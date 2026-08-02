@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:42.033Z",
+  "mode": "build-generated-video-data",
+  "runtimeVersion": "20260725-video-v5",
+  "sequence": [
+    "generated-video-data",
+    "video:auto",
+    "manual-play-fallback",
+    "dissolve:720ms",
+    "existing-welcome-gate"
+  ],
+  "voiceGatePreserved": true,
+  "videoParts": [
+    "assets/matrix-intro-video-1.txt",
+    "assets/matrix-intro-video-2.txt"
+  ],
+  "decodedBytes": 15003,
+  "dataAsset": "homepage-mask-intro-data.js",
+  "counts": {
+    "overlay": 1,
+    "style": 1,
+    "version": 7,
+    "dataRuntime": 1,
+    "legacyPreloads": 0,
+    "runtime": 1,
+    "video": 1,
+    "skip": 1,
+    "legacyEyeImages": 0,
+    "legacyMaskImages": 0
+  },
+  "required": [
+    "homepage-mask-intro.css",
+    "homepage-mask-intro.js",
+    "assets/matrix-intro-video-1.txt",
+    "assets/matrix-intro-video-2.txt"
+  ],
+  "failures": []
+}

@@ -41,3 +41,19 @@
 - The build is unusually large and mutates generated artifacts.
 - Source terms and quotas are not yet represented per HTML source, so those sources fail closed under the new broker.
 - In-process cache and circuit state do not survive a Node process restart; D1 persistence exists in schema but requires the later runtime rollout.
+
+## Matrix synergy integration (2026-08-02)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Event bus | Typed, auditable Matrix events with mandatory evidence class, origin, actor, affected outputs and propagation plan |
+| Evidence | `VERIFIED` requires all authentication checks; incomplete material is automatically `SPECULATION`; unsafe material is security-quarantined |
+| Corrections | Withdrawals and corrections reopen/downgrade conclusions, issue correction notices and recalculate reversible rewards |
+| Member missions | Authenticated mission, contribution, progression and impact APIs; deduplication and hourly rate limiting |
+| Anti-abuse | No rewards for views, ideology, accusations, duplicates, submission volume or suspicious coordination |
+| Human actions | Schema allowlist limited to provider/legal/identity/credential/permission/payment/destructive/consequential operations; no editorial fallback |
+| Model improvement | Superior-quality, citation, hallucination, licence, privacy, zero-cost and rollback gates before staged replacement |
+| Truthful health | `structurally_operational`, `data_connected`, `evidence_ready`, `live_verified`, `blocked`, `awaiting_human_action`, `disabled`, `degraded`, `broken` derived from evidence, not file presence |
+| Compute | Candidate discovery retained; remote routing and execution are explicitly disabled in both Wrangler configurations |
+
+Architecture decision: `docs/adr/0002-matrix-synergy-accountability-event-bus.md`.

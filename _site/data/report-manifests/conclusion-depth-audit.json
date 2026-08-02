@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:34:55.000Z",
+  "generatedAt": "2026-08-02T12:19:54.771Z",
   "pageCount": 126,
   "output": "downloads/conclusion-depth-audit.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Conclusion Depth Audit",
-    "contentHash": "7bc63154f8c5ce8f280c1203e74c7d60a8b9113eaa0fedc58df7565664bb5c18",
+    "contentHash": "01686afbe8ea05ccbfdbcf069a5a795d793f4dfe5a6dd7cf5b2216d0521eda6a",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "9e8903fd8dfa9b54a1d6db30",
@@ -16,18 +16,18 @@
       "7c05d9244c4620950350cf27",
       "594100b62a47db521fe2a128",
       "34805734b1ad3b73f0ede0d8",
-      "3a425f0d5d683952bc0ad7ac",
       "e72d22f4f28eb53e3173d0a6",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "3a425f0d5d683952bc0ad7ac",
       "65debd126cdfa5f7547a3eca",
       "9f77464e401ac59ad1adb812",
       "b5a32a76f19d554c484e917f",
       "3c9c23f7f9a1cec81ef90f59",
-      "e083e748ec6311742c2416e5",
       "bf773d3ec83b9b3768dfce6b",
       "310372a3fc518b6aabbc5d07",
       "76cf5cb1f42b219ea38128f4",
@@ -87,12 +87,6 @@
       "008875ef7bf45eb14dccb254",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-004",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-45ACC28AC220EA79",
@@ -100,8 +94,6 @@
       "f8da9551192fb7f98b4efa86",
       "275d6c3caca158f7a3e15780",
       "72ef7895f95288946ccb3cff",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -120,10 +112,16 @@
       "46757b632ca28a9b50b2985e",
       "9ba6422e85e51eba84b0a13d",
       "14d04c0943d24cbe6a1926db",
-      "e23cd21de10db6ee88418929",
+      "b9ddbc73f7baaa3eaf0e5399",
       "9b9816cd15ea0d816c77affa",
       "41772e5c9af7970ddd7d5aac",
-      "ASC-REVIEW-2A8D7C6B5A23CEAD",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-8299a278d70b1f879d6d522f",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -146,20 +144,22 @@
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
       "ASC-REVIEW-686B68808D58A838",
-      "ASC-REVIEW-E0C2B02D28255CC3"
+      "ASC-REVIEW-E0C2B02D28255CC3",
+      "ASC-REVIEW-4E0C4B2A65FF8D42",
+      "ASC-REVIEW-995324D0659C1960"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 52,
-      "disputedClaimCount": 45,
+      "primarySourceCount": 51,
+      "disputedClaimCount": 46,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 42,
-      "moneyRecordCount": 43
+      "relationshipCount": 43,
+      "moneyRecordCount": 46
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Conclusion Depth Audit.",
+        "conclusion": "The indexed record establishes that 51 A/B-grade public-record items are materially relevant to Conclusion Depth Audit.",
         "evidence": "ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 43 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Elite Power Theory; Media / Narrative Theory; Elite Power Theory; Media / Narrative Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 43 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",

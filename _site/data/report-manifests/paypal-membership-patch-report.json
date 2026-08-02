@@ -1,18 +1,17 @@
 {
-  "generatedAt": "2026-08-02T10:40:05.546Z",
+  "generatedAt": "2026-08-02T11:48:58.318Z",
   "pageCount": 124,
   "output": "downloads/paypal-membership-patch-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Paypal Membership Patch Report",
-    "contentHash": "fd3c526b6a19b2841a5a5d82de12f6b62718fce68cb51fa4aaff554736bb7cac",
+    "contentHash": "4ec2768512b57723c2486c805c8c80883e42643256de44232d7dfd607f9d0d4e",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "157cdab04b61ae6309c0c713",
       "7fc07964a27914afe516c45b",
       "DOJ-EPSTEIN-CASE",
       "DOJ-MAXWELL-CASE",
-      "3a425f0d5d683952bc0ad7ac",
       "44505b4afb60938c8117ad31",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
@@ -55,6 +54,7 @@
       "source-change-a53bf480df4e4883383a08e0",
       "source-change-81d1ec66d255ebaf3f7d61de",
       "source-change-7ed151a515391f967d229642",
+      "e083e748ec6311742c2416e5",
       "source-change-a334a207405ec629b4be337d",
       "source-change-c452df757991611cb06ec88a",
       "source-change-8299a278d70b1f879d6d522f",
@@ -133,6 +133,7 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
+      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -145,21 +146,20 @@
       "58a212e4e1a93007ec5b3d6d",
       "eb3448928554960651da56f6",
       "a42c91c655cd066504ed6515",
-      "7dcf4ef18ea1f86d01068773",
-      "511ed227bb4be58b582ebb8d"
+      "7dcf4ef18ea1f86d01068773"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 53,
+      "primarySourceCount": 52,
       "disputedClaimCount": 85,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 41,
       "moneyRecordCount": 32
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 53 A/B-grade public-record items are materially relevant to Paypal Membership Patch Report.",
+        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Paypal Membership Patch Report.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); United States v. Epstein DOJ court-record page (data/auto-evidence-latest.json); United States v. Maxwell DOJ court-record page (data/auto-evidence-latest.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-02T10:39:20.499Z",
-  "pageCount": 122,
+  "generatedAt": "2026-08-02T12:24:06.356Z",
+  "pageCount": 119,
   "output": "downloads/master-evidence-source-registry.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Master Evidence Source Registry",
-    "contentHash": "e66ebfc3a4bc92a1d43f4543eed4379c153621090cc2d7818d2a3f9394cb40fd",
+    "contentHash": "73b42c424bb709fdd645014f52fae68dc0b17deaa1b2f214256f3cc0b6bcd3a3",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "26b90533dbf7d2ed42f02de6",
-      "e72d22f4f28eb53e3173d0a6",
       "e083e748ec6311742c2416e5",
+      "e72d22f4f28eb53e3173d0a6",
       "72ef7895f95288946ccb3cff",
       "ecd4a1111010f13b2d74bf8c",
-      "3a425f0d5d683952bc0ad7ac",
       "4c372edcf20b760ae3305f10",
       "ec968f2ec6ba82128b4cd91b",
+      "3a425f0d5d683952bc0ad7ac",
       "73799cb9af4829047998b026",
       "EP-AI-001",
       "71e0563ca7b139c37c302956",
@@ -86,20 +86,18 @@
       "d23398b8ca4c7124399c9504",
       "2529322b7b5345fd6f575174",
       "4961972398d896435d33f3f7",
+      "9d0cf694c0c2e7c8947c7596",
+      "ecadede6696db6c7c3e6b7ec",
+      "085baf8dafdf6692a4203706",
       "76a719654ec3312153163154",
       "7f5b91c14c671bd24b8bbd81",
       "c5d9edd2562c4c00e3ddfdfb",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
-      "9d0cf694c0c2e7c8947c7596",
-      "ecadede6696db6c7c3e6b7ec",
-      "fe3f3107cffaf5599a7b09f9",
-      "085baf8dafdf6692a4203706",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "53245eb712fc0413483084ad",
       "9f27e4d750de830ccb16df4b",
       "EP-AI-002",
-      "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "c1520a15d6e62871a66c558e",
       "f5bc8d91413e4e72ae005ad4",
@@ -114,6 +112,7 @@
       "1cf0a13f71ba0bffc242dcab",
       "5295a33003172878f9880122",
       "bf773d3ec83b9b3768dfce6b",
+      "missing-records-report",
       "orsini-family",
       "310372a3fc518b6aabbc5d07",
       "7ee9141a42ad539f58a57e50",
@@ -132,8 +131,6 @@
       "ASC-REVIEW-25B371012CBA1315",
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "8d0375496d59f1d012deaead",
-      "daily-revelation-report",
-      "contractor-blackwater-xe-academi-constellis-lineage",
       "bb5dfe90c29929d84ce60e6d",
       "osint",
       "157cdab04b61ae6309c0c713",
@@ -146,16 +143,19 @@
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-45ACC28AC220EA79",
-      "ASC-REVIEW-D3C6DB16A89DBA51"
+      "ASC-REVIEW-D3C6DB16A89DBA51",
+      "ASC-REVIEW-44F136F26F8A52B2",
+      "ASC-REVIEW-E76F1740FFF4E811",
+      "d6936ce262c4c18cb75c6e44"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 50,
-      "disputedClaimCount": 37,
-      "newEntityCount": 24,
+      "disputedClaimCount": 39,
+      "newEntityCount": 6,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 51,
-      "moneyRecordCount": 36
+      "relationshipCount": 49,
+      "moneyRecordCount": 34
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 51 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; DELL MARKETING L.P. — District of Columbia Courts; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; Matrix Reprogrammed Structured Investigation Schema",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 51 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "INDUSTRIAL BANK — District of Columbia Courts",

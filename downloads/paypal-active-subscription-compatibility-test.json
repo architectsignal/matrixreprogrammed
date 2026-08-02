@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T12:51:03.159Z",
+  "query": "SELECT tier,billing_state,entitlement_active,provider_status,current_period_end,next_billing_at,CASE WHEN entitlement_active=1 OR (entitlement_active IS NULL AND LOWER(provider_status) IN ('active','trialing') AND (current_period_end IS NULL OR datetime(current_period_end)>datetime('now'))) THEN 1 ELSE 0 END AS paid_access FROM paypal_current_subscription_status WHERE member_id=? ORDER BY paid_access DESC,state_updated_at DESC LIMIT 1",
+  "results": [
+    {
+      "name": "modern active",
+      "memberId": "member-modern-active",
+      "expected": 1,
+      "actual": 1,
+      "ok": true,
+      "row": {
+        "tier": "intelligence",
+        "billing_state": "active",
+        "entitlement_active": 1,
+        "provider_status": "ACTIVE",
+        "current_period_end": "2099-01-01T00:00:00Z",
+        "next_billing_at": null,
+        "paid_access": 1
+      }
+    },
+    {
+      "name": "legacy active",
+      "memberId": "member-legacy-active",
+      "expected": 1,
+      "actual": 1,
+      "ok": true,
+      "row": {
+        "tier": "supporter",
+        "billing_state": null,
+        "entitlement_active": null,
+        "provider_status": "ACTIVE",
+        "current_period_end": "2099-01-01T00:00:00Z",
+        "next_billing_at": null,
+        "paid_access": 1
+      }
+    },
+    {
+      "name": "legacy trialing",
+      "memberId": "member-legacy-trial",
+      "expected": 1,
+      "actual": 1,
+      "ok": true,
+      "row": {
+        "tier": "supporter",
+        "billing_state": null,
+        "entitlement_active": null,
+        "provider_status": "TRIALING",
+        "current_period_end": null,
+        "next_billing_at": null,
+        "paid_access": 1
+      }
+    },
+    {
+      "name": "legacy expired",
+      "memberId": "member-legacy-expired",
+      "expected": 0,
+      "actual": 0,
+      "ok": true,
+      "row": {
+        "tier": "supporter",
+        "billing_state": null,
+        "entitlement_active": null,
+        "provider_status": "ACTIVE",
+        "current_period_end": "2001-01-01T00:00:00Z",
+        "next_billing_at": null,
+        "paid_access": 0
+      }
+    },
+    {
+      "name": "modern cancelled",
+      "memberId": "member-modern-cancelled",
+      "expected": 0,
+      "actual": 0,
+      "ok": true,
+      "row": {
+        "tier": "intelligence",
+        "billing_state": "cancelled",
+        "entitlement_active": 0,
+        "provider_status": "ACTIVE",
+        "current_period_end": "2099-01-01T00:00:00Z",
+        "next_billing_at": null,
+        "paid_access": 0
+      }
+    }
+  ],
+  "failures": [],
+  "policy": "Modern entitlement state is authoritative; legacy ACTIVE or TRIALING records remain protected only while their paid period has not expired."
+}

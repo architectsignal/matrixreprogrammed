@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:36:02.718Z",
-  "pageCount": 96,
+  "generatedAt": "2026-08-02T12:21:06.093Z",
+  "pageCount": 95,
   "output": "downloads/deep-audit-public-defect-repair.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Deep Audit Public Defect Repair",
-    "contentHash": "5a0051d0f9109e4c0fb0c40881d817ecb64ebb443b6ec884fac2b0884dfde40f",
+    "contentHash": "620be6b4db14ac8754aec5470e2dfc7c587e4987d6c6b5378b04f613ad907fcc",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
@@ -14,7 +14,6 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
-      "3a425f0d5d683952bc0ad7ac",
       "7f5b91c14c671bd24b8bbd81",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -30,6 +29,7 @@
       "e4a0df7a70409789454722e7",
       "d6936ce262c4c18cb75c6e44",
       "6d8df9af51b8078e703b2748",
+      "3a425f0d5d683952bc0ad7ac",
       "b5a32a76f19d554c484e917f",
       "157cdab04b61ae6309c0c713",
       "9848ec4b4c3f6c2693269839",
@@ -84,8 +84,6 @@
       "7dcf4ef18ea1f86d01068773",
       "ecd4a1111010f13b2d74bf8c",
       "41772e5c9af7970ddd7d5aac",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-288CD8D5C42C050E",
@@ -111,10 +109,8 @@
       "deb382cdbfe57b57793d739e",
       "f44c3c7309a5f0779a57e655",
       "81d1ec66d255ebaf3f7d61de",
-      "5143def4d109df60d6ae99db",
-      "384bb39bdc916ad6752ac63a",
-      "2828a0d0f67977aa4a3e373c",
-      "de58872cc8483198b691c403",
+      "9e8903fd8dfa9b54a1d6db30",
+      "ec1316fb1fb70c83dc347bb6",
       "e72d22f4f28eb53e3173d0a6",
       "8299a278d70b1f879d6d522f",
       "edba4782143dd855b818b53a",
@@ -134,32 +130,36 @@
       "41238c8b70e678402d643e26",
       "b079bec5bc869b0463d0584c",
       "b20bf5953df956897ee110a3",
+      "88ef9baf356c096816236956",
+      "7c05d9244c4620950350cf27",
       "4c372edcf20b760ae3305f10",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
       "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-CE46DBEB6BCAAE01"
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-481745ED8153AA11",
+      "ASC-REVIEW-9719FEC8729E7FE2",
+      "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-565A586322B4B93A",
+      "ASC-REVIEW-2F0D540A3C8B64CE",
+      "ASC-REVIEW-1D0E514392976CFC"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 51,
-      "disputedClaimCount": 47,
+      "primarySourceCount": 45,
+      "disputedClaimCount": 53,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 29,
-      "moneyRecordCount": 12
+      "relationshipCount": 30,
+      "moneyRecordCount": 10
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 51 A/B-grade public-record items are materially relevant to Deep Audit Public Defect Repair.",
+        "conclusion": "The indexed record establishes that 45 A/B-grade public-record items are materially relevant to Deep Audit Public Defect Repair.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 29 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 30 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Matrix Reprogrammed Canonical Intelligence Record; Follow The Money Watch; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 29 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 30 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

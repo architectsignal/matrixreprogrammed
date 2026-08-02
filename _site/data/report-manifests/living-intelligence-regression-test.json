@@ -1,14 +1,16 @@
 {
-  "generatedAt": "2026-08-02T10:39:03.782Z",
-  "pageCount": 93,
+  "generatedAt": "2026-08-02T12:23:50.957Z",
+  "pageCount": 94,
   "output": "downloads/living-intelligence-regression-test.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Living Intelligence Regression Test",
-    "contentHash": "dc9225ba38c6842a3aac2da6541e4581ff11c0cf5cbe2678954b50933abdef83",
+    "contentHash": "d9df8cafd784eba0615f39d399ff2135e92c67544c45618105c5b9cc0eac3e9c",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "360e80c162081c85d2c680ef",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
@@ -20,7 +22,6 @@
       "b9006a5edc55cc88bfccd04a",
       "06baa45bea3e2e15eb80eff9",
       "a8d2d3bf834ea59c6a49b8ea",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "david-james-clarke-conviction-2026",
       "abdul-halim-khan-conviction-2026",
@@ -37,6 +38,8 @@
       "janner-charges-2015",
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
+      "ASC-REVIEW-A8005F6D70DBECBC",
+      "ASC-REVIEW-B7720C9C5A09A4B4",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -49,6 +52,7 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-5A774507A02DF22B",
       "bf041695a279c3dc5412cdf4",
+      "495efbb6e1ee304347ae3bdf",
       "deutsche-bank-epstein-dfs-2020",
       "us-doj",
       "gao-hq",
@@ -133,25 +137,21 @@
       "trusts-duchy-related-trust-disclosures",
       "trusts-rockefeller-brothers-fund",
       "trusts-rockefeller-family-fund",
-      "trusts-j-paul-getty-trust",
-      "trusts-leona-m-and-harry-b-helmsley-charitable-trust",
-      "trusts-kendeda-fund-trust-routes",
-      "trusts-silicon-valley-community-foundation-donor-trusts",
-      "trusts-fidelity-charitable-donor-advised-funds"
+      "trusts-j-paul-getty-trust"
     ],
     "metrics": {
       "evidenceCount": 131,
-      "primarySourceCount": 120,
-      "disputedClaimCount": 19,
-      "newEntityCount": 0,
+      "primarySourceCount": 117,
+      "disputedClaimCount": 21,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 24,
-      "moneyRecordCount": 100
+      "relationshipCount": 26,
+      "moneyRecordCount": 96
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 120 A/B-grade public-record items are materially relevant to Living Intelligence Regression Test.",
-        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 117 A/B-grade public-record items are materially relevant to Living Intelligence Regression Test.",
+        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -170,8 +170,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
+        "inference": "The indexed set contains 26 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -185,7 +185,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 26 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Christopher Wray's Gift to Attorney General Garland",
           "Christopher Wray's Gift to Attorney General Garland (Final)",
@@ -193,8 +193,8 @@
           "IICSA documented predatory activities and institutional failures",
           "Official health investigations documented abuse and enabling access",
           "Broadmoor investigation examined Savile's access and abuse",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer"
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -209,6 +209,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

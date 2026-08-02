@@ -1,62 +1,66 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T11:01:50.673Z",
+  "liveComplete": false,
+  "status": "degraded-preserved-verified-snapshot",
+  "generatedAt": "2026-08-02T12:56:21.628Z",
+  "sourceSnapshotDate": "2026-08-02",
+  "freshnessTruth": "One or more ranking pages were unreachable. Complete previously verified, dated rows were preserved without being presented as newly retrieved.",
   "diagnostics": [
     {
       "category": "companies",
       "ok": true,
       "parsed": 100,
       "expected": 100,
-      "error": ""
+      "error": "fetch failed"
     },
     {
       "category": "investment-vehicles",
       "ok": true,
       "parsed": 100,
       "expected": 100,
-      "error": ""
+      "error": "fetch failed"
     },
     {
       "category": "banks",
       "ok": true,
       "parsed": 100,
       "expected": 100,
-      "error": ""
+      "error": "fetch failed"
     },
     {
       "category": "property",
       "ok": true,
       "parsed": 100,
       "expected": 100,
-      "error": ""
+      "error": "fetch failed"
     },
     {
       "category": "media",
       "ok": true,
       "parsed": 100,
       "expected": 100,
-      "error": ""
+      "error": "fetch failed"
     },
     {
       "category": "technology-control",
       "ok": true,
       "parsed": 100,
       "expected": 100,
-      "error": ""
+      "error": "fetch failed"
     },
     {
       "category": "energy-resources",
       "ok": true,
       "parsed": 100,
       "expected": 100,
-      "error": ""
+      "error": "fetch failed"
     },
     {
       "category": "defence-security",
       "ok": true,
       "parsed": 99,
       "expected": 90,
-      "error": ""
+      "error": "fetch failed"
     }
   ]
 }

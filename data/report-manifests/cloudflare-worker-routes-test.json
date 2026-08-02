@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:34:52.331Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-02T11:43:59.901Z",
+  "pageCount": 126,
   "output": "downloads/cloudflare-worker-routes-test.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Cloudflare Worker Routes Test",
-    "contentHash": "a16ace2209ce009de5c612e30d5b500b4ec78a02feafaedeccc071d648db5afe",
+    "contentHash": "f1778619b239d7141f5cf876264f5349ff551468dd57da256a4493a30d2d4afc",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
@@ -13,7 +13,6 @@
       "ASC-REVIEW-20316213EFD183CC",
       "7f5b91c14c671bd24b8bbd81",
       "1769af26a7bda813406cd8f5",
-      "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -41,7 +40,9 @@
       "2529322b7b5345fd6f575174",
       "74fb2863cc9a8120f3c68b67",
       "4961972398d896435d33f3f7",
+      "3a425f0d5d683952bc0ad7ac",
       "c1520a15d6e62871a66c558e",
+      "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
       "53201d6b1babefc058e6d6ac",
       "538941a6b0f31a954f98439a",
@@ -78,11 +79,10 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "EP-AI-004",
       "ec1316fb1fb70c83dc347bb6",
-      "a5e5d4ec4df4352ea242ea3f",
+      "7dcf4ef18ea1f86d01068773",
       "7c05d9244c4620950350cf27",
       "73799cb9af4829047998b026",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-81d1ec66d255ebaf3f7d61de",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -123,10 +123,8 @@
       "EP-AI-002",
       "72ef7895f95288946ccb3cff",
       "157cdab04b61ae6309c0c713",
-      "7dcf4ef18ea1f86d01068773",
       "427a4b3a840619411d8d1c33",
       "1583ed9e90a5874047a33041",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -146,20 +144,22 @@
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
-      "ASC-REVIEW-686B68808D58A838"
+      "ASC-REVIEW-686B68808D58A838",
+      "ASC-REVIEW-E0C2B02D28255CC3",
+      "ASC-REVIEW-4E0C4B2A65FF8D42"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 39,
-      "disputedClaimCount": 81,
+      "primarySourceCount": 37,
+      "disputedClaimCount": 83,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 82,
-      "moneyRecordCount": 57
+      "relationshipCount": 84,
+      "moneyRecordCount": 59
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Cloudflare Worker Routes Test.",
+        "conclusion": "The indexed record establishes that 37 A/B-grade public-record items are materially relevant to Cloudflare Worker Routes Test.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 82 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 84 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; The strongest public pattern is convergence across access systems.; Follow The Money Watch; DELL MARKETING L.P. — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; DELL MARKETING L.P. — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 82 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 84 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "The strongest public pattern is convergence across access systems.",

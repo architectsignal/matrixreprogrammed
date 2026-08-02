@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:36:37.130Z",
+  "generatedAt": "2026-08-02T12:21:39.398Z",
   "pageCount": 121,
   "output": "downloads/email-campaign-quality-patch.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Email Campaign Quality Patch",
-    "contentHash": "229d69e2b599592985db4af7d7db10bc240e155e56e926b6e0e0159a3e8dc49f",
+    "contentHash": "2ceda6bb176f51e7547ad92cbc85fd0965acfc0790846acacccbfb45759228e7",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -13,6 +13,7 @@
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "e083e748ec6311742c2416e5",
       "a103f2650e31fc92fa3688e6",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
@@ -39,7 +40,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -48,9 +48,9 @@
       "f8da9551192fb7f98b4efa86",
       "275d6c3caca158f7a3e15780",
       "1769af26a7bda813406cd8f5",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
+      "9f77464e401ac59ad1adb812",
       "6d665d935673091233751767",
       "ecd4a1111010f13b2d74bf8c",
       "427a4b3a840619411d8d1c33",
@@ -74,7 +74,6 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
-      "9f77464e401ac59ad1adb812",
       "osint",
       "peter-ball-iicsa-support-2019",
       "ASC-REVIEW-AF18512452F699D2",
@@ -89,10 +88,7 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "EP-AI-003",
       "9f3052b5d8cec138a2a37e8c",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
+      "e72d22f4f28eb53e3173d0a6",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-09AE97E87425D94A",
@@ -107,7 +103,7 @@
       "7419d29b3a469a40362a11f4",
       "4961972398d896435d33f3f7",
       "EP-AI-001",
-      "e72d22f4f28eb53e3173d0a6",
+      "3a425f0d5d683952bc0ad7ac",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -129,10 +125,6 @@
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -146,20 +138,28 @@
       "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-46CE3CB0306D4130",
-      "ASC-REVIEW-9E85403F3389F334"
+      "ASC-REVIEW-9E85403F3389F334",
+      "ASC-REVIEW-640E991C59CBDA5A",
+      "ASC-REVIEW-0178D2F659DD4EB6",
+      "ASC-REVIEW-E617D0A88088FBF7",
+      "ASC-REVIEW-E88A7B581690918F",
+      "ASC-REVIEW-19181472DB04522E",
+      "ASC-REVIEW-DA186233A3EDF0BE",
+      "ASC-REVIEW-7EDB22F37F0003A5",
+      "ASC-REVIEW-78EAB66242E0B95B"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 66,
-      "disputedClaimCount": 53,
+      "primarySourceCount": 58,
+      "disputedClaimCount": 61,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 40,
-      "moneyRecordCount": 12
+      "relationshipCount": 48,
+      "moneyRecordCount": 20
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 66 A/B-grade public-record items are materially relevant to Email Campaign Quality Patch.",
+        "conclusion": "The indexed record establishes that 58 A/B-grade public-record items are materially relevant to Email Campaign Quality Patch.",
         "evidence": "DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 48 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; DELL MARKETING L.P. — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 48 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

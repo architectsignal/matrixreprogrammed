@@ -1,6 +1,6 @@
 # Exhaustive Public Site Audit
 
-Generated: 2026-08-02T11:03:47.389Z
+Generated: 2026-08-02T13:23:01.171Z
 Result: PASS
 
 ## Scope
@@ -9,14 +9,14 @@ All source HTML recursively, built-output parity, static markup links and anchor
 
 ## Totals
 
-- sourceFiles: 5883
-- htmlPages: 1662
-- publicPages: 1624
+- sourceFiles: 6002
+- htmlPages: 1663
+- publicPages: 1625
 - internalPages: 38
-- builtFiles: 6096
-- sitemapUrls: 459
-- linkReferences: 74359
-- externalLinks: 2449
+- builtFiles: 6164
+- sitemapUrls: 465
+- linkReferences: 73708
+- externalLinks: 2448
 - conclusionPages: 546
 - deepConclusionPages: 126
 - hardFailures: 0

@@ -1,0 +1,33 @@
+{
+  "updated": "2026-08-02T12:55:01.505Z",
+  "defaultMode": "local-hybrid",
+  "providers": {
+    "localSemantic": {
+      "enabled": true,
+      "costCeilingGBP": 0,
+      "requiresAccount": false,
+      "role": "Compact local semantic vectors and cosine retrieval."
+    },
+    "cloudflareVectorize": {
+      "enabled": false,
+      "configured": false,
+      "entitlementVerified": false,
+      "reason": "No Vectorize binding is present in wrangler.toml.",
+      "requiredAction": "Verify entitlement in the Cloudflare dashboard, create a separate index and add a binding before enabling."
+    },
+    "cloudflareAiSearch": {
+      "enabled": false,
+      "configured": false,
+      "entitlementVerified": false,
+      "reason": "No AI Search instance or binding is configured in the repository.",
+      "requiredAction": "Verify account availability and limits before adding an optional adapter."
+    },
+    "workersAi": {
+      "enabled": false,
+      "configured": false,
+      "entitlementVerified": false,
+      "reason": "No Workers AI binding is configured for search."
+    }
+  },
+  "boundary": "Managed semantic providers are optional accelerators. Search must remain functional with local exact, entity, BM25, semantic, domain and confidence layers only."
+}

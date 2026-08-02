@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:34:55.926Z",
-  "pageCount": 120,
+  "generatedAt": "2026-08-02T12:19:55.537Z",
+  "pageCount": 119,
   "output": "downloads/consequence-tracking-runtime-hardening.pdf",
   "report": {
-    "version": 5,
+    "version": 7,
     "title": "Consequence Tracking Runtime Hardening",
-    "contentHash": "5acf00efee04f6d7c647d1d50e43cd7ec196dcc1066c470898dbd840152fb38f",
+    "contentHash": "f042d5e9d5c2b262112068e7af281e2b16ff03820bd3e521af53d1b8497bc103",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "5460c0408472ce834da2b82f",
@@ -74,9 +74,12 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-21E454816F050A34",
+      "contractor-blackwater-xe-academi-constellis-lineage",
+      "14d04c0943d24cbe6a1926db",
       "EFS-001-R006",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
+      "e083e748ec6311742c2416e5",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
       "cbe0915cb2d88f076ed7b91e",
@@ -133,23 +136,20 @@
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
-      "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-481745ED8153AA11",
-      "ASC-REVIEW-9719FEC8729E7FE2"
+      "ASC-REVIEW-AF18512452F699D2"
     ],
     "metrics": {
       "evidenceCount": 130,
-      "primarySourceCount": 110,
-      "disputedClaimCount": 29,
-      "newEntityCount": 0,
+      "primarySourceCount": 111,
+      "disputedClaimCount": 26,
+      "newEntityCount": 5,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 30,
-      "moneyRecordCount": 23
+      "relationshipCount": 28,
+      "moneyRecordCount": 24
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 110 A/B-grade public-record items are materially relevant to Consequence Tracking Runtime Hardening.",
+        "conclusion": "The indexed record establishes that 111 A/B-grade public-record items are materially relevant to Consequence Tracking Runtime Hardening.",
         "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -169,7 +169,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 30 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 28 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -184,7 +184,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 30 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 28 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:40:35.532Z",
+  "generatedAt": "2026-08-02T12:25:33.654Z",
   "pageCount": 123,
   "output": "downloads/probability-snapshot.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Probability Snapshot",
-    "contentHash": "25090882c569f6bd45d1318f3bbbf49e7485db6eaa33d660708b3d7e7f044bd0",
+    "contentHash": "61f580f9aa86c40ec14e0e8833d99ea2048728adc17a747899229d66f179c4ac",
     "sourceIds": [
       "9f77464e401ac59ad1adb812",
       "26b90533dbf7d2ed42f02de6",
@@ -49,7 +49,6 @@
       "7198c204fd0f39a8d6faf5b4",
       "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
-      "subject-digital-id-and-access-systems",
       "65debd126cdfa5f7547a3eca",
       "71e0563ca7b139c37c302956",
       "157cdab04b61ae6309c0c713",
@@ -82,14 +81,13 @@
       "9f52702daea7fcbbfb32b9bc",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-96665FE56FA75D90",
-      "subject-health-data-and-emergency-systems",
+      "e72d22f4f28eb53e3173d0a6",
       "c1520a15d6e62871a66c558e",
       "dcec2a45ef35362072af05e3",
       "b49c319c09a07b245b24f74a",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-45ACC28AC220EA79",
-      "daily-revelation-report",
       "310372a3fc518b6aabbc5d07",
       "2931a84c2c7fe86982d5d6e5",
       "eb3448928554960651da56f6",
@@ -107,7 +105,6 @@
       "665a5072d96b9757a6ee9d2d",
       "4e5cc6449bcc7ddf1c878ee0",
       "EP-AI-004",
-      "e72d22f4f28eb53e3173d0a6",
       "7dcf4ef18ea1f86d01068773",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-875607DBB9C95C91",
@@ -130,8 +127,7 @@
       "2529322b7b5345fd6f575174",
       "74fb2863cc9a8120f3c68b67",
       "4961972398d896435d33f3f7",
-      "subject-banking-and-payment-rails",
-      "subject-foundation-and-ngo-policy-influence",
+      "missing-records-report",
       "76cf5cb1f42b219ea38128f4",
       "osint",
       "15adccba38bd91644b561261",
@@ -146,16 +142,20 @@
       "ASC-REVIEW-B7720C9C5A09A4B4",
       "ASC-REVIEW-7C6630BA6B2598AA",
       "ASC-REVIEW-0BDE78366651B0AB",
-      "ASC-REVIEW-9E85403F3389F334"
+      "ASC-REVIEW-9E85403F3389F334",
+      "ASC-REVIEW-747FA1D74D7A92E3",
+      "ASC-REVIEW-52F3C5EC8401656D",
+      "ASC-REVIEW-B5FCD410F732DBED",
+      "ASC-REVIEW-B5A7582A4286A663"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 43,
-      "disputedClaimCount": 50,
-      "newEntityCount": 22,
+      "disputedClaimCount": 54,
+      "newEntityCount": 5,
       "updatedAssessmentCount": 1,
       "relationshipCount": 58,
-      "moneyRecordCount": 42
+      "moneyRecordCount": 44
     },
     "evidenceBasedConclusions": [
       {

@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-08-02T11:01:46.739Z",
+  "updated": "2026-08-02T13:22:21.472Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 46953,
+    "recordsInspected": 46959,
     "criticalClocks": [
       {
         "slug": "childrens-digital-identity-age-gating",
@@ -224,8 +224,8 @@
           }
         ],
         "timerUpdateRule": "Raise when age assurance becomes legally required across major services, expands across jurisdictions, relies on biometric or government-identity onboarding, becomes interoperable with general identity wallets, creates persistent records or gates lawful adult access. Lower when anonymous or selective-disclosure proof-of-age methods, data minimisation, non-identity alternatives, deletion rights, independent audits and meaningful appeal rights are legally enforceable and practically available.",
-        "evidenceFingerprint": "cfd066a01264327627eb0033241f24a6e58b266d13ca110b74987d321d1275f7",
-        "lastEvidenceChangeAt": "2026-08-02T10:33:31.976Z",
+        "evidenceFingerprint": "4cc4501d0be244dbf12b7d1dfb8fda17bf1271724d5fa8e88ca5a51f213d4f51",
+        "lastEvidenceChangeAt": "2026-08-02T11:36:47.671Z",
         "automaticUpdateStatus": "evidence-unchanged-score-held",
         "scoreLabel": "Pressure index — not event probability",
         "scoreType": "pressureIndex",
@@ -483,7 +483,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-08-02T11:01:42.711Z",
+        "generatedAt": "2026-08-02T12:56:12.679Z",
         "previousAutomaticScore": 93,
         "automaticScoreMovement": 0,
         "automaticUpdateReason": "Evidence change: 11 fresh records, 9 primary/official, 7 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -918,7 +918,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-08-02T11:01:42.711Z",
+        "generatedAt": "2026-08-02T12:56:12.679Z",
         "id": "surveillance-state",
         "name": "Surveillance State Clock",
         "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -938,7 +938,7 @@
         "id": "procurement-vendors",
         "title": "Procurement and public-private implementation",
         "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 23682,
+        "signalCount": 23683,
         "actors": [
           "Consolidated Sanctions List (Non-SDN Lists)",
           "Default Judgment",
@@ -952,14 +952,14 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 17120,
+        "signalCount": 17108,
         "actors": []
       },
       {
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 12370,
+        "signalCount": 12367,
         "actors": [
           "Information and narrative control"
         ]
@@ -975,7 +975,7 @@
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 3523,
+        "signalCount": 3516,
         "actors": [
           "Exercise or conversion of derivative security",
           "Identity, surveillance and access",
@@ -986,7 +986,7 @@
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 2716,
+        "signalCount": 2714,
         "actors": [
           "Identity, surveillance and access"
         ]
@@ -1004,7 +1004,7 @@
         "id": "data-ai-cloud",
         "title": "Data, cloud and AI infrastructure",
         "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
-        "signalCount": 600,
+        "signalCount": 594,
         "actors": [
           "Identity, surveillance and access"
         ]

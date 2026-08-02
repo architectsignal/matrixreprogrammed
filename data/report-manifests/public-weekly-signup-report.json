@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-08-02T10:41:02.664Z",
-  "pageCount": 105,
+  "generatedAt": "2026-08-02T11:50:01.579Z",
+  "pageCount": 103,
   "output": "downloads/public-weekly-signup-report.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Public Weekly Signup Report",
-    "contentHash": "abfe55fe7455735e6f4e9417f179fc473f6f80373df84f3ded1881bb2021dce4",
+    "contentHash": "a710c002f93d6ae2737d61d19337d0e1c4dbef0cdad038b3ab729849704ea8fd",
     "sourceIds": [
-      "3a425f0d5d683952bc0ad7ac",
       "2931a84c2c7fe86982d5d6e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
@@ -20,6 +19,7 @@
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
       "26b90533dbf7d2ed42f02de6",
+      "3a425f0d5d683952bc0ad7ac",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -110,7 +110,6 @@
       "ASC-REVIEW-995107775153DECB",
       "ASC-REVIEW-3BECB9AD9D29AF5D",
       "81d1ec66d255ebaf3f7d61de",
-      "daily-revelation-report",
       "gates-epstein-meetings-2011-2014",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
@@ -146,20 +145,21 @@
       "foundations-novo-nordisk-foundation",
       "foundations-wellcome-trust",
       "foundations-howard-hughes-medical-institute",
-      "foundations-ford-foundation"
+      "foundations-ford-foundation",
+      "foundations-robert-wood-johnson-foundation"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 73,
+      "primarySourceCount": 74,
       "disputedClaimCount": 58,
-      "newEntityCount": 20,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 53,
-      "moneyRecordCount": 55
+      "moneyRecordCount": 56
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 73 A/B-grade public-record items are materially relevant to Public Weekly Signup Report.",
+        "conclusion": "The indexed record establishes that 74 A/B-grade public-record items are materially relevant to Public Weekly Signup Report.",
         "evidence": "content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

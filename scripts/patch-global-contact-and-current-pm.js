@@ -52,6 +52,13 @@ function patchNavigation(file, html, targetRoot) {
       return open + body + contact + close;
     });
   }
+  if (!changed) {
+    html = html.replace(/(<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>)([\s\S]*?)(<\/nav>)/i, (match, open, body, close) => {
+      if (/href=["'][^"']*contact-the-machine\.html["']/i.test(body)) return match;
+      changed = true;
+      return open + body + contact + close;
+    });
+  }
   return html;
 }
 
@@ -142,7 +149,8 @@ function homepageHasContact(file) {
     return /<nav\b[^>]*aria-label=["']Primary navigation["'][^>]*>[\s\S]*?contact-the-machine\.html/i.test(html)
       || /class=["'][^"']*accountability-primary-actions[^"']*["'][\s\S]*?contact-the-machine\.html/i.test(html);
   }
-  return /nav-primary[\s\S]*contact-the-machine\.html/i.test(html);
+  return /nav-primary[\s\S]*contact-the-machine\.html/i.test(html)
+    || /<nav\b[^>]*class=["'][^"']*\bnav\b[^"']*["'][^>]*>[\s\S]*?contact-the-machine\.html/i.test(html);
 }
 
 const sourceResult = patchTree(root, rootExcluded, root, 'source');

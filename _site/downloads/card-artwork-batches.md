@@ -1,6 +1,6 @@
 # Card Artwork Batches
 
-Updated: 2026-08-02T10:53:04.597Z
+Updated: 2026-08-02T12:36:41.396Z
 
 Total missing: 466
 

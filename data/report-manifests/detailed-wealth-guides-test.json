@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:36:10.257Z",
+  "generatedAt": "2026-08-02T11:45:15.916Z",
   "pageCount": 91,
   "output": "downloads/detailed-wealth-guides-test.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Detailed Wealth Guides Test",
-    "contentHash": "6be3072ae7075a0ccc03abe055187ed04df2bd781fa56147143f740dcd0fe0b6",
+    "contentHash": "205c56d8ef98203ae65486b9e4741e169f3073e4a26e44b898a03de32528bc15",
     "sourceIds": [
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
@@ -52,7 +52,6 @@
       "ASC-REVIEW-21E454816F050A34",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
-      "26b90533dbf7d2ed42f02de6",
       "us-doj",
       "gao-hq",
       "family-offices-cascade-investment",
@@ -135,20 +134,21 @@
       "trusts-prince-of-wales-charitable-fund",
       "trusts-duchy-related-trust-disclosures",
       "trusts-rockefeller-brothers-fund",
-      "trusts-rockefeller-family-fund"
+      "trusts-rockefeller-family-fund",
+      "trusts-j-paul-getty-trust"
     ],
     "metrics": {
       "evidenceCount": 129,
-      "primarySourceCount": 115,
+      "primarySourceCount": 116,
       "disputedClaimCount": 21,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 25,
-      "moneyRecordCount": 96
+      "moneyRecordCount": 97
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 115 A/B-grade public-record items are materially relevant to Detailed Wealth Guides Test.",
+        "conclusion": "The indexed record establishes that 116 A/B-grade public-record items are materially relevant to Detailed Wealth Guides Test.",
         "evidence": "IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); DOJ OIG documented FBI handling failures (data/exposure-evidence-ledger.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/exposure-evidence-ledger.json); IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Congressional hearings and records (data/atlas-layers.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

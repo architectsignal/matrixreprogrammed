@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T10:56:35.778Z",
-  "sourceDossierRoutes": 325,
-  "synchronizedCount": 323,
-  "materializedBuiltCount": 17,
+  "generatedAt": "2026-08-02T13:21:46.485Z",
+  "sourceDossierRoutes": 324,
+  "synchronizedCount": 322,
+  "materializedBuiltCount": 0,
   "directoryBackedCount": 4,
   "synchronized": [
     "built/amazon-store-books",
@@ -75,8 +75,6 @@
     "built/card-artwork-queue",
     "built/codex",
     "built/conversion-funnel",
-    "built/daily-brain-brief",
-    "built/daily-command-brief",
     "built/daily-watch",
     "built/death-file-aaron-swartz",
     "built/death-file-alberto-nisman",
@@ -228,6 +226,7 @@
     "built/institution-profile",
     "built/institution-tracker",
     "built/institutions/bill-melinda-gates-foundation",
+    "built/institutions/vanguard",
     "built/intelligence-dossiers",
     "built/intelligence-hub",
     "built/launch-room",
@@ -330,25 +329,7 @@
     "built/videos",
     "built/war-conflict-hub"
   ],
-  "materializedBuiltRoutes": [
-    "reports/entity-control-structure.html",
-    "reports/institution-european-commission.html",
-    "reports/institution-federal-reserve.html",
-    "reports/institution-international-monetary-fund.html",
-    "reports/institution-nato.html",
-    "reports/institution-united-nations.html",
-    "reports/institution-world-bank.html",
-    "reports/institution-world-economic-forum.html",
-    "reports/institution-world-health-organization.html",
-    "reports/subject-ai-surveillance-and-data-systems.html",
-    "reports/subject-banking-and-payment-rails.html",
-    "reports/subject-digital-id-and-access-systems.html",
-    "reports/subject-disclosure-gaps-and-missing-files.html",
-    "reports/subject-foundation-and-ngo-policy-influence.html",
-    "reports/subject-gold-reserve-and-custody-systems.html",
-    "reports/subject-health-data-and-emergency-systems.html",
-    "reports/subject-private-contractor-power.html"
-  ],
+  "materializedBuiltRoutes": [],
   "directoryBackedRoutes": [
     {
       "scope": "source",

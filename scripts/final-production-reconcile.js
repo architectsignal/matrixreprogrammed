@@ -245,7 +245,7 @@ requireMarker('timers.html', 'Classified claims, not confirmed events');
 requireMarker('ai-speculative-conclusions.html', 'ai-speculative-conclusion-integrity');
 requireMarker('data/global-risk-clocks.json', '"speculativeReaderClockCount": 49');
 requireMarker('data/clock-wall.json', '"speculativeClockCount": 49');
-requireMarker('search.html', 'SEARCH THE MACHINE');
+requireMarker('search.html', 'START WITH WHAT HAPPENED.');
 requireMarker('search.html', 'id="archive-search"');
 requireMarker('search.html', 'id="search-v3-filters"');
 requireMarker('search.js', 'SEARCH V3');

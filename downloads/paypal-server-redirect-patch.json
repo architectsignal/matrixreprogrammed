@@ -1,9 +1,10 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T10:59:47.152Z",
+  "generatedAt": "2026-08-02T13:18:43.416Z",
   "changed": [
     "src/worker-paypal-subscriptions.js",
     "src/worker-production.js",
+    "paypal-membership.js",
     "scripts/cloudflare-worker-routes-test.js",
     "scripts/site-function-harmony-test.js",
     "scripts/phase7-paypal-sandbox-rehearsal-test.mjs",

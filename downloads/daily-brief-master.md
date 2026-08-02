@@ -1,6 +1,6 @@
 # Deep Daily Control Brief
 
-Generated: 2026-08-02T10:49:22.191Z
+Generated: 2026-08-02T12:33:21.749Z
 
 Boundary: This brief gives conclusions with evidence routes and missing-proof boundaries. It must not present convergence or control as proven beyond the records.
 

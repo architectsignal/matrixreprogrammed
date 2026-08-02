@@ -60,7 +60,19 @@ if (exists('data/live-intel.json')) {
   if (!intel.freshnessTruth) fail('live intel freshnessTruth is required');
   if (!intel.status) fail('live intel collection status is required');
   if (Number(metrics.configuredFeedCount || 0) < 10) fail('live intel must combine discovery and official/public-record feeds');
-  if (Number(metrics.successfulFeedCount || 0) < 1) fail('live intel collection completed without one successful feed');
+  const configuredFeeds = Number(metrics.configuredFeedCount || 0);
+  const successfulFeeds = Number(metrics.successfulFeedCount || 0);
+  const failedFeeds = Number(metrics.failedFeedCount || 0);
+  if (successfulFeeds < 1) {
+    const explicitPreservedOutage = intel.status === 'degraded-preserved-current-window'
+      && items.length > 0
+      && failedFeeds === configuredFeeds
+      && Array.isArray(intel.feedErrors)
+      && intel.feedErrors.length === configuredFeeds
+      && /preserved/i.test(String(intel.freshnessTruth || ''))
+      && /without pretending.*newly published/i.test(String(intel.freshnessTruth || ''));
+    if (!explicitPreservedOutage) fail('zero-feed collection must fail closed or explicitly preserve a dated in-window source set with every outage recorded');
+  }
   if (Number(metrics.currentItemCount || 0) !== items.length) fail('live intel currentItemCount does not match items length');
   if (items.length === 0 && intel.status !== 'no-fresh-source-items') fail('zero current items must use the truthful no-fresh-source-items status');
   let previous = Infinity;

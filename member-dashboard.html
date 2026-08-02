@@ -55,12 +55,12 @@
         <h3>Submit a source</h3>
         <p class="warning"><strong>Automatic evidence boundary:</strong> a member submission cannot authenticate itself. Unless every verification requirement is independently satisfied by the trusted pipeline, it is stored and visibly labelled <strong>SPECULATION</strong>, earns no points and cannot support factual conclusions or alerts. It is not routed to human editorial review.</p>
         <form id="contribution-form" class="form-grid">
-          <label>Mission<select id="contribution-mission" name="missionId" required></select></label>
-          <label>Secure source URL<input name="sourceUrl" type="url" required maxlength="1500" placeholder="https://official.example/record"></label>
-          <label>Source title<input name="sourceTitle" maxlength="300"></label>
-          <label>Publisher<input name="sourcePublisher" maxlength="300"></label>
-          <label>Publication date<input name="publicationDate" type="date"></label>
-          <label>What this source contributes<textarea name="summary" required maxlength="3000" rows="5"></textarea></label>
+          <label>Mission<select id="contribution-mission" name="missionId" required aria-label="MissionId"></select></label>
+          <label>Secure source URL<input name="sourceUrl" type="url" required maxlength="1500" reader field="https://official.example/record" aria-label="SourceUrl"></label>
+          <label>Source title<input name="sourceTitle" maxlength="300" aria-label="SourceTitle"></label>
+          <label>Publisher<input name="sourcePublisher" maxlength="300" aria-label="SourcePublisher"></label>
+          <label>Publication date<input name="publicationDate" type="date" aria-label="PublicationDate"></label>
+          <label>What this source contributes<textarea name="summary" required maxlength="3000" rows="5" aria-label="Summary"></textarea></label>
           <button class="btn" type="submit">Submit for automatic classification</button>
         </form>
         <p id="contribution-result" class="status" aria-live="polite"></p>
@@ -90,10 +90,10 @@
         <h2>Followed topics and entities</h2>
         <p class="muted">Registered members can follow public topics. Named entity and institution following requires Intelligence membership.</p>
         <form id="follow-form" class="form-grid">
-          <label>Identifier<input name="id" required maxlength="180" reader field="topic-digital-identity"></label>
-          <label>Type<select name="type"><option value="topic">Topic</option><option value="entity">Entity</option><option value="institution">Institution</option></select></label>
-          <label>Label<input name="label" required maxlength="200" reader field="Digital identity"></label>
-          <label>Local route<input name="route" maxlength="500" reader field="/policy-watch.html"></label>
+          <label>Identifier<input name="id" required maxlength="180" reader field="topic-digital-identity" aria-label="Id"></label>
+          <label>Type<select name="type" aria-label="Type"><option value="topic">Topic</option><option value="entity">Entity</option><option value="institution">Institution</option></select></label>
+          <label>Label<input name="label" required maxlength="200" reader field="Digital identity" aria-label="Label"></label>
+          <label>Local route<input name="route" maxlength="500" reader field="/policy-watch.html" aria-label="Route"></label>
           <button class="btn" type="submit">Follow</button>
         </form>
         <div id="follow-list" class="member-list"></div>
@@ -103,11 +103,11 @@
         <h2>Watchlists</h2>
         <p class="muted">Intelligence membership unlocks standard watches. Advanced criteria require Research Pro.</p>
         <form id="watch-form" class="form-grid">
-          <label>Target ID<input name="id" required maxlength="180" reader field="policy-example"></label>
-          <label>Type<select name="type"><option value="entity">Entity</option><option value="topic">Topic</option><option value="institution">Institution</option><option value="jurisdiction">Jurisdiction</option><option value="policy">Policy</option><option value="record">Record</option><option value="source_change">Source change</option></select></label>
-          <label>Label<input name="label" required maxlength="200" reader field="Policy watch"></label>
-          <label>Local route<input name="route" maxlength="500" reader field="/policy-watch.html"></label>
-          <label>Criteria JSON<textarea name="criteria" rows="3" reader field='{"threshold":3}'></textarea></label>
+          <label>Target ID<input name="id" required maxlength="180" reader field="policy-example" aria-label="Id"></label>
+          <label>Type<select name="type" aria-label="Type"><option value="entity">Entity</option><option value="topic">Topic</option><option value="institution">Institution</option><option value="jurisdiction">Jurisdiction</option><option value="policy">Policy</option><option value="record">Record</option><option value="source_change">Source change</option></select></label>
+          <label>Label<input name="label" required maxlength="200" reader field="Policy watch" aria-label="Label"></label>
+          <label>Local route<input name="route" maxlength="500" reader field="/policy-watch.html" aria-label="Route"></label>
+          <label>Criteria JSON<textarea name="criteria" rows="3" reader field='{"threshold":3}' aria-label="Criteria"></textarea></label>
           <button class="btn" type="submit">Create watch</button>
         </form>
         <div id="watch-list" class="member-list"></div>
@@ -126,5 +126,5 @@
   <!-- Guarded-build compatibility contracts only; active account and billing actions remain server-side and fail closed: /api/member/me /api/auth/logout /api/paypal/subscription/cancel paidAccessEnabled -->
   <script src="member-dashboard-app.js"></script>
 <script src="analytics.js"></script>  <script src="matrix.js"></script>
-<script src="investigation-pulse.js"></script><script type="application/json" id="public-copy-internal-vault" data-internal-only="true">{"purpose":"Internal routes, commercial strategy and operational labels retained for audits but hidden from normal public navigation.","hiddenRoutes":["review-dashboard.html","deploy-status.html","deploy-health.html","card-system-health.html","site-brain-router.html","card-artwork-automation.html","card-artwork-queue.html","conclusion-engine.html","information-gathering-system.html","source-intake.html","update-monitor.html","distribution-center.html","launch-room.html","offer-center.html","sales-ladder.html","schema-index.html","machine-index.html","campaign-calendar.html","card-art-studio.html"],"labels":["Reader Resources","Site Brain Router","Money Engine","Reader Money Path","Matrix Reprogrammed Status","Mission + Money Engine","Capture System","Monetisation Dashboard"]}</script></body>
+<script src="investigation-pulse.js"></script><script type="application/json" id="public-copy-internal-vault" data-internal-only="true">{"purpose":"Internal routes, commercial strategy and operational labels retained for audits but hidden from normal public navigation.","hiddenRoutes":["review-dashboard.html","deploy-status.html","deploy-health.html","card-system-health.html","site-brain-router.html","card-artwork-automation.html","card-artwork-queue.html","conclusion-engine.html","information-gathering-system.html","source-intake.html","update-monitor.html","distribution-center.html","launch-room.html","offer-center.html","sales-ladder.html","schema-index.html","machine-index.html","campaign-calendar.html","card-art-studio.html"],"labels":["Reader Resources","Research Navigation","Money Engine","Reader Money Path","Matrix Reprogrammed Status","Membership and Publishing System","Capture System","Publishing Dashboard"]}</script></body>
 </html>

@@ -1,11 +1,16 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T10:59:23.581Z",
+  "generatedAt": "2026-08-02T12:54:09.161Z",
   "roots": [
     ".",
     "_site"
   ],
-  "changed": [],
+  "changed": [
+    "index.html",
+    "live-intel.html",
+    "_site/index.html",
+    "_site/live-intel.html"
+  ],
   "targets": [
     "index.html",
     "live-intel.html",

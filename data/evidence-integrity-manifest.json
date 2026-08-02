@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": 1,
-  "generatedAt": "2026-08-02T11:00:43.094Z",
+  "generatedAt": "2026-08-02T12:55:26.906Z",
   "algorithm": "SHA-256",
   "signing": {
     "system": "Sigstore Cosign",
@@ -16,7 +16,7 @@
     {
       "path": "data/evidence-archive-manifest.json",
       "bytes": 1157,
-      "sha256": "b899559826703cf5c012ca9ac55a140484b591e34d437478697af709f09bea85"
+      "sha256": "b4c63a76cac4b56868a55bfaabe7800a830d5fd5b15c564286cf8ad4648c2593"
     },
     {
       "path": "data/source-change-public.json",
@@ -25,18 +25,18 @@
     },
     {
       "path": "data/evidence-reader-manifest.json",
-      "bytes": 482775,
-      "sha256": "f233997bafdd3e51c531cc0a79e4839b3653ca98ab78e8c980f7bcc9ba36b05d"
+      "bytes": 492678,
+      "sha256": "1374fd9770a756bf4945738849b0f5bb0f6329137a6d6858bcea9f29af93d445"
     },
     {
       "path": "data/evidence-timeline.json",
       "bytes": 8105618,
-      "sha256": "73124d8e7bad1217b5f160d21b3339cf73194c00965ae717fa0c74c46468ae7f"
+      "sha256": "7b678b83a75f688dec2b67077d45eaa5e898c6aa7e30abe9e6d80ad64fb9f0f1"
     },
     {
       "path": "data/relationship-registry.json",
       "bytes": 17649294,
-      "sha256": "5b2ed7a194c4ab24fe0383d2299d9d1a6adc24895994735f13853705ce334046"
+      "sha256": "ee03f898ad94c9bc7c8384b4a7bed7f6c9d9ddb693d02518afd4058bf197115e"
     }
   ]
 }

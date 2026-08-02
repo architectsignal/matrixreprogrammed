@@ -1,0 +1,188 @@
+{
+  "ok": true,
+  "platform": "Cloudflare Worker + D1 + Cloudflare Assets",
+  "generatedAt": "2026-08-02T12:50:54.670Z",
+  "checks": [
+    {
+      "name": "Cloudflare production worker remains authoritative behind the autonomy wrapper",
+      "ok": true,
+      "detail": "wrangler.toml must deploy src/worker-production-autonomy.js, which must delegate every fetch unchanged to src/worker-production.js and add only bounded scheduled AI maintenance"
+    },
+    {
+      "name": "Cloudflare Assets are authoritative",
+      "ok": true,
+      "detail": "Cloudflare Assets must serve _site"
+    },
+    {
+      "name": "Cloudflare D1 membership database is bound",
+      "ok": true,
+      "detail": "MEMBERS_DB must remain the membership authority"
+    },
+    {
+      "name": "Worker runs before protected assets",
+      "ok": true,
+      "detail": "Authenticated API and protected download patterns must reach the Worker before static assets, while ordinary public assets may remain direct"
+    },
+    {
+      "name": "Production router dispatches email lifecycle",
+      "ok": true,
+      "detail": "Newsletter, welcome and campaign routes must use worker-email-lifecycle.js"
+    },
+    {
+      "name": "Production router dispatches PayPal lifecycle",
+      "ok": true,
+      "detail": "PayPal routes must use worker-paypal-subscriptions.js"
+    },
+    {
+      "name": "Production router dispatches member experience",
+      "ok": true,
+      "detail": "Dashboard routes must use worker-member-experience.js"
+    },
+    {
+      "name": "Production router protects member assets",
+      "ok": true,
+      "detail": "Protected downloads must be checked before static delivery"
+    },
+    {
+      "name": "Cloudflare Worker canonicalizes www to apex",
+      "ok": true,
+      "detail": "Every member and API request must reach the same host-only cookie origin with a method-preserving redirect"
+    },
+    {
+      "name": "Login writes current secure session cookie",
+      "ok": true,
+      "detail": "Passwordless login must issue the current secure cookie"
+    },
+    {
+      "name": "Logout clears current and legacy cookies",
+      "ok": true,
+      "detail": "Logout must clear both cookie generations"
+    },
+    {
+      "name": "Member dashboard accepts current and legacy cookies",
+      "ok": true,
+      "detail": "Member APIs must accept current sessions and a temporary legacy fallback"
+    },
+    {
+      "name": "PayPal accepts current and legacy cookies",
+      "ok": true,
+      "detail": "A logged-in member must remain authenticated when loading or creating a subscription"
+    },
+    {
+      "name": "Protected assets accept current and legacy cookies",
+      "ok": true,
+      "detail": "Logged-in members must not be denied protected downloads because of cookie-version drift"
+    },
+    {
+      "name": "PayPal subscription view exposes compatibility fields",
+      "ok": true,
+      "detail": "The duplicate guard needs both provider status and modern state timestamps"
+    },
+    {
+      "name": "Duplicate active PayPal subscriptions are blocked",
+      "ok": true,
+      "detail": "An active entitlement must block allocation of another checkout intent"
+    },
+    {
+      "name": "Legacy active PayPal subscriptions are blocked",
+      "ok": true,
+      "detail": "Older active subscriptions without a PayPal state row must still prevent duplicate billing"
+    },
+    {
+      "name": "PayPal config exposes compatible billing state",
+      "ok": true,
+      "detail": "The membership page must recognise modern and legacy paid access"
+    },
+    {
+      "name": "Active membership UI routes to billing",
+      "ok": true,
+      "detail": "An active member should see billing management instead of another subscription button"
+    },
+    {
+      "name": "Billing dashboard requests include credentials",
+      "ok": true,
+      "detail": "Billing status and cancellation must carry the active Cloudflare session"
+    },
+    {
+      "name": "Membership signup sends canonical consent",
+      "ok": true,
+      "detail": "The membership form must send the same explicit consent contract the email worker validates"
+    },
+    {
+      "name": "Email lifecycle accepts compatible consent alias",
+      "ok": true,
+      "detail": "Existing clients using marketingConsent must remain compatible"
+    },
+    {
+      "name": "Newsletter consent remains explicit",
+      "ok": true,
+      "detail": "No marketing subscription may be activated without a required checkbox and server-side explicit-consent validation"
+    },
+    {
+      "name": "Membership requests include credentials",
+      "ok": true,
+      "detail": "Same-origin member cookies must be sent on PayPal and signup requests"
+    },
+    {
+      "name": "Dashboard requests include credentials",
+      "ok": true,
+      "detail": "Dashboard reads, writes and logout must retain the active session"
+    },
+    {
+      "name": "Free dashboard avoids paid watchlist request",
+      "ok": true,
+      "detail": "A registered member must not be redirected to access denied while the dashboard loads"
+    },
+    {
+      "name": "Dashboard exposes tier-aware membership management",
+      "ok": true,
+      "detail": "Free members need an upgrade route and paid members need a billing route"
+    },
+    {
+      "name": "Verified subscriber has recovery routes",
+      "ok": true,
+      "detail": "Verification success must offer both preference management and secure member access"
+    },
+    {
+      "name": "Login uses canonical Cloudflare origin",
+      "ok": true,
+      "detail": "The login page must stay on the canonical Worker origin"
+    },
+    {
+      "name": "Welcome email uses D1 outbox",
+      "ok": true,
+      "detail": "Welcome delivery must be recorded and processed through the authoritative outbox"
+    },
+    {
+      "name": "First daily brief uses detailed intelligence builder",
+      "ok": true,
+      "detail": "Selected daily subscribers should get the detailed brief with a safe fallback, and the legacy executable call must be absent"
+    },
+    {
+      "name": "Daily and weekly Cloudflare cron paths exist",
+      "ok": true,
+      "detail": "Cloudflare scheduled events must drive both daily and weekly automation, whether the handler reads event.cron directly or normalises it first"
+    },
+    {
+      "name": "Brevo lifecycle is fail-closed",
+      "ok": true,
+      "detail": "Provider configuration and sender-domain readiness must be verified before delivery success"
+    },
+    {
+      "name": "Email retries and suppression are persistent",
+      "ok": true,
+      "detail": "Retries, unsubscribes, bounces and webhook events must remain in D1"
+    },
+    {
+      "name": "Cloudflare output excludes Netlify runtime files",
+      "ok": true,
+      "detail": "Legacy Netlify compatibility files must not enter the Cloudflare asset bundle"
+    },
+    {
+      "name": "Cloudflare build applies membership repair before copying assets",
+      "ok": true,
+      "detail": "The final member contract must be repaired before _site is rebuilt"
+    }
+  ],
+  "failed": []
+}

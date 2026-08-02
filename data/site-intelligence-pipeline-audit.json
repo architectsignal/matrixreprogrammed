@@ -1,7 +1,7 @@
 {
   "ok": true,
   "overall": "fully-working",
-  "updated": "2026-08-02T11:03:47.667Z",
+  "updated": "2026-08-02T12:47:46.623Z",
   "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
   "summary": {
     "green": 43,
@@ -86,7 +86,7 @@
       "id": "fresh-current-news",
       "stage": "Collect",
       "status": "green",
-      "finding": "45 news item(s) are inside the active seven-day window.",
+      "finding": "42 news item(s) are inside the active seven-day window.",
       "fix": "Keep the homepage empty rather than showing stale news when this count reaches zero.",
       "evidence": [
         "downloads/seven-day-intel.json"
@@ -443,7 +443,7 @@
       "id": "daily-automation",
       "stage": "Automate",
       "status": "green",
-      "finding": "192 workflow file(s) scanned for daily scheduling.",
+      "finding": "193 workflow file(s) scanned for daily scheduling.",
       "fix": "Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.",
       "evidence": [
         ".github/workflows/accountability-review-inbox.yml",
@@ -468,6 +468,7 @@
         ".github/workflows/card-artwork-automation.yml",
         ".github/workflows/cleanup-forum-test-posts.yml",
         ".github/workflows/cloudflare-domain-repair.yml",
+        ".github/workflows/compute-adapter-safety.yml",
         ".github/workflows/compute-capacity-safety.yml",
         ".github/workflows/controlled-production-receipt.yml",
         ".github/workflows/core-public-surfaces-validation.yml",
@@ -669,6 +670,7 @@
         ".github/workflows/card-artwork-automation.yml",
         ".github/workflows/cleanup-forum-test-posts.yml",
         ".github/workflows/cloudflare-domain-repair.yml",
+        ".github/workflows/compute-adapter-safety.yml",
         ".github/workflows/compute-capacity-safety.yml",
         ".github/workflows/controlled-production-receipt.yml",
         ".github/workflows/core-public-surfaces-validation.yml",

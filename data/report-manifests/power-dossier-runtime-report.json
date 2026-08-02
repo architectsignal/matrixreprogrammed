@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:40:23.450Z",
+  "generatedAt": "2026-08-02T12:00:47.058Z",
   "pageCount": 128,
   "output": "downloads/power-dossier-runtime-report.pdf",
   "report": {
-    "version": 11,
+    "version": 13,
     "title": "Power Dossier Runtime Report",
-    "contentHash": "203c43b2876239269dbbbedbc7ee6fb4d9e397473f3d7c1bd15517045cad662c",
+    "contentHash": "7715b1869797bf4c16ffc0e20988a46ca759c0ad9187b853be2feaad582dd32f",
     "sourceIds": [
       "008875ef7bf45eb14dccb254",
       "9f3052b5d8cec138a2a37e8c",
@@ -90,14 +90,10 @@
       "ASC-REVIEW-CEAFD28B55D0DA69",
       "ASC-REVIEW-25B371012CBA1315",
       "ASC-REVIEW-5A774507A02DF22B",
-      "people-of-interest",
       "16cde9bd4c87e916ff1e4fb7",
       "d23398b8ca4c7124399c9504",
       "bbf59ae4094608bcd2c37305",
       "2529322b7b5345fd6f575174",
-      "26b90533dbf7d2ed42f02de6",
-      "bb5dfe90c29929d84ce60e6d",
-      "f17e0de0ef7b66aa842ac3a1",
       "ASC-REVIEW-B9D6F588FF54AD31",
       "ASC-REVIEW-03A8457B74049A13",
       "ASC-REVIEW-AD4A5A51C1AD5BFD",
@@ -146,16 +142,20 @@
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-75C693C304757153"
+      "ASC-REVIEW-75C693C304757153",
+      "ASC-REVIEW-26C98CAD8AA9CE0A",
+      "ASC-REVIEW-D921C72A4BA2FDF3",
+      "ASC-REVIEW-AFF7699289F993E4",
+      "ASC-REVIEW-06CC87AEAF289EB7"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 122,
+      "disputedClaimCount": 126,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 90,
-      "moneyRecordCount": 74
+      "relationshipCount": 94,
+      "moneyRecordCount": 75
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 94 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Elon Musk → Spacex: ecosystem hint; Elon Musk → Starlink: ecosystem hint; Elon Musk → Tesla: ecosystem hint; Elon Musk → X: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 94 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T10:40:23.450Z"
+    "intelligenceFreshnessDate": "2026-08-02T12:00:47.058Z"
   }
 }

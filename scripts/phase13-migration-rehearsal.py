@@ -4,6 +4,8 @@ import sqlite3
 ROOT = Path(__file__).resolve().parents[1]
 MIGRATIONS = [
     "migrations/0001_membership_foundation.sql",
+    "migrations/phase5_member_experience.sql",
+    "migrations/phase13_member_entitlement_datetime_fix.sql",
     "migrations/phase9_ai_resource_orchestration.sql",
     "migrations/phase10_ai_autonomy.sql",
     "migrations/phase11_local_job_queue.sql",
@@ -41,6 +43,12 @@ if mission_count != 3:
 capability_count = database.execute("SELECT COUNT(*) FROM matrix_capabilities").fetchone()[0]
 if capability_count != 6:
     raise SystemExit(f"Expected six truthful capability seeds, found {capability_count}")
+
+entitlement_view = database.execute(
+    "SELECT sql FROM sqlite_master WHERE type='view' AND name='member_effective_entitlements'"
+).fetchone()[0]
+if "datetime(g.starts_at)" not in entitlement_view or "datetime(g.expires_at)" not in entitlement_view:
+    raise SystemExit("Entitlement view does not normalize ISO-8601 access-grant timestamps")
 
 contribution_schema = database.execute(
     "SELECT sql FROM sqlite_master WHERE type='table' AND name='matrix_contributions'"

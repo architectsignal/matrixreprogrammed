@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T10:54:03.993Z",
+  "generatedAt": "2026-08-02T12:40:02.552Z",
   "purpose": "Prove repeated passwordless login requests produce complete, visibly distinct subject, HTML and text payloads; repeated builds remain idempotent; malformed queued messages never reach Brevo.",
   "checks": {
     "repeat request 1 accepted by provider": true,
@@ -51,13 +51,13 @@
     }
   ],
   "subjects": [
-    "Your Matrix Reprogrammed login link · 4C4B75D0",
-    "Your Matrix Reprogrammed login link · 85029003",
-    "Your Matrix Reprogrammed login link · 124F4F62"
+    "Your Matrix Reprogrammed login link · 37BFA10A",
+    "Your Matrix Reprogrammed login link · A417611D",
+    "Your Matrix Reprogrammed login link · DE85B2A4"
   ],
   "references": [
-    "4C4B75D0",
-    "85029003",
-    "124F4F62"
+    "37BFA10A",
+    "A417611D",
+    "DE85B2A4"
   ]
 }

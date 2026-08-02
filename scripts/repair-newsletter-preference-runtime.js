@@ -93,7 +93,7 @@ const client = `(function(){
     if(submitButton)submitButton.disabled=true;
     message.textContent='Saving your preferences and preparing verification...';
     try{
-      const response=await fetch('/newsletter-signup',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)});
+      const response=await fetch('/newsletter-signup',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)});
       let data={};try{data=await response.json();}catch{}
       if(!response.ok||!data.ok)throw new Error(data.error||data.message||('Signup failed ('+response.status+')'));
       const verificationRequired=data.verificationRequired!==false;

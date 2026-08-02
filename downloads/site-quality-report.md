@@ -2,8 +2,8 @@
 
 Reader-quality audit for thin pages, public scaffold copy, missing routes, risky figures without source panels, raw JSON prominence, and weak navigation.
 
-Scanned pages: 753
-Weak pages: 14
+Scanned pages: 754
+Weak pages: 13
 
 ## Weakest Pages
 - 45/100 — newsletter.html: Thin copy: 67 visible words; Missing evidence route; Missing book/store route; Missing Rumble/video route
@@ -11,7 +11,6 @@ Weak pages: 14
 - 68/100 — claim-classifier.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — dark-speculation-lab.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — download-center.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /source pathway/i; Visible scaffold/internal copy: /Phase \d+/i; Visible scaffold/internal copy: /builder/i
-- 68/100 — institution-profile.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — public-consequence-contracts.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — source-document-vault.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — subject-dog-architect.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i; Missing Rumble/video route; Intel/evidence page missing Live Intel route
@@ -66,6 +65,7 @@ Weak pages: 14
 - 84/100 — path-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-dog-architect.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-evidence-trust.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — path-intelligence-dossiers.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

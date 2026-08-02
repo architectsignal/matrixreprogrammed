@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:41:08.901Z",
-  "pageCount": 84,
+  "generatedAt": "2026-08-02T12:26:12.176Z",
+  "pageCount": 83,
   "output": "downloads/red-team-mirror-pressure-test.pdf",
   "report": {
-    "version": 4,
+    "version": 7,
     "title": "Red Team Mirror Pressure Test",
-    "contentHash": "66dd0214fac7dc63846c333a9716a6b8c6d2f8caf10a48ff2f5a35c515c23ebd",
+    "contentHash": "bdede6ec3801c81e151ce49c7bcb3a24197df9060cff480b321f49ab12cebb36",
     "sourceIds": [
       "f669b33c49b63e787cde3008",
       "janner-iicsa-2022",
@@ -39,9 +39,6 @@
       "savile-broadmoor-2014",
       "bf041695a279c3dc5412cdf4",
       "495efbb6e1ee304347ae3bdf",
-      "c495decb9e41ce889da20ed1",
-      "c8acdb17acd478f0ba121c11",
-      "26b90533dbf7d2ed42f02de6",
       "deutsche-bank-epstein-dfs-2020",
       "us-doj",
       "gao-hq",
@@ -137,20 +134,23 @@
       "trusts-community-foundation-trust-networks",
       "private-equity-blackstone",
       "private-equity-kkr",
-      "private-equity-apollo-global-management"
+      "private-equity-apollo-global-management",
+      "private-equity-carlyle-group",
+      "private-equity-tpg",
+      "private-equity-cvc-capital-partners"
     ],
     "metrics": {
       "evidenceCount": 131,
-      "primarySourceCount": 129,
+      "primarySourceCount": 130,
       "disputedClaimCount": 8,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 15,
-      "moneyRecordCount": 97
+      "moneyRecordCount": 100
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 129 A/B-grade public-record items are materially relevant to Red Team Mirror Pressure Test.",
+        "conclusion": "The indexed record establishes that 130 A/B-grade public-record items are materially relevant to Red Team Mirror Pressure Test.",
         "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

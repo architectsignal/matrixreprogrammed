@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-08-02T10:38:05.329Z",
-  "pageCount": 122,
+  "generatedAt": "2026-08-02T12:22:59.059Z",
+  "pageCount": 119,
   "output": "downloads/geographic-power-atlas-runtime-test.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Geographic Power Atlas Runtime Test",
-    "contentHash": "44affca489ac5af88694063a6cc27f2b0f1632f1225c12b449060d97c8383e28",
+    "contentHash": "abd3bc5b1ba7042eb2a0178f61bb0cc92ac3f264763b914a2147fe823c2c19bf",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
+      "73799cb9af4829047998b026",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "32fdb7636e52846298c14671",
@@ -27,8 +28,8 @@
       "7fc07964a27914afe516c45b",
       "511ed227bb4be58b582ebb8d",
       "ecd4a1111010f13b2d74bf8c",
-      "73799cb9af4829047998b026",
       "source-change-81d1ec66d255ebaf3f7d61de",
+      "e083e748ec6311742c2416e5",
       "source-change-8299a278d70b1f879d6d522f",
       "85520e019b70f975e8a39066",
       "nassar-fbi-oig-2021",
@@ -56,7 +57,7 @@
       "ea3baad623d1ff141246d639",
       "74fb2863cc9a8120f3c68b67",
       "7ed151a515391f967d229642",
-      "3a425f0d5d683952bc0ad7ac",
+      "9f77464e401ac59ad1adb812",
       "0c5f51804baf8e9e2c1fdd0b",
       "eb79eba926106673fc0305cc",
       "ef50253c90923f8fe305c4cf",
@@ -69,8 +70,8 @@
       "def94e0a086f2eac4c5ad91a",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
+      "f73c11ef3163b1800592aabe",
       "ec968f2ec6ba82128b4cd91b",
-      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -145,22 +146,21 @@
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
-      "ASC-REVIEW-D921C72A4BA2FDF3",
-      "ASC-REVIEW-AFF7699289F993E4"
+      "ASC-REVIEW-D921C72A4BA2FDF3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 45,
-      "disputedClaimCount": 85,
+      "primarySourceCount": 46,
+      "disputedClaimCount": 84,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 73,
-      "moneyRecordCount": 59
+      "relationshipCount": 72,
+      "moneyRecordCount": 58
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 45 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
+        "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
+        "inference": "The indexed set contains 72 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,10 +194,10 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 72 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "INDUSTRIAL BANK — District of Columbia Courts",
           "MINDCUBED LLC — District of Columbia Courts",
+          "INDUSTRIAL BANK — District of Columbia Courts",
           "MINDCUBED LLC — District of Columbia Courts",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",

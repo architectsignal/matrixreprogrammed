@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:43:12.083Z",
-  "pageCount": 109,
+  "generatedAt": "2026-08-02T12:28:19.656Z",
+  "pageCount": 108,
   "output": "downloads/subject-crime-state-overlap.pdf",
   "report": {
-    "version": 11,
+    "version": 13,
     "title": "Crime-State Overlap Brief",
-    "contentHash": "9d9a10e5a8f6ca503420b69e578aea200a09fa598cee550e15c1fe9bda7855b7",
+    "contentHash": "04b1acf3627c5b1757ce71d65bf011d3c9330a11ab58ce38740a22a5eca5196f",
     "sourceIds": [
       "aa45c75a112060231ce901ba",
       "a0a974f7d560e8b12930c956",
@@ -77,6 +77,7 @@
       "4961972398d896435d33f3f7",
       "1e4f15d09e1414670233d7f7",
       "cab66e2bb53cf082d241d7e1",
+      "missing-records-report",
       "594100b62a47db521fe2a128",
       "5027c7710261fa36d86ced5b",
       "783a9e14546bc2c2cc12cd20",
@@ -85,7 +86,7 @@
       "9b5810e2943ffdc912a78854",
       "60ffee3d081bb309f1d3fd65",
       "e72d22f4f28eb53e3173d0a6",
-      "12918474e4d21dab306f10dd",
+      "28829849343a98c6be7c44b8",
       "481c4eb8b2fd03a36ca7037c",
       "44505b4afb60938c8117ad31",
       "1c352ab364fbfca06ab12a57",
@@ -137,28 +138,27 @@
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
-      "pdf-subject-crime-state-overlap-b3bbcdd6fbce",
+      "pdf-subject-crime-state-overlap-e2c5189758b2",
       "e2ac57ffd11f45bcdfb24c2e",
       "epstein-federal-indictment-2019",
       "fincen",
       "cdffd8cd0165511bb5f825ef",
       "b2892adcc3f96c248535748e",
       "22961124092ffbfa9297f5d0",
-      "35733d144352d0255d4b0f95",
-      "0c5f51804baf8e9e2c1fdd0b"
+      "35733d144352d0255d4b0f95"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 25,
+      "primarySourceCount": 24,
       "disputedClaimCount": 0,
-      "newEntityCount": 26,
+      "newEntityCount": 19,
       "updatedAssessmentCount": 1,
       "relationshipCount": 39,
       "moneyRecordCount": 34
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Crime-State Overlap Brief.",
+        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Crime-State Overlap Brief.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); U.S. Department of Justice (data/evidence-vault.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

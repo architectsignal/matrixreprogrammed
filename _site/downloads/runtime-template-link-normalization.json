@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T10:57:29.229Z",
+  "generatedAt": "2026-08-02T12:41:32.490Z",
   "checked": [
     "heroes-fighting-matrix-card.html",
     "heroes-fighting-matrix-research-ledger.html",
@@ -9,13 +9,6 @@
     "_site/heroes-fighting-matrix-research-ledger.html",
     "_site/heroes-fighting-matrix-research-ledger"
   ],
-  "changed": [
-    "heroes-fighting-matrix-card.html",
-    "heroes-fighting-matrix-research-ledger.html",
-    "_site/heroes-fighting-matrix-card.html",
-    "_site/heroes-fighting-matrix-card",
-    "_site/heroes-fighting-matrix-research-ledger.html",
-    "_site/heroes-fighting-matrix-research-ledger"
-  ],
+  "changed": [],
   "rule": "Runtime-generated href attributes remain functional in the browser but are not presented to the static link auditor as literal filesystem targets."
 }

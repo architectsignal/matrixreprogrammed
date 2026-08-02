@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:40:59.482Z",
-  "pageCount": 139,
+  "generatedAt": "2026-08-02T12:26:01.003Z",
+  "pageCount": 140,
   "output": "downloads/public-utility-dedupe-output.pdf",
   "report": {
-    "version": 10,
+    "version": 13,
     "title": "Public Utility Dedupe Output",
-    "contentHash": "8c4da583d51e8c6a10f828b190f6cd3ade9fa12588dc5d0cb4421c96bd604a36",
+    "contentHash": "95f01204160d9c1487c82047d1a9fb0012334d9a4125b06e615ece61298d5cda",
     "sourceIds": [
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
@@ -140,22 +140,22 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
-      "26b90533dbf7d2ed42f02de6",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "source-change-62862e6ca90495adc0788a2d",
       "source-change-a53bf480df4e4883383a08e0",
       "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a"
+      "source-change-c452df757991611cb06ec88a",
+      "ASC-REVIEW-5D13FDD470EDF012"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 7,
-      "disputedClaimCount": 132,
+      "disputedClaimCount": 133,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 84,
-      "moneyRecordCount": 59
+      "relationshipCount": 85,
+      "moneyRecordCount": 60
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 84 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 85 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: Federal Register — Latest Documents; content changed: UK Serious Fraud Office — News And Communications; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 84 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 85 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

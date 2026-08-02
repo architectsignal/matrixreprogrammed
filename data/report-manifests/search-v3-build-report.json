@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:41:25.343Z",
-  "pageCount": 92,
+  "generatedAt": "2026-08-02T12:26:35.176Z",
+  "pageCount": 91,
   "output": "downloads/search-v3-build-report.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Search V3 Build Report",
-    "contentHash": "355c00f55b9443c05ef419bcb71512c049265b1ba98c7281287c4c04d1abb84f",
+    "contentHash": "4da85ac43191ddd321e0f3c89be2542f2b34e6bf3b3a97a80404411bbb8f0d11",
     "sourceIds": [
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
@@ -37,6 +37,11 @@
       "f44c3c7309a5f0779a57e655",
       "275d6c3caca158f7a3e15780",
       "1769af26a7bda813406cd8f5",
+      "companies-aapl",
+      "technology-control-aapl",
+      "6d665d935673091233751767",
+      "ad23fb22757e50c30b3d487c",
+      "1c352ab364fbfca06ab12a57",
       "360e80c162081c85d2c680ef",
       "a71a8be091652489b843ecf6",
       "06baa45bea3e2e15eb80eff9",
@@ -83,8 +88,6 @@
       "4961972398d896435d33f3f7",
       "9e8310c49b990aa62d2b0921",
       "deutsche-bank-epstein-dfs-2020",
-      "EP-AI-004",
-      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -141,10 +144,7 @@
       "foundations-king-baudouin-foundation",
       "foundations-fondation-de-france",
       "foundations-azim-premji-foundation",
-      "foundations-tata-trusts",
-      "foundations-templeton-world-charity-foundation",
-      "foundations-john-templeton-foundation",
-      "foundations-walton-family-foundation"
+      "foundations-tata-trusts"
     ],
     "metrics": {
       "evidenceCount": 138,
@@ -152,8 +152,8 @@
       "disputedClaimCount": 3,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 12,
-      "moneyRecordCount": 69
+      "relationshipCount": 11,
+      "moneyRecordCount": 68
     },
     "evidenceBasedConclusions": [
       {
@@ -177,7 +177,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 11 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Conviction for indecent images and misconduct in public office; Follow The Money Watch; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -192,7 +192,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 11 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",

@@ -1,0 +1,26 @@
+{
+  "accessGrants": 2,
+  "boundary": "The test uses isolated in-memory member data, mocked Brevo delivery and mocked protected storage. It does not modify real members, sessions, subscriptions, grants or files.",
+  "deniedDownloadEvents": 2,
+  "downloadEvents": 4,
+  "follows": 2,
+  "generatedAt": "2026-07-13T12:00:00.000Z",
+  "membersTested": 5,
+  "mode": "isolated-integration-test",
+  "ok": true,
+  "passwordlessProviderCalls": 1,
+  "paymentActivation": false,
+  "productionMigrationExecution": false,
+  "requiredStages": 11,
+  "savedItems": 1,
+  "stagesPassed": 11,
+  "tiersTested": [
+    "anonymous",
+    "registered",
+    "supporter_3",
+    "intelligence_6",
+    "research_pro_9",
+    "admin"
+  ],
+  "watchItems": 2
+}

@@ -1,11 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T11:00:06.922Z",
+  "generatedAt": "2026-08-02T12:54:48.862Z",
   "platform": "Cloudflare Worker + D1 + Cloudflare Assets",
   "workerEntryPolicy": "The verified autonomy wrapper delegates every fetch unchanged to the strict production Worker and adds only the bounded AI scheduled lifecycle.",
-  "changed": [
-    "_site/membership"
-  ],
+  "changed": [],
   "pages": [
     "membership.html",
     "member-login.html",

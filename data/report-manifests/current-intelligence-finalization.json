@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-02T10:35:21.213Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-02T12:20:23.180Z",
+  "pageCount": 133,
   "output": "downloads/current-intelligence-finalization.pdf",
   "report": {
-    "version": 11,
+    "version": 13,
     "title": "Current Intelligence Finalization",
-    "contentHash": "23bc3486e59f2d7e01e55471f2a1c64ff217a63b877dbcc84d8c9cb7f9d88c3b",
+    "contentHash": "e5aa560566109a89cb8dceea52f143c6453898f243bc297c3338986745bf8e55",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
-      "3a425f0d5d683952bc0ad7ac",
       "EP-AI-004",
+      "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -24,6 +24,7 @@
       "26b90533dbf7d2ed42f02de6",
       "EP-AI-002",
       "e72d22f4f28eb53e3173d0a6",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -34,11 +35,10 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "daily-revelation-report",
       "EP-AI-003",
       "360e80c162081c85d2c680ef",
       "ec968f2ec6ba82128b4cd91b",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "digital-euro-parliament-hurdle-2026-06-23",
       "ASC-003",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -150,19 +150,19 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
+      "primarySourceCount": 4,
       "disputedClaimCount": 128,
-      "newEntityCount": 20,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 107,
-      "moneyRecordCount": 99
+      "moneyRecordCount": 100
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Current Intelligence Finalization.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Current Intelligence Finalization.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Digital euro clears key European Parliament hurdle (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"

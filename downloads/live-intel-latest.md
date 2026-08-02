@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-02T11:01:42.093Z
+Collection completed: 2026-08-02T12:56:11.942Z
 Latest source publication: 2026-08-01T12:00:00.000Z
-Collection status: current-window-refreshed-no-new-items
+Collection status: degraded-preserved-current-window
 New items this collection: 0
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+Source collection was degraded. Current in-window records were preserved without pretending they were newly published.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -277,22 +277,4 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - eurasiareview.com
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-26 — After war took her leg, this Ukrainian gymnast refused to give up
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168020
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: After war took her leg, this Ukrainian gymnast refused to give up
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-26 — Gaza: Dialysis patients face gruelling hospital journey by donkey cart
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168026
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Gaza: Dialysis patients face gruelling hospital journey by donkey cart
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-26 — Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168028
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

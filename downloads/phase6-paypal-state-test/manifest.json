@@ -1,0 +1,13 @@
+{
+  "boundary": "The test uses an isolated D1-compatible database and a deterministic PayPal sandbox mock. No real PayPal account, charge, subscription, member or production database is touched.",
+  "files": [
+    "lifecycle.json",
+    "summary.json"
+  ],
+  "generatedAt": "2026-07-13T12:30:00.000Z",
+  "ok": true,
+  "productionCheckoutEnabled": false,
+  "productionMigrationExecution": false,
+  "realCharges": false,
+  "realPayPalCalls": false
+}

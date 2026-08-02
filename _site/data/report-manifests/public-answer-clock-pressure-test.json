@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:40:38.754Z",
+  "generatedAt": "2026-08-02T12:25:37.204Z",
   "pageCount": 90,
   "output": "downloads/public-answer-clock-pressure-test.pdf",
   "report": {
-    "version": 4,
+    "version": 7,
     "title": "Public Answer Clock Pressure Test",
-    "contentHash": "322b19cc91ef05a93ecae625aa07b2f2d6bc04ec8258e75262016fb1f6545483",
+    "contentHash": "7541bbd390c29a585642cbdeaa58b33fd80a1e637c6d09d42ac5ed5dd687c654",
     "sourceIds": [
       "f669b33c49b63e787cde3008",
       "e083e748ec6311742c2416e5",
@@ -17,7 +17,6 @@
       "d91969cf88008135217d911c",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
-      "26b90533dbf7d2ed42f02de6",
       "360e80c162081c85d2c680ef",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
@@ -54,12 +53,10 @@
       "ASC-REVIEW-A9879DBB68A52307",
       "bf041695a279c3dc5412cdf4",
       "495efbb6e1ee304347ae3bdf",
-      "c495decb9e41ce889da20ed1",
-      "c8acdb17acd478f0ba121c11",
+      "26b90533dbf7d2ed42f02de6",
       "deutsche-bank-epstein-dfs-2020",
       "us-doj",
       "gao-hq",
-      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -137,20 +134,23 @@
       "trusts-john-lewis-partnership-trust",
       "trusts-employee-ownership-trust-register-watch",
       "trusts-royal-collection-trust",
-      "trusts-prince-of-wales-charitable-fund"
+      "trusts-prince-of-wales-charitable-fund",
+      "trusts-duchy-related-trust-disclosures",
+      "trusts-rockefeller-brothers-fund",
+      "trusts-rockefeller-family-fund"
     ],
     "metrics": {
       "evidenceCount": 131,
-      "primarySourceCount": 127,
+      "primarySourceCount": 128,
       "disputedClaimCount": 9,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 14,
-      "moneyRecordCount": 83
+      "relationshipCount": 15,
+      "moneyRecordCount": 86
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 127 A/B-grade public-record items are materially relevant to Public Answer Clock Pressure Test.",
+        "conclusion": "The indexed record establishes that 128 A/B-grade public-record items are materially relevant to Public Answer Clock Pressure Test.",
         "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/current-clock-evidence.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/global-risk-clocks.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -170,7 +170,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 15 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -185,7 +185,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 15 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Christopher Wray's Gift to Attorney General Garland",

@@ -33,7 +33,7 @@ const routeMarkers = {
   '/geographic-power-atlas': 'GEOGRAPHIC POWER ATLAS',
   '/data-lab': 'PUBLIC DATA',
   '/evidence-archive': 'EVIDENCE ARCHIVE',
-  '/search': 'SEARCH THE MACHINE',
+  '/search': 'START WITH WHAT HAPPENED.',
   '/deploy-health.json': '"workerScript": "src/worker-production-autonomy.js"'
 };
 

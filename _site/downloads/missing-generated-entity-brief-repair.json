@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T12:47:28.902Z",
+  "referencedEntityBriefs": 2,
+  "created": [
+    "entity-briefs/securities-and-exchange-commission.html",
+    "_site/entity-briefs/securities-and-exchange-commission.html"
+  ],
+  "marked": [
+    "entity-briefs/control-structure.html",
+    "_site/entity-briefs/control-structure.html"
+  ],
+  "engineCommands": [
+    {
+      "script": "scripts/run-power-dossier-runtime-compatible.js",
+      "status": 0,
+      "stdout": "Criminal Conduct & Allegations engine installed on 328 source dossier surfaces and 328 built surfaces; 66 approved records rendered; 1 candidates held for editorial review.\nCriminal Conduct & Allegations engine synchronized to 326 extensionless dossier route(s); 0 missing built dossier page(s) materialized; 4 directory-backed namespace(s) preserved with their explicit .html dossier verified.\nCriminal Conduct Engine pressure test passed: schema v1 compatibility for v2, 9 categories, 328 source dossier surfaces, 328 built surfaces, 32 approved records, 1 review-only candidates.\nPredators in Power built: 20 qualifying subject(s), 32 approved record(s), 0 review-only candidate(s), 4 route link(s).\nPredators in Power linked from 1636 Criminal Conduct & Allegations surface(s); 1636 file(s) updated.\nPredators in Power output synchronized: 19 file/alias copy operation(s).\nPredators in Power pressure test passed: 20 qualifying subject(s), 32 approved record(s), 16 conduct domains, 19 power sectors, 1636 conduct-dropdown link(s).\nPower dossier runtime wired across source and Cloudflare output: 30 HTML/extensionless page(s), 0 newly patched, runtime copy current; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.\nPower dossier runtime completed with criminal registry schema v2 restored.\n",
+      "stderr": ""
+    }
+  ],
+  "criminalConductEngineApplied": true,
+  "predatorsInPowerApplied": true,
+  "failures": [],
+  "boundary": "Missing generated entity routes receive evidence-gap briefs only. These pages do not assert wrongdoing or upgrade evidence. Every generated entity brief receives the evidence-classified Criminal Conduct & Allegations dropdown and the evidence-gated Predators in Power route."
+}

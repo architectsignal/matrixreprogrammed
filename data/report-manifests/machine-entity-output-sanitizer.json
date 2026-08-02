@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-02T10:39:12.478Z",
-  "pageCount": 140,
+  "generatedAt": "2026-08-02T12:23:57.983Z",
+  "pageCount": 139,
   "output": "downloads/machine-entity-output-sanitizer.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Machine Entity Output Sanitizer",
-    "contentHash": "06341774492a3eb0d778846eb7bcc4b3cea969ae16ee2d33648a5c5933ec1078",
+    "contentHash": "521c630781b81a4e6f4dee4efec40148e13eeb7a0f106607f6652be5262ff76e",
     "sourceIds": [
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-32D4420F5F198DA2",
       "26b90533dbf7d2ed42f02de6",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -24,6 +24,7 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
+      "daee19f2c0d92279cc9a7569",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
@@ -145,13 +146,12 @@
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967"
+      "ASC-REVIEW-1CDBDA84057D802E"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 1,
-      "disputedClaimCount": 137,
+      "disputedClaimCount": 136,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 116,

@@ -1,6 +1,6 @@
 # Top 52 Card Art Manifest
 
-Generated: 2026-08-02T10:45:41.093Z
+Generated: 2026-08-02T12:30:14.223Z
 
 Boundary: Portrait slots are editorial-symbolic placeholders. They are not allegations, mugshots or proof of wrongdoing. Any future likeness art should be sourced and labelled as editorial illustration.
 

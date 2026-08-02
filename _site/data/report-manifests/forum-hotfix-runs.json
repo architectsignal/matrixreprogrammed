@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:37:52.307Z",
+  "generatedAt": "2026-08-02T11:46:56.955Z",
   "pageCount": 99,
   "output": "downloads/forum-hotfix-runs.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Forum Hotfix Runs",
-    "contentHash": "c718f16491b93bc53647fa873b217f633bc5631178f5b97410411615b6556b1f",
+    "contentHash": "c3630b8148906ddb61012c35243810b815962ecb23dc8d37a73a768521137d51",
     "sourceIds": [
       "30091864423",
       "30091003163",
@@ -58,9 +58,9 @@
       "a42c91c655cd066504ed6515",
       "7f5b91c14c671bd24b8bbd81",
       "511ed227bb4be58b582ebb8d",
+      "e083e748ec6311742c2416e5",
       "peter-ball-iicsa-support-2019",
       "30150045792",
-      "3a425f0d5d683952bc0ad7ac",
       "7ee9141a42ad539f58a57e50",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
@@ -92,7 +92,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -142,23 +141,24 @@
       "b079bec5bc869b0463d0584c",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642"
+      "declassified-files-2026-07-31-cc395014",
+      "b4cb47ea50dc901364239e9f",
+      "b9006a5edc55cc88bfccd04a",
+      "06baa45bea3e2e15eb80eff9",
+      "epstein-nda-settlement-protection-lane-2026-06-26"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 86,
+      "primarySourceCount": 87,
       "disputedClaimCount": 2,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 12,
-      "moneyRecordCount": 12
+      "relationshipCount": 13,
+      "moneyRecordCount": 13
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 86 A/B-grade public-record items are materially relevant to Forum Hotfix Runs.",
+        "conclusion": "The indexed record establishes that 87 A/B-grade public-record items are materially relevant to Forum Hotfix Runs.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -178,7 +178,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 13 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Diagnose Power-Family Production Refresh; Diagnose Power-Family Production Refresh; Production Runtime Contract Rehearsal; IICSA documented predatory activities and institutional failures",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -193,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 13 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Production Runtime Contract Rehearsal",
           "Production Runtime Contract Rehearsal",

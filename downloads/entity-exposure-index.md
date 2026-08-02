@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-08-02T10:33:42.780Z
+Updated: 2026-08-02T13:18:37.249Z
 
 ## Control Structure
 

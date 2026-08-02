@@ -1,16 +1,15 @@
 {
-  "generatedAt": "2026-08-02T10:38:13.264Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-02T12:23:06.291Z",
+  "pageCount": 123,
   "output": "downloads/homepage-construction-banner.pdf",
   "report": {
-    "version": 8,
+    "version": 10,
     "title": "Homepage Construction Banner",
-    "contentHash": "a413d3b524d60dee89e361a3555e5bc7a7c2b8b3890cb49a4ec26d811d947d26",
+    "contentHash": "783104775bc1db20a53eacea3bfe7166661c31a3260869584eb723167cd23737",
     "sourceIds": [
-      "3a425f0d5d683952bc0ad7ac",
-      "1769af26a7bda813406cd8f5",
-      "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
+      "1769af26a7bda813406cd8f5",
+      "3a425f0d5d683952bc0ad7ac",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "ec8ef1adbaaebb9fde883cae",
@@ -18,6 +17,7 @@
       "5ad827d001f90dc0134b3260",
       "d98fbb852c4ba20ad85be270",
       "f9a646e1d3bf2abf0b0b3767",
+      "26b90533dbf7d2ed42f02de6",
       "6188547d91106e0f9d3bce50",
       "aa93ff989cf62abb814747c9",
       "7d7ccb5b896a02cf45094879",
@@ -26,7 +26,6 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "EP-AI-004",
       "72ef7895f95288946ccb3cff",
-      "e72d22f4f28eb53e3173d0a6",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -59,6 +58,7 @@
       "ASC-REVIEW-A9879DBB68A52307",
       "d6936ce262c4c18cb75c6e44",
       "6d8df9af51b8078e703b2748",
+      "e72d22f4f28eb53e3173d0a6",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
       "c1520a15d6e62871a66c558e",
@@ -66,7 +66,6 @@
       "ecd4a1111010f13b2d74bf8c",
       "4c372edcf20b760ae3305f10",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -92,13 +91,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -146,20 +138,28 @@
       "ASC-REVIEW-09A1231B842DD08D",
       "ASC-REVIEW-CEAFD28B55D0DA69",
       "ASC-REVIEW-25B371012CBA1315",
-      "ASC-REVIEW-995107775153DECB"
+      "ASC-REVIEW-995107775153DECB",
+      "ASC-REVIEW-3BECB9AD9D29AF5D",
+      "ASC-REVIEW-5A774507A02DF22B",
+      "ASC-REVIEW-086FE6E8B4620CB8",
+      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-5AE5A3805582A7F2",
+      "ASC-REVIEW-C8EBC7F8BBBAC4D3",
+      "ASC-REVIEW-C53B123A4708B84E",
+      "ASC-REVIEW-848BDB9B5C3EEC1B"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 56,
-      "disputedClaimCount": 63,
+      "primarySourceCount": 48,
+      "disputedClaimCount": 71,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 31,
-      "moneyRecordCount": 31
+      "relationshipCount": 32,
+      "moneyRecordCount": 32
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 56 A/B-grade public-record items are materially relevant to Homepage Construction Banner.",
+        "conclusion": "The indexed record establishes that 48 A/B-grade public-record items are materially relevant to Homepage Construction Banner.",
         "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 32 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; General Assembly LIVE: Debating US sanctions against Cuba; Influence should be mapped through infrastructure, filings and contracts.; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 32 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",

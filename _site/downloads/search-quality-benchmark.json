@@ -1,0 +1,1074 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T12:55:00.999Z",
+  "engineVersion": "matrix-search-quality-v1",
+  "benchmarkCases": 100,
+  "checks": [
+    {
+      "name": "permanent benchmark size",
+      "ok": true,
+      "detail": "100 cases"
+    },
+    {
+      "name": "domain why7 has my eletric gine up",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking why7 has my eletric gine up",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch why7 has my eletric gine up",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain why has my electric gone up",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking why has my electric gone up",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch why has my electric gone up",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain why has my electricity bill gone up",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking why has my electricity bill gone up",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch why has my electricity bill gone up",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain electric bill higher",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking electric bill higher",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch electric bill higher",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain energy prices",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking energy prices",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch energy prices",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain standing charge increase",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking standing charge increase",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch standing charge increase",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain why is my power bill so high",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking why is my power bill so high",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch why is my power bill so high",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain my EDF bill increased",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking my EDF bill increased",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch my EDF bill increased",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain electricity unit rate went up",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking electricity unit rate went up",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch electricity unit rate went up",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain why did my tariff change",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking why did my tariff change",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch why did my tariff change",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain higher gas and electricity costs",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking higher gas and electricity costs",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch higher gas and electricity costs",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain supplier raised my energy price",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking supplier raised my energy price",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch supplier raised my energy price",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain electric meter bill increase",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking electric meter bill increase",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch electric meter bill increase",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain household power costs rising",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking household power costs rising",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch household power costs rising",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain why is the standing fee higher",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking why is the standing fee higher",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch why is the standing fee higher",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain what changed on my energy contract",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking what changed on my energy contract",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch what changed on my energy contract",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain electricity price cap increase",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking electricity price cap increase",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch electricity price cap increase",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain network charge on my bill",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking network charge on my bill",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch network charge on my bill",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain wholesale energy price effect",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking wholesale energy price effect",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch wholesale energy price effect",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain why am i paying more per kwh",
+      "ok": true,
+      "detail": "household-energy"
+    },
+    {
+      "name": "ranking why am i paying more per kwh",
+      "ok": true,
+      "detail": "fixture-electricity.html"
+    },
+    {
+      "name": "energy mismatch why am i paying more per kwh",
+      "ok": true,
+      "detail": "health domain excluded"
+    },
+    {
+      "name": "domain AIDS policy costs",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking AIDS policy costs",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain HIV treatment policy",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking HIV treatment policy",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain hospital closure impact",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking hospital closure impact",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain vaccine contract health policy",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking vaccine contract health policy",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain why did medicine price rise",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking why did medicine price rise",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain public health restriction",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking public health restriction",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain cancer treatment waiting list",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking cancer treatment waiting list",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain pharma company trial",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking pharma company trial",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain patient data policy",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking patient data policy",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain disease surveillance system",
+      "ok": true,
+      "detail": "health-medical"
+    },
+    {
+      "name": "ranking disease surveillance system",
+      "ok": true,
+      "detail": "fixture-aids.html"
+    },
+    {
+      "name": "domain what law caused this restriction",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking what law caused this restriction",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain government policy decision",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking government policy decision",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain parliament voted on the bill",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking parliament voted on the bill",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain which regulator approved it",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking which regulator approved it",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain ministry implementation plan",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking ministry implementation plan",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain public authority decision",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking public authority decision",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain new legislation consequence",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking new legislation consequence",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain who had legal authority",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking who had legal authority",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain government promised benefit",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking government promised benefit",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain policy outcome review",
+      "ok": true,
+      "detail": "government-policy"
+    },
+    {
+      "name": "ranking policy outcome review",
+      "ok": true,
+      "detail": "fixture-policy.html"
+    },
+    {
+      "name": "domain who received the public contract",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking who received the public contract",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain procurement award value",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking procurement award value",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain company filing ownership",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking company filing ownership",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain where did the grant money go",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking where did the grant money go",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain supplier profit after price rise",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking supplier profit after price rise",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain government spending contract",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking government spending contract",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain tender winner and amount",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking tender winner and amount",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain shareholder ownership filing",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking shareholder ownership filing",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain budget allocation outcome",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking budget allocation outcome",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain public money trail",
+      "ok": true,
+      "detail": "money-contracts"
+    },
+    {
+      "name": "ranking public money trail",
+      "ok": true,
+      "detail": "fixture-contracts.html"
+    },
+    {
+      "name": "domain court judgment outcome",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking court judgment outcome",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain lawsuit against company",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking lawsuit against company",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain who was convicted",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking who was convicted",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain appeal court ruling",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking appeal court ruling",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain legal case docket",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking legal case docket",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain enforcement action",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking enforcement action",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain sanctions court challenge",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking sanctions court challenge",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain indicted public official",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking indicted public official",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain court publication record",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking court publication record",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain judicial decision consequence",
+      "ok": true,
+      "detail": "courts-enforcement"
+    },
+    {
+      "name": "ranking judicial decision consequence",
+      "ok": true,
+      "detail": "fixture-courts.html"
+    },
+    {
+      "name": "domain Epstein files redaction",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking Epstein files redaction",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain missing public records",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking missing public records",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain FOIA documents withheld",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking FOIA documents withheld",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain sealed court files",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking sealed court files",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain wikileaks archive documents",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking wikileaks archive documents",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain record removed from website",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking record removed from website",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain declassified file release",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking declassified file release",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain public disclosure delay",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking public disclosure delay",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain missing evidence document",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking missing evidence document",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain redaction log",
+      "ok": true,
+      "detail": "disclosure-files"
+    },
+    {
+      "name": "ranking redaction log",
+      "ok": true,
+      "detail": "fixture-disclosure.html"
+    },
+    {
+      "name": "domain who controls BlackRock",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking who controls BlackRock",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain billionaire foundation influence",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking billionaire foundation influence",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain elite family network",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking elite family network",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain institutional power map",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking institutional power map",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain lobbying influence on policy",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking lobbying influence on policy",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain who controls the company",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking who controls the company",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain power network relationships",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking power network relationships",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain foundation board connections",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking foundation board connections",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain corporate influence route",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking corporate influence route",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain family office control",
+      "ok": true,
+      "detail": "power-networks"
+    },
+    {
+      "name": "ranking family office control",
+      "ok": true,
+      "detail": "fixture-power.html"
+    },
+    {
+      "name": "domain media narrative change",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking media narrative change",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain news coverage of policy",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking news coverage of policy",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain censorship report",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking censorship report",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain press investigation",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking press investigation",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain journalism source record",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking journalism source record",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain broadcast coverage",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking broadcast coverage",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain information campaign",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking information campaign",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain news report correction",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking news report correction",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain media ownership influence",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking media ownership influence",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "domain narrative tracking",
+      "ok": true,
+      "detail": "information-media"
+    },
+    {
+      "name": "ranking narrative tracking",
+      "ok": true,
+      "detail": "fixture-media.html"
+    },
+    {
+      "name": "no-match purple unicorn weather",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match banana spaceship tax",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match invisible dragon permit",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match moon cheese orbit",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match telepathic toaster dream",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match underwater bicycle cloud",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match time travel rainbow",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match alien sandwich melody",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match ghost pineapple telescope",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "no-match quantum potato orchestra",
+      "ok": true,
+      "detail": "honest low-confidence boundary"
+    },
+    {
+      "name": "mandatory correction",
+      "ok": true,
+      "detail": "why has my electricity bill gone up"
+    },
+    {
+      "name": "actual-index energy/health separation",
+      "ok": true,
+      "detail": "public-source-evidence.html, top-52/bill-gates.html, follow-the-money/people/bill-gates.html"
+    }
+  ],
+  "failures": []
+}

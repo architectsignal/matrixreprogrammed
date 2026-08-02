@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-07-13T12:30:00.000Z",
+  "ok": true,
+  "stages": [
+    {
+      "name": "anonymous-payment-routes-fail-closed",
+      "passed": true
+    },
+    {
+      "name": "checkout-default-disabled",
+      "passed": true
+    },
+    {
+      "name": "sandbox-products-and-plans",
+      "passed": true,
+      "prices": [
+        "3.00",
+        "6.00",
+        "9.00"
+      ]
+    },
+    {
+      "name": "dual-sandbox-activation-gate",
+      "passed": true
+    },
+    {
+      "name": "approval-without-entitlement",
+      "passed": true
+    },
+    {
+      "name": "verified-activation-and-idempotency",
+      "passed": true
+    },
+    {
+      "name": "renewal-recording",
+      "passed": true
+    },
+    {
+      "name": "payment-failure-threshold",
+      "passed": true
+    },
+    {
+      "name": "payment-recovery",
+      "passed": true
+    },
+    {
+      "name": "refund-and-reversal-holds",
+      "passed": true
+    },
+    {
+      "name": "cancellation-and-expiry",
+      "passed": true
+    },
+    {
+      "name": "member-self-service-cancellation",
+      "passed": true
+    },
+    {
+      "name": "webhook-signature-enforcement",
+      "passed": true
+    },
+    {
+      "name": "reconciliation-and-admin-logs",
+      "passed": true
+    },
+    {
+      "name": "production-switch-and-safe-shutdown",
+      "passed": true
+    }
+  ]
+}

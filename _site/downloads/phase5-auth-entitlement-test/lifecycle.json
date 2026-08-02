@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-07-13T12:00:00.000Z",
+  "ok": true,
+  "stages": [
+    {
+      "name": "anonymous-fails-closed",
+      "passed": true
+    },
+    {
+      "name": "passwordless-login-and-session-cookie",
+      "passed": true
+    },
+    {
+      "member-admin": "registered",
+      "member-intelligence": "intelligence_6",
+      "member-registered": "registered",
+      "member-research": "research_pro_9",
+      "member-supporter": "supporter_3",
+      "name": "effective-tier-resolution",
+      "passed": true
+    },
+    {
+      "name": "registered-capabilities-and-denials",
+      "passed": true
+    },
+    {
+      "name": "supporter-cumulative-access",
+      "passed": true
+    },
+    {
+      "name": "intelligence-capabilities-and-speculation-label",
+      "passed": true
+    },
+    {
+      "name": "research-pro-capabilities",
+      "passed": true
+    },
+    {
+      "name": "download-entitlement-and-product-isolation",
+      "passed": true
+    },
+    {
+      "name": "session-controls",
+      "passed": true
+    },
+    {
+      "name": "admin-dashboard-and-audited-grants",
+      "passed": true
+    },
+    {
+      "name": "audit-and-surface-coverage",
+      "passed": true
+    }
+  ]
+}

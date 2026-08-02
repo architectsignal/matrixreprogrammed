@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-08-02T10:53:06.115Z",
-  "filesScanned": 755,
+  "updated": "2026-08-02T12:36:42.647Z",
+  "filesScanned": 756,
   "highIssues": 0,
-  "reviewIssues": 15,
+  "reviewIssues": 16,
   "issues": [
     {
       "file": "access-denied.html",
@@ -44,6 +44,11 @@
       "file": "daily-watch.html",
       "severity": "review",
       "issue": "missing meta description"
+    },
+    {
+      "file": "daily-watch.html",
+      "severity": "review",
+      "issue": "missing H1"
     },
     {
       "file": "institution-profile.html",

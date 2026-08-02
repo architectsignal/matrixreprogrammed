@@ -9,7 +9,7 @@ function needText(name, text, label = text) { if (!exists(name) || !read(name).i
 function forbid(name, text) { if (exists(name) && read(name).toLowerCase().includes(text.toLowerCase())) issues.push(`${name} contains forbidden paid/external marker: ${text}`); }
 
 for (const name of ['search.html', 'search.js', 'search-index.json', 'data/search-facets.json', 'scripts/repair-search-system.js', 'scripts/search-investigation-smoke-test.js']) needFile(name);
-needText('search.html', 'SEARCH THE MACHINE', 'current search heading');
+needText('search.html', 'START WITH WHAT HAPPENED.', 'current consequence-aware search heading');
 needText('search.html', 'id="archive-search"', 'search input');
 needText('search.html', 'id="search-results"', 'search results container');
 needText('search.html', '<script src="search.js"></script>', 'search runtime');

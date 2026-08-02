@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:40:25.797Z",
-  "pageCount": 116,
+  "generatedAt": "2026-08-02T12:25:20.350Z",
+  "pageCount": 115,
   "output": "downloads/predators-in-power-build-report.pdf",
   "report": {
-    "version": 7,
+    "version": 10,
     "title": "Predators In Power Build Report",
-    "contentHash": "3cd3f0d3288aa67df0455df45402f4c71394e2137870c841b649685588a81707",
+    "contentHash": "fddc4495992d54c39ed94903ad4d150dfe1a785a4e603fcdfe9eb460b43e3577",
     "sourceIds": [
       "9cb9631a2f2749b86bc69e0a",
       "45f5269389def99607b5a517",
@@ -109,11 +109,9 @@
       "0defb9debab95a663872bf25",
       "7419d29b3a469a40362a11f4",
       "26b90533dbf7d2ed42f02de6",
-      "3a425f0d5d683952bc0ad7ac",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-8299a278d70b1f879d6d522f",
+      "e083e748ec6311742c2416e5",
       "r-kelly-illinois-conviction-2022",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -135,31 +133,33 @@
       "6f6462b75cdb929e0acbcde7",
       "18930d440aed009547436b81",
       "1769af26a7bda813406cd8f5",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-7ed151a515391f967d229642",
-      "e083e748ec6311742c2416e5",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
+      "3a425f0d5d683952bc0ad7ac",
       "david-james-clarke-conviction-2026",
       "r-kelly-appellate-finality-2025",
       "nassar-fbi-oig-2021",
       "peter-ball-iicsa-support-2019",
-      "cyril-smith-iicsa-2018"
+      "cyril-smith-iicsa-2018",
+      "ASC-REVIEW-A90E36DF59A2A3C2",
+      "ASC-REVIEW-2A8D7C6B5A23CEAD",
+      "ASC-REVIEW-A8005F6D70DBECBC",
+      "ASC-REVIEW-0E868AF7B9CFC533",
+      "ASC-REVIEW-565A586322B4B93A",
+      "ASC-REVIEW-2F0D540A3C8B64CE",
+      "ASC-REVIEW-1D9239F50A285FC0",
+      "ASC-REVIEW-1D0E514392976CFC"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 53,
-      "disputedClaimCount": 42,
+      "primarySourceCount": 45,
+      "disputedClaimCount": 50,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 38,
+      "relationshipCount": 42,
       "moneyRecordCount": 19
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 53 A/B-grade public-record items are materially relevant to Predators In Power Build Report.",
+        "conclusion": "The indexed record establishes that 45 A/B-grade public-record items are materially relevant to Predators In Power Build Report.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 38 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Official health investigations documented abuse and enabling access; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 38 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

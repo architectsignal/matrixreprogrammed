@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:35:52.529Z",
-  "pageCount": 109,
+  "generatedAt": "2026-08-02T11:44:57.337Z",
+  "pageCount": 110,
   "output": "downloads/dark-speculation-deep-dossiers.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Dark Speculation Deep Dossiers",
-    "contentHash": "6cecbbb8ad94ca452b8e4720bb4908e899e9e6ece3c90da7564f5772738b795b",
+    "contentHash": "8e24fbb86746f1a16e256d8b75174638ed736b6690f7c68d660e00a875f3695c",
     "sourceIds": [
       "cf5ed542c9e5fe15fd32d5bf",
       "22a1a7445ebffb07e54066ea",
@@ -16,7 +16,6 @@
       "2529322b7b5345fd6f575174",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
-      "3a425f0d5d683952bc0ad7ac",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "8d0375496d59f1d012deaead",
@@ -26,6 +25,7 @@
       "275d6c3caca158f7a3e15780",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
+      "e083e748ec6311742c2416e5",
       "9cb9631a2f2749b86bc69e0a",
       "cf94b367bfb0237448d49649",
       "eda53ad65d382819ea249e14",
@@ -69,9 +69,9 @@
       "7f0eb9ddb996aecbeeda522d",
       "7419d29b3a469a40362a11f4",
       "deb382cdbfe57b57793d739e",
+      "3a425f0d5d683952bc0ad7ac",
       "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
@@ -128,8 +128,6 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "7a0ce047ee750826a59e7474",
       "c4545fe318d34c16a8f8fe7a",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -143,23 +141,25 @@
       "a01fc28e9fb6ce85637a3248",
       "6d8df9af51b8078e703b2748",
       "orsini-family",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-E6D70696A19B3CDA"
+      "ASC-REVIEW-E6D70696A19B3CDA",
+      "ASC-REVIEW-20316213EFD183CC",
+      "ASC-REVIEW-83A2CD51E51B5E0E",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
+      "ASC-REVIEW-C0E6134747580127"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 48,
-      "disputedClaimCount": 31,
+      "primarySourceCount": 44,
+      "disputedClaimCount": 35,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 33,
+      "relationshipCount": 37,
       "moneyRecordCount": 14
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 48 A/B-grade public-record items are materially relevant to Dark Speculation Deep Dossiers.",
+        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Dark Speculation Deep Dossiers.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 33 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 37 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Pizzagate / coded-network claim cluster; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; FCN, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 33 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 37 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Pizzagate / coded-network claim cluster",
           "Follow The Money Watch",

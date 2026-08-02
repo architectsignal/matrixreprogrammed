@@ -15,7 +15,10 @@ const array = value => Array.isArray(value) ? value : [];
 const validRoute = value => {
   const route = clean(value, 900);
   if (!route || /^data\//i.test(route)) return '';
-  return /^https?:\/\//i.test(route) || /^[a-z0-9][a-z0-9._/-]*\.html(?:[?#].*)?$/i.test(route) ? route : '';
+  if (/^https?:\/\//i.test(route)) return route;
+  if (!/^[a-z0-9][a-z0-9._/-]*\.html(?:[?#].*)?$/i.test(route)) return '';
+  const target = route.replace(/[?#].*$/, '');
+  return exists(target) ? route : '';
 };
 const ext = route => /^https?:\/\//i.test(route) ? ' target="_blank" rel="noopener noreferrer"' : '';
 
@@ -111,7 +114,7 @@ function inject(relative, homepage = false) {
 const pages = [];
 if (inject('index.html',true)) pages.push('index.html');
 for (const page of ['daily-command-brief.html','daily-brain-brief.html','live-intel.html']) if (inject(page,false)) pages.push(page);
-const fullPage = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Daily Intelligence Hit List | Matrix Reprogrammed</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="reader-experience.css">${styles}</head><body><div class="page"><header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="weekly-watch-delta.html">Ranking History</a><a href="daily-command-brief.html">Daily Brief</a><a href="live-intel.html">Live Intel</a><a href="membership.html">Support</a></nav></header>${block.replace(markerStart,'').replace(markerEnd,'')}</div></body></html>`;
+const fullPage = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Daily Intelligence Hit List | Matrix Reprogrammed</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="reader-experience.css">${styles}</head><body><div class="page"><header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a><nav class="nav"><a href="weekly-watch-delta.html">Ranking History</a><a href="daily-command-brief.html">Daily Brief</a><a href="live-intel.html">Live Intel</a><a href="membership.html">Support</a></nav></header><main><section class="hero wrap"><div class="eyebrow">Daily evidence priorities</div><h1>THE DAILY INTELLIGENCE HIT LIST.</h1><p class="lead">Source-linked research priorities, ranked by evidence strength and bounded against accusation.</p></section>${block.replace(markerStart,'').replace(markerEnd,'')}</main></div></body></html>`;
 write('daily-watch.html',fullPage);
 
 for (const relative of ['data/homepage-command-surface.json','data/daily-command-brief.json','data/daily-brain-brief.json','data/live-intel.json']) {

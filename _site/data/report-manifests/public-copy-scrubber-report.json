@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-08-02T10:40:44.595Z",
-  "pageCount": 94,
+  "generatedAt": "2026-08-02T12:25:43.591Z",
+  "pageCount": 93,
   "output": "downloads/public-copy-scrubber-report.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Public Copy Scrubber Report",
-    "contentHash": "95d7942abe22d8143f819c359a38427abc58df5453365ac4b73330799bdab461",
+    "contentHash": "cc388cbf44ae9771d3ecc66e6700f789641a738efcaf3c47130e4a392bcd5b49",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
+      "e083e748ec6311742c2416e5",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
-      "e083e748ec6311742c2416e5",
       "19ae23289f4be13ad5f7e317",
       "9e8310c49b990aa62d2b0921",
       "a21f3d8e98268d5e01e1eb7c",
@@ -27,7 +27,6 @@
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
       "69f071adbd84f39904a53107",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "9f77464e401ac59ad1adb812",
       "44505b4afb60938c8117ad31",
@@ -50,7 +49,6 @@
       "665a5072d96b9757a6ee9d2d",
       "74fb2863cc9a8120f3c68b67",
       "7ed151a515391f967d229642",
-      "daily-revelation-report",
       "ecb",
       "9e8903fd8dfa9b54a1d6db30",
       "ec1316fb1fb70c83dc347bb6",
@@ -123,7 +121,8 @@
       "9f3052b5d8cec138a2a37e8c",
       "us-doj",
       "gao-hq",
-      "2c51c16708e90ad19a79ae97",
+      "3a425f0d5d683952bc0ad7ac",
+      "a6fc0833a331a8e2d1be1816",
       "ca1cc6e65192026ef6471497",
       "89688da0c2e3dfaa40c9cbc3",
       "24a844c3ddb5aecaad25e9bc",
@@ -145,20 +144,21 @@
       "source-change-c452df757991611cb06ec88a",
       "source-change-8299a278d70b1f879d6d522f",
       "source-change-0c5f51804baf8e9e2c1fdd0b",
-      "256f98297be62e6e12591e9a"
+      "256f98297be62e6e12591e9a",
+      "3a021c1c1fb65abc89564b11"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 68,
+      "primarySourceCount": 69,
       "disputedClaimCount": 35,
-      "newEntityCount": 20,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 21,
+      "relationshipCount": 22,
       "moneyRecordCount": 6
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 68 A/B-grade public-record items are materially relevant to Public Copy Scrubber Report.",
+        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Public Copy Scrubber Report.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -178,7 +178,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 21 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -193,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 21 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",

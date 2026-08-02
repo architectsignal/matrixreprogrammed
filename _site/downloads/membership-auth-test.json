@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T12:52:34.322Z",
+  "checks": [
+    {
+      "name": "signup persists pending member and sends verification email",
+      "ok": true
+    },
+    {
+      "name": "verification email contains one-time link",
+      "ok": true
+    },
+    {
+      "name": "raw verification token is never stored",
+      "ok": true
+    },
+    {
+      "name": "verification activates member and creates secure cookie",
+      "ok": true
+    },
+    {
+      "name": "authenticated member identity endpoint returns safe account data",
+      "ok": true
+    },
+    {
+      "name": "verification link is single-use",
+      "ok": true
+    },
+    {
+      "name": "logout revokes server session and clears cookie",
+      "ok": true
+    },
+    {
+      "name": "revoked session cannot access member identity",
+      "ok": true
+    },
+    {
+      "name": "login request response does not reveal account existence",
+      "ok": true
+    },
+    {
+      "name": "verified member can create a new passwordless session",
+      "ok": true
+    },
+    {
+      "name": "invalid magic token is rejected safely",
+      "ok": true
+    },
+    {
+      "name": "auth health proves D1 schema and email configuration without PII",
+      "ok": true
+    },
+    {
+      "name": "member persistence stays truthful when email provider is absent",
+      "ok": true
+    },
+    {
+      "name": "Worker contains membership-auth-v1:",
+      "ok": true
+    },
+    {
+      "name": "Worker contains crypto.subtle.digest('SHA-256'",
+      "ok": true
+    },
+    {
+      "name": "Worker contains api.brevo.com/v3/smtp/email",
+      "ok": true
+    },
+    {
+      "name": "Worker contains originalPath==='/api/auth/request-link'",
+      "ok": true
+    },
+    {
+      "name": "Worker contains originalPath==='/api/auth/verify'",
+      "ok": true
+    },
+    {
+      "name": "Worker contains originalPath==='/api/auth/logout'",
+      "ok": true
+    },
+    {
+      "name": "Worker contains originalPath==='/api/member/me'",
+      "ok": true
+    }
+  ],
+  "memberCount": 2,
+  "verificationEmails": 1,
+  "loginEmails": 1,
+  "boundary": "Authentication is healthy only when raw tokens are never stored, links are single-use, verified accounts receive secure server-side sessions, logout revokes them, account existence is not disclosed, and email delivery status remains truthful."
+}

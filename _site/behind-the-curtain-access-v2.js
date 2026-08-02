@@ -1,5 +1,5 @@
 (()=>{'use strict';
-const URLS={pyramid:'data/behind-the-curtain-pyramid.json',people:'data/behind-the-curtain-people-registry.json',core:'data/behind-the-curtain.json',families:'data/behind-the-curtain-family-access.json',history:'data/behind-the-curtain-living-access-history.json',continuity:'data/behind-the-curtain-continuity-layers.json'};
+const URLS={pyramid:'/api/public/structural-power/pyramid',people:'/api/public/structural-power/people',core:'/api/public/structural-power/core',families:'/api/public/structural-power/families',history:'/api/public/structural-power/history',continuity:'/api/public/structural-power/continuity'};
 const MODE_RANK={proof:0,structural:1,symbolic:2};
 const state={mode:'structural',selectedLevel:'public-stage',models:null,lastLoaded:null,timer:null};
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T10:56:33.558Z",
+  "generatedAt": "2026-08-02T13:21:44.282Z",
   "registryUpdated": "2026-07-27",
   "surfaces": [
     {
@@ -488,22 +488,8 @@
     },
     {
       "scope": "source",
-      "route": "daily-brain-brief.html",
-      "title": "DAILY BRAIN BRIEF",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "daily-command-brief.html",
-      "title": "DAILY COMMAND BRIEF",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
       "route": "daily-watch.html",
-      "title": "Daily Intelligence Hit List",
+      "title": "DAILY INTELLIGENCE HIT LIST",
       "type": "subject",
       "approvedRecords": 0
     },
@@ -1563,6 +1549,13 @@
       "title": "Bill & Melinda Gates Foundation",
       "type": "institution",
       "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "institutions/vanguard.html",
+      "title": "Vanguard",
+      "type": "subject",
+      "approvedRecords": 1
     },
     {
       "scope": "source",
@@ -2763,22 +2756,8 @@
     },
     {
       "scope": "built",
-      "route": "daily-brain-brief.html",
-      "title": "DAILY BRAIN BRIEF",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "daily-command-brief.html",
-      "title": "DAILY COMMAND BRIEF",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
       "route": "daily-watch.html",
-      "title": "Daily Intelligence Hit List",
+      "title": "DAILY INTELLIGENCE HIT LIST",
       "type": "subject",
       "approvedRecords": 0
     },
@@ -3736,6 +3715,13 @@
     },
     {
       "scope": "built",
+      "route": "entity-briefs/control-structure.html",
+      "title": "Control Structure",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
       "route": "entity-daily-briefs.html",
       "title": "ENTITY DAILY BRIEFS",
       "type": "entity",
@@ -3869,13 +3855,6 @@
     },
     {
       "scope": "built",
-      "route": "live-intel.html",
-      "title": "LIVE INTEL",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
       "route": "map-intelligence-network.html",
       "title": "Intelligence Network Map",
       "type": "subject",
@@ -3955,6 +3934,125 @@
       "scope": "built",
       "route": "public-record-dossiers.html",
       "title": "DOSSIERS & PUBLIC RECORD",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-control-structure.html",
+      "title": "CONTROL STRUCTURE — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-european-commission.html",
+      "title": "EUROPEAN COMMISSION — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-federal-reserve.html",
+      "title": "FEDERAL RESERVE — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-international-monetary-fund.html",
+      "title": "INTERNATIONAL MONETARY FUND — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-nato.html",
+      "title": "NATO — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-united-nations.html",
+      "title": "UNITED NATIONS — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-world-bank.html",
+      "title": "WORLD BANK — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-world-economic-forum.html",
+      "title": "WORLD ECONOMIC FORUM — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/institution-world-health-organization.html",
+      "title": "WORLD HEALTH ORGANIZATION — INSTITUTION POWER REPORT",
+      "type": "institution",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-ai-surveillance-and-data-systems.html",
+      "title": "AI, SURVEILLANCE AND DATA SYSTEMS — SUBJECT REPORT",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-banking-and-payment-rails.html",
+      "title": "BANKING AND PAYMENT RAILS — SUBJECT REPORT",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-digital-id-and-access-systems.html",
+      "title": "DIGITAL ID AND ACCESS SYSTEMS — SUBJECT REPORT",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-disclosure-gaps-and-missing-files.html",
+      "title": "DISCLOSURE GAPS AND MISSING FILES — SUBJECT REPORT",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-foundation-and-ngo-policy-influence.html",
+      "title": "FOUNDATION AND NGO POLICY INFLUENCE — SUBJECT REPORT",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-gold-reserve-and-custody-systems.html",
+      "title": "GOLD, RESERVE AND CUSTODY SYSTEMS — SUBJECT REPORT",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-health-data-and-emergency-systems.html",
+      "title": "HEALTH DATA AND EMERGENCY SYSTEMS — SUBJECT REPORT",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/subject-private-contractor-power.html",
+      "title": "PRIVATE CONTRACTOR POWER — SUBJECT REPORT",
       "type": "subject",
       "approvedRecords": 0
     },
@@ -4450,9 +4548,9 @@
     }
   ],
   "counts": {
-    "source": 325,
-    "built": 310,
-    "records": 65
+    "source": 324,
+    "built": 325,
+    "records": 66
   },
   "reviewCandidates": 0
 }

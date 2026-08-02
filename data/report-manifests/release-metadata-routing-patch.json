@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:41:12.664Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-02T11:50:11.763Z",
+  "pageCount": 134,
   "output": "downloads/release-metadata-routing-patch.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Release Metadata Routing Patch",
-    "contentHash": "47173381127a3173813b65e4617499fe3a7cdd33335b99788914b34e13bd4393",
+    "contentHash": "b61db4b6a54366d69e1168bb9c16f8d1820434c7971b8284043badb59c436dc2",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
@@ -31,7 +31,6 @@
       "1769af26a7bda813406cd8f5",
       "e72d22f4f28eb53e3173d0a6",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -39,10 +38,6 @@
       "4c07add2a6d4eb22cadecd27",
       "388e2e8c136c6891fe3af13a",
       "5546f85d1ba69563adc9bffd",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -96,7 +91,6 @@
       "ASC-REVIEW-5D75F861BBF77D9D",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-C0E6134747580127",
-      "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
       "41772e5c9af7970ddd7d5aac",
       "a27dd3c9a4cf6bbd952989d3",
@@ -127,9 +121,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
@@ -146,21 +137,30 @@
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
-      "ASC-REVIEW-6809880AE2446DD1"
+      "ASC-REVIEW-6809880AE2446DD1",
+      "ASC-REVIEW-D23512B8758FE6BB",
+      "ASC-REVIEW-9F5E6DCB06093895",
+      "ASC-REVIEW-CAEF74273342914C",
+      "ASC-REVIEW-747FA1D74D7A92E3",
+      "ASC-REVIEW-2EAAC7D7DF8B957D",
+      "ASC-REVIEW-686B68808D58A838",
+      "ASC-REVIEW-E0C2B02D28255CC3",
+      "ASC-REVIEW-4E0C4B2A65FF8D42",
+      "ASC-REVIEW-995324D0659C1960"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 44,
-      "disputedClaimCount": 86,
+      "primarySourceCount": 36,
+      "disputedClaimCount": 95,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 70,
-      "moneyRecordCount": 46
+      "relationshipCount": 79,
+      "moneyRecordCount": 55
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Release Metadata Routing Patch.",
-        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 36 A/B-grade public-record items are materially relevant to Release Metadata Routing Patch.",
+        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 70 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 70 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",

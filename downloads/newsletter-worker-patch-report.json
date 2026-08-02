@@ -1,19 +1,5 @@
 {
-  "ok": true,
-  "generatedAt": "2026-07-12T06:48:58.024Z",
-  "changed": false,
-  "required": [
-    "env.FORUM_POSTS.put(`newsletter:subscriber:${id}`",
-    "env.FORUM_POSTS.put('newsletter:index'",
-    "const saved=subscriberSaved&&indexSaved",
-    "error:'Valid email required'",
-    "persistent:false,saved:false"
-  ],
-  "membershipIntegrated": true,
-  "authIntegrated": true,
-  "paypalIntegrated": true,
-  "membershipUiIntegrated": true,
-  "osintIntegrated": true,
-  "researchToolsUiIntegrated": true,
-  "mode": "D1 membership, passwordless authentication, PayPal subscriptions and encrypted member/admin OSINT tools"
+  "ok": false,
+  "generatedAt": "2026-08-02T12:51:49.456Z",
+  "error": "newsletter signup handler shape not recognized"
 }

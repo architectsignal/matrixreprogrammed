@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:36:37.695Z",
-  "pageCount": 120,
+  "generatedAt": "2026-08-02T12:21:40.022Z",
+  "pageCount": 117,
   "output": "downloads/email-campaign-source-anchor-repair.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Email Campaign Source Anchor Repair",
-    "contentHash": "27f08944999ae140d2836d527d6bef5f0c38be5b29928879ce03b8fd2f69f7a7",
+    "contentHash": "a219b44ffdc4729056644a79551badb504b88799234a34f9b13604b7e91afe60",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-A90E36DF59A2A3C2",
@@ -14,6 +14,7 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-C0E6134747580127",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -32,7 +33,6 @@
       "ASC-REVIEW-AB5A700449B10AEC",
       "EP-AI-004",
       "71e0563ca7b139c37c302956",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-B9D6F588FF54AD31",
@@ -81,6 +81,7 @@
       "f8da9551192fb7f98b4efa86",
       "275d6c3caca158f7a3e15780",
       "EP-AI-002",
+      "e72d22f4f28eb53e3173d0a6",
       "weekly-8",
       "weekly-9",
       "weekly-17",
@@ -96,14 +97,6 @@
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
       "a103f2650e31fc92fa3688e6",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
       "epstein-opr-review-2020",
@@ -141,25 +134,32 @@
       "daily-15",
       "daily-16",
       "daily-17",
-      "daily-19",
-      "daily-20",
-      "daily-21",
-      "daily-22",
-      "daily-23",
-      "EP-AI-003"
+      "EP-AI-003",
+      "1769af26a7bda813406cd8f5",
+      "9f77464e401ac59ad1adb812",
+      "weekly-10",
+      "weekly-11",
+      "weekly-12",
+      "weekly-13",
+      "weekly-14",
+      "weekly-21",
+      "weekly-22",
+      "weekly-23",
+      "weekly-24",
+      "weekly-25"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 71,
+      "primarySourceCount": 68,
       "disputedClaimCount": 57,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 50,
-      "moneyRecordCount": 19
+      "relationshipCount": 51,
+      "moneyRecordCount": 20
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 71 A/B-grade public-record items are materially relevant to Email Campaign Source Anchor Repair.",
+        "conclusion": "The indexed record establishes that 68 A/B-grade public-record items are materially relevant to Email Campaign Source Anchor Repair.",
         "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 51 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: UK Serious Fraud Office — News And Communications; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 51 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

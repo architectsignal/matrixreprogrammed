@@ -29,6 +29,7 @@ const preferenceBlock = `          <input type="text" name="website" tabindex="-
             <label><input type="checkbox" name="release_notices" value="true" checked data-default-checked="true"> Release notices</label>
             <label><input type="checkbox" name="public_weekly_digest" value="true"> Weekly Signal Drop</label>
           </div>`;
+const consentBlock = `          <label class="newsletter-consent"><input id="member-consent" name="marketingConsent" type="checkbox" required> <span>I agree to receive the Matrix Reprogrammed briefings selected on this form. I can unsubscribe or change preferences at any time.</span></label>`;
 
 function patchMembership(file) {
   if (!fs.existsSync(file)) {
@@ -61,6 +62,12 @@ function patchMembership(file) {
     else html = html.replace(emailLine, `${emailLine}\n${preferenceBlock}`);
   }
 
+  if (!html.includes('id="member-consent"')) {
+    const submitButton = '<button class="btn" type="submit">Join Free Brief</button>';
+    if (!html.includes(submitButton)) failures.push(`${path.relative(root, file)} missing membership consent insertion anchor`);
+    else html = html.replace(submitButton, `${consentBlock}\n          ${submitButton}`);
+  }
+
   html = html.replace(
     'Your email and consent are stored only when the signup service confirms success.',
     'Daily Control Brief and release notices are preselected. Verify your email to activate them; the Weekly Signal Drop is optional.'
@@ -75,6 +82,9 @@ function patchMembership(file) {
     'name="public_weekly_digest"',
     'data-default-checked="true"',
     'id="free-brief-preferences-label"'
+    ,'id="member-consent"'
+    ,'name="marketingConsent"'
+    ,'type="checkbox" required'
   ]) if (!html.includes(marker)) failures.push(`${path.relative(root, file)} missing ${marker}`);
 
   if (html !== before) {

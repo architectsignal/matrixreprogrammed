@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:39:49.682Z",
-  "pageCount": 136,
+  "generatedAt": "2026-08-02T11:48:44.351Z",
+  "pageCount": 135,
   "output": "downloads/newsletter-worker-patch-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Newsletter Worker Patch Report",
-    "contentHash": "d59d9ee9272b1ac31ff12cb8197c1cf907e2df78bf7a71bd222202928d64da50",
+    "contentHash": "bf3ae6ce76b84516f523059181bb01e1b4e6f71ba62ff7b50d1f3232a79e5c5f",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-9E85403F3389F334",
@@ -60,6 +60,7 @@
       "eb3448928554960651da56f6",
       "dcec2a45ef35362072af05e3",
       "1583ed9e90a5874047a33041",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -145,14 +146,13 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
-      "ASC-REVIEW-22BBAF16578AD07C"
+      "ASC-REVIEW-B8E3F97B2B57C256"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 13,
-      "disputedClaimCount": 126,
-      "newEntityCount": 0,
+      "disputedClaimCount": 125,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 99,
       "moneyRecordCount": 71

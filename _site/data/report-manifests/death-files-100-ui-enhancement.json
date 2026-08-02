@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-02T10:35:58.419Z",
-  "pageCount": 107,
+  "generatedAt": "2026-08-02T12:21:01.940Z",
+  "pageCount": 106,
   "output": "downloads/death-files-100-ui-enhancement.pdf",
   "report": {
-    "version": 7,
+    "version": 9,
     "title": "Death Files 100 Ui Enhancement",
-    "contentHash": "3abed435b92f9784d4f2afc5f04b2c9a598c0d761f3dd24b4d6b7b787624a2db",
+    "contentHash": "f2f5d743d473a3a6ddaff94d8e227e5609549d1c085c748c6cf4c36a0c63cb10",
     "sourceIds": [
+      "e083e748ec6311742c2416e5",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
       "janner-charges-2015",
@@ -66,15 +67,6 @@
       "7fc07964a27914afe516c45b",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "e083e748ec6311742c2416e5",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -83,12 +75,15 @@
       "255a3ae9592a4cdd47fc9851",
       "8212c1ebe163e30add33aeaf",
       "b866e2c7eb4ced9098559c86",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "f3676fb7b03d3ee0516f2a19",
       "david-james-clarke-conviction-2026",
       "5ad950fb2db3a942445d47cc",
       "31471a73797c47322ae87f79",
       "abdul-halim-khan-conviction-2026",
+      "declassified-files-2026-05-08-presidential-unsealing-and-reporting-system-for-uap-encounters-pursue-",
       "conor-mcgrath-iico-conviction-2026",
+      "epstein-files-2026-03-21-prison-guard-reported-suspicious-document-shredding-after-jeffrey-epst",
       "huw-edwards-iico-conviction-2024",
       "adam-taylor-nca-conviction-2024",
       "hadden-federal-conviction-sentence-2023",
@@ -136,26 +131,31 @@
       "daily-12",
       "daily-15",
       "daily-16",
-      "daily-19",
-      "daily-20",
-      "daily-21",
-      "daily-22",
-      "daily-23",
       "62862e6ca90495adc0788a2d",
-      "a53bf480df4e4883383a08e0"
+      "a53bf480df4e4883383a08e0",
+      "missing-records-report",
+      "71e0563ca7b139c37c302956",
+      "72ef7895f95288946ccb3cff",
+      "44505b4afb60938c8117ad31",
+      "88269481cf5b04b7b0f83b58",
+      "7ee9141a42ad539f58a57e50",
+      "eb79eba926106673fc0305cc",
+      "d10a3c874af4d2b467263ee1",
+      "49679b1ed63de244c1cf19f9",
+      "d5adf164b612fd92a1dca692"
     ],
     "metrics": {
       "evidenceCount": 136,
-      "primarySourceCount": 110,
+      "primarySourceCount": 105,
       "disputedClaimCount": 25,
-      "newEntityCount": 2,
+      "newEntityCount": 5,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
-      "moneyRecordCount": 13
+      "relationshipCount": 19,
+      "moneyRecordCount": 14
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 110 A/B-grade public-record items are materially relevant to Death Files 100 Ui Enhancement.",
+        "conclusion": "The indexed record establishes that 105 A/B-grade public-record items are materially relevant to Death Files 100 Ui Enhancement.",
         "evidence": "IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); 2015 criminal charges relating to nine complainants (data/exposure-evidence-ledger.json); Broadmoor investigation examined Savile's access and abuse (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -175,7 +175,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Conviction for indecent images and misconduct in public office; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -190,7 +190,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Broadmoor investigation examined Savile's access and abuse",
@@ -214,6 +214,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
   }
 }

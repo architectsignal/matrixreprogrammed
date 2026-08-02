@@ -1,8 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T11:03:37.130Z",
+  "generatedAt": "2026-08-02T13:22:42.316Z",
   "owner": "scripts/reconcile-public-page-headings.js",
-  "changes": [],
+  "changes": [
+    "daily-watch.html",
+    "_site\\daily-watch.html",
+    "_site\\daily-watch"
+  ],
   "checks": [
     {
       "file": "daily-watch.html",
@@ -48,7 +52,7 @@
   "summary": {
     "headingChecks": 6,
     "entityBoundaryChecks": 2,
-    "changedFiles": 0
+    "changedFiles": 3
   },
   "boundary": "This reconciliation changes document hierarchy and makes existing evidence limitations statically visible. It does not alter evidence, rankings, claims, membership, payment, forum or Worker behaviour."
 }

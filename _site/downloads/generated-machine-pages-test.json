@@ -1,50 +1,7 @@
 {
-  "ok": false,
-  "generatedAt": "2026-08-02T10:58:29.452Z",
-  "failures": [
-    "entityBriefs _site: missing entity-briefs/control-structure.html",
-    "entityBriefs _site: missing extensionless route entity-briefs/control-structure",
-    "eliteReports _site: missing reports/billionaire-bernard-arnault.html",
-    "eliteReports _site: missing reports/billionaire-bill-gates.html",
-    "eliteReports _site: missing reports/billionaire-elon-musk.html",
-    "eliteReports _site: missing reports/billionaire-jeff-bezos.html",
-    "eliteReports _site: missing reports/billionaire-jensen-huang.html",
-    "eliteReports _site: missing reports/billionaire-larry-ellison.html",
-    "eliteReports _site: missing reports/billionaire-mark-zuckerberg.html",
-    "eliteReports _site: missing reports/billionaire-michael-bloomberg.html",
-    "eliteReports _site: missing reports/billionaire-peter-thiel.html",
-    "eliteReports _site: missing reports/billionaire-warren-buffett.html",
-    "eliteReports _site: missing reports/contractor-blackwater-xe-academi-constellis-lineage.html",
-    "eliteReports _site: missing reports/contractor-booz-allen-hamilton.html",
-    "eliteReports _site: missing reports/contractor-caci-international.html",
-    "eliteReports _site: missing reports/contractor-dyncorp-amentum-lineage.html",
-    "eliteReports _site: missing reports/contractor-g4s-allied-universal-security-lineage.html",
-    "eliteReports _site: missing reports/contractor-palantir-government-platforms.html",
-    "eliteReports _site: missing reports/contractor-saic-leidos-lineage.html",
-    "eliteReports _site: missing reports/contradiction-watch-report.html",
-    "eliteReports _site: missing reports/daily-revelation-report.html",
-    "eliteReports _site: missing reports/missing-records-report.html",
-    "eliteReports _site: missing extensionless route reports/billionaire-bernard-arnault",
-    "eliteReports _site: missing extensionless route reports/billionaire-bill-gates",
-    "eliteReports _site: missing extensionless route reports/billionaire-elon-musk",
-    "eliteReports _site: missing extensionless route reports/billionaire-jeff-bezos",
-    "eliteReports _site: missing extensionless route reports/billionaire-jensen-huang",
-    "eliteReports _site: missing extensionless route reports/billionaire-larry-ellison",
-    "eliteReports _site: missing extensionless route reports/billionaire-mark-zuckerberg",
-    "eliteReports _site: missing extensionless route reports/billionaire-michael-bloomberg",
-    "eliteReports _site: missing extensionless route reports/billionaire-peter-thiel",
-    "eliteReports _site: missing extensionless route reports/billionaire-warren-buffett",
-    "eliteReports _site: missing extensionless route reports/contractor-blackwater-xe-academi-constellis-lineage",
-    "eliteReports _site: missing extensionless route reports/contractor-booz-allen-hamilton",
-    "eliteReports _site: missing extensionless route reports/contractor-caci-international",
-    "eliteReports _site: missing extensionless route reports/contractor-dyncorp-amentum-lineage",
-    "eliteReports _site: missing extensionless route reports/contractor-g4s-allied-universal-security-lineage",
-    "eliteReports _site: missing extensionless route reports/contractor-palantir-government-platforms",
-    "eliteReports _site: missing extensionless route reports/contractor-saic-leidos-lineage",
-    "eliteReports _site: missing extensionless route reports/contradiction-watch-report",
-    "eliteReports _site: missing extensionless route reports/daily-revelation-report",
-    "eliteReports _site: missing extensionless route reports/missing-records-report"
-  ],
+  "ok": true,
+  "generatedAt": "2026-08-02T12:48:48.548Z",
+  "failures": [],
   "inventory": {
     "entityBriefs": {
       "expected": 1,
@@ -59,15 +16,11 @@
         },
         {
           "root": "_site",
-          "files": 0,
-          "actualIds": 0,
+          "files": 2,
+          "actualIds": 1,
           "stale": [],
-          "missingHtml": [
-            "control-structure"
-          ],
-          "missingAliases": [
-            "control-structure"
-          ]
+          "missingHtml": [],
+          "missingAliases": []
         }
       ]
     },
@@ -105,53 +58,11 @@
         },
         {
           "root": "_site",
-          "files": 34,
-          "actualIds": 17,
+          "files": 74,
+          "actualIds": 37,
           "stale": [],
-          "missingHtml": [
-            "billionaire-bernard-arnault",
-            "billionaire-bill-gates",
-            "billionaire-elon-musk",
-            "billionaire-jeff-bezos",
-            "billionaire-jensen-huang",
-            "billionaire-larry-ellison",
-            "billionaire-mark-zuckerberg",
-            "billionaire-michael-bloomberg",
-            "billionaire-peter-thiel",
-            "billionaire-warren-buffett",
-            "contractor-blackwater-xe-academi-constellis-lineage",
-            "contractor-booz-allen-hamilton",
-            "contractor-caci-international",
-            "contractor-dyncorp-amentum-lineage",
-            "contractor-g4s-allied-universal-security-lineage",
-            "contractor-palantir-government-platforms",
-            "contractor-saic-leidos-lineage",
-            "contradiction-watch-report",
-            "daily-revelation-report",
-            "missing-records-report"
-          ],
-          "missingAliases": [
-            "billionaire-bernard-arnault",
-            "billionaire-bill-gates",
-            "billionaire-elon-musk",
-            "billionaire-jeff-bezos",
-            "billionaire-jensen-huang",
-            "billionaire-larry-ellison",
-            "billionaire-mark-zuckerberg",
-            "billionaire-michael-bloomberg",
-            "billionaire-peter-thiel",
-            "billionaire-warren-buffett",
-            "contractor-blackwater-xe-academi-constellis-lineage",
-            "contractor-booz-allen-hamilton",
-            "contractor-caci-international",
-            "contractor-dyncorp-amentum-lineage",
-            "contractor-g4s-allied-universal-security-lineage",
-            "contractor-palantir-government-platforms",
-            "contractor-saic-leidos-lineage",
-            "contradiction-watch-report",
-            "daily-revelation-report",
-            "missing-records-report"
-          ]
+          "missingHtml": [],
+          "missingAliases": []
         }
       ]
     }

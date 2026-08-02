@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:33:58.402Z",
+  "generatedAt": "2026-08-02T12:18:54.160Z",
   "pageCount": 110,
   "output": "downloads/accountability-tracker-pressure-test.pdf",
   "report": {
-    "version": 4,
+    "version": 7,
     "title": "Accountability Tracker Pressure Test",
-    "contentHash": "ad8ff77203c31929791956c40ff3044ff00d45c6215187dd4bbe714b8d14df25",
+    "contentHash": "ccc4d82068e8728057b3783f56988c13e795cf2acb26e78d1a58a47e9bd2cb59",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "janner-iicsa-2022",
@@ -32,8 +32,6 @@
       "4961972398d896435d33f3f7",
       "deutsche-bank-epstein-dfs-2020",
       "gao-hq",
-      "3a425f0d5d683952bc0ad7ac",
-      "9f77464e401ac59ad1adb812",
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
       "10420eb4159dd9ba47a3f7cb",
@@ -106,9 +104,8 @@
       "5295a33003172878f9880122",
       "f44c3c7309a5f0779a57e655",
       "275d6c3caca158f7a3e15780",
-      "26b90533dbf7d2ed42f02de6",
-      "contractor-blackwater-xe-academi-constellis-lineage",
       "us-doj",
+      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -135,20 +132,23 @@
       "family-offices-grosvenor-group",
       "family-offices-exor",
       "family-offices-jab-holding-company",
-      "family-offices-kirkbi"
+      "family-offices-kirkbi",
+      "family-offices-pontegadea",
+      "family-offices-l-catterton-family-capital-routes",
+      "family-offices-premjiinvest"
     ],
     "metrics": {
       "evidenceCount": 129,
-      "primarySourceCount": 95,
+      "primarySourceCount": 98,
       "disputedClaimCount": 30,
-      "newEntityCount": 5,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 28,
-      "moneyRecordCount": 43
+      "moneyRecordCount": 45
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 95 A/B-grade public-record items are materially relevant to Accountability Tracker Pressure Test.",
+        "conclusion": "The indexed record establishes that 98 A/B-grade public-record items are materially relevant to Accountability Tracker Pressure Test.",
         "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

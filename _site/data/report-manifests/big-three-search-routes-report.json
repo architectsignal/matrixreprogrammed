@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-02T10:34:14.287Z",
-  "pageCount": 123,
+  "generatedAt": "2026-08-02T12:19:09.557Z",
+  "pageCount": 118,
   "output": "downloads/big-three-search-routes-report.pdf",
   "report": {
-    "version": 11,
+    "version": 14,
     "title": "Big Three Search Routes Report",
-    "contentHash": "ce70191fd7c159ae9940bac575697df27639d00054a09900b8d53a5f0f0fbbd1",
+    "contentHash": "f8831564c10f1905be1940ba043a619e56ff622d1803363c327a4811f3c04501",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
+      "e083e748ec6311742c2416e5",
       "1769af26a7bda813406cd8f5",
       "05e609f8ccfd225cfc787019",
-      "e083e748ec6311742c2416e5",
       "26b90533dbf7d2ed42f02de6",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
@@ -81,16 +81,15 @@
       "74fb2863cc9a8120f3c68b67",
       "4961972398d896435d33f3f7",
       "asset-managers",
-      "daily-revelation-report",
       "contractor-dyncorp-amentum-lineage",
       "contractor-palantir-government-platforms",
       "contractor-g4s-allied-universal-security-lineage",
-      "3a425f0d5d683952bc0ad7ac",
       "trusts-crown-estate-ownership-trust-routes",
       "political-money-open-society-policy-grant-routes",
       "71e0563ca7b139c37c302956",
       "008875ef7bf45eb14dccb254",
       "14d04c0943d24cbe6a1926db",
+      "a4c15f7c3d808369b294115e",
       "c1520a15d6e62871a66c558e",
       "7fc07964a27914afe516c45b",
       "b7e4a66335a706ef5097117f",
@@ -98,7 +97,6 @@
       "alex-karp",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
-      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -124,13 +122,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "b4cb47ea50dc901364239e9f",
       "a71a8be091652489b843ecf6",
       "f669b33c49b63e787cde3008",
@@ -145,20 +136,29 @@
       "janner-iicsa-2022",
       "peter-ball-conviction-2015",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-DA07BCFBB726AA49"
+      "ASC-REVIEW-DA07BCFBB726AA49",
+      "ASC-REVIEW-CFB2B8804532DFFC",
+      "ASC-REVIEW-5D13FDD470EDF012",
+      "ASC-REVIEW-94F3B4C96A469AB3",
+      "ASC-REVIEW-5F69F7CCEE3F7274",
+      "ASC-REVIEW-C369A84AD971DD75",
+      "ASC-REVIEW-A6F3D2598C5BA884",
+      "ASC-REVIEW-7729CF4536080393",
+      "ASC-REVIEW-EAB6011874016286",
+      "ASC-REVIEW-C973762B151D5947"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 64,
-      "disputedClaimCount": 42,
-      "newEntityCount": 30,
+      "primarySourceCount": 56,
+      "disputedClaimCount": 51,
+      "newEntityCount": 12,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 49,
-      "moneyRecordCount": 53
+      "relationshipCount": 58,
+      "moneyRecordCount": 62
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 64 A/B-grade public-record items are materially relevant to Big Three Search Routes Report.",
+        "conclusion": "The indexed record establishes that 56 A/B-grade public-record items are materially relevant to Big Three Search Routes Report.",
         "evidence": "SEC EDGAR / ownership / proxy-vote records (data/deep-intel-feed-matrix.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -178,7 +178,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 58 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; SEC EDGAR / ownership / proxy-vote records; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -193,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 58 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "SEC EDGAR / ownership / proxy-vote records",

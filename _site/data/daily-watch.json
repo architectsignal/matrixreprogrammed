@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-08-02T10:54:03.560Z",
+  "updated": "2026-08-02T13:22:23.447Z",
   "date": "2026-08-02",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 23682
+      "signalCount": 23683
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 17115
+      "signalCount": 17108
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 12368
+      "signalCount": 12367
     }
   ],
   "person": {
@@ -175,7 +175,7 @@
       "person": {
         "changed": false,
         "reason": "The same entity remains the current evidence leader.",
-        "incumbentScore": 135,
+        "incumbentScore": 91,
         "challengerScore": 91,
         "marginRequired": 14
       },

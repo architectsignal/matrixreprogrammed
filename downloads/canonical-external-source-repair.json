@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:21:22.536Z",
+  "changed": [],
+  "replacements": {
+    "https://www.bis.org/topic/cbdc.htm": {
+      "to": "https://www.bis.org/about/bisih/topics/cbdc.htm",
+      "count": 0
+    },
+    "https://search.worldbank.org/api/v2/projects": {
+      "to": "https://projects.worldbank.org/en/projects-operations/project-search",
+      "count": 0
+    },
+    "https://efile.fara.gov/ords/fara/f?p=1381:1": {
+      "to": "https://efile.fara.gov/ords/fara/f?p=1235%3A10",
+      "count": 0
+    },
+    "https://efile.fara.gov/ords/fara/f?p=1381%3A1": {
+      "to": "https://efile.fara.gov/ords/fara/f?p=1235%3A10",
+      "count": 0
+    },
+    "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home": {
+      "to": "https://cde.ucr.cjis.gov/",
+      "count": 0
+    },
+    "https://cde.ucr.cjis.gov/LATEST/webapp/": {
+      "to": "https://cde.ucr.cjis.gov/",
+      "count": 0
+    },
+    "https://cde.ucr.cjis.gov/LATEST/": {
+      "to": "https://cde.ucr.cjis.gov/",
+      "count": 0
+    },
+    "https://www.bmi.gv.at/508/Statistiken/": {
+      "to": "https://www.bmi.gv.at/magazin/2026_05_06/01_kriminalstatistik_2025.html",
+      "count": 0
+    }
+  },
+  "residual": [],
+  "canonicalPresent": [
+    "https://www.bis.org/about/bisih/topics/cbdc.htm",
+    "https://efile.fara.gov/ords/fara/f?p=1235%3A10",
+    "https://cde.ucr.cjis.gov/",
+    "https://www.bmi.gv.at/magazin/2026_05_06/01_kriminalstatistik_2025.html",
+    "https://projects.worldbank.org/en/projects-operations/project-search"
+  ],
+  "sources": {
+    "bis": "BIS Innovation Hub CBDC topic",
+    "worldBank": "World Bank Projects & Operations advanced search",
+    "fara": "FARA Search Filings",
+    "fbi": "FBI Crime Data Explorer current official root",
+    "austria": "Austrian Interior Ministry 2025 crime-statistics publication"
+  },
+  "officialSourceNotes": {
+    "fbiCde": "The official CDE root is current; retired /LATEST/ deep links are normalized to it."
+  }
+}

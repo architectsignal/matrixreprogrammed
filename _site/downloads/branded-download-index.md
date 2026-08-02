@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-08-02T10:43:14.971Z
+Updated: 2026-08-02T12:28:21.936Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -79,7 +79,9 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Clock Meaning Contract Report: downloads/clock-meaning-contract-report.pdf
 - WWIII Escalation Clock: downloads/clock-wall.pdf
 - Cloudflare Canonical Member Origin: downloads/cloudflare-canonical-member-origin.pdf
+- Cloudflare Homepage Route Sync: downloads/cloudflare-homepage-route-sync.pdf
 - Cloudflare Investigation Graph Projection: downloads/cloudflare-investigation-graph-projection.pdf
+- Cloudflare Member Experience Test: downloads/cloudflare-member-experience-test.pdf
 - Cloudflare Search Index Compaction: downloads/cloudflare-search-index-compaction.pdf
 - Cloudflare Worker Routes Test: downloads/cloudflare-worker-routes-test.pdf
 - Commercial Strategy Visibility: downloads/commercial-strategy-visibility.pdf
@@ -212,6 +214,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Generated Machine Page Cleanup: downloads/generated-machine-page-cleanup.pdf
 - Generated Machine Pages Test: downloads/generated-machine-pages-test.pdf
 - Generated Site Repair Report: downloads/generated-site-repair-report.pdf
+- Geographic Power Atlas Build: downloads/geographic-power-atlas-build.pdf
 - Geographic Power Atlas Runtime Test: downloads/geographic-power-atlas-runtime-test.pdf
 - Global Risk Clocks: downloads/global-risk-clocks-linked.pdf
 - Heroes Fighting the Matrix — Source Ledger: downloads/heroes-fighting-matrix-source-ledger.pdf
@@ -383,10 +386,15 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Review Queue Speculation Publication: downloads/review-queue-speculation-publication.pdf
 - Runtime Performance Budget Test: downloads/runtime-performance-budget-test.pdf
 - Runtime Performance Optimizations: downloads/runtime-performance-optimizations.pdf
+- Runtime Template Link Normalization: downloads/runtime-template-link-normalization.pdf
 - Search First Accountability Home Pressure Test: downloads/search-first-accountability-home-pressure-test.pdf
 - Search First Accountability Home Report: downloads/search-first-accountability-home-report.pdf
 - Search Investigation Smoke Test: downloads/search-investigation-smoke-test.pdf
+- Search Provider Entitlements: downloads/search-provider-entitlements.pdf
+- Search Quality Benchmark: downloads/search-quality-benchmark.pdf
 - Search Runtime Hardening Report: downloads/search-runtime-hardening-report.pdf
+- Search Semantic Benchmark: downloads/search-semantic-benchmark.pdf
+- Search Semantic Index Report: downloads/search-semantic-index-report.pdf
 - Search System Repair Report: downloads/search-system-repair-report.pdf
 - Search V3 Adjudicated Ranking Patch: downloads/search-v3-adjudicated-ranking-patch.pdf
 - Search V3 Build Report: downloads/search-v3-build-report.pdf
@@ -415,6 +423,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Site Quality Report: downloads/site-quality-report.pdf
 - Site Relationship Map: downloads/site-relationship-map.pdf
 - Site-Wide Function Audit: downloads/site-wide-function-audit.pdf
+- Source Adapter Contract Test: downloads/source-adapter-contract-test.pdf
 - Source Cards: downloads/source-cards.pdf
 - Source Change Monitor Report: downloads/source-change-monitor-report.pdf
 - Source Change Preservation Hardening Report: downloads/source-change-preservation-hardening-report.pdf
@@ -422,6 +431,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Source Change Preservation Test: downloads/source-change-preservation-test.pdf
 - Source Document Vault Route Restore: downloads/source-document-vault-route-restore.pdf
 - Source Document Vault: downloads/source-document-vault.pdf
+- Source Evidence Search Extension: downloads/source-evidence-search-extension.pdf
 - Speculation / Needs Review: downloads/speculation-needs-review-public.pdf
 - Speculative Conclusion Review Queue: downloads/speculative-conclusion-review-queue.pdf
 - Speculative Conclusions: downloads/speculative-conclusions.pdf

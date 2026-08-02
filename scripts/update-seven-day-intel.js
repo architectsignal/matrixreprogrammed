@@ -312,6 +312,7 @@ async function main() {
   const updated = {
     ...existing,
     updated: collectionCompletedAt,
+    lastCheckedAt: collectionCompletedAt,
     collectionStartedAt,
     collectionCompletedAt,
     sourceCollectionCutoff: new Date(cutoff).toISOString(),
@@ -364,6 +365,7 @@ main().catch(error => {
     const recovered = {
       ...existing,
       updated: recoveredAt,
+      lastCheckedAt: recoveredAt,
       collectionCompletedAt: recoveredAt,
       status: preservedItems ? 'collector-failed-safely-preserved-current-window' : 'collector-failed-safely-no-current-items',
       freshnessTruth: preservedItems

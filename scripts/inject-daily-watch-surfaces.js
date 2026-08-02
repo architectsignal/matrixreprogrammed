@@ -121,7 +121,35 @@ for (const relative of ['data/homepage-command-surface.json','data/daily-command
   write(relative,JSON.stringify(value,null,2));
 }
 
-const report = { ok:pages.length >= 3,generatedAt:new Date().toISOString(),watchDate:watch.date,pages,dedicatedPage:'daily-watch.html',firstPostIntroHomepageSurface:pages.includes('index.html'),rankingPolicy:watch.rankingPolicy,dossierTotals:{person:dossiers.person.totals,institution:dossiers.institution.totals,family:dossiers.family.totals},supportActions:['GoFundMe','Membership','Signal Drop','Ranking History'] };
+const outputRoot = at('_site');
+const outputCopies = [];
+if (fs.existsSync(outputRoot)) {
+  for (const relative of [
+    'index.html','daily-command-brief.html','daily-brain-brief.html','live-intel.html','daily-watch.html',
+    'data/homepage-command-surface.json','data/daily-command-brief.json','data/daily-brain-brief.json','data/live-intel.json',
+    'data/daily-watch.json','data/daily-watch-dossiers.json','data/daily-watch-history.json','data/daily-watch-incumbents.json','data/weekly-watch-delta.json',
+    'data/evidence-weighted-relationship-graph.json','data/clock-wall.json','data/mission-data-contract-report.json',
+    'downloads/mission-data-contract-report.json'
+  ]) {
+    const source = at(relative);
+    if (!fs.existsSync(source) || !fs.statSync(source).isFile()) continue;
+    const destination = path.join(outputRoot, relative);
+    fs.mkdirSync(path.dirname(destination), { recursive: true });
+    fs.copyFileSync(source, destination);
+    outputCopies.push(relative);
+    if (relative.endsWith('.html')) {
+      const extensionless = path.join(outputRoot, relative.replace(/\.html$/i, ''));
+      if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(source, extensionless);
+    }
+  }
+}
+
+const report = { ok:pages.length >= 3,generatedAt:new Date().toISOString(),watchDate:watch.date,pages,dedicatedPage:'daily-watch.html',firstPostIntroHomepageSurface:pages.includes('index.html'),rankingPolicy:watch.rankingPolicy,dossierTotals:{person:dossiers.person.totals,institution:dossiers.institution.totals,family:dossiers.family.totals},supportActions:['GoFundMe','Membership','Signal Drop','Ranking History'],cloudflareCopies:outputCopies };
 write('downloads/daily-watch-publication-report.json',JSON.stringify(report,null,2));
+if (fs.existsSync(outputRoot)) {
+  const outputReport = path.join(outputRoot, 'downloads', 'daily-watch-publication-report.json');
+  fs.mkdirSync(path.dirname(outputReport), { recursive: true });
+  fs.copyFileSync(at('downloads/daily-watch-publication-report.json'), outputReport);
+}
 if (!report.ok) throw new Error(`Daily hit list reached only ${pages.length} public pages.`);
-console.log(`Cinematic daily hit list published first after the intro across ${pages.length} public pages with expandable dossiers.`);
+console.log(`Cinematic daily hit list published first after the intro across ${pages.length} public pages with expandable dossiers${outputCopies.length ? `; ${outputCopies.length} source files synchronized to Cloudflare output` : ''}.`);

@@ -3,6 +3,7 @@ const path = require('path');
 
 const root = process.cwd();
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/$/, '');
+const directWorkerUrl = String(process.env.AI_DIRECT_WORKER_URL || '').replace(/\/$/, '');
 const attempts = Number(process.env.PYRAMID_VERIFY_ATTEMPTS || 36);
 const delayMs = Number(process.env.PYRAMID_VERIFY_DELAY_MS || 10000);
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -12,7 +13,9 @@ async function fetchText(route) {
   const accept = route.includes('/api/public/') || route.endsWith('.json')
     ? 'application/json,text/plain;q=0.9,*/*;q=0.8'
     : 'text/html,application/xhtml+xml,application/javascript,application/json;q=0.9,*/*;q=0.8';
-  const urls = [`${siteUrl}${route}${join}matrix_verify=${Date.now()}`, `${siteUrl}${route}`];
+  const bases = [siteUrl];
+  if (directWorkerUrl && directWorkerUrl !== siteUrl) bases.push(directWorkerUrl);
+  const urls = bases.flatMap(base => [`${base}${route}${join}matrix_verify=${Date.now()}`, `${base}${route}`]);
   let last = null;
   for (const url of urls) {
     const response = await fetch(url, {

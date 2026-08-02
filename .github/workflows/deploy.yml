@@ -22,6 +22,7 @@ jobs:
   refresh-build-guard-deploy-verify:
     name: Refresh, migrate, deploy and prove autonomous AI production
     runs-on: ubuntu-latest
+    environment: production
     timeout-minutes: 120
     steps:
       - name: Confirm explicit manual production release
@@ -32,12 +33,25 @@ jobs:
             echo 'Production release refused: confirmation text did not match.'
             exit 1
           }
+          test "${{ github.actor }}" != "github-actions[bot]" || {
+            echo 'Production release refused: automated workflow dispatches are not release authority.'
+            exit 1
+          }
 
       - name: Checkout latest main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
+
+      - name: Enforce Cloudflare zero-overage budget
+        env:
+          CLOUDFLARE_GIT_BUILDS_DISCONNECTED: ${{ vars.CLOUDFLARE_GIT_BUILDS_DISCONNECTED }}
+          CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED: ${{ vars.CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED }}
+          CLOUDFLARE_BUILD_MINUTES_USED: ${{ vars.CLOUDFLARE_BUILD_MINUTES_USED }}
+          CLOUDFLARE_USAGE_CHECKED_AT_UTC: ${{ vars.CLOUDFLARE_USAGE_CHECKED_AT_UTC }}
+          EXPECTED_CLOUDFLARE_BUILD_MINUTES: '0'
+        run: node scripts/cloudflare-usage-budget-guard.js release
 
       - name: Record exact main commit to deploy
         run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"

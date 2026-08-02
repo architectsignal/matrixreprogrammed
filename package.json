@@ -24,6 +24,8 @@
     "mission-orchestration-audit": "node scripts/mission-orchestration-audit.js",
     "daily-watch": "node scripts/enforce-mission-data-contracts.js && node scripts/build-daily-watch.js && node scripts/inject-daily-watch-surfaces.js && node scripts/repair-search-system.js && node scripts/mission-orchestration-audit.js",
     "production-guard": "node scripts/production-deploy-guard.js",
+    "cloudflare-budget": "node scripts/cloudflare-usage-budget-guard.js check",
+    "test:cloudflare-budget": "node scripts/cloudflare-usage-budget-guard-test.js && node scripts/cloudflare-usage-budget-workflow-test.js",
     "forum-persistence": "node scripts/forum-persistence-d1-test.js",
     "pressure-test:paypal-rehearsal": "node scripts/phase7-paypal-sandbox-rehearsal-test.mjs",
     "dark-speculation": "node scripts/update-seven-day-intel.js && node scripts/build-dark-speculation-lab.js && node scripts/build-dark-speculation-clubs.js && node scripts/patch-homepage-speculation-eye.js && node scripts/enlarge-homepage-dark-files-gate.js && node scripts/hide-visible-compatibility-markers.js && node scripts/ensure-shared-assets.js",

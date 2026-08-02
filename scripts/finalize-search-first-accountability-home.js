@@ -78,11 +78,14 @@ const questionLedger = {
 writeEverywhere('data/accountability-question-ledger.json', `${JSON.stringify(questionLedger, null, 2)}\n`);
 
 const explore = [
-  ['hit-list.html','Accountability Hit List'],['subject-index.html','People and Dossiers'],['follow-the-money.html','Follow the Money'],
+  ['start-here.html','Start Here'],['live-intel.html','Live Intel'],['hit-list.html','Accountability Hit List'],
+  ['subject-index.html','People and Dossiers'],['follow-the-money.html','Follow the Money'],
   ['behind-the-curtain.html','Behind the Curtain'],['elite-family-tracker.html','Track the Families'],['epstein-files.html','Epstein Files'],
   ['predators-in-power.html','Predators in Power'],['death-files.html','Death Files'],['agenda-2030.html','Agenda 2030'],
-  ['evidence-vault.html','Evidence Vault'],['network-maps.html','Network Maps'],['timers.html','Risk Timers'],
-  ['dark-speculation-lab.html','Dark Speculation Lab'],['books.html','Books and Reports'],['forum.html','Signal Board']
+  ['evidence-vault.html','Evidence Vault'],['independent-links.html','Independent Links'],['network-maps.html','Network Maps'],
+  ['power-atlas.html','Control System'],['timers.html','Risk Timers'],['security-privacy.html','Security Tools'],
+  ['dark-web-safety.html','Dark Web Safety'],['dark-speculation-lab.html','Dark Speculation Lab'],
+  ['books.html','Books and Reports'],['forum.html','Signal Board'],['contact-the-machine.html','Contact the Machine']
 ];
 
 const fallbackCards = [

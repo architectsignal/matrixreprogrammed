@@ -133,6 +133,7 @@ critical.forEach(copy);
 
 // Nothing may mutate the deployable bundle after this sanitation and audit.
 run('scripts/final-release-sanitize.js');
+run('scripts/search-first-accountability-home-pressure-test.js');
 
 // The exact regression that paused the release is now proved after the last
 // mutator, against both canonical source and the Cloudflare output.

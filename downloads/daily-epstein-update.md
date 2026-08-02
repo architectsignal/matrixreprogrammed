@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-02T13:54:20.802Z
-Live Intel source window: 2026-08-02T13:54:14.270Z
+Generated: 2026-08-02T19:34:28.064Z
+Live Intel source window: 2026-08-02T19:34:21.862Z
 Latest source publication: 2026-07-31T19:07:23.000Z
 Status: current-seven-day-record-window
 
@@ -75,13 +75,13 @@ Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannic
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
 - Published: 2026-07-30T00:48:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
 
-U.S. Senate unanimously opposes clemency for Ghislaine Maxwell AnewZ
+U.S. Senate unanimously opposes clemency for Ghislaine Maxwell anewz.tv
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

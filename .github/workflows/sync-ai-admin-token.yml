@@ -59,6 +59,7 @@ jobs:
           node --check src/worker-production-autonomy.js
           node --check src/worker-ai-management.js
           node --check scripts/verify-live-ai-management.mjs
+          node scripts/live-ai-verification-classifier.test.mjs
 
       - name: Build activated production configuration
         shell: bash

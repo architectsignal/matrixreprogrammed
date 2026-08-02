@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { classifyAiManagementResponse } from './lib/live-ai-verification-classifier.mjs';
 
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/+$/, '');
 const adminToken = String(process.env.ADMIN_API_TOKEN || process.env.AI_MANAGEMENT_ADMIN_TOKEN || '').trim();
@@ -50,6 +51,8 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
     data = { raw: diagnosticPreview(text) };
   }
   return {
+    requestedUrl: `${siteUrl}${pathname}`,
+    responseUrl: response.url,
     status: response.status,
     ok: response.ok,
     origin: response.headers.get('x-matrix-origin'),
@@ -57,6 +60,9 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
     contentType: response.headers.get('content-type'),
     server: response.headers.get('server'),
     cfRay: response.headers.get('cf-ray'),
+    cfMitigated: response.headers.get('cf-mitigated'),
+    cfAccessApp: response.headers.get('cf-access-app'),
+    cfAccessTeam: response.headers.get('cf-access-team'),
     location: response.headers.get('location'),
     data
   };
@@ -71,6 +77,10 @@ function diagnostic(result) {
     contentType: result.contentType,
     server: result.server,
     cfRay: result.cfRay,
+    cfMitigated: result.cfMitigated,
+    cfAccessApp: result.cfAccessApp,
+    cfAccessTeam: result.cfAccessTeam,
+    responseUrl: result.responseUrl,
     location: result.location,
     error: result.data?.error || null,
     preview: result.data?.raw || null
@@ -86,9 +96,11 @@ const attemptsLog = [];
 for (let attempt = 1; attempt <= attempts; attempt += 1) {
   try {
     health = await request('/api/ai-management/admin/health');
+    const classification = classifyAiManagementResponse(health, { siteUrl, pathname: '/api/ai-management/admin/health' });
     attemptsLog.push({
       attempt,
       ...diagnostic(health),
+      classification: classification.code,
       schemaReady: health.data?.schemaReady,
       autonomySchemaReady: health.data?.autonomySchemaReady
     });
@@ -100,25 +112,21 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
 }
 
 if (health?.status !== 200) {
-  const edgeBlocked = health?.status === 403
-    && !health?.origin
-    && /text\/html/i.test(String(health?.contentType || ''));
+  const classification = classifyAiManagementResponse(health, { siteUrl, pathname: '/api/ai-management/admin/health' });
+  const edgeBlocked = ['cloudflare-access-rejection', 'waf-or-bot-rejection'].includes(classification.code);
   const failure = {
     ok: false,
     siteUrl,
     verifiedAt: new Date().toISOString(),
     edgeBlocked,
     authorizationHeaderSent: sendAuthorization,
+    classification,
     attempts: attemptsLog,
     final: diagnostic(health),
-    remediation: edgeBlocked
-      ? 'Cloudflare returned HTML before the AI-management Worker. Check Access/WAF/custom security rules for /api/ai-management/* and allow the GitHub deployment verifier. The verifier now uses only x-admin-token by default.'
-      : null
+    remediation: classification.remediation
   };
   fs.writeFileSync(outputPath, `${JSON.stringify(failure, null, 2)}\n`);
-  if (edgeBlocked) {
-    throw new Error(`AI-management request was blocked before the Worker; status=403; server=${health.server || 'missing'}; cfRay=${health.cfRay || 'missing'}; contentType=${health.contentType || 'missing'}`);
-  }
+  throw new Error(`AI-management verification failed: ${classification.code}; status=${health?.status || 'missing'}; origin=${health?.origin || 'missing'}; authLayer=${health?.authLayer || 'missing'}; server=${health?.server || 'missing'}; cfRay=${health?.cfRay || 'missing'}; contentType=${health?.contentType || 'missing'}`);
 }
 
 assert(

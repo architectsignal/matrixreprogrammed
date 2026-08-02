@@ -29,7 +29,6 @@ const internalRoutes = new Set([
   'sales-ladder.html',
   'schema-index.html',
   'machine-index.html',
-  'campaign-calendar.html',
   'accountability-review-inbox.html',
   'speculation-needs-review.html'
 ]);

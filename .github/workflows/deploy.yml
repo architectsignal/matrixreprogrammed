@@ -95,6 +95,7 @@ jobs:
           node --check ai-management/provider-adapters/opportunity/zero-spend-public-http.mjs
           node --check scripts/run-autonomous-ai-manager.mjs
           node --check scripts/verify-live-ai-management.mjs
+          node scripts/live-ai-verification-classifier.test.mjs
           node scripts/d1-export-command-test.js
           npx --yes wrangler@latest deploy --dry-run
 

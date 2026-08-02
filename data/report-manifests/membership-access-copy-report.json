@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:26:18.351Z",
+  "generatedAt": "2026-08-02T10:39:23.701Z",
   "pageCount": 126,
   "output": "downloads/membership-access-copy-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Membership Access Copy Report",
-    "contentHash": "203911d0763181a1028cc1c6557c7c6cf8c72bfa76f6a763505e953c6191644d",
+    "contentHash": "e24d3b47f1032a063e2f2173ef88fe0f735dcb699ae369fa233afa0664e679ef",
     "sourceIds": [
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -17,14 +17,14 @@
       "511ed227bb4be58b582ebb8d",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
       "source-change-a334a207405ec629b4be337d",
       "source-change-c452df757991611cb06ec88a",
       "source-change-8299a278d70b1f879d6d522f",
       "source-change-0c5f51804baf8e9e2c1fdd0b",
-      "source-change-96b50a0ea1ae9a6b5767f2c2",
-      "source-change-a21f3d8e98268d5e01e1eb7c",
-      "source-change-44505b4afb60938c8117ad31",
-      "source-change-701229696b57f88191742d4f",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T07:39:38.763Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
   }
 }

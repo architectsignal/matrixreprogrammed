@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-02T06:33:29.139Z",
+  "updated": "2026-08-02T10:49:22.191Z",
   "title": "Daily / Weekly Visual Control Map",
   "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
   "periods": {
@@ -175,9 +175,21 @@
           "type": "profile route"
         },
         {
+          "name": "Bill Gates",
+          "score": 100,
+          "route": "billionaire-briefs/bill-gates.html",
+          "type": "profile route"
+        },
+        {
           "name": "Mark Zuckerberg",
           "score": 100,
           "route": "billionaire-briefs/mark-zuckerberg.html",
+          "type": "profile route"
+        },
+        {
+          "name": "Warren Buffett",
+          "score": 100,
+          "route": "billionaire-briefs/warren-buffett.html",
           "type": "profile route"
         },
         {
@@ -190,18 +202,6 @@
           "name": "DynCorp / Amentum lineage",
           "score": 100,
           "route": "contractor-briefs/dyncorp-amentum-lineage.html",
-          "type": "contractor route"
-        },
-        {
-          "name": "CACI International",
-          "score": 100,
-          "route": "contractor-briefs/caci-intelligence-contractor.html",
-          "type": "contractor route"
-        },
-        {
-          "name": "Booz Allen Hamilton",
-          "score": 100,
-          "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
           "type": "contractor route"
         }
       ]
@@ -249,7 +249,7 @@
         {
           "name": "Most important missing record",
           "score": 80,
-          "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+          "route": "entity-briefs/control-structure.html",
           "type": "daily conclusion"
         },
         {

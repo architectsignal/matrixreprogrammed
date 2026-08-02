@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:20:04.805Z",
+  "generatedAt": "2026-08-02T10:34:27.578Z",
   "pageCount": 117,
   "output": "downloads/campaign-intelligence-dossiers-push.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Intelligence Dossiers Campaign",
-    "contentHash": "d9b696b59bbda249cd8b2baf09f017fe805f35eee2694b6c3c51d8c3bba15402",
+    "contentHash": "41efe83ea456ae664d2d8a78be3749b2cce26fd2fa98a892b02ff6f8afc2e195",
     "sourceIds": [
       "8277ac276bab9b050504a33f",
       "c773a9b56feb9b238da1ce66",
@@ -85,16 +85,6 @@
       "55a324e4bddcaa4ce8c4586e",
       "360e80c162081c85d2c680ef",
       "aa45c75a112060231ce901ba",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
       "6188547d91106e0f9d3bce50",
       "declassified-files-2026-06-16-pentagon-releases-72-ufo-files-military-reports-reveal-new-sightings-r",
       "declassified-files-2026-05-19-cuba-declassified-records-on-the-brothers-to-the-rescue-shootdown-nati",
@@ -146,32 +136,42 @@
       "epstein-files-2026-06-10-bill-gates-tells-congress-he-didn-t-know-of-epstein-s-crimes-renounces",
       "epstein-files-2026-06-10-gates-sought-donations-from-epstein-despite-knowledge-of-crimes-the-ce",
       "epstein-files-2026-06-10-bill-gates-tells-lawmakers-he-was-not-aware-of-epstein-s-crimes-npr",
-      "epstein-files-2026-06-10-lawmakers-once-saw-bill-gates-as-a-benevolent-innovator-after-epstein-"
+      "epstein-files-2026-06-10-lawmakers-once-saw-bill-gates-as-a-benevolent-innovator-after-epstein-",
+      "epstein-files-2026-06-05-jeffrey-epstein-s-death-mystery-deepens-around-orange-figure-near-his-",
+      "epstein-files-2026-06-04-bondi-invoked-privilege-declined-to-answer-questions-about-interaction",
+      "epstein-files-2026-06-04-house-oversight-releases-transcribed-interview-with-epstein-s-former-a",
+      "war-machine-2026-06-03-trump-s-choice-of-acting-intel-chief-threatens-fragile-surveillance-po",
+      "epstein-files-2026-05-30-bondi-refuses-to-answer-trump-questions-in-epstein-probe-abc-news-head",
+      "epstein-files-2026-05-29-bondi-refuses-to-answer-questions-about-trump-s-involvement-in-epstein",
+      "epstein-files-2026-05-28-viral-jeffrey-epstein-lookalike-announces-run-for-palm-beach-mayor-pro",
+      "war-machine-2026-05-22-dod-wants-nearly-30-billion-to-modernize-its-ai-supercomputing-arsenal",
+      "war-machine-2026-05-21-one-fifth-of-spacex-revenue-comes-from-uncle-sam-the-defense-contracto",
+      "epstein-files-2026-05-18-epstein-jailer-to-meet-with-house-oversight-panel-monday-newsnation"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 11,
+      "primarySourceCount": 1,
       "disputedClaimCount": 4,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 32,
-      "moneyRecordCount": 21
+      "relationshipCount": 23,
+      "moneyRecordCount": 22
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Intelligence Dossiers Campaign.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); World Wrestling Entertainment (data/live-intel.json); World Wrestling Entertainment Part 01 (data/live-intel.json); World Wrestling Entertainment Part 02 (Final) (data/live-intel.json); Brian Wells (data/live-intel.json); Brian Wells Part 01 (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Intelligence Dossiers Campaign.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 32 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Network Share Kit; War Machine Campaign; Intelligence Dossiers Offer; Intelligence Network Pack; Crime Network Starter Brief; War Machine Share Kit; Follow The Money Watch; Organised Crime Index 2025: South Africa a continental hotspot for criminal networks - Mail & Guardian",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 32 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 23 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Share Kit",
           "War Machine Campaign",

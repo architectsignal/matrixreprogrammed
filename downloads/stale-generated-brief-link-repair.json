@@ -1,12 +1,77 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:38:05.030Z",
+  "generatedAt": "2026-08-02T10:57:22.605Z",
   "roots": [
     ".",
     "_site"
   ],
-  "filesChanged": 0,
-  "fixes": 0,
-  "changes": [],
+  "filesChanged": 16,
+  "fixes": 34,
+  "changes": [
+    {
+      "file": "daily-brain-brief.html",
+      "fixes": 1
+    },
+    {
+      "file": "daily-command-brief.html",
+      "fixes": 1
+    },
+    {
+      "file": "daily-watch.html",
+      "fixes": 1
+    },
+    {
+      "file": "index.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-brain-brief",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-brain-brief.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-command-brief",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-command-brief.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-watch",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-watch.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/elite-reports",
+      "fixes": 10
+    },
+    {
+      "file": "_site/elite-reports.html",
+      "fixes": 10
+    },
+    {
+      "file": "_site/index",
+      "fixes": 1
+    },
+    {
+      "file": "_site/index.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/live-intel",
+      "fixes": 1
+    },
+    {
+      "file": "_site/live-intel.html",
+      "fixes": 1
+    }
+  ],
   "boundary": "Only links to generated entity briefs, exposure pages and elite reports are changed, and only when the current generated target does not exist. Missing entity routes fall back to the public search; missing report routes fall back to the reports hub. Both source pages and the exact Cloudflare output are repaired."
 }

@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "updated": "2026-08-02T08:23:00.075Z",
+  "updated": "2026-08-02T10:45:40.969Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
-  "nodeCount": 131,
+  "nodeCount": 97,
   "edgeCount": 172,
   "nodes": [
     {
@@ -186,11 +186,26 @@
       "type": "profile route",
       "route": "billionaire-briefs/jeff-bezos.html",
       "notes": [
-        "elite priority",
+        "high priority",
         "Amazon",
         "AWS",
         "Blue Origin",
         "Washington Post"
+      ],
+      "score": 100
+    },
+    {
+      "id": "bill-gates",
+      "layer": "capital-and-ownership",
+      "name": "Bill Gates",
+      "type": "profile route",
+      "route": "billionaire-briefs/bill-gates.html",
+      "notes": [
+        "high priority",
+        "Gates Foundation",
+        "Microsoft legacy",
+        "health and development philanthropy",
+        "health"
       ],
       "score": 100
     },
@@ -206,6 +221,21 @@
         "Facebook",
         "Instagram",
         "WhatsApp"
+      ],
+      "score": 100
+    },
+    {
+      "id": "warren-buffett",
+      "layer": "capital-and-ownership",
+      "name": "Warren Buffett",
+      "type": "profile route",
+      "route": "billionaire-briefs/warren-buffett.html",
+      "notes": [
+        "active watch",
+        "Berkshire Hathaway",
+        "insurance",
+        "energy",
+        "rail and finance holdings"
       ],
       "score": 100
     },
@@ -315,21 +345,6 @@
       "score": 100
     },
     {
-      "id": "bill-gates",
-      "layer": "capital-and-ownership",
-      "name": "Bill Gates",
-      "type": "profile route",
-      "route": "billionaire-briefs/bill-gates.html",
-      "notes": [
-        "high priority",
-        "Gates Foundation",
-        "Microsoft legacy",
-        "health and development philanthropy",
-        "health"
-      ],
-      "score": 70
-    },
-    {
       "id": "larry-ellison",
       "layer": "capital-and-ownership",
       "name": "Larry Ellison",
@@ -342,7 +357,7 @@
         "health-data systems",
         "ai-data"
       ],
-      "score": 70
+      "score": 99
     },
     {
       "id": "peter-thiel",
@@ -357,7 +372,7 @@
         "political and technology networks",
         "ai-data"
       ],
-      "score": 70
+      "score": 99
     },
     {
       "id": "bernard-arnault",
@@ -390,28 +405,13 @@
       "score": 70
     },
     {
-      "id": "warren-buffett",
-      "layer": "capital-and-ownership",
-      "name": "Warren Buffett",
-      "type": "profile route",
-      "route": "billionaire-briefs/warren-buffett.html",
-      "notes": [
-        "active watch",
-        "Berkshire Hathaway",
-        "insurance",
-        "energy",
-        "rail and finance holdings"
-      ],
-      "score": 70
-    },
-    {
       "id": "jensen-huang",
       "layer": "capital-and-ownership",
       "name": "Jensen Huang",
       "type": "profile route",
       "route": "billionaire-briefs/jensen-huang.html",
       "notes": [
-        "high priority",
+        "active watch",
         "NVIDIA",
         "AI chips",
         "data-center infrastructure",
@@ -630,376 +630,13 @@
       "score": 55
     },
     {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "id": "control-structure",
       "layer": "evidence-and-records",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "name": "Control Structure",
       "type": "missing record",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "route": "entity-briefs/control-structure.html",
       "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "centers-for-medicare-medicaid-services",
-      "layer": "evidence-and-records",
-      "name": "Centers for Medicare & Medicaid Services",
-      "type": "missing record",
-      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "health-and-human-services-department",
-      "layer": "evidence-and-records",
-      "name": "Health and Human Services Department",
-      "type": "missing record",
-      "route": "entity-briefs/health-and-human-services-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "2021-08825",
-      "layer": "evidence-and-records",
-      "name": "2021-08825",
-      "type": "missing record",
-      "route": "entity-briefs/2021-08825.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "2024-13374",
-      "layer": "evidence-and-records",
-      "name": "2024-13374",
-      "type": "missing record",
-      "route": "entity-briefs/2024-13374.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "2025-0045-appeal",
-      "layer": "evidence-and-records",
-      "name": "2025-0045-Appeal.",
-      "type": "missing record",
-      "route": "entity-briefs/2025-0045-appeal.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "23-wap-2023",
-      "layer": "evidence-and-records",
-      "name": "23 WAP 2023",
-      "type": "missing record",
-      "route": "entity-briefs/23-wap-2023.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "24-2251",
-      "layer": "evidence-and-records",
-      "name": "24-2251",
-      "type": "missing record",
-      "route": "entity-briefs/24-2251.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "24-7261",
-      "layer": "evidence-and-records",
-      "name": "24-7261",
-      "type": "missing record",
-      "route": "entity-briefs/24-7261.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "civil-rights-corps-v-lasalle",
-      "layer": "evidence-and-records",
-      "name": "Civil Rights Corps v. LaSalle",
-      "type": "missing record",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "court-of-appeals-for-the-ninth-circuit",
-      "layer": "evidence-and-records",
-      "name": "Court of Appeals for the Ninth Circuit",
-      "type": "missing record",
-      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "court-of-appeals-for-the-second-circuit",
-      "layer": "evidence-and-records",
-      "name": "Court of Appeals for the Second Circuit",
-      "type": "missing record",
-      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "d-a-grandview-llc-v-60-davidson-llc",
-      "layer": "evidence-and-records",
-      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
-      "type": "missing record",
-      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-island-public-transit-authority",
-      "layer": "evidence-and-records",
-      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-      "type": "missing record",
-      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "homeland-security-department",
-      "layer": "evidence-and-records",
-      "name": "Homeland Security Department",
-      "type": "missing record",
-      "route": "entity-briefs/homeland-security-department.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "punxsutawney-hunting-club-v-pgc",
-      "layer": "evidence-and-records",
-      "name": "Punxsutawney Hunting Club v. PGC",
-      "type": "missing record",
-      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "supreme-court-of-pennsylvania",
-      "layer": "evidence-and-records",
-      "name": "Supreme Court of Pennsylvania",
-      "type": "missing record",
-      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "supreme-court-of-rhode-island",
-      "layer": "evidence-and-records",
-      "name": "Supreme Court of Rhode Island",
-      "type": "missing record",
-      "route": "entity-briefs/supreme-court-of-rhode-island.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "united-states-v-anten",
-      "layer": "evidence-and-records",
-      "name": "United States v. Anten",
-      "type": "missing record",
-      "route": "entity-briefs/united-states-v-anten.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "williams-v-biggs",
-      "layer": "evidence-and-records",
-      "name": "Williams v. Biggs",
-      "type": "missing record",
-      "route": "entity-briefs/williams-v-biggs.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "aapl",
-      "layer": "evidence-and-records",
-      "name": "AAPL",
-      "type": "missing record",
-      "route": "entity-briefs/aapl.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "alphabet-inc",
-      "layer": "evidence-and-records",
-      "name": "Alphabet Inc.",
-      "type": "missing record",
-      "route": "entity-briefs/alphabet-inc.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "amazon-com-inc",
-      "layer": "evidence-and-records",
-      "name": "AMAZON COM INC",
-      "type": "missing record",
-      "route": "entity-briefs/amazon-com-inc.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "amzn",
-      "layer": "evidence-and-records",
-      "name": "AMZN",
-      "type": "missing record",
-      "route": "entity-briefs/amzn.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "apple-inc",
-      "layer": "evidence-and-records",
-      "name": "Apple Inc.",
-      "type": "missing record",
-      "route": "entity-briefs/apple-inc.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "avgo",
-      "layer": "evidence-and-records",
-      "name": "AVGO",
-      "type": "missing record",
-      "route": "entity-briefs/avgo.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "broadcom-inc",
-      "layer": "evidence-and-records",
-      "name": "Broadcom Inc.",
-      "type": "missing record",
-      "route": "entity-briefs/broadcom-inc.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "googl",
-      "layer": "evidence-and-records",
-      "name": "GOOGL",
-      "type": "missing record",
-      "route": "entity-briefs/googl.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "microsoft-corp",
-      "layer": "evidence-and-records",
-      "name": "MICROSOFT CORP",
-      "type": "missing record",
-      "route": "entity-briefs/microsoft-corp.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "msft",
-      "layer": "evidence-and-records",
-      "name": "MSFT",
-      "type": "missing record",
-      "route": "entity-briefs/msft.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "nvda",
-      "layer": "evidence-and-records",
-      "name": "NVDA",
-      "type": "missing record",
-      "route": "entity-briefs/nvda.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "nvidia-corp",
-      "layer": "evidence-and-records",
-      "name": "NVIDIA CORP",
-      "type": "missing record",
-      "route": "entity-briefs/nvidia-corp.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "nuclear-regulatory-commission",
-      "layer": "evidence-and-records",
-      "name": "Nuclear Regulatory Commission",
-      "type": "missing record",
-      "route": "entity-briefs/nuclear-regulatory-commission.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "securities-and-exchange-commission",
-      "layer": "evidence-and-records",
-      "name": "Securities and Exchange Commission",
-      "type": "missing record",
-      "route": "entity-briefs/securities-and-exchange-commission.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+        "Feed runner has not produced entity observations yet."
       ],
       "score": 54
     },
@@ -1138,11 +775,11 @@
       "score": 43
     },
     {
-      "id": "feed-appellate-division-of-the-supreme-court-of-the-state-of-new-",
+      "id": "feed-control-structure-feed-runner-has-not-produced-entity-observ",
       "layer": "evidence-and-records",
-      "name": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Control Structure — Feed runner has not produced entity observations yet.",
       "type": "deep intel item",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "route": "entity-briefs/control-structure.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1150,11 +787,11 @@
       "score": 43
     },
     {
-      "id": "feed-centers-for-medicare-medicaid-services-confirm-the-primary-r",
+      "id": "feed-blackwater-xe-academi-constellis-lineage-usaspending-awards",
       "layer": "evidence-and-records",
-      "name": "Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Blackwater / Xe / Academi / Constellis lineage — USAspending awards",
       "type": "deep intel item",
-      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1162,11 +799,11 @@
       "score": 43
     },
     {
-      "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
+      "id": "feed-blackwater-xe-academi-constellis-lineage-court-records",
       "layer": "evidence-and-records",
-      "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Blackwater / Xe / Academi / Constellis lineage — Court records",
       "type": "deep intel item",
-      "route": "entity-briefs/health-and-human-services-department.html",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1174,11 +811,11 @@
       "score": 43
     },
     {
-      "id": "feed-2021-08825-confirm-the-primary-record-page-pdf-docket-filing",
+      "id": "feed-blackwater-xe-academi-constellis-lineage-congressional-heari",
       "layer": "evidence-and-records",
-      "name": "2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Blackwater / Xe / Academi / Constellis lineage — Congressional hearing material",
       "type": "deep intel item",
-      "route": "entity-briefs/2021-08825.html",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1186,11 +823,11 @@
       "score": 43
     },
     {
-      "id": "feed-2024-13374-confirm-the-primary-record-page-pdf-docket-filing",
+      "id": "feed-blackwater-xe-academi-constellis-lineage-sec-or-corporate-re",
       "layer": "evidence-and-records",
-      "name": "2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Blackwater / Xe / Academi / Constellis lineage — SEC or corporate records where available",
       "type": "deep intel item",
-      "route": "entity-briefs/2024-13374.html",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1198,11 +835,11 @@
       "score": 43
     },
     {
-      "id": "feed-2025-0045-appeal-confirm-the-primary-record-page-pdf-docket-",
+      "id": "feed-blackwater-xe-academi-constellis-lineage-sanctions-debarment",
       "layer": "evidence-and-records",
-      "name": "2025-0045-Appeal. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Blackwater / Xe / Academi / Constellis lineage — Sanctions / debarment checks",
       "type": "deep intel item",
-      "route": "entity-briefs/2025-0045-appeal.html",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1210,11 +847,11 @@
       "score": 43
     },
     {
-      "id": "feed-23-wap-2023-confirm-the-primary-record-page-pdf-docket-filin",
+      "id": "feed-blackwater-xe-academi-constellis-lineage-news-signals-verifi",
       "layer": "evidence-and-records",
-      "name": "23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Blackwater / Xe / Academi / Constellis lineage — News signals verified against primary records",
       "type": "deep intel item",
-      "route": "entity-briefs/23-wap-2023.html",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1222,11 +859,11 @@
       "score": 43
     },
     {
-      "id": "feed-24-2251-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "id": "feed-dyncorp-amentum-lineage-usaspending-awards",
       "layer": "evidence-and-records",
-      "name": "24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "DynCorp / Amentum lineage — USAspending awards",
       "type": "deep intel item",
-      "route": "entity-briefs/24-2251.html",
+      "route": "contractor-briefs/dyncorp-amentum-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1234,11 +871,11 @@
       "score": 43
     },
     {
-      "id": "feed-24-7261-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "id": "feed-dyncorp-amentum-lineage-court-records",
       "layer": "evidence-and-records",
-      "name": "24-7261 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "DynCorp / Amentum lineage — Court records",
       "type": "deep intel item",
-      "route": "entity-briefs/24-7261.html",
+      "route": "contractor-briefs/dyncorp-amentum-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1246,11 +883,11 @@
       "score": 43
     },
     {
-      "id": "feed-civil-rights-corps-v-lasalle-confirm-the-primary-record-page",
+      "id": "feed-dyncorp-amentum-lineage-inspector-general-reports",
       "layer": "evidence-and-records",
-      "name": "Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "DynCorp / Amentum lineage — Inspector General reports",
       "type": "deep intel item",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "route": "contractor-briefs/dyncorp-amentum-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1258,11 +895,11 @@
       "score": 43
     },
     {
-      "id": "feed-court-of-appeals-for-the-ninth-circuit-confirm-the-primary-r",
+      "id": "feed-dyncorp-amentum-lineage-corporate-transaction-records",
       "layer": "evidence-and-records",
-      "name": "Court of Appeals for the Ninth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "DynCorp / Amentum lineage — Corporate transaction records",
       "type": "deep intel item",
-      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
+      "route": "contractor-briefs/dyncorp-amentum-lineage.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1270,11 +907,11 @@
       "score": 43
     },
     {
-      "id": "feed-court-of-appeals-for-the-second-circuit-confirm-the-primary-",
+      "id": "feed-caci-international-sec-filings",
       "layer": "evidence-and-records",
-      "name": "Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "CACI International — SEC filings",
       "type": "deep intel item",
-      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "route": "contractor-briefs/caci-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1282,11 +919,11 @@
       "score": 43
     },
     {
-      "id": "feed-d-a-grandview-llc-v-60-davidson-llc-confirm-the-primary-reco",
+      "id": "feed-caci-international-usaspending-awards",
       "layer": "evidence-and-records",
-      "name": "D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "CACI International — USAspending awards",
       "type": "deep intel item",
-      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "route": "contractor-briefs/caci-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1294,11 +931,11 @@
       "score": 43
     },
     {
-      "id": "feed-galbin-fernandez-in-his-capacity-as-the-administrator-of-the",
+      "id": "feed-caci-international-court-records",
       "layer": "evidence-and-records",
-      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "CACI International — Court records",
       "type": "deep intel item",
-      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "route": "contractor-briefs/caci-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1306,11 +943,11 @@
       "score": 43
     },
     {
-      "id": "feed-homeland-security-department-confirm-the-primary-record-page",
+      "id": "feed-caci-international-contract-notices",
       "layer": "evidence-and-records",
-      "name": "Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "CACI International — Contract notices",
       "type": "deep intel item",
-      "route": "entity-briefs/homeland-security-department.html",
+      "route": "contractor-briefs/caci-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1318,11 +955,11 @@
       "score": 43
     },
     {
-      "id": "feed-punxsutawney-hunting-club-v-pgc-confirm-the-primary-record-p",
+      "id": "feed-booz-allen-hamilton-sec-filings",
       "layer": "evidence-and-records",
-      "name": "Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Booz Allen Hamilton — SEC filings",
       "type": "deep intel item",
-      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1330,11 +967,11 @@
       "score": 43
     },
     {
-      "id": "feed-supreme-court-of-pennsylvania-confirm-the-primary-record-pag",
+      "id": "feed-booz-allen-hamilton-usaspending-awards",
       "layer": "evidence-and-records",
-      "name": "Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Booz Allen Hamilton — USAspending awards",
       "type": "deep intel item",
-      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
+      "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1342,11 +979,11 @@
       "score": 43
     },
     {
-      "id": "feed-supreme-court-of-rhode-island-confirm-the-primary-record-pag",
+      "id": "feed-booz-allen-hamilton-lobbying-records",
       "layer": "evidence-and-records",
-      "name": "Supreme Court of Rhode Island — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Booz Allen Hamilton — Lobbying records",
       "type": "deep intel item",
-      "route": "entity-briefs/supreme-court-of-rhode-island.html",
+      "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1354,23 +991,11 @@
       "score": 43
     },
     {
-      "id": "feed-united-states-v-anten-confirm-the-primary-record-page-pdf-do",
+      "id": "feed-booz-allen-hamilton-court-records",
       "layer": "evidence-and-records",
-      "name": "United States v. Anten — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Booz Allen Hamilton — Court records",
       "type": "deep intel item",
-      "route": "entity-briefs/united-states-v-anten.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-williams-v-biggs-confirm-the-primary-record-page-pdf-docket-",
-      "layer": "evidence-and-records",
-      "name": "Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/williams-v-biggs.html",
+      "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1517,6 +1142,127 @@
       "route": "search.html",
       "notes": [
         "expand with named records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "financial-authorities",
+      "layer": "policy-and-institutions",
+      "name": "financial authorities",
+      "type": "public route",
+      "route": "search.html",
+      "notes": [
+        "expand with named records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "government-agencies",
+      "layer": "policy-and-institutions",
+      "name": "government agencies",
+      "type": "public route",
+      "route": "search.html",
+      "notes": [
+        "expand with named records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "international-bodies",
+      "layer": "policy-and-institutions",
+      "name": "international bodies",
+      "type": "public route",
+      "route": "search.html",
+      "notes": [
+        "expand with named records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "regulators",
+      "layer": "policy-and-institutions",
+      "name": "regulators",
+      "type": "public route",
+      "route": "search.html",
+      "notes": [
+        "expand with named records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "media-routes",
+      "layer": "information-and-technology",
+      "name": "media routes",
+      "type": "system route",
+      "route": "search.html",
+      "notes": [
+        "expand with records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "platform-routes",
+      "layer": "information-and-technology",
+      "name": "platform routes",
+      "type": "system route",
+      "route": "search.html",
+      "notes": [
+        "expand with records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "cloud-routes",
+      "layer": "information-and-technology",
+      "name": "cloud routes",
+      "type": "system route",
+      "route": "search.html",
+      "notes": [
+        "expand with records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "ai-routes",
+      "layer": "information-and-technology",
+      "name": "AI routes",
+      "type": "system route",
+      "route": "search.html",
+      "notes": [
+        "expand with records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "payment-routes",
+      "layer": "information-and-technology",
+      "name": "payment routes",
+      "type": "system route",
+      "route": "search.html",
+      "notes": [
+        "expand with records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "identity-routes",
+      "layer": "information-and-technology",
+      "name": "identity routes",
+      "type": "system route",
+      "route": "search.html",
+      "notes": [
+        "expand with records"
+      ],
+      "score": 24
+    },
+    {
+      "id": "data-routes",
+      "layer": "information-and-technology",
+      "name": "data routes",
+      "type": "system route",
+      "route": "search.html",
+      "notes": [
+        "expand with records"
       ],
       "score": 24
     }
@@ -3244,6 +2990,6 @@
     }
   ],
   "contractVersion": "2.0.0",
-  "contractUpdated": "2026-08-02T08:23:00.639Z",
+  "contractUpdated": "2026-08-02T10:53:52.175Z",
   "relationshipBoundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism."
 }

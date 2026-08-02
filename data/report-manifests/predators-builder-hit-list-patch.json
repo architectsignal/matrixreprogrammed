@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-08-02T06:27:41.616Z",
+  "generatedAt": "2026-08-02T10:40:24.994Z",
   "pageCount": 129,
   "output": "downloads/predators-builder-hit-list-patch.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Predators Builder Hit List Patch",
-    "contentHash": "b47b6a29193f0afb126c3c5df85b0e1acb0dcefd3636288359105b7deea93ffd",
+    "contentHash": "68d601dcb83e5521d531aaf73d88f8f17668b098cf77f2bb8784847b755fc3f7",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
       "source-change-a334a207405ec629b4be337d",
       "source-change-c452df757991611cb06ec88a",
       "source-change-8299a278d70b1f879d6d522f",
       "source-change-0c5f51804baf8e9e2c1fdd0b",
-      "source-change-96b50a0ea1ae9a6b5767f2c2",
-      "source-change-a21f3d8e98268d5e01e1eb7c",
-      "source-change-44505b4afb60938c8117ad31",
-      "source-change-701229696b57f88191742d4f",
       "r-kelly-illinois-conviction-2022",
       "cyril-smith-iicsa-2018",
       "ASC-REVIEW-9E85403F3389F334",
@@ -34,18 +34,22 @@
       "ASC-REVIEW-757D8D44A7C45F2F",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-6C02F7DFCB3CC39B",
-      "a21f3d8e98268d5e01e1eb7c",
       "9086b5de8aac89f84189be72",
+      "3a425f0d5d683952bc0ad7ac",
+      "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "eb3448928554960651da56f6",
       "360e80c162081c85d2c680ef",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "janner-iicsa-2022",
@@ -57,6 +61,10 @@
       "shortey-child-sex-trafficking-2018",
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
+      "ASC-REVIEW-A90E36DF59A2A3C2",
+      "ASC-REVIEW-2A8D7C6B5A23CEAD",
+      "ASC-REVIEW-A8005F6D70DBECBC",
+      "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-1D9239F50A285FC0",
@@ -103,8 +111,9 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
+      "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -137,29 +146,20 @@
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967",
-      "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621",
-      "ASC-REVIEW-285205442D5C5D56",
-      "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27"
+      "ASC-REVIEW-EEC0192F2AF2FCFB"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 34,
-      "disputedClaimCount": 104,
+      "primarySourceCount": 37,
+      "disputedClaimCount": 100,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 89,
-      "moneyRecordCount": 84
+      "relationshipCount": 84,
+      "moneyRecordCount": 75
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Predators Builder Hit List Patch.",
+        "conclusion": "The indexed record establishes that 37 A/B-grade public-record items are materially relevant to Predators Builder Hit List Patch.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 89 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 84 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 89 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 84 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T07:39:38.763Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
   }
 }

@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-08-02T08:23:05.334Z",
+  "updated": "2026-08-02T10:54:03.560Z",
   "date": "2026-08-02",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 23627
+      "signalCount": 23682
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 16832
+      "signalCount": 17115
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 12708
+      "signalCount": 12368
     }
   ],
   "person": {
@@ -33,26 +33,24 @@
       "graphId": "bill-gates",
       "graphType": "profile route",
       "reviewStatus": "",
-      "directFreshRecords": 1
+      "directFreshRecords": 0
     },
-    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this person: 1 fresh record plus 0 retained evidence references.",
+    "selectionBasis": "Highest registry-resolved structural relevance to the leading evidence lanes. No fresh accusation is inferred, and this position changes only when stronger source-linked evidence clears the promotion threshold.",
     "whatWasFound": "profile route",
     "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
     "investigativeLanes": [
-      "Information, media and platform access",
+      "Procurement and public-private implementation",
       "Money, banking and payment access"
     ],
     "howItFits": "This person fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
-    "effectOnLane": "moderately-strengthens",
-    "whatItPointsToward": "Closer examination of how information, media and platform access, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+    "effectOnLane": "adds-context",
+    "whatItPointsToward": "Closer examination of how procurement and public-private implementation, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
     "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
     "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
-    "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
-    "confidence": "moderate-to-high",
+    "evidenceStrength": "E2–E4 — resolved structural public records requiring direct review",
+    "confidence": "moderate",
     "sourceRoutes": [
-      "billionaire-briefs/bill-gates.html",
-      "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5",
-      "data/latest-public-drops.json"
+      "billionaire-briefs/bill-gates.html"
     ],
     "nextQuestions": [
       "What exact legal, financial, ownership, appointment or operational authority does Bill Gates possess?",
@@ -60,13 +58,10 @@
       "What oversight, competing authority, opt-out or appeal limits the power?",
       "What new evidence would strengthen, narrow, replace or falsify this position?"
     ],
-    "rankingScore": 135,
-    "rankingStatus": "incumbent-held-position",
+    "rankingScore": 91,
+    "rankingStatus": "retained-current-leader",
     "incumbentSince": "2026-07-27T17:29:36.861Z",
-    "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-    "challengerHeld": "Elon Musk",
-    "challengerScore": 91,
-    "retentionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
+    "lastPromotedAt": "2026-07-27T17:29:36.861Z"
   },
   "institution": {
     "type": "institution",
@@ -118,9 +113,12 @@
       "What new evidence would strengthen, narrow, replace or falsify this position?"
     ],
     "rankingScore": 143,
-    "rankingStatus": "retained-current-leader",
+    "rankingStatus": "incumbent-held-position",
     "incumbentSince": "2026-07-27T17:29:36.861Z",
-    "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+    "challengerHeld": "U.S. Securities and Exchange Commission",
+    "challengerScore": 143,
+    "retentionReason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent."
   },
   "family": {
     "type": "family",
@@ -176,19 +174,19 @@
     "decisions": {
       "person": {
         "changed": false,
-        "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
-        "incumbent": "Bill Gates",
+        "reason": "The same entity remains the current evidence leader.",
         "incumbentScore": 135,
-        "challenger": "Elon Musk",
         "challengerScore": 91,
-        "required": 149,
         "marginRequired": 14
       },
       "institution": {
         "changed": false,
-        "reason": "The same entity remains the current evidence leader.",
+        "reason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent.",
+        "incumbent": "Securities and Exchange Commission",
         "incumbentScore": 143,
+        "challenger": "U.S. Securities and Exchange Commission",
         "challengerScore": 143,
+        "required": 157,
         "marginRequired": 14
       },
       "family": {

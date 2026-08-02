@@ -142,9 +142,9 @@
       if(!response.ok||!data.ok)throw new Error(data.error||data.message||('Signup failed ('+response.status+')'));
       const verificationRequired=data.verificationRequired!==false;
       message.textContent=verificationRequired&&preferences.daily
-        ?'Saved. Check your inbox to verify your email and activate reports. Once verified, today’s Daily Control Brief will be sent immediately.'
+        ?'Saved. Check your inbox to verify your email. Once verified, today’s Daily Control Brief will be sent immediately.'
         :verificationRequired
-          ?'Saved. Check your inbox to verify your email and activate reports.'
+          ?'Saved. Check your inbox to verify your email and activate the selected briefings.'
           :'Saved. Your email preferences are active.';
       form.reset();
       for(const control of form.querySelectorAll('[data-default-checked="true"]'))control.checked=true;

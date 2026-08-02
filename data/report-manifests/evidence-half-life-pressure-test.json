@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:23:51.553Z",
-  "pageCount": 87,
+  "generatedAt": "2026-08-02T10:37:24.119Z",
+  "pageCount": 84,
   "output": "downloads/evidence-half-life-pressure-test.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Evidence Half Life Pressure Test",
-    "contentHash": "6ebd884d9078b4ab450924f176e05a997f2e2a6327b9956f701763228798d425",
+    "contentHash": "139cd2dbf1d0f29867e543c4789a65ee4e7ed7c4cd6d6577d94256dff5eb56a2",
     "sourceIds": [
       "f669b33c49b63e787cde3008",
       "abdul-halim-khan-conviction-2026",
@@ -19,22 +19,15 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
       "0491ca77f4f2c9b90f832c2e",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "b4cb47ea50dc901364239e9f",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "e457b31e704efd10ec987a59",
@@ -62,6 +55,7 @@
       "1769af26a7bda813406cd8f5",
       "us-doj",
       "gao-hq",
+      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -137,21 +131,27 @@
       "trusts-national-trust",
       "trusts-crown-estate-ownership-trust-routes",
       "trusts-john-lewis-partnership-trust",
-      "trusts-employee-ownership-trust-register-watch"
+      "trusts-employee-ownership-trust-register-watch",
+      "trusts-royal-collection-trust",
+      "trusts-prince-of-wales-charitable-fund",
+      "trusts-duchy-related-trust-disclosures",
+      "trusts-rockefeller-brothers-fund",
+      "trusts-rockefeller-family-fund",
+      "trusts-j-paul-getty-trust"
     ],
     "metrics": {
       "evidenceCount": 131,
-      "primarySourceCount": 128,
+      "primarySourceCount": 127,
       "disputedClaimCount": 8,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 24,
-      "moneyRecordCount": 81
+      "relationshipCount": 15,
+      "moneyRecordCount": 87
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 128 A/B-grade public-record items are materially relevant to Evidence Half Life Pressure Test.",
-        "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); Twenty-one convictions for rape, sexual assault and child sexual offenses (data/criminal-conduct-registry.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 127 A/B-grade public-record items are materially relevant to Evidence Half Life Pressure Test.",
+        "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); Twenty-one convictions for rape, sexual assault and child sexual offenses (data/criminal-conduct-registry.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -170,8 +170,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01",
+        "inference": "The indexed set contains 15 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -185,16 +185,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 15 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Christopher Wray's Gift to Attorney General Garland",
           "Christopher Wray's Gift to Attorney General Garland (Final)",
-          "World Wrestling Entertainment",
-          "World Wrestling Entertainment Part 01",
-          "World Wrestling Entertainment Part 02 (Final)",
-          "Brian Wells",
-          "Brian Wells Part 01"
+          "Westminster inquiry examined political and policing responses",
+          "Official health investigations documented abuse and enabling access",
+          "Broadmoor investigation examined Savile's access and abuse",
+          "New York DFS enforcement action concerning the bank's Epstein relationship",
+          "Follow The Money Watch"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -209,6 +209,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:29:08.885Z",
-  "pageCount": 128,
+  "generatedAt": "2026-08-02T10:41:31.213Z",
+  "pageCount": 129,
   "output": "downloads/search-v3-runtime-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Search V3 Runtime Report",
-    "contentHash": "53fec41f39f73b6b033af83b815bfc2dd31f2b9ce10e753459b3c20ba0d6d723",
+    "contentHash": "452f320330d7105ba4ffecd035d2db412509b9e13c8b558b7d0f2db83f6f1ae3",
     "sourceIds": [
       "a21f3d8e98268d5e01e1eb7c",
       "44505b4afb60938c8117ad31",
@@ -26,14 +26,16 @@
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
+      "1583ed9e90a5874047a33041",
+      "ec968f2ec6ba82128b4cd91b",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
       "source-change-a334a207405ec629b4be337d",
       "source-change-c452df757991611cb06ec88a",
       "source-change-8299a278d70b1f879d6d522f",
       "source-change-0c5f51804baf8e9e2c1fdd0b",
-      "source-change-96b50a0ea1ae9a6b5767f2c2",
-      "source-change-a21f3d8e98268d5e01e1eb7c",
-      "source-change-44505b4afb60938c8117ad31",
-      "source-change-701229696b57f88191742d4f",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -62,7 +64,8 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
-      "a54df8218ca146eb70f725e3",
+      "a103f2650e31fc92fa3688e6",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -143,24 +146,21 @@
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
       "ASC-REVIEW-8A2ACAFD47272636",
-      "ASC-REVIEW-39269A2C0471A66C",
-      "ASC-REVIEW-53BD0E17B018491C",
-      "ASC-REVIEW-0177F61D444ED739",
-      "ASC-REVIEW-FE9A5B02284E30E4"
+      "ASC-REVIEW-39269A2C0471A66C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 32,
-      "disputedClaimCount": 100,
+      "primarySourceCount": 35,
+      "disputedClaimCount": 97,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 99,
-      "moneyRecordCount": 98
+      "relationshipCount": 98,
+      "moneyRecordCount": 97
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 35 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 99 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
+        "inference": "The indexed set contains 98 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 99 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 98 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "MINDCUBED LLC — District of Columbia Courts",
+          "INDUSTRIAL BANK — District of Columbia Courts",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
-          "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer"
+          "CACI International → Defense Technology: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

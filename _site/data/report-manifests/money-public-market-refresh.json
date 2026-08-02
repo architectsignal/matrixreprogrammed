@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:26:47.842Z",
-  "pageCount": 74,
+  "generatedAt": "2026-08-02T10:39:45.762Z",
+  "pageCount": 77,
   "output": "downloads/money-public-market-refresh.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Money Public Market Refresh",
-    "contentHash": "5b578e918b4305119f3391978bb02565fa8318a9aa850ebf6a21141625958b6c",
+    "contentHash": "8a9d939811f89973a01b14af4ba5bbcfc946cf8469851b6b21618352039c5f1c",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -13,9 +13,9 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
+      "3a425f0d5d683952bc0ad7ac",
       "a21f3d8e98268d5e01e1eb7c",
-      "investment-vehicles-ivv",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
@@ -24,17 +24,15 @@
       "7f5b91c14c671bd24b8bbd81",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "a71a8be091652489b843ecf6",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
-      "3a425f0d5d683952bc0ad7ac",
       "energy-resources",
       "defence-security-bksy",
-      "companies-nvda",
-      "companies-msft",
-      "companies-amzn",
-      "companies-meta",
       "7ee9141a42ad539f58a57e50",
       "6d665d935673091233751767",
       "157cdab04b61ae6309c0c713",
@@ -56,7 +54,6 @@
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-B8034056CD461A0D",
       "5295a33003172878f9880122",
-      "44505b4afb60938c8117ad31",
       "contractor-caci-international",
       "contractor-saic-leidos-lineage",
       "media",
@@ -110,21 +107,24 @@
       "property-9ci-si",
       "media-tri",
       "media-nyt",
-      "media-djt"
+      "media-djt",
+      "media-4210-sr",
+      "media-pnc-a-to",
+      "technology-control-lrcx"
     ],
     "metrics": {
       "evidenceCount": 104,
-      "primarySourceCount": 67,
+      "primarySourceCount": 69,
       "disputedClaimCount": 2,
       "newEntityCount": 4,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 10,
-      "moneyRecordCount": 71
+      "relationshipCount": 11,
+      "moneyRecordCount": 69
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -143,7 +143,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 10 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 11 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; CACI International — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report; Top 100 Technology-Control Companies; Top 100 Defence & Security Companies; Palo Alto Networks",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -158,7 +158,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 10 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 11 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "CACI International → Defense Technology: execution layer",
@@ -182,6 +182,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

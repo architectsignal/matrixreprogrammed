@@ -1,15 +1,24 @@
 {
-  "generatedAt": "2026-08-02T06:24:07.247Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-02T10:37:38.350Z",
+  "pageCount": 127,
   "output": "downloads/exposure-predators-hit-list-link.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Exposure Predators Hit List Link",
-    "contentHash": "e60a5d1eea16ddfe11d643aa8e2286951b9626874879c417e053b0a974575284",
+    "contentHash": "44bc3f373d11a6f5c398f051b00383a9e9ac52f7c5b44b3a71da75b6c85380a8",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "9086b5de8aac89f84189be72",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-8708EF2A4E1C3023",
+      "ASC-REVIEW-64E0D2BCFC6FF23D",
+      "ASC-REVIEW-AF18512452F699D2",
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-481745ED8153AA11",
+      "ASC-REVIEW-9719FEC8729E7FE2",
+      "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
@@ -25,6 +34,7 @@
       "d23398b8ca4c7124399c9504",
       "665a5072d96b9757a6ee9d2d",
       "2529322b7b5345fd6f575174",
+      "3a425f0d5d683952bc0ad7ac",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -64,23 +74,23 @@
       "f44c3c7309a5f0779a57e655",
       "4961972398d896435d33f3f7",
       "26b90533dbf7d2ed42f02de6",
-      "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
-      "ASC-REVIEW-4D93FE8E0666D181",
-      "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-8708EF2A4E1C3023",
-      "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-481745ED8153AA11",
-      "ASC-REVIEW-9719FEC8729E7FE2",
-      "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-B9D6F588FF54AD31",
       "ASC-REVIEW-03A8457B74049A13",
+      "ASC-REVIEW-AD4A5A51C1AD5BFD",
       "ASC-REVIEW-B7720C9C5A09A4B4",
+      "ASC-REVIEW-7C6630BA6B2598AA",
+      "ASC-REVIEW-0BDE78366651B0AB",
+      "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-1D9239F50A285FC0",
@@ -125,8 +135,9 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
+      "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -135,34 +146,23 @@
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-06CC87AEAF289EB7",
-      "ASC-REVIEW-6FEEE1F638ADFCD6",
-      "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7",
-      "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
-      "ASC-REVIEW-22BBAF16578AD07C"
+      "ASC-REVIEW-06CC87AEAF289EB7"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 108,
+      "primarySourceCount": 9,
+      "disputedClaimCount": 105,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 82,
-      "moneyRecordCount": 69
+      "relationshipCount": 80,
+      "moneyRecordCount": 61
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Exposure Predators Hit List Link.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json)",
+        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Exposure Predators Hit List Link.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 94,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 82 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
+        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 82 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
-          "Influence should be mapped through infrastructure, filings and contracts.",
-          "Influence should be mapped through infrastructure, filings and contracts.",
-          "The strongest public pattern is convergence across access systems.",
-          "The strongest public pattern is convergence across access systems.",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer"
+          "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
+          "FCN, INC. — Court Services and Offender Supervision Agency",
+          "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
+          "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
+          "INDUSTRIAL BANK — District of Columbia Courts",
+          "MINDCUBED LLC — District of Columbia Courts",
+          "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

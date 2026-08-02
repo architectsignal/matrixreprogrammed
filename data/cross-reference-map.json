@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-02T06:33:41.351Z",
+  "updated": "2026-08-02T10:53:06.115Z",
   "title": "Cross-Reference Map",
   "mission": "Matrix Reprogrammed is a public-record intelligence system mapping people, institutions, families, jurisdictions, policies, think tanks, financial routes, narrative systems, legal structures, missing records, and convergence signals.",
   "boundary": "Inclusion means public-record research relevance. Claims must be checked against sources, limits, context, and missing records.",
@@ -19,17 +19,6 @@
       "deckId": "people-of-interest",
       "route": "top-52/elon-musk.html",
       "asset": "assets/top-52/cards/elon-musk.svg",
-      "score": 100,
-      "category": "Coins",
-      "summary": "money / ownership power"
-    },
-    {
-      "id": "people-of-interest:jeff-bezos",
-      "type": "card",
-      "label": "Jeff Bezos",
-      "deckId": "people-of-interest",
-      "route": "top-52/jeff-bezos.html",
-      "asset": "assets/top-52/cards/jeff-bezos.svg",
       "score": 100,
       "category": "Coins",
       "summary": "money / ownership power"
@@ -145,17 +134,6 @@
       "summary": "money / ownership power"
     },
     {
-      "id": "people-of-interest:jensen-huang",
-      "type": "card",
-      "label": "Jensen Huang",
-      "deckId": "people-of-interest",
-      "route": "top-52/jensen-huang.html",
-      "asset": "assets/top-52/cards/jensen-huang.svg",
-      "score": 83,
-      "category": "Coins",
-      "summary": "money / ownership power"
-    },
-    {
       "id": "people-of-interest:christine-lagarde",
       "type": "card",
       "label": "Christine Lagarde",
@@ -198,6 +176,17 @@
       "score": 81,
       "category": "Swords",
       "summary": "security / contractor power"
+    },
+    {
+      "id": "people-of-interest:jeff-bezos",
+      "type": "card",
+      "label": "Jeff Bezos",
+      "deckId": "people-of-interest",
+      "route": "top-52/jeff-bezos.html",
+      "asset": "assets/top-52/cards/jeff-bezos.svg",
+      "score": 80,
+      "category": "Coins",
+      "summary": "money / ownership power"
     },
     {
       "id": "people-of-interest:bill-gates",
@@ -558,6 +547,17 @@
       "deckId": "people-of-interest",
       "route": "top-52/warren-buffett.html",
       "asset": "assets/top-52/cards/warren-buffett.svg",
+      "score": 60,
+      "category": "Coins",
+      "summary": "money / ownership power"
+    },
+    {
+      "id": "people-of-interest:jensen-huang",
+      "type": "card",
+      "label": "Jensen Huang",
+      "deckId": "people-of-interest",
+      "route": "top-52/jensen-huang.html",
+      "asset": "assets/top-52/cards/jensen-huang.svg",
       "score": 60,
       "category": "Coins",
       "summary": "money / ownership power"
@@ -31839,16 +31839,6 @@
     },
     {
       "from": "people-of-interest",
-      "to": "people-of-interest:jeff-bezos",
-      "type": "deck-card"
-    },
-    {
-      "from": "people-of-interest:jeff-bezos",
-      "to": "billionaire-briefs/jeff-bezos.html",
-      "type": "source-route"
-    },
-    {
-      "from": "people-of-interest",
       "to": "people-of-interest:world-health-organization",
       "type": "deck-card"
     },
@@ -31949,16 +31939,6 @@
     },
     {
       "from": "people-of-interest",
-      "to": "people-of-interest:jensen-huang",
-      "type": "deck-card"
-    },
-    {
-      "from": "people-of-interest:jensen-huang",
-      "to": "billionaire-briefs/jensen-huang.html",
-      "type": "source-route"
-    },
-    {
-      "from": "people-of-interest",
       "to": "people-of-interest:christine-lagarde",
       "type": "deck-card"
     },
@@ -31995,6 +31975,16 @@
     {
       "from": "people-of-interest:erik-prince",
       "to": "contractor-briefs/blackwater-constellis-lineage.html",
+      "type": "source-route"
+    },
+    {
+      "from": "people-of-interest",
+      "to": "people-of-interest:jeff-bezos",
+      "type": "deck-card"
+    },
+    {
+      "from": "people-of-interest:jeff-bezos",
+      "to": "billionaire-briefs/jeff-bezos.html",
       "type": "source-route"
     },
     {
@@ -32325,6 +32315,16 @@
     {
       "from": "people-of-interest:warren-buffett",
       "to": "billionaire-briefs/warren-buffett.html",
+      "type": "source-route"
+    },
+    {
+      "from": "people-of-interest",
+      "to": "people-of-interest:jensen-huang",
+      "type": "deck-card"
+    },
+    {
+      "from": "people-of-interest:jensen-huang",
+      "to": "billionaire-briefs/jensen-huang.html",
       "type": "source-route"
     },
     {

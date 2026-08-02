@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-08-02T06:20:44.641Z",
-  "pageCount": 113,
+  "generatedAt": "2026-08-02T10:34:59.279Z",
+  "pageCount": 115,
   "output": "downloads/control-brain-v2.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Control Brain V2",
-    "contentHash": "944fac2aaa6e4506c8659b0867dfea01d2a7860d1bee27fedc7ef5be016b0537",
+    "contentHash": "4b84b39f427c016c88e1d50a3239e506c4a548496b77036081a57c2a917c948d",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "1769af26a7bda813406cd8f5",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
       "daily-revelation-report",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
       "people-of-interest",
       "missing-records-report",
-      "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
+      "26b90533dbf7d2ed42f02de6",
       "erik-prince",
       "institutions",
       "contractor-palantir-government-platforms",
@@ -103,10 +103,16 @@
       "mark-rutte",
       "jens-stoltenberg",
       "priscilla-chan",
+      "4c07add2a6d4eb22cadecd27",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-6809880AE2446DD1",
+      "ASC-REVIEW-836A8E9D516E6FEC",
+      "ASC-REVIEW-BF5A5D787C430742",
+      "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-B6BEE1135257F502",
+      "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
+      "ASC-REVIEW-20316213EFD183CC",
       "ASC-REVIEW-55AEF4F6803A279A",
       "ASC-REVIEW-1EA1A54BAAF5A93D",
       "ASC-REVIEW-8F4A530FA82C384B",
@@ -140,38 +146,32 @@
       "sam-altman",
       "sundar-pichai",
       "satya-nadella",
-      "tim-cook",
-      "george-soros",
-      "mukesh-ambani",
-      "xi-jinping",
-      "narendra-modi",
-      "volodymyr-zelenskyy",
-      "gautam-adani"
+      "tim-cook"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 56,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 61,
       "newEntityCount": 44,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
-      "moneyRecordCount": 72
+      "relationshipCount": 81,
+      "moneyRecordCount": 73
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Control Brain V2.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Control Brain V2.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment - Geoffrey Allen Wall,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Palantir government platforms — Contractor Power Report; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; Blackwater / Xe / Academi / Constellis lineage → Contractors: execution layer; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Blackwater / Xe / Academi / Constellis lineage → Public Private Power: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 81 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Palantir government platforms — Contractor Power Report",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
   }
 }

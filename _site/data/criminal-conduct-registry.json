@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updated": "2026-07-27",
   "purpose": "Authoritative, editorially approved criminal-conduct, legal-action, official-finding and response records for person and institution dossiers, including the evidence-classified Predators in Power and Criminal Investigations layers.",
   "publicationRule": "Only records with publicationStatus=approved are rendered. Automated matches, anonymous claims and unsourced allegations remain private review candidates and never publish directly.",
@@ -2539,6 +2539,5 @@
     "data/criminal-conduct-subjects.json"
   ],
   "subjectCount": 20,
-  "approvedFindingCount": 32,
-  "compatibilitySchemaVersion": 2
+  "approvedFindingCount": 32
 }

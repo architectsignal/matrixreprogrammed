@@ -21,7 +21,6 @@ Weak pages: 14
 - 68/100 — subject-trust-evidence-method.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 68/100 — tracker-dashboard.html: Missing evidence route; Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route
 - 76/100 — contact-the-machine.html: Missing book/store route; Missing Rumble/video route; Missing free brief/opt-in route
-- 76/100 — membership.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: €0, €0, €3, €3, €6
 - 76/100 — network-search.html: Missing Rumble/video route; Missing free brief/opt-in route; Intel/evidence page missing Live Intel route
 - 76/100 — subject-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route
 - 76/100 — subject-intelligence-network.html: Visible scaffold/internal copy: /Reader path/i; Missing Rumble/video route; Missing free brief/opt-in route
@@ -38,7 +37,7 @@ Weak pages: 14
 - 84/100 — big-three-asset-managers.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: $13.46, $10, $12, $5.4
 - 84/100 — books.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — conversion-funnel.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
-- 84/100 — daily-watch.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: 16 conviction, 16 conviction, 16 conviction, 24 conviction, 13 conviction
+- 84/100 — daily-watch.html: Visible scaffold/internal copy: /Reader path/i; Dynamic figures need visible source panel: 16 conviction, 16 conviction, 16 conviction, 24 conviction, 14 conviction
 - 84/100 — data-lab.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — death-files-methodology.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
 - 84/100 — deck-expansion-hub.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /builder/i
@@ -66,6 +65,7 @@ Weak pages: 14
 - 84/100 — news.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-crime-state-overlap.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 - 84/100 — path-dog-architect.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
+- 84/100 — path-evidence-trust.html: Visible scaffold/internal copy: /Reader path/i; Visible scaffold/internal copy: /Phase \d+/i
 
 ## Production Boundary
 - Remove reader-visible builder/scaffold language.

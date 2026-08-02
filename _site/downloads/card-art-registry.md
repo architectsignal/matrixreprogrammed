@@ -1,6 +1,6 @@
 # Card Art Registry
 
-Updated: 2026-08-02T06:33:30.919Z
+Updated: 2026-08-02T10:49:28.430Z
 
 Real artwork: 2
 
@@ -29,7 +29,6 @@ Unmatched likely card images: 0
 ## Card map
 
 - people-of-interest/elon-musk: assets/top-52/cards/elon-musk.svg — real-art-live — source card-art-inbox/elon-musk.svg
-- people-of-interest/jeff-bezos: assets/top-52/cards/jeff-bezos.svg — placeholder-svg
 - people-of-interest/world-health-organization: assets/top-52/cards/world-health-organization.svg — placeholder-svg
 - people-of-interest/federal-reserve: assets/top-52/cards/federal-reserve.svg — placeholder-svg
 - people-of-interest/caci-international: assets/top-52/cards/caci-international.svg — placeholder-svg
@@ -40,11 +39,11 @@ Unmatched likely card images: 0
 - people-of-interest/tony-blair: assets/top-52/cards/tony-blair.svg — placeholder-svg
 - people-of-interest/jamie-dimon: assets/top-52/cards/jamie-dimon.svg — placeholder-svg
 - people-of-interest/jerome-powell: assets/top-52/cards/jerome-powell.svg — placeholder-svg
-- people-of-interest/jensen-huang: assets/top-52/cards/jensen-huang.svg — placeholder-svg
 - people-of-interest/christine-lagarde: assets/top-52/cards/christine-lagarde.svg — placeholder-svg
 - people-of-interest/pope-francis: assets/top-52/cards/pope-francis.svg — placeholder-svg
 - people-of-interest/king-charles-iii: assets/top-52/cards/king-charles-iii.svg — placeholder-svg
 - people-of-interest/erik-prince: assets/top-52/cards/erik-prince.svg — placeholder-svg
+- people-of-interest/jeff-bezos: assets/top-52/cards/jeff-bezos.svg — placeholder-svg
 - people-of-interest/bill-gates: assets/top-52/cards/bill-gates.svg — placeholder-svg
 - people-of-interest/sam-altman: assets/top-52/cards/sam-altman.svg — placeholder-svg
 - people-of-interest/sundar-pichai: assets/top-52/cards/sundar-pichai.svg — placeholder-svg
@@ -78,6 +77,7 @@ Unmatched likely card images: 0
 - people-of-interest/peter-thiel: assets/top-52/cards/peter-thiel.svg — placeholder-svg
 - people-of-interest/michael-bloomberg: assets/top-52/cards/michael-bloomberg.svg — placeholder-svg
 - people-of-interest/warren-buffett: assets/top-52/cards/warren-buffett.svg — placeholder-svg
+- people-of-interest/jensen-huang: assets/top-52/cards/jensen-huang.svg — placeholder-svg
 - people-of-interest/mackenzie-scott: assets/top-52/cards/mackenzie-scott.svg — placeholder-svg
 - people-of-interest/priscilla-chan: assets/top-52/cards/priscilla-chan.svg — placeholder-svg
 - controlled-opposition/alex-jones: assets/controlled-opposition/cards/alex-jones.svg — placeholder-svg

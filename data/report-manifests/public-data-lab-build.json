@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-08-02T06:28:11.100Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-02T10:40:46.944Z",
+  "pageCount": 132,
   "output": "downloads/public-data-lab-build.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Public Data Lab Build",
-    "contentHash": "cb11d75090773de8269705b91073bc8e1a58e7ee043abe7fb527993c19ff1088",
+    "contentHash": "a8b5658b4737add167e2f2ca677d943cc2788ae3c167cc2857df06d4cae22465",
     "sourceIds": [
-      "a54df8218ca146eb70f725e3",
+      "3a425f0d5d683952bc0ad7ac",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -75,6 +76,7 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
@@ -144,18 +146,16 @@
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-52C3694FF95479F1",
       "ASC-REVIEW-3EB368ED00ADD23E",
-      "ASC-REVIEW-C47A1B7DA11B68C4",
-      "ASC-REVIEW-C7A00AFA602DD2A9",
-      "ASC-REVIEW-C2A19D091C2D1254"
+      "ASC-REVIEW-C47A1B7DA11B68C4"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 139,
+      "disputedClaimCount": 138,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 138,
-      "moneyRecordCount": 138
+      "relationshipCount": 137,
+      "moneyRecordCount": 137
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 138 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 138 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

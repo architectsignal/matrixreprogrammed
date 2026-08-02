@@ -19,7 +19,7 @@ routes = [
 [triggers]
 # Four of the five Workers Free cron slots are used. The AI-management lifecycle shares the
 # existing scheduled events and performs only bounded D1 maintenance when explicitly enabled.
-crons = ["25 5 * * *", "5 6 * * *", "15 7 * * 1", "35 * * * *"]
+crons = ["5 6 * * *", "15 7 * * 1", "35 * * * *"]
 [vars]
 EMAIL_AUTOMATION_ENABLED = "true"
 EMAIL_TRANSACTIONAL_ENABLED = "true"

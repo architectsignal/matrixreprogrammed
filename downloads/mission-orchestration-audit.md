@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-08-02T10:11:53.746Z
+Generated: 2026-08-02T11:03:47.941Z
 Overall: ready
 Homepage mode: search-first-accountability
 Passed: 52/52
@@ -18,19 +18,19 @@ Promotion margin: 14
 - **PASS · stable-hit-list-standard:** Promotion margin: 14.
 - **PASS · dossier-standard:** 11 required dossier sections.
 - **PASS · data-integrity-repair:** Repair status: ready; active findings: 2500.
-- **PASS · authoritative-entity-resolution:** Resolved person=Elon Musk; institution=Securities and Exchange Commission; family=Al Maktoum family.
+- **PASS · authoritative-entity-resolution:** Resolved person=Bill Gates; institution=U.S. Securities and Exchange Commission; family=Al Maktoum family.
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
 - **PASS · ledger-archive-preserved:** 2833 archived findings retained.
 - **PASS · daily-watch-data:** Watch status: ready.
 - **PASS · watch-person-fields:** person: Bill Gates; missing none.
-- **PASS · watch-person-rank:** person score 135; status incumbent-held-position.
-- **PASS · watch-person-sources:** 3 source routes attached.
+- **PASS · watch-person-rank:** person score 91; status retained-current-leader.
+- **PASS · watch-person-sources:** 1 source routes attached.
 - **PASS · watch-person-boundary:** person limitation present.
 - **PASS · watch-person-resolved-class:** person resolution=authoritatively-resolved; name=Bill Gates.
 - **PASS · watch-institution-fields:** institution: Securities and Exchange Commission; missing none.
-- **PASS · watch-institution-rank:** institution score 143; status retained-current-leader.
+- **PASS · watch-institution-rank:** institution score 143; status incumbent-held-position.
 - **PASS · watch-institution-sources:** 16 source routes attached.
 - **PASS · watch-institution-boundary:** institution limitation present.
 - **PASS · watch-institution-resolved-class:** institution resolution=authoritatively-resolved; name=Securities and Exchange Commission.
@@ -54,7 +54,7 @@ Promotion margin: 14
 - **PASS · dossier-family-assessment:** family executive assessment checked.
 - **PASS · history-and-weekly-delta:** 7 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3769; search=138473; accountabilityHitList=139737.
+- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=5190; search=31756; accountabilityHitList=33020.
 - **PASS · accountability-card-ui:** 3 search-first accountability cards found.
 - **PASS · daily-watch-deep-links:** Daily Watch contains no generated links to nonexistent Capstone anchors.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.

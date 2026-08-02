@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "1.0.0",
-  "updated": "2026-08-02T08:23:05.641Z",
+  "updated": "2026-08-02T10:54:03.835Z",
   "periodStart": "2026-07-27",
   "periodEnd": "2026-08-02",
   "daysAvailable": 7,
@@ -12,21 +12,19 @@
       "latest": {
         "date": "2026-08-02",
         "name": "Bill Gates",
-        "selectionBasis": "Directly elevated by current source-linked evidence resolving to this person: 1 fresh record plus 0 retained evidence references.",
-        "effectOnLane": "moderately-strengthens",
+        "selectionBasis": "Highest registry-resolved structural relevance to the leading evidence lanes. No fresh accusation is inferred, and this position changes only when stronger source-linked evidence clears the promotion threshold.",
+        "effectOnLane": "adds-context",
         "investigativeLanes": [
-          "Information, media and platform access",
+          "Procurement and public-private implementation",
           "Money, banking and payment access"
         ],
         "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
-        "whatItPointsToward": "Closer examination of how information, media and platform access, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+        "whatItPointsToward": "Closer examination of how procurement and public-private implementation, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
         "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
-        "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
-        "confidence": "moderate-to-high",
+        "evidenceStrength": "E2–E4 — resolved structural public records requiring direct review",
+        "confidence": "moderate",
         "sourceRoutes": [
-          "billionaire-briefs/bill-gates.html",
-          "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5",
-          "data/latest-public-drops.json"
+          "billionaire-briefs/bill-gates.html"
         ]
       },
       "previous": {
@@ -49,7 +47,7 @@
           "data/latest-public-drops.json"
         ]
       },
-      "change": "continued-watch",
+      "change": "assessment-changed",
       "repeatedEntities": [
         {
           "name": "Bill Gates",
@@ -159,26 +157,6 @@
         },
         {
           "date": "2026-08-01",
-          "name": "Bill Gates",
-          "selectionBasis": "Directly elevated by current source-linked evidence resolving to this person: 1 fresh record plus 0 retained evidence references.",
-          "effectOnLane": "moderately-strengthens",
-          "investigativeLanes": [
-            "Information, media and platform access",
-            "Money, banking and payment access"
-          ],
-          "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
-          "whatItPointsToward": "Closer examination of how information, media and platform access, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
-          "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
-          "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
-          "confidence": "moderate-to-high",
-          "sourceRoutes": [
-            "billionaire-briefs/bill-gates.html",
-            "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOQ2dUSVNDeUp1MWNPUzkwZG1tWEp2c2FhYllHYUtlSGZISVExT1pnVnBibnhfV0Y1ZEVZYThSM3BhaEx1aHRxa25Nc01ITlpRbkNvcUZmOTBjRkN1dkdkMUFZeE5aNmQ3cGEzQWVubVNncURCQ2YxZTdweXV2UDVlZUM2djJjcE9iN0tNbWZrR2l2Zmo1VDhITzR2UU1kX1dWWnVlTDBsajhoN3dMWkRXRDhnNjB5QVNQN2lEZmtWX0o3c1locGpoRVNvUmFmUGEy0gHWAUFVX3lxTE9FQTNkcEFwX0VzTE1YTTctWWlTTVY0YXhJX01wb2RsQ0MwYzJqbEFfY3pXTDBITkVteFhyYVRXUU9XbjBrOWQ4c2hBcC10WFFFelVid3Z5NGhPMUVHTUtpdWM4MHozckZxZHVSdU1wZUpLRjg0SEFyRFpkVEx3QS1mcjlRV3ZmUmxscUVSXzZfemFHeHMtTFdodUhqbkR1S0diTnpFYURxNVl1WWZjY01fb1piNTd6bTd5MXphVGR5dmExdGZpRU94d1FtRHlnSUY3eTRHNGc?oc=5",
-            "data/latest-public-drops.json"
-          ]
-        },
-        {
-          "date": "2026-08-02",
           "name": "Bill Gates",
           "selectionBasis": "Directly elevated by current source-linked evidence resolving to this person: 1 fresh record plus 0 retained evidence references.",
           "effectOnLane": "moderately-strengthens",
@@ -529,6 +507,6 @@
       "insufficient": []
     }
   ],
-  "keyConclusion": "Bill Gates is the latest person watch and appeared on 7 recorded days during this window. The current lane effect is moderately-strengthens. Securities and Exchange Commission is the latest institution watch and appeared on 7 recorded days during this window. The current lane effect is moderately-strengthens. Wallenberg family and foundations is the latest family watch and appeared on 7 recorded days during this window. The current lane effect is adds-context.",
+  "keyConclusion": "Bill Gates is the latest person watch and appeared on 7 recorded days during this window. The current lane effect is adds-context. Securities and Exchange Commission is the latest institution watch and appeared on 7 recorded days during this window. The current lane effect is moderately-strengthens. Wallenberg family and foundations is the latest family watch and appeared on 7 recorded days during this window. The current lane effect is adds-context.",
   "boundary": "Repeated appearance means repeated research priority under the stated selection method. It is not cumulative proof of guilt, hidden control or wrongdoing."
 }

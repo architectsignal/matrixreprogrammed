@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-08-02T06:31:11.648Z
+Updated: 2026-08-02T10:43:14.971Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -185,6 +185,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Evidence Network Map Wiring: downloads/evidence-network-map-wiring.pdf
 - Top 50 Evidence Pull List: downloads/evidence-pull-list.pdf
 - Evidence Task Engine: downloads/evidence-task-engine.pdf
+- Exhaustive Public Site Audit: downloads/exhaustive-public-site-audit.pdf
 - Exposure Integrity Input Report: downloads/exposure-integrity-input-report.pdf
 - Exposure Integrity Pressure Test: downloads/exposure-integrity-pressure-test.pdf
 - Exposure Integrity Engine: downloads/exposure-integrity-report.pdf
@@ -240,10 +241,12 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Full Archive Map: downloads/lead-magnet-full-archive-map.pdf
 - Intelligence Files Starter Brief: downloads/lead-magnet-intelligence-files-brief.pdf
 - Trust And Evidence Checklist: downloads/lead-magnet-trust-evidence-checklist.pdf
+- Link Audit Report: downloads/link-audit-report.pdf
 - Live Intel Machine: downloads/live-intel-latest.pdf
 - Live Intel Research Routes: downloads/live-intel-research-routes.pdf
 - Live Machine Dependants Test: downloads/live-machine-dependants-test.pdf
 - Live Machine Status: downloads/live-machine-status.pdf
+- Live Production Verification: downloads/live-production-verification.pdf
 - Live Verifier Intelligence Routes Patch: downloads/live-verifier-intelligence-routes-patch.pdf
 - Lived Consequence Receipts Pressure Test: downloads/lived-consequence-receipts-pressure-test.pdf
 - Lived Consequence Receipts Report: downloads/lived-consequence-receipts-report.pdf
@@ -334,6 +337,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Protected Build Template Report: downloads/protected-build-template-report.pdf
 - Public Answer Clock Pressure Test: downloads/public-answer-clock-pressure-test.pdf
 - Public Answer Clock Report: downloads/public-answer-clock-report.pdf
+- Public Audit Boundary Reconciliation: downloads/public-audit-boundary-reconciliation.pdf
 - Public Consequence Contracts Pressure Test: downloads/public-consequence-contracts-pressure-test.pdf
 - Public Consequence Contracts Report: downloads/public-consequence-contracts-report.pdf
 - Public Consequence Due Index Report: downloads/public-consequence-due-index-report.pdf
@@ -347,6 +351,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Public Editorial Audit Repair: downloads/public-editorial-audit-repair.pdf
 - Public Network Map Test: downloads/public-network-map-test.pdf
 - Public Output Secret Audit: downloads/public-output-secret-audit.pdf
+- Public Page Heading Reconciliation: downloads/public-page-heading-reconciliation.pdf
 - Public Record Intake Manifest: downloads/public-record-intake.pdf
 - Public Runtime Controls Output: downloads/public-runtime-controls-output.pdf
 - Public Runtime Controls: downloads/public-runtime-controls.pdf
@@ -409,6 +414,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Site Public Copy And Intake Audit: downloads/site-public-copy-intake-audit.pdf
 - Site Quality Report: downloads/site-quality-report.pdf
 - Site Relationship Map: downloads/site-relationship-map.pdf
+- Site-Wide Function Audit: downloads/site-wide-function-audit.pdf
 - Source Cards: downloads/source-cards.pdf
 - Source Change Monitor Report: downloads/source-change-monitor-report.pdf
 - Source Change Preservation Hardening Report: downloads/source-change-preservation-hardening-report.pdf

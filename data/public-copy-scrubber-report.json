@@ -1,18 +1,8 @@
 {
   "ok": false,
-  "updated": "2026-08-02T06:34:07.977Z",
+  "updated": "2026-08-02T10:53:32.976Z",
   "changed": [],
   "issues": [
-    {
-      "file": "_site/dossier-jimmy-savile.html",
-      "pattern": "/do not show/i",
-      "severity": "review"
-    },
-    {
-      "file": "_site/information-gathering-system.html",
-      "pattern": "/author note/i",
-      "severity": "review"
-    },
     {
       "file": "dossier-jimmy-savile.html",
       "pattern": "/do not show/i",
@@ -32,8 +22,18 @@
       "file": "information-gathering-system.html",
       "pattern": "/\\[object Object\\]/i",
       "severity": "review"
+    },
+    {
+      "file": "_site/dossier-jimmy-savile.html",
+      "pattern": "/do not show/i",
+      "severity": "review"
+    },
+    {
+      "file": "_site/information-gathering-system.html",
+      "pattern": "/author note/i",
+      "severity": "review"
     }
   ],
-  "filesScanned": 3356,
+  "filesScanned": 3283,
   "note": "Public copy scrubber removes common internal or generator-facing phrasing from HTML and reports remaining visible issues."
 }

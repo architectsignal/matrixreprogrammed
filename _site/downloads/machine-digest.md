@@ -1,63 +1,15 @@
 # Machine Digest
 
-Updated: 2026-08-02T06:18:59.057Z
+Updated: 2026-08-02T10:33:41.897Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
-Feeds reached: 4
-Normalized events: 18
-Entity observations: 34
+Feeds reached: 0
+Normalized events: 0
+Entity observations: 0
 
 ## Latest Events
 
-- documented association: Electronic Delivery of Information Under the Federal Securities Laws — federal-register-policy — https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws
-- documented association: Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media — federal-register-policy — https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant
-- documented association: Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots — federal-register-policy — https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment
-- documented association: Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies — federal-register-policy — https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh
-- documented association: Alien Registration Form and Evidence of Registration — federal-register-policy — https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration
-- documented association: Modernizing Security Requirements — federal-register-policy — https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements
-- documented association: Apple Inc. (AAPL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: NVIDIA CORP (NVDA) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Alphabet Inc. (GOOGL) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
-- charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
-- charged / sued: Civil Rights Corps v. LaSalle — courtlistener-court-records — https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/
-- charged / sued: United States v. Anten — courtlistener-court-records — https://www.courtlistener.com/opinion/10935302/united-states-v-anten/
-- charged / sued: Punxsutawney Hunting Club v. PGC — courtlistener-court-records — https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/
-- charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
 
 ## Entity Observations
 
-- Homeland Security Department: 2 mention(s), lanes: federal-register-policy
-- Health and Human Services Department: 2 mention(s), lanes: federal-register-policy
-- Centers for Medicare & Medicaid Services: 2 mention(s), lanes: federal-register-policy
-- Appellate Division of the Supreme Court of the State of New York: 2 mention(s), lanes: courtlistener-court-records
-- Securities and Exchange Commission: 1 mention(s), lanes: federal-register-policy
-- Nuclear Regulatory Commission: 1 mention(s), lanes: federal-register-policy
-- Apple Inc.: 1 mention(s), lanes: sec-edgar-filings
-- AAPL: 1 mention(s), lanes: sec-edgar-filings
-- NVIDIA CORP: 1 mention(s), lanes: sec-edgar-filings
-- NVDA: 1 mention(s), lanes: sec-edgar-filings
-- Alphabet Inc.: 1 mention(s), lanes: sec-edgar-filings
-- GOOGL: 1 mention(s), lanes: sec-edgar-filings
-- MICROSOFT CORP: 1 mention(s), lanes: sec-edgar-filings
-- MSFT: 1 mention(s), lanes: sec-edgar-filings
-- AMAZON COM INC: 1 mention(s), lanes: sec-edgar-filings
-- AMZN: 1 mention(s), lanes: sec-edgar-filings
-- Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
-- AVGO: 1 mention(s), lanes: sec-edgar-filings
-- D & A Grandview, LLC v. 60 Davidson, LLC: 1 mention(s), lanes: courtlistener-court-records
-- 2024-13374: 1 mention(s), lanes: courtlistener-court-records
-- Williams v. Biggs: 1 mention(s), lanes: courtlistener-court-records
-- 2021-08825: 1 mention(s), lanes: courtlistener-court-records
-- Civil Rights Corps v. LaSalle: 1 mention(s), lanes: courtlistener-court-records
-- Court of Appeals for the Second Circuit: 1 mention(s), lanes: courtlistener-court-records
-- 24-2251: 1 mention(s), lanes: courtlistener-court-records
-- United States v. Anten: 1 mention(s), lanes: courtlistener-court-records
-- Court of Appeals for the Ninth Circuit: 1 mention(s), lanes: courtlistener-court-records
-- 24-7261: 1 mention(s), lanes: courtlistener-court-records
-- Punxsutawney Hunting Club v. PGC: 1 mention(s), lanes: courtlistener-court-records
-- Supreme Court of Pennsylvania: 1 mention(s), lanes: courtlistener-court-records

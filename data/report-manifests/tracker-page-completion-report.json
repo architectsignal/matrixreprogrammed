@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:30:45.961Z",
-  "pageCount": 96,
+  "generatedAt": "2026-08-02T10:42:54.747Z",
+  "pageCount": 97,
   "output": "downloads/tracker-page-completion-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Tracker Page Completion Report",
-    "contentHash": "0f1148b7799266e078b596654c4a58fdbd7f7e310ef0e054357e6fb9e4d2e061",
+    "contentHash": "9cf6bc4143667bada99e84be620dcffca340d09b7d281cda23911ca080f8a13f",
     "sourceIds": [
       "14d04c0943d24cbe6a1926db",
       "contractor-blackwater-xe-academi-constellis-lineage",
@@ -17,7 +17,10 @@
       "EFS-001-R006",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "b4cb47ea50dc901364239e9f",
       "a14c474ff4f291b0a260ee46",
       "2d4be12850f5299709adc82a",
@@ -37,12 +40,12 @@
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
       "26b90533dbf7d2ed42f02de6",
-      "a21f3d8e98268d5e01e1eb7c",
       "daily-revelation-report",
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
       "missing-records-report",
+      "3a425f0d5d683952bc0ad7ac",
       "9f77464e401ac59ad1adb812",
       "4caa111afb22cbc7c0d8d866",
       "05e609f8ccfd225cfc787019",
@@ -143,24 +146,21 @@
       "d5a6d57bd3fff065044ecb9a",
       "1da7373372b1f7679a52c12c",
       "f32c7a3b4e9e313492012150",
-      "f4a42124ae77f1d2ba130e44",
-      "762d32a752f0e1b81e6c81d7",
-      "6ab3b3c1e0b672eb05ccd9ed",
-      "b5bc068110d098fd52e50600"
+      "f4a42124ae77f1d2ba130e44"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 26,
+      "primarySourceCount": 28,
       "disputedClaimCount": 0,
       "newEntityCount": 26,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 91,
+      "relationshipCount": 88,
       "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 26 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 28 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 91 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 91 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report",
           "Westminster inquiry examined political and policing responses",

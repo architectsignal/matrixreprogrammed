@@ -1,9 +1,9 @@
 # Reader Experience Governor
 
-Generated: 2026-08-02T06:33:29.733Z
+Generated: 2026-08-02T10:49:24.281Z
 
-Files scanned: 1735
+Files scanned: 1662
 
-Files touched: 1582
+Files touched: 1508
 
 Mission: Preserve depth while improving the reader path.

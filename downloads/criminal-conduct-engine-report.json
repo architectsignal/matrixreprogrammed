@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:37:40.672Z",
+  "generatedAt": "2026-08-02T10:56:33.558Z",
   "registryUpdated": "2026-07-27",
   "surfaces": [
     {
@@ -1671,71 +1671,8 @@
     },
     {
       "scope": "source",
-      "route": "reports/entity-2021-08825.html",
-      "title": "2021-08825 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-2024-13374.html",
-      "title": "2024-13374 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-2025-0045-appeal.html",
-      "title": "2025-0045-APPEAL. — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-23-wap-2023.html",
-      "title": "23 WAP 2023 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-24-2251.html",
-      "title": "24-2251 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-24-7261.html",
-      "title": "24-7261 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "title": "APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-centers-for-medicare-and-medicaid-services.html",
-      "title": "CENTERS FOR MEDICARE & MEDICAID SERVICES — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-civil-rights-corps-v-lasalle.html",
-      "title": "CIVIL RIGHTS CORPS V. LASALLE — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "reports/entity-health-and-human-services-department.html",
-      "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
+      "route": "reports/entity-control-structure.html",
+      "title": "CONTROL STRUCTURE — ENTITY REPORT",
       "type": "entity",
       "approvedRecords": 0
     },
@@ -3904,6 +3841,13 @@
     },
     {
       "scope": "built",
+      "route": "institutions/vanguard.html",
+      "title": "Vanguard",
+      "type": "subject",
+      "approvedRecords": 1
+    },
+    {
+      "scope": "built",
       "route": "intelligence-dossiers.html",
       "title": "INTELLIGENCE DOSSIERS",
       "type": "subject",
@@ -3920,6 +3864,13 @@
       "scope": "built",
       "route": "launch-room.html",
       "title": "LAUNCH ROOM",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "live-intel.html",
+      "title": "LIVE INTEL",
       "type": "subject",
       "approvedRecords": 0
     },
@@ -4004,188 +3955,6 @@
       "scope": "built",
       "route": "public-record-dossiers.html",
       "title": "DOSSIERS & PUBLIC RECORD",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-2021-08825.html",
-      "title": "2021-08825 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-2024-13374.html",
-      "title": "2024-13374 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-2025-0045-appeal.html",
-      "title": "2025-0045-APPEAL. — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-23-wap-2023.html",
-      "title": "23 WAP 2023 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-24-2251.html",
-      "title": "24-2251 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-24-7261.html",
-      "title": "24-7261 — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "title": "APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-centers-for-medicare-and-medicaid-services.html",
-      "title": "CENTERS FOR MEDICARE & MEDICAID SERVICES — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-civil-rights-corps-v-lasalle.html",
-      "title": "CIVIL RIGHTS CORPS V. LASALLE — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/entity-health-and-human-services-department.html",
-      "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-european-commission.html",
-      "title": "EUROPEAN COMMISSION — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-federal-reserve.html",
-      "title": "FEDERAL RESERVE — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-international-monetary-fund.html",
-      "title": "INTERNATIONAL MONETARY FUND — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-nato.html",
-      "title": "NATO — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-united-nations.html",
-      "title": "UNITED NATIONS — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-world-bank.html",
-      "title": "WORLD BANK — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-world-economic-forum.html",
-      "title": "WORLD ECONOMIC FORUM — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/institution-world-health-organization.html",
-      "title": "WORLD HEALTH ORGANIZATION — INSTITUTION POWER REPORT",
-      "type": "institution",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-ai-surveillance-and-data-systems.html",
-      "title": "AI, SURVEILLANCE AND DATA SYSTEMS — SUBJECT REPORT",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-banking-and-payment-rails.html",
-      "title": "BANKING AND PAYMENT RAILS — SUBJECT REPORT",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-digital-id-and-access-systems.html",
-      "title": "DIGITAL ID AND ACCESS SYSTEMS — SUBJECT REPORT",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-disclosure-gaps-and-missing-files.html",
-      "title": "DISCLOSURE GAPS AND MISSING FILES — SUBJECT REPORT",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-foundation-and-ngo-policy-influence.html",
-      "title": "FOUNDATION AND NGO POLICY INFLUENCE — SUBJECT REPORT",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-gold-reserve-and-custody-systems.html",
-      "title": "GOLD, RESERVE AND CUSTODY SYSTEMS — SUBJECT REPORT",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-health-data-and-emergency-systems.html",
-      "title": "HEALTH DATA AND EMERGENCY SYSTEMS — SUBJECT REPORT",
-      "type": "subject",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "reports/subject-private-contractor-power.html",
-      "title": "PRIVATE CONTRACTOR POWER — SUBJECT REPORT",
       "type": "subject",
       "approvedRecords": 0
     },
@@ -4681,9 +4450,9 @@
     }
   ],
   "counts": {
-    "source": 334,
-    "built": 334,
-    "records": 64
+    "source": 325,
+    "built": 310,
+    "records": 65
   },
   "reviewCandidates": 0
 }

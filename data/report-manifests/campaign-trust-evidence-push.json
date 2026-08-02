@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:20:07.648Z",
-  "pageCount": 120,
+  "generatedAt": "2026-08-02T10:34:29.614Z",
+  "pageCount": 125,
   "output": "downloads/campaign-trust-evidence-push.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Trust And Evidence Campaign",
-    "contentHash": "1aaf47328ffe3239106731730b27758b4706eded1f77188d25ffa2d358b4430c",
+    "contentHash": "089653a70aa59224c99db0ce0ff7c91aa87d8a0a95fdf0745ac64ac2f07e2b31",
     "sourceIds": [
       "16b845aacad691a1299d5faa",
       "232955cb3e08720ec29ae560",
@@ -40,16 +40,6 @@
       "7c05d9244c4620950350cf27",
       "72ef7895f95288946ccb3cff",
       "ad283f9945fc2a5c7c0facc5",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
       "war-machine-2026-07-26-262b52a7",
       "crime-state-overlap-2026-04-23-legal-experts-skeptical-of-doj-s-criminal-case-against-southern-povert",
       "crime-state-overlap-2026-04-21-southern-poverty-law-center-indicted-for-fraud-money-laundering-politi",
@@ -64,7 +54,6 @@
       "cab66e2bb53cf082d241d7e1",
       "430b96f7d9c0b8b34fe8c029",
       "a48e62c41a98c1650efe9d98",
-      "war-machine-2026-08-01-62857078",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
       "war-machine-2026-07-30-1a19f6a2",
@@ -146,23 +135,34 @@
       "control-system-2025-07-17-myanmar-s-digital-crackdown-is-worsening-the-world-is-stepping-back-te",
       "control-system-2025-07-10-opinion-a-band-of-innovators-reimagines-the-spy-game-for-a-world-with-",
       "1e4f15d09e1414670233d7f7",
-      "594100b62a47db521fe2a128"
+      "594100b62a47db521fe2a128",
+      "e72d22f4f28eb53e3173d0a6",
+      "34805734b1ad3b73f0ede0d8",
+      "war-machine-2026-08-01-62857078",
+      "war-machine-2026-07-31-a6218ecb",
+      "war-machine-2026-07-29-1b1c36cc",
+      "war-machine-2026-07-29-1d1c39f2",
+      "war-machine-2026-07-29-211c403e",
+      "war-machine-2026-07-28-21290c31",
+      "war-machine-2026-07-28-181c3213",
+      "war-machine-2026-07-28-20290a9e",
+      "war-machine-2026-07-28-1a1c3539"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
+      "primarySourceCount": 2,
       "disputedClaimCount": 7,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 40,
-      "moneyRecordCount": 35
+      "relationshipCount": 38,
+      "moneyRecordCount": 37
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Trust And Evidence Campaign.",
-        "evidence": "World Wrestling Entertainment (data/live-intel.json); World Wrestling Entertainment Part 01 (data/live-intel.json); World Wrestling Entertainment Part 02 (Final) (data/live-intel.json); Brian Wells (data/live-intel.json); Brian Wells Part 01 (data/live-intel.json); Brian Wells Part 02 (Final) (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Trust And Evidence Campaign.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 38 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "War Machine Campaign; Intelligence Network Share Kit; War Machine Share Kit; Crime Network Starter Brief; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Intelligence Dossiers Offer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 38 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "War Machine Campaign",
           "Intelligence Network Share Kit",

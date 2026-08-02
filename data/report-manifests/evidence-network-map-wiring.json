@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:23:54.448Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-02T10:37:26.492Z",
+  "pageCount": 133,
   "output": "downloads/evidence-network-map-wiring.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Evidence Network Map Wiring",
-    "contentHash": "5931b066a5941bb8874b951ac9cdc88d5a63c90c5f087d059d548075cf41d521",
+    "contentHash": "16aed2e990a401ff59a28523bd68c6c8d062b12c3984e7ac467366c03ae6d8a4",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -17,24 +17,14 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
       "crime-state-overlap-2025-11-18-organised-crime-index-2025-south-africa-a-continental-hotspot-for-crim",
+      "ASC-REVIEW-A90E36DF59A2A3C2",
+      "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
       "ASC-REVIEW-0E868AF7B9CFC533",
-      "ASC-REVIEW-5745DAEE3A7221DC",
-      "ASC-REVIEW-9EBC0B258FA9E647",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -63,10 +53,6 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-83B750F5A70AA896",
-      "ASC-REVIEW-5C5BC2E897FCBBFE",
-      "ASC-REVIEW-BA5FF644D411D868",
-      "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -146,23 +132,37 @@
       "ASC-REVIEW-B3BA7D663A9BE4B2",
       "ASC-REVIEW-AD7847E11513D899",
       "ASC-REVIEW-C2C7140B7B6F51FF",
-      "ASC-REVIEW-2750F333FF6B37B3"
+      "ASC-REVIEW-2750F333FF6B37B3",
+      "ASC-REVIEW-B6BEE1135257F502",
+      "ASC-REVIEW-5F9BB287023DE81E",
+      "ASC-REVIEW-68286C2A2CB861AF",
+      "ASC-REVIEW-2527E3DEA85AE958",
+      "ASC-REVIEW-AF658BEE2D866332",
+      "ASC-REVIEW-1C806B2577C4D44C",
+      "ASC-REVIEW-A04C87BD046475D3",
+      "ASC-REVIEW-3A6BF3064A28E236",
+      "ASC-REVIEW-3B7DCAEF5ABCE701",
+      "ASC-REVIEW-3C0E3174433D0A74",
+      "ASC-REVIEW-954EF610F9B32B24",
+      "ASC-REVIEW-CA2354BF2081EB62",
+      "ASC-REVIEW-8A44FB8AADF1FB38",
+      "ASC-REVIEW-7527D6692621D585"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 126,
+      "primarySourceCount": 2,
+      "disputedClaimCount": 136,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 139,
-      "moneyRecordCount": 117
+      "moneyRecordCount": 131
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Evidence Network Map Wiring.",
-        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/conclusion-engine.json); World Wrestling Entertainment (data/live-intel.json); World Wrestling Entertainment Part 01 (data/live-intel.json); World Wrestling Entertainment Part 02 (Final) (data/live-intel.json); Brian Wells (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Evidence Network Map Wiring.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

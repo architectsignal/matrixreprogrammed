@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-02T06:26:28.932Z",
-  "pageCount": 96,
+  "generatedAt": "2026-08-02T10:39:31.315Z",
+  "pageCount": 97,
   "output": "downloads/missing-record-missions-pressure-test.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Missing Record Missions Pressure Test",
-    "contentHash": "73521e64e5cce8d534256867f64c07f711ccb24dc4ca017719d90f9ca83f61ce",
+    "contentHash": "3dd16c7dfd3fd643fb9105a1f2da9d2641468ff672b3947d09a433cbfe142ea8",
     "sourceIds": [
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
       "peter-ball-conviction-2015",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
@@ -27,19 +27,13 @@
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
       "0491ca77f4f2c9b90f832c2e",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "b4cb47ea50dc901364239e9f",
       "06baa45bea3e2e15eb80eff9",
+      "eb5d60860a79b38aeefa3633",
       "e457b31e704efd10ec987a59",
       "e349935405c0c31e3807b5af",
       "david-james-clarke-conviction-2026",
@@ -67,7 +61,6 @@
       "495efbb6e1ee304347ae3bdf",
       "c495decb9e41ce889da20ed1",
       "c8acdb17acd478f0ba121c11",
-      "a21f3d8e98268d5e01e1eb7c",
       "epstein-federal-indictment-2019",
       "us-doj",
       "gao-hq",
@@ -134,7 +127,14 @@
       "trusts-wellcome-trust",
       "trusts-pew-charitable-trusts",
       "trusts-garfield-weston-foundation",
-      "trusts-esme-e-fairbairn-foundation"
+      "trusts-esme-e-fairbairn-foundation",
+      "trusts-leverhulme-trust",
+      "trusts-nuffield-foundation",
+      "trusts-joseph-rowntree-charitable-trust",
+      "trusts-joseph-rowntree-foundation",
+      "trusts-sainsbury-family-charitable-funds",
+      "trusts-wolfson-foundation",
+      "trusts-calouste-gulbenkian-foundation"
     ],
     "metrics": {
       "evidenceCount": 128,
@@ -142,8 +142,8 @@
       "disputedClaimCount": 15,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 31,
-      "moneyRecordCount": 79
+      "relationshipCount": 22,
+      "moneyRecordCount": 87
     },
     "evidenceBasedConclusions": [
       {
@@ -167,8 +167,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Conviction for indecent images and misconduct in public office",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -182,7 +182,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Westminster inquiry examined political and policing responses",
@@ -191,7 +191,7 @@
           "New York DFS enforcement action concerning the bank's Epstein relationship",
           "Christopher Wray's Gift to Attorney General Garland",
           "Christopher Wray's Gift to Attorney General Garland (Final)",
-          "World Wrestling Entertainment"
+          "Conviction for indecent images and misconduct in public office"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -206,6 +206,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

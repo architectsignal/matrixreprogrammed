@@ -58,6 +58,8 @@ jobs:
           node --check ai-management/provider-adapters/local/openai-compatible-local.mjs
           node --check ai-management/resource-scout/resource-scout.mjs
           node --check ai-management/opportunity-hunter/opportunity-hunter.mjs
+          node --check ai-management/compute-resource-scout/compute-resource-scout.mjs
+          node --check ai-management/compute-resource-scout/compute-resource-store.mjs
           node --check ai-management/site-director/site-improvement-director.mjs
           node --check local-agent/matrix-local-agent.mjs
           node --check local-agent/control-plane-client.mjs
@@ -119,6 +121,10 @@ jobs:
               'ai_local_job_receipts',
               'ai_opportunities',
               'ai_opportunity_hunter_runs',
+              'ai_compute_provider_candidates',
+              'ai_compute_onboarding_tasks',
+              'ai_compute_resources',
+              'ai_compute_leases',
           }
           present = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
           missing = required - present
@@ -148,8 +154,19 @@ jobs:
           if 'zero_spend_lock = 1' not in hunter_runs_schema:
               raise SystemExit('Opportunity Hunter runs do not structurally enforce zero spend')
 
+          compute_lease_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_compute_leases'").fetchone()[0]
+          if "data_class='public'" not in compute_lease_schema:
+              raise SystemExit('Compute leases do not structurally restrict remote capacity to public workloads')
+
           flags = {row[0]: row[1] for row in database.execute('SELECT flag_name, enabled FROM ai_feature_flags')}
-          for flag in ['AI_LOCAL_MODEL_ROUTING_ENABLED', 'AI_SITE_DIRECTOR_ENABLED', 'AI_RESOURCE_AUTO_APPROVAL_ENABLED', 'AI_OPPORTUNITY_HUNTER_ENABLED']:
+          for flag in [
+              'AI_LOCAL_MODEL_ROUTING_ENABLED',
+              'AI_SITE_DIRECTOR_ENABLED',
+              'AI_RESOURCE_AUTO_APPROVAL_ENABLED',
+              'AI_OPPORTUNITY_HUNTER_ENABLED',
+              'AI_COMPUTE_RESOURCE_SCOUT_ENABLED',
+              'AI_REMOTE_COMPUTE_ROUTING_ENABLED',
+          ]:
               if flags.get(flag) != 0:
                   raise SystemExit(f'{flag} must start disabled before reviewed activation')
 
@@ -161,7 +178,7 @@ jobs:
           if duplicate_resources:
               raise SystemExit(f'Duplicate resources after rerun: {duplicate_resources}')
 
-          print('D1 phases 9, 10, 11 and 12 passed two complete executions with prompt-local, allowlist and zero-spend constraints.')
+          print('D1 phases 9 through 12 passed two complete executions with prompt-local, allowlist, public-only remote compute, and zero-spend constraints.')
 
       - name: Verify fail-closed production configuration
         run: |
@@ -176,6 +193,8 @@ jobs:
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
           grep -F "payment-method-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
           grep -F "owner-approval-required-for-capacity-program" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F 'public_workloads_only: true' ai-management/compute-resource-scout/compute-resource-scout.mjs
+          grep -F 'prompt_transfer_allowed: false' ai-management/compute-resource-scout/compute-resource-scout.mjs
 
       - name: Verify controlled production workflow includes AI release gates
         run: |

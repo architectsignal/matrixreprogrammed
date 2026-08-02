@@ -5,6 +5,8 @@ const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com')
 const adminToken = String(process.env.ADMIN_API_TOKEN || process.env.AI_MANAGEMENT_ADMIN_TOKEN || '').trim();
 const attempts = Math.max(1, Math.min(60, Number(process.env.AI_VERIFY_ATTEMPTS || 24)));
 const delayMs = Math.max(250, Math.min(30000, Number(process.env.AI_VERIFY_DELAY_MS || 5000)));
+const routeAttempts = Math.max(1, Math.min(12, Number(process.env.AI_VERIFY_ROUTE_ATTEMPTS || 6)));
+const sendAuthorization = String(process.env.AI_VERIFY_SEND_AUTHORIZATION || '').toLowerCase() === 'true';
 const outputPath = path.join(process.cwd(), 'downloads', 'live-ai-management-verification.json');
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 
@@ -17,10 +19,14 @@ function assert(condition, message) {
 }
 
 async function request(pathname, { method = 'GET', body, authorized = true } = {}) {
-  const headers = { accept: 'application/json' };
+  const headers = {
+    accept: 'application/json',
+    'cache-control': 'no-cache',
+    'user-agent': 'MatrixProductionVerifier/2.0'
+  };
   if (authorized) {
     headers['x-admin-token'] = adminToken;
-    headers.authorization = `Bearer ${adminToken}`;
+    if (sendAuthorization) headers.authorization = `Bearer ${adminToken}`;
   }
   if (body !== undefined) headers['content-type'] = 'application/json';
   const response = await fetch(`${siteUrl}${pathname}`, {
@@ -33,13 +39,49 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
   let data;
   try { data = JSON.parse(text); } catch { data = { raw: text.slice(0, 1000) }; }
   return {
+    requestedUrl: `${siteUrl}${pathname}`,
+    responseUrl: response.url,
     status: response.status,
     ok: response.ok,
     origin: response.headers.get('x-matrix-origin'),
     authLayer: response.headers.get('x-matrix-auth-layer') || data?.authLayer || null,
     contentType: response.headers.get('content-type'),
+    server: response.headers.get('server'),
+    cfRay: response.headers.get('cf-ray'),
+    cfMitigated: response.headers.get('cf-mitigated'),
+    location: response.headers.get('location'),
     data
   };
+}
+
+function responseDiagnostic(result) {
+  if (!result) return null;
+  return {
+    status: result.status,
+    origin: result.origin,
+    authLayer: result.authLayer,
+    contentType: result.contentType,
+    server: result.server,
+    cfRay: result.cfRay,
+    cfMitigated: result.cfMitigated,
+    responseUrl: result.responseUrl,
+    location: result.location,
+    error: result.data?.error || null,
+    message: result.data?.message || null,
+    preview: result.data?.raw || null
+  };
+}
+
+function writeFailure(stage, result, extra = {}) {
+  fs.writeFileSync(outputPath, `${JSON.stringify({
+    ok: false,
+    stage,
+    siteUrl,
+    verifiedAt: new Date().toISOString(),
+    authorizationHeaderSent: sendAuthorization,
+    response: responseDiagnostic(result),
+    ...extra
+  }, null, 2)}\n`);
 }
 
 if (!adminToken) {
@@ -133,7 +175,7 @@ const promptRejection = await request('/api/ai-management/admin/route-model', {
 assert(promptRejection.status === 400, `Cloudflare routing did not reject prompt material; got ${promptRejection.status}`);
 assert(/prompt material is forbidden/i.test(String(promptRejection.data?.error || promptRejection.data?.message || '')), 'Prompt rejection did not identify the privacy boundary');
 
-const route = await request('/api/ai-management/admin/route-model', {
+const routeRequest = {
   method: 'POST',
   body: {
     task_profile: 'reasoning',
@@ -143,8 +185,23 @@ const route = await request('/api/ai-management/admin/route-model', {
     max_tokens: 1024,
     allow_cpu_fallback: true
   }
-});
-assert([200, 503].includes(route.status), `Metadata-only route endpoint returned unexpected status ${route.status}`);
+};
+let route;
+const routeAttemptLog = [];
+for (let attempt = 1; attempt <= routeAttempts; attempt += 1) {
+  route = await request('/api/ai-management/admin/route-model', routeRequest);
+  routeAttemptLog.push({ attempt, ...responseDiagnostic(route) });
+  if ([200, 503].includes(route.status)) break;
+  if (attempt < routeAttempts) await sleep(delayMs);
+}
+if (![200, 503].includes(route.status)) {
+  writeFailure('metadata-route', route, {
+    routeAttempts: routeAttemptLog,
+    promptRejection: responseDiagnostic(promptRejection),
+    health: responseDiagnostic(health)
+  });
+  throw new Error(`Metadata-only route endpoint returned unexpected status ${route.status}; origin=${route.origin || 'missing'}; authLayer=${route.authLayer || 'missing'}; server=${route.server || 'missing'}; cfRay=${route.cfRay || 'missing'}; error=${route.data?.error || route.data?.message || 'missing'}`);
+}
 if (route.status === 200) {
   assert(route.data?.promptReceived === false && route.data?.promptStored === false && route.data?.promptTransferred === false, 'Successful route did not prove prompt-free selection');
   assert(route.data?.costStatus === 'EUR 0', 'Successful route did not prove zero cost');
@@ -173,6 +230,7 @@ const proof = {
   promptBoundary: { rejectionStatus: promptRejection.status, promptAccepted: false },
   route: {
     status: route.status,
+    attempts: routeAttemptLog,
     selectedResource: route.status === 200 ? route.data?.selected?.resource_id || null : null,
     noModelYet: route.status === 503
   },

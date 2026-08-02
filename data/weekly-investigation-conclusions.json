@@ -4150,50 +4150,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-41",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-02T08:22:23.243Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "money-contracts"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-a53bf480df4e4883383a08e0",
@@ -4231,50 +4188,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-42",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-02T07:42:48.079Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "money-contracts"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-81d1ec66d255ebaf3f7d61de",
@@ -4312,50 +4226,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-43",
-        "title": "content changed: Federal Register — Latest Documents",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "Federal Register — Latest Documents; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-02T07:42:48.079Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "oversight-audit"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-7ed151a515391f967d229642",
@@ -4393,50 +4264,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-44",
-        "title": "content changed: UK Serious Fraud Office — News And Communications",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.gov.uk/government/organisations/serious-fraud-office",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "UK Serious Fraud Office — News And Communications; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-02T07:42:48.079Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.gov.uk/government/organisations/serious-fraud-office",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "international-corruption"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.gov.uk/government/organisations/serious-fraud-office"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-a334a207405ec629b4be337d",
@@ -4474,50 +4302,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-45",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:38.763Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "money-contracts"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-c452df757991611cb06ec88a",
@@ -4555,50 +4340,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-46",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-31T08:12:11.783Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "money-contracts"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-8299a278d70b1f879d6d522f",
@@ -4636,50 +4378,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-47",
-        "title": "content changed: Federal Register — Latest Documents",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "Federal Register — Latest Documents; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-31T08:12:11.783Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "oversight-audit"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-0c5f51804baf8e9e2c1fdd0b",
@@ -4717,50 +4416,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "weekly-48",
-        "title": "content changed: UK Serious Fraud Office — News And Communications",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.gov.uk/government/organisations/serious-fraud-office",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "UK Serious Fraud Office — News And Communications; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-07-31T08:12:11.783Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.gov.uk/government/organisations/serious-fraud-office",
-          "data/weekly-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "international-corruption"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.gov.uk/government/organisations/serious-fraud-office"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     }
   ],
   "changedSources": [

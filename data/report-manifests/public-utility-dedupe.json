@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:26:01.779Z",
+  "generatedAt": "2026-08-02T21:07:32.465Z",
   "pageCount": 139,
   "output": "downloads/public-utility-dedupe.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Public Utility Dedupe",
-    "contentHash": "fb437721f58dc5575fc194b9dd775e70154b7388a06ecabbe2944b348f2522b3",
+    "contentHash": "51a50f426028fed6a6f1e4412ca1f9dbeb4fb202255b3926388baae1fc3127ba",
     "sourceIds": [
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
@@ -46,7 +46,6 @@
       "ASC-REVIEW-0BDE78366651B0AB",
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -79,7 +78,6 @@
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-06CC87AEAF289EB7",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-08CB150A42984598",
@@ -119,16 +117,16 @@
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-D71392631DCCB39D",
-      "ASC-REVIEW-6C02F7DFCB3CC39B",
       "ASC-REVIEW-8F78AF6351AD0401",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-8D837E7F40890879",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-562FC137832B0529",
       "ASC-REVIEW-CEAFD28B55D0DA69",
       "ASC-REVIEW-F75F4FFBA085D396",
       "ASC-REVIEW-0F8586CC2CBF8ED4",
       "ASC-REVIEW-ECFD914DA00A7C36",
       "ASC-REVIEW-44CBDE6F2AE4CA62",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-995107775153DECB",
       "ASC-REVIEW-3BECB9AD9D29AF5D",
       "ASC-REVIEW-5A774507A02DF22B",
@@ -145,24 +143,26 @@
       "a5e5d4ec4df4352ea242ea3f",
       "source-change-62862e6ca90495adc0788a2d",
       "source-change-a53bf480df4e4883383a08e0",
-      "e083e748ec6311742c2416e5",
-      "source-change-a334a207405ec629b4be337d"
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
+      "ASC-REVIEW-5D13FDD470EDF012",
+      "ASC-REVIEW-94F3B4C96A469AB3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
+      "primarySourceCount": 7,
       "disputedClaimCount": 132,
-      "newEntityCount": 2,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 84,
-      "moneyRecordCount": 59
+      "relationshipCount": 86,
+      "moneyRecordCount": 60
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Public Utility Dedupe.",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Public Utility Dedupe.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 84 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 86 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: Federal Register — Latest Documents; content changed: UK Serious Fraud Office — News And Communications; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 84 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 86 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

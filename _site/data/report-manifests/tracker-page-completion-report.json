@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:28:04.563Z",
-  "pageCount": 95,
+  "generatedAt": "2026-08-02T21:09:43.312Z",
+  "pageCount": 94,
   "output": "downloads/tracker-page-completion-report.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Tracker Page Completion Report",
-    "contentHash": "f8f902d60d5a9bfbf84b5fc776c7a87cea3c63f02ca6a1610096faca1610fe29",
+    "contentHash": "7c4cf004143be17bd3ce27e9be6a1d6c555318733a9592f60f65dfdc86de7f98",
     "sourceIds": [
       "14d04c0943d24cbe6a1926db",
       "e72d22f4f28eb53e3173d0a6",
@@ -14,7 +14,6 @@
       "24a844c3ddb5aecaad25e9bc",
       "57c45b5418e8e6b512f06603",
       "EFS-001-R006",
-      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -26,8 +25,6 @@
       "2d4be12850f5299709adc82a",
       "8212c1ebe163e30add33aeaf",
       "b866e2c7eb4ced9098559c86",
-      "epstein-nda-settlement-protection-lane-2026-06-26",
-      "digital-euro-parliament-hurdle-2026-06-23",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
@@ -41,12 +38,15 @@
       "janner-charges-2015",
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
-      "495efbb6e1ee304347ae3bdf",
       "26b90533dbf7d2ed42f02de6",
       "contractor-blackwater-xe-academi-constellis-lineage",
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
+      "us-doj",
+      "fbi-hq",
+      "cia-hq",
+      "gao-hq",
       "9f77464e401ac59ad1adb812",
       "30ad4c24b86fb43ebd917c6b",
       "05e609f8ccfd225cfc787019",
@@ -150,16 +150,16 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 31,
+      "primarySourceCount": 32,
       "disputedClaimCount": 0,
-      "newEntityCount": 8,
+      "newEntityCount": 6,
       "updatedAssessmentCount": 1,
       "relationshipCount": 87,
-      "moneyRecordCount": 10
+      "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 31 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
+        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
         "evidence": "SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
   }
 }

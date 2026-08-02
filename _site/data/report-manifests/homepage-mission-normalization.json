@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:23:07.628Z",
+  "generatedAt": "2026-08-02T21:04:26.508Z",
   "pageCount": 134,
   "output": "downloads/homepage-mission-normalization.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Homepage Mission Normalization",
-    "contentHash": "c6c99df5781d6ab7e7fb9f2453b1fa2a046231e11b3bc1cf634e7c36dfaf68d2",
+    "contentHash": "9b820d4d901c8d786b15094a69ae62f39d10bf315f567189c30384b03c06c9cc",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
@@ -14,6 +14,10 @@
       "ASC-REVIEW-A8005F6D70DBECBC",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-8D34DAEE930AC84F",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -31,10 +35,10 @@
       "ASC-REVIEW-AB5A700449B10AEC",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -142,27 +146,23 @@
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
       "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D"
+      "ASC-REVIEW-00A30F616825A65E"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 132,
+      "primarySourceCount": 10,
+      "disputedClaimCount": 128,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 122,
-      "moneyRecordCount": 112
+      "relationshipCount": 118,
+      "moneyRecordCount": 108
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Homepage Mission Normalization.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Homepage Mission Normalization.",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 122 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 118 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 122 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 118 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

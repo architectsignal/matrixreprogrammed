@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T11:48:04.175Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-02T21:05:08.962Z",
+  "pageCount": 137,
   "output": "downloads/live-verifier-intelligence-routes-patch.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Live Verifier Intelligence Routes Patch",
-    "contentHash": "4aebfaa3ce00bc85c7f0068f8222742640e35427ffc6329368c1f48a7e1b6def",
+    "contentHash": "736b7f70667009a952c04a44f97020c7dd9c153523ae8058973c0e0df743d077",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -14,6 +14,7 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "EP-AI-004",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -32,7 +33,6 @@
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
       "72ef7895f95288946ccb3cff",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -44,6 +44,9 @@
       "ASC-REVIEW-C0E6134747580127",
       "EP-AI-002",
       "EP-AI-003",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-a334a207405ec629b4be337d",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-32D4420F5F198DA2",
@@ -64,6 +67,9 @@
       "ASC-REVIEW-AB5A700449B10AEC",
       "3a425f0d5d683952bc0ad7ac",
       "ec968f2ec6ba82128b4cd91b",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-c452df757991611cb06ec88a",
       "ASC-REVIEW-B9D6F588FF54AD31",
       "ASC-REVIEW-03A8457B74049A13",
       "ASC-REVIEW-AD4A5A51C1AD5BFD",
@@ -140,29 +146,23 @@
       "ASC-REVIEW-1CDBDA84057D802E",
       "ASC-REVIEW-5F2C7C064DEAB967",
       "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621",
-      "ASC-REVIEW-285205442D5C5D56",
-      "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27",
-      "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-E48690C00EA31793"
+      "ASC-REVIEW-5F86F35C103C9621"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 132,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 126,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 116,
-      "moneyRecordCount": 89
+      "relationshipCount": 110,
+      "moneyRecordCount": 83
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Live Verifier Intelligence Routes Patch.",
-        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Live Verifier Intelligence Routes Patch.",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 116 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 116 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

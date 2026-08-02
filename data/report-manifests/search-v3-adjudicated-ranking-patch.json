@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:26:34.523Z",
+  "generatedAt": "2026-08-02T21:08:09.447Z",
   "pageCount": 135,
   "output": "downloads/search-v3-adjudicated-ranking-patch.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Search V3 Adjudicated Ranking Patch",
-    "contentHash": "5b1908301bdea62b7ef2be0491ae988c00e2b3ffba39023798553e7550197709",
+    "contentHash": "b8492a5eb0f4d93919e56e66219ecdfff90b70e7c1aa69d4c3b296d0e76a57fd",
     "sourceIds": [
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-AF18512452F699D2",
@@ -65,7 +65,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -98,9 +97,9 @@
       "665a5072d96b9757a6ee9d2d",
       "74fb2863cc9a8120f3c68b67",
       "26b90533dbf7d2ed42f02de6",
-      "9f77464e401ac59ad1adb812",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -112,7 +111,6 @@
       "savile-health-investigations-2014",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -146,16 +144,18 @@
       "ASC-REVIEW-EA0D28B414E271DB",
       "ASC-REVIEW-6A0CBB4AE4D6A280",
       "ASC-REVIEW-AE10394716B1B048",
-      "ASC-REVIEW-F5CA53DC99863DAC"
+      "ASC-REVIEW-F5CA53DC99863DAC",
+      "ASC-REVIEW-0914587401D9BDE0",
+      "ASC-REVIEW-525DDFDACCB9146E"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 45,
-      "disputedClaimCount": 84,
+      "disputedClaimCount": 85,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 76,
-      "moneyRecordCount": 49
+      "relationshipCount": 78,
+      "moneyRecordCount": 51
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "FCN, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "FCN, INC. — Court Services and Offender Supervision Agency",
           "INDUSTRIAL BANK — District of Columbia Courts",

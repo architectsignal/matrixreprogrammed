@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:20:42.816Z",
+  "generatedAt": "2026-08-02T21:01:35.139Z",
   "pageCount": 135,
   "output": "downloads/daily-watch-entity-resolution-report.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Daily Watch Entity Resolution Report",
-    "contentHash": "95cd41717aea99035baeb276dfacd71d18d0c52984cbf2ca02dd00da0f4e0d6f",
+    "contentHash": "818587861f628d004ce5cfb6361119aae7552c837be440db41dd9a2b22057f0b",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
@@ -98,10 +98,11 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
-      "26b90533dbf7d2ed42f02de6",
       "157cdab04b61ae6309c0c713",
       "360e80c162081c85d2c680ef",
-      "a103f2650e31fc92fa3688e6",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-a334a207405ec629b4be337d",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -112,7 +113,6 @@
       "savile-health-investigations-2014",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -150,16 +150,16 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 37,
-      "disputedClaimCount": 98,
+      "primarySourceCount": 39,
+      "disputedClaimCount": 97,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
-      "moneyRecordCount": 53
+      "relationshipCount": 78,
+      "moneyRecordCount": 52
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 37 A/B-grade public-record items are materially relevant to Daily Watch Entity Resolution Report.",
+        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Daily Watch Entity Resolution Report.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; DELL MARKETING L.P. — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
   }
 }

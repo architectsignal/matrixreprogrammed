@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:19:06.738Z",
-  "pageCount": 103,
+  "generatedAt": "2026-08-02T20:59:54.533Z",
+  "pageCount": 101,
   "output": "downloads/auto-evidence-pipeline-report.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Auto Evidence Pipeline Report",
-    "contentHash": "98269053b176506e6f402279881c563c230ebce89473e5f4e0444e89f342f32e",
+    "contentHash": "3de6969d34519ed646602bb27e7c2ad634b725fd2da182c20dcc09015095c0aa",
     "sourceIds": [
       "DOJ-USVI-JPMORGAN",
       "DOJ-MAXWELL-CASE",
@@ -32,6 +32,8 @@
       "9f77464e401ac59ad1adb812",
       "EFS-001-R003",
       "ec968f2ec6ba82128b4cd91b",
+      "16cde9bd4c87e916ff1e4fb7",
+      "bbf59ae4094608bcd2c37305",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -57,8 +59,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "16cde9bd4c87e916ff1e4fb7",
-      "bbf59ae4094608bcd2c37305",
       "f8da9551192fb7f98b4efa86",
       "275d6c3caca158f7a3e15780",
       "ec1316fb1fb70c83dc347bb6",
@@ -82,7 +82,6 @@
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "e4a0df7a70409789454722e7",
-      "a103f2650e31fc92fa3688e6",
       "a76edf5945d2f4910bd413ef",
       "c414ea6b5bea3390d2a8ce5c",
       "cf94b367bfb0237448d49649",
@@ -93,10 +92,14 @@
       "3a425f0d5d683952bc0ad7ac",
       "6510364e9b1a1504b9f99521",
       "EFS-001-R006",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-9455E984D4DBC196",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-CEAFD28B55D0DA69",
       "ASC-REVIEW-5A774507A02DF22B",
       "c8eeb5656d86646c1e6dc75c",
@@ -116,13 +119,18 @@
       "360e80c162081c85d2c680ef",
       "34805734b1ad3b73f0ede0d8",
       "427a4b3a840619411d8d1c33",
+      "a103f2650e31fc92fa3688e6",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-E6D70696A19B3CDA",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-E76F1740FFF4E811",
       "d6936ce262c4c18cb75c6e44",
       "4ae6a940305d15da61333450",
@@ -138,28 +146,20 @@
       "3c9c23f7f9a1cec81ef90f59",
       "EFS-001-R002",
       "9b9816cd15ea0d816c77affa",
-      "ASC-REVIEW-4D93FE8E0666D181",
-      "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-96665FE56FA75D90",
-      "ASC-REVIEW-5EA0FB3A48583D82",
-      "ASC-REVIEW-32D4420F5F198DA2",
-      "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-7B1A15ED77443F13",
-      "ASC-REVIEW-9B01C094346A78B0"
+      "ASC-REVIEW-4D93FE8E0666D181"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 54,
-      "disputedClaimCount": 24,
+      "primarySourceCount": 62,
+      "disputedClaimCount": 16,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 17,
-      "moneyRecordCount": 17
+      "relationshipCount": 11,
+      "moneyRecordCount": 16
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 54 A/B-grade public-record items are materially relevant to Auto Evidence Pipeline Report.",
+        "conclusion": "The indexed record establishes that 62 A/B-grade public-record items are materially relevant to Auto Evidence Pipeline Report.",
         "evidence": "Government of the USVI v. JPMorgan Chase Bank, N.A. DOJ court-record page (data/auto-evidence-latest.json); United States v. Maxwell DOJ court-record page (data/auto-evidence-latest.json); United States v. Epstein DOJ court-record page (data/auto-evidence-latest.json); DOJ Data Set 9 files (data/auto-evidence-latest.json); DOJ Epstein disclosures index (data/auto-evidence-latest.json); Court Record lane — Government of the USVI v. JPMorgan Chase Bank, N.A. (data/tracker-core-investigations.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 17 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; INDUSTRIAL BANK — District of Columbia Courts; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; DELL MARKETING L.P. — District of Columbia Courts; Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2; Follow The Money Watch",
+        "inference": "The indexed set contains 11 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; INDUSTRIAL BANK — District of Columbia Courts; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2; Follow The Money Watch; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 17 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 11 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "MINDCUBED LLC — District of Columbia Courts",
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2",
-          "Follow The Money Watch"
+          "Follow The Money Watch",
+          "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

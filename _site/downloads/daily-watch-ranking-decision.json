@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T12:48:48.078Z",
+  "generatedAt": "2026-08-02T21:19:08.205Z",
   "promotionMargin": 14,
   "decisions": {
     "person": {
@@ -12,16 +12,22 @@
     },
     "institution": {
       "changed": false,
-      "reason": "The same entity remains the current evidence leader.",
+      "reason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent.",
+      "incumbent": "Securities and Exchange Commission",
       "incumbentScore": 143,
+      "challenger": "U.S. Securities and Exchange Commission",
       "challengerScore": 143,
+      "required": 157,
       "marginRequired": 14
     },
     "family": {
       "changed": false,
-      "reason": "The same entity remains the current evidence leader.",
+      "reason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent.",
+      "incumbent": "Wallenberg family and foundations",
       "incumbentScore": 122,
+      "challenger": "Al Maktoum family",
       "challengerScore": 122,
+      "required": 136,
       "marginRequired": 14
     }
   }

@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-02T12:24:56.250Z",
+  "generatedAt": "2026-08-02T21:06:17.933Z",
   "pageCount": 120,
   "output": "downloads/page-quality-audit.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Page Quality Audit",
-    "contentHash": "4408b51b9b7361a0b3282326eaf7874e525ed1f8dbbee14ce1cca43c0d382273",
+    "contentHash": "30163bbd6eb42a8b5215aeef0683cac9e6cd046c7d4f4204a2631f282cd11835",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "71e0563ca7b139c37c302956",
-      "e083e748ec6311742c2416e5",
       "9f77464e401ac59ad1adb812",
+      "e083e748ec6311742c2416e5",
       "008875ef7bf45eb14dccb254",
       "9e8903fd8dfa9b54a1d6db30",
       "d218a6ca65aef38cb9459460",
@@ -102,7 +102,7 @@
       "7cf985b1718c7774326e28a3",
       "bd2b6cad16638929f20e72c2",
       "17bc0215b6efa48e3969efce",
-      "d383cac1372c971b21b3d928",
+      "306c4e44df4c42a0ff9641ee",
       "6ed6d91c20dd7f961cdfb583",
       "ce2bed50773268f6818c64d5",
       "036c1d6ead8fc4ca1e02fb7b",
@@ -120,6 +120,8 @@
       "aa125ed22fe885dd57f96c32",
       "b49c319c09a07b245b24f74a",
       "ec968f2ec6ba82128b4cd91b",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-8299a278d70b1f879d6d522f",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "109714c301ba5ae2367d080e",
       "62231a08b90f027815e7bc01",
@@ -144,22 +146,20 @@
       "ASC-REVIEW-F9B27A08465F560B",
       "ASC-REVIEW-81EECB8AC7F0B57B",
       "ASC-REVIEW-9455E984D4DBC196",
-      "ASC-REVIEW-E8F3DDB7E3724A74",
-      "ASC-REVIEW-09A1231B842DD08D",
-      "ASC-REVIEW-562FC137832B0529"
+      "ASC-REVIEW-E8F3DDB7E3724A74"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 50,
-      "disputedClaimCount": 39,
+      "primarySourceCount": 52,
+      "disputedClaimCount": 37,
       "newEntityCount": 12,
       "updatedAssessmentCount": 1,
       "relationshipCount": 41,
-      "moneyRecordCount": 24
+      "moneyRecordCount": 23
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 50 A/B-grade public-record items are materially relevant to Page Quality Audit.",
+        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Page Quality Audit.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T12:54:08.436Z",
+  "generatedAt": "2026-08-02T21:19:13.706Z",
   "mapLibreVersion": "5.24.0",
   "mapLibreScriptUrl": "https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js",
   "mapLibreCssUrl": "https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css",
@@ -13,13 +13,13 @@
     "page": false,
     "builder": false,
     "runtime": false,
-    "runtimeRestored": true,
+    "runtimeRestored": false,
     "protectedRuntime": false,
     "seed": false,
     "manifest": false,
     "aliasSynced": false,
     "protectedRuntimeCreated": false
   },
-  "transformError": "Geographic Atlas loadMapLibraries function could not be located.",
+  "transformError": null,
   "failures": []
 }

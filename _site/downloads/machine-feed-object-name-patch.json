@@ -1,12 +1,14 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T12:40:11.551Z",
+  "generatedAt": "2026-08-02T20:59:25.981Z",
   "runnerPatched": false,
   "roots": [
     ".",
     "_site"
   ],
-  "touched": [],
+  "touched": [
+    "data/daily-brain-brief.json"
+  ],
   "residual": [],
   "boundary": "Object-valued upstream fields are converted into meaningful labels when available. Unresolvable object placeholders are excluded rather than published as entity names."
 }

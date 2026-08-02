@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:23:02.396Z",
-  "pageCount": 123,
+  "generatedAt": "2026-08-02T21:04:18.183Z",
+  "pageCount": 124,
   "output": "downloads/global-risk-clocks-linked.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Global Risk Clocks",
-    "contentHash": "3ff947bd847b4d7afb1a1205eafd037e17799f3de07346c597ed28c64f5129b5",
+    "contentHash": "b5ae55e78c0793e1cb18dbce30175132380b81e14224e0f2eae20da3e07ed90b",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "26b90533dbf7d2ed42f02de6",
@@ -88,12 +88,11 @@
       "e116361cb7791d4be20113e1",
       "9d0cf694c0c2e7c8947c7596",
       "ecadede6696db6c7c3e6b7ec",
-      "085baf8dafdf6692a4203706",
+      "fe3f3107cffaf5599a7b09f9",
       "9f77464e401ac59ad1adb812",
       "7f5b91c14c671bd24b8bbd81",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
-      "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -146,12 +145,13 @@
       "ASC-REVIEW-09AE97E87425D94A",
       "ASC-REVIEW-8A44FB8AADF1FB38",
       "ASC-REVIEW-C7A00AFA602DD2A9",
-      "ASC-REVIEW-8D34DAEE930AC84F"
+      "ASC-REVIEW-8D34DAEE930AC84F",
+      "ASC-REVIEW-1EA1A54BAAF5A93D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 99,
+      "primarySourceCount": 6,
+      "disputedClaimCount": 100,
       "newEntityCount": 11,
       "updatedAssessmentCount": 1,
       "relationshipCount": 99,
@@ -159,10 +159,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Global Risk Clocks.",
-        "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Global Risk Clocks.",
+        "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 88,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"

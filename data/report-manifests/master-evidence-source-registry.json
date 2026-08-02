@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:24:06.356Z",
+  "generatedAt": "2026-08-02T21:05:24.354Z",
   "pageCount": 119,
   "output": "downloads/master-evidence-source-registry.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Master Evidence Source Registry",
-    "contentHash": "73b42c424bb709fdd645014f52fae68dc0b17deaa1b2f214256f3cc0b6bcd3a3",
+    "contentHash": "d75dae54d19a6270cb0c2a425566f85a97251ca3dbba1e4f28c452cc231ad696",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "26b90533dbf7d2ed42f02de6",
@@ -26,20 +26,23 @@
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
       "9f3052b5d8cec138a2a37e8c",
-      "4c07add2a6d4eb22cadecd27",
       "ASC-REVIEW-7B1A15ED77443F13",
-      "a103f2650e31fc92fa3688e6",
+      "4c07add2a6d4eb22cadecd27",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "daee19f2c0d92279cc9a7569",
+      "9f77464e401ac59ad1adb812",
+      "008875ef7bf45eb14dccb254",
+      "360e80c162081c85d2c680ef",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
       "440a73a5b6c1002efa765acb",
       "388e2e8c136c6891fe3af13a",
       "5546f85d1ba69563adc9bffd",
-      "ASC-REVIEW-4D93FE8E0666D181",
-      "daee19f2c0d92279cc9a7569",
-      "9f77464e401ac59ad1adb812",
-      "008875ef7bf45eb14dccb254",
-      "360e80c162081c85d2c680ef",
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-96665FE56FA75D90",
+      "427a4b3a840619411d8d1c33",
+      "a103f2650e31fc92fa3688e6",
       "53201d6b1babefc058e6d6ac",
       "538941a6b0f31a954f98439a",
       "57155b538497645f1d15d258",
@@ -58,9 +61,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-96665FE56FA75D90",
-      "427a4b3a840619411d8d1c33",
       "ASC-REVIEW-AF18512452F699D2",
       "594100b62a47db521fe2a128",
       "EP-AI-004",
@@ -88,16 +88,18 @@
       "4961972398d896435d33f3f7",
       "9d0cf694c0c2e7c8947c7596",
       "ecadede6696db6c7c3e6b7ec",
-      "085baf8dafdf6692a4203706",
+      "fe3f3107cffaf5599a7b09f9",
       "76a719654ec3312153163154",
       "7f5b91c14c671bd24b8bbd81",
       "c5d9edd2562c4c00e3ddfdfb",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
+      "085baf8dafdf6692a4203706",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "53245eb712fc0413483084ad",
       "9f27e4d750de830ccb16df4b",
       "EP-AI-002",
+      "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "c1520a15d6e62871a66c558e",
       "f5bc8d91413e4e72ae005ad4",
@@ -128,7 +130,7 @@
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "8d0375496d59f1d012deaead",
       "bb5dfe90c29929d84ce60e6d",
@@ -144,18 +146,16 @@
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-D3C6DB16A89DBA51",
-      "ASC-REVIEW-44F136F26F8A52B2",
-      "ASC-REVIEW-E76F1740FFF4E811",
-      "d6936ce262c4c18cb75c6e44"
+      "ASC-REVIEW-44F136F26F8A52B2"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 50,
-      "disputedClaimCount": 39,
+      "disputedClaimCount": 38,
       "newEntityCount": 6,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 49,
-      "moneyRecordCount": 34
+      "relationshipCount": 51,
+      "moneyRecordCount": 36
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; DELL MARKETING L.P. — District of Columbia Courts; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; Matrix Reprogrammed Structured Investigation Schema",
+        "inference": "The indexed set contains 51 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; Matrix Reprogrammed Structured Investigation Schema; FCN, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 51 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "MINDCUBED LLC — District of Columbia Courts",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Influence should be mapped through infrastructure, filings and contracts.",
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
-          "Matrix Reprogrammed Structured Investigation Schema"
+          "Matrix Reprogrammed Structured Investigation Schema",
+          "FCN, INC. — Court Services and Offender Supervision Agency"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

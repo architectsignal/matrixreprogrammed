@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-02T12:25:39.389Z",
-  "pageCount": 129,
+  "generatedAt": "2026-08-02T21:07:12.473Z",
+  "pageCount": 128,
   "output": "downloads/public-consequence-contracts-report.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Public Consequence Contracts Report",
-    "contentHash": "24c89539e986b2eec05bd558fbb0c1310b8ecaa476835a650e178210b254acfc",
+    "contentHash": "380d2f0cda9983f812ce019a9b62417de7af25107464674842ed09b96c995923",
     "sourceIds": [
+      "e083e748ec6311742c2416e5",
       "f669b33c49b63e787cde3008",
       "3a425f0d5d683952bc0ad7ac",
-      "e083e748ec6311742c2416e5",
       "f485885c5a3e8953643e4c73",
       "8b7f7c669cb0890687a24e01",
       "0206ddc18fa512b3355ca390",
@@ -52,7 +52,7 @@
       "ASC-REVIEW-5D75F861BBF77D9D",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-5C5BC2E897FCBBFE",
-      "EP-AI-004",
+      "de58872cc8483198b691c403",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -63,6 +63,7 @@
       "511ed227bb4be58b582ebb8d",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
+      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -88,6 +89,11 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-8299a278d70b1f879d6d522f",
       "6f24413e4cc0832e80e3ca03",
       "cbe0915cb2d88f076ed7b91e",
       "b71592baee67a6754037f46c",
@@ -117,7 +123,6 @@
       "3c922aeb68ebddd6e5818930",
       "8212c1ebe163e30add33aeaf",
       "b866e2c7eb4ced9098559c86",
-      "eb5d60860a79b38aeefa3633",
       "4230305352f457f0cfcd2c1c",
       "f028e09fbaa2ebdfeb532e99",
       "3d3e57be0bd7b5d58b2f1fc8",
@@ -141,25 +146,20 @@
       "peter-ball-conviction-2015",
       "janner-charges-2015",
       "epstein-florida-plea-2008",
-      "ASC-REVIEW-A90E36DF59A2A3C2",
-      "ASC-REVIEW-2A8D7C6B5A23CEAD",
-      "ASC-REVIEW-A8005F6D70DBECBC",
-      "ASC-REVIEW-0E868AF7B9CFC533",
-      "ASC-REVIEW-B9D6F588FF54AD31",
-      "ASC-REVIEW-03A8457B74049A13"
+      "ASC-REVIEW-A90E36DF59A2A3C2"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 94,
-      "disputedClaimCount": 38,
+      "primarySourceCount": 99,
+      "disputedClaimCount": 33,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 51,
+      "relationshipCount": 47,
       "moneyRecordCount": 40
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 94 A/B-grade public-record items are materially relevant to Public Consequence Contracts Report.",
+        "conclusion": "The indexed record establishes that 99 A/B-grade public-record items are materially relevant to Public Consequence Contracts Report.",
         "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/global-risk-clocks.json); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 51 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 47 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Bill Gates; Bill Gates; Bill Gates; Bill Gates; Bill Gates; Bill Gates; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 51 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 47 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Bill Gates",
           "Bill Gates",

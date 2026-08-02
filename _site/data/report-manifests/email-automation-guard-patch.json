@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:21:38.472Z",
+  "generatedAt": "2026-08-02T21:02:37.908Z",
   "pageCount": 118,
   "output": "downloads/email-automation-guard-patch.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Email Automation Guard Patch",
-    "contentHash": "64efd366862eaa522527bc6879d5085c51c16116abb11e450b12938f0fda24bc",
+    "contentHash": "da45c972c4070299f697e0eab080bff012f2df4aab6187261c2273fe38c275d3",
     "sourceIds": [
       "EP-AI-004",
       "26b90533dbf7d2ed42f02de6",
@@ -25,7 +25,7 @@
       "ASC-REVIEW-A8005F6D70DBECBC",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-8D34DAEE930AC84F",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
@@ -54,7 +54,6 @@
       "511ed227bb4be58b582ebb8d",
       "ecd4a1111010f13b2d74bf8c",
       "ec968f2ec6ba82128b4cd91b",
-      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -145,20 +144,21 @@
       "270841af2bd81407a26bed0b",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
-      "dcec2a45ef35362072af05e3"
+      "dcec2a45ef35362072af05e3",
+      "aa125ed22fe885dd57f96c32"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 51,
+      "primarySourceCount": 52,
       "disputedClaimCount": 63,
-      "newEntityCount": 2,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 55,
       "moneyRecordCount": 27
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 51 A/B-grade public-record items are materially relevant to Email Automation Guard Patch.",
+        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Email Automation Guard Patch.",
         "evidence": "DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

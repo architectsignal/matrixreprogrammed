@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-02T12:41:31.126Z",
+  "generatedAt": "2026-08-02T21:23:10.879Z",
   "title": "Public Consequence Due Index",
   "purpose": "A compact bounded manifest for the Cloudflare Free tracking runtime. Historical contracts persist in D1 after they leave this current manifest.",
   "freeTierBudget": {
@@ -10,38 +10,8 @@
     "perFollowerWrites": 0,
     "aiInferenceInsideWorker": false
   },
-  "count": 7,
+  "count": 6,
   "contracts": [
-    {
-      "id": "consequence-epstein-files-2026-07-30-8d6ae028",
-      "title": "Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post",
-      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-30-8d6ae028",
-      "actionDate": "2026-07-30T03:43:00.000Z",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5",
-      "evidenceRoute": "epstein-files.html#epstein-evidence-ladder",
-      "accountabilityQuestion": "What measurable public consequence followed “Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-29T03:43:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-28T03:43:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-30T03:43:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "c5dc8cc4b53212732c769878e311938f39ecf34944b0d634972e515b04813cdb"
-    },
     {
       "id": "consequence-epstein-files-2026-07-30-1f471233",
       "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",

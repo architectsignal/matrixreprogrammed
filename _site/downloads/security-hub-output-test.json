@@ -1,6 +1,6 @@
 {
-  "ok": false,
-  "generatedAt": "2026-08-02T12:53:55.324Z",
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:49.954Z",
   "files": 12,
   "officialOnions": 4,
   "checks": [
@@ -67,12 +67,12 @@
     {
       "name": "security page marker",
       "ok": true,
-      "detail": "148413 bytes"
+      "detail": "142056 bytes"
     },
     {
       "name": "dark web page marker",
       "ok": true,
-      "detail": "44906 bytes"
+      "detail": "39045 bytes"
     },
     {
       "name": "public pages are not hidden as internal",
@@ -81,12 +81,12 @@
     },
     {
       "name": "homepage security link",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {
       "name": "homepage dark web link",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {
@@ -101,12 +101,12 @@
     },
     {
       "name": "sitemap contains both routes",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {
       "name": "llms contains both routes",
-      "ok": false,
+      "ok": true,
       "detail": ""
     },
     {

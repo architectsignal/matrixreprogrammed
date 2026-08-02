@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:26:20.388Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-02T21:07:55.635Z",
+  "pageCount": 120,
   "output": "downloads/reverse-accountability-platform-report.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Reverse Accountability Platform Report",
-    "contentHash": "d46e3c1e974dd24726ab27722725c421e09d1292bda63f93ff29938c8c2e58a8",
+    "contentHash": "2b7eaaa29f435f2297f1448595e5070cbd586b679a41a84a1dea116d3166eb3d",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "26b90533dbf7d2ed42f02de6",
@@ -55,11 +55,16 @@
       "4e5cc6449bcc7ddf1c878ee0",
       "4961972398d896435d33f3f7",
       "9f3052b5d8cec138a2a37e8c",
+      "de58872cc8483198b691c403",
       "consequence-war-machine-2026-07-31-1d19fb5b",
       "73799cb9af4829047998b026",
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
       "ec968f2ec6ba82128b4cd91b",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
       "ASC-REVIEW-7B1A15ED77443F13",
       "32fdb7636e52846298c14671",
       "19ae23289f4be13ad5f7e317",
@@ -67,6 +72,7 @@
       "9e8310c49b990aa62d2b0921",
       "9d0cf694c0c2e7c8947c7596",
       "ecadede6696db6c7c3e6b7ec",
+      "fe3f3107cffaf5599a7b09f9",
       "085baf8dafdf6692a4203706",
       "consequence-war-machine-2026-07-31-a82191f1",
       "consequence-epstein-files-2026-07-31-b0ba52f7",
@@ -114,6 +120,10 @@
       "a42c91c655cd066504ed6515",
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -136,30 +146,20 @@
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-FA5662AF68B13A9F",
-      "ASC-REVIEW-08CB150A42984598",
-      "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967",
-      "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621"
+      "ASC-REVIEW-E6C400911BD1A158"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 52,
-      "disputedClaimCount": 40,
+      "primarySourceCount": 60,
+      "disputedClaimCount": 30,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 45,
-      "moneyRecordCount": 45
+      "relationshipCount": 39,
+      "moneyRecordCount": 39
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Reverse Accountability Platform Report.",
+        "conclusion": "The indexed record establishes that 60 A/B-grade public-record items are materially relevant to Reverse Accountability Platform Report.",
         "evidence": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 45 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; Securities and Exchange Commission",
+        "inference": "The indexed set contains 39 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; Matrix Reprogrammed Canonical Intelligence Record; Bill Gates; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 45 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 39 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
           "DELL MARKETING L.P. — District of Columbia Courts",
           "Matrix Reprogrammed Canonical Intelligence Record",
+          "Bill Gates",
           "MINDCUBED LLC — District of Columbia Courts",
           "INDUSTRIAL BANK — District of Columbia Courts",
-          "Influence should be mapped through infrastructure, filings and contracts.",
-          "Securities and Exchange Commission"
+          "Influence should be mapped through infrastructure, filings and contracts."
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

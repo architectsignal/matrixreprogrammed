@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:19:20.630Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-02T21:00:07.719Z",
+  "pageCount": 134,
   "output": "downloads/brevo-transactional-readiness-patch.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Brevo Transactional Readiness Patch",
-    "contentHash": "be485467ebb0f93df0b1c3936bbc67c22fd8c9edca2cef4be985a3ebca537abd",
+    "contentHash": "eb08f0f7881910ac2472e61d1721c4cbf5a5d6a52aebbe19dba903837e306794",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-5EA0FB3A48583D82",
@@ -26,12 +26,9 @@
       "33e7eb67145c9e096d47341a",
       "EP-AI-004",
       "3a425f0d5d683952bc0ad7ac",
-      "9e8903fd8dfa9b54a1d6db30",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "7f5b91c14c671bd24b8bbd81",
-      "88ef9baf356c096816236956",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -59,17 +56,19 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-C0E6134747580127",
       "45f5269389def99607b5a517",
       "ea3baad623d1ff141246d639",
       "4961972398d896435d33f3f7",
+      "9e8903fd8dfa9b54a1d6db30",
+      "88ef9baf356c096816236956",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -131,7 +130,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
@@ -146,7 +144,9 @@
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB"
+      "ASC-REVIEW-EEC0192F2AF2FCFB",
+      "ASC-REVIEW-6B883D09C63ED673",
+      "ASC-REVIEW-1CDBDA84057D802E"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 125,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 106,
-      "moneyRecordCount": 77
+      "relationshipCount": 108,
+      "moneyRecordCount": 79
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 106 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 108 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "DELL MARKETING L.P. — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Influence should be mapped through infrastructure, filings and contracts.; Follow The Money Watch; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 106 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 108 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "DELL MARKETING L.P. — District of Columbia Courts",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",

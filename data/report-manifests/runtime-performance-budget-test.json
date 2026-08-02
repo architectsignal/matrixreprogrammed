@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:26:23.753Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-02T21:07:59.039Z",
+  "pageCount": 125,
   "output": "downloads/runtime-performance-budget-test.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Runtime Performance Budget Test",
-    "contentHash": "0644a54f918e743b44d93bd0cce4af28b02ab23729e2fa711a11d6b1d485e100",
+    "contentHash": "99d47a5a573bddba59281a02892bb047e98ecfc664b2822d422e3e8f4feb1aa6",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "72ef7895f95288946ccb3cff",
@@ -63,6 +63,8 @@
       "a5e5d4ec4df4352ea242ea3f",
       "b079bec5bc869b0463d0584c",
       "7c05d9244c4620950350cf27",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
@@ -144,22 +146,20 @@
       "ASC-REVIEW-D74C8D239713181D",
       "ASC-REVIEW-FF2029A261CA3CAD",
       "ASC-REVIEW-35409BA5B302BB83",
-      "ASC-REVIEW-7EFB3EFB7EE261FF",
-      "ASC-REVIEW-8F2468497DC18A3E",
-      "ASC-REVIEW-8EDA87E9301AAFAE"
+      "ASC-REVIEW-7EFB3EFB7EE261FF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 114,
+      "primarySourceCount": 14,
+      "disputedClaimCount": 112,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 112,
-      "moneyRecordCount": 101
+      "relationshipCount": 110,
+      "moneyRecordCount": 99
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Runtime Performance Budget Test.",
+        "conclusion": "The indexed record establishes that 14 A/B-grade public-record items are materially relevant to Runtime Performance Budget Test.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Treasury OFAC — Recent Actions,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions",
+        "conclusion": "The most defensible current assessment is based on “content changed: Federal Register — Latest Documents,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 112 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 112 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T07:42:48.079Z"
   }
 }

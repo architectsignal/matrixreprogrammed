@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:24:57.987Z",
-  "pageCount": 92,
+  "generatedAt": "2026-08-02T21:06:20.852Z",
+  "pageCount": 90,
   "output": "downloads/paypal-server-redirect-patch.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Paypal Server Redirect Patch",
-    "contentHash": "a66a41a04cb1e03ceba8929a0359ae9158e73e24a9f316b3efe9c2340519e906",
+    "contentHash": "f34252aa48d2b98c4e7ea666713923cb823b9ce0beb7bb1e32b1a179756fbf13",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "0c5f51804baf8e9e2c1fdd0b",
@@ -80,6 +80,7 @@
       "46042e30fdcccc9e94aee0af",
       "6d665d935673091233751767",
       "1ee57e70dacfa67f04323529",
+      "3074e1c1bea52f04ac59408f",
       "ecd4a1111010f13b2d74bf8c",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
@@ -107,7 +108,6 @@
       "ASC-REVIEW-EA0D28B414E271DB",
       "ASC-REVIEW-81EECB8AC7F0B57B",
       "ASC-REVIEW-DF275E6CED38437F",
-      "ASC-REVIEW-6C02F7DFCB3CC39B",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "d6936ce262c4c18cb75c6e44",
       "c8eeb5656d86646c1e6dc75c",
@@ -147,16 +147,16 @@
     ],
     "metrics": {
       "evidenceCount": 137,
-      "primarySourceCount": 100,
-      "disputedClaimCount": 13,
+      "primarySourceCount": 101,
+      "disputedClaimCount": 12,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 14,
-      "moneyRecordCount": 10
+      "moneyRecordCount": 9
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 100 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
+        "conclusion": "The indexed record establishes that 101 A/B-grade public-record items are materially relevant to Paypal Server Redirect Patch.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

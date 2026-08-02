@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-08-02T12:25:06.673Z",
+  "generatedAt": "2026-08-02T21:06:35.471Z",
   "pageCount": 119,
   "output": "downloads/phase8-evidence-archive-test.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Phase8 Evidence Archive Test",
-    "contentHash": "779cd24874bf50132f9c658b4c8ee1a77e2986d4d0f66b827f85339d0c7ba8c4",
+    "contentHash": "dbf9eb8585fe92bfa2015b38e8dfd40eaadfd051a0cc688941d031e4ba1ddbf6",
     "sourceIds": [
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
@@ -36,6 +35,9 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "e083e748ec6311742c2416e5",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-45ACC28AC220EA79",
@@ -54,6 +56,12 @@
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
       "73799cb9af4829047998b026",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -80,7 +88,6 @@
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
       "427a4b3a840619411d8d1c33",
-      "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -102,9 +109,9 @@
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-E8F3DDB7E3724A74",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-5A774507A02DF22B",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-5AE5A3805582A7F2",
@@ -131,8 +138,7 @@
       "dcec2a45ef35362072af05e3",
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-8299a278d70b1f879d6d522f",
+      "a103f2650e31fc92fa3688e6",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
       "ASC-REVIEW-AF18512452F699D2",
@@ -140,26 +146,20 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-C369A84AD971DD75",
-      "ASC-REVIEW-9E85403F3389F334",
-      "ASC-REVIEW-640E991C59CBDA5A",
-      "ASC-REVIEW-0178D2F659DD4EB6",
-      "ASC-REVIEW-E617D0A88088FBF7",
-      "ASC-REVIEW-E88A7B581690918F",
-      "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-19181472DB04522E"
+      "ASC-REVIEW-9E85403F3389F334"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 56,
-      "disputedClaimCount": 62,
+      "primarySourceCount": 62,
+      "disputedClaimCount": 56,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 46,
-      "moneyRecordCount": 17
+      "relationshipCount": 40,
+      "moneyRecordCount": 11
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 56 A/B-grade public-record items are materially relevant to Phase8 Evidence Archive Test.",
+        "conclusion": "The indexed record establishes that 62 A/B-grade public-record items are materially relevant to Phase8 Evidence Archive Test.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 46 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 46 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

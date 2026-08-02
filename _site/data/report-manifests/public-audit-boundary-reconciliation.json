@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-08-02T12:25:38.556Z",
-  "pageCount": 121,
+  "generatedAt": "2026-08-02T21:07:11.593Z",
+  "pageCount": 122,
   "output": "downloads/public-audit-boundary-reconciliation.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Public Audit Boundary Reconciliation",
-    "contentHash": "691b8045f64711b07a8220a7f60e72501ac513ea774d8d2b3995e3d9557dd01a",
+    "contentHash": "70dd8433edd152c0c9c8c85fb006073fbe66b73d8760c1d09a43e7b465aa6fd5",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
       "ASC-REVIEW-BF5A5D787C430742",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "b5a32a76f19d554c484e917f",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-20316213EFD183CC",
@@ -39,9 +39,9 @@
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-45ACC28AC220EA79",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-5A774507A02DF22B",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-A9879DBB68A52307",
@@ -55,6 +55,7 @@
       "88ef9baf356c096816236956",
       "34805734b1ad3b73f0ede0d8",
       "9b9816cd15ea0d816c77affa",
+      "source-change-81d1ec66d255ebaf3f7d61de",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -98,10 +99,10 @@
       "brian-moynihan",
       "david-solomon",
       "jane-fraser",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -123,7 +124,6 @@
       "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-06CC87AEAF289EB7",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-08CB150A42984598",
       "ASC-REVIEW-7CAC9318F83A7E8B",
@@ -150,8 +150,8 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 11,
-      "disputedClaimCount": 99,
+      "primarySourceCount": 13,
+      "disputedClaimCount": 97,
       "newEntityCount": 16,
       "updatedAssessmentCount": 1,
       "relationshipCount": 66,
@@ -159,8 +159,8 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Public Audit Boundary Reconciliation.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Public Audit Boundary Reconciliation.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "conclusion": "The most defensible current assessment is based on “content changed: Federal Register — Latest Documents,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T07:42:48.079Z"
   }
 }

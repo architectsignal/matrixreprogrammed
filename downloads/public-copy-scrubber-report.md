@@ -1,10 +1,10 @@
 # Public Copy Scrubber Report
 
-Updated: 2026-08-02T12:37:08.121Z
+Updated: 2026-08-02T21:18:39.176Z
 
 Changed files: 0
 
-Visible review issues: 7
+Visible review issues: 6
 
 ## Changed
 - None
@@ -15,5 +15,4 @@ Visible review issues: 7
 - information-gathering-system.html: /author note/i
 - information-gathering-system.html: /\[object Object\]/i
 - _site/dossier-jimmy-savile.html: /do not show/i
-- _site/index.html: /do not show/i
 - _site/information-gathering-system.html: /author note/i

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T11:47:23.204Z",
+  "generatedAt": "2026-08-02T21:04:30.947Z",
   "pageCount": 116,
   "output": "downloads/intel-drop-vault.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Matrix Reprogrammed Intel Drop Vault",
-    "contentHash": "cd2ffff417e2746665ea3f340b5ede7cf8e4ecffe9fa15e18a1aca379a2e2734",
+    "contentHash": "3a6983cea44a735d0a5803252125568888215f9b059d57a97a90bec159f2c52c",
     "sourceIds": [
       "2026-07-01-security-council-live-spotlight-on-israeli-settlements-in-occupied-palestinian-territory",
       "2026-06-30-security-council-live-spotlight-on-israeli-settlements-in-occupied-palestinian-territory",
@@ -100,7 +100,10 @@
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "7f5b91c14c671bd24b8bbd81",
+      "war-machine-2026-08-02-5d856899",
+      "source-change-7ed151a515391f967d229642",
       "war-machine-2026-08-01-62857078",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "declassified-files-2026-07-31-cc395014",
       "war-machine-2026-07-30-1619f056",
       "war-machine-2026-07-30-1519eec3",
@@ -123,14 +126,14 @@
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-06CC87AEAF289EB7",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-7CAC9318F83A7E8B",
       "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-D71392631DCCB39D",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-8D837E7F40890879",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-562FC137832B0529",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-5A774507A02DF22B",
       "9cb9631a2f2749b86bc69e0a",
       "c414ea6b5bea3390d2a8ce5c",
@@ -143,23 +146,20 @@
       "4961972398d896435d33f3f7",
       "9e8310c49b990aa62d2b0921",
       "EP-AI-002",
-      "3e1535c44d5e0449c3f59d73",
-      "ce5e1adeb64b743a59fc5d2d",
-      "57c45b5418e8e6b512f06603",
-      "2931a84c2c7fe86982d5d6e5"
+      "3e1535c44d5e0449c3f59d73"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 18,
+      "primarySourceCount": 17,
       "disputedClaimCount": 20,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 45,
+      "relationshipCount": 46,
       "moneyRecordCount": 22
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Matrix Reprogrammed Intel Drop Vault.",
+        "conclusion": "The indexed record establishes that 17 A/B-grade public-record items are materially relevant to Matrix Reprogrammed Intel Drop Vault.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 45 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 46 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "General Assembly LIVE: Debating US sanctions against Cuba; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Updates on Gaza, West Bank amid regional tensions; Matrix Reprogrammed Canonical Intelligence Record; UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 45 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 46 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "General Assembly LIVE: Debating US sanctions against Cuba",
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T12:00:00.000Z"
   }
 }

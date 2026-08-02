@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:19:31.940Z",
+  "generatedAt": "2026-08-02T21:00:19.854Z",
   "pageCount": 99,
   "output": "downloads/card-artwork-queue.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Next Card Artwork Queue",
-    "contentHash": "f36a985803982e5a6d8579726e320fd3d9dd71989026d83c07e75876bdc89087",
+    "contentHash": "051a86e3c5973da6dc5832cfcf0b331db06c041ad8edb80cf04f5ee71e2646b0",
     "sourceIds": [
       "people-of-interest",
       "310372a3fc518b6aabbc5d07",
@@ -85,7 +85,6 @@
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
-      "war-machine-2026-07-29-211c403e",
       "0286171e0bf7415859b35948",
       "e5f914fb3ce4e13fe16181c4",
       "255a3ae9592a4cdd47fc9851",
@@ -127,9 +126,11 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
-      "war-machine-2026-07-28-1a1c3539",
-      "war-machine-2026-07-28-171c3080",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
+      "war-machine-2026-07-29-211c403e",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
@@ -141,21 +142,20 @@
       "54197b23c792a122f53a863b",
       "16cde9bd4c87e916ff1e4fb7",
       "e6dd95e595093e11aa17005a",
-      "bbf59ae4094608bcd2c37305",
-      "f44c3c7309a5f0779a57e655"
+      "bbf59ae4094608bcd2c37305"
     ],
     "metrics": {
       "evidenceCount": 136,
-      "primarySourceCount": 46,
+      "primarySourceCount": 50,
       "disputedClaimCount": 5,
-      "newEntityCount": 13,
+      "newEntityCount": 11,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 16,
+      "relationshipCount": 14,
       "moneyRecordCount": 18
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Next Card Artwork Queue.",
+        "conclusion": "The indexed record establishes that 50 A/B-grade public-record items are materially relevant to Next Card Artwork Queue.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -175,7 +175,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 16 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; General Assembly LIVE: Debating US sanctions against Cuba; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -190,7 +190,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 16 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Media / Narrative Theory",
           "Media / Narrative Theory",

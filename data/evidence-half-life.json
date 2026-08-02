@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-02T13:22:36.618Z",
+  "generatedAt": "2026-08-02T21:23:11.926Z",
   "title": "Evidence Half-Life Ledger",
   "proposition": "Every material public claim should show when its supporting record was last anchored, when current applicability must be checked again and whether a recall notice is active.",
   "boundary": "Evidence age is not evidence of falsity. Review states concern freshness, source availability and current applicability, not guilt, credibility or truth by themselves.",
-  "count": 7,
+  "count": 6,
   "recallCount": 0,
   "entries": [
     {
@@ -142,7 +142,7 @@
       "reviewClass": "public-source-lead",
       "nextReviewAt": "2026-09-13T16:07:32.000Z",
       "freshnessState": "within-review-window",
-      "daysUntilReview": 42,
+      "daysUntilReview": 41,
       "sourceAvailability": "not-checked-in-static-build",
       "currentApplicability": "not-human-reverified",
       "recallNotice": "",
@@ -234,44 +234,6 @@
       "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-epstein-files-2026-07-30-1f471233",
       "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-epstein-files-2026-07-30-1f471233-proposal",
       "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-epstein-files-2026-07-30-1f471233#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "half-life-consequence-epstein-files-2026-07-30-8d6ae028",
-      "sourceRecordId": "consequence-epstein-files-2026-07-30-8d6ae028",
-      "title": "Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-epstein-files-2026-07-30-8d6ae028",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-epstein-files-2026-07-30-8d6ae028",
-      "source": {
-        "label": "Google News / Epstein sighting and alive claims",
-        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5",
-        "classification": "public-source-lead",
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder"
-      },
-      "baselineAt": "2026-07-30T03:43:00.000Z",
-      "baselineType": "action-date-provisional-baseline",
-      "reviewIntervalDays": 45,
-      "reviewClass": "public-source-lead",
-      "nextReviewAt": "2026-09-13T03:43:00.000Z",
-      "freshnessState": "within-review-window",
-      "daysUntilReview": 41,
-      "sourceAvailability": "not-checked-in-static-build",
-      "currentApplicability": "not-human-reverified",
-      "recallNotice": "",
-      "reviewQuestions": [
-        "Does the original source remain accessible and unchanged?",
-        "Has the relevant office, ownership, law, policy, contract or institutional role changed?",
-        "Does newer primary evidence confirm, narrow, contradict or supersede the record?",
-        "Should any public conclusion, prominence or alert be revised?"
-      ],
-      "evidenceBoundary": "Evidence age is not a truth score. This system measures when current applicability must be checked again; it must not silently downgrade historical facts or declare a claim false because time passed.",
-      "powerDiffRoute": "power-diff.html#diff-consequence-epstein-files-2026-07-30-8d6ae028",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-epstein-files-2026-07-30-8d6ae028",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-epstein-files-2026-07-30-8d6ae028",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-epstein-files-2026-07-30-8d6ae028-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-epstein-files-2026-07-30-8d6ae028#submit"
     }
   ]
 }

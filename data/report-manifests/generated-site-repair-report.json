@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:22:58.133Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-02T21:04:13.639Z",
+  "pageCount": 135,
   "output": "downloads/generated-site-repair-report.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Generated Site Repair Report",
-    "contentHash": "2246bb99cf8f578af111f3967a5c113388e3f12a145f4c772f1dd4afb17d3dea",
+    "contentHash": "5c4a26e6691cce777bdfe3955dfebe8cfad56ac1a48962fbe018715ba153b717",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "9f77464e401ac59ad1adb812",
@@ -30,39 +30,13 @@
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-55AEF4F6803A279A",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "10420eb4159dd9ba47a3f7cb",
-      "2254daad4526bf026ecf1244",
-      "421097c38f7e1597d6f37887",
-      "440a73a5b6c1002efa765acb",
-      "4c07add2a6d4eb22cadecd27",
-      "388e2e8c136c6891fe3af13a",
-      "5546f85d1ba69563adc9bffd",
-      "53201d6b1babefc058e6d6ac",
-      "538941a6b0f31a954f98439a",
-      "57155b538497645f1d15d258",
-      "5f3757ed7a1bff60dd744163",
-      "6526cef4d91b2f389a62e99a",
-      "6c715818cfec6f11a1b8b85c",
-      "6cf7743730a5636af0dc3091",
-      "6f66147261a0241fcaeb6bcd",
-      "716537707cc3711364860b2d",
-      "7198c204fd0f39a8d6faf5b4",
-      "72bcb512d506a1b0a85631b1",
-      "743a389be27470e9f7499f57",
-      "82750a3e20c221986cd0cabe",
-      "8520c7f63276f20bba20b661",
-      "853ccda81528512d55dccf72",
-      "89b0fad6a2b4b9533d9b03f5",
-      "9b0e64f836a3f9fe3acbf12c",
-      "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-EAB6011874016286",
@@ -143,26 +117,52 @@
       "ASC-REVIEW-D3C6DB16A89DBA51",
       "ASC-REVIEW-DAC9306D89683C63",
       "ASC-REVIEW-44F136F26F8A52B2",
-      "ASC-REVIEW-6C02F7DFCB3CC39B",
       "ASC-REVIEW-7757E49DD8F6D264",
       "ASC-REVIEW-D5386E9017A18F49",
-      "ASC-REVIEW-CBB7EB7E52CE7014"
+      "ASC-REVIEW-CBB7EB7E52CE7014",
+      "ASC-REVIEW-1EA1A54BAAF5A93D",
+      "ASC-REVIEW-8F4A530FA82C384B",
+      "ASC-REVIEW-D2F6E9BE7B7B66ED",
+      "ASC-REVIEW-45FC68BFE6057AEE",
+      "ASC-REVIEW-D86EBD209FFF875A",
+      "ASC-REVIEW-A5C911DFEE587573",
+      "ASC-REVIEW-995107775153DECB",
+      "ASC-REVIEW-B5B617BCDE703C68",
+      "ASC-REVIEW-CE28CE91D8A738DF",
+      "ASC-REVIEW-D74C8D239713181D",
+      "ASC-REVIEW-FF2029A261CA3CAD",
+      "ASC-REVIEW-35409BA5B302BB83",
+      "ASC-REVIEW-7EFB3EFB7EE261FF",
+      "ASC-REVIEW-8F2468497DC18A3E",
+      "ASC-REVIEW-8EDA87E9301AAFAE",
+      "ASC-REVIEW-2F809A60275611A5",
+      "ASC-REVIEW-5F18C934E1FFBBB4",
+      "9e8903fd8dfa9b54a1d6db30",
+      "72ef7895f95288946ccb3cff",
+      "88ef9baf356c096816236956",
+      "ec968f2ec6ba82128b4cd91b",
+      "10420eb4159dd9ba47a3f7cb",
+      "2254daad4526bf026ecf1244",
+      "421097c38f7e1597d6f37887",
+      "440a73a5b6c1002efa765acb",
+      "4c07add2a6d4eb22cadecd27",
+      "388e2e8c136c6891fe3af13a"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 25,
-      "disputedClaimCount": 111,
-      "newEntityCount": 2,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 126,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 97,
-      "moneyRecordCount": 96
+      "relationshipCount": 116,
+      "moneyRecordCount": 112
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Generated Site Repair Report.",
-        "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Generated Site Repair Report.",
+        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 116 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 116 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
+    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
   }
 }

@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-08-02T12:28:21.936Z
+Updated: 2026-08-02T21:10:02.055Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -63,6 +63,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Symbolic Power Campaign: downloads/campaign-symbolic-power-push.pdf
 - Trust And Evidence Campaign: downloads/campaign-trust-evidence-push.pdf
 - War Machine Campaign: downloads/campaign-war-machine-push.pdf
+- Canonical External Source Repair: downloads/canonical-external-source-repair.pdf
 - Card Art Registry: downloads/card-art-registry.pdf
 - Card Artwork Batches: downloads/card-artwork-batches.pdf
 - Card Artwork Install Log: downloads/card-artwork-install-log.pdf
@@ -94,6 +95,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Daily / Weekly Visual Control Map: downloads/control-map-daily.pdf
 - Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf
 - Convergence Control Lenses: downloads/convergence-control-lenses.pdf
+- Core Public Surfaces Finalize: downloads/core-public-surfaces-finalize.pdf
 - Criminal Conduct Engine Pressure Test: downloads/criminal-conduct-engine-pressure-test.pdf
 - Criminal Conduct Engine Report: downloads/criminal-conduct-engine-report.pdf
 - Criminal Conduct Extensionless Sync: downloads/criminal-conduct-extensionless-sync.pdf
@@ -127,14 +129,17 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Dark Speculation Club Investigations: downloads/dark-speculation-club-investigations.pdf
 - Dark Speculation Deep Dossiers: downloads/dark-speculation-deep-dossiers.pdf
 - Dark Speculation Weekly Scan: downloads/dark-speculation-scan.pdf
+- Dark Web Safety Build: downloads/dark-web-safety-build.pdf
 - Death Files 100 Catalogue: downloads/death-files-100-catalogue.pdf
 - Death Files 100 Ui Enhancement: downloads/death-files-100-ui-enhancement.pdf
 - The Death Files: downloads/death-files-index.pdf
 - Death Files Pressure Test: downloads/death-files-pressure-test.pdf
+- Deep Audit Accessibility Metadata Repair: downloads/deep-audit-accessibility-metadata-repair.pdf
 - Deep Audit Member Posting Contract: downloads/deep-audit-member-posting-contract.pdf
 - Deep Audit Public Defect Repair: downloads/deep-audit-public-defect-repair.pdf
 - Deep Intel Feed Matrix: downloads/deep-intel-feed-matrix.pdf
 - Deploy Health: downloads/deploy-health.pdf
+- Deploy Manifest: downloads/deploy-manifest.pdf
 - Deploy Retry Marker: downloads/deploy-retry-marker.pdf
 - Deploy Status Current Mission Patch: downloads/deploy-status-current-mission-patch.pdf
 - Deploy Status: downloads/deploy-status.pdf
@@ -193,11 +198,14 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Exposure Integrity Engine: downloads/exposure-integrity-report.pdf
 - Exposure Predators Hit List Link: downloads/exposure-predators-hit-list-link.pdf
 - Final Contact Worker: downloads/final-contact-worker.pdf
+- Final Evidence Badge Dedupe: downloads/final-evidence-badge-dedupe.pdf
 - Final Forum Controlled Deploy: downloads/final-forum-controlled-deploy.pdf
 - Final Investigation Hardening: downloads/final-investigation-hardening.pdf
 - Final Live Audit And External Links: downloads/final-live-audit-and-external-links.pdf
+- Final Production Reconcile: downloads/final-production-reconcile.pdf
 - Final Public Editorial Hardening: downloads/final-public-editorial-hardening.pdf
 - Final Public Route Cleanup: downloads/final-public-route-cleanup.pdf
+- Final Release Sanitize: downloads/final-release-sanitize.pdf
 - Follow The Money Tracking Manual: downloads/follow-the-money-tracking-manual.pdf
 - Follow The Money Watch: downloads/follow-the-money-watch.pdf
 - Forum Controlled Deploy Runs: downloads/forum-controlled-deploy-runs.pdf
@@ -207,6 +215,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Forum Member Posting Repair: downloads/forum-member-posting-repair.pdf
 - Forum Member Posting Test: downloads/forum-member-posting-test.pdf
 - Forum Page Consistency Repair: downloads/forum-page-consistency-repair.pdf
+- Forum Persistence D1 Test: downloads/forum-persistence-d1-test.pdf
 - Forum Posts Export: downloads/forum-posts.pdf
 - Forum Session Compatibility Repair: downloads/forum-session-compatibility-repair.pdf
 - Full Site Audit Target Detection Patch: downloads/full-site-audit-target-detection-patch.pdf
@@ -221,7 +230,10 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - AI Detective — Epstein Files: downloads/homepage-ai-detective-route.pdf
 - Homepage Command Builder Shell Patch: downloads/homepage-command-builder-shell-patch.pdf
 - Homepage Construction Banner: downloads/homepage-construction-banner.pdf
+- Homepage Contract Integrity: downloads/homepage-contract-integrity.pdf
 - Homepage Critical Clocks: downloads/homepage-critical-clocks.pdf
+- Homepage Mask Intro Report: downloads/homepage-mask-intro-report.pdf
+- Homepage Mask Intro Test: downloads/homepage-mask-intro-test.pdf
 - Homepage Mission Normalization: downloads/homepage-mission-normalization.pdf
 - Homepage Navigation Repair: downloads/homepage-navigation-repair.pdf
 - Homepage Video Intro Release: downloads/homepage-video-intro-release.pdf
@@ -270,12 +282,14 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Member Login Paypal Newsletter Patch: downloads/member-login-paypal-newsletter-patch.pdf
 - Membership Access Copy Report: downloads/membership-access-copy-report.pdf
 - Membership Auth Patch Report: downloads/membership-auth-patch-report.pdf
+- Membership Authentication Test: downloads/membership-auth-test.pdf
 - Membership Auth Ui Patch: downloads/membership-auth-ui-patch.pdf
 - Membership Brief Preferences Patch: downloads/membership-brief-preferences-patch.pdf
 - Membership Foundation Patch Report: downloads/membership-foundation-patch-report.pdf
 - Membership Signup Server Fallback: downloads/membership-signup-server-fallback.pdf
 - Membership Tiers Report: downloads/membership-tiers-report.pdf
 - Missing Files / Pressure List: downloads/missing-files-pressure-list.pdf
+- Missing Generated Entity Brief Repair: downloads/missing-generated-entity-brief-repair.pdf
 - Missing Record Missions Pressure Test: downloads/missing-record-missions-pressure-test.pdf
 - Missing Record Missions Report: downloads/missing-record-missions-report.pdf
 - Mission Acceptance Copy Alignment: downloads/mission-acceptance-copy-alignment.pdf
@@ -287,9 +301,12 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Monetisation Dashboard: downloads/monetisation-dashboard.pdf
 - Money Depth Integration Test: downloads/money-depth-integration-test.pdf
 - Money Graph Root Data Patch: downloads/money-graph-root-data-patch.pdf
+- Money Intelligence Finalize: downloads/money-intelligence-finalize.pdf
 - Money Public Market Refresh: downloads/money-public-market-refresh.pdf
 - Network Search: downloads/network-search.pdf
 - Newsletter Consent Patch: downloads/newsletter-consent-patch.pdf
+- Newsletter Preference Runtime Repair: downloads/newsletter-preference-runtime-repair.pdf
+- Newsletter Public Page Repair: downloads/newsletter-public-page-repair.pdf
 - Newsletter Worker Patch Report: downloads/newsletter-worker-patch-report.pdf
 - Crime Dossiers Offer: downloads/offer-crime-dossiers.pdf
 - D.O.G The Architect Collector Offer: downloads/offer-dog-architect-collector.pdf
@@ -304,13 +321,21 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Osint Worker Patch Report: downloads/osint-worker-patch-report.pdf
 - Outcome Briefings: downloads/outcome-briefings.pdf
 - Page Quality Audit: downloads/page-quality-audit.pdf
+- Paypal Active Subscription Compatibility Test: downloads/paypal-active-subscription-compatibility-test.pdf
 - Paypal Membership Patch Report: downloads/paypal-membership-patch-report.pdf
 - Paypal Server Redirect Patch: downloads/paypal-server-redirect-patch.pdf
 - Paypal Subscription Create State Repair: downloads/paypal-subscription-create-state-repair.pdf
 - Paypal Voluntary Support Patch: downloads/paypal-voluntary-support-patch.pdf
 - Permanent Forum Repair Runs: downloads/permanent-forum-repair-runs.pdf
+- Phase1 Cloudflare Config Enforcement: downloads/phase1-cloudflare-config-enforcement.pdf
 - Phase1 Live Email Verifier Patch: downloads/phase1-live-email-verifier-patch.pdf
+- Phase5 Auth Entitlement Test/Lifecycle: downloads/phase5-auth-entitlement-test/lifecycle.pdf
+- Phase5 Auth Entitlement Test/Manifest: downloads/phase5-auth-entitlement-test/manifest.pdf
+- Phase5 Auth Entitlement Test/Summary: downloads/phase5-auth-entitlement-test/summary.pdf
 - Phase6 Data Integration: downloads/phase6-data-integration.pdf
+- Phase6 Paypal State Test/Lifecycle: downloads/phase6-paypal-state-test/lifecycle.pdf
+- Phase6 Paypal State Test/Manifest: downloads/phase6-paypal-state-test/manifest.pdf
+- Phase6 Paypal State Test/Summary: downloads/phase6-paypal-state-test/summary.pdf
 - Phase6 Worker Patch: downloads/phase6-worker-patch.pdf
 - PayPal sandbox rehearsal: downloads/phase7-paypal-sandbox-rehearsal-test.pdf
 - Phase8 Evidence Archive Build: downloads/phase8-evidence-archive-build.pdf
@@ -322,6 +347,8 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Power Diff Pressure Test: downloads/power-diff-pressure-test.pdf
 - Power Diff Report: downloads/power-diff-report.pdf
 - Power Dossier Runtime Report: downloads/power-dossier-runtime-report.pdf
+- Power Family Capstone Reconcile: downloads/power-family-capstone-reconcile.pdf
+- Power Family Public Gateways: downloads/power-family-public-gateways.pdf
 - Power Supply Chain Pressure Test: downloads/power-supply-chain-pressure-test.pdf
 - Power Supply Chain Report: downloads/power-supply-chain-report.pdf
 - Predators Builder Hit List Patch: downloads/predators-builder-hit-list-patch.pdf
@@ -334,6 +361,8 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Site Pressure Test Report: downloads/pressure-test-site-report.pdf
 - Private Contractor Intelligence: downloads/private-contractor-intelligence.pdf
 - Probability Snapshot: downloads/probability-snapshot.pdf
+- Production Cache Policy: downloads/production-cache-policy.pdf
+- Production Deploy Guard: downloads/production-deploy-guard-report.pdf
 - Production Freshness Guard: downloads/production-freshness-guard.pdf
 - Production Kv Traffic Repair: downloads/production-kv-traffic-repair.pdf
 - Production Receipt Email Safety Patch: downloads/production-receipt-email-safety-patch.pdf
@@ -374,7 +403,10 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Red Team Mirror Route Finalization: downloads/red-team-mirror-route-finalization.pdf
 - Release Audit Hard Issue Repair: downloads/release-audit-hard-issue-repair.pdf
 - Release Forum Contract Reconciliation: downloads/release-forum-contract-reconciliation.pdf
+- Release Homepage Order Reconciliation: downloads/release-homepage-order-reconciliation.pdf
+- Release Metadata Assets: downloads/release-metadata-assets.pdf
 - Release Metadata Routing Patch: downloads/release-metadata-routing-patch.pdf
+- Release Page Contract Repair: downloads/release-page-contract-repair.pdf
 - Release Regression Finalize: downloads/release-regression-finalize.pdf
 - Release Regression Repair: downloads/release-regression-repair.pdf
 - Research Tools Ui Patch: downloads/research-tools-ui-patch.pdf
@@ -405,6 +437,10 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - SEC Filing Feed: downloads/sec-filing-feed.pdf
 - Secondary Deck Artwork: downloads/secondary-deck-artwork.pdf
 - Secret Societies and Orders Tracker: downloads/secret-societies-tracker.pdf
+- Security Hub Output Test: downloads/security-hub-output-test.pdf
+- Security Privacy Hub Build: downloads/security-privacy-hub-build.pdf
+- Security Privacy Hub Test: downloads/security-privacy-hub-test.pdf
+- Selective Worker First Gate Alignment: downloads/selective-worker-first-gate-alignment.pdf
 - Seven Day Intel: downloads/seven-day-intel.pdf
 - Black File Starter Share Kit: downloads/share-kit-black-file-starter.pdf
 - Crime-State Overlap Share Kit: downloads/share-kit-crime-state-overlap.pdf

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:22:52.435Z",
-  "pageCount": 117,
+  "generatedAt": "2026-08-02T21:04:07.486Z",
+  "pageCount": 116,
   "output": "downloads/forum-session-compatibility-repair.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Forum Session Compatibility Repair",
-    "contentHash": "ed493fc22eadcfabdf74b2b98694e753c22b738fe7169ebd9c95bcabc40dde49",
+    "contentHash": "559c2f4c0d45708c75fdd2b85c6456a56fb4b42b0c50149eb421dd43505a0cd7",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "71e0563ca7b139c37c302956",
@@ -65,9 +65,6 @@
       "2529322b7b5345fd6f575174",
       "74fb2863cc9a8120f3c68b67",
       "4961972398d896435d33f3f7",
-      "sec-hq",
-      "us-doj",
-      "gao-hq",
       "7ee9141a42ad539f58a57e50",
       "2931a84c2c7fe86982d5d6e5",
       "157cdab04b61ae6309c0c713",
@@ -84,7 +81,15 @@
       "b15555ae60ebe0ab74026bfc",
       "d868ab139bf4fdfb6909e927",
       "cb0b726f4acfe8260c355304",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-a334a207405ec629b4be337d",
       "war-machine-2026-07-31-a82191f1",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
       "56d03242af4d235549963dd3",
@@ -138,25 +143,20 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
-      "ASC-REVIEW-285205442D5C5D56",
-      "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27",
-      "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-21E454816F050A34"
+      "ASC-REVIEW-285205442D5C5D56"
     ],
     "metrics": {
       "evidenceCount": 137,
-      "primarySourceCount": 79,
-      "disputedClaimCount": 33,
+      "primarySourceCount": 84,
+      "disputedClaimCount": 28,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 41,
-      "moneyRecordCount": 28
+      "relationshipCount": 36,
+      "moneyRecordCount": 23
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 79 A/B-grade public-record items are materially relevant to Forum Session Compatibility Repair.",
+        "conclusion": "The indexed record establishes that 84 A/B-grade public-record items are materially relevant to Forum Session Compatibility Repair.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json); Appellate challenges concluded without reversal (data/exposure-evidence-ledger.json); Federal conviction and 120-year sentence for racketeering and sex-trafficking offenses (data/criminal-conduct-registry.json); IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -176,7 +176,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 41 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 36 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Broadmoor investigation examined Savile's access and abuse; Jeffrey Epstein; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Conviction for indecent images and misconduct in public office; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -191,7 +191,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 41 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 36 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Broadmoor investigation examined Savile's access and abuse",

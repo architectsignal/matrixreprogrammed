@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:02:41.533Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-02T21:09:17.876Z",
+  "pageCount": 129,
   "output": "downloads/speculative-intelligence-synthesis.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Speculative Intelligence Synthesis",
-    "contentHash": "0030baedcc926758257ab2e827da3e88836af213fa1ffafffaf10c105e13f085",
+    "contentHash": "7d0bf968db3838d72dbc4b8fd5bd3e53bd17b720e2271bd52ea9d39f25526f38",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "3a425f0d5d683952bc0ad7ac",
@@ -16,13 +16,13 @@
       "ASC-001",
       "9d0cf694c0c2e7c8947c7596",
       "ecadede6696db6c7c3e6b7ec",
+      "fe3f3107cffaf5599a7b09f9",
       "085baf8dafdf6692a4203706",
       "421097c38f7e1597d6f37887",
       "5546f85d1ba69563adc9bffd",
       "6c715818cfec6f11a1b8b85c",
       "6f66147261a0241fcaeb6bcd",
       "ASC-REVIEW-20316213EFD183CC",
-      "a103f2650e31fc92fa3688e6",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "440a73a5b6c1002efa765acb",
@@ -69,8 +69,9 @@
       "ASC-REVIEW-5EA0FB3A48583D82",
       "cd6ef5a92f0a4409772d2587",
       "384bb39bdc916ad6752ac63a",
-      "de58872cc8483198b691c403",
+      "2828a0d0f67977aa4a3e373c",
       "dcec2a45ef35362072af05e3",
+      "a103f2650e31fc92fa3688e6",
       "6a932dfa60e115194467bb12",
       "ASC-REVIEW-B9D6F588FF54AD31",
       "ASC-REVIEW-03A8457B74049A13",
@@ -145,13 +146,12 @@
       "ASC-REVIEW-7640579815B0B893",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-21E454816F050A34"
+      "ASC-REVIEW-68286C2A2CB861AF"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 42,
-      "disputedClaimCount": 78,
+      "disputedClaimCount": 77,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 90,
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 42 A/B-grade public-record items are materially relevant to Speculative Intelligence Synthesis.",
-        "evidence": "Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment (data/weekly-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment - Bongiorno (data/daily-investigation-conclusions.json); Final Judgment - Suzee Han (data/weekly-investigation-conclusions.json); Final Judgment - Randall J. Miller (data/weekly-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json)",
+        "evidence": "Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment (data/weekly-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment - Bongiorno (data/daily-investigation-conclusions.json); Final Judgment - Suzee Han (data/weekly-investigation-conclusions.json); Final Judgment - Randall J. Miller (data/weekly-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; The strongest public pattern is convergence across access systems.; DELL MARKETING L.P. — District of Columbia Courts; Securities and Exchange Commission",
+        "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; The strongest public pattern is convergence across access systems.; Securities and Exchange Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -201,8 +201,8 @@
           "Securities and Exchange Commission",
           "Securities and Exchange Commission",
           "Securities and Exchange Commission",
+          "Securities and Exchange Commission",
           "The strongest public pattern is convergence across access systems.",
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "Securities and Exchange Commission"
         ],
         "counterEvidence": [

@@ -1,15 +1,15 @@
 # Full Site Function and Tool Audit
 
-Generated: 2026-08-02T12:41:57.358Z
+Generated: 2026-08-02T13:22:18.697Z
 Mode: postbuild-cloudflare-output
 Status: PASS
 
 ## Coverage
 
 - html: 3321
-- js: 119
-- json: 1275
-- links: 156905
+- js: 120
+- json: 1293
+- links: 158628
 - localFetches: 68
 - forms: 333
 - buttons: 2540

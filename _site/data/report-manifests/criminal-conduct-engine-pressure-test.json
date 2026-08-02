@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:20:06.286Z",
+  "generatedAt": "2026-08-02T21:00:58.697Z",
   "pageCount": 112,
   "output": "downloads/criminal-conduct-engine-pressure-test.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Criminal Conduct Engine Pressure Test",
-    "contentHash": "7ddfca0055738d1d9284ec20045ec3870886ef68b87a7e1629868466f326a723",
+    "contentHash": "9c11710a023c24a3d134bd9ae9ac0b2ee8f933f4ea43ff9c7c4c0025e1fd7c10",
     "sourceIds": [
       "54197b23c792a122f53a863b",
       "45f5269389def99607b5a517",
@@ -20,6 +20,7 @@
       "5295a33003172878f9880122",
       "2529322b7b5345fd6f575174",
       "daee19f2c0d92279cc9a7569",
+      "e083e748ec6311742c2416e5",
       "peter-ball-iicsa-support-2019",
       "peter-ball-conviction-2015",
       "savile-health-investigations-2014",
@@ -53,7 +54,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "r-kelly-appellate-finality-2025",
       "hadden-federal-conviction-sentence-2023",
       "r-kelly-illinois-acquittals-2022",
@@ -116,7 +116,6 @@
       "5ce17839086eddf839270b1a",
       "157cdab04b61ae6309c0c713",
       "bdd7e454126ebfa6319a594c",
-      "a103f2650e31fc92fa3688e6",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -138,12 +137,13 @@
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
       "ASC-REVIEW-E88A7B581690918F",
-      "ASC-REVIEW-19181472DB04522E"
+      "ASC-REVIEW-19181472DB04522E",
+      "ASC-REVIEW-DA186233A3EDF0BE"
     ],
     "metrics": {
       "evidenceCount": 132,
-      "primarySourceCount": 70,
-      "disputedClaimCount": 40,
+      "primarySourceCount": 69,
+      "disputedClaimCount": 41,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 40,
@@ -151,7 +151,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 70 A/B-grade public-record items are materially relevant to Criminal Conduct Engine Pressure Test.",
+        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Criminal Conduct Engine Pressure Test.",
         "evidence": "IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -210,6 +210,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
   }
 }

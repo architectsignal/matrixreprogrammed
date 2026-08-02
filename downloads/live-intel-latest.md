@@ -1,7 +1,7 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-02T12:56:11.942Z
-Latest source publication: 2026-08-01T12:00:00.000Z
+Collection completed: 2026-08-02T21:21:07.195Z
+Latest source publication: 2026-08-02T12:00:00.000Z
 Collection status: degraded-preserved-current-window
 New items this collection: 0
 
@@ -26,17 +26,23 @@ Source collection was degraded. Current in-window records were preserved without
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-08-02 — Trapped by a Facebook job advert, freed by a stranger in a taxi
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168058
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Trapped by a Facebook job advert, freed by a stranger in a taxi
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-01 — Recovery in Ukraine, one life at a time
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168053
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Recovery in Ukraine, one life at a time
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
+- 2026-07-31 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org
   - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
+  - Video hook: New public-record signal: Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-31 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168062
@@ -128,11 +134,17 @@ Source collection was degraded. Current in-window records were preserved without
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+- 2026-07-30 — Epstein survivors’ lawsuits against Les Wexner combined into one case - nbc4i.com
   - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+  - Video hook: New public-record signal: Epstein survivors’ lawsuits against Les Wexner combined into one case - nbc4i.com
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
+  - Source class: discovery
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV. Source first, claim second.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
@@ -140,17 +152,11 @@ Source collection was degraded. Current in-window records were preserved without
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
-  - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-source drop in the Epstein Files, Timeline And Court Records lane: Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post. Source first, claim second.
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+- 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
   - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+  - Video hook: New public-record signal: U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
   - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5

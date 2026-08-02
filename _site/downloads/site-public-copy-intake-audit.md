@@ -1,14 +1,14 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-08-02T12:37:04.184Z
+Updated: 2026-08-02T21:18:35.715Z
 
-Files scanned: 6558
+Files scanned: 6683
 
-High issues: 3606
+High issues: 3616
 
 Review issues: 15
 
-Intake areas: 3105
+Intake areas: 3159
 
 Weak intake areas: 1
 
@@ -330,6 +330,7 @@ Weak intake areas: 1
 - data/card-download-manifest.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/card-intelligence-feed.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/card-live-updates.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- data/change-detection.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/cinematic-hit-list.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/clock-wall.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/conclusion-engine-policy.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -402,7 +403,6 @@ Weak intake areas: 1
 - data/epstein-relationship-registry.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/epstein-relationship-sync-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/epstein-research-targets.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- data/epstein-sighting-scan.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/epstein-watch.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/evidence-half-life.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - data/evidence-network-map.json: /NaN/i — Potentially visible internal, broken, or author-facing text.

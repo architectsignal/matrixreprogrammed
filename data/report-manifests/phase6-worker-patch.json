@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:25:03.319Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-02T21:06:32.366Z",
+  "pageCount": 123,
   "output": "downloads/phase6-worker-patch.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Phase6 Worker Patch",
-    "contentHash": "5abdc81c2cec96ae7d7d37eed6054de8b234da4600979b98d32d50f7f7f3139b",
+    "contentHash": "5a9c31de0480c2d26466ed6b51d572bbf8935cc655a60dbbed05984c7da8b1d3",
     "sourceIds": [
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
@@ -32,8 +32,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "a103f2650e31fc92fa3688e6",
-      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -49,10 +47,14 @@
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
       "ec968f2ec6ba82128b4cd91b",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-B8034056CD461A0D",
       "1769af26a7bda813406cd8f5",
+      "sec-hq",
+      "us-doj",
+      "gao-hq",
       "companies-amzn",
       "companies-meta",
       "companies-tsla",
@@ -62,6 +64,7 @@
       "technology-control-tsla",
       "technology-control-pltr",
       "427a4b3a840619411d8d1c33",
+      "a103f2650e31fc92fa3688e6",
       "companies-meta:sec-form4",
       "technology-control-meta:sec-form4",
       "companies-amzn:sec-form4",
@@ -73,7 +76,6 @@
       "technology-control-tsla:sec-form4",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-46CE3CB0306D4130",
@@ -97,7 +99,6 @@
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-06CC87AEAF289EB7",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-08CB150A42984598",
@@ -123,28 +124,27 @@
       "ASC-REVIEW-DAC9306D89683C63",
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-D71392631DCCB39D",
-      "ASC-REVIEW-6C02F7DFCB3CC39B",
       "ASC-REVIEW-8F78AF6351AD0401",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-8D837E7F40890879",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-562FC137832B0529",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
-      "ASC-REVIEW-995107775153DECB"
+      "ASC-REVIEW-9ABCBA0136F7F0F3"
     ],
     "metrics": {
       "evidenceCount": 125,
-      "primarySourceCount": 51,
-      "disputedClaimCount": 65,
+      "primarySourceCount": 54,
+      "disputedClaimCount": 62,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 33,
-      "moneyRecordCount": 50
+      "moneyRecordCount": 49
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 51 A/B-grade public-record items are materially relevant to Phase6 Worker Patch.",
+        "conclusion": "The indexed record establishes that 54 A/B-grade public-record items are materially relevant to Phase6 Worker Patch.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -165,7 +165,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 33 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "DELL MARKETING L.P. — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; State Street / State Street Investment Management → Market Services: capital layer; Follow The Money Watch; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
+        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; State Street / State Street Investment Management → Market Services: capital layer; Follow The Money Watch; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -181,13 +181,13 @@
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
         "whyItIsBeingConsidered": "The indexed set contains 33 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "MINDCUBED LLC — District of Columbia Courts",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "Influence should be mapped through infrastructure, filings and contracts.",
           "State Street / State Street Investment Management → Market Services: capital layer",
           "Follow The Money Watch",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+          "DELL MARKETING L.P. — District of Columbia Courts",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint"
         ],
         "counterEvidence": [

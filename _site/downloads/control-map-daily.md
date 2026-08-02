@@ -1,6 +1,6 @@
 # Daily / Weekly Visual Control Map
 
-Generated: 2026-08-02T12:33:21.749Z
+Generated: 2026-08-02T21:14:55.661Z
 
 Boundary: The visual map is generated from site data. Nodes are evidence routes, not verdicts.
 

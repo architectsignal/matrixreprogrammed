@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:24:02.843Z",
+  "generatedAt": "2026-08-02T21:05:21.245Z",
   "pageCount": 91,
   "output": "downloads/market-activity-test.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Market Activity Test",
-    "contentHash": "871e385f87335a451290bffca21d2444b9bfa5bf7f560706d684440cf33de2fa",
+    "contentHash": "9f6120e1fc49f1bf57577fd5612150adf91eb9a7e4541228c95ec2e79ee27a70",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
@@ -24,6 +24,18 @@
       "bbf59ae4094608bcd2c37305",
       "3a425f0d5d683952bc0ad7ac",
       "ecd4a1111010f13b2d74bf8c",
+      "ASC-REVIEW-E6D70696A19B3CDA",
+      "companies-nvda",
+      "companies-amzn",
+      "companies-meta",
+      "companies-tsla",
+      "companies-pltr",
+      "technology-control-nvda",
+      "technology-control-amzn",
+      "technology-control-meta",
+      "technology-control-tsla",
+      "technology-control-pltr",
+      "7f5b91c14c671bd24b8bbd81",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -49,19 +61,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "ASC-REVIEW-E6D70696A19B3CDA",
-      "companies-nvda",
-      "companies-amzn",
-      "companies-meta",
-      "companies-tsla",
-      "companies-pltr",
-      "technology-control-nvda",
-      "technology-control-amzn",
-      "technology-control-meta",
-      "technology-control-tsla",
-      "technology-control-pltr",
-      "7f5b91c14c671bd24b8bbd81",
-      "a103f2650e31fc92fa3688e6",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "9f3052b5d8cec138a2a37e8c",
@@ -99,6 +98,7 @@
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
       "427a4b3a840619411d8d1c33",
+      "a103f2650e31fc92fa3688e6",
       "ASC-REVIEW-45ACC28AC220EA79",
       "a76edf5945d2f4910bd413ef",
       "8165fb4ec7543f1da0762496",
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Market Activity Test.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 8 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; DELL MARKETING L.P. — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; MINDCUBED LLC — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Palo Alto Networks",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; MINDCUBED LLC — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; Palo Alto Networks",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -198,11 +198,11 @@
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
           "MINDCUBED LLC — District of Columbia Courts",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+          "DELL MARKETING L.P. — District of Columbia Courts",
           "Palo Alto Networks"
         ],
         "counterEvidence": [

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T10:42:57.272Z",
+  "generatedAt": "2026-08-02T21:09:45.780Z",
   "pageCount": 128,
   "output": "downloads/update-cadence-report.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Update Cadence Report",
-    "contentHash": "5776c96971f0f922b3842f34f8c17f46fc2b63eefe5f2909946581dc4a5bced8",
+    "contentHash": "fd5399c043e8c79ad758a736161a226b799c11387db6358a18b0052920b087ea",
     "sourceIds": [
       "network-defence",
       "ASC-REVIEW-A90E36DF59A2A3C2",
@@ -108,7 +108,6 @@
       "ASC-REVIEW-0BDE78366651B0AB",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
@@ -146,7 +145,8 @@
       "ASC-REVIEW-6A0CBB4AE4D6A280",
       "ASC-REVIEW-AE10394716B1B048",
       "ASC-REVIEW-F5CA53DC99863DAC",
-      "ASC-REVIEW-0914587401D9BDE0"
+      "ASC-REVIEW-0914587401D9BDE0",
+      "ASC-REVIEW-525DDFDACCB9146E"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 116,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 101,
-      "moneyRecordCount": 75
+      "relationshipCount": 102,
+      "moneyRecordCount": 76
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 101 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 102 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "10. Device, Network & Incident Defence; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: UK Serious Fraud Office — News And Communications; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 101 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 102 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "10. Device, Network & Incident Defence",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

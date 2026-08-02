@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-02T12:30:07.343Z
-Live Intel source window: 2026-08-02T12:29:52.739Z
+Generated: 2026-08-02T21:11:40.789Z
+Live Intel source window: 2026-08-02T21:11:26.641Z
 Latest source publication: 2026-07-31T19:07:23.000Z
 Status: current-seven-day-record-window
 
@@ -11,17 +11,17 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-13 current Epstein-lane record leads remain inside the active source window.
+11 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
-### Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
+### Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org
 - Published: 2026-07-31T19:07:23.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
 
-Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails PBS
+Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails pbs.org
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -45,16 +45,6 @@ Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent cre
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Epstein files: How victims remain exposed to identification - DW.com
-- Published: 2026-07-30T16:07:32.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
-
-Epstein files: How victims remain exposed to identification DW.com
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
 ### US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
 - Published: 2026-07-30T11:19:00.000Z
 - Source: Google News / Epstein timeline and files
@@ -65,13 +55,13 @@ US Senate unanimously opposes Presidential pardon for Epstein associate Ghislain
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+### Epstein survivors’ lawsuits against Les Wexner combined into one case - nbc4i.com
 - Published: 2026-07-30T09:30:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5
 
-Epstein survivors’ lawsuits against Les Wexner combined into one case NBC4 WCMH-TV
+Epstein survivors’ lawsuits against Les Wexner combined into one case nbc4i.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -85,23 +75,13 @@ Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannic
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
-- Published: 2026-07-30T03:43:00.000Z
-- Source: Google News / Epstein sighting and alive claims
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
-
-Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell New York Post
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
 - Published: 2026-07-30T00:48:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
 
-U.S. Senate unanimously opposes clemency for Ghislaine Maxwell AnewZ
+U.S. Senate unanimously opposes clemency for Ghislaine Maxwell anewz.tv
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

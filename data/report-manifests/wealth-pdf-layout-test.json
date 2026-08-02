@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-08-02T12:28:08.594Z",
-  "pageCount": 92,
+  "generatedAt": "2026-08-02T21:09:47.955Z",
+  "pageCount": 91,
   "output": "downloads/wealth-pdf-layout-test.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Wealth Pdf Layout Test",
-    "contentHash": "817176ac06b5a21e5f94515fb982dc794930177491415fd2eff3298b09c04e88",
+    "contentHash": "3aec454bede3a46e45ef775dfabbfdc6c238a4b1c5a60c79bd01af92df869413",
     "sourceIds": [
-      "epstein-nda-settlement-protection-lane-2026-06-26",
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
       "epstein-opr-review-2020",
@@ -15,7 +14,8 @@
       "cyril-smith-iicsa-2018",
       "bf041695a279c3dc5412cdf4",
       "deutsche-bank-epstein-dfs-2020",
-      "e083e748ec6311742c2416e5",
+      "us-doj",
+      "gao-hq",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
@@ -25,6 +25,7 @@
       "e5f914fb3ce4e13fe16181c4",
       "255a3ae9592a4cdd47fc9851",
       "b4cb47ea50dc901364239e9f",
+      "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "3d3e57be0bd7b5d58b2f1fc8",
       "62ef00886878edb710a5fd60",
@@ -49,12 +50,14 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-21E454816F050A34",
-      "495efbb6e1ee304347ae3bdf",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "26b90533dbf7d2ed42f02de6",
-      "us-doj",
-      "gao-hq",
+      "sec-hq",
+      "us-treasury",
+      "fbi-hq",
+      "cia-hq",
+      "eu-commission",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -132,24 +135,21 @@
       "trusts-john-lewis-partnership-trust",
       "trusts-employee-ownership-trust-register-watch",
       "trusts-royal-collection-trust",
-      "trusts-prince-of-wales-charitable-fund",
-      "trusts-duchy-related-trust-disclosures",
-      "trusts-rockefeller-brothers-fund",
-      "trusts-rockefeller-family-fund"
+      "trusts-prince-of-wales-charitable-fund"
     ],
     "metrics": {
       "evidenceCount": 129,
-      "primarySourceCount": 114,
+      "primarySourceCount": 115,
       "disputedClaimCount": 21,
-      "newEntityCount": 2,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 25,
-      "moneyRecordCount": 96
+      "relationshipCount": 24,
+      "moneyRecordCount": 93
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 114 A/B-grade public-record items are materially relevant to Wealth Pdf Layout Test.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); DOJ OIG documented FBI handling failures (data/exposure-evidence-ledger.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/exposure-evidence-ledger.json); IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json)",
+        "conclusion": "The indexed record establishes that 115 A/B-grade public-record items are materially relevant to Wealth Pdf Layout Test.",
+        "evidence": "IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); DOJ OIG documented FBI handling failures (data/exposure-evidence-ledger.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/exposure-evidence-ledger.json); IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Congressional hearings and records (data/atlas-layers.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,7 +168,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 25 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -183,7 +183,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 25 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "New York DFS enforcement action concerning the bank's Epstein relationship",
@@ -207,6 +207,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
   }
 }

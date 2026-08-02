@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T13:21:44.282Z",
+  "generatedAt": "2026-08-02T21:22:20.718Z",
   "registryUpdated": "2026-07-27",
   "surfaces": [
     {
@@ -483,6 +483,20 @@
       "scope": "source",
       "route": "conversion-funnel.html",
       "title": "CONVERSION FUNNEL",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "daily-brain-brief.html",
+      "title": "DAILY BRAIN BRIEF",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "daily-command-brief.html",
+      "title": "DAILY COMMAND BRIEF",
       "type": "subject",
       "approvedRecords": 0
     },
@@ -1549,13 +1563,6 @@
       "title": "Bill & Melinda Gates Foundation",
       "type": "institution",
       "approvedRecords": 0
-    },
-    {
-      "scope": "source",
-      "route": "institutions/vanguard.html",
-      "title": "Vanguard",
-      "type": "subject",
-      "approvedRecords": 1
     },
     {
       "scope": "source",
@@ -2756,6 +2763,20 @@
     },
     {
       "scope": "built",
+      "route": "daily-brain-brief.html",
+      "title": "DAILY BRAIN BRIEF",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "daily-command-brief.html",
+      "title": "DAILY COMMAND BRIEF",
+      "type": "subject",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
       "route": "daily-watch.html",
       "title": "DAILY INTELLIGENCE HIT LIST",
       "type": "subject",
@@ -3715,13 +3736,6 @@
     },
     {
       "scope": "built",
-      "route": "entity-briefs/control-structure.html",
-      "title": "Control Structure",
-      "type": "entity",
-      "approvedRecords": 0
-    },
-    {
-      "scope": "built",
       "route": "entity-daily-briefs.html",
       "title": "ENTITY DAILY BRIEFS",
       "type": "entity",
@@ -3824,13 +3838,6 @@
       "title": "Bill & Melinda Gates Foundation",
       "type": "institution",
       "approvedRecords": 0
-    },
-    {
-      "scope": "built",
-      "route": "institutions/vanguard.html",
-      "title": "Vanguard",
-      "type": "subject",
-      "approvedRecords": 1
     },
     {
       "scope": "built",
@@ -4548,9 +4555,9 @@
     }
   ],
   "counts": {
-    "source": 324,
+    "source": 325,
     "built": 325,
-    "records": 66
+    "records": 64
   },
   "reviewCandidates": 0
 }

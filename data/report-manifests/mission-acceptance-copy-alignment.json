@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-08-02T12:24:19.302Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-02T21:05:39.884Z",
+  "pageCount": 118,
   "output": "downloads/mission-acceptance-copy-alignment.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Mission Acceptance Copy Alignment",
-    "contentHash": "4be7829dc351cb604dba72dc2b6dc04cb2bdbff5571b51a0c4bb0c0aabfc9bab",
+    "contentHash": "84e8136ae218aa677888e3bc0498238c132623b4513426efc6cd19c5ae24965d",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "peter-ball-conviction-2015",
+      "14d04c0943d24cbe6a1926db",
       "a21f3d8e98268d5e01e1eb7c",
       "88269481cf5b04b7b0f83b58",
       "04178dd78ae55a022df89f05",
@@ -53,7 +54,9 @@
       "62862e6ca90495adc0788a2d",
       "a53bf480df4e4883383a08e0",
       "1769af26a7bda813406cd8f5",
-      "14d04c0943d24cbe6a1926db",
+      "e72d22f4f28eb53e3173d0a6",
+      "24a844c3ddb5aecaad25e9bc",
+      "a4c15f7c3d808369b294115e",
       "44505b4afb60938c8117ad31",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
@@ -80,7 +83,6 @@
       "a71a8be091652489b843ecf6",
       "8212c1ebe163e30add33aeaf",
       "b866e2c7eb4ced9098559c86",
-      "eb5d60860a79b38aeefa3633",
       "4230305352f457f0cfcd2c1c",
       "f028e09fbaa2ebdfeb532e99",
       "f669b33c49b63e787cde3008",
@@ -101,7 +103,6 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -139,22 +140,21 @@
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-0C3383FAE797FF46",
-      "ASC-REVIEW-7FBB26E1B0ECA17A"
+      "ASC-REVIEW-0C3383FAE797FF46"
     ],
     "metrics": {
       "evidenceCount": 134,
       "primarySourceCount": 73,
-      "disputedClaimCount": 66,
+      "disputedClaimCount": 64,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 59,
-      "moneyRecordCount": 51
+      "relationshipCount": 58,
+      "moneyRecordCount": 49
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 73 A/B-grade public-record items are materially relevant to Mission Acceptance Copy Alignment.",
-        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); SEC FILING FEED. (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -173,7 +173,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 58 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -188,7 +188,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 59 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 58 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
           "IICSA documented predatory activities and institutional failures",

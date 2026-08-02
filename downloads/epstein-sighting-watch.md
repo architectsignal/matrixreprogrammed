@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-02T12:28:27.512Z
+Generated: 2026-08-02T21:10:07.569Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: low
+- Internet claim activity: none found in current seven-day feed window
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -48,23 +48,3 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 - Likely explanation: Synthetic image, altered image, old footage, compression artefact, or repost without origin.
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
-
-### Epstein files: How victims remain exposed to identification - DW.com
-- Type: debunk/fake-media-risk
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
-- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
-
-Epstein files: How victims remain exposed to identification DW.com
-
-### Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post
-- Type: debunk/fake-media-risk
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5
-- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
-
-Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell New York Post

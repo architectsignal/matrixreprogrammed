@@ -4,14 +4,14 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v2
 Source rules: 8
-Scanned pages: 3282
-Flagged pages: 3034
-High priority pages: 1469
-Medium priority pages: 1562
+Scanned pages: 3320
+Flagged pages: 3053
+High priority pages: 1653
+Medium priority pages: 1264
 Pages with missing rules: 741
 Auto-update eligible figures: 2
 Manual-review figures: 106
-Missing-rule figures: 1471
+Missing-rule figures: 1493
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -25,9 +25,9 @@ Missing-rule figures: 1471
 - _site/premium-reports.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - _site/store.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
 - _site/timers.html: 20 figure/stat markers; 20 missing rules. Add figure-source rules before automatic replacement.
+- _site/weekly-investigation-report.html: 18 figure/stat markers; 18 missing rules. Add figure-source rules before automatic replacement.
 - review-dashboard.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
 - weekly-investigation-report.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
-- _site/weekly-investigation-report.html: 12 figure/stat markers; 12 missing rules. Add figure-source rules before automatic replacement.
 - palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - _site/palantir-watch.html: 10 figure/stat markers; 10 missing rules. Add figure-source rules before automatic replacement.
 - dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Add figure-source rules before automatic replacement.
@@ -42,8 +42,8 @@ Missing-rule figures: 1471
 - big-three-asset-managers.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - making-money.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
-- membership.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - one-world-religion-theory.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
+- power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -57,9 +57,9 @@ Missing-rule figures: 1471
 - _site/premium-reports.html: 20 figure(s) need source rules.
 - _site/store.html: 20 figure(s) need source rules.
 - _site/timers.html: 20 figure(s) need source rules.
+- _site/weekly-investigation-report.html: 18 figure(s) need source rules.
 - review-dashboard.html: 12 figure(s) need source rules.
 - weekly-investigation-report.html: 12 figure(s) need source rules.
-- _site/weekly-investigation-report.html: 12 figure(s) need source rules.
 - palantir-watch.html: 10 figure(s) need source rules.
 - _site/palantir-watch.html: 10 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
@@ -74,7 +74,6 @@ Missing-rule figures: 1471
 - big-three-asset-managers.html: 4 figure(s) need source rules.
 - intel-archive.html: 4 figure(s) need source rules.
 - making-money.html: 4 figure(s) need source rules.
-- membership.html: 4 figure(s) need source rules.
 - one-world-religion-theory.html: 4 figure(s) need source rules.
 - power-structure-map.html: 4 figure(s) need source rules.
 - _site/dossier-george-nader.html: 4 figure(s) need source rules.
@@ -86,6 +85,7 @@ Missing-rule figures: 1471
 - death-file-anna-politkovskaya.html: 3 figure(s) need source rules.
 - death-file-arshad-sharif.html: 3 figure(s) need source rules.
 - death-file-benazir-bhutto.html: 3 figure(s) need source rules.
+- death-file-berta-caceres.html: 3 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

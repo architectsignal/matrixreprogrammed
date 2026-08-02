@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T12:44:34.487Z",
+  "generatedAt": "2026-08-02T13:22:51.032Z",
   "htmlFiles": 756,
   "dynamicWorkerRoutes": [
     ".netlify/functions/forum-feed",
@@ -27,12 +27,16 @@
     "track-event"
   ],
   "failureCount": 0,
-  "warningCount": 4,
+  "warningCount": 8,
   "failures": [],
   "warnings": [
     "daily-watch.html: does not use shared matrix.js",
+    "deploy-health.html: does not use shared matrix.js",
+    "entity-registry.html: does not use shared matrix.js",
     "epstein-email-network.html: does not use shared matrix.js",
     "epstein-email-network.html: missing shared styles.css",
+    "relationship-registry.html: does not use shared matrix.js",
+    "source-changes.html: does not use shared matrix.js",
     "weekly-watch-delta.html: does not use shared matrix.js"
   ]
 }

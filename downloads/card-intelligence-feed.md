@@ -1,6 +1,6 @@
 # Card Intelligence Feed
 
-Updated: 2026-08-02T12:33:18.524Z
+Updated: 2026-08-02T21:14:53.062Z
 
 Boundary: This feed provides research routing, scoring context, relationship-source rules and speculative rationale. It is not an accusation system and does not assert guilt, intent, hidden control or unlawful conduct.
 

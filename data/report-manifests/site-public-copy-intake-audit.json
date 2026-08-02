@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-02T12:27:17.629Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-02T21:08:55.969Z",
+  "pageCount": 127,
   "output": "downloads/site-public-copy-intake-audit.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Site Public Copy And Intake Audit",
-    "contentHash": "50dfc6908c3b7fe1054fd96919192dbc80828fc86652d8ca9c30ea27b78cd9b1",
+    "contentHash": "750306003628a07031d1e8705ffe33d6c4f169fb7b7501a9188031c992eeacf9",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "3a425f0d5d683952bc0ad7ac",
-      "e083e748ec6311742c2416e5",
       "9e8903fd8dfa9b54a1d6db30",
       "e72d22f4f28eb53e3173d0a6",
       "88ef9baf356c096816236956",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-7B1A15ED77443F13",
       "594100b62a47db521fe2a128",
       "ec1316fb1fb70c83dc347bb6",
@@ -46,6 +46,10 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5AE5A3805582A7F2",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-46CE3CB0306D4130",
@@ -67,6 +71,8 @@
       "6d665d935673091233751767",
       "eb3448928554960651da56f6",
       "ec968f2ec6ba82128b4cd91b",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-8299a278d70b1f879d6d522f",
       "7d7ccb5b896a02cf45094879",
       "aa93ff989cf62abb814747c9",
       "ASC-REVIEW-4D93FE8E0666D181",
@@ -132,37 +138,31 @@
       "ASC-REVIEW-D3C6DB16A89DBA51",
       "ASC-REVIEW-DAC9306D89683C63",
       "ASC-REVIEW-44F136F26F8A52B2",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-D5386E9017A18F49",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-35409BA5B302BB83",
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-086FE6E8B4620CB8",
-      "ASC-REVIEW-E76F1740FFF4E811",
-      "ASC-REVIEW-C8EBC7F8BBBAC4D3",
-      "ASC-REVIEW-848BDB9B5C3EEC1B",
-      "ASC-REVIEW-CE615863A9722AC5",
-      "EP-AI-002",
-      "EP-AI-004"
+      "ASC-REVIEW-086FE6E8B4620CB8"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 101,
+      "primarySourceCount": 13,
+      "disputedClaimCount": 97,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 82,
-      "moneyRecordCount": 73
+      "relationshipCount": 81,
+      "moneyRecordCount": 72
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Site Public Copy And Intake Audit.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Site Public Copy And Intake Audit.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 82 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Orsini family; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 82 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 81 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",

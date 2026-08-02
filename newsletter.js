@@ -2,47 +2,90 @@
   'use strict';
 
   function context(form){
-    return [document.title,location.pathname,form.getAttribute('name'),form.id,form.className,form.dataset.source,form.dataset.tags,form.textContent].join(' ').toLowerCase();
+    return [
+      document.title,
+      location.pathname,
+      form.getAttribute('name'),
+      form.id,
+      form.className,
+      form.dataset.source,
+      form.dataset.tags,
+      form.textContent
+    ].join(' ').toLowerCase();
   }
-  function emailInput(form){return form.querySelector('input[type="email"],input[name="email"],input[name="Email"]');}
+
+  function emailInput(form){
+    return form.querySelector('input[type="email"],input[name="email"],input[name="Email"]');
+  }
+
   function status(form){
     let node=form.querySelector('.form-status,.newsletter-status,[data-newsletter-status]');
-    if(!node){node=document.createElement('p');node.className='form-status newsletter-status';form.appendChild(node);}
+    if(!node){
+      node=document.createElement('p');
+      node.className='form-status newsletter-status';
+      form.appendChild(node);
+    }
     return node;
   }
-  function truthy(value){return ['1','true','yes','on','selected'].includes(String(value||'').trim().toLowerCase());}
-  function shouldCapture(form){
-    if(!emailInput(form))return false;
-    return /newsletter|black file|opt.?in|lead magnet|weekly|digest|brief|request|get the file|download|signal path|release notice/.test(context(form));
+
+  function truthy(value){
+    return ['1','true','yes','on','selected'].includes(String(value||'').trim().toLowerCase());
   }
+
+  function shouldCapture(form){
+    const email=emailInput(form);
+    if(!email)return false;
+    const hay=context(form);
+    return /newsletter|black file|opt.?in|lead magnet|weekly|digest|brief|request|get the file|download|signal path|release notice/.test(hay);
+  }
+
   function ensureConsent(form){
     let consent=form.querySelector('input[type="checkbox"][name="marketingConsent"],input[type="checkbox"][name="consent"],input[data-marketing-consent]');
     if(consent){consent.required=true;return consent;}
     const label=document.createElement('label');
     label.className='newsletter-consent';
     consent=document.createElement('input');
-    consent.type='checkbox';consent.name='marketingConsent';consent.required=true;consent.dataset.marketingConsent='true';
+    consent.type='checkbox';
+    consent.name='marketingConsent';
+    consent.required=true;
+    consent.dataset.marketingConsent='true';
     const text=document.createElement('span');
     text.textContent=' I agree to receive the Matrix Reprogrammed briefings selected on this form. I can unsubscribe or change preferences at any time.';
-    label.appendChild(consent);label.appendChild(text);
+    label.appendChild(consent);
+    label.appendChild(text);
     const button=form.querySelector('button[type="submit"],input[type="submit"]');
     if(button)form.insertBefore(label,button);else form.appendChild(label);
     return consent;
   }
-  function preferenceControl(form,name){return [...form.querySelectorAll('[name="'+name+'"]')];}
+
+  function preferenceControl(form,name){
+    return [...form.querySelectorAll('[name="'+name+'"]')];
+  }
+
   function preferenceValue(form,name,fallback){
     const controls=preferenceControl(form,name);
     if(!controls.length)return Boolean(fallback);
-    return controls.some(control=>(control.type==='checkbox'||control.type==='radio')?control.checked:truthy(control.value));
+    return controls.some(control=>{
+      if(control.type==='checkbox'||control.type==='radio')return control.checked;
+      return truthy(control.value);
+    });
   }
+
   function preferenceDefaults(form){
     const hay=context(form);
-    let daily=truthy(form.dataset.defaultDaily)||/daily control brief|daily intelligence|daily brief|daily updates/.test(hay);
-    let weekly=truthy(form.dataset.defaultWeekly)||/weekly signal|weekly file|weekly digest|signal drop|\bweekly\b|\bdigest\b/.test(hay);
-    let release=truthy(form.dataset.defaultRelease)||/release notice|release notices|public-source drops|file drop|book release/.test(hay);
-    if(!daily&&!weekly&&!release){if(/download|get the file|lead magnet|black file/.test(hay))release=true;else weekly=true;}
+    const explicitDaily=truthy(form.dataset.defaultDaily);
+    const explicitWeekly=truthy(form.dataset.defaultWeekly);
+    const explicitRelease=truthy(form.dataset.defaultRelease);
+    let daily=explicitDaily||/daily control brief|daily intelligence|daily brief|daily updates/.test(hay);
+    let weekly=explicitWeekly||/weekly signal|weekly file|weekly digest|signal drop|\bweekly\b|\bdigest\b/.test(hay);
+    let release=explicitRelease||/release notice|release notices|public-source drops|file drop|book release/.test(hay);
+    if(!daily&&!weekly&&!release){
+      if(/download|get the file|lead magnet|black file/.test(hay))release=true;
+      else weekly=true;
+    }
     return{daily,weekly,release};
   }
+
   function selectedPreferences(form){
     const defaults=preferenceDefaults(form);
     return{
@@ -51,6 +94,7 @@
       release:preferenceValue(form,'release_notices',defaults.release)
     };
   }
+
   async function submit(form,event){
     event.preventDefault();
     const email=emailInput(form);
@@ -78,31 +122,49 @@
       timezone:(Intl.DateTimeFormat().resolvedOptions().timeZone||'Europe/Paris'),
       wordingVersion:'newsletter-explicit-consent-v3'
     };
+
     if(!body.email||!/@/.test(body.email)){message.textContent='Enter a valid email first.';return;}
     if(!consentGranted){message.textContent='Please confirm that you agree to receive the selected briefings.';consent.focus();return;}
     if(!preferences.daily&&!preferences.weekly&&!preferences.release){message.textContent='Select at least one briefing or release-notice preference.';return;}
+
     const submitButton=form.querySelector('button[type="submit"],input[type="submit"]');
     if(submitButton)submitButton.disabled=true;
     message.textContent='Saving your preferences and preparing verification...';
+
     try{
-      const response=await fetch('/newsletter-signup',{method:'POST',credentials:'include',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)});
-      let data={};try{data=await response.json();}catch{}
+      const response=await fetch('/newsletter-signup',{
+        method:'POST',
+        credentials:'include',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(body)
+      });
+      let data={};
+      try{data=await response.json();}catch{}
       if(!response.ok||!data.ok)throw new Error(data.error||data.message||('Signup failed ('+response.status+')'));
       const verificationRequired=data.verificationRequired!==false;
       message.textContent=verificationRequired&&preferences.daily
-        ?'Saved. Check your inbox to verify your email. Once verified, today’s Daily Control Brief will be sent immediately.'
-        :verificationRequired?'Saved. Check your inbox to verify your email and activate the selected briefings.':'Saved. Your email preferences are active.';
+        ?'Saved. Check your inbox to verify your email and activate reports. Once verified, today’s Daily Control Brief will be sent immediately.'
+        :verificationRequired
+          ?'Saved. Check your inbox to verify your email and activate reports.'
+          :'Saved. Your email preferences are active.';
       form.reset();
       for(const control of form.querySelectorAll('[data-default-checked="true"]'))control.checked=true;
       if(data.downloadUrl)setTimeout(()=>{location.href=data.downloadUrl;},500);
-    }catch(error){message.textContent=String(error&&error.message||'Email signup failed. Please try again later.');}
-    finally{if(submitButton)submitButton.disabled=false;}
+    }catch(error){
+      message.textContent=String(error&&error.message||'Email signup failed. Please try again later.');
+    }finally{
+      if(submitButton)submitButton.disabled=false;
+    }
   }
+
   function boot(){
     document.querySelectorAll('form').forEach(form=>{
       if(!shouldCapture(form)||form.dataset.newsletterCapture==='active')return;
-      ensureConsent(form);form.dataset.newsletterCapture='active';form.addEventListener('submit',submit.bind(null,form));
+      ensureConsent(form);
+      form.dataset.newsletterCapture='active';
+      form.addEventListener('submit',submit.bind(null,form));
     });
   }
+
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T12:55:47.150Z",
+  "generatedAt": "2026-08-02T21:20:42.285Z",
   "totals": {
     "entities": 9317,
     "relationships": 13378,
@@ -14,7 +14,7 @@
       "malformed": 0
     }
   },
-  "graphBytes": 22952946,
+  "graphBytes": 22952854,
   "cloudflareSafetyTarget": 25165824,
   "checks": [
     {
@@ -130,7 +130,7 @@
     {
       "name": "build report confirms deployable size",
       "ok": true,
-      "detail": "22952946 / 22952946"
+      "detail": "22952854 / 22952854"
     },
     {
       "name": "runtime syntax",

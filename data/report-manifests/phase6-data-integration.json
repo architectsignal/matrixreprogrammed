@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:25:02.799Z",
+  "generatedAt": "2026-08-02T21:06:29.136Z",
   "pageCount": 73,
   "output": "downloads/phase6-data-integration.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Phase6 Data Integration",
-    "contentHash": "1d4a0e91705fc3c3348f1aa7354630ad9e394d3cc2eccb82dfdcc6fbfef9e79a",
+    "contentHash": "67c09f54d3fc6b80392d889b11ae511bc9a62d963c93fdcc48b93316f9c773c8",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "companies-tsla",
@@ -24,7 +24,6 @@
       "technology-control-amzn",
       "technology-control-meta",
       "technology-control-pltr",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-44F136F26F8A52B2",
       "companies-aapl",
@@ -146,16 +145,17 @@
       "technology-control-snps",
       "technology-control-se",
       "technology-control-tel",
-      "technology-control-grmn"
+      "technology-control-grmn",
+      "technology-control-alab"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
       "disputedClaimCount": 2,
-      "newEntityCount": 2,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 7,
-      "moneyRecordCount": 139
+      "moneyRecordCount": 140
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Daily Intelligence Hit List",
+        "conclusion": "The most defensible current assessment is based on “Follow The Money Watch,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily-updated Matrix Reprogrammed watch system for contracts, billionaires, contractors, AI surveillance, asset managers, foundations, NGOs, lobbying, and revolving-door power.",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -217,6 +217,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T21:06:29.136Z"
   }
 }

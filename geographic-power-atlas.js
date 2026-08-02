@@ -209,7 +209,7 @@ async function fetchAtlasData() {
   const manifestResponse=await fetch('data/geographic-power-atlas.json',{cache:'no-store'});
   if (!manifestResponse.ok) throw new Error(`Atlas manifest could not be loaded (${manifestResponse.status}).`);
   let geoResponse=await fetch('data/geographic-power-atlas-data.json',{cache:'no-store'});
-  if (!geoResponse.ok) geoResponse=await fetch('data/geographic-power-atlas.geojson',{cache:'no-store'});
+  if (!geoResponse.ok) geoResponse=await fetch('data/geographic-power-atlas-data.json',{cache:'no-store'});
   if (!geoResponse.ok) throw new Error(`Atlas location data could not be loaded (${geoResponse.status}).`);
   const [manifest,geojson]=await Promise.all([manifestResponse.json(),geoResponse.json()]);
   if (!geojson || !Array.isArray(geojson.features)) throw new Error('Atlas location data is malformed.');

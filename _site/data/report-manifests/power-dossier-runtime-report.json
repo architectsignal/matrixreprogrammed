@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:00:47.058Z",
-  "pageCount": 128,
+  "generatedAt": "2026-08-02T21:06:46.152Z",
+  "pageCount": 127,
   "output": "downloads/power-dossier-runtime-report.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Power Dossier Runtime Report",
-    "contentHash": "7715b1869797bf4c16ffc0e20988a46ca759c0ad9187b853be2feaad582dd32f",
+    "contentHash": "312be4d6c8d70c6a21d6261ae6cab41b57bac66176a6bf40c63abe1cb5085ce7",
     "sourceIds": [
       "008875ef7bf45eb14dccb254",
       "9f3052b5d8cec138a2a37e8c",
@@ -85,10 +85,9 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-B8034056CD461A0D",
-      "ASC-REVIEW-6C02F7DFCB3CC39B",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-5A774507A02DF22B",
       "16cde9bd4c87e916ff1e4fb7",
       "d23398b8ca4c7124399c9504",
@@ -103,7 +102,6 @@
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -146,7 +144,9 @@
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
-      "ASC-REVIEW-06CC87AEAF289EB7"
+      "ASC-REVIEW-06CC87AEAF289EB7",
+      "ASC-REVIEW-6FEEE1F638ADFCD6",
+      "ASC-REVIEW-6D7642B46743C895"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 126,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 94,
-      "moneyRecordCount": 75
+      "relationshipCount": 96,
+      "moneyRecordCount": 76
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 94 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Elon Musk → Spacex: ecosystem hint; Elon Musk → Starlink: ecosystem hint; Elon Musk → Tesla: ecosystem hint; Elon Musk → X: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 94 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T12:00:47.058Z"
+    "intelligenceFreshnessDate": "2026-08-02T21:06:46.152Z"
   }
 }

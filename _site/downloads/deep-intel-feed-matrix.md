@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-08-02T12:30:14.100Z
+Generated: 2026-08-02T21:11:47.272Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-08-02T12:30:14.100Z
 - 85 — Palantir government platforms — Procurement notices — contractor-briefs/palantir-government-platforms.html
 - 85 — Palantir government platforms — Court records — contractor-briefs/palantir-government-platforms.html
 - 85 — Palantir government platforms — Policy documents — contractor-briefs/palantir-government-platforms.html
+- 72 — Trapped by a Facebook job advert, freed by a stranger in a taxi — live-intel.html
 - 72 — Recovery in Ukraine, one life at a time — live-intel.html
-- 72 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS — live-intel.html
+- 72 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org — live-intel.html
 - 72 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’ — live-intel.html
 - 72 — Strong El Niño ahead, UN weather agency warns — live-intel.html
-- 72 — Wildfire smoke poses hidden health threat — live-intel.html

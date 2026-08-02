@@ -1,20 +1,18 @@
 {
-  "generatedAt": "2026-08-02T12:24:47.044Z",
+  "generatedAt": "2026-08-02T21:06:09.806Z",
   "pageCount": 132,
   "output": "downloads/open-source-research-suite-test.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Open Source Research Suite Test",
-    "contentHash": "2848c562d8571de9f629e3d5a98fe69679ac353c58952fad669805fa22dcac32",
+    "contentHash": "fe1ea78e0d375813cc2b35b12f5e3715e2c79085e846f9d321cade2ec4e1153b",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "26b90533dbf7d2ed42f02de6",
       "a5e5d4ec4df4352ea242ea3f",
       "dcec2a45ef35362072af05e3",
-      "a103f2650e31fc92fa3688e6",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -40,6 +38,7 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-9E85403F3389F334",
@@ -66,9 +65,9 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-09A1231B842DD08D",
+      "ASC-REVIEW-21808557DF4C165F",
       "ASC-REVIEW-CEAFD28B55D0DA69",
-      "ASC-REVIEW-25B371012CBA1315",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-5A774507A02DF22B",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
@@ -79,6 +78,7 @@
       "73799cb9af4829047998b026",
       "b49c319c09a07b245b24f74a",
       "427a4b3a840619411d8d1c33",
+      "a103f2650e31fc92fa3688e6",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Open Source Research Suite Test.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "DELL MARKETING L.P. — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; Breakspear → Name Lineage: layer hint",
+        "supportingEvidence": "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; Breakspear → Name Lineage: layer hint; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -196,14 +196,14 @@
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
         "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
-          "Breakspear → Name Lineage: layer hint"
+          "Breakspear → Name Lineage: layer hint",
+          "CACI International → Defense Technology: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

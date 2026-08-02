@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:25:28.401Z",
-  "pageCount": 98,
+  "generatedAt": "2026-08-02T21:06:58.700Z",
+  "pageCount": 101,
   "output": "downloads/predators-in-power.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Predators in Power",
-    "contentHash": "7c2ad784f04b0491c445b959ea459cddfaec2288867b7153cea78a04bc7203f2",
+    "contentHash": "cc8b9576d527c5c474a7fa9f35c60f62c6640992bfa557c841baad4086421b91",
     "sourceIds": [
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
@@ -56,6 +56,8 @@
       "d06308ce08cd7bbee96607ab",
       "0defb9debab95a663872bf25",
       "c4545fe318d34c16a8f8fe7a",
+      "0ae6fe3db8ffe781097c1e9f",
+      "e10c38338a42062da8899449",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -81,12 +83,9 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "0ae6fe3db8ffe781097c1e9f",
-      "e10c38338a42062da8899449",
       "f7daf286d43a132beadea7ee",
       "7a0ce047ee750826a59e7474",
       "360e80c162081c85d2c680ef",
-      "a103f2650e31fc92fa3688e6",
       "869fb3fbc8c9ae63c5aca5f3",
       "a01fc28e9fb6ce85637a3248",
       "bb93e91c7f48987e68a8f9a5",
@@ -108,10 +107,11 @@
       "daee19f2c0d92279cc9a7569",
       "bdd7e454126ebfa6319a594c",
       "janner-charges-2015",
-      "26b90533dbf7d2ed42f02de6",
       "72ef7895f95288946ccb3cff",
       "b7e4a66335a706ef5097117f",
+      "a103f2650e31fc92fa3688e6",
       "abdul-halim-khan-conviction-2026",
+      "26b90533dbf7d2ed42f02de6",
       "lawrence-ray-conviction-sentence-2023",
       "cyril-smith-iicsa-2018",
       "7f5b91c14c671bd24b8bbd81",
@@ -125,6 +125,7 @@
       "hadden-federal-conviction-sentence-2023",
       "53245eb712fc0413483084ad",
       "9f27e4d750de830ccb16df4b",
+      "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
@@ -138,28 +139,27 @@
       "raniere-conviction-sentence-2020",
       "savile-health-investigations-2014",
       "a5e5d4ec4df4352ea242ea3f",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "nader-child-exploitation-sentence-2020",
       "epstein-sdny-charges-2019",
       "nassar-federal-conviction-2017",
       "ASC-REVIEW-4D93FE8E0666D181",
       "9848ec4b4c3f6c2693269839",
-      "c1520a15d6e62871a66c558e",
-      "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-CE46DBEB6BCAAE01"
+      "c1520a15d6e62871a66c558e"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 67,
-      "disputedClaimCount": 5,
+      "primarySourceCount": 69,
+      "disputedClaimCount": 2,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
+      "relationshipCount": 16,
       "moneyRecordCount": 11
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Predators in Power.",
+        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Predators in Power.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; DELL MARKETING L.P. — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; IICSA documented predatory activities and institutional failures; Conviction for indecent images and misconduct in public office; INDUSTRIAL BANK — District of Columbia Courts",
+        "inference": "The indexed set contains 16 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; DELL MARKETING L.P. — District of Columbia Courts; IICSA documented predatory activities and institutional failures; Conviction for indecent images and misconduct in public office; INDUSTRIAL BANK — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,13 +194,13 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 16 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Matrix Reprogrammed Structured Investigation Schema",
+          "DELL MARKETING L.P. — District of Columbia Courts",
           "IICSA documented predatory activities and institutional failures",
           "Conviction for indecent images and misconduct in public office",
           "INDUSTRIAL BANK — District of Columbia Courts"

@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-08-02T12:30:10.470Z
+Generated: 2026-08-02T21:11:43.737Z
 
 ## Daily Revelation Report
 
-Recovery in Ukraine, one life at a time
+Trapped by a Facebook job advert, freed by a stranger in a taxi
 
 Source: daily-command-brief.html
 

@@ -1,24 +1,19 @@
 {
-  "generatedAt": "2026-08-02T12:21:44.097Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-02T21:02:43.588Z",
+  "pageCount": 120,
   "output": "downloads/entity-exposure-index.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Entity Exposure Index",
-    "contentHash": "6010b50251d952ed65a4deb43a5e291be41d1d268f52a1e0e3b8c2382c71f3dd",
+    "contentHash": "94c0962b6df0b19d69d3a694096fe5da1afe4b0dd3084d97bdadaff43e30f320",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
-      "e72d22f4f28eb53e3173d0a6",
       "1769af26a7bda813406cd8f5",
       "3a425f0d5d683952bc0ad7ac",
+      "e72d22f4f28eb53e3173d0a6",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
-      "missing-records-report",
-      "9e8903fd8dfa9b54a1d6db30",
-      "ec1316fb1fb70c83dc347bb6",
-      "88ef9baf356c096816236956",
-      "7c05d9244c4620950350cf27",
       "4c372edcf20b760ae3305f10",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -38,7 +33,12 @@
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-A9879DBB68A52307",
+      "missing-records-report",
       "594100b62a47db521fe2a128",
+      "9e8903fd8dfa9b54a1d6db30",
+      "ec1316fb1fb70c83dc347bb6",
+      "88ef9baf356c096816236956",
+      "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
       "ecd4a1111010f13b2d74bf8c",
       "a27dd3c9a4cf6bbd952989d3",
@@ -106,7 +106,6 @@
       "ASC-REVIEW-CE615863A9722AC5",
       "65debd126cdfa5f7547a3eca",
       "72ef7895f95288946ccb3cff",
-      "9f77464e401ac59ad1adb812",
       "3c9c23f7f9a1cec81ef90f59",
       "EFS-001-R006",
       "427a4b3a840619411d8d1c33",
@@ -146,20 +145,21 @@
       "f6a31ab6ef66ed57c337d1fe",
       "89bb0f6cd0729d8a50fa7ca8",
       "f65ce8ac52001a0eeea48c81",
-      "6f38091039a1be2abbd0a696"
+      "6f38091039a1be2abbd0a696",
+      "05c61d1a0f454d99808217c8"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 84,
+      "primarySourceCount": 85,
       "disputedClaimCount": 38,
       "newEntityCount": 5,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
+      "relationshipCount": 80,
       "moneyRecordCount": 28
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 84 A/B-grade public-record items are materially relevant to Entity Exposure Index.",
+        "conclusion": "The indexed record establishes that 85 A/B-grade public-record items are materially relevant to Entity Exposure Index.",
         "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts",
+        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
-          "Illuminati / Secret Society Theory",
-          "Illuminati / Secret Society Theory",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",
           "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
           "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
-          "INDUSTRIAL BANK — District of Columbia Courts"
+          "INDUSTRIAL BANK — District of Columbia Courts",
+          "MINDCUBED LLC — District of Columbia Courts",
+          "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:26:39.648Z",
+  "generatedAt": "2026-08-02T21:08:14.427Z",
   "pageCount": 109,
   "output": "downloads/search-v3-quality-test.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Search V3 Quality Test",
-    "contentHash": "d87f89118a14437978c9120e0e31f1954c3ac0dedf0341a94570d1e88afc32d6",
+    "contentHash": "a1517cfc910eb05280f711868a461421d1f853f80d347bc8f156974d8cbb05a6",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
       "daee19f2c0d92279cc9a7569",
@@ -20,7 +20,6 @@
       "4c07add2a6d4eb22cadecd27",
       "388e2e8c136c6891fe3af13a",
       "5546f85d1ba69563adc9bffd",
-      "e083e748ec6311742c2416e5",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "72ef7895f95288946ccb3cff",
@@ -32,7 +31,6 @@
       "b49c319c09a07b245b24f74a",
       "427a4b3a840619411d8d1c33",
       "1583ed9e90a5874047a33041",
-      "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
       "53201d6b1babefc058e6d6ac",
       "538941a6b0f31a954f98439a",
@@ -52,7 +50,9 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "e083e748ec6311742c2416e5",
       "1769af26a7bda813406cd8f5",
+      "a103f2650e31fc92fa3688e6",
       "f8da9551192fb7f98b4efa86",
       "275d6c3caca158f7a3e15780",
       "26b90533dbf7d2ed42f02de6",
@@ -103,6 +103,7 @@
       "9f3052b5d8cec138a2a37e8c",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
+      "source-change-7ed151a515391f967d229642",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "cf94b367bfb0237448d49649",
       "a354895c18c7e12ab408462d",
@@ -116,6 +117,11 @@
       "9848ec4b4c3f6c2693269839",
       "7f5b91c14c671bd24b8bbd81",
       "b7e4a66335a706ef5097117f",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
@@ -140,26 +146,20 @@
       "bdd7e454126ebfa6319a594c",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
-      "41772e5c9af7970ddd7d5aac",
-      "nassar-fbi-oig-2021",
-      "ASC-REVIEW-A90E36DF59A2A3C2",
-      "ASC-REVIEW-2A8D7C6B5A23CEAD",
-      "ASC-REVIEW-A8005F6D70DBECBC",
-      "ASC-REVIEW-E8F3DDB7E3724A74",
-      "ASC-REVIEW-5D75F861BBF77D9D"
+      "41772e5c9af7970ddd7d5aac"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 54,
-      "disputedClaimCount": 34,
+      "primarySourceCount": 59,
+      "disputedClaimCount": 29,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 37,
-      "moneyRecordCount": 13
+      "relationshipCount": 32,
+      "moneyRecordCount": 12
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 54 A/B-grade public-record items are materially relevant to Search V3 Quality Test.",
+        "conclusion": "The indexed record establishes that 59 A/B-grade public-record items are materially relevant to Search V3 Quality Test.",
         "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 37 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; MINDCUBED LLC — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Follow The Money Watch; COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
+        "inference": "The indexed set contains 32 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; MINDCUBED LLC — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts; Follow The Money Watch; DELL MARKETING L.P. — District of Columbia Courts; COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,15 +194,15 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 37 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 32 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Matrix Reprogrammed Structured Investigation Schema",
           "MINDCUBED LLC — District of Columbia Courts",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "Follow The Money Watch",
+          "DELL MARKETING L.P. — District of Columbia Courts",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense"
         ],
         "counterEvidence": [

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:21:42.937Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-02T21:02:42.432Z",
+  "pageCount": 135,
   "output": "downloads/empty-public-controls.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Empty Public Controls",
-    "contentHash": "4a5ce87f77a58f27bd08993af3c135727c0c2b04503fc1c3d7714b5619faca47",
+    "contentHash": "a261dafb39abb95858cff53d03cefbfbe2b45690281f85304ad7942b5d6b7a3a",
     "sourceIds": [
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
@@ -15,7 +15,6 @@
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
-      "e083e748ec6311742c2416e5",
       "five-eyes-ai-cyber-warning-2026-06-22",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
@@ -45,7 +44,6 @@
       "ASC-REVIEW-D3C6DB16A89DBA51",
       "ASC-REVIEW-DAC9306D89683C63",
       "ASC-REVIEW-44F136F26F8A52B2",
-      "ASC-REVIEW-6C02F7DFCB3CC39B",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
@@ -66,11 +64,15 @@
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
       "6d8df9af51b8078e703b2748",
-      "9f77464e401ac59ad1adb812",
-      "b9ddbc73f7baaa3eaf0e5399",
-      "a103f2650e31fc92fa3688e6",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
       "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
+      "e083e748ec6311742c2416e5",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
       "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "janner-iicsa-2022",
@@ -95,7 +97,6 @@
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -145,24 +146,23 @@
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-E3E367656A99DD33",
-      "ASC-REVIEW-75C693C304757153"
+      "ASC-REVIEW-E3E367656A99DD33"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 9,
-      "disputedClaimCount": 118,
+      "primarySourceCount": 13,
+      "disputedClaimCount": 115,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 96,
-      "moneyRecordCount": 70
+      "relationshipCount": 94,
+      "moneyRecordCount": 68
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Empty Public Controls.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Site Population Audit (data/search-index.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/weekly-investigation-conclusions.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Empty Public Controls.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 94 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 94 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
   }
 }

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T12:54:59.046Z",
+  "generatedAt": "2026-08-02T21:19:56.543Z",
   "internalPages": [
     "review-dashboard.html",
     "deploy-status.html",
@@ -29,7 +29,13 @@
     "thank-you-book-path.html"
   ],
   "changes": [
-    "reader-conclusions.html:public-cleanup"
+    "deploy-health.html:noindex",
+    "daily-command-brief.html:public-cleanup",
+    "daily-power-conclusions.html:public-cleanup",
+    "epstein-conclusions.html:public-cleanup",
+    "reader-conclusions.html:public-cleanup",
+    "speculative-conclusions.html:public-cleanup",
+    "sitemap.xml:internal-routes-removed"
   ],
   "repairedPlaceholders": "live-intel Evidence Route links",
   "deepenedPage": "reader-conclusions.html",

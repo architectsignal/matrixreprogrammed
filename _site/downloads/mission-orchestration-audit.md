@@ -1,8 +1,8 @@
 # Mission Orchestration Audit
 
-Generated: 2026-08-02T12:49:16.728Z
+Generated: 2026-08-02T21:19:08.968Z
 Overall: ready
-Homepage mode: search-first-accountability
+Homepage mode: legacy-cinematic
 Passed: 52/52
 
 Person: Bill Gates
@@ -30,12 +30,12 @@ Promotion margin: 14
 - **PASS · watch-person-boundary:** person limitation present.
 - **PASS · watch-person-resolved-class:** person resolution=authoritatively-resolved; name=Bill Gates.
 - **PASS · watch-institution-fields:** institution: Securities and Exchange Commission; missing none.
-- **PASS · watch-institution-rank:** institution score 143; status retained-current-leader.
+- **PASS · watch-institution-rank:** institution score 143; status incumbent-held-position.
 - **PASS · watch-institution-sources:** 16 source routes attached.
 - **PASS · watch-institution-boundary:** institution limitation present.
 - **PASS · watch-institution-resolved-class:** institution resolution=authoritatively-resolved; name=Securities and Exchange Commission.
 - **PASS · watch-family-fields:** family: Wallenberg family and foundations; missing none.
-- **PASS · watch-family-rank:** family score 122; status retained-current-leader.
+- **PASS · watch-family-rank:** family score 122; status incumbent-held-position.
 - **PASS · watch-family-sources:** 5 source routes attached.
 - **PASS · watch-family-boundary:** family limitation present.
 - **PASS · watch-family-resolved-class:** family resolution=resolved-family-access-record; name=Wallenberg family and foundations.
@@ -54,8 +54,8 @@ Promotion margin: 14
 - **PASS · dossier-family-assessment:** family executive assessment checked.
 - **PASS · history-and-weekly-delta:** 7 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=4048; search=134820; accountabilityHitList=136084.
-- **PASS · accountability-card-ui:** 3 search-first accountability cards found.
+- **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.
+- **PASS · accountability-card-ui:** 3 cinematic dossier cards found.
 - **PASS · daily-watch-deep-links:** Daily Watch contains no generated links to nonexistent Capstone anchors.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.
 - **PASS · support-conversion:** Watchlist or membership, evidence submission, brief and full accountability list actions checked.

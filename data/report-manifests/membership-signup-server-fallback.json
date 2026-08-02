@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:24:15.126Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-02T21:05:33.836Z",
+  "pageCount": 135,
   "output": "downloads/membership-signup-server-fallback.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Membership Signup Server Fallback",
-    "contentHash": "7d2c5b2a63021eed6c6a2261256027d413a7c243c0adb5f76d6c6305e61e32f2",
+    "contentHash": "0cd07f3ab987d300d90a49702174bef7928573a683df8de5553feec311220457",
     "sourceIds": [
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
@@ -15,7 +15,6 @@
       "388e2e8c136c6891fe3af13a",
       "5546f85d1ba69563adc9bffd",
       "26b90533dbf7d2ed42f02de6",
-      "a103f2650e31fc92fa3688e6",
       "53201d6b1babefc058e6d6ac",
       "538941a6b0f31a954f98439a",
       "57155b538497645f1d15d258",
@@ -45,8 +44,8 @@
       "b49c319c09a07b245b24f74a",
       "427a4b3a840619411d8d1c33",
       "1583ed9e90a5874047a33041",
+      "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -64,6 +63,8 @@
       "9f3052b5d8cec138a2a37e8c",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -103,8 +104,12 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-E76F1740FFF4E811",
-      "9e8903fd8dfa9b54a1d6db30",
-      "88ef9baf356c096816236956",
+      "daily-21",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-7ed151a515391f967d229642",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-8299a278d70b1f879d6d522f",
       "9d5ab7f5717c4527d5b04e38",
       "7fcb597dc71df06f1e522aaf",
       "a71a8be091652489b843ecf6",
@@ -141,25 +146,20 @@
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
-      "ASC-REVIEW-E88A7B581690918F",
-      "ASC-REVIEW-927E79836853DFAE",
-      "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-19181472DB04522E",
-      "ASC-REVIEW-DA186233A3EDF0BE"
+      "ASC-REVIEW-E88A7B581690918F"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 52,
-      "disputedClaimCount": 78,
+      "primarySourceCount": 59,
+      "disputedClaimCount": 73,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
-      "moneyRecordCount": 51
+      "relationshipCount": 72,
+      "moneyRecordCount": 46
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Membership Signup Server Fallback.",
+        "conclusion": "The indexed record establishes that 59 A/B-grade public-record items are materially relevant to Membership Signup Server Fallback.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "DELL MARKETING L.P. — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; DELL MARKETING L.P. — District of Columbia Courts",
+        "inference": "The indexed set contains 72 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; DELL MARKETING L.P. — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,11 +194,11 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 72 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "DELL MARKETING L.P. — District of Columbia Courts",
           "MINDCUBED LLC — District of Columbia Courts",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+          "DELL MARKETING L.P. — District of Columbia Courts",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

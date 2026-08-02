@@ -5,8 +5,8 @@
   if (!intro) return;
 
   // Retired release-test markers only: matrix-homepage-intro-seen-v2; eye: 3000; burn: 1100; mask: 3000.
-  const runtimeVersion = '20260725-video-v5';
-  const sessionKey = 'matrix-homepage-intro-seen-v5';
+  const runtimeVersion = '20260803-video-v6';
+  const sessionKey = 'matrix-homepage-intro-seen-v6';
   const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches === true;
   const forceReplay = new URLSearchParams(window.location.search).get('intro') === '1';
   const timers = new Set();
@@ -103,9 +103,25 @@
     return stage.querySelector('[data-homepage-intro-video]');
   }
 
-  function base64ToObjectUrl(base64) {
-    const clean = String(base64 || '').replace(/\s+/g, '');
+  function normalizeBase64(base64) {
+    let clean = String(base64 || '')
+      .trim()
+      .replace(/^data:[^,]*;base64,/i, '')
+      .replace(/\s+/g, '')
+      .replace(/-/g, '+')
+      .replace(/_/g, '/');
     if (clean.length < 1000) throw new Error('Build-generated intro video data is missing or incomplete');
+    if (!/^[A-Za-z0-9+/]*={0,2}$/.test(clean)) throw new Error('Build-generated intro video data contains invalid Base64 characters');
+
+    // Some historic build assets carried redundant terminal padding. Node's
+    // Buffer decoder accepted it, but browsers correctly reject it in atob().
+    clean = clean.replace(/=+$/, '');
+    if (clean.length % 4 === 1) throw new Error('Build-generated intro video data has an invalid Base64 length');
+    return clean + '='.repeat((4 - (clean.length % 4)) % 4);
+  }
+
+  function base64ToObjectUrl(base64) {
+    const clean = normalizeBase64(base64);
     const binary = window.atob(clean);
     const bytes = new Uint8Array(binary.length);
     for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);

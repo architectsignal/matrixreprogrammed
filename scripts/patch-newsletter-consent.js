@@ -99,7 +99,7 @@ const client = `(function(){
     label.appendChild(consent);
     label.appendChild(text);
     const button=form.querySelector('button[type="submit"],input[type="submit"]');
-    if(button)form.insertBefore(label,button);else form.appendChild(label);
+    if(button&&button.parentNode)button.parentNode.insertBefore(label,button);else form.appendChild(label);
     return consent;
   }
 
@@ -227,7 +227,8 @@ const checks = {
   explicitPreferenceGate: finalClient.includes('Select at least one briefing or release-notice preference.'),
   dailyVerificationMessage: finalClient.includes('today’s Daily Control Brief will be sent immediately.'),
   noUniversalWeeklyDefault: !finalClient.includes('public_weekly_digest:true') && !finalClient.includes('weekly:true'),
-  serverErrorsVisible: finalClient.includes("throw new Error(data.error||data.message||('Signup failed ('+response.status+')'))")
+  serverErrorsVisible: finalClient.includes("throw new Error(data.error||data.message||('Signup failed ('+response.status+')'))"),
+  nestedSubmitSafe: finalClient.includes('button&&button.parentNode') && finalClient.includes('button.parentNode.insertBefore(label,button)') && !finalClient.includes('form.insertBefore(label,button)')
 };
 const ok = Object.values(checks).every(Boolean);
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });

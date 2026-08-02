@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T08:57:31.461Z",
+  "generatedAt": "2026-08-02T21:20:18.220Z",
   "schemaVersion": "1.1.0",
   "totals": {
-    "entities": 6700,
-    "relationships": 9140,
+    "entities": 6699,
+    "relationships": 9139,
     "findings": 2500,
     "documents": 76,
     "missingRecords": 93
@@ -13,7 +13,7 @@
     "Person": 24,
     "Organization": 65,
     "Company": 117,
-    "GovernmentAgency": 370,
+    "GovernmentAgency": 369,
     "Contractor": 26,
     "Foundation": 16,
     "Trust": 5,
@@ -35,7 +35,7 @@
     "operatedBy": 20,
     "retrievedFrom": 76,
     "supports": 76,
-    "mentions": 3187,
+    "mentions": 3186,
     "subjectOf": 3188,
     "affiliatedWith": 0,
     "owns": 0,
@@ -65,5 +65,5 @@
     "relationship-registry.html"
   ],
   "software": "Node.js with FollowTheMoney-compatible concepts; no paid service or external database required.",
-  "refinedAt": "2026-08-02T08:57:32.407Z"
+  "refinedAt": "2026-08-02T21:20:19.155Z"
 }

@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "a0a1ef2d3d87977a4facd3efe2cafdb5899f0600",
-  "buildShortSha": "a0a1ef2d3d87",
-  "generatedAt": "2026-08-02T06:31:51.577Z",
+  "buildSha": "local-build",
+  "buildShortSha": "local-build",
+  "generatedAt": "2026-08-02T21:10:37.037Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -345,7 +345,7 @@
       "marker": "MAP THE STRUCTURE.",
       "exists": true,
       "markerPresent": true,
-      "hash": "3204abb03fc6ed75"
+      "hash": "547522b779a71aae"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "d47ab4e5ab6c9445"
+      "hash": "3311402c62273e25"
     },
     {
       "name": "Epstein Command Center",
@@ -409,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "293016821a550989"
+      "hash": "ba0d38d32efab6ce"
     },
     {
       "name": "Dark Speculation Board",
@@ -433,7 +433,7 @@
       "marker": "FORUM_POSTS",
       "exists": true,
       "markerPresent": true,
-      "hash": "7a389d78f08ef04d"
+      "hash": "6c0f1c706437d35f"
     },
     {
       "name": "Hard Board Routes",
@@ -441,7 +441,7 @@
       "marker": "/forum-feed-speculation",
       "exists": true,
       "markerPresent": true,
-      "hash": "7a389d78f08ef04d"
+      "hash": "6c0f1c706437d35f"
     },
     {
       "name": "Cloudflare Output Builder",
@@ -449,15 +449,15 @@
       "marker": "_site",
       "exists": true,
       "markerPresent": true,
-      "hash": "f5487fd4ccabdfaa"
+      "hash": "bf2d83d35d409cb9"
     }
   ],
   "hashes": {
-    "worker": "7a389d78f08ef04d",
-    "package": "44848d047731aa77",
+    "worker": "6c0f1c706437d35f",
+    "package": "1251878dba22ccd6",
     "epsteinFiles": "5b2bf898b648df22",
-    "liveIntel": "d47ab4e5ab6c9445",
-    "homepage": "3204abb03fc6ed75"
+    "liveIntel": "3311402c62273e25",
+    "homepage": "547522b779a71aae"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

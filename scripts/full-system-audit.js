@@ -196,7 +196,7 @@ const checks = [
   ['D1-only public runtime', 'src/worker-production.js', 'FORUM_POSTS: undefined'],
   ['Commit-bound health Worker', 'deploy-health.json', 'src/worker-production.js'],
   ['Commit-bound PayPal health', 'deploy-health.json', '"paymentStatus": "runtime-gated-dashboard-managed"'],
-  ['Ask Matrix', 'search.html', 'SEARCH THE MACHINE'],
+  ['Ask Matrix', 'search.html', 'START WITH WHAT HAPPENED.'],
   ['Ask Matrix local index', 'search.js', 'search-index.json'],
   ['Live Intel', 'live-intel.html', 'LIVE INTEL'],
   ['Evidence Archive', 'evidence-archive.html', 'EVIDENCE ARCHIVE'],

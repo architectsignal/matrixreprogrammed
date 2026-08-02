@@ -1,11 +1,26 @@
 # Intel Vault
 
-Updated: 2026-08-02T06:36:57.113Z
+Updated: 2026-08-02T21:21:07.195Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### After war took her leg, this Ukrainian gymnast refused to give up
+- Published: 2026-07-26T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168020
+- Source class: primary-or-official
+
+### Gaza: Dialysis patients face gruelling hospital journey by donkey cart
+- Published: 2026-07-26T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168026
+- Source class: primary-or-official
+
+### Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods
+- Published: 2026-07-26T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168028
+- Source class: primary-or-official
 
 ### ‘I am somebody’: Street-smart youth take their declaration to the UN
 - Published: 2026-07-25T12:00:00.000Z

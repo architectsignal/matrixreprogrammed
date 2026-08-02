@@ -7,6 +7,11 @@ on:
         description: 'Type DEPLOY MATRIX REPROGRAMMED to authorize the controlled production release'
         required: true
         type: string
+      billing_exception:
+        description: 'One-day owner exception; leave blank unless the 2026-08-02 billable build is explicitly authorized'
+        required: false
+        default: ''
+        type: string
 
 concurrency:
   group: matrixreprogrammed-production
@@ -44,14 +49,21 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Enforce Cloudflare zero-overage budget
+      - name: Enforce Cloudflare budget or one-day owner exception
         env:
           CLOUDFLARE_GIT_BUILDS_DISCONNECTED: ${{ vars.CLOUDFLARE_GIT_BUILDS_DISCONNECTED }}
           CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED: ${{ vars.CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED }}
           CLOUDFLARE_BUILD_MINUTES_USED: ${{ vars.CLOUDFLARE_BUILD_MINUTES_USED }}
           CLOUDFLARE_USAGE_CHECKED_AT_UTC: ${{ vars.CLOUDFLARE_USAGE_CHECKED_AT_UTC }}
           EXPECTED_CLOUDFLARE_BUILD_MINUTES: '0'
-        run: node scripts/cloudflare-usage-budget-guard.js release
+          CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: ${{ inputs.billing_exception }}
+        shell: bash
+        run: |
+          if [[ "$CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION" == "OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02" ]]; then
+            node scripts/cloudflare-usage-budget-guard.js owner-exception
+          else
+            node scripts/cloudflare-usage-budget-guard.js release
+          fi
 
       - name: Record exact main commit to deploy
         run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
@@ -99,17 +111,23 @@ jobs:
           node scripts/opportunity-hunter-worker-test.mjs
           node scripts/opportunity-provider-adapter-test.mjs
           node scripts/phase12-production-readiness-test.mjs
+          node scripts/matrix-synergy-test.mjs
+          python3 scripts/phase13-migration-rehearsal.py
           node local-agent/matrix-local-agent.test.mjs
           node local-agent/control-plane-client.test.mjs
           node ai-management/local-runtime/job-queue.test.mjs
           node --check src/worker-production.js
           node --check src/worker-production-autonomy.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-matrix-synergy.js
+          node --check src/matrix-synergy-core.js
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
           node --check src/worker-opportunity-hunter.js
           node --check ai-management/provider-adapters/opportunity/zero-spend-public-http.mjs
           node --check scripts/run-autonomous-ai-manager.mjs
           node --check scripts/verify-live-ai-management.mjs
+          node scripts/live-ai-verification-classifier.test.mjs
           node scripts/d1-export-command-test.js
           npx --yes wrangler@latest deploy --dry-run
 
@@ -198,6 +216,7 @@ jobs:
             migrations/phase10_ai_autonomy.sql
             migrations/phase11_local_job_queue.sql
             migrations/phase12_opportunity_hunter.sql
+            migrations/phase13_matrix_synergy.sql
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
@@ -213,8 +232,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT sql FROM sqlite_master WHERE type='table' AND name IN ('ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs') ORDER BY name;" --json > downloads/d1-autonomy-schema.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT sql FROM sqlite_master WHERE type='table' AND name IN ('ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_leases','matrix_contributions','matrix_human_actions') ORDER BY name;" --json > downloads/d1-autonomy-schema.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT resource_id,billing_enabled,payment_method_present,monetary_cost_per_unit_eur,billing_risk FROM ai_resources ORDER BY resource_id;" --json > downloads/d1-ai-zero-spend-resources.json
           node - <<'NODE'
@@ -224,7 +243,7 @@ jobs:
           const autonomy = JSON.parse(fs.readFileSync('downloads/d1-autonomy-schema.json','utf8'));
           const payment = JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
           const resources = JSON.parse(fs.readFileSync('downloads/d1-ai-zero-spend-resources.json','utf8'));
-          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs'];
+          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger'];
           const names = new Set(rows(schema).map(row => row.name));
           const missing = required.filter(name => !names.has(name));
           if (missing.length) throw new Error(`Missing D1 objects: ${missing.join(', ')}`);
@@ -234,6 +253,9 @@ jobs:
           if (!sql.includes('external_network_used = 0')) throw new Error('Local receipt network constraint missing');
           if (!sql.includes("approval_state IN ('approved-auto','awaiting-owner','quarantined','disabled')")) throw new Error('Opportunity approval-state constraint missing');
           if (!sql.includes('zero_spend_lock = 1')) throw new Error('Opportunity run zero-spend constraint missing');
+          if (!sql.includes("data_class='public'")) throw new Error('Compute lease public-only constraint missing');
+          if (!sql.includes("evidence_class IN ('VERIFIED','SPECULATION','SECURITY_QUARANTINE')")) throw new Error('Matrix evidence boundary missing');
+          if (sql.toLowerCase().includes('editorial')) throw new Error('Human action queue became an editorial fallback');
           const settings = rows(payment);
           const sandbox = settings.find(row => row.environment === 'sandbox');
           const live = settings.find(row => row.environment === 'live');
@@ -245,7 +267,7 @@ jobs:
             if (Number(resource.monetary_cost_per_unit_eur) !== 0) throw new Error(`${resource.resource_id} has non-zero cost`);
             if (resource.billing_risk !== 'none') throw new Error(`${resource.resource_id} has billing risk`);
           }
-          console.log(`D1 phases 9-12 verified with local execution and Opportunity Hunter zero-spend constraints; live PayPal checkout state preserved at ${Number(live.checkout_enabled)}.`);
+          console.log(`D1 phases 9-13 verified with zero-spend compute, automatic evidence classification, provider-only human actions and live PayPal checkout state preserved at ${Number(live.checkout_enabled)}.`);
           NODE
 
       - name: Activate approved AI autonomy flags under the zero-spend lock

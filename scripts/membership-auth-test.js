@@ -167,10 +167,14 @@ function extractLink(email) {
 }
 
 async function main() {
-  const patch = spawnSync(process.execPath, ['scripts/patch-worker-newsletter-system.js'], { cwd: root, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
-  if (patch.stdout) process.stdout.write(patch.stdout);
-  if (patch.stderr) process.stderr.write(patch.stderr);
-  if (patch.status !== 0) throw new Error('membership auth patch chain failed');
+  const currentWorker = fs.readFileSync(path.join(root, 'src', 'worker.js'), 'utf8');
+  const currentAuthContract = currentWorker.includes('matrix_session_v2=') && currentWorker.includes("originalPath==='/api/auth/request-link'");
+  if (!currentAuthContract) {
+    const patch = spawnSync(process.execPath, ['scripts/patch-worker-newsletter-system.js'], { cwd: root, encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
+    if (patch.stdout) process.stdout.write(patch.stdout);
+    if (patch.stderr) process.stderr.write(patch.stderr);
+    if (patch.status !== 0) throw new Error('membership auth patch chain failed');
+  }
 
   const workerFile = path.join(root, 'src', 'worker.js');
   const source = fs.readFileSync(workerFile, 'utf8');

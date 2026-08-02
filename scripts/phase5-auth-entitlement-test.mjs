@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import {pathToFileURL} from 'node:url';
 import {DatabaseSync} from 'node:sqlite';
 
 const root=process.cwd();
@@ -28,11 +29,9 @@ CREATE TABLE audit_log(id TEXT PRIMARY KEY,actor_id TEXT,action TEXT NOT NULL,ta
 db.exec(fs.readFileSync(path.join(root,'migrations/phase5_member_experience.sql'),'utf8'));
 const d1=new D1Database(db);
 
-const memberSource=fs.readFileSync(path.join(root,'src/worker-member-experience.js'),'utf8');
-const memberModule=await import(`data:text/javascript;base64,${Buffer.from(memberSource).toString('base64')}`);
+const memberModule=await import(`${pathToFileURL(path.join(root,'src/worker-member-experience.js')).href}?phase5=${Date.now()}`);
 const memberWorker=memberModule.default;
-const legacySource=fs.readFileSync(path.join(root,'src/worker.js'),'utf8');
-const legacyModule=await import(`data:text/javascript;base64,${Buffer.from(legacySource).toString('base64')}`);
+const legacyModule=await import(`${pathToFileURL(path.join(root,'src/worker.js')).href}?phase5=${Date.now()}`);
 const legacyWorker=legacyModule.default;
 
 const members=[
@@ -80,7 +79,7 @@ const stages=[];const pass=(name,details={})=>stages.push({name,passed:true,...d
 
 const anonymous=await memberCall('/api/member/dashboard');deniedSafe(anonymous,401);pass('anonymous-fails-closed');
 
-const requestLink=await legacyCall('/api/auth/request-link',{method:'POST',body:{email:'registered@example.com'}});assert(requestLink.response.status===202&&requestLink.data.ok,'Passwordless request-link failed');assert(providerCalls.length===1&&lastAuthLink,'Passwordless email was not delivered');const authUrl=new URL(lastAuthLink);const verify=await legacyCall(authUrl.pathname+authUrl.search);assert(verify.response.status===303,'Passwordless verify did not redirect');const setCookie=verify.response.headers.get('set-cookie')||'';assert(setCookie.includes('matrix_session=')&&setCookie.includes('HttpOnly')&&setCookie.includes('Secure')&&setCookie.includes('SameSite=Lax'),'Secure session cookie flags missing');const replay=await legacyCall(authUrl.pathname+authUrl.search);assert(replay.response.status===303&&String(replay.response.headers.get('location')).includes('error='),'One-time login link was reusable');pass('passwordless-login-and-session-cookie');
+const requestLink=await legacyCall('/api/auth/request-link',{method:'POST',body:{email:'registered@example.com'}});assert(requestLink.response.status===202&&requestLink.data.ok,'Passwordless request-link failed');assert(providerCalls.length===1&&lastAuthLink,'Passwordless email was not delivered');const authUrl=new URL(lastAuthLink);const verify=await legacyCall(authUrl.pathname+authUrl.search);assert(verify.response.status===303,'Passwordless verify did not redirect');const setCookie=verify.response.headers.get('set-cookie')||'';assert(setCookie.includes('matrix_session_v2=')&&setCookie.includes('HttpOnly')&&setCookie.includes('Secure')&&setCookie.includes('SameSite=Lax'),'Secure current session cookie flags missing');const replay=await legacyCall(authUrl.pathname+authUrl.search);assert(replay.response.status===303&&String(replay.response.headers.get('location')).includes('error='),'One-time login link was reusable');pass('passwordless-login-and-session-cookie');
 
 const expectedTiers={
   'member-registered':'registered','member-supporter':'supporter_3','member-intelligence':'intelligence_6','member-research':'research_pro_9','member-admin':'registered'

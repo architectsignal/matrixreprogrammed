@@ -1,16 +1,27 @@
 # Site Brain Router
 
-Updated: 2026-08-02T06:33:41.051Z
+Updated: 2026-08-02T21:18:19.678Z
 
-Inputs: 3243
+Inputs: 3129
 
-Routed sources: 3243
+Routed sources: 3129
 
 Conclusions: 14
 
-Missing-record queue: 3243
+Missing-record queue: 3129
 
 ## Conclusions
+### People dossier
+Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
 ### Institution dossier
 Conclusion: 5 source route(s) currently point to Institution dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
@@ -26,6 +37,17 @@ Next action: Route reviewed sources into the specific dossier, clock, brief and 
 Conclusion: 5 source route(s) currently point to Policy dossier and clock. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Policy dossier and clock is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
+### Jurisdictions of Power dossier
+Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -110,17 +132,6 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### People dossier
-Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
 ### Digital ID / surveillance route
 Conclusion: 5 source route(s) currently point to Digital ID / surveillance route. Treat this as an update-priority cluster, not proof of a final claim.
 
@@ -147,17 +158,6 @@ Next action: Route reviewed sources into the specific dossier, clock, brief and 
 Conclusion: 5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
-### Jurisdictions of Power dossier
-Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 

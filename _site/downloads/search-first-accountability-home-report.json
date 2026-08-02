@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:38:07.096Z",
-  "searchIndexEntries": 1928,
-  "hitListEntries": 275,
-  "accountabilityQuestions": 275,
+  "generatedAt": "2026-08-02T21:23:10.049Z",
+  "searchIndexEntries": 1863,
+  "hitListEntries": 252,
+  "accountabilityQuestions": 252,
   "proposition": "Power should not only have a public record. It should have a public list of the questions that record has not yet answered.",
   "outputs": [
     "index.html",
@@ -11,5 +11,10 @@
     "accountability-home.js",
     "search-query-handoff.js",
     "data/accountability-question-ledger.json"
+  ],
+  "cloudflareHomepageRoutes": [
+    "/",
+    "/index",
+    "/index.html"
   ]
 }

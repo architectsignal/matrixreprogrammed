@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:42.985Z",
+  "checked": [
+    "index.html",
+    "_site\\index.html",
+    "_site\\index"
+  ],
+  "repaired": [
+    "index.html",
+    "_site\\index.html",
+    "_site\\index"
+  ],
+  "convertedDuplicateAnchors": [],
+  "rule": "Each consequence anchor ID has one owner in a single masked pass across live document markup. Compact previews and later duplicate DOM occurrences use data-contract-id. Real id attributes are matched only when the attribute name is exactly id, never when it appears inside data-contract-id. HTML comments and script, style, template and textarea blocks are temporarily masked, then restored byte-for-byte. The canonical Live Intel route remains required."
+}

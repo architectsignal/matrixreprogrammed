@@ -1,14 +1,18 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T19:34:12.751Z",
+  "generatedAt": "2026-08-02T21:22:01.984Z",
+  "engine": "matrix-hybrid-search-v1",
   "required": [
-    "const fallbackIndex=",
+    "MatrixHybridSearch",
+    "search-semantic-index.json",
     "cache:'no-store'",
     "HTML returned instead of JSON",
-    "loadSearchIndex()",
-    "init(fallbackIndex)"
+    "fallbackIndex",
+    "No reliable match found",
+    "relevance is not proof"
   ],
   "missing": [],
   "syntaxOk": true,
-  "syntaxError": null
+  "syntaxError": null,
+  "providerBoundary": "Exact, entity, BM25 and compact semantic retrieval all run locally. No managed AI provider, credential or paid fallback is installed."
 }

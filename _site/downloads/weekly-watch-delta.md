@@ -2,17 +2,17 @@
 
 Period: 2026-07-27 to 2026-08-02
 
-Bill Gates is the latest person watch and appeared on 7 recorded days during this window. The current lane effect is moderately-strengthens. Securities and Exchange Commission is the latest institution watch and appeared on 7 recorded days during this window. The current lane effect is moderately-strengthens. Wallenberg family and foundations is the latest family watch and appeared on 7 recorded days during this window. The current lane effect is adds-context.
+Bill Gates is the latest person watch and appeared on 7 recorded days during this window. The current lane effect is adds-context. Securities and Exchange Commission is the latest institution watch and appeared on 7 recorded days during this window. The current lane effect is moderately-strengthens. Wallenberg family and foundations is the latest family watch and appeared on 7 recorded days during this window. The current lane effect is adds-context.
 
 > Repeated appearance means repeated research priority under the stated selection method. It is not cumulative proof of guilt, hidden control or wrongdoing.
 
 ## Person
 
-Latest: **Bill Gates** — moderately-strengthens
+Latest: **Bill Gates** — adds-context
 
 Why it matters: The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.
 
-What it points toward: Closer examination of how information, media and platform access, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.
+What it points toward: Closer examination of how procurement and public-private implementation, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.
 
 Repeated: Bill Gates (7)
 

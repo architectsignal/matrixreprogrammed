@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-02T06:33:29.139Z",
+  "updated": "2026-08-02T21:14:55.661Z",
   "title": "Deep Daily Control Brief",
   "boundary": "This brief gives conclusions with evidence routes and missing-proof boundaries. It must not present convergence or control as proven beyond the records.",
   "mainConclusion": {
@@ -95,9 +95,9 @@
     {
       "rank": 7,
       "title": "Most important missing record",
-      "text": "Appellate Division of the Supreme Court of the State of New York needs: Confirm the primary record page, PDF, docket, filing, award notice or registry record..",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "evidenceStrength": "High",
+      "text": "Control Structure needs: Feed runner has not produced entity observations yet..",
+      "route": "entity-briefs/control-structure.html",
+      "evidenceStrength": "Review",
       "readerAction": "Open the route, then check the missing-record queue before treating the pattern as settled."
     },
     {
@@ -295,13 +295,29 @@
       "score": 100,
       "route": "billionaire-briefs/jeff-bezos.html",
       "layer": "capital-and-ownership",
-      "why": "elite priority"
+      "why": "high priority"
+    },
+    {
+      "name": "Bill Gates",
+      "type": "profile route",
+      "score": 100,
+      "route": "billionaire-briefs/bill-gates.html",
+      "layer": "capital-and-ownership",
+      "why": "high priority"
     },
     {
       "name": "Mark Zuckerberg",
       "type": "profile route",
       "score": 100,
       "route": "billionaire-briefs/mark-zuckerberg.html",
+      "layer": "capital-and-ownership",
+      "why": "active watch"
+    },
+    {
+      "name": "Warren Buffett",
+      "type": "profile route",
+      "score": 100,
+      "route": "billionaire-briefs/warren-buffett.html",
       "layer": "capital-and-ownership",
       "why": "active watch"
     },
@@ -320,22 +336,6 @@
       "route": "contractor-briefs/dyncorp-amentum-lineage.html",
       "layer": "execution-and-contracts",
       "why": "active contractor watch"
-    },
-    {
-      "name": "CACI International",
-      "type": "contractor route",
-      "score": 100,
-      "route": "contractor-briefs/caci-intelligence-contractor.html",
-      "layer": "execution-and-contracts",
-      "why": "seed contractor profile"
-    },
-    {
-      "name": "Booz Allen Hamilton",
-      "type": "contractor route",
-      "score": 100,
-      "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
-      "layer": "execution-and-contracts",
-      "why": "seed contractor profile"
     }
   ],
   "sourceRegistryRoutes": [

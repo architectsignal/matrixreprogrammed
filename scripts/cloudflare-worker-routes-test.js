@@ -55,12 +55,12 @@ if (exists('_site')) {
 }
 
 [
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js',
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-matrix-synergy.js','src/matrix-synergy-core.js',
   'wrangler.toml','wrangler.jsonc','_headers','membership.html','paypal-membership.js','billing-dashboard.html','billing-dashboard.js',
   'admin-payment-dashboard.html','admin-payment-dashboard.js','forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html',
   'templates/phase6-membership.template','data/membership-tiers.json',
   'migrations/0001_membership_foundation.sql','migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql',
-  'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql',
+  'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','migrations/phase13_matrix_synergy.sql',
   'scripts/build-cloudflare-output.js','scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/forum-persistence-d1-test.js',
   'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js','scripts/repair-forum-page-consistency.js','scripts/verify-live-ai-management.mjs',
   '_site/index.html','_site/index','_site/search.html','_site/search','_site/membership.html','_site/membership','_site/paypal-membership.js','_site/forum.html','_site/forum',
@@ -79,6 +79,7 @@ for (const marker of [
 for (const marker of [
   "import productionWorker from './worker-production.js';",
   "import aiManagementWorker from './worker-ai-management.js';",
+  "import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';",
   'return productionWorker.fetch(request, env, ctx);',
   'productionWorker.scheduled',
   'aiManagementWorker.scheduled',
@@ -100,6 +101,8 @@ for (const marker of [
 forbidText('src/worker-forum-persistence.js', 'INSERT OR IGNORE INTO forum_posts', 'silent duplicate-ignoring forum write');
 
 needText('src/worker-member-experience.js', "cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')", 'shared v2 and legacy session reader');
+for (const marker of ['/api/member/missions','/api/member/contributions','/api/member/impact','/api/member/progression','/api/member/admin/matrix','trustedSystemAssertion:false','humanEditorialReview:false']) needText('src/worker-member-experience.js', marker, `Matrix member boundary ${marker}`);
+for (const marker of ['/api/matrix/admin/health','/api/matrix/admin/events','/api/matrix/admin/human-actions','/api/matrix/admin/models']) needText('src/worker-matrix-synergy.js', marker, `Matrix owner route ${marker}`);
 for (const marker of ["credentials:'include'",'member && member.emailVerifiedAt',"data.saved !== true","data.storage !== 'Cloudflare D1 MEMBERS_DB.forum_posts'",'Persistent posting is unlocked.']) {
   needText('forum.js', marker, `authenticated forum client marker ${marker}`);
   needText('_site/forum.js', marker, `deployable authenticated forum client marker ${marker}`);
@@ -137,6 +140,7 @@ for (const marker of ['paypal_runtime_settings','paypal_products','paypal_plans'
 needText('migrations/phase6_paypal_failure_counter_fix.sql', 'paypal_preserve_failure_count_on_failed_snapshot');
 for (const marker of ['CREATE TABLE IF NOT EXISTS ai_resources','AI_RESOURCE_ZERO_SPEND_LOCK']) needText('migrations/phase9_ai_resource_orchestration.sql', marker, `Phase 9 AI migration marker ${marker}`);
 for (const marker of ['CREATE TABLE IF NOT EXISTS ai_model_routing_decisions','prompt_received INTEGER NOT NULL DEFAULT 0 CHECK (prompt_received = 0)','CREATE TABLE IF NOT EXISTS ai_site_improvement_runs']) needText('migrations/phase10_ai_autonomy.sql', marker, `Phase 10 AI migration marker ${marker}`);
+for (const marker of ['CREATE TABLE IF NOT EXISTS matrix_events','CREATE TABLE IF NOT EXISTS matrix_contributions','CREATE TABLE IF NOT EXISTS matrix_human_actions',"evidence_class IN ('VERIFIED','SPECULATION','SECURITY_QUARANTINE')"]) needText('migrations/phase13_matrix_synergy.sql', marker, `Phase 13 Matrix synergy marker ${marker}`);
 
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');

@@ -39,7 +39,15 @@ function cleanText(value = '') {
 function cleanUrl(value = '') {
   const text = cleanText(value);
   const normalized = routeAliases[text] || text;
-  return /^https?:\/\//i.test(normalized) || /^[a-z0-9/_#.-]+\.html$/i.test(normalized) || /^downloads\//i.test(normalized) ? normalized : '#';
+  return /^https?:\/\//i.test(normalized)
+    || /^[a-z0-9/_-]+\.html(?:#[a-z0-9_-]+)?$/i.test(normalized)
+    || /^downloads\/[a-z0-9/_.-]+(?:[?#][^\s"'<>]*)?$/i.test(normalized)
+    ? normalized
+    : '#';
+}
+function usableRoute(value, fallback) {
+  const normalized = cleanUrl(value);
+  return normalized === '#' ? cleanUrl(fallback) : normalized;
 }
 function validDate(value) { const time = Date.parse(String(value || '')); return Number.isFinite(time) ? new Date(time).toISOString() : ''; }
 function laneDefaultRoute(laneId, field, fallback) {
@@ -66,12 +74,12 @@ function cleanItem(item = {}) {
     videoHook: cleanText(item.videoHook || item.summary || ''),
     rumbleShortTitle: cleanText(item.rumbleShortTitle || item.title || ''),
     rumbleLongTitle: cleanText(item.rumbleLongTitle || item.title || ''),
-    evidenceRoute: cleanUrl(item.evidenceRoute || laneDefaultRoute(laneId, 'evidenceRoute', 'evidence-vault.html')),
-    videoRoute: cleanUrl(item.videoRoute || laneDefaultRoute(laneId, 'videoRoute', 'videos.html')),
-    optinRoute: cleanUrl(item.optinRoute || 'optin-center.html'),
-    offerRoute: cleanUrl(item.offerRoute || laneDefaultRoute(laneId, 'offerRoute', 'offer-center.html')),
-    storeRoute: cleanUrl(item.storeRoute || 'amazon-store-books.html'),
-    bookRoute: cleanUrl(item.bookRoute || laneDefaultRoute(laneId, 'bookRoute', 'books.html')),
+    evidenceRoute: usableRoute(item.evidenceRoute, laneDefaultRoute(laneId, 'evidenceRoute', 'evidence-vault.html')),
+    videoRoute: usableRoute(item.videoRoute, laneDefaultRoute(laneId, 'videoRoute', 'videos.html')),
+    optinRoute: usableRoute(item.optinRoute, 'optin-center.html'),
+    offerRoute: usableRoute(item.offerRoute, laneDefaultRoute(laneId, 'offerRoute', 'offer-center.html')),
+    storeRoute: usableRoute(item.storeRoute, 'amazon-store-books.html'),
+    bookRoute: usableRoute(item.bookRoute, laneDefaultRoute(laneId, 'bookRoute', 'books.html')),
     socialThread: Array.isArray(item.socialThread) ? item.socialThread.map(cleanText).filter(Boolean) : []
   };
 }
@@ -90,7 +98,7 @@ function layout(title, description, body) {
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>${esc(title)}</title><meta name="description" content="${esc(description)}" /><link rel="stylesheet" href="styles.css" /><script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@type':'CollectionPage',name:title,description,dateModified:collectionCompletedAt || data.updated})}</script></head><body><canvas id="matrix"></canvas><div class="signal-face"></div><div class="veil"></div><div class="page">${nav()}${body}<footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — dated public-source intelligence, evidence routes, video hooks, and book paths.</p><p class="warning">Source boundary: current records are starting points for verification, not automatic proof of wrongdoing.</p></footer></div><script src="matrix.js"></script></body></html>`;
 }
 function laneCards() {
-  return lanes.map(lane => `<article class="card redline"><span class="label">Source lane</span><h3>${esc(cleanText(lane.title))}</h3><p>${esc(cleanText(lane.description))}</p><div class="cta-row small"><a class="btn" href="${esc(cleanUrl(lane.route))}">Open Lane</a><a class="btn alt" href="${esc(cleanUrl(lane.evidenceRoute))}">Evidence</a><a class="btn alt" href="${esc(cleanUrl(lane.videoRoute))}">Video</a><a class="btn alt" href="${esc(cleanUrl(lane.bookRoute))}">Book</a></div></article>`).join('');
+  return lanes.map(lane => `<article class="card redline"><span class="label">Source lane</span><h3>${esc(cleanText(lane.title))}</h3><p>${esc(cleanText(lane.description))}</p><div class="cta-row small"><a class="btn" href="${esc(usableRoute(lane.route, 'live-intel.html'))}">Open Lane</a><a class="btn alt" href="${esc(usableRoute(lane.evidenceRoute, 'evidence-vault.html'))}">Evidence</a><a class="btn alt" href="${esc(usableRoute(lane.videoRoute, 'videos.html'))}">Video</a><a class="btn alt" href="${esc(usableRoute(lane.bookRoute, 'books.html'))}">Book</a></div></article>`).join('');
 }
 function actionButtons(item) {
   return `<div class="cta-row small"><a class="btn" href="${esc(item.url)}">Open Source</a><a class="btn alt" href="${esc(item.evidenceRoute || 'evidence-vault.html')}">Evidence Route</a><a class="btn alt" href="${esc(item.videoRoute || 'videos.html')}">Video Hook</a><a class="btn alt" href="${esc(item.optinRoute || 'optin-center.html')}">Free Brief</a><a class="btn alt" href="${esc(item.offerRoute || 'offer-center.html')}">Offer</a><a class="btn alt" href="${esc(item.storeRoute || 'amazon-store-books.html')}">Books / Store</a></div>`;

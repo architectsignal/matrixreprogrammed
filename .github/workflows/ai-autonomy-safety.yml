@@ -15,10 +15,18 @@ on:
       - 'src/worker-local-job-api.js'
       - 'src/worker-production-autonomy.js'
       - 'src/worker-production.js'
+      - 'src/worker-member-experience.js'
+      - 'src/worker-matrix-synergy.js'
+      - 'src/matrix-synergy-core.js'
       - 'migrations/phase9_ai_resource_orchestration.sql'
       - 'migrations/phase10_ai_autonomy.sql'
       - 'migrations/phase11_local_job_queue.sql'
       - 'migrations/phase12_opportunity_hunter.sql'
+      - 'migrations/phase13_matrix_synergy.sql'
+      - 'scripts/matrix-synergy-test.mjs'
+      - 'scripts/phase13-migration-rehearsal.py'
+      - 'member-dashboard.html'
+      - 'member-dashboard-app.js'
       - 'wrangler.toml'
       - 'wrangler.jsonc'
       - '.github/workflows/ai-autonomy-safety.yml'
@@ -58,6 +66,8 @@ jobs:
           node --check ai-management/provider-adapters/local/openai-compatible-local.mjs
           node --check ai-management/resource-scout/resource-scout.mjs
           node --check ai-management/opportunity-hunter/opportunity-hunter.mjs
+          node --check ai-management/compute-resource-scout/compute-resource-scout.mjs
+          node --check ai-management/compute-resource-scout/compute-resource-store.mjs
           node --check ai-management/site-director/site-improvement-director.mjs
           node --check local-agent/matrix-local-agent.mjs
           node --check local-agent/control-plane-client.mjs
@@ -69,6 +79,10 @@ jobs:
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
           node --check src/worker-production-autonomy.js
+          node --check src/worker-member-experience.js
+          node --check src/worker-matrix-synergy.js
+          node --check src/matrix-synergy-core.js
+          node --check member-dashboard-app.js
 
       - name: Run zero-spend broker foundation tests
         run: |
@@ -80,6 +94,8 @@ jobs:
           node scripts/ai-management-autonomy-test.mjs
           node scripts/opportunity-hunter-test.mjs
           node scripts/phase12-production-readiness-test.mjs
+          node scripts/matrix-synergy-test.mjs
+          python3 scripts/phase13-migration-rehearsal.py
 
       - name: Run owner-local execution tests
         run: |
@@ -99,6 +115,7 @@ jobs:
               'migrations/phase10_ai_autonomy.sql',
               'migrations/phase11_local_job_queue.sql',
               'migrations/phase12_opportunity_hunter.sql',
+              'migrations/phase13_matrix_synergy.sql',
           ]
           for pass_number in (1, 2):
               for migration in migrations:
@@ -119,6 +136,20 @@ jobs:
               'ai_local_job_receipts',
               'ai_opportunities',
               'ai_opportunity_hunter_runs',
+              'ai_compute_provider_candidates',
+              'ai_compute_onboarding_tasks',
+              'ai_compute_resources',
+              'ai_compute_leases',
+              'matrix_events',
+              'matrix_missions',
+              'matrix_contributions',
+              'matrix_impact_trail',
+              'matrix_rewards',
+              'matrix_human_actions',
+              'matrix_models',
+              'matrix_model_benchmarks',
+              'matrix_capabilities',
+              'matrix_learning_ledger',
           }
           present = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
           missing = required - present
@@ -148,8 +179,26 @@ jobs:
           if 'zero_spend_lock = 1' not in hunter_runs_schema:
               raise SystemExit('Opportunity Hunter runs do not structurally enforce zero spend')
 
+          compute_lease_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='ai_compute_leases'").fetchone()[0]
+          if "data_class='public'" not in compute_lease_schema:
+              raise SystemExit('Compute leases do not structurally restrict remote capacity to public workloads')
+
+          contribution_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='matrix_contributions'").fetchone()[0]
+          human_action_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='matrix_human_actions'").fetchone()[0]
+          if "'VERIFIED','SPECULATION','SECURITY_QUARANTINE'" not in contribution_schema:
+              raise SystemExit('Matrix contributions do not enforce the evidence boundary')
+          if 'editorial' in human_action_schema.lower():
+              raise SystemExit('Human action queue must not become an editorial fallback')
+
           flags = {row[0]: row[1] for row in database.execute('SELECT flag_name, enabled FROM ai_feature_flags')}
-          for flag in ['AI_LOCAL_MODEL_ROUTING_ENABLED', 'AI_SITE_DIRECTOR_ENABLED', 'AI_RESOURCE_AUTO_APPROVAL_ENABLED', 'AI_OPPORTUNITY_HUNTER_ENABLED']:
+          for flag in [
+              'AI_LOCAL_MODEL_ROUTING_ENABLED',
+              'AI_SITE_DIRECTOR_ENABLED',
+              'AI_RESOURCE_AUTO_APPROVAL_ENABLED',
+              'AI_OPPORTUNITY_HUNTER_ENABLED',
+              'AI_COMPUTE_RESOURCE_SCOUT_ENABLED',
+              'AI_REMOTE_COMPUTE_ROUTING_ENABLED',
+          ]:
               if flags.get(flag) != 0:
                   raise SystemExit(f'{flag} must start disabled before reviewed activation')
 
@@ -161,7 +210,7 @@ jobs:
           if duplicate_resources:
               raise SystemExit(f'Duplicate resources after rerun: {duplicate_resources}')
 
-          print('D1 phases 9, 10, 11 and 12 passed two complete executions with prompt-local, allowlist and zero-spend constraints.')
+          print('D1 phases 9 through 13 passed two complete executions with prompt-local, public-only remote compute, automatic evidence classification, provider-only human actions, and zero-spend constraints.')
 
       - name: Verify fail-closed production configuration
         run: |
@@ -171,11 +220,17 @@ jobs:
           grep -F 'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"' wrangler.toml
           grep -F 'AI_SITE_DIRECTOR_ENABLED = "false"' wrangler.toml
           grep -F 'AI_OPPORTUNITY_HUNTER_ENABLED = "false"' wrangler.toml
+          grep -F 'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "false"' wrangler.toml
+          grep -F 'AI_REMOTE_COMPUTE_ROUTING_ENABLED = "false"' wrangler.toml
+          grep -F 'AI_REMOTE_COMPUTE_EXECUTION_ENABLED = "false"' wrangler.toml
+          grep -F 'AI_REMOTE_COMPUTE_JOBS_PER_CYCLE = "0"' wrangler.toml
           grep -F 'ZERO_SPEND_INVARIANT_VIOLATION' ai-management/policy-engine/zero-spend-invariant.mjs
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
           grep -F "payment-method-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
           grep -F "owner-approval-required-for-capacity-program" ai-management/opportunity-hunter/opportunity-hunter.mjs
+          grep -F 'public_workloads_only: true' ai-management/compute-resource-scout/compute-resource-scout.mjs
+          grep -F 'prompt_transfer_allowed: false' ai-management/compute-resource-scout/compute-resource-scout.mjs
 
       - name: Verify controlled production workflow includes AI release gates
         run: |
@@ -183,6 +238,7 @@ jobs:
           grep -F 'migrations/phase10_ai_autonomy.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase11_local_job_queue.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase12_opportunity_hunter.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/phase13_matrix_synergy.sql' .github/workflows/deploy.yml
           grep -F "'ai_local_jobs','ai_local_job_receipts'" .github/workflows/deploy.yml
           grep -F "'ai_opportunities','ai_opportunity_hunter_runs'" .github/workflows/deploy.yml
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .github/workflows/deploy.yml

@@ -39,6 +39,9 @@ if (exists('data/daily-command-brief.json')) {
   const data = json('data/daily-command-brief.json');
   if (!Array.isArray(data.topContractors)) failures.push('command brief topContractors must be array');
   if (!Array.isArray(data.missingRecords)) failures.push('command brief missingRecords must be array');
+  for (const field of ['missionConclusion', 'speculativeTrajectory', 'counterpoint', 'practicalMeaning', 'conclusionBoundary']) {
+    if (typeof data[field] !== 'string' || !data[field].trim()) failures.push(`command brief ${field} evidence-boundary text missing`);
+  }
 }
 if (exists('data/billionaire-control-index.json')) {
   const data = json('data/billionaire-control-index.json');
@@ -49,6 +52,8 @@ if (exists('data/institution-control-index.json')) {
   if (!Array.isArray(data.profiles) || data.profiles.length < 5) failures.push('institution tracker needs seed profiles');
 }
 text('daily-command-brief.html', 'DAILY COMMAND BRIEF');
+text('daily-command-brief.html', 'href="daily-watch.html"');
+text('daily-command-brief.html', 'speculative scenario');
 text('billionaire-control-tracker.html', 'BILLIONAIRE CONTROL TRACKER');
 text('institution-control-tracker.html', 'INSTITUTION CONTROL TRACKER');
 text('subject-briefs.html', 'SUBJECT BRIEFS');

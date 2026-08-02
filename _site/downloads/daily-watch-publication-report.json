@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:34:42.589Z",
+  "generatedAt": "2026-08-02T21:19:08.529Z",
   "watchDate": "2026-08-02",
   "pages": [
     "index.html",
@@ -17,19 +17,19 @@
     "decisions": {
       "person": {
         "changed": false,
-        "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
-        "incumbent": "Bill Gates",
-        "incumbentScore": 135,
-        "challenger": "Elon Musk",
+        "reason": "The same entity remains the current evidence leader.",
+        "incumbentScore": 91,
         "challengerScore": 91,
-        "required": 149,
         "marginRequired": 14
       },
       "institution": {
         "changed": false,
-        "reason": "The same entity remains the current evidence leader.",
+        "reason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent.",
+        "incumbent": "Securities and Exchange Commission",
         "incumbentScore": 143,
+        "challenger": "U.S. Securities and Exchange Commission",
         "challengerScore": 143,
+        "required": 157,
         "marginRequired": 14
       },
       "family": {
@@ -55,13 +55,13 @@
       "contradictionRecords": 0
     },
     "institution": {
-      "matchedFindings": 984,
+      "matchedFindings": 1059,
       "legalRecords": 16,
       "safeguardingOverlaps": 0,
       "moneyRecords": 16,
       "authorityRecords": 16,
       "connections": 0,
-      "contradictionRecords": 13
+      "contradictionRecords": 14
     },
     "family": {
       "matchedFindings": 0,
@@ -78,5 +78,25 @@
     "Membership",
     "Signal Drop",
     "Ranking History"
+  ],
+  "cloudflareCopies": [
+    "index.html",
+    "daily-command-brief.html",
+    "daily-brain-brief.html",
+    "live-intel.html",
+    "daily-watch.html",
+    "data/homepage-command-surface.json",
+    "data/daily-command-brief.json",
+    "data/daily-brain-brief.json",
+    "data/live-intel.json",
+    "data/daily-watch.json",
+    "data/daily-watch-dossiers.json",
+    "data/daily-watch-history.json",
+    "data/daily-watch-incumbents.json",
+    "data/weekly-watch-delta.json",
+    "data/evidence-weighted-relationship-graph.json",
+    "data/clock-wall.json",
+    "data/mission-data-contract-report.json",
+    "downloads/mission-data-contract-report.json"
   ]
 }

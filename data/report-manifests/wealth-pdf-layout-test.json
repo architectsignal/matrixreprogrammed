@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:30:52.045Z",
-  "pageCount": 92,
+  "generatedAt": "2026-08-02T21:09:47.955Z",
+  "pageCount": 91,
   "output": "downloads/wealth-pdf-layout-test.pdf",
   "report": {
-    "version": 10,
+    "version": 15,
     "title": "Wealth Pdf Layout Test",
-    "contentHash": "3c3f719f1d85105a70631035fb59eacfec8faf2e4946e7b0e3b542372e3a3c6e",
+    "contentHash": "3aec454bede3a46e45ef775dfabbfdc6c238a4b1c5a60c79bd01af92df869413",
     "sourceIds": [
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
@@ -14,21 +14,16 @@
       "cyril-smith-iicsa-2018",
       "bf041695a279c3dc5412cdf4",
       "deutsche-bank-epstein-dfs-2020",
+      "us-doj",
+      "gao-hq",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
       "0491ca77f4f2c9b90f832c2e",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "b4cb47ea50dc901364239e9f",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
@@ -58,9 +53,11 @@
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "26b90533dbf7d2ed42f02de6",
-      "a21f3d8e98268d5e01e1eb7c",
-      "us-doj",
-      "gao-hq",
+      "sec-hq",
+      "us-treasury",
+      "fbi-hq",
+      "cia-hq",
+      "eu-commission",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -135,7 +132,10 @@
       "trusts-rhodes-trust",
       "trusts-national-trust",
       "trusts-crown-estate-ownership-trust-routes",
-      "trusts-john-lewis-partnership-trust"
+      "trusts-john-lewis-partnership-trust",
+      "trusts-employee-ownership-trust-register-watch",
+      "trusts-royal-collection-trust",
+      "trusts-prince-of-wales-charitable-fund"
     ],
     "metrics": {
       "evidenceCount": 129,
@@ -143,8 +143,8 @@
       "disputedClaimCount": 21,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 33,
-      "moneyRecordCount": 90
+      "relationshipCount": 24,
+      "moneyRecordCount": 93
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 33 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -183,16 +183,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 33 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "New York DFS enforcement action concerning the bank's Epstein relationship",
           "Christopher Wray's Gift to Attorney General Garland",
           "Christopher Wray's Gift to Attorney General Garland (Final)",
-          "World Wrestling Entertainment",
-          "World Wrestling Entertainment Part 01",
-          "World Wrestling Entertainment Part 02 (Final)",
-          "Brian Wells"
+          "Westminster inquiry examined political and policing responses",
+          "Official health investigations documented abuse and enabling access",
+          "Broadmoor investigation examined Savile's access and abuse",
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

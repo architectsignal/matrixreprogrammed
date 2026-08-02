@@ -22,13 +22,13 @@
       <p class="lead">Choose the briefings you receive. A suppression or unsubscribe always overrides these preferences.</p>
       <section class="status-box" id="subscriber-status" aria-live="polite">Loading subscriber record...</section>
       <form id="preference-form" class="preference-grid" hidden>
-        <label class="preference-row"><input type="checkbox" name="public_daily_brief"><span><strong>Daily Control Brief</strong><br>Evidence-bounded daily intelligence and source changes.</span></label>
-        <label class="preference-row"><input type="checkbox" name="public_weekly_digest"><span><strong>Weekly Signal Drop</strong><br>The weekly investigation, records and release digest.</span></label>
-        <label class="preference-row"><input type="checkbox" name="release_notices"><span><strong>Release notices</strong><br>New dossiers, books, source drops and major corrections.</span></label>
-        <label class="preference-row" data-paid="supporter"><input type="checkbox" name="supporter_weekly_member_brief"><span><strong>Supporter weekly member brief</strong><br>Available when the Supporter tier is active.</span></label>
-        <label class="preference-row" data-paid="intelligence"><input type="checkbox" name="intelligence_daily_member_brief"><span><strong>Intelligence daily member brief</strong><br>Available when the Intelligence tier is active.</span></label>
-        <label class="preference-row" data-paid="research"><input type="checkbox" name="research_pro_reports"><span><strong>Research Pro reports</strong><br>Available when the Research Pro tier is active.</span></label>
-        <label>Timezone <input name="timezone" autocomplete="off"></label>
+        <label class="preference-row"><input type="checkbox" name="public_daily_brief" aria-label="Public Daily Brief"><span><strong>Daily Control Brief</strong><br>Evidence-bounded daily intelligence and source changes.</span></label>
+        <label class="preference-row"><input type="checkbox" name="public_weekly_digest" aria-label="Public Weekly Digest"><span><strong>Weekly Signal Drop</strong><br>The weekly investigation, records and release digest.</span></label>
+        <label class="preference-row"><input type="checkbox" name="release_notices" aria-label="Release Notices"><span><strong>Release notices</strong><br>New dossiers, books, source drops and major corrections.</span></label>
+        <label class="preference-row" data-paid="supporter"><input type="checkbox" name="supporter_weekly_member_brief" aria-label="Supporter Weekly Member Brief"><span><strong>Supporter weekly member brief</strong><br>Available when the Supporter tier is active.</span></label>
+        <label class="preference-row" data-paid="intelligence"><input type="checkbox" name="intelligence_daily_member_brief" aria-label="Intelligence Daily Member Brief"><span><strong>Intelligence daily member brief</strong><br>Available when the Intelligence tier is active.</span></label>
+        <label class="preference-row" data-paid="research"><input type="checkbox" name="research_pro_reports" aria-label="Research Pro Reports"><span><strong>Research Pro reports</strong><br>Available when the Research Pro tier is active.</span></label>
+        <label>Timezone <input name="timezone" autocomplete="off" aria-label="Timezone"></label>
         <button class="btn" type="submit">Save preferences</button>
         <p class="form-status" id="save-status" aria-live="polite"></p>
       </form>

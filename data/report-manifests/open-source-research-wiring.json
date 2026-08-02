@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:27:04.371Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-02T12:24:47.732Z",
+  "pageCount": 126,
   "output": "downloads/open-source-research-wiring.pdf",
   "report": {
-    "version": 10,
+    "version": 13,
     "title": "Open Source Research Wiring",
-    "contentHash": "a9d1509ae61e11afc3fb3d853ddb30230b731828fdc0bc14838e1b3930880a10",
+    "contentHash": "4845f2cf83433743b2a796498845216138915ba4c67aa30a563a8cefca06531f",
     "sourceIds": [
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -30,7 +30,9 @@
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-B6BEE1135257F502",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-9B01C094346A78B0",
+      "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "26b90533dbf7d2ed42f02de6",
@@ -43,7 +45,10 @@
       "88ef9baf356c096816236956",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -141,26 +146,21 @@
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D"
+      "ASC-REVIEW-0F86A972B08C9E18"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 19,
-      "disputedClaimCount": 120,
+      "primarySourceCount": 22,
+      "disputedClaimCount": 117,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 116,
-      "moneyRecordCount": 113
+      "relationshipCount": 111,
+      "moneyRecordCount": 108
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 116 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 116 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

@@ -56,12 +56,22 @@ function collectIds(html) {
   return ids;
 }
 
+// Static link validation must only inspect rendered markup. JavaScript template
+// strings can contain href/src examples that are populated at runtime and are
+// not local navigation targets.
+function staticMarkup(html) {
+  return html
+    .replace(/<!--[\s\S]*?-->/g, '')
+    .replace(/<(script|style|template|textarea)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '');
+}
+
 for (const file of htmlFiles) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
-  const ids = collectIds(html);
+  const markup = staticMarkup(html);
+  const ids = collectIds(markup);
   const attrRegex = /\s(?:href|src)=["']([^"']+)["']/gi;
   let match;
-  while ((match = attrRegex.exec(html))) {
+  while ((match = attrRegex.exec(markup))) {
     const link = match[1].trim();
     if (!link || link.startsWith('mailto:') || link.startsWith('tel:') || link.startsWith('javascript:') || link.startsWith('data:')) continue;
     if (link.startsWith('http://') || link.startsWith('https://')) continue;

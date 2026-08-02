@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:26:15.365Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-02T21:05:25.424Z",
+  "pageCount": 129,
   "output": "downloads/member-forum-integration-test.pdf",
   "report": {
-    "version": 10,
+    "version": 14,
     "title": "Member Forum Integration Test",
-    "contentHash": "8137983a915b44f120426d5e21292e589b0c6700807b393384500327d2cdfccf",
+    "contentHash": "3107c9cfc33abfa102a4da4a85c23789873c07395db6f707d72dff677c378d73",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-E6C400911BD1A158",
@@ -32,19 +32,9 @@
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
       "war-machine-2026-07-24-192b3e30",
       "b4cb47ea50dc901364239e9f",
       "abdul-halim-khan-conviction-2026",
@@ -144,21 +134,31 @@
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18"
+      "ASC-REVIEW-0F86A972B08C9E18",
+      "ASC-REVIEW-00A30F616825A65E",
+      "ASC-REVIEW-7640579815B0B893",
+      "ASC-REVIEW-36CFBB8E5F6A4E74",
+      "ASC-REVIEW-B4A3ADF8C6D010A1",
+      "ASC-REVIEW-D177A29CF338E56D",
+      "ASC-REVIEW-8EBEC47E70E33B9F",
+      "ASC-REVIEW-4FDBCEA6F4D74FFD",
+      "ASC-REVIEW-CD1B68F215696D25",
+      "ASC-REVIEW-B3BA7D663A9BE4B2",
+      "ASC-REVIEW-AD7847E11513D899"
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 21,
-      "disputedClaimCount": 115,
+      "primarySourceCount": 11,
+      "disputedClaimCount": 125,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 125,
-      "moneyRecordCount": 110
+      "moneyRecordCount": 120
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/conclusion-engine.json)",
+        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -216,6 +216,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

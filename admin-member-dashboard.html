@@ -7,8 +7,8 @@
   <title>Member Administration | Matrix Reprogrammed</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="fixes.css">
-  <style>body{background:#070707;color:#f2e8ca}.shell{max-width:1440px;margin:auto;padding:28px 18px 70px}.head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.panel{border:1px solid rgba(216,181,106,.28);border-radius:18px;padding:18px;background:#0d0b07;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.count{font-size:2rem;color:#d8b56a;font-weight:900}.status{min-height:1.4rem;font-weight:700}.good{color:#9ddd9d}.danger{color:#ff9b8f}.muted{color:#c8bb95}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.form-grid input,.form-grid select,.form-grid textarea{width:100%;box-sizing:border-box;background:#050505;color:#f2e8ca;border:1px solid rgba(216,181,106,.3);border-radius:10px;padding:10px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:9px;border-bottom:1px solid rgba(216,181,106,.2);vertical-align:top}.scroll{overflow:auto}.btn.danger{border-color:#844;color:#ffb0a8}.admin-actions{display:flex;gap:10px;flex-wrap:wrap}</style>
-<link rel="stylesheet" href="reader-experience.css" /><style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style></head>
+  <style>body{background:#070707;color:#f2e8ca}.shell{max-width:1440px;margin:auto;padding:28px 18px 70px}.head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.panel{border:1px solid rgba(216,181,106,.28);border-radius:18px;padding:18px;background:#0d0b07;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.count{font-size:2rem;color:#d8b56a;font-weight:900}.status{min-height:1.4rem;font-weight:700}.good{color:#9ddd9d}.warning{color:#d8b56a}.danger{color:#ff9b8f}.muted{color:#c8bb95}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.form-grid input,.form-grid select,.form-grid textarea{width:100%;box-sizing:border-box;background:#050505;color:#f2e8ca;border:1px solid rgba(216,181,106,.3);border-radius:10px;padding:10px}table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:9px;border-bottom:1px solid rgba(216,181,106,.2);vertical-align:top}.scroll{overflow:auto}.btn.danger{border-color:#844;color:#ffb0a8}.admin-actions{display:flex;gap:10px;flex-wrap:wrap}</style>
+<link rel="stylesheet" href="reader-experience.css" /><style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style><meta name="description" content="Member Administration | Matrix Reprogrammed. Evidence, records, source routes, public research tools and clearly bounded conclusions from Matrix Reprogrammed."></head>
 <body>
   <main class="shell">
     <header class="head"><div><div class="eyebrow">Administrator Only</div><h1>MEMBER & ENTITLEMENT CONTROL.</h1><p id="admin-status" class="status">Checking administrator access…</p></div><div class="admin-actions"><a class="btn" href="admin-payment-dashboard.html">PayPal control</a><a class="btn alt" href="billing-dashboard.html">Billing</a><a class="btn alt" href="member-dashboard.html">Member dashboard</a></div></header><!-- page-guide:start --><section class="page-guide wrap commercial-internal"><div><span class="label">You are here</span><h2>Signal board</h2><p>This page is part of the wider reporting system. Start with the summary, then open the evidence route or research tools for deeper source work.</p></div><div class="page-guide-chips"><span>Summary</span><span>Evidence</span><span>Research</span><span>Search</span></div><div class="page-guide-actions"><a class="btn" href="daily-command-brief.html">Today</a><a class="btn alt" href="evidence-vault.html">Evidence</a><a class="btn alt" href="research-tools.html">Research Tools</a></div></section><!-- page-guide:end --><!-- reader-governor:start --><section class="reader-governor-strip"><div><strong>Matrix Reprogrammed</strong><span>Reports, records, people, institutions, money routes and missing files.</span></div><nav><a href="daily-command-brief.html">Daily Brief</a><a href="control-structure.html">Power Map</a><a href="entities.html">Entities</a><a href="investigations.html">Investigations</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav></section><!-- reader-governor:end -->
@@ -24,29 +24,45 @@
       </section>
       <section class="panel"><h2>Tier distribution</h2><p id="tier-summary" class="muted"></p></section>
 
+      <section class="panel" id="matrix-synergy-health">
+        <h2>Matrix synergy and evidence health</h2>
+        <p class="muted">Capability states are derived from structural checks, live dependencies, connected data, evidence readiness and live verification. File existence alone is never green.</p>
+        <div class="grid">
+          <article class="panel"><div id="matrix-events" class="count">0</div><p>audited events</p></article>
+          <article class="panel"><div id="matrix-verifiedContributions" class="count">0</div><p>verified contributions</p></article>
+          <article class="panel"><div id="matrix-speculativeContributions" class="count">0</div><p>SPECULATION contributions</p></article>
+          <article class="panel"><div id="matrix-quarantinedContributions" class="count">0</div><p>security-quarantined contributions</p></article>
+          <article class="panel"><div id="matrix-awaitingHumanActions" class="count">0</div><p>unavoidable human actions</p></article>
+          <article class="panel"><div id="matrix-activeModels" class="count">0</div><p>active benchmarked models</p></article>
+        </div>
+        <p id="matrix-human-scope" class="muted"></p>
+        <h3>Capability truth states</h3><div class="scroll"><table><thead><tr><th>Capability</th><th>Derived state</th><th>Blocker</th><th>Checked</th></tr></thead><tbody id="matrix-capability-rows"></tbody></table></div>
+        <h3>Recent evidence events</h3><div class="scroll"><table><thead><tr><th>Event</th><th>Evidence class</th><th>Automatic state</th><th>Timestamp</th><th>Audit ID</th></tr></thead><tbody id="matrix-event-rows"></tbody></table></div>
+      </section>
+
       <section class="panel">
-        <div class="head"><div><h2>Members</h2><p class="muted">Search verified account, role, tier and session state.</p></div><form id="member-search"><input name="q" reader field="Search email or name"><button class="btn" type="submit">Search</button></form></div>
+        <div class="head"><div><h2>Members</h2><p class="muted">Search verified account, role, tier and session state.</p></div><form id="member-search"><input name="q" reader field="Search email or name" aria-label="Q"><button class="btn" type="submit">Search</button></form></div>
         <div class="scroll"><table><thead><tr><th>Email</th><th>Name</th><th>Role</th><th>Tier</th><th>Status</th><th>Sessions</th></tr></thead><tbody id="member-rows"></tbody></table></div>
       </section>
 
       <section class="panel">
         <h2>Audited access grants</h2>
         <form id="grant-form" class="form-grid">
-          <label>Member ID<input name="memberId" required></label>
-          <label>Tier<select name="tier"><option value="supporter">Supporter</option><option value="intelligence">Intelligence</option><option value="research_pro">Research Pro</option></select></label>
-          <label>Reason<input name="reason" required maxlength="500"></label>
-          <label>Expiry<input name="expiresAt" type="datetime-local"></label>
+          <label>Member ID<input name="memberId" required aria-label="MemberId"></label>
+          <label>Tier<select name="tier" aria-label="Tier"><option value="supporter">Supporter</option><option value="intelligence">Intelligence</option><option value="research_pro">Research Pro</option></select></label>
+          <label>Reason<input name="reason" required maxlength="500" aria-label="Reason"></label>
+          <label>Expiry<input name="expiresAt" type="datetime-local" aria-label="ExpiresAt"></label>
           <button class="btn" type="submit">Create audited grant</button>
         </form>
         <div class="scroll"><table><thead><tr><th>Member</th><th>Tier</th><th>Status</th><th>Reason</th><th>Expiry</th><th>Action</th></tr></thead><tbody id="grant-rows"></tbody></table></div>
       </section>
 
       <section class="panel">
-        <h2>Member archive</h2>
+        <h2>Member archive</h2><p class="muted">Archive entries are classified automatically. This form cannot self-authenticate a factual claim, so an entry without a complete trusted verification payload is visibly stored as SPECULATION and cannot support factual conclusions.</p>
         <form id="archive-form" class="form-grid">
-          <label>Canonical ID<input name="canonicalId" required></label><label>Type<input name="contentType" required value="brief"></label><label>Title<input name="title" required></label><label>Route<input name="route" required reader field="/weekly-report.html"></label>
-          <label>Minimum tier<select name="minimumTier"><option value="registered">Registered</option><option value="supporter_3">Supporter</option><option value="intelligence_6">Intelligence</option><option value="research_pro_9">Research Pro</option></select></label>
-          <label>Claim class<input name="claimClass"></label><label>Evidence grade<input name="evidenceGrade"></label><label>Speculative label<input name="speculativeLabel" reader field="speculative research hint"></label><label>Summary<textarea name="summary"></textarea></label><button class="btn" type="submit">Save archive entry</button>
+          <label>Canonical ID<input name="canonicalId" required aria-label="CanonicalId"></label><label>Type<input name="contentType" required value="brief" aria-label="ContentType"></label><label>Title<input name="title" required aria-label="Title"></label><label>Route<input name="route" required reader field="/weekly-report.html" aria-label="Route"></label>
+          <label>Minimum tier<select name="minimumTier" aria-label="MinimumTier"><option value="registered">Registered</option><option value="supporter_3">Supporter</option><option value="intelligence_6">Intelligence</option><option value="research_pro_9">Research Pro</option></select></label>
+          <label>Summary<textarea name="summary" aria-label="Summary"></textarea></label><button class="btn" type="submit">Save with automatic classification</button>
         </form>
         <div class="scroll"><table><thead><tr><th>Title</th><th>Tier</th><th>Status</th><th>Claim class</th><th>Speculation</th></tr></thead><tbody id="archive-rows"></tbody></table></div>
       </section>
@@ -54,8 +70,8 @@
       <section class="panel">
         <h2>Protected download catalog</h2>
         <form id="download-form" class="form-grid">
-          <label>Title<input name="title" required></label><label>Description<input name="description"></label><label>Private storage key<input name="storageKey" required></label><label>Filename<input name="fileName" required></label><label>MIME type<input name="mimeType" value="application/pdf"></label>
-          <label>Minimum tier<select name="minimumTier"><option value="registered">Registered</option><option value="supporter_3">Supporter</option><option value="intelligence_6">Intelligence</option><option value="research_pro_9">Research Pro</option><option value="separate_product">Separate product</option></select></label><label>Product key<input name="productKey"></label><button class="btn" type="submit">Save protected download</button>
+          <label>Title<input name="title" required aria-label="Title"></label><label>Description<input name="description" aria-label="Description"></label><label>Private storage key<input name="storageKey" required aria-label="StorageKey"></label><label>Filename<input name="fileName" required aria-label="FileName"></label><label>MIME type<input name="mimeType" value="application/pdf" aria-label="MimeType"></label>
+          <label>Minimum tier<select name="minimumTier" aria-label="MinimumTier"><option value="registered">Registered</option><option value="supporter_3">Supporter</option><option value="intelligence_6">Intelligence</option><option value="research_pro_9">Research Pro</option><option value="separate_product">Separate product</option></select></label><label>Product key<input name="productKey" aria-label="ProductKey"></label><button class="btn" type="submit">Save protected download</button>
         </form>
         <div class="scroll"><table><thead><tr><th>Title</th><th>Tier</th><th>Filename</th><th>Status</th></tr></thead><tbody id="download-rows"></tbody></table></div>
       </section>

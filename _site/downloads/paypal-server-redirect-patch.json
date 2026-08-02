@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:34:53.488Z",
+  "generatedAt": "2026-08-02T21:19:28.675Z",
   "changed": [
     "src/worker-paypal-subscriptions.js",
     "src/worker-production.js",
@@ -12,42 +12,42 @@
   ],
   "checked": [
     {
-      "label": "src/worker-paypal-subscriptions.js",
+      "label": "src\\worker-paypal-subscriptions.js",
       "marker": "/api/paypal/subscription/create",
       "ok": true
     },
     {
-      "label": "src/worker-paypal-subscriptions.js",
+      "label": "src\\worker-paypal-subscriptions.js",
       "marker": "/api/paypal/subscription/return",
       "ok": true
     },
     {
-      "label": "src/worker-paypal-subscriptions.js",
+      "label": "src\\worker-paypal-subscriptions.js",
       "marker": "async function createSubscriptionApproval",
       "ok": true
     },
     {
-      "label": "src/worker-paypal-subscriptions.js",
+      "label": "src\\worker-paypal-subscriptions.js",
       "marker": "async function subscriptionReturn",
       "ok": true
     },
     {
-      "label": "src/worker-paypal-subscriptions.js",
+      "label": "src\\worker-paypal-subscriptions.js",
       "marker": "'/v1/billing/subscriptions'",
       "ok": true
     },
     {
-      "label": "src/worker-paypal-subscriptions.js",
+      "label": "src\\worker-paypal-subscriptions.js",
       "marker": "rel==='approve'",
       "ok": true
     },
     {
-      "label": "src/worker-production.js",
+      "label": "src\\worker-production.js",
       "marker": "'/api/paypal/subscription/create'",
       "ok": true
     },
     {
-      "label": "src/worker-production.js",
+      "label": "src\\worker-production.js",
       "marker": "enforceSandboxRehearsalGate",
       "ok": true
     },
@@ -72,27 +72,27 @@
       "ok": true
     },
     {
-      "label": "scripts/verify-live-production.js",
+      "label": "scripts\\verify-live-production.js",
       "marker": "/api/paypal/subscription/create",
       "ok": true
     },
     {
-      "label": "scripts/verify-live-production.js",
+      "label": "scripts\\verify-live-production.js",
       "marker": "subscriptionCreate",
       "ok": true
     },
     {
-      "label": "scripts/verify-live-production.js",
+      "label": "scripts\\verify-live-production.js",
       "marker": "anonymousChargePossible: false",
       "ok": true
     },
     {
-      "label": "scripts/build-production-deploy-receipt.js",
+      "label": "scripts\\build-production-deploy-receipt.js",
       "marker": "serverRedirectWired",
       "ok": true
     },
     {
-      "label": "scripts/build-production-deploy-receipt.js",
+      "label": "scripts\\build-production-deploy-receipt.js",
       "marker": "Continue securely to PayPal",
       "ok": true
     }

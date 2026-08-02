@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T09:20:42.738Z",
+  "generatedAt": "2026-08-02T21:20:53.679Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 31406,
-    "primarySources": 29517,
-    "relationships": 13379
+    "results": 31333,
+    "primarySources": 29515,
+    "relationships": 13378
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "31406 results"
+      "detail": "31333 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "31406/31406"
+      "detail": "31333/31333"
     },
     {
       "name": "normalised field sourceType",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "31406 vs 31406"
+      "detail": "31333 vs 31333"
     },
     {
       "name": "facet evidenceGrade",

@@ -85,3 +85,16 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - The isolated Worker contract includes the external `ai-management/` dependency tree and passed the original fail-closed boundaries.
 - Default outbound Investigator identification contains no personal email address.
 - The expanded autonomy implementation must receive a fresh complete verification before merge or deployment.
+
+## 2026-08-02 Matrix synergy checkpoint
+
+- [x] Reconciled zero-spend compute-resource scouting while keeping remote routing and execution disabled by default.
+- [x] Added strict automatic `VERIFIED` / `SPECULATION` / `SECURITY_QUARANTINE` classification.
+- [x] Added typed event propagation and correction/withdrawal reopening rules.
+- [x] Added member evidence missions, contribution intake, ethical progression, reversible rewards and impact trails.
+- [x] Added anti-duplication, submission-rate, coordination and prohibited-reward controls.
+- [x] Limited human-action records to unavoidable provider, legal, identity, credential, permission, payment, destructive or consequential operations.
+- [x] Added model benchmark/replacement and truthful capability-health contracts.
+- [x] Added repeat-safe phase 13 schema and controlled-release workflow wiring.
+- [ ] Complete the fresh full build, strict public audit, Worker/config/security matrix and draft PR.
+- [ ] Production deployment remains blocked until the Cloudflare zero-overage policy permits a release.

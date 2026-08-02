@@ -1,15 +1,14 @@
 {
-  "generatedAt": "2026-08-02T06:28:01.250Z",
-  "pageCount": 90,
+  "generatedAt": "2026-08-02T21:07:10.290Z",
+  "pageCount": 91,
   "output": "downloads/public-answer-clock-pressure-test.pdf",
   "report": {
-    "version": 3,
+    "version": 8,
     "title": "Public Answer Clock Pressure Test",
-    "contentHash": "4e5b3dc0d2b9dd6e6eaf06e7d74faa03b22b05b02d2e652cc56ac1f972c97227",
+    "contentHash": "b652b798e6a6aa563f86a402f0e0c20b62b6cacd5de5b6251be7dc8ac6b7dd22",
     "sourceIds": [
+      "e083e748ec6311742c2416e5",
       "f669b33c49b63e787cde3008",
-      "a54df8218ca146eb70f725e3",
-      "0491ca77f4f2c9b90f832c2e",
       "b4cb47ea50dc901364239e9f",
       "e457b31e704efd10ec987a59",
       "e349935405c0c31e3807b5af",
@@ -18,22 +17,15 @@
       "d91969cf88008135217d911c",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
-      "26b90533dbf7d2ed42f02de6",
       "360e80c162081c85d2c680ef",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
+      "0491ca77f4f2c9b90f832c2e",
+      "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
+      "e5f914fb3ce4e13fe16181c4",
+      "255a3ae9592a4cdd47fc9851",
       "a71a8be091652489b843ecf6",
       "06baa45bea3e2e15eb80eff9",
       "a8d2d3bf834ea59c6a49b8ea",
@@ -63,7 +55,7 @@
       "495efbb6e1ee304347ae3bdf",
       "c495decb9e41ce889da20ed1",
       "c8acdb17acd478f0ba121c11",
-      "a21f3d8e98268d5e01e1eb7c",
+      "26b90533dbf7d2ed42f02de6",
       "deutsche-bank-epstein-dfs-2020",
       "us-doj",
       "gao-hq",
@@ -137,7 +129,15 @@
       "trusts-joseph-rowntree-foundation",
       "trusts-sainsbury-family-charitable-funds",
       "trusts-wolfson-foundation",
-      "trusts-calouste-gulbenkian-foundation"
+      "trusts-calouste-gulbenkian-foundation",
+      "trusts-rhodes-trust",
+      "trusts-national-trust",
+      "trusts-crown-estate-ownership-trust-routes",
+      "trusts-john-lewis-partnership-trust",
+      "trusts-employee-ownership-trust-register-watch",
+      "trusts-royal-collection-trust",
+      "trusts-prince-of-wales-charitable-fund",
+      "trusts-duchy-related-trust-disclosures"
     ],
     "metrics": {
       "evidenceCount": 131,
@@ -145,13 +145,13 @@
       "disputedClaimCount": 9,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 22,
-      "moneyRecordCount": 76
+      "relationshipCount": 14,
+      "moneyRecordCount": 84
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 128 A/B-grade public-record items are materially relevant to Public Answer Clock Pressure Test.",
-        "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/current-clock-evidence.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/global-risk-clocks.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json)",
+        "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/current-clock-evidence.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/global-risk-clocks.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -170,8 +170,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -185,16 +185,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Christopher Wray's Gift to Attorney General Garland",
           "Christopher Wray's Gift to Attorney General Garland (Final)",
-          "World Wrestling Entertainment",
-          "World Wrestling Entertainment Part 01",
-          "World Wrestling Entertainment Part 02 (Final)",
-          "Brian Wells",
-          "Brian Wells Part 01"
+          "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
+          "Westminster inquiry examined political and policing responses",
+          "Official health investigations documented abuse and enabling access",
+          "Broadmoor investigation examined Savile's access and abuse",
+          "New York DFS enforcement action concerning the bank's Epstein relationship"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -209,6 +209,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

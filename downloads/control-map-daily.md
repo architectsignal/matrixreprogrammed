@@ -1,6 +1,6 @@
 # Daily / Weekly Visual Control Map
 
-Generated: 2026-08-02T06:33:29.139Z
+Generated: 2026-08-02T21:14:55.661Z
 
 Boundary: The visual map is generated from site data. Nodes are evidence routes, not verdicts.
 
@@ -34,11 +34,11 @@ Boundary: The visual map is generated from site data. Nodes are evidence routes,
 - 100 — State Street / State Street Investment Management — big-three/state-street.html
 - 100 — Elon Musk — billionaire-briefs/elon-musk.html
 - 100 — Jeff Bezos — billionaire-briefs/jeff-bezos.html
+- 100 — Bill Gates — billionaire-briefs/bill-gates.html
 - 100 — Mark Zuckerberg — billionaire-briefs/mark-zuckerberg.html
+- 100 — Warren Buffett — billionaire-briefs/warren-buffett.html
 - 100 — Blackwater / Xe / Academi / Constellis lineage — contractor-briefs/blackwater-constellis-lineage.html
 - 100 — DynCorp / Amentum lineage — contractor-briefs/dyncorp-amentum-lineage.html
-- 100 — CACI International — contractor-briefs/caci-intelligence-contractor.html
-- 100 — Booz Allen Hamilton — contractor-briefs/booz-allen-intelligence-contractor.html
 
 ## User Actions: open, prove, disprove, watch next
 - 80 — Strongest route today — institution-briefs/world-economic-forum.html
@@ -47,5 +47,5 @@ Boundary: The visual map is generated from site data. Nodes are evidence routes,
 - 80 — Top contractor lane — contractor-briefs/blackwater-constellis-lineage.html
 - 80 — Top institution lane — institution-briefs/united-nations.html
 - 80 — Top billionaire lane — billionaire-briefs/elon-musk.html
-- 80 — Most important missing record — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
+- 80 — Most important missing record — entity-briefs/control-structure.html
 - 80 — One-world governance convergence — power-structure-map.html

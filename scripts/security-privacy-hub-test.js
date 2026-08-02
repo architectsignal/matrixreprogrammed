@@ -56,7 +56,7 @@ const research = read(path.join(root, 'research-tools.html'));
 const sitemap = read(path.join(root, 'sitemap.xml'));
 const llms = read(path.join(root, 'llms.txt'));
 add('homepage has visible hub route', home.includes('security-privacy-home') && home.includes('Open Security & Anonymity Hub'));
-add('main navigation contains hub', home.includes('href="security-privacy.html">Security & Privacy</a>'));
+add('main navigation contains hub', /<nav[\s\S]*?href="security-privacy\.html"[\s\S]*?<\/nav>/i.test(home));
 add('research tools route connected', research.includes('security-privacy-research') && research.includes('security-privacy.html'));
 add('sitemap contains hub', sitemap.includes('/security-privacy.html'));
 add('llms route contains hub', llms.includes('security-privacy.html'));

@@ -1,0 +1,133 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:49.954Z",
+  "files": 12,
+  "officialOnions": 4,
+  "checks": [
+    {
+      "name": "deployable security-privacy.html",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable security-privacy",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable security-privacy.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable dark-web-safety.html",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable dark-web-safety",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable dark-web-safety.js",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable data/security-privacy-tools.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable data/dark-web-safety.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable index.html",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable search-index.json",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable sitemap.xml",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "deployable llms.txt",
+      "ok": true,
+      "detail": "present"
+    },
+    {
+      "name": "security page marker",
+      "ok": true,
+      "detail": "142056 bytes"
+    },
+    {
+      "name": "dark web page marker",
+      "ok": true,
+      "detail": "39045 bytes"
+    },
+    {
+      "name": "public pages are not hidden as internal",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage security link",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "homepage dark web link",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search contains security page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "search contains dark web page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sitemap contains both routes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "llms contains both routes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "only allowlisted onions rendered",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "only allowlisted onions clickable",
+      "ok": true,
+      "detail": "4/4 clickable allowlisted onions"
+    },
+    {
+      "name": "no onion addresses in danger data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "criminal boundary visible",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

@@ -38,5 +38,10 @@ for (const file of workflowFiles) {
   );
 }
 
+const canonicalDeploy = fs.readFileSync(path.join(workflowsDirectory, 'deploy.yml'), 'utf8');
+assert.match(canonicalDeploy, /OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02/);
+assert.match(canonicalDeploy, /cloudflare-usage-budget-guard\.js owner-exception/);
+assert.match(canonicalDeploy, /cloudflare-usage-budget-guard\.js release/);
+
 assert(directMutationWorkflows.length >= 9, 'Expected the known direct Cloudflare mutation workflows to be audited.');
 console.log(`Cloudflare workflow budget PASS: ${directMutationWorkflows.length} direct mutation workflows are guarded and manual-only.`);

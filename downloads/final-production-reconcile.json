@@ -1,0 +1,978 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:18:18.767Z",
+  "commands": [
+    {
+      "script": "scripts/patch-main-navigation-safety-links.js",
+      "status": 0,
+      "stdout": "Death Files built: 100 dossiers, 50 year pages, 796 automatic matches, 15 connected pages patched.\nDeath Files pressure test passed: 100 dossiers from 1963 to 2024; 67 structured placeholder(s) normalized across 61 page(s).\nSearch-first homepage navigation preserved; My Watchlist, full-system Explore routes, safety routes and the corrected Capstone runtime are all present.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-membership-tiers.js",
+      "status": 0,
+      "stdout": "Membership Daily Control Brief preference form patched: already current; newsletter runtime verified.\nMembership page restored across 4 source/output route(s): Free Member evidence access, explicit Daily Control Brief and release preferences, plus optional €3, €6 and €9 monthly donations.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-homepage-mask-intro.js",
+      "status": 0,
+      "stdout": "Homepage intro patched: 20260725-video-v5, build-generated video data (15003 MP4 bytes), Blob playback and existing voice gate preserved.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/homepage-mask-intro-test.js",
+      "status": 0,
+      "stdout": "Homepage video intro 20260725-video-v5 test passed (15003 embedded MP4 bytes); no live video fetch, voice gate and membership surface verified.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-live-intel-machine.js",
+      "status": 0,
+      "stdout": "Live Intel machine built: 42 current items, 0 new this collection, latest source 2026-08-01T12:00:00.000Z.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-mission-intelligence-10.js",
+      "status": 0,
+      "stdout": "Mission Intelligence 10 built: 97 nodes, 172 edges.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-investigation-pages.js",
+      "status": 0,
+      "stdout": "Investigation pages built: 20 sources, 2500 findings, daily and weekly conclusions, global pulse status.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-outcome-briefings.js",
+      "status": 0,
+      "stdout": "Outcome briefings generated: 5 detailed briefs.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-daily-brain-brief.js",
+      "status": 0,
+      "stdout": "Machine feed object-name normalization already current; 1 source/output file(s) sanitized.\nMachine Feed Runner complete: 7 lanes, 0 reached, 0 events, 0 observations.\nDaily Brain record-event patch complete: 0 events, 0 observations.\nChange Detection Engine complete: 0 new, 0 changed, 0 relationship candidates.\nGenerated page cleanup entity-briefs: 3 stale or previous file(s) removed.\nEntity Daily Briefs built: 1 briefs.\nGenerated page cleanup entity-exposure: 3 stale or previous file(s) removed.\nEntity Exposure Index built safely: 1 profiles.\nPrivate Contractor Intelligence built: 7 profiles.\nMission intelligence layer applied to 40 brief pages with 50 documented actors and 7 bounded scenarios.\nMaster Brief Engine built with rich reader-ready pages, evidence boundaries, records, missing files and watch triggers.\nNested brief link repair complete: 7 file(s), 7 link(s) checked/fixed.\nStale generated brief link repair complete: 0 link(s) in 0 source/output file(s).\nMACHINE FEED RUNNER TEST PASSED\nCHANGE DETECTION ENGINE TEST PASSED\nENTITY DAILY BRIEFS TEST PASSED\nPRIVATE CONTRACTOR INTELLIGENCE TEST PASSED\nMASTER BRIEF ENGINE TEST PASSED\nLiving control interface built: control map linked, brain pulse injected, contractor intelligence and Master Brief Engine integrated.\nDaily brain brief generated: 5 conclusions, 5 signals, 12 missing-record prompts.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-conclusion-integrity-cards.js",
+      "status": 0,
+      "stdout": "Conclusion integrity cards built: 88 cards.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-public-site-errors.js",
+      "status": 0,
+      "stdout": "Public site error repair complete: 6 file(s), 3 deployed-output HTML file(s), 0 data file(s), 22 duplicate id(s), 0 dynamic route repair(s), 8 outdated URL(s), 0 unavailable store link(s) removed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-evidence-badge-system.js",
+      "status": 0,
+      "stdout": "Evidence badge system built: 12 badges, claim-classifier.html, downloads, page patches, sitemap, llms, and search index.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-premier-resource-upgrade.js",
+      "status": 0,
+      "stdout": "Premier resource upgrade built: daily-drop.html, network-search.html, Epstein command center patch, downloads, sitemap, llms, and search index.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/ensure-evidence-badge-routes.js",
+      "status": 0,
+      "stdout": "Canonical evidence badge routes ensured across source and deploy output: 20 checked, 7 rewritten.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/enforce-production-cache-policy.js",
+      "status": 0,
+      "stdout": "Optimized production cache policy enforced: current intelligence revalidates, fingerprinted assets cache safely, and health proof remains no-store.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/phase7-paypal-sandbox-rehearsal-test.mjs",
+      "status": 0,
+      "stdout": "PHASE 7 PAYPAL SANDBOX REHEARSAL TEST PASSED (42 checks; deployment-enabled)\n",
+      "stderr": "(node:21148) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/njjmg/Documents/Codex/2026-08-02/c/work/matrixreprogrammed-audit-20260802/src/worker-paypal-sandbox-rehearsal.js?test=1785676723364 is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to \\\\?\\C:\\Users\\njjmg\\Documents\\Codex\\2026-08-02\\c\\work\\matrixreprogrammed-audit-20260802\\package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+    },
+    {
+      "script": "scripts/patch-paypal-server-redirect.js",
+      "status": 0,
+      "stdout": "PayPal server redirect checkout installed: Worker creates the subscription, returns the official approval URL, verifies the PayPal return, and the browser no longer loads paypal.com/sdk/js.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-forum-member-posting.js",
+      "status": 0,
+      "stdout": "Forum member posting repair applied: forum.js, member-login.html.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-forum-login-canonical.js",
+      "status": 0,
+      "stdout": "Forum login canonical repair applied.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-forum-session-compatibility.js",
+      "status": 0,
+      "stdout": "Forum session compatibility repair applied to forum.js.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-forum-page-consistency.js",
+      "status": 0,
+      "stdout": "Forum page consistency repair passed: already current.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/forum-member-posting-test.js",
+      "status": 0,
+      "stdout": "Forum login canonical repair already current.\nForum session compatibility repair already current.\nForum page consistency repair passed: already current.\nFORUM MEMBER POSTING TEST PASSED\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-search-system.js",
+      "status": 0,
+      "stdout": "Investigation pages built: 20 sources, 2500 findings, daily and weekly conclusions, global pulse status.\nSearch V2 built: 1671 indexed routes, 8 core feeds, 23 boosted mission routes, 0.85 MiB compact index.\nSearch quality benchmark passed: 100 permanent queries, 213 checks.\nSearch Quality V1 installed: typo correction, domain-aware BM25, mismatch penalties and confidence gating are active.\nSearch quality installation complete.\nSource evidence search extension complete: 2 routes, 1672 total indexed routes.\nSource evidence search extension complete.\nSemantic index built: 1672 routes, 0.269 MiB, 96 dimensions.\nSearch provider entitlement check complete: local semantic active; Vectorize not configured; AI Search not configured.\nSemantic search benchmark passed: 18 checks.\nSearch Hybrid V1 installed: exact, entity, BM25, compact local semantic retrieval, domain filtering, reranking and confidence gating are active.\nLocal hybrid semantic retrieval installation complete.\nSearch runtime hardened with source evidence, exact/entity/BM25 retrieval, compact local semantic vectors, domain reranking and confidence gating. No managed AI provider is required.\nInvestigation search extension complete: 1840 routes, 50 live findings, 20 monitored sources and 93 preserved source changes indexed.\nSearch investigation smoke test passed: 27 checks across UI, runtime, index and investigation queries.\nSearch V3 deploy-size repair already current with the strictest profile last.\nSearch system repair complete: 30 repair(s). Search V2 investigation runtime guard passed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-search-v3-index.js",
+      "status": 0,
+      "stdout": "Search V3 index built: 27092 results, 11 source types and 6 status classes.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-search-v3-runtime.js",
+      "status": 0,
+      "stdout": "Search V3 runtime built with evidence filters and a 19.57 MiB deployable index using the deployment-safe profile; 27092 searchable URLs preserved and facets synchronized.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-conclusion-integrity-cards.js",
+      "status": 0,
+      "stdout": "Conclusion integrity cards built: 88 cards.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/align-selective-worker-first-gates.js",
+      "status": 0,
+      "stdout": "synchronized records across all eight systems.\nMembership Daily Control Brief preference form patched: already current; newsletter runtime verified.\nMembership page restored across 4 source/output route(s): Free Member evidence access, explicit Daily Control Brief and release preferences, plus optional €3, €6 and €9 monthly donations.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nPublic-market ranking refresh complete: 799 quantitative rows across 8 categories.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nMoney depth enrichment complete: 2000 candidates, 255 identity profiles, 799 verified measures, 2640 relationships.\nMoney overlap map built: 171 overlap entities, 3272 edges, 2000 records.\nMoney depth integration PASS: 2000 candidates, 255 identity profiles, 799 verified measures, 171 overlap entities and 2640 sourced relationships.\nBehind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=validated-local-prepatch.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; guarded one-run production authorization verified.\nBehind the Curtain route links updated: index.html, follow-the-money.html.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\nHomepage construction and support banner secured across index.html, _site/index.html, _site/index; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.\nHomepage intro patched: 20260725-video-v5, build-generated video data (15003 MP4 bytes), Blob playback and existing voice gate preserved.\nHomepage video intro 20260725-video-v5 test passed (15003 embedded MP4 bytes); no live video fetch, voice gate and membership surface verified.\nPublic page headings and entity evidence boundaries reconciled: 7 route checks, 1 file change(s).\nPublic audit boundaries reconciled: 100 checks, 7 file change(s).\nSecurity, privacy and OSINT safety hub built: 13 categories, 6 complete systems and 84 vetted tools.\nDark web safety guide built: 12 steps, 4 verified onion services and 9 non-clickable danger categories.\nSearch-first accountability homepage pressure test passed with 0 warning(s).\nRelease homepage order reconciled: cumulative membership, public H1 hierarchy, My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.\nSelective Worker-first release gates aligned semantically: 0 file(s) updated; canonical homepage owner reconciled before manifest hashing.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-deploy-manifest.js",
+      "status": 0,
+      "stdout": "Brief and release preferences, plus optional €3, €6 and €9 monthly donations.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nPublic-market ranking refresh complete: 799 quantitative rows across 8 categories.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nMoney depth enrichment complete: 2000 candidates, 255 identity profiles, 799 verified measures, 2640 relationships.\nMoney overlap map built: 171 overlap entities, 3272 edges, 2000 records.\nMoney depth integration PASS: 2000 candidates, 255 identity profiles, 799 verified measures, 171 overlap entities and 2640 sourced relationships.\nBehind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=validated-local-prepatch.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; guarded one-run production authorization verified.\nBehind the Curtain route links updated: index.html.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\nHomepage construction and support banner secured across index.html, _site/index.html, _site/index; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.\nHomepage intro patched: 20260725-video-v5, build-generated video data (15003 MP4 bytes), Blob playback and existing voice gate preserved.\nHomepage video intro 20260725-video-v5 test passed (15003 embedded MP4 bytes); no live video fetch, voice gate and membership surface verified.\nPublic page headings and entity evidence boundaries reconciled: 7 route checks, 0 file change(s).\nPublic audit boundaries reconciled: 100 checks, 2 file change(s).\nSecurity, privacy and OSINT safety hub built: 13 categories, 6 complete systems and 84 vetted tools.\nDark web safety guide built: 12 steps, 4 verified onion services and 9 non-clickable danger categories.\nSearch-first accountability homepage pressure test passed with 0 warning(s).\nRelease homepage order reconciled: cumulative membership, public H1 hierarchy, My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.\nCore public surfaces finalized: construction banner, Top 100 Links, live family tracker and exactly 100 readable Death Files dossiers copied into the Cloudflare bundle; canonical homepage and capstone owners were applied last.\nDeployment manifest built for 8e0338102cc8: construction banner, Top 100 links, 100 Death Files, 325 built conduct dossiers, Predators in Power and 2 homepage clock(s) above 90% are hash-bound.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-conclusion-integrity-cards.js",
+      "status": 0,
+      "stdout": "Conclusion integrity cards built: 88 cards.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-production-health.js",
+      "status": 0,
+      "stdout": "/output route(s): Free Member evidence access, explicit Daily Control Brief and release preferences, plus optional €3, €6 and €9 monthly donations.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nPublic-market ranking refresh complete: 799 quantitative rows across 8 categories.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nMoney depth enrichment complete: 2000 candidates, 255 identity profiles, 799 verified measures, 2640 relationships.\nMoney overlap map built: 171 overlap entities, 3272 edges, 2000 records.\nMoney depth integration PASS: 2000 candidates, 255 identity profiles, 799 verified measures, 171 overlap entities and 2640 sourced relationships.\nBehind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=validated-local-prepatch.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; guarded one-run production authorization verified.\nBehind the Curtain route links updated: index.html.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\nHomepage construction and support banner secured across index.html, _site/index.html, _site/index; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.\nHomepage intro patched: 20260725-video-v5, build-generated video data (15003 MP4 bytes), Blob playback and existing voice gate preserved.\nHomepage video intro 20260725-video-v5 test passed (15003 embedded MP4 bytes); no live video fetch, voice gate and membership surface verified.\nPublic page headings and entity evidence boundaries reconciled: 7 route checks, 0 file change(s).\nPublic audit boundaries reconciled: 100 checks, 2 file change(s).\nSecurity, privacy and OSINT safety hub built: 13 categories, 6 complete systems and 84 vetted tools.\nDark web safety guide built: 12 steps, 4 verified onion services and 9 non-clickable danger categories.\nSearch-first accountability homepage pressure test passed with 0 warning(s).\nRelease homepage order reconciled: cumulative membership, public H1 hierarchy, My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.\nPublic site error repair complete: 4 file(s), 2 deployed-output HTML file(s), 0 data file(s), 20 duplicate id(s), 0 dynamic route repair(s), 8 outdated URL(s), 0 unavailable store link(s) removed.\nProduction health built for 8e0338102cc8: verified Worker entry, selective routing, D1 fail-closed and Cloudflare-managed PayPal runtime gates preserved.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/final-release-sanitize.js",
+      "status": 0,
+      "stdout": "urfaces, 120 scripts, 1293 JSON feeds, 158628 links/assets, 31 critical tool contracts. Warnings: 8.\nInvestigation data integrity repaired: 2500 active findings with full mission conclusions, 0 archived this run, 0 source attempts restored.\nCriminal conduct registry hydrated: 20 sourced subjects and 32 approved findings from 3 source files.\nNumbered criminal waves verified without duplicate hydration: 13 subjects across 2 wave files.\nPredators in Power built: 20 qualifying subject(s), 32 approved record(s), 0 review-only candidate(s), 4 route link(s).\nCriminal investigations built: 20 complete dossiers (5 historical, 15 current) and 47 sourced access edges.\nCriminal status injected into 208 dossier pages; 20/100 approved Predators in Power dossiers built.\nCriminal dossier system passed: 208 dossier pages checked; 20/100 Predators in Power dossiers approved.\nMission data contracts enforced: 172 graph edges checked; 81 clocks checked; 2500 active findings normalized; 20 accountability dossiers regenerated; 208 dossier pages carry criminal status; 20/100 target.\nDaily hit list resolved: person=Bill Gates; institution=U.S. Securities and Exchange Commission; family=Al Maktoum family; invalid incumbents removed=0.\nDaily hit list stabilized: person=Bill Gates; institution=Securities and Exchange Commission; family=Wallenberg family and foundations. 14-point evidence promotion margin enforced.\nDaily watch history updated: 7 retained day(s); weekly delta covers 7 day(s).\nCinematic daily hit list published first after the intro across 4 public pages with expandable dossiers; 18 source files synchronized to Cloudflare output.\nCloudflare homepage routes synchronized: /, /index and /index.html (83c2b93b27e8).\nMission orchestration audit passed: 52 checks; search-first-accountability public accountability surfaces ready.\nSearch-first accountability homepage pressure test passed with 0 warning(s).\nPower-Family Intelligence Layer generated, canonicalized, validated and synchronized to _site.\nPUBLIC CONTROL TARGET AUDIT PASSED: 3321 pages and 128020 visible controls checked. Power-Family Capstone synchronized. Warnings: 27.\nFinal search index compacted: 29101 records / 29101 routes -> 29101 routes, 19.98 MiB (balanced-final); root and _site synchronized.\nRUNTIME PERFORMANCE BUDGET PASSED: 48 checks across startup data, animation CPU, cached pulse, cache policy, lazy media and deployable asset sizes.\nFinal release sanitation passed for the deployable bundle, current release metadata routes, protected homepage navigation, construction status banner, normalized PayPal OAuth credentials, canonical public sources, PayPal D1 checkout state compatibility, membership signup defaults, email automation safety, evidence-bounded campaign content, conclusion-integrity routes, runtime performance budgets, voluntary support pages, active Epstein AI Detective docket, homepage AI Detective route, accessibility, metadata, internal-manifest exclusion and Cloudflare configuration.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/search-first-accountability-home-pressure-test.js",
+      "status": 0,
+      "stdout": "Search-first accountability homepage pressure test passed with 0 warning(s).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/mission-orchestration-audit.js",
+      "status": 0,
+      "stdout": "Mission orchestration audit passed: 52 checks; search-first-accountability public accountability surfaces ready.\n",
+      "stderr": ""
+    }
+  ],
+  "copied": [
+    "index.html",
+    "accountability-home.css",
+    "accountability-home.js",
+    "search-query-handoff.js",
+    "welcome-gate.css",
+    "welcome-gate.js",
+    "reverse-accountability-search.html",
+    "reverse-accountability-search.css",
+    "reverse-accountability-search.js",
+    "homepage-mask-intro.css",
+    "homepage-mask-intro-data.js",
+    "homepage-mask-intro.js",
+    "assets/intro-eye.svg",
+    "assets/intro-mask.svg",
+    "start-here.html",
+    "contact-the-machine.html",
+    "contact-the-machine.css",
+    "contact-the-machine.js",
+    "membership.html",
+    "paypal-membership.js",
+    "member-login.html",
+    "member-dashboard.html",
+    "member-dashboard-app.js",
+    "forum.html",
+    "dark-speculation-forum.html",
+    "epstein-alive-board.html",
+    "forum.js",
+    "billing-dashboard.html",
+    "billing-dashboard.js",
+    "admin-payment-dashboard.html",
+    "admin-payment-dashboard.js",
+    "admin-paypal-rehearsal.html",
+    "admin-paypal-rehearsal.js",
+    "live-intel.html",
+    "daily-power-conclusions.html",
+    "daily-investigation-conclusions.html",
+    "weekly-investigation-report.html",
+    "daily-brain-brief.html",
+    "outcome-briefings.html",
+    "security-privacy.html",
+    "dark-web-safety.html",
+    "geographic-power-atlas.html",
+    "data-lab.html",
+    "evidence-archive.html",
+    "timers.html",
+    "ai-speculative-conclusions.html",
+    "search.html",
+    "search.js",
+    "search-index.json",
+    "data/search-facets.json",
+    "_headers",
+    "data/membership-tiers.json",
+    "data/accountability-question-ledger.json",
+    "data/reverse-accountability-index.json",
+    "data/live-intel.json",
+    "data/daily-power-conclusions.json",
+    "data/daily-investigation-conclusions.json",
+    "data/weekly-investigation-conclusions.json",
+    "data/daily-brain-brief.json",
+    "data/outcome-briefings.json",
+    "data/global-risk-clocks.json",
+    "data/clock-wall.json",
+    "data/production-freshness-policy.json",
+    "deploy-manifest.json",
+    "deploy-health.html",
+    "deploy-health.json",
+    "downloads/deploy-health.json",
+    "downloads/release-homepage-order-reconciliation.json",
+    "data/live-intel.json",
+    "data/daily-investigation-conclusions.json",
+    "data/daily-power-conclusions.json",
+    "data/daily-brain-brief.json",
+    "data/outcome-briefings.json",
+    "data/global-risk-clocks.json",
+    "data/clock-wall.json",
+    "timers.html",
+    "ai-speculative-conclusions.html",
+    "search.html",
+    "search.js"
+  ],
+  "checks": [
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "class=\"accountability-home\"",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "class=\"accountability-home\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "My Watchlist",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "My Watchlist",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "id=\"accountability-search\"",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "id=\"accountability-search\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "action=\"search.html\" method=\"get\"",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "action=\"search.html\" method=\"get\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "name=\"q\"",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "name=\"q\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "accountability-home.js",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "accountability-home.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "data-homepage-mask-intro",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "data-homepage-mask-intro",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "welcome-gate.js",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "welcome-gate.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "id=\"matrix-construction-banner\"",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index.html",
+      "marker": "id=\"matrix-construction-banner\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search.html",
+      "marker": "search-query-handoff.js",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "search.html",
+      "marker": "search-query-handoff.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search-query-handoff.js",
+      "marker": "new URLSearchParams(location.search).get('q')",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "search-query-handoff.js",
+      "marker": "new URLSearchParams(location.search).get('q')",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index",
+      "marker": "My Watchlist",
+      "ok": true
+    },
+    {
+      "scope": "deployable",
+      "rel": "index",
+      "marker": "name=\"q\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "Security Tools",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "Dark Web Safety",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "assets/intro-eye.svg",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "assets/intro-mask.svg",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "homepage-intro__burn",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "homepage-mask-intro-data.js?v=20260725-video-v5",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "index.html",
+      "marker": "homepage-mask-intro.js?v=20260725-video-v5",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro-data.js",
+      "marker": "globalThis.__MATRIX_INTRO_BASE64__",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro-data.js",
+      "marker": "20260725-video-v5",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.js",
+      "marker": "matrix-homepage-intro-seen-v5",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.js",
+      "marker": "globalThis.__MATRIX_INTRO_BASE64__",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.js",
+      "rejectedMarker": "fetch(",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "start-here.html",
+      "marker": "Open Security Tools",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "start-here.html",
+      "marker": "Open Dark Web Safety",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "marker": "Free Member",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "marker": "€3",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "marker": "€6",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "marker": "€9",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "marker": "paypal-membership.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "marker": "paypal-membership-status",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "marker": "Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "rejectedMarker": "Coming soon — no payment taken",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "rejectedMarker": "€19/month",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "membership.html",
+      "rejectedMarker": "€49/month",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "member-login.html",
+      "marker": "https://matrixreprogrammed.com/api/auth/request-link",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "forum.html",
+      "marker": "forum.js?v=20260720-forum-member-posting-v3",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "dark-speculation-forum.html",
+      "marker": "forum.js?v=20260720-forum-member-posting-v3",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "epstein-alive-board.html",
+      "marker": "forum.js?v=20260720-forum-member-posting-v3",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "forum.html",
+      "marker": "id=\"forum-member-status\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "dark-speculation-forum.html",
+      "marker": "id=\"forum-member-status\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "epstein-alive-board.html",
+      "marker": "id=\"forum-member-status\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "dark-speculation-forum.html",
+      "marker": "Verified Member Posting",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "dark-speculation-forum.html",
+      "rejectedMarker": "paypal.me/njmgroup/1",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "dark-speculation-forum.html",
+      "rejectedMarker": "unlock-signal-pass",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "forum.js",
+      "marker": "credentials:'include'",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "forum.js",
+      "marker": "Persistent posting is unlocked.",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "forum.js",
+      "marker": "data.saved !== true",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "src/worker.js",
+      "marker": "matrix_session_v2=",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "src/worker.js",
+      "marker": "Domain=matrixreprogrammed.com",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "src/worker-member-experience.js",
+      "marker": "cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "src/worker-forum-persistence.js",
+      "marker": "D1 forum read-after-write confirmation failed",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "src/worker-forum-persistence.js",
+      "rejectedMarker": "INSERT OR IGNORE INTO forum_posts",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "paypal-membership.js",
+      "marker": "/api/paypal/subscription/create",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "paypal-membership.js",
+      "marker": "Continue securely to PayPal",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "paypal-membership.js",
+      "marker": "location.assign",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "paypal-membership.js",
+      "rejectedMarker": "paypal.com/sdk/js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "billing-dashboard.html",
+      "marker": "billing-dashboard.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-payment-dashboard.html",
+      "marker": "admin-payment-dashboard.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-payment-dashboard.js",
+      "marker": "admin-paypal-rehearsal.html",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-paypal-rehearsal.html",
+      "marker": "PAYPAL SANDBOX REHEARSAL.",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-paypal-rehearsal.html",
+      "marker": "maximum 45-minute window",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-paypal-rehearsal.html",
+      "marker": "admin-paypal-rehearsal.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-paypal-rehearsal.js",
+      "marker": "/api/paypal/admin/rehearsal/start",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-paypal-rehearsal.js",
+      "marker": "/api/paypal/admin/rehearsal/complete",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "admin-paypal-rehearsal.js",
+      "marker": "/api/paypal/admin/rehearsal/abort",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.js",
+      "marker": "matrix-homepage-intro-seen-v2",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.js",
+      "marker": "eye: 3000",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.js",
+      "marker": "burn: 1100",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.js",
+      "marker": "mask: 3000",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.css",
+      "marker": "intro-eye-burn",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.css",
+      "marker": "intro-fire-ring",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "homepage-mask-intro.css",
+      "marker": "intro-mask-dissolve",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "assets/intro-eye.svg",
+      "marker": "Eye of Providence seal",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "assets/intro-mask.svg",
+      "marker": "Anonymous revolutionary mask",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "timers.html",
+      "marker": "MISSION TIMERS.",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "timers.html",
+      "marker": "Classified claims, not confirmed events",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "ai-speculative-conclusions.html",
+      "marker": "ai-speculative-conclusion-integrity",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "data/global-risk-clocks.json",
+      "marker": "\"speculativeReaderClockCount\": 49",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "data/clock-wall.json",
+      "marker": "\"speculativeClockCount\": 49",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search.html",
+      "marker": "START WITH WHAT HAPPENED.",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search.html",
+      "marker": "id=\"archive-search\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search.html",
+      "marker": "id=\"search-v3-filters\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search.js",
+      "marker": "SEARCH V3",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search.js",
+      "marker": "cache:'no-store'",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "search.js",
+      "marker": "HTML returned instead of JSON",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "daily-power-conclusions.html",
+      "marker": "<!-- conclusion-integrity:start -->",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "daily-investigation-conclusions.html",
+      "marker": "<!-- conclusion-integrity:start -->",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "daily-brain-brief.html",
+      "marker": "<!-- conclusion-integrity:start -->",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "outcome-briefings.html",
+      "marker": "<!-- conclusion-integrity:start -->",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "daily-drop.html",
+      "marker": "id=\"evidence-badge-system-route\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "network-search.html",
+      "marker": "id=\"evidence-badge-system-route\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "_headers",
+      "marker": "/deploy-manifest.json",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "_headers",
+      "marker": "/deploy-health.json",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "_headers",
+      "marker": "Cache-Control: no-store",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "deploy-health.html",
+      "marker": "D1 AUTHORITATIVE / FAIL CLOSED",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "deploy-health.html",
+      "marker": "Payments: RUNTIME GATED / DASHBOARD MANAGED",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "deploy-health.json",
+      "marker": "src/worker-production.js",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "deploy-health.json",
+      "marker": "\"paymentStatus\": \"runtime-gated-dashboard-managed\"",
+      "ok": true
+    },
+    {
+      "scope": "source",
+      "rel": "deploy-health.json",
+      "marker": "\"checkoutDefault\": \"runtime-d1-gated\"",
+      "ok": true
+    }
+  ],
+  "authoritativeUpdateMirrors": [
+    "data/live-intel.json",
+    "data/daily-investigation-conclusions.json",
+    "data/daily-power-conclusions.json",
+    "data/daily-brain-brief.json",
+    "data/outcome-briefings.json",
+    "data/global-risk-clocks.json",
+    "data/clock-wall.json",
+    "timers.html",
+    "ai-speculative-conclusions.html",
+    "search.html",
+    "search.js"
+  ]
+}

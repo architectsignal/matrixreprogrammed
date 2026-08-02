@@ -14,6 +14,15 @@
 - Do not create accounts, accept provider terms, add payment methods, evade quotas, bypass CAPTCHAs, rotate proxies, or use visitor devices for compute.
 - Unknown pricing, terms, health, quota, or privacy means fail closed. Local-only operation must remain usable.
 
+## Cloudflare zero-overage build policy
+
+- `.github/build-budget-policy.json` is the durable source of truth for Cloudflare included usage, the latest owner-supplied billing snapshot, safety reserves, and release locks.
+- Never start, dispatch, retry, or publish a Cloudflare build or deployment when the policy is locked, its usage snapshot is stale, billable usage is non-zero, or the relevant remaining allowance is unknown.
+- Cloudflare Git-connected Workers Builds and the legacy Cloudflare Pages project must both remain disconnected; non-production branch builds and automatic Pages deployments stay disabled. Build and test locally or in GitHub Actions; production is released only through the manually confirmed canonical Wrangler workflow.
+- Keep at least 2,000 of the 6,000 monthly Workers Build minutes as a delay/emergency reserve. Warn at 3,000 and stop ordinary build consumption at 4,000.
+- Batch verified changes into deliberate releases. Prefer read-only live probes, cached/static delivery, idempotent data refreshes, and local tests between releases.
+- Cloudflare budget alerts are notification-only and never count as a spending cap. Unknown or delayed usage means fail closed.
+
 ## Architecture and changes
 
 - Production is a Cloudflare Worker serving `_site`, with D1 `MEMBERS_DB`, compatibility KV, scheduled workflows, and Node-based build/investigation scripts.

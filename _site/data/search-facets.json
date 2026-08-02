@@ -1,26 +1,26 @@
 {
   "searchVersion": 3,
-  "updated": "2026-08-02T06:37:40.562Z",
-  "totalResults": 1928,
+  "updated": "2026-08-02T21:22:20.569Z",
+  "totalResults": 1863,
   "evidenceBoundary": "Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.",
   "filters": {
     "evidenceGrade": [],
     "sourceType": [
       {
         "value": "html",
-        "count": 1709
+        "count": 1636
       },
       {
         "value": "source-change",
-        "count": 89
+        "count": 93
       },
       {
         "value": "investigation-finding",
-        "count": 48
+        "count": 50
       },
       {
         "value": "json-feed",
-        "count": 34
+        "count": 35
       },
       {
         "value": "mission-route",
@@ -33,12 +33,16 @@
       {
         "value": "investigation-route",
         "count": 5
+      },
+      {
+        "value": "source-evidence-route",
+        "count": 1
       }
     ],
     "statusClass": [
       {
         "value": "context",
-        "count": 1928
+        "count": 1863
       }
     ],
     "jurisdiction": [],
@@ -46,7 +50,7 @@
     "resultKind": [
       {
         "value": "route",
-        "count": 1928
+        "count": 1863
       }
     ]
   }

@@ -1,6 +1,6 @@
 # Atlas Lane Dossiers
 
-Generated: 2026-08-02T06:33:29.142Z
+Generated: 2026-08-02T21:14:55.666Z
 
 Boundary: Every Atlas box opens a dossier. Dossiers track public-record alignment, influence routes and evidence boundaries; they do not treat policy support, association, symbolism or office-holding as guilt.
 

@@ -31,7 +31,7 @@
 
       <section class="review-toolbar review-panel" aria-label="Review controls">
         <label>Administrator token
-          <input id="admin-token" type="password" autocomplete="off" reader field="Held in memory only; never stored by this page">
+          <input id="admin-token" type="password" autocomplete="off" reader field="Held in memory only; never stored by this page" aria-label="Admin Token">
         </label>
         <div class="review-actions"><button id="refresh-inbox" class="btn" type="button">Refresh Inbox</button><button id="clear-token" class="btn alt" type="button">Clear Token</button></div>
       </section>
@@ -65,13 +65,13 @@
                 <h3>Lock the original terms</h3>
                 <p class="muted">Use the primary decision, order, filing, contract, vote or official announcement. Do not infer the actor, authority or promised benefit.</p>
                 <form id="terms-form" class="review-form">
-                  <label>Responsible actor<input name="responsibleActor" required maxlength="300"></label>
-                  <label>Authority basis<textarea name="authorityBasis" required></textarea></label>
-                  <label>Stated rationale<textarea name="statedRationale" required></textarea></label>
-                  <label>Claimed public benefit<textarea name="claimedPublicBenefit" required></textarea></label>
-                  <label>Measurable success criteria, one per line<textarea name="measurableSuccess" required></textarea></label>
-                  <label>Primary source URLs, one per line<textarea name="primarySourceUrls" required></textarea></label>
-                  <label>Reviewer name<input name="reviewedBy" required maxlength="180"></label>
+                  <label>Responsible actor<input name="responsibleActor" required maxlength="300" aria-label="ResponsibleActor"></label>
+                  <label>Authority basis<textarea name="authorityBasis" required aria-label="AuthorityBasis"></textarea></label>
+                  <label>Stated rationale<textarea name="statedRationale" required aria-label="StatedRationale"></textarea></label>
+                  <label>Claimed public benefit<textarea name="claimedPublicBenefit" required aria-label="ClaimedPublicBenefit"></textarea></label>
+                  <label>Measurable success criteria, one per line<textarea name="measurableSuccess" required aria-label="MeasurableSuccess"></textarea></label>
+                  <label>Primary source URLs, one per line<textarea name="primarySourceUrls" required aria-label="PrimarySourceUrls"></textarea></label>
+                  <label>Reviewer name<input name="reviewedBy" required maxlength="180" aria-label="ReviewedBy"></label>
                   <button class="btn" type="submit">Lock Primary Terms</button>
                   <p class="review-message" data-message="terms"></p>
                 </form>
@@ -81,14 +81,14 @@
                 <h3>Add checkpoint evidence</h3>
                 <p class="muted">Add primary and counter-evidence. Every item must explicitly state its limits.</p>
                 <form id="evidence-form" class="review-form">
-                  <label>Evidence class<select name="evidenceClass" required><option value="official_record">Official record</option><option value="court_record">Court record</option><option value="regulator_record">Regulator record</option><option value="corporate_filing">Corporate filing</option><option value="budget_contract">Budget or contract</option><option value="corroborated_reporting">Corroborated reporting</option><option value="counter_evidence">Counter-evidence</option><option value="right_of_reply">Right of reply</option></select></label>
-                  <label>Evidence title<input name="title" required maxlength="500"></label>
-                  <label>Source URL<input name="sourceUrl" type="url" required></label>
-                  <label>Published date<input name="publishedAt" type="date"></label>
-                  <label>What this establishes<textarea name="establishes" required></textarea></label>
-                  <label>What this does not establish<textarea name="doesNotEstablish" required></textarea></label>
-                  <label>Local evidence route<input name="evidenceRoute" value="/evidence-vault.html"></label>
-                  <label>Submitted by<input name="submittedBy" required maxlength="180"></label>
+                  <label>Evidence class<select name="evidenceClass" required aria-label="EvidenceClass"><option value="official_record">Official record</option><option value="court_record">Court record</option><option value="regulator_record">Regulator record</option><option value="corporate_filing">Corporate filing</option><option value="budget_contract">Budget or contract</option><option value="corroborated_reporting">Corroborated reporting</option><option value="counter_evidence">Counter-evidence</option><option value="right_of_reply">Right of reply</option></select></label>
+                  <label>Evidence title<input name="title" required maxlength="500" aria-label="Title"></label>
+                  <label>Source URL<input name="sourceUrl" type="url" required aria-label="SourceUrl"></label>
+                  <label>Published date<input name="publishedAt" type="date" aria-label="PublishedAt"></label>
+                  <label>What this establishes<textarea name="establishes" required aria-label="Establishes"></textarea></label>
+                  <label>What this does not establish<textarea name="doesNotEstablish" required aria-label="DoesNotEstablish"></textarea></label>
+                  <label>Local evidence route<input name="evidenceRoute" value="/evidence-vault.html" aria-label="EvidenceRoute"></label>
+                  <label>Submitted by<input name="submittedBy" required maxlength="180" aria-label="SubmittedBy"></label>
                   <button class="btn" type="submit">Accept Evidence</button>
                   <p class="review-message" data-message="evidence"></p>
                 </form>
@@ -98,19 +98,19 @@
                 <h3>Draft or publish the outcome</h3>
                 <p class="danger-note">Publishing is blocked until the original terms are locked and every selected evidence item is accepted for this checkpoint.</p>
                 <form id="assessment-form" class="review-form">
-                  <label>Overall finding<select name="overallFinding" required><option value="too-early">Too early</option><option value="insufficient-evidence">Insufficient evidence</option><option value="supported">Supported</option><option value="partially-supported">Partially supported</option><option value="not-supported">Not supported</option><option value="mixed">Mixed</option><option value="not-implemented">Not implemented</option></select></label>
-                  <label>Implementation status<textarea name="implementationStatus" required></textarea></label>
-                  <label>Public benefit status<textarea name="publicBenefitStatus" required></textarea></label>
-                  <label>Money and beneficiary status<textarea name="moneyBeneficiaryStatus" required></textarea></label>
-                  <label>Affected groups status<textarea name="affectedGroupsStatus" required></textarea></label>
-                  <label>Confidence, 0–100<input name="confidence" type="number" min="0" max="100" value="50" required></label>
-                  <label>Plain-language conclusion<textarea name="summary" required></textarea></label>
-                  <label>Alternative explanations, one per line<textarea name="alternativeExplanations"></textarea></label>
-                  <label>Falsifiers tested, one per line<textarea name="falsifiersTested"></textarea></label>
+                  <label>Overall finding<select name="overallFinding" required aria-label="OverallFinding"><option value="too-early">Too early</option><option value="insufficient-evidence">Insufficient evidence</option><option value="supported">Supported</option><option value="partially-supported">Partially supported</option><option value="not-supported">Not supported</option><option value="mixed">Mixed</option><option value="not-implemented">Not implemented</option></select></label>
+                  <label>Implementation status<textarea name="implementationStatus" required aria-label="ImplementationStatus"></textarea></label>
+                  <label>Public benefit status<textarea name="publicBenefitStatus" required aria-label="PublicBenefitStatus"></textarea></label>
+                  <label>Money and beneficiary status<textarea name="moneyBeneficiaryStatus" required aria-label="MoneyBeneficiaryStatus"></textarea></label>
+                  <label>Affected groups status<textarea name="affectedGroupsStatus" required aria-label="AffectedGroupsStatus"></textarea></label>
+                  <label>Confidence, 0–100<input name="confidence" type="number" min="0" max="100" value="50" required aria-label="Confidence"></label>
+                  <label>Plain-language conclusion<textarea name="summary" required aria-label="Summary"></textarea></label>
+                  <label>Alternative explanations, one per line<textarea name="alternativeExplanations" aria-label="AlternativeExplanations"></textarea></label>
+                  <label>Falsifiers tested, one per line<textarea name="falsifiersTested" aria-label="FalsifiersTested"></textarea></label>
                   <fieldset><legend>Accepted evidence used</legend><div id="assessment-evidence" class="evidence-choice"><p class="muted">Add accepted evidence before drafting an assessment.</p></div></fieldset>
-                  <label>Evidence route<input name="evidenceRoute" value="/evidence-vault.html"></label>
-                  <label>Publication status<select name="publicationStatus"><option value="draft">Draft for editorial review</option><option value="published">Publish reviewed outcome</option></select></label>
-                  <label>Named reviewer<input name="reviewedBy" maxlength="180"></label>
+                  <label>Evidence route<input name="evidenceRoute" value="/evidence-vault.html" aria-label="EvidenceRoute"></label>
+                  <label>Publication status<select name="publicationStatus" aria-label="PublicationStatus"><option value="draft">Draft for editorial review</option><option value="published">Publish reviewed outcome</option></select></label>
+                  <label>Named reviewer<input name="reviewedBy" maxlength="180" aria-label="ReviewedBy"></label>
                   <button class="btn" type="submit">Save Assessment</button>
                   <p class="review-message" data-message="assessment"></p>
                 </form>

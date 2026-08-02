@@ -11,7 +11,7 @@
   <style>
     body{background:#070707;color:#f2e8ca}.shell{max-width:1320px;margin:auto;padding:28px 18px 70px}.panel{border:1px solid rgba(216,181,106,.28);border-radius:18px;padding:18px;background:#0d0b07;margin:16px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.status{min-height:1.4rem;font-weight:800}.good{color:#9ddd9d}.warning{color:#e2c27a}.danger{color:#ff9b8f}.actions{display:flex;gap:10px;flex-wrap:wrap}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.form-grid input,.form-grid select{width:100%;box-sizing:border-box;background:#050505;color:#f2e8ca;border:1px solid rgba(216,181,106,.3);border-radius:10px;padding:10px}.check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid rgba(216,181,106,.14)}.check strong{min-width:210px}.pill{display:inline-block;border:1px solid rgba(216,181,106,.35);border-radius:999px;padding:.25rem .6rem}.boundary{border-left:3px solid #d8b56a;padding-left:12px;color:#c8bb95}.terminal{white-space:pre-wrap;word-break:break-word;background:#020202;border:1px solid rgba(216,181,106,.22);border-radius:14px;padding:14px;max-height:360px;overflow:auto}.hidden{display:none!important}
   </style>
-<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style></head>
+<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style><meta name="description" content="PayPal Sandbox Rehearsal | Matrix Reprogrammed. Evidence, records, source routes, public research tools and clearly bounded conclusions from Matrix Reprogrammed."></head>
 <body>
   <main class="shell">
     <header>
@@ -42,10 +42,10 @@
       <h2>Start timed sandbox rehearsal</h2>
       <p>Use a PayPal sandbox buyer account and a dedicated Matrix test-member email. The rehearsal must begin with checkout closed.</p>
       <form id="rehearsal-start-form" class="form-grid">
-        <label>Target tier<select name="tier"><option value="supporter">Supporter €3</option><option value="intelligence">Intelligence €6</option><option value="research_pro">Research Pro €9</option></select></label>
-        <label>Matrix test-member email<input type="email" name="email" required autocomplete="off" reader field="sandbox-member@example.com"></label>
-        <label>Window<select name="durationMinutes"><option value="15">15 minutes</option><option value="20" selected>20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option></select></label>
-        <label>Exact phrase<input name="phrase" required autocomplete="off" value="START MATRIX PAYPAL SANDBOX REHEARSAL"></label>
+        <label>Target tier<select name="tier" aria-label="Tier"><option value="supporter">Supporter €3</option><option value="intelligence">Intelligence €6</option><option value="research_pro">Research Pro €9</option></select></label>
+        <label>Matrix test-member email<input type="email" name="email" required autocomplete="off" reader field="sandbox-member@example.com" aria-label="Email"></label>
+        <label>Window<select name="durationMinutes" aria-label="DurationMinutes"><option value="15">15 minutes</option><option value="20" selected>20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option></select></label>
+        <label>Exact phrase<input name="phrase" required autocomplete="off" value="START MATRIX PAYPAL SANDBOX REHEARSAL" aria-label="Phrase"></label>
         <button class="btn" type="submit">Open sandbox rehearsal</button>
       </form>
     </section>

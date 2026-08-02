@@ -1,70 +1,16 @@
 # Elite Reports
 
-Generated: 2026-08-02T06:33:12.765Z
+Generated: 2026-08-02T21:11:43.737Z
 
 ## Daily Revelation Report
 
-Recovery in Ukraine, one life at a time
+Trapped by a Facebook job advert, freed by a stranger in a taxi
 
 Source: daily-command-brief.html
 
-## Appellate Division of the Supreme Court of the State of New York — Entity Report
+## Control Structure — Entity Report
 
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## Centers for Medicare & Medicaid Services — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## Health and Human Services Department — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## 2021-08825 — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## 2024-13374 — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## 2025-0045-Appeal. — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## 23 WAP 2023 — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## 24-2251 — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## 24-7261 — Entity Report
-
-Worth watching because records and relationship signals both exist.
-
-Source: entity-daily-briefs.html
-
-## Civil Rights Corps v. LaSalle — Entity Report
-
-Worth watching because records and relationship signals both exist.
+A structural entity in the control map. It needs current public records attached.
 
 Source: entity-daily-briefs.html
 

@@ -3,6 +3,7 @@ const path=require('path');
 
 const root=process.cwd();
 const registryPath=path.join(root,'data','money-intelligence-registry.json');
+const snapshotPath=path.join(root,'data','money-public-market-snapshot.json');
 const today=new Date().toISOString().slice(0,10);
 const requireLive=process.env.MATRIX_MONEY_REQUIRE_LIVE==='1';
 
@@ -80,6 +81,8 @@ async function fetchText(url){
 async function main(){
   if(!fs.existsSync(registryPath))throw new Error('Money intelligence registry is missing');
   const registry=JSON.parse(fs.readFileSync(registryPath,'utf8'));
+  const readJson=file=>{try{return JSON.parse(fs.readFileSync(file,'utf8'))}catch{return null}};
+  const preservedSources=[readJson(snapshotPath),readJson(path.join(root,'_site','data','money-intelligence-registry.json'))].filter(Boolean);
   const categories=new Map((registry.categories||[]).map(category=>[category.id,category]));
   const diagnostics=[];
   for(const [categoryId,adapter] of Object.entries(ADAPTERS)){
@@ -88,22 +91,32 @@ async function main(){
     try{parsed=parseRows(await fetchText(adapter.url),categoryId,adapter)}catch(cause){error=cause.message}
     const expected=Math.min(adapter.min,100);
     if(parsed.length<expected){
-      const retained=existing.filter(quantitative).sort((a,b)=>a.rank-b.rank).slice(0,100);
+      const retained=[existing,...preservedSources.map(source=>(source.records||[]).filter(record=>record.category===categoryId))]
+        .flat()
+        .filter(quantitative)
+        .sort((a,b)=>a.rank-b.rank)
+        .filter((record,index,rows)=>rows.findIndex(candidate=>candidate.rank===record.rank)===index)
+        .slice(0,100);
       if(retained.length>=expected){parsed=retained;error=error||`Live parser returned ${parsed.length}; retained prior verified snapshot`}
       else if(requireLive)throw new Error(`${categoryId}: expected at least ${expected} quantitative rows, parsed ${parsed.length}; ${error||'market-cap cells not found'}`);
     }
     if(!parsed.length){diagnostics.push({category:categoryId,ok:false,parsed:0,error:error||'No quantitative rows'});continue}
     registry.records=[...(registry.records||[]).filter(record=>record.category!==categoryId),...parsed];
     const category=categories.get(categoryId);
-    if(category)Object.assign(category,{metric:adapter.metric,rankingStatus:adapter.status,sourceTitle:`CompaniesMarketCap — ${adapter.title}`,sourceUrl:adapter.url,coverage:parsed.length,ranked:parsed.length,verified:parsed.length,research:0,lastChecked:today,refreshAdapter:{type:'public-market-ranking',url:adapter.url,live:!error,quantitativeRows:parsed.length}});
+    const snapshotDate=parsed.map(record=>String(record.sourceDate||'')).filter(Boolean).sort().at(-1)||today;
+    if(category)Object.assign(category,{metric:adapter.metric,rankingStatus:adapter.status,sourceTitle:`CompaniesMarketCap — ${adapter.title}`,sourceUrl:adapter.url,coverage:parsed.length,ranked:parsed.length,verified:parsed.length,research:0,lastChecked:snapshotDate,refreshAttemptedAt:today,refreshAdapter:{type:'public-market-ranking',url:adapter.url,live:!error,quantitativeRows:parsed.length,snapshotDate}});
     diagnostics.push({category:categoryId,ok:parsed.length>=expected,parsed:parsed.length,expected,error});
   }
   registry.updated=new Date().toISOString();
-  registry.publicMarketRefresh={generatedAt:registry.updated,source:'CompaniesMarketCap ranking pages',boundary:'Market capitalisation is a dated market-value measure and does not establish cash ownership, assets under management, voting control, operational control or wrongdoing.',diagnostics};
+  const liveComplete=diagnostics.every(item=>item.ok&&!item.error);
+  const snapshotRecords=(registry.records||[]).filter(record=>ADAPTERS[record.category]&&quantitative(record));
+  const sourceSnapshotDate=snapshotRecords.map(record=>String(record.sourceDate||'')).filter(Boolean).sort().at(-1)||null;
+  registry.publicMarketRefresh={generatedAt:registry.updated,status:liveComplete?'live-complete':'degraded-preserved-verified-snapshot',source:'CompaniesMarketCap ranking pages',sourceSnapshotDate,refreshAttemptedAt:registry.updated,freshnessTruth:liveComplete?'All configured public-market ranking pages were retrieved during this run.':'One or more ranking pages were unreachable. Complete previously verified, dated rows were preserved without being presented as newly retrieved.',boundary:'Market capitalisation is a dated market-value measure and does not establish cash ownership, assets under management, voting control, operational control or wrongdoing.',diagnostics};
   fs.writeFileSync(registryPath,`${JSON.stringify(registry,null,2)}\n`);
   const failures=diagnostics.filter(item=>!item.ok);
   fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
-  fs.writeFileSync(path.join(root,'downloads','money-public-market-refresh.json'),`${JSON.stringify({ok:failures.length===0,generatedAt:registry.updated,diagnostics},null,2)}\n`);
+  if(failures.length===0)fs.writeFileSync(snapshotPath,`${JSON.stringify({generatedAt:registry.updated,sourceSnapshotDate,source:'CompaniesMarketCap ranking pages',boundary:registry.publicMarketRefresh.boundary,records:snapshotRecords},null,2)}\n`);
+  fs.writeFileSync(path.join(root,'downloads','money-public-market-refresh.json'),`${JSON.stringify({ok:failures.length===0,liveComplete,status:registry.publicMarketRefresh.status,generatedAt:registry.updated,sourceSnapshotDate,freshnessTruth:registry.publicMarketRefresh.freshnessTruth,diagnostics},null,2)}\n`);
   if(requireLive&&failures.length)throw new Error(`Public-market refresh incomplete: ${failures.map(item=>item.category).join(', ')}`);
   console.log(`Public-market ranking refresh complete: ${diagnostics.reduce((sum,item)=>sum+item.parsed,0)} quantitative rows across ${diagnostics.length} categories.`);
 }

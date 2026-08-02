@@ -29,7 +29,7 @@
       <section class="card redline">
         <h2>Administrator token</h2>
         <label class="launch-token">X-Admin-Token
-          <input id="email-admin-token" type="password" autocomplete="off" reader field="Enter the protected administrator token">
+          <input id="email-admin-token" type="password" autocomplete="off" reader field="Enter the protected administrator token" aria-label="Email Admin Token">
         </label>
         <div class="cta-row">
           <button class="btn" id="email-readiness-check" type="button">Check Email Readiness</button>

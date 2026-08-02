@@ -1,10 +1,10 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:34:42.944Z",
+  "generatedAt": "2026-08-02T21:19:08.968Z",
   "overall": "ready",
   "summary": {
-    "total": 50,
-    "passed": 50,
+    "total": 52,
+    "passed": 52,
     "failed": 0
   },
   "homepageMode": "legacy-cinematic",
@@ -17,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 2582,
+    "archivedFindings": 2833,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -64,7 +64,7 @@
     {
       "id": "authoritative-entity-resolution",
       "ok": true,
-      "detail": "Resolved person=Elon Musk; institution=Securities and Exchange Commission; family=Al Maktoum family.",
+      "detail": "Resolved person=Bill Gates; institution=U.S. Securities and Exchange Commission; family=Al Maktoum family.",
       "fix": "Run build-daily-watch.js and reject document, report, archive, case or finding titles."
     },
     {
@@ -88,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "2582 archived findings retained.",
+      "detail": "2833 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -106,13 +106,13 @@
     {
       "id": "watch-person-rank",
       "ok": true,
-      "detail": "person score 135; status incumbent-held-position.",
+      "detail": "person score 91; status retained-current-leader.",
       "fix": "Run the stable ranking and dossier builder."
     },
     {
       "id": "watch-person-sources",
       "ok": true,
-      "detail": "3 source routes attached.",
+      "detail": "1 source routes attached.",
       "fix": "Attach direct source or explicit missing-record route."
     },
     {
@@ -136,7 +136,7 @@
     {
       "id": "watch-institution-rank",
       "ok": true,
-      "detail": "institution score 143; status retained-current-leader.",
+      "detail": "institution score 143; status incumbent-held-position.",
       "fix": "Run the stable ranking and dossier builder."
     },
     {
@@ -224,6 +224,12 @@
       "fix": "Distinguish direct evidence from structural lane overlap."
     },
     {
+      "id": "family-source-deep-links",
+      "ok": true,
+      "detail": "0 obsolete anchor routes; 3/3 official family sources resolved.",
+      "fix": "Resolve family source IDs to the official URLs in the family-access registry."
+    },
+    {
       "id": "dossier-person-structure",
       "ok": true,
       "detail": "person dossier Bill Gates; missing arrays none.",
@@ -284,6 +290,12 @@
       "fix": "Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html."
     },
     {
+      "id": "daily-watch-deep-links",
+      "ok": true,
+      "detail": "Daily Watch contains no generated links to nonexistent Capstone anchors.",
+      "fix": "Regenerate Daily Watch with official registry source URLs."
+    },
+    {
       "id": "dedicated-dossier-page",
       "ok": true,
       "detail": "Dedicated hit-list page checked.",
@@ -322,7 +334,7 @@
     {
       "id": "sensitive-claim-safeguard",
       "ok": true,
-      "detail": "8 sensitive items; 0 unsafe.",
+      "detail": "3 sensitive items; 0 unsafe.",
       "fix": "Require exact status, provenance, limitation and review."
     }
   ],

@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:37:23.258Z",
+  "generatedAt": "2026-08-02T21:21:59.440Z",
   "checks": [
     {
       "name": "search-index.json compaction",
       "ok": true,
-      "detail": "33275 source records -> 31368 deployable records · 20.95 MiB · 1907 repeated findings, 0 exact duplicates and 0 invalid records removed"
+      "detail": "33333 source records -> 31328 deployable records · 20.94 MiB · 2005 repeated findings, 0 exact duplicates and 0 invalid records removed"
     },
     {
       "name": "search-index semantic preservation",
@@ -220,17 +220,17 @@
     {
       "name": "search-index.json size",
       "ok": true,
-      "detail": "20.95 MiB <= 22 MiB"
+      "detail": "20.94 MiB <= 22 MiB"
     },
     {
       "name": "data/evidence-network-map.json size",
       "ok": true,
-      "detail": "21.79 MiB <= 25 MiB"
+      "detail": "21.89 MiB <= 25 MiB"
     },
     {
       "name": "deployable HTML inspected",
       "ok": true,
-      "detail": "3465 routes"
+      "detail": "3321 routes"
     },
     {
       "name": "offscreen image lazy-loading",
@@ -245,8 +245,8 @@
   ],
   "failures": [],
   "budgets": {
-    "searchIndexMebibytes": 20.95,
-    "evidenceNetworkMebibytes": 21.79,
+    "searchIndexMebibytes": 20.94,
+    "evidenceNetworkMebibytes": 21.89,
     "searchStartupPolicy": "verified fallback routes render immediately; complete index loads on search interaction or URL query",
     "networkStartupPolicy": "graph data loads only when the map approaches the viewport or a map control is used",
     "animationPolicy": "adaptive frame rate, reduced pixel ratio, Save-Data support and visibility pause",

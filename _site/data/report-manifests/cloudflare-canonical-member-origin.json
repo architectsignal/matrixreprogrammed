@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-02T06:20:31.731Z",
+  "generatedAt": "2026-08-02T21:00:35.065Z",
   "pageCount": 128,
   "output": "downloads/cloudflare-canonical-member-origin.pdf",
   "report": {
-    "version": 7,
+    "version": 10,
     "title": "Cloudflare Canonical Member Origin",
-    "contentHash": "a47221d0103da721c6991e698c0114de59098e5f34dd30e3203a331ccabf8519",
+    "contentHash": "279088a1b9784c7350c54b9a5acb551f096ae7ea86de23e5cdb025b775bce84e",
     "sourceIds": [
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
-      "a54df8218ca146eb70f725e3",
+      "e083e748ec6311742c2416e5",
+      "ASC-REVIEW-A90E36DF59A2A3C2",
+      "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
       "ASC-REVIEW-0E868AF7B9CFC533",
-      "ASC-REVIEW-5745DAEE3A7221DC",
-      "ASC-REVIEW-9EBC0B258FA9E647",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -24,14 +24,14 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-83B750F5A70AA896",
-      "ASC-REVIEW-5C5BC2E897FCBBFE",
-      "ASC-REVIEW-BA5FF644D411D868",
-      "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
-      "44505b4afb60938c8117ad31",
+      "ASC-REVIEW-83A2CD51E51B5E0E",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
+      "ASC-REVIEW-C0E6134747580127",
+      "ASC-REVIEW-AB5A700449B10AEC",
       "71e0563ca7b139c37c302956",
+      "44505b4afb60938c8117ad31",
       "7ee9141a42ad539f58a57e50",
       "2931a84c2c7fe86982d5d6e5",
       "1c352ab364fbfca06ab12a57",
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Cloudflare Canonical Member Origin.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

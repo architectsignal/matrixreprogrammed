@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-08-02T06:31:14.414Z
+Updated: 2026-08-02T21:10:07.435Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -63,7 +63,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Control System / Climate
 - Label: control-system hypothesis
-- Matches: 7
+- Matches: 8
 - Boundary: Climate policy critique is not proof of planned imprisonment. Track mandates, enforcement, financial pressure, opt-out and mobility restrictions.
 - Research brief: Map the public mechanisms: policy papers, funding, legal mandates, enforcement tools, public-private partnerships, identity layers, financial rails and opt-out limits.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.

@@ -46,6 +46,7 @@
             <label><input type="checkbox" name="release_notices" value="true" checked data-default-checked="true"> Release notices</label>
             <label><input type="checkbox" name="public_weekly_digest" value="true"> Weekly Signal Drop</label>
           </div>
+          <label class="newsletter-consent"><input id="member-consent" name="marketingConsent" type="checkbox" required> <span>I agree to receive the Matrix Reprogrammed briefings selected on this form. I can unsubscribe or change preferences at any time.</span></label>
           <button class="btn" type="submit">Join Free Brief</button>
           <p class="form-status newsletter-status" aria-live="polite">Daily Control Brief and release notices are preselected. Verify your email to activate them; the Weekly Signal Drop is optional.</p>
         </form>

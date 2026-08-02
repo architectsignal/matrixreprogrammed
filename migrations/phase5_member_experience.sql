@@ -186,7 +186,7 @@ WITH entitlement_candidates AS (
   WHERE m.status = 'active'
     AND m.email_verified_at IS NOT NULL
     AND LOWER(s.status) IN ('active', 'trialing')
-    AND (s.current_period_end IS NULL OR s.current_period_end > datetime('now'))
+    AND (s.current_period_end IS NULL OR datetime(s.current_period_end) > datetime('now'))
 
   UNION ALL
 
@@ -211,8 +211,8 @@ WITH entitlement_candidates AS (
   WHERE m.status = 'active'
     AND m.email_verified_at IS NOT NULL
     AND g.status = 'active'
-    AND g.starts_at <= datetime('now')
-    AND (g.expires_at IS NULL OR g.expires_at > datetime('now'))
+    AND datetime(g.starts_at) <= datetime('now')
+    AND (g.expires_at IS NULL OR datetime(g.expires_at) > datetime('now'))
 ), ranked AS (
   SELECT member_id, MAX(tier_rank) AS tier_rank
   FROM entitlement_candidates

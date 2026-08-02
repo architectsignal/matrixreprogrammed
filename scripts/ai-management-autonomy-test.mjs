@@ -10,6 +10,10 @@ import {
 } from '../ai-management/local-runtime/hardware-detector.mjs';
 import { modelCompatibility, routeLocalModel } from '../ai-management/local-runtime/model-router.mjs';
 import { ResourceScout } from '../ai-management/resource-scout/resource-scout.mjs';
+import {
+  ComputeResourceScout,
+  revalidateComputeResource
+} from '../ai-management/compute-resource-scout/compute-resource-scout.mjs';
 import { SiteImprovementDirector } from '../ai-management/site-director/site-improvement-director.mjs';
 
 const root = process.cwd();
@@ -152,6 +156,86 @@ assert.equal(scoutReport.approved[0].payment_method_present, false);
 assert.equal(scoutReport.quarantined.length, 1);
 assert.ok(scoutReport.quarantined[0].reasons.includes('billing-risk-not-zero'));
 
+const automaticCompute = {
+  provider_id: 'verified-free-compute-api',
+  provider_name: 'Verified Compute',
+  service_name: 'Bounded GPU API',
+  access_method: 'automatic_api',
+  endpoint_url: 'https://compute.example.org/health',
+  official_documentation_url: 'https://compute.example.org/docs',
+  terms_url: 'https://compute.example.org/terms',
+  privacy_url: 'https://compute.example.org/privacy',
+  account_required: true,
+  owner_onboarding_completed: true,
+  automation_permission_verified: true,
+  billing_hard_stop_confirmed: true,
+  payment_method_present: false,
+  zero_spend_verified: true,
+  quota_verified: true,
+  free_quota_amount: 60,
+  free_quota_unit: 'GPU minutes per day',
+  quota_reset_period: 'daily',
+  session_max_minutes: 30,
+  accelerator_types: ['test GPU'],
+  minimum_gpu_memory_mb: 16000,
+  credential_reference: 'VERIFIED_COMPUTE_TOKEN',
+  terms_last_verified: fixedNow.toISOString(),
+  terms_revalidation_due: '2026-08-29T00:00:00.000Z',
+  quota_last_verified: fixedNow.toISOString()
+};
+const interactiveCompute = {
+  ...automaticCompute,
+  provider_id: 'interactive-notebook',
+  provider_name: 'Interactive Notebook',
+  access_method: 'interactive_notebook',
+  endpoint_url: null,
+  owner_onboarding_completed: false,
+  automation_permission_verified: false,
+  credential_reference: null
+};
+const riskyCompute = {
+  ...automaticCompute,
+  provider_id: 'billing-risk-api',
+  provider_name: 'Billing Risk API'
+};
+const computeFetch = async url => {
+  const value = String(url);
+  if (value.includes('billing-risk-api')) return new Response('Free credits then automatic billing and pricing per hour.', { status: 200, headers: { 'content-type': 'text/plain' } });
+  if (value.endsWith('/docs')) return new Response('Free GPU API with programmatic automated jobs and SDK access at no cost.', { status: 200, headers: { 'content-type': 'text/plain' } });
+  if (value.endsWith('/terms')) return new Response('Automation through the API is permitted. Free quota has no paid fallback.', { status: 200, headers: { 'content-type': 'text/plain' } });
+  if (value.endsWith('/privacy')) return new Response('Privacy policy for public workloads.', { status: 200, headers: { 'content-type': 'text/plain' } });
+  return new Response(JSON.stringify({ ok: true }), { status: 200, headers: { 'content-type': 'application/json' } });
+};
+const computeScout = new ComputeResourceScout({ fetchImpl: computeFetch, clock, concurrency: 2 });
+const computeReport = await computeScout.run({ providers: [automaticCompute, interactiveCompute] });
+assert.equal(computeReport.discovered, 2);
+assert.equal(computeReport.automatic_approved, 1);
+assert.equal(computeReport.approved_resources.length, 1);
+assert.equal(computeReport.approved_resources[0].metadata.remote_compute, true);
+assert.equal(computeReport.approved_resources[0].metadata.prompt_transfer_allowed, false);
+assert.deepEqual(computeReport.approved_resources[0].approved_data_classes, ['public']);
+assert.equal(computeReport.manual_onboarding.length, 1);
+assert.equal(computeReport.manual_onboarding[0].owner_action_required, true);
+
+const riskyFetch = async url => {
+  const value = String(url);
+  if (value.endsWith('/docs')) return new Response('Free GPU API and SDK access.', { status: 200 });
+  if (value.endsWith('/terms')) return new Response('Free credits then automatic billing with pricing per hour.', { status: 200 });
+  if (value.endsWith('/privacy')) return new Response('Privacy policy.', { status: 200 });
+  return new Response('{}', { status: 200 });
+};
+const riskyReport = await new ComputeResourceScout({ fetchImpl: riskyFetch, clock }).run({ providers: [riskyCompute] });
+assert.equal(riskyReport.automatic_approved, 0);
+assert.ok(riskyReport.quarantined[0].reasons.includes('billing-or-credit-language-detected'));
+
+const expiredResource = {
+  ...computeReport.approved_resources[0],
+  metadata: { ...computeReport.approved_resources[0].metadata, expires_at: '2026-07-30T11:59:00.000Z' }
+};
+const expiry = revalidateComputeResource(expiredResource, fixedNow);
+assert.equal(expiry.valid, false);
+assert.ok(expiry.reasons.includes('compute-session-expired'));
+
 const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'matrix-site-director-'));
 try {
   fs.mkdirSync(path.join(temporaryRoot, 'data'), { recursive: true });
@@ -184,6 +268,7 @@ const wranglerToml = fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8');
 const wranglerJson = fs.readFileSync(path.join(root, 'wrangler.jsonc'), 'utf8');
 const managerSource = fs.readFileSync(path.join(root, 'scripts', 'run-autonomous-ai-manager.mjs'), 'utf8');
 const taskLedger = fs.readFileSync(path.join(root, 'ai-management', 'TASK_LEDGER.md'), 'utf8');
+const computeRegistry = JSON.parse(fs.readFileSync(path.join(root, 'ai-management', 'config', 'compute-providers.json'), 'utf8'));
 
 assert.match(workerSource, /containsPromptMaterial/);
 assert.doesNotMatch(workerSource, /prompt:\s*body\.prompt/);
@@ -191,8 +276,13 @@ assert.doesNotMatch(workerSource, /messages:\s*body\.messages/);
 assert.match(workerSource, /Prompt material is forbidden/);
 assert.match(workerSource, /promptReceived:\s*false/);
 assert.match(workerSource, /promptTransferred:\s*false/);
+assert.match(workerSource, /\/api\/ai-management\/admin\/compute-scout/);
+assert.match(workerSource, /maintainComputeRegistry/);
 assert.match(migration, /CREATE TABLE IF NOT EXISTS ai_model_routing_decisions/);
 assert.match(migration, /prompt_received INTEGER NOT NULL DEFAULT 0 CHECK \(prompt_received = 0\)/);
+assert.match(migration, /CREATE TABLE IF NOT EXISTS ai_compute_provider_candidates/);
+assert.match(migration, /CREATE TABLE IF NOT EXISTS ai_compute_resources/);
+assert.match(migration, /data_class TEXT NOT NULL DEFAULT 'public' CHECK \(data_class='public'\)/);
 assert.match(wranglerToml, /main = "src\/worker-production-autonomy\.js"/);
 assert.match(wranglerJson, /"main": "src\/worker-production-autonomy\.js"/);
 for (const flag of ['AI_RESOURCE_AUTO_APPROVAL_ENABLED', 'AI_LOCAL_MODEL_ROUTING_ENABLED', 'AI_SITE_DIRECTOR_ENABLED']) {
@@ -203,7 +293,12 @@ assert.match(productionWrapper, /productionWorker\.scheduled/);
 assert.match(productionWrapper, /aiManagementWorker\.scheduled/);
 assert.match(managerSource, /discoverFromVerifiedDocumentation/);
 assert.match(managerSource, /linked_candidates_discovered/);
+assert.match(managerSource, /ComputeResourceScout/);
+assert.match(managerSource, /ai-compute-resource-scout-report\.json/);
+assert.equal(computeRegistry.providers.length >= 4, true);
+assert.ok(computeRegistry.providers.every(provider => ['manual_onboarding', 'interactive_notebook', 'prohibited', 'automatic_api'].includes(provider.access_method)));
+assert.ok(computeRegistry.providers.every(provider => provider.owner_onboarding_completed === false));
 assert.match(taskLedger, /## Priority lock/);
 assert.match(taskLedger, /must not be deferred/);
 
-console.log('AI autonomy tests passed: automatic Scout approval and quarantine, bounded discovery contract, local GPU and model detection, metadata-only intelligent routing, prompt-leak prevention, safe Site Director boundaries, D1 routing ledger and production wrapper wiring.');
+console.log('AI autonomy tests passed: automatic Scout approval and quarantine, dedicated compute-provider classification and owner onboarding, zero-spend temporary compute registration and revocation, local GPU and model detection, metadata-only intelligent routing, prompt-leak prevention, safe Site Director boundaries, D1 ledgers and production wrapper wiring.');

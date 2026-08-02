@@ -1,6 +1,6 @@
 # Card Intelligence Feed
 
-Updated: 2026-08-02T06:33:28.400Z
+Updated: 2026-08-02T21:14:53.062Z
 
 Boundary: This feed provides research routing, scoring context, relationship-source rules and speculative rationale. It is not an accusation system and does not assert guilt, intent, hidden control or unlawful conduct.
 
@@ -14,348 +14,348 @@ Elon Musk is included because it is a high-relevance public-record route in the 
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Elon Musk unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #2: Jeff Bezos
-Score: 100/100 · Confidence: high
-
-Jeff Bezos is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 100/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
-
-Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jeff Bezos unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
-
-## Top 52 Puppets of Interest #3: World Health Organization
+## Top 52 Puppets of Interest #2: World Health Organization
 Score: 100/100 · Confidence: high
 
 World Health Organization is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 100/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for World Health Organization unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #4: Federal Reserve
+## Top 52 Puppets of Interest #3: Federal Reserve
 Score: 100/100 · Confidence: high
 
 Federal Reserve is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 100/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Federal Reserve unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #5: CACI International
+## Top 52 Puppets of Interest #4: CACI International
 Score: 100/100 · Confidence: high
 
 CACI International is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 100/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for CACI International unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #6: Booz Allen Hamilton
+## Top 52 Puppets of Interest #5: Booz Allen Hamilton
 Score: 100/100 · Confidence: high
 
 Booz Allen Hamilton is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 100/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Booz Allen Hamilton unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #7: Larry Fink
+## Top 52 Puppets of Interest #6: Larry Fink
 Score: 98/100 · Confidence: high
 
 Larry Fink is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 98/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Larry Fink unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #8: Klaus Schwab
+## Top 52 Puppets of Interest #7: Klaus Schwab
 Score: 94/100 · Confidence: high
 
 Klaus Schwab is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 94/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Klaus Schwab unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #9: Emmanuel Macron
+## Top 52 Puppets of Interest #8: Emmanuel Macron
 Score: 90/100 · Confidence: medium
 
 Emmanuel Macron is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward governance / state power. The Crowns suit marks the first investigation lane, and the 90/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Emmanuel Macron unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #10: Tony Blair
+## Top 52 Puppets of Interest #9: Tony Blair
 Score: 88/100 · Confidence: medium
 
 Tony Blair is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 88/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Tony Blair unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #11: Jamie Dimon
+## Top 52 Puppets of Interest #10: Jamie Dimon
 Score: 85/100 · Confidence: medium
 
 Jamie Dimon is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 85/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jamie Dimon unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #12: Jerome Powell
+## Top 52 Puppets of Interest #11: Jerome Powell
 Score: 84/100 · Confidence: medium
 
 Jerome Powell is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 84/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jerome Powell unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #13: Jensen Huang
-Score: 83/100 · Confidence: medium
-
-Jensen Huang is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 83/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
-
-Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jensen Huang unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
-
-## Top 52 Puppets of Interest #14: Christine Lagarde
+## Top 52 Puppets of Interest #12: Christine Lagarde
 Score: 83/100 · Confidence: medium
 
 Christine Lagarde is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 83/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Christine Lagarde unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #15: Pope Francis
+## Top 52 Puppets of Interest #13: Pope Francis
 Score: 82/100 · Confidence: medium
 
 Pope Francis is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Pope Francis unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #16: King Charles III
+## Top 52 Puppets of Interest #14: King Charles III
 Score: 82/100 · Confidence: medium
 
 King Charles III is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward governance / state power. The Crowns suit marks the first investigation lane, and the 82/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for King Charles III unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #17: Erik Prince
+## Top 52 Puppets of Interest #15: Erik Prince
 Score: 81/100 · Confidence: medium
 
 Erik Prince is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward security / contractor power. The Swords suit marks the first investigation lane, and the 81/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Erik Prince unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #18: Bill Gates
+## Top 52 Puppets of Interest #16: Jeff Bezos
+Score: 80/100 · Confidence: medium
+
+Jeff Bezos is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jeff Bezos unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Top 52 Puppets of Interest #17: Bill Gates
 Score: 80/100 · Confidence: medium
 
 Bill Gates is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Bill Gates unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #19: Sam Altman
+## Top 52 Puppets of Interest #18: Sam Altman
 Score: 80/100 · Confidence: medium
 
 Sam Altman is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 80/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Sam Altman unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #20: Sundar Pichai
+## Top 52 Puppets of Interest #19: Sundar Pichai
 Score: 79/100 · Confidence: medium
 
 Sundar Pichai is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 79/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Sundar Pichai unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #21: Satya Nadella
+## Top 52 Puppets of Interest #20: Satya Nadella
 Score: 78/100 · Confidence: medium
 
 Satya Nadella is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 78/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Satya Nadella unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #22: Tim Cook
+## Top 52 Puppets of Interest #21: Tim Cook
 Score: 77/100 · Confidence: medium
 
 Tim Cook is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 77/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Tim Cook unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #23: George Soros
+## Top 52 Puppets of Interest #22: George Soros
 Score: 74/100 · Confidence: medium
 
 George Soros is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 74/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for George Soros unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #24: Mukesh Ambani
+## Top 52 Puppets of Interest #23: Mukesh Ambani
 Score: 72/100 · Confidence: medium
 
 Mukesh Ambani is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 72/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Mukesh Ambani unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #25: Xi Jinping
+## Top 52 Puppets of Interest #24: Xi Jinping
 Score: 72/100 · Confidence: medium
 
 Xi Jinping is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward governance / state power. The Crowns suit marks the first investigation lane, and the 72/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Xi Jinping unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #26: Narendra Modi
+## Top 52 Puppets of Interest #25: Narendra Modi
 Score: 71/100 · Confidence: watch
 
 Narendra Modi is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward governance / state power. The Crowns suit marks the first investigation lane, and the 71/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Narendra Modi unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #27: Vladimir Putin
+## Top 52 Puppets of Interest #26: Vladimir Putin
 Score: 71/100 · Confidence: watch
 
 Vladimir Putin is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward security / contractor power. The Swords suit marks the first investigation lane, and the 71/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Vladimir Putin unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #28: Benjamin Netanyahu
+## Top 52 Puppets of Interest #27: Benjamin Netanyahu
 Score: 70/100 · Confidence: watch
 
 Benjamin Netanyahu is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward security / contractor power. The Swords suit marks the first investigation lane, and the 70/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Benjamin Netanyahu unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #29: Volodymyr Zelenskyy
+## Top 52 Puppets of Interest #28: Volodymyr Zelenskyy
 Score: 69/100 · Confidence: watch
 
 Volodymyr Zelenskyy is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward governance / state power. The Crowns suit marks the first investigation lane, and the 69/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Volodymyr Zelenskyy unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #30: Giorgia Meloni
+## Top 52 Puppets of Interest #29: Giorgia Meloni
 Score: 68/100 · Confidence: watch
 
 Giorgia Meloni is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward governance / state power. The Crowns suit marks the first investigation lane, and the 68/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Giorgia Meloni unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #31: Gautam Adani
+## Top 52 Puppets of Interest #30: Gautam Adani
 Score: 67/100 · Confidence: watch
 
 Gautam Adani is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 67/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Gautam Adani unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #32: Ray Dalio
+## Top 52 Puppets of Interest #31: Ray Dalio
 Score: 66/100 · Confidence: watch
 
 Ray Dalio is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 66/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Ray Dalio unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #33: Brian Moynihan
+## Top 52 Puppets of Interest #32: Brian Moynihan
 Score: 65/100 · Confidence: watch
 
 Brian Moynihan is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 65/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Brian Moynihan unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #34: David Solomon
+## Top 52 Puppets of Interest #33: David Solomon
 Score: 65/100 · Confidence: watch
 
 David Solomon is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 65/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for David Solomon unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #35: Jane Fraser
+## Top 52 Puppets of Interest #34: Jane Fraser
 Score: 65/100 · Confidence: watch
 
 Jane Fraser is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 65/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jane Fraser unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #36: Ajay Banga
+## Top 52 Puppets of Interest #35: Ajay Banga
 Score: 65/100 · Confidence: watch
 
 Ajay Banga is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 65/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Ajay Banga unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #37: Kristalina Georgieva
+## Top 52 Puppets of Interest #36: Kristalina Georgieva
 Score: 65/100 · Confidence: watch
 
 Kristalina Georgieva is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 65/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Kristalina Georgieva unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #38: Tedros Adhanom Ghebreyesus
+## Top 52 Puppets of Interest #37: Tedros Adhanom Ghebreyesus
 Score: 65/100 · Confidence: watch
 
 Tedros Adhanom Ghebreyesus is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 65/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Tedros Adhanom Ghebreyesus unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #39: António Guterres
+## Top 52 Puppets of Interest #38: António Guterres
 Score: 65/100 · Confidence: watch
 
 António Guterres is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward governance / state power. The Crowns suit marks the first investigation lane, and the 65/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for António Guterres unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #40: Mark Rutte
+## Top 52 Puppets of Interest #39: Mark Rutte
 Score: 64/100 · Confidence: watch
 
 Mark Rutte is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward security / contractor power. The Swords suit marks the first investigation lane, and the 64/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Mark Rutte unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #41: Jens Stoltenberg
+## Top 52 Puppets of Interest #40: Jens Stoltenberg
 Score: 63/100 · Confidence: watch
 
 Jens Stoltenberg is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward security / contractor power. The Swords suit marks the first investigation lane, and the 63/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jens Stoltenberg unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #42: Alex Karp
+## Top 52 Puppets of Interest #41: Alex Karp
 Score: 63/100 · Confidence: watch
 
 Alex Karp is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward security / contractor power. The Swords suit marks the first investigation lane, and the 63/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Alex Karp unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #43: Miriam Adelson
+## Top 52 Puppets of Interest #42: Miriam Adelson
 Score: 62/100 · Confidence: watch
 
 Miriam Adelson is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 62/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Miriam Adelson unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #44: Rupert Murdoch
+## Top 52 Puppets of Interest #43: Rupert Murdoch
 Score: 62/100 · Confidence: watch
 
 Rupert Murdoch is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 62/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Rupert Murdoch unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #45: Laurene Powell Jobs
+## Top 52 Puppets of Interest #44: Laurene Powell Jobs
 Score: 61/100 · Confidence: watch
 
 Laurene Powell Jobs is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward narrative / belief power. The Masks suit marks the first investigation lane, and the 61/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Laurene Powell Jobs unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #46: Mark Zuckerberg
+## Top 52 Puppets of Interest #45: Mark Zuckerberg
 Score: 60/100 · Confidence: watch
 
 Mark Zuckerberg is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 60/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Mark Zuckerberg unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #47: Larry Ellison
+## Top 52 Puppets of Interest #46: Larry Ellison
 Score: 60/100 · Confidence: watch
 
 Larry Ellison is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 60/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Larry Ellison unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #48: Peter Thiel
+## Top 52 Puppets of Interest #47: Peter Thiel
 Score: 60/100 · Confidence: watch
 
 Peter Thiel is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 60/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Peter Thiel unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #49: Michael Bloomberg
+## Top 52 Puppets of Interest #48: Michael Bloomberg
 Score: 60/100 · Confidence: watch
 
 Michael Bloomberg is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 60/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Michael Bloomberg unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
-## Top 52 Puppets of Interest #50: Warren Buffett
+## Top 52 Puppets of Interest #49: Warren Buffett
 Score: 60/100 · Confidence: watch
 
 Warren Buffett is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 60/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
 
 Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Warren Buffett unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
+
+## Top 52 Puppets of Interest #50: Jensen Huang
+Score: 60/100 · Confidence: watch
+
+Jensen Huang is included because it is a high-relevance public-record route in the people-of-interest deck. The card points readers toward money / ownership power. The Coins suit marks the first investigation lane, and the 60/100 score is a relevance and update-priority indicator, not an accusation score. This card has a route into the site database or dossier layer. This is a speculative routing rationale for research navigation, not a factual allegation, proof of intent, or claim of wrongdoing.
+
+Source relationship lane: no reviewed public-source entry yet. No relationship or source entry should be listed for Jensen Huang unless it is documented by a public source route. A documented relationship does not prove shared intent, knowledge or wrongdoing.
 
 ## Top 52 Puppets of Interest #51: MacKenzie Scott
 Score: 60/100 · Confidence: watch

@@ -134,6 +134,7 @@
     try{
       const response=await fetch('/newsletter-signup',{
         method:'POST',
+        credentials:'include',
         headers:{'Content-Type':'application/json','Accept':'application/json'},
         body:JSON.stringify(body)
       });

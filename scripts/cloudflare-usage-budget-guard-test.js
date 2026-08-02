@@ -34,6 +34,15 @@ const locked = run(sourcePolicy);
 assert.notStrictEqual(locked.status, 0, 'The owner-reported overage period must be locked.');
 assert.match(locked.stderr, /5,470 billable build minutes/);
 
+const exceptionDenied = run(sourcePolicy, 'owner-exception');
+assert.notStrictEqual(exceptionDenied.status, 0, 'The one-day exception must fail without the exact owner phrase.');
+
+const exceptionAllowed = run(sourcePolicy, 'owner-exception', {
+  CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02'
+});
+assert.strictEqual(exceptionAllowed.status, 0, exceptionAllowed.stderr);
+assert.match(exceptionAllowed.stdout, /one-time owner exception PASS/);
+
 const nextPeriod = structuredClone(sourcePolicy);
 nextPeriod.status = 'enforced';
 nextPeriod.cloudflareWorkersBuildMinutes.currentBillingPeriodLocked = false;

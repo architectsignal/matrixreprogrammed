@@ -28,7 +28,7 @@
       </section>
       <section class="section wrap phase8-grid">
         <aside class="card">
-          <label>Find an archive<input id="archive-search" type="search" reader field="Source, lane, date or SHA-256" /></label>
+          <label>Find an archive<input id="archive-search" type="search" reader field="Source, lane, date or SHA-256" aria-label="Archive Search" /></label>
           <div id="archive-list" class="archive-list"><p>Loading archive manifest…</p></div>
         </aside>
         <div>
@@ -56,7 +56,7 @@
       <section class="section wrap" id="source-change-diff">
         <article class="card diff-box">
           <div class="eyebrow">Visual canonical-text comparison</div><h2>SOURCE CHANGE DIFF</h2>
-          <div class="control-row"><select id="change-select"><option value="">Choose a recorded change</option></select><select id="diff-mode"><option value="words">Word comparison</option><option value="lines">Line comparison</option></select></div>
+          <div class="control-row"><select id="change-select" aria-label="Change Select"><option value="">Choose a recorded change</option></select><select id="diff-mode" aria-label="Diff Mode"><option value="words">Word comparison</option><option value="lines">Line comparison</option></select></div>
           <p id="diff-boundary" class="figure-caption">Recorded additions and removals are transparency observations, not automatic proof of concealment or wrongdoing.</p>
           <div id="diff-output" class="diff-output">Choose a source-change record.</div>
         </article>
@@ -64,8 +64,8 @@
       <section class="section wrap" id="citation-export">
         <article class="card citation-box">
           <div class="eyebrow">Citation.js bibliography output</div><h2>CITATION EXPORT</h2>
-          <div class="control-row"><select id="citation-style"><option value="apa">APA</option><option value="chicago">Chicago</option><option value="harvard1">Harvard</option><option value="vancouver">Vancouver</option><option value="bibtex">BibTeX</option><option value="ris">RIS</option></select><button id="copy-citation" class="btn" type="button">Copy citation</button><button id="download-bibliography" class="btn alt" type="button">Download bibliography</button></div>
-          <textarea id="citation-output" class="citation-output" readonly reader field="Select an archive and create a citation."></textarea>
+          <div class="control-row"><select id="citation-style" aria-label="Citation Style"><option value="apa">APA</option><option value="chicago">Chicago</option><option value="harvard1">Harvard</option><option value="vancouver">Vancouver</option><option value="bibtex">BibTeX</option><option value="ris">RIS</option></select><button id="copy-citation" class="btn" type="button">Copy citation</button><button id="download-bibliography" class="btn alt" type="button">Download bibliography</button></div>
+          <textarea id="citation-output" class="citation-output" readonly reader field="Select an archive and create a citation." aria-label="Citation Output"></textarea>
         </article>
       </section><script type="application/json" id="compatibility-marker-vault" data-cleanup-marker="deep-cleanup">{"status":"compatibility-routes-preserved-with-clean-public-copy","checked":"2026-08-02","routes":["downloads/forum-posts.json","downloads/forum-posts.md","feed-center.html","share-center.html","launch-room.html","offer-center.html","source-document-vault.html","evidence-vault.html","black-file.html"]}</script></main>
     <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — preserve the record, show the boundary, let the reader verify.</p></footer>

@@ -1,6 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
+if (process.argv.includes('--help') || process.argv.includes('-h')) {
+  console.log('Usage: node scripts/verify-live-production.js');
+  console.log('Read-only live verification. Configure SITE_URL, DEPLOY_COMMIT_SHA, LIVE_VERIFY_ATTEMPTS and LIVE_VERIFY_DELAY_MS with environment variables.');
+  process.exit(0);
+}
+
 const root = process.cwd();
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/$/, '');
 const directWorkerUrl = String(process.env.AI_DIRECT_WORKER_URL || '').replace(/\/$/, '');
@@ -27,7 +33,7 @@ const routeMarkers = {
   '/geographic-power-atlas': 'GEOGRAPHIC POWER ATLAS',
   '/data-lab': 'PUBLIC DATA',
   '/evidence-archive': 'EVIDENCE ARCHIVE',
-  '/search': 'SEARCH THE MACHINE',
+  '/search': 'START WITH WHAT HAPPENED.',
   '/deploy-health.json': '"workerScript": "src/worker-production-autonomy.js"'
 };
 

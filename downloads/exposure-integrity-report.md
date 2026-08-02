@@ -1,6 +1,6 @@
 # Exposure Integrity Engine
 
-Generated: 2026-08-02T06:38:06.273Z
+Generated: 2026-08-02T21:23:08.031Z
 
 **Status:** PASS
 
@@ -9,8 +9,8 @@ Generated: 2026-08-02T06:38:06.273Z
 ## Coverage
 
 - Evidence ledger entries: 85
-- Hit List entries: 275
-- Graph nodes: 120
+- Hit List entries: 252
+- Graph nodes: 97
 - Graph edges: 172
 - Unresolved graph provenance: 172
 - Sensitive-record failures: 0

@@ -45,6 +45,18 @@ function invariantSubject(resource, external) {
   return { ...localDefaults, ...resource, external };
 }
 
+function implementationApproved(resource, external) {
+  if (['production', 'batch'].includes(resource?.implementation_status)) return true;
+  if (!external || resource?.implementation_status !== 'experimental') return false;
+  const metadata = resource?.metadata || {};
+  return metadata.remote_compute === true &&
+    metadata.owner_onboarding_completed === true &&
+    metadata.automation_permission_verified === true &&
+    metadata.billing_hard_stop_confirmed === true &&
+    metadata.public_workloads_only === true &&
+    metadata.prompt_transfer_allowed === false;
+}
+
 export function utilityScore(resource, weights = DEFAULT_UTILITY_WEIGHTS) {
   return Number(Object.entries(weights).reduce((total, [field, weight]) => {
     return total + clamp(resource[field]) * weight;
@@ -54,7 +66,7 @@ export function utilityScore(resource, weights = DEFAULT_UTILITY_WEIGHTS) {
 export function evaluateResource(resource, job, context = {}) {
   const reasons = [];
   const now = context.now instanceof Date ? context.now : new Date(context.now || Date.now());
-  const external = Number(resource.resource_tier) >= 3;
+  const external = resource?.metadata?.remote_compute === true || Number(resource.resource_tier) >= 3;
   const approvedData = resource.approved_data_classes || [];
   const prohibitedData = resource.prohibited_data_classes || [];
   const supportedJobs = resource.supported_job_types || [];
@@ -63,7 +75,7 @@ export function evaluateResource(resource, job, context = {}) {
   if (!resource.enabled) reasons.push('resource-disabled');
   if (resource.manual_approval_required) reasons.push('manual-approval-required');
   if (!resource.approved_for_automation) reasons.push('automation-not-approved');
-  if (!['production', 'batch'].includes(resource.implementation_status)) reasons.push('implementation-not-approved');
+  if (!implementationApproved(resource, external)) reasons.push('implementation-not-approved');
 
   const invariant = evaluateZeroSpendInvariant(invariantSubject(resource, external), {
     now,
@@ -77,7 +89,6 @@ export function evaluateResource(resource, job, context = {}) {
     if (invariant.violations.includes('payment-method-present-required-or-unknown')) reasons.push('payment-method-present-or-unknown');
     if (invariant.violations.includes('quota-not-verified')) reasons.push('quota-unverified');
   }
-
   if (!['none', 'environment_secret', 'managed_identity', 'manual'].includes(resource.authentication_type)) reasons.push('authentication-type-unknown');
   if (resource.authentication_type === 'environment_secret' && !resource.credential_reference) reasons.push('credential-binding-missing');
   if (!approvedData.includes(job.data_class)) reasons.push('data-class-not-approved');
@@ -140,4 +151,4 @@ export function rankResources(resources, job, context = {}) {
   return { eligible, excluded };
 }
 
-export const policyInternals = { dateExpired, dateStale, hostAllowed, clamp, invariantSubject };
+export const policyInternals = { dateExpired, dateStale, hostAllowed, clamp, invariantSubject, implementationApproved };

@@ -11,7 +11,7 @@
   <style>
     .monitor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.monitor-card{padding:1rem;border:1px solid rgba(216,181,106,.3);border-radius:14px;background:rgba(7,6,3,.86)}table{width:100%;border-collapse:collapse;font-size:.82rem}th,td{padding:.55rem;border-bottom:1px solid rgba(216,181,106,.18);text-align:left}.scroll{overflow:auto}.admin-controls{display:flex;gap:.6rem;flex-wrap:wrap}.admin-controls input,.admin-controls select,.admin-controls textarea{background:#050505;color:#f3e6bd;border:1px solid rgba(216,181,106,.35);padding:.65rem;border-radius:10px}.admin-controls textarea{width:100%;min-height:100px}
   </style>
-<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style></head>
+<style id="public-internal-visibility">.internal-only,[data-internal-only="true"]{display:none!important}</style><style id="commercial-strategy-visibility">.commercial-internal,[data-commercial-internal="true"]{display:none!important}</style><meta name="description" content="Email Campaign Monitor | Matrix Reprogrammed. Evidence, records, source routes, public research tools and clearly bounded conclusions from Matrix Reprogrammed."></head>
 <body>
   <div class="page">
     <header class="wrap topbar"><a class="brand" href="index.html">MATRIX REPROGRAMMED</a></header><!-- page-guide:start --><section class="page-guide wrap commercial-internal"><div><span class="label">You are here</span><h2>Site route</h2><p>This page is part of the wider reporting system. Start with the summary, then open the evidence route or research tools for deeper source work.</p></div><div class="page-guide-chips"><span>Summary</span><span>Evidence</span><span>Research</span><span>Search</span></div><div class="page-guide-actions"><a class="btn" href="daily-command-brief.html">Today</a><a class="btn alt" href="evidence-vault.html">Evidence</a><a class="btn alt" href="research-tools.html">Research Tools</a></div></section><!-- page-guide:end --><!-- reader-governor:start --><section class="reader-governor-strip"><div><strong>Matrix Reprogrammed</strong><span>Reports, records, people, institutions, money routes and missing files.</span></div><nav><a href="daily-command-brief.html">Daily Brief</a><a href="control-structure.html">Power Map</a><a href="entities.html">Entities</a><a href="investigations.html">Investigations</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav></section><!-- reader-governor:end -->
@@ -19,7 +19,7 @@
       <div class="eyebrow">Protected administration</div>
       <h1>EMAIL CAMPAIGN MONITOR.</h1>
       <section class="monitor-card">
-        <label>Admin API token <input type="password" id="admin-token" autocomplete="off"></label>
+        <label>Admin API token <input type="password" id="admin-token" autocomplete="off" aria-label="Admin Token"></label>
         <button class="btn" id="connect" type="button">Connect</button>
         <p id="connection-status" aria-live="polite">No admin request has been made.</p>
       </section>
@@ -32,12 +32,12 @@
       <section class="monitor-card">
         <h2>Create reviewed campaign</h2>
         <form id="campaign-form" class="admin-controls">
-          <select name="kind"><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="release">Release</option><option value="monthly">Monthly</option></select>
-          <select name="segmentKey"><option value="public_daily_brief">Public daily</option><option value="public_weekly_digest">Public weekly</option><option value="registered_release_notices">Registered releases</option><option value="supporter_weekly_member_brief">Supporter weekly</option><option value="intelligence_daily_member_brief">Intelligence daily</option><option value="research_pro_reports">Research Pro</option></select>
-          <input name="subject" reader field="Subject" required>
-          <textarea name="textContent" reader field="Plain-text content" required></textarea>
-          <textarea name="htmlContent" reader field="HTML content" required></textarea>
-          <label><input type="checkbox" name="sendNow"> Queue and send now</label>
+          <select name="kind" aria-label="Kind"><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="release">Release</option><option value="monthly">Monthly</option></select>
+          <select name="segmentKey" aria-label="SegmentKey"><option value="public_daily_brief">Public daily</option><option value="public_weekly_digest">Public weekly</option><option value="registered_release_notices">Registered releases</option><option value="supporter_weekly_member_brief">Supporter weekly</option><option value="intelligence_daily_member_brief">Intelligence daily</option><option value="research_pro_reports">Research Pro</option></select>
+          <input name="subject" reader field="Subject" required aria-label="Subject">
+          <textarea name="textContent" reader field="Plain-text content" required aria-label="TextContent"></textarea>
+          <textarea name="htmlContent" reader field="HTML content" required aria-label="HtmlContent"></textarea>
+          <label><input type="checkbox" name="sendNow" aria-label="SendNow"> Queue and send now</label>
           <button class="btn" type="submit">Create campaign</button>
         </form>
         <p id="campaign-status" aria-live="polite"></p>

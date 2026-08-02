@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:23:29.855Z",
-  "pageCount": 103,
+  "generatedAt": "2026-08-02T21:03:08.591Z",
+  "pageCount": 108,
   "output": "downloads/epstein-network-deep-dive.pdf",
   "report": {
-    "version": 10,
+    "version": 13,
     "title": "Epstein Network Deep Dive Matrix",
-    "contentHash": "691e9b715bdd0880888263ea08106a13bcc2a096a92fbfa7ee2c4c6a3faa00c9",
+    "contentHash": "e90800b69b3e1b4e726e768412c09f2776dc2f66861e6569ab07d4579d84cc81",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -16,9 +16,9 @@
       "16cde9bd4c87e916ff1e4fb7",
       "bbf59ae4094608bcd2c37305",
       "ecd4a1111010f13b2d74bf8c",
+      "e083e748ec6311742c2416e5",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
-      "a54df8218ca146eb70f725e3",
       "cf94b367bfb0237448d49649",
       "d23398b8ca4c7124399c9504",
       "a01fc28e9fb6ce85637a3248",
@@ -40,6 +40,11 @@
       "275d6c3caca158f7a3e15780",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
+      "ASC-REVIEW-BF5A5D787C430742",
+      "ASC-REVIEW-7B1A15ED77443F13",
+      "ASC-REVIEW-9B01C094346A78B0",
+      "ASC-REVIEW-E6D70696A19B3CDA",
+      "ASC-REVIEW-20316213EFD183CC",
       "a76edf5945d2f4910bd413ef",
       "54197b23c792a122f53a863b",
       "e6dd95e595093e11aa17005a",
@@ -49,26 +54,29 @@
       "f44c3c7309a5f0779a57e655",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-AF18512452F699D2",
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-96665FE56FA75D90",
       "3a8c1f1e8620cb3f09a2c7ab",
       "e10c38338a42062da8899449",
       "8d2a26495075b1d71abf17c2",
       "EP-AI-001",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "ASC-REVIEW-8708EF2A4E1C3023",
+      "ASC-REVIEW-64E0D2BCFC6FF23D",
+      "ASC-REVIEW-481745ED8153AA11",
+      "ASC-REVIEW-9719FEC8729E7FE2",
       "a19f1d67009a0b031677b2af",
       "869fb3fbc8c9ae63c5aca5f3",
       "69f071adbd84f39904a53107",
       "0defb9debab95a663872bf25",
       "bdd7e454126ebfa6319a594c",
+      "ASC-REVIEW-2B2EECE9A18DFF2C",
       "7f0eb9ddb996aecbeeda522d",
       "deb382cdbfe57b57793d739e",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
-      "d6936ce262c4c18cb75c6e44",
-      "96d8ea15e49544e3f1cafd06",
-      "7a0ce047ee750826a59e7474",
-      "6d8df9af51b8078e703b2748",
-      "65debd126cdfa5f7547a3eca",
-      "a5e5d4ec4df4352ea242ea3f",
-      "3c9c23f7f9a1cec81ef90f59",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-9E85403F3389F334",
@@ -79,17 +87,14 @@
       "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-285205442D5C5D56",
       "ASC-REVIEW-3266CA18BAEC4ACB",
-      "ASC-REVIEW-25B371012CBA1315",
-      "d0b647e325275daa6d824a49",
-      "d06308ce08cd7bbee96607ab",
-      "75fcb0966ee4802cca054261",
-      "594100b62a47db521fe2a128",
-      "EP-AI-004",
-      "9f3052b5d8cec138a2a37e8c",
-      "76a719654ec3312153163154",
-      "c5d9edd2562c4c00e3ddfdfb",
-      "34805734b1ad3b73f0ede0d8",
-      "cee347fbc3752c6e0f890457",
+      "ASC-REVIEW-9ABCBA0136F7F0F3",
+      "d6936ce262c4c18cb75c6e44",
+      "96d8ea15e49544e3f1cafd06",
+      "7a0ce047ee750826a59e7474",
+      "6d8df9af51b8078e703b2748",
+      "65debd126cdfa5f7547a3eca",
+      "a5e5d4ec4df4352ea242ea3f",
+      "3c9c23f7f9a1cec81ef90f59",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-C369A84AD971DD75",
@@ -139,23 +144,18 @@
       "ASC-REVIEW-D3C6DB16A89DBA51",
       "ASC-REVIEW-DAC9306D89683C63",
       "ASC-REVIEW-44F136F26F8A52B2",
+      "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-1EA1A54BAAF5A93D",
-      "ASC-REVIEW-45FC68BFE6057AEE",
-      "ASC-REVIEW-44CBDE6F2AE4CA62",
-      "ASC-REVIEW-8F2468497DC18A3E",
-      "ASC-REVIEW-2F809A60275611A5",
-      "ASC-REVIEW-5F18C934E1FFBBB4",
-      "ASC-REVIEW-5D75F861BBF77D9D",
-      "c414ea6b5bea3390d2a8ce5c"
+      "ASC-REVIEW-45FC68BFE6057AEE"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 4,
-      "disputedClaimCount": 69,
+      "disputedClaimCount": 78,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 67,
-      "moneyRecordCount": 71
+      "relationshipCount": 73,
+      "moneyRecordCount": 66
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 67 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Bilderberg Meeting → Banks And Finance: overlap hint; Bilderberg Meeting → Media: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; CACI International → Defense Technology: execution layer",
+        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; FCN, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 67 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
+          "Influence should be mapped through infrastructure, filings and contracts.",
+          "The strongest public pattern is convergence across access systems.",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
-          "Bilderberg Meeting → Banks And Finance: overlap hint",
-          "Bilderberg Meeting → Media: overlap hint",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "CACI International → Defense Technology: execution layer"
+          "FCN, INC. — Court Services and Offender Supervision Agency",
+          "INDUSTRIAL BANK — District of Columbia Courts"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

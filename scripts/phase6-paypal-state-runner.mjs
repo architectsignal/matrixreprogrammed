@@ -22,12 +22,19 @@ function canonicalPayPalSource(){
     "function cookie(request,name=''){const raw=request.headers.get('cookie')||'';const values={};for(const part of raw.split(';')){const index=part.indexOf('=');if(index<=0)continue;const key=part.slice(0,index).trim();if(key&&!Object.prototype.hasOwnProperty.call(values,key))values[key]=decodeURIComponent(part.slice(index+1).trim())}if(name)return values[name]||'';return values.matrix_session_v2||values.matrix_session||''}",
     'session-cookie reader'
   );
-  source=replaceRequired(
-    source,
-    "async function config(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const state=await activationState(env);return json({ok:true,authenticated:true,environment:state.environment,currency:'EUR',clientId:state.configured?String(env.PAYPAL_CLIENT_ID):null,configured:state.configured,checkoutEnabled:state.checkoutEnabled,webhookConfigured:Boolean(env.PAYPAL_WEBHOOK_ID),tiers:Object.fromEntries(Object.entries(tiers).map(([key,value])=>[key,{label:value.label,price:value.price,planId:state.plans.find(plan=>plan.tier===key)?.provider_plan_id||null}])),activation:{environmentSwitch:state.environmentSwitch,databaseSwitch:state.databaseSwitch,confirmation:state.confirmation,plansReady:state.plansReady}})}",
-    "async function currentSubscriptionForMember(env,memberId){return await first(env.MEMBERS_DB.prepare(`SELECT tier,billing_state,entitlement_active,provider_status,current_period_end,next_billing_at,CASE WHEN entitlement_active=1 OR (entitlement_active IS NULL AND LOWER(provider_status) IN ('active','trialing') AND (current_period_end IS NULL OR datetime(current_period_end)>datetime('now'))) THEN 1 ELSE 0 END AS paid_access FROM paypal_current_subscription_status WHERE member_id=? ORDER BY paid_access DESC,state_updated_at DESC LIMIT 1`).bind(memberId))}\nasync function config(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const state=await activationState(env);const currentSubscription=await currentSubscriptionForMember(env,required.auth.member.id);return json({ok:true,authenticated:true,environment:state.environment,currency:'EUR',clientId:state.configured?String(env.PAYPAL_CLIENT_ID):null,configured:state.configured,checkoutEnabled:state.checkoutEnabled,webhookConfigured:Boolean(env.PAYPAL_WEBHOOK_ID),paidAccess:bool(currentSubscription?.paid_access),currentSubscription:currentSubscription||null,effectiveTier:required.auth.entitlement.effective_tier,billingUrl:'/billing-dashboard.html',tiers:Object.fromEntries(Object.entries(tiers).map(([key,value])=>[key,{label:value.label,price:value.price,planId:state.plans.find(plan=>plan.tier===key)?.provider_plan_id||null}])),activation:{environmentSwitch:state.environmentSwitch,databaseSwitch:state.databaseSwitch,confirmation:state.confirmation,plansReady:state.plansReady}})}",
-    'member configuration response'
-  );
+  const currentSubscriptionMarkers=[
+    'async function currentSubscriptionForMember(env,memberId)',
+    'paidAccess:bool(currentSubscription?.paid_access)',
+    "billingUrl:'/billing-dashboard.html'"
+  ];
+  if(!currentSubscriptionMarkers.every(marker=>source.includes(marker))){
+    source=replaceRequired(
+      source,
+      "async function config(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const state=await activationState(env);return json({ok:true,authenticated:true,environment:state.environment,currency:'EUR',clientId:state.configured?String(env.PAYPAL_CLIENT_ID):null,configured:state.configured,checkoutEnabled:state.checkoutEnabled,webhookConfigured:Boolean(env.PAYPAL_WEBHOOK_ID),tiers:Object.fromEntries(Object.entries(tiers).map(([key,value])=>[key,{label:value.label,price:value.price,planId:state.plans.find(plan=>plan.tier===key)?.provider_plan_id||null}])),activation:{environmentSwitch:state.environmentSwitch,databaseSwitch:state.databaseSwitch,confirmation:state.confirmation,plansReady:state.plansReady}})}",
+      "async function currentSubscriptionForMember(env,memberId){return await first(env.MEMBERS_DB.prepare(`SELECT tier,billing_state,entitlement_active,provider_status,current_period_end,next_billing_at,CASE WHEN entitlement_active=1 OR (entitlement_active IS NULL AND LOWER(provider_status) IN ('active','trialing') AND (current_period_end IS NULL OR datetime(current_period_end)>datetime('now'))) THEN 1 ELSE 0 END AS paid_access FROM paypal_current_subscription_status WHERE member_id=? ORDER BY paid_access DESC,state_updated_at DESC LIMIT 1`).bind(memberId))}\nasync function config(request,env){const required=await requireAuth(request,env);if(required.response)return required.response;const state=await activationState(env);const currentSubscription=await currentSubscriptionForMember(env,required.auth.member.id);return json({ok:true,authenticated:true,environment:state.environment,currency:'EUR',clientId:state.configured?String(env.PAYPAL_CLIENT_ID):null,configured:state.configured,checkoutEnabled:state.checkoutEnabled,webhookConfigured:Boolean(env.PAYPAL_WEBHOOK_ID),paidAccess:bool(currentSubscription?.paid_access),currentSubscription:currentSubscription||null,effectiveTier:required.auth.entitlement.effective_tier,billingUrl:'/billing-dashboard.html',tiers:Object.fromEntries(Object.entries(tiers).map(([key,value])=>[key,{label:value.label,price:value.price,planId:state.plans.find(plan=>plan.tier===key)?.provider_plan_id||null}])),activation:{environmentSwitch:state.environmentSwitch,databaseSwitch:state.databaseSwitch,confirmation:state.confirmation,plansReady:state.plansReady}})}",
+      'member configuration response'
+    );
+  }
   if(!source.includes(shutdownFirst)){
     source=replaceRequired(
       source,
@@ -44,10 +51,14 @@ try{
   const duplicateGuardAnchor="pass('verified-activation-and-idempotency');";
   const duplicateGuardStage="const duplicateCheckout=await call('/api/paypal/checkout-intent',{as:'member-buyer',method:'POST',body:{tier:'intelligence'}});assert(duplicateCheckout.response.status===409&&duplicateCheckout.data.billingUrl==='/billing-dashboard.html','Active PayPal membership did not block duplicate checkout');pass('duplicate-active-subscription-blocked');";
   let source=fs.readFileSync(testPath,'utf8');
-  const workerImport="const source=fs.readFileSync(path.join(root,'src/worker-paypal-subscriptions.js'),'utf8');\nconst module=await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);";
+  const workerImports=[
+    "const source=fs.readFileSync(path.join(root,'src/worker-paypal-subscriptions.js'),'utf8');\nconst module=await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);",
+    "const source=fs.readFileSync(path.join(root,'src/worker-paypal-subscriptions.js'),'utf8');\r\nconst module=await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);"
+  ];
   const canonicalWorker=canonicalPayPalSource();
   const canonicalImport=`const source=Buffer.from('${Buffer.from(canonicalWorker).toString('base64')}','base64').toString('utf8');\nconst module=await import(\`data:text/javascript;base64,\${Buffer.from(source).toString('base64')}\`);`;
-  if(!source.includes(workerImport))throw new Error('Phase 6 worker import anchor is missing');
+  const workerImport=workerImports.find(anchor=>source.includes(anchor));
+  if(!workerImport)throw new Error('Phase 6 worker import anchor is missing');
   source=source.replace(workerImport,canonicalImport);
   if(!source.includes(duplicateGuardStage)){
     if(!source.includes(duplicateGuardAnchor))throw new Error('Phase 6 duplicate-subscription stage anchor is missing');
@@ -55,9 +66,13 @@ try{
   }
   source=source
     .replace('requiredStages:14','requiredStages:16')
+    .replace('requiredStages:15','requiredStages:16')
     .replace('stages.length===14','stages.length===16')
+    .replace('stages.length===15','stages.length===16')
     .replace('all 14 state stages','all 16 state stages')
-    .replace('${stages.length}/14 stages','${stages.length}/16 stages');
+    .replace('all 15 state stages','all 16 state stages')
+    .replace('${stages.length}/14 stages','${stages.length}/16 stages')
+    .replace('${stages.length}/15 stages','${stages.length}/16 stages');
   await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
 }catch(error){
   const failure={ok:false,failedAt:new Date().toISOString(),name:error?.name||'Error',message:String(error?.message||error),stack:String(error?.stack||error),boundary:'Diagnostic only. No real PayPal account, charge, subscription, member, source file or production database was modified.'};

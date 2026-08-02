@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 const sourceFile = path.join(dirname, 'recovery-browser-smoke-legacy.mjs');
-let source = fs.readFileSync(sourceFile, 'utf8');
+let source = fs.readFileSync(sourceFile, 'utf8').replace(/\r\n/g, '\n');
 const startMarker = "  await runTest(browser, 'Homepage navigation', '/index.html', async page => {";
 const endMarker = "\n\n  await runTest(browser, 'Start Here safety routes'";
 const start = source.indexOf(startMarker);

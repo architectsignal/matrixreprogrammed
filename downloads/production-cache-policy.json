@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:18:43.315Z",
+  "criticalHtml": "revalidate every request",
+  "criticalLiveJson": "revalidate every request",
+  "searchIndex": "10-minute browser/edge cache with one-day stale-while-revalidate",
+  "evidenceNetwork": "one-hour browser/edge cache with one-day stale-while-revalidate",
+  "javascriptAndCss": "one-day cache with seven-day stale-while-revalidate; HTML references are content-hash versioned",
+  "immutableMedia": "images and fonts only",
+  "deployManifest": "no-store",
+  "deployHealth": "no-store",
+  "membership": "no-cache with runtime-gated checkout",
+  "boundary": "Fresh intelligence, health and account surfaces always revalidate. Large static indexes and fingerprinted assets are cached to reduce startup latency without hiding new releases."
+}

@@ -1,9 +1,9 @@
 {
-  // The strict production boundary remains in worker-production.js.
-  // The autonomy wrapper delegates fetch traffic unchanged and adds bounded scheduled AI maintenance.
+  // Recovery mirror of the canonical wrangler.toml used by production workflows.
+  // Keep runtime-affecting values in semantic parity with that file.
   "name": "matrixreprogrammed",
   "main": "src/worker-production-autonomy.js",
-  "compatibility_date": "2026-06-28",
+  "compatibility_date": "2026-06-25",
 
   // Runtime credentials and activation switches are managed in Cloudflare.
   // Preserve dashboard values across every Wrangler deployment.
@@ -42,12 +42,79 @@
     "AI_RESOURCE_SCOUT_ENABLED": "false",
     "AI_RESOURCE_AUTO_APPROVAL_ENABLED": "false",
     "AI_LOCAL_MODEL_ROUTING_ENABLED": "false",
-    "AI_SITE_DIRECTOR_ENABLED": "false"
+    "AI_SITE_DIRECTOR_ENABLED": "false",
+    "AI_OPPORTUNITY_HUNTER_ENABLED": "false",
+    "AI_COMPUTE_RESOURCE_SCOUT_ENABLED": "false",
+    "AI_REMOTE_COMPUTE_ROUTING_ENABLED": "false",
+    "AI_REMOTE_COMPUTE_EXECUTION_ENABLED": "false",
+    "AI_REMOTE_COMPUTE_JOBS_PER_CYCLE": "0"
   },
   "assets": {
     "binding": "ASSETS",
-    "directory": "_site",
-    "run_worker_first": true
+    "directory": "./_site",
+    "run_worker_first": [
+      "/api/*",
+      "/.netlify/functions/*",
+      "/newsletter-signup",
+      "/subscribe-newsletter",
+      "/forum-*",
+      "/submit-*",
+      "/report-*",
+      "/admin-control-center*",
+      "/review-dashboard*",
+      "/source-intake*",
+      "/deploy-status*",
+      "/deploy-health*",
+      "/card-system-health*",
+      "/site-brain-router*",
+      "/card-artwork-automation*",
+      "/card-artwork-queue*",
+      "/card-artwork-batches*",
+      "/card-art-studio*",
+      "/conclusion-engine*",
+      "/information-gathering-system*",
+      "/update-monitor*",
+      "/distribution-center*",
+      "/launch-room*",
+      "/offer-center*",
+      "/sales-ladder*",
+      "/schema-index*",
+      "/machine-index*",
+      "/campaign-calendar*",
+      "/accountability-review-inbox*",
+      "/speculation-needs-review*",
+      "/data/review-dashboard.json",
+      "/data/site-brain-router.json",
+      "/data/missing-record-queue.json",
+      "/data/site-public-copy-intake-audit.json",
+      "/data/card-deck-system-audit.json",
+      "/downloads/review-dashboard.md",
+      "/downloads/generated-site-repair-report.json",
+      "/downloads/live-ai-management-verification.json",
+      "/downloads/forum-posts*",
+      "/downloads/the-black-file-matrix-reprogrammed.pdf",
+      "/downloads/seven-day-intel.json",
+      "/downloads/intel-vault.*",
+      "/downloads/timer-synthesis.md",
+      "/downloads/probability-snapshot.md",
+      "/downloads/supporter*",
+      "/downloads/weekly-*",
+      "/downloads/signal-drop*",
+      "/downloads/source-drop-bundle*",
+      "/downloads/daily-*",
+      "/downloads/intelligence-*",
+      "/downloads/in-depth-report*",
+      "/downloads/elite-report*",
+      "/downloads/member-report*",
+      "/downloads/research*",
+      "/downloads/full-dossier*",
+      "/downloads/citation*",
+      "/downloads/bibliography*",
+      "/downloads/evidence-path*",
+      "/downloads/source-pack*",
+      "/downloads/data-export*",
+      "/downloads/network-export*"
+    ]
   },
   "kv_namespaces": [
     {

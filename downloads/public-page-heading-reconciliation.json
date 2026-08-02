@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:42.316Z",
+  "owner": "scripts/reconcile-public-page-headings.js",
+  "changes": [
+    "daily-watch.html",
+    "_site\\daily-watch.html",
+    "_site\\daily-watch"
+  ],
+  "checks": [
+    {
+      "file": "daily-watch.html",
+      "contract": "visible daily-watch H1",
+      "ok": true
+    },
+    {
+      "file": "heroes-fighting-matrix-card.html",
+      "contract": "visible heroes-card H1",
+      "ok": true
+    },
+    {
+      "file": "entity-briefs\\control-structure.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    },
+    {
+      "file": "_site\\daily-watch.html",
+      "contract": "visible daily-watch H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\daily-watch",
+      "contract": "visible daily-watch H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\heroes-fighting-matrix-card.html",
+      "contract": "visible heroes-card H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\heroes-fighting-matrix-card",
+      "contract": "visible heroes-card H1",
+      "ok": true
+    },
+    {
+      "file": "_site\\entity-briefs\\control-structure.html",
+      "contract": "static visible evidence boundary",
+      "ok": true
+    }
+  ],
+  "summary": {
+    "headingChecks": 6,
+    "entityBoundaryChecks": 2,
+    "changedFiles": 3
+  },
+  "boundary": "This reconciliation changes document hierarchy and makes existing evidence limitations statically visible. It does not alter evidence, rankings, claims, membership, payment, forum or Worker behaviour."
+}

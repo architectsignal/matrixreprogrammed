@@ -153,6 +153,8 @@ assert(protectedResponse.status===503,'Protected asset must remain closed withou
 assert(protectedAssetTier('/downloads/timer-synthesis.md')==='supporter_3','Supporter asset mapping failed');
 assert(protectedAssetTier('/downloads/probability-snapshot.md')==='intelligence_6','Intelligence asset mapping failed');
 assert(protectedAssetTier('/downloads/research-bundle.zip')==='research_pro_9','Research Pro asset mapping failed');
+assert(protectedAssetTier('/review-dashboard.html')==='admin','Admin control-surface mapping failed');
+assert(protectedAssetTier('/review-dashboard')==='admin','Extensionless admin control-surface mapping failed');
 const direct=await enforceProtectedAssetAccess(new Request('https://matrixreprogrammed.com/downloads/the-black-file-matrix-reprogrammed.pdf'),{});
 assert(direct.status===503,'Direct access gate must fail closed without D1');
 const staticResponse=await call('/index.html',{ASSETS:{fetch:async()=>new Response('<!doctype html><title>ok</title>',{status:200,headers:{'content-type':'text/html'}})}});

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-02T06:21:12.661Z",
-  "pageCount": 136,
+  "generatedAt": "2026-08-02T21:01:15.407Z",
+  "pageCount": 133,
   "output": "downloads/current-intelligence-finalization.pdf",
   "report": {
-    "version": 10,
+    "version": 14,
     "title": "Current Intelligence Finalization",
-    "contentHash": "e46accaa8a1a100f57e5a69e742956c658b839629beca28d1adcabeb8700ba91",
+    "contentHash": "4aa7fc17a9694f9aa4c68794ca8b8eced775d7a40dc4f79da53f9976dc64b9f6",
     "sourceIds": [
-      "a54df8218ca146eb70f725e3",
       "EP-AI-004",
       "3a425f0d5d683952bc0ad7ac",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -20,7 +20,6 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-6C02F7DFCB3CC39B",
       "26b90533dbf7d2ed42f02de6",
       "EP-AI-002",
       "e72d22f4f28eb53e3173d0a6",
@@ -34,21 +33,22 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "daily-revelation-report",
       "EP-AI-003",
       "360e80c162081c85d2c680ef",
+      "ec968f2ec6ba82128b4cd91b",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-003",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
+      "ASC-REVIEW-64E0D2BCFC6FF23D",
+      "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-565A586322B4B93A",
       "ASC-REVIEW-2F0D540A3C8B64CE",
-      "ASC-REVIEW-1D9239F50A285FC0",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -80,7 +80,6 @@
       "ASC-REVIEW-F26BA2899C21B0EA",
       "ASC-REVIEW-288CD8D5C42C050E",
       "ASC-REVIEW-EA0D28B414E271DB",
-      "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-6A0CBB4AE4D6A280",
       "ASC-REVIEW-AE10394716B1B048",
       "ASC-REVIEW-F5CA53DC99863DAC",
@@ -92,7 +91,8 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B6BCA7554CFEEE44",
+      "ASC-REVIEW-B59332D029E64DD4",
+      "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -111,7 +111,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-B8E3F97B2B57C256",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
@@ -146,23 +145,24 @@
       "ASC-REVIEW-F9B27A08465F560B",
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-39269A2C0471A66C",
-      "ASC-REVIEW-53BD0E17B018491C"
+      "ASC-REVIEW-53BD0E17B018491C",
+      "ASC-REVIEW-0177F61D444ED739"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
+      "primarySourceCount": 3,
       "disputedClaimCount": 129,
-      "newEntityCount": 20,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 108,
-      "moneyRecordCount": 100
+      "relationshipCount": 111,
+      "moneyRecordCount": 102
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Current Intelligence Finalization.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Current Intelligence Finalization.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 82,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 108 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 108 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
   }
 }

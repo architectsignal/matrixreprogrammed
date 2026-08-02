@@ -1,10 +1,10 @@
 {
   "ok": true,
   "kind": "daily",
-  "generatedAt": "2026-08-01T07:39:36.959Z",
+  "generatedAt": "2026-08-02T08:22:21.766Z",
   "period": {
-    "start": "2026-07-30T07:39:38.557Z",
-    "end": "2026-08-01T07:39:36.959Z",
+    "start": "2026-07-31T08:22:22.807Z",
+    "end": "2026-08-02T08:22:21.766Z",
     "days": 2
   },
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
@@ -21,192 +21,66 @@
     "sourcesScheduled": 12,
     "sourcesFetched": 9,
     "sourceFailures": 3,
-    "changedSources": 8,
-    "findingsInWindow": 905,
-    "establishedWrongdoingFindings": 11,
+    "changedSources": 5,
+    "findingsInWindow": 503,
+    "establishedWrongdoingFindings": 7,
     "officialActionFindings": 0,
     "documentOrLeakLeads": 0,
-    "meaningfulSourceChanges": 4
+    "meaningfulSourceChanges": 5
   },
   "topConclusion": "The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.",
   "patterns": {
     "byLane": {
-      "money-contracts": 162,
-      "international-corruption": 121,
-      "government-enforcement": 231,
-      "oversight-audit": 151,
-      "epstein-disclosure": 240
+      "money-contracts": 87,
+      "government-enforcement": 154,
+      "international-corruption": 68,
+      "oversight-audit": 34,
+      "epstein-disclosure": 160
     },
     "byStatus": {
-      "record-update": 544,
-      "established-wrongdoing": 204,
-      "official-enforcement": 60,
-      "official-audit-finding": 34,
-      "wrongdoing-lead": 60,
-      "document-release": 3
+      "record-update": 276,
+      "established-wrongdoing": 134,
+      "official-enforcement": 38,
+      "official-audit-finding": 23,
+      "wrongdoing-lead": 30,
+      "document-release": 2
     },
     "topWrongdoingIndicators": [
       {
-        "term": "fraud",
-        "count": 62
-      },
-      {
         "term": "sanction",
-        "count": 60
+        "count": 38
       },
       {
-        "term": "corruption",
-        "count": 5
-      },
-      {
-        "term": "procurement fraud",
-        "count": 4
+        "term": "fraud",
+        "count": 30
       },
       {
         "term": "misconduct",
-        "count": 3
+        "count": 2
       },
       {
         "term": "bribery",
-        "count": 3
+        "count": 2
       },
       {
-        "term": "convicted",
+        "term": "corruption",
         "count": 2
       }
     ]
   },
   "establishedWrongdoing": [
     {
-      "id": "5460c0408472ce834da2b82f",
-      "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-      "summary": "News - The independent public prosecution office of the EU - European Union",
-      "published": "2026-07-31T08:12:09.685Z",
-      "fetchedAt": "2026-07-31T08:12:09.685Z",
-      "lane": "international-corruption",
-      "sourceId": "eppo-news",
-      "sourceLabel": "European Public Prosecutor's Office — News",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
-      "itemUrl": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 60,
-      "wrongdoingIndicators": [
-        "fraud",
-        "convicted"
-      ],
-      "keywordMatches": [
-        "fraud",
-        "convicted"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade — News - The independent public prosecution office of the EU - European Union",
-      "whyItMatters": "This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "international-corruption"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the international-corruption lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
-      "sourceRoutes": [
-        "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-        "https://www.eppo.europa.eu/media/news_en"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
-    },
-    {
-      "id": "0491ca77f4f2c9b90f832c2e",
-      "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-      "summary": "News - The independent public prosecution office of the EU - European Union",
-      "published": "2026-07-30T17:52:41.636Z",
-      "fetchedAt": "2026-07-30T17:52:41.636Z",
-      "lane": "international-corruption",
-      "sourceId": "eppo-news",
-      "sourceLabel": "European Public Prosecutor's Office — News",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
-      "itemUrl": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 60,
-      "wrongdoingIndicators": [
-        "fraud",
-        "convicted"
-      ],
-      "keywordMatches": [
-        "fraud",
-        "convicted"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade — News - The independent public prosecution office of the EU - European Union",
-      "whyItMatters": "This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "international-corruption"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the international-corruption lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
-      "sourceRoutes": [
-        "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-        "https://www.eppo.europa.eu/media/news_en"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
-    },
-    {
-      "id": "c5e336c0b2cc4a30aee62ff2",
+      "id": "10420eb4159dd9ba47a3f7cb",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -221,36 +95,11 @@
       "questions": []
     },
     {
-      "id": "f337071143994ca225e59e5b",
-      "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
-      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
-      "lane": "government-enforcement",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 59,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [
-        "judgment"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [],
-      "questions": []
-    },
-    {
-      "id": "c856bcc2f79cf1ac248b5d12",
+      "id": "2254daad4526bf026ecf1244",
       "title": "Final Judgment - Ali Derakhshanfar",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
@@ -271,17 +120,17 @@
       "questions": []
     },
     {
-      "id": "f3993831e68cecb13238dbdb",
-      "title": "Final Judgment - Sal N. Ortiz",
+      "id": "421097c38f7e1597d6f37887",
+      "title": "Final Judgment by Default",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -296,67 +145,17 @@
       "questions": []
     },
     {
-      "id": "d6f73edf9a6fc2522f2cdf81",
-      "title": "Final Judgment - Semisub, Inc.",
-      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
-      "lane": "government-enforcement",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/judg26592-semisub.pdf",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 59,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [
-        "judgment"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [],
-      "questions": []
-    },
-    {
-      "id": "9bd94693007536a6d9793a2f",
-      "title": "Final Judgment - Jamey Denise Jackson",
-      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
-      "lane": "government-enforcement",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 59,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [
-        "judgment"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [],
-      "questions": []
-    },
-    {
-      "id": "5c498c53685f48f038ad7267",
+      "id": "440a73a5b6c1002efa765acb",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -371,17 +170,17 @@
       "questions": []
     },
     {
-      "id": "da2af7d51f4d667788a13198",
-      "title": "Revised Final Judgment",
+      "id": "4c07add2a6d4eb22cadecd27",
+      "title": "Final Judgment - Geoffrey Allen Wall",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -396,17 +195,42 @@
       "questions": []
     },
     {
-      "id": "648c7669536d5862c476e7c0",
+      "id": "388e2e8c136c6891fe3af13a",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+      "status": "established-wrongdoing",
+      "evidenceGrade": "A",
+      "severity": 5,
+      "score": 59,
+      "wrongdoingIndicators": [],
+      "keywordMatches": [
+        "judgment"
+      ],
+      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "nextRecords": [],
+      "questions": []
+    },
+    {
+      "id": "5546f85d1ba69563adc9bffd",
+      "title": "Final Judgment - Bongiorno",
+      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
+      "lane": "government-enforcement",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceAuthority": "primary-official",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1006,173 +830,17 @@
       }
     },
     {
-      "id": "5460c0408472ce834da2b82f",
-      "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-      "summary": "News - The independent public prosecution office of the EU - European Union",
-      "published": "2026-07-31T08:12:09.685Z",
-      "fetchedAt": "2026-07-31T08:12:09.685Z",
-      "lane": "international-corruption",
-      "sourceId": "eppo-news",
-      "sourceLabel": "European Public Prosecutor's Office — News",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
-      "itemUrl": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 60,
-      "wrongdoingIndicators": [
-        "fraud",
-        "convicted"
-      ],
-      "keywordMatches": [
-        "fraud",
-        "convicted"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade — News - The independent public prosecution office of the EU - European Union",
-      "whyItMatters": "This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "international-corruption"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the international-corruption lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
-      "sourceRoutes": [
-        "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-        "https://www.eppo.europa.eu/media/news_en"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-8",
-        "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-        "route": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-        "classification": "established wrongdoing",
-        "confidence": "high",
-        "evidenceBasis": "European Public Prosecutor's Office — News; evidence grade A; authority not stated.",
-        "supportingCount": 3,
-        "freshness": "2026-07-31T08:12:09.685Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sources": [
-          "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "0491ca77f4f2c9b90f832c2e",
-      "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-      "summary": "News - The independent public prosecution office of the EU - European Union",
-      "published": "2026-07-30T17:52:41.636Z",
-      "fetchedAt": "2026-07-30T17:52:41.636Z",
-      "lane": "international-corruption",
-      "sourceId": "eppo-news",
-      "sourceLabel": "European Public Prosecutor's Office — News",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
-      "itemUrl": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 60,
-      "wrongdoingIndicators": [
-        "fraud",
-        "convicted"
-      ],
-      "keywordMatches": [
-        "fraud",
-        "convicted"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade — News - The independent public prosecution office of the EU - European Union",
-      "whyItMatters": "This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "international-corruption"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the international-corruption lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
-      "sourceRoutes": [
-        "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-        "https://www.eppo.europa.eu/media/news_en"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-9",
-        "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-        "route": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-        "classification": "established wrongdoing",
-        "confidence": "high",
-        "evidenceBasis": "European Public Prosecutor's Office — News; evidence grade A; authority not stated.",
-        "supportingCount": 3,
-        "freshness": "2026-07-30T17:52:41.636Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-        "sources": [
-          "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "c5e336c0b2cc4a30aee62ff2",
+      "id": "10420eb4159dd9ba47a3f7cb",
       "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1190,19 +858,19 @@
       ],
       "questions": [],
       "integrity": {
-        "id": "daily-10",
+        "id": "daily-8",
         "title": "Final Judgment",
-        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf",
         "classification": "established wrongdoing",
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-08-02T08:22:21.766Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sources": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
@@ -1221,7 +889,7 @@
       "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
       "confidence": "high",
       "sourceRoutes": [
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf",
         "https://www.sec.gov/enforcement-litigation/litigation-releases"
       ],
       "nextQuestions": [
@@ -1236,85 +904,11 @@
       "integrityVersion": "2.1.0"
     },
     {
-      "id": "f337071143994ca225e59e5b",
-      "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
-      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
-      "lane": "government-enforcement",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 59,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [
-        "judgment"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "integrity": {
-        "id": "daily-11",
-        "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
-        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-        "classification": "established wrongdoing",
-        "confidence": "high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
-        "sources": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux — Litigation Releases | U.S. Securities and Exchange Commission",
-      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "government-enforcement"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
-      "sourceRoutes": [
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-        "https://www.sec.gov/enforcement-litigation/litigation-releases"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
-    },
-    {
-      "id": "c856bcc2f79cf1ac248b5d12",
+      "id": "2254daad4526bf026ecf1244",
       "title": "Final Judgment - Ali Derakhshanfar",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
@@ -1338,17 +932,17 @@
       ],
       "questions": [],
       "integrity": {
-        "id": "daily-12",
+        "id": "daily-9",
         "title": "Final Judgment - Ali Derakhshanfar",
         "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf",
         "classification": "established wrongdoing",
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-08-02T08:22:21.766Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sources": [
           "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf",
           "data/daily-investigation-conclusions.json",
@@ -1384,17 +978,17 @@
       "integrityVersion": "2.1.0"
     },
     {
-      "id": "f3993831e68cecb13238dbdb",
-      "title": "Final Judgment - Sal N. Ortiz",
+      "id": "421097c38f7e1597d6f37887",
+      "title": "Final Judgment by Default",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1411,138 +1005,367 @@
         "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
       ],
       "questions": [],
+      "integrity": {
+        "id": "daily-10",
+        "title": "Final Judgment by Default",
+        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf",
+        "classification": "established wrongdoing",
+        "confidence": "high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
+        "supportingCount": 1,
+        "freshness": "2026-08-02T08:22:21.766Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sources": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "Final Judgment by Default — Litigation Releases | U.S. Securities and Exchange Commission",
+      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+      "investigativeLanes": [
+        "government-enforcement"
+      ],
+      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "effectOnLane": "strongly-strengthens",
+      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+      "confidence": "high",
+      "sourceRoutes": [
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf",
+        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+      ],
+      "nextQuestions": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "integrityVersion": "2.1.0"
+    },
+    {
+      "id": "440a73a5b6c1002efa765acb",
+      "title": "Final Judgment",
+      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
+      "lane": "government-enforcement",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceAuthority": "primary-official",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+      "status": "established-wrongdoing",
+      "evidenceGrade": "A",
+      "severity": 5,
+      "score": 59,
+      "wrongdoingIndicators": [],
+      "keywordMatches": [
+        "judgment"
+      ],
+      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "questions": [],
+      "integrity": {
+        "id": "daily-11",
+        "title": "Final Judgment",
+        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+        "classification": "established wrongdoing",
+        "confidence": "high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
+        "supportingCount": 1,
+        "freshness": "2026-08-02T08:22:21.766Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sources": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "Final Judgment — Litigation Releases | U.S. Securities and Exchange Commission",
+      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+      "investigativeLanes": [
+        "government-enforcement"
+      ],
+      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "effectOnLane": "strongly-strengthens",
+      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+      "confidence": "high",
+      "sourceRoutes": [
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
+        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+      ],
+      "nextQuestions": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "integrityVersion": "2.1.0"
+    },
+    {
+      "id": "4c07add2a6d4eb22cadecd27",
+      "title": "Final Judgment - Geoffrey Allen Wall",
+      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
+      "lane": "government-enforcement",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceAuthority": "primary-official",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf",
+      "status": "established-wrongdoing",
+      "evidenceGrade": "A",
+      "severity": 5,
+      "score": 59,
+      "wrongdoingIndicators": [],
+      "keywordMatches": [
+        "judgment"
+      ],
+      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
+      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "questions": [],
+      "integrity": {
+        "id": "daily-12",
+        "title": "Final Judgment - Geoffrey Allen Wall",
+        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf",
+        "classification": "established wrongdoing",
+        "confidence": "high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
+        "supportingCount": 1,
+        "freshness": "2026-08-02T08:22:21.766Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+        "sources": [
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "Final Judgment - Geoffrey Allen Wall — Litigation Releases | U.S. Securities and Exchange Commission",
+      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+      "investigativeLanes": [
+        "government-enforcement"
+      ],
+      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "effectOnLane": "strongly-strengthens",
+      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
+      "confidence": "high",
+      "sourceRoutes": [
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf",
+        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+      ],
+      "nextQuestions": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "integrityVersion": "2.1.0"
+    },
+    {
+      "id": "427a4b3a840619411d8d1c33",
+      "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+      "summary": "ORDER FOR SOFT BODY ARMOR & CARRIERS. · Amount: 64575 · Sub-agency: Court Services and Offender Supervision Agency",
+      "published": "2026-10-02T00:00:00.000Z",
+      "fetchedAt": "2026-07-30T17:52:41.636Z",
+      "lane": "money-contracts",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceAuthority": "primary-official",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/9594CS26F0051",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "score": 18,
+      "wrongdoingIndicators": [],
+      "keywordMatches": [],
+      "establishes": "A dated source update exists and should be compared with prior records.",
+      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "questions": [],
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "whatWasFound": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency — ORDER FOR SOFT BODY ARMOR & CARRIERS. · Amount: 64575 · Sub-agency: Court Services and Offender Supervision Agency",
+      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+      "investigativeLanes": [
+        "money-contracts"
+      ],
+      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9594CS26F0051",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
       "integrity": {
         "id": "daily-13",
-        "title": "Final Judgment - Sal N. Ortiz",
-        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-        "classification": "established wrongdoing",
-        "confidence": "high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
+        "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+        "route": "https://www.usaspending.gov/award/9594CS26F0051",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-10-02T00:00:00.000Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
         "sources": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
+          "https://www.usaspending.gov/award/9594CS26F0051",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      },
-      "whatWasFound": "Final Judgment - Sal N. Ortiz — Litigation Releases | U.S. Securities and Exchange Commission",
-      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "government-enforcement"
+      }
+    },
+    {
+      "id": "1583ed9e90a5874047a33041",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/80NSSC26P1028",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
+      "summary": "HBK SOFTWARE MAINTENANCE · Amount: 80243.2 · Sub-agency: National Aeronautics and Space Administration",
+      "published": "2026-10-01T00:00:00.000Z",
+      "firstSeen": "2026-07-19T07:37:07.820Z",
+      "lastSeen": "2026-07-19T07:37:07.820Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
       ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "80NSSC26P1028",
+        "amount": 80243.2,
+        "agency": "National Aeronautics and Space Administration",
+        "subAgency": "National Aeronautics and Space Administration"
+      },
+      "occurrences": 1,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
       "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
       "sourceRoutes": [
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        "https://www.usaspending.gov/award/80NSSC26P1028",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
       ],
       "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
       ],
       "sensitiveReviewRequired": false,
       "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
-    },
-    {
-      "id": "d6f73edf9a6fc2522f2cdf81",
-      "title": "Final Judgment - Semisub, Inc.",
-      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
-      "lane": "government-enforcement",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/judg26592-semisub.pdf",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 59,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [
-        "judgment"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
+      "integrityVersion": "2.1.0",
       "integrity": {
         "id": "daily-14",
-        "title": "Final Judgment - Semisub, Inc.",
-        "route": "https://www.sec.gov/files/judg26592-semisub.pdf",
-        "classification": "established wrongdoing",
-        "confidence": "high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
+        "title": "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/80NSSC26P1028",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-10-01T00:00:00.000Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
         "sources": [
-          "https://www.sec.gov/files/judg26592-semisub.pdf",
+          "https://www.usaspending.gov/award/80NSSC26P1028",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
-      },
-      "whatWasFound": "Final Judgment - Semisub, Inc. — Litigation Releases | U.S. Securities and Exchange Commission",
-      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "government-enforcement"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
-      "sourceRoutes": [
-        "https://www.sec.gov/files/judg26592-semisub.pdf",
-        "https://www.sec.gov/enforcement-litigation/litigation-releases"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
+      }
     },
     {
-      "id": "9bd94693007536a6d9793a2f",
-      "title": "Final Judgment - Jamey Denise Jackson",
+      "id": "388e2e8c136c6891fe3af13a",
+      "title": "Final Judgment",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1561,24 +1384,24 @@
       "questions": [],
       "integrity": {
         "id": "daily-15",
-        "title": "Final Judgment - Jamey Denise Jackson",
-        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
+        "title": "Final Judgment",
+        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
         "classification": "established wrongdoing",
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-08-02T08:22:21.766Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sources": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
       },
-      "whatWasFound": "Final Judgment - Jamey Denise Jackson — Litigation Releases | U.S. Securities and Exchange Commission",
+      "whatWasFound": "Final Judgment — Litigation Releases | U.S. Securities and Exchange Commission",
       "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
       "investigativeLanes": [
         "government-enforcement"
@@ -1591,7 +1414,7 @@
       "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
       "confidence": "high",
       "sourceRoutes": [
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
         "https://www.sec.gov/enforcement-litigation/litigation-releases"
       ],
       "nextQuestions": [
@@ -1606,17 +1429,17 @@
       "integrityVersion": "2.1.0"
     },
     {
-      "id": "5c498c53685f48f038ad7267",
-      "title": "Final Judgment",
+      "id": "5546f85d1ba69563adc9bffd",
+      "title": "Final Judgment - Bongiorno",
       "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
+      "published": "2026-08-02T08:22:21.766Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
       "lane": "government-enforcement",
       "sourceId": "sec-litigation-releases",
       "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
       "sourceAuthority": "primary-official",
       "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
       "status": "established-wrongdoing",
       "evidenceGrade": "A",
       "severity": 5,
@@ -1635,24 +1458,24 @@
       "questions": [],
       "integrity": {
         "id": "daily-16",
-        "title": "Final Judgment",
-        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+        "title": "Final Judgment - Bongiorno",
+        "route": "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
         "classification": "established wrongdoing",
         "confidence": "high",
         "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-08-02T08:22:21.766Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
         "sources": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+          "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
       },
-      "whatWasFound": "Final Judgment — Litigation Releases | U.S. Securities and Exchange Commission",
+      "whatWasFound": "Final Judgment - Bongiorno — Litigation Releases | U.S. Securities and Exchange Commission",
       "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
       "investigativeLanes": [
         "government-enforcement"
@@ -1665,7 +1488,7 @@
       "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
       "confidence": "high",
       "sourceRoutes": [
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
         "https://www.sec.gov/enforcement-litigation/litigation-releases"
       ],
       "nextQuestions": [
@@ -1680,27 +1503,25 @@
       "integrityVersion": "2.1.0"
     },
     {
-      "id": "da2af7d51f4d667788a13198",
-      "title": "Revised Final Judgment",
-      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
-      "lane": "government-enforcement",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "id": "a103f2650e31fc92fa3688e6",
+      "title": "DELL MARKETING L.P. — District of Columbia Courts",
+      "summary": "ANNUAL QUEST SHAREPLEX SOFTWARE LICENSING RENEWAL. · Amount: 147939.96 · Sub-agency: District of Columbia Courts",
+      "published": "2026-09-30T00:00:00.000Z",
+      "fetchedAt": "2026-08-02T08:22:21.766Z",
+      "lane": "money-contracts",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
       "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 59,
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/95C67826P0299",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "score": 18,
       "wrongdoingIndicators": [],
-      "keywordMatches": [
-        "judgment"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "keywordMatches": [],
+      "establishes": "A dated source update exists and should be compared with prior records.",
+      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
       "nextRecords": [
         "Open and preserve the underlying primary document or official case page.",
         "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
@@ -1709,38 +1530,38 @@
       "questions": [],
       "integrity": {
         "id": "daily-17",
-        "title": "Revised Final Judgment",
-        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
-        "classification": "established wrongdoing",
-        "confidence": "high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
+        "title": "DELL MARKETING L.P. — District of Columbia Courts",
+        "route": "https://www.usaspending.gov/award/95C67826P0299",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-09-30T00:00:00.000Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
         "sources": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
+          "https://www.usaspending.gov/award/95C67826P0299",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
       },
-      "whatWasFound": "Revised Final Judgment — Litigation Releases | U.S. Securities and Exchange Commission",
-      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+      "whatWasFound": "DELL MARKETING L.P. — District of Columbia Courts — ANNUAL QUEST SHAREPLEX SOFTWARE LICENSING RENEWAL. · Amount: 147939.96 · Sub-agency: District of Columbia Courts",
+      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
       "investigativeLanes": [
-        "government-enforcement"
+        "money-contracts"
       ],
       "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
       "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
       "sourceRoutes": [
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
-        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+        "https://www.usaspending.gov/award/95C67826P0299",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
       ],
       "nextQuestions": [
         "Open and preserve the underlying primary document or official case page.",
@@ -1749,83 +1570,244 @@
       ],
       "sensitiveReviewRequired": false,
       "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
       "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
       "integrityVersion": "2.1.0"
     },
     {
-      "id": "648c7669536d5862c476e7c0",
-      "title": "Final Judgment",
-      "summary": "Litigation Releases | U.S. Securities and Exchange Commission",
-      "published": "2026-08-01T07:39:36.959Z",
-      "fetchedAt": "2026-08-01T07:39:36.959Z",
-      "lane": "government-enforcement",
-      "sourceId": "sec-litigation-releases",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "itemUrl": "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
-      "status": "established-wrongdoing",
-      "evidenceGrade": "A",
-      "severity": 5,
-      "score": 59,
+      "id": "ec968f2ec6ba82128b4cd91b",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/95C67826P0279",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "INDUSTRIAL BANK — District of Columbia Courts",
+      "summary": "CONTRACT NO. DCSC-25-SAS-116 (REPAIR & SUPPORT SERVICES FOR COURTWIDE PUBLIC USE AUTOMATED TELLER MACHINE). EXERCISE OF OPTION YEAR 1 BEGINNING SEPTEMBER 30, 2026, THROUGH SEPTEMBER 29, 2027. OPTION YEAR 1 CONTRACT PRICE IS $10,990.20. · Amount: 10990.2 · Sub-agency: District of Columbia Courts",
+      "published": "2026-09-30T00:00:00.000Z",
+      "firstSeen": "2026-07-11T10:15:45.417Z",
+      "lastSeen": "2026-07-11T12:51:11.789Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
       "wrongdoingIndicators": [],
-      "keywordMatches": [
-        "judgment"
-      ],
-      "establishes": "An official record reports a conviction, guilty plea, sentence, final judgment or comparable adjudicated outcome within the scope described by the source.",
-      "boundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
       "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
       ],
-      "questions": [],
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "95C67826P0279",
+        "amount": 10990.2,
+        "agency": "District of Columbia Courts",
+        "subAgency": "District of Columbia Courts"
+      },
+      "occurrences": 4,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/95C67826P0279",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
       "integrity": {
         "id": "daily-18",
-        "title": "Final Judgment",
-        "route": "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
-        "classification": "established wrongdoing",
-        "confidence": "high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade A; authority not stated.",
+        "title": "INDUSTRIAL BANK — District of Columbia Courts",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/95C67826P0279",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
         "supportingCount": 1,
-        "freshness": "2026-08-01T07:39:36.959Z",
+        "freshness": "2026-09-30T00:00:00.000Z",
         "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
         "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
         "sources": [
-          "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+          "https://www.usaspending.gov/award/95C67826P0279",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
         ]
+      }
+    },
+    {
+      "id": "source-change-62862e6ca90495adc0788a2d",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-02T08:22:23.243Z",
+      "firstSeen": "2026-08-02T08:22:23.243Z",
+      "lastSeen": "2026-08-02T08:22:23.243Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
       },
-      "whatWasFound": "Final Judgment — Litigation Releases | U.S. Securities and Exchange Commission",
-      "whyItMatters": "This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "government-enforcement"
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
+    },
+    {
+      "id": "source-change-a53bf480df4e4883383a08e0",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-02T07:42:48.079Z",
+      "firstSeen": "2026-08-02T07:42:48.079Z",
+      "lastSeen": "2026-08-02T07:42:48.079Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
       ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "strongly-strengthens",
-      "whatItPointsToward": "Closer examination of how the documented established wrongdoing affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the government-enforcement lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "evidenceStrength": "E5–E6 — official finding or final adjudication within the exact scope of the cited record",
-      "confidence": "high",
-      "sourceRoutes": [
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
-        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
+    },
+    {
+      "id": "source-change-81d1ec66d255ebaf3f7d61de",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "itemUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: Federal Register — Latest Documents",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-02T07:42:48.079Z",
+      "firstSeen": "2026-08-02T07:42:48.079Z",
+      "lastSeen": "2026-08-02T07:42:48.079Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
       ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
+    },
+    {
+      "id": "source-change-7ed151a515391f967d229642",
+      "sourceId": "uk-sfo-news",
+      "sourceLabel": "UK Serious Fraud Office — News And Communications",
+      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "itemUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "lane": "international-corruption",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: UK Serious Fraud Office — News And Communications",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-02T07:42:48.079Z",
+      "firstSeen": "2026-08-02T07:42:48.079Z",
+      "lastSeen": "2026-08-02T07:42:48.079Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
       ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ]
     },
     {
       "id": "source-change-a334a207405ec629b4be337d",
@@ -1864,155 +1846,21 @@
         "hash",
         "content changed"
       ]
-    },
-    {
-      "id": "source-change-c452df757991611cb06ec88a",
-      "sourceId": "sec-current-filings",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "lane": "money-contracts",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-31T08:12:11.783Z",
-      "firstSeen": "2026-07-31T08:12:11.783Z",
-      "lastSeen": "2026-07-31T08:12:11.783Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
-    },
-    {
-      "id": "source-change-8299a278d70b1f879d6d522f",
-      "sourceId": "federal-register-latest",
-      "sourceLabel": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "itemUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "lane": "oversight-audit",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: Federal Register — Latest Documents",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-31T08:12:11.783Z",
-      "firstSeen": "2026-07-31T08:12:11.783Z",
-      "lastSeen": "2026-07-31T08:12:11.783Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
-    },
-    {
-      "id": "source-change-0c5f51804baf8e9e2c1fdd0b",
-      "sourceId": "uk-sfo-news",
-      "sourceLabel": "UK Serious Fraud Office — News And Communications",
-      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "itemUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "lane": "international-corruption",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: UK Serious Fraud Office — News And Communications",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-07-31T08:12:11.783Z",
-      "firstSeen": "2026-07-31T08:12:11.783Z",
-      "lastSeen": "2026-07-31T08:12:11.783Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
     }
   ],
   "changedSources": [
-    {
-      "label": "U.S. Department of Justice — Epstein Disclosures",
-      "lane": "epstein-disclosure",
-      "authority": "primary-official",
-      "url": "https://www.justice.gov/epstein/doj-disclosures",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.justice.gov/epstein/doj-disclosures",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 90490,
-      "bodyHash": "6b4527f2d959a26f56a4e3762e3312eac60bcdae24dd1394ef652fc16ecee657",
-      "changed": true,
-      "itemCount": 80,
-      "error": "",
-      "resourceId": "investigation-source-doj-epstein-disclosures",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
     {
       "label": "U.S. Department of Justice — Justice News",
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.justice.gov/news",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
+      "checkedAt": "2026-08-02T08:22:21.766Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2201,
-      "bodyHash": "d3a8a054bc9f1fde1315a18d89fd8aa9d0a299621d904d8194ac50cc6d6daf24",
+      "bytes": 2193,
+      "bodyHash": "061cb06827ea8b8a8e15584cbb81c7e4945333cf9c5ad9db01571f0da5e06096",
       "changed": true,
       "itemCount": 1,
       "error": "",
@@ -2022,37 +1870,17 @@
       "brokerAttempts": 1
     },
     {
-      "label": "U.S. Department of Justice Office of Inspector General — Reports",
-      "lane": "oversight-audit",
-      "authority": "primary-official",
-      "url": "https://oig.justice.gov/reports",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://oig.justice.gov/reports",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 62531,
-      "bodyHash": "9ec2b7d7fb840d17348cf8a980cfa0dc8c7861872c146d872dd9e7c422a1270e",
-      "changed": true,
-      "itemCount": 14,
-      "error": "",
-      "resourceId": "investigation-source-doj-oig-reports",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
       "label": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
       "lane": "money-contracts",
       "authority": "primary-official",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
+      "checkedAt": "2026-08-02T08:22:21.766Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
       "bytes": 22609,
-      "bodyHash": "a0b60d5e808f7c9727fb5a62d53912eaf612203b2cf0e0524caf18fcd71f2d22",
+      "bodyHash": "94db37a6538704aa6a2b85e99d2ff8a1fb4edbeff0c5eec6844ddcff6df1013b",
       "changed": true,
       "itemCount": 40,
       "error": "",
@@ -2066,13 +1894,13 @@
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
+      "checkedAt": "2026-08-02T08:22:21.766Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 232704,
-      "bodyHash": "87ed6ae1b2bf09e40ac7cb7508ba427721991ce965377c23b42b1fd1f0a26b53",
+      "bytes": 232706,
+      "bodyHash": "2f2cb55f0bd2de65c88831343a243f47bb515fae873455f541e18452a53534ca",
       "changed": true,
       "itemCount": 76,
       "error": "",
@@ -2082,37 +1910,17 @@
       "brokerAttempts": 1
     },
     {
-      "label": "USAspending.gov — Recent Contract Awards",
-      "lane": "money-contracts",
-      "authority": "primary-official",
-      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "contentType": "application/json",
-      "bytes": 66911,
-      "bodyHash": "38c7a485097f3d870e1451aec59396e66355b2e6e0302492b2d408aaed03ddf6",
-      "changed": true,
-      "itemCount": 100,
-      "error": "",
-      "resourceId": "investigation-source-usaspending-recent-contracts",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
       "label": "U.S. Treasury OFAC — Recent Actions",
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://ofac.treasury.gov/recent-actions",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
+      "checkedAt": "2026-08-02T08:22:21.766Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43651,
-      "bodyHash": "9f165fd4d51db732ff5058093b47c3f60cbcf9ff576584e1a2217f879faee274",
+      "bytes": 43649,
+      "bodyHash": "5d459fba2632b100788ddc3a1f13eb78b30c13a29dd83360849730c4132c82dc",
       "changed": true,
       "itemCount": 19,
       "error": "",
@@ -2126,13 +1934,13 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "checkedAt": "2026-08-01T07:39:36.959Z",
+      "checkedAt": "2026-08-02T08:22:21.766Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
-      "bytes": 101985,
-      "bodyHash": "43a152d85a6867c07b4a1cba67d57690153c80638847e1d883bbc9a46c114958",
+      "bytes": 102000,
+      "bodyHash": "3144c7000bc8378d183d85d7a31c95d5da12c0e0c18ea2fa16d6be915a065ef6",
       "changed": true,
       "itemCount": 15,
       "error": "",
@@ -2147,8 +1955,8 @@
       "sourceId": "federal-register-latest",
       "label": "Federal Register — Latest Documents",
       "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "status": "failed-request",
-      "error": "ALL_ZERO_COST_RESOURCES_FAILED: Every eligible zero-cost resource failed safely"
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
     },
     {
       "sourceId": "wikileaks-publications",
@@ -2161,8 +1969,8 @@
       "sourceId": "eppo-news",
       "label": "European Public Prosecutor's Office — News",
       "url": "https://www.eppo.europa.eu/media/news_en",
-      "status": "failed-request",
-      "error": "ALL_ZERO_COST_RESOURCES_FAILED: Every eligible zero-cost resource failed safely"
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
     }
   ],
   "missingRecords": [
@@ -2244,82 +2052,257 @@
       "source": "https://www.usaspending.gov/award/9523ZY26P0022"
     },
     {
-      "findingId": "5460c0408472ce834da2b82f",
-      "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en"
-    },
-    {
-      "findingId": "0491ca77f4f2c9b90f832c2e",
-      "title": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en"
-    },
-    {
-      "findingId": "c5e336c0b2cc4a30aee62ff2",
+      "findingId": "10420eb4159dd9ba47a3f7cb",
       "title": "Final Judgment",
       "nextRecords": [],
-      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf"
+      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf"
     },
     {
-      "findingId": "f337071143994ca225e59e5b",
-      "title": "Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux",
-      "nextRecords": [],
-      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf"
-    },
-    {
-      "findingId": "c856bcc2f79cf1ac248b5d12",
+      "findingId": "2254daad4526bf026ecf1244",
       "title": "Final Judgment - Ali Derakhshanfar",
       "nextRecords": [],
       "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf"
     },
     {
-      "findingId": "f3993831e68cecb13238dbdb",
-      "title": "Final Judgment - Sal N. Ortiz",
+      "findingId": "421097c38f7e1597d6f37887",
+      "title": "Final Judgment by Default",
       "nextRecords": [],
-      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf"
+      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf"
     },
     {
-      "findingId": "d6f73edf9a6fc2522f2cdf81",
-      "title": "Final Judgment - Semisub, Inc.",
-      "nextRecords": [],
-      "source": "https://www.sec.gov/files/judg26592-semisub.pdf"
-    },
-    {
-      "findingId": "9bd94693007536a6d9793a2f",
-      "title": "Final Judgment - Jamey Denise Jackson",
-      "nextRecords": [],
-      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf"
-    },
-    {
-      "findingId": "5c498c53685f48f038ad7267",
+      "findingId": "440a73a5b6c1002efa765acb",
       "title": "Final Judgment",
       "nextRecords": [],
-      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf"
+      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf"
     },
     {
-      "findingId": "da2af7d51f4d667788a13198",
-      "title": "Revised Final Judgment",
+      "findingId": "4c07add2a6d4eb22cadecd27",
+      "title": "Final Judgment - Geoffrey Allen Wall",
       "nextRecords": [],
-      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf"
+      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf"
     },
     {
-      "findingId": "648c7669536d5862c476e7c0",
+      "findingId": "427a4b3a840619411d8d1c33",
+      "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "source": "https://www.usaspending.gov/award/9594CS26F0051"
+    },
+    {
+      "findingId": "1583ed9e90a5874047a33041",
+      "title": "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/80NSSC26P1028"
+    },
+    {
+      "findingId": "388e2e8c136c6891fe3af13a",
       "title": "Final Judgment",
       "nextRecords": [],
-      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf"
+      "source": "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf"
+    },
+    {
+      "findingId": "5546f85d1ba69563adc9bffd",
+      "title": "Final Judgment - Bongiorno",
+      "nextRecords": [],
+      "source": "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf"
+    },
+    {
+      "findingId": "a103f2650e31fc92fa3688e6",
+      "title": "DELL MARKETING L.P. — District of Columbia Courts",
+      "nextRecords": [],
+      "source": "https://www.usaspending.gov/award/95C67826P0299"
+    },
+    {
+      "findingId": "ec968f2ec6ba82128b4cd91b",
+      "title": "INDUSTRIAL BANK — District of Columbia Courts",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/95C67826P0279"
     }
   ],
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
   "sourceChanges": [
+    {
+      "id": "62862e6ca90495adc0788a2d",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-02T08:22:23.243Z",
+      "detectedAt": "2026-08-02T08:22:23.243Z",
+      "changeType": "content-changed",
+      "previousHash": "d3b698f2188c45fe620255965bf6c3437c5e7ba1bc05c73fed4fa12415e73be3",
+      "currentHash": "443619eda7c5de42718df16a9d26b93f838bd107d139d118f92c32954438ab4f",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Sun, 02 Aug 2026 04:22:23 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-02T04:22:23-04:00 4 - Allen Zipporah (0002142412) (Reporting) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T21:54:50-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-089353 4 - Reformation Inc."
+      ],
+      "removals": [
+        "Latest Filings - Sun, 02 Aug 2026 03:42:48 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-02T03:42:48-04:00 4 - Allen Zipporah (0002142412) (Reporting) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T21:54:50-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-089353 4 - Reformation Inc."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "a53bf480df4e4883383a08e0",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-02T07:42:48.079Z",
+      "detectedAt": "2026-08-02T07:42:48.079Z",
+      "changeType": "content-changed",
+      "previousHash": "c8032606526d8077df895a251af0ca41256a87fd6afa346cacd73c176ac4e77b",
+      "currentHash": "d3b698f2188c45fe620255965bf6c3437c5e7ba1bc05c73fed4fa12415e73be3",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Sun, 02 Aug 2026 03:42:48 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-02T03:42:48-04:00 4 - Allen Zipporah (0002142412) (Reporting) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T21:54:50-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-089353 4 - Reformation Inc."
+      ],
+      "removals": [
+        "Latest Filings - Sat, 01 Aug 2026 03:39:38 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-01T03:39:38-04:00 4 - Allen Zipporah (0002142412) (Reporting) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T21:54:50-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-089353 4 - Reformation Inc."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "81d1ec66d255ebaf3f7d61de",
+      "title": "content changed: Federal Register — Latest Documents",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-02T07:42:48.079Z",
+      "detectedAt": "2026-08-02T07:42:48.079Z",
+      "changeType": "content-changed",
+      "previousHash": "2607e550bf40d4c2e72133b23e40f661686ea6a8bf7ee10e1ca9507164b51f8d",
+      "currentHash": "5ae27260cdfcf24d34bed4945a4f3f7fdb3d41a8e200341d78cd3d1dc0ae3afa",
+      "httpStatus": 200,
+      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "additions": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU3MTUyMDAwMDAsIjIwMjYtMTU2MTciXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "removals": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU0NTYwMDAwMDAsIjIwMjYtMTU1MDAiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "7ed151a515391f967d229642",
+      "title": "content changed: UK Serious Fraud Office — News And Communications",
+      "sourceId": "uk-sfo-news",
+      "sourceLabel": "UK Serious Fraud Office — News And Communications",
+      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-02T07:42:48.079Z",
+      "detectedAt": "2026-08-02T07:42:48.079Z",
+      "changeType": "content-changed",
+      "previousHash": "c031233b56367326139c8c536f702b238453356597326f172e9b2fbdcf55cf2a",
+      "currentHash": "083fac5ac3d86def7d3d888cae48fc7747aeef48e8e6fdeda28171a08d7f91f9",
+      "httpStatus": 200,
+      "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "additions": [
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
+      ],
+      "removals": [
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance Is the message I’ve had from the SFO genuine?",
+        "12 November 2024 Notice See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
+      ],
+      "additionCount": 1,
+      "removalCount": 2,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "a334a207405ec629b4be337d",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -2392,160 +2375,9 @@
       "evidenceGrade": "B",
       "factualStatus": "source-change-observation",
       "status": "source-change"
-    },
-    {
-      "id": "c452df757991611cb06ec88a",
-      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "sourceId": "sec-current-filings",
-      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "lane": "money-contracts",
-      "authority": "primary-official",
-      "publicationDate": null,
-      "retrievalDate": "2026-07-31T08:12:11.783Z",
-      "detectedAt": "2026-07-31T08:12:11.783Z",
-      "changeType": "content-changed",
-      "previousHash": "46e8baa96bde807e1e63949dfb8a92ce17d50efcae3306979fa04ccaf69944ed",
-      "currentHash": "145cd0916b73f3b93b682a3ca150b50ce63e3ea3d853c6b00cb9fb2f86e3a4db",
-      "httpStatus": 200,
-      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "additions": [
-        "Latest Filings - Fri, 31 Jul 2026 04:12:11 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-31T04:12:11-04:00 SCHEDULE 13D/A - Martin Ryan Todd (0002148029) (Filed by) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002148029-26-000002 <b>Size:</b> 5 KB 2026-07-30T21:51:53-04:00 urn:tag:sec.gov,2008:accession-number=0002148029-26-000002 SCHEDULE 13D/A - KUSTOM ENTERTAINMENT, INC.",
-        "(0001342958) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002148029-26-000002 <b>Size:</b> 5 KB 2026-07-30T21:51:53-04:00 urn:tag:sec.gov,2008:accession-number=0002148029-26-000002 4 - GUJRATHI SHEILA (0001575202) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000011 <b>Size:</b> 10 KB 2026-07-30T21:49:56-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000011 4 - Processa Pharmaceuticals, Inc.",
-        "(0001533743) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000011 <b>Size:</b> 10 KB 2026-07-30T21:49:56-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000011 3 - GUJRATHI SHEILA (0001575202) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000009 <b>Size:</b> 3 KB 2026-07-30T21:46:01-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000009 3 - Processa Pharmaceuticals, Inc.",
-        "(0001533743) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001575202-26-000009 <b>Size:</b> 3 KB 2026-07-30T21:46:01-04:00 urn:tag:sec.gov,2008:accession-number=0001575202-26-000009 144/A - Zhuge Yue (0002038003) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000005 <b>Size:</b> 4 KB 2026-07-30T21:45:13-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000005 144/A - New Oriental Education & Technology Group Inc.",
-        "(0001372920) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000005 <b>Size:</b> 4 KB 2026-07-30T21:45:13-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000005 3 - Churchill Capital Corp XIII (0002114229) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083554 <b>Size:</b> 3 KB 2026-07-30T21:43:24-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083554 3 - Taragin Lee Jay (0001802944) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083554 <b>Size:</b> 3 KB 2026-07-30T21:43:24-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083554 3 - Churchill Capital Corp XIII (0002114229) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083553 <b>Size:</b> 3 KB 2026-07-30T21:43:11-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083553 3 - Sherman William M (0002032879) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083553 <b>Size:</b> 3 KB 2026-07-30T21:43:11-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083553 3 - CHURCHILL SPONSOR XIII LLC (0002124749) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 3 - Churchill Capital Corp XIII (0002114229) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 3 - M.",
-        "(0001751504) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 3 - Klein Michael Stuart (0001327392) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083552 <b>Size:</b> 9 KB 2026-07-30T21:42:59-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083552 4 - Tempus AI, Inc.",
-        "(0001717115) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001114357-26-000027 <b>Size:</b> 28 KB 2026-07-30T21:42:39-04:00 urn:tag:sec.gov,2008:accession-number=0001114357-26-000027 4 - LEFKOFSKY ERIC P (0001114357) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001114357-26-000027 <b>Size:</b> 28 KB 2026-07-30T21:42:39-04:00 urn:tag:sec.gov,2008:accession-number=0001114357-26-000027 4 - Controladora Vuela Compania de Aviacion, S.A.B.",
-        "(0001520504) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001361096-26-000005 <b>Size:</b> 14 KB 2026-07-30T21:37:55-04:00 urn:tag:sec.gov,2008:accession-number=0001361096-26-000005 4 - Maldonado Yanez Ricardo (0001361096) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001361096-26-000005 <b>Size:</b> 14 KB 2026-07-30T21:37:55-04:00 urn:tag:sec.gov,2008:accession-number=0001361096-26-000005 4 - Allan David Robert Malcolm (0002105210) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083547 <b>Size:</b> 4 KB 2026-07-30T21:35:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083547 4 - Virtuix Holdings Inc.",
-        "(0001606242) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083547 <b>Size:</b> 4 KB 2026-07-30T21:35:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083547 SCHEDULE 13D - Scribe Therapeutics, Inc.",
-        "(0001853921) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000902664-26-003281 <b>Size:</b> 30 KB 2026-07-30T21:30:13-04:00 urn:tag:sec.gov,2008:accession-number=0000902664-26-003281 SCHEDULE 13D - Avoro Capital Advisors LLC (0001633313) (Filed by) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000902664-26-003281 <b>Size:</b> 30 KB 2026-07-30T21:30:13-04:00 urn:tag:sec.gov,2008:accession-number=0000902664-26-003281 3 - Miao Guili (0002141880) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083544 <b>Size:</b> 4 KB 2026-07-30T21:29:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083544 3 - SuperX AI Technology Ltd (0001897087) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083544 <b>Size:</b> 4 KB 2026-07-30T21:29:07-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083544 4 - Fundomo SN-002 GP, LLC (0002146934) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Fundomo SN-001 GP, LLC (0002146930) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Nobile Corey L.",
-        "(0002146927) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Fundomo SN-002, LP (0002124229) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Standard Nuclear, Inc.",
-        "(0002086716) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 4 - Fundomo SN-001, LP (0002084264) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002084264-26-000006 <b>Size:</b> 24 KB 2026-07-30T21:28:21-04:00 urn:tag:sec.gov,2008:accession-number=0002084264-26-000006 S-1MEF - Churchill Capital Corp XIII (0002114229) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083541 <b>Size:</b> 394 KB 2026-07-30T21:23:13-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083541 144 - Zhuge Yue (0002038003) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000004 <b>Size:</b> 4 KB 2026-07-30T21:19:35-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000004 144 - New Oriental Education & Technology Group Inc.",
-        "(0001372920) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002038003-26-000004 <b>Size:</b> 4 KB 2026-07-30T21:19:35-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000004 4 - Kettnich John Paul (0002096724) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326537 <b>Size:</b> 5 KB 2026-07-30T21:15:09-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326537 4 - StepStone Private Equity Strategies Fund (0002066799) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326537 <b>Size:</b> 5 KB 2026-07-30T21:15:09-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326537 4 - Navios Maritime Partners L.P.",
-        "(0001415921) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326536 <b>Size:</b> 12 KB 2026-07-30T21:15:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326536 4 - Frangou Angeliki (0001310495) (Reporting) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001193125-26-326536 <b>Size:</b> 12 KB 2026-07-30T21:15:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-326536 3 - Controladora Vuela Compania de Aviacion, S.A.B.",
-        "(0001520504) (Issuer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001361096-26-000004 <b>Size:</b> 12 KB 2026-07-30T21:14:35-04:00 urn:tag:sec.gov,2008:accession-number=0001361096-26-000004"
-      ],
-      "removals": [
-        "Latest Filings - Thu, 30 Jul 2026 13:41:20 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-07-30T13:41:20-04:00 425 - Sanara MedTech Inc.",
-        "(0000714256) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001493152-26-035407 <b>Size:</b> 23 KB 2026-07-30T13:40:51-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035407 D - G3 Interlochen, LLC (0002145686) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002145686-26-000001 <b>Size:</b> 7 KB 2026-07-30T13:40:49-04:00 urn:tag:sec.gov,2008:accession-number=0002145686-26-000001 ABS-EE - BANK 2022-BNK41 (0001920442) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014259 <b>Size:</b> 729 KB 2026-07-30T13:40:41-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014259 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037224 <b>Size:</b> 406 KB 2026-07-30T13:40:40-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037224 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037224 <b>Size:</b> 406 KB 2026-07-30T13:40:40-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037224 ABS-EE - Benchmark 2018-B7 Mortgage Trust (0001757018) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014257 <b>Size:</b> 527 KB 2026-07-30T13:40:25-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014257 D/A - Blue Owl Real Estate Exchange VI DST (0002135424) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002135424-26-000005 <b>Size:</b> 14 KB 2026-07-30T13:39:49-04:00 urn:tag:sec.gov,2008:accession-number=0002135424-26-000005 ABS-EE - Benchmark 2020-B22 Mortgage Trust (0001833563) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014253 <b>Size:</b> 271 KB 2026-07-30T13:39:30-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014253 424B2 - JPMorgan Chase Financial Co.",
-        "LLC (0001665650) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021771 <b>Size:</b> 590 KB 2026-07-30T13:39:21-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021771 424B2 - JPMORGAN CHASE & CO (0000019617) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021771 <b>Size:</b> 590 KB 2026-07-30T13:39:21-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021771 40-6B - Jefferies Partners PE Fund 2026 (Dedicated) LP (0002146461) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 40-6B - Jefferies Partners PE Fund 2026 (Cayman) LP (0002145873) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 40-6B - Jefferies Partners PE Fund 2026 LP (0002140136) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 40-6B - Jefferies Financial Group Inc.",
-        "(0000096223) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0000905148-26-003390 <b>Size:</b> 204 KB 2026-07-30T13:39:11-04:00 urn:tag:sec.gov,2008:accession-number=0000905148-26-003390 SCHEDULE 13G - New ERA Energy & Digital, Inc.",
-        "(0002028336) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002012383-26-003194 <b>Size:</b> 11 KB 2026-07-30T13:39:03-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-003194 SCHEDULE 13G - BlackRock, Inc.",
-        "(0002012383) (Filed by) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002012383-26-003194 <b>Size:</b> 11 KB 2026-07-30T13:39:03-04:00 urn:tag:sec.gov,2008:accession-number=0002012383-26-003194 D - Industry Ventures Secondary XI (Feeder), L.P.",
-        "(0002126009) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002126009-26-000001 <b>Size:</b> 9 KB <br>Item 3C: Investment Company Act Section 3(c) <br>Item 3C.7: Section 3(c)(7) 2026-07-30T13:38:59-04:00 urn:tag:sec.gov,2008:accession-number=0002126009-26-000001 425 - Sanara MedTech Inc.",
-        "(0000714256) (Subject) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001493152-26-035405 <b>Size:</b> 24 KB 2026-07-30T13:38:45-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035405 6-K - BARCLAYS PLC (0000312069) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001654954-26-007018 <b>Size:</b> 252 KB 2026-07-30T13:38:41-04:00 urn:tag:sec.gov,2008:accession-number=0001654954-26-007018 424B2 - BofA Finance LLC (0001682472) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021770 <b>Size:</b> 1 MB 2026-07-30T13:38:01-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021770 424B2 - BANK OF AMERICA CORP /DE/ (0000070858) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001918704-26-021770 <b>Size:</b> 1 MB 2026-07-30T13:38:01-04:00 urn:tag:sec.gov,2008:accession-number=0001918704-26-021770 F-4/A - Aiways Automobile Europe GmbH (0002049203) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083235 <b>Size:</b> 31 MB 2026-07-30T13:37:10-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083235 F-4/A - EUROEV Holdings Ltd (0002048740) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001213900-26-083235 <b>Size:</b> 31 MB 2026-07-30T13:37:10-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-083235 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037222 <b>Size:</b> 736 KB 2026-07-30T13:37:07-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037222 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037222 <b>Size:</b> 736 KB 2026-07-30T13:37:07-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037222 10-D - BANK 2021-BNK38 (0001895567) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014246 <b>Size:</b> 2 MB 2026-07-30T13:36:57-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014246 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037221 <b>Size:</b> 458 KB 2026-07-30T13:36:25-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037221 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037221 <b>Size:</b> 458 KB 2026-07-30T13:36:25-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037221 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037220 <b>Size:</b> 1 MB 2026-07-30T13:35:50-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037220 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037220 <b>Size:</b> 1 MB 2026-07-30T13:35:50-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037220 ABS-EE - BANK 2021-BNK38 (0001895567) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001888524-26-014247 <b>Size:</b> 403 KB 2026-07-30T13:34:57-04:00 urn:tag:sec.gov,2008:accession-number=0001888524-26-014247 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037219 <b>Size:</b> 395 KB 2026-07-30T13:34:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037219 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037219 <b>Size:</b> 395 KB 2026-07-30T13:34:41-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037219 424B2 - WELLS FARGO & COMPANY/MN (0000072971) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037218 <b>Size:</b> 216 KB 2026-07-30T13:34:34-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037218 485BPOS - Kurv ETF Trust (0001782952) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001999371-26-016447 <b>Size:</b> 2 MB 2026-07-30T13:34:28-04:00 urn:tag:sec.gov,2008:accession-number=0001999371-26-016447 485BPOS - Kurv ETF Trust (0001782952) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001999371-26-016447 <b>Size:</b> 2 MB 2026-07-30T13:34:28-04:00 urn:tag:sec.gov,2008:accession-number=0001999371-26-016447 424B2 - Morgan Stanley Finance LLC (0001666268) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037216 <b>Size:</b> 460 KB 2026-07-30T13:33:39-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037216 424B2 - MORGAN STANLEY (0000895421) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001839882-26-037216 <b>Size:</b> 460 KB 2026-07-30T13:33:39-04:00 urn:tag:sec.gov,2008:accession-number=0001839882-26-037216 10-Q - CROWN HOLDINGS, INC.",
-        "(0001219601) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0001628280-26-050949 <b>Size:</b> 8 MB 2026-07-30T13:33:34-04:00 urn:tag:sec.gov,2008:accession-number=0001628280-26-050949 D - TWE2024 Fund LLC - Series TWE Canvas300 (0002147532) (Filer) <b>Filed:</b> 2026-07-30 <b>AccNo:</b> 0002134718-26-000064 <b>Size:</b> 6 KB 2026-07-30T13:33:32-04:00 urn:tag:sec.gov,2008:accession-number=0002134718-26-000064"
-      ],
-      "additionCount": 15,
-      "removalCount": 9,
-      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecordRequired": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "evidenceGrade": "B",
-      "factualStatus": "source-change-observation",
-      "status": "source-change"
-    },
-    {
-      "id": "8299a278d70b1f879d6d522f",
-      "title": "content changed: Federal Register — Latest Documents",
-      "sourceId": "federal-register-latest",
-      "sourceLabel": "Federal Register — Latest Documents",
-      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "lane": "oversight-audit",
-      "authority": "primary-official",
-      "publicationDate": null,
-      "retrievalDate": "2026-07-31T08:12:11.783Z",
-      "detectedAt": "2026-07-31T08:12:11.783Z",
-      "changeType": "content-changed",
-      "previousHash": "ce90b7428b76726a567b92dd03bb380681d6f6100d9ac084af2c4efd0ef34073",
-      "currentHash": "2607e550bf40d4c2e72133b23e40f661686ea6a8bf7ee10e1ca9507164b51f8d",
-      "httpStatus": 200,
-      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "additions": [
-        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU0NTYwMDAwMDAsIjIwMjYtMTU1MDAiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
-      ],
-      "removals": [
-        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODUzNjk2MDAwMDAsIjIwMjYtMTUzNDciXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
-      ],
-      "additionCount": 1,
-      "removalCount": 1,
-      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecordRequired": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "evidenceGrade": "B",
-      "factualStatus": "source-change-observation",
-      "status": "source-change"
-    },
-    {
-      "id": "0c5f51804baf8e9e2c1fdd0b",
-      "title": "content changed: UK Serious Fraud Office — News And Communications",
-      "sourceId": "uk-sfo-news",
-      "sourceLabel": "UK Serious Fraud Office — News And Communications",
-      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "lane": "international-corruption",
-      "authority": "primary-official",
-      "publicationDate": null,
-      "retrievalDate": "2026-07-31T08:12:11.783Z",
-      "detectedAt": "2026-07-31T08:12:11.783Z",
-      "changeType": "content-changed",
-      "previousHash": "d45600ac8907a2ac7ead82482c084aeb387476c3470d698ef941855fd5e782bb",
-      "currentHash": "c031233b56367326139c8c536f702b238453356597326f172e9b2fbdcf55cf2a",
-      "httpStatus": 200,
-      "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "additions": [
-        "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.",
-        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance Is the message I’ve had from the SFO genuine?",
-        "12 November 2024 Notice See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
-      ],
-      "removals": [
-        "Latest from the Serious Fraud Office FOI Log - June 2026 28 July 2026 FOI release Director and senior management team expenses 28 July 2026 Collection 2026-27 Director and senior management team expenses 28 July 2026 Corporate report See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.",
-        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases FOI Log - June 2026 28 July 2026 FOI release 2026-27 Director and senior management team expenses 28 July 2026 Corporate report See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
-      ],
-      "additionCount": 3,
-      "removalCount": 2,
-      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecordRequired": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "evidenceGrade": "B",
-      "factualStatus": "source-change-observation",
-      "status": "source-change"
     }
   ],
-  "sourceChangeConclusion": "4 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
+  "sourceChangeConclusion": "5 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
   "integrityVersion": 1,
   "conclusionContractVersion": "2.1.0"
 }

@@ -1,0 +1,284 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:42.962Z",
+  "canonicalOwner": "scripts/finalize-search-first-accountability-home.js",
+  "membershipOwner": "scripts/patch-membership-tiers.js",
+  "publicHeadingOwner": "scripts/reconcile-public-page-headings.js",
+  "hitListPresent": true,
+  "orderingRule": "Broad generators first; canonical cumulative membership, search-first homepage, public H1 hierarchy, Live Intel, independent research, money routes, reverse-accountability entry, construction banner and video intro last. The full search-pressure test is mandatory whenever its generated hit-list input exists; metadata-only pre-builds retain exact marker checks without inventing fixture data.",
+  "commands": [
+    {
+      "script": "scripts/finalize-search-first-accountability-home.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Search-first accountability homepage finalized: 27096 search routes, 252 Hit List records and 252 open accountability questions.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/refine-accountability-question-ledger.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Accountability Question Ledger refined: 252 questions, 1 imported subject names cleaned, 167 with dossier/source routes, 85 with timer routes; hit list present.\nPublic Consequence Contracts built: 7 accountability twins and 21 dated outcome checks; no premature verdicts issued.\nPublic Consequence Contract follow runtime finalized for source and Cloudflare output.\nPublic Consequence Contracts pressure test passed with 0 warning(s).\nPublic Consequence Contract selection passed: 7/24 unique current items contained a consequential action; 0 duplicate source(s) removed and 0 ID collision(s) resolved.\nCloudflare homepage routes synchronized: /, /index and /index.html (f17db4388135).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/install-reverse-accountability-platform.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Reverse Accountability Search installed with 7 evidence-bounded path records.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/reverse-accountability-platform-pressure-test.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Voiced accountability mission intro finalized without restoring the legacy command rail on the simple homepage.\nPower Supply Chain installed with 7 chains and explicit unresolved-stage boundaries.\nPower Supply Chain pressure test passed with 7 chains and 10 evidence-classified stages per chain.\nEvidence Half-Life installed with 7 records and 0 active recall notices.\nEvidence Half-Life pressure test passed with 7 records and 0 recall notices.\nPower Diff installed with 7 records; baseline available: false.\nPower Diff pressure test passed with 7 records; baseline available: false.\nRed-Team Mirror installed with 7 evidence-bounded records and no automated verdicts.\nRed-Team Mirror routes finalized; removed 0 invalid historical-only route(s).\nRed-Team Mirror pressure test passed with 7 records and no automated verdicts.\nPublic Answer Clock installed with 7 records and 0 verified running clock(s).\nPublic Answer Clock pressure test passed with 7 records and 0 verified running clock(s).\nMissing Record Missions installed with 63 structured research tasks.\nMissing Record Missions pressure test passed with 63 structured research tasks.\nLived Consequence Receipts installed with 0 reviewed public receipt(s); raw submissions remain private.\nLived Consequence Receipts pressure test passed with 0 reviewed public receipt(s); raw submissions remain private.\nAccountability innovation links finalized across 0 file(s).\nAccountability innovation platform pressure test passed with 7 synchronized records across all eight systems.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-membership-tiers.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Membership Daily Control Brief preference form patched: already current; newsletter runtime verified.\nMembership page restored across 4 source/output route(s): Free Member evidence access, explicit Daily Control Brief and release preferences, plus optional €3, €6 and €9 monthly donations.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-homepage-construction-banner.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Money research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nPublic-market ranking refresh complete: 799 quantitative rows across 8 categories.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nMoney depth enrichment complete: 2000 candidates, 255 identity profiles, 799 verified measures, 2640 relationships.\nMoney overlap map built: 171 overlap entities, 3272 edges, 2000 records.\nMoney depth integration PASS: 2000 candidates, 255 identity profiles, 799 verified measures, 171 overlap entities and 2640 sourced relationships.\nBehind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=validated-local-prepatch.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; guarded one-run production authorization verified.\nBehind the Curtain route links updated: index.html.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\nHomepage construction and support banner secured across index.html, _site/index.html, _site/index; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-homepage-mask-intro.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Homepage intro patched: 20260725-video-v5, build-generated video data (15003 MP4 bytes), Blob playback and existing voice gate preserved.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/homepage-mask-intro-test.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Homepage video intro 20260725-video-v5 test passed (15003 embedded MP4 bytes); no live video fetch, voice gate and membership surface verified.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/reconcile-public-page-headings.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Public page headings and entity evidence boundaries reconciled: 8 route checks, 3 file change(s).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/reconcile-public-audit-boundaries.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Public audit boundaries reconciled: 100 checks, 2 file change(s).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-security-privacy-hub.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Security, privacy and OSINT safety hub built: 13 categories, 6 complete systems and 84 vetted tools.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-dark-web-safety.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Dark web safety guide built: 12 steps, 4 verified onion services and 9 non-clickable danger categories.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/search-first-accountability-home-pressure-test.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Search-first accountability homepage pressure test passed with 0 warning(s).\n",
+      "stderr": ""
+    }
+  ],
+  "copied": [
+    "index.html",
+    "accountability-home.css",
+    "accountability-home.js",
+    "search-query-handoff.js",
+    "search.html",
+    "welcome-gate.css",
+    "welcome-gate.js",
+    "homepage-mask-intro.css",
+    "homepage-mask-intro.js",
+    "homepage-mask-intro-data.js",
+    "reverse-accountability-search.html",
+    "reverse-accountability-search.css",
+    "reverse-accountability-search.js",
+    "data/accountability-question-ledger.json",
+    "data/reverse-accountability-index.json",
+    "downloads/search-first-accountability-home-report.json",
+    "downloads/reverse-accountability-platform-report.json",
+    "downloads/homepage-mask-intro-report.json"
+  ],
+  "checks": [
+    {
+      "file": "index.html",
+      "marker": "My Watchlist",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "id=\"accountability-search\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "action=\"search.html\" method=\"get\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "name=\"q\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "accountability-home.js",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "href=\"follow-the-money.html\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "href=\"making-money.html\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "href=\"live-intel.html\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "live-intel-machine-route",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "href=\"independent-links.html\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "href=\"security-privacy.html\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "href=\"dark-web-safety.html\"",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "data-homepage-mask-intro",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "welcome-gate.js",
+      "present": true
+    },
+    {
+      "file": "index.html",
+      "marker": "id=\"matrix-construction-banner\"",
+      "present": true
+    },
+    {
+      "file": "search.html",
+      "marker": "search-query-handoff.js",
+      "present": true
+    },
+    {
+      "file": "search-query-handoff.js",
+      "marker": "new URLSearchParams(location.search).get('q')",
+      "present": true
+    },
+    {
+      "file": "daily-watch.html",
+      "marker": "<h1 id=\"daily-hit-list-title\">",
+      "present": true
+    },
+    {
+      "file": "heroes-fighting-matrix-card.html",
+      "marker": "id=\"heroes-card-page-title\"",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "My Watchlist",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "id=\"accountability-search\"",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "name=\"q\"",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "href=\"follow-the-money.html\"",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "href=\"making-money.html\"",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "href=\"live-intel.html\"",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "live-intel-machine-route",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "href=\"independent-links.html\"",
+      "present": true
+    },
+    {
+      "file": "_site\\index.html",
+      "marker": "data-homepage-mask-intro",
+      "present": true
+    },
+    {
+      "file": "_site\\search.html",
+      "marker": "search-query-handoff.js",
+      "present": true
+    },
+    {
+      "file": "_site\\search-query-handoff.js",
+      "marker": "new URLSearchParams(location.search).get('q')",
+      "present": true
+    },
+    {
+      "file": "_site\\daily-watch.html",
+      "marker": "<h1 id=\"daily-hit-list-title\">",
+      "present": true
+    },
+    {
+      "file": "_site\\heroes-fighting-matrix-card.html",
+      "marker": "id=\"heroes-card-page-title\"",
+      "present": true
+    }
+  ]
+}

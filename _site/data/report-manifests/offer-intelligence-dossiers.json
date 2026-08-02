@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T06:26:57.919Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-02T10:39:53.412Z",
+  "pageCount": 121,
   "output": "downloads/offer-intelligence-dossiers.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Intelligence Dossiers Offer",
-    "contentHash": "373466601d3395a9784dd31f9ba801838f6aac87dcf353ce44493d900ad49f4b",
+    "contentHash": "b61684bc6db9b4ad8a3bff70ca88a7387b77e299f9cafbf6801b4540d751f628",
     "sourceIds": [
       "ad283f9945fc2a5c7c0facc5",
       "c773a9b56feb9b238da1ce66",
@@ -73,17 +73,7 @@
       "280c0d2d4b2108c9fbea4d8e",
       "8a388409c7e1203c78157fcc",
       "9c2ed866829ec14701b4f6aa",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
       "war-machine-2026-07-28-20290a9e",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
       "declassified-files-2026-06-27-moldova-publishes-declassified-soviet-deportation-lists-from-1941-mold",
       "declassified-files-2026-06-16-pentagon-releases-72-ufo-files-military-reports-reveal-new-sightings-r",
       "war-machine-2026-06-03-trump-s-choice-of-acting-intel-chief-threatens-fragile-surveillance-po",
@@ -146,32 +136,42 @@
       "war-machine-2026-04-24-what-recent-wars-mean-for-u-s-india-defense-cooperation-the-heritage-f",
       "control-system-2026-04-01-penn-state-approves-massive-ai-surveillance-network-featuring-facial-i",
       "war-machine-2026-03-18-how-the-military-is-using-ai-in-war-cbs-news",
-      "war-machine-2026-03-18-ukraine-war-undermining-russia-s-arctic-plans-us-intelligence-says-def"
+      "war-machine-2026-03-18-ukraine-war-undermining-russia-s-arctic-plans-us-intelligence-says-def",
+      "war-machine-2026-03-12-the-military-s-use-of-ai-explained-brennan-center-for-justice",
+      "war-machine-2026-03-12-iran-linked-hackers-take-aim-at-u-s-and-other-targets-raising-risk-of-",
+      "war-machine-2026-03-11-the-business-of-military-ai-brennan-center-for-justice",
+      "war-machine-2026-03-11-centcom-commander-touts-use-of-ai-in-fight-against-iran-during-operati",
+      "war-machine-2026-03-08-trump-administration-and-democrats-at-odds-over-risk-to-us-weapons-sto",
+      "war-machine-2026-03-06-the-war-on-anthropic-pretextual-designation-and-unlawful-punishment-ju",
+      "war-machine-2026-03-05-5-unresolved-questions-hanging-over-the-anthropic-pentagon-fracas-it-s",
+      "war-machine-2026-03-05-pentagon-officially-notifies-anthropic-it-is-a-supply-chain-risk-the-n",
+      "war-machine-2026-03-05-hegseth-says-u-s-just-getting-started-in-iran-war-as-conflict-intensif",
+      "war-machine-2026-03-04-the-department-of-defense-s-conflict-with-anthropic-and-deal-with-open"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 10,
+      "primarySourceCount": 0,
       "disputedClaimCount": 3,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 35,
+      "relationshipCount": 26,
       "moneyRecordCount": 20
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Intelligence Dossiers Offer.",
-        "evidence": "World Wrestling Entertainment (data/live-intel.json); World Wrestling Entertainment Part 01 (data/live-intel.json); World Wrestling Entertainment Part 02 (Final) (data/live-intel.json); Brian Wells (data/live-intel.json); Brian Wells Part 01 (data/live-intel.json); Brian Wells Part 02 (Final) (data/live-intel.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Intelligence Dossiers Offer beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "conclusion": "The most defensible current assessment is based on “DOD wants nearly $30 billion to modernize its AI supercomputing arsenal in fiscal 2027 - DefenseScoop,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "DOD wants nearly $30 billion to modernize its AI supercomputing arsenal in fiscal 2027 DefenseScoop This item is fresh enough to appear in the seven-day intelligence window and can route readers to source, evidence, free brief, book, video, or offer paths.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 68,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 35 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 26 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Dossiers Offer; Crime Network Starter Brief; Intelligence Network Pack; Intelligence Network Share Kit; War Machine Campaign; 75 years later, the promise to protect refugees faces its greatest test; Senate passes $901 billion defense bill that pushes Hegseth for boat strike video - Federal News Network; Operation Condor: A Network of Transnational Repression 50 Years Later - National Security Archive",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 35 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 26 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Dossiers Offer",
           "Crime Network Starter Brief",

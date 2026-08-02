@@ -122,6 +122,13 @@ run('scripts/homepage-mask-intro-test.js');
 // a static visible H1. Reconcile document hierarchy in source and Cloudflare output
 // before the exhaustive public audit and production deploy guard.
 run('scripts/reconcile-public-page-headings.js');
+run('scripts/reconcile-public-audit-boundaries.js');
+
+// Safety routes are part of the canonical public homepage, not optional
+// post-build decoration. Reinstall their full visible cards after the
+// search-first homepage owner has replaced the document.
+run('scripts/build-security-privacy-hub.js');
+run('scripts/build-dark-web-safety.js');
 
 patchSafetyRoutes(path.join(root, 'index.html'));
 patchMoneyRoutes(path.join(root, 'index.html'));

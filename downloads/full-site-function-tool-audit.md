@@ -1,18 +1,18 @@
 # Full Site Function and Tool Audit
 
-Generated: 2026-08-02T06:38:21.896Z
+Generated: 2026-08-02T21:23:31.250Z
 Mode: postbuild-cloudflare-output
 Status: PASS
 
 ## Coverage
 
-- html: 3465
-- js: 114
-- json: 1235
-- links: 159993
+- html: 3321
+- js: 120
+- json: 1350
+- links: 156701
 - localFetches: 68
-- forms: 330
-- buttons: 2530
+- forms: 333
+- buttons: 2539
 - criticalTools: 31
 
 ## Hard Issues
@@ -22,10 +22,6 @@ Status: PASS
 ## Warnings
 
 - .cloudflare/pages-output/living-pulse.js: fetch target not found data/daily-brain-brief.json
-- heroes-fighting-matrix-card: missing local target ${esc(source.url)}
-- heroes-fighting-matrix-card.html: missing local target ${esc(source.url)}
-- heroes-fighting-matrix-research-ledger: missing local target ${esc(source.url)}
-- heroes-fighting-matrix-research-ledger.html: missing local target ${esc(source.url)}
 - src/money-command-center.js: fetch target not found data/money-intelligence-registry.json
 - src/money-command-center.js: fetch target not found data/money-overlap-graph.json
 - src/money-overlap-graph.js: fetch target not found data/money-overlap-graph.json

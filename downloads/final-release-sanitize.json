@@ -1,0 +1,455 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:28.603Z",
+  "commands": [
+    {
+      "script": "scripts/patch-geographic-power-atlas-runtime.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Geographic Power Atlas runtime passed: 32 locations, MapLibre 5.24.0 official browser bundle enabled.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/sanitize-machine-entity-outputs.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Machine entity outputs sanitized (source-tree): 0 invalid names, 0 invalid objects, 0 malformed cards and 0 search entries removed; 0 malformed routes deleted.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/sanitize-machine-entity-outputs.js",
+      "args": [
+        "--output"
+      ],
+      "status": 0,
+      "stdout": "Machine entity outputs sanitized (cloudflare-output): 0 invalid names, 0 invalid objects, 0 malformed cards and 0 search entries removed; 0 malformed routes deleted.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/compact-cloudflare-search-index.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Final search index compacted: 29101 records / 29101 routes -> 29101 routes, 17.92 MiB (minimum-final); root and _site synchronized.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/run-power-dossier-runtime-compatible.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Criminal Conduct & Allegations engine installed on 324 source dossier surfaces and 324 built surfaces; 66 approved records rendered; 0 candidates held for editorial review.\nCriminal Conduct & Allegations engine synchronized to 322 extensionless dossier route(s); 0 missing built dossier page(s) materialized; 4 directory-backed namespace(s) preserved with their explicit .html dossier verified.\nCriminal Conduct Engine pressure test passed: schema v1 compatibility for v2, 9 categories, 324 source dossier surfaces, 324 built surfaces, 32 approved records, 0 review-only candidates.\nPredators in Power built: 20 qualifying subject(s), 32 approved record(s), 0 review-only candidate(s), 4 route link(s).\nPredators in Power linked from 1616 Criminal Conduct & Allegations surface(s); 1616 file(s) updated.\nPredators in Power output synchronized: 19 file/alias copy operation(s).\nPredators in Power pressure test passed: 20 qualifying subject(s), 32 approved record(s), 16 conduct domains, 19 power sectors, 1616 conduct-dropdown link(s).\nPower dossier runtime wired across source and Cloudflare output: 30 HTML/extensionless page(s), 0 newly patched, runtime copy current; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.\nPower dossier runtime completed with criminal registry schema v2 restored.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-empty-public-controls.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Protected build templates excluded from public output: 0 change(s).\nPremier resource contracts restored across source and output: 2 file(s) changed.\nPublic runtime controls repaired (source-and-output): 0 file(s) changed.\nPublic utility ID collisions resolved (source-and-output): 0 ID(s) renamed across 0 file(s).\nEmpty public controls repaired (source-tree): 0 file(s) changed; dynamic fallbacks, utility dedupe and template protection verified.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-empty-public-controls.js",
+      "args": [
+        "--output"
+      ],
+      "status": 0,
+      "stdout": "Protected build templates excluded from public output: 0 change(s).\nPremier resource contracts restored across source and output: 0 file(s) changed.\nPublic runtime controls repaired (cloudflare-output): 0 file(s) changed.\nPublic utility ID collisions resolved (cloudflare-output): 0 ID(s) renamed across 0 file(s).\nEmpty public controls repaired (cloudflare-output): 0 file(s) changed; dynamic fallbacks, utility dedupe and template protection verified.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-public-runtime-controls.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Public runtime controls repaired (source-and-output): 0 file(s) changed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-public-runtime-controls.js",
+      "args": [
+        "--output"
+      ],
+      "status": 0,
+      "stdout": "Public runtime controls repaired (cloudflare-output): 0 file(s) changed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/fix-public-editorial-audit-errors.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Public editorial audit errors repaired: 8 file(s), 4 conclusion pages deepened.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/hide-visible-compatibility-markers.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Public marker scrub complete: 599 HTML file(s) patched across 1671 HTML surfaces; valid public routes preserved.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/hide-visible-compatibility-markers.js",
+      "args": [
+        "--output"
+      ],
+      "status": 0,
+      "stdout": "Public marker scrub complete: 706 HTML file(s) patched across 3320 HTML surfaces; valid public routes preserved.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-paypal-voluntary-support.js",
+      "args": [],
+      "status": 0,
+      "stdout": "PayPal voluntary support flow updated; server-created subscription routes preserved.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-paypal-subscription-create-runtime.js",
+      "args": [],
+      "status": 0,
+      "stdout": "PayPal subscription creation repaired permanently: routes restored, normalized OAuth credentials, D1-compatible state, resilient redirect and provider diagnostics installed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-voluntary-support-store.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Voluntary support cards patched across store, deck store and premium reports (1 file(s)).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-brevo-transactional-readiness.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Brevo transactional readiness already current: authenticated transactional sending enabled, reply-to enabled, marketing automation remains off.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-email-launch-console.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Controlled email launch and retry quarantine endpoints already current.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-email-automation-guard.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Email automation retry guard already current.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-email-campaign-quality.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Email campaign quality already current: useful sources, evidence labels, preferences and unsubscribe controls.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-membership-signup-server-fallback.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Membership signup server fallback already current.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/brevo-operational-readiness-audit.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Email subscription delivery repair applied.\nBrevo operational readiness audit passed: automation-and-transactional-ready.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-production-receipt-email-safety.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Production receipt email activation already current: consent-bound daily and weekly automation certified.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-release-page-contracts.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Release page contracts repaired: 0 file(s) changed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-deep-audit-public-defects.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Deep audit public defects repaired: 6 file mutation(s), 0 malformed or unstable route(s) removed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-deep-audit-accessibility-metadata.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Deep-audit accessibility and metadata repair completed across 4986 HTML surfaces; 353 file(s) changed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-canonical-external-sources.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Canonical external source repair passed: 0 file(s) changed; 0 stale reference(s) replaced.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/enforce-phase1-cloudflare-config.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Cloudflare configuration enforced and repaired: transactional account email and consent-bound report automation active, PayPal runtime values preserved from the Cloudflare dashboard.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/restore-homepage-navigation.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Contact navigation added to 7 source pages and 7 deployable pages; current UK Prime Minister patches applied to 0 files.\nCloudflare-safe Structural Power Map aliases and public evidence API installed.\nSearch-first homepage navigation preserved and validated across 3 target(s); classic navigation repaired across 0 target(s).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-release-page-contracts.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Release page contracts repaired: 0 file(s) changed.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-missing-generated-entity-briefs.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Criminal Conduct & Allegations engine installed on 324 source dossier surfaces and 325 built surfaces; 66 approved records rendered; 0 candidates held for editorial review.\nCriminal Conduct & Allegations engine synchronized to 322 extensionless dossier route(s); 0 missing built dossier page(s) materialized; 4 directory-backed namespace(s) preserved with their explicit .html dossier verified.\nCriminal Conduct Engine pressure test passed: schema v1 compatibility for v2, 9 categories, 324 source dossier surfaces, 325 built surfaces, 32 approved records, 0 review-only candidates.\nPredators in Power built: 20 qualifying subject(s), 32 approved record(s), 0 review-only candidate(s), 4 route link(s).\nPredators in Power linked from 1618 Criminal Conduct & Allegations surface(s); 1618 file(s) updated.\nPredators in Power output synchronized: 19 file/alias copy operation(s).\nPredators in Power pressure test passed: 20 qualifying subject(s), 32 approved record(s), 16 conduct domains, 19 power sectors, 1618 conduct-dropdown link(s).\nPower dossier runtime wired across source and Cloudflare output: 30 HTML/extensionless page(s), 0 newly patched, runtime copy current; Criminal Conduct & Allegations and Predators in Power engines built, cross-linked, synchronized and pressure-tested.\nPower dossier runtime completed with criminal registry schema v2 restored.\nGenerated entity route repair passed: 1 referenced routes, 1 missing files created, 1 entity dossier marker(s) applied; Criminal Conduct & Allegations and Predators in Power engines verified.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-release-metadata-routing.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Money depth enrichment complete: 2000 candidates, 255 identity profiles, 799 verified measures, 2640 relationships.\nMoney overlap map built: 171 overlap entities, 3272 edges, 2000 records.\nMoney depth integration PASS: 2000 candidates, 255 identity profiles, 799 verified measures, 171 overlap entities and 2640 sourced relationships.\nBehind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=validated-local-prepatch.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; guarded one-run production authorization verified.\nBehind the Curtain route links updated: index.html, control-structure.html, power-atlas.html, follow-the-money.html.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\nHomepage construction and support banner secured across index.html, _site/index.html, _site/index; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.\nHomepage intro patched: 20260725-video-v5, build-generated video data (15003 MP4 bytes), Blob playback and existing voice gate preserved.\nHomepage video intro 20260725-video-v5 test passed (15003 embedded MP4 bytes); no live video fetch, voice gate and membership surface verified.\nPublic page headings and entity evidence boundaries reconciled: 8 route checks, 1 file change(s).\nPublic audit boundaries reconciled: 100 checks, 2 file change(s).\nSecurity, privacy and OSINT safety hub built: 13 categories, 6 complete systems and 84 vetted tools.\nDark web safety guide built: 12 steps, 4 verified onion services and 9 non-clickable danger categories.\nSearch-first accountability homepage pressure test passed with 0 warning(s).\nRelease homepage order reconciled: cumulative membership, public H1 hierarchy, My Watchlist, q= search handoff, Live Intel, independent research, money routes, construction banner and intro are canonical across source and Cloudflare output.\nHomepage contract integrity reconciled: 3 file(s) repaired, 0 duplicate consequence DOM anchor(s) converted; Live Intel route preserved.\nRelease metadata routing already current in strict production Worker.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/publish-release-metadata-assets.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Exact runtime and deployable release metadata assets published for 8e0338102cc8.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-conclusion-integrity-cards.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Conclusion integrity cards built: 88 cards.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/repair-final-evidence-badge-duplicates.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Canonical evidence badge routes ensured across source and deploy output: 20 checked, 20 rewritten.\nFinal evidence badge duplicate repair passed across 10 source and Cloudflare routes; audit ID parser already-correct.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/apply-runtime-performance-optimizations.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Runtime performance optimization complete: 2 search runtime(s), 1 network runtime(s), 3319 deployable HTML route(s), 0 lazy image(s), 0 lazy frame(s).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/remove-internal-report-manifests.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Internal report-manifest cleanup already current.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-epstein-ai-detective-docket.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Epstein AI detective docket built: 4 hypotheses from 13 current record leads.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-homepage-ai-detective-button.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Homepage AI detective route updated index.html, _site/index.html.\nRelease audit repair passed: 1 exposure pages generated, Epstein network rebuilt, duplicate IDs removed, missing anchor restored and actionable accessibility warnings repaired.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/patch-homepage-construction-banner.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Money research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nPublic-market ranking refresh complete: 799 quantitative rows across 8 categories.\nMoney research candidate expansion PASS: 2000 candidates across 20 complete Top 100 universes.\nMoney depth enrichment complete: 2000 candidates, 255 identity profiles, 799 verified measures, 2640 relationships.\nMoney overlap map built: 171 overlap entities, 3272 edges, 2000 records.\nMoney depth integration PASS: 2000 candidates, 255 identity profiles, 799 verified measures, 171 overlap entities and 2640 sourced relationships.\nBehind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=validated-local-prepatch.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; guarded one-run production authorization verified.\nBehind the Curtain route links updated: index.html.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\nHomepage construction and support banner secured across index.html, _site/index.html, _site/index; money intelligence depth, overlap propagation and Behind the Curtain structural-power model rebuilt first.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/public-control-target-audit.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Power-Family Intelligence Layer generated, canonicalized, validated and synchronized to _site.\nPUBLIC CONTROL TARGET AUDIT PASSED: 3321 pages and 126257 visible controls checked. Power-Family Capstone synchronized. Warnings: 27.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/full-site-function-tool-audit.js",
+      "args": [
+        "--postbuild"
+      ],
+      "status": 0,
+      "stdout": "FULL SITE FUNCTION AND TOOL AUDIT PASSED: 3321 HTML surfaces, 120 scripts, 1293 JSON feeds, 158628 links/assets, 31 critical tool contracts. Warnings: 8.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/enforce-mission-data-contracts.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Investigation data integrity repaired: 2500 active findings with full mission conclusions, 0 archived this run, 0 source attempts restored.\nCriminal conduct registry hydrated: 20 sourced subjects and 32 approved findings from 3 source files.\nNumbered criminal waves verified without duplicate hydration: 13 subjects across 2 wave files.\nPredators in Power built: 20 qualifying subject(s), 32 approved record(s), 0 review-only candidate(s), 4 route link(s).\nCriminal investigations built: 20 complete dossiers (5 historical, 15 current) and 47 sourced access edges.\nCriminal status injected into 208 dossier pages; 20/100 approved Predators in Power dossiers built.\nCriminal dossier system passed: 208 dossier pages checked; 20/100 Predators in Power dossiers approved.\nMission data contracts enforced: 172 graph edges checked; 81 clocks checked; 2500 active findings normalized; 20 accountability dossiers regenerated; 208 dossier pages carry criminal status; 20/100 target.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/build-daily-watch.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Daily hit list resolved: person=Bill Gates; institution=U.S. Securities and Exchange Commission; family=Al Maktoum family; invalid incumbents removed=0.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/inject-daily-watch-surfaces.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Daily hit list stabilized: person=Bill Gates; institution=Securities and Exchange Commission; family=Wallenberg family and foundations. 14-point evidence promotion margin enforced.\nDaily watch history updated: 7 retained day(s); weekly delta covers 7 day(s).\nCinematic daily hit list published first after the intro across 4 public pages with expandable dossiers; 18 source files synchronized to Cloudflare output.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/sync-cloudflare-homepage-routes.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Cloudflare homepage routes synchronized: /, /index and /index.html (83c2b93b27e8).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/mission-orchestration-audit.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Mission orchestration audit passed: 52 checks; search-first-accountability public accountability surfaces ready.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/search-first-accountability-home-pressure-test.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Search-first accountability homepage pressure test passed with 0 warning(s).\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/public-control-target-audit.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Power-Family Intelligence Layer generated, canonicalized, validated and synchronized to _site.\nPUBLIC CONTROL TARGET AUDIT PASSED: 3321 pages and 128020 visible controls checked. Power-Family Capstone synchronized. Warnings: 27.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/compact-cloudflare-search-index.js",
+      "args": [],
+      "status": 0,
+      "stdout": "Final search index compacted: 29101 records / 29101 routes -> 29101 routes, 19.98 MiB (balanced-final); root and _site synchronized.\n",
+      "stderr": ""
+    },
+    {
+      "script": "scripts/runtime-performance-budget-test.js",
+      "args": [],
+      "status": 0,
+      "stdout": "RUNTIME PERFORMANCE BUDGET PASSED: 48 checks across startup data, animation CPU, cached pulse, cache policy, lazy media and deployable asset sizes.\n",
+      "stderr": ""
+    }
+  ],
+  "synchronized": [
+    "index.html",
+    "_site/index.html",
+    "_site/index",
+    "scripts/patch-homepage-construction-banner.js",
+    "downloads/homepage-construction-banner.json",
+    "ai-speculative-conclusions.html",
+    "_site/ai-speculative-conclusions.html",
+    "ai-speculative-conclusions.js",
+    "_site/ai-speculative-conclusions.js",
+    "data/epstein-investigator-status.json",
+    "_site/data/epstein-investigator-status.json",
+    "scripts/build-epstein-ai-detective-docket.js",
+    "scripts/patch-homepage-ai-detective-button.js",
+    "downloads/homepage-ai-detective-route.json",
+    "geographic-power-atlas.html",
+    "geographic-power-atlas.js",
+    "data/geographic-power-atlas.json",
+    "data/geographic-power-atlas-data.json",
+    "data/geographic-power-atlas.geojson",
+    "downloads/geographic-power-atlas.csv",
+    "power-dossier-runtime.js",
+    "search-index.json",
+    "_site/search-index.json",
+    "data/search-facets.json",
+    "_site/data/search-facets.json",
+    "store.html",
+    "card-deck-store.html",
+    "premium-reports.html",
+    "paypal-voluntary-support.js",
+    "paypal-membership.js",
+    "_site/paypal-membership.js",
+    "epstein-upload-check.html",
+    "wrongdoing-tracker.html",
+    "intake-fallback.js",
+    "admin-email-launch.html",
+    "admin-email-launch.js",
+    "src/worker-paypal-subscriptions.js",
+    "src/worker-email-lifecycle.js",
+    "src/worker-release-metadata.js",
+    "src/worker-production.js",
+    "runtime/deploy-manifest-current.json",
+    "_site/runtime/deploy-manifest-current.json",
+    "runtime/deploy-health-current.json",
+    "_site/runtime/deploy-health-current.json",
+    "daily-power-conclusions.html",
+    "daily-investigation-conclusions.html",
+    "weekly-investigation-report.html",
+    "daily-brain-brief.html",
+    "outcome-briefings.html",
+    "matrix.js",
+    "investigation-pulse.js",
+    "search.js",
+    "evidence-network-map.js",
+    "fixes.css",
+    "_headers",
+    "scripts/apply-runtime-performance-optimizations.js",
+    "scripts/compact-cloudflare-search-index.js",
+    "scripts/runtime-performance-budget-test.js",
+    "downloads/cloudflare-search-index-compaction.json",
+    "downloads/runtime-performance-optimizations.json",
+    "downloads/runtime-performance-budget-test.json",
+    "scripts/build-production-deploy-receipt.js",
+    "scripts/restore-homepage-navigation.js",
+    "scripts/repair-release-page-contracts.js",
+    "scripts/repair-missing-generated-entity-briefs.js",
+    "scripts/patch-conclusion-integrity-cards.js",
+    "downloads/conclusion-integrity-report.json",
+    "scripts/repair-final-evidence-badge-duplicates.js",
+    "downloads/final-evidence-badge-dedupe.json",
+    "downloads/missing-generated-entity-brief-repair.json",
+    "downloads/release-page-contract-repair.json",
+    "downloads/homepage-navigation-repair.json",
+    "downloads/paypal-subscription-create-state-repair.json",
+    "downloads/deep-audit-accessibility-metadata-repair.json",
+    "downloads/canonical-external-source-repair.json",
+    "downloads/email-launch-console-patch.json",
+    "downloads/email-automation-guard-patch.json",
+    "downloads/email-campaign-quality-patch.json",
+    "downloads/membership-signup-server-fallback.json",
+    "downloads/brevo-operational-readiness.json",
+    "downloads/release-metadata-routing-patch.json",
+    "downloads/live-verifier-intelligence-routes-patch.json",
+    "downloads/release-metadata-assets.json",
+    "downloads/internal-report-manifest-cleanup.json",
+    "wrangler.toml",
+    "wrangler.jsonc"
+  ],
+  "boundary": "This is the final mutation and audit step for the exact _site bundle and Worker configuration. No later generator may restore malformed entity routes, dead intake placeholders, broken tracker JavaScript, fixed report prices, stale mission copy, inaccessible controls, removed operational navigation, weak metadata, dead canonical source links, unsafe email/payment switches, unnormalised PayPal OAuth credentials, invalid PayPal checkout states, hidden provider errors, generic newsletter content, missing unsubscribe controls, rejected membership Daily Control Brief submissions, pre-activation retry delivery, missing archive anchors, raw object placeholders, missing generated entity briefs, missing conclusion-integrity markers, duplicate evidence-route IDs, author-facing build labels, a missing construction-status banner, oversized startup assets, eager offscreen media, continuously running hidden animations, uncached static intelligence data, public internal report manifests, an inactive or unsynchronised Epstein investigator docket, a missing homepage AI Detective route or stale deployment metadata."
+}

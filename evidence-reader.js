@@ -77,6 +77,7 @@ function setMetadata(documentRecord) {
   elements.established.textContent = documentRecord.established || '—';
   elements.notEstablished.textContent = documentRecord.notEstablished || '—';
   elements.original.href = documentRecord.url;
+  elements.original.removeAttribute('aria-disabled');
 }
 
 async function renderPage(pageNumber = currentPage) {

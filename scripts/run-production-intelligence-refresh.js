@@ -8,7 +8,9 @@ fs.mkdirSync(downloads, { recursive: true });
 
 const commands = [
   ['scripts/repair-investigation-source-registry.js'],
+  ['scripts/source-adapter-contract-test.js'],
   ['scripts/run-investigation-machine.js', 'daily'],
+  ['scripts/run-source-adapters.js', 'daily'],
   ['scripts/update-live-intel.js'],
   ['scripts/record-live-intel-check.js'],
   ['scripts/update-seven-day-intel.js'],

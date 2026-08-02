@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-07-29T22:45:19.930Z",
-  "ok": true,
-  "status": "success",
-  "workflowRunId": 30497190745,
+  "checkedAt": "2026-08-02T10:16:12.856Z",
+  "ok": false,
+  "status": "failure",
+  "workflowRunId": 30743366740,
   "runAttempt": 1,
-  "headSha": "f77b38ba9298abe7a4df3af210c8bb05433fad39",
+  "headSha": "34a9eaf98cb047d42287e6182362d194f7dbe0ab",
   "reconciliation": {
-    "ok": true,
-    "generatedAt": "2026-07-29T22:45:14.511Z",
+    "ok": false,
+    "generatedAt": "2026-08-02T10:16:08.629Z",
     "actions": [
       {
         "type": "run",
@@ -30,12 +30,12 @@
         "target": "search-index.json",
         "routes": 6,
         "format": "compact",
-        "sizeMiB": 1.06
+        "sizeMiB": 23.36
       },
       {
         "type": "patch",
         "target": "sitemap.xml",
-        "added": 0
+        "added": 4
       },
       {
         "type": "patch",
@@ -92,7 +92,7 @@
           "--output"
         ],
         "status": 0,
-        "stdout": "Public marker scrub complete: 12 HTML file(s) patched across 3363 HTML surfaces; valid public routes preserved.\n",
+        "stdout": "Public marker scrub complete: 677 HTML file(s) patched across 3467 HTML surfaces; valid public routes preserved.\n",
         "stderr": ""
       },
       {
@@ -107,8 +107,8 @@
     "checks": [
       {
         "name": "compact search index remains under 22 MiB",
-        "ok": true,
-        "detail": "1.06 MiB"
+        "ok": false,
+        "detail": "23.36 MiB"
       },
       {
         "name": "nine documented family structures",
@@ -311,57 +311,11 @@
         "detail": ""
       }
     ],
-    "errors": []
+    "errors": [
+      "compact search index remains under 22 MiB: 23.36 MiB"
+    ]
   },
-  "productionGuard": {
-    "ok": true,
-    "checkedAt": "2026-07-29T22:45:17.150Z",
-    "hardIssues": [],
-    "broadPeopleCount": 80,
-    "pyramidLevels": 12,
-    "chokePoints": 10,
-    "documentedFamilies": 9,
-    "curatedLivingProfiles": 18,
-    "typedFamilyLinks": 18,
-    "professionalGatekeepers": 5,
-    "curatedSources": 20,
-    "historicalAnnexFamilies": 13,
-    "symbolicDossiers": 4
-  },
-  "publicGateways": {
-    "ok": true,
-    "generatedAt": "2026-07-29T22:45:14.390Z",
-    "verified": [
-      "index.html",
-      "start-here.html",
-      "_site/index.html",
-      "_site/index",
-      "_site/start-here.html",
-      "_site/start-here"
-    ],
-    "patched": [
-      "index.html",
-      "start-here.html",
-      "_site/index.html",
-      "_site/index",
-      "_site/start-here.html",
-      "_site/start-here"
-    ],
-    "errors": []
-  },
-  "newsletter": {
-    "ok": true,
-    "generatedAt": "2026-07-29T22:45:14.362Z",
-    "verified": [
-      "newsletter.html",
-      "_site/newsletter.html",
-      "_site/newsletter"
-    ],
-    "patched": [
-      "newsletter.html",
-      "_site/newsletter.html",
-      "_site/newsletter"
-    ],
-    "errors": []
-  }
+  "productionGuard": null,
+  "publicGateways": null,
+  "newsletter": null
 }

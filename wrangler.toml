@@ -10,7 +10,6 @@ compatibility_date = "2026-06-25"
 # Runtime payment credentials and activation switches are managed in the Cloudflare dashboard.
 # keep_vars prevents Wrangler deployments from deleting unrelated dashboard values.
 keep_vars = true
-
 routes = [
   { pattern = "matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" },
   { pattern = "www.matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" }
@@ -32,7 +31,7 @@ MEMBERS_REPLY_TO_EMAIL = "njmgroupfrance@gmail.com"
 MEMBERS_REPLY_TO_NAME = "Matrix Reprogrammed Support"
 ENABLE_KV_COMPATIBILITY_MIRROR = "false"
 
-# AI management remains fail closed until phases 9-12 migrations and the complete
+# AI management remains fail closed until phases 9-13 migrations and the complete
 # release matrix pass. Activation is a separate reviewed production step.
 AI_RESOURCE_BROKER_ENABLED = "false"
 AI_RESOURCE_EXTERNAL_ENABLED = "false"
@@ -44,6 +43,10 @@ AI_RESOURCE_AUTO_APPROVAL_ENABLED = "false"
 AI_LOCAL_MODEL_ROUTING_ENABLED = "false"
 AI_SITE_DIRECTOR_ENABLED = "false"
 AI_OPPORTUNITY_HUNTER_ENABLED = "false"
+AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "false"
+AI_REMOTE_COMPUTE_ROUTING_ENABLED = "false"
+AI_REMOTE_COMPUTE_EXECUTION_ENABLED = "false"
+AI_REMOTE_COMPUTE_JOBS_PER_CYCLE = "0"
 
 # Non-active compatibility markers retained for the Phase 7 sandbox audit only.
 # PAYPAL_ENVIRONMENT = "sandbox"
@@ -64,6 +67,37 @@ run_worker_first = [
   "/forum-*",
   "/submit-*",
   "/report-*",
+  "/admin-control-center*",
+  "/review-dashboard*",
+  "/source-intake*",
+  "/deploy-status*",
+  "/deploy-health*",
+  "/card-system-health*",
+  "/site-brain-router*",
+  "/card-artwork-automation*",
+  "/card-artwork-queue*",
+  "/card-artwork-batches*",
+  "/card-art-studio*",
+  "/conclusion-engine*",
+  "/information-gathering-system*",
+  "/update-monitor*",
+  "/distribution-center*",
+  "/launch-room*",
+  "/offer-center*",
+  "/sales-ladder*",
+  "/schema-index*",
+  "/machine-index*",
+  "/campaign-calendar*",
+  "/accountability-review-inbox*",
+  "/speculation-needs-review*",
+  "/data/review-dashboard.json",
+  "/data/site-brain-router.json",
+  "/data/missing-record-queue.json",
+  "/data/site-public-copy-intake-audit.json",
+  "/data/card-deck-system-audit.json",
+  "/downloads/review-dashboard.md",
+  "/downloads/generated-site-repair-report.json",
+  "/downloads/live-ai-management-verification.json",
   "/downloads/forum-posts*",
   "/downloads/the-black-file-matrix-reprogrammed.pdf",
   "/downloads/seven-day-intel.json",

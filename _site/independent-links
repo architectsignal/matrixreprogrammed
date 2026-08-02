@@ -68,7 +68,7 @@
   <p>The numbering provides a stable reference for the page. It is not a scientific ranking of truthfulness or importance.</p>
   <div class="links-controls">
     <label for="links-search" class="sr-only">Search sources</label>
-    <input class="links-search" id="links-search" type="search" reader field="Search a name, topic, source type or description…" autocomplete="off"/>
+    <input class="links-search" id="links-search" type="search" reader field="Search a name, topic, source type or description…" autocomplete="off" aria-label="Links Search" />
     <div class="links-filters" id="links-filters" aria-label="Filter by category"></div>
     <p class="links-result" id="links-result" role="status" aria-live="polite">Loading 100 sources…</p>
   </div>

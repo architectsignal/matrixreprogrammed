@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-31T06:37:11.119Z",
+  "generatedAt": "2026-08-02T21:06:12.871Z",
   "pageCount": 81,
   "output": "downloads/osint-worker-patch-report.pdf",
   "report": {
-    "version": 8,
+    "version": 12,
     "title": "Osint Worker Patch Report",
-    "contentHash": "80e745383a45141f7f4014188e98c2c9fd418a61b5df627d9e25954f117affe1",
+    "contentHash": "2553880557b97a375d75286b3940af246a538e097079918b6ff43c406e50a9b0",
     "sourceIds": [
       "savile-health-investigations-2014",
       "a21f3d8e98268d5e01e1eb7c",
@@ -39,6 +39,8 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
+      "us-doj",
+      "gao-hq",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -143,9 +145,7 @@
       "private-equity-general-atlantic",
       "private-equity-silver-lake",
       "private-equity-vista-equity-partners",
-      "private-equity-hellman-friedman",
-      "private-equity-clayton-dubilier-rice",
-      "private-equity-permira"
+      "private-equity-hellman-friedman"
     ],
     "metrics": {
       "evidenceCount": 139,
@@ -154,12 +154,12 @@
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 22,
-      "moneyRecordCount": 119
+      "moneyRecordCount": 117
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 129 A/B-grade public-record items are materially relevant to Osint Worker Patch Report.",
-        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",

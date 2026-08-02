@@ -1,0 +1,11 @@
+{
+  "boundary": "The test uses isolated in-memory member data, mocked Brevo delivery and mocked protected storage. It does not modify real members, sessions, subscriptions, grants or files.",
+  "files": [
+    "lifecycle.json",
+    "summary.json"
+  ],
+  "generatedAt": "2026-07-13T12:00:00.000Z",
+  "ok": true,
+  "paymentActivation": false,
+  "productionMigrationExecution": false
+}

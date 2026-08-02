@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generatedAt": "2026-08-02T06:35:31.007Z",
+  "generatedAt": "2026-08-02T21:20:24.013Z",
   "method": "Build-time canonical-name, alias and keyword matching. Matches are leads, not findings.",
   "sourceFiles": [
     "data/live-intel.json",
@@ -15,7 +15,7 @@
       "slug": "john-f-kennedy",
       "name": "John F. Kennedy",
       "year": 1963,
-      "checkedAt": "2026-08-02T06:35:31.087Z",
+      "checkedAt": "2026-08-02T21:20:24.074Z",
       "keywords": [
         "john f. kennedy",
         "john fitzgerald kennedy",
@@ -37,7 +37,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -49,7 +57,7 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -103,14 +111,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -119,7 +119,7 @@
       "slug": "malcolm-x",
       "name": "Malcolm X",
       "year": 1965,
-      "checkedAt": "2026-08-02T06:35:31.155Z",
+      "checkedAt": "2026-08-02T21:20:24.284Z",
       "keywords": [
         "malcolm x",
         "el-hajj malik el-shabazz",
@@ -134,15 +134,63 @@
       "matchCount": 14,
       "matches": [
         {
+          "title": "source-change-public.json",
+          "url": "",
+          "sourceFile": "data/source-change-public.json",
+          "score": 2,
+          "date": "2026-08-02T08:22:23.243Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
           "title": "live-intel.json",
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Entity — contract record subject — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — investigation record subject — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — operated or published by — Entity",
+          "url": "https://vault.fbi.gov/recently-added",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — published finding record — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -164,54 +212,6 @@
           "score": 1,
           "date": "2026-07-31T04:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T09:30:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment Part 01",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment Part 02 (Final)",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Brian Wells",
-          "url": "https://vault.fbi.gov/brian-wells",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-28T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Brian Wells Part 01",
-          "url": "https://vault.fbi.gov/brian-wells/brian-wells-part-01/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-28T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -220,7 +220,7 @@
       "slug": "dorothy-kilgallen",
       "name": "Dorothy Kilgallen",
       "year": 1965,
-      "checkedAt": "2026-08-02T06:35:31.415Z",
+      "checkedAt": "2026-08-02T21:20:24.465Z",
       "keywords": [
         "dorothy kilgallen",
         "jack ruby",
@@ -237,7 +237,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -245,7 +245,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -253,8 +253,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -303,7 +303,7 @@
       "slug": "martin-luther-king-jr",
       "name": "Martin Luther King Jr.",
       "year": 1968,
-      "checkedAt": "2026-08-02T06:35:31.470Z",
+      "checkedAt": "2026-08-02T21:20:24.649Z",
       "keywords": [
         "martin luther king jr.",
         "mlk",
@@ -318,15 +318,63 @@
       "matchCount": 14,
       "matches": [
         {
+          "title": "source-change-public.json",
+          "url": "",
+          "sourceFile": "data/source-change-public.json",
+          "score": 2,
+          "date": "2026-08-02T08:22:23.243Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
           "title": "live-intel.json",
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Entity — contract record subject — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — investigation record subject — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — operated or published by — Entity",
+          "url": "https://vault.fbi.gov/recently-added",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — published finding record — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -348,54 +396,6 @@
           "score": 1,
           "date": "2026-07-31T04:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T09:30:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment Part 01",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment Part 02 (Final)",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Brian Wells",
-          "url": "https://vault.fbi.gov/brian-wells",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-28T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Brian Wells Part 01",
-          "url": "https://vault.fbi.gov/brian-wells/brian-wells-part-01/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-28T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -404,7 +404,7 @@
       "slug": "robert-f-kennedy",
       "name": "Robert F. Kennedy",
       "year": 1968,
-      "checkedAt": "2026-08-02T06:35:31.526Z",
+      "checkedAt": "2026-08-02T21:20:24.695Z",
       "keywords": [
         "robert f. kennedy",
         "rfk",
@@ -425,7 +425,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -437,7 +445,7 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -491,14 +499,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -507,7 +507,7 @@
       "slug": "fred-hampton",
       "name": "Fred Hampton",
       "year": 1969,
-      "checkedAt": "2026-08-02T06:35:31.796Z",
+      "checkedAt": "2026-08-02T21:20:24.878Z",
       "keywords": [
         "fred hampton",
         "black panther party",
@@ -525,7 +525,7 @@
       "slug": "hale-boggs",
       "name": "Hale Boggs",
       "year": 1972,
-      "checkedAt": "2026-08-02T06:35:32.049Z",
+      "checkedAt": "2026-08-02T21:20:25.054Z",
       "keywords": [
         "hale boggs",
         "alaska plane",
@@ -542,7 +542,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -550,7 +550,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -558,7 +558,7 @@
           "url": "",
           "sourceFile": "data/investigation-source-registry.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -624,7 +624,7 @@
       "slug": "salvador-allende",
       "name": "Salvador Allende",
       "year": 1973,
-      "checkedAt": "2026-08-02T06:35:32.103Z",
+      "checkedAt": "2026-08-02T21:20:25.104Z",
       "keywords": [
         "salvador allende",
         "chile coup",
@@ -642,7 +642,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -654,7 +662,7 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -708,14 +716,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -724,7 +724,7 @@
       "slug": "pablo-neruda",
       "name": "Pablo Neruda",
       "year": 1973,
-      "checkedAt": "2026-08-02T06:35:32.375Z",
+      "checkedAt": "2026-08-02T21:20:25.280Z",
       "keywords": [
         "pablo neruda",
         "pinochet",
@@ -743,7 +743,7 @@
       "slug": "karen-silkwood",
       "name": "Karen Silkwood",
       "year": 1974,
-      "checkedAt": "2026-08-02T06:35:32.631Z",
+      "checkedAt": "2026-08-02T21:20:25.437Z",
       "keywords": [
         "karen silkwood",
         "kerr-mcgee",
@@ -760,7 +760,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -826,7 +826,7 @@
       "slug": "jimmy-hoffa",
       "name": "Jimmy Hoffa",
       "year": 1975,
-      "checkedAt": "2026-08-02T06:35:32.908Z",
+      "checkedAt": "2026-08-02T21:20:25.620Z",
       "keywords": [
         "jimmy hoffa",
         "james r. hoffa",
@@ -845,7 +845,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -853,7 +853,7 @@
           "url": "",
           "sourceFile": "data/investigation-source-registry.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -927,7 +927,7 @@
       "slug": "don-bolles",
       "name": "Don Bolles",
       "year": 1976,
-      "checkedAt": "2026-08-02T06:35:33.160Z",
+      "checkedAt": "2026-08-02T21:20:25.778Z",
       "keywords": [
         "don bolles",
         "arizona project",
@@ -943,7 +943,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -951,15 +951,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "investigation-source-registry.json",
-          "url": "",
-          "sourceFile": "data/investigation-source-registry.json",
-          "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -967,8 +959,16 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
+        },
+        {
+          "title": "investigation-source-registry.json",
+          "url": "",
+          "sourceFile": "data/investigation-source-registry.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -1025,7 +1025,7 @@
       "slug": "orlando-letelier",
       "name": "Orlando Letelier",
       "year": 1976,
-      "checkedAt": "2026-08-02T06:35:33.289Z",
+      "checkedAt": "2026-08-02T21:20:25.867Z",
       "keywords": [
         "orlando letelier",
         "dina",
@@ -1106,7 +1106,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1124,7 +1124,7 @@
       "slug": "steve-biko",
       "name": "Steve Biko",
       "year": 1977,
-      "checkedAt": "2026-08-02T06:35:33.555Z",
+      "checkedAt": "2026-08-02T21:20:26.046Z",
       "keywords": [
         "steve biko",
         "apartheid",
@@ -1142,7 +1142,7 @@
       "slug": "aldo-moro",
       "name": "Aldo Moro",
       "year": 1978,
-      "checkedAt": "2026-08-02T06:35:33.812Z",
+      "checkedAt": "2026-08-02T21:20:26.221Z",
       "keywords": [
         "aldo moro",
         "red brigades",
@@ -1160,7 +1160,7 @@
       "slug": "georgi-markov",
       "name": "Georgi Markov",
       "year": 1978,
-      "checkedAt": "2026-08-02T06:35:33.933Z",
+      "checkedAt": "2026-08-02T21:20:26.321Z",
       "keywords": [
         "georgi markov",
         "ricin umbrella",
@@ -1173,6 +1173,22 @@
       ],
       "matchCount": 14,
       "matches": [
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://oig.justice.gov/reports/audit-office-community-oriented-policing-services-technology-and-equipment-program-grant",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
         {
           "title": "Entity — contract record subject — Entity",
           "url": "https://www.justice.gov/epstein/doj-disclosures/court-records-v-nine-east-71st-street-no-119-cv-07625-sdny-2019",
@@ -1236,22 +1252,6 @@
           "score": 1,
           "date": "2026-07-31",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15413/announcement-of-the-intent-to-award-single-source-grants-multiple-recipients-for-necessary-expenses",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-30",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15443/tennessee-gas-pipeline-company-llc-notice-of-request-under-blanket-authorization-and-establishing",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-30",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -1260,7 +1260,7 @@
       "slug": "john-paisley",
       "name": "John Paisley",
       "year": 1978,
-      "checkedAt": "2026-08-02T06:35:33.988Z",
+      "checkedAt": "2026-08-02T21:20:26.365Z",
       "keywords": [
         "john paisley",
         "cia",
@@ -1278,7 +1278,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1290,7 +1298,7 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -1344,14 +1352,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -1360,7 +1360,7 @@
       "slug": "harvey-milk",
       "name": "Harvey Milk",
       "year": 1978,
-      "checkedAt": "2026-08-02T06:35:34.261Z",
+      "checkedAt": "2026-08-02T21:20:26.548Z",
       "keywords": [
         "harvey milk",
         "dan white",
@@ -1378,7 +1378,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1396,7 +1396,7 @@
       "slug": "oscar-romero",
       "name": "Óscar Romero",
       "year": 1980,
-      "checkedAt": "2026-08-02T06:35:34.524Z",
+      "checkedAt": "2026-08-02T21:20:26.711Z",
       "keywords": [
         "óscar romero",
         "oscar romero",
@@ -1414,7 +1414,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1422,7 +1422,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1480,7 +1480,7 @@
       "slug": "jaime-roldos-aguilera",
       "name": "Jaime Roldós Aguilera",
       "year": 1981,
-      "checkedAt": "2026-08-02T06:35:34.811Z",
+      "checkedAt": "2026-08-02T21:20:26.885Z",
       "keywords": [
         "jaime roldós aguilera",
         "jaime roldos",
@@ -1499,7 +1499,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1533,7 +1533,7 @@
       "slug": "omar-torrijos",
       "name": "Omar Torrijos",
       "year": 1981,
-      "checkedAt": "2026-08-02T06:35:34.866Z",
+      "checkedAt": "2026-08-02T21:20:26.935Z",
       "keywords": [
         "omar torrijos",
         "panama canal",
@@ -1551,7 +1551,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1563,7 +1571,7 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -1617,14 +1625,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -1633,7 +1633,7 @@
       "slug": "tom-ogle",
       "name": "Tom Ogle",
       "year": 1981,
-      "checkedAt": "2026-08-02T06:35:34.978Z",
+      "checkedAt": "2026-08-02T21:20:27.026Z",
       "keywords": [
         "tom ogle",
         "fuel vapor system",
@@ -1733,7 +1733,7 @@
       "slug": "eduardo-frei-montalva",
       "name": "Eduardo Frei Montalva",
       "year": 1982,
-      "checkedAt": "2026-08-02T06:35:35.254Z",
+      "checkedAt": "2026-08-02T21:20:27.203Z",
       "keywords": [
         "eduardo frei montalva",
         "pinochet",
@@ -1751,7 +1751,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1801,7 +1801,7 @@
       "slug": "roberto-calvi",
       "name": "Roberto Calvi",
       "year": 1982,
-      "checkedAt": "2026-08-02T06:35:35.492Z",
+      "checkedAt": "2026-08-02T21:20:27.378Z",
       "keywords": [
         "roberto calvi",
         "banco ambrosiano",
@@ -1836,7 +1836,7 @@
       "slug": "indira-gandhi",
       "name": "Indira Gandhi",
       "year": 1984,
-      "checkedAt": "2026-08-02T06:35:35.625Z",
+      "checkedAt": "2026-08-02T21:20:27.540Z",
       "keywords": [
         "indira gandhi",
         "operation blue star",
@@ -1853,7 +1853,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "source-change-public.json",
+          "url": "",
+          "sourceFile": "data/source-change-public.json",
+          "score": 1,
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1861,7 +1869,7 @@
           "url": "https://oig.justice.gov/reports/audit-office-justice-programs-victim-assistance-grants-awarded-indiana-criminal-justice",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1869,7 +1877,7 @@
           "url": "https://oig.justice.gov/reports/audit-office-justice-programs-victim-assistance-grants-awarded-indiana-criminal-justice",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1877,7 +1885,7 @@
           "url": "https://oig.justice.gov/reports/audit-office-justice-programs-victim-assistance-grants-awarded-indiana-criminal-justice",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1885,15 +1893,7 @@
           "url": "https://oig.justice.gov/reports/audit-office-justice-programs-victim-assistance-grants-awarded-indiana-criminal-justice",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T11:19:00.000Z",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1902,14 +1902,6 @@
           "sourceFile": "data/live-intel.json",
           "score": 1,
           "date": "2026-07-30T11:19:00.000Z",
-          "summary": "US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell timesofindia.indiatimes.com"
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15360/rate-adjustments-for-indian-irrigation-projects",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-30",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1922,6 +1914,14 @@
         },
         {
           "title": "Entity — investigation record subject — Entity",
+          "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15396/large-diameter-graphite-electrodes-from-india-preliminary-affirmative-countervailing-duty",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-07-30",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
           "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15396/large-diameter-graphite-electrodes-from-india-preliminary-affirmative-countervailing-duty",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
@@ -1935,7 +1935,7 @@
       "slug": "barry-seal",
       "name": "Barry Seal",
       "year": 1986,
-      "checkedAt": "2026-08-02T06:35:35.889Z",
+      "checkedAt": "2026-08-02T21:20:27.720Z",
       "keywords": [
         "barry seal",
         "medellin cartel",
@@ -1953,7 +1953,7 @@
           "url": "",
           "sourceFile": "data/investigation-source-registry.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -1979,7 +1979,7 @@
       "slug": "olof-palme",
       "name": "Olof Palme",
       "year": 1986,
-      "checkedAt": "2026-08-02T06:35:36.175Z",
+      "checkedAt": "2026-08-02T21:20:27.901Z",
       "keywords": [
         "olof palme",
         "sweden",
@@ -1997,7 +1997,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2023,7 +2023,7 @@
       "slug": "michele-sindona",
       "name": "Michele Sindona",
       "year": 1986,
-      "checkedAt": "2026-08-02T06:35:36.419Z",
+      "checkedAt": "2026-08-02T21:20:28.054Z",
       "keywords": [
         "michele sindona",
         "vatican bank",
@@ -2058,7 +2058,7 @@
       "slug": "samora-machel",
       "name": "Samora Machel",
       "year": 1986,
-      "checkedAt": "2026-08-02T06:35:36.708Z",
+      "checkedAt": "2026-08-02T21:20:28.234Z",
       "keywords": [
         "samora machel",
         "mozambique",
@@ -2076,7 +2076,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2110,7 +2110,7 @@
       "slug": "thomas-sankara",
       "name": "Thomas Sankara",
       "year": 1987,
-      "checkedAt": "2026-08-02T06:35:36.962Z",
+      "checkedAt": "2026-08-02T21:20:28.406Z",
       "keywords": [
         "thomas sankara",
         "burkina faso",
@@ -2128,7 +2128,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2186,7 +2186,7 @@
       "slug": "muhammad-zia-ul-haq",
       "name": "Muhammad Zia-ul-Haq",
       "year": 1988,
-      "checkedAt": "2026-08-02T06:35:37.249Z",
+      "checkedAt": "2026-08-02T21:20:28.578Z",
       "keywords": [
         "muhammad zia-ul-haq",
         "zia-ul-haq",
@@ -2205,7 +2205,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2239,7 +2239,7 @@
       "slug": "chico-mendes",
       "name": "Chico Mendes",
       "year": 1988,
-      "checkedAt": "2026-08-02T06:35:37.312Z",
+      "checkedAt": "2026-08-02T21:20:28.625Z",
       "keywords": [
         "chico mendes",
         "amazon",
@@ -2255,8 +2255,16 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
+          "summary": "Sofia* was 27, raising her seven-year-old son alone in Venezuela, and running out of options. For years she had distributed personal hygiene products door to door, but as her customers’ finances collapsed, so did her income."
         },
         {
           "title": "Recovery in Ukraine, one life at a time",
@@ -2267,12 +2275,12 @@
           "summary": "In classrooms, maternity wards, hospital corridors and local communities across Ukraine, people are rebuilding their lives despite the ongoing war."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
           "date": "2026-07-31T19:07:23.000Z",
-          "summary": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails PBS"
+          "summary": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails pbs.org"
         },
         {
           "title": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’",
@@ -2321,14 +2329,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation"
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ The Guardian"
         }
       ]
     },
@@ -2337,7 +2337,7 @@
       "slug": "luis-carlos-galan",
       "name": "Luis Carlos Galán",
       "year": 1989,
-      "checkedAt": "2026-08-02T06:35:37.563Z",
+      "checkedAt": "2026-08-02T21:20:28.788Z",
       "keywords": [
         "luis carlos galán",
         "luis carlos galan",
@@ -2355,7 +2355,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2371,7 +2371,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2437,7 +2437,7 @@
       "slug": "alfred-herrhausen",
       "name": "Alfred Herrhausen",
       "year": 1989,
-      "checkedAt": "2026-08-02T06:35:37.711Z",
+      "checkedAt": "2026-08-02T21:20:28.943Z",
       "keywords": [
         "alfred herrhausen",
         "deutsche bank",
@@ -2451,11 +2451,19 @@
       "matchCount": 14,
       "matches": [
         {
+          "title": "market-activity.json",
+          "url": "https://www.sec.gov/edgar/search/",
+          "sourceFile": "data/market-activity.json",
+          "score": 2,
+          "date": "",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
           "title": "live-intel.json",
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2463,7 +2471,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/counter-narcotics-trafficking-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2471,7 +2479,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/counter-narcotics-trafficking-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2483,52 +2491,44 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Senate unanimously agrees to oppose pardon for Epstein accomplice, convicted sex trafficker Ghislaine Maxwell - New York Post",
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZ3gzZzlmOTBEN3BpVE9qRnlPUWNBdGdEbVc2SU9VZDk2Y3hjRzV5c0dLMjg1eDhaLXRqVjA3X2l2NFZsaHljaFlZQ0NYd2M4OUxRa0pBdHo3aDJhQ2RfSGJZb203eFo0QmlIWml0S0x4andRbTVCN2ZNUUdyR0RONHBtbG9wYlBnX0pDLUtZNlp4MXBiNFR1bUc0dk8wMWRaVUw4dTNB?oc=5",
+          "title": "Forced online scams: IOM warns trafficking networks are booming",
+          "url": "https://news.un.org/feed/view/en/story/2026/07/1168038",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-07-30T03:43:00.000Z",
+          "date": "2026-07-28T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15467/airworthiness-directives-pilatus-aircraft-ltd-airplanes",
+          "title": "Entity — sanction record subject — Entity",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/counter-narcotics-trafficking-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-30",
+          "date": "2026-07-26",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Entity — mentions — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15467/airworthiness-directives-pilatus-aircraft-ltd-airplanes",
-          "sourceFile": "data/evidence-timeline.json",
+          "title": "Epstein Files, Timeline And Court Records",
+          "url": "epstein-files.html#epstein-timeline-map",
+          "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-07-30",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+          "date": "",
+          "summary": "Public-record updates, court filings, document releases, email-release reporting, archive mirrors, oversight moves, timeline changes, people/entity tracking, sighting-claim traffic, and association-boundary briefings."
         },
         {
-          "title": "Entity — published finding record — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/30/2026-15467/airworthiness-directives-pilatus-aircraft-ltd-airplanes",
-          "sourceFile": "data/evidence-timeline.json",
+          "title": "Crime State Overlap",
+          "url": "crime-hub.html",
+          "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-07-30",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+          "date": "",
+          "summary": "Organized crime, money laundering, trafficking routes, cartel logistics, state protection, and public-record criminal networks."
         },
         {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15267/112-trichloroethane-draft-risk-evaluation-under-the-toxic-substances-control-act-tsca-notice-of",
+          "title": "evidence-timeline.json",
+          "url": "",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15285/product-specific-guidances-revised-draft-guidances-for-industry-availability",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+          "date": "",
+          "summary": "Timeline position shows when a source reports, files or records an event. It does not convert association, chronology, proximity or a filing into proof of motive, coordination or wrongdoing."
         }
       ]
     },
@@ -2537,7 +2537,7 @@
       "slug": "gerald-bull",
       "name": "Gerald Bull",
       "year": 1990,
-      "checkedAt": "2026-08-02T06:35:37.828Z",
+      "checkedAt": "2026-08-02T21:20:29.035Z",
       "keywords": [
         "gerald bull",
         "project babylon",
@@ -2637,7 +2637,7 @@
       "slug": "carlos-pizarro-leongomez",
       "name": "Carlos Pizarro Leongómez",
       "year": 1990,
-      "checkedAt": "2026-08-02T06:35:38.097Z",
+      "checkedAt": "2026-08-02T21:20:29.193Z",
       "keywords": [
         "carlos pizarro leongómez",
         "carlos pizarro",
@@ -2655,7 +2655,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2689,7 +2689,7 @@
       "slug": "danny-casolaro",
       "name": "Danny Casolaro",
       "year": 1991,
-      "checkedAt": "2026-08-02T06:35:38.364Z",
+      "checkedAt": "2026-08-02T21:20:29.362Z",
       "keywords": [
         "danny casolaro",
         "inslaw",
@@ -2706,7 +2706,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2714,7 +2714,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2722,8 +2722,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -2772,7 +2772,7 @@
       "slug": "robert-maxwell",
       "name": "Robert Maxwell",
       "year": 1991,
-      "checkedAt": "2026-08-02T06:35:38.635Z",
+      "checkedAt": "2026-08-02T21:20:29.525Z",
       "keywords": [
         "robert maxwell",
         "mirror group",
@@ -2791,7 +2791,7 @@
       "slug": "ugur-mumcu",
       "name": "Uğur Mumcu",
       "year": 1993,
-      "checkedAt": "2026-08-02T06:35:38.911Z",
+      "checkedAt": "2026-08-02T21:20:29.693Z",
       "keywords": [
         "uğur mumcu",
         "ugur mumcu",
@@ -2809,7 +2809,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2817,7 +2817,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -2825,8 +2825,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -2875,7 +2875,7 @@
       "slug": "vince-foster",
       "name": "Vince Foster",
       "year": 1993,
-      "checkedAt": "2026-08-02T06:35:39.187Z",
+      "checkedAt": "2026-08-02T21:20:29.854Z",
       "keywords": [
         "vince foster",
         "vincent foster",
@@ -2894,7 +2894,7 @@
       "slug": "yitzhak-rabin",
       "name": "Yitzhak Rabin",
       "year": 1995,
-      "checkedAt": "2026-08-02T06:35:39.450Z",
+      "checkedAt": "2026-08-02T21:20:30.016Z",
       "keywords": [
         "yitzhak rabin",
         "oslo accords",
@@ -2912,7 +2912,7 @@
       "slug": "ken-saro-wiwa",
       "name": "Ken Saro-Wiwa",
       "year": 1995,
-      "checkedAt": "2026-08-02T06:35:39.688Z",
+      "checkedAt": "2026-08-02T21:20:30.159Z",
       "keywords": [
         "ken saro-wiwa",
         "shell",
@@ -3012,7 +3012,7 @@
       "slug": "ron-brown",
       "name": "Ron Brown",
       "year": 1996,
-      "checkedAt": "2026-08-02T06:35:39.967Z",
+      "checkedAt": "2026-08-02T21:20:30.336Z",
       "keywords": [
         "ron brown",
         "commerce department",
@@ -3030,7 +3030,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3038,7 +3038,7 @@
           "url": "https://www.fec.gov/data/",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3046,7 +3046,7 @@
           "url": "",
           "sourceFile": "data/investigation-source-registry.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3096,7 +3096,7 @@
       "slug": "william-colby",
       "name": "William Colby",
       "year": 1996,
-      "checkedAt": "2026-08-02T06:35:40.029Z",
+      "checkedAt": "2026-08-02T21:20:30.379Z",
       "keywords": [
         "william colby",
         "cia",
@@ -3114,7 +3114,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3126,7 +3134,7 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -3180,14 +3188,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -3196,7 +3196,7 @@
       "slug": "veronica-guerin",
       "name": "Veronica Guerin",
       "year": 1996,
-      "checkedAt": "2026-08-02T06:35:40.298Z",
+      "checkedAt": "2026-08-02T21:20:30.546Z",
       "keywords": [
         "veronica guerin",
         "ireland",
@@ -3213,7 +3213,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3229,15 +3229,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "investigation-source-registry.json",
-          "url": "",
-          "sourceFile": "data/investigation-source-registry.json",
-          "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3245,8 +3237,16 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
+        },
+        {
+          "title": "investigation-source-registry.json",
+          "url": "",
+          "sourceFile": "data/investigation-source-registry.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -3295,7 +3295,7 @@
       "slug": "diana-princess-of-wales",
       "name": "Diana, Princess of Wales",
       "year": 1997,
-      "checkedAt": "2026-08-02T06:35:40.420Z",
+      "checkedAt": "2026-08-02T21:20:30.639Z",
       "keywords": [
         "diana, princess of wales",
         "diana spencer",
@@ -3314,7 +3314,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3326,11 +3326,35 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
+          "title": "Entity — contract record subject — Entity",
+          "url": "https://www.justice.gov/media/1426281/dl?inline",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://www.justice.gov/media/1426281/dl?inline",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
           "title": "Entity — operated or published by — Entity",
           "url": "https://www.eppo.europa.eu/media/news_en",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — published finding record — Entity",
+          "url": "https://www.justice.gov/media/1426281/dl?inline",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3364,30 +3388,6 @@
           "score": 1,
           "date": "2026-07-31",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.eppo.europa.eu/media/news/latvia-eppo-carries-out-searches-investigation-suspected-hospital-procurement-fraud-2026-07-22_en",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.eppo.europa.eu/media/news/poland-new-arrests-and-second-request-lifting-immunity-member-parliament-ongoing-corruption-2026-07-30_en",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Hunger hampers Ebola response as cases top 3,200 in DR Congo",
-          "url": "https://news.un.org/feed/view/en/story/2026/07/1168047",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T12:00:00.000Z",
-          "summary": "The UN emergency food agency appealed for immediate funding on Wednesday, warning that deepening hunger is undermining the response to an Ebola outbreak in the Democratic Republic of the Congo (DRC) that has now infected more than 3,200 people."
         }
       ]
     },
@@ -3396,7 +3396,7 @@
       "slug": "stanley-meyer",
       "name": "Stanley Meyer",
       "year": 1998,
-      "checkedAt": "2026-08-02T06:35:40.550Z",
+      "checkedAt": "2026-08-02T21:20:30.730Z",
       "keywords": [
         "stanley meyer",
         "water fuel cell",
@@ -3416,6 +3416,38 @@
           "score": 2,
           "date": "",
           "summary": "Timeline position shows when a source reports, files or records an event. It does not convert association, chronology, proximity or a filing into proof of motive, coordination or wrongdoing."
+        },
+        {
+          "title": "Entity — contract record subject — Entity",
+          "url": "https://www.gov.uk/government/news/sfo-to-secure-a-further-96000-from-green-energy-fraudster",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://www.gov.uk/government/news/sfo-to-secure-a-further-96000-from-green-energy-fraudster",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — published finding record — Entity",
+          "url": "https://www.gov.uk/government/news/sfo-to-secure-a-further-96000-from-green-energy-fraudster",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-01",
+          "summary": "Latest Filings - Sat, 01 Aug 2026 03:39:38 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-01T03:39:38-04:00 4 - Allen Zipporah (0002142412) (Reporting) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T21:54:50-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-089353 4 - Reformation Inc.,(0001787117) (Issuer) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T2"
         },
         {
           "title": "Entity — contract record subject — Entity",
@@ -3456,38 +3488,6 @@
           "score": 1,
           "date": "2026-07-31",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15524/notice-of-inventory-completion-louisiana-department-of-culture-recreation-and-tourism-division-of",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15519/notice-of-inventory-completion-louisiana-department-of-culture-recreation-and-tourism-division-of",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15501/notice-of-inventory-completion-louisiana-department-of-culture-recreation-and-tourism-division-of",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/31/2026-15507/notice-of-inventory-completion-university-of-missouri-museum-of-anthropology-columbia-mo",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -3496,7 +3496,7 @@
       "slug": "mko-abiola",
       "name": "M.K.O. Abiola",
       "year": 1998,
-      "checkedAt": "2026-08-02T06:35:40.834Z",
+      "checkedAt": "2026-08-02T21:20:30.899Z",
       "keywords": [
         "m.k.o. abiola",
         "moshood kashimawo olawale abiola",
@@ -3516,7 +3516,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3524,7 +3524,7 @@
           "url": "",
           "sourceFile": "data/investigation-source-registry.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3566,7 +3566,7 @@
       "slug": "john-f-kennedy-jr",
       "name": "John F. Kennedy Jr.",
       "year": 1999,
-      "checkedAt": "2026-08-02T06:35:41.088Z",
+      "checkedAt": "2026-08-02T21:20:31.076Z",
       "keywords": [
         "john f. kennedy jr.",
         "john kennedy jr.",
@@ -3587,7 +3587,7 @@
       "slug": "edmond-safra",
       "name": "Edmond Safra",
       "year": 1999,
-      "checkedAt": "2026-08-02T06:35:41.365Z",
+      "checkedAt": "2026-08-02T21:20:31.248Z",
       "keywords": [
         "edmond safra",
         "private banking",
@@ -3647,7 +3647,7 @@
       "slug": "mark-lombardi",
       "name": "Mark Lombardi",
       "year": 2000,
-      "checkedAt": "2026-08-02T06:35:41.631Z",
+      "checkedAt": "2026-08-02T21:20:31.410Z",
       "keywords": [
         "mark lombardi",
         "network diagrams",
@@ -3665,7 +3665,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3699,7 +3699,7 @@
       "slug": "daniel-pearl",
       "name": "Daniel Pearl",
       "year": 2002,
-      "checkedAt": "2026-08-02T06:35:41.878Z",
+      "checkedAt": "2026-08-02T21:20:31.569Z",
       "keywords": [
         "daniel pearl",
         "karachi",
@@ -3716,7 +3716,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3732,7 +3732,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3740,8 +3740,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -3798,7 +3798,7 @@
       "slug": "paul-wellstone",
       "name": "Paul Wellstone",
       "year": 2002,
-      "checkedAt": "2026-08-02T06:35:42.161Z",
+      "checkedAt": "2026-08-02T21:20:31.744Z",
       "keywords": [
         "paul wellstone",
         "iraq war",
@@ -3817,7 +3817,7 @@
       "slug": "zoran-djindjic",
       "name": "Zoran Đinđić",
       "year": 2003,
-      "checkedAt": "2026-08-02T06:35:42.422Z",
+      "checkedAt": "2026-08-02T21:20:31.912Z",
       "keywords": [
         "zoran đinđić",
         "zoran djindjic",
@@ -3835,7 +3835,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3843,7 +3843,7 @@
           "url": "",
           "sourceFile": "data/investigation-source-registry.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3893,7 +3893,7 @@
       "slug": "david-kelly",
       "name": "David Kelly",
       "year": 2003,
-      "checkedAt": "2026-08-02T06:35:42.708Z",
+      "checkedAt": "2026-08-02T21:20:32.087Z",
       "keywords": [
         "david kelly",
         "iraq dossier",
@@ -3911,7 +3911,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3919,8 +3919,8 @@
           "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU0NTYwMDAwMDAsIjIwMjYtMTU1MDAiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},"
+          "date": "2026-08-02",
+          "summary": "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU3MTUyMDAwMDAsIjIwMjYtMTU2MTciXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},"
         },
         {
           "title": "evidence-timeline.json",
@@ -3945,7 +3945,7 @@
       "slug": "yasser-arafat",
       "name": "Yasser Arafat",
       "year": 2004,
-      "checkedAt": "2026-08-02T06:35:42.979Z",
+      "checkedAt": "2026-08-02T21:20:32.265Z",
       "keywords": [
         "yasser arafat",
         "polonium",
@@ -3963,7 +3963,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -3989,7 +3989,7 @@
       "slug": "gary-webb",
       "name": "Gary Webb",
       "year": 2004,
-      "checkedAt": "2026-08-02T06:35:43.042Z",
+      "checkedAt": "2026-08-02T21:20:32.312Z",
       "keywords": [
         "gary webb",
         "dark alliance",
@@ -4007,7 +4007,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4019,7 +4027,7 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -4073,14 +4081,6 @@
           "score": 1,
           "date": "2026-07-31T02:02:25.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T18:14:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -4089,7 +4089,7 @@
       "slug": "rafik-hariri",
       "name": "Rafik Hariri",
       "year": 2005,
-      "checkedAt": "2026-08-02T06:35:43.332Z",
+      "checkedAt": "2026-08-02T21:20:32.501Z",
       "keywords": [
         "rafik hariri",
         "lebanon",
@@ -4100,14 +4100,14 @@
         "bombing",
         "regional power"
       ],
-      "matchCount": 11,
+      "matchCount": 10,
       "matches": [
         {
           "title": "live-intel.json",
           "url": "",
           "sourceFile": "data/live-intel.json",
-          "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "score": 1,
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4115,7 +4115,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4167,20 +4167,20 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods",
-          "url": "https://news.un.org/feed/view/en/story/2026/07/1168028",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-26T12:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
           "title": "evidence-timeline.json",
           "url": "",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
           "date": "",
           "summary": "Timeline position shows when a source reports, files or records an event. It does not convert association, chronology, proximity or a filing into proof of motive, coordination or wrongdoing."
+        },
+        {
+          "title": "content changed: U.S. Department of Justice Office of Inspector General — Reports",
+          "url": "https://oig.justice.gov/reports",
+          "sourceFile": "data/source-change-public.json",
+          "score": 1,
+          "date": "",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -4189,7 +4189,7 @@
       "slug": "john-garang",
       "name": "John Garang",
       "year": 2005,
-      "checkedAt": "2026-08-02T06:35:43.584Z",
+      "checkedAt": "2026-08-02T21:20:32.678Z",
       "keywords": [
         "john garang",
         "sudan peace agreement",
@@ -4272,7 +4272,7 @@
       "slug": "anna-politkovskaya",
       "name": "Anna Politkovskaya",
       "year": 2006,
-      "checkedAt": "2026-08-02T06:35:43.853Z",
+      "checkedAt": "2026-08-02T21:20:32.847Z",
       "keywords": [
         "anna politkovskaya",
         "chechnya",
@@ -4289,7 +4289,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4297,7 +4297,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4313,15 +4313,15 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Entity — contract record subject — Entity",
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4329,7 +4329,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4371,7 +4371,7 @@
       "slug": "alexander-litvinenko",
       "name": "Alexander Litvinenko",
       "year": 2006,
-      "checkedAt": "2026-08-02T06:35:44.114Z",
+      "checkedAt": "2026-08-02T21:20:33.028Z",
       "keywords": [
         "alexander litvinenko",
         "polonium-210",
@@ -4389,7 +4389,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4439,7 +4439,7 @@
       "slug": "hrant-dink",
       "name": "Hrant Dink",
       "year": 2007,
-      "checkedAt": "2026-08-02T06:35:44.408Z",
+      "checkedAt": "2026-08-02T21:20:33.220Z",
       "keywords": [
         "hrant dink",
         "agos",
@@ -4457,7 +4457,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4465,7 +4465,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4473,8 +4473,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -4523,7 +4523,7 @@
       "slug": "benazir-bhutto",
       "name": "Benazir Bhutto",
       "year": 2007,
-      "checkedAt": "2026-08-02T06:35:44.690Z",
+      "checkedAt": "2026-08-02T21:20:33.404Z",
       "keywords": [
         "benazir bhutto",
         "pakistan",
@@ -4541,7 +4541,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4549,7 +4549,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4591,7 +4591,7 @@
       "slug": "deborah-jeane-palfrey",
       "name": "Deborah Jeane Palfrey",
       "year": 2008,
-      "checkedAt": "2026-08-02T06:35:45.001Z",
+      "checkedAt": "2026-08-02T21:20:33.607Z",
       "keywords": [
         "deborah jeane palfrey",
         "deborah palfrey",
@@ -4611,7 +4611,7 @@
       "slug": "bruce-ivins",
       "name": "Bruce Ivins",
       "year": 2008,
-      "checkedAt": "2026-08-02T06:35:45.283Z",
+      "checkedAt": "2026-08-02T21:20:33.812Z",
       "keywords": [
         "bruce ivins",
         "anthrax letters",
@@ -4630,7 +4630,7 @@
       "slug": "michael-connell",
       "name": "Michael Connell",
       "year": 2008,
-      "checkedAt": "2026-08-02T06:35:45.562Z",
+      "checkedAt": "2026-08-02T21:20:33.985Z",
       "keywords": [
         "michael connell",
         "election technology",
@@ -4698,7 +4698,7 @@
       "slug": "lasantha-wickrematunge",
       "name": "Lasantha Wickrematunge",
       "year": 2009,
-      "checkedAt": "2026-08-02T06:35:45.812Z",
+      "checkedAt": "2026-08-02T21:20:34.150Z",
       "keywords": [
         "lasantha wickrematunge",
         "sri lanka",
@@ -4715,7 +4715,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4731,7 +4731,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4739,8 +4739,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -4797,7 +4797,7 @@
       "slug": "beverly-eckert",
       "name": "Beverly Eckert",
       "year": 2009,
-      "checkedAt": "2026-08-02T06:35:46.082Z",
+      "checkedAt": "2026-08-02T21:20:34.318Z",
       "keywords": [
         "beverly eckert",
         "9/11 families",
@@ -4815,7 +4815,7 @@
       "slug": "sergei-magnitsky",
       "name": "Sergei Magnitsky",
       "year": 2009,
-      "checkedAt": "2026-08-02T06:35:46.344Z",
+      "checkedAt": "2026-08-02T21:20:34.479Z",
       "keywords": [
         "sergei magnitsky",
         "hermitage capital",
@@ -4833,7 +4833,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4881,7 +4881,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4889,7 +4889,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4897,7 +4897,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4915,7 +4915,7 @@
       "slug": "nancy-schaefer",
       "name": "Nancy Schaefer",
       "year": 2010,
-      "checkedAt": "2026-08-02T06:35:46.604Z",
+      "checkedAt": "2026-08-02T21:20:34.642Z",
       "keywords": [
         "nancy schaefer",
         "child protective services",
@@ -4932,7 +4932,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -4966,7 +4966,7 @@
       "slug": "lech-kaczynski",
       "name": "Lech Kaczyński",
       "year": 2010,
-      "checkedAt": "2026-08-02T06:35:46.724Z",
+      "checkedAt": "2026-08-02T21:20:34.732Z",
       "keywords": [
         "lech kaczyński",
         "lech kaczynski",
@@ -4993,7 +4993,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5001,7 +5001,15 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — published finding record — Entity",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5051,14 +5059,6 @@
           "score": 1,
           "date": "2026-07-31",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — published finding record — Entity",
-          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -5067,7 +5067,7 @@
       "slug": "gareth-williams",
       "name": "Gareth Williams",
       "year": 2010,
-      "checkedAt": "2026-08-02T06:35:46.996Z",
+      "checkedAt": "2026-08-02T21:20:34.904Z",
       "keywords": [
         "gareth williams",
         "mi6",
@@ -5086,7 +5086,7 @@
       "slug": "muammar-gaddafi",
       "name": "Muammar Gaddafi",
       "year": 2011,
-      "checkedAt": "2026-08-02T06:35:47.275Z",
+      "checkedAt": "2026-08-02T21:20:35.087Z",
       "keywords": [
         "muammar gaddafi",
         "muammar qaddafi",
@@ -5100,14 +5100,14 @@
         "regime change",
         "monetary sovereignty"
       ],
-      "matchCount": 14,
+      "matchCount": 13,
       "matches": [
         {
           "title": "source-change-public.json",
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5123,7 +5123,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5144,30 +5144,6 @@
         },
         {
           "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15301/implementation-of-section-403-of-the-senator-elizabeth-dole-21st-century-veterans-healthcare-and",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — mentions — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15301/implementation-of-section-403-of-the-senator-elizabeth-dole-21st-century-veterans-healthcare-and",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — published finding record — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15301/implementation-of-section-403-of-the-senator-elizabeth-dole-21st-century-veterans-healthcare-and",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
           "url": "https://www.fec.gov/updates/supreme-court-issues-opinion-in-national-republican-senatorial-committee-et-al-v-fec-et-al/",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
@@ -5181,6 +5157,30 @@
           "score": 1,
           "date": "2026-07-26",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://www.fec.gov/updates/supreme-court-issues-opinion-in-national-republican-senatorial-committee-et-al-v-fec-et-al/",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-07-26",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — published finding record — Entity",
+          "url": "https://www.fec.gov/updates/supreme-court-issues-opinion-in-national-republican-senatorial-committee-et-al-v-fec-et-al/",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-07-26",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Wallenberg family and foundations",
+          "url": "",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -5189,7 +5189,7 @@
       "slug": "marie-colvin",
       "name": "Marie Colvin",
       "year": 2012,
-      "checkedAt": "2026-08-02T06:35:47.540Z",
+      "checkedAt": "2026-08-02T21:20:35.244Z",
       "keywords": [
         "marie colvin",
         "homs",
@@ -5200,22 +5200,14 @@
         "war crime allegation",
         "targeted killing"
       ],
-      "matchCount": 12,
+      "matchCount": 11,
       "matches": [
-        {
-          "title": "live-intel.json",
-          "url": "",
-          "sourceFile": "data/live-intel.json",
-          "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
         {
           "title": "source-change-public.json",
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5223,8 +5215,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 2,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "evidence-timeline.json",
@@ -5243,20 +5235,20 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
+          "title": "live-intel.json",
+          "url": "",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
           "title": "Fear grows as freedoms shrink in Uganda",
           "url": "https://news.un.org/feed/view/en/story/2026/07/1168057",
           "sourceFile": "data/live-intel.json",
           "score": 1,
           "date": "2026-07-30T12:00:00.000Z",
           "summary": "Uganda is experiencing a growing climate of fear as increasing restrictions on fundamental freedoms leave opposition supporters, journalists, human rights defenders and civil society groups at heightened risk of abuse, according to the UN Human Rights Office (OHCHR)."
-        },
-        {
-          "title": "Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods",
-          "url": "https://news.un.org/feed/view/en/story/2026/07/1168028",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-26T12:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
           "title": "content changed: European Public Prosecutor's Office — News",
@@ -5281,6 +5273,14 @@
           "score": 1,
           "date": "",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "sec-13f-change-5f4dd0a22f9cc9794ce195a0",
+          "url": "",
+          "sourceFile": "data/market-activity.json",
+          "score": 1,
+          "date": "",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -5289,7 +5289,7 @@
       "slug": "aaron-swartz",
       "name": "Aaron Swartz",
       "year": 2013,
-      "checkedAt": "2026-08-02T06:35:47.817Z",
+      "checkedAt": "2026-08-02T21:20:35.427Z",
       "keywords": [
         "aaron swartz",
         "jstor",
@@ -5349,7 +5349,7 @@
       "slug": "hugo-chavez",
       "name": "Hugo Chávez",
       "year": 2013,
-      "checkedAt": "2026-08-02T06:35:48.097Z",
+      "checkedAt": "2026-08-02T21:20:35.600Z",
       "keywords": [
         "hugo chávez",
         "hugo chavez",
@@ -5361,22 +5361,30 @@
         "natural death",
         "poisoning theory"
       ],
-      "matchCount": 10,
+      "matchCount": 9,
       "matches": [
         {
-          "title": "evidence-timeline.json",
+          "title": "live-intel.json",
           "url": "",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 2,
-          "date": "",
-          "summary": "Timeline position shows when a source reports, files or records an event. It does not convert association, chronology, proximity or a filing into proof of motive, coordination or wrongdoing."
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Trapped by a Facebook job advert, freed by a stranger in a taxi",
+          "url": "https://news.un.org/feed/view/en/story/2026/08/1168058",
+          "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "2026-08-02T12:00:00.000Z",
+          "summary": "Sofia* was 27, raising her seven-year-old son alone in Venezuela, and running out of options. For years she had distributed personal hygiene products door to door, but as her customers’ finances collapsed, so did her income."
         },
         {
           "title": "source-change-public.json",
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5384,7 +5392,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5392,7 +5400,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5404,36 +5412,20 @@
           "summary": "Department of the Treasury Read the latest Treasury news Office of Foreign Assets Control A Part of Treasury's Office of Terrorism and Financial Intelligence MENU About OFAC Recent Actions Sanctions Lists Sanctions List Service Specially Designated Nationals (SDN) List Consolidated Sanctions List (Non-SDN Lists) Other OFAC Sanctions Lists Sanctions List Search Sanctions Programs Russia-related Sanctions Iran Sanctions North Korea Sanctions Cuba Sanctions Counter Narcotics Sanctions Cyber-related"
         },
         {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15186/cancer-clinical-trial-eligibility-criteria-washout-periods-and-concomitant-medications-guidance-for",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-28",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — mentions — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15186/cancer-clinical-trial-eligibility-criteria-washout-periods-and-concomitant-medications-guidance-for",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-28",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — published finding record — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/28/2026-15186/cancer-clinical-trial-eligibility-criteria-washout-periods-and-concomitant-medications-guidance-for",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-28",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
           "title": "Entity — sanction record subject — Entity",
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/venezuela-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
           "date": "2026-07-26",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "evidence-timeline.json",
+          "url": "",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "",
+          "summary": "Timeline position shows when a source reports, files or records an event. It does not convert association, chronology, proximity or a filing into proof of motive, coordination or wrongdoing."
         },
         {
           "title": "content changed: U.S. Treasury OFAC — Recent Actions",
@@ -5450,7 +5442,7 @@
       "slug": "boris-berezovsky",
       "name": "Boris Berezovsky",
       "year": 2013,
-      "checkedAt": "2026-08-02T06:35:48.359Z",
+      "checkedAt": "2026-08-02T21:20:35.765Z",
       "keywords": [
         "boris berezovsky",
         "putin",
@@ -5460,40 +5452,8 @@
         "open verdict",
         "russian politics"
       ],
-      "matchCount": 8,
+      "matchCount": 4,
       "matches": [
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15303/medical-devices-radiology-devices-classification-of-the-phase-changing-fiducial-marker-for-radiation",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — mentions — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15303/medical-devices-radiology-devices-classification-of-the-phase-changing-fiducial-marker-for-radiation",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — published finding record — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15303/medical-devices-radiology-devices-classification-of-the-phase-changing-fiducial-marker-for-radiation",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "evidence-timeline.json",
-          "url": "",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "",
-          "summary": "Timeline position shows when a source reports, files or records an event. It does not convert association, chronology, proximity or a filing into proof of motive, coordination or wrongdoing."
-        },
         {
           "title": "market-activity.json",
           "url": "https://www.sec.gov/edgar/search/",
@@ -5533,7 +5493,7 @@
       "slug": "michael-hastings",
       "name": "Michael Hastings",
       "year": 2013,
-      "checkedAt": "2026-08-02T06:35:48.422Z",
+      "checkedAt": "2026-08-02T21:20:35.856Z",
       "keywords": [
         "michael hastings",
         "rolling stone",
@@ -5551,11 +5511,59 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
+          "title": "evidence-timeline.json",
+          "url": "",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 2,
+          "date": "",
+          "summary": "Timeline position shows when a source reports, files or records an event. It does not convert association, chronology, proximity or a filing into proof of motive, coordination or wrongdoing."
+        },
+        {
+          "title": "content changed: UK Serious Fraud Office — News And Communications",
+          "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
+        },
+        {
+          "title": "Entity — contract record subject — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — investigation record subject — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — mentions — Entity",
+          "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-investigation-fbi",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — operated or published by — Entity",
+          "url": "https://vault.fbi.gov/recently-added",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
           "sourceFile": "data/live-intel.json",
           "score": 1,
@@ -5577,54 +5585,6 @@
           "score": 1,
           "date": "2026-07-31T04:00:00.000Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV",
-          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-30T09:30:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment Part 01",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "World Wrestling Entertainment Part 02 (Final)",
-          "url": "https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-29T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Brian Wells",
-          "url": "https://vault.fbi.gov/brian-wells",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-28T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Brian Wells Part 01",
-          "url": "https://vault.fbi.gov/brian-wells/brian-wells-part-01/view",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-28T04:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -5633,7 +5593,7 @@
       "slug": "alberto-nisman",
       "name": "Alberto Nisman",
       "year": 2015,
-      "checkedAt": "2026-08-02T06:35:48.544Z",
+      "checkedAt": "2026-08-02T21:20:35.950Z",
       "keywords": [
         "alberto nisman",
         "amia bombing",
@@ -5659,7 +5619,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — contract record subject — Entity",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5667,7 +5635,15 @@
           "url": "https://www.eppo.europa.eu/media/news_en",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "Entity — published finding record — Entity",
+          "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
+          "sourceFile": "data/evidence-timeline.json",
+          "score": 1,
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5709,22 +5685,6 @@
           "score": 1,
           "date": "2026-07-31",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.eppo.europa.eu/media/news/poland-new-arrests-and-second-request-lifting-immunity-member-parliament-ongoing-corruption-2026-07-30_en",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.eppo.europa.eu/media/news/greece-eppo-indicts-22-ongoing-probe-large-scale-agricultural-subsidy-fraud-2026-07-16_en",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-31",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         }
       ]
     },
@@ -5733,7 +5693,7 @@
       "slug": "boris-nemtsov",
       "name": "Boris Nemtsov",
       "year": 2015,
-      "checkedAt": "2026-08-02T06:35:48.814Z",
+      "checkedAt": "2026-08-02T21:20:36.139Z",
       "keywords": [
         "boris nemtsov",
         "russia",
@@ -5751,7 +5711,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5759,7 +5719,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5767,7 +5727,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5775,7 +5735,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5833,7 +5793,7 @@
       "slug": "mikhail-lesin",
       "name": "Mikhail Lesin",
       "year": 2015,
-      "checkedAt": "2026-08-02T06:35:49.085Z",
+      "checkedAt": "2026-08-02T21:20:36.304Z",
       "keywords": [
         "mikhail lesin",
         "gazprom-media",
@@ -5852,7 +5812,7 @@
       "slug": "berta-caceres",
       "name": "Berta Cáceres",
       "year": 2016,
-      "checkedAt": "2026-08-02T06:35:49.373Z",
+      "checkedAt": "2026-08-02T21:20:36.489Z",
       "keywords": [
         "berta cáceres",
         "berta caceres",
@@ -5871,7 +5831,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5905,7 +5865,7 @@
       "slug": "seth-rich",
       "name": "Seth Rich",
       "year": 2016,
-      "checkedAt": "2026-08-02T06:35:49.647Z",
+      "checkedAt": "2026-08-02T21:20:36.653Z",
       "keywords": [
         "seth rich",
         "dnc",
@@ -5916,7 +5876,7 @@
         "unsolved homicide",
         "disinformation"
       ],
-      "matchCount": 14,
+      "matchCount": 12,
       "matches": [
         {
           "title": "evidence-timeline.json",
@@ -5931,7 +5891,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5939,7 +5899,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5947,7 +5907,7 @@
           "url": "https://wikileaks.org/-Leaks-.html",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5955,7 +5915,7 @@
           "url": "",
           "sourceFile": "data/investigation-source-registry.json",
           "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -5967,33 +5927,33 @@
           "summary": "Press Releases Archive - United States House Committee on Oversight and Government Reform Skip to main content Toggle navigation Search About Chairman James Comer Full Committee Rules Committee Activity Calendar Hearings Letters Markups Reports Forums Roundtables Subcommittees Cybersecurity, Information Technology, and Government Innovation Economic Growth, Energy Policy, and Regulatory Affairs Government Operations Health Care and Financial Services Military and Foreign Affairs Federal Law Enfo"
         },
         {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15306/filing-of-plats-of-survey-oregonwashington",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — mentions — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15306/filing-of-plats-of-survey-oregonwashington",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — published finding record — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15306/filing-of-plats-of-survey-oregonwashington",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
           "title": "WikiLeaks",
           "url": "https://wikileaks.org/feed.xml",
           "sourceFile": "data/live-intel.json",
+          "score": 1,
+          "date": "",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "market-activity.json",
+          "url": "https://www.sec.gov/edgar/search/",
+          "sourceFile": "data/market-activity.json",
+          "score": 1,
+          "date": "",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "sec-13f-change-ade74d07124fbd798f10d8cf",
+          "url": "",
+          "sourceFile": "data/market-activity.json",
+          "score": 1,
+          "date": "",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+          "url": "https://oversight.house.gov/release/",
+          "sourceFile": "data/source-change-public.json",
           "score": 1,
           "date": "",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
@@ -6005,7 +5965,7 @@
       "slug": "kim-jong-nam",
       "name": "Kim Jong-nam",
       "year": 2017,
-      "checkedAt": "2026-08-02T06:35:49.898Z",
+      "checkedAt": "2026-08-02T21:20:36.809Z",
       "keywords": [
         "kim jong-nam",
         "north korea",
@@ -6022,7 +5982,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6072,7 +6032,7 @@
       "slug": "daphne-caruana-galizia",
       "name": "Daphne Caruana Galizia",
       "year": 2017,
-      "checkedAt": "2026-08-02T06:35:50.165Z",
+      "checkedAt": "2026-08-02T21:20:36.970Z",
       "keywords": [
         "daphne caruana galizia",
         "malta",
@@ -6090,7 +6050,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6106,7 +6066,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6114,8 +6074,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -6172,7 +6132,7 @@
       "slug": "jan-kuciak",
       "name": "Jan Kuciak",
       "year": 2018,
-      "checkedAt": "2026-08-02T06:35:50.412Z",
+      "checkedAt": "2026-08-02T21:20:37.122Z",
       "keywords": [
         "jan kuciak",
         "slovakia",
@@ -6189,7 +6149,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6205,15 +6165,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "investigation-source-registry.json",
-          "url": "",
-          "sourceFile": "data/investigation-source-registry.json",
-          "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6221,8 +6173,16 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
+        },
+        {
+          "title": "investigation-source-registry.json",
+          "url": "",
+          "sourceFile": "data/investigation-source-registry.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -6271,7 +6231,7 @@
       "slug": "marielle-franco",
       "name": "Marielle Franco",
       "year": 2018,
-      "checkedAt": "2026-08-02T06:35:50.676Z",
+      "checkedAt": "2026-08-02T21:20:37.292Z",
       "keywords": [
         "marielle franco",
         "rio militias",
@@ -6282,14 +6242,14 @@
         "militia conflict",
         "assassination"
       ],
-      "matchCount": 10,
+      "matchCount": 7,
       "matches": [
         {
           "title": "live-intel.json",
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6297,7 +6257,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6307,30 +6267,6 @@
           "score": 1,
           "date": "2026-07-29",
           "summary": "Department of Justice Office of the Inspector General Menu Reports All Reports Oversight of the BOP’s Supplemental Funding Recommendations Investigations Criminal and Civil Cases Misconduct Findings Ongoing Work News Recent Updates Multimedia Testimony FOIA About About the Office Hotline Office Directory Whistleblower Rights and Protections Careers Español | 繁體中文 | Tiếng Việt | Tagalog | العربية REPORT FRAUD, WASTE & ABUSE Search Search Breadcrumb Home Reports 07/29/2026 Audit of the United Stat"
-        },
-        {
-          "title": "Entity — contract record subject — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15389/continuation-of-the-national-emergency-with-respect-to-brazil",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — mentions — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15389/continuation-of-the-national-emergency-with-respect-to-brazil",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Entity — published finding record — Entity",
-          "url": "https://www.federalregister.gov/documents/2026/07/29/2026-15389/continuation-of-the-national-emergency-with-respect-to-brazil",
-          "sourceFile": "data/evidence-timeline.json",
-          "score": 1,
-          "date": "2026-07-29",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
           "title": "High prices and funding cuts stall HIV prevention revolution",
@@ -6371,7 +6307,7 @@
       "slug": "jamal-khashoggi",
       "name": "Jamal Khashoggi",
       "year": 2018,
-      "checkedAt": "2026-08-02T06:35:50.919Z",
+      "checkedAt": "2026-08-02T21:20:37.447Z",
       "keywords": [
         "jamal khashoggi",
         "saudi arabia",
@@ -6388,7 +6324,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6404,7 +6340,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6412,8 +6348,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -6470,7 +6406,7 @@
       "slug": "jeffrey-epstein",
       "name": "Jeffrey Epstein",
       "year": 2019,
-      "checkedAt": "2026-08-02T06:35:51.177Z",
+      "checkedAt": "2026-08-02T21:20:37.608Z",
       "keywords": [
         "jeffrey epstein",
         "mcc new york",
@@ -6496,7 +6432,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/court-records-matter-estate-jeffrey-e-epstein-deceased-no-st-21-rv-00005-vi-super-ct-2021",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6504,7 +6440,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/court-records-maxwell-v-estate-jeffrey-epstein-no-st-20-cv-155-vi-super-ct-2020",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6512,7 +6448,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/court-records-matter-estate-jeffrey-e-epstein-deceased-no-st-21-rv-00005-vi-super-ct-2021",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6520,7 +6456,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/court-records-maxwell-v-estate-jeffrey-epstein-no-st-20-cv-155-vi-super-ct-2020",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6528,7 +6464,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/court-records-matter-estate-jeffrey-e-epstein-deceased-no-st-21-rv-00005-vi-super-ct-2021",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6536,7 +6472,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/court-records-maxwell-v-estate-jeffrey-epstein-no-st-20-cv-155-vi-super-ct-2020",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6570,7 +6506,7 @@
       "slug": "james-le-mesurier",
       "name": "James Le Mesurier",
       "year": 2019,
-      "checkedAt": "2026-08-02T06:35:51.436Z",
+      "checkedAt": "2026-08-02T21:20:37.773Z",
       "keywords": [
         "james le mesurier",
         "white helmets",
@@ -6581,32 +6517,15 @@
         "disputed suicide",
         "information warfare"
       ],
-      "matchCount": 2,
-      "matches": [
-        {
-          "title": "live-intel.json",
-          "url": "",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "Syria’s hopes for renewal hinge on rebuilding trust, lives and livelihoods",
-          "url": "https://news.un.org/feed/view/en/story/2026/07/1168028",
-          "sourceFile": "data/live-intel.json",
-          "score": 1,
-          "date": "2026-07-26T12:00:00.000Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        }
-      ]
+      "matchCount": 0,
+      "matches": []
     },
     {
       "id": "death-mohsen-fakhrizadeh",
       "slug": "mohsen-fakhrizadeh",
       "name": "Mohsen Fakhrizadeh",
       "year": 2020,
-      "checkedAt": "2026-08-02T06:35:51.723Z",
+      "checkedAt": "2026-08-02T21:20:37.953Z",
       "keywords": [
         "mohsen fakhrizadeh",
         "iran nuclear program",
@@ -6625,7 +6544,7 @@
       "slug": "john-mcafee",
       "name": "John McAfee",
       "year": 2021,
-      "checkedAt": "2026-08-02T06:35:51.991Z",
+      "checkedAt": "2026-08-02T21:20:38.122Z",
       "keywords": [
         "john mcafee",
         "whackd",
@@ -6644,7 +6563,7 @@
       "slug": "jovenel-moise",
       "name": "Jovenel Moïse",
       "year": 2021,
-      "checkedAt": "2026-08-02T06:35:52.257Z",
+      "checkedAt": "2026-08-02T21:20:38.286Z",
       "keywords": [
         "jovenel moïse",
         "jovenel moise",
@@ -6662,7 +6581,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "source-change-public.json",
+          "url": "",
+          "sourceFile": "data/source-change-public.json",
+          "score": 1,
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6671,14 +6598,6 @@
           "sourceFile": "data/live-intel.json",
           "score": 1,
           "date": "2026-08-02",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "source-change-public.json",
-          "url": "",
-          "sourceFile": "data/source-change-public.json",
-          "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6720,7 +6639,7 @@
       "slug": "peter-r-de-vries",
       "name": "Peter R. de Vries",
       "year": 2021,
-      "checkedAt": "2026-08-02T06:35:52.503Z",
+      "checkedAt": "2026-08-02T21:20:38.463Z",
       "keywords": [
         "peter r. de vries",
         "peter r de vries",
@@ -6737,7 +6656,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 2,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6753,15 +6672,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
-          "title": "investigation-source-registry.json",
-          "url": "",
-          "sourceFile": "data/investigation-source-registry.json",
-          "score": 1,
-          "date": "2026-08-01",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6769,8 +6680,16 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
+        },
+        {
+          "title": "investigation-source-registry.json",
+          "url": "",
+          "sourceFile": "data/investigation-source-registry.json",
+          "score": 1,
+          "date": "2026-08-02",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -6819,7 +6738,7 @@
       "slug": "shireen-abu-akleh",
       "name": "Shireen Abu Akleh",
       "year": 2022,
-      "checkedAt": "2026-08-02T06:35:52.766Z",
+      "checkedAt": "2026-08-02T21:20:38.638Z",
       "keywords": [
         "shireen abu akleh",
         "jenin",
@@ -6836,7 +6755,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6844,7 +6763,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6852,8 +6771,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Fear grows as freedoms shrink in Uganda",
@@ -6902,7 +6821,7 @@
       "slug": "shinzo-abe",
       "name": "Shinzo Abe",
       "year": 2022,
-      "checkedAt": "2026-08-02T06:35:53.029Z",
+      "checkedAt": "2026-08-02T21:20:38.804Z",
       "keywords": [
         "shinzo abe",
         "japan",
@@ -6920,7 +6839,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -6978,7 +6897,7 @@
       "slug": "arshad-sharif",
       "name": "Arshad Sharif",
       "year": 2022,
-      "checkedAt": "2026-08-02T06:35:53.271Z",
+      "checkedAt": "2026-08-02T21:20:38.958Z",
       "keywords": [
         "arshad sharif",
         "pakistan",
@@ -6995,7 +6914,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 4,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7011,7 +6930,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7027,8 +6946,8 @@
           "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
-          "summary": "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.,Read more about what we do Follow us The following"
+          "date": "2026-08-02",
+          "summary": "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release"
         },
         {
           "title": "Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities",
@@ -7077,7 +6996,7 @@
       "slug": "yevgeny-prigozhin",
       "name": "Yevgeny Prigozhin",
       "year": 2023,
-      "checkedAt": "2026-08-02T06:35:53.541Z",
+      "checkedAt": "2026-08-02T21:20:39.138Z",
       "keywords": [
         "yevgeny prigozhin",
         "evgeny prigozhin",
@@ -7130,7 +7049,7 @@
       "slug": "alexei-navalny",
       "name": "Alexei Navalny",
       "year": 2024,
-      "checkedAt": "2026-08-02T06:35:53.809Z",
+      "checkedAt": "2026-08-02T21:20:39.309Z",
       "keywords": [
         "alexei navalny",
         "epibatidine",
@@ -7148,7 +7067,7 @@
           "url": "",
           "sourceFile": "data/source-change-public.json",
           "score": 3,
-          "date": "2026-08-01T07:39:38.763Z",
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7172,7 +7091,7 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 1,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7180,7 +7099,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7188,7 +7107,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-prisons-bop",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7196,7 +7115,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-prisons-bop",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7204,7 +7123,7 @@
           "url": "https://www.justice.gov/epstein/doj-disclosures/foia-federal-bureau-prisons-bop",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7212,7 +7131,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/russia-related-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7230,7 +7149,7 @@
       "slug": "ebrahim-raisi",
       "name": "Ebrahim Raisi",
       "year": 2024,
-      "checkedAt": "2026-08-02T06:35:54.055Z",
+      "checkedAt": "2026-08-02T21:20:39.470Z",
       "keywords": [
         "ebrahim raisi",
         "iran",
@@ -7246,7 +7165,15 @@
           "url": "",
           "sourceFile": "data/live-intel.json",
           "score": 2,
-          "date": "2026-08-02T06:34:34.633Z",
+          "date": "2026-08-02T21:19:03.160Z",
+          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
+        },
+        {
+          "title": "source-change-public.json",
+          "url": "",
+          "sourceFile": "data/source-change-public.json",
+          "score": 1,
+          "date": "2026-08-02T08:22:23.243Z",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7258,19 +7185,11 @@
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
-          "title": "source-change-public.json",
-          "url": "",
-          "sourceFile": "data/source-change-public.json",
-          "score": 1,
-          "date": "2026-08-01T07:39:38.763Z",
-          "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
-        },
-        {
           "title": "Entity — contract record subject — Entity",
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {
@@ -7278,7 +7197,7 @@
           "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions",
           "sourceFile": "data/evidence-timeline.json",
           "score": 1,
-          "date": "2026-07-31",
+          "date": "2026-08-02",
           "summary": "Matched structured source record. Open the connected record and review the original source before drawing conclusions."
         },
         {

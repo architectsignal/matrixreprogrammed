@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const mode = process.argv[2] || 'check';
+const oneTimeAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
 const policyPath = path.resolve(
   process.env.MATRIX_CLOUDFLARE_BUDGET_POLICY_PATH || '.github/build-budget-policy.json'
 );
@@ -71,8 +72,33 @@ try {
   if (mode === 'check') {
     process.exit();
   }
+  if (mode === 'owner-exception') {
+    const londonDate = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/London',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(new Date());
+    if (londonDate !== '2026-08-02') {
+      fail(`The one-time billable-build exception expired; London date is ${londonDate}.`);
+      process.exit();
+    }
+    if (process.env.CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION !== oneTimeAuthorization) {
+      fail('The one-time owner authorization phrase did not match.');
+      process.exit();
+    }
+    if (!budget.currentBillingPeriodLocked || observedBillable !== 5470 || observedCost !== 27.34) {
+      fail('The one-time exception is not bound to the locked 2026-08-02 owner usage snapshot.');
+      process.exit();
+    }
+    console.log(
+      'Cloudflare one-time owner exception PASS: one billable production build is authorized only on ' +
+      '2026-08-02 Europe/London; the recorded snapshot remains 5,470 billable minutes and $27.34.'
+    );
+    process.exit();
+  }
   if (mode !== 'release') {
-    throw new Error(`Unknown mode ${JSON.stringify(mode)}; use check or release.`);
+    throw new Error(`Unknown mode ${JSON.stringify(mode)}; use check, release or owner-exception.`);
   }
 
   if (budget.currentBillingPeriodLocked) {

@@ -21,6 +21,7 @@ env:
 
 jobs:
   repair-deploy-verify:
+    if: github.ref_name == 'main'
     name: Deploy latest Worker, bind secrets and prove autonomous AI
     runs-on: ubuntu-latest
     timeout-minutes: 60
@@ -157,3 +158,53 @@ jobs:
       - name: Remove temporary configuration
         if: always()
         run: rm -f .wrangler-ai-auth-repair.toml
+
+  diagnose-existing-worker:
+    if: github.ref_name != 'main'
+    name: Diagnose existing autonomous AI without deployment
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout diagnostic branch
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Resolve canonical workers.dev endpoint from Cloudflare API
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          RESPONSE="$(curl --fail-with-body --silent --show-error \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H 'Content-Type: application/json' \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain")"
+          SUBDOMAIN="$(printf '%s' "$RESPONSE" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const j=JSON.parse(s);if(!j.success||!j.result?.subdomain)process.exit(2);process.stdout.write(j.result.subdomain)})")"
+          test -n "$SUBDOMAIN"
+          echo "AI_DIRECT_WORKER_URL=https://matrixreprogrammed.$SUBDOMAIN.workers.dev" >> "$GITHUB_ENV"
+
+      - name: Diagnose live autonomous AI directly
+        env:
+          SITE_URL: ${{ env.AI_DIRECT_WORKER_URL }}
+          ADMIN_API_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
+          AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
+          AI_VERIFY_ATTEMPTS: '3'
+          AI_VERIFY_ROUTE_ATTEMPTS: '6'
+          AI_VERIFY_DELAY_MS: '3000'
+        run: node scripts/verify-live-ai-management.mjs
+
+      - name: Upload sanitized diagnostic proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-live-diagnostic-${{ github.run_id }}
+          path: downloads/live-ai-management-verification.json
+          if-no-files-found: error
+          retention-days: 7

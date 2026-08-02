@@ -4,6 +4,7 @@ import { isAiManagementRoute } from './worker-ai-management.js';
 import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
+import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';
 
 function cleanToken(value) {
   return String(value || '').trim();
@@ -62,6 +63,11 @@ export default {
   async fetch(request, env, ctx) {
     const runtimeEnv = withAiManagementAdminToken(env);
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    if (isMatrixSynergyRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleMatrixSynergyRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
 
     if (isCapacityGrowthRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();

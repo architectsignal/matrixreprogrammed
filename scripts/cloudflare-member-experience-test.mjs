@@ -19,6 +19,8 @@ const paypalMigration = read('migrations/phase6_paypal_subscriptions.sql');
 const gate = read('src/worker-access-gate.js');
 const email = read('src/worker-email-lifecycle.js');
 const membership = read('membership.html');
+const paypalMembership = read('paypal-membership.js');
+const newsletterClient = read('newsletter.js');
 const membershipTemplate = read('scripts/templates/membership-auth/membership.template');
 const login = read('member-login.html');
 const dashboardHtml = read('member-dashboard.html');
@@ -67,13 +69,13 @@ check('PayPal subscription view exposes compatibility fields', paypalMigration.i
 check('Duplicate active PayPal subscriptions are blocked', paypal.includes('currentSubscriptionForMember') && paypal.includes('An active PayPal membership already exists') && paypal.includes('bool(currentSubscription.paid_access)') && paypal.includes("billingUrl:'/billing-dashboard.html'"), 'An active entitlement must block allocation of another checkout intent');
 check('Legacy active PayPal subscriptions are blocked', paypal.includes("LOWER(provider_status) IN ('active','trialing')") && paypal.includes("datetime(current_period_end)>datetime('now')") && paypal.includes('AS paid_access'), 'Older active subscriptions without a PayPal state row must still prevent duplicate billing');
 check('PayPal config exposes compatible billing state', paypal.includes('currentSubscription:currentSubscription||null') && paypal.includes('paidAccess:bool(currentSubscription?.paid_access)'), 'The membership page must recognise modern and legacy paid access');
-check('Active membership UI routes to billing', membership.includes("billingLink.textContent = 'Manage billing'") && membership.includes('Paid access is already active'), 'An active member should see billing management instead of another subscription button');
+check('Active membership UI routes to billing', paypalMembership.includes("billingLink.textContent='Manage billing'") && paypalMembership.includes('Paid access is already active'), 'An active member should see billing management instead of another subscription button');
 check('Billing dashboard requests include credentials', billingDashboard.includes("fetch(path,{cache:'no-store',credentials:'include'"), 'Billing status and cancellation must carry the active Cloudflare session');
 
 check('Membership signup sends canonical consent', membershipTemplate.includes('consent:marketingConsent,marketingConsent'), 'The membership form must send the same explicit consent contract the email worker validates');
 check('Email lifecycle accepts compatible consent alias', email.includes('input.consent??input.marketingConsent'), 'Existing clients using marketingConsent must remain compatible');
 check('Newsletter consent remains explicit', membership.includes('id="member-consent"') && membership.includes('name="marketingConsent"') && membership.includes('type="checkbox" required') && email.includes('Explicit email consent is required'), 'No marketing subscription may be activated without a required checkbox and server-side explicit-consent validation');
-check('Membership requests include credentials', membership.includes("credentials:'include'") && membership.includes('/api/paypal/config'), 'Same-origin member cookies must be sent on PayPal and signup requests');
+check('Membership requests include credentials', paypalMembership.includes("credentials:'include'") && paypalMembership.includes('/api/paypal/config') && newsletterClient.includes("credentials:'include'"), 'Same-origin member cookies must be sent on PayPal and signup requests');
 check('Dashboard requests include credentials', dashboardApp.includes("fetch(path,{cache:'no-store',credentials:'include'") && dashboardApp.includes("/api/auth/logout',{method:'POST',credentials:'include'"), 'Dashboard reads, writes and logout must retain the active session');
 check('Free dashboard avoids paid watchlist request', dashboardApp.includes("capabilities.includes('member_watchlists')") && dashboardApp.includes('if(canWatch)tasks.push(loadWatchlists())'), 'A registered member must not be redirected to access denied while the dashboard loads');
 check('Dashboard exposes tier-aware membership management', dashboardHtml.includes('id="membership-action"') && dashboardApp.includes("membershipAction.href=paid?'billing-dashboard.html':'membership.html'"), 'Free members need an upgrade route and paid members need a billing route');

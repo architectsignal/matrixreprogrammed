@@ -46,8 +46,38 @@
       </section>
 
       <nav class="member-tabs" aria-label="Dashboard sections">
-        <a href="#sessions">Sessions</a><a href="#accountability-alerts">Accountability Alerts</a><a href="#saved">Saved</a><a href="#follows">Follows</a><a href="#watchlists">Watchlists</a><a href="#archive">Archive</a><a href="#downloads">Downloads</a>
+        <a href="#missions">Evidence Missions</a><a href="#progression">Progression</a><a href="#impact">Impact Trail</a><a href="#sessions">Sessions</a><a href="#accountability-alerts">Accountability Alerts</a><a href="#saved">Saved</a><a href="#follows">Follows</a><a href="#watchlists">Watchlists</a><a href="#archive">Archive</a><a href="#downloads">Downloads</a>
       </nav>
+
+      <section id="missions" class="panel section-anchor">
+        <div class="member-head"><div><h2>Evidence missions</h2><p class="muted">Contribute public records, corrections and source checks. Rewards are based only on authenticated evidence work, never page views, ideology, accusations or volume.</p></div></div>
+        <div id="mission-list" class="member-list"></div>
+        <h3>Submit a source</h3>
+        <p class="warning"><strong>Automatic evidence boundary:</strong> a member submission cannot authenticate itself. Unless every verification requirement is independently satisfied by the trusted pipeline, it is stored and visibly labelled <strong>SPECULATION</strong>, earns no points and cannot support factual conclusions or alerts. It is not routed to human editorial review.</p>
+        <form id="contribution-form" class="form-grid">
+          <label>Mission<select id="contribution-mission" name="missionId" required></select></label>
+          <label>Secure source URL<input name="sourceUrl" type="url" required maxlength="1500" placeholder="https://official.example/record"></label>
+          <label>Source title<input name="sourceTitle" maxlength="300"></label>
+          <label>Publisher<input name="sourcePublisher" maxlength="300"></label>
+          <label>Publication date<input name="publicationDate" type="date"></label>
+          <label>What this source contributes<textarea name="summary" required maxlength="3000" rows="5"></textarea></label>
+          <button class="btn" type="submit">Submit for automatic classification</button>
+        </form>
+        <p id="contribution-result" class="status" aria-live="polite"></p>
+      </section>
+
+      <section id="progression" class="panel section-anchor">
+        <h2>Ethical progression</h2>
+        <div class="dashboard-grid">
+          <article class="member-item"><p class="muted">Current level</p><p id="progression-level" class="value">Observer</p></article>
+          <article class="member-item"><p class="muted">Trusted points</p><p id="progression-points" class="count">0</p></article>
+          <article class="member-item"><p class="muted">Verified contributions</p><p id="progression-verified" class="count">0</p></article>
+          <article class="member-item"><p class="muted">Speculative contributions</p><p id="progression-speculation" class="count">0</p></article>
+        </div>
+        <p id="progression-rule" class="muted"></p><p class="muted">Rewards are reversible when supporting evidence is corrected, withdrawn or invalidated.</p>
+      </section>
+
+      <section id="impact" class="panel section-anchor"><h2>Impact trail</h2><p class="muted">A permanent audit trail shows what changed, which outputs were affected and which evidence class governed the change.</p><div id="impact-list" class="member-list"></div></section>
 
       <section id="accountability-alerts" class="panel section-anchor"><div class="member-head"><div><h2>Accountability alerts</h2><p class="muted">Due 30-, 90- and 365-day consequence checks and reviewed outcomes from records you follow. A due alert is not a verdict.</p></div><a class="btn alt" href="/public-consequence-contracts.html">Open Accountability Twins</a></div><div id="accountability-alert-list" class="member-list"></div></section><section id="sessions" class="panel section-anchor">
         <div class="member-head"><div><h2>Session controls</h2><p class="muted">Review active sessions and revoke any device you no longer trust.</p></div><button id="revoke-others" class="btn danger" type="button">Revoke other sessions</button></div>

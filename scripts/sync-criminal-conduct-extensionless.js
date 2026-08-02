@@ -8,6 +8,7 @@ const reportPath = path.join(root, 'downloads', 'criminal-conduct-extensionless-
 const failures = [];
 const synchronized = [];
 const directoryBackedRoutes = [];
+const materializedBuiltRoutes = [];
 
 if (!fs.existsSync(engineReportPath)) throw new Error('Missing criminal conduct engine report before extensionless synchronization');
 const engine = JSON.parse(fs.readFileSync(engineReportPath, 'utf8'));
@@ -51,7 +52,16 @@ for (const route of sourceRoutes) {
   const sourceAlias = path.join(root, route.replace(/\.html$/i, ''));
   if (fs.existsSync(sourceAlias) && fs.statSync(sourceAlias).isFile()) syncAlias(root, route, 'source');
   else if (fs.existsSync(sourceAlias) && fs.statSync(sourceAlias).isDirectory()) syncAlias(root, route, 'source');
-  if (fs.existsSync(site)) syncAlias(site, route, 'built');
+  if (fs.existsSync(site)) {
+    const sourceHtml = path.join(root, route);
+    const builtHtml = path.join(site, route);
+    if (!fs.existsSync(builtHtml) && fs.existsSync(sourceHtml) && fs.statSync(sourceHtml).isFile()) {
+      fs.mkdirSync(path.dirname(builtHtml), { recursive: true });
+      fs.copyFileSync(sourceHtml, builtHtml);
+      materializedBuiltRoutes.push(route);
+    }
+    syncAlias(site, route, 'built');
+  }
 }
 
 const report = {
@@ -59,8 +69,10 @@ const report = {
   generatedAt: new Date().toISOString(),
   sourceDossierRoutes: sourceRoutes.length,
   synchronizedCount: synchronized.length,
+  materializedBuiltCount: materializedBuiltRoutes.length,
   directoryBackedCount: directoryBackedRoutes.length,
   synchronized,
+  materializedBuiltRoutes,
   directoryBackedRoutes,
   failures
 };
@@ -70,4 +82,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`CRIMINAL CONDUCT EXTENSIONLESS SYNC FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Criminal Conduct & Allegations engine synchronized to ${synchronized.length} extensionless dossier route(s); ${directoryBackedRoutes.length} directory-backed namespace(s) preserved with their explicit .html dossier verified.`);
+console.log(`Criminal Conduct & Allegations engine synchronized to ${synchronized.length} extensionless dossier route(s); ${materializedBuiltRoutes.length} missing built dossier page(s) materialized; ${directoryBackedRoutes.length} directory-backed namespace(s) preserved with their explicit .html dossier verified.`);

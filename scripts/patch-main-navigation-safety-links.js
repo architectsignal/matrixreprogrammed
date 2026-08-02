@@ -91,7 +91,9 @@ function verifySearchFirstHomepage(document) {
     if (!document.includes(marker)) throw new Error(`Search-first homepage navigation marker missing: ${marker}`);
   }
   for (const [route] of primaryLinks) {
-    if (!document.includes(`href="${route}"`)) throw new Error(`Search-first homepage Explore menu is missing ${route}`);
+    const routePresent = document.includes(`href="${route}"`)
+      || (route === 'search.html' && document.includes('action="search.html"'));
+    if (!routePresent) throw new Error(`Search-first homepage is missing the public route ${route}`);
   }
   for (const route of ['elite-family-tracker.html','security-privacy.html','dark-web-safety.html','contact-the-machine.html']) {
     if (!document.includes(`href="${route}"`)) throw new Error(`Search-first homepage safety route is missing ${route}`);

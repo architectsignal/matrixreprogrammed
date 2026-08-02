@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:23:03.405Z",
+  "generatedAt": "2026-08-02T06:26:47.842Z",
   "pageCount": 74,
   "output": "downloads/money-public-market-refresh.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Money Public Market Refresh",
-    "contentHash": "09c91566b02908169196b502aa450ee63c305cf8ab4d04bd61c1ec72e24f4a02",
+    "contentHash": "5b578e918b4305119f3391978bb02565fa8318a9aa850ebf6a21141625958b6c",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -13,9 +13,8 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
       "a21f3d8e98268d5e01e1eb7c",
-      "3a425f0d5d683952bc0ad7ac",
       "investment-vehicles-ivv",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -24,10 +23,12 @@
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
       "5460c0408472ce834da2b82f",
-      "aa119272f233de638bb1e02d",
+      "0491ca77f4f2c9b90f832c2e",
+      "0286171e0bf7415859b35948",
       "a71a8be091652489b843ecf6",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
+      "3a425f0d5d683952bc0ad7ac",
       "energy-resources",
       "defence-security-bksy",
       "companies-nvda",
@@ -41,8 +42,6 @@
       "7dcf4ef18ea1f86d01068773",
       "b7e4a66335a706ef5097117f",
       "gautam-adani",
-      "fe51591d2f98b1e8140add7f",
-      "2482c3e0241c7c7679a18cd1",
       "56d03242af4d235549963dd3",
       "technology-control-pltr:sec-form4",
       "technology-control-nvda:sec-form4",
@@ -54,13 +53,10 @@
       "31471a73797c47322ae87f79",
       "lawrence-ray-conviction-sentence-2023",
       "epstein-opr-review-2020",
-      "ASC-REVIEW-6B9A792BD16666C3",
-      "ASC-REVIEW-8E57602B48B9C301",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-B8034056CD461A0D",
       "5295a33003172878f9880122",
       "44505b4afb60938c8117ad31",
-      "14394588e567b7c52bd11cb3",
       "contractor-caci-international",
       "contractor-saic-leidos-lineage",
       "media",
@@ -110,20 +106,24 @@
       "property-1109-hk",
       "property-0688-hk",
       "property-agnc",
-      "property-frt"
+      "property-frt",
+      "property-9ci-si",
+      "media-tri",
+      "media-nyt",
+      "media-djt"
     ],
     "metrics": {
       "evidenceCount": 104,
-      "primarySourceCount": 69,
-      "disputedClaimCount": 4,
+      "primarySourceCount": 67,
+      "disputedClaimCount": 2,
       "newEntityCount": 4,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 14,
-      "moneyRecordCount": 69
+      "relationshipCount": 10,
+      "moneyRecordCount": 71
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
+        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -132,8 +132,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -143,8 +143,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; ARGUS MEDIA INC — Department of Energy; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; CARAHSOFT TECHNOLOGY CORP — Department of Energy; ARGUS MEDIA INC — Department of Energy; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; CACI International — Contractor Power Report",
+        "inference": "The indexed set contains 10 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; CACI International — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report; Top 100 Technology-Control Companies; Top 100 Defence & Security Companies; Palo Alto Networks",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -158,16 +158,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 10 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
-          "ARGUS MEDIA INC — Department of Energy",
-          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
-          "CARAHSOFT TECHNOLOGY CORP — Department of Energy",
-          "ARGUS MEDIA INC — Department of Energy",
           "CACI International → Defense Technology: execution layer",
           "State Street / State Street Investment Management → Market Services: capital layer",
-          "CACI International — Contractor Power Report"
+          "CACI International — Contractor Power Report",
+          "SAIC / Leidos lineage — Contractor Power Report",
+          "Top 100 Technology-Control Companies",
+          "Top 100 Defence & Security Companies",
+          "Palo Alto Networks"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -182,6 +182,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-20T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

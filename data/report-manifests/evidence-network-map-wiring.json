@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:20:26.458Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-02T06:23:54.448Z",
+  "pageCount": 132,
   "output": "downloads/evidence-network-map-wiring.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Evidence Network Map Wiring",
-    "contentHash": "e02c915ac45c8318059559e69823cd7cb39352144db0c6ae3f5a0d7533b039bd",
+    "contentHash": "5931b066a5941bb8874b951ac9cdc88d5a63c90c5f087d059d548075cf41d521",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -17,9 +17,9 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
+      "a54df8218ca146eb70f725e3",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "d358fc1eedcb8f9eae6e4ab7",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
@@ -31,6 +31,7 @@
       "declassified-files-2026-07-28-47e74d46",
       "declassified-files-2026-07-28-d6d67d44",
       "crime-state-overlap-2025-11-18-organised-crime-index-2025-south-africa-a-continental-hotspot-for-crim",
+      "ASC-REVIEW-A8005F6D70DBECBC",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
@@ -62,6 +63,10 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
+      "ASC-REVIEW-83B750F5A70AA896",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
+      "ASC-REVIEW-BA5FF644D411D868",
+      "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -141,12 +146,7 @@
       "ASC-REVIEW-B3BA7D663A9BE4B2",
       "ASC-REVIEW-AD7847E11513D899",
       "ASC-REVIEW-C2C7140B7B6F51FF",
-      "ASC-REVIEW-2750F333FF6B37B3",
-      "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332"
+      "ASC-REVIEW-2750F333FF6B37B3"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -155,12 +155,12 @@
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 139,
-      "moneyRecordCount": 122
+      "moneyRecordCount": 117
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Evidence Network Map Wiring.",
-        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/live-intel.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/live-intel.json); World Wrestling Entertainment (data/latest-public-drops.json); World Wrestling Entertainment Part 01 (data/latest-public-drops.json); World Wrestling Entertainment Part 02 (Final) (data/latest-public-drops.json); Brian Wells (data/live-intel.json)",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/conclusion-engine.json); World Wrestling Entertainment (data/live-intel.json); World Wrestling Entertainment Part 01 (data/live-intel.json); World Wrestling Entertainment Part 02 (Final) (data/live-intel.json); Brian Wells (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

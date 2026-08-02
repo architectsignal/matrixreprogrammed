@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-01T19:33:38.774Z
-Live Intel source window: 2026-08-01T19:33:33.614Z
-Tracked cards: 966
+Generated: 2026-08-02T06:33:10.803Z
+Live Intel source window: 2026-08-02T06:32:57.430Z
+Tracked cards: 965
 Cards with current matched records: 93
-Cards with no new verified record: 873
+Cards with no new verified record: 872
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -5672,12 +5672,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## Welcome To Matrix Reprogrammed
-- Route: index.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

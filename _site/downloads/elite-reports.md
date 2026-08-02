@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-08-01T06:28:46.658Z
+Generated: 2026-08-02T06:33:12.765Z
 
 ## Daily Revelation Report
 
-Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
+Recovery in Ukraine, one life at a time
 
 Source: daily-command-brief.html
 

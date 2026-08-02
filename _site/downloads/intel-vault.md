@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-08-01T06:31:55.607Z
+Updated: 2026-08-02T06:36:57.113Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### ‘I am somebody’: Street-smart youth take their declaration to the UN
+- Published: 2026-07-25T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168015
+- Source class: primary-or-official
 
 ### ‘Judges should be superhuman’: The invisible burden behind the bench
 - Published: 2026-07-24T12:00:00.000Z

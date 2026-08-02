@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-01T06:23:36.896Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-02T06:27:23.979Z",
+  "pageCount": 132,
   "output": "downloads/phase7-paypal-sandbox-rehearsal-test.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "PayPal sandbox rehearsal",
-    "contentHash": "ca6d2d55212cd48df6c7c400639355d605980615be6b18ce57a16dda8dbd6cfd",
+    "contentHash": "aa175f67d6255e660c57ec9e5cdca9e0a2928a44e0268426b67bfa511630f7e8",
     "sourceIds": [
-      "3a425f0d5d683952bc0ad7ac",
+      "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -20,8 +20,11 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-CBB7EB7E52CE7014",
-      "ASC-REVIEW-8FC95E6CC8F8F440",
+      "3a425f0d5d683952bc0ad7ac",
+      "72ef7895f95288946ccb3cff",
+      "360e80c162081c85d2c680ef",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -143,35 +146,32 @@
       "ASC-REVIEW-7527D6692621D585",
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-52C3694FF95479F1",
-      "ASC-REVIEW-3EB368ED00ADD23E",
-      "ASC-REVIEW-C47A1B7DA11B68C4",
-      "ASC-REVIEW-C7A00AFA602DD2A9",
-      "ASC-REVIEW-C2A19D091C2D1254"
+      "ASC-REVIEW-3EB368ED00ADD23E"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 139,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 136,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 139,
-      "moneyRecordCount": 138
+      "relationshipCount": 136,
+      "moneyRecordCount": 136
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about PayPal sandbox rehearsal beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to PayPal sandbox rehearsal.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 78,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Global Risk Clocks,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Evidence-fed pressure indexes with plain-language meanings, score methods, movement, control-system relevance, source trails, counter-signals and useful actions.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 139 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; Breakspear → Name Lineage: layer hint; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 139 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T06:23:36.896Z"
+    "intelligenceFreshnessDate": "2026-08-02T06:27:23.979Z"
   }
 }

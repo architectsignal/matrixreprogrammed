@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:17:44.755Z",
+  "generatedAt": "2026-08-02T06:21:01.443Z",
   "pageCount": 100,
   "output": "downloads/criminal-investigations-build-report.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Criminal Investigations Build Report",
-    "contentHash": "96fef86c735257f0780229b104d8ce8b0906ed352a65f2234075e47129a5aee5",
+    "contentHash": "8182ba654f3ff4bff589a1cfa05bae2a49df893ae418b75dd3668b9cce664833",
     "sourceIds": [
       "19ae23289f4be13ad5f7e317",
       "9e8310c49b990aa62d2b0921",
@@ -79,14 +79,14 @@
       "e10c38338a42062da8899449",
       "7a0ce047ee750826a59e7474",
       "a01fc28e9fb6ce85637a3248",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "7dcf4ef18ea1f86d01068773",
+      "a54df8218ca146eb70f725e3",
       "david-james-clarke-conviction-2026",
       "lawrence-ray-conviction-sentence-2023",
       "maxwell-conviction-2021",
       "cyril-smith-westminster-2020",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "869fb3fbc8c9ae63c5aca5f3",
-      "7dcf4ef18ea1f86d01068773",
       "360e80c162081c85d2c680ef",
       "abdul-halim-khan-conviction-2026",
       "adam-taylor-nca-conviction-2024",
@@ -100,7 +100,7 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "72209393009884f476bb7c96",
       "1ee57e70dacfa67f04323529",
-      "5460c0408472ce834da2b82f",
+      "40033dd57e8d272ed626d65e",
       "conor-mcgrath-iico-conviction-2026",
       "huw-edwards-iico-conviction-2024",
       "greenberg-sentence-2022",
@@ -130,22 +130,22 @@
       "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-20316213EFD183CC",
       "ASC-REVIEW-09A1231B842DD08D",
-      "ASC-REVIEW-CEAFD28B55D0DA69",
+      "ASC-REVIEW-73A254AF094E8599",
       "f7daf286d43a132beadea7ee",
       "deutsche-bank-epstein-dfs-2020",
       "EP-AI-003",
-      "3a425f0d5d683952bc0ad7ac",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
-      "1257c3ee2bf54442161b9029",
-      "279c781eec7b4886b26d8896",
-      "8a8b1224cb4b359547bb61dc"
+      "c5e336c0b2cc4a30aee62ff2",
+      "f337071143994ca225e59e5b",
+      "c856bcc2f79cf1ac248b5d12",
+      "f3993831e68cecb13238dbdb"
     ],
     "metrics": {
       "evidenceCount": 135,
-      "primarySourceCount": 38,
+      "primarySourceCount": 39,
       "disputedClaimCount": 32,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
@@ -154,7 +154,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Criminal Investigations Build Report.",
+        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Criminal Investigations Build Report.",
         "evidence": "IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Official health investigations documented abuse and enabling access (data/criminal-conduct-registry.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); Guilty pleas to indecent assaults and misconduct in public office (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -163,8 +163,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment - Robert Yedid,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -213,6 +213,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
+    "intelligenceFreshnessDate": "2026-08-01T07:39:36.959Z"
   }
 }

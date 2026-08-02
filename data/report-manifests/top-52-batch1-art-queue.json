@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:26:33.927Z",
-  "pageCount": 101,
+  "generatedAt": "2026-08-02T06:30:33.128Z",
+  "pageCount": 102,
   "output": "downloads/top-52-batch1-art-queue.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Top 52 Batch 1 Art Queue",
-    "contentHash": "1c310df634813a9a383940b769ed0cb7a1aaadb505f1fa16524ea9c573d7fda4",
+    "contentHash": "027306e2fdf807925546f54db80b65cd0969ef74153251605875914528da4baa",
     "sourceIds": [
       "world-health-organization",
       "elon-musk",
@@ -22,8 +22,6 @@
       "people-of-interest",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
-      "594100b62a47db521fe2a128",
-      "34805734b1ad3b73f0ede0d8",
       "26b90533dbf7d2ed42f02de6",
       "ec1316fb1fb70c83dc347bb6",
       "e72d22f4f28eb53e3173d0a6",
@@ -95,6 +93,7 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
+      "594100b62a47db521fe2a128",
       "65debd126cdfa5f7547a3eca",
       "76cf5cb1f42b219ea38128f4",
       "008875ef7bf45eb14dccb254",
@@ -103,9 +102,11 @@
       "b7e4a66335a706ef5097117f",
       "15adccba38bd91644b561261",
       "3c9c23f7f9a1cec81ef90f59",
+      "34805734b1ad3b73f0ede0d8",
       "9b9816cd15ea0d816c77affa",
       "5460c0408472ce834da2b82f",
-      "aa119272f233de638bb1e02d",
+      "0491ca77f4f2c9b90f832c2e",
+      "0286171e0bf7415859b35948",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
@@ -134,36 +135,35 @@
       "4961972398d896435d33f3f7",
       "7dcf4ef18ea1f86d01068773",
       "7f5b91c14c671bd24b8bbd81",
-      "fe51591d2f98b1e8140add7f",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "20421b1881768c676601a24b",
+      "a54df8218ca146eb70f725e3",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-875607DBB9C95C91",
-      "ASC-REVIEW-BE461670E34D316C"
+      "ASC-REVIEW-875607DBB9C95C91"
     ],
     "metrics": {
       "evidenceCount": 134,
-      "primarySourceCount": 9,
-      "disputedClaimCount": 35,
+      "primarySourceCount": 10,
+      "disputedClaimCount": 34,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 44,
-      "moneyRecordCount": 49
+      "relationshipCount": 42,
+      "moneyRecordCount": 47
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Top 52 Batch 1 Art Queue.",
+        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Top 52 Batch 1 Art Queue.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment -Christopher McKnight,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -173,7 +173,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 44 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Media / Narrative Theory; Media / Narrative Theory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -181,14 +181,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 44 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -212,6 +212,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-20T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T07:39:36.959Z"
   }
 }

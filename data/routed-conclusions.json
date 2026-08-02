@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-01T06:29:09.011Z",
+  "updated": "2026-08-02T06:33:41.051Z",
   "conclusions": [
     {
       "category": "Institution dossier",
@@ -8,6 +8,13 @@
       "whyItMatters": "Institution dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
       "evidenceUsed": [
         {
+          "title": "Recovery in Ukraine, one life at a time",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/08/1168053"
+        },
+        {
           "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
           "sourceType": "court record",
           "evidenceLevel": 3,
@@ -34,13 +41,6 @@
           "evidenceLevel": 3,
           "confidence": "medium",
           "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168060"
-        },
-        {
-          "title": "Christopher Wray's Gift to Attorney General Garland",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland"
         }
       ],
       "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
@@ -52,7 +52,7 @@
         "think-tanks"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Policy dossier and clock",
@@ -60,11 +60,63 @@
       "whyItMatters": "Policy dossier and clock is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
       "evidenceUsed": [
         {
+          "title": "Recovery in Ukraine, one life at a time",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/08/1168053"
+        },
+        {
           "title": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS",
           "sourceType": "court record",
           "evidenceLevel": 3,
           "confidence": "medium",
           "sourceUrl": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5"
+        },
+        {
+          "title": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168062"
+        },
+        {
+          "title": "Strong El Niño ahead, UN weather agency warns",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168059"
+        },
+        {
+          "title": "Wildfire smoke poses hidden health threat",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168060"
+        }
+      ],
+      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
+      "confidence": "watch",
+      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
+      "relatedCardsOrPages": [
+        "institutions",
+        "policy",
+        "think-tanks"
+      ],
+      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
+      "updated": "2026-08-02T06:33:41.050Z"
+    },
+    {
+      "category": "War/security route",
+      "conclusion": "5 source route(s) currently point to War/security route. Treat this as an update-priority cluster, not proof of a final claim.",
+      "whyItMatters": "War/security route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
+      "evidenceUsed": [
+        {
+          "title": "Recovery in Ukraine, one life at a time",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/08/1168053"
         },
         {
           "title": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’",
@@ -104,7 +156,7 @@
         "think-tanks"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Health/biosecurity route",
@@ -126,21 +178,21 @@
           "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168060"
         },
         {
-          "title": "Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5"
-        },
-        {
-          "title": "Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5"
-        },
-        {
           "title": "Source 102",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 337",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 615",
           "sourceType": "lead / needs classification",
           "evidenceLevel": 1,
           "confidence": "watch",
@@ -152,11 +204,10 @@
       "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
       "relatedCardsOrPages": [
         "institutions",
-        "policy",
-        "power-families"
+        "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Missing-record queue",
@@ -207,7 +258,7 @@
         "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Think Tanks dossier",
@@ -259,59 +310,7 @@
         "think-tanks"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
-    },
-    {
-      "category": "War/security route",
-      "conclusion": "5 source route(s) currently point to War/security route. Treat this as an update-priority cluster, not proof of a final claim.",
-      "whyItMatters": "War/security route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
-      "evidenceUsed": [
-        {
-          "title": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168062"
-        },
-        {
-          "title": "Strong El Niño ahead, UN weather agency warns",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168059"
-        },
-        {
-          "title": "Wildfire smoke poses hidden health threat",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.un.org/feed/view/en/story/2026/07/1168060"
-        },
-        {
-          "title": "Christopher Wray's Gift to Attorney General Garland",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland"
-        },
-        {
-          "title": "Christopher Wray's Gift to Attorney General Garland (Final)",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland/christopher-wrays-gift-to-attorney-general-garland-final/view"
-        }
-      ],
-      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
-      "confidence": "watch",
-      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
-      "relatedCardsOrPages": [
-        "institutions",
-        "policy",
-        "think-tanks"
-      ],
-      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Secret Societies dossier",
@@ -364,7 +363,7 @@
         "controlled-opposition"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Controlled Opposition / media route",
@@ -417,7 +416,7 @@
         "controlled-opposition"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Financial/currency route",
@@ -471,7 +470,7 @@
         "people-of-interest"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.010Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "People dossier",
@@ -480,6 +479,13 @@
       "evidenceUsed": [
         {
           "title": "US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com",
+          "sourceType": "court record",
+          "evidenceLevel": 3,
+          "confidence": "medium",
+          "sourceUrl": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5"
+        },
+        {
+          "title": "US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India",
           "sourceType": "court record",
           "evidenceLevel": 3,
           "confidence": "medium",
@@ -505,13 +511,6 @@
           "evidenceLevel": 1,
           "confidence": "watch",
           "sourceUrl": ""
-        },
-        {
-          "title": "Source 127",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
         }
       ],
       "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
@@ -523,59 +522,7 @@
         "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.011Z"
-    },
-    {
-      "category": "Power Families / Black Nobility",
-      "conclusion": "5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.",
-      "whyItMatters": "Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
-      "evidenceUsed": [
-        {
-          "title": "Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5"
-        },
-        {
-          "title": "Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com",
-          "sourceType": "court record",
-          "evidenceLevel": 3,
-          "confidence": "medium",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5"
-        },
-        {
-          "title": "Source 110",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        },
-        {
-          "title": "Source 148",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        },
-        {
-          "title": "Source 149",
-          "sourceType": "lead / needs classification",
-          "evidenceLevel": 1,
-          "confidence": "watch",
-          "sourceUrl": ""
-        }
-      ],
-      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
-      "confidence": "watch",
-      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
-      "relatedCardsOrPages": [
-        "institutions",
-        "power-families",
-        "policy"
-      ],
-      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.011Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Digital ID / surveillance route",
@@ -627,7 +574,7 @@
         "secret-societies"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.011Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Correction / counter-evidence",
@@ -678,7 +625,59 @@
         "policy"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.011Z"
+      "updated": "2026-08-02T06:33:41.050Z"
+    },
+    {
+      "category": "Power Families / Black Nobility",
+      "conclusion": "5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.",
+      "whyItMatters": "Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.",
+      "evidenceUsed": [
+        {
+          "title": "Source 110",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 148",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 149",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 150",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        },
+        {
+          "title": "Source 151",
+          "sourceType": "lead / needs classification",
+          "evidenceLevel": 1,
+          "confidence": "watch",
+          "sourceUrl": ""
+        }
+      ],
+      "evidenceBoundary": "This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.",
+      "confidence": "watch",
+      "missingRecord": "Primary-source confirmation, counter-evidence and exact affected page/card/clock are needed before making stronger claims.",
+      "relatedCardsOrPages": [
+        "institutions",
+        "power-families",
+        "policy"
+      ],
+      "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
+      "updated": "2026-08-02T06:33:41.050Z"
     },
     {
       "category": "Jurisdictions of Power dossier",
@@ -731,7 +730,7 @@
         "jurisdictions-of-power"
       ],
       "nextAction": "Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.",
-      "updated": "2026-08-01T06:29:09.011Z"
+      "updated": "2026-08-02T06:33:41.050Z"
     }
   ]
 }

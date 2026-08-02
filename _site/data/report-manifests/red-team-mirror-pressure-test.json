@@ -1,23 +1,24 @@
 {
-  "generatedAt": "2026-08-01T06:24:48.456Z",
-  "pageCount": 86,
+  "generatedAt": "2026-08-02T06:28:39.984Z",
+  "pageCount": 87,
   "output": "downloads/red-team-mirror-pressure-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Red Team Mirror Pressure Test",
-    "contentHash": "d34008e3bb7ea41228e4b508fe6be8b2beea3fca707ca4e6b1025d32dc02c932",
+    "contentHash": "ba570f4ab55078e92cd130e24d90e6cbe56f04ea8158e06f4f3236706470c1fa",
     "sourceIds": [
       "f669b33c49b63e787cde3008",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
+      "a54df8218ca146eb70f725e3",
       "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "d358fc1eedcb8f9eae6e4ab7",
-      "aa119272f233de638bb1e02d",
+      "0491ca77f4f2c9b90f832c2e",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
+      "0286171e0bf7415859b35948",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -136,8 +137,7 @@
       "trusts-rockefeller-family-fund",
       "trusts-j-paul-getty-trust",
       "trusts-leona-m-and-harry-b-helmsley-charitable-trust",
-      "trusts-kendeda-fund-trust-routes",
-      "trusts-silicon-valley-community-foundation-donor-trusts"
+      "trusts-kendeda-fund-trust-routes"
     ],
     "metrics": {
       "evidenceCount": 131,
@@ -146,12 +146,12 @@
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 24,
-      "moneyRecordCount": 89
+      "moneyRecordCount": 88
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 129 A/B-grade public-record items are materially relevant to Red Team Mirror Pressure Test.",
-        "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); Christopher Wray's Gift to Attorney General Garland (data/live-intel.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/live-intel.json)",
+        "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/daily-investigation-conclusions.json); Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/conclusion-engine.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -209,6 +209,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

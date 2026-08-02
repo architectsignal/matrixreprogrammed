@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-08-01T06:25:08.273Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-02T06:29:00.943Z",
+  "pageCount": 133,
   "output": "downloads/search-system-repair-report.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Search System Repair Report",
-    "contentHash": "e9cca2b27b5a901c2aaa6d861eaa073bed44642e765c0994fe63d1f24c52d366",
+    "contentHash": "7bec8eea7c6264bea619ac64ac9691b3b355c7edd8450e8217dc2a85db985d77",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "9f77464e401ac59ad1adb812",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
       "e72d22f4f28eb53e3173d0a6",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
-      "ASC-REVIEW-1CE8C25DF0CA4C18",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
+      "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
-      "ASC-REVIEW-B87070F04E239F1B",
+      "ASC-REVIEW-B9D6F588FF54AD31",
+      "ASC-REVIEW-03A8457B74049A13",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -36,15 +36,9 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-5F18C934E1FFBBB4",
-      "ASC-REVIEW-B9D6F588FF54AD31",
-      "ASC-REVIEW-AD4A5A51C1AD5BFD",
       "b5a32a76f19d554c484e917f",
       "41772e5c9af7970ddd7d5aac",
-      "ASC-REVIEW-8E57602B48B9C301",
-      "ASC-REVIEW-8F8980CBAE670AE9",
-      "ASC-REVIEW-32D4420F5F198DA2",
-      "ASC-REVIEW-D55167851C6E78DE",
-      "ASC-REVIEW-22655628248FD0CD",
+      "ASC-REVIEW-B7720C9C5A09A4B4",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -103,8 +97,8 @@
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
+      "daily-revelation-report",
       "008875ef7bf45eb14dccb254",
-      "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -112,6 +106,7 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-A8005F6D70DBECBC",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-5745DAEE3A7221DC",
       "ASC-REVIEW-9EBC0B258FA9E647",
@@ -120,7 +115,7 @@
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-A6F3D2598C5BA884",
-      "ASC-REVIEW-C954C3B615AAFE11",
+      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -133,10 +128,15 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
+      "ASC-REVIEW-83B750F5A70AA896",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
+      "ASC-REVIEW-BA5FF644D411D868",
+      "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-B59332D029E64DD4",
+      "ASC-REVIEW-B6BCA7554CFEEE44",
+      "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
@@ -151,10 +151,10 @@
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 130,
-      "newEntityCount": 2,
+      "disputedClaimCount": 129,
+      "newEntityCount": 20,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 121,
+      "relationshipCount": 119,
       "moneyRecordCount": 97
     },
     "evidenceBasedConclusions": [
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 121 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; TRACE SYSTEMS INC. — Department of Defense; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
+        "inference": "The indexed set contains 119 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,14 +194,14 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 121 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 119 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
-          "TRACE SYSTEMS INC. — Department of Defense",
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
           "The strongest public pattern is convergence across access systems.",
-          "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",
+          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
+          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer"
         ],
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

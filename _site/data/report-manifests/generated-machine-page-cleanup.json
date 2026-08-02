@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-08-01T06:21:05.568Z",
-  "pageCount": 117,
+  "generatedAt": "2026-08-02T06:24:36.340Z",
+  "pageCount": 116,
   "output": "downloads/generated-machine-page-cleanup.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Generated Machine Page Cleanup",
-    "contentHash": "63c23f7dc6431916624916c15afae903179947c73d105478a5a606433b0212c6",
+    "contentHash": "da717e8fcb4d6b7aa9313978925ecc1d63903b4612691f8d1b266f40fd8ab8c0",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "daily-revelation-report",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
       "1769af26a7bda813406cd8f5",
       "26b90533dbf7d2ed42f02de6",
-      "3a425f0d5d683952bc0ad7ac",
       "65debd126cdfa5f7547a3eca",
       "3c9c23f7f9a1cec81ef90f59",
       "institutions",
       "missing-records-report",
       "9f3052b5d8cec138a2a37e8c",
+      "3a425f0d5d683952bc0ad7ac",
       "008875ef7bf45eb14dccb254",
       "bf773d3ec83b9b3768dfce6b",
       "8a10f165e16d0f8648cb8ec4",
@@ -97,9 +97,6 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "erik-prince",
-      "ASC-REVIEW-8B36B00ED92DCB72",
-      "ASC-REVIEW-8E57602B48B9C301",
-      "ASC-REVIEW-1CE8C25DF0CA4C18",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-0914587401D9BDE0",
@@ -131,8 +128,6 @@
       "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "6d665d935673091233751767",
-      "5460c0408472ce834da2b82f",
-      "ASC-REVIEW-FCEFDBDA93429C4F",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
@@ -146,20 +141,25 @@
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-D13048D78F8EA6E3",
-      "ASC-REVIEW-D921C72A4BA2FDF3"
+      "ASC-REVIEW-D921C72A4BA2FDF3",
+      "ASC-REVIEW-836A8E9D516E6FEC",
+      "ASC-REVIEW-DEA5865B50E63221",
+      "ASC-REVIEW-EEC0192F2AF2FCFB",
+      "ASC-REVIEW-6B883D09C63ED673",
+      "ASC-REVIEW-1CDBDA84057D802E"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 19,
-      "disputedClaimCount": 72,
+      "primarySourceCount": 18,
+      "disputedClaimCount": 73,
       "newEntityCount": 37,
       "updatedAssessmentCount": 1,
       "relationshipCount": 87,
-      "moneyRecordCount": 80
+      "moneyRecordCount": 84
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Generated Machine Page Cleanup.",
+        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Generated Machine Page Cleanup.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

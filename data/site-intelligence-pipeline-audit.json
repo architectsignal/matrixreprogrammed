@@ -1,7 +1,7 @@
 {
   "ok": true,
   "overall": "fully-working",
-  "updated": "2026-08-01T06:30:04.340Z",
+  "updated": "2026-08-02T06:34:42.715Z",
   "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
   "summary": {
     "green": 43,
@@ -443,11 +443,12 @@
       "id": "daily-automation",
       "stage": "Automate",
       "status": "green",
-      "finding": "190 workflow file(s) scanned for daily scheduling.",
+      "finding": "192 workflow file(s) scanned for daily scheduling.",
       "fix": "Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.",
       "evidence": [
         ".github/workflows/accountability-review-inbox.yml",
         ".github/workflows/adapter-factory-safety.yml",
+        ".github/workflows/ai-auth-repair-deploy.yml",
         ".github/workflows/ai-autonomy-safety.yml",
         ".github/workflows/apply-homepage-construction-banner.yml",
         ".github/workflows/authorized-production-dispatch.yml",
@@ -625,6 +626,7 @@
         ".github/workflows/site-wide-master-audit.yml",
         ".github/workflows/source-preservation-hardening-assurance.yml",
         ".github/workflows/structured-investigation-data.yml",
+        ".github/workflows/sync-ai-admin-token.yml",
         ".github/workflows/test-site.yml",
         ".github/workflows/transparent-maintenance.yml",
         ".github/workflows/unpack-site-upgrade.yml",
@@ -647,6 +649,7 @@
       "evidence": [
         ".github/workflows/accountability-review-inbox.yml",
         ".github/workflows/adapter-factory-safety.yml",
+        ".github/workflows/ai-auth-repair-deploy.yml",
         ".github/workflows/ai-autonomy-safety.yml",
         ".github/workflows/apply-homepage-construction-banner.yml",
         ".github/workflows/authorized-production-dispatch.yml",
@@ -824,6 +827,7 @@
         ".github/workflows/site-wide-master-audit.yml",
         ".github/workflows/source-preservation-hardening-assurance.yml",
         ".github/workflows/structured-investigation-data.yml",
+        ".github/workflows/sync-ai-admin-token.yml",
         ".github/workflows/test-site.yml",
         ".github/workflows/transparent-maintenance.yml",
         ".github/workflows/unpack-site-upgrade.yml",

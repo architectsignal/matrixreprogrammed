@@ -1,15 +1,13 @@
 {
-  "generatedAt": "2026-08-01T06:25:04.087Z",
-  "pageCount": 93,
+  "generatedAt": "2026-08-02T06:28:56.459Z",
+  "pageCount": 91,
   "output": "downloads/search-first-accountability-home-pressure-test.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Search First Accountability Home Pressure Test",
-    "contentHash": "1c13df2d6707ed97c67b93ed8410b8049d5b03e7f4d004e2e1fe5ee72858b586",
+    "contentHash": "c0bc7ac0c554d7c2fa2edaadd4f673be496094c407027708b7a17233dd4fb95e",
     "sourceIds": [
-      "3a425f0d5d683952bc0ad7ac",
       "360e80c162081c85d2c680ef",
-      "2482c3e0241c7c7679a18cd1",
       "b4cb47ea50dc901364239e9f",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
@@ -31,13 +29,13 @@
       "511ed227bb4be58b582ebb8d",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
-      "2cd777e4d3f82343f5cd5274",
-      "5151c3a9f6b60883b360a522",
+      "a54df8218ca146eb70f725e3",
       "5460c0408472ce834da2b82f",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
-      "d358fc1eedcb8f9eae6e4ab7",
-      "aa119272f233de638bb1e02d",
+      "0491ca77f4f2c9b90f832c2e",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "0286171e0bf7415859b35948",
       "declassified-files-2026-07-28-bb7df4f6",
       "declassified-files-2026-07-28-dc596165",
       "declassified-files-2026-07-28-82e502f5",
@@ -71,14 +69,13 @@
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "44505b4afb60938c8117ad31",
-      "205bd2407ea96080fdae5fe8",
-      "88269481cf5b04b7b0f83b58",
       "gates-epstein-meetings-2011-2014",
       "deutsche-bank-epstein-dfs-2020",
-      "pdf-search-first-accountability-home-pressure-test-663cd7c1380d",
-      "pdf-search-first-accountability-home-report-8487e1c0d986",
+      "pdf-search-first-accountability-home-pressure-test-44fa799cf6af",
+      "pdf-search-first-accountability-home-report-ec1c1f35a919",
       "us-treasury",
       "us-doj",
+      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -141,21 +138,24 @@
       "foundations-walton-family-foundation",
       "trusts-wellcome-trust",
       "trusts-pew-charitable-trusts",
-      "trusts-garfield-weston-foundation"
+      "trusts-garfield-weston-foundation",
+      "trusts-esme-e-fairbairn-foundation",
+      "trusts-leverhulme-trust",
+      "trusts-nuffield-foundation"
     ],
     "metrics": {
       "evidenceCount": 135,
       "primarySourceCount": 113,
-      "disputedClaimCount": 17,
+      "disputedClaimCount": 16,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 29,
-      "moneyRecordCount": 78
+      "moneyRecordCount": 80
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 113 A/B-grade public-record items are materially relevant to Search First Accountability Home Pressure Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board (data/weekly-investigation-conclusions.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); U.S. Government Accountability Office (data/geographic-power-atlas-data.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -163,8 +163,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -175,7 +175,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 29 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; IICSA documented predatory activities and institutional failures; MINDCUBED LLC — District of Columbia Courts; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final)",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; MINDCUBED LLC — District of Columbia Courts; World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final)",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -191,11 +191,11 @@
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
         "whyItIsBeingConsidered": "The indexed set contains 29 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
           "IICSA documented predatory activities and institutional failures",
           "MINDCUBED LLC — District of Columbia Courts",
-          "Christopher Wray's Gift to Attorney General Garland",
-          "Christopher Wray's Gift to Attorney General Garland (Final)",
+          "World Wrestling Entertainment",
+          "World Wrestling Entertainment Part 01",
+          "World Wrestling Entertainment Part 02 (Final)",
           "Brian Wells",
           "Brian Wells Part 01",
           "Brian Wells Part 02 (Final)"

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:25:09.815Z",
-  "pageCount": 92,
+  "generatedAt": "2026-08-02T06:29:02.633Z",
+  "pageCount": 91,
   "output": "downloads/search-v3-build-report.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Search V3 Build Report",
-    "contentHash": "ca1e1d944a54bd5b9a889ffae34f378d69a476f802ae2406cdb8fa8a21adcc66",
+    "contentHash": "27a15db7a5779717e32b6fbbac660e6f92fbe5bb9c0e376fd14d118738747491",
     "sourceIds": [
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
@@ -39,7 +39,6 @@
       "1769af26a7bda813406cd8f5",
       "companies-aapl",
       "360e80c162081c85d2c680ef",
-      "2482c3e0241c7c7679a18cd1",
       "a71a8be091652489b843ecf6",
       "06baa45bea3e2e15eb80eff9",
       "companies-aapl:federal-register-latest",
@@ -87,7 +86,6 @@
       "a21f3d8e98268d5e01e1eb7c",
       "44505b4afb60938c8117ad31",
       "deutsche-bank-epstein-dfs-2020",
-      "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -144,20 +142,22 @@
       "foundations-king-baudouin-foundation",
       "foundations-fondation-de-france",
       "foundations-azim-premji-foundation",
-      "foundations-tata-trusts"
+      "foundations-tata-trusts",
+      "foundations-templeton-world-charity-foundation",
+      "foundations-john-templeton-foundation"
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 110,
+      "primarySourceCount": 111,
       "disputedClaimCount": 3,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 12,
-      "moneyRecordCount": 68
+      "relationshipCount": 11,
+      "moneyRecordCount": 69
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 110 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
+        "conclusion": "The indexed record establishes that 111 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
         "evidence": "IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); DOJ OIG documented FBI handling failures (data/criminal-conduct-registry.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/criminal-conduct-registry.json); Westminster inquiry examined political and policing responses (data/criminal-conduct-registry.json); IICSA found serious Church failures and examined prominent support (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -166,8 +166,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "FINANCIAL IMPROVEMENT AND AUDIT SERVICES · Amount: 867982.1 · Sub-agency: Defense Nuclear Facilities Safety Board An official audit, inspector-general or oversight source reports a finding, deficiency or substantiated concern. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -177,8 +177,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Conviction for indecent images and misconduct in public office; Follow The Money Watch; GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
+        "inference": "The indexed set contains 11 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Conviction for indecent images and misconduct in public office; Follow The Money Watch; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -192,7 +192,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 11 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",
@@ -200,8 +200,8 @@
           "Broadmoor investigation examined Savile's access and abuse",
           "Conviction for indecent images and misconduct in public office",
           "Follow The Money Watch",
-          "GUIDEHOUSE INC. — Defense Nuclear Facilities Safety Board",
-          "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash"
+          "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
+          "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -216,6 +216,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
   }
 }

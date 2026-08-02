@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T06:22:33.349Z",
-  "pageCount": 128,
+  "generatedAt": "2026-08-02T06:26:15.365Z",
+  "pageCount": 127,
   "output": "downloads/member-forum-integration-test.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Member Forum Integration Test",
-    "contentHash": "4fce7c137235bb7f365e596dba01b2e24989fa4319f252f4397c04e14871dfe5",
+    "contentHash": "8137983a915b44f120426d5e21292e589b0c6700807b393384500327d2cdfccf",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-E6C400911BD1A158",
@@ -32,9 +32,9 @@
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
+      "a54df8218ca146eb70f725e3",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "d358fc1eedcb8f9eae6e4ab7",
       "declassified-files-2026-07-29-7116ac17",
       "declassified-files-2026-07-29-6057124d",
       "declassified-files-2026-07-29-1c57583d",
@@ -51,7 +51,6 @@
       "raniere-conviction-sentence-2020",
       "peter-ball-conviction-2015",
       "savile-health-investigations-2014",
-      "ASC-REVIEW-9A9799A9A37BB837",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -144,7 +143,8 @@
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6"
+      "ASC-REVIEW-11446D58C9F4E2B6",
+      "ASC-REVIEW-0F86A972B08C9E18"
     ],
     "metrics": {
       "evidenceCount": 138,
@@ -153,12 +153,12 @@
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 125,
-      "moneyRecordCount": 109
+      "moneyRecordCount": 110
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Christopher Wray's Gift to Attorney General Garland (data/live-intel.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/live-intel.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Christopher Wray's Gift to Attorney General Garland (data/conclusion-engine.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/conclusion-engine.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -216,6 +216,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

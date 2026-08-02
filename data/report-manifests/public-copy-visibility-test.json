@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-01T06:24:20.254Z",
-  "pageCount": 116,
+  "generatedAt": "2026-08-02T06:28:09.899Z",
+  "pageCount": 115,
   "output": "downloads/public-copy-visibility-test.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Public Copy Visibility Test",
-    "contentHash": "1a9749b243766baebf3a92ccc4fb00a7b076af8c4eb0631a338f1b682c6e17d0",
+    "contentHash": "5264ea066d12e2a193274d1fda92ee8b9995e73a028c6597d56181c29a5337db",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "71e0563ca7b139c37c302956",
-      "d358fc1eedcb8f9eae6e4ab7",
+      "a54df8218ca146eb70f725e3",
       "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
       "9e8903fd8dfa9b54a1d6db30",
@@ -25,12 +25,10 @@
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
-      "594100b62a47db521fe2a128",
       "9f3052b5d8cec138a2a37e8c",
       "9f77464e401ac59ad1adb812",
       "e72d22f4f28eb53e3173d0a6",
       "7f5b91c14c671bd24b8bbd81",
-      "34805734b1ad3b73f0ede0d8",
       "ecd4a1111010f13b2d74bf8c",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-E6C400911BD1A158",
@@ -56,13 +54,11 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "a21f3d8e98268d5e01e1eb7c",
       "504cb0d739ef4a5a5798123f",
-      "65debd126cdfa5f7547a3eca",
       "network-defence",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
-      "3c9c23f7f9a1cec81ef90f59",
       "ec8ef1adbaaebb9fde883cae",
       "5ad827d001f90dc0134b3260",
       "epstein-files-2026-04-23-doj-internal-watchdog-to-review-department-s-compliance-with-epstein-f",
@@ -77,6 +73,7 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -122,15 +119,18 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "65debd126cdfa5f7547a3eca",
       "3d90c7929346a292b6c46095",
       "24a844c3ddb5aecaad25e9bc",
       "osint",
       "6d665d935673091233751767",
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
+      "3c9c23f7f9a1cec81ef90f59",
       "356f10eff5c6f147fc33ebeb",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
       "war-machine-2026-07-28-171c3080",
       "war-machine-2026-07-28-1b2902bf",
       "declassified-files-2026-07-28-bb7df4f6",
@@ -150,16 +150,16 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 24,
-      "disputedClaimCount": 73,
+      "primarySourceCount": 25,
+      "disputedClaimCount": 74,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 88,
-      "moneyRecordCount": 78
+      "relationshipCount": 89,
+      "moneyRecordCount": 76
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Public Copy Visibility Test.",
+        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Public Copy Visibility Test.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 89 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Health And Development Philanthropy: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 89 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T04:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-01T00:00:00.000Z"
   }
 }

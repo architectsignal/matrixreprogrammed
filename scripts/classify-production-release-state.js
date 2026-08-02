@@ -3,9 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
-function classify({ deployOutcome, pyramidVerifyOutcome, liveVerifyOutcome, receiptOutcome, live, receipt }) {
+function classify({ deployOutcome, aiVerifyOutcome, pyramidVerifyOutcome, liveVerifyOutcome, receiptOutcome, ai, live, receipt }) {
   const deployed = deployOutcome === 'success';
   const liveVerified = deployed
+    && aiVerifyOutcome === 'success'
+    && ai?.ok === true
     && pyramidVerifyOutcome === 'success'
     && liveVerifyOutcome === 'success'
     && live?.ok === true;
@@ -39,12 +41,14 @@ if (require.main === module) {
   };
   const outcomes = {
     deployOutcome: process.env.CLOUDFLARE_DEPLOY_OUTCOME || 'unknown',
+    aiVerifyOutcome: process.env.AI_VERIFY_OUTCOME || 'unknown',
     pyramidVerifyOutcome: process.env.PYRAMID_VERIFY_OUTCOME || 'unknown',
     liveVerifyOutcome: process.env.LIVE_VERIFY_OUTCOME || 'unknown',
     receiptOutcome: process.env.RECEIPT_OUTCOME || 'unknown',
   };
   const result = classify({
     ...outcomes,
+    ai: readJson('downloads/live-ai-management-verification.json'),
     live: readJson('downloads/live-production-verification.json'),
     receipt: readJson('downloads/production-deploy-receipt.json'),
   });
@@ -54,7 +58,7 @@ if (require.main === module) {
     generatedAt: new Date().toISOString(),
     deployedCommit: process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || null,
     outcomes,
-    boundary: 'Cloudflare deployment, live verification and post-deployment receipt reporting are separate states. Receipt-only failure never authorizes or requires a repeat deployment.',
+    boundary: 'Cloudflare deployment, direct owner-only AI verification, public live verification and post-deployment receipt reporting are separate states. Receipt-only failure never authorizes or requires a repeat deployment.',
   };
   fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
   fs.writeFileSync(path.join(root, 'downloads', 'production-release-state.json'), `${JSON.stringify(report, null, 2)}\n`);

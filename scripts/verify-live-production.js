@@ -3,13 +3,14 @@ const path = require('path');
 
 const root = process.cwd();
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/$/, '');
+const directWorkerUrl = String(process.env.AI_DIRECT_WORKER_URL || '').replace(/\/$/, '');
 const expectedSha = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || '';
 const repository = process.env.GITHUB_REPOSITORY || 'architectsignal/matrixreprogrammed';
 const attempts = Number(process.env.LIVE_VERIFY_ATTEMPTS || 36);
 const delayMs = Number(process.env.LIVE_VERIFY_DELAY_MS || 10000);
 const policy = JSON.parse(fs.readFileSync(path.join(root, 'data', 'production-freshness-policy.json'), 'utf8'));
 const routeMarkers = {
-  '/': 'MAP THE STRUCTURE. READ THE SIGNALS.',
+  '/': 'POWER SHOULD HAVE',
   '/start-here': 'Open Dark Web Safety',
   '/membership': 'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.',
   '/billing-dashboard': 'billing-dashboard.js',
@@ -27,23 +28,30 @@ const routeMarkers = {
   '/data-lab': 'PUBLIC DATA',
   '/evidence-archive': 'EVIDENCE ARCHIVE',
   '/search': 'SEARCH THE MACHINE',
-  '/deploy-health.json': '"workerScript": "src/worker-production.js"'
+  '/deploy-health.json': '"workerScript": "src/worker-production-autonomy.js"'
 };
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 async function fetchText(route, options = {}) {
   const join = route.includes('?') ? '&' : '?';
-  const response = await fetch(`${siteUrl}${route}${join}deployment_check=${Date.now()}`, {
-    redirect: 'follow',
-    ...options,
-    headers: {
-      'cache-control': 'no-cache',
-      pragma: 'no-cache',
-      'user-agent': 'MatrixProductionVerifier/6.0',
-      ...(options.headers || {})
-    }
-  });
-  return { status: response.status, ok: response.ok, text: await response.text(), headers: Object.fromEntries(response.headers.entries()) };
+  const bases = [siteUrl];
+  if (directWorkerUrl && directWorkerUrl !== siteUrl) bases.push(directWorkerUrl);
+  let last = null;
+  for (const base of bases) {
+    const response = await fetch(`${base}${route}${join}deployment_check=${Date.now()}`, {
+      redirect: 'follow',
+      ...options,
+      headers: {
+        'cache-control': 'no-cache',
+        pragma: 'no-cache',
+        'user-agent': 'MatrixProductionVerifier/6.0',
+        ...(options.headers || {})
+      }
+    });
+    last = { status: response.status, ok: response.ok, text: await response.text(), headers: Object.fromEntries(response.headers.entries()) };
+    if (last.status !== 403) return last;
+  }
+  return last;
 }
 const parseJson = text => { try { return JSON.parse(text); } catch { return null; } };
 async function currentMainSha() {
@@ -220,7 +228,7 @@ async function verifyOnce() {
     && health?.buildSha === manifestSha
     && health?.manifestSha === manifestSha
     && health?.manifestMatches === true
-    && health?.workerScript === 'src/worker-production.js'
+    && health?.workerScript === 'src/worker-production-autonomy.js'
     && health?.paymentStatus === 'runtime-gated-dashboard-managed'
     && health?.checkoutDefault === 'runtime-d1-gated'
     && health?.runtimeConfigurationOwner === 'Cloudflare dashboard'

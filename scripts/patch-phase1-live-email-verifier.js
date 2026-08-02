@@ -21,7 +21,8 @@ function replaceIfPresent(oldValue, newValue) {
 // the runtime-gated PayPal model and must not be rewritten back to sandbox logic.
 replaceIfPresent("'/daily-power-conclusions': '<!-- conclusion-integrity:start -->'", "'/daily-power-conclusions': 'DAILY POWER CONCLUSIONS'");
 replaceIfPresent("'/daily-investigation-conclusions': '<!-- conclusion-integrity:start -->'", "'/daily-investigation-conclusions': 'DAILY INVESTIGATION CONCLUSIONS.'");
-replaceIfPresent("'/deploy-health': 'SANDBOX READY / CHECKOUT DISABLED'", "'/deploy-health.json': '\"workerScript\": \"src/worker-production.js\"'");
+replaceIfPresent("'/deploy-health': 'SANDBOX READY / CHECKOUT DISABLED'", "'/deploy-health.json': '\"workerScript\": \"src/worker-production-autonomy.js\"'");
+replaceIfPresent("'/deploy-health.json': '\"workerScript\": \"src/worker-production.js\"'", "'/deploy-health.json': '\"workerScript\": \"src/worker-production-autonomy.js\"'");
 
 // The reporting system is now deliberately live. Repair the old Phase 1 proof
 // that required scheduled email automation to remain disabled.
@@ -53,7 +54,7 @@ const requiredMarkers = [
   "wranglerConfig.includes('15 7 * * 1')",
   'requiredRuntimeValue: true',
   "'/daily-power-conclusions': 'DAILY POWER CONCLUSIONS'",
-  "'/deploy-health.json': '\"workerScript\": \"src/worker-production.js\"'",
+  "'/deploy-health.json': '\"workerScript\": \"src/worker-production-autonomy.js\"'",
   'manifestMatchesCurrentMain',
   'manifestIsCommitBound',
   'health?.buildSha === manifestSha',

@@ -2,10 +2,7 @@ name: PayPal and homepage navigation hotfix
 # Final run includes the canonical homepage navigation owner and normalized OAuth credentials.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/paypal-worker-hotfix-deploy.yml
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,6 +14,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+      - name: Enforce Cloudflare zero-overage budget
+        env:
+          CLOUDFLARE_GIT_BUILDS_DISCONNECTED: ${{ vars.CLOUDFLARE_GIT_BUILDS_DISCONNECTED }}
+          CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED: ${{ vars.CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED }}
+          CLOUDFLARE_BUILD_MINUTES_USED: ${{ vars.CLOUDFLARE_BUILD_MINUTES_USED }}
+          CLOUDFLARE_USAGE_CHECKED_AT_UTC: ${{ vars.CLOUDFLARE_USAGE_CHECKED_AT_UTC }}
+          EXPECTED_CLOUDFLARE_BUILD_MINUTES: '0'
+        run: node scripts/cloudflare-usage-budget-guard.js release
       - uses: actions/setup-node@v4
         with:
           node-version: 20

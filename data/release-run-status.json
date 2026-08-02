@@ -1,15 +1,15 @@
 {
   "ok": false,
-  "observedAt": "2026-08-02T22:10:18.678Z",
+  "observedAt": "2026-08-02T22:48:37.482Z",
   "production": {
     "conclusion": "failure",
-    "createdAt": "2026-08-02T19:59:43Z",
-    "databaseId": 30764600808,
+    "createdAt": "2026-08-02T22:12:39Z",
+    "databaseId": 30769603151,
     "event": "workflow_dispatch",
-    "headSha": "036ab02875ee76156e6dcac90020c70c82268a07",
+    "headSha": "3faa6b88a29f07ca16c9e43abbf8255fa76106c3",
     "status": "completed",
-    "updatedAt": "2026-08-02T19:59:52Z",
-    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30764600808"
+    "updatedAt": "2026-08-02T22:47:33Z",
+    "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30769603151"
   },
   "moneyIntelligence": {
     "conclusion": "success",
@@ -73,6 +73,16 @@
   },
   "recent": {
     "production": [
+      {
+        "conclusion": "failure",
+        "createdAt": "2026-08-02T22:12:39Z",
+        "databaseId": 30769603151,
+        "event": "workflow_dispatch",
+        "headSha": "3faa6b88a29f07ca16c9e43abbf8255fa76106c3",
+        "status": "completed",
+        "updatedAt": "2026-08-02T22:47:33Z",
+        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30769603151"
+      },
       {
         "conclusion": "failure",
         "createdAt": "2026-08-02T19:59:43Z",
@@ -182,16 +192,6 @@
         "status": "completed",
         "updatedAt": "2026-08-02T08:26:23Z",
         "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30739670183"
-      },
-      {
-        "conclusion": "failure",
-        "createdAt": "2026-08-02T08:22:21Z",
-        "databaseId": 30739648446,
-        "event": "workflow_dispatch",
-        "headSha": "2dc21aa02ea83402aaf1189f9abeef4d2ea32876",
-        "status": "completed",
-        "updatedAt": "2026-08-02T08:53:32Z",
-        "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/30739648446"
       }
     ],
     "moneyIntelligence": [

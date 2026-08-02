@@ -1,0 +1,137 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T11:19:09.535Z",
+  "engine": "matrix-hybrid-search-v1",
+  "semantic": "matrix-semantic-vector-v1",
+  "tests": 18,
+  "checks": [
+    {
+      "query": "why7 has my eletric gine up",
+      "expected": "energy.html",
+      "top": "energy.html",
+      "strong": true,
+      "confidence": 0.9501899379562095,
+      "semantic": 0.5363926355578912,
+      "ok": true
+    },
+    {
+      "query": "why am i paying more to keep the lights on",
+      "expected": "energy.html",
+      "top": "energy.html",
+      "strong": true,
+      "confidence": 0.473556720039816,
+      "semantic": 0.14739023593183664,
+      "ok": true
+    },
+    {
+      "query": "fixed daily fee on my power account",
+      "expected": "energy.html",
+      "top": "energy.html",
+      "strong": true,
+      "confidence": 0.6720666861905079,
+      "semantic": 0.24179324798066762,
+      "ok": true
+    },
+    {
+      "query": "cost of keeping the lights on has risen",
+      "expected": "energy.html",
+      "top": "energy.html",
+      "strong": true,
+      "confidence": 0.5023421812264052,
+      "semantic": 0.19621856266191515,
+      "ok": true
+    },
+    {
+      "query": "utility company charging more each month",
+      "expected": "energy.html",
+      "top": "energy.html",
+      "strong": true,
+      "confidence": 0.6554387038185351,
+      "semantic": 0.21358746205082693,
+      "ok": true
+    },
+    {
+      "query": "who got the public deal",
+      "expected": "contracts.html",
+      "top": "contracts.html",
+      "strong": true,
+      "confidence": 0.885264828921147,
+      "semantic": 0.578326769956477,
+      "ok": true
+    },
+    {
+      "query": "which supplier won the government tender",
+      "expected": "contracts.html",
+      "top": "contracts.html",
+      "strong": true,
+      "confidence": 0.8244620611212924,
+      "semantic": 0.37307878971890096,
+      "ok": true
+    },
+    {
+      "query": "business ownership report",
+      "expected": "filings.html",
+      "top": "filings.html",
+      "strong": true,
+      "confidence": 0.969232359843728,
+      "semantic": 0.6044012851561712,
+      "ok": true
+    },
+    {
+      "query": "corporate annual disclosure",
+      "expected": "filings.html",
+      "top": "filings.html",
+      "strong": true,
+      "confidence": 0.831808581990094,
+      "semantic": 0.3874116023455735,
+      "ok": true
+    },
+    {
+      "query": "judge decision in the case",
+      "expected": "court.html",
+      "top": "court.html",
+      "strong": true,
+      "confidence": 0.9335392618298897,
+      "semantic": 0.7507354589162722,
+      "ok": true
+    },
+    {
+      "query": "what did the appeal court decide",
+      "expected": "court.html",
+      "top": "court.html",
+      "strong": true,
+      "confidence": 0.9214946979333347,
+      "semantic": 0.7077191592857188,
+      "ok": true
+    },
+    {
+      "query": "what law changed",
+      "expected": "law.html",
+      "top": "law.html",
+      "strong": true,
+      "confidence": 0.9547676589961315,
+      "semantic": 0.6777416392718981,
+      "ok": true
+    },
+    {
+      "query": "new official rule",
+      "expected": "law.html",
+      "top": "law.html",
+      "strong": true,
+      "confidence": 0.9022347119177003,
+      "semantic": 0.6389334949441677,
+      "ok": true
+    },
+    {
+      "query": "missing Epstein records",
+      "expected": "epstein.html",
+      "top": "epstein.html",
+      "strong": true,
+      "confidence": 0.99,
+      "semantic": 0.7412673518688173,
+      "ok": true
+    }
+  ],
+  "failures": [],
+  "boundary": "Semantic retrieval is additive. Domain conflicts and confidence thresholds remain authoritative."
+}

@@ -34,7 +34,7 @@
       const itemDomain=quality.classifyText(text(item));if(incompatible(interpretation.domain,itemDomain))continue;
       const lexical=lexicalMap.get(String(item.url));const encoded=semanticMap.get(String(item.url));
       const sem=encoded?semantic.similarity(queryVector,encoded):semantic.cosine(queryVector,semantic.embed(semantic.documentText(item)));
-      const exact=exactBoost(item,interpretation);const domain=itemDomain.primary===interpretation.domain?5:itemDomain.matched.includes(interpretation.domain)?2:interpretation.domain==='general'?0:-1;
+      const exact=exactBoost(item,interpretation);const domain=itemDomain.primary===interpretation.domain?5:itemDomain.matched.includes(interpretation.domain)?2:interpretation.domain==='general'?0:-8;
       const lexicalScore=Number(lexical?._score||0);const coverage=Number(lexical?._coverage||0);const semanticScore=Math.max(0,sem-0.04)*13;
       const hybridScore=lexicalScore+semanticScore+exact.score+domain;
       const reasons=[...(lexical?._reasons||[]),...exact.reasons];if(sem>=0.12)reasons.push(`semantic similarity ${Math.round(sem*100)}%`);

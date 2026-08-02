@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-08-02T08:23:05.918Z
+Generated: 2026-08-02T10:11:53.746Z
 Overall: ready
 Homepage mode: search-first-accountability
 Passed: 52/52
@@ -54,7 +54,7 @@ Promotion margin: 14
 - **PASS · dossier-family-assessment:** family executive assessment checked.
 - **PASS · history-and-weekly-delta:** 7 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3769; search=137338; accountabilityHitList=138602.
+- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=3769; search=138473; accountabilityHitList=139737.
 - **PASS · accountability-card-ui:** 3 search-first accountability cards found.
 - **PASS · daily-watch-deep-links:** Daily Watch contains no generated links to nonexistent Capstone anchors.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T06:37:23.559Z",
+  "generatedAt": "2026-08-02T10:08:33.909Z",
   "problems": [],
   "canonicalMembershipPatch": {
     "status": 0,
@@ -11,7 +11,7 @@
     {
       "script": "scripts/repair-forum-member-posting.js",
       "status": 0,
-      "stdout": "Forum member posting repair applied: forum.js, forum.html, dark-speculation-forum.html, epstein-alive-board.html, member-login.html.\n",
+      "stdout": "Forum member posting repair applied: forum.js, member-login.html.\n",
       "stderr": ""
     },
     {
@@ -29,7 +29,7 @@
     {
       "script": "scripts/repair-forum-page-consistency.js",
       "status": 0,
-      "stdout": "Forum page consistency repair passed: dark-speculation-forum.html.\n",
+      "stdout": "Forum page consistency repair passed: already current.\n",
       "stderr": ""
     },
     {

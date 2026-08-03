@@ -6,6 +6,23 @@ const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 const sourceFile = path.join(dirname, 'recovery-browser-smoke-legacy.mjs');
 let source = fs.readFileSync(sourceFile, 'utf8').replace(/\r\n/g, '\n');
+
+// The production forum client cache-busts the secure member-session request.
+// Playwright route globs must therefore accept the optional query string.
+let memberRouteRepairs = 0;
+source = source.replace(/page\.route\((['"])\*\*\/api\/member\/me\1\s*,/g, (_match, quote) => {
+  memberRouteRepairs += 1;
+  return `page.route(${quote}**/api/member/me**${quote},`;
+});
+if (memberRouteRepairs < 2) {
+  throw new Error(`Recovery forum proof expected at least two member-session route mocks; repaired ${memberRouteRepairs}`);
+}
+
+// Preserve the semantic contract while accepting the current reader-facing wording.
+const publicReadingBefore = source;
+source = source.replace(/\/reading is public\/i/g, '/(?:reading is public|reading stays public|public reading)/i');
+if (source === publicReadingBefore) throw new Error('Recovery forum public-reading assertion is missing');
+
 const startMarker = "  await runTest(browser, 'Homepage navigation', '/index.html', async page => {";
 const endMarker = "\n\n  await runTest(browser, 'Start Here safety routes'";
 const start = source.indexOf(startMarker);

@@ -1,0 +1,99 @@
+name: One-Shot Production Authorization
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - '.github/workflows/one-shot-production-authorization.yml'
+      - '.github/one-shot-controlled-production.trigger'
+      - 'scripts/verify-one-shot-production-authorization.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  prove:
+    name: Prove human and guarded dispatcher authority
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout proposed release authority
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check and self-test verifier
+        run: |
+          node --check scripts/verify-one-shot-production-authorization.js
+          node scripts/verify-one-shot-production-authorization.js --self-test
+
+      - name: Prove explicit human workflow dispatch
+        env:
+          MATRIX_PRODUCTION_CONFIRMATION: DEPLOY MATRIX REPROGRAMMED
+          MATRIX_PRODUCTION_ACTOR: architectsignal
+          MATRIX_WORKFLOW_EVENT: workflow_dispatch
+          MATRIX_BILLING_EXCEPTION: ''
+        run: node scripts/verify-one-shot-production-authorization.js
+
+      - name: Prove fresh merged one-shot dispatcher authority
+        env:
+          NODE_ENV: test
+          MATRIX_AUTH_ALLOW_NON_MAIN_TEST: '1'
+          MATRIX_PRODUCTION_CONFIRMATION: DEPLOY MATRIX REPROGRAMMED
+          MATRIX_PRODUCTION_ACTOR: github-actions[bot]
+          MATRIX_WORKFLOW_EVENT: workflow_dispatch
+          MATRIX_BILLING_EXCEPTION: ''
+        run: node scripts/verify-one-shot-production-authorization.js
+
+      - name: Prove automated dispatch cannot request billing exception
+        env:
+          NODE_ENV: test
+          MATRIX_AUTH_ALLOW_NON_MAIN_TEST: '1'
+          MATRIX_PRODUCTION_CONFIRMATION: DEPLOY MATRIX REPROGRAMMED
+          MATRIX_PRODUCTION_ACTOR: github-actions[bot]
+          MATRIX_WORKFLOW_EVENT: workflow_dispatch
+          MATRIX_BILLING_EXCEPTION: OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02
+        shell: bash
+        run: |
+          set +e
+          node scripts/verify-one-shot-production-authorization.js > downloads/one-shot-billing-exception-rejection.log 2>&1
+          code=$?
+          cat downloads/one-shot-billing-exception-rejection.log
+          test "$code" -ne 0
+          grep -F 'Automated one-shot dispatch cannot request a billable-build exception.' downloads/one-shot-billing-exception-rejection.log
+
+      - name: Verify deploy workflow preserves authorization then budget order
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const workflow = fs.readFileSync('.github/workflows/deploy.yml', 'utf8');
+          const authority = workflow.indexOf('node scripts/verify-one-shot-production-authorization.js');
+          const budget = workflow.indexOf('node scripts/cloudflare-usage-budget-guard.js');
+          if (authority < 0) throw new Error('Deploy workflow does not invoke the one-shot authority verifier.');
+          if (budget < 0 || budget < authority) throw new Error('Cloudflare budget guard must remain immediately downstream of authorization.');
+          if (workflow.includes('automated workflow dispatches are not release authority')) throw new Error('Obsolete unconditional bot rejection remains.');
+          if (!workflow.includes('MATRIX_BILLING_EXCEPTION: ${{ inputs.billing_exception }}')) throw new Error('Billing exception must be visible to the authority verifier.');
+          console.log('DEPLOY AUTHORITY ORDER PASS');
+          NODE
+
+      - name: Upload focused authorization proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: one-shot-production-authorization-${{ github.sha }}
+          path: |
+            downloads/one-shot-production-authorization.json
+            downloads/one-shot-billing-exception-rejection.log
+          if-no-files-found: error
+          retention-days: 30

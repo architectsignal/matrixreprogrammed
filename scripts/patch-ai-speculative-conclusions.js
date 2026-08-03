@@ -43,14 +43,6 @@ if (!touched.length && !roots.some(base => fs.existsSync(path.join(base, 'ai-spe
   throw new Error('ai-speculative-conclusions.html was not generated before the final evidence-integrity pass.');
 }
 
-fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
-fs.writeFileSync(path.join(root, 'downloads', 'ai-speculative-conclusions-integrity.json'), JSON.stringify({
-  ok: true,
-  generatedAt: new Date().toISOString(),
-  reviewed,
-  touched
-}, null, 2));
-
 // This pass runs immediately before the executable living-intelligence regression test.
 // Reconcile any late Worker rewrites here so imports stay unique and the contact routes
 // remain owned by the strict production Worker.
@@ -61,4 +53,53 @@ require('./finalize-contact-worker.js');
 // pathway link has a deployable target before assets are copied.
 require('./run-cinematic-link-structure.js');
 
-console.log(`AI speculative conclusions integrity pass complete: ${touched.length} file(s) updated.`);
+// Older generated conclusions and saved reader links still use the entity-brief route
+// for Control Structure. Keep that address functional while the canonical evidence page
+// lives in entity-timelines. This is a transparent compatibility route, not a duplicate
+// conclusion or a silent fallback.
+const compatibilityRoutes = [];
+const compatibilityHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,follow" />
+  <meta http-equiv="refresh" content="0;url=../entity-timelines/control-structure.html" />
+  <link rel="canonical" href="../entity-timelines/control-structure.html" />
+  <title>Control Structure Evidence Route | Matrix Reprogrammed</title>
+  <meta name="description" content="Continue to the canonical Control Structure evidence timeline." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../fixes.css" />
+</head>
+<body>
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow">Evidence Route Updated</div>
+      <h1>CONTROL STRUCTURE.</h1>
+      <p class="lead">This earlier entity-brief address now continues to the maintained Control Structure evidence timeline.</p>
+      <p><strong>Evidence boundary:</strong> the route organises documented records and missing-record questions. It does not turn association, centrality or a research gap into proof of wrongdoing or secret coordination.</p>
+      <div class="cta-row"><a class="btn" href="../entity-timelines/control-structure.html">Open the Control Structure timeline</a></div>
+    </section>
+  </main>
+  <script>location.replace('../entity-timelines/control-structure.html'+location.search+location.hash);</script>
+</body>
+</html>`;
+for (const base of roots) {
+  const target = path.join(base, 'entity-briefs', 'control-structure.html');
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  if (!fs.existsSync(target) || fs.readFileSync(target, 'utf8') !== compatibilityHtml) {
+    fs.writeFileSync(target, compatibilityHtml);
+  }
+  compatibilityRoutes.push(path.relative(root, target).replace(/\\/g, '/'));
+}
+
+fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
+fs.writeFileSync(path.join(root, 'downloads', 'ai-speculative-conclusions-integrity.json'), JSON.stringify({
+  ok: true,
+  generatedAt: new Date().toISOString(),
+  reviewed,
+  touched,
+  compatibilityRoutes
+}, null, 2));
+
+console.log(`AI speculative conclusions integrity pass complete: ${touched.length} file(s) updated; ${compatibilityRoutes.length} compatibility route(s) verified.`);

@@ -9,7 +9,7 @@ on:
 
 permissions:
   actions: write
-  contents: read
+  contents: write
 
 concurrency:
   group: one-shot-controlled-production-dispatch
@@ -19,32 +19,153 @@ jobs:
   dispatch-controlled-production:
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch existing controlled production workflow
+      - name: Find, dispatch and record exactly one production run
         uses: actions/github-script@v7
         with:
           script: |
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const response = await github.rest.actions.listRepoWorkflows({
+            const markerPath = '.github/one-shot-controlled-production.trigger';
+            const statusPath = 'data/current-production-run.json';
+            const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+            const markerResponse = await github.rest.repos.getContent({
+              owner,
+              repo,
+              path: markerPath,
+              ref: 'main'
+            });
+            if (Array.isArray(markerResponse.data) || !markerResponse.data.content) {
+              core.setFailed('One-shot production marker could not be read.');
+              return;
+            }
+            const markerText = Buffer.from(markerResponse.data.content, 'base64').toString('utf8');
+            const requestedLine = markerText.split(/\r?\n/).find(line => line.startsWith('Requested:'));
+            const requestedAt = Date.parse(requestedLine?.slice('Requested:'.length).trim() || '');
+            if (!Number.isFinite(requestedAt)) {
+              core.setFailed('One-shot marker has no valid Requested timestamp.');
+              return;
+            }
+            const cutoff = requestedAt - (2 * 60 * 1000);
+
+            const workflowResponse = await github.rest.actions.listRepoWorkflows({
               owner,
               repo,
               per_page: 100
             });
-            const target = response.data.workflows.find(
+            const target = workflowResponse.data.workflows.find(
               workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
             );
             if (!target) {
               core.setFailed('Controlled production workflow was not found.');
               return;
             }
-            await github.rest.actions.createWorkflowDispatch({
+
+            async function listCandidateRuns() {
+              const response = await github.rest.actions.listWorkflowRuns({
+                owner,
+                repo,
+                workflow_id: target.id,
+                branch: 'main',
+                event: 'workflow_dispatch',
+                per_page: 30
+              });
+              return response.data.workflow_runs
+                .filter(run => Date.parse(run.created_at) >= cutoff)
+                .sort((a, b) => Date.parse(a.created_at) - Date.parse(b.created_at));
+            }
+
+            async function cancelExtraRuns(runs, keepId) {
+              for (const run of runs) {
+                if (run.id === keepId || run.status === 'completed') continue;
+                try {
+                  await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: run.id });
+                  core.warning(`Cancelled duplicate production run ${run.id}.`);
+                } catch (error) {
+                  core.warning(`Could not cancel duplicate run ${run.id}: ${error.message}`);
+                }
+              }
+            }
+
+            let candidates = await listCandidateRuns();
+            let active = candidates.filter(run => run.status !== 'completed');
+            let selected = active.find(run => ['in_progress', 'waiting', 'pending', 'requested'].includes(run.status))
+              || active[0]
+              || candidates.at(-1)
+              || null;
+
+            if (selected && active.length > 1) {
+              await cancelExtraRuns(active, selected.id);
+            }
+
+            if (!selected) {
+              const dispatchStarted = Date.now();
+              await github.rest.actions.createWorkflowDispatch({
+                owner,
+                repo,
+                workflow_id: target.id,
+                ref: 'main',
+                inputs: {
+                  confirmation: 'DEPLOY MATRIX REPROGRAMMED',
+                  billing_exception: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02'
+                }
+              });
+              core.info(`Dispatched one owner-authorized billable production workflow ${target.id}.`);
+
+              for (let attempt = 0; attempt < 30 && !selected; attempt += 1) {
+                await sleep(2000);
+                candidates = await listCandidateRuns();
+                selected = candidates.find(run => Date.parse(run.created_at) >= dispatchStarted - 10000) || null;
+              }
+              if (!selected) {
+                core.setFailed('Production workflow was dispatched but its run could not be resolved.');
+                return;
+              }
+            } else {
+              core.info(`Reusing production run ${selected.id} (${selected.status}); no duplicate dispatch created.`);
+            }
+
+            candidates = await listCandidateRuns();
+            active = candidates.filter(run => run.status !== 'completed');
+            await cancelExtraRuns(active, selected.id);
+
+            const payload = {
+              ok: selected.status === 'completed' && selected.conclusion === 'success',
+              observedAt: new Date().toISOString(),
+              conclusion: selected.conclusion || '',
+              createdAt: selected.created_at,
+              databaseId: selected.id,
+              event: selected.event,
+              headSha: selected.head_sha,
+              status: selected.status,
+              updatedAt: selected.updated_at,
+              url: selected.html_url,
+              ownerAuthorizedBillableBuild: true,
+              triggerCommit: context.sha
+            };
+
+            let existingSha;
+            try {
+              const existing = await github.rest.repos.getContent({
+                owner,
+                repo,
+                path: statusPath,
+                ref: 'main'
+              });
+              if (!Array.isArray(existing.data)) existingSha = existing.data.sha;
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
+
+            await github.rest.repos.createOrUpdateFileContents({
               owner,
               repo,
-              workflow_id: target.id,
-              ref: 'main',
-              inputs: {
-                confirmation: 'DEPLOY MATRIX REPROGRAMMED',
-                billing_exception: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02'
-              }
+              path: statusPath,
+              branch: 'main',
+              message: `Record owner-authorized production run ${selected.id}`,
+              content: Buffer.from(`${JSON.stringify(payload, null, 2)}\n`).toString('base64'),
+              ...(existingSha ? { sha: existingSha } : {})
             });
-            core.info(`Dispatched one owner-authorized billable controlled production workflow ${target.id} on main.`);
+
+            core.notice(`Production run ${selected.id}: ${selected.status}${selected.conclusion ? ` / ${selected.conclusion}` : ''}`);
+            core.notice(selected.html_url);

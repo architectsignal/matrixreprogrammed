@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-08-03T09:35:04.996Z
+Generated: 2026-08-03T15:52:56.128Z
 Overall: ready
 Homepage mode: search-first-accountability
 Passed: 52/52
@@ -22,7 +22,7 @@ Promotion margin: 14
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
-- **PASS · ledger-archive-preserved:** 3116 archived findings retained.
+- **PASS · ledger-archive-preserved:** 3146 archived findings retained.
 - **PASS · daily-watch-data:** Watch status: ready.
 - **PASS · watch-person-fields:** person: Bill Gates; missing none.
 - **PASS · watch-person-rank:** person score 91; status incumbent-held-position.
@@ -54,7 +54,7 @@ Promotion margin: 14
 - **PASS · dossier-family-assessment:** family executive assessment checked.
 - **PASS · history-and-weekly-delta:** 8 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=5002; search=135946; accountabilityHitList=137210.
+- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=4048; search=137536; accountabilityHitList=138800.
 - **PASS · accountability-card-ui:** 3 search-first accountability cards found.
 - **PASS · daily-watch-deep-links:** Daily Watch contains no generated links to nonexistent Capstone anchors.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.

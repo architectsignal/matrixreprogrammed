@@ -316,3 +316,9 @@ fs.writeFileSync(at('downloads/member-forum-integration-patch.json'), JSON.strin
   boundary: 'No browser-only switch may claim that payment, authentication or entitlement has been verified.'
 }, null, 2));
 console.log(`Member/forum integration patched: ${changed.length ? changed.join(', ') : 'already current'}.`);
+
+// This integration owner runs late in the Cloudflare build. Reassert the
+// canonical fail-closed D1 client after its legacy template has done the
+// membership/markup migration so credential, verified-email and
+// read-after-write guarantees cannot be weakened by build order.
+require('./repair-forum-member-posting.js');

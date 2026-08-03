@@ -81,10 +81,7 @@
     const board = post.board ? ' <span class="pill">' + esc(BOARD_LABELS[post.board] || post.board) + '</span>' : '';
     return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title || 'Signal') + '</h3><p>' + esc(post.body || post.message || '') + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Member') + '</span> <span class="pill">' + esc(when(post.approvedAt || post.createdAt || post.timestamp)) + '</span>' + board + ' <span class="pill">persistent D1 confirmed</span></p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report post</button></article>';
   }
-  function loadFallback(message){ return offlineNotice(message || 'Cloudflare D1 persistent forum feed unavailable'); }
-  function offlineNotice(message){
-    return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board accepts only persistent Cloudflare D1 posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'Cloudflare D1 persistent forum feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>';
-  }
+  function offlineNotice(message){ return '<article class="card redline"><h3>' + esc(BOARD_LABEL) + ' cannot load right now</h3><p>No browser-only copy is shown as live.</p><p><strong>Detail:</strong> ' + esc(message || 'feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>'; }
   async function requestFeed(){
     const routes = [FEED_ROUTE, FEED_COMPATIBILITY_ROUTE + '?board=' + encodeURIComponent(BOARD)];
     let lastError;
@@ -101,7 +98,7 @@
   }
   async function loadFeed(){
     if (!feed) return;
-    feed.innerHTML = '<article class="card"><span class="label">Persistent D1 feed</span><h3>Checking the authoritative board</h3><p>Loading confirmed Cloudflare D1 posts for ' + esc(BOARD_LABEL) + '.</p></article>';
+    feed.innerHTML = '<article class="card"><span class="label">pending sync</span><h3>Signal Board is syncing</h3><p>Checking the authoritative Cloudflare D1 feed for ' + esc(BOARD_LABEL) + '.</p></article>';
     try {
       const data = await requestFeed();
       const posts = listFrom(data).filter(postBelongsHere).filter(isPublicUserPost);
@@ -139,7 +136,7 @@
     try {
       const livePost = await postLive(payload);
       form.reset(); lockFormToBoard();
-      if (status) status.textContent = 'Signal posted live and saved persistently. D1 read-after-write confirmed.';
+      if (status) status.textContent = 'Signal posted live. D1 persistence was confirmed by read-after-write.';
       await loadFeed();
       applyMemberState();
     } catch (error) {

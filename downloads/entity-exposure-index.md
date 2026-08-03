@@ -1,14 +1,344 @@
 # Entity Exposure Index
 
-Updated: 2026-08-03T09:34:51.156Z
+Updated: 2026-08-03T10:05:09.204Z
 
-## Control Structure
+## Appellate Division of the Supreme Court of the State of New York
 
-Score: 0
+Score: 368
 
-Level: low / insufficient record exposure
+Level: critical public-record exposure
 
-Highest evidence: not graded
+Highest evidence: charged / sued
 
-Reading: Control Structure is being watched. More primary records are needed before stronger conclusions are made.
+Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Court of Appeals for the Ninth Circuit
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals for the Ninth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Court of Appeals for the Second Circuit
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Supreme Court of Pennsylvania
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Supreme Court of Pennsylvania deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Supreme Court of Rhode Island
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Supreme Court of Rhode Island deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 2021-08825
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 2021-08825 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 2024-13374
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 2024-13374 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 2025-0045-Appeal.
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 23 WAP 2023
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 23 WAP 2023 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 24-2251
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 24-2251 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## 24-7261
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: 24-7261 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Civil Rights Corps v. LaSalle
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Civil Rights Corps v. LaSalle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## D & A Grandview, LLC v. 60 Davidson, LLC
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: D & A Grandview, LLC v. 60 Davidson, LLC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Punxsutawney Hunting Club v. PGC
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Punxsutawney Hunting Club v. PGC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## United States v. Anten
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: United States v. Anten deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Williams v. Biggs
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Williams v. Biggs deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Homeland Security Department
+
+Score: 118
+
+Level: critical public-record exposure
+
+Highest evidence: documented association
+
+Reading: Homeland Security Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Centers for Medicare & Medicaid Services
+
+Score: 89
+
+Level: high public-record exposure
+
+Highest evidence: documented association
+
+Reading: Centers for Medicare & Medicaid Services deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Health and Human Services Department
+
+Score: 89
+
+Level: high public-record exposure
+
+Highest evidence: documented association
+
+Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## AAPL
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: AAPL deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Alphabet Inc.
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Alphabet Inc. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## AMAZON COM INC
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: AMAZON COM INC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## AMZN
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: AMZN deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Apple Inc.
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Apple Inc. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## AVGO
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: AVGO deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Broadcom Inc.
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Broadcom Inc. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## GOOGL
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: GOOGL deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## MICROSOFT CORP
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: MICROSOFT CORP deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## MSFT
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: MSFT deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## NVDA
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: NVDA deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## NVIDIA CORP
+
+Score: 45
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: NVIDIA CORP deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Nuclear Regulatory Commission
+
+Score: 40
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Securities and Exchange Commission
+
+Score: 40
+
+Level: moderate public-record exposure
+
+Highest evidence: documented association
+
+Reading: Securities and Exchange Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 

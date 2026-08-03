@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:07:37.067Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-03T06:56:33.879Z",
+  "pageCount": 125,
   "output": "downloads/readable-user-briefs.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Readable User Briefs",
-    "contentHash": "7441452f80dd5f12b30060a71da3d2eb7a7e29cb1595cbfda70c0e5a56dfd06b",
+    "contentHash": "4f5983b9b465a8dd6b2f4a513f949d45e9eba995396bd14e52e062064510a9fe",
     "sourceIds": [
       "e72d22f4f28eb53e3173d0a6",
       "e083e748ec6311742c2416e5",
@@ -41,10 +41,11 @@
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-9B01C094346A78B0",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
       "384bb39bdc916ad6752ac63a",
       "daily-revelation-report",
       "9f3052b5d8cec138a2a37e8c",
-      "2828a0d0f67977aa4a3e373c",
+      "de58872cc8483198b691c403",
       "310372a3fc518b6aabbc5d07",
       "bb5dfe90c29929d84ce60e6d",
       "f17e0de0ef7b66aa842ac3a1",
@@ -69,7 +70,6 @@
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "de58872cc8483198b691c403",
       "53201d6b1babefc058e6d6ac",
       "538941a6b0f31a954f98439a",
       "57155b538497645f1d15d258",
@@ -88,7 +88,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "ASC-REVIEW-E76F1740FFF4E811",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "5143def4d109df60d6ae99db",
       "9d0cf694c0c2e7c8947c7596",
@@ -96,7 +95,6 @@
       "billionaire-elon-musk",
       "billionaire-mark-zuckerberg",
       "billionaire-warren-buffett",
-      "fe3f3107cffaf5599a7b09f9",
       "085baf8dafdf6692a4203706",
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-CAEF74273342914C",
@@ -125,7 +123,6 @@
       "billionaire-peter-thiel",
       "billionaire-michael-bloomberg",
       "billionaire-jensen-huang",
-      "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "b5a32a76f19d554c484e917f",
       "ecd4a1111010f13b2d74bf8c",
@@ -133,33 +130,36 @@
       "ASC-REVIEW-D3C6DB16A89DBA51",
       "ASC-REVIEW-D86EBD209FFF875A",
       "ASC-REVIEW-5F18C934E1FFBBB4",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-CE615863A9722AC5",
       "d0b647e325275daa6d824a49",
       "cee347fbc3752c6e0f890457",
       "erik-prince",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-a334a207405ec629b4be337d",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
       "0286171e0bf7415859b35948",
       "e5f914fb3ce4e13fe16181c4",
-      "255a3ae9592a4cdd47fc9851"
+      "255a3ae9592a4cdd47fc9851",
+      "ASC-REVIEW-875607DBB9C95C91",
+      "ASC-REVIEW-BE461670E34D316C",
+      "ASC-REVIEW-CDDCEFC70DF63561",
+      "ASC-REVIEW-6809880AE2446DD1",
+      "ASC-REVIEW-F5CA53DC99863DAC",
+      "ASC-REVIEW-0C3383FAE797FF46"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 46,
-      "disputedClaimCount": 36,
+      "primarySourceCount": 42,
+      "disputedClaimCount": 43,
       "newEntityCount": 60,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 59,
-      "moneyRecordCount": 43
+      "relationshipCount": 62,
+      "moneyRecordCount": 46
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Readable User Briefs.",
+        "conclusion": "The indexed record establishes that 42 A/B-grade public-record items are materially relevant to Readable User Briefs.",
         "evidence": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 62 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Elite Power Theory; Elite Power Theory; MINDCUBED LLC — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 59 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 62 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",

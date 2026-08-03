@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T20:58:56.637Z",
+  "generatedAt": "2026-08-03T06:44:16.489Z",
   "changed": [
-    "src/worker-paypal-subscriptions.js",
-    "paypal-membership.js"
+    "paypal-membership.js",
+    "_site/paypal-membership.js"
   ],
   "checkoutState": "created until provider approval",
   "failureState": "failed with failed_at and failure_reason",

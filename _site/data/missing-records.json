@@ -1,19 +1,211 @@
 {
-  "updated": "2026-08-02T20:59:26.674Z",
+  "updated": "2026-08-03T06:45:17.947Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
   "records": [
     {
-      "entity": "Control Structure",
-      "record": "Feed runner has not produced entity observations yet.",
-      "route": "entity-briefs/control-structure.html",
+      "entity": "Centers for Medicare & Medicaid Services",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
       "type": "entity brief"
     },
     {
-      "entity": "Control Structure",
-      "record": "Feed runner has not produced entity observations yet.",
-      "route": "entity-exposure/control-structure.html",
+      "entity": "Health and Human Services Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/health-and-human-services-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Homeland Security Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/homeland-security-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AAPL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/aapl.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Alphabet Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/alphabet-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AMAZON COM INC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/amazon-com-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AMZN",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/amzn.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Apple Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/apple-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AVGO",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/avgo.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Broadcom Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/broadcom-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "GOOGL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/googl.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "MICROSOFT CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/microsoft-corp.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "MSFT",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/msft.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "NVDA",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nvda.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "NVIDIA CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nvidia-corp.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Nuclear Regulatory Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nuclear-regulatory-commission.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Securities and Exchange Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/securities-and-exchange-commission.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Homeland Security Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/homeland-security-department.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Centers for Medicare & Medicaid Services",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Health and Human Services Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/health-and-human-services-department.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AAPL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/aapl.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Alphabet Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/alphabet-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AMAZON COM INC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/amazon-com-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AMZN",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/amzn.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Apple Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/apple-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AVGO",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/avgo.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Broadcom Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/broadcom-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "GOOGL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/googl.html",
+      "type": "record review"
+    },
+    {
+      "entity": "MICROSOFT CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/microsoft-corp.html",
+      "type": "record review"
+    },
+    {
+      "entity": "MSFT",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/msft.html",
+      "type": "record review"
+    },
+    {
+      "entity": "NVDA",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/nvda.html",
+      "type": "record review"
+    },
+    {
+      "entity": "NVIDIA CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/nvidia-corp.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Nuclear Regulatory Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/nuclear-regulatory-commission.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Securities and Exchange Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/securities-and-exchange-commission.html",
       "type": "record review"
     },
     {
@@ -49,6 +241,12 @@
     {
       "entity": "Blackwater / Xe / Academi / Constellis lineage",
       "record": "News signals verified against primary records",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
+      "type": "contractor profile"
+    },
+    {
+      "entity": "Blackwater / Xe / Academi / Constellis lineage",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "type": "contractor profile"
     },

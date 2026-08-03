@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:06:25.826Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-03T06:54:54.727Z",
+  "pageCount": 133,
   "output": "downloads/phase1-live-email-verifier-patch.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Phase1 Live Email Verifier Patch",
-    "contentHash": "c14a95c6d2aa9c8a13c48f1326766089406d302a8d5428457d1c71daa9bfe954",
+    "contentHash": "cb1839cc9301c5aa0e6d32eaddf909ef9db4f9e327bcb3a6b3a121feaa5802dc",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -43,7 +43,6 @@
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -69,13 +68,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-0E868AF7B9CFC533",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
@@ -146,20 +138,28 @@
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D"
+      "ASC-REVIEW-FF1A5D475493F22D",
+      "ASC-REVIEW-0C3383FAE797FF46",
+      "ASC-REVIEW-7FBB26E1B0ECA17A",
+      "ASC-REVIEW-ECBF89F9DB572E57",
+      "ASC-REVIEW-9CC26AD16796DAE5",
+      "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-52F3C5EC8401656D",
+      "ASC-REVIEW-D13048D78F8EA6E3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 46,
-      "disputedClaimCount": 85,
+      "primarySourceCount": 38,
+      "disputedClaimCount": 93,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 82,
-      "moneyRecordCount": 57
+      "relationshipCount": 89,
+      "moneyRecordCount": 64
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Phase1 Live Email Verifier Patch.",
+        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Phase1 Live Email Verifier Patch.",
         "evidence": "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 82 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 89 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; DELL MARKETING L.P. — District of Columbia Courts; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 82 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 89 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
           "Influence should be mapped through infrastructure, filings and contracts.",

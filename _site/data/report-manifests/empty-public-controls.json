@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:02:42.432Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-03T06:49:39.212Z",
+  "pageCount": 133,
   "output": "downloads/empty-public-controls.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Empty Public Controls",
-    "contentHash": "a261dafb39abb95858cff53d03cefbfbe2b45690281f85304ad7942b5d6b7a3a",
+    "contentHash": "a8217eecc86c650f1b9541ec3e5639b91da340cd22e579b27ad757a0eb0eb3d5",
     "sourceIds": [
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
@@ -54,8 +54,12 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
@@ -64,15 +68,10 @@
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
       "6d8df9af51b8078e703b2748",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
       "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
       "e083e748ec6311742c2416e5",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
       "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
+      "255a3ae9592a4cdd47fc9851",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "janner-iicsa-2022",
@@ -109,7 +108,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -142,6 +140,8 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
@@ -150,26 +150,26 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 13,
-      "disputedClaimCount": 115,
+      "primarySourceCount": 8,
+      "disputedClaimCount": 120,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 94,
-      "moneyRecordCount": 68
+      "moneyRecordCount": 69
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Empty Public Controls.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Empty Public Controls.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
+    "intelligenceFreshnessDate": "2026-08-02T07:42:48.079Z"
   }
 }

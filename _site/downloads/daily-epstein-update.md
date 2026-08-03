@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-02T21:11:40.789Z
-Live Intel source window: 2026-08-02T21:11:26.641Z
+Generated: 2026-08-03T07:01:51.242Z
+Live Intel source window: 2026-08-03T07:01:36.479Z
 Latest source publication: 2026-07-31T19:07:23.000Z
 Status: current-seven-day-record-window
 
@@ -45,6 +45,16 @@ Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent cre
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
+### Epstein files: How victims remain exposed to identification - DW.com
+- Published: 2026-07-30T16:07:32.000Z
+- Source: Google News / Epstein sighting and alive claims
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
+
+Epstein files: How victims remain exposed to identification DW.com
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
 ### US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
 - Published: 2026-07-30T11:19:00.000Z
 - Source: Google News / Epstein timeline and files
@@ -62,6 +72,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5
 
 Epstein survivors’ lawsuits against Les Wexner combined into one case nbc4i.com
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+- Published: 2026-07-30T05:30:00.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
+
+Epstein survivors’ lawsuits against Les Wexner combined into one case NBC4 WCMH-TV
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -102,26 +122,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
 
 Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The Guardian
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Group in Congress pushing for more Epstein transparency - American Press
-- Published: 2026-07-27T00:13:58.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
-
-Group in Congress pushing for more Epstein transparency American Press
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - eurasiareview.com
-- Published: 2026-07-26T23:43:09.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
-
-Bipartisan Group In Congress Demands Greater Transparency On Epstein Files eurasiareview.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

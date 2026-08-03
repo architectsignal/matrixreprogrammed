@@ -1,22 +1,16 @@
 {
-  "generatedAt": "2026-08-02T21:07:50.709Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-03T06:56:52.565Z",
+  "pageCount": 136,
   "output": "downloads/release-metadata-routing-patch.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Release Metadata Routing Patch",
-    "contentHash": "4e70786ffcdf9b876ffaaae373fcabe223409a1e734e80c0ff216b0cbeb1fddf",
+    "contentHash": "386a9f3ff8da214580172ecaaf4049514d46469a4a8bc902b0fb6c6a616964a2",
     "sourceIds": [
-      "e083e748ec6311742c2416e5",
       "71e0563ca7b139c37c302956",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-a334a207405ec629b4be337d",
+      "e083e748ec6311742c2416e5",
       "26b90533dbf7d2ed42f02de6",
       "EP-AI-002",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-c452df757991611cb06ec88a",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -40,14 +34,11 @@
       "4c07add2a6d4eb22cadecd27",
       "388e2e8c136c6891fe3af13a",
       "5546f85d1ba69563adc9bffd",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -58,9 +49,10 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-B59332D029E64DD4",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-285205442D5C5D56",
       "ASC-REVIEW-9553A9554C0E8D6A",
       "ASC-REVIEW-375A853A96E42D84",
@@ -100,6 +92,7 @@
       "427a4b3a840619411d8d1c33",
       "1583ed9e90a5874047a33041",
       "a103f2650e31fc92fa3688e6",
+      "source-change-62862e6ca90495adc0788a2d",
       "53201d6b1babefc058e6d6ac",
       "538941a6b0f31a954f98439a",
       "57155b538497645f1d15d258",
@@ -118,6 +111,11 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -146,21 +144,23 @@
       "ASC-REVIEW-9F5E6DCB06093895",
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-747FA1D74D7A92E3",
-      "ASC-REVIEW-2EAAC7D7DF8B957D"
+      "ASC-REVIEW-2EAAC7D7DF8B957D",
+      "ASC-REVIEW-686B68808D58A838",
+      "ASC-REVIEW-E0C2B02D28255CC3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 44,
-      "disputedClaimCount": 91,
+      "primarySourceCount": 42,
+      "disputedClaimCount": 93,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 57
+      "relationshipCount": 80,
+      "moneyRecordCount": 59
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Release Metadata Routing Patch.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 42 A/B-grade public-record items are materially relevant to Release Metadata Routing Patch.",
+        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",

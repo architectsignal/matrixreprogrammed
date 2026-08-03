@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:04:20.068Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-03T06:51:54.707Z",
+  "pageCount": 122,
   "output": "downloads/heroes-fighting-matrix-source-ledger.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Heroes Fighting the Matrix — Source Ledger",
-    "contentHash": "aae05a5737ac69ad55db73b7ecbaaed3fcbb57567d0522699c6f5ef80f058efc",
+    "contentHash": "8c51bd9fd864086ada0d34fa33a6d39bd906225de0822ad470fc05937969356c",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "26b90533dbf7d2ed42f02de6",
@@ -40,14 +40,6 @@
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "15adccba38bd91644b561261",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "008875ef7bf45eb14dccb254",
       "4c372edcf20b760ae3305f10",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
@@ -68,6 +60,7 @@
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
+      "ASC-REVIEW-E09138F879103681",
       "d0b647e325275daa6d824a49",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
@@ -76,7 +69,6 @@
       "EP-AI-001",
       "EP-AI-004",
       "9f3052b5d8cec138a2a37e8c",
-      "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "6d665d935673091233751767",
       "157cdab04b61ae6309c0c713",
@@ -136,7 +128,10 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -146,21 +141,26 @@
       "9e8310c49b990aa62d2b0921",
       "6510364e9b1a1504b9f99521",
       "7f5b91c14c671bd24b8bbd81",
-      "270841af2bd81407a26bed0b"
+      "270841af2bd81407a26bed0b",
+      "ASC-REVIEW-DA07BCFBB726AA49",
+      "ASC-REVIEW-CFB2B8804532DFFC",
+      "ASC-REVIEW-5D13FDD470EDF012",
+      "ASC-REVIEW-94F3B4C96A469AB3",
+      "ASC-REVIEW-5F69F7CCEE3F7274"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 52,
-      "disputedClaimCount": 48,
+      "primarySourceCount": 44,
+      "disputedClaimCount": 57,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 50,
-      "moneyRecordCount": 51
+      "relationshipCount": 54,
+      "moneyRecordCount": 56
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Heroes Fighting the Matrix — Source Ledger.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Heroes Fighting the Matrix — Source Ledger.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 54 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Elite Power Theory; Media / Narrative Theory; Elite Power Theory; Media / Narrative Theory; Influence should be mapped through infrastructure, filings and contracts.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 54 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:00:45.184Z",
-  "pageCount": 122,
+  "generatedAt": "2026-08-03T06:46:56.503Z",
+  "pageCount": 120,
   "output": "downloads/consequence-tracking-runtime-hardening.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Consequence Tracking Runtime Hardening",
-    "contentHash": "a331224bd4b85c383df42083377ec3aeee6d08fd58ffd929d27412018811f099",
+    "contentHash": "835d710669ad8054088d8405b751074877a3749f9483f5ddd17c46045e163ee3",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "5460c0408472ce834da2b82f",
@@ -42,6 +42,16 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "a8d2d3bf834ea59c6a49b8ea",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "e457b31e704efd10ec987a59",
@@ -96,6 +106,7 @@
       "2d4be12850f5299709adc82a",
       "8212c1ebe163e30add33aeaf",
       "b866e2c7eb4ced9098559c86",
+      "eb5d60860a79b38aeefa3633",
       "4230305352f457f0cfcd2c1c",
       "f028e09fbaa2ebdfeb532e99",
       "digital-euro-parliament-hurdle-2026-06-23",
@@ -127,29 +138,20 @@
       "epstein-sdny-charges-2019",
       "shortey-child-sex-trafficking-2018",
       "nassar-state-convictions-2018",
-      "nassar-federal-conviction-2017",
-      "ASC-REVIEW-4D93FE8E0666D181",
-      "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-8708EF2A4E1C3023",
-      "ASC-REVIEW-64E0D2BCFC6FF23D",
-      "ASC-REVIEW-AF18512452F699D2",
-      "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-481745ED8153AA11",
-      "ASC-REVIEW-9719FEC8729E7FE2",
-      "ASC-REVIEW-96665FE56FA75D90"
+      "nassar-federal-conviction-2017"
     ],
     "metrics": {
-      "evidenceCount": 130,
-      "primarySourceCount": 109,
-      "disputedClaimCount": 30,
+      "evidenceCount": 132,
+      "primarySourceCount": 120,
+      "disputedClaimCount": 19,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 31,
+      "relationshipCount": 32,
       "moneyRecordCount": 22
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 109 A/B-grade public-record items are materially relevant to Consequence Tracking Runtime Hardening.",
+        "conclusion": "The indexed record establishes that 120 A/B-grade public-record items are materially relevant to Consequence Tracking Runtime Hardening.",
         "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -169,8 +171,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
+        "inference": "The indexed set contains 32 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01; Brian Wells Part 02 (Final); Lufthansa Heist; Lufthansa Heist Part 01",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -184,16 +186,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 32 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Westminster inquiry examined political and policing responses",
-          "IICSA documented predatory activities and institutional failures",
-          "Official health investigations documented abuse and enabling access",
-          "Broadmoor investigation examined Savile's access and abuse",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer",
-          "Booz Allen Hamilton → Intelligence: execution layer"
+          "World Wrestling Entertainment",
+          "World Wrestling Entertainment Part 01",
+          "World Wrestling Entertainment Part 02 (Final)",
+          "Brian Wells",
+          "Brian Wells Part 01",
+          "Brian Wells Part 02 (Final)",
+          "Lufthansa Heist",
+          "Lufthansa Heist Part 01"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

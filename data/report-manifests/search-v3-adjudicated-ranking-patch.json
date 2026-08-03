@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:08:09.447Z",
+  "generatedAt": "2026-08-03T06:57:17.094Z",
   "pageCount": 135,
   "output": "downloads/search-v3-adjudicated-ranking-patch.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Search V3 Adjudicated Ranking Patch",
-    "contentHash": "b8492a5eb0f4d93919e56e66219ecdfff90b70e7c1aa69d4c3b296d0e76a57fd",
+    "contentHash": "228c46c119c89474614aa4954117d70002844d9b05a34dfca9d1f5a3383b1035",
     "sourceIds": [
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-AF18512452F699D2",
@@ -75,6 +75,7 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-DAB5BBAD900386F9",
       "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -89,7 +90,6 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
-      "ASC-REVIEW-E76F1740FFF4E811",
       "9cb9631a2f2749b86bc69e0a",
       "a354895c18c7e12ab408462d",
       "138e9d694e41f192556d34a2",
@@ -122,7 +122,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -146,7 +145,8 @@
       "ASC-REVIEW-AE10394716B1B048",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E"
+      "ASC-REVIEW-525DDFDACCB9146E",
+      "ASC-REVIEW-FF1A5D475493F22D"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 85,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 51
+      "relationshipCount": 79,
+      "moneyRecordCount": 52
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "FCN, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "FCN, INC. — Court Services and Offender Supervision Agency",
           "INDUSTRIAL BANK — District of Columbia Courts",

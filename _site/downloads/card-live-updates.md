@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-02T21:11:40.810Z
-Live Intel source window: 2026-08-02T21:11:26.641Z
-Tracked cards: 900
-Cards with current matched records: 8
-Cards with no new verified record: 892
+Generated: 2026-08-03T07:01:51.264Z
+Live Intel source window: 2026-08-03T07:01:36.479Z
+Tracked cards: 932
+Cards with current matched records: 44
+Cards with no new verified record: 888
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -393,6 +393,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## AAPL
+- Route: entity-briefs/aapl.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AAPL
+- Route: entity-exposure/aapl.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## ABDUL HALIM KHAN
 - Route: dossier-abdul-halim-khan.html
 - Status: no-new-verified-record-in-current-window
@@ -533,9 +545,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## ALPHABET INC.
 - Route: entity-timelines/alphabet-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Alphabet Inc. — Entity Observation
+
+## ALPHABET INC.
+- Route: entity-briefs/alphabet-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Alphabet Inc. — Entity Observation
+
+## ALPHABET INC.
+- Route: entity-exposure/alphabet-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Alphabet Inc. — Entity Observation
 
 ## Amancio Ortega
 - Route: follow-the-money/people/amancio-ortega.html
@@ -545,15 +572,31 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Amazon
 - Route: institutions/amazon.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
 
 ## AMAZON COM INC
 - Route: entity-timelines/amazon-com-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
+
+## AMAZON COM INC
+- Route: entity-briefs/amazon-com-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
+
+## AMAZON COM INC
+- Route: entity-exposure/amazon-com-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
 
 ## Ambani family
 - Route: power-families/ambani-family.html
@@ -575,6 +618,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## AMZN
 - Route: entity-timelines/amzn.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AMZN
+- Route: entity-briefs/amzn.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AMZN
+- Route: entity-exposure/amzn.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -641,15 +696,31 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Apple
 - Route: institutions/apple.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
 
 ## APPLE INC.
 - Route: entity-timelines/apple-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
+
+## APPLE INC.
+- Route: entity-briefs/apple-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
+
+## APPLE INC.
+- Route: entity-exposure/apple-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
 
 ## Arenberg
 - Route: black-nobility/arenberg.html
@@ -707,6 +778,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## AVGO
 - Route: entity-timelines/avgo.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AVGO
+- Route: entity-briefs/avgo.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AVGO
+- Route: entity-exposure/avgo.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1067,9 +1150,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## BROADCOM INC.
 - Route: entity-timelines/broadcom-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Broadcom Inc. — Entity Observation
+
+## BROADCOM INC.
+- Route: entity-briefs/broadcom-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Broadcom Inc. — Entity Observation
+
+## BROADCOM INC.
+- Route: entity-exposure/broadcom-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Broadcom Inc. — Entity Observation
 
 ## Brookings Institution
 - Route: institutions/brookings-institution.html
@@ -1269,6 +1367,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES
+- Route: entity-briefs/centers-for-medicare-and-medicaid-services.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES
+- Route: entity-exposure/centers-for-medicare-and-medicaid-services.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Central bank instant payment systems
 - Route: policy/central-bank-instant-payment-systems.html
 - Status: no-new-verified-record-in-current-window
@@ -1451,18 +1561,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## CONTROL STRUCTURE
 - Route: entity-timelines/control-structure.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## CONTROL STRUCTURE
-- Route: entity-briefs/control-structure.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## CONTROL STRUCTURE
-- Route: entity-exposure/control-structure.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2361,9 +2459,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GOOGL
 - Route: entity-timelines/googl.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — GOOGL — Entity Observation
+
+## GOOGL
+- Route: entity-briefs/googl.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — GOOGL — Entity Observation
+
+## GOOGL
+- Route: entity-exposure/googl.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — GOOGL — Entity Observation
 
 ## Google
 - Route: institutions/google.html
@@ -2430,9 +2543,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## HEALTH AND HUMAN SERVICES DEPARTMENT
 - Route: entity-timelines/health-and-human-services-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Health and Human Services Department — Entity Observation
+
+## HEALTH AND HUMAN SERVICES DEPARTMENT
+- Route: entity-briefs/health-and-human-services-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Health and Human Services Department — Entity Observation
+
+## HEALTH AND HUMAN SERVICES DEPARTMENT
+- Route: entity-exposure/health-and-human-services-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Health and Human Services Department — Entity Observation
 
 ## Hearst family
 - Route: power-families/hearst-family.html
@@ -2490,9 +2618,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-timelines/homeland-security-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Homeland Security Department — Entity Observation
+
+## HOMELAND SECURITY DEPARTMENT
+- Route: entity-briefs/homeland-security-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Homeland Security Department — Entity Observation
+
+## HOMELAND SECURITY DEPARTMENT
+- Route: entity-exposure/homeland-security-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Homeland Security Department — Entity Observation
 
 ## Hong Kong
 - Route: jurisdictions-of-power/hong-kong.html
@@ -3516,15 +3659,31 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Microsoft
 - Route: institutions/microsoft.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
 
 ## MICROSOFT CORP
 - Route: entity-timelines/microsoft-corp.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
+
+## MICROSOFT CORP
+- Route: entity-briefs/microsoft-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
+
+## MICROSOFT CORP
+- Route: entity-exposure/microsoft-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
 
 ## Mike Cernovich
 - Route: controlled-opposition/mike-cernovich.html
@@ -3612,6 +3771,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## MSFT
 - Route: entity-timelines/msft.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## MSFT
+- Route: entity-briefs/msft.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## MSFT
+- Route: entity-exposure/msft.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3744,9 +3915,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## NUCLEAR REGULATORY COMMISSION
 - Route: entity-timelines/nuclear-regulatory-commission.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Nuclear Regulatory Commission — Entity Observation
+
+## NUCLEAR REGULATORY COMMISSION
+- Route: entity-briefs/nuclear-regulatory-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Nuclear Regulatory Commission — Entity Observation
+
+## NUCLEAR REGULATORY COMMISSION
+- Route: entity-exposure/nuclear-regulatory-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Nuclear Regulatory Commission — Entity Observation
 
 ## NVDA
 - Route: entity-timelines/nvda.html
@@ -3754,11 +3940,38 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## NVIDIA CORP
-- Route: entity-timelines/nvidia-corp.html
+## NVDA
+- Route: entity-briefs/nvda.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
+
+## NVDA
+- Route: entity-exposure/nvda.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## NVIDIA CORP
+- Route: entity-timelines/nvidia-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — NVIDIA CORP — Entity Observation
+
+## NVIDIA CORP
+- Route: entity-briefs/nvidia-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — NVIDIA CORP — Entity Observation
+
+## NVIDIA CORP
+- Route: entity-exposure/nvidia-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — NVIDIA CORP — Entity Observation
 
 ## Observer Research Foundation
 - Route: think-tanks/observer-research-foundation.html
@@ -4512,9 +4725,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## SECURITIES AND EXCHANGE COMMISSION
 - Route: entity-timelines/securities-and-exchange-commission.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-briefs/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-exposure/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
 
 ## Sergey Brin
 - Route: follow-the-money/people/sergey-brin.html

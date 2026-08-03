@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T12:22:32.083Z",
-  "pageCount": 137,
+  "generatedAt": "2026-08-03T06:50:56.406Z",
+  "pageCount": 135,
   "output": "downloads/exposure-integrity-input-report.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Exposure Integrity Input Report",
-    "contentHash": "2a71f17f55be88b3fbb38a95048f4e47ccf3bd12f5561e5623c8a518377cd724",
+    "contentHash": "001e20f7eae69fb8bea19a6ad253d5c1d9b9817b4181eed69230f46991912dc7",
     "sourceIds": [
       "ASC-REVIEW-B9D6F588FF54AD31",
       "ASC-REVIEW-03A8457B74049A13",
@@ -26,6 +26,7 @@
       "ASC-REVIEW-FE9A5B02284E30E4",
       "ASC-REVIEW-21E454816F050A34",
       "9086b5de8aac89f84189be72",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-2F0D540A3C8B64CE",
@@ -40,7 +41,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -69,6 +69,8 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
@@ -87,7 +89,6 @@
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-2750F333FF6B37B3",
       "ASC-REVIEW-B6BEE1135257F502",
       "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958"
+      "ASC-REVIEW-68286C2A2CB861AF"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 139,
-      "newEntityCount": 0,
+      "disputedClaimCount": 138,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 132,
-      "moneyRecordCount": 123
+      "relationshipCount": 131,
+      "moneyRecordCount": 122
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A broader control interpretation of “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade — italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 132 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 131 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 132 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 131 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
           "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T12:22:32.083Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

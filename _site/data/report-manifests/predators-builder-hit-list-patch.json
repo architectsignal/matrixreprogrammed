@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:06:49.972Z",
+  "generatedAt": "2026-08-03T06:55:28.026Z",
   "pageCount": 129,
   "output": "downloads/predators-builder-hit-list-patch.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Predators Builder Hit List Patch",
-    "contentHash": "92ae5ba66dfff7dfb4bf9cb7a53236977c24adba374938ac11a6bc58544e8aff",
+    "contentHash": "75374bbdffc6c5f154021fb24755c86b94188da26ca52b9171c82b5c72bff2a4",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -41,6 +41,7 @@
       "5b6b5c0285c3c8742768ea5c",
       "eb3448928554960651da56f6",
       "360e80c162081c85d2c680ef",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -76,7 +77,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -109,6 +109,8 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
@@ -128,7 +130,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-6B883D09C63ED673",
       "ASC-REVIEW-1CDBDA84057D802E",
       "ASC-REVIEW-5F2C7C064DEAB967",
-      "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621"
+      "ASC-REVIEW-008D94FCB408C868"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 37,
-      "disputedClaimCount": 102,
-      "newEntityCount": 0,
+      "disputedClaimCount": 101,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 89,
-      "moneyRecordCount": 79
+      "relationshipCount": 88,
+      "moneyRecordCount": 78
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 89 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 89 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

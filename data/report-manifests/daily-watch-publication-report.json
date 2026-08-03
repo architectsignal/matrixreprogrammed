@@ -1,21 +1,19 @@
 {
-  "generatedAt": "2026-08-02T21:01:37.327Z",
+  "generatedAt": "2026-08-03T06:48:07.423Z",
   "pageCount": 131,
   "output": "downloads/daily-watch-publication-report.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Daily Watch Publication Report",
-    "contentHash": "f735ad1dff798727008b9895293bf044fb4498805bc3b49d55e72a29a801d037",
+    "contentHash": "947d5706f2baa3aff8cd9a36c2dc244ad26858dc4bf91488727996625ebd3b0d",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "9d0cf694c0c2e7c8947c7596",
       "ecadede6696db6c7c3e6b7ec",
-      "fe3f3107cffaf5599a7b09f9",
-      "3a425f0d5d683952bc0ad7ac",
-      "26b90533dbf7d2ed42f02de6",
-      "71e0563ca7b139c37c302956",
-      "de58872cc8483198b691c403",
       "085baf8dafdf6692a4203706",
+      "26b90533dbf7d2ed42f02de6",
+      "3a425f0d5d683952bc0ad7ac",
+      "71e0563ca7b139c37c302956",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
@@ -54,13 +52,13 @@
       "ASC-REVIEW-35409BA5B302BB83",
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-385C8E133B9E3CEA",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "1769af26a7bda813406cd8f5",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
+      "e72d22f4f28eb53e3173d0a6",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-5EA0FB3A48583D82",
       "ASC-REVIEW-32D4420F5F198DA2",
@@ -146,32 +144,34 @@
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-B1D0DFCBB6CF0079",
-      "ASC-REVIEW-4C256A755BDBA2D3"
+      "ASC-REVIEW-4C256A755BDBA2D3",
+      "ASC-REVIEW-90FA3F8805F271FF",
+      "ASC-REVIEW-D33599099BE12C6C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 4,
-      "disputedClaimCount": 126,
+      "primarySourceCount": 0,
+      "disputedClaimCount": 131,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 123,
-      "moneyRecordCount": 114
+      "moneyRecordCount": 115
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Daily Watch Publication Report.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Daily Watch Publication Report beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 123 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Matrix Reprogrammed Canonical Intelligence Record; Bill Gates; Securities and Exchange Commission; Influence should be mapped through infrastructure, filings and contracts.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+        "supportingEvidence": "Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -200,9 +200,9 @@
           "Securities and Exchange Commission",
           "Securities and Exchange Commission",
           "Matrix Reprogrammed Canonical Intelligence Record",
-          "Bill Gates",
-          "Securities and Exchange Commission",
           "Influence should be mapped through infrastructure, filings and contracts.",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings"
         ],
         "counterEvidence": [
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

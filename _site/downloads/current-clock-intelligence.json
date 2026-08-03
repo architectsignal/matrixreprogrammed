@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T21:11:25.840Z",
+  "generatedAt": "2026-08-03T07:01:26.476Z",
   "policy": "Every Mission Timer is evaluated against a dated current-evidence window. Current status, official-source count, implementation stage, jurisdiction coverage and evidence gaps are published separately from speculation.",
   "recalibrations": [
     {
@@ -90,7 +90,7 @@
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 9,
-      "officialCount": 2,
+      "officialCount": 1,
       "implementationCount": 1,
       "lawCount": 0,
       "jurisdictions": []
@@ -276,7 +276,7 @@
     {
       "slug": "rule-of-law-accountability",
       "title": "Rule of Law and Institutional Accountability Clock",
-      "score": 58,
+      "score": 56,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
       "currentEvidenceCount": 10,

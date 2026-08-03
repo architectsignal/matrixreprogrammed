@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "updated": "2026-08-02T21:19:08.205Z",
+  "updated": "2026-08-03T07:03:22.037Z",
   "promotionMargin": 14,
   "slots": {
     "person": {
@@ -38,13 +38,20 @@
           "Which dated primary record establishes the current action?",
           "What oversight, competing authority, opt-out or appeal limits the power?",
           "What new evidence would strengthen, narrow, replace or falsify this position?"
-        ]
+        ],
+        "rankingScore": 91,
+        "rankingStatus": "incumbent-held-position",
+        "incumbentSince": "2026-07-27T17:29:36.861Z",
+        "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+        "challengerHeld": "Elon Musk",
+        "challengerScore": 91,
+        "retentionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
       },
       "rankingScore": 91,
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-      "lastDecision": "incumbent-retained-and-refreshed",
-      "lastReviewedAt": "2026-08-02T21:19:08.205Z",
+      "lastDecision": "incumbent-retained-threshold-not-cleared",
+      "lastReviewedAt": "2026-08-03T07:03:22.037Z",
       "challengerHeld": "Elon Musk",
       "challengerScore": 91
     },
@@ -97,20 +104,13 @@
           "Which dated primary record establishes the current action?",
           "What oversight, competing authority, opt-out or appeal limits the power?",
           "What new evidence would strengthen, narrow, replace or falsify this position?"
-        ],
-        "rankingScore": 143,
-        "rankingStatus": "incumbent-held-position",
-        "incumbentSince": "2026-07-27T17:29:36.861Z",
-        "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-        "challengerHeld": "U.S. Securities and Exchange Commission",
-        "challengerScore": 143,
-        "retentionReason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent."
+        ]
       },
       "rankingScore": 143,
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-      "lastDecision": "incumbent-retained-threshold-not-cleared",
-      "lastReviewedAt": "2026-08-02T21:19:08.205Z",
+      "lastDecision": "incumbent-retained-and-refreshed",
+      "lastReviewedAt": "2026-08-03T07:03:22.037Z",
       "challengerHeld": "U.S. Securities and Exchange Commission",
       "challengerScore": 143
     },
@@ -164,7 +164,7 @@
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-threshold-not-cleared",
-      "lastReviewedAt": "2026-08-02T21:19:08.205Z",
+      "lastReviewedAt": "2026-08-03T07:03:22.037Z",
       "challengerHeld": "Al Maktoum family",
       "challengerScore": 122
     }

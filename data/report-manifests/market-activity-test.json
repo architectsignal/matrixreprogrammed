@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:05:21.245Z",
-  "pageCount": 91,
+  "generatedAt": "2026-08-03T06:53:26.644Z",
+  "pageCount": 93,
   "output": "downloads/market-activity-test.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Market Activity Test",
-    "contentHash": "9f6120e1fc49f1bf57577fd5612150adf91eb9a7e4541228c95ec2e79ee27a70",
+    "contentHash": "39ec3b77bbaf512fa7270ef9c9df06c3175765f2a90484fb46159d6aee405afc",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
@@ -97,6 +97,7 @@
       "41772e5c9af7970ddd7d5aac",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
+      "b49c319c09a07b245b24f74a",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
       "ASC-REVIEW-45ACC28AC220EA79",
@@ -145,21 +146,20 @@
       "investment-vehicles-qual",
       "investment-vehicles-ibit",
       "investment-vehicles-acwi",
-      "banks-ms",
-      "banks-c"
+      "banks-ms"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 39,
+      "primarySourceCount": 40,
       "disputedClaimCount": 8,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 8,
-      "moneyRecordCount": 70
+      "moneyRecordCount": 69
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Market Activity Test.",
+        "conclusion": "The indexed record establishes that 40 A/B-grade public-record items are materially relevant to Market Activity Test.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

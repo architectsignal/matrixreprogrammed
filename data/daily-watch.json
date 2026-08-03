@@ -1,8 +1,8 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-08-02T21:19:08.205Z",
-  "date": "2026-08-02",
+  "updated": "2026-08-03T07:03:22.037Z",
+  "date": "2026-08-03",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
   "leadingEvidenceConclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Children’s Digital Identity and Age-Gating Clock is the highest canonical pressure index at 93%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 23682
+      "signalCount": 23626
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 17113
+      "signalCount": 17125
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 12368
+      "signalCount": 12387
     }
   ],
   "person": {
@@ -59,9 +59,12 @@
       "What new evidence would strengthen, narrow, replace or falsify this position?"
     ],
     "rankingScore": 91,
-    "rankingStatus": "retained-current-leader",
+    "rankingStatus": "incumbent-held-position",
     "incumbentSince": "2026-07-27T17:29:36.861Z",
-    "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+    "challengerHeld": "Elon Musk",
+    "challengerScore": 91,
+    "retentionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
   },
   "institution": {
     "type": "institution",
@@ -113,12 +116,9 @@
       "What new evidence would strengthen, narrow, replace or falsify this position?"
     ],
     "rankingScore": 143,
-    "rankingStatus": "incumbent-held-position",
+    "rankingStatus": "retained-current-leader",
     "incumbentSince": "2026-07-27T17:29:36.861Z",
-    "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-    "challengerHeld": "U.S. Securities and Exchange Commission",
-    "challengerScore": 143,
-    "retentionReason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent."
+    "lastPromotedAt": "2026-07-27T17:29:36.861Z"
   },
   "family": {
     "type": "family",
@@ -174,19 +174,19 @@
     "decisions": {
       "person": {
         "changed": false,
-        "reason": "The same entity remains the current evidence leader.",
+        "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
+        "incumbent": "Bill Gates",
         "incumbentScore": 91,
+        "challenger": "Elon Musk",
         "challengerScore": 91,
+        "required": 105,
         "marginRequired": 14
       },
       "institution": {
         "changed": false,
-        "reason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent.",
-        "incumbent": "Securities and Exchange Commission",
+        "reason": "The same entity remains the current evidence leader.",
         "incumbentScore": 143,
-        "challenger": "U.S. Securities and Exchange Commission",
         "challengerScore": 143,
-        "required": 157,
         "marginRequired": 14
       },
       "family": {

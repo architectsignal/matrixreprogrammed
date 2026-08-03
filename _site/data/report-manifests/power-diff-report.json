@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:06:45.028Z",
+  "generatedAt": "2026-08-03T06:55:21.359Z",
   "pageCount": 133,
   "output": "downloads/power-diff-report.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Power Diff Report",
-    "contentHash": "cc7e0bd38a2c2a6e6684e0008e6619f7cec72dd639c1947be6dbe3f4a805d63c",
+    "contentHash": "340b03aea664480aba1769fc014c47816aaa62aa5043cbc4bfb104e67b827cc6",
     "sourceIds": [
       "diff-consequence-war-machine-2026-07-31-a82191f1",
       "diff-consequence-war-machine-2026-07-31-1d19fb5b",
@@ -13,16 +13,7 @@
       "diff-consequence-epstein-files-2026-07-31-b0ba52f7",
       "diff-consequence-epstein-files-2026-07-30-2a83e994",
       "diff-consequence-epstein-files-2026-07-30-1f471233",
-      "diff-consequence-epstein-files-2026-07-30-8d6ae028",
-      "ASC-REVIEW-E76F1740FFF4E811",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -34,7 +25,11 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-44F136F26F8A52B2",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -53,6 +48,7 @@
       "1583ed9e90a5874047a33041",
       "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
+      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -78,7 +74,14 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "source-change-a53bf480df4e4883383a08e0",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-7ed151a515391f967d229642",
       "e083e748ec6311742c2416e5",
+      "source-change-a334a207405ec629b4be337d",
+      "source-change-c452df757991611cb06ec88a",
+      "source-change-8299a278d70b1f879d6d522f",
+      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -143,24 +146,21 @@
       "ASC-REVIEW-16C81ABB8280B33F",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
-      "ASC-REVIEW-8F441C443ED90227",
-      "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673"
+      "ASC-REVIEW-8F441C443ED90227"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 51,
-      "disputedClaimCount": 81,
+      "disputedClaimCount": 82,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 79
+      "relationshipCount": 75,
+      "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 51 A/B-grade public-record items are materially relevant to Power Diff Report.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 75 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 75 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:02:56.916Z",
-  "pageCount": 103,
+  "generatedAt": "2026-08-03T06:50:02.062Z",
+  "pageCount": 99,
   "output": "downloads/epstein-file-cockpit.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Epstein Actual Files Cockpit",
-    "contentHash": "79980be351b017538d069071464d86be47ce966071de41cd861fa99f318b11e0",
+    "contentHash": "f9ac79fb6963b2457f1ad94f221c76e15b8ab1cb5c1de28e416077ba6548205e",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -35,8 +35,6 @@
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "EP-AI-002",
-      "65debd126cdfa5f7547a3eca",
-      "3c9c23f7f9a1cec81ef90f59",
       "73799cb9af4829047998b026",
       "aa125ed22fe885dd57f96c32",
       "f73c11ef3163b1800592aabe",
@@ -81,10 +79,12 @@
       "ASC-REVIEW-7B1A15ED77443F13",
       "5295a33003172878f9880122",
       "EP-AI-004",
+      "65debd126cdfa5f7547a3eca",
       "9f77464e401ac59ad1adb812",
       "e72d22f4f28eb53e3173d0a6",
       "2931a84c2c7fe86982d5d6e5",
       "7dcf4ef18ea1f86d01068773",
+      "3c9c23f7f9a1cec81ef90f59",
       "310372a3fc518b6aabbc5d07",
       "f59da50ababa3ddae79a8f1c",
       "a103f2650e31fc92fa3688e6",
@@ -96,8 +96,6 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "356f10eff5c6f147fc33ebeb",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-9B01C094346A78B0",
       "f8da9551192fb7f98b4efa86",
@@ -108,12 +106,6 @@
       "daee19f2c0d92279cc9a7569",
       "bb5dfe90c29929d84ce60e6d",
       "f17e0de0ef7b66aa842ac3a1",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "a76edf5945d2f4910bd413ef",
       "54197b23c792a122f53a863b",
       "96d8ea15e49544e3f1cafd06",
@@ -146,20 +138,28 @@
       "88269481cf5b04b7b0f83b58",
       "b079bec5bc869b0463d0584c",
       "8a10f165e16d0f8648cb8ec4",
-      "ASC-REVIEW-BF27AEC65E76AEC9"
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-32D4420F5F198DA2",
+      "f5bc8d91413e4e72ae005ad4",
+      "d6936ce262c4c18cb75c6e44",
+      "8165fb4ec7543f1da0762496",
+      "c8eeb5656d86646c1e6dc75c",
+      "19ae23289f4be13ad5f7e317",
+      "e116361cb7791d4be20113e1"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 68,
-      "disputedClaimCount": 10,
+      "primarySourceCount": 60,
+      "disputedClaimCount": 12,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 19,
+      "relationshipCount": 21,
       "moneyRecordCount": 23
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 68 A/B-grade public-record items are materially relevant to Epstein Actual Files Cockpit.",
+        "conclusion": "The indexed record establishes that 60 A/B-grade public-record items are materially relevant to Epstein Actual Files Cockpit.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 21 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; 12. Lawful OSINT & Source Verification; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 21 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "12. Lawful OSINT & Source Verification",

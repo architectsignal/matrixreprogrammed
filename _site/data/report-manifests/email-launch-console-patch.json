@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:02:40.496Z",
-  "pageCount": 131,
+  "generatedAt": "2026-08-03T06:49:36.373Z",
+  "pageCount": 129,
   "output": "downloads/email-launch-console-patch.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Email Launch Console Patch",
-    "contentHash": "bfddbed1cdc23d36802d7272a854ee64d52561a3d235b73c64c59ede8a95a4d0",
+    "contentHash": "cd1a9d3fc19762d8d18437f0fdb2779bdce34a131b922643572443e45c143888",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-836A8E9D516E6FEC",
@@ -44,8 +44,12 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -94,7 +98,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -127,6 +130,8 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
@@ -141,12 +146,7 @@
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7",
-      "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-22BBAF16578AD07C",
-      "ASC-REVIEW-FA5662AF68B13A9F"
+      "ASC-REVIEW-F42C454D9E75A8A7"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 121,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 97,
-      "moneyRecordCount": 69
+      "relationshipCount": 94,
+      "moneyRecordCount": 66
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 94 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 94 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

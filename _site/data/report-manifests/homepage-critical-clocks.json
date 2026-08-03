@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:04:24.113Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-03T06:52:00.052Z",
+  "pageCount": 127,
   "output": "downloads/homepage-critical-clocks.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Homepage Critical Clocks",
-    "contentHash": "016970d2cad6cafad2fc7c986d2d05aa5d4f5e0a9e31e716c92baf25e0422df2",
+    "contentHash": "079e10a15e68c45a34d5623f25dbae7f20fd44d218d1aa0926397af6da9d974f",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "3a425f0d5d683952bc0ad7ac",
@@ -130,6 +130,7 @@
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
@@ -145,21 +146,20 @@
       "256f98297be62e6e12591e9a",
       "3a021c1c1fb65abc89564b11",
       "8ddb3b7e4b5f3efe969f1614",
-      "de2b96c84f46cb60ca59fe4f",
-      "e2299e1c70246bd8a0616588"
+      "de2b96c84f46cb60ca59fe4f"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 92,
-      "disputedClaimCount": 32,
+      "primarySourceCount": 91,
+      "disputedClaimCount": 33,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 33,
-      "moneyRecordCount": 32
+      "moneyRecordCount": 33
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 92 A/B-grade public-record items are materially relevant to Homepage Critical Clocks.",
+        "conclusion": "The indexed record establishes that 91 A/B-grade public-record items are materially relevant to Homepage Critical Clocks.",
         "evidence": "Denmark, France, Greece, Italy and Spain are adopting customised versions of the EU age-verification solution (data/current-clock-evidence.json); Australia's under-16 social-media account restriction is in force (data/current-clock-evidence.json); EU urges Member States to make a common age-verification app available by the end of 2026 (data/current-clock-evidence.json); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/current-clock-evidence.json); EU age-verification blueprint is technically ready and supports national eIDs, passports and identity cards (data/current-clock-evidence.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

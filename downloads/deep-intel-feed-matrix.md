@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-08-02T21:11:47.272Z
+Generated: 2026-08-03T07:01:58.774Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -15,31 +15,31 @@ Generated: 2026-08-02T21:11:47.272Z
 - 88 — Live intel drops — live-intel.html
 
 ## Top items
-- 85 — Control Structure — Feed runner has not produced entity observations yet. — entity-briefs/control-structure.html
-- 85 — Control Structure — Feed runner has not produced entity observations yet. — entity-exposure/control-structure.html
-- 85 — Blackwater / Xe / Academi / Constellis lineage — USAspending awards — contractor-briefs/blackwater-constellis-lineage.html
-- 85 — Blackwater / Xe / Academi / Constellis lineage — Court records — contractor-briefs/blackwater-constellis-lineage.html
-- 85 — Blackwater / Xe / Academi / Constellis lineage — Congressional hearing material — contractor-briefs/blackwater-constellis-lineage.html
-- 85 — Blackwater / Xe / Academi / Constellis lineage — SEC or corporate records where available — contractor-briefs/blackwater-constellis-lineage.html
-- 85 — Blackwater / Xe / Academi / Constellis lineage — Sanctions / debarment checks — contractor-briefs/blackwater-constellis-lineage.html
-- 85 — Blackwater / Xe / Academi / Constellis lineage — News signals verified against primary records — contractor-briefs/blackwater-constellis-lineage.html
-- 85 — DynCorp / Amentum lineage — USAspending awards — contractor-briefs/dyncorp-amentum-lineage.html
-- 85 — DynCorp / Amentum lineage — Court records — contractor-briefs/dyncorp-amentum-lineage.html
-- 85 — DynCorp / Amentum lineage — Inspector General reports — contractor-briefs/dyncorp-amentum-lineage.html
-- 85 — DynCorp / Amentum lineage — Corporate transaction records — contractor-briefs/dyncorp-amentum-lineage.html
-- 85 — CACI International — SEC filings — contractor-briefs/caci-intelligence-contractor.html
-- 85 — CACI International — USAspending awards — contractor-briefs/caci-intelligence-contractor.html
-- 85 — CACI International — Court records — contractor-briefs/caci-intelligence-contractor.html
-- 85 — CACI International — Contract notices — contractor-briefs/caci-intelligence-contractor.html
-- 85 — Booz Allen Hamilton — SEC filings — contractor-briefs/booz-allen-intelligence-contractor.html
-- 85 — Booz Allen Hamilton — USAspending awards — contractor-briefs/booz-allen-intelligence-contractor.html
-- 85 — Booz Allen Hamilton — Lobbying records — contractor-briefs/booz-allen-intelligence-contractor.html
-- 85 — Booz Allen Hamilton — Court records — contractor-briefs/booz-allen-intelligence-contractor.html
-- 85 — Palantir government platforms — SEC filings — contractor-briefs/palantir-government-platforms.html
-- 85 — Palantir government platforms — USAspending awards — contractor-briefs/palantir-government-platforms.html
-- 85 — Palantir government platforms — Procurement notices — contractor-briefs/palantir-government-platforms.html
-- 85 — Palantir government platforms — Court records — contractor-briefs/palantir-government-platforms.html
-- 85 — Palantir government platforms — Policy documents — contractor-briefs/palantir-government-platforms.html
+- 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/centers-for-medicare-and-medicaid-services.html
+- 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/health-and-human-services-department.html
+- 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/homeland-security-department.html
+- 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/aapl.html
+- 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/alphabet-inc.html
+- 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
+- 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
+- 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
+- 85 — AVGO — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/avgo.html
+- 85 — Broadcom Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/broadcom-inc.html
+- 85 — GOOGL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/googl.html
+- 85 — MICROSOFT CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/microsoft-corp.html
+- 85 — MSFT — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/msft.html
+- 85 — NVDA — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nvda.html
+- 85 — NVIDIA CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nvidia-corp.html
+- 85 — Nuclear Regulatory Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nuclear-regulatory-commission.html
+- 85 — Securities and Exchange Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/securities-and-exchange-commission.html
+- 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/homeland-security-department.html
+- 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/centers-for-medicare-and-medicaid-services.html
+- 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/health-and-human-services-department.html
+- 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/aapl.html
+- 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/alphabet-inc.html
+- 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/amazon-com-inc.html
+- 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/amzn.html
+- 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/apple-inc.html
 - 72 — Trapped by a Facebook job advert, freed by a stranger in a taxi — live-intel.html
 - 72 — Recovery in Ukraine, one life at a time — live-intel.html
 - 72 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org — live-intel.html

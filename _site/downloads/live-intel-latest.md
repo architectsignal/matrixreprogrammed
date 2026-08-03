@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-02T21:21:07.195Z
+Collection completed: 2026-08-03T07:05:59.850Z
 Latest source publication: 2026-08-02T12:00:00.000Z
-Collection status: degraded-preserved-current-window
+Collection status: current-window-refreshed-no-new-items
 New items this collection: 0
 
 ## Freshness truth
-Source collection was degraded. Current in-window records were preserved without pretending they were newly published.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -66,13 +66,13 @@ Source collection was degraded. Current in-window records were preserved without
   - Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Christopher Wray's Gift to Attorney General Garland. Source first, claim second.
+  - Video hook: New public-record signal: Christopher Wray's Gift to Attorney General Garland
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-31 — Christopher Wray's Gift to Attorney General Garland (Final)
   - Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland/christopher-wrays-gift-to-attorney-general-garland-final/view
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-source drop in the Declassified Files And Public Archives lane: Christopher Wray's Gift to Attorney General Garland (Final). Source first, claim second.
+  - Video hook: New public-record signal: Christopher Wray's Gift to Attorney General Garland (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
@@ -194,6 +194,24 @@ Source collection was degraded. Current in-window records were preserved without
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — World Wrestling Entertainment
+  - Source: https://vault.fbi.gov/world-wrestling-entertainment
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World Wrestling Entertainment
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — World Wrestling Entertainment Part 01
+  - Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World Wrestling Entertainment Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — World Wrestling Entertainment Part 02 (Final)
+  - Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World Wrestling Entertainment Part 02 (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-28 — A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168039
   - Source class: primary-or-official
@@ -229,6 +247,48 @@ Source collection was degraded. Current in-window records were preserved without
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Brian Wells
+  - Source: https://vault.fbi.gov/brian-wells
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Brian Wells
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Brian Wells Part 01
+  - Source: https://vault.fbi.gov/brian-wells/brian-wells-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Brian Wells Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Brian Wells Part 02 (Final)
+  - Source: https://vault.fbi.gov/brian-wells/brian-wells-part-02-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Brian Wells Part 02 (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist
+  - Source: https://vault.fbi.gov/lufthansa-heist
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist Part 01
+  - Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist Part 02
+  - Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-02/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist Part 02
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Lufthansa Heist Part 03 (Final)
+  - Source: https://vault.fbi.gov/lufthansa-heist/lufthansa-heist-part-03-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lufthansa Heist Part 03 (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-27 — 75 years later, the promise to protect refugees faces its greatest test
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168036
@@ -271,16 +331,4 @@ Source collection was degraded. Current in-window records were preserved without
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Security Council LIVE: Briefing on Ukraine as deadly Russian strikes hit cities and ports
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-27 — Group in Congress pushing for more Epstein transparency - American Press
-  - Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Group in Congress pushing for more Epstein transparency - American Press
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-26 — Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - eurasiareview.com
-  - Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - eurasiareview.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

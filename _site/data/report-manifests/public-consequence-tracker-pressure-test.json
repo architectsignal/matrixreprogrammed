@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:07:15.238Z",
-  "pageCount": 123,
+  "generatedAt": "2026-08-03T06:56:02.591Z",
+  "pageCount": 121,
   "output": "downloads/public-consequence-tracker-pressure-test.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Public Consequence Tracker Pressure Test",
-    "contentHash": "e0571defed6e273c7ec29c6748088ffa7e1991d6af3ea75148ad1bad7d26b51d",
+    "contentHash": "5ef0fd10bdc83dee8ba3870e3c51abcb5851b6f50bf930aca98e644bef7d8ad9",
     "sourceIds": [
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
@@ -41,6 +41,7 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "e083e748ec6311742c2416e5",
       "e457b31e704efd10ec987a59",
       "e349935405c0c31e3807b5af",
       "nassar-fbi-oig-2021",
@@ -58,22 +59,30 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-40BE75698429CC21",
       "bf041695a279c3dc5412cdf4",
       "9cb9631a2f2749b86bc69e0a",
       "45f5269389def99607b5a517",
       "74fb2863cc9a8120f3c68b67",
       "4961972398d896435d33f3f7",
       "deutsche-bank-epstein-dfs-2020",
-      "us-doj",
-      "gao-hq",
       "3a425f0d5d683952bc0ad7ac",
       "ecd4a1111010f13b2d74bf8c",
       "EFS-001-R006",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
-      "e083e748ec6311742c2416e5",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "b4cb47ea50dc901364239e9f",
       "8212c1ebe163e30add33aeaf",
       "b866e2c7eb4ced9098559c86",
@@ -125,29 +134,20 @@
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
-      "ASC-REVIEW-5F69F7CCEE3F7274",
-      "ASC-REVIEW-C369A84AD971DD75",
-      "ASC-REVIEW-A6F3D2598C5BA884",
-      "ASC-REVIEW-7729CF4536080393",
-      "ASC-REVIEW-EAB6011874016286",
-      "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
-      "ASC-REVIEW-875607DBB9C95C91",
-      "ASC-REVIEW-BE461670E34D316C",
-      "ASC-REVIEW-CDDCEFC70DF63561"
+      "ASC-REVIEW-5F69F7CCEE3F7274"
     ],
     "metrics": {
       "evidenceCount": 128,
-      "primarySourceCount": 69,
-      "disputedClaimCount": 61,
+      "primarySourceCount": 77,
+      "disputedClaimCount": 53,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 55,
-      "moneyRecordCount": 34
+      "relationshipCount": 57,
+      "moneyRecordCount": 26
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Public Consequence Tracker Pressure Test.",
+        "conclusion": "The indexed record establishes that 77 A/B-grade public-record items are materially relevant to Public Consequence Tracker Pressure Test.",
         "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -167,7 +167,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 55 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 57 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -182,7 +182,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 55 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 57 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Official health investigations documented abuse and enabling access",

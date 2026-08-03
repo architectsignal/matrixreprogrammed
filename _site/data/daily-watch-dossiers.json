@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "1.0.0",
-  "updated": "2026-08-02T21:19:08.205Z",
+  "updated": "2026-08-03T07:03:22.037Z",
   "rankingPolicy": {
     "mode": "stable-incumbent-evidence-promotion",
     "promotionMargin": 14,
@@ -9,19 +9,19 @@
     "decisions": {
       "person": {
         "changed": false,
-        "reason": "The same entity remains the current evidence leader.",
+        "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
+        "incumbent": "Bill Gates",
         "incumbentScore": 91,
+        "challenger": "Elon Musk",
         "challengerScore": 91,
+        "required": 105,
         "marginRequired": 14
       },
       "institution": {
         "changed": false,
-        "reason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent.",
-        "incumbent": "Securities and Exchange Commission",
+        "reason": "The same entity remains the current evidence leader.",
         "incumbentScore": 143,
-        "challenger": "U.S. Securities and Exchange Commission",
         "challengerScore": 143,
-        "required": 157,
         "marginRequired": 14
       },
       "family": {
@@ -39,16 +39,16 @@
   "person": {
     "slot": "person",
     "name": "Bill Gates",
-    "generatedAt": "2026-08-02T21:19:08.205Z",
+    "generatedAt": "2026-08-03T07:03:22.037Z",
     "ranking": {
       "score": 91,
-      "status": "retained-current-leader",
+      "status": "incumbent-held-position",
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "replacedEntity": "",
-      "challengerHeld": "",
-      "challengerScore": null,
-      "promotionReason": ""
+      "challengerHeld": "Elon Musk",
+      "challengerScore": 91,
+      "promotionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
     },
     "executiveAssessment": {
       "whatWasFound": "profile route",
@@ -77,7 +77,7 @@
         "health and development philanthropy",
         "health"
       ],
-      "graphScore": 100
+      "graphScore": 70
     },
     "familyAccess": null,
     "legalAndWrongdoingRecord": [],
@@ -139,16 +139,16 @@
   "institution": {
     "slot": "institution",
     "name": "Securities and Exchange Commission",
-    "generatedAt": "2026-08-02T21:19:08.205Z",
+    "generatedAt": "2026-08-03T07:03:22.037Z",
     "ranking": {
       "score": 143,
-      "status": "incumbent-held-position",
+      "status": "retained-current-leader",
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "replacedEntity": "",
-      "challengerHeld": "U.S. Securities and Exchange Commission",
-      "challengerScore": 143,
-      "promotionReason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent."
+      "challengerHeld": "",
+      "challengerScore": null,
+      "promotionReason": ""
     },
     "executiveAssessment": {
       "whatWasFound": "named-in-public-record, refined-from-organization",
@@ -164,7 +164,16 @@
         "Procurement and public-private implementation"
       ]
     },
-    "profile": null,
+    "profile": {
+      "id": "securities-and-exchange-commission",
+      "type": "missing record",
+      "layer": "evidence-and-records",
+      "route": "entity-briefs/securities-and-exchange-commission.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "graphScore": 54
+    },
     "familyAccess": null,
     "legalAndWrongdoingRecord": [
       {
@@ -1703,7 +1712,7 @@
   "family": {
     "slot": "family",
     "name": "Wallenberg family and foundations",
-    "generatedAt": "2026-08-02T21:19:08.205Z",
+    "generatedAt": "2026-08-03T07:03:22.037Z",
     "ranking": {
       "score": 122,
       "status": "incumbent-held-position",

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-02T20:59:41.857Z",
-  "pageCount": 110,
+  "generatedAt": "2026-08-03T06:45:33.663Z",
+  "pageCount": 112,
   "output": "downloads/accountability-tracker-pressure-test.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Accountability Tracker Pressure Test",
-    "contentHash": "dbc7d751d75945d5e3b0e0b0ac524667168c6a294d7eddcb6e048cf96a54382d",
+    "contentHash": "28158344436e9e32ea652d8774dd16bf2e9f662d50501e305e7d9e36b54d5b93",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
-      "gao-hq",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -32,7 +32,7 @@
       "74fb2863cc9a8120f3c68b67",
       "4961972398d896435d33f3f7",
       "deutsche-bank-epstein-dfs-2020",
-      "us-doj",
+      "gao-hq",
       "9f77464e401ac59ad1adb812",
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
@@ -61,9 +61,18 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "a8d2d3bf834ea59c6a49b8ea",
       "6188547d91106e0f9d3bce50",
       "8212c1ebe163e30add33aeaf",
@@ -101,6 +110,7 @@
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-40BE75698429CC21",
       "f8da9551192fb7f98b4efa86",
       "54197b23c792a122f53a863b",
       "5295a33003172878f9880122",
@@ -108,11 +118,7 @@
       "275d6c3caca158f7a3e15780",
       "26b90533dbf7d2ed42f02de6",
       "contractor-blackwater-xe-academi-constellis-lineage",
-      "sec-hq",
-      "us-treasury",
-      "fbi-hq",
-      "cia-hq",
-      "eu-commission",
+      "us-doj",
       "3a425f0d5d683952bc0ad7ac",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
@@ -129,27 +135,21 @@
       "family-offices-bayshore-global-management",
       "family-offices-euclidean-capital",
       "family-offices-wildcat-capital-management",
-      "family-offices-tengelmann-twenty-one",
-      "family-offices-athos-service",
-      "family-offices-waycrosse",
-      "family-offices-msd-capital",
-      "family-offices-yard-ventures",
-      "family-offices-blue-pool-capital",
-      "family-offices-rit-capital-partners"
+      "family-offices-tengelmann-twenty-one"
     ],
     "metrics": {
       "evidenceCount": 129,
-      "primarySourceCount": 95,
-      "disputedClaimCount": 30,
+      "primarySourceCount": 94,
+      "disputedClaimCount": 31,
       "newEntityCount": 5,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 28,
-      "moneyRecordCount": 38
+      "relationshipCount": 38,
+      "moneyRecordCount": 32
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 95 A/B-grade public-record items are materially relevant to Accountability Tracker Pressure Test.",
-        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); U.S. Government Accountability Office (data/geographic-power-atlas-data.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 94 A/B-grade public-record items are materially relevant to Accountability Tracker Pressure Test.",
+        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 28 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); General Assembly LIVE: Debating US sanctions against Cuba; Westminster inquiry examined political and policing responses; Broadmoor investigation examined Savile's access and abuse",
+        "inference": "The indexed set contains 38 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; New York DFS enforcement action concerning the bank's Epstein relationship; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final)",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -183,16 +183,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 28 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 38 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Official health investigations documented abuse and enabling access",
           "New York DFS enforcement action concerning the bank's Epstein relationship",
           "Christopher Wray's Gift to Attorney General Garland",
           "Christopher Wray's Gift to Attorney General Garland (Final)",
-          "General Assembly LIVE: Debating US sanctions against Cuba",
-          "Westminster inquiry examined political and policing responses",
-          "Broadmoor investigation examined Savile's access and abuse"
+          "World Wrestling Entertainment",
+          "World Wrestling Entertainment Part 01",
+          "World Wrestling Entertainment Part 02 (Final)"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

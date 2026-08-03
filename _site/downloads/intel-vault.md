@@ -1,11 +1,21 @@
 # Intel Vault
 
-Updated: 2026-08-02T21:21:07.195Z
+Updated: 2026-08-03T07:05:59.850Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Group in Congress pushing for more Epstein transparency - American Press
+- Published: 2026-07-27T00:13:58.000Z
+- Source: https://news.google.com/rss/articles/CBMimAFBVV95cUxPZ3ZLcE11LXBkUW90eU9QNWM3Tnl6bWVVdzdrbzF4czRVWllDM1JXZlN6cXR2bTZyRExfbWtyMzM0dFBaTFFxcWg4cDVFZDZWTnFpbVhidTBtX01sb0dueFhoWXUwX1c3TFhTVVc3N0c3SWZEMkZQM210VFFROXV4TzNCSF91bE9xdEN0NHBlRnhLOTJRLWVndg?oc=5
+- Source class: primary-or-official
+
+### Bipartisan Group In Congress Demands Greater Transparency On Epstein Files - eurasiareview.com
+- Published: 2026-07-26T23:43:09.000Z
+- Source: https://news.google.com/rss/articles/CBMitAFBVV95cUxPSjdacTFUcDZHRmFKUTRQSE56dGJHMVh6THNva3h4b2t5bnBMTE1pNHhZV1NoOEtVOVJNSHRacUtGdGpWOHpQM09oWU8ycXFCaFN5YlpONUttT1dZQlNxYzBSelc2MzRPTzhBZm1tZ2JidkZZQUVCU2g5bk1Id2lIMkJ3azM2VjUwdkdrTzU5a0NyM2xSUzFJdFhENlItQ3pPNG03RmJlWUF1QURYWVZjSEJaTm8?oc=5
+- Source class: primary-or-official
 
 ### After war took her leg, this Ukrainian gymnast refused to give up
 - Published: 2026-07-26T12:00:00.000Z

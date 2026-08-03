@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:06:01.728Z",
-  "pageCount": 103,
+  "generatedAt": "2026-08-03T06:54:22.882Z",
+  "pageCount": 108,
   "output": "downloads/newsletter-worker-patch-report.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Newsletter Worker Patch Report",
-    "contentHash": "bef3fa4d59fe5d7673a1957ed1f9d443ff947a4b74d4279b074a853fe1aa923a",
+    "contentHash": "ba1e260972f4ac51b7b2d2df9b8977986284c06ad49f2d7452ac78557e754dc5",
     "sourceIds": [
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
@@ -16,7 +16,6 @@
       "savile-health-investigations-2014",
       "us-doj",
       "gao-hq",
-      "14d04c0943d24cbe6a1926db",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -52,10 +51,21 @@
       "9f52702daea7fcbbfb32b9bc",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "b4cb47ea50dc901364239e9f",
       "b9006a5edc55cc88bfccd04a",
       "06baa45bea3e2e15eb80eff9",
       "a8d2d3bf834ea59c6a49b8ea",
+      "eb5d60860a79b38aeefa3633",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "e457b31e704efd10ec987a59",
@@ -86,10 +96,12 @@
       "bf041695a279c3dc5412cdf4",
       "455a3e286a1556971b9f9ec3",
       "30b4ccd6bdb28397e374fc9e",
+      "a2bb881829aebc0f3da87989",
+      "50146345833ee35e94dd4940",
       "gates-epstein-meetings-2011-2014",
       "deutsche-bank-epstein-dfs-2020",
       "EP-AI-004",
-      "pdf-newsletter-worker-patch-report-fc6632055302",
+      "pdf-newsletter-worker-patch-report-b6d50b467e26",
       "sec-hq",
       "us-treasury",
       "fbi-hq",
@@ -124,19 +136,7 @@
       "family-offices-kirkbi",
       "family-offices-pontegadea",
       "family-offices-l-catterton-family-capital-routes",
-      "family-offices-premjiinvest",
-      "foundations-bill-melinda-gates-foundation",
-      "foundations-novo-nordisk-foundation",
-      "foundations-wellcome-trust",
-      "foundations-howard-hughes-medical-institute",
-      "foundations-ford-foundation",
-      "foundations-robert-wood-johnson-foundation",
-      "foundations-william-and-flora-hewlett-foundation",
-      "foundations-lilly-endowment",
-      "foundations-david-and-lucile-packard-foundation",
-      "foundations-open-society-foundations",
-      "foundations-bloomberg-philanthropies",
-      "foundations-rockefeller-foundation"
+      "family-offices-premjiinvest"
     ],
     "metrics": {
       "evidenceCount": 130,
@@ -144,8 +144,8 @@
       "disputedClaimCount": 18,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 20,
-      "moneyRecordCount": 57
+      "relationshipCount": 30,
+      "moneyRecordCount": 48
     },
     "evidenceBasedConclusions": [
       {
@@ -169,8 +169,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 20 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Official health investigations documented abuse and enabling access; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
+        "inference": "The indexed set contains 30 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Official health investigations documented abuse and enabling access; Christopher Wray's Gift to Attorney General Garland; Christopher Wray's Gift to Attorney General Garland (Final); World Wrestling Entertainment; World Wrestling Entertainment Part 01; World Wrestling Entertainment Part 02 (Final); Brian Wells; Brian Wells Part 01",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -184,16 +184,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 20 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 30 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Official health investigations documented abuse and enabling access",
           "Christopher Wray's Gift to Attorney General Garland",
           "Christopher Wray's Gift to Attorney General Garland (Final)",
-          "Westminster inquiry examined political and policing responses",
-          "IICSA documented predatory activities and institutional failures",
-          "Broadmoor investigation examined Savile's access and abuse",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer"
+          "World Wrestling Entertainment",
+          "World Wrestling Entertainment Part 01",
+          "World Wrestling Entertainment Part 02 (Final)",
+          "Brian Wells",
+          "Brian Wells Part 01"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

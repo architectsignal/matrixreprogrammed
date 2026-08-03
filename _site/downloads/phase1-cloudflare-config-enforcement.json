@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:21:22.584Z",
+  "phase": 11,
+  "changed": {
+    "toml": true,
+    "jsonc": false
+  },
+  "sourcesOfTruth": [
+    "wrangler.jsonc",
+    "wrangler.toml",
+    "Cloudflare dashboard runtime variables"
+  ],
+  "activePrecedenceProtected": true,
+  "keepVars": true,
+  "emailAutomationEnabled": true,
+  "emailTransactionalEnabled": true,
+  "brevoDomainAuthenticated": true,
+  "personalizedBatchLimit": 100,
+  "retryQuarantineBefore": "2026-07-18T00:00:00.000Z",
+  "membersFromEmail": "members@matrixreprogrammed.com",
+  "membersReplyToEmail": "njmgroupfrance@gmail.com",
+  "paypalRuntimeSource": "Cloudflare dashboard",
+  "paypalRepositoryOverrides": false,
+  "failures": [],
+  "boundary": "Both Wrangler formats preserve Cloudflare dashboard payment variables. Daily and weekly reporting automation is active only through verified consent, selected preferences, suppressions, per-recipient unsubscribe links, D1 idempotency and a maximum batch of 100. PayPal remains controlled by its separate Worker, D1 and dashboard activation gates."
+}

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:08:49.427Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-03T06:58:09.947Z",
+  "pageCount": 124,
   "output": "downloads/site-intelligence-graph.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Site Intelligence Graph",
-    "contentHash": "79b20e9ef057e606e0d2fd389bdd24c3c7440dcf858266c8d284e77072fec290",
+    "contentHash": "5736979d01b38f67bf78cb94c82bdc6a9eb4c7db6339a0c35651f6cc144379bf",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "1769af26a7bda813406cd8f5",
@@ -75,6 +75,8 @@
       "ASC-REVIEW-288CD8D5C42C050E",
       "ASC-REVIEW-EA0D28B414E271DB",
       "ASC-REVIEW-6A0CBB4AE4D6A280",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-54C7773F8BEDE2F4",
@@ -144,14 +146,12 @@
       "743a389be27470e9f7499f57",
       "82750a3e20c221986cd0cabe",
       "8520c7f63276f20bba20b661",
-      "853ccda81528512d55dccf72",
-      "89b0fad6a2b4b9533d9b03f5",
-      "9f52702daea7fcbbfb32b9bc"
+      "853ccda81528512d55dccf72"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 36,
-      "disputedClaimCount": 64,
+      "primarySourceCount": 34,
+      "disputedClaimCount": 66,
       "newEntityCount": 11,
       "updatedAssessmentCount": 1,
       "relationshipCount": 53,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 36 A/B-grade public-record items are materially relevant to Site Intelligence Graph.",
+        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Site Intelligence Graph.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

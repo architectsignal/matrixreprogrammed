@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:07:53.833Z",
+  "generatedAt": "2026-08-03T06:56:56.308Z",
   "pageCount": 103,
   "output": "downloads/restore-public-core-routes.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Restore Public Core Routes",
-    "contentHash": "c5fd633afa770780bb92acd54806dcbdd2f7614628768e43301398b1ec71e450",
+    "contentHash": "21c42b9b8bdb0492d3d24438ceef902bc89d76dead8c88f66ec3b411a6fa3ff2",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
@@ -15,13 +15,12 @@
       "34805734b1ad3b73f0ede0d8",
       "f59da50ababa3ddae79a8f1c",
       "peter-ball-iicsa-support-2019",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -36,10 +35,15 @@
       "72ef7895f95288946ccb3cff",
       "3c9c23f7f9a1cec81ef90f59",
       "peter-ball-conviction-2015",
+      "ASC-REVIEW-DAB5BBAD900386F9",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -52,7 +56,6 @@
       "535d2f595c3ec1621e13dd0f",
       "1769af26a7bda813406cd8f5",
       "3a425f0d5d683952bc0ad7ac",
-      "fe3f3107cffaf5599a7b09f9",
       "9e8903fd8dfa9b54a1d6db30",
       "ec1316fb1fb70c83dc347bb6",
       "085baf8dafdf6692a4203706",
@@ -143,23 +146,20 @@
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
       "maxwell-appeal-2025",
-      "r-kelly-appellate-finality-2025",
-      "janner-iicsa-2022",
-      "epstein-opr-review-2020",
-      "cyril-smith-iicsa-2018"
+      "r-kelly-appellate-finality-2025"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 44,
-      "disputedClaimCount": 28,
+      "primarySourceCount": 41,
+      "disputedClaimCount": 32,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 16,
+      "relationshipCount": 14,
       "moneyRecordCount": 21
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Restore Public Core Routes.",
+        "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Restore Public Core Routes.",
         "evidence": "IICSA found serious Church failures and examined prominent support (data/criminal-conduct-registry.json); Guilty pleas to indecent assaults and misconduct in public office (data/criminal-conduct-registry.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 16 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Media / Narrative Theory; Media / Narrative Theory; Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Professional and institutional intermediaries may be more informative than raw contact lists; Top contractor lane; Securities and Exchange Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 16 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Media / Narrative Theory",
           "Media / Narrative Theory",

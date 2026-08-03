@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:03:42.542Z",
-  "pageCount": 123,
+  "generatedAt": "2026-08-03T06:51:03.622Z",
+  "pageCount": 122,
   "output": "downloads/final-investigation-hardening.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Final Investigation Hardening",
-    "contentHash": "420cfae502fb3394306335975ec3e328a9abab66ecbb676be27d7c8faaeb998f",
+    "contentHash": "7e5a6a5995a5f092479177e8a803e9dfaaa09fd9ad528a226f230109cd7cb767",
     "sourceIds": [
       "peter-ball-conviction-2015",
       "10420eb4159dd9ba47a3f7cb",
@@ -33,6 +33,7 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -50,7 +51,10 @@
       "janner-charges-2015",
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
+      "7ed151a515391f967d229642",
       "1239a2b40856a94ca9309bb4",
+      "0c5f51804baf8e9e2c1fdd0b",
+      "6d665d935673091233751767",
       "360e80c162081c85d2c680ef",
       "EFS-001-R006",
       "a27dd3c9a4cf6bbd952989d3",
@@ -64,16 +68,10 @@
       "1583ed9e90a5874047a33041",
       "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "e083e748ec6311742c2416e5",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-d6d67d44",
       "388b609fd969af10879c06f9",
       "9cbfbb0859bcf2cc4da3c75f",
       "b4cb47ea50dc901364239e9f",
@@ -130,7 +128,9 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-EC681923A21C3AFD",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
@@ -142,16 +142,16 @@
     ],
     "metrics": {
       "evidenceCount": 132,
-      "primarySourceCount": 93,
-      "disputedClaimCount": 44,
+      "primarySourceCount": 91,
+      "disputedClaimCount": 46,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 46,
+      "relationshipCount": 49,
       "moneyRecordCount": 19
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 93 A/B-grade public-record items are materially relevant to Final Investigation Hardening.",
+        "conclusion": "The indexed record establishes that 91 A/B-grade public-record items are materially relevant to Final Investigation Hardening.",
         "evidence": "Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -171,7 +171,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 46 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; MINDCUBED LLC — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -186,7 +186,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 46 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",

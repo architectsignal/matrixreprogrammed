@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:04:08.347Z",
-  "pageCount": 126,
+  "generatedAt": "2026-08-03T06:51:38.713Z",
+  "pageCount": 123,
   "output": "downloads/full-site-audit-target-detection-patch.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Full Site Audit Target Detection Patch",
-    "contentHash": "aabbf5f5ee7d8251d15b8d5e56c24ef5d55d4f05907f5084ab975c4c0f277aa7",
+    "contentHash": "dd24531751382a5afc7a064b777ca18e00e077a2b687522c878227e92e2d4127",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -33,6 +33,7 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "aa125ed22fe885dd57f96c32",
       "4c372edcf20b760ae3305f10",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -48,8 +49,12 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E8F3DDB7E3724A74",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -72,13 +77,6 @@
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
       "ec968f2ec6ba82128b4cd91b",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "e083e748ec6311742c2416e5",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
@@ -146,20 +144,22 @@
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
       "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967"
+      "ASC-REVIEW-5F2C7C064DEAB967",
+      "ASC-REVIEW-008D94FCB408C868",
+      "ASC-REVIEW-5F86F35C103C9621"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 30,
-      "disputedClaimCount": 97,
+      "primarySourceCount": 24,
+      "disputedClaimCount": 103,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 91,
-      "moneyRecordCount": 83
+      "relationshipCount": 93,
+      "moneyRecordCount": 86
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 30 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
+        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 91 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 93 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Matrix Reprogrammed Canonical Intelligence Record; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 91 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 93 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",

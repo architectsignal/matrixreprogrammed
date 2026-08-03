@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:08:04.747Z",
-  "pageCount": 96,
+  "generatedAt": "2026-08-03T06:57:11.019Z",
+  "pageCount": 94,
   "output": "downloads/search-quality-benchmark.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Search Quality Benchmark",
-    "contentHash": "7291fa00daab47d0bc5188e50bc43f172c9178763c485013542b573370c52c0a",
+    "contentHash": "99c65b43ff3a3cd7f885fe56b32506c04051a8ea256d0b7e479940c879556204",
     "sourceIds": [
       "157cdab04b61ae6309c0c713",
       "3a425f0d5d683952bc0ad7ac",
@@ -59,7 +59,11 @@
       "ASC-REVIEW-08CB150A42984598",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-55AEF4F6803A279A",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
@@ -75,6 +79,7 @@
       "bbf59ae4094608bcd2c37305",
       "4961972398d896435d33f3f7",
       "9e8310c49b990aa62d2b0921",
+      "EP-AI-004",
       "9e8903fd8dfa9b54a1d6db30",
       "ec1316fb1fb70c83dc347bb6",
       "6510364e9b1a1504b9f99521",
@@ -139,24 +144,20 @@
       "epstein-opr-review-2020",
       "cyril-smith-westminster-2020",
       "peter-ball-iicsa-support-2019",
-      "cyril-smith-iicsa-2018",
-      "janner-charges-2015",
-      "savile-health-investigations-2014",
-      "savile-broadmoor-2014",
-      "ASC-REVIEW-7729CF4536080393"
+      "cyril-smith-iicsa-2018"
     ],
     "metrics": {
-      "evidenceCount": 137,
-      "primarySourceCount": 39,
-      "disputedClaimCount": 15,
+      "evidenceCount": 138,
+      "primarySourceCount": 36,
+      "disputedClaimCount": 18,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 15,
+      "relationshipCount": 12,
       "moneyRecordCount": 48
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Search Quality Benchmark.",
+        "conclusion": "The indexed record establishes that 36 A/B-grade public-record items are materially relevant to Search Quality Benchmark.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Euro area inflation was 2.8% in June 2026 while energy prices were 8.7% higher than a year earlier (data/clock-wall.json); Euro area inflation was 2.8% in June 2026 while energy prices were 8.7% higher than a year earlier (data/global-risk-clocks.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -176,7 +177,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 15 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; INDUSTRIAL BANK — District of Columbia Courts; Bill Gates → Health And Development Philanthropy: ecosystem hint; High prices and funding cuts stall HIV prevention revolution; United Nations → health: institution layer; Top contractor lane; Illuminati / Secret Society Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -191,7 +192,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 15 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",

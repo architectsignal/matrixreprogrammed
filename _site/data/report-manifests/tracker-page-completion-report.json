@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:09:43.312Z",
-  "pageCount": 94,
+  "generatedAt": "2026-08-03T06:59:22.375Z",
+  "pageCount": 95,
   "output": "downloads/tracker-page-completion-report.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Tracker Page Completion Report",
-    "contentHash": "7c4cf004143be17bd3ce27e9be6a1d6c555318733a9592f60f65dfdc86de7f98",
+    "contentHash": "2c33ee7cbd116ce0a7d01ea8d64fe0e9b38f3bd5d1356191455eac7272adc7ee",
     "sourceIds": [
       "14d04c0943d24cbe6a1926db",
       "e72d22f4f28eb53e3173d0a6",
@@ -14,6 +14,7 @@
       "24a844c3ddb5aecaad25e9bc",
       "57c45b5418e8e6b512f06603",
       "EFS-001-R006",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -43,10 +44,6 @@
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
-      "us-doj",
-      "fbi-hq",
-      "cia-hq",
-      "gao-hq",
       "9f77464e401ac59ad1adb812",
       "30ad4c24b86fb43ebd917c6b",
       "05e609f8ccfd225cfc787019",
@@ -146,20 +143,23 @@
       "0cb9c1bcf262e9e0e0509be9",
       "36ef6573c89302c4d499353a",
       "f8f6be9577d182b3d8689b02",
-      "48af9fa2970ea18e6c6d2f1a"
+      "48af9fa2970ea18e6c6d2f1a",
+      "49868f40a51da1e94caf3909",
+      "a78f5c8ec206e2294c0fb2a3",
+      "fe4097a90c116091bfcd6b9a"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 32,
+      "primarySourceCount": 28,
       "disputedClaimCount": 0,
-      "newEntityCount": 6,
+      "newEntityCount": 8,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 87,
+      "relationshipCount": 90,
       "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
+        "conclusion": "The indexed record establishes that 28 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
         "evidence": "SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 87 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 87 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-31T08:12:09.685Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

@@ -1,23 +1,23 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T21:19:08.205Z",
+  "generatedAt": "2026-08-03T07:03:22.037Z",
   "promotionMargin": 14,
   "decisions": {
     "person": {
       "changed": false,
-      "reason": "The same entity remains the current evidence leader.",
+      "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
+      "incumbent": "Bill Gates",
       "incumbentScore": 91,
+      "challenger": "Elon Musk",
       "challengerScore": 91,
+      "required": 105,
       "marginRequired": 14
     },
     "institution": {
       "changed": false,
-      "reason": "U.S. Securities and Exchange Commission reached 143, below the 157 points required to replace the incumbent.",
-      "incumbent": "Securities and Exchange Commission",
+      "reason": "The same entity remains the current evidence leader.",
       "incumbentScore": 143,
-      "challenger": "U.S. Securities and Exchange Commission",
       "challengerScore": 143,
-      "required": 157,
       "marginRequired": 14
     },
     "family": {

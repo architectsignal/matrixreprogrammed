@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-08-02T21:02:11.192Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-03T06:48:53.381Z",
+  "pageCount": 124,
   "output": "downloads/deploy-status-current-mission-patch.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Deploy Status Current Mission Patch",
-    "contentHash": "f853ab2c52444103d54fa9e0765d8dc46498e71454f990bd40bdabad8bc0f95f",
+    "contentHash": "6832afe8e0704e01df5b55d98ad29c1e8caeecc376580a1fa1f71c6601b72049",
     "sourceIds": [
-      "c1520a15d6e62871a66c558e",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -17,7 +16,7 @@
       "d7398c0c72a085a05c90422c",
       "5ce17839086eddf839270b1a",
       "9848ec4b4c3f6c2693269839",
-      "58a212e4e1a93007ec5b3d6d",
+      "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "b7e4a66335a706ef5097117f",
       "digital-euro-parliament-hurdle-2026-06-23",
@@ -46,8 +45,7 @@
       "ad23fb22757e50c30b3d487c",
       "1c352ab364fbfca06ab12a57",
       "5b6b5c0285c3c8742768ea5c",
-      "ff1a3a77816af400f09ab95e",
-      "eb3448928554960651da56f6",
+      "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
@@ -56,6 +54,16 @@
       "e083e748ec6311742c2416e5",
       "source-change-a334a207405ec629b4be337d",
       "source-change-c452df757991611cb06ec88a",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "b4cb47ea50dc901364239e9f",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
@@ -91,7 +99,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -124,6 +131,8 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
@@ -137,30 +146,21 @@
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7",
-      "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-836A8E9D516E6FEC",
-      "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-22BBAF16578AD07C",
-      "ASC-REVIEW-FA5662AF68B13A9F"
+      "ASC-REVIEW-E6C400911BD1A158"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 31,
-      "disputedClaimCount": 106,
+      "primarySourceCount": 39,
+      "disputedClaimCount": 98,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 91,
-      "moneyRecordCount": 67
+      "relationshipCount": 96,
+      "moneyRecordCount": 61
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 31 A/B-grade public-record items are materially relevant to Deploy Status Current Mission Patch.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Deploy Status Current Mission Patch.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
+        "conclusion": "The most defensible current assessment is based on “World Wrestling Entertainment,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "World Wrestling Entertainment This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 91 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 91 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

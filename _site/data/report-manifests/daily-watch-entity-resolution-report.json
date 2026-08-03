@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:01:35.139Z",
+  "generatedAt": "2026-08-03T06:48:04.635Z",
   "pageCount": 135,
   "output": "downloads/daily-watch-entity-resolution-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Daily Watch Entity Resolution Report",
-    "contentHash": "818587861f628d004ce5cfb6361119aae7552c837be440db41dd9a2b22057f0b",
+    "contentHash": "bf39aa88505afb39446a6d30008bbb4266546c3460291e0fa21f6f880a2013d3",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
@@ -64,6 +64,7 @@
       "72ef7895f95288946ccb3cff",
       "ASC-REVIEW-83A2CD51E51B5E0E",
       "ASC-REVIEW-C0E6134747580127",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
@@ -81,6 +82,7 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-288CD8D5C42C050E",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -92,17 +94,18 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-AB5A700449B10AEC",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
+      "26b90533dbf7d2ed42f02de6",
       "157cdab04b61ae6309c0c713",
       "360e80c162081c85d2c680ef",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-a334a207405ec629b4be337d",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -122,7 +125,6 @@
       "ASC-REVIEW-5F69F7CCEE3F7274",
       "ASC-REVIEW-C369A84AD971DD75",
       "ASC-REVIEW-A6F3D2598C5BA884",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -144,22 +146,20 @@
       "ASC-REVIEW-6A0CBB4AE4D6A280",
       "ASC-REVIEW-AE10394716B1B048",
       "ASC-REVIEW-F5CA53DC99863DAC",
-      "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D"
+      "ASC-REVIEW-0914587401D9BDE0"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 39,
-      "disputedClaimCount": 97,
+      "primarySourceCount": 36,
+      "disputedClaimCount": 99,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 52
+      "relationshipCount": 76,
+      "moneyRecordCount": 51
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Daily Watch Entity Resolution Report.",
+        "conclusion": "The indexed record establishes that 36 A/B-grade public-record items are materially relevant to Daily Watch Entity Resolution Report.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; DELL MARKETING L.P. — District of Columbia Courts; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
   }
 }

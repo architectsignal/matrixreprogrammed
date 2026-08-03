@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-03T06:59:53.073Z
+Generated: 2026-08-03T15:15:58.540Z
 
 ## Official Boundary
 
@@ -49,12 +49,12 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### Epstein files: How victims remain exposed to identification - DW.com
-- Type: debunk/fake-media-risk
+### What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+- Type: sighting-claim
 - Status: unverified-claim
-- Evidence level: 5
+- Evidence level: 3
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
-- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
+- Source: https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
+- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
 
-Epstein files: How victims remain exposed to identification DW.com
+What we know about Melania Trump and Jeffrey Epstein ABC News - Breaking News, Latest News and Videos

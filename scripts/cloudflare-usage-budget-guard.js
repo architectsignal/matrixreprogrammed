@@ -5,7 +5,11 @@ const fs = require('fs');
 const path = require('path');
 
 const mode = process.argv[2] || 'check';
+// Legacy workflow token retained because deploy.yml already routes this exact value
+// into owner-exception mode. The authorization date is independently bound below.
 const oneTimeAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
+const oneTimeExceptionDate = '2026-08-03';
+const oneTimeSnapshotDate = '2026-08-02';
 const policyPath = path.resolve(
   process.env.MATRIX_CLOUDFLARE_BUDGET_POLICY_PATH || '.github/build-budget-policy.json'
 );
@@ -79,21 +83,35 @@ try {
       month: '2-digit',
       day: '2-digit'
     }).format(new Date());
-    if (londonDate !== '2026-08-02') {
-      fail(`The one-time billable-build exception expired; London date is ${londonDate}.`);
+    if (londonDate !== oneTimeExceptionDate) {
+      fail(`The one-time billable-build exception is valid only on ${oneTimeExceptionDate}; London date is ${londonDate}.`);
       process.exit();
     }
     if (process.env.CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION !== oneTimeAuthorization) {
       fail('The one-time owner authorization phrase did not match.');
       process.exit();
     }
-    if (!budget.currentBillingPeriodLocked || observedBillable !== 5470 || observedCost !== 27.34) {
-      fail('The one-time exception is not bound to the locked 2026-08-02 owner usage snapshot.');
+    if (
+      !budget.currentBillingPeriodLocked ||
+      policy.ownerUsageSnapshot?.observedOn !== oneTimeSnapshotDate ||
+      observedBillable !== 5470 ||
+      observedCost !== 27.34
+    ) {
+      fail(`The one-time exception is not bound to the locked ${oneTimeSnapshotDate} owner usage snapshot.`);
+      process.exit();
+    }
+    if (process.env.GITHUB_EVENT_NAME && process.env.GITHUB_EVENT_NAME !== 'workflow_dispatch') {
+      fail(`The one-time exception requires workflow_dispatch, not ${process.env.GITHUB_EVENT_NAME}.`);
+      process.exit();
+    }
+    if (process.env.GITHUB_RUN_ATTEMPT && process.env.GITHUB_RUN_ATTEMPT !== '1') {
+      fail('The one-time exception cannot be used for a workflow re-run attempt.');
       process.exit();
     }
     console.log(
       'Cloudflare one-time owner exception PASS: one billable production build is authorized only on ' +
-      '2026-08-02 Europe/London; the recorded snapshot remains 5,470 billable minutes and $27.34.'
+      `${oneTimeExceptionDate} Europe/London against the recorded ${oneTimeSnapshotDate} snapshot ` +
+      'of 5,470 billable minutes and $27.34. All non-budget release gates remain mandatory.'
     );
     process.exit();
   }

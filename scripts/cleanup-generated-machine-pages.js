@@ -12,6 +12,10 @@ function isHtmlOrAlias(name) {
   return name.endsWith('.html') || !path.extname(name);
 }
 
+function pageStem(name) {
+  return String(name || '').replace(/\.html$/i, '');
+}
+
 function removeMatching(relativeDir, predicate) {
   const removed = [];
   for (const base of [root, path.join(root, '_site')]) {
@@ -53,12 +57,39 @@ function cleanEntityExposure() {
 
 function isGeneratedEliteReport(name) {
   if (!isHtmlOrAlias(name)) return false;
-  const stem = name.replace(/\.html$/i, '');
+  const stem = pageStem(name);
   return /^(?:daily-revelation-report|missing-records-report|contradiction-watch-report|(?:entity|contractor|billionaire|institution|subject)-[a-z0-9][a-z0-9-]*)$/.test(stem);
 }
 
 function cleanEliteReports() {
   return record('elite-reports', removeMatching('reports', isGeneratedEliteReport));
+}
+
+function normalizeExpectedIds(expectedIds) {
+  return new Set((Array.isArray(expectedIds) ? expectedIds : [])
+    .map(value => String(value || '').trim())
+    .filter(Boolean));
+}
+
+function pruneUnexpectedNamespace(relativeDir, expectedIds, generatedPredicate = isHtmlOrAlias) {
+  const expected = normalizeExpectedIds(expectedIds);
+  const removed = removeMatching(relativeDir, name => {
+    if (!generatedPredicate(name)) return false;
+    return !expected.has(pageStem(name));
+  });
+  return record(`prune-${relativeDir}`, removed);
+}
+
+function pruneUnexpectedGeneratedMachinePages({
+  entityBriefIds = [],
+  entityExposureIds = [],
+  eliteReportIds = []
+} = {}) {
+  return {
+    entityBriefs: pruneUnexpectedNamespace('entity-briefs', entityBriefIds),
+    entityExposure: pruneUnexpectedNamespace('entity-exposure', entityExposureIds),
+    eliteReports: pruneUnexpectedNamespace('reports', eliteReportIds, isGeneratedEliteReport)
+  };
 }
 
 function cleanAllGeneratedMachinePages() {
@@ -74,6 +105,8 @@ module.exports = {
   cleanEntityExposure,
   cleanEliteReports,
   cleanAllGeneratedMachinePages,
+  pruneUnexpectedNamespace,
+  pruneUnexpectedGeneratedMachinePages,
   isGeneratedEliteReport
 };
 

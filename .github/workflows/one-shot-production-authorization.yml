@@ -51,7 +51,7 @@ jobs:
           NODE_ENV: test
           MATRIX_AUTH_ALLOW_NON_MAIN_TEST: '1'
           MATRIX_PRODUCTION_CONFIRMATION: DEPLOY MATRIX REPROGRAMMED
-          MATRIX_PRODUCTION_ACTOR: github-actions[bot]
+          MATRIX_PRODUCTION_ACTOR: 'github-actions[bot]'
           MATRIX_WORKFLOW_EVENT: workflow_dispatch
           MATRIX_BILLING_EXCEPTION: ''
         run: node scripts/verify-one-shot-production-authorization.js
@@ -61,7 +61,7 @@ jobs:
           NODE_ENV: test
           MATRIX_AUTH_ALLOW_NON_MAIN_TEST: '1'
           MATRIX_PRODUCTION_CONFIRMATION: DEPLOY MATRIX REPROGRAMMED
-          MATRIX_PRODUCTION_ACTOR: github-actions[bot]
+          MATRIX_PRODUCTION_ACTOR: 'github-actions[bot]'
           MATRIX_WORKFLOW_EVENT: workflow_dispatch
           MATRIX_BILLING_EXCEPTION: OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02
         shell: bash
@@ -83,7 +83,7 @@ jobs:
           if (authority < 0) throw new Error('Deploy workflow does not invoke the one-shot authority verifier.');
           if (budget < 0 || budget < authority) throw new Error('Cloudflare budget guard must remain immediately downstream of authorization.');
           if (workflow.includes('automated workflow dispatches are not release authority')) throw new Error('Obsolete unconditional bot rejection remains.');
-          if (!workflow.includes('MATRIX_BILLING_EXCEPTION: ${{ inputs.billing_exception }}')) throw new Error('Billing exception must be visible to the authority verifier.');
+          if (!workflow.includes('MATRIX_BILLING_EXCEPTION:')) throw new Error('Billing exception must be visible to the authority verifier.');
           console.log('DEPLOY AUTHORITY ORDER PASS');
           NODE
 

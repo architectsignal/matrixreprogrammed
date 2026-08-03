@@ -1,0 +1,41 @@
+name: Generated Machine Page Namespace Integrity
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/cleanup-generated-machine-pages.js'
+      - 'scripts/generated-machine-page-prune-test.js'
+      - 'scripts/generated-machine-pages-test.js'
+      - '.github/workflows/generated-machine-page-prune.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Prove exact generated namespace pruning
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout proposed namespace repair
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check pruning owner and final audit
+        run: |
+          node --check scripts/cleanup-generated-machine-pages.js
+          node --check scripts/generated-machine-page-prune-test.js
+          node --check scripts/generated-machine-pages-test.js
+
+      - name: Prove stale source and Cloudflare aliases are removed
+        run: node scripts/generated-machine-page-prune-test.js

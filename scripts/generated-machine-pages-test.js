@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
-const { isGeneratedEliteReport } = require('./cleanup-generated-machine-pages.js');
+const {
+  isGeneratedEliteReport,
+  pruneUnexpectedNamespace
+} = require('./cleanup-generated-machine-pages.js');
 
 const root = process.cwd();
 const failures = [];
@@ -18,6 +21,8 @@ function runRequired(relative) {
   if (result.stderr) process.stderr.write(result.stderr);
   if (result.status !== 0) throw new Error(`${relative} failed`);
 }
+
+runRequired('scripts/generated-machine-page-prune-test.js');
 
 // This is the last mutation pass before the final public-control and function audits.
 // First make the protected command dashboard evidence-honest, then connect every
@@ -79,6 +84,25 @@ for (const [label, ids] of [['Entity Daily Brief', dailyIds], ['Entity Exposure'
   if (duplicates.length) failures.push(`${label} index contains duplicate IDs: ${[...new Set(duplicates)].join(', ')}`);
 }
 
+// Legacy generators may create aliases after the canonical builders have already
+// cleaned these namespaces. Reassert the JSON indexes at the final mutation
+// boundary, then keep the exact-match audit below fully fail-closed.
+const finalPrune = {
+  entityBriefs: dailyIds.length
+    ? pruneUnexpectedNamespace('entity-briefs', dailyIds)
+    : [],
+  entityExposure: exposureIds.length
+    ? pruneUnexpectedNamespace('entity-exposure', exposureIds)
+    : [],
+  eliteReports: eliteIds.length
+    ? pruneUnexpectedNamespace('reports', eliteIds, isGeneratedEliteReport)
+    : []
+};
+inventory.finalPrune = Object.fromEntries(Object.entries(finalPrune).map(([name, removed]) => [name, {
+  removedCount: removed.length,
+  removed
+}]));
+
 auditNamespace({ name: 'entityBriefs', relativeDir: 'entity-briefs', expectedIds: dailyIds });
 auditNamespace({ name: 'entityExposure', relativeDir: 'entity-exposure', expectedIds: exposureIds });
 auditNamespace({ name: 'eliteReports', relativeDir: 'reports', expectedIds: eliteIds, generatedPredicate: isGeneratedEliteReport });
@@ -98,4 +122,4 @@ if (!report.ok) {
   failures.slice(0, 200).forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log(`Generated machine pages test passed: ${dailyIds.length} entity briefs, ${exposureIds.length} exposure pages and ${eliteIds.length} elite reports match source and Cloudflare output.`);
+console.log(`Generated machine pages test passed: ${dailyIds.length} entity briefs, ${exposureIds.length} exposure pages and ${eliteIds.length} elite reports match source and Cloudflare output; ${Object.values(finalPrune).reduce((sum, removed) => sum + removed.length, 0)} late stale route file(s) pruned.`);

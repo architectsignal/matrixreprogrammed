@@ -3471,28 +3471,6 @@
   },
   {
     "searchVersion": 3,
-    "title": "Dark Speculation Lab",
-    "url": "dark-speculation-lab.html",
-    "sourceType": "mission-route",
-    "resultKind": "route",
-    "statusClass": "context",
-    "category": "Speculation Review",
-    "layer": "speculation-review",
-    "description": "Source-chain review route for dark claims and counter-sources.",
-    "exactTerms": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "elite-networks",
-      "Elite Networks"
-    ],
-    "priority": 95
-  },
-  {
-    "searchVersion": 3,
     "title": "Record Intake Queue",
     "url": "record-intake-queue.html",
     "sourceType": "mission-route",
@@ -4307,14 +4285,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Newsletter",
+    "title": "Weekly Black File",
     "url": "newsletter.html",
     "sourceType": "mission-route",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Free Brief",
+    "category": "Newsletter",
     "layer": "information-narrative",
-    "description": "Free briefing and newsletter route.",
+    "description": "Weekly Black File email capture for Epstein updates, source records, power trackers, live intel and free briefs.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -4325,7 +4303,17 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 77
+    "priority": 77,
+    "key": "weekly-black-file",
+    "subtitle": "Email capture and weekly signal drop",
+    "series": "Conversion",
+    "keywords": [
+      "newsletter",
+      "weekly signal",
+      "black file",
+      "email",
+      "free brief"
+    ]
   },
   {
     "searchVersion": 3,
@@ -8091,14 +8079,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Aviation Evidence Policy | Matrix Reprogrammed",
+    "title": "Aviation Evidence Policy",
     "url": "aviation-evidence-policy.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Evidence Policy",
     "layer": "information-narrative",
-    "description": "Safe historical aviation and transport evidence policy for Matrix Reprogrammed public-record research.",
+    "description": "Safe public-record policy for historical aviation and transport evidence, court exhibits, registries, privacy boundaries and transport card fields.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -8109,7 +8097,17 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "aviation-evidence-policy",
+    "subtitle": "Historical transport records only",
+    "series": "Power Atlas",
+    "keywords": [
+      "aviation evidence",
+      "flight logs",
+      "transport records",
+      "court exhibits",
+      "public records"
+    ]
   },
   {
     "searchVersion": 3,
@@ -9887,14 +9885,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Bloodline and Dynasty Claims | Dark Speculation Lab",
+    "title": "Bloodline and Dynasty Claims",
     "url": "dark-speculation-bloodline-dynasty-claims.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A cluster claiming a fixed set of families or bloodlines has controlled finance, politics, religion, media, and institutions across centuries or millennia. Real",
+    "description": "A cluster claiming a fixed set of families or bloodlines has controlled finance, politics, religion, media, and institutions across centuries or millennia. Real dynastic wealth and intermarriage must be separated from unsupported supernatural or total-control claims.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -9905,7 +9903,21 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-bloodline-dynasty-claims",
+    "subtitle": "Genealogy and power-network claim / high-risk allegation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Bloodline and Dynasty Claims",
+      "Elite Bloodlines",
+      "Thirteen Families",
+      "Dynasty Control",
+      "elite bloodlines",
+      "thirteen families conspiracy",
+      "dynasty control network",
+      "family power map",
+      "Genealogy and power-network claim / high-risk allegation"
+    ]
   },
   {
     "searchVersion": 3,
@@ -9975,14 +9987,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Bohemian Grove | Dark Speculation Lab",
+    "title": "Bohemian Grove",
     "url": "dark-speculation-bohemian-grove.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A private men’s club and recurring encampment that has attracted scrutiny because of influential attendees, secrecy, theatrical ceremonies, and questions about",
+    "description": "A private men’s club and recurring encampment that has attracted scrutiny because of influential attendees, secrecy, theatrical ceremonies, and questions about informal access and networking.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -9993,7 +10005,19 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-bohemian-grove",
+    "subtitle": "Verified private organization and event / disputed interpretations",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Bohemian Grove",
+      "Bohemian Club Encampment",
+      "The Grove",
+      "Bohemian Club",
+      "Cremation of Care",
+      "elite retreat",
+      "Verified private organization and event / disputed interpretations"
+    ]
   },
   {
     "searchVersion": 3,
@@ -11399,14 +11423,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Celebrity Humiliation Ritual Claims | Dark Speculation Lab",
+    "title": "Celebrity Humiliation Ritual Claims",
     "url": "dark-speculation-celebrity-humiliation-ritual.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A theory that public breakdowns, embarrassing performances, image changes, staged controversies, or coercive contracts function as ritual humiliation before car",
+    "description": "A theory that public breakdowns, embarrassing performances, image changes, staged controversies, or coercive contracts function as ritual humiliation before career advancement or renewed acceptance.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -11417,7 +11441,19 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-celebrity-humiliation-ritual",
+    "subtitle": "Recurring allegation / media-pattern claim",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Celebrity Humiliation Ritual Claims",
+      "Humiliation Ritual",
+      "Industry Initiation Ritual",
+      "celebrity humiliation ritual",
+      "industry initiation claim",
+      "public breakdown ritual",
+      "Recurring allegation / media-pattern claim"
+    ]
   },
   {
     "searchVersion": 3,
@@ -13957,28 +13993,6 @@
     "category": "Information / Narrative",
     "layer": "information-narrative",
     "description": "The Matrix Reprogrammed Dark Psychology shelf: Manipulation Immunity, Mind Control in Seven Days, How to Analyze Anyone in 60 Seconds, behavioural psychology, i",
-    "exactTerms": [
-      "money-reserves",
-      "Money / Reserves",
-      "identity-access",
-      "Identity / Access",
-      "information-narrative",
-      "Information / Narrative",
-      "security-emergency",
-      "Security / Emergency Power"
-    ],
-    "priority": 10
-  },
-  {
-    "searchVersion": 3,
-    "title": "Dark Speculation Forum | Matrix Reprogrammed",
-    "url": "dark-speculation-forum.html",
-    "sourceType": "html",
-    "resultKind": "route",
-    "statusClass": "context",
-    "category": "Elite Networks",
-    "layer": "elite-networks",
-    "description": "Reader drop box for dark speculation links, photo links, counter-sources, source trails, and claim classification.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -17556,14 +17570,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Elite Masked Balls and Ritual-Gala Claims | Dark Speculation Lab",
+    "title": "Elite Masked Balls and Ritual-Gala Claims",
     "url": "dark-speculation-masked-balls-ritual-galas.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "An investigation into masquerades, themed galas, art events, charity balls, and private parties interpreted online as ritual gatherings or membership ceremonies",
+    "description": "An investigation into masquerades, themed galas, art events, charity balls, and private parties interpreted online as ritual gatherings or membership ceremonies.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -17574,7 +17588,19 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-masked-balls-ritual-galas",
+    "subtitle": "Documented events / speculative interpretation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Elite Masked Balls and Ritual-Gala Claims",
+      "Masked Ball Network",
+      "Ritual Gala Club",
+      "elite masked ball",
+      "ritual gala conspiracy",
+      "masquerade elite symbolism",
+      "Documented events / speculative interpretation"
+    ]
   },
   {
     "searchVersion": 3,
@@ -21708,14 +21734,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Hand Signs and Gesture Archive | Dark Speculation Lab",
+    "title": "Hand Signs and Gesture Archive",
     "url": "dark-speculation-hand-signs-gesture-archive.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A structured archive of hand gestures alleged to indicate secret-society, occult, gang, political, religious, or industry affiliation. Similar hand shapes can h",
+    "description": "A structured archive of hand gestures alleged to indicate secret-society, occult, gang, political, religious, or industry affiliation. Similar hand shapes can have many meanings or be incidental.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -21726,7 +21752,19 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-hand-signs-gesture-archive",
+    "subtitle": "Gesture archive / disputed interpretation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Hand Signs and Gesture Archive",
+      "Elite Hand Signs",
+      "Occult Gesture Club",
+      "elite hand signs",
+      "occult gestures celebrity",
+      "secret society gesture",
+      "Gesture archive / disputed interpretation"
+    ]
   },
   {
     "searchVersion": 3,
@@ -22082,14 +22120,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Hidden-in-Plain-Sight Claims | Dark Speculation Lab",
+    "title": "Hidden-in-Plain-Sight Claims",
     "url": "dark-speculation-hidden-in-plain-sight.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A framework claiming powerful actors disclose plans through symbols, fiction, jokes, ceremonies, policy papers, or media so the public passively consents or so",
+    "description": "A framework claiming powerful actors disclose plans through symbols, fiction, jokes, ceremonies, policy papers, or media so the public passively consents or so responsibility is transferred to observers.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -22100,7 +22138,19 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-hidden-in-plain-sight",
+    "subtitle": "Interpretive framework / recurring allegation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Hidden-in-Plain-Sight Claims",
+      "They Tell You Everything",
+      "Revelation of the Method",
+      "hidden in plain sight",
+      "revelation of the method",
+      "they tell you everything",
+      "Interpretive framework / recurring allegation"
+    ]
   },
   {
     "searchVersion": 3,
@@ -22895,14 +22945,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Institution Tracker | Matrix Reprogrammed",
+    "title": "Institution Tracker",
     "url": "institution-tracker.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Institution Tracker",
     "layer": "information-narrative",
-    "description": "Evidence-safe tracker framework for institutions, money lanes, filings, oversight and public records.",
+    "description": "Usable tracker cards for institutions by sector, record type, public action, money lane, source route and boundary.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -22913,7 +22963,20 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "institution-tracker",
+    "subtitle": "Banks, foundations, universities, media, tech, law and politics",
+    "series": "Power Atlas",
+    "keywords": [
+      "institutions",
+      "banks",
+      "foundations",
+      "universities",
+      "media",
+      "tech",
+      "law",
+      "politics"
+    ]
   },
   {
     "searchVersion": 3,
@@ -25821,14 +25884,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Live Intel | Matrix Reprogrammed",
+    "title": "Live Intel Machine",
     "url": "live-intel.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Live Intel",
     "layer": "information-narrative",
-    "description": "Current dated public-source intelligence with truthful collection and publication timestamps.",
+    "description": "Dated source lanes with separate collection and publication times, official-source classification and evidence boundaries.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -25839,7 +25902,18 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "live-intel-machine",
+    "subtitle": "Current source-watch updates",
+    "series": "Freedom Intelligence Engine",
+    "keywords": [
+      "live intel",
+      "source watch",
+      "declassified files",
+      "Epstein files",
+      "official records",
+      "current updates"
+    ]
   },
   {
     "searchVersion": 3,
@@ -31713,14 +31787,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Power Research Method | Matrix Reprogrammed",
+    "title": "Power Research Method",
     "url": "power-research-method.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Elite Networks",
+    "category": "Research Method",
     "layer": "elite-networks",
-    "description": "Source-first method for people, institutions, money and historical transport evidence.",
+    "description": "Evidence-safe method for people, institutions, money, filings and historical transport records with usable money route cards.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -31731,7 +31805,16 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "power-research-method",
+    "subtitle": "Track evidence, not fake claims",
+    "series": "Power Atlas",
+    "keywords": [
+      "power tracker",
+      "institution tracker",
+      "money tracker",
+      "public records"
+    ]
   },
   {
     "searchVersion": 3,
@@ -32284,12 +32367,12 @@
   },
   {
     "searchVersion": 3,
-    "title": "Public Injury and Initiation Claims | Dark Speculation Lab",
+    "title": "Public Injury and Initiation Claims",
     "url": "dark-speculation-public-injury-initiation.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
     "description": "A broader theory that visible injuries, scars, casts, dental changes, or accidents involving public figures are initiation marks, punishments, or warnings.",
     "exactTerms": [
@@ -32302,7 +32385,19 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-public-injury-initiation",
+    "subtitle": "Recurring allegation / case-specific evidence required",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Public Injury and Initiation Claims",
+      "Injury Initiation",
+      "Ritual Injury Club",
+      "public injury initiation",
+      "celebrity injury ritual",
+      "ritual scar claim",
+      "Recurring allegation / case-specific evidence required"
+    ]
   },
   {
     "searchVersion": 3,
@@ -32657,14 +32752,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Red Carpet Symbolism | Dark Speculation Lab",
+    "title": "Red Carpet Symbolism",
     "url": "dark-speculation-red-carpet-symbolism.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "An investigation into recurring colors, costumes, poses, stage designs, themes, and mythological imagery at awards shows, premieres, fashion events, and promoti",
+    "description": "An investigation into recurring colors, costumes, poses, stage designs, themes, and mythological imagery at awards shows, premieres, fashion events, and promotional appearances.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -32675,7 +32770,19 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-red-carpet-symbolism",
+    "subtitle": "Media symbolism cluster",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "Red Carpet Symbolism",
+      "Red Carpet Ritual",
+      "Awards Symbolism Network",
+      "red carpet symbolism",
+      "awards ritual claim",
+      "celebrity fashion occult",
+      "Media symbolism cluster"
+    ]
   },
   {
     "searchVersion": 3,
@@ -36197,14 +36304,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "The 33 Club | Dark Speculation Lab",
+    "title": "The 33 Club",
     "url": "dark-speculation-33-club.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A label used online to connect the number 33 with Freemasonry, celebrity deaths, elite networks, brands, locations, and private clubs. Some real organizations u",
+    "description": "A label used online to connect the number 33 with Freemasonry, celebrity deaths, elite networks, brands, locations, and private clubs. Some real organizations use 33 in their names, but that does not establish one unified hidden organization.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -36215,16 +36322,30 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-33-club",
+    "subtitle": "Numerology cluster / ambiguous label",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The 33 Club",
+      "Club 33",
+      "33 Club",
+      "Thirty-Three Club",
+      "33 club",
+      "club 33 conspiracy",
+      "33 numerology elite",
+      "thirty third degree symbolism",
+      "Numerology cluster / ambiguous label"
+    ]
   },
   {
     "searchVersion": 3,
-    "title": "The All-Seeing Eye Network | Dark Speculation Lab",
+    "title": "The All-Seeing Eye Network",
     "url": "dark-speculation-all-seeing-eye-network.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
     "description": "A cluster connecting eye imagery with divine providence, surveillance, Freemasonry, hidden knowledge, state power, finance, entertainment, and secret societies.",
     "exactTerms": [
@@ -36237,7 +36358,19 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-all-seeing-eye-network",
+    "subtitle": "Historical symbol / symbolism cluster",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The All-Seeing Eye Network",
+      "Eye of Providence Network",
+      "All-Seeing Eye Club",
+      "all seeing eye network",
+      "eye of providence celebrity",
+      "Illuminati eye symbolism",
+      "Historical symbol / symbolism cluster"
+    ]
   },
   {
     "searchVersion": 3,
@@ -36263,14 +36396,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "The Black Eye Club | Dark Speculation Lab",
+    "title": "The Black Eye Club",
     "url": "dark-speculation-black-eye-club.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A label applied to photographs of prominent people with bruising around one eye. Authentic photographs exist, but the images alone do not establish a coordinate",
+    "description": "A label applied to photographs of prominent people with bruising around one eye. Authentic photographs exist, but the images alone do not establish a coordinated club, common ritual, or membership structure.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -36281,7 +36414,21 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-black-eye-club",
+    "subtitle": "Internet-created label / recurring allegation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Black Eye Club",
+      "Black Eye Club",
+      "Black-Eye Club",
+      "Bruised Eye Club",
+      "black eye club",
+      "bruised eye elite",
+      "left eye initiation",
+      "public injury ritual",
+      "Internet-created label / recurring allegation"
+    ]
   },
   {
     "searchVersion": 3,
@@ -36439,14 +36586,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "The Black-and-White Checkerboard Pattern | Dark Speculation Lab",
+    "title": "The Black-and-White Checkerboard Pattern",
     "url": "dark-speculation-checkerboard-pattern.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A visual pattern associated in different contexts with duality, contrast, games, racing, design, architecture, and Masonic lodge floors. Its use in media does n",
+    "description": "A visual pattern associated in different contexts with duality, contrast, games, racing, design, architecture, and Masonic lodge floors. Its use in media does not by itself prove Masonic control or initiation.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -36457,7 +36604,19 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-checkerboard-pattern",
+    "subtitle": "Historical symbol / symbolism cluster",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Black-and-White Checkerboard Pattern",
+      "Checkerboard Symbolism",
+      "Masonic Floor Pattern",
+      "checkerboard symbolism",
+      "masonic floor media",
+      "black white tiles conspiracy",
+      "Historical symbol / symbolism cluster"
+    ]
   },
   {
     "searchVersion": 3,
@@ -37164,12 +37323,12 @@
   },
   {
     "searchVersion": 3,
-    "title": "The Moloch Claim | Dark Speculation Lab",
+    "title": "The Moloch Claim",
     "url": "dark-speculation-moloch-claim.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
     "description": "A claim that elite ceremonies, owl imagery, policy language, or cultural references indicate worship of Moloch or continuation of ancient sacrifice traditions.",
     "exactTerms": [
@@ -37182,18 +37341,30 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-moloch-claim",
+    "subtitle": "Historical-religious reference / recurring allegation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Moloch Claim",
+      "Moloch Network",
+      "Moloch Worship Claim",
+      "Moloch elite claim",
+      "Moloch worship conspiracy",
+      "Moloch symbolism",
+      "Historical-religious reference / recurring allegation"
+    ]
   },
   {
     "searchVersion": 3,
-    "title": "The Monarch Butterfly Pattern | Dark Speculation Lab",
+    "title": "The Monarch Butterfly Pattern",
     "url": "dark-speculation-monarch-butterfly-pattern.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "An online theory connecting monarch-butterfly imagery with trauma-based mind control or a covert program. Butterfly imagery also commonly represents transformat",
+    "description": "An online theory connecting monarch-butterfly imagery with trauma-based mind control or a covert program. Butterfly imagery also commonly represents transformation, beauty, rebirth, migration, and branding.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -37204,7 +37375,19 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-monarch-butterfly-pattern",
+    "subtitle": "Symbolism cluster / mind-control allegation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Monarch Butterfly Pattern",
+      "Monarch Symbolism",
+      "Butterfly Programming Claim",
+      "monarch butterfly programming",
+      "butterfly mind control",
+      "monarch symbolism celebrity",
+      "Symbolism cluster / mind-control allegation"
+    ]
   },
   {
     "searchVersion": 3,
@@ -37252,14 +37435,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "The One-Eye or Covered-Eye Pattern | Dark Speculation Lab",
+    "title": "The One-Eye or Covered-Eye Pattern",
     "url": "dark-speculation-one-eye-covered-eye.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A recurring visual motif in portraits, advertising, music, film, and fashion where one eye is obscured, emphasized, or framed. The imagery is real; a single cen",
+    "description": "A recurring visual motif in portraits, advertising, music, film, and fashion where one eye is obscured, emphasized, or framed. The imagery is real; a single centralized meaning is not established.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -37270,18 +37453,32 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-one-eye-covered-eye",
+    "subtitle": "Symbolism cluster / disputed interpretation",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The One-Eye or Covered-Eye Pattern",
+      "One-Eye Club",
+      "Covered Eye Symbolism",
+      "One Eye Sign",
+      "one eye symbolism",
+      "covered eye celebrity",
+      "all seeing eye media",
+      "one eye sign",
+      "Symbolism cluster / disputed interpretation"
+    ]
   },
   {
     "searchVersion": 3,
-    "title": "The Owl Symbolism Network | Dark Speculation Lab",
+    "title": "The Owl Symbolism Network",
     "url": "dark-speculation-owl-symbolism-network.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A cluster connecting owl imagery with wisdom, secrecy, night, surveillance, ancient deities, institutions, and Bohemian Grove. The owl has many independent cult",
+    "description": "A cluster connecting owl imagery with wisdom, secrecy, night, surveillance, ancient deities, institutions, and Bohemian Grove. The owl has many independent cultural meanings.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -37292,18 +37489,31 @@
       "elite-networks",
       "Elite Networks"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-owl-symbolism-network",
+    "subtitle": "Historical symbol / association cluster",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Owl Symbolism Network",
+      "Owl Network",
+      "Owl Club",
+      "Owl Symbolism",
+      "owl symbolism elite",
+      "owl network conspiracy",
+      "bohemian grove owl",
+      "Historical symbol / association cluster"
+    ]
   },
   {
     "searchVersion": 3,
-    "title": "The Panda Eyes Claim | Dark Speculation Lab",
+    "title": "The Panda Eyes Claim",
     "url": "dark-speculation-panda-eyes-claim.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "An online allegation that dark bruising around both eyes is a coded sign of abuse or a particular form of victimization. Periorbital bruising can have multiple",
+    "description": "An online allegation that dark bruising around both eyes is a coded sign of abuse or a particular form of victimization. Periorbital bruising can have multiple medical and traumatic causes, so no diagnosis or allegation should be made from an image alone.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -37314,7 +37524,19 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-panda-eyes-claim",
+    "subtitle": "Recurring allegation / high-harm claim",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Panda Eyes Claim",
+      "Panda Eyes",
+      "Panda Eye Sign",
+      "panda eyes claim",
+      "periorbital bruising allegation",
+      "panda eye conspiracy",
+      "Recurring allegation / high-harm claim"
+    ]
   },
   {
     "searchVersion": 3,
@@ -37384,14 +37606,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "The Red Shoe Club | Dark Speculation Lab",
+    "title": "The Red Shoe Club",
     "url": "dark-speculation-red-shoe-club.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "An online label connecting red footwear worn by influential people with claims of ritual affiliation, blood symbolism, sacrifice, or covert membership. Red foot",
+    "description": "An online label connecting red footwear worn by influential people with claims of ritual affiliation, blood symbolism, sacrifice, or covert membership. Red footwear also has ordinary fashion, branding, theatrical, historical, and religious contexts.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -37402,7 +37624,20 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-red-shoe-club",
+    "subtitle": "Internet-created label / symbolism cluster",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Red Shoe Club",
+      "Red Shoe Club",
+      "Red Shoes Club",
+      "red shoe club",
+      "red shoes elite",
+      "red footwear symbolism",
+      "ritual shoe claim",
+      "Internet-created label / symbolism cluster"
+    ]
   },
   {
     "searchVersion": 3,
@@ -37428,12 +37663,12 @@
   },
   {
     "searchVersion": 3,
-    "title": "The Saturn and Black Cube Pattern | Dark Speculation Lab",
+    "title": "The Saturn and Black Cube Pattern",
     "url": "dark-speculation-saturn-black-cube.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
     "description": "An internet theory linking Saturn, cubes, black geometric monuments, time, limitation, death, finance, religion, and elite control into one symbolic system.",
     "exactTerms": [
@@ -37446,7 +37681,20 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-saturn-black-cube",
+    "subtitle": "Symbolism cluster / internet mythology",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The Saturn and Black Cube Pattern",
+      "Saturn Cube",
+      "Black Cube Network",
+      "Saturn System",
+      "Saturn black cube",
+      "black cube symbolism",
+      "Saturn control system",
+      "Symbolism cluster / internet mythology"
+    ]
   },
   {
     "searchVersion": 3,
@@ -37472,14 +37720,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "The White Rabbit Network | Dark Speculation Lab",
+    "title": "The White Rabbit Network",
     "url": "dark-speculation-white-rabbit-network.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Club Investigation",
     "layer": "information-narrative",
-    "description": "A cluster connecting white-rabbit imagery with hidden knowledge, initiation, mind control, trafficking claims, or invitations to uncover a concealed system. The",
+    "description": "A cluster connecting white-rabbit imagery with hidden knowledge, initiation, mind control, trafficking claims, or invitations to uncover a concealed system. The motif has broad literary and popular-culture roots.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -37490,7 +37738,19 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "dark-speculation-white-rabbit-network",
+    "subtitle": "Symbolism cluster / internet narrative",
+    "series": "Dark Speculation Lab",
+    "keywords": [
+      "The White Rabbit Network",
+      "Follow the White Rabbit",
+      "White Rabbit Symbolism",
+      "white rabbit symbolism",
+      "follow the white rabbit conspiracy",
+      "white rabbit network",
+      "Symbolism cluster / internet narrative"
+    ]
   },
   {
     "searchVersion": 3,
@@ -38299,14 +38559,14 @@
   },
   {
     "searchVersion": 3,
-    "title": "Tracker Dashboard | Matrix Reprogrammed",
+    "title": "Tracker Dashboard",
     "url": "tracker-dashboard.html",
     "sourceType": "html",
     "resultKind": "route",
     "statusClass": "context",
-    "category": "Information / Narrative",
+    "category": "Tracker Hub",
     "layer": "information-narrative",
-    "description": "Central control room for Matrix Reprogrammed trackers: Epstein files, billionaires, institutions, money, source vault, speculation and aviation evidence policy.",
+    "description": "Central control room for Matrix Reprogrammed trackers with priority people/wealth starter cards, institution sectors, money routes, source routes, Epstein files, billionaires, speculation and aviation evidence policy.",
     "exactTerms": [
       "money-reserves",
       "Money / Reserves",
@@ -38317,7 +38577,21 @@
       "disclosure-black-files",
       "Disclosure / Black Files"
     ],
-    "priority": 10
+    "priority": 10,
+    "key": "tracker-dashboard",
+    "subtitle": "People, money, institutions, files and power",
+    "series": "Power Atlas",
+    "keywords": [
+      "tracker dashboard",
+      "people tracker",
+      "money tracker",
+      "institution tracker",
+      "Epstein",
+      "billionaires",
+      "power map",
+      "wealth nodes",
+      "source routes"
+    ]
   },
   {
     "searchVersion": 3,
@@ -41885,5 +42159,52 @@
       "365 day review"
     ],
     "priority": 86
+  },
+  {
+    "key": "latest-public-drops",
+    "title": "Latest Public Drops",
+    "subtitle": "Curated current source leads",
+    "series": "Live Intel",
+    "category": "Source Watch",
+    "url": "downloads/latest-public-drops.json",
+    "description": "Curated current public-source drops merged into Live Intel, Epstein Watch and risk timers.",
+    "keywords": [
+      "latest drops",
+      "Epstein",
+      "digital euro",
+      "digital ID",
+      "AI cyber",
+      "timers"
+    ]
+  },
+  {
+    "url": "data/big-three-asset-managers.json",
+    "title": "Big Three Asset Manager JSON",
+    "category": "Machine Data",
+    "description": "Machine-readable Big Three tracker data.",
+    "keywords": [
+      "BlackRock",
+      "Vanguard",
+      "State Street",
+      "machine data"
+    ],
+    "layer": "money-reserves",
+    "priority": 91,
+    "sourceType": "json-feed"
+  },
+  {
+    "url": "downloads/big-three-asset-managers.md",
+    "title": "Big Three Asset Manager Download",
+    "category": "Downloads",
+    "description": "Downloadable Big Three tracker report.",
+    "keywords": [
+      "BlackRock",
+      "Vanguard",
+      "State Street",
+      "download"
+    ],
+    "layer": "money-reserves",
+    "priority": 91,
+    "sourceType": "json-feed"
   }
 ]

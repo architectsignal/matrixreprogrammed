@@ -23,6 +23,7 @@ function runRequired(relative) {
 }
 
 runRequired('scripts/generated-machine-page-prune-test.js');
+runRequired('scripts/cinematic-pathway-idempotency-test.js');
 
 // This is the last mutation pass before the final public-control and function audits.
 // First make the protected command dashboard evidence-honest, then connect every
@@ -31,6 +32,10 @@ runRequired('scripts/repair-review-dashboard-truth.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-review-dashboard-truth-output.js');
 runRequired('scripts/run-cinematic-link-structure.js');
 if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/build-cinematic-link-structure-output.js');
+// The cinematic generator is intentionally invoked by several compatibility owners.
+// Collapse every legacy or repeated section to one canonical route-specific heading
+// before the global duplicate-ID audit runs.
+runRequired('scripts/finalize-cinematic-pathway-ids.js');
 
 function readJson(relative, fallback) {
   try { return JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8')); }

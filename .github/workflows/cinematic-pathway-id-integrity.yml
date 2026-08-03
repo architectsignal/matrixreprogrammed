@@ -1,0 +1,41 @@
+name: Cinematic Pathway ID Integrity
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'scripts/finalize-cinematic-pathway-ids.js'
+      - 'scripts/cinematic-pathway-idempotency-test.js'
+      - 'scripts/generated-machine-pages-test.js'
+      - '.github/workflows/cinematic-pathway-id-integrity.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Prove one pathway section and one route-specific ID
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout proposed cinematic pathway repair
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check finalizer and integration owner
+        run: |
+          node --check scripts/finalize-cinematic-pathway-ids.js
+          node --check scripts/cinematic-pathway-idempotency-test.js
+          node --check scripts/generated-machine-pages-test.js
+
+      - name: Prove duplicate removal, route-specific IDs and repeat safety
+        run: node scripts/cinematic-pathway-idempotency-test.js

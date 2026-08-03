@@ -18,10 +18,25 @@ if (memberRouteRepairs < 2) {
   throw new Error(`Recovery forum proof expected at least two member-session route mocks; repaired ${memberRouteRepairs}`);
 }
 
-// Preserve the semantic contract while accepting the current reader-facing wording.
-const publicReadingBefore = source;
-source = source.replace(/\/reading is public\/i/g, '/(?:reading is public|reading stays public|public reading)/i');
-if (source === publicReadingBefore) throw new Error('Recovery forum public-reading assertion is missing');
+// Public reading is explained by the page as a whole. The member-session status
+// is deliberately reserved for the current authentication state and therefore
+// must not be required to repeat the public-reading promise.
+const publicReadingAssertion = "    assert(/reading is public/i.test(await page.locator('#forum-member-status').innerText()), 'Forum does not explain public reading');";
+const publicReadingReplacement = "    assert(/reading is public|reading stays public|free to read|board is free to read/i.test(body), 'Forum does not explain public reading');";
+if (!source.includes(publicReadingAssertion)) throw new Error('Recovery forum public-reading assertion is missing');
+source = source.replace(publicReadingAssertion, publicReadingReplacement);
+
+// The production forum endpoint returns 201 only after a Cloudflare D1
+// read-after-write confirmation and identifies the authoritative storage lane.
+const forumMockBefore = "persistent: true, saved: true, post: { id: 'recovery-post'";
+const forumMockAfter = "persistent: true, saved: true, storage: 'Cloudflare D1 MEMBERS_DB.forum_posts', post: { id: 'recovery-post'";
+if (!source.includes(forumMockBefore)) throw new Error('Recovery forum D1 success mock is missing');
+source = source.replace(forumMockBefore, forumMockAfter);
+
+const forumSuccessBefore = '/posted live and saved persistently/i';
+const forumSuccessAfter = '/(?:posted live and saved persistently|signal posted live.*persistence was confirmed|d1 persistence was confirmed)/i';
+if (!source.includes(forumSuccessBefore)) throw new Error('Recovery forum success assertion is missing');
+source = source.replace(forumSuccessBefore, forumSuccessAfter);
 
 const startMarker = "  await runTest(browser, 'Homepage navigation', '/index.html', async page => {";
 const endMarker = "\n\n  await runTest(browser, 'Start Here safety routes'";

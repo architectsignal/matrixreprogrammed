@@ -31,7 +31,8 @@ need(priceById.intelligence === 6, 'Feature matrix Intelligence price must be â‚
 need(priceById.research_pro === 9, 'Feature matrix Research Pro price must be â‚¬9');
 need(JSON.stringify(matrix).includes('verified-member Signal Board posting'), 'Feature matrix does not include verified-member forum posting');
 
-need(forumClient.includes("fetch('/api/member/me'"), 'Forum client does not check the member session');
+const credentialedMemberSessionFetch = /fetch\(\s*['"]\/api\/member\/me[\s\S]{0,260}?credentials\s*:\s*['"]include['"]/m.test(forumClient);
+need(credentialedMemberSessionFetch, 'Forum client does not check the member session with credentials');
 need(!forumClient.includes('localStorage'), 'Forum client still uses a browser-only unlock');
 need(!forumClient.includes('paypal.me'), 'Forum client still references the false PayPal gate');
 need(forumClient.includes('Posting requires a verified free member account'), 'Forum client lacks the verified-member boundary');

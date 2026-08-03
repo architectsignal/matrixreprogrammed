@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-02T21:11:40.810Z
-Live Intel source window: 2026-08-02T21:11:26.641Z
-Tracked cards: 900
-Cards with current matched records: 8
-Cards with no new verified record: 892
+Generated: 2026-08-03T03:54:29.834Z
+Live Intel source window: 2026-08-03T03:54:25.212Z
+Tracked cards: 969
+Cards with current matched records: 92
+Cards with no new verified record: 877
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -299,9 +299,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 2021-08825
 - Route: entity-timelines/2021-08825.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2021-08825 — Entity Observation
+
+## 2021-08825
+- Route: entity-briefs/2021-08825.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 2021-08825 — Entity Observation
+
+## 2021-08825
+- Route: entity-exposure/2021-08825.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 2021-08825 — Entity Observation
 
 ## 2022
 - Route: death-files-year-2022.html
@@ -329,33 +344,108 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 2024-13374
 - Route: entity-timelines/2024-13374.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2024-13374 — Entity Observation
+
+## 2024-13374
+- Route: entity-briefs/2024-13374.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 2024-13374 — Entity Observation
+
+## 2024-13374
+- Route: entity-exposure/2024-13374.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 2024-13374 — Entity Observation
 
 ## 2025-0045-APPEAL.
 - Route: entity-timelines/2025-0045-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 2025-0045-Appeal. — Entity Observation
+
+## 2025-0045-APPEAL.
+- Route: entity-briefs/2025-0045-appeal.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 2025-0045-Appeal. — Entity Observation
+
+## 2025-0045-APPEAL.
+- Route: entity-exposure/2025-0045-appeal.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 2025-0045-Appeal. — Entity Observation
 
 ## 23 WAP 2023
 - Route: entity-timelines/23-wap-2023.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
+## 23 WAP 2023
+- Route: entity-briefs/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
+
+## 23 WAP 2023
+- Route: entity-exposure/23-wap-2023.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 23 WAP 2023 — Entity Observation
 
 ## 24-2251
 - Route: entity-timelines/24-2251.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 24-2251 — Entity Observation
+
+## 24-2251
+- Route: entity-briefs/24-2251.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-2251 — Entity Observation
+
+## 24-2251
+- Route: entity-exposure/24-2251.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-2251 — Entity Observation
 
 ## 24-7261
 - Route: entity-timelines/24-7261.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — 24-7261 — Entity Observation
+
+## 24-7261
+- Route: entity-briefs/24-7261.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-7261 — Entity Observation
+
+## 24-7261
+- Route: entity-exposure/24-7261.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — 24-7261 — Entity Observation
 
 ## 25-113
 - Route: entity-timelines/25-113.html
@@ -389,6 +479,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## AAPL
 - Route: entity-timelines/aapl.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AAPL
+- Route: entity-briefs/aapl.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AAPL
+- Route: entity-exposure/aapl.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -533,9 +635,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## ALPHABET INC.
 - Route: entity-timelines/alphabet-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Alphabet Inc. — Entity Observation
+
+## ALPHABET INC.
+- Route: entity-briefs/alphabet-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Alphabet Inc. — Entity Observation
+
+## ALPHABET INC.
+- Route: entity-exposure/alphabet-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Alphabet Inc. — Entity Observation
 
 ## Amancio Ortega
 - Route: follow-the-money/people/amancio-ortega.html
@@ -545,15 +662,31 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Amazon
 - Route: institutions/amazon.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
 
 ## AMAZON COM INC
 - Route: entity-timelines/amazon-com-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
+
+## AMAZON COM INC
+- Route: entity-briefs/amazon-com-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
+
+## AMAZON COM INC
+- Route: entity-exposure/amazon-com-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — AMAZON COM INC — Entity Observation
 
 ## Ambani family
 - Route: power-families/ambani-family.html
@@ -575,6 +708,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## AMZN
 - Route: entity-timelines/amzn.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AMZN
+- Route: entity-briefs/amzn.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AMZN
+- Route: entity-exposure/amzn.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -635,21 +780,52 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
 - Route: entity-timelines/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Appellate Division of the Supreme Court of the State of New York — Entity Observation
+
+## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
+- Route: entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Appellate Division of the Supreme Court of the State of New York — Entity Observation
+
+## APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK
+- Route: entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Appellate Division of the Supreme Court of the State of New York — Entity Observation
 
 ## Apple
 - Route: institutions/apple.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
 
 ## APPLE INC.
 - Route: entity-timelines/apple-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
+
+## APPLE INC.
+- Route: entity-briefs/apple-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
+
+## APPLE INC.
+- Route: entity-exposure/apple-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Apple Inc. — Entity Observation
 
 ## Arenberg
 - Route: black-nobility/arenberg.html
@@ -707,6 +883,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## AVGO
 - Route: entity-timelines/avgo.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AVGO
+- Route: entity-briefs/avgo.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## AVGO
+- Route: entity-exposure/avgo.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1067,9 +1255,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## BROADCOM INC.
 - Route: entity-timelines/broadcom-inc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Broadcom Inc. — Entity Observation
+
+## BROADCOM INC.
+- Route: entity-briefs/broadcom-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Broadcom Inc. — Entity Observation
+
+## BROADCOM INC.
+- Route: entity-exposure/broadcom-inc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Broadcom Inc. — Entity Observation
 
 ## Brookings Institution
 - Route: institutions/brookings-institution.html
@@ -1269,6 +1472,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES
+- Route: entity-briefs/centers-for-medicare-and-medicaid-services.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES
+- Route: entity-exposure/centers-for-medicare-and-medicaid-services.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Central bank instant payment systems
 - Route: policy/central-bank-instant-payment-systems.html
 - Status: no-new-verified-record-in-current-window
@@ -1367,9 +1582,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## CIVIL RIGHTS CORPS V. LASALLE
 - Route: entity-timelines/civil-rights-corps-v-lasalle.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Civil Rights Corps v. LaSalle — Entity Observation
+
+## CIVIL RIGHTS CORPS V. LASALLE
+- Route: entity-briefs/civil-rights-corps-v-lasalle.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Civil Rights Corps v. LaSalle — Entity Observation
+
+## CIVIL RIGHTS CORPS V. LASALLE
+- Route: entity-exposure/civil-rights-corps-v-lasalle.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Civil Rights Corps v. LaSalle — Entity Observation
 
 ## Clingendael Institute
 - Route: think-tanks/clingendael-institute.html
@@ -1449,6 +1679,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Control Structure
+- Route: entity-exposure/control-structure.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## CONTROL STRUCTURE
 - Route: entity-timelines/control-structure.html
 - Status: no-new-verified-record-in-current-window
@@ -1457,12 +1693,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## CONTROL STRUCTURE
 - Route: entity-briefs/control-structure.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## CONTROL STRUCTURE
-- Route: entity-exposure/control-structure.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -1517,15 +1747,45 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## COURT OF APPEALS FOR THE NINTH CIRCUIT
 - Route: entity-timelines/court-of-appeals-for-the-ninth-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
+
+## COURT OF APPEALS FOR THE NINTH CIRCUIT
+- Route: entity-briefs/court-of-appeals-for-the-ninth-circuit.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
+
+## COURT OF APPEALS FOR THE NINTH CIRCUIT
+- Route: entity-exposure/court-of-appeals-for-the-ninth-circuit.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Court of Appeals for the Ninth Circuit — Entity Observation
 
 ## COURT OF APPEALS FOR THE SECOND CIRCUIT
 - Route: entity-timelines/court-of-appeals-for-the-second-circuit.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Court of Appeals for the Second Circuit — Entity Observation
+
+## COURT OF APPEALS FOR THE SECOND CIRCUIT
+- Route: entity-briefs/court-of-appeals-for-the-second-circuit.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Court of Appeals for the Second Circuit — Entity Observation
+
+## COURT OF APPEALS FOR THE SECOND CIRCUIT
+- Route: entity-exposure/court-of-appeals-for-the-second-circuit.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Court of Appeals for the Second Circuit — Entity Observation
 
 ## COURT OF APPEALS OF NORTH CAROLINA
 - Route: entity-timelines/court-of-appeals-of-north-carolina.html
@@ -1590,6 +1850,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## D &AMP; A GRANDVIEW, LLC V. 60 DAVIDSON, LLC
 - Route: entity-timelines/d-and-a-grandview-llc-v-60-davidson-llc.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## D &AMP; A GRANDVIEW, LLC V. 60 DAVIDSON, LLC
+- Route: entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## D &AMP; A GRANDVIEW, LLC V. 60 DAVIDSON, LLC
+- Route: entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2190,9 +2462,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
 - Route: entity-timelines/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Entity Observation
+
+## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
+- Route: entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Entity Observation
+
+## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
+- Route: entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — Entity Observation
 
 ## Gates family
 - Route: power-families/gates-family.html
@@ -2361,9 +2648,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GOOGL
 - Route: entity-timelines/googl.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — GOOGL — Entity Observation
+
+## GOOGL
+- Route: entity-briefs/googl.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — GOOGL — Entity Observation
+
+## GOOGL
+- Route: entity-exposure/googl.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — GOOGL — Entity Observation
 
 ## Google
 - Route: institutions/google.html
@@ -2430,9 +2732,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## HEALTH AND HUMAN SERVICES DEPARTMENT
 - Route: entity-timelines/health-and-human-services-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Health and Human Services Department — Entity Observation
+
+## HEALTH AND HUMAN SERVICES DEPARTMENT
+- Route: entity-briefs/health-and-human-services-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Health and Human Services Department — Entity Observation
+
+## HEALTH AND HUMAN SERVICES DEPARTMENT
+- Route: entity-exposure/health-and-human-services-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Health and Human Services Department — Entity Observation
 
 ## Hearst family
 - Route: power-families/hearst-family.html
@@ -2490,9 +2807,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-timelines/homeland-security-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Homeland Security Department — Entity Observation
+
+## HOMELAND SECURITY DEPARTMENT
+- Route: entity-briefs/homeland-security-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Homeland Security Department — Entity Observation
+
+## HOMELAND SECURITY DEPARTMENT
+- Route: entity-exposure/homeland-security-department.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Homeland Security Department — Entity Observation
 
 ## Hong Kong
 - Route: jurisdictions-of-power/hong-kong.html
@@ -3516,15 +3848,31 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Microsoft
 - Route: institutions/microsoft.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
 
 ## MICROSOFT CORP
 - Route: entity-timelines/microsoft-corp.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
+
+## MICROSOFT CORP
+- Route: entity-briefs/microsoft-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
+
+## MICROSOFT CORP
+- Route: entity-exposure/microsoft-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — MICROSOFT CORP — Entity Observation
 
 ## Mike Cernovich
 - Route: controlled-opposition/mike-cernovich.html
@@ -3612,6 +3960,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## MSFT
 - Route: entity-timelines/msft.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## MSFT
+- Route: entity-briefs/msft.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## MSFT
+- Route: entity-exposure/msft.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -3744,9 +4104,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## NUCLEAR REGULATORY COMMISSION
 - Route: entity-timelines/nuclear-regulatory-commission.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Nuclear Regulatory Commission — Entity Observation
+
+## NUCLEAR REGULATORY COMMISSION
+- Route: entity-briefs/nuclear-regulatory-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Nuclear Regulatory Commission — Entity Observation
+
+## NUCLEAR REGULATORY COMMISSION
+- Route: entity-exposure/nuclear-regulatory-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Nuclear Regulatory Commission — Entity Observation
 
 ## NVDA
 - Route: entity-timelines/nvda.html
@@ -3754,11 +4129,38 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## NVIDIA CORP
-- Route: entity-timelines/nvidia-corp.html
+## NVDA
+- Route: entity-briefs/nvda.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
+
+## NVDA
+- Route: entity-exposure/nvda.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## NVIDIA CORP
+- Route: entity-timelines/nvidia-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — NVIDIA CORP — Entity Observation
+
+## NVIDIA CORP
+- Route: entity-briefs/nvidia-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — NVIDIA CORP — Entity Observation
+
+## NVIDIA CORP
+- Route: entity-exposure/nvidia-corp.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — NVIDIA CORP — Entity Observation
 
 ## Observer Research Foundation
 - Route: think-tanks/observer-research-foundation.html
@@ -4164,9 +4566,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## PUNXSUTAWNEY HUNTING CLUB V. PGC
 - Route: entity-timelines/punxsutawney-hunting-club-v-pgc.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-briefs/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
+
+## PUNXSUTAWNEY HUNTING CLUB V. PGC
+- Route: entity-exposure/punxsutawney-hunting-club-v-pgc.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Punxsutawney Hunting Club v. PGC — Entity Observation
 
 ## PUPPETS OF INTEREST.
 - Route: top-52-power-deck.html
@@ -4512,9 +4929,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## SECURITIES AND EXCHANGE COMMISSION
 - Route: entity-timelines/securities-and-exchange-commission.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-briefs/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
+
+## SECURITIES AND EXCHANGE COMMISSION
+- Route: entity-exposure/securities-and-exchange-commission.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Securities and Exchange Commission — Entity Observation
 
 ## Sergey Brin
 - Route: follow-the-money/people/sergey-brin.html
@@ -4698,15 +5130,45 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## SUPREME COURT OF PENNSYLVANIA
 - Route: entity-timelines/supreme-court-of-pennsylvania.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-briefs/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
+
+## SUPREME COURT OF PENNSYLVANIA
+- Route: entity-exposure/supreme-court-of-pennsylvania.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Pennsylvania — Entity Observation
 
 ## SUPREME COURT OF RHODE ISLAND
 - Route: entity-timelines/supreme-court-of-rhode-island.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Supreme Court of Rhode Island — Entity Observation
+
+## SUPREME COURT OF RHODE ISLAND
+- Route: entity-briefs/supreme-court-of-rhode-island.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Rhode Island — Entity Observation
+
+## SUPREME COURT OF RHODE ISLAND
+- Route: entity-exposure/supreme-court-of-rhode-island.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Supreme Court of Rhode Island — Entity Observation
 
 ## Supreme Court of the United States
 - Route: entity-timelines/supreme-court-of-the-united-states.html
@@ -5020,9 +5482,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## UNITED STATES V. ANTEN
 - Route: entity-timelines/united-states-v-anten.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
+
+## UNITED STATES V. ANTEN
+- Route: entity-briefs/united-states-v-anten.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
+
+## UNITED STATES V. ANTEN
+- Route: entity-exposure/united-states-v-anten.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — United States v. Anten — Entity Observation
 
 ## UPGRADE TARGETS.
 - Route: upgrade-targets.html
@@ -5216,6 +5693,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## Welcome To Matrix Reprogrammed
+- Route: index.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Wellcome Trust
 - Route: institutions/wellcome-trust.html
 - Status: no-new-verified-record-in-current-window
@@ -5266,9 +5749,24 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## WILLIAMS V. BIGGS
 - Route: entity-timelines/williams-v-biggs.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
+- Status: current-records-matched
+- Current matched records: 1
 - Latest record: none in current window
+- undated — Williams v. Biggs — Entity Observation
+
+## WILLIAMS V. BIGGS
+- Route: entity-briefs/williams-v-biggs.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Williams v. Biggs — Entity Observation
+
+## WILLIAMS V. BIGGS
+- Route: entity-exposure/williams-v-biggs.html
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: none in current window
+- undated — Williams v. Biggs — Entity Observation
 
 ## Wilson Center
 - Route: think-tanks/wilson-center.html

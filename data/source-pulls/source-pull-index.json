@@ -1,24 +1,24 @@
 {
-  "updated": "2026-08-03T06:44:57.495Z",
+  "updated": "2026-08-03T09:34:50.551Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "pulls": [
     {
       "lane": "federal-register-policy",
       "name": "Federal Register latest policy records",
-      "ok": true,
-      "status": 200,
+      "ok": false,
+      "status": 0,
       "output": "data/source-pulls/federal-register-latest.json",
-      "itemCount": 6,
-      "error": null
+      "itemCount": 0,
+      "error": "fetch failed"
     },
     {
       "lane": "sec-edgar-filings",
       "name": "SEC EDGAR company tickers snapshot",
-      "ok": true,
-      "status": 200,
+      "ok": false,
+      "status": 0,
       "output": "data/source-pulls/sec-edgar-watch.json",
-      "itemCount": 6,
-      "error": null
+      "itemCount": 0,
+      "error": "fetch failed"
     },
     {
       "lane": "courtlistener-court-records",
@@ -27,16 +27,16 @@
       "status": 0,
       "output": "data/source-pulls/courtlistener-watch.json",
       "itemCount": 0,
-      "error": "This operation was aborted"
+      "error": "fetch failed"
     },
     {
       "lane": "usaspending-contracts",
       "name": "USAspending public awards signal",
       "ok": false,
-      "status": 422,
+      "status": 0,
       "output": "data/source-pulls/usaspending-watch.json",
       "itemCount": 0,
-      "error": null
+      "error": "fetch failed"
     },
     {
       "lane": "ofac-sanctions",
@@ -45,16 +45,16 @@
       "status": 0,
       "output": "data/source-pulls/ofac-watch.json",
       "itemCount": 0,
-      "error": "This operation was aborted"
+      "error": "fetch failed"
     },
     {
       "lane": "world-bank-projects",
       "name": "World Bank project search",
-      "ok": true,
-      "status": 200,
+      "ok": false,
+      "status": 0,
       "output": "data/source-pulls/worldbank-watch.json",
       "itemCount": 0,
-      "error": null
+      "error": "fetch failed"
     },
     {
       "lane": "news-signal-not-evidence",
@@ -63,7 +63,7 @@
       "status": 0,
       "output": "data/source-pulls/news-signal-watch.json",
       "itemCount": 0,
-      "error": "This operation was aborted"
+      "error": "fetch failed"
     }
   ]
 }

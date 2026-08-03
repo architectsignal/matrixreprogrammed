@@ -1,12 +1,161 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T07:07:08.843Z",
+  "generatedAt": "2026-08-03T09:34:56.312Z",
   "roots": [
     ".",
     "_site"
   ],
-  "filesChanged": 0,
-  "fixes": 0,
-  "changes": [],
+  "filesChanged": 37,
+  "fixes": 583,
+  "changes": [
+    {
+      "file": "cinematic-hit-list",
+      "fixes": 34
+    },
+    {
+      "file": "cinematic-hit-list.html",
+      "fixes": 34
+    },
+    {
+      "file": "control-map-daily.html",
+      "fixes": 1
+    },
+    {
+      "file": "daily-power-conclusions.html",
+      "fixes": 2
+    },
+    {
+      "file": "daily-watch.html",
+      "fixes": 1
+    },
+    {
+      "file": "deep-intel-feed.html",
+      "fixes": 24
+    },
+    {
+      "file": "hit-list",
+      "fixes": 34
+    },
+    {
+      "file": "hit-list.html",
+      "fixes": 34
+    },
+    {
+      "file": "index.html",
+      "fixes": 1
+    },
+    {
+      "file": "live-intel.html",
+      "fixes": 1
+    },
+    {
+      "file": "power-structure-map.html",
+      "fixes": 17
+    },
+    {
+      "file": "_site/brief-quality-report",
+      "fixes": 17
+    },
+    {
+      "file": "_site/brief-quality-report.html",
+      "fixes": 17
+    },
+    {
+      "file": "_site/cinematic-hit-list",
+      "fixes": 34
+    },
+    {
+      "file": "_site/cinematic-hit-list.html",
+      "fixes": 34
+    },
+    {
+      "file": "_site/control-map-daily",
+      "fixes": 1
+    },
+    {
+      "file": "_site/control-map-daily.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-brain-brief",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-brain-brief.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-command-brief",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-command-brief.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-missing-records",
+      "fixes": 34
+    },
+    {
+      "file": "_site/daily-missing-records.html",
+      "fixes": 34
+    },
+    {
+      "file": "_site/daily-power-conclusions",
+      "fixes": 2
+    },
+    {
+      "file": "_site/daily-power-conclusions.html",
+      "fixes": 2
+    },
+    {
+      "file": "_site/daily-watch",
+      "fixes": 1
+    },
+    {
+      "file": "_site/daily-watch.html",
+      "fixes": 1
+    },
+    {
+      "file": "_site/deep-intel-feed",
+      "fixes": 24
+    },
+    {
+      "file": "_site/deep-intel-feed.html",
+      "fixes": 24
+    },
+    {
+      "file": "_site/entity-daily-briefs",
+      "fixes": 17
+    },
+    {
+      "file": "_site/entity-daily-briefs.html",
+      "fixes": 17
+    },
+    {
+      "file": "_site/entity-exposure-index",
+      "fixes": 17
+    },
+    {
+      "file": "_site/entity-exposure-index.html",
+      "fixes": 17
+    },
+    {
+      "file": "_site/hit-list",
+      "fixes": 34
+    },
+    {
+      "file": "_site/hit-list.html",
+      "fixes": 34
+    },
+    {
+      "file": "_site/power-structure-map",
+      "fixes": 17
+    },
+    {
+      "file": "_site/power-structure-map.html",
+      "fixes": 17
+    }
+  ],
   "boundary": "Only links to generated entity briefs, exposure pages and elite reports are changed, and only when the current generated target does not exist. Missing entity routes fall back to the public search; missing report routes fall back to the reports hub. Both source pages and the exact Cloudflare output are repaired."
 }

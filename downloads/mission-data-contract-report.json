@@ -1,18 +1,18 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T08:46:32.181Z",
+  "generatedAt": "2026-08-03T09:35:00.507Z",
   "investigationData": {
     "ok": true,
-    "generatedAt": "2026-08-03T08:46:31.494Z",
+    "generatedAt": "2026-08-03T09:34:58.676Z",
     "sourceState": {
       "sources": 12,
       "created": 0,
       "lastAttemptRepaired": 12
     },
     "ledger": {
-      "before": 2806,
+      "before": 2596,
       "active": 2500,
-      "archivedThisRun": 306,
+      "archivedThisRun": 96,
       "duplicateIdsRepaired": 0,
       "invalidUrlsArchived": 0,
       "activeLimit": 2500,
@@ -20,14 +20,14 @@
       "fullMissionConclusions": 2500
     },
     "conclusionProducts": {
-      "dailyFindingsEnriched": 24,
+      "dailyFindingsEnriched": 25,
       "weeklyFindingsEnriched": 48
     },
     "boundary": "This repair normalises provenance, active-ledger capacity and user-facing meaning. It does not change a legal allegation into an established fact or remove archived evidence from the historical record."
   },
   "criminalAccountability": {
     "ok": true,
-    "generatedAt": "2026-08-03T08:46:31.867Z",
+    "generatedAt": "2026-08-03T09:34:58.962Z",
     "subjects": 20,
     "current": 15,
     "historical": 5,
@@ -60,7 +60,7 @@
   },
   "criminalDossierCoverage": {
     "ok": true,
-    "generatedAt": "2026-08-03T08:46:32.160Z",
+    "generatedAt": "2026-08-03T09:35:00.413Z",
     "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
     "minimumPredatorsInPowerTarget": 100,
     "approvedPredatorsInPowerDossiers": 20,
@@ -72,1023 +72,6 @@
     "missingNativeRoutes": [],
     "missingPanels": [],
     "coverage": [
-      {
-        "route": "_site/atlas-lanes/agencies.html",
-        "title": "AGENCIES",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/banks-and-central-banks.html",
-        "title": "BANKS AND CENTRAL BANKS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/civil-suits.html",
-        "title": "CIVIL SUITS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/civilian-casualties.html",
-        "title": "CIVILIAN CASUALTIES",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/contracts.html",
-        "title": "CONTRACTS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/covert-project-records.html",
-        "title": "COVERT-PROJECT RECORDS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/depositions-and-exhibits.html",
-        "title": "DEPOSITIONS AND EXHIBITS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/donations.html",
-        "title": "DONATIONS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/exploitation.html",
-        "title": "EXPLOITATION",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/financiers.html",
-        "title": "FINANCIERS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/foundations.html",
-        "title": "FOUNDATIONS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/fraternal-claims.html",
-        "title": "FRATERNAL CLAIMS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/grants.html",
-        "title": "GRANTS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/hearings.html",
-        "title": "HEARINGS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/human-cost.html",
-        "title": "HUMAN COST",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/indictments.html",
-        "title": "INDICTMENTS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/institutions.html",
-        "title": "INSTITUTIONS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/intelligence-figures.html",
-        "title": "INTELLIGENCE FIGURES",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/legal-records.html",
-        "title": "LEGAL RECORDS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/lobbying.html",
-        "title": "LOBBYING",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/logos.html",
-        "title": "LOGOS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/media-owners.html",
-        "title": "MEDIA OWNERS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/migration.html",
-        "title": "MIGRATION",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/mission-patches.html",
-        "title": "MISSION PATCHES",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/money-flows.html",
-        "title": "MONEY FLOWS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/ngos.html",
-        "title": "NGOS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/operations.html",
-        "title": "OPERATIONS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/people.html",
-        "title": "PEOPLE",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/politicians.html",
-        "title": "POLITICIANS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/ritual-architecture.html",
-        "title": "RITUAL ARCHITECTURE",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/scandals.html",
-        "title": "SCANDALS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/symbolic-layer.html",
-        "title": "SYMBOLIC LAYER",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/trials.html",
-        "title": "TRIALS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/vaccine-compensation.html",
-        "title": "VACCINE COMPENSATION",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/atlas-lanes/wars.html",
-        "title": "WARS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/bernard-arnault.html",
-        "title": "BERNARD ARNAULT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/bill-gates.html",
-        "title": "BILL GATES",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/elon-musk.html",
-        "title": "ELON MUSK",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/jeff-bezos.html",
-        "title": "JEFF BEZOS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/jensen-huang.html",
-        "title": "JENSEN HUANG",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/larry-ellison.html",
-        "title": "LARRY ELLISON",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/mark-zuckerberg.html",
-        "title": "MARK ZUCKERBERG",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/michael-bloomberg.html",
-        "title": "MICHAEL BLOOMBERG",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/peter-thiel.html",
-        "title": "PETER THIEL",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/billionaire-briefs/warren-buffett.html",
-        "title": "WARREN BUFFETT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/card-dossier-standard.html",
-        "title": "CARD DOSSIER STANDARD.",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/contractor-briefs/blackwater-constellis-lineage.html",
-        "title": "BLACKWATER / XE / ACADEMI / CONSTELLIS LINEAGE",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/contractor-briefs/booz-allen-intelligence-contractor.html",
-        "title": "BOOZ ALLEN HAMILTON",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/contractor-briefs/caci-intelligence-contractor.html",
-        "title": "CACI INTERNATIONAL",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/contractor-briefs/dyncorp-amentum-lineage.html",
-        "title": "DYNCORP / AMENTUM LINEAGE",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/contractor-briefs/g4s-allied-security-lineage.html",
-        "title": "G4S / ALLIED UNIVERSAL SECURITY LINEAGE",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/contractor-briefs/leidos-saic-lineage.html",
-        "title": "SAIC / LEIDOS LINEAGE",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/contractor-briefs/palantir-government-platforms.html",
-        "title": "PALANTIR GOVERNMENT PLATFORMS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/distribution-longform-video.html",
-        "title": "Longform Dossier Videos",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-abdul-halim-khan.html",
-        "title": "ABDUL HALIM KHAN",
-        "matchedSubject": "Abdul Halim Khan",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-abdul-halim-khan.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-adam-taylor-nca.html",
-        "title": "ADAM TAYLOR",
-        "matchedSubject": "Adam Taylor",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-adam-taylor-nca.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-alex-karp.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-anthony-weiner.html",
-        "title": "ANTHONY WEINER",
-        "matchedSubject": "Anthony Weiner",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-anthony-weiner.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-conor-mcgrath.html",
-        "title": "CONOR MCGRATH",
-        "matchedSubject": "Conor McGrath",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-conor-mcgrath.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-cyril-smith.html",
-        "title": "CYRIL SMITH",
-        "matchedSubject": "Cyril Smith",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 2,
-        "criminalDossierRoute": "dossier-cyril-smith.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-david-james-clarke.html",
-        "title": "DAVID JAMES CLARKE",
-        "matchedSubject": "David James Clarke",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-david-james-clarke.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-elon-musk.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-george-nader.html",
-        "title": "GEORGE A. NADER",
-        "matchedSubject": "George A. Nader",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-george-nader.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-ghislaine-maxwell-criminal.html",
-        "title": "GHISLAINE MAXWELL",
-        "matchedSubject": "Ghislaine Maxwell",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 2,
-        "criminalDossierRoute": "dossier-ghislaine-maxwell-criminal.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-greville-janner.html",
-        "title": "GREVILLE JANNER",
-        "matchedSubject": "Greville Janner",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 2,
-        "criminalDossierRoute": "dossier-greville-janner.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-huw-edwards.html",
-        "title": "HUW EDWARDS",
-        "matchedSubject": "Huw Edwards",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-huw-edwards.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-jeff-bezos.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-jeffrey-epstein-criminal.html",
-        "title": "JEFFREY EPSTEIN",
-        "matchedSubject": "Jeffrey Epstein",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 3,
-        "criminalDossierRoute": "dossier-jeffrey-epstein-criminal.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-jensen-huang.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-jimmy-savile.html",
-        "title": "JIMMY SAVILE",
-        "matchedSubject": "Jimmy Savile",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 2,
-        "criminalDossierRoute": "dossier-jimmy-savile.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-joel-greenberg.html",
-        "title": "JOEL MICAH GREENBERG",
-        "matchedSubject": "Joel Micah Greenberg",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 2,
-        "criminalDossierRoute": "dossier-joel-greenberg.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-keith-raniere.html",
-        "title": "KEITH RANIERE",
-        "matchedSubject": "Keith Raniere",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-keith-raniere.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-larry-ellison.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-larry-fink.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-larry-nassar.html",
-        "title": "LARRY NASSAR",
-        "matchedSubject": "Larry Nassar",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 3,
-        "criminalDossierRoute": "dossier-larry-nassar.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-lawrence-ray.html",
-        "title": "LAWRENCE RAY",
-        "matchedSubject": "Lawrence Ray",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-lawrence-ray.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-mark-zuckerberg.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-pack-black-file-starter.html",
-        "title": "Black File Starter Pack",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-pack-crime-state-overlap.html",
-        "title": "Crime-State Overlap Pack",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-pack-intelligence-network.html",
-        "title": "Intelligence Network Pack",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-pack-symbolic-power.html",
-        "title": "Symbolic Power Pack",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-pack-trust-evidence.html",
-        "title": "Trust And Evidence Pack",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-pack-war-machine.html",
-        "title": "War Machine Pack",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-peter-ball.html",
-        "title": "PETER BALL",
-        "matchedSubject": "Peter Ball",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 2,
-        "criminalDossierRoute": "dossier-peter-ball.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-r-kelly.html",
-        "title": "R. KELLY",
-        "matchedSubject": "R. Kelly",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 3,
-        "criminalDossierRoute": "dossier-r-kelly.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-ralph-shortey.html",
-        "title": "RALPH SHORTEY",
-        "matchedSubject": "Ralph Shortey",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-ralph-shortey.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-robert-hadden.html",
-        "title": "ROBERT HADDEN",
-        "matchedSubject": "Robert Hadden",
-        "matchStatus": "approved-registry-subject",
-        "approvedRecords": 1,
-        "criminalDossierRoute": "dossier-robert-hadden.html",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-sam-altman.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-satya-nadella.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/dossier-sundar-pichai.html",
-        "title": "Loading dossier...",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/entity-daily-briefs.html",
-        "title": "ENTITY DAILY BRIEFS.",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/entity-exposure-index.html",
-        "title": "ENTITY EXPOSURE INDEX.",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/entity-registry.html",
-        "title": "ENTITY REGISTRY",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/entity-relationship-map.html",
-        "title": "ENTITY RELATIONSHIP MAP.",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/entity-timelines.html",
-        "title": "ENTITY TIMELINES",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/european-commission.html",
-        "title": "EUROPEAN COMMISSION",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/federal-reserve.html",
-        "title": "FEDERAL RESERVE",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/international-monetary-fund.html",
-        "title": "INTERNATIONAL MONETARY FUND",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/nato.html",
-        "title": "NATO",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/united-nations.html",
-        "title": "UNITED NATIONS",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/world-bank.html",
-        "title": "WORLD BANK",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/world-economic-forum.html",
-        "title": "WORLD ECONOMIC FORUM",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/institution-briefs/world-health-organization.html",
-        "title": "WORLD HEALTH ORGANIZATION",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-aapl.html",
-        "title": "AAPL — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-alphabet-inc.html",
-        "title": "ALPHABET INC. — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-amazon-com-inc.html",
-        "title": "AMAZON COM INC — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-amzn.html",
-        "title": "AMZN — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-apple-inc.html",
-        "title": "APPLE INC. — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-avgo.html",
-        "title": "AVGO — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-broadcom-inc.html",
-        "title": "BROADCOM INC. — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-centers-for-medicare-and-medicaid-services.html",
-        "title": "CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-health-and-human-services-department.html",
-        "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-homeland-security-department.html",
-        "title": "HOMELAND SECURITY DEPARTMENT — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
       {
         "route": "atlas-lanes/agencies.html",
         "title": "AGENCIES",
@@ -2105,12 +1088,1029 @@
         "approvedRecords": 0,
         "criminalDossierRoute": "",
         "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/agencies.html",
+        "title": "AGENCIES",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/banks-and-central-banks.html",
+        "title": "BANKS AND CENTRAL BANKS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/civil-suits.html",
+        "title": "CIVIL SUITS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/civilian-casualties.html",
+        "title": "CIVILIAN CASUALTIES",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/contracts.html",
+        "title": "CONTRACTS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/covert-project-records.html",
+        "title": "COVERT-PROJECT RECORDS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/depositions-and-exhibits.html",
+        "title": "DEPOSITIONS AND EXHIBITS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/donations.html",
+        "title": "DONATIONS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/exploitation.html",
+        "title": "EXPLOITATION",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/financiers.html",
+        "title": "FINANCIERS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/foundations.html",
+        "title": "FOUNDATIONS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/fraternal-claims.html",
+        "title": "FRATERNAL CLAIMS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/grants.html",
+        "title": "GRANTS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/hearings.html",
+        "title": "HEARINGS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/human-cost.html",
+        "title": "HUMAN COST",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/indictments.html",
+        "title": "INDICTMENTS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/institutions.html",
+        "title": "INSTITUTIONS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/intelligence-figures.html",
+        "title": "INTELLIGENCE FIGURES",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/legal-records.html",
+        "title": "LEGAL RECORDS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/lobbying.html",
+        "title": "LOBBYING",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/logos.html",
+        "title": "LOGOS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/media-owners.html",
+        "title": "MEDIA OWNERS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/migration.html",
+        "title": "MIGRATION",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/mission-patches.html",
+        "title": "MISSION PATCHES",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/money-flows.html",
+        "title": "MONEY FLOWS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/ngos.html",
+        "title": "NGOS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/operations.html",
+        "title": "OPERATIONS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/people.html",
+        "title": "PEOPLE",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/politicians.html",
+        "title": "POLITICIANS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/ritual-architecture.html",
+        "title": "RITUAL ARCHITECTURE",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/scandals.html",
+        "title": "SCANDALS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/symbolic-layer.html",
+        "title": "SYMBOLIC LAYER",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/trials.html",
+        "title": "TRIALS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/vaccine-compensation.html",
+        "title": "VACCINE COMPENSATION",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/atlas-lanes/wars.html",
+        "title": "WARS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/bernard-arnault.html",
+        "title": "BERNARD ARNAULT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/bill-gates.html",
+        "title": "BILL GATES",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/elon-musk.html",
+        "title": "ELON MUSK",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/jeff-bezos.html",
+        "title": "JEFF BEZOS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/jensen-huang.html",
+        "title": "JENSEN HUANG",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/larry-ellison.html",
+        "title": "LARRY ELLISON",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/mark-zuckerberg.html",
+        "title": "MARK ZUCKERBERG",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/michael-bloomberg.html",
+        "title": "MICHAEL BLOOMBERG",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/peter-thiel.html",
+        "title": "PETER THIEL",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/billionaire-briefs/warren-buffett.html",
+        "title": "WARREN BUFFETT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/card-dossier-standard.html",
+        "title": "CARD DOSSIER STANDARD.",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/contractor-briefs/blackwater-constellis-lineage.html",
+        "title": "BLACKWATER / XE / ACADEMI / CONSTELLIS LINEAGE",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/contractor-briefs/booz-allen-intelligence-contractor.html",
+        "title": "BOOZ ALLEN HAMILTON",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/contractor-briefs/caci-intelligence-contractor.html",
+        "title": "CACI INTERNATIONAL",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/contractor-briefs/dyncorp-amentum-lineage.html",
+        "title": "DYNCORP / AMENTUM LINEAGE",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/contractor-briefs/g4s-allied-security-lineage.html",
+        "title": "G4S / ALLIED UNIVERSAL SECURITY LINEAGE",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/contractor-briefs/leidos-saic-lineage.html",
+        "title": "SAIC / LEIDOS LINEAGE",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/contractor-briefs/palantir-government-platforms.html",
+        "title": "PALANTIR GOVERNMENT PLATFORMS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/distribution-longform-video.html",
+        "title": "Longform Dossier Videos",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-abdul-halim-khan.html",
+        "title": "ABDUL HALIM KHAN",
+        "matchedSubject": "Abdul Halim Khan",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-abdul-halim-khan.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-adam-taylor-nca.html",
+        "title": "ADAM TAYLOR",
+        "matchedSubject": "Adam Taylor",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-adam-taylor-nca.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-alex-karp.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-anthony-weiner.html",
+        "title": "ANTHONY WEINER",
+        "matchedSubject": "Anthony Weiner",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-anthony-weiner.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-conor-mcgrath.html",
+        "title": "CONOR MCGRATH",
+        "matchedSubject": "Conor McGrath",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-conor-mcgrath.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-cyril-smith.html",
+        "title": "CYRIL SMITH",
+        "matchedSubject": "Cyril Smith",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-cyril-smith.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-david-james-clarke.html",
+        "title": "DAVID JAMES CLARKE",
+        "matchedSubject": "David James Clarke",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-david-james-clarke.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-elon-musk.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-george-nader.html",
+        "title": "GEORGE A. NADER",
+        "matchedSubject": "George A. Nader",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-george-nader.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-ghislaine-maxwell-criminal.html",
+        "title": "GHISLAINE MAXWELL",
+        "matchedSubject": "Ghislaine Maxwell",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-ghislaine-maxwell-criminal.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-greville-janner.html",
+        "title": "GREVILLE JANNER",
+        "matchedSubject": "Greville Janner",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-greville-janner.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-huw-edwards.html",
+        "title": "HUW EDWARDS",
+        "matchedSubject": "Huw Edwards",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-huw-edwards.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-jeff-bezos.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-jeffrey-epstein-criminal.html",
+        "title": "JEFFREY EPSTEIN",
+        "matchedSubject": "Jeffrey Epstein",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 3,
+        "criminalDossierRoute": "dossier-jeffrey-epstein-criminal.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-jensen-huang.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-jimmy-savile.html",
+        "title": "JIMMY SAVILE",
+        "matchedSubject": "Jimmy Savile",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-jimmy-savile.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-joel-greenberg.html",
+        "title": "JOEL MICAH GREENBERG",
+        "matchedSubject": "Joel Micah Greenberg",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-joel-greenberg.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-keith-raniere.html",
+        "title": "KEITH RANIERE",
+        "matchedSubject": "Keith Raniere",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-keith-raniere.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-larry-ellison.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-larry-fink.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-larry-nassar.html",
+        "title": "LARRY NASSAR",
+        "matchedSubject": "Larry Nassar",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 3,
+        "criminalDossierRoute": "dossier-larry-nassar.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-lawrence-ray.html",
+        "title": "LAWRENCE RAY",
+        "matchedSubject": "Lawrence Ray",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-lawrence-ray.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-mark-zuckerberg.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-pack-black-file-starter.html",
+        "title": "Black File Starter Pack",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-pack-crime-state-overlap.html",
+        "title": "Crime-State Overlap Pack",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-pack-intelligence-network.html",
+        "title": "Intelligence Network Pack",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-pack-symbolic-power.html",
+        "title": "Symbolic Power Pack",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-pack-trust-evidence.html",
+        "title": "Trust And Evidence Pack",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-pack-war-machine.html",
+        "title": "War Machine Pack",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-peter-ball.html",
+        "title": "PETER BALL",
+        "matchedSubject": "Peter Ball",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 2,
+        "criminalDossierRoute": "dossier-peter-ball.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-r-kelly.html",
+        "title": "R. KELLY",
+        "matchedSubject": "R. Kelly",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 3,
+        "criminalDossierRoute": "dossier-r-kelly.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-ralph-shortey.html",
+        "title": "RALPH SHORTEY",
+        "matchedSubject": "Ralph Shortey",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-ralph-shortey.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-robert-hadden.html",
+        "title": "ROBERT HADDEN",
+        "matchedSubject": "Robert Hadden",
+        "matchStatus": "approved-registry-subject",
+        "approvedRecords": 1,
+        "criminalDossierRoute": "dossier-robert-hadden.html",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-sam-altman.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-satya-nadella.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/dossier-sundar-pichai.html",
+        "title": "Loading dossier...",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/entity-daily-briefs.html",
+        "title": "ENTITY DAILY BRIEFS.",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/entity-exposure-index.html",
+        "title": "ENTITY EXPOSURE INDEX.",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/entity-registry.html",
+        "title": "ENTITY REGISTRY",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/entity-relationship-map.html",
+        "title": "ENTITY RELATIONSHIP MAP.",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/entity-timelines.html",
+        "title": "ENTITY TIMELINES",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/european-commission.html",
+        "title": "EUROPEAN COMMISSION",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/federal-reserve.html",
+        "title": "FEDERAL RESERVE",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/international-monetary-fund.html",
+        "title": "INTERNATIONAL MONETARY FUND",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/nato.html",
+        "title": "NATO",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/united-nations.html",
+        "title": "UNITED NATIONS",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/world-bank.html",
+        "title": "WORLD BANK",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/world-economic-forum.html",
+        "title": "WORLD ECONOMIC FORUM",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/institution-briefs/world-health-organization.html",
+        "title": "WORLD HEALTH ORGANIZATION",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-aapl.html",
+        "title": "AAPL — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-alphabet-inc.html",
+        "title": "ALPHABET INC. — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-amazon-com-inc.html",
+        "title": "AMAZON COM INC — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-amzn.html",
+        "title": "AMZN — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-apple-inc.html",
+        "title": "APPLE INC. — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-avgo.html",
+        "title": "AVGO — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-broadcom-inc.html",
+        "title": "BROADCOM INC. — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-centers-for-medicare-and-medicaid-services.html",
+        "title": "CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-health-and-human-services-department.html",
+        "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-homeland-security-department.html",
+        "title": "HOMELAND SECURITY DEPARTMENT — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
       }
     ]
   },
   "criminalWaveBuild": {
     "ok": true,
-    "generatedAt": "2026-08-03T08:46:31.848Z",
+    "generatedAt": "2026-08-03T09:34:58.932Z",
     "mode": "single-authoritative-hydration-with-verification-only",
     "idempotent": true,
     "waveFiles": [
@@ -2204,7 +2204,7 @@
   },
   "criminalDossierTest": {
     "ok": true,
-    "generatedAt": "2026-08-03T08:46:32.180Z",
+    "generatedAt": "2026-08-03T09:35:00.505Z",
     "target": 100,
     "approvedDossiers": 20,
     "dossierPagesChecked": 226,

@@ -1,19 +1,415 @@
 {
-  "updated": "2026-08-02T20:59:26.674Z",
+  "updated": "2026-08-03T03:53:55.316Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
   "records": [
     {
-      "entity": "Control Structure",
-      "record": "Feed runner has not produced entity observations yet.",
-      "route": "entity-briefs/control-structure.html",
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
       "type": "entity brief"
     },
     {
-      "entity": "Control Structure",
-      "record": "Feed runner has not produced entity observations yet.",
-      "route": "entity-exposure/control-structure.html",
+      "entity": "Centers for Medicare & Medicaid Services",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Health and Human Services Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/health-and-human-services-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2021-08825",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2021-08825.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2024-13374",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2024-13374.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2025-0045-Appeal.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2025-0045-appeal.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "23 WAP 2023",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/23-wap-2023.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "24-2251",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/24-2251.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "24-7261",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/24-7261.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Civil Rights Corps v. LaSalle",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals for the Ninth Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals for the Second Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Homeland Security Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/homeland-security-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Punxsutawney Hunting Club v. PGC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Supreme Court of Pennsylvania",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Supreme Court of Rhode Island",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/supreme-court-of-rhode-island.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "United States v. Anten",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/united-states-v-anten.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Williams v. Biggs",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/williams-v-biggs.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AAPL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/aapl.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Alphabet Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/alphabet-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AMAZON COM INC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/amazon-com-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AMZN",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/amzn.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Apple Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/apple-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "AVGO",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/avgo.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Broadcom Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/broadcom-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "GOOGL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/googl.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "MICROSOFT CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/microsoft-corp.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "MSFT",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/msft.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "NVDA",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nvda.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "NVIDIA CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nvidia-corp.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Nuclear Regulatory Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nuclear-regulatory-commission.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Securities and Exchange Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/securities-and-exchange-commission.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Court of Appeals for the Ninth Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Court of Appeals for the Second Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Supreme Court of Pennsylvania",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/supreme-court-of-pennsylvania.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Supreme Court of Rhode Island",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/supreme-court-of-rhode-island.html",
+      "type": "record review"
+    },
+    {
+      "entity": "2021-08825",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/2021-08825.html",
+      "type": "record review"
+    },
+    {
+      "entity": "2024-13374",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/2024-13374.html",
+      "type": "record review"
+    },
+    {
+      "entity": "2025-0045-Appeal.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/2025-0045-appeal.html",
+      "type": "record review"
+    },
+    {
+      "entity": "23 WAP 2023",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/23-wap-2023.html",
+      "type": "record review"
+    },
+    {
+      "entity": "24-2251",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/24-2251.html",
+      "type": "record review"
+    },
+    {
+      "entity": "24-7261",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/24-7261.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Civil Rights Corps v. LaSalle",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/civil-rights-corps-v-lasalle.html",
+      "type": "record review"
+    },
+    {
+      "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Punxsutawney Hunting Club v. PGC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "United States v. Anten",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/united-states-v-anten.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Williams v. Biggs",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/williams-v-biggs.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Homeland Security Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/homeland-security-department.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Centers for Medicare & Medicaid Services",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Health and Human Services Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/health-and-human-services-department.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AAPL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/aapl.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Alphabet Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/alphabet-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AMAZON COM INC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/amazon-com-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AMZN",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/amzn.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Apple Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/apple-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AVGO",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/avgo.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Broadcom Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/broadcom-inc.html",
+      "type": "record review"
+    },
+    {
+      "entity": "GOOGL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/googl.html",
+      "type": "record review"
+    },
+    {
+      "entity": "MICROSOFT CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/microsoft-corp.html",
+      "type": "record review"
+    },
+    {
+      "entity": "MSFT",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/msft.html",
+      "type": "record review"
+    },
+    {
+      "entity": "NVDA",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/nvda.html",
+      "type": "record review"
+    },
+    {
+      "entity": "NVIDIA CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/nvidia-corp.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Nuclear Regulatory Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/nuclear-regulatory-commission.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Securities and Exchange Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/securities-and-exchange-commission.html",
       "type": "record review"
     },
     {
@@ -49,6 +445,12 @@
     {
       "entity": "Blackwater / Xe / Academi / Constellis lineage",
       "record": "News signals verified against primary records",
+      "route": "contractor-briefs/blackwater-constellis-lineage.html",
+      "type": "contractor profile"
+    },
+    {
+      "entity": "Blackwater / Xe / Academi / Constellis lineage",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "contractor-briefs/blackwater-constellis-lineage.html",
       "type": "contractor profile"
     },

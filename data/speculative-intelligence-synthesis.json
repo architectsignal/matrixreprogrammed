@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-08-02T21:21:12.339Z",
+  "updated": "2026-08-03T03:53:56.857Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 46955,
+    "recordsInspected": 47007,
     "criticalClocks": [
       {
         "slug": "childrens-digital-identity-age-gating",
@@ -952,14 +952,14 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 17119,
+        "signalCount": 17125,
         "actors": []
       },
       {
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 12371,
+        "signalCount": 12382,
         "actors": [
           "Information and narrative control"
         ]
@@ -968,14 +968,14 @@
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 5084,
+        "signalCount": 5087,
         "actors": []
       },
       {
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 3527,
+        "signalCount": 3532,
         "actors": [
           "Exercise or conversion of derivative security",
           "Identity, surveillance and access",
@@ -995,7 +995,7 @@
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 1892,
+        "signalCount": 1898,
         "actors": [
           "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
         ]

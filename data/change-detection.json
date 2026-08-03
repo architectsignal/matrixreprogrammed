@@ -1,13 +1,12 @@
 {
-  "updated": "2026-08-02T20:59:26.479Z",
+  "updated": "2026-08-03T03:53:55.140Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-08-02T19:34:11.458Z",
-  "currentRecordCount": 0,
-  "previousRecordCount": 18,
-  "newRecords": [],
-  "removedRecords": [
+  "previousUpdated": "2026-08-02T20:59:26.479Z",
+  "currentRecordCount": 18,
+  "previousRecordCount": 0,
+  "newRecords": [
     {
       "key": "federal-register-policy-2026-14679-1",
       "hash": "85c7ab5a5e58ef57",
@@ -84,12 +83,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000320193-1",
-      "hash": "2e1f25973218efc3",
+      "hash": "1652fd5eaa86d7d5",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-02",
+      "date": "2026-08-03",
       "names": [
         "Apple Inc.",
         "AAPL"
@@ -97,12 +96,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001045810-2",
-      "hash": "b1d03d3784339b5c",
+      "hash": "f4a23a0a863bebd6",
       "summary": "NVIDIA CORP (NVDA)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-02",
+      "date": "2026-08-03",
       "names": [
         "NVIDIA CORP",
         "NVDA"
@@ -110,12 +109,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001652044-3",
-      "hash": "0114f65bf8abd450",
+      "hash": "f591c8821bfe12e2",
       "summary": "Alphabet Inc. (GOOGL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-02",
+      "date": "2026-08-03",
       "names": [
         "Alphabet Inc.",
         "GOOGL"
@@ -123,12 +122,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000789019-4",
-      "hash": "dee49d6c70409bff",
+      "hash": "99e3c6861560d950",
       "summary": "MICROSOFT CORP (MSFT)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-02",
+      "date": "2026-08-03",
       "names": [
         "MICROSOFT CORP",
         "MSFT"
@@ -136,12 +135,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001018724-5",
-      "hash": "b34fb8d908999c53",
+      "hash": "e56ce0dafb3b302d",
       "summary": "AMAZON COM INC (AMZN)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-02",
+      "date": "2026-08-03",
       "names": [
         "AMAZON COM INC",
         "AMZN"
@@ -149,12 +148,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001730168-6",
-      "hash": "f894efefc4d19a72",
+      "hash": "6bab6e790f427e9d",
       "summary": "Broadcom Inc. (AVGO)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-02",
+      "date": "2026-08-03",
       "names": [
         "Broadcom Inc.",
         "AVGO"
@@ -245,8 +244,231 @@
       ]
     }
   ],
+  "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
-  "clockTriggers": [],
-  "repeatedEntities": []
+  "clockTriggers": [
+    {
+      "id": "federal-register-policy-2026-14679-1",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Electronic Delivery of Information Under the Federal Securities Laws",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws"
+    },
+    {
+      "id": "federal-register-policy-2026-14439-2",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant"
+    },
+    {
+      "id": "federal-register-policy-2026-13656-3",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment"
+    },
+    {
+      "id": "federal-register-policy-2026-13602-4",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh"
+    },
+    {
+      "id": "federal-register-policy-2026-13057-5",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration"
+    },
+    {
+      "id": "federal-register-policy-2026-12989-6",
+      "lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "summary": "Modernizing Security Requirements",
+      "trigger": "Review federal-register-policy for clock movement.",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements"
+    },
+    {
+      "id": "sec-edgar-filings-cik0000320193-1",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Apple Inc. (AAPL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001045810-2",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "NVIDIA CORP (NVDA)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001652044-3",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Alphabet Inc. (GOOGL)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0000789019-4",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "MICROSOFT CORP (MSFT)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001018724-5",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "AMAZON COM INC (AMZN)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "sec-edgar-filings-cik0001730168-6",
+      "lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "summary": "Broadcom Inc. (AVGO)",
+      "trigger": "Review sec-edgar-filings for clock movement.",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+    },
+    {
+      "id": "courtlistener-court-records-10936935-1",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/"
+    },
+    {
+      "id": "courtlistener-court-records-10936889-2",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Williams v. Biggs",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/"
+    },
+    {
+      "id": "courtlistener-court-records-10936118-3",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Civil Rights Corps v. LaSalle",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/"
+    },
+    {
+      "id": "courtlistener-court-records-10935302-4",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "United States v. Anten",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/"
+    },
+    {
+      "id": "courtlistener-court-records-10933234-5",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Punxsutawney Hunting Club v. PGC",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/"
+    },
+    {
+      "id": "courtlistener-court-records-10928510-6",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/"
+    }
+  ],
+  "repeatedEntities": [
+    {
+      "id": "homeland-security-department",
+      "name": "Homeland Security Department",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-14439-2",
+        "federal-register-policy-2026-13057-5"
+      ],
+      "last_seen": "2026-06-29"
+    },
+    {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13656-3",
+        "federal-register-policy-2026-13602-4"
+      ],
+      "last_seen": "2026-07-06"
+    },
+    {
+      "id": "centers-for-medicare-and-medicaid-services",
+      "name": "Centers for Medicare & Medicaid Services",
+      "count": 2,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-13656-3",
+        "federal-register-policy-2026-13602-4"
+      ],
+      "last_seen": "2026-07-06"
+    },
+    {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "count": 2,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10936935-1",
+        "courtlistener-court-records-10936889-2"
+      ],
+      "last_seen": "2026-07-29"
+    }
+  ]
 }

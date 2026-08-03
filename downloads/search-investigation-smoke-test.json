@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T07:06:29.771Z",
+  "generatedAt": "2026-08-03T08:46:40.577Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "1904 entries"
+      "detail": "1938 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "1904 unique routes"
+      "detail": "1938 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -115,7 +115,7 @@
     {
       "name": "local query corruption bribery fraud official enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=uk-sfo-news, investigation-source-ledger.html?source=doj-justice-news, daily-investigation-conclusions.html?finding=5460c0408472ce834da2b82f"
+      "detail": "investigation-source-ledger.html?source=uk-sfo-news, investigation-source-ledger.html?source=doj-justice-news, investigation-machine.html"
     },
     {
       "name": "local query WikiLeaks documents cables archive",
@@ -135,7 +135,7 @@
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=62862e6ca90495adc0788a2d, source-changes.html?change=a53bf480df4e4883383a08e0"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=b0403e3a18fe2637c0f94aa3, source-changes.html?change=62862e6ca90495adc0788a2d"
     }
   ],
   "failures": []

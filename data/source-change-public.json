@@ -1,14 +1,102 @@
 {
-  "updated": "2026-08-02T08:22:23.243Z",
+  "updated": "2026-08-03T08:45:48.703Z",
   "summary": {
     "registeredSources": 20,
     "checkedThisRun": 12,
-    "changesThisRun": 1,
-    "retainedChanges": 93,
+    "changesThisRun": 2,
+    "retainedChanges": 95,
     "unavailableSources": 4
   },
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
   "changes": [
+    {
+      "id": "b0403e3a18fe2637c0f94aa3",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-03T08:45:48.703Z",
+      "detectedAt": "2026-08-03T08:45:48.703Z",
+      "changeType": "content-changed",
+      "previousHash": "443619eda7c5de42718df16a9d26b93f838bd107d139d118f92c32954438ab4f",
+      "currentHash": "c0b5b879935aaafe975865cbf2a1a61828069f5c5bd9d7ea038e1d1453d75916",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Mon, 03 Aug 2026 04:45:48 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-03T04:45:48-04:00 4 - Allen Zipporah (0002142412) (Reporting) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T21:54:50-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-089353 4 - Reformation Inc."
+      ],
+      "removals": [
+        "Latest Filings - Sun, 02 Aug 2026 04:22:23 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-02T04:22:23-04:00 4 - Allen Zipporah (0002142412) (Reporting) <b>Filed:</b> 2026-07-31 <b>AccNo:</b> 0001104659-26-089353 <b>Size:</b> 5 KB 2026-07-31T21:54:50-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-089353 4 - Reformation Inc."
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "c3bd2d306202dfc2e2374303",
+      "title": "content changed: European Public Prosecutor's Office — News",
+      "sourceId": "eppo-news",
+      "sourceLabel": "European Public Prosecutor's Office — News",
+      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-03T08:45:48.703Z",
+      "detectedAt": "2026-08-03T08:45:48.703Z",
+      "changeType": "content-changed",
+      "previousHash": "c81d1e98ae3df4a04eb4d8b1e22aa13a152032841a9f5f0be017990cd0ec3230",
+      "currentHash": "4d7bea9fb36f6d312990e341a913f683409dadc33d4adb921c7df4a8c4147830",
+      "httpStatus": 200,
+      "finalUrl": "https://www.eppo.europa.eu/media/news_en",
+      "additions": [
+        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Procurement Finance See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Vacancies Working for the EPPO Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU European Public Prosecutor’s Office VAT public health agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (906) RSS Showing results 1 to 10 News article 3 August 2026 Czechia: Six indicted in large-scale VAT fraud case involving imports of goods from China The European Public Prosecutor’s Office (EPPO) in Ostrava (Czechia) has filed an indictment before the Municipal Court in Prague against five individuals and one company suspected of defrauding over €17.4 million (CZK 418 million) in VAT on goods imported from China.",
+        "2 min read News article 30 July 2026 Poland: New arrests and second request to lifting immunity of Member of Parliament in ongoing corruption investigation Yesterday, in accordance with the procedures laid down by the EPPO Regulation and the Polish national law, the European Chief Prosecutor submitted to the Polish Parliament (Sejm) a second request to lift the immunity of an active Member of Parliament.",
+        "2 min read 1 Page 1 2 3 ..."
+      ],
+      "removals": [
+        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Procurement Finance See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Vacancies Working for the EPPO Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU European Public Prosecutor’s Office VAT public health agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (905) RSS Showing results 1 to 10 News article 30 July 2026 Poland: New arrests and second request to lifting immunity of Member of Parliament in ongoing corruption investigation Yesterday, in accordance with the procedures laid down by the EPPO Regulation and the Polish national law, the European Chief Prosecutor submitted to the Polish Parliament (Sejm) a second request to lift the immunity of an active Member of Parliament.",
+        "2 min read News article 15 July 2026 College of the EPPO concludes disciplinary proceedings against Bulgarian European Prosecutor Today, the College of the European Public Prosecutor’s Office (EPPO) in its capacity as appointing authority and in accordance with the EU Staff regulations, imposed the disciplinary penalty of “reprimand” to the European Prosecutor from Bulgaria.",
+        "1 min read 1 Page 1 2 3 ..."
+      ],
+      "additionCount": 3,
+      "removalCount": 3,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "62862e6ca90495adc0788a2d",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

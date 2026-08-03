@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T07:03:22.805Z",
+  "generatedAt": "2026-08-03T08:46:37.172Z",
   "overall": "ready",
   "summary": {
     "total": 52,
     "passed": 52,
     "failed": 0
   },
-  "homepageMode": "legacy-cinematic",
+  "homepageMode": "search-first-accountability",
   "watch": {
     "date": "2026-08-03",
     "person": "Bill Gates",
@@ -17,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 2833,
+    "archivedFindings": 3098,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -88,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "2833 archived findings retained.",
+      "detail": "3098 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -280,13 +280,13 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Legacy homepage: headerEnd=5447; hitList=5456; nextLegacyPanel=-1.",
+      "detail": "Search-first homepage: headerEnd=4048; search=134894; accountabilityHitList=136158.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {
       "id": "accountability-card-ui",
       "ok": true,
-      "detail": "3 cinematic dossier cards found.",
+      "detail": "3 search-first accountability cards found.",
       "fix": "Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html."
     },
     {

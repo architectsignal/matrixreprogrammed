@@ -8,6 +8,7 @@ const uiFile = path.join(root, 'research-tools.js');
 const deliveryFile = path.join(root, 'src', 'worker-report-delivery.js');
 const changeDetectionFile = path.join(root, 'scripts', 'build-change-detection-engine.js');
 const homepageFile = path.join(root, 'index.html');
+const adminControlCenterFile = path.join(root, 'admin-control-center.html');
 const diagnosticFile = path.join(root, 'downloads', 'osint-worker-patch-report.json');
 let currentStage = 'initialization';
 
@@ -131,6 +132,16 @@ if (fs.existsSync(homepageFile)) {
     else throw new Error('Book Universe homepage route target not found');
   }
   write(homepageFile, homepage);
+}
+
+currentStage = 'admin campaign route';
+if (fs.existsSync(adminControlCenterFile)) {
+  let adminControlCenter = read(adminControlCenterFile);
+  adminControlCenter = adminControlCenter.replace('href="campaign-calendar.html">Campaigns', 'href="launch-room.html">Campaigns');
+  if (!adminControlCenter.includes('href="launch-room.html">Campaigns')) {
+    throw new Error('Admin campaign route target not found');
+  }
+  write(adminControlCenterFile, adminControlCenter);
 }
 
 const runPatch = script => {

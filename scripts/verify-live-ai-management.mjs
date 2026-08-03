@@ -19,6 +19,10 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function diagnosticPreview(text = '') {
+  return String(text).replace(/\s+/g, ' ').trim().slice(0, 300);
+}
+
 async function request(pathname, { method = 'GET', body, authorized = true } = {}) {
   const headers = {
     accept: 'application/json',
@@ -26,6 +30,8 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
     'user-agent': 'MatrixProductionVerifier/2.0'
   };
   if (authorized) {
+    // The Worker authenticates with x-admin-token. Sending a Bearer header by
+    // default can cause an upstream Access policy to intercept the request.
     headers['x-admin-token'] = adminToken;
     if (sendAuthorization) headers.authorization = `Bearer ${adminToken}`;
   }
@@ -38,7 +44,7 @@ async function request(pathname, { method = 'GET', body, authorized = true } = {
   });
   const text = await response.text();
   let data;
-  try { data = JSON.parse(text); } catch { data = { raw: text.slice(0, 1000) }; }
+  try { data = JSON.parse(text); } catch { data = { raw: diagnosticPreview(text) }; }
   return {
     requestedUrl: `${siteUrl}${pathname}`,
     responseUrl: response.url,
@@ -98,7 +104,10 @@ const attemptsLog = [];
 for (let attempt = 1; attempt <= attempts; attempt += 1) {
   try {
     health = await request('/api/ai-management/admin/health');
-    const classification = classifyAiManagementResponse(health, { siteUrl });
+    const classification = classifyAiManagementResponse(health, {
+      siteUrl,
+      pathname: '/api/ai-management/admin/health'
+    });
     attemptsLog.push({
       attempt,
       status: health.status,
@@ -118,7 +127,10 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
 }
 
 if (health?.status !== 200) {
-  const classification = classifyAiManagementResponse(health, { siteUrl });
+  const classification = classifyAiManagementResponse(health, {
+    siteUrl,
+    pathname: '/api/ai-management/admin/health'
+  });
   fs.writeFileSync(outputPath, `${JSON.stringify({
     ok: false,
     siteUrl,

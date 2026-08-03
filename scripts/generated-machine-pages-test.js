@@ -1,10 +1,31 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const { isGeneratedEliteReport } = require('./cleanup-generated-machine-pages.js');
 
 const root = process.cwd();
 const failures = [];
 const inventory = {};
+
+function runRequired(relative) {
+  const result = spawnSync(process.execPath, [path.join(root, relative)], {
+    cwd: root,
+    encoding: 'utf8',
+    env: process.env,
+    maxBuffer: 40 * 1024 * 1024
+  });
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+  if (result.status !== 0) throw new Error(`${relative} failed`);
+}
+
+// This is the last mutation pass before the final public-control and function audits.
+// First make the protected command dashboard evidence-honest, then connect every
+// deployable public page by mission in both source and Cloudflare output.
+runRequired('scripts/repair-review-dashboard-truth.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/repair-review-dashboard-truth-output.js');
+runRequired('scripts/run-cinematic-link-structure.js');
+if (fs.existsSync(path.join(root, '_site'))) runRequired('scripts/build-cinematic-link-structure-output.js');
 
 function readJson(relative, fallback) {
   try { return JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8')); }

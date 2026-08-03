@@ -1,20 +1,20 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T21:20:42.285Z",
+  "generatedAt": "2026-08-03T07:05:06.314Z",
   "totals": {
-    "entities": 9317,
-    "relationships": 13378,
+    "entities": 9318,
+    "relationships": 13379,
     "coreRelationships": 10192,
-    "officialRelationships": 13376,
+    "officialRelationships": 13377,
     "reviewedRelationships": 2613,
-    "weakMentions": 3186,
+    "weakMentions": 3187,
     "excluded": {
       "orphaned": 0,
       "unsourced": 0,
       "malformed": 0
     }
   },
-  "graphBytes": 22952854,
+  "graphBytes": 22954723,
   "cloudflareSafetyTarget": 25165824,
   "checks": [
     {
@@ -30,22 +30,22 @@
     {
       "name": "substantial entity graph",
       "ok": true,
-      "detail": "9317 nodes"
+      "detail": "9318 nodes"
     },
     {
       "name": "substantial relationship graph",
       "ok": true,
-      "detail": "13378 edges"
+      "detail": "13379 edges"
     },
     {
       "name": "relationship totals agree",
       "ok": true,
-      "detail": "13378 / 13378"
+      "detail": "13379 / 13379"
     },
     {
       "name": "entity totals agree",
       "ok": true,
-      "detail": "9317 / 9317"
+      "detail": "9318 / 9318"
     },
     {
       "name": "browser graph remains below Cloudflare safety target",
@@ -85,12 +85,12 @@
     {
       "name": "official view exists",
       "ok": true,
-      "detail": "13376 official edges"
+      "detail": "13377 official edges"
     },
     {
       "name": "weak mentions are separated",
       "ok": true,
-      "detail": "3186 weak mentions"
+      "detail": "3187 weak mentions"
     },
     {
       "name": "relationship filter metadata",
@@ -130,7 +130,7 @@
     {
       "name": "build report confirms deployable size",
       "ok": true,
-      "detail": "22952854 / 22952854"
+      "detail": "22954723 / 22954723"
     },
     {
       "name": "runtime syntax",

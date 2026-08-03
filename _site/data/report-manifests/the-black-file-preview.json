@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:09:24.105Z",
-  "pageCount": 95,
+  "generatedAt": "2026-08-03T06:58:56.986Z",
+  "pageCount": 96,
   "output": "downloads/the-black-file-preview.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "The Black File Preview",
-    "contentHash": "883da34edf5edd029bfc92bd0cc9e258e3dc7f1c0fae96a05b2324ad1a335c96",
+    "contentHash": "8a51794473dadb66461ba222f04483597bb0ac9ed0330c0c610a460eb4fe7882",
     "sourceIds": [
       "904512c4cc9427a39650c32a",
       "ec8ef1adbaaebb9fde883cae",
@@ -51,7 +51,6 @@
       "53245eb712fc0413483084ad",
       "9f27e4d750de830ccb16df4b",
       "cab66e2bb53cf082d241d7e1",
-      "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "310372a3fc518b6aabbc5d07",
       "bb5dfe90c29929d84ce60e6d",
@@ -90,7 +89,6 @@
       "2529322b7b5345fd6f575174",
       "bf773d3ec83b9b3768dfce6b",
       "contractor-caci-international",
-      "085baf8dafdf6692a4203706",
       "481c4eb8b2fd03a36ca7037c",
       "5594665950812895f468c11d",
       "2931a84c2c7fe86982d5d6e5",
@@ -107,8 +105,7 @@
       "ecadede6696db6c7c3e6b7ec",
       "1e4f15d09e1414670233d7f7",
       "contractor-blackwater-xe-academi-constellis-lineage",
-      "fe3f3107cffaf5599a7b09f9",
-      "de58872cc8483198b691c403",
+      "085baf8dafdf6692a4203706",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "7ee9141a42ad539f58a57e50",
@@ -138,28 +135,31 @@
       "384bb39bdc916ad6752ac63a",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
-      "2828a0d0f67977aa4a3e373c",
       "daee19f2c0d92279cc9a7569",
+      "de58872cc8483198b691c403",
       "9b5810e2943ffdc912a78854",
       "904f327f561c64c5a9b88b13",
       "76cf5cb1f42b219ea38128f4",
       "08bd598b62be808eec324493",
       "1ee57e70dacfa67f04323529",
       "15adccba38bd91644b561261",
-      "a035358efae9360160b116d5"
+      "a035358efae9360160b116d5",
+      "erik-prince",
+      "priscilla-chan",
+      "4c372edcf20b760ae3305f10"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 25,
+      "primarySourceCount": 26,
       "disputedClaimCount": 6,
       "newEntityCount": 8,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 39,
-      "moneyRecordCount": 42
+      "relationshipCount": 36,
+      "moneyRecordCount": 39
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to The Black File Preview.",
+        "conclusion": "The indexed record establishes that 26 A/B-grade public-record items are materially relevant to The Black File Preview.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 39 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 36 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; General Assembly LIVE: Debating US sanctions against Cuba; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 39 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 36 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-11-12T00:00:00.000Z"
   }
 }

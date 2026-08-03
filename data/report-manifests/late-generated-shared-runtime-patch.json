@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:04:41.597Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-03T06:52:25.041Z",
+  "pageCount": 120,
   "output": "downloads/late-generated-shared-runtime-patch.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Late Generated Shared Runtime Patch",
-    "contentHash": "bbd2e4011545653c95d17c054c13eeb8f4ede42aa7d7ff55da81368ecc9b8881",
+    "contentHash": "686b1d35b113362e3ef4bc22da421e4e49e43566dece753269b9b91455de2d9b",
     "sourceIds": [
       "c1520a15d6e62871a66c558e",
       "26b90533dbf7d2ed42f02de6",
@@ -13,17 +13,16 @@
       "a42c91c655cd066504ed6515",
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
-      "ASC-REVIEW-E76F1740FFF4E811",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "7f5b91c14c671bd24b8bbd81",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-8299a278d70b1f879d6d522f",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
       "72ef7895f95288946ccb3cff",
@@ -59,7 +58,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -100,7 +98,11 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -127,12 +129,8 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
       "41772e5c9af7970ddd7d5aac",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -146,20 +144,22 @@
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-5D13FDD470EDF012",
-      "ASC-REVIEW-94F3B4C96A469AB3"
+      "ASC-REVIEW-94F3B4C96A469AB3",
+      "ASC-REVIEW-5F69F7CCEE3F7274",
+      "ASC-REVIEW-C369A84AD971DD75"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 58,
-      "disputedClaimCount": 64,
+      "primarySourceCount": 52,
+      "disputedClaimCount": 70,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 57,
-      "moneyRecordCount": 30
+      "relationshipCount": 59,
+      "moneyRecordCount": 33
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 58 A/B-grade public-record items are materially relevant to Late Generated Shared Runtime Patch.",
+        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Late Generated Shared Runtime Patch.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 57 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Site Population Audit; Illuminati / Secret Society Theory; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 57 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 59 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:23.243Z"
+    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
   }
 }

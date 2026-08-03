@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:03:35.079Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-03T06:50:53.158Z",
+  "pageCount": 117,
   "output": "downloads/evidence-task-engine.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Evidence Task Engine",
-    "contentHash": "4ea68383c22b124c91d65af6920f95f0c678df50610d72041ab4f6c6f9c64117",
+    "contentHash": "183812c5619395356ca74d7c7d6beb9bb4930006b32171a26d7af84b312b0431",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -59,7 +59,6 @@
       "594100b62a47db521fe2a128",
       "34805734b1ad3b73f0ede0d8",
       "41772e5c9af7970ddd7d5aac",
-      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -85,9 +84,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
       "ASC-REVIEW-B9D6F588FF54AD31",
       "ASC-REVIEW-03A8457B74049A13",
       "ASC-REVIEW-AD4A5A51C1AD5BFD",
@@ -98,11 +94,6 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
-      "ASC-REVIEW-E76F1740FFF4E811",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "45f5269389def99607b5a517",
@@ -125,6 +116,8 @@
       "f59da50ababa3ddae79a8f1c",
       "9b9816cd15ea0d816c77affa",
       "ASC-REVIEW-836A8E9D516E6FEC",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-CE615863A9722AC5",
       "cf94b367bfb0237448d49649",
       "8165fb4ec7543f1da0762496",
@@ -140,26 +133,33 @@
       "3c9c23f7f9a1cec81ef90f59",
       "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-5A774507A02DF22B",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "c414ea6b5bea3390d2a8ce5c",
-      "8d0375496d59f1d012deaead"
+      "8d0375496d59f1d012deaead",
+      "9dad49e7d690ef5780b5a6bf",
+      "EP-AI-004",
+      "daee19f2c0d92279cc9a7569"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 52,
-      "disputedClaimCount": 47,
+      "primarySourceCount": 44,
+      "disputedClaimCount": 52,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 40,
-      "moneyRecordCount": 17
+      "relationshipCount": 41,
+      "moneyRecordCount": 19
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Evidence Task Engine.",
+        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Evidence Task Engine.",
         "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 41 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; Matrix Reprogrammed Canonical Intelligence Record; The strongest public pattern is convergence across access systems.; FCN, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 41 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",

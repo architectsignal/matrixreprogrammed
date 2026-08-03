@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-02T20:59:40.868Z",
-  "pageCount": 117,
+  "generatedAt": "2026-08-03T06:45:32.320Z",
+  "pageCount": 118,
   "output": "downloads/accountability-review-inbox-pressure-test.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Accountability Review Inbox Pressure Test",
-    "contentHash": "df60f8bde9715ad73df29a78e668b256c265e66b700f304e3bf2a125c4cabbd7",
+    "contentHash": "f0a01e779d67ed06318027517f7bba1517efda057f52e28755de776dbbad1739",
     "sourceIds": [
       "cyril-smith-iicsa-2018",
-      "gao-hq",
+      "e083e748ec6311742c2416e5",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -22,7 +22,7 @@
       "nassar-fbi-oig-2021",
       "epstein-opr-review-2020",
       "deutsche-bank-epstein-dfs-2020",
-      "us-doj",
+      "gao-hq",
       "7f5b91c14c671bd24b8bbd81",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
@@ -49,7 +49,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "e083e748ec6311742c2416e5",
       "b9006a5edc55cc88bfccd04a",
       "06baa45bea3e2e15eb80eff9",
       "f669b33c49b63e787cde3008",
@@ -85,11 +84,7 @@
       "f44c3c7309a5f0779a57e655",
       "4961972398d896435d33f3f7",
       "26b90533dbf7d2ed42f02de6",
-      "sec-hq",
-      "us-treasury",
-      "fbi-hq",
-      "cia-hq",
-      "eu-commission",
+      "us-doj",
       "9f77464e401ac59ad1adb812",
       "360e80c162081c85d2c680ef",
       "73799cb9af4829047998b026",
@@ -100,6 +95,16 @@
       "source-change-8299a278d70b1f879d6d522f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "3dd6363c2883c45b5d643662",
       "9cbceb07e87ab3e91cd1a259",
       "a8d2d3bf834ea59c6a49b8ea",
@@ -129,26 +134,21 @@
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
-      "ASC-REVIEW-96665FE56FA75D90",
-      "ASC-REVIEW-5EA0FB3A48583D82",
-      "ASC-REVIEW-B9D6F588FF54AD31",
-      "ASC-REVIEW-03A8457B74049A13",
-      "ASC-REVIEW-AD4A5A51C1AD5BFD",
-      "ASC-REVIEW-B7720C9C5A09A4B4"
+      "ASC-REVIEW-96665FE56FA75D90"
     ],
     "metrics": {
       "evidenceCount": 128,
-      "primarySourceCount": 85,
-      "disputedClaimCount": 45,
+      "primarySourceCount": 90,
+      "disputedClaimCount": 40,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 42,
+      "relationshipCount": 47,
       "moneyRecordCount": 22
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 85 A/B-grade public-record items are materially relevant to Accountability Review Inbox Pressure Test.",
-        "evidence": "IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); U.S. Government Accountability Office (data/geographic-power-atlas-data.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 90 A/B-grade public-record items are materially relevant to Accountability Review Inbox Pressure Test.",
+        "evidence": "IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -167,7 +167,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 47 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; New York DFS enforcement action concerning the bank's Epstein relationship; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -182,7 +182,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 47 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "New York DFS enforcement action concerning the bank's Epstein relationship",

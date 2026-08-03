@@ -1,6 +1,6 @@
 # Speculative Conclusion Review Queue
 
-Updated: 2026-08-02T21:18:21.230Z
+Updated: 2026-08-03T07:02:21.985Z
 
 - Elite Power Theory: Risky phrasing or missing safety fields Next: Keep in review until evidence, missing-record and falsification sections are complete.
 - New World Order Theory: Risky phrasing or missing safety fields Next: Keep in review until evidence, missing-record and falsification sections are complete.

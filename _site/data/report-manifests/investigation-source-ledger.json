@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:04:37.698Z",
-  "pageCount": 110,
+  "generatedAt": "2026-08-03T06:52:19.019Z",
+  "pageCount": 109,
   "output": "downloads/investigation-source-ledger.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Investigation Source Ledger",
-    "contentHash": "9cd71e622a7390309315f6eb7c704986978974d0134aadce2f606542a659814d",
+    "contentHash": "5bfdb1d06e654dafa4ee7e02f80d7c23babcc294cb57fee582d771015e22d746",
     "sourceIds": [
       "6d665d935673091233751767",
       "2931a84c2c7fe86982d5d6e5",
@@ -32,11 +32,7 @@
       "5ce17839086eddf839270b1a",
       "9d13cbe9989a1430580de2ff",
       "b7e4a66335a706ef5097117f",
-      "source-change-62862e6ca90495adc0788a2d",
       "7198c204fd0f39a8d6faf5b4",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
       "c59bd028e66abe69d1373742",
       "6e1b16a4906354292a8d2261",
       "cd6ef5a92f0a4409772d2587",
@@ -74,7 +70,6 @@
       "9f52702daea7fcbbfb32b9bc",
       "9d0cf694c0c2e7c8947c7596",
       "ecadede6696db6c7c3e6b7ec",
-      "fe3f3107cffaf5599a7b09f9",
       "085baf8dafdf6692a4203706",
       "0c5f51804baf8e9e2c1fdd0b",
       "44505b4afb60938c8117ad31",
@@ -89,8 +84,6 @@
       "eb3448928554960651da56f6",
       "def94e0a086f2eac4c5ad91a",
       "427a4b3a840619411d8d1c33",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-8299a278d70b1f879d6d522f",
       "008875ef7bf45eb14dccb254",
       "7ee9141a42ad539f58a57e50",
       "41af4eba97b7eb1c0afb301f",
@@ -99,8 +92,6 @@
       "a27dd3c9a4cf6bbd952989d3",
       "b49c319c09a07b245b24f74a",
       "a103f2650e31fc92fa3688e6",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -120,8 +111,12 @@
       "f73c11ef3163b1800592aabe",
       "1583ed9e90a5874047a33041",
       "ec968f2ec6ba82128b4cd91b",
+      "source-change-62862e6ca90495adc0788a2d",
+      "source-change-a53bf480df4e4883383a08e0",
       "916737118d260263ef485fd9",
+      "source-change-a334a207405ec629b4be337d",
       "b5d06b3279b7c4ee24c0ca0f",
+      "source-change-c452df757991611cb06ec88a",
       "45602cba086e181cfa69a51b",
       "c75e0ce33981b609561f5986",
       "d23398b8ca4c7124399c9504",
@@ -138,6 +133,8 @@
       "contractor-palantir-government-platforms",
       "EP-AI-001",
       "6510364e9b1a1504b9f99521",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-B9D6F588FF54AD31",
       "ASC-REVIEW-03A8457B74049A13",
@@ -146,20 +143,23 @@
       "ASC-REVIEW-7C6630BA6B2598AA",
       "ASC-REVIEW-0BDE78366651B0AB",
       "ASC-REVIEW-32D4420F5F198DA2",
-      "ASC-REVIEW-C0E6134747580127"
+      "ASC-REVIEW-C0E6134747580127",
+      "ASC-REVIEW-AB5A700449B10AEC",
+      "EP-AI-002",
+      "71e0563ca7b139c37c302956"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 97,
-      "disputedClaimCount": 14,
+      "primarySourceCount": 95,
+      "disputedClaimCount": 15,
       "newEntityCount": 5,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 34,
-      "moneyRecordCount": 21
+      "relationshipCount": 35,
+      "moneyRecordCount": 20
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 97 A/B-grade public-record items are materially relevant to Investigation Source Ledger.",
+        "conclusion": "The indexed record establishes that 95 A/B-grade public-record items are materially relevant to Investigation Source Ledger.",
         "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 34 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 35 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Securities and Exchange Commission; Follow The Money Watch; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 34 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 35 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Securities and Exchange Commission",
           "Follow The Money Watch",

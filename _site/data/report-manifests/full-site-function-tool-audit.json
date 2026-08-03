@@ -1,28 +1,32 @@
 {
-  "generatedAt": "2026-08-02T21:04:09.690Z",
-  "pageCount": 131,
+  "generatedAt": "2026-08-03T06:51:40.436Z",
+  "pageCount": 132,
   "output": "downloads/full-site-function-tool-audit.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Full Site Function and Tool Audit",
-    "contentHash": "676c38d6d11deda38a895c615dcbbf063dec13e9120657b64dc4b54bcb0bb941",
+    "contentHash": "673f5f09ce3577182f133699e5028d2ef5a65240a98905c7164cb7fd08951ce4",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "e083e748ec6311742c2416e5",
-      "ASC-REVIEW-7B1A15ED77443F13",
       "9f77464e401ac59ad1adb812",
+      "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "3a425f0d5d683952bc0ad7ac",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -65,6 +69,7 @@
       "ASC-REVIEW-5D75F861BBF77D9D",
       "EP-AI-003",
       "9f3052b5d8cec138a2a37e8c",
+      "e72d22f4f28eb53e3173d0a6",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -141,21 +146,16 @@
       "ASC-REVIEW-14DA4C1F787B63ED",
       "ASC-REVIEW-98888270E5A6D011",
       "ASC-REVIEW-0F0776894447C197",
-      "ASC-REVIEW-6E0BEE85BA956CBF",
-      "ASC-REVIEW-F9B27A08465F560B",
-      "ASC-REVIEW-8A2ACAFD47272636",
-      "ASC-REVIEW-53BD0E17B018491C",
-      "ASC-REVIEW-0177F61D444ED739",
-      "ASC-REVIEW-FE9A5B02284E30E4"
+      "ASC-REVIEW-6E0BEE85BA956CBF"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 132,
+      "disputedClaimCount": 131,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 124,
-      "moneyRecordCount": 109
+      "relationshipCount": 119,
+      "moneyRecordCount": 105
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 124 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 119 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; Influence should be mapped through infrastructure, filings and contracts.; Top contractor lane",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 124 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 119 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",

@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T12:58:36.579Z",
+  "failures": [],
+  "persistenceModel": "Cloudflare D1 is authoritative behind a strict production boundary. The configured autonomy wrapper may add only scheduled AI maintenance and must delegate every fetch unchanged to that strict Worker. Every accepted post requires one confirmed insert and a read-after-write match.",
+  "boundary": "The test rejects missing D1, legacy forum fallback, non-D1 health responses, ignored or duplicate inserts, missing read-after-write confirmation, analytics KV writes, unnecessary KV exposure to normal traffic, mismatched Wrangler entries, or an autonomy wrapper that intercepts fetch traffic."
+}

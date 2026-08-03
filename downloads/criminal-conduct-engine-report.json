@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T21:22:20.718Z",
+  "generatedAt": "2026-08-03T07:06:44.865Z",
   "registryUpdated": "2026-07-27",
   "surfaces": [
     {
@@ -1671,8 +1671,71 @@
     },
     {
       "scope": "source",
-      "route": "reports/entity-control-structure.html",
-      "title": "CONTROL STRUCTURE — ENTITY REPORT",
+      "route": "reports/entity-aapl.html",
+      "title": "AAPL — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-alphabet-inc.html",
+      "title": "ALPHABET INC. — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-amazon-com-inc.html",
+      "title": "AMAZON COM INC — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-amzn.html",
+      "title": "AMZN — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-apple-inc.html",
+      "title": "APPLE INC. — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-avgo.html",
+      "title": "AVGO — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-broadcom-inc.html",
+      "title": "BROADCOM INC. — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-centers-for-medicare-and-medicaid-services.html",
+      "title": "CENTERS FOR MEDICARE & MEDICAID SERVICES — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-health-and-human-services-department.html",
+      "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "source",
+      "route": "reports/entity-homeland-security-department.html",
+      "title": "HOMELAND SECURITY DEPARTMENT — ENTITY REPORT",
       "type": "entity",
       "approvedRecords": 0
     },
@@ -3946,8 +4009,71 @@
     },
     {
       "scope": "built",
-      "route": "reports/entity-control-structure.html",
-      "title": "CONTROL STRUCTURE — ENTITY REPORT",
+      "route": "reports/entity-aapl.html",
+      "title": "AAPL — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-alphabet-inc.html",
+      "title": "ALPHABET INC. — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-amazon-com-inc.html",
+      "title": "AMAZON COM INC — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-amzn.html",
+      "title": "AMZN — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-apple-inc.html",
+      "title": "APPLE INC. — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-avgo.html",
+      "title": "AVGO — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-broadcom-inc.html",
+      "title": "BROADCOM INC. — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-centers-for-medicare-and-medicaid-services.html",
+      "title": "CENTERS FOR MEDICARE & MEDICAID SERVICES — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-health-and-human-services-department.html",
+      "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
+      "type": "entity",
+      "approvedRecords": 0
+    },
+    {
+      "scope": "built",
+      "route": "reports/entity-homeland-security-department.html",
+      "title": "HOMELAND SECURITY DEPARTMENT — ENTITY REPORT",
       "type": "entity",
       "approvedRecords": 0
     },
@@ -4555,8 +4681,8 @@
     }
   ],
   "counts": {
-    "source": 325,
-    "built": 325,
+    "source": 334,
+    "built": 334,
     "records": 64
   },
   "reviewCandidates": 0

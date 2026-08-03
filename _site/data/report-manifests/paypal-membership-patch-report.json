@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:06:19.865Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-03T06:54:46.797Z",
+  "pageCount": 125,
   "output": "downloads/paypal-membership-patch-report.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Paypal Membership Patch Report",
-    "contentHash": "d50d45ff6024944c05731d41eb7d64851be7cc417a706c81abe28f4f4b640f56",
+    "contentHash": "ad3ecb75ee66d31901e9e55310d89537fe3a01f7053b38db6a486ab90392e305",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "157cdab04b61ae6309c0c713",
@@ -29,7 +29,6 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
-      "ASC-REVIEW-E76F1740FFF4E811",
       "DOJ-USVI-JPMORGAN",
       "DOJ-DATASET-9",
       "0c5f51804baf8e9e2c1fdd0b",
@@ -68,7 +67,6 @@
       "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-1D0E514392976CFC",
       "ASC-REVIEW-EAB6011874016286",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -84,13 +82,14 @@
       "ASC-REVIEW-AE10394716B1B048",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-06CC87AEAF289EB7",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-836A8E9D516E6FEC",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-08CB150A42984598",
       "ASC-REVIEW-7CAC9318F83A7E8B",
@@ -124,7 +123,14 @@
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
       "ASC-REVIEW-086FE6E8B4620CB8",
+      "ASC-REVIEW-E93F43D3E52193B6",
+      "ASC-REVIEW-EC681923A21C3AFD",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -140,26 +146,20 @@
       "1c352ab364fbfca06ab12a57",
       "5b6b5c0285c3c8742768ea5c",
       "9848ec4b4c3f6c2693269839",
-      "58a212e4e1a93007ec5b3d6d",
-      "eb3448928554960651da56f6",
-      "a42c91c655cd066504ed6515",
-      "7dcf4ef18ea1f86d01068773",
-      "511ed227bb4be58b582ebb8d",
-      "EFS-001-R006",
-      "427a4b3a840619411d8d1c33"
+      "58a212e4e1a93007ec5b3d6d"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 54,
-      "disputedClaimCount": 83,
+      "primarySourceCount": 48,
+      "disputedClaimCount": 89,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 41,
+      "relationshipCount": 40,
       "moneyRecordCount": 31
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 54 A/B-grade public-record items are materially relevant to Paypal Membership Patch Report.",
+        "conclusion": "The indexed record establishes that 48 A/B-grade public-record items are materially relevant to Paypal Membership Patch Report.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: UK Serious Fraud Office — News And Communications (data/source-change-ledger.json); United States v. Epstein DOJ court-record page (data/auto-evidence-latest.json); United States v. Maxwell DOJ court-record page (data/auto-evidence-latest.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 41 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; content changed: Federal Register — Latest Documents; content changed: Federal Register — Latest Documents",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 41 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

@@ -1,7 +1,7 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-08-02T08:22:21.766Z",
+  "checkedAt": "2026-08-03T08:45:47.693Z",
   "selectedSources": 12,
   "fetchedSources": 9,
   "skippedSources": 0,
@@ -9,7 +9,7 @@
   "policyFilteredSources": 3,
   "parsedItems": 356,
   "newOrSeenFindings": 356,
-  "ledgerFindings": 2596,
+  "ledgerFindings": 2806,
   "results": [
     {
       "sourceId": "doj-epstein-disclosures",
@@ -36,8 +36,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "061cb06827ea8b8a8e15584cbb81c7e4945333cf9c5ad9db01571f0da5e06096",
+      "bytes": 2201,
+      "bodyHash": "6bf8d9e24b25e2bb8586f9070b31455590d4eb094a0829dbe6cd78108419827d",
       "itemCount": 1,
       "error": "",
       "resourceId": "investigation-source-doj-epstein-disclosures",
@@ -54,7 +54,7 @@
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62531,
-      "bodyHash": "7ddbd9616c44e36535700d8f8a87c9c296a27daecf085de2072b2253fa2242cf",
+      "bodyHash": "675c59bc37a463e6f8005f1efe7121567374758c2880887a459dd0969a1c0962",
       "itemCount": 14,
       "error": "",
       "resourceId": "investigation-source-doj-oig-reports",
@@ -71,7 +71,7 @@
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
       "bytes": 22609,
-      "bodyHash": "94db37a6538704aa6a2b85e99d2ff8a1fb4edbeff0c5eec6844ddcff6df1013b",
+      "bodyHash": "c63dd0982bb589325b841a7c3342e214df3b37a1d74897c5d6cd772f3815d8ac",
       "itemCount": 40,
       "error": "",
       "resourceId": "investigation-source-sec-current-filings",
@@ -87,8 +87,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 232706,
-      "bodyHash": "2f2cb55f0bd2de65c88831343a243f47bb515fae873455f541e18452a53534ca",
+      "bytes": 232703,
+      "bodyHash": "c7dba2df73ce9a0936e41205a82ee7ddc7a113aaeca634c279107f7944fbac30",
       "itemCount": 76,
       "error": "",
       "resourceId": "investigation-source-sec-current-filings",
@@ -116,8 +116,8 @@
       "statusCode": 200,
       "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
       "contentType": "application/json",
-      "bytes": 62438,
-      "bodyHash": "9c83f7796f7af673f79aa6f6d9501acf0e58cdcef3e1e24b15c2b58315ee8b81",
+      "bytes": 59676,
+      "bodyHash": "e6cf8edd32b19a4034aa2071522ff6e8780ddb89a0c0d1a40547a312cafa1c0e",
       "itemCount": 100,
       "error": "",
       "resourceId": "investigation-source-usaspending-recent-contracts",
@@ -133,8 +133,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43649,
-      "bodyHash": "5d459fba2632b100788ddc3a1f13eb78b30c13a29dd83360849730c4132c82dc",
+      "bytes": 43653,
+      "bodyHash": "851eb06fa7e536da4aa5f7bdda254ec813704120867525c667b67896a76ad0d9",
       "itemCount": 19,
       "error": "",
       "resourceId": "investigation-source-treasury-ofac-recent-actions",
@@ -180,7 +180,7 @@
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 102000,
-      "bodyHash": "3144c7000bc8378d183d85d7a31c95d5da12c0e0c18ea2fa16d6be915a065ef6",
+      "bodyHash": "4e0ed4956ac93c3d46f07fc8211ffc49d8a4083b7dc81365ed0f3dde6fdd803a",
       "itemCount": 15,
       "error": "",
       "resourceId": "investigation-source-uk-sfo-news",
@@ -212,8 +212,8 @@
   },
   "resourceDecisions": [
     {
-      "actionId": "action-ba2a8cab-3841-47fc-a9cb-b47ccc87b48d",
-      "jobId": "job-57045af6-656d-4502-bfbe-e5e6c45850fa",
+      "actionId": "action-4f9c8e22-a6d3-4bfc-9442-9b6461eea50b",
+      "jobId": "job-d8b6ccc3-4ee7-4e4f-af42-301ed419f107",
       "selectedResource": "investigation-source-doj-epstein-disclosures",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -479,20 +479,20 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 268,
+      "latency": 206,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.179Z"
+      "createdAt": "2026-08-03T08:45:47.937Z"
     },
     {
-      "actionId": "action-1c68bb30-4bba-41b1-8496-d1067eb13a85",
-      "jobId": "job-b4d7fcd0-9efc-4e81-a13f-32eb6aca80ab",
-      "selectedResource": "investigation-source-sec-current-filings",
+      "actionId": "action-555e45a2-d987-4b33-9b80-c7ba26fe1bcd",
+      "jobId": "job-22953684-28d4-47e5-8a27-ff6aada54fdd",
+      "selectedResource": "investigation-source-doj-epstein-disclosures",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-sec-current-filings",
-        "investigation-source-sec-litigation-releases"
+        "investigation-source-doj-epstein-disclosures",
+        "investigation-source-doj-justice-news"
       ],
       "excludedResources": [
         {
@@ -504,21 +504,21 @@
           "compatibility": null
         },
         {
-          "resource_id": "investigation-source-doj-epstein-disclosures",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-doj-justice-news",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
           "resource_id": "investigation-source-doj-oig-reports",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-sec-current-filings",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-sec-litigation-releases",
           "reasons": [
             "resource-host-scope-mismatch"
           ],
@@ -752,16 +752,16 @@
       ],
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
-      "quotaAfter": 23,
-      "latency": 157,
+      "quotaAfter": 22,
+      "latency": 207,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.198Z"
+      "createdAt": "2026-08-03T08:45:47.982Z"
     },
     {
-      "actionId": "action-fb0d51b0-b415-4c06-b6b0-0d3ff3397fe9",
-      "jobId": "job-803ec029-06d6-43f8-931a-391c02322755",
+      "actionId": "action-99b3db35-be56-4f87-99ee-f0b5914c7b5c",
+      "jobId": "job-33e69516-7219-4a50-99a0-a2cad56a101b",
       "selectedResource": null,
       "utilityScore": null,
       "candidateResources": [],
@@ -1041,16 +1041,16 @@
       "costConfirmedZero": true,
       "validationResult": "not-dispatched",
       "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE",
-      "createdAt": "2026-08-02T08:22:22.203Z"
+      "createdAt": "2026-08-03T08:45:47.985Z"
     },
     {
-      "actionId": "action-33cd9a87-eaf5-4752-9b9c-5931bc282b2d",
-      "jobId": "job-fa8be241-adef-4f66-af1e-93fab817c122",
-      "selectedResource": "investigation-source-doj-epstein-disclosures",
+      "actionId": "action-b13df95c-99ef-41c9-b99a-b07ddfc4d5c5",
+      "jobId": "job-2cc49b32-012f-4316-a1cc-2d221cc151c8",
+      "selectedResource": "investigation-source-sec-current-filings",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-doj-epstein-disclosures",
-        "investigation-source-doj-justice-news"
+        "investigation-source-sec-current-filings",
+        "investigation-source-sec-litigation-releases"
       ],
       "excludedResources": [
         {
@@ -1062,21 +1062,21 @@
           "compatibility": null
         },
         {
+          "resource_id": "investigation-source-doj-epstein-disclosures",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-doj-justice-news",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
           "resource_id": "investigation-source-doj-oig-reports",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-sec-current-filings",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-sec-litigation-releases",
           "reasons": [
             "resource-host-scope-mismatch"
           ],
@@ -1310,16 +1310,16 @@
       ],
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
-      "quotaAfter": 22,
-      "latency": 171,
+      "quotaAfter": 23,
+      "latency": 214,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.210Z"
+      "createdAt": "2026-08-03T08:45:47.996Z"
     },
     {
-      "actionId": "action-ccd7cbb7-15ca-438d-9c46-5109d698ab8f",
-      "jobId": "job-ee9b10ea-8cb8-49aa-aa75-d2cbc904e950",
+      "actionId": "action-05de69a4-0f0c-4ba7-9d18-32f13eb30c74",
+      "jobId": "job-20ece204-f049-433e-9090-b7ecf9cca7b3",
       "selectedResource": "investigation-source-sec-current-filings",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -1585,15 +1585,15 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 22,
-      "latency": 74,
+      "latency": 104,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.265Z"
+      "createdAt": "2026-08-03T08:45:48.054Z"
     },
     {
-      "actionId": "action-fbe0d011-2d8d-45b2-870e-5a6198b20cb8",
-      "jobId": "job-2ff7947b-1a20-4e8e-9c22-e7884a41e835",
+      "actionId": "action-3cb7f40b-bcc6-43d6-9520-e2ea86f19d74",
+      "jobId": "job-0799b4d9-754e-45d3-a598-3f8cd52b1c2f",
       "selectedResource": "investigation-source-treasury-ofac-recent-actions",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -1865,15 +1865,15 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 62,
+      "latency": 175,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.275Z"
+      "createdAt": "2026-08-03T08:45:48.177Z"
     },
     {
-      "actionId": "action-f5509792-35da-4938-80c5-e6625fbd3180",
-      "jobId": "job-419de766-df78-458a-8465-7e1dac9c118e",
+      "actionId": "action-5fcf2966-3a0e-4abe-b31d-943791b20281",
+      "jobId": "job-4d5f2bcf-18c1-448d-ae69-93797fb1a6e4",
       "selectedResource": null,
       "utilityScore": null,
       "candidateResources": [],
@@ -2152,15 +2152,15 @@
       "costConfirmedZero": true,
       "validationResult": "not-dispatched",
       "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE",
-      "createdAt": "2026-08-02T08:22:22.278Z"
+      "createdAt": "2026-08-03T08:45:48.180Z"
     },
     {
-      "actionId": "action-80b6a1cf-b25d-4d23-ab44-cd5e9fcfc15f",
-      "jobId": "job-a340e2fd-55b4-4c07-92d8-ce35305268b4",
-      "selectedResource": "investigation-source-uk-sfo-news",
+      "actionId": "action-c8e92dde-6229-48e2-80eb-2b16007f90dc",
+      "jobId": "job-ce27a138-5fdc-4fac-ab4a-869d2b16542e",
+      "selectedResource": "investigation-source-house-oversight-releases",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-uk-sfo-news"
+        "investigation-source-house-oversight-releases"
       ],
       "excludedResources": [
         {
@@ -2289,13 +2289,6 @@
           "compatibility": null
         },
         {
-          "resource_id": "investigation-source-house-oversight-releases",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
           "resource_id": "investigation-source-wikileaks-publications",
           "reasons": [
             "resource-disabled",
@@ -2332,6 +2325,13 @@
             "provider-health-unknown-stale-or-unhealthy",
             "terms-check-missing-or-expired",
             "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-uk-sfo-news",
+          "reasons": [
             "resource-host-scope-mismatch"
           ],
           "compatibility": null
@@ -2428,15 +2428,15 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 33,
+      "latency": 124,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.314Z"
+      "createdAt": "2026-08-03T08:45:48.185Z"
     },
     {
-      "actionId": "action-d3f14346-8ab7-4f40-8954-ada687f832d8",
-      "jobId": "job-fcdbda5f-7c62-40d2-9b2e-06ca8f3708d6",
+      "actionId": "action-f9b16449-58ec-4b34-b6aa-2e4c1c651dd1",
+      "jobId": "job-f65ece32-536a-44ae-ba61-90606d6f1bb5",
       "selectedResource": null,
       "utilityScore": null,
       "candidateResources": [],
@@ -2716,15 +2716,15 @@
       "costConfirmedZero": true,
       "validationResult": "not-dispatched",
       "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE",
-      "createdAt": "2026-08-02T08:22:22.317Z"
+      "createdAt": "2026-08-03T08:45:48.189Z"
     },
     {
-      "actionId": "action-c21ad53b-ecbf-4275-bbca-b9ce2f8782a4",
-      "jobId": "job-a4a901bf-942c-420f-86a3-cf6b4a2a9978",
-      "selectedResource": "investigation-source-house-oversight-releases",
+      "actionId": "action-15f08180-d340-40c3-a5fe-2db54debde95",
+      "jobId": "job-9736c6de-7903-4074-ab95-e897d99b4715",
+      "selectedResource": "investigation-source-uk-sfo-news",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-house-oversight-releases"
+        "investigation-source-uk-sfo-news"
       ],
       "excludedResources": [
         {
@@ -2853,6 +2853,13 @@
           "compatibility": null
         },
         {
+          "resource_id": "investigation-source-house-oversight-releases",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
           "resource_id": "investigation-source-wikileaks-publications",
           "reasons": [
             "resource-disabled",
@@ -2889,13 +2896,6 @@
             "provider-health-unknown-stale-or-unhealthy",
             "terms-check-missing-or-expired",
             "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-uk-sfo-news",
-          "reasons": [
             "resource-host-scope-mismatch"
           ],
           "compatibility": null
@@ -2992,15 +2992,15 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 98,
+      "latency": 196,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.372Z"
+      "createdAt": "2026-08-03T08:45:48.380Z"
     },
     {
-      "actionId": "action-0d9285cf-c3d3-4813-beb0-c580484589b3",
-      "jobId": "job-576a3cd9-6edf-43b4-945d-2f17ac632aad",
+      "actionId": "action-379bb9c2-b4e2-41f6-a6b6-d53889ca2da3",
+      "jobId": "job-c608cc31-04ed-42b3-a192-3f3289552898",
       "selectedResource": "investigation-source-doj-oig-reports",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -3272,15 +3272,15 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 621,
+      "latency": 608,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.654Z"
+      "createdAt": "2026-08-03T08:45:48.388Z"
     },
     {
-      "actionId": "action-b070a2e0-74f5-4485-9682-7afa5e2b29e5",
-      "jobId": "job-a1054d49-5435-4857-bc4a-7480d95b4134",
+      "actionId": "action-2fde153b-57bf-4bb7-9a61-19c07cd8271b",
+      "jobId": "job-a9a05b9f-8cff-49ea-b80c-847c09360404",
       "selectedResource": "investigation-source-usaspending-recent-contracts",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -3552,11 +3552,11 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 50,
       "quotaAfter": 49,
-      "latency": 537,
+      "latency": 456,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-02T08:22:22.746Z"
+      "createdAt": "2026-08-03T08:45:48.446Z"
     }
   ],
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated."

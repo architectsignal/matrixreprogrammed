@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-02T21:08:01.359Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-03T06:57:06.555Z",
+  "pageCount": 129,
   "output": "downloads/search-first-accountability-home-report.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Search First Accountability Home Report",
-    "contentHash": "5fc68e9ce5b3ab477e50f6c9030c2c0502fd89aee539b7a9ffbef3a3b9048baa",
+    "contentHash": "08a0bddbb024721bec693b462ea71264ef87c726f7cd741905b411f19da351a8",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
-      "ASC-REVIEW-7B1A15ED77443F13",
       "26b90533dbf7d2ed42f02de6",
+      "ASC-REVIEW-7B1A15ED77443F13",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
@@ -50,7 +50,6 @@
       "360e80c162081c85d2c680ef",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
-      "source-change-62862e6ca90495adc0788a2d",
       "10420eb4159dd9ba47a3f7cb",
       "2254daad4526bf026ecf1244",
       "421097c38f7e1597d6f37887",
@@ -76,13 +75,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -146,20 +138,28 @@
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-8274DB7F7415A742",
-      "ASC-REVIEW-D74AE4AD0CA9732B"
+      "ASC-REVIEW-D74AE4AD0CA9732B",
+      "ASC-REVIEW-B5A7582A4286A663",
+      "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-54C7773F8BEDE2F4",
+      "ASC-REVIEW-603C7E693C77AF6C",
+      "ASC-REVIEW-8F441C443ED90227",
+      "ASC-REVIEW-DEA5865B50E63221",
+      "ASC-REVIEW-EEC0192F2AF2FCFB",
+      "ASC-REVIEW-6B883D09C63ED673"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 55,
-      "disputedClaimCount": 81,
+      "primarySourceCount": 47,
+      "disputedClaimCount": 89,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 80,
-      "moneyRecordCount": 71
+      "relationshipCount": 88,
+      "moneyRecordCount": 79
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 55 A/B-grade public-record items are materially relevant to Search First Accountability Home Report.",
+        "conclusion": "The indexed record establishes that 47 A/B-grade public-record items are materially relevant to Search First Accountability Home Report.",
         "evidence": "ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; The strongest public pattern is convergence across access systems.; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "MINDCUBED LLC — District of Columbia Courts",

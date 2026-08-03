@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-02T21:05:16.092Z",
-  "pageCount": 138,
+  "generatedAt": "2026-08-03T06:53:18.433Z",
+  "pageCount": 137,
   "output": "downloads/machine-entity-output-sanitizer-output.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Machine Entity Output Sanitizer Output",
-    "contentHash": "6c498836e3e6e1e40bba9713a075124037b8edc8ab93b0a9f85a3ef3c99a86c3",
+    "contentHash": "817dd81a4477fb328995bf3cd4fd5cbcd924ad6919172dcb954adf3b77cc153d",
     "sourceIds": [
+      "26b90533dbf7d2ed42f02de6",
       "e083e748ec6311742c2416e5",
       "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -14,7 +15,6 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -25,7 +25,7 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
       "daee19f2c0d92279cc9a7569",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-AF18512452F699D2",
@@ -58,7 +58,11 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E8F3DDB7E3724A74",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -84,7 +88,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -115,6 +118,8 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-DAB5BBAD900386F9",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -133,7 +138,6 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-FA5662AF68B13A9F",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
@@ -142,11 +146,7 @@
       "ASC-REVIEW-08CB150A42984598",
       "ASC-REVIEW-7CAC9318F83A7E8B",
       "ASC-REVIEW-774FD6AB4E46BCE8",
-      "ASC-REVIEW-54C7773F8BEDE2F4",
-      "ASC-REVIEW-603C7E693C77AF6C",
-      "ASC-REVIEW-8F441C443ED90227",
-      "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB"
+      "ASC-REVIEW-54C7773F8BEDE2F4"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 135,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 110,
-      "moneyRecordCount": 81
+      "relationshipCount": 106,
+      "moneyRecordCount": 78
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 106 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; DELL MARKETING L.P. — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 106 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
           "Influence should be mapped through infrastructure, filings and contracts.",

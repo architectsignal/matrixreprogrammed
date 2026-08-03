@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Site Intelligence Pipeline Audit
 
-Updated: 2026-08-02T21:19:08.782Z
+Updated: 2026-08-03T07:03:22.579Z
 Overall: fully-working
 Green: 43 · Amber: 0 · Red: 0
 
@@ -12,14 +12,14 @@ Green: 43 · Amber: 0 · Red: 0
 - **GREEN · Collect · collect-source-pulls:** Source-pull index exists.
 - **GREEN · Collect · freshness-curated-drops:** Curated source file age: 0 day(s). Fix: Run the current-source updater daily and fail the homepage build when the curated source set exceeds seven days.
 - **GREEN · Collect · freshness-seven-day-feed:** Seven-day feed file age: 0 day(s). Fix: Run RSS/public-source intake every day and archive items automatically after seven days.
-- **GREEN · Collect · fresh-current-news:** 43 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
+- **GREEN · Collect · fresh-current-news:** 51 news item(s) are inside the active seven-day window. Fix: Keep the homepage empty rather than showing stale news when this count reaches zero.
 - **GREEN · Classify · classification-system:** Information-gathering operating model exists.
 - **GREEN · Grade · interpretation-standard:** Reader score and evidence interpretation standard exists.
 - **GREEN · Grade · source-registry:** Master evidence source registry exists.
 - **GREEN · Classify · pipeline-completeness:** 8 collection-to-review pipeline step(s) are declared. Fix: Require collect, classify, grade, cross-check, connect, conclude, publish and review stages.
 - **GREEN · Grade · evidence-levels:** 6 evidence/implementation level(s) are declared. Fix: Ensure implementation, convergence and lock-in cannot be inferred from source volume alone.
 - **GREEN · Connect · relationship-graph:** Evidence-weighted relationship graph exists.
-- **GREEN · Connect · graph-population:** Relationship graph contains 97 node(s) and 172 edge(s). Fix: Rebuild the graph and reject empty deployments.
+- **GREEN · Connect · graph-population:** Relationship graph contains 111 node(s) and 172 edge(s). Fix: Rebuild the graph and reject empty deployments.
 - **GREEN · Connect · graph-boundaries:** 0 relationship edge(s) lack an explicit grade or boundary field. Fix: Require source IDs, relationship type, evidence grade and association-not-guilt boundary on every edge.
 - **GREEN · Conclude · daily-conclusions:** Daily power conclusions exists.
 - **GREEN · Conclude · conclusion-engine:** Conclusion engine exists.
@@ -30,7 +30,7 @@ Green: 43 · Amber: 0 · Red: 0
 - **GREEN · Conclude · daily-counterpoint:** Daily Command Brief contains its counterpoint. Fix: Generate counterpoint from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-practicalMeaning:** Daily Command Brief contains its practical meaning. Fix: Generate practical meaning from current evidence and canonical timers on every build.
 - **GREEN · Conclude · daily-conclusionBoundary:** Daily Command Brief contains its claim boundary. Fix: Generate claim boundary from current evidence and canonical timers on every build.
-- **GREEN · Publish · brief-coverage:** 40 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
+- **GREEN · Publish · brief-coverage:** 56 brief page(s) received the mission interpretation layer. Fix: Apply the final mission lens after all legacy brief generators and audit every brief route.
 - **GREEN · Conclude · conclusion-engine-population:** 5 conclusion-engine item(s) exist. Fix: Do not publish an empty conclusion engine.
 - **GREEN · Clocks · clock-source:** Canonical risk-clock source exists.
 - **GREEN · Clocks · clock-wall:** Evidence-fed clock synthesis exists.

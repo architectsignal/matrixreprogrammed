@@ -1,7 +1,7 @@
 {
   "ok": true,
   "title": "Matrix Reprogrammed Card Download Manifest",
-  "updated": "2026-08-02T21:18:18.406Z",
+  "updated": "2026-08-03T07:02:20.501Z",
   "boundary": "Card downloads are visual gateways. Existing real artwork is preferred; labelled placeholders remain only where no approved image has been matched. Evidence, current Intel and scoring live in linked dossiers and source routes.",
   "cardContractVersion": "2.0",
   "expectedCardsPerDeck": 52,
@@ -37,8 +37,24 @@
           "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
         },
         {
-          "id": "world-health-organization",
+          "id": "jeff-bezos",
           "rank": 2,
+          "name": "Jeff Bezos",
+          "suit": "Coins",
+          "score": 100,
+          "lane": "money / ownership power",
+          "asset": "assets/top-52/cards/jeff-bezos.svg",
+          "downloadAsset": "assets/top-52/cards/jeff-bezos.svg",
+          "artStatus": "placeholder-svg",
+          "realArt": false,
+          "artSource": "assets/top-52/cards/jeff-bezos.svg",
+          "profileRoute": "top-52/jeff-bezos.html",
+          "sourceRoute": "billionaire-briefs/jeff-bezos.html",
+          "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
+        },
+        {
+          "id": "world-health-organization",
+          "rank": 3,
           "name": "World Health Organization",
           "suit": "Masks",
           "score": 100,
@@ -54,7 +70,7 @@
         },
         {
           "id": "federal-reserve",
-          "rank": 3,
+          "rank": 4,
           "name": "Federal Reserve",
           "suit": "Masks",
           "score": 100,
@@ -70,7 +86,7 @@
         },
         {
           "id": "caci-international",
-          "rank": 4,
+          "rank": 5,
           "name": "CACI International",
           "suit": "Masks",
           "score": 100,
@@ -86,7 +102,7 @@
         },
         {
           "id": "booz-allen-hamilton",
-          "rank": 5,
+          "rank": 6,
           "name": "Booz Allen Hamilton",
           "suit": "Masks",
           "score": 100,
@@ -102,7 +118,7 @@
         },
         {
           "id": "larry-fink",
-          "rank": 6,
+          "rank": 7,
           "name": "Larry Fink",
           "suit": "Coins",
           "score": 98,
@@ -118,7 +134,7 @@
         },
         {
           "id": "klaus-schwab",
-          "rank": 7,
+          "rank": 8,
           "name": "Klaus Schwab",
           "suit": "Masks",
           "score": 94,
@@ -134,7 +150,7 @@
         },
         {
           "id": "emmanuel-macron",
-          "rank": 8,
+          "rank": 9,
           "name": "Emmanuel Macron",
           "suit": "Crowns",
           "score": 90,
@@ -150,7 +166,7 @@
         },
         {
           "id": "tony-blair",
-          "rank": 9,
+          "rank": 10,
           "name": "Tony Blair",
           "suit": "Masks",
           "score": 88,
@@ -166,7 +182,7 @@
         },
         {
           "id": "jamie-dimon",
-          "rank": 10,
+          "rank": 11,
           "name": "Jamie Dimon",
           "suit": "Coins",
           "score": 85,
@@ -182,7 +198,7 @@
         },
         {
           "id": "jerome-powell",
-          "rank": 11,
+          "rank": 12,
           "name": "Jerome Powell",
           "suit": "Coins",
           "score": 84,
@@ -197,8 +213,24 @@
           "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
         },
         {
+          "id": "jensen-huang",
+          "rank": 13,
+          "name": "Jensen Huang",
+          "suit": "Coins",
+          "score": 83,
+          "lane": "money / ownership power",
+          "asset": "assets/top-52/cards/jensen-huang.svg",
+          "downloadAsset": "assets/top-52/cards/jensen-huang.svg",
+          "artStatus": "placeholder-svg",
+          "realArt": false,
+          "artSource": "assets/top-52/cards/jensen-huang.svg",
+          "profileRoute": "top-52/jensen-huang.html",
+          "sourceRoute": "billionaire-briefs/jensen-huang.html",
+          "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
+        },
+        {
           "id": "christine-lagarde",
-          "rank": 12,
+          "rank": 14,
           "name": "Christine Lagarde",
           "suit": "Coins",
           "score": 83,
@@ -214,7 +246,7 @@
         },
         {
           "id": "pope-francis",
-          "rank": 13,
+          "rank": 15,
           "name": "Pope Francis",
           "suit": "Masks",
           "score": 82,
@@ -230,7 +262,7 @@
         },
         {
           "id": "king-charles-iii",
-          "rank": 14,
+          "rank": 16,
           "name": "King Charles III",
           "suit": "Crowns",
           "score": 82,
@@ -246,7 +278,7 @@
         },
         {
           "id": "erik-prince",
-          "rank": 15,
+          "rank": 17,
           "name": "Erik Prince",
           "suit": "Swords",
           "score": 81,
@@ -261,24 +293,8 @@
           "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
         },
         {
-          "id": "jeff-bezos",
-          "rank": 16,
-          "name": "Jeff Bezos",
-          "suit": "Coins",
-          "score": 80,
-          "lane": "money / ownership power",
-          "asset": "assets/top-52/cards/jeff-bezos.svg",
-          "downloadAsset": "assets/top-52/cards/jeff-bezos.svg",
-          "artStatus": "placeholder-svg",
-          "realArt": false,
-          "artSource": "assets/top-52/cards/jeff-bezos.svg",
-          "profileRoute": "top-52/jeff-bezos.html",
-          "sourceRoute": "billionaire-briefs/jeff-bezos.html",
-          "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
-        },
-        {
           "id": "bill-gates",
-          "rank": 17,
+          "rank": 18,
           "name": "Bill Gates",
           "suit": "Coins",
           "score": 80,
@@ -294,7 +310,7 @@
         },
         {
           "id": "sam-altman",
-          "rank": 18,
+          "rank": 19,
           "name": "Sam Altman",
           "suit": "Masks",
           "score": 80,
@@ -310,7 +326,7 @@
         },
         {
           "id": "sundar-pichai",
-          "rank": 19,
+          "rank": 20,
           "name": "Sundar Pichai",
           "suit": "Masks",
           "score": 79,
@@ -326,7 +342,7 @@
         },
         {
           "id": "satya-nadella",
-          "rank": 20,
+          "rank": 21,
           "name": "Satya Nadella",
           "suit": "Masks",
           "score": 78,
@@ -342,7 +358,7 @@
         },
         {
           "id": "tim-cook",
-          "rank": 21,
+          "rank": 22,
           "name": "Tim Cook",
           "suit": "Coins",
           "score": 77,
@@ -358,7 +374,7 @@
         },
         {
           "id": "george-soros",
-          "rank": 22,
+          "rank": 23,
           "name": "George Soros",
           "suit": "Masks",
           "score": 74,
@@ -374,7 +390,7 @@
         },
         {
           "id": "mukesh-ambani",
-          "rank": 23,
+          "rank": 24,
           "name": "Mukesh Ambani",
           "suit": "Coins",
           "score": 72,
@@ -390,7 +406,7 @@
         },
         {
           "id": "xi-jinping",
-          "rank": 24,
+          "rank": 25,
           "name": "Xi Jinping",
           "suit": "Crowns",
           "score": 72,
@@ -406,7 +422,7 @@
         },
         {
           "id": "narendra-modi",
-          "rank": 25,
+          "rank": 26,
           "name": "Narendra Modi",
           "suit": "Crowns",
           "score": 71,
@@ -422,7 +438,7 @@
         },
         {
           "id": "vladimir-putin",
-          "rank": 26,
+          "rank": 27,
           "name": "Vladimir Putin",
           "suit": "Swords",
           "score": 71,
@@ -438,7 +454,7 @@
         },
         {
           "id": "benjamin-netanyahu",
-          "rank": 27,
+          "rank": 28,
           "name": "Benjamin Netanyahu",
           "suit": "Swords",
           "score": 70,
@@ -454,7 +470,7 @@
         },
         {
           "id": "volodymyr-zelenskyy",
-          "rank": 28,
+          "rank": 29,
           "name": "Volodymyr Zelenskyy",
           "suit": "Crowns",
           "score": 69,
@@ -470,7 +486,7 @@
         },
         {
           "id": "giorgia-meloni",
-          "rank": 29,
+          "rank": 30,
           "name": "Giorgia Meloni",
           "suit": "Crowns",
           "score": 68,
@@ -486,7 +502,7 @@
         },
         {
           "id": "gautam-adani",
-          "rank": 30,
+          "rank": 31,
           "name": "Gautam Adani",
           "suit": "Coins",
           "score": 67,
@@ -502,7 +518,7 @@
         },
         {
           "id": "ray-dalio",
-          "rank": 31,
+          "rank": 32,
           "name": "Ray Dalio",
           "suit": "Coins",
           "score": 66,
@@ -518,7 +534,7 @@
         },
         {
           "id": "brian-moynihan",
-          "rank": 32,
+          "rank": 33,
           "name": "Brian Moynihan",
           "suit": "Coins",
           "score": 65,
@@ -534,7 +550,7 @@
         },
         {
           "id": "david-solomon",
-          "rank": 33,
+          "rank": 34,
           "name": "David Solomon",
           "suit": "Coins",
           "score": 65,
@@ -550,7 +566,7 @@
         },
         {
           "id": "jane-fraser",
-          "rank": 34,
+          "rank": 35,
           "name": "Jane Fraser",
           "suit": "Coins",
           "score": 65,
@@ -566,7 +582,7 @@
         },
         {
           "id": "ajay-banga",
-          "rank": 35,
+          "rank": 36,
           "name": "Ajay Banga",
           "suit": "Coins",
           "score": 65,
@@ -582,7 +598,7 @@
         },
         {
           "id": "kristalina-georgieva",
-          "rank": 36,
+          "rank": 37,
           "name": "Kristalina Georgieva",
           "suit": "Coins",
           "score": 65,
@@ -598,7 +614,7 @@
         },
         {
           "id": "tedros-adhanom-ghebreyesus",
-          "rank": 37,
+          "rank": 38,
           "name": "Tedros Adhanom Ghebreyesus",
           "suit": "Masks",
           "score": 65,
@@ -614,7 +630,7 @@
         },
         {
           "id": "ant-nio-guterres",
-          "rank": 38,
+          "rank": 39,
           "name": "António Guterres",
           "suit": "Crowns",
           "score": 65,
@@ -630,7 +646,7 @@
         },
         {
           "id": "mark-rutte",
-          "rank": 39,
+          "rank": 40,
           "name": "Mark Rutte",
           "suit": "Swords",
           "score": 64,
@@ -646,7 +662,7 @@
         },
         {
           "id": "jens-stoltenberg",
-          "rank": 40,
+          "rank": 41,
           "name": "Jens Stoltenberg",
           "suit": "Swords",
           "score": 63,
@@ -662,7 +678,7 @@
         },
         {
           "id": "alex-karp",
-          "rank": 41,
+          "rank": 42,
           "name": "Alex Karp",
           "suit": "Swords",
           "score": 63,
@@ -678,7 +694,7 @@
         },
         {
           "id": "miriam-adelson",
-          "rank": 42,
+          "rank": 43,
           "name": "Miriam Adelson",
           "suit": "Coins",
           "score": 62,
@@ -694,7 +710,7 @@
         },
         {
           "id": "rupert-murdoch",
-          "rank": 43,
+          "rank": 44,
           "name": "Rupert Murdoch",
           "suit": "Masks",
           "score": 62,
@@ -710,7 +726,7 @@
         },
         {
           "id": "laurene-powell-jobs",
-          "rank": 44,
+          "rank": 45,
           "name": "Laurene Powell Jobs",
           "suit": "Masks",
           "score": 61,
@@ -726,7 +742,7 @@
         },
         {
           "id": "mark-zuckerberg",
-          "rank": 45,
+          "rank": 46,
           "name": "Mark Zuckerberg",
           "suit": "Coins",
           "score": 60,
@@ -742,7 +758,7 @@
         },
         {
           "id": "larry-ellison",
-          "rank": 46,
+          "rank": 47,
           "name": "Larry Ellison",
           "suit": "Coins",
           "score": 60,
@@ -758,7 +774,7 @@
         },
         {
           "id": "peter-thiel",
-          "rank": 47,
+          "rank": 48,
           "name": "Peter Thiel",
           "suit": "Coins",
           "score": 60,
@@ -774,7 +790,7 @@
         },
         {
           "id": "michael-bloomberg",
-          "rank": 48,
+          "rank": 49,
           "name": "Michael Bloomberg",
           "suit": "Coins",
           "score": 60,
@@ -790,7 +806,7 @@
         },
         {
           "id": "warren-buffett",
-          "rank": 49,
+          "rank": 50,
           "name": "Warren Buffett",
           "suit": "Coins",
           "score": 60,
@@ -802,22 +818,6 @@
           "artSource": "assets/top-52/cards/warren-buffett.svg",
           "profileRoute": "top-52/warren-buffett.html",
           "sourceRoute": "billionaire-briefs/warren-buffett.html",
-          "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
-        },
-        {
-          "id": "jensen-huang",
-          "rank": 50,
-          "name": "Jensen Huang",
-          "suit": "Coins",
-          "score": 60,
-          "lane": "money / ownership power",
-          "asset": "assets/top-52/cards/jensen-huang.svg",
-          "downloadAsset": "assets/top-52/cards/jensen-huang.svg",
-          "artStatus": "placeholder-svg",
-          "realArt": false,
-          "artSource": "assets/top-52/cards/jensen-huang.svg",
-          "profileRoute": "top-52/jensen-huang.html",
-          "sourceRoute": "billionaire-briefs/jensen-huang.html",
           "evidenceBoundary": "Puppet of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity."
         },
         {

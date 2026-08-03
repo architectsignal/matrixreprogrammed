@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-02T21:11:47.272Z",
+  "updated": "2026-08-03T07:01:58.774Z",
   "title": "Site Relationship Map",
   "boundary": "This is a public route map. It links records and trackers without treating association as a conclusion.",
   "layers": [
@@ -454,7 +454,7 @@
           "type": "profile route",
           "route": "billionaire-briefs/jeff-bezos.html",
           "notes": [
-            "high priority",
+            "elite priority",
             "Amazon",
             "AWS",
             "Blue Origin",
@@ -566,7 +566,7 @@
           "type": "profile route",
           "route": "billionaire-briefs/jensen-huang.html",
           "notes": [
-            "active watch",
+            "high priority",
             "NVIDIA",
             "AI chips",
             "data-center infrastructure",
@@ -872,13 +872,173 @@
       "id": "evidence-and-records",
       "nodes": [
         {
-          "id": "control-structure",
+          "id": "centers-for-medicare-medicaid-services",
           "layer": "evidence-and-records",
-          "name": "Control Structure",
+          "name": "Centers for Medicare & Medicaid Services",
           "type": "missing record",
-          "route": "entity-briefs/control-structure.html",
+          "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
           "notes": [
-            "Feed runner has not produced entity observations yet."
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "health-and-human-services-department",
+          "layer": "evidence-and-records",
+          "name": "Health and Human Services Department",
+          "type": "missing record",
+          "route": "entity-briefs/health-and-human-services-department.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "homeland-security-department",
+          "layer": "evidence-and-records",
+          "name": "Homeland Security Department",
+          "type": "missing record",
+          "route": "entity-briefs/homeland-security-department.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "aapl",
+          "layer": "evidence-and-records",
+          "name": "AAPL",
+          "type": "missing record",
+          "route": "entity-briefs/aapl.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "alphabet-inc",
+          "layer": "evidence-and-records",
+          "name": "Alphabet Inc.",
+          "type": "missing record",
+          "route": "entity-briefs/alphabet-inc.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "amazon-com-inc",
+          "layer": "evidence-and-records",
+          "name": "AMAZON COM INC",
+          "type": "missing record",
+          "route": "entity-briefs/amazon-com-inc.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "amzn",
+          "layer": "evidence-and-records",
+          "name": "AMZN",
+          "type": "missing record",
+          "route": "entity-briefs/amzn.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "apple-inc",
+          "layer": "evidence-and-records",
+          "name": "Apple Inc.",
+          "type": "missing record",
+          "route": "entity-briefs/apple-inc.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "avgo",
+          "layer": "evidence-and-records",
+          "name": "AVGO",
+          "type": "missing record",
+          "route": "entity-briefs/avgo.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "broadcom-inc",
+          "layer": "evidence-and-records",
+          "name": "Broadcom Inc.",
+          "type": "missing record",
+          "route": "entity-briefs/broadcom-inc.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "googl",
+          "layer": "evidence-and-records",
+          "name": "GOOGL",
+          "type": "missing record",
+          "route": "entity-briefs/googl.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "microsoft-corp",
+          "layer": "evidence-and-records",
+          "name": "MICROSOFT CORP",
+          "type": "missing record",
+          "route": "entity-briefs/microsoft-corp.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "msft",
+          "layer": "evidence-and-records",
+          "name": "MSFT",
+          "type": "missing record",
+          "route": "entity-briefs/msft.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "nvda",
+          "layer": "evidence-and-records",
+          "name": "NVDA",
+          "type": "missing record",
+          "route": "entity-briefs/nvda.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "nvidia-corp",
+          "layer": "evidence-and-records",
+          "name": "NVIDIA CORP",
+          "type": "missing record",
+          "route": "entity-briefs/nvidia-corp.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "nuclear-regulatory-commission",
+          "layer": "evidence-and-records",
+          "name": "Nuclear Regulatory Commission",
+          "type": "missing record",
+          "route": "entity-briefs/nuclear-regulatory-commission.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+          ]
+        },
+        {
+          "id": "securities-and-exchange-commission",
+          "layer": "evidence-and-records",
+          "name": "Securities and Exchange Commission",
+          "type": "missing record",
+          "route": "entity-briefs/securities-and-exchange-commission.html",
+          "notes": [
+            "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
           ]
         },
         {
@@ -992,209 +1152,187 @@
           ]
         },
         {
-          "id": "feed-control-structure-feed-runner-has-not-produced-entity-observ",
+          "id": "feed-centers-for-medicare-medicaid-services-confirm-the-primary-r",
           "layer": "evidence-and-records",
-          "name": "Control Structure — Feed runner has not produced entity observations yet.",
+          "name": "Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "entity-briefs/control-structure.html",
+          "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-blackwater-xe-academi-constellis-lineage-usaspending-awards",
+          "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
           "layer": "evidence-and-records",
-          "name": "Blackwater / Xe / Academi / Constellis lineage — USAspending awards",
+          "name": "Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "route": "entity-briefs/health-and-human-services-department.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-blackwater-xe-academi-constellis-lineage-court-records",
+          "id": "feed-homeland-security-department-confirm-the-primary-record-page",
           "layer": "evidence-and-records",
-          "name": "Blackwater / Xe / Academi / Constellis lineage — Court records",
+          "name": "Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "route": "entity-briefs/homeland-security-department.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-blackwater-xe-academi-constellis-lineage-congressional-heari",
+          "id": "feed-aapl-confirm-the-primary-record-page-pdf-docket-filing-award",
           "layer": "evidence-and-records",
-          "name": "Blackwater / Xe / Academi / Constellis lineage — Congressional hearing material",
+          "name": "AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "route": "entity-briefs/aapl.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-blackwater-xe-academi-constellis-lineage-sec-or-corporate-re",
+          "id": "feed-alphabet-inc-confirm-the-primary-record-page-pdf-docket-fili",
           "layer": "evidence-and-records",
-          "name": "Blackwater / Xe / Academi / Constellis lineage — SEC or corporate records where available",
+          "name": "Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "route": "entity-briefs/alphabet-inc.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-blackwater-xe-academi-constellis-lineage-sanctions-debarment",
+          "id": "feed-amazon-com-inc-confirm-the-primary-record-page-pdf-docket-fi",
           "layer": "evidence-and-records",
-          "name": "Blackwater / Xe / Academi / Constellis lineage — Sanctions / debarment checks",
+          "name": "AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "route": "entity-briefs/amazon-com-inc.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-blackwater-xe-academi-constellis-lineage-news-signals-verifi",
+          "id": "feed-amzn-confirm-the-primary-record-page-pdf-docket-filing-award",
           "layer": "evidence-and-records",
-          "name": "Blackwater / Xe / Academi / Constellis lineage — News signals verified against primary records",
+          "name": "AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/blackwater-constellis-lineage.html",
+          "route": "entity-briefs/amzn.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-dyncorp-amentum-lineage-usaspending-awards",
+          "id": "feed-apple-inc-confirm-the-primary-record-page-pdf-docket-filing-",
           "layer": "evidence-and-records",
-          "name": "DynCorp / Amentum lineage — USAspending awards",
+          "name": "Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/dyncorp-amentum-lineage.html",
+          "route": "entity-briefs/apple-inc.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-dyncorp-amentum-lineage-court-records",
+          "id": "feed-avgo-confirm-the-primary-record-page-pdf-docket-filing-award",
           "layer": "evidence-and-records",
-          "name": "DynCorp / Amentum lineage — Court records",
+          "name": "AVGO — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/dyncorp-amentum-lineage.html",
+          "route": "entity-briefs/avgo.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-dyncorp-amentum-lineage-inspector-general-reports",
+          "id": "feed-broadcom-inc-confirm-the-primary-record-page-pdf-docket-fili",
           "layer": "evidence-and-records",
-          "name": "DynCorp / Amentum lineage — Inspector General reports",
+          "name": "Broadcom Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/dyncorp-amentum-lineage.html",
+          "route": "entity-briefs/broadcom-inc.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-dyncorp-amentum-lineage-corporate-transaction-records",
+          "id": "feed-googl-confirm-the-primary-record-page-pdf-docket-filing-awar",
           "layer": "evidence-and-records",
-          "name": "DynCorp / Amentum lineage — Corporate transaction records",
+          "name": "GOOGL — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/dyncorp-amentum-lineage.html",
+          "route": "entity-briefs/googl.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-caci-international-sec-filings",
+          "id": "feed-microsoft-corp-confirm-the-primary-record-page-pdf-docket-fi",
           "layer": "evidence-and-records",
-          "name": "CACI International — SEC filings",
+          "name": "MICROSOFT CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/caci-intelligence-contractor.html",
+          "route": "entity-briefs/microsoft-corp.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-caci-international-usaspending-awards",
+          "id": "feed-msft-confirm-the-primary-record-page-pdf-docket-filing-award",
           "layer": "evidence-and-records",
-          "name": "CACI International — USAspending awards",
+          "name": "MSFT — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/caci-intelligence-contractor.html",
+          "route": "entity-briefs/msft.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-caci-international-court-records",
+          "id": "feed-nvda-confirm-the-primary-record-page-pdf-docket-filing-award",
           "layer": "evidence-and-records",
-          "name": "CACI International — Court records",
+          "name": "NVDA — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/caci-intelligence-contractor.html",
+          "route": "entity-briefs/nvda.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-caci-international-contract-notices",
+          "id": "feed-nvidia-corp-confirm-the-primary-record-page-pdf-docket-filin",
           "layer": "evidence-and-records",
-          "name": "CACI International — Contract notices",
+          "name": "NVIDIA CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/caci-intelligence-contractor.html",
+          "route": "entity-briefs/nvidia-corp.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-booz-allen-hamilton-sec-filings",
+          "id": "feed-nuclear-regulatory-commission-confirm-the-primary-record-pag",
           "layer": "evidence-and-records",
-          "name": "Booz Allen Hamilton — SEC filings",
+          "name": "Nuclear Regulatory Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
+          "route": "entity-briefs/nuclear-regulatory-commission.html",
           "notes": [
             "missing record",
             "Score 85"
           ]
         },
         {
-          "id": "feed-booz-allen-hamilton-usaspending-awards",
+          "id": "feed-securities-and-exchange-commission-confirm-the-primary-recor",
           "layer": "evidence-and-records",
-          "name": "Booz Allen Hamilton — USAspending awards",
+          "name": "Securities and Exchange Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
           "type": "deep intel item",
-          "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
-          "notes": [
-            "missing record",
-            "Score 85"
-          ]
-        },
-        {
-          "id": "feed-booz-allen-hamilton-lobbying-records",
-          "layer": "evidence-and-records",
-          "name": "Booz Allen Hamilton — Lobbying records",
-          "type": "deep intel item",
-          "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
-          "notes": [
-            "missing record",
-            "Score 85"
-          ]
-        },
-        {
-          "id": "feed-booz-allen-hamilton-court-records",
-          "layer": "evidence-and-records",
-          "name": "Booz Allen Hamilton — Court records",
-          "type": "deep intel item",
-          "route": "contractor-briefs/booz-allen-intelligence-contractor.html",
+          "route": "entity-briefs/securities-and-exchange-commission.html",
           "notes": [
             "missing record",
             "Score 85"

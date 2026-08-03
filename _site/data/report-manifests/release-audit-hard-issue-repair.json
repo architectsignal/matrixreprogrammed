@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:07:44.805Z",
-  "pageCount": 95,
+  "generatedAt": "2026-08-03T06:56:44.566Z",
+  "pageCount": 97,
   "output": "downloads/release-audit-hard-issue-repair.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Release Audit Hard Issue Repair",
-    "contentHash": "73cf388b8fe7f7cbd30222c7fe4c3a39f57218f1c06fec71c34042f8dad8d997",
+    "contentHash": "04c19ef55f11b27447a99147599583a3e43b39a5815ee1ab280ea3b6c990a759",
     "sourceIds": [
       "157cdab04b61ae6309c0c713",
       "360e80c162081c85d2c680ef",
@@ -90,7 +90,6 @@
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-32D4420F5F198DA2",
-      "ASC-REVIEW-E76F1740FFF4E811",
       "d6936ce262c4c18cb75c6e44",
       "4ae6a940305d15da61333450",
       "869fb3fbc8c9ae63c5aca5f3",
@@ -130,7 +129,6 @@
       "ASC-REVIEW-5EA0FB3A48583D82",
       "2cd5060b0ae53c330cbe3aa1",
       "7ed151a515391f967d229642",
-      "65debd126cdfa5f7547a3eca",
       "310372a3fc518b6aabbc5d07",
       "6510364e9b1a1504b9f99521",
       "0c5f51804baf8e9e2c1fdd0b",
@@ -140,24 +138,26 @@
       "9848ec4b4c3f6c2693269839",
       "b7e4a66335a706ef5097117f",
       "f4b44414c2c9ee4fd9b0ea74",
-      "3c9c23f7f9a1cec81ef90f59",
       "f59da50ababa3ddae79a8f1c",
       "weekly-39",
       "4c372edcf20b760ae3305f10",
-      "ec968f2ec6ba82128b4cd91b"
+      "ec968f2ec6ba82128b4cd91b",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-7116ac17"
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 74,
-      "disputedClaimCount": 17,
+      "primarySourceCount": 77,
+      "disputedClaimCount": 16,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 19,
-      "moneyRecordCount": 10
+      "relationshipCount": 22,
+      "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 74 A/B-grade public-record items are materially relevant to Release Audit Hard Issue Repair.",
+        "conclusion": "The indexed record establishes that 77 A/B-grade public-record items are materially relevant to Release Audit Hard Issue Repair.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -177,7 +177,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; General Assembly LIVE: Debating US sanctions against Cuba; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Matrix Reprogrammed Canonical Intelligence Record; COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -192,7 +192,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "General Assembly LIVE: Debating US sanctions against Cuba",

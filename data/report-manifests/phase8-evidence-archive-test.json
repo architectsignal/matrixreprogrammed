@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-02T21:06:35.471Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-03T06:55:07.914Z",
+  "pageCount": 118,
   "output": "downloads/phase8-evidence-archive-test.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Phase8 Evidence Archive Test",
-    "contentHash": "dbf9eb8585fe92bfa2015b38e8dfd40eaadfd051a0cc688941d031e4ba1ddbf6",
+    "contentHash": "1bc05585bea5c56a4f6902ab3a1833a20af201e61c0ef49d3c2158aa4b2930e8",
     "sourceIds": [
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
@@ -35,9 +36,6 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "e083e748ec6311742c2416e5",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-45ACC28AC220EA79",
@@ -56,12 +54,6 @@
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
       "73799cb9af4829047998b026",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-2A8D7C6B5A23CEAD",
       "ASC-REVIEW-A8005F6D70DBECBC",
@@ -71,7 +63,6 @@
       "ASC-REVIEW-5C5BC2E897FCBBFE",
       "ASC-REVIEW-C0E6134747580127",
       "ASC-REVIEW-AB5A700449B10AEC",
-      "ASC-REVIEW-E76F1740FFF4E811",
       "cf94b367bfb0237448d49649",
       "45f5269389def99607b5a517",
       "9bc66da5c53d37d8c3d59e13",
@@ -99,13 +90,12 @@
       "ASC-REVIEW-B7720C9C5A09A4B4",
       "ASC-REVIEW-7C6630BA6B2598AA",
       "ASC-REVIEW-0BDE78366651B0AB",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-B59332D029E64DD4",
       "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-836A8E9D516E6FEC",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-9455E984D4DBC196",
       "ASC-REVIEW-E8F3DDB7E3724A74",
@@ -113,7 +103,12 @@
       "ASC-REVIEW-CEAFD28B55D0DA69",
       "ASC-REVIEW-9ABCBA0136F7F0F3",
       "ASC-REVIEW-5A774507A02DF22B",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-86B6EBB92DAD0BB7",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -139,6 +134,8 @@
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
       "a103f2650e31fc92fa3688e6",
+      "source-change-81d1ec66d255ebaf3f7d61de",
+      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
       "ASC-REVIEW-AF18512452F699D2",
@@ -146,20 +143,23 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-C369A84AD971DD75",
-      "ASC-REVIEW-9E85403F3389F334"
+      "ASC-REVIEW-9E85403F3389F334",
+      "ASC-REVIEW-640E991C59CBDA5A",
+      "ASC-REVIEW-0178D2F659DD4EB6",
+      "ASC-REVIEW-E617D0A88088FBF7"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 62,
-      "disputedClaimCount": 56,
+      "primarySourceCount": 56,
+      "disputedClaimCount": 62,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 40,
-      "moneyRecordCount": 11
+      "relationshipCount": 43,
+      "moneyRecordCount": 15
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 62 A/B-grade public-record items are materially relevant to Phase8 Evidence Archive Test.",
+        "conclusion": "The indexed record establishes that 56 A/B-grade public-record items are materially relevant to Phase8 Evidence Archive Test.",
         "evidence": "Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment by Default (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Geoffrey Allen Wall (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 40 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 43 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 40 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 43 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

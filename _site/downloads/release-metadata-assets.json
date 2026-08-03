@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:43.072Z",
+  "commitSha": "8e0338102cc89a1ae04dca64114cc6de0fcbb3e7",
+  "manifestAsset": "runtime/deploy-manifest-current.json",
+  "healthAsset": "runtime/deploy-health-current.json",
+  "deployableManifestAsset": "_site/runtime/deploy-manifest-current.json",
+  "deployableHealthAsset": "_site/runtime/deploy-health-current.json",
+  "exactCopies": true,
+  "boundary": "Runtime and deployable _site aliases preserve the exact final manifest and health bytes and are served through explicit no-store Worker routes."
+}

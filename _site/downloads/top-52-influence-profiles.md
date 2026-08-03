@@ -1,8 +1,15 @@
 # Top 52 Influence Profiles
 
-Generated: 2026-08-02T21:11:47.347Z
+Generated: 2026-08-03T07:01:58.817Z
 
 ## Elon Musk
+Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
+- Religion & Interfaith: 80
+- Update Priority: 80
+- Finance & Banking: 77
+- Intelligence & Security: 75
+
+## Jeff Bezos
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
 - Religion & Interfaith: 80
 - Update Priority: 80
@@ -79,6 +86,13 @@ Boundary: Person of Interest card: this is a public-record influence route. It d
 - Update Priority: 77
 - Corporate & Asset Management: 75
 
+## Jensen Huang
+Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
+- Religion & Interfaith: 80
+- Finance & Banking: 77
+- Update Priority: 77
+- Corporate & Asset Management: 75
+
 ## Christine Lagarde
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
 - Religion & Interfaith: 80
@@ -106,13 +120,6 @@ Boundary: Person of Interest card: this is a public-record influence route. It d
 - Finance & Banking: 77
 - Update Priority: 76
 - Intelligence & Security: 75
-
-## Jeff Bezos
-Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
-- Religion & Interfaith: 80
-- Finance & Banking: 77
-- Intelligence & Security: 75
-- Corporate & Asset Management: 75
 
 ## Bill Gates
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
@@ -344,13 +351,6 @@ Boundary: Person of Interest card: this is a public-record influence route. It d
 - Finance & Banking: 77
 - Intelligence & Security: 75
 - Corporate & Asset Management: 75
-
-## Jensen Huang
-Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.
-- Religion & Interfaith: 80
-- Finance & Banking: 77
-- Corporate & Asset Management: 75
-- Government: 73
 
 ## MacKenzie Scott
 Boundary: Person of Interest card: this is a public-record influence route. It does not claim wrongdoing, hidden guilt, secret control, criminal conduct, or unlawful activity.

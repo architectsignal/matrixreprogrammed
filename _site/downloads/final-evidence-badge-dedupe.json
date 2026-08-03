@@ -1,0 +1,319 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:21:57.382Z",
+  "repaired": [
+    "index.html",
+    "daily-drop.html",
+    "epstein-files.html",
+    "network-search.html",
+    "live-intel.html",
+    "evidence-vault.html",
+    "download-center.html",
+    "news.html",
+    "books.html",
+    "black-file.html"
+  ],
+  "checks": [
+    {
+      "rel": "source:index.html",
+      "routeCount": 0,
+      "contractCount": 1,
+      "expectedRoute": 0,
+      "expectedContract": 1,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:index.html",
+      "routeCount": 0,
+      "contractCount": 1,
+      "expectedRoute": 0,
+      "expectedContract": 1,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:index.html",
+      "routeCount": 0,
+      "contractCount": 1,
+      "expectedRoute": 0,
+      "expectedContract": 1,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:daily-drop.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:daily-drop.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:daily-drop.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:epstein-files.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:epstein-files.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:epstein-files.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:network-search.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:network-search.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:network-search.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:live-intel.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:live-intel.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:live-intel.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:evidence-vault.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:evidence-vault.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:evidence-vault.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:download-center.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:download-center.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:download-center.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:news.html",
+      "routeCount": 0,
+      "contractCount": 1,
+      "expectedRoute": 0,
+      "expectedContract": 1,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:news.html",
+      "routeCount": 0,
+      "contractCount": 1,
+      "expectedRoute": 0,
+      "expectedContract": 1,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:news.html",
+      "routeCount": 0,
+      "contractCount": 1,
+      "expectedRoute": 0,
+      "expectedContract": 1,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:books.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:books.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:books.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "source:black-file.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "output:black-file.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    },
+    {
+      "rel": "extensionless:black-file.html",
+      "routeCount": 1,
+      "contractCount": 0,
+      "expectedRoute": 1,
+      "expectedContract": 0,
+      "staleBadgeIds": [],
+      "duplicateIds": [],
+      "ok": true
+    }
+  ],
+  "auditIdParser": "already-correct"
+}

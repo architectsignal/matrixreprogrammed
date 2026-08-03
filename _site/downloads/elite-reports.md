@@ -1,6 +1,6 @@
 # Elite Reports
 
-Generated: 2026-08-02T21:11:43.737Z
+Generated: 2026-08-03T07:01:53.036Z
 
 ## Daily Revelation Report
 
@@ -8,9 +8,63 @@ Trapped by a Facebook job advert, freed by a stranger in a taxi
 
 Source: daily-command-brief.html
 
-## Control Structure — Entity Report
+## Centers for Medicare & Medicaid Services — Entity Report
 
-A structural entity in the control map. It needs current public records attached.
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Health and Human Services Department — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Homeland Security Department — Entity Report
+
+A source route exists. More records are needed before drawing a stronger conclusion.
+
+Source: entity-daily-briefs.html
+
+## AAPL — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Alphabet Inc. — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## AMAZON COM INC — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## AMZN — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Apple Inc. — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## AVGO — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Broadcom Inc. — Entity Report
+
+Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 

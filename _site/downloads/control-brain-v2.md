@@ -1,11 +1,11 @@
 # Control Brain V2
 
-Generated: 2026-08-02T21:11:43.762Z
+Generated: 2026-08-03T07:01:53.058Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
-Nodes: 76
-Edges: 96
+Nodes: 101
+Edges: 117
 
 ## BlackRock
 
@@ -35,7 +35,7 @@ Source routes: big-three/state-street.html
 
 Score: 99
 
-Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 12 missing-record prompt(s), and 0 review prompt(s).
+Blackwater / Xe / Academi / Constellis lineage is ranked 99/100 because of 3 relationship route(s), 6 control layer(s), 8 record signal(s), 14 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: private-contractor-tracker.html, contractor-briefs/blackwater-constellis-lineage.html
 
@@ -89,11 +89,19 @@ Source routes: private-contractor-tracker.html, contractor-briefs/leidos-saic-li
 
 ## United Nations
 
-Score: 76
+Score: 77
 
-United Nations is ranked 76/100 because of 3 relationship route(s), 5 control layer(s), 0 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
+United Nations is ranked 77/100 because of 3 relationship route(s), 5 control layer(s), 1 record signal(s), 6 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: institution-control-tracker.html
+
+## Elon Musk
+
+Score: 74
+
+Elon Musk is ranked 74/100 because of 5 relationship route(s), 5 control layer(s), 3 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: billionaire-control-tracker.html
 
 ## World Economic Forum
 
@@ -151,21 +159,37 @@ NATO is ranked 73/100 because of 3 relationship route(s), 4 control layer(s), 0 
 
 Source routes: institution-control-tracker.html
 
-## Elon Musk
-
-Score: 71
-
-Elon Musk is ranked 71/100 because of 5 relationship route(s), 5 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: billionaire-control-tracker.html
-
 ## Jeff Bezos
 
-Score: 64
+Score: 66
 
-Jeff Bezos is ranked 64/100 because of 4 relationship route(s), 4 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+Jeff Bezos is ranked 66/100 because of 4 relationship route(s), 4 control layer(s), 2 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: billionaire-control-tracker.html
+
+## Digital ID and access systems
+
+Score: 62
+
+Digital ID and access systems is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
+
+## Health data and emergency systems
+
+Score: 62
+
+Health data and emergency systems is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
+
+## Foundation and NGO policy influence
+
+Score: 62
+
+Foundation and NGO policy influence is ranked 62/100 because of 5 relationship route(s), 3 control layer(s), 6 record signal(s), 4 missing-record prompt(s), and 0 review prompt(s).
+
+Source routes: subject-briefs.html
 
 ## Mark Zuckerberg
 
@@ -180,29 +204,5 @@ Source routes: billionaire-control-tracker.html
 Score: 61
 
 Warren Buffett is ranked 61/100 because of 4 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: billionaire-control-tracker.html
-
-## Bill Gates
-
-Score: 60
-
-Bill Gates is ranked 60/100 because of 3 relationship route(s), 4 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: billionaire-control-tracker.html
-
-## Larry Ellison
-
-Score: 57
-
-Larry Ellison is ranked 57/100 because of 3 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
-
-Source routes: billionaire-control-tracker.html
-
-## Peter Thiel
-
-Score: 57
-
-Peter Thiel is ranked 57/100 because of 3 relationship route(s), 3 control layer(s), 0 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: billionaire-control-tracker.html

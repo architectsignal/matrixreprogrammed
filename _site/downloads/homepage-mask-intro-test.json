@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:22:42.260Z",
+  "mode": "build-generated-video-data",
+  "runtimeVersion": "20260725-video-v5",
+  "asset": {
+    "sourceParts": 2,
+    "decodedBytes": 15003,
+    "generatedBase64Characters": 20006,
+    "generatedDataRuntime": "homepage-mask-intro-data.js",
+    "mp4": true
+  },
+  "behavior": {
+    "mutedAutoplay": true,
+    "playsInline": true,
+    "blobUrl": true,
+    "liveVideoFetches": false,
+    "cacheBusted": true,
+    "skip": true,
+    "escape": true,
+    "successfulPlaybackSessionLimited": true,
+    "failedPlaybackRemembered": false,
+    "reducedMotionManualPlay": true,
+    "forceReplayQuery": "?intro=1",
+    "voiceGatePreserved": true
+  },
+  "membership": {
+    "freeTier": true,
+    "paidPrices": [
+      3,
+      6,
+      9
+    ],
+    "checkoutDefault": "server-gated-disabled"
+  },
+  "failures": []
+}

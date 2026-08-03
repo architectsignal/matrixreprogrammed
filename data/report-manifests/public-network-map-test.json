@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:07:24.020Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-03T06:56:16.571Z",
+  "pageCount": 136,
   "output": "downloads/public-network-map-test.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Public Network Map Test",
-    "contentHash": "d43209cb71e7a853e13f5d9a93168aae5e1fba0201dc69ab6d24e4b66981d11c",
+    "contentHash": "b979160978ce8fe568f45250bf40e7770fd24fc815526c320ec8214d6cbe077c",
     "sourceIds": [
       "daee19f2c0d92279cc9a7569",
       "45f5269389def99607b5a517",
@@ -45,6 +45,7 @@
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
+      "ASC-REVIEW-85B553D0178BFBA1",
       "ASC-REVIEW-2B2EECE9A18DFF2C",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-06CC87AEAF289EB7",
@@ -56,6 +57,7 @@
       "ASC-REVIEW-1C806B2577C4D44C",
       "ASC-REVIEW-A04C87BD046475D3",
       "ASC-REVIEW-3A6BF3064A28E236",
+      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -76,7 +78,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -108,7 +109,6 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
       "ASC-REVIEW-836A8E9D516E6FEC",
-      "ASC-REVIEW-22BBAF16578AD07C",
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
@@ -151,8 +151,8 @@
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 136,
-      "newEntityCount": 0,
+      "disputedClaimCount": 135,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 126,
       "moneyRecordCount": 107
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Matrix Reprogrammed Structured Investigation Schema,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A lightweight public-record entity and relationship model aligned with FollowTheMoney concepts where practical.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T21:07:24.020Z"
+    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
   }
 }

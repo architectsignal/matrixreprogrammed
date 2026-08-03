@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:07:12.947Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-03T06:55:59.688Z",
+  "pageCount": 131,
   "output": "downloads/public-consequence-due-index-report.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Public Consequence Due Index Report",
-    "contentHash": "dff4c9080ca3afb88fb03eab783b34e5812cee3fdb50167f04b1ee64a026b334",
+    "contentHash": "815cb1a1e647736b3a2b6c8bf88db298b246e121826a6b4ab24c1bbc5554475d",
     "sourceIds": [
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
@@ -49,8 +49,19 @@
       "89b0fad6a2b4b9533d9b03f5",
       "9b0e64f836a3f9fe3acbf12c",
       "9f52702daea7fcbbfb32b9bc",
+      "e083e748ec6311742c2416e5",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "b4cb47ea50dc901364239e9f",
       "e457b31e704efd10ec987a59",
       "e349935405c0c31e3807b5af",
@@ -105,7 +116,6 @@
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-46CE3CB0306D4130",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
@@ -136,30 +146,20 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-B59332D029E64DD4",
-      "ASC-REVIEW-398C265AD47ACC74",
-      "ASC-REVIEW-2B2EECE9A18DFF2C",
-      "ASC-REVIEW-52F3C5EC8401656D",
-      "ASC-REVIEW-D13048D78F8EA6E3",
-      "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-E3E367656A99DD33",
-      "ASC-REVIEW-75C693C304757153",
-      "ASC-REVIEW-26C98CAD8AA9CE0A",
-      "ASC-REVIEW-D921C72A4BA2FDF3",
-      "ASC-REVIEW-AFF7699289F993E4"
+      "ASC-REVIEW-B59332D029E64DD4"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 53,
-      "disputedClaimCount": 88,
-      "newEntityCount": 0,
+      "primarySourceCount": 63,
+      "disputedClaimCount": 77,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 82,
-      "moneyRecordCount": 58
+      "relationshipCount": 86,
+      "moneyRecordCount": 52
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 53 A/B-grade public-record items are materially relevant to Public Consequence Due Index Report.",
+        "conclusion": "The indexed record establishes that 63 A/B-grade public-record items are materially relevant to Public Consequence Due Index Report.",
         "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 82 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 86 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 82 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 86 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",

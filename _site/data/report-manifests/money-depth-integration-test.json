@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:05:52.437Z",
+  "generatedAt": "2026-08-03T06:54:10.636Z",
   "pageCount": 135,
   "output": "downloads/money-depth-integration-test.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Money Depth Integration Test",
-    "contentHash": "2e3ac05bc49c54f3c1d388e94c8088c4fca33dbbbaa142cb3d7de01b1088274b",
+    "contentHash": "8b320fd7f1372d8b1c4ba1a05d40c3bcbf5d8cf809fc1713c74687c297b62072",
     "sourceIds": [
       "e083e748ec6311742c2416e5",
       "ASC-REVIEW-9E85403F3389F334",
@@ -18,6 +18,7 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
+      "26b90533dbf7d2ed42f02de6",
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E"
+      "ASC-REVIEW-0F86A972B08C9E18"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 10,
-      "disputedClaimCount": 130,
+      "disputedClaimCount": 129,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 128,
-      "moneyRecordCount": 110
+      "relationshipCount": 127,
+      "moneyRecordCount": 109
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 128 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 127 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 128 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 127 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",

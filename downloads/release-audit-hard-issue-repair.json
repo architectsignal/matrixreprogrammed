@@ -1,9 +1,25 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T21:19:28.460Z",
-  "exposureProfiles": 1,
+  "generatedAt": "2026-08-03T07:03:34.621Z",
+  "exposureProfiles": 17,
   "generatedExposurePages": [
-    "entity-exposure/control-structure.html"
+    "entity-exposure/homeland-security-department.html",
+    "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+    "entity-exposure/health-and-human-services-department.html",
+    "entity-exposure/aapl.html",
+    "entity-exposure/alphabet-inc.html",
+    "entity-exposure/amazon-com-inc.html",
+    "entity-exposure/amzn.html",
+    "entity-exposure/apple-inc.html",
+    "entity-exposure/avgo.html",
+    "entity-exposure/broadcom-inc.html",
+    "entity-exposure/googl.html",
+    "entity-exposure/microsoft-corp.html",
+    "entity-exposure/msft.html",
+    "entity-exposure/nvda.html",
+    "entity-exposure/nvidia-corp.html",
+    "entity-exposure/nuclear-regulatory-commission.html",
+    "entity-exposure/securities-and-exchange-commission.html"
   ],
   "repairedPages": [
     "epstein-email-network.html",
@@ -14,8 +30,40 @@
     "follow-the-money.html"
   ],
   "syncedAssets": [
-    "entity-exposure/control-structure.html",
-    "entity-exposure/control-structure",
+    "entity-exposure/homeland-security-department.html",
+    "entity-exposure/homeland-security-department",
+    "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+    "entity-exposure/centers-for-medicare-and-medicaid-services",
+    "entity-exposure/health-and-human-services-department.html",
+    "entity-exposure/health-and-human-services-department",
+    "entity-exposure/aapl.html",
+    "entity-exposure/aapl",
+    "entity-exposure/alphabet-inc.html",
+    "entity-exposure/alphabet-inc",
+    "entity-exposure/amazon-com-inc.html",
+    "entity-exposure/amazon-com-inc",
+    "entity-exposure/amzn.html",
+    "entity-exposure/amzn",
+    "entity-exposure/apple-inc.html",
+    "entity-exposure/apple-inc",
+    "entity-exposure/avgo.html",
+    "entity-exposure/avgo",
+    "entity-exposure/broadcom-inc.html",
+    "entity-exposure/broadcom-inc",
+    "entity-exposure/googl.html",
+    "entity-exposure/googl",
+    "entity-exposure/microsoft-corp.html",
+    "entity-exposure/microsoft-corp",
+    "entity-exposure/msft.html",
+    "entity-exposure/msft",
+    "entity-exposure/nvda.html",
+    "entity-exposure/nvda",
+    "entity-exposure/nvidia-corp.html",
+    "entity-exposure/nvidia-corp",
+    "entity-exposure/nuclear-regulatory-commission.html",
+    "entity-exposure/nuclear-regulatory-commission",
+    "entity-exposure/securities-and-exchange-commission.html",
+    "entity-exposure/securities-and-exchange-commission",
     "epstein-email-network.html",
     "epstein-email-network",
     "downloads/epstein-relationship-intelligence.json",
@@ -33,14 +81,174 @@
   ],
   "checks": [
     {
-      "name": "exposure page control-structure",
+      "name": "exposure page homeland-security-department",
       "ok": true,
-      "detail": "entity-exposure/control-structure.html"
+      "detail": "entity-exposure/homeland-security-department.html"
     },
     {
-      "name": "built exposure page control-structure",
+      "name": "built exposure page homeland-security-department",
       "ok": true,
-      "detail": "_site/entity-exposure/control-structure.html"
+      "detail": "_site/entity-exposure/homeland-security-department.html"
+    },
+    {
+      "name": "exposure page centers-for-medicare-and-medicaid-services",
+      "ok": true,
+      "detail": "entity-exposure/centers-for-medicare-and-medicaid-services.html"
+    },
+    {
+      "name": "built exposure page centers-for-medicare-and-medicaid-services",
+      "ok": true,
+      "detail": "_site/entity-exposure/centers-for-medicare-and-medicaid-services.html"
+    },
+    {
+      "name": "exposure page health-and-human-services-department",
+      "ok": true,
+      "detail": "entity-exposure/health-and-human-services-department.html"
+    },
+    {
+      "name": "built exposure page health-and-human-services-department",
+      "ok": true,
+      "detail": "_site/entity-exposure/health-and-human-services-department.html"
+    },
+    {
+      "name": "exposure page aapl",
+      "ok": true,
+      "detail": "entity-exposure/aapl.html"
+    },
+    {
+      "name": "built exposure page aapl",
+      "ok": true,
+      "detail": "_site/entity-exposure/aapl.html"
+    },
+    {
+      "name": "exposure page alphabet-inc",
+      "ok": true,
+      "detail": "entity-exposure/alphabet-inc.html"
+    },
+    {
+      "name": "built exposure page alphabet-inc",
+      "ok": true,
+      "detail": "_site/entity-exposure/alphabet-inc.html"
+    },
+    {
+      "name": "exposure page amazon-com-inc",
+      "ok": true,
+      "detail": "entity-exposure/amazon-com-inc.html"
+    },
+    {
+      "name": "built exposure page amazon-com-inc",
+      "ok": true,
+      "detail": "_site/entity-exposure/amazon-com-inc.html"
+    },
+    {
+      "name": "exposure page amzn",
+      "ok": true,
+      "detail": "entity-exposure/amzn.html"
+    },
+    {
+      "name": "built exposure page amzn",
+      "ok": true,
+      "detail": "_site/entity-exposure/amzn.html"
+    },
+    {
+      "name": "exposure page apple-inc",
+      "ok": true,
+      "detail": "entity-exposure/apple-inc.html"
+    },
+    {
+      "name": "built exposure page apple-inc",
+      "ok": true,
+      "detail": "_site/entity-exposure/apple-inc.html"
+    },
+    {
+      "name": "exposure page avgo",
+      "ok": true,
+      "detail": "entity-exposure/avgo.html"
+    },
+    {
+      "name": "built exposure page avgo",
+      "ok": true,
+      "detail": "_site/entity-exposure/avgo.html"
+    },
+    {
+      "name": "exposure page broadcom-inc",
+      "ok": true,
+      "detail": "entity-exposure/broadcom-inc.html"
+    },
+    {
+      "name": "built exposure page broadcom-inc",
+      "ok": true,
+      "detail": "_site/entity-exposure/broadcom-inc.html"
+    },
+    {
+      "name": "exposure page googl",
+      "ok": true,
+      "detail": "entity-exposure/googl.html"
+    },
+    {
+      "name": "built exposure page googl",
+      "ok": true,
+      "detail": "_site/entity-exposure/googl.html"
+    },
+    {
+      "name": "exposure page microsoft-corp",
+      "ok": true,
+      "detail": "entity-exposure/microsoft-corp.html"
+    },
+    {
+      "name": "built exposure page microsoft-corp",
+      "ok": true,
+      "detail": "_site/entity-exposure/microsoft-corp.html"
+    },
+    {
+      "name": "exposure page msft",
+      "ok": true,
+      "detail": "entity-exposure/msft.html"
+    },
+    {
+      "name": "built exposure page msft",
+      "ok": true,
+      "detail": "_site/entity-exposure/msft.html"
+    },
+    {
+      "name": "exposure page nvda",
+      "ok": true,
+      "detail": "entity-exposure/nvda.html"
+    },
+    {
+      "name": "built exposure page nvda",
+      "ok": true,
+      "detail": "_site/entity-exposure/nvda.html"
+    },
+    {
+      "name": "exposure page nvidia-corp",
+      "ok": true,
+      "detail": "entity-exposure/nvidia-corp.html"
+    },
+    {
+      "name": "built exposure page nvidia-corp",
+      "ok": true,
+      "detail": "_site/entity-exposure/nvidia-corp.html"
+    },
+    {
+      "name": "exposure page nuclear-regulatory-commission",
+      "ok": true,
+      "detail": "entity-exposure/nuclear-regulatory-commission.html"
+    },
+    {
+      "name": "built exposure page nuclear-regulatory-commission",
+      "ok": true,
+      "detail": "_site/entity-exposure/nuclear-regulatory-commission.html"
+    },
+    {
+      "name": "exposure page securities-and-exchange-commission",
+      "ok": true,
+      "detail": "entity-exposure/securities-and-exchange-commission.html"
+    },
+    {
+      "name": "built exposure page securities-and-exchange-commission",
+      "ok": true,
+      "detail": "_site/entity-exposure/securities-and-exchange-commission.html"
     },
     {
       "name": "black-file.html duplicate IDs",

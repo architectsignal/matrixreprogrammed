@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T21:03:33.222Z",
-  "pageCount": 107,
+  "generatedAt": "2026-08-03T06:50:50.464Z",
+  "pageCount": 102,
   "output": "downloads/evidence-pull-list.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Top 50 Evidence Pull List",
-    "contentHash": "8e0e2c69675581fa5c2fd03fddf9d6b7021978cd506c57d1e389cb7c64152734",
+    "contentHash": "5c7753ea31ce0551471f3270832212ca88af33ab490927c83d3801c31454c5ce",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -48,9 +48,9 @@
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
       "65debd126cdfa5f7547a3eca",
-      "3c9c23f7f9a1cec81ef90f59",
       "6d665d935673091233751767",
       "b7e4a66335a706ef5097117f",
+      "3c9c23f7f9a1cec81ef90f59",
       "427a4b3a840619411d8d1c33",
       "a103f2650e31fc92fa3688e6",
       "54197b23c792a122f53a863b",
@@ -101,12 +101,6 @@
       "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-96665FE56FA75D90",
       "bdd7e454126ebfa6319a594c",
-      "source-change-62862e6ca90495adc0788a2d",
-      "source-change-a53bf480df4e4883383a08e0",
-      "source-change-81d1ec66d255ebaf3f7d61de",
-      "source-change-a334a207405ec629b4be337d",
-      "source-change-c452df757991611cb06ec88a",
-      "source-change-8299a278d70b1f879d6d522f",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-64E0D2BCFC6FF23D",
@@ -130,8 +124,6 @@
       "18930d440aed009547436b81",
       "EP-AI-001",
       "44505b4afb60938c8117ad31",
-      "source-change-7ed151a515391f967d229642",
-      "source-change-0c5f51804baf8e9e2c1fdd0b",
       "d0b647e325275daa6d824a49",
       "eda53ad65d382819ea249e14",
       "75fcb0966ee4802cca054261",
@@ -146,20 +138,28 @@
       "f59da50ababa3ddae79a8f1c",
       "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-9B01C094346A78B0",
-      "ASC-REVIEW-83A2CD51E51B5E0E"
+      "ASC-REVIEW-83A2CD51E51B5E0E",
+      "ASC-REVIEW-5C5BC2E897FCBBFE",
+      "7f0eb9ddb996aecbeeda522d",
+      "69f071adbd84f39904a53107",
+      "deb382cdbfe57b57793d739e",
+      "7ed151a515391f967d229642",
+      "a21f3d8e98268d5e01e1eb7c",
+      "04178dd78ae55a022df89f05",
+      "5594665950812895f468c11d"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 67,
-      "disputedClaimCount": 22,
+      "primarySourceCount": 63,
+      "disputedClaimCount": 23,
       "newEntityCount": 5,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 30,
+      "relationshipCount": 31,
       "moneyRecordCount": 17
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Top 50 Evidence Pull List.",
+        "conclusion": "The indexed record establishes that 63 A/B-grade public-record items are materially relevant to Top 50 Evidence Pull List.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 30 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; 12. Lawful OSINT & Source Verification; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; Matrix Reprogrammed Structured Investigation Schema; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; DELL MARKETING L.P. — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 30 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",

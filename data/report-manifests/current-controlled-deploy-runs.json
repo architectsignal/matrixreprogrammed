@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-02T11:44:24.244Z",
-  "pageCount": 108,
+  "generatedAt": "2026-08-03T06:47:35.873Z",
+  "pageCount": 109,
   "output": "downloads/current-controlled-deploy-runs.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Current Controlled Deploy Runs",
-    "contentHash": "1b8a6a5e7b019f522ee3fed4614296770d23db0ac48c0dc5e16e4586baa255c6",
+    "contentHash": "76e1e6b715a489492275d998c60f7ef3061c40c60fb2239a5452481e58bfd055",
     "sourceIds": [
       "30091864423",
       "30156692342",
@@ -118,7 +118,17 @@
       "5460c0408472ce834da2b82f",
       "0491ca77f4f2c9b90f832c2e",
       "aa119272f233de638bb1e02d",
+      "declassified-files-2026-07-29-7116ac17",
+      "declassified-files-2026-07-29-6057124d",
+      "declassified-files-2026-07-29-1c57583d",
       "0286171e0bf7415859b35948",
+      "declassified-files-2026-07-28-bb7df4f6",
+      "declassified-files-2026-07-28-dc596165",
+      "declassified-files-2026-07-28-82e502f5",
+      "declassified-files-2026-07-28-e360ff06",
+      "declassified-files-2026-07-28-d82c8cb5",
+      "declassified-files-2026-07-28-47e74d46",
+      "declassified-files-2026-07-28-d6d67d44",
       "e5f914fb3ce4e13fe16181c4",
       "255a3ae9592a4cdd47fc9851",
       "b9006a5edc55cc88bfccd04a",
@@ -135,30 +145,20 @@
       "b0bc5bb08386785c28b2bbff",
       "83ef6f58803306735c007289",
       "janner-iicsa-2022",
-      "nassar-fbi-oig-2021",
-      "epstein-opr-review-2020",
-      "cyril-smith-westminster-2020",
-      "cyril-smith-iicsa-2018",
-      "ASC-REVIEW-5EA0FB3A48583D82",
-      "ASC-REVIEW-32D4420F5F198DA2",
-      "a354895c18c7e12ab408462d",
-      "16cde9bd4c87e916ff1e4fb7",
-      "96d8ea15e49544e3f1cafd06",
-      "138e9d694e41f192556d34a2",
-      "665a5072d96b9757a6ee9d2d"
+      "nassar-fbi-oig-2021"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 79,
-      "disputedClaimCount": 4,
+      "primarySourceCount": 86,
+      "disputedClaimCount": 2,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 19,
+      "relationshipCount": 25,
       "moneyRecordCount": 17
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 79 A/B-grade public-record items are materially relevant to Current Controlled Deploy Runs.",
+        "conclusion": "The indexed record establishes that 86 A/B-grade public-record items are materially relevant to Current Controlled Deploy Runs.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -178,7 +178,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 19 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 25 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Production Runtime Contract Rehearsal; Diagnose Power-Family Production Refresh; Diagnose Power-Family Production Refresh; Production Runtime Contract Rehearsal; Matrix Reprogrammed Canonical Intelligence Record",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -193,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 19 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 25 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Production Runtime Contract Rehearsal",
           "Production Runtime Contract Rehearsal",

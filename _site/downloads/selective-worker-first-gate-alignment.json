@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-02T13:18:59.809Z",
+  "routingMode": "selective-worker-first-array",
+  "validationMode": "semantic-contract",
+  "staticAssetsBypassWorker": true,
+  "protectedAndDynamicRoutesUseWorker": true,
+  "homepageOwnerReconciledBeforeManifest": true,
+  "changed": [],
+  "checked": [
+    "scripts/build-production-health.js",
+    "scripts/production-deploy-guard.js"
+  ]
+}

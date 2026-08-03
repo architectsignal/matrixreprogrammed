@@ -14,6 +14,10 @@ function git(args) {
   return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
 }
 
+function gitOptional(args) {
+  try { return git(args); } catch { return ''; }
+}
+
 function parseMarker(content) {
   const lines = String(content || '').replace(/\r\n/g, '\n').split('\n');
   const fields = {};
@@ -71,11 +75,39 @@ function writeReport(report) {
   fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 }
 
+function markerBlob(commit, relative) {
+  return gitOptional(['rev-parse', `${commit}:${relative}`]).toLowerCase();
+}
+
+function firstParent(commit) {
+  return gitOptional(['rev-parse', `${commit}^1`]).toLowerCase();
+}
+
+function resolveFirstParentMarkerCommit(relative, maxDepth = 500) {
+  let commit = git(['rev-parse', 'HEAD']).toLowerCase();
+  for (let depth = 0; depth < maxDepth && commit; depth += 1) {
+    const parent = firstParent(commit);
+    const currentBlob = markerBlob(commit, relative);
+    const parentBlob = parent ? markerBlob(parent, relative) : '';
+    if (currentBlob && currentBlob !== parentBlob) return commit;
+    commit = parent;
+  }
+  throw new Error(`Could not resolve a first-parent change for ${relative}.`);
+}
+
+function validTriggerSubject(subject, allowPrTest = false) {
+  if (/^Dispatch guarded .*production release/i.test(String(subject || ''))) return true;
+  return allowPrTest && /^Request guarded production release/i.test(String(subject || ''));
+}
+
 function runSelfTest() {
   const now = new Date('2026-08-03T16:00:00Z');
   const valid = `${exactConfirmation}\nRequested: 2026-08-03T15:55:00Z\nRelease: pr197-5ef11b37-repaired-runtime-production-20260803-1555z\nTarget: current main 5ef11b375eabef539d532dee8553c3c7b380c5cf containing merged PR #197\nAuthorization: ${exactAuthorization}\nRequired proof: complete production build and fresh Cloudflare zero-overage budget approval\nPurpose: deploy the merged PR #197 repaired release\nBoundary: do not bypass the Cloudflare billing-period lock or zero-spend policy\nNonce: pr197-5ef11b37-controlled-production-20260803T155500Z\n`;
   const parsed = validateMarker(valid, { now, maxAgeHours: 6 });
   requireValue(parsed.targetSha === '5ef11b375eabef539d532dee8553c3c7b380c5cf', 'Self-test target parsing failed.');
+  requireValue(validTriggerSubject('Dispatch guarded PR #197 production release'), 'Self-test rejected a valid merged dispatch subject.');
+  requireValue(!validTriggerSubject('Request guarded production release after authority repair'), 'Self-test accepted a branch request subject in production mode.');
+  requireValue(validTriggerSubject('Request guarded production release after authority repair', true), 'Self-test rejected a branch request subject in isolated PR-test mode.');
 
   let staleRejected = false;
   try {
@@ -114,6 +146,7 @@ const report = {
   headSha: '',
   targetSha: '',
   triggerCommit: '',
+  triggerSubject: '',
   release: '',
   nonce: '',
   billingExceptionPresent: Boolean(billingException),
@@ -136,7 +169,8 @@ try {
 
   requireValue(!billingException, 'Automated one-shot dispatch cannot request a billable-build exception.');
   requireValue(fs.existsSync(markerPath) && fs.statSync(markerPath).isFile(), `One-shot marker is missing: ${markerRelative}`);
-  const marker = validateMarker(fs.readFileSync(markerPath, 'utf8'), { maxAgeHours });
+  const markerText = fs.readFileSync(markerPath, 'utf8');
+  const marker = validateMarker(markerText, { maxAgeHours });
   const headSha = git(['rev-parse', 'HEAD']).toLowerCase();
   const originMain = git(['rev-parse', 'refs/remotes/origin/main']).toLowerCase();
   const allowPrTest = process.env.NODE_ENV === 'test' && process.env.MATRIX_AUTH_ALLOW_NON_MAIN_TEST === '1';
@@ -147,11 +181,13 @@ try {
   catch { targetIsAncestor = false; }
   requireValue(targetIsAncestor, `Authorized target ${marker.targetSha} is not an ancestor of current main ${headSha}.`);
 
-  const triggerCommit = git(['log', '-1', '--format=%H', '--', markerRelative]).toLowerCase();
+  const triggerCommit = resolveFirstParentMarkerCommit(markerRelative);
   const triggerSubject = git(['show', '-s', '--format=%s', triggerCommit]);
   const triggerTime = Date.parse(git(['show', '-s', '--format=%cI', triggerCommit]));
+  const triggerMarker = git(['show', `${triggerCommit}:${markerRelative}`]);
   requireValue(triggerCommit, 'Could not resolve the one-shot trigger commit.');
-  requireValue(/^Dispatch guarded .*production release/i.test(triggerSubject), `Unexpected one-shot trigger commit subject: ${triggerSubject}`);
+  requireValue(validTriggerSubject(triggerSubject, allowPrTest), `Unexpected one-shot trigger commit subject: ${triggerSubject}`);
+  requireValue(triggerMarker.replace(/\r\n/g, '\n').trim() === markerText.replace(/\r\n/g, '\n').trim(), 'Current one-shot marker does not match the first-parent trigger commit.');
   requireValue(Number.isFinite(triggerTime), 'One-shot trigger commit timestamp is invalid.');
   const triggerAgeHours = (Date.now() - triggerTime) / 3600000;
   requireValue(triggerAgeHours >= -0.1 && triggerAgeHours <= maxAgeHours, `One-shot trigger commit age ${triggerAgeHours.toFixed(2)}h is outside the allowed window.`);
@@ -166,6 +202,7 @@ try {
   report.headSha = headSha;
   report.targetSha = marker.targetSha;
   report.triggerCommit = triggerCommit;
+  report.triggerSubject = triggerSubject;
   report.triggerAgeHours = triggerAgeHours;
   report.release = marker.release;
   report.nonce = marker.nonce;

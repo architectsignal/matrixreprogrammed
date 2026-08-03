@@ -10,19 +10,37 @@ function read(relative) {
   try { return fs.readFileSync(path.join(root, relative), 'utf8'); } catch { return ''; }
 }
 function unique(values) { return [...new Set(values.filter(Boolean))]; }
-
-for (const page of report.pages || []) {
-  const code = (page.localScriptFiles || []).map(read).join('\n');
-  const genericSubmitBinding = /querySelectorAll\s*\(\s*['"]form['"]\s*\)/.test(code)
-    && /addEventListener\s*\(\s*['"]submit['"]/.test(code);
-  if (!genericSubmitBinding) continue;
-  const formIds = new Set((page.controls || []).filter(control => control.tag === 'form' && control.id).map(control => control.id));
-  page.unboundControlIds = (page.unboundControlIds || []).filter(id => !formIds.has(id));
+function removeBoundControlRisk(page) {
   if (!page.unboundControlIds.length) {
     page.blockingRisks = (page.blockingRisks || []).filter(risk => risk !== 'possibly-unbound-controls');
     page.functionalRisks = (page.functionalRisks || []).filter(risk => risk !== 'possibly-unbound-controls');
     page.risks = (page.risks || []).filter(risk => risk !== 'possibly-unbound-controls');
   }
+}
+
+for (const page of report.pages || []) {
+  const code = (page.localScriptFiles || []).map(read).join('\n');
+  const genericSubmitBinding = /querySelectorAll\s*\(\s*['"]form['"]\s*\)/.test(code)
+    && /addEventListener\s*\(\s*['"]submit['"]/.test(code);
+  if (genericSubmitBinding) {
+    const formIds = new Set((page.controls || []).filter(control => control.tag === 'form' && control.id).map(control => control.id));
+    page.unboundControlIds = (page.unboundControlIds || []).filter(id => !formIds.has(id));
+  }
+
+  // Public Consequence Contracts uses one delegated click listener for every
+  // current and future button carrying data-follow-id. Those controls are
+  // intentionally data-driven and therefore do not appear as literal IDs in JS.
+  const delegatedFollowBinding = /addEventListener\s*\(\s*['"]click['"]/.test(code)
+    && /closest\s*\(\s*['"]button\[data-follow-id\]['"]\s*\)/.test(code)
+    && /button\.dataset\.followId/.test(code);
+  if (delegatedFollowBinding) {
+    const delegatedButtonIds = new Set((page.controls || [])
+      .filter(control => control.tag === 'button' && control.id)
+      .map(control => control.id));
+    page.unboundControlIds = (page.unboundControlIds || []).filter(id => !delegatedButtonIds.has(id));
+  }
+
+  removeBoundControlRisk(page);
 }
 
 const pages = report.pages || [];
@@ -31,7 +49,7 @@ const possiblyDeadControls = pages.filter(page => (page.unboundControlIds || [])
 const objectPlaceholderPages = pages.filter(page => (page.blockingRisks || []).includes('object-placeholder-published'));
 const missingReferences = pages.flatMap(page => page.missingReferences || []);
 const missingDataDependencies = pages.flatMap(page => page.missingDataDependencies || []);
-report.version = 4;
+report.version = 5;
 report.bindingRefinedAt = new Date().toISOString();
 report.summary.pagesWithPossiblyDeadControls = possiblyDeadControls.length;
 report.summary.criticalFunctionalRiskPages = criticalRiskPages.length;
@@ -66,8 +84,8 @@ const md = [
   '',
   ...(possiblyDeadControls.length ? possiblyDeadControls.map(page => `- \`${page.file}\` — ${(page.unboundControlIds || []).join(', ')}`) : ['- None detected']),
   '',
-  'Generic form submit handlers are recognised as valid bindings when they attach submit listeners to every form.',
+  'Generic form submit handlers and delegated data-follow-id click handlers are recognised as valid bindings.',
   ''
 ].join('\n');
 fs.writeFileSync(markdownPath, md);
-console.log(`Recovery functional inventory v4 bindings refined: ${JSON.stringify(report.summary)}`);
+console.log(`Recovery functional inventory v5 bindings refined: ${JSON.stringify(report.summary)}`);

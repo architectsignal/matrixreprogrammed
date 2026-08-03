@@ -55,9 +55,9 @@ function patchForumJs(){
   const offlineNotice = `function offlineNotice(message){
     return '<article class="card redline"><span class="label">Persistent Signal Board</span><h3>' + esc(BOARD_LABEL) + ' cannot save right now</h3><p>Posts are not saved in this browser. This board accepts only persistent Cloudflare D1 posts. Try again after the live backend is healthy.</p><p><strong>Detail:</strong> ' + esc(message || 'Cloudflare D1 persistent forum feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>';
   }`;
-  const offlineToLoad = /function offlineNotice\(message\)\{[\s\S]*?\}\s*async function loadFeed\(\)\{/;
-  if (offlineToLoad.test(s)) {
-    s = s.replace(offlineToLoad, `${offlineNotice}\n  async function loadFeed(){`);
+  const offlineToNextLoader = /function offlineNotice\(message\)\{[\s\S]*?\}\s*(?=async function (?:requestFeed|loadFeed)\(\)\{)/;
+  if (offlineToNextLoader.test(s)) {
+    s = s.replace(offlineToNextLoader, `${offlineNotice}\n  `);
   } else if (s.includes('async function loadFeed(){')) {
     s = s.replace('async function loadFeed(){', `${offlineNotice}\n  async function loadFeed(){`);
   } else {
@@ -72,7 +72,8 @@ function patchForumJs(){
     'only persistent Cloudflare D1 posts',
     'Cloudflare D1 persistent forum feed unavailable',
     'Signal posted live and saved persistently',
-    'persistent !== true'
+    'persistent !== true',
+    'requestFeed'
   ];
   for (const marker of markers) if (!s.includes(marker)) throw new Error(`forum.js D1 persistence marker missing after repair: ${marker}`);
   for (const banned of ['pending sync','Signal Board is syncing','Local fallback','saved on this device','matrix_signal_board_posts_v2_','saveLocalPosts','syncPendingLocalPosts','localOnly','Cloudflare KV']) {

@@ -64,9 +64,10 @@ for(const ref of refs){assert(indexes[ref.dataset],`Unknown Pyramid dataset ${re
 for(const source of [...families.sources,...people.sources,...core.sources]){assert(/^https:\/\//.test(source.url),'Every source requires HTTPS');assert(source.establishes&&source.doesNotEstablish,'Every source requires an evidence boundary')}
 for(const required of ['THE PYRAMID','WHO CAN REACH EACH CHOKE POINT','THE DYNASTY FILES','THE INNER COUNCILS','THE LIGHTBRINGER'])assert(html.includes(required),`Missing cinematic page section: ${required}`);
 assert(html.includes('behind-the-curtain-access-v2.js'),'The public page must load the tier-specific renderer');
-const usesPublicApi=js.includes("people:'/api/public/structural-power/people'")&&js.includes("pyramid:'/api/public/structural-power/pyramid'");
-const usesValidatedLocalModels=js.includes("people:'data/behind-the-curtain-people-registry.json'")&&js.includes("pyramid:'data/behind-the-curtain-pyramid.json'");
-assert(usesPublicApi||usesValidatedLocalModels,'The renderer must load the validated named-people and Pyramid models');
+const usesPublicApi=js.includes("'/api/public/structural-power/people'")&&js.includes("'/api/public/structural-power/pyramid'");
+const usesValidatedLocalModels=js.includes("'/data/behind-the-curtain-people-registry.json'")&&js.includes("'/data/behind-the-curtain-pyramid.json'");
+assert(usesPublicApi&&usesValidatedLocalModels,'The renderer must prefer the public API and retain validated static-model fallbacks');
+assert(js.includes('non-JSON response'),'The Pyramid loader must reject asset-interception HTML instead of parsing it as evidence');
 assert(bridge.includes("['/api/public/structural-power/people', '/data/behind-the-curtain-people-registry.json']"),'The public people API must be bound to the validated local registry');
 assert(bridge.includes("['/api/public/structural-power/pyramid', '/data/behind-the-curtain-pyramid.json']"),'The public Pyramid API must be bound to the validated local model');
 assert(bridge.includes('/structural-power-map'),'The final public map alias must be defined');

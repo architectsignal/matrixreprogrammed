@@ -21,7 +21,7 @@ let profileBlock = profileMatch[0]
 const close = profileBlock.lastIndexOf('\n];');
 if (close < 0) throw new Error('Search V3 compaction profile closing marker is missing');
 const body = profileBlock.slice(0, close).trimEnd().replace(/,+$/, '');
-const deploymentSafeProfile = "  { id: 'deployment-safe', title: 84, description: 0, listItems: 3, listChars: 18, scalar: 30, sourceUrl: 100, sparseDefaults: true, mergeTerms: true, termItems: 4 }";
+const deploymentSafeProfile = "  { id: 'deployment-safe', title: 67, description: 0, listItems: 3, listChars: 16, scalar: 24, sourceUrl: 80, sparseDefaults: true, mergeTerms: true, termItems: 3 }";
 profileBlock = `${body},\n${deploymentSafeProfile}\n];`;
 source = source.replace(profileMatch[0], profileBlock);
 
@@ -67,7 +67,7 @@ const datePolicyOk = source.includes(sparseDateMarker) || source.includes(browse
 const sourcePolicyOk = (source.includes('const keepSourceUrl =') && source.includes('sourceUrl.slice(0, Number(profile.sourceUrl || 320))'))
   || source.includes(legacyDesiredSourceLine);
 for (const [label, ok] of [
-  ['strict final deployment profile', source.includes("id: 'deployment-safe'") && source.includes('termItems: 4') && source.includes('sourceUrl: 100')],
+  ['strict final deployment profile', source.includes("id: 'deployment-safe'") && source.includes('termItems: 3') && source.includes('sourceUrl: 80')],
   ['normalized metadata contract', source.includes(requiredMetadataMarker) && source.includes('searchVersion: 3') && source.includes('sourceType,') && source.includes('resultKind,') && source.includes('statusClass,') && source.includes('primarySource')],
   ['single browser date policy', datePolicyOk],
   ['bounded external source policy', sourcePolicyOk]
@@ -85,15 +85,15 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   requiredMetadata: ['searchVersion', 'sourceType', 'resultKind', 'statusClass', 'primarySource'],
   finalProfile: {
     id: 'deployment-safe',
-    title: 84,
+    title: 67,
     description: 0,
     listItems: 3,
-    listChars: 18,
-    scalar: 30,
-    sourceUrl: 100,
+    listChars: 16,
+    scalar: 24,
+    sourceUrl: 80,
     sparseDefaults: true,
     mergeTerms: true,
-    termItems: 4
+    termItems: 3
   },
   strategy: 'Preserve every searchable internal URL and required normalized metadata, consolidate duplicate routes, merge equivalent terms, keep one browser date and retain bounded direct sources for primary or high-authority records.',
   boundary: 'Complete source URLs and unabridged metadata remain available on linked result pages, registries, the evidence network and document library.'

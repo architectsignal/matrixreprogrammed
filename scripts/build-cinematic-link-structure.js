@@ -34,6 +34,16 @@ const internalRoutes = new Set([
 ]);
 
 const excludedRoutes = new Set(['index_v2.html', 'investigation-pathways.html']);
+const volatileMachineRoutePatterns = [
+  /^entity-briefs\//,
+  /^entity-exposure\//,
+  /^entity-timelines\//,
+  /^reports\/entity-/
+];
+
+function isVolatileMachineRoute(route) {
+  return volatileMachineRoutePatterns.some(pattern => pattern.test(route));
+}
 
 const clusters = {
   command: {
@@ -258,7 +268,7 @@ const files = walk(root);
 const pages = [];
 for (const file of files) {
   const route = relativeRoute(file);
-  if (excludedRoutes.has(route)) continue;
+  if (excludedRoutes.has(route) || isVolatileMachineRoute(route)) continue;
   const html = fs.readFileSync(file, 'utf8');
   if (isInternal(route, html)) continue;
   const title = extract(html, /<title[^>]*>([\s\S]*?)<\/title>/i, path.basename(route, '.html').replace(/[-_]+/g, ' '));

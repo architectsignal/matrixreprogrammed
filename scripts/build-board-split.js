@@ -35,7 +35,7 @@ function ensureMemberPosting(html, name){
   }
   html = html
     .replace('Posting is locked until Signal Pass is unlocked on this device.', 'Posting requires a verified free member account.')
-    .replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
+    .replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260803-forum-resilient-fetch-v4"></script>');
   return html;
 }
 function patchPage(name, board, heading, lead){

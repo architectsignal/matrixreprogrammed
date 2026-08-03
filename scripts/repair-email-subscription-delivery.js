@@ -58,14 +58,14 @@ function repairEmailWorker(source) {
 }
 
 function repairToml(source) {
-  const required = 'crons = ["5 6 * * *", "15 7 * * 1", "35 * * * *"]';
+  const required = 'crons = ["25 5 * * *", "5 6 * * *", "15 7 * * 1", "35 * * * *"]';
   if (/^crons\s*=\s*\[[^\]]*\]\s*$/m.test(source)) return source.replace(/^crons\s*=\s*\[[^\]]*\]\s*$/m, required);
   if (!/^\[triggers\]\s*$/m.test(source)) throw new Error('wrangler.toml [triggers] section is missing');
   return source.replace(/^\[triggers\]\s*$/m, `[triggers]\n${required}`);
 }
 
 function repairJsonc(source) {
-  const required = '"crons": ["5 6 * * *", "15 7 * * 1", "35 * * * *"]';
+  const required = '"crons": ["25 5 * * *", "5 6 * * *", "15 7 * * 1", "35 * * * *"]';
   if (/"crons"\s*:\s*\[[^\]]*\]/s.test(source)) return source.replace(/"crons"\s*:\s*\[[^\]]*\]/s, required);
   if (!/"triggers"\s*:\s*\{/m.test(source)) throw new Error('wrangler.jsonc triggers object is missing');
   return source.replace(/"triggers"\s*:\s*\{/m, `"triggers": {\n    ${required},`);

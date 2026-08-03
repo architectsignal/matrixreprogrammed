@@ -33,6 +33,7 @@ check('forum client does not carry cookies', (client.match(/credentials:'include
 check('forum client accepts unconfirmed success', client.includes("data.saved !== true") && client.includes("data.storage !== 'Cloudflare D1 MEMBERS_DB.forum_posts'"));
 check('forum client discards an existing www-only legacy session', !client.includes("location.replace(CANONICAL_ORIGIN + location.pathname"));
 check('forum client does not require verified email', client.includes('member && member.emailVerifiedAt'));
+check('forum client lacks a D1 compatibility-feed retry', client.includes('FEED_COMPATIBILITY_ROUTE') && client.includes('requestFeed'));
 check('member login does not canonicalize www before authentication', login.includes('MEMBER_CANONICAL_ORIGIN') && login.includes("location.hostname === 'www.matrixreprogrammed.com'"));
 check('member login request is not same-origin', login.includes("fetch('/api/auth/request-link', {"));
 check('member login request does not carry credentials', login.includes("credentials:'include'"));
@@ -43,7 +44,7 @@ check('speculation board does not use the verified free member lock', speculatio
 
 for (const relative of ['forum.html', 'dark-speculation-forum.html', 'epstein-alive-board.html']) {
   const html = read(relative);
-  check(`${relative} still uses an unversioned forum client`, html.includes('forum.js?v=20260720-forum-member-posting-v3'));
+  check(`${relative} still uses an unversioned forum client`, html.includes('forum.js?v=20260803-forum-resilient-fetch-v4'));
   check(`${relative} has no member session status`, html.includes('id="forum-member-status"'));
   check(`${relative} has no posting form`, html.includes('id="signal-board-form"'));
 }

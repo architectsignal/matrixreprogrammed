@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-03T09:34:49.711Z
-Latest source publication: 2026-07-31T19:07:23.000Z
-Collection status: degraded-preserved-current-window
-New items this collection: 0
+Collection completed: 2026-08-03T19:57:16.176Z
+Latest source publication: 2026-08-03T15:39:07.000Z
+Collection status: fresh-items-added
+New items this collection: 6
 
 ## Freshness truth
-Source collection was degraded. Current in-window records were preserved without pretending they were newly published.
+6 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,39 +26,225 @@ Source collection was degraded. Current in-window records were preserved without
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-08-03 — What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Pentagon releases declassified UFO files from various federal agencies - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMiogFBVV95cUxQbHVBS3VqSGpNSmgxTWtIa2c3aDI2WE5vS2pfVXRFNjNZd3BlWUdILWh6b245RDMtOXk3Yk91UXktV3k4ckR1dTh1R1lVbFR4MFpLRnhXVmFMMGNsaWs3SXpaTHdzekxQNmRUQkktTHMwTjU3d3V2Z2R4akdIeEM4VGlnNFFzTVVzTXprS1AyT2l3MWdGaDJxUEFiWjBMc3BwMVHSAacBQVVfeXFMUGJvM2xwYk1mVU9OYW1haDlYZlhfaF83ekszcWZrbXRWTzMtZXNOOXNYR1loRThfWElkd3NiVllpX1ZuOGV1eDQ2NHQ5aDR2M1FKZDJmb0Y5TDYzTE53T0lNQ0FvUXQ3QmtYb09QVlRRRGV2eWFjOVJFcUVCVkF1YUlkSkRGclM0eUJVV0VLSl9UZmtBb1ZKUVRtTFhoUUFXWnFiQ1hqSzQ?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Pentagon releases declassified UFO files from various federal agencies - ABC News - Breaking News, Latest News and Videos
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxPU0sxVk0xV3dnbkJmZXMtWWJ6WFMxemhZdHpoOWdCSnMyNnhpMjk0S0JlVGtOT2otMVd1MkpPSzM3VG8zdHkteHhiNGI4MFh1YmZSRmRYTXNFWWJRUVZxN3IzSzV3aHZiZVVEdGdzc1RsRnNJbERLX3JSRzNMRGt6MS1IOHdGVTVOb1ZteHdjd2RrMDM5V0V1V1R6dWtJZkZVa0dZOTBpNmYtSG93d2fSAbMBQVVfeXFMTTJKQVhNallicGJScUl4eXVhcVVObUdPSmI3bkIzc1JaT0FCX1ZFWXZoZzJyZHJsMFpGQmhETnoxSmdvUFRpTW9pam9BVnJVUERoUThEczg3N0tVSjBCMmpLVlFtYy0xUk8wR0REdkRnNUZPTUVJcDR6ZUdnbjRpRVRzR25wYW04Ui1MbmRNTU1nVFpsQnQ1NDY3dHpDVzZHdkllXzJLdjhRYkJhRkpSaXpDek0?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking - ABC News - Breaking News, Latest News and Videos
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — DR Congo: New centre opens at heart of record Ebola outbreak
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168064
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: DR Congo: New centre opens at heart of record Ebola outbreak
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — In Somalia, AI is helping deliver food to hungry families
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168066
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: In Somalia, AI is helping deliver food to hungry families
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Mothers still lack support to breastfeed, UN warns
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168065
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Mothers still lack support to breastfeed, UN warns
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-02 — Trapped by a Facebook job advert, freed by a stranger in a taxi
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168058
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Trapped by a Facebook job advert, freed by a stranger in a taxi
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-01 — Recovery in Ukraine, one life at a time
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168053
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Recovery in Ukraine, one life at a time
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-31 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
   - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
-  - Source class: discovery
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-31 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168062
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-31 — Strong El Niño ahead, UN weather agency warns
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168059
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Strong El Niño ahead, UN weather agency warns
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-31 — Wildfire smoke poses hidden health threat
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168060
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Wildfire smoke poses hidden health threat
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
-  - Source class: discovery
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: With a unanimous Maxwell vote, the US Senate issues a warning to Trump
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
   - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
-  - Source class: discovery
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168052
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Fear grows as freedoms shrink in Uganda
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168057
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Fear grows as freedoms shrink in Uganda
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Middle East crisis: Humanitarian fallout ‘worsening by the day’
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168055
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Middle East crisis: Humanitarian fallout ‘worsening by the day’
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Returning Afghans face growing risk of trafficking as crises deepen
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168051
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Returning Afghans face growing risk of trafficking as crises deepen
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — The climate pattern putting millions at risk: El Niño explained
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168056
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: The climate pattern putting millions at risk: El Niño explained
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Wildfires: Prevention is the best defence, UN says
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168054
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Wildfires: Prevention is the best defence, UN says
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
   - Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
-  - Source class: discovery
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-  - Source class: discovery
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Epstein Files | History, Timeline, Vote, Trump, & Updates
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+  - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
   - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
-  - Source class: discovery
-  - Evidence: News/source-watch item
-  - Video hook: This update matters only if it is tied to source type, evidence level, and the power structure around it: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’
-  - Next action: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168048
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — Hunger hampers Ebola response as cases top 3,200 in DR Congo
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168047
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Hunger hampers Ebola response as cases top 3,200 in DR Congo
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168045
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168049
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168039
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Climate alarm ‘blaring from every direction’
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168042
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Climate alarm ‘blaring from every direction’
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Forced online scams: IOM warns trafficking networks are booming
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168038
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Forced online scams: IOM warns trafficking networks are booming
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — HIV, hepatitis, STI gains at risk as funding falls, WHO warns
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168040
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: HIV, hepatitis, STI gains at risk as funding falls, WHO warns
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Mount Olympus and D-Day beaches among new World Heritage Sites
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168043
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Mount Olympus and D-Day beaches among new World Heritage Sites
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-28 — Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
+  - Source: https://news.un.org/feed/view/en/story/2026/07/1168037
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

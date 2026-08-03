@@ -56,4 +56,9 @@ fs.writeFileSync(path.join(root, 'downloads', 'ai-speculative-conclusions-integr
 // remain owned by the strict production Worker.
 require('./finalize-contact-worker.js');
 
+// Direct Cloudflare-output workflows do not always run the complete source QA chain.
+// Regenerate the public route graph at the last safe source stage so every current
+// pathway link has a deployable target before assets are copied.
+require('./run-cinematic-link-structure.js');
+
 console.log(`AI speculative conclusions integrity pass complete: ${touched.length} file(s) updated.`);

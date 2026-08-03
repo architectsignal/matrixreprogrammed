@@ -36,18 +36,13 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Confirm explicit manual production release
-        shell: bash
-        run: |
-          set -euo pipefail
-          test "${{ inputs.confirmation }}" = "DEPLOY MATRIX REPROGRAMMED" || {
-            echo 'Production release refused: confirmation text did not match.'
-            exit 1
-          }
-          test "${{ github.actor }}" != "github-actions[bot]" || {
-            echo 'Production release refused: automated workflow dispatches are not release authority.'
-            exit 1
-          }
+      - name: Confirm explicit production release authority
+        env:
+          MATRIX_PRODUCTION_CONFIRMATION: ${{ inputs.confirmation }}
+          MATRIX_PRODUCTION_ACTOR: ${{ github.actor }}
+          MATRIX_WORKFLOW_EVENT: ${{ github.event_name }}
+          MATRIX_BILLING_EXCEPTION: ${{ inputs.billing_exception }}
+        run: node scripts/verify-one-shot-production-authorization.js
 
       - name: Enforce Cloudflare budget or one-day owner exception
         env:
@@ -417,6 +412,7 @@ jobs:
         with:
           name: production-proof-${{ github.run_id }}
           path: |
+            downloads/one-shot-production-authorization.json
             downloads/production-build.log
             downloads/deploy-manifest.json
             downloads/deploy-health.json

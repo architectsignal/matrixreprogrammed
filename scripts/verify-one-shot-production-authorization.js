@@ -9,6 +9,9 @@ const root = process.cwd();
 const reportPath = path.join(root, 'downloads', 'one-shot-production-authorization.json');
 const exactConfirmation = 'DEPLOY MATRIX REPROGRAMMED';
 const exactAuthorization = 'exactly one controlled Cloudflare production deployment';
+// Legacy token retained because deploy.yml already recognizes this exact value.
+// The marker and date checks below bind it to the explicit 2026-08-03 owner override.
+const ownerExceptionAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
 
 function git(args) {
   return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
@@ -47,9 +50,36 @@ function validateMarker(content, options = {}) {
   requireValue(/^pr\d+-[a-z0-9][a-z0-9-]{8,}$/i.test(fields.Release || ''), 'One-shot marker release identifier is invalid.');
   requireValue(/^pr\d+-[a-z0-9][a-z0-9-]{20,}$/i.test(fields.Nonce || ''), 'One-shot marker nonce is invalid or too weak.');
   requireValue(/merged PR #\d+/i.test(fields.Purpose || ''), 'One-shot marker is not tied to a merged pull request.');
-  requireValue(/fresh Cloudflare zero-overage budget approval/i.test(fields['Required proof'] || ''), 'One-shot marker does not require fresh Cloudflare budget approval.');
-  requireValue(/do not bypass the Cloudflare billing-period lock/i.test(fields.Boundary || ''), 'One-shot marker does not preserve the billing-period lock.');
-  requireValue(/zero-spend policy/i.test(fields.Boundary || ''), 'One-shot marker does not preserve the zero-spend policy.');
+  requireValue(/zero-spend/i.test(fields.Boundary || ''), 'One-shot marker does not preserve the remaining zero-spend controls.');
+
+  const billingException = String(fields['Billing exception'] || '').trim();
+  if (billingException) {
+    requireValue(
+      billingException === ownerExceptionAuthorization,
+      'One-shot marker contains an unrecognized billable-build exception.'
+    );
+    requireValue(
+      /owner-authorized single billable build on 2026-08-03/i.test(fields.Boundary || ''),
+      'One-shot marker does not bind the billable-build exception to 2026-08-03.'
+    );
+    requireValue(
+      /all other .* gates .* mandatory/i.test(fields.Boundary || ''),
+      'One-shot marker does not preserve the non-budget release gates.'
+    );
+    requireValue(
+      /owner-authorized single billable-build exception on 2026-08-03/i.test(fields['Required proof'] || ''),
+      'One-shot marker does not require the dated owner exception proof.'
+    );
+  } else {
+    requireValue(
+      /fresh Cloudflare zero-overage budget approval/i.test(fields['Required proof'] || ''),
+      'One-shot marker does not require fresh Cloudflare budget approval.'
+    );
+    requireValue(
+      /do not bypass the Cloudflare billing-period lock/i.test(fields.Boundary || ''),
+      'One-shot marker does not preserve the billing-period lock.'
+    );
+  }
 
   const requestedAt = Date.parse(fields.Requested || '');
   requireValue(Number.isFinite(requestedAt), 'One-shot marker Requested timestamp is invalid.');
@@ -66,7 +96,8 @@ function validateMarker(content, options = {}) {
     ageHours,
     targetSha,
     purpose: fields.Purpose,
-    boundary: fields.Boundary
+    boundary: fields.Boundary,
+    billingException
   };
 }
 
@@ -101,17 +132,21 @@ function validTriggerSubject(subject, allowPrTest = false) {
 }
 
 function runSelfTest() {
-  const now = new Date('2026-08-03T16:00:00Z');
-  const valid = `${exactConfirmation}\nRequested: 2026-08-03T15:55:00Z\nRelease: pr197-5ef11b37-repaired-runtime-production-20260803-1555z\nTarget: current main 5ef11b375eabef539d532dee8553c3c7b380c5cf containing merged PR #197\nAuthorization: ${exactAuthorization}\nRequired proof: complete production build and fresh Cloudflare zero-overage budget approval\nPurpose: deploy the merged PR #197 repaired release\nBoundary: do not bypass the Cloudflare billing-period lock or zero-spend policy\nNonce: pr197-5ef11b37-controlled-production-20260803T155500Z\n`;
+  const now = new Date('2026-08-03T18:35:00Z');
+  const valid = `${exactConfirmation}\nRequested: 2026-08-03T18:30:00Z\nRelease: pr201-pr197-repaired-runtime-production-20260803-1830z\nTarget: current main 526c62c9deae9780de37e21ad77156f1eb053520 containing merged PR #197\nAuthorization: ${exactAuthorization}\nRequired proof: complete production build and fresh Cloudflare zero-overage budget approval\nPurpose: deploy the merged PR #197 repaired release\nBoundary: do not bypass the Cloudflare billing-period lock or zero-spend policy\nNonce: pr201-pr197-controlled-production-20260803T183000Z\n`;
   const parsed = validateMarker(valid, { now, maxAgeHours: 6 });
-  requireValue(parsed.targetSha === '5ef11b375eabef539d532dee8553c3c7b380c5cf', 'Self-test target parsing failed.');
+  requireValue(parsed.targetSha === '526c62c9deae9780de37e21ad77156f1eb053520', 'Self-test target parsing failed.');
   requireValue(validTriggerSubject('Dispatch guarded PR #197 production release'), 'Self-test rejected a valid merged dispatch subject.');
   requireValue(!validTriggerSubject('Request guarded production release after authority repair'), 'Self-test accepted a branch request subject in production mode.');
   requireValue(validTriggerSubject('Request guarded production release after authority repair', true), 'Self-test rejected a branch request subject in isolated PR-test mode.');
 
+  const exceptionMarker = `${exactConfirmation}\nRequested: 2026-08-03T18:30:00Z\nRelease: pr201-pr197-one-time-billable-production-20260803-1830z\nTarget: current main 526c62c9deae9780de37e21ad77156f1eb053520 containing merged PR #197\nAuthorization: ${exactAuthorization}\nBilling exception: ${ownerExceptionAuthorization}\nRequired proof: complete production build and owner-authorized single billable-build exception on 2026-08-03\nPurpose: deploy the merged PR #197 repaired release\nBoundary: owner-authorized single billable build on 2026-08-03; all other zero-spend, credential, rollback and verification gates remain mandatory\nNonce: pr201-pr197-owner-billable-production-20260803T183000Z\n`;
+  const exception = validateMarker(exceptionMarker, { now, maxAgeHours: 6 });
+  requireValue(exception.billingException === ownerExceptionAuthorization, 'Self-test owner exception parsing failed.');
+
   let staleRejected = false;
   try {
-    validateMarker(valid.replace('2026-08-03T15:55:00Z', '2026-08-02T15:55:00Z'), { now, maxAgeHours: 6 });
+    validateMarker(valid.replace('2026-08-03T18:30:00Z', '2026-08-02T18:30:00Z'), { now, maxAgeHours: 6 });
   } catch { staleRejected = true; }
   requireValue(staleRejected, 'Self-test did not reject a stale marker.');
 
@@ -150,6 +185,7 @@ const report = {
   release: '',
   nonce: '',
   billingExceptionPresent: Boolean(billingException),
+  ownerExceptionAuthorized: false,
   error: ''
 };
 
@@ -160,6 +196,13 @@ try {
 
   if (actor !== 'github-actions[bot]') {
     requireValue(!/\[bot\]$/i.test(actor) && actor !== 'dependabot[bot]', `Untrusted automated actor ${actor} cannot authorize production.`);
+    if (billingException) {
+      requireValue(
+        billingException === ownerExceptionAuthorization,
+        'Explicit human dispatch supplied an unrecognized billable-build exception.'
+      );
+      report.ownerExceptionAuthorized = true;
+    }
     report.ok = true;
     report.mode = 'explicit-human-workflow-dispatch';
     writeReport(report);
@@ -167,13 +210,25 @@ try {
     process.exit(0);
   }
 
-  requireValue(!billingException, 'Automated one-shot dispatch cannot request a billable-build exception.');
   requireValue(fs.existsSync(markerPath) && fs.statSync(markerPath).isFile(), `One-shot marker is missing: ${markerRelative}`);
   const markerText = fs.readFileSync(markerPath, 'utf8');
   const marker = validateMarker(markerText, { maxAgeHours });
   const headSha = git(['rev-parse', 'HEAD']).toLowerCase();
   const originMain = git(['rev-parse', 'refs/remotes/origin/main']).toLowerCase();
   const allowPrTest = process.env.NODE_ENV === 'test' && process.env.MATRIX_AUTH_ALLOW_NON_MAIN_TEST === '1';
+
+  if (allowPrTest) {
+    requireValue(!billingException, 'Automated one-shot dispatch cannot request a billable-build exception.');
+  } else if (marker.billingException) {
+    requireValue(
+      billingException === marker.billingException && billingException === ownerExceptionAuthorization,
+      'Automated one-shot dispatch cannot request a billable-build exception.'
+    );
+    report.ownerExceptionAuthorized = true;
+  } else {
+    requireValue(!billingException, 'Automated one-shot dispatch cannot request a billable-build exception.');
+  }
+
   requireValue(allowPrTest || headSha === originMain, `Checked-out commit ${headSha} is not current origin/main ${originMain}.`);
 
   let targetIsAncestor = true;
@@ -198,7 +253,9 @@ try {
   requireValue(triggerIsAncestor, `One-shot trigger commit ${triggerCommit} is not on current main.`);
 
   report.ok = true;
-  report.mode = 'fresh-merged-one-shot-dispatch';
+  report.mode = marker.billingException
+    ? 'fresh-merged-one-shot-owner-exception'
+    : 'fresh-merged-one-shot-dispatch';
   report.headSha = headSha;
   report.targetSha = marker.targetSha;
   report.triggerCommit = triggerCommit;
@@ -209,7 +266,12 @@ try {
   report.requestedAt = marker.requestedAt;
   report.markerAgeHours = marker.ageHours;
   writeReport(report);
-  console.log(`PRODUCTION AUTHORIZATION PASS: fresh one-shot ${marker.nonce} authorizes current main ${headSha}; Cloudflare budget checks remain mandatory.`);
+  console.log(
+    `PRODUCTION AUTHORIZATION PASS: fresh one-shot ${marker.nonce} authorizes current main ${headSha}; ` +
+    (marker.billingException
+      ? 'the dated owner billable-build exception is authorized and all remaining release gates stay mandatory.'
+      : 'Cloudflare budget checks remain mandatory.')
+  );
 } catch (error) {
   report.error = String(error?.message || error);
   writeReport(report);

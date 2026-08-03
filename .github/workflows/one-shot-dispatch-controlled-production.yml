@@ -43,7 +43,8 @@ jobs:
               workflow_id: target.id,
               ref: 'main',
               inputs: {
-                confirmation: 'DEPLOY MATRIX REPROGRAMMED'
+                confirmation: 'DEPLOY MATRIX REPROGRAMMED',
+                billing_exception: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02'
               }
             });
-            core.info(`Dispatched controlled production workflow ${target.id} on main.`);
+            core.info(`Dispatched one owner-authorized billable controlled production workflow ${target.id} on main.`);

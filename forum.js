@@ -8,6 +8,7 @@
   const submitSection = document.getElementById('submit-signal');
   const BOARD_LABELS = { main: 'Main Signal Board', speculation: 'Dark Speculation Board', 'epstein-alive': 'Epstein Alive / Sighting Board' };
   const FEED_ROUTES = { main: '/forum-feed-main', speculation: '/forum-feed-speculation', 'epstein-alive': '/forum-feed-epstein-alive' };
+  const FEED_COMPATIBILITY_ROUTE = '/forum-feed';
   const SUBMIT_ROUTES = { main: '/submit-main-post', speculation: '/submit-speculation-post', 'epstein-alive': '/submit-epstein-alive-post' };
   const REPORT_ROUTES = { main: '/report-main-post', speculation: '/report-speculation-post', 'epstein-alive': '/report-epstein-alive-post' };
   let member = null;
@@ -81,13 +82,25 @@
     return '<article class="card news-item"><span class="label">' + esc(post.category || 'Signal') + '</span><h3>' + esc(post.title || 'Signal') + '</h3><p>' + esc(post.body || post.message || '') + '</p>' + source + '<p><span class="pill">' + esc(post.name || 'Member') + '</span> <span class="pill">' + esc(when(post.approvedAt || post.createdAt || post.timestamp)) + '</span>' + board + ' <span class="pill">persistent D1 confirmed</span></p><button class="btn alt report-signal" type="button" data-id="' + esc(post.id) + '">Report post</button></article>';
   }
   function offlineNotice(message){ return '<article class="card redline"><h3>' + esc(BOARD_LABEL) + ' cannot load right now</h3><p>No browser-only copy is shown as live.</p><p><strong>Detail:</strong> ' + esc(message || 'feed unavailable') + '</p><p><a class="btn alt" href="/forum-health">Check forum health</a></p></article>'; }
+  async function requestFeed(){
+    const routes = [FEED_ROUTE, FEED_COMPATIBILITY_ROUTE + '?board=' + encodeURIComponent(BOARD)];
+    let lastError;
+    for (const route of routes) {
+      try {
+        const separator = route.includes('?') ? '&' : '?';
+        const response = await fetch(route + separator + 't=' + Date.now(), { credentials:'include', cache:'no-store', headers:{ Accept:'application/json', 'Cache-Control':'no-cache' } });
+        const data = await parse(response);
+        if (!response.ok || data.ok === false || data.persistent !== true) throw new Error(data.error || ('persistent feed unavailable HTTP ' + response.status));
+        return data;
+      } catch (error) { lastError = error; }
+    }
+    throw lastError || new Error('persistent feed unavailable');
+  }
   async function loadFeed(){
     if (!feed) return;
     feed.innerHTML = '<article class="card"><span class="label">pending sync</span><h3>Signal Board is syncing</h3><p>Checking the authoritative Cloudflare D1 feed for ' + esc(BOARD_LABEL) + '.</p></article>';
     try {
-      const response = await fetch(FEED_ROUTE + '?t=' + Date.now(), { credentials:'include', cache:'no-store', headers:{ Accept:'application/json', 'Cache-Control':'no-cache' } });
-      const data = await parse(response);
-      if (!response.ok || data.ok === false || data.persistent !== true) throw new Error(data.error || 'persistent feed unavailable');
+      const data = await requestFeed();
       const posts = listFrom(data).filter(postBelongsHere).filter(isPublicUserPost);
       feed.innerHTML = posts.length ? posts.map(renderPost).join('') : '<article class="card redline"><h3>No persistent signals yet</h3><p>' + esc(BOARD_LABEL) + ' is connected. Verified members can post a source, question or public-record lead.</p></article>';
     } catch (error) { feed.innerHTML = offlineNotice(systemErrorLabel('Feed failed', error)); }

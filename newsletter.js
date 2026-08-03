@@ -54,7 +54,7 @@
     label.appendChild(consent);
     label.appendChild(text);
     const button=form.querySelector('button[type="submit"],input[type="submit"]');
-    if(button)form.insertBefore(label,button);else form.appendChild(label);
+    if(button&&button.parentNode)button.parentNode.insertBefore(label,button);else form.appendChild(label);
     return consent;
   }
 

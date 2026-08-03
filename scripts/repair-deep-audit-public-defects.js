@@ -73,7 +73,7 @@ function repairMemberPosting(html) {
     .replace(/\s+signal-locked(?=["'])/g, '')
     .replace('Posting is locked until Signal Pass is unlocked on this device.', 'Posting requires a verified free member account.')
     .replace(/<script id="signal-pass-unlock-runtime">[\s\S]*?<\/script>/gi, '')
-    .replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
+    .replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260803-forum-resilient-fetch-v4"></script>');
   return next;
 }
 function repairWarnings(relative, html) {
@@ -130,7 +130,7 @@ for (const base of bases) {
     const file = path.join(base, route);
     if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
     const html = fs.readFileSync(file, 'utf8');
-    checks.push({ file: display(file), ok: html.includes('id="forum-member-status"') && html.includes('Verified Member Posting') && html.includes('member-login.html?return=') && html.includes('forum-member-posting-v3') && !html.includes('unlock-signal-pass') && !html.includes('paypal.me/njmgroup/1') && !html.includes('signal-pass-unlock-runtime') });
+    checks.push({ file: display(file), ok: html.includes('id="forum-member-status"') && html.includes('Verified Member Posting') && html.includes('member-login.html?return=') && html.includes('forum.js?v=20260803-forum-resilient-fetch-v4') && !html.includes('unlock-signal-pass') && !html.includes('paypal.me/njmgroup/1') && !html.includes('signal-pass-unlock-runtime') });
   }
   for (const route of ['information-gathering-system.html','information-gathering-system']) {
     const file = path.join(base, route);

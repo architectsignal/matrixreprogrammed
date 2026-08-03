@@ -23,6 +23,8 @@ const stripHtml=value=>String(value||'').replace(/<script[\s\S]*?<\/script>/gi,'
 const absolute=(base,href='')=>{try{return new URL(href,base).href}catch{return base}};
 const quantitative=row=>Number(row?.rank)>0&&/[$€£¥₹]\s*[\d,.]+\s*[TBM]\b/i.test(String(row?.value||''))&&/^https:\/\//.test(String(row?.sourceUrl||''));
 
+const evidenceScore=row=>(/verified market data/i.test(String(row?.evidenceClass||''))?4:0)+(row?.financialMeasureVerified===true?2:0)+(/verified (?:public-)?market snapshot/i.test(String(row?.status||''))?1:0);
+
 function parseRows(html,category,adapter){
   const rows=String(html).match(/<tr\b[\s\S]*?<\/tr>/gi)||[],out=[];
   for(const row of rows){
@@ -94,7 +96,7 @@ async function main(){
       const retained=[existing,...preservedSources.map(source=>(source.records||[]).filter(record=>record.category===categoryId))]
         .flat()
         .filter(quantitative)
-        .sort((a,b)=>a.rank-b.rank)
+        .sort((a,b)=>a.rank-b.rank||evidenceScore(b)-evidenceScore(a)||String(b.sourceDate||'').localeCompare(String(a.sourceDate||'')))
         .filter((record,index,rows)=>rows.findIndex(candidate=>candidate.rank===record.rank)===index)
         .slice(0,100);
       if(retained.length>=expected){parsed=retained;error=error||`Live parser returned ${parsed.length}; retained prior verified snapshot`}
@@ -115,7 +117,9 @@ async function main(){
   fs.writeFileSync(registryPath,`${JSON.stringify(registry,null,2)}\n`);
   const failures=diagnostics.filter(item=>!item.ok);
   fs.mkdirSync(path.join(root,'downloads'),{recursive:true});
-  if(failures.length===0)fs.writeFileSync(snapshotPath,`${JSON.stringify({generatedAt:registry.updated,sourceSnapshotDate,source:'CompaniesMarketCap ranking pages',boundary:registry.publicMarketRefresh.boundary,records:snapshotRecords},null,2)}\n`);
+  // A degraded run may reuse a verified snapshot, but must never replace that
+  // snapshot with a lower-quality aggregate assembled while sources are down.
+  if(liveComplete)fs.writeFileSync(snapshotPath,`${JSON.stringify({generatedAt:registry.updated,sourceSnapshotDate,source:'CompaniesMarketCap ranking pages',boundary:registry.publicMarketRefresh.boundary,records:snapshotRecords},null,2)}\n`);
   fs.writeFileSync(path.join(root,'downloads','money-public-market-refresh.json'),`${JSON.stringify({ok:failures.length===0,liveComplete,status:registry.publicMarketRefresh.status,generatedAt:registry.updated,sourceSnapshotDate,freshnessTruth:registry.publicMarketRefresh.freshnessTruth,diagnostics},null,2)}\n`);
   if(requireLive&&failures.length)throw new Error(`Public-market refresh incomplete: ${failures.map(item=>item.category).join(', ')}`);
   console.log(`Public-market ranking refresh complete: ${diagnostics.reduce((sum,item)=>sum+item.parsed,0)} quantitative rows across ${diagnostics.length} categories.`);

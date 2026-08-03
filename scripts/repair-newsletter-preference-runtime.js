@@ -34,7 +34,7 @@ const client = `(function(){
     text.textContent=' I agree to receive the Matrix Reprogrammed briefings selected on this form. I can unsubscribe or change preferences at any time.';
     label.appendChild(consent);label.appendChild(text);
     const button=form.querySelector('button[type="submit"],input[type="submit"]');
-    if(button)form.insertBefore(label,button);else form.appendChild(label);
+    if(button&&button.parentNode)button.parentNode.insertBefore(label,button);else form.appendChild(label);
     return consent;
   }
   function preferenceControl(form,name){return [...form.querySelectorAll('[name="'+name+'"]')];}
@@ -130,6 +130,7 @@ const markers = [
   'Select at least one briefing or release-notice preference.',
   "wordingVersion:'newsletter-explicit-consent-v3'",
   'Please confirm that you agree to receive the selected briefings.',
+  'button.parentNode.insertBefore(label,button)',
   'today’s Daily Control Brief will be sent immediately.'
 ];
 const final = fs.readFileSync(clientPath, 'utf8');

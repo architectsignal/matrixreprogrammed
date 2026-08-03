@@ -5,7 +5,7 @@ const root = process.cwd();
 const pagePath = path.join(root, 'index.html');
 const reportPath = path.join(root, 'downloads', 'homepage-mask-intro-report.json');
 const dataAssetPath = path.join(root, 'homepage-mask-intro-data.js');
-const runtimeVersion = '20260725-video-v5';
+const runtimeVersion = '20260803-video-v6';
 const videoParts = [
   'assets/matrix-intro-video-1.txt',
   'assets/matrix-intro-video-2.txt'
@@ -20,10 +20,12 @@ for (const rel of required) {
 }
 if (!fs.existsSync(pagePath)) throw new Error('index.html is missing');
 
-const base64 = videoParts.map(rel => fs.readFileSync(path.join(root, rel), 'utf8').trim()).join('').replace(/\s+/g, '');
-const decoded = Buffer.from(base64, 'base64');
-if (base64.length < 1000 || decoded.length < 10000) throw new Error('Homepage intro MP4 data is unexpectedly small');
+const rawBase64 = videoParts.map(rel => fs.readFileSync(path.join(root, rel), 'utf8').trim()).join('').replace(/\s+/g, '');
+const decoded = Buffer.from(rawBase64, 'base64');
+const base64 = decoded.toString('base64');
+if (rawBase64.length < 1000 || decoded.length < 10000) throw new Error('Homepage intro MP4 data is unexpectedly small');
 if (decoded.slice(4, 8).toString('ascii') !== 'ftyp') throw new Error('Homepage intro data does not decode to an MP4');
+if (Buffer.from(base64, 'base64').compare(decoded) !== 0) throw new Error('Homepage intro Base64 canonicalization changed the MP4 bytes');
 const dataAsset = [
   `/* Matrix Reprogrammed homepage intro video data · ${runtimeVersion} · generated at build time */`,
   `globalThis.__MATRIX_INTRO_BASE64__=${JSON.stringify(base64)};`,

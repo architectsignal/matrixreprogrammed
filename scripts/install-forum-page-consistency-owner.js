@@ -29,7 +29,7 @@ update('scripts/final-production-reconcile.js', source => {
     output = output.replace(anchor, `${anchor}\nrun('scripts/repair-forum-page-consistency.js');`);
   }
   if (!output.includes("rejectMarker('dark-speculation-forum.html', 'paypal.me/njmgroup/1');")) {
-    const anchor = "requireMarker('epstein-alive-board.html', 'forum.js?v=20260720-forum-member-posting-v3');";
+const anchor = "requireMarker('epstein-alive-board.html', 'forum.js?v=20260803-forum-resilient-fetch-v4');";
     if (!output.includes(anchor)) throw new Error('Final reconcile board marker anchor missing');
     output = output.replace(anchor, `${anchor}\nrequireMarker('dark-speculation-forum.html', 'Verified Member Posting');\nrequireMarker('dark-speculation-forum.html', 'id=\"forum-member-status\"');\nrejectMarker('dark-speculation-forum.html', 'paypal.me/njmgroup/1');\nrejectMarker('dark-speculation-forum.html', 'unlock-signal-pass');`);
   }

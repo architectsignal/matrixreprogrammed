@@ -1,17 +1,17 @@
 {
   "searchVersion": 3,
-  "updated": "2026-08-03T10:53:47.079Z",
-  "totalResults": 31562,
+  "updated": "2026-08-03T11:05:09.696Z",
+  "totalResults": 33577,
   "evidenceBoundary": "Search ranking and filtering organise cited records. They do not establish guilt, convert allegations into facts, or replace the underlying source.",
   "filters": {
     "evidenceGrade": [
       {
         "value": "A",
-        "count": 21364
+        "count": 21365
       },
       {
         "value": "B",
-        "count": 8395
+        "count": 8407
       },
       {
         "value": "C",
@@ -33,7 +33,11 @@
       },
       {
         "value": "investigation-finding",
-        "count": 2508
+        "count": 2520
+      },
+      {
+        "value": "money-intelligence-profi",
+        "count": 2000
       },
       {
         "value": "html",
@@ -41,7 +45,7 @@
       },
       {
         "value": "source-change",
-        "count": 95
+        "count": 96
       },
       {
         "value": "document-extraction",
@@ -49,7 +53,7 @@
       },
       {
         "value": "json-feed",
-        "count": 37
+        "count": 39
       },
       {
         "value": "mission-route",
@@ -68,22 +72,22 @@
         "count": 1
       },
       {
-        "value": "structured-entity-registry",
+        "value": "structured-entity-regist",
         "count": 1
       },
       {
-        "value": "structured-relationship-regist",
+        "value": "structured-relationship-",
         "count": 1
       }
     ],
     "statusClass": [
       {
         "value": "source-record",
-        "count": 25274
+        "count": 25384
       },
       {
         "value": "context",
-        "count": 3046
+        "count": 4948
       },
       {
         "value": "enforcement",
@@ -91,11 +95,11 @@
       },
       {
         "value": "source-change",
-        "count": 293
+        "count": 295
       },
       {
         "value": "allegation",
-        "count": 18
+        "count": 19
       },
       {
         "value": "unverified",
@@ -105,7 +109,7 @@
     "jurisdiction": [
       {
         "value": "United States",
-        "count": 27972
+        "count": 27985
       },
       {
         "value": "United Kingdom",
@@ -170,7 +174,7 @@
         "count": 354
       },
       {
-        "value": "Document→GovernmentAgency",
+        "value": "Document→GovernmentAgenc",
         "count": 350
       },
       {
@@ -312,16 +316,16 @@
         "count": 9381
       },
       {
-        "value": "institutional position change",
+        "value": "institutional position c",
         "count": 4000
       },
       {
-        "value": "finding",
-        "count": 2508
+        "value": "route",
+        "count": 3739
       },
       {
-        "value": "route",
-        "count": 1737
+        "value": "finding",
+        "count": 2520
       },
       {
         "value": "insider transaction",
@@ -329,7 +333,7 @@
       },
       {
         "value": "source-record",
-        "count": 116
+        "count": 117
       },
       {
         "value": "document",

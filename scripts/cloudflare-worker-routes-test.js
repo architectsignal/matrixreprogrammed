@@ -108,7 +108,7 @@ for (const marker of ["credentials:'include'",'member && member.emailVerifiedAt'
   needText('_site/forum.js', marker, `deployable authenticated forum client marker ${marker}`);
 }
 for (const file of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html','_site/forum.html','_site/dark-speculation-forum.html','_site/epstein-alive-board.html']) {
-  needText(file, 'forum.js?v=20260720-forum-member-posting-v3', 'versioned repaired forum client');
+    needText(file, 'forum.js?v=20260803-forum-resilient-fetch-v4', 'versioned repaired forum client');
   needText(file, 'id="forum-member-status"', 'member session status');
   needText(file, 'id="signal-board-form"', 'forum posting form');
 }

@@ -1,5 +1,5 @@
 (()=>{'use strict';
-const URLS={pyramid:'/api/public/structural-power/pyramid',people:'/api/public/structural-power/people',core:'/api/public/structural-power/core',families:'/api/public/structural-power/families',history:'/api/public/structural-power/history',continuity:'/api/public/structural-power/continuity'};
+const URLS={pyramid:['/api/public/structural-power/pyramid','/data/behind-the-curtain-pyramid.json'],people:['/api/public/structural-power/people','/data/behind-the-curtain-people-registry.json'],core:['/api/public/structural-power/core','/data/behind-the-curtain.json'],families:['/api/public/structural-power/families','/data/behind-the-curtain-family-access.json'],history:['/api/public/structural-power/history','/data/behind-the-curtain-living-access-history.json'],continuity:['/api/public/structural-power/continuity','/data/behind-the-curtain-continuity-layers.json']};
 const MODE_RANK={proof:0,structural:1,symbolic:2};
 const state={mode:'structural',selectedLevel:'public-stage',models:null,lastLoaded:null,timer:null};
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
@@ -11,7 +11,7 @@ const clamp=v=>Math.max(0,Math.min(100,Number(v)||0));
 const list=v=>array(v).length?`<ul>${array(v).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<p class="muted">No current record.</p>';
 const classification=v=>`<span class="classification ${esc(v||'unsupported')}">${esc(label(v||'unsupported'))}</span>`;
 const refKey=ref=>`${ref.dataset}:${ref.id}`;
-async function load(url){const r=await fetch(`${url}?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`${url}: HTTP ${r.status}`);return r.json()}
+async function load(urls){let lastError;for(const url of array(urls)){try{const r=await fetch(`${url}?v=${Date.now()}`,{cache:'no-store',headers:{Accept:'application/json'}});if(!r.ok)throw new Error(`${url}: HTTP ${r.status}`);const type=String(r.headers.get('content-type')||'').toLowerCase();if(!type.includes('application/json'))throw new Error(`${url}: non-JSON response`);return await r.json()}catch(error){lastError=error}}throw lastError||new Error('Evidence package unavailable')}
 function buildIndexes(models){const historical=array(models.families.historicalArchitects).map(x=>({...x,id:slug(x.name),_dataset:'historical'}));return{people:new Map(array(models.people.people).map(x=>[x.id,{...x,_dataset:'people'}])),family:new Map(array(models.families.families).map(x=>[x.id,{...x,_dataset:'family'}])),core:new Map(array(models.core.powerCenters).map(x=>[x.id,{...x,_dataset:'core'}])),historical:new Map(historical.map(x=>[x.id,x])),symbolic:new Map(array(models.pyramid.symbolicDossiers).map(x=>[x.id,{...x,_dataset:'symbolic'}]))}}
 function resolve(ref){return ref&&state.models?.indexes?.[ref.dataset]?.get(ref.id)||null}
 function displayName(e){return e?.name||e?.title||'Unresolved entity'}

@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T10:53:02.664Z",
+  "generatedAt": "2026-08-03T11:05:16.955Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 31562,
-    "primarySources": 29667,
+    "results": 33577,
+    "primarySources": 29680,
     "relationships": 13467
   },
   "checks": [
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "31562 results"
+      "detail": "33577 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "31562/31562"
+      "detail": "33577/33577"
     },
     {
       "name": "normalised field sourceType",
@@ -97,7 +97,7 @@
     {
       "name": "query corruption bribery fraud",
       "ok": true,
-      "detail": "entity-registry.html#entity-contract-e20e22468efffe4d80b1, entity-registry.html#entity-contract-606cd7ee94dce4ee1caa, entity-registry.html#entity-contract-e4f0192d3e832ae19d8b, entity-registry.html#entity-contract-89586f1631cf4232b9a8, entity-registry.html#entity-contract-296fd4277c86dc1c8b30"
+      "detail": "daily-investigation-conclusions.html?finding=a64418c3b3a948ed46fb9e10, daily-investigation-conclusions.html?finding=9bed98ec77ed21dbc416e0ca, daily-investigation-conclusions.html?finding=9767eb9045ad96382a68ea1c, daily-investigation-conclusions.html?finding=c3d8ec437ee5ff940f815a56, daily-investigation-conclusions.html?finding=c87076d5dbb810268d1f5103"
     },
     {
       "name": "query Epstein DOJ disclosures",
@@ -122,17 +122,17 @@
     {
       "name": "query public corruption conviction",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=source-change-c3bd2d306202dfc2e2374303, daily-investigation-conclusions.html?finding=b3e6eda074b2856f301567b5, daily-investigation-conclusions.html?finding=af846974d1c737e62eb13ed9, daily-investigation-conclusions.html?finding=46951923144fe1686590f0ff, daily-investigation-conclusions.html?finding=b6faffb03b27c5093975150f"
+      "detail": "daily-investigation-conclusions.html?finding=b3e6eda074b2856f301567b5, daily-investigation-conclusions.html?finding=af846974d1c737e62eb13ed9, daily-investigation-conclusions.html?finding=46951923144fe1686590f0ff, daily-investigation-conclusions.html?finding=source-change-c3bd2d306202dfc2e2374303, daily-investigation-conclusions.html?finding=b6faffb03b27c5093975150f"
     },
     {
       "name": "query inspector-general misconduct",
       "ok": true,
-      "detail": "source-changes.html?change=205bd2407ea96080fdae5fe8, source-changes.html?change=9549433fcfc93118c8a9d2e7, source-changes.html?change=e856c4e44fa6c3a3dad142ce, source-changes.html?change=9a4ff091b85d6ba354dd8e03, source-changes.html?change=9d13cbe9989a1430580de2ff"
+      "detail": "relationship-registry.html?relationship=relationship-eacecc377601c777e5ae, relationship-registry.html?relationship=relationship-2120c1b71b7d04fabc9c, relationship-registry.html?relationship=relationship-0b19e0e4defac2df6b76, relationship-registry.html?relationship=relationship-0afca3cf1bee6fd30a2f, relationship-registry.html?relationship=relationship-9d57b2f9613208605c07"
     },
     {
       "name": "query company ownership contract agency",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-45a91131402a990020f8, relationship-registry.html?relationship=relationship-ef831c6fa23d6c13e8d1, relationship-registry.html?relationship=relationship-2961101708dc51830314, relationship-registry.html?relationship=relationship-ace94fd99602766f1dbd, entity-registry.html#entity-contract-39d48c42c159c3567e81"
+      "detail": "relationship-registry.html?relationship=relationship-ace94fd99602766f1dbd, relationship-registry.html?relationship=relationship-45a91131402a990020f8, entity-registry.html#entity-contract-39d48c42c159c3567e81, entity-registry.html#entity-contract-758d6edb90360cfb244a, relationship-registry.html?relationship=relationship-d2f69b5c3d5f95eedbcb"
     },
     {
       "name": "query missing record redaction log",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "31562 vs 31562"
+      "detail": "33577 vs 33577"
     },
     {
       "name": "facet evidenceGrade",

@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// Run after the canonical forum owner so deployable pages cannot retain paid-pass
+// wording, malformed form attributes or retired browser-export filenames.
+require('./finalize-forum-public-surfaces.js');
+
 const root = process.cwd();
 const at = relative => path.join(root, relative);
 const read = relative => fs.readFileSync(at(relative), 'utf8');
@@ -31,7 +35,8 @@ need(priceById.intelligence === 6, 'Feature matrix Intelligence price must be �
 need(priceById.research_pro === 9, 'Feature matrix Research Pro price must be €9');
 need(JSON.stringify(matrix).includes('verified-member Signal Board posting'), 'Feature matrix does not include verified-member forum posting');
 
-need(forumClient.includes("fetch('/api/member/me'"), 'Forum client does not check the member session');
+const credentialedMemberSessionFetch = /fetch\(\s*['"]\/api\/member\/me[\s\S]{0,260}?credentials\s*:\s*['"]include['"]/m.test(forumClient);
+need(credentialedMemberSessionFetch, 'Forum client does not check the member session with credentials');
 need(!forumClient.includes('localStorage'), 'Forum client still uses a browser-only unlock');
 need(!forumClient.includes('paypal.me'), 'Forum client still references the false PayPal gate');
 need(forumClient.includes('Posting requires a verified free member account'), 'Forum client lacks the verified-member boundary');
@@ -40,7 +45,11 @@ for (const relative of ['forum.html', 'dark-speculation-forum.html', 'epstein-al
   const html = read(relative);
   need(html.includes('id="forum-member-status"'), `${relative} lacks member-session status`);
   need(html.includes('Create Free Account'), `${relative} lacks free account route`);
-  need(!/paypal\.me|I(?:’|')ve Paid|Pay €1/i.test(html), `${relative} still exposes the false Signal Pass`);
+  need(!/paypal\.me|I(?:’|')ve Paid|Pay €1/i.test(html), `${relative} still exposes the false payment gate`);
+  need(!/\bSignal Pass\b/i.test(html), `${relative} still exposes obsolete paid-pass wording`);
+  need(!/downloads\/forum-posts\.(?:json|md)/i.test(html), `${relative} still exposes retired local forum exports`);
+  need(!/\sreader\s+field=/i.test(html), `${relative} still contains malformed form attributes`);
+  need(/reading is public|reading stays public|free to read|board is free to read/i.test(html), `${relative} lacks the public-reading promise`);
 }
 
 need(memberWorker.includes('export async function memberSessionContext'), 'Member worker does not export its secure session context');
@@ -61,6 +70,7 @@ const report = {
   membershipPrices: priceById,
   forumReading: 'public',
   forumPosting: 'verified-free-member-session',
+  forumPublicSurface: 'clean-authoritative-d1',
   issues
 };
 fs.mkdirSync(at('downloads'), { recursive: true });
@@ -70,5 +80,5 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log('MEMBER/FORUM INTEGRATION TEST PASSED: €0/€3/€6/€9 tiers and verified-member D1 forum posting.');
+console.log('MEMBER/FORUM INTEGRATION TEST PASSED: €0/€3/€6/€9 tiers, clean public pages and verified-member D1 forum posting.');
 require('./recovery-worker-api-contract-test.js');

@@ -51,7 +51,7 @@ for (const file of [workerPath, accessSource, capstoneSource, accessRuntimePath,
 let accessRuntime = fs.readFileSync(accessRuntimePath, 'utf8');
 accessRuntime = accessRuntime.replace(
   /const URLS=\{[^;]+\};/,
-  "const URLS={pyramid:'/api/public/structural-power/pyramid',people:'/api/public/structural-power/people',core:'/api/public/structural-power/core',families:'/api/public/structural-power/families',history:'/api/public/structural-power/history',continuity:'/api/public/structural-power/continuity'};"
+  "const URLS={pyramid:['/api/public/structural-power/pyramid','/data/behind-the-curtain-pyramid.json'],people:['/api/public/structural-power/people','/data/behind-the-curtain-people-registry.json'],core:['/api/public/structural-power/core','/data/behind-the-curtain.json'],families:['/api/public/structural-power/families','/data/behind-the-curtain-family-access.json'],history:['/api/public/structural-power/history','/data/behind-the-curtain-living-access-history.json'],continuity:['/api/public/structural-power/continuity','/data/behind-the-curtain-continuity-layers.json']};"
 );
 fs.writeFileSync(accessRuntimePath, accessRuntime);
 

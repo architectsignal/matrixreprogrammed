@@ -1,6 +1,6 @@
 # Weekly Investigation Report
 
-Generated: 2026-08-03T08:45:47.693Z
+Generated: 2026-08-03T09:33:53.880Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -11,8 +11,8 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 - sourcesScheduled: 12
 - sourcesFetched: 9
 - sourceFailures: 3
-- changedSources: 7
-- findingsInWindow: 2054
+- changedSources: 5
+- findingsInWindow: 1711
 - establishedWrongdoingFindings: 33
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
@@ -150,11 +150,11 @@ Next records: Open and preserve the primary document or official case page.; Ide
 
 Source URL: https://www.usaspending.gov/award/9523ZY26P0022
 
-### Final Judgment
+### Italy: Ten convicted in €100 million VAT fraud case involving plastics trade
 
 Grade: A · Status: established-wrongdoing · Severity: 5
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: European Public Prosecutor's Office — News
 
 Conclusion: undefined
 
@@ -166,13 +166,13 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf
+Source URL: https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en
 
-### Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux
+### Italy: Ten convicted in €100 million VAT fraud case involving plastics trade
 
 Grade: A · Status: established-wrongdoing · Severity: 5
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: European Public Prosecutor's Office — News
 
 Conclusion: undefined
 
@@ -184,13 +184,13 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf
+Source URL: https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en
 
-### Final Judgment - Ali Derakhshanfar
+### Italy: Ten convicted in €100 million VAT fraud case involving plastics trade
 
 Grade: A · Status: established-wrongdoing · Severity: 5
 
-Source: U.S. Securities and Exchange Commission — Litigation Releases
+Source: European Public Prosecutor's Office — News
 
 Conclusion: undefined
 
@@ -202,61 +202,7 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf
-
-### Final Judgment - Sal N. Ortiz
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf
-
-### Final Judgment - Semisub, Inc.
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/judg26592-semisub.pdf
-
-### Final Judgment - Jamey Denise Jackson
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf
+Source URL: https://www.eppo.europa.eu/media/news/italy-ten-convicted-eur100-million-vat-fraud-case-involving-plastics-trade-2026-07-22_en
 
 ### Final Judgment
 
@@ -266,391 +212,13 @@ Source: U.S. Securities and Exchange Commission — Litigation Releases
 
 Conclusion: undefined
 
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
+Mechanism: undefined
 
 Implication: undefined
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: undefined
 
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf
-
-### Revised Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf
-
-### Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/order26587.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf
-
-### Proposed Final Judgment - Shaukat Shamim
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26584-shamim.pdf
-
-### Proposed Final Judgment - YouPlus, Inc.
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26584-youplus.pdf
-
-### Final Judgment -Steve Bajic
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26583-bajic.pdf
-
-### Final Judgment -Christopher McKnight
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26583-mcknight.pdf
-
-### Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf
-
-### Final Judgment - Robert Yedid
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26582-robert-yedid.pdf
-
-### Final Judgment - Andrew Kaufman
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26582-andrew-kaufman.pdf
-
-### Final Judgment - Mark Jacobs
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26582-mark-jacobs.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26576.pdf
-
-### Final Judgment - Michael Bowen
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26575.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26568.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf
-
-### Final Judgment - Ross Gregory Erskine
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26559.pdf
-
-### Final Judgment
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
+Next records: 
 
 Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26557.pdf
 
@@ -662,69 +230,15 @@ Source: U.S. Securities and Exchange Commission — Litigation Releases
 
 Conclusion: undefined
 
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
+Mechanism: undefined
 
 Implication: undefined
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: undefined
 
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
+Next records: 
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26555.pdf
-
-### Consent of and Final Judgment as to Gautam Adani
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/consents26554-gadani.pdf
-
-### Consent of and Final Judgment as to Sagar Adani
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/consents26554-sadani.pdf
-
-### Final Judgment - Robert Newell
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26553.pdf
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf
 
 ### Final Judgment
 
@@ -734,15 +248,519 @@ Source: U.S. Securities and Exchange Commission — Litigation Releases
 
 Conclusion: undefined
 
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
+Mechanism: undefined
 
 Implication: undefined
 
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+Boundary: undefined
 
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
+Next records: 
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26550.pdf
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26504.pdf
+
+### Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26539.pdf
+
+### Final Judgment - P/E Capital Investment Management Partners
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26515-pe-capital.pdf
+
+### Final Judgment - Treusch
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26545-treusch.pdf
+
+### Final Judgment - Bin Hao
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26500-hao.pdf
+
+### Final Judgment by Default
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf
+
+### Final Judgment - Ross Gregory Erskine
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26559.pdf
+
+### Final Judgment - Eliseo Jojo Prisno
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26515-prisno.pdf
+
+### Final Judgment - Lloyd
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26545-lloyd.pdf
+
+### Final Judgment - Daniel McCormick
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26514-mccormick.pdf
+
+### Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf
+
+### Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26508.pdf
+
+### Final Judgment - Brent Cranmer
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26514-cranmer.pdf
+
+### Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/order26587.pdf
+
+### Final Judgment - Andrew Kaufman
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26582-andrew-kaufman.pdf
+
+### Final Judgment - DaveGlo Investment Group, Inc.
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26549-daveglo.pdf
+
+### Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26580.pdf
+
+### Final Judgment -Steve Bajic
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26583-bajic.pdf
+
+### Final Judgment - Randall J. Miller
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26498-randy-miller.pdf
+
+### Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf
+
+### Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf
+
+### Final Judgment - Sal N. Ortiz
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf
+
+### Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf
+
+### Final Judgment - Jamey Denise Jackson
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf
+
+### Final Judgment - David P. Ortiz
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26549-ortiz.pdf
+
+### Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf
+
+### Consent Motion for Entry of Final Judgment
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/complaints/2026/judgment26548.pdf
+
+### Proposed Final Judgment - Shaukat Shamim
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: undefined
+
+Implication: undefined
+
+Boundary: undefined
+
+Next records: 
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26584-shamim.pdf
+
+### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
 
 ### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 
@@ -851,24 +869,6 @@ Boundary: The change alone does not establish wrongdoing, deliberate concealment
 Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
 
 Source URL: https://www.gov.uk/government/organisations/serious-fraud-office
-
-### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
-
-Grade: B · Status: source-change · Severity: 2
-
-Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
-
-Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
-
-Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
-
-Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
-
-Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
-
-Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
-
-Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
 
 ### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 

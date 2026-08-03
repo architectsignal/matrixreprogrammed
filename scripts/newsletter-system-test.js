@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const root = process.cwd();
 const issues=[];
 function exists(name){return fs.existsSync(path.join(root,name))}
@@ -22,6 +23,8 @@ needAny('src/worker.js',['newsletter:index','newsletter:index marker optional','
 needAny('src/worker.js',['newsletter:subscriber:','subscriberId','status:\'subscribed\'','status:"subscribed"'],'newsletter subscriber marker');
 needText('src/worker.js','Cloudflare KV');
 needText('llms.txt','/newsletter-signup');
+const runtimeTest=spawnSync(process.execPath,[path.join(root,'scripts','newsletter-runtime-dom-test.js')],{cwd:root,encoding:'utf8'});
+if(runtimeTest.status!==0)issues.push(`newsletter nested-submit DOM regression failed: ${String(runtimeTest.stderr||runtimeTest.stdout).trim()}`);
 if(exists('downloads/weekly-newsletter-latest.json')){const data=JSON.parse(read('downloads/weekly-newsletter-latest.json'));if(!data.ok)issues.push('weekly newsletter json not ok');if(!Array.isArray(data.items))issues.push('weekly newsletter missing items array')}
 if(issues.length){console.error('NEWSLETTER SYSTEM TEST FAILED');for(const issue of issues)console.error(`- ${issue}`);process.exit(1)}
 console.log('NEWSLETTER SYSTEM TEST PASSED');

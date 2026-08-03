@@ -32,7 +32,7 @@ const canonicalLogin = route => `https://matrixreprogrammed.com/member-login.htm
   html = html.replace(/<section id="signal-pass" class="section wrap split">.*?<\/section>/, memberSection);
   html = html.replace('Posting is locked until Signal Pass is unlocked on this device.', 'Posting requires a verified free member account.');
   html = html.replace('Posts appear publicly by default after Signal Pass unlock.', 'Posts appear publicly after verified member sign-in.');
-  html = html.replace(/<script src="forum\.js(?:\?[^\"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
+  html = html.replace(/<script src="forum\.js(?:\?[^\"]*)?"><\/script>/g, '<script src="forum.js?v=20260803-forum-resilient-fetch-v4"></script>');
 
   if (html.includes('paypal.me/njmgroup/1')) throw new Error('Dark speculation page still contains the obsolete paid posting link');
   if (html.includes('unlock-signal-pass')) throw new Error('Dark speculation page still contains the obsolete browser unlock control');
@@ -43,10 +43,10 @@ const canonicalLogin = route => `https://matrixreprogrammed.com/member-login.htm
 
 for (const relative of ['forum.html', 'dark-speculation-forum.html', 'epstein-alive-board.html']) {
   let html = read(relative);
-  html = html.replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260720-forum-member-posting-v3"></script>');
-  if (!html.includes('forum.js?v=20260720-forum-member-posting-v3')) html = html.replace('</body>', '<script src="forum.js?v=20260720-forum-member-posting-v3"></script></body>');
+  html = html.replace(/<script src="forum\.js(?:\?[^"]*)?"><\/script>/g, '<script src="forum.js?v=20260803-forum-resilient-fetch-v4"></script>');
+  if (!html.includes('forum.js?v=20260803-forum-resilient-fetch-v4')) html = html.replace('</body>', '<script src="forum.js?v=20260803-forum-resilient-fetch-v4"></script></body>');
   write(relative, html);
-  if (!html.includes('forum.js?v=20260720-forum-member-posting-v3')) throw new Error(`${relative} does not load the repaired forum client`);
+  if (!html.includes('forum.js?v=20260803-forum-resilient-fetch-v4')) throw new Error(`${relative} does not load the repaired forum client`);
   if (!html.includes('id="forum-member-status"')) throw new Error(`${relative} does not expose member-session status`);
   if (!html.includes('id="signal-board-form"')) throw new Error(`${relative} has no posting form`);
   if (!html.includes('class="signal-lock-message"')) throw new Error(`${relative} has no authenticated posting lock`);
@@ -60,7 +60,7 @@ fs.writeFileSync(reportPath, `${JSON.stringify({
   boards: ['main', 'speculation', 'epstein-alive'],
   postingAccess: 'verified free member session',
   obsoletePaidSignalPassRemoved: true,
-  versionedForumClient: '20260720-forum-member-posting-v3',
+  versionedForumClient: '20260803-forum-resilient-fetch-v4',
   boundary: 'All three public boards use the same passwordless verified-member session and Cloudflare D1 persistence contract.'
 }, null, 2)}\n`);
 console.log(`Forum page consistency repair passed: ${changed.length ? changed.join(', ') : 'already current'}.`);

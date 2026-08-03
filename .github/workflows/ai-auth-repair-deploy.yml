@@ -73,6 +73,7 @@ jobs:
           node scripts/live-ai-verification-classifier.test.mjs
           node scripts/ai-management-foundation-test.mjs
           node scripts/ai-management-autonomy-test.mjs
+          node scripts/live-ai-verification-classifier.test.mjs
           node scripts/cloudflare-worker-routes-test.js
 
       - name: Build activated zero-spend production configuration

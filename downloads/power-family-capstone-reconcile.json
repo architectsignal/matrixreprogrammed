@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T13:20:05.654Z",
+  "generatedAt": "2026-08-03T11:05:11.389Z",
   "actions": [
     {
       "type": "run",
@@ -23,12 +23,12 @@
       "target": "search-index.json",
       "routes": 6,
       "format": "compact",
-      "sizeMiB": 20.63
+      "sizeMiB": 21.97
     },
     {
       "type": "patch",
       "target": "sitemap.xml",
-      "added": 0
+      "added": 4
     },
     {
       "type": "patch",
@@ -85,7 +85,7 @@
         "--output"
       ],
       "status": 0,
-      "stdout": "Public marker scrub complete: 316 HTML file(s) patched across 3320 HTML surfaces; valid public routes preserved.\n",
+      "stdout": "Public marker scrub complete: 680 HTML file(s) patched across 3477 HTML surfaces; valid public routes preserved.\n",
       "stderr": ""
     },
     {
@@ -101,7 +101,7 @@
     {
       "name": "compact search index remains under 22 MiB",
       "ok": true,
-      "detail": "20.63 MiB"
+      "detail": "21.97 MiB"
     },
     {
       "name": "nine documented family structures",

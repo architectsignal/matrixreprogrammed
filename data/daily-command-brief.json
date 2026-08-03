@@ -1,8 +1,93 @@
 {
-  "updated": "2026-08-03T15:15:27.856Z",
+  "updated": "2026-08-03T10:05:10.843Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [],
+  "topMovements": [
+    {
+      "key": "courtlistener-court-records-10936935-1",
+      "hash": "b742dac477765570",
+      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+      "date": "2026-07-29",
+      "names": [
+        "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-13374"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936889-2",
+      "hash": "ac792fbc60ee4406",
+      "summary": "Williams v. Biggs",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+      "date": "2026-07-29",
+      "names": [
+        "Williams v. Biggs",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-08825"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936118-3",
+      "hash": "444a161f0f618fcb",
+      "summary": "Civil Rights Corps v. LaSalle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+      "date": "2026-07-29",
+      "names": [
+        "Civil Rights Corps v. LaSalle",
+        "Court of Appeals for the Second Circuit",
+        "24-2251"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10935302-4",
+      "hash": "19b5109d3f39cd51",
+      "summary": "United States v. Anten",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+      "date": "2026-07-27",
+      "names": [
+        "United States v. Anten",
+        "Court of Appeals for the Ninth Circuit",
+        "24-7261"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10933234-5",
+      "hash": "93db7550ff8da9da",
+      "summary": "Punxsutawney Hunting Club v. PGC",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+      "date": "2026-07-21",
+      "names": [
+        "Punxsutawney Hunting Club v. PGC",
+        "Supreme Court of Pennsylvania",
+        "23 WAP 2023"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10928510-6",
+      "hash": "8fecafeb799b260d",
+      "summary": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+      "date": "2026-07-15",
+      "names": [
+        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+        "Supreme Court of Rhode Island",
+        "2025-0045-Appeal."
+      ]
+    }
+  ],
   "topEntityChanges": [
     {
       "name": "Appellate Division of the Supreme Court of the State of New York",
@@ -1147,23 +1232,6 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
-      "name": "Consolidated Sanctions List (Non-SDN Lists)",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 60,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
       "name": "Exercise or conversion of derivative security",
       "documentedRole": "reportedTransaction",
       "roleGroup": "security, intelligence and emergency power",
@@ -1175,6 +1243,23 @@
       "records": 58,
       "sources": [
         "data/relationship-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Consolidated Sanctions List (Non-SDN Lists)",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 56,
+      "sources": [
+        "data/entity-registry.json"
       ],
       "summaries": [],
       "specificity": 9,
@@ -1225,7 +1310,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 40,
+      "records": 37,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1242,7 +1327,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 40,
+      "records": 37,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1259,7 +1344,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Chad J. Miller inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 40,
+      "records": 37,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1276,7 +1361,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Jeffrey Puzzullo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 40,
+      "records": 37,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1293,7 +1378,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Suzee Han inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 40,
+      "records": 37,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1310,7 +1395,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 40,
+      "records": 37,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1327,9 +1412,27 @@
       "action": "Contract",
       "whyItMatters": "This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 40,
+      "records": 37,
       "sources": [
         "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Identity, surveillance and access",
+      "documentedRole": "Documented in the linked public record",
+      "roleGroup": "technology, identity, data and platforms",
+      "authority": "",
+      "instrument": "",
+      "action": "Documented in the linked public record",
+      "whyItMatters": "This record places Identity, surveillance and access inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 37,
+      "sources": [
+        "data/clock-wall.json",
+        "data/global-risk-clocks.json"
       ],
       "summaries": [],
       "specificity": 9,
@@ -1344,7 +1447,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Amended Judgment - Spartan Trading Company, LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1361,7 +1464,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1378,7 +1481,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Consent Motion for Entry of Final Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1395,7 +1498,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Consent of and Final Judgment as to Gautam Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1412,7 +1515,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Consent of and Final Judgment as to Sagar Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1429,7 +1532,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Andrew Kaufman inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1446,7 +1549,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Arthur inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1463,7 +1566,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Bin Hao inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1480,7 +1583,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Brent Cranmer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1497,7 +1600,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Daniel McCormick inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1514,7 +1617,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - DaveGlo Investment Group, Inc. inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1531,7 +1634,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - David P. Ortiz inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1548,7 +1651,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Eliseo Jojo Prisno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1565,7 +1668,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Estate of Richard Myre inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1582,7 +1685,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Flagg inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1599,7 +1702,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Geoffrey Allen Wall inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1616,24 +1719,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Henry Abdo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Jeffrey De Laveaga",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Final Judgment - Jeffrey De Laveaga inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 36,
       "sources": [
         "data/entity-registry.json"
       ],

@@ -24,6 +24,10 @@ check(!deployFailure.ok && deployFailure.state === 'deployment-not-completed', '
 for (const marker of ['workers_dev = true','Resolve canonical workers.dev endpoint','id: cloudflare_deploy','id: ai_verify','id: pyramid_verify','id: live_verify','id: receipt','continue-on-error: true','AI_VERIFY_OUTCOME','classify-production-release-state.js','production-release-state.json']) {
   check(workflow.includes(marker), `controlled production workflow missing release-state marker: ${marker}`);
 }
+const checkoutIndex = workflow.indexOf('- name: Checkout latest main');
+const authorityIndex = workflow.indexOf('- name: Confirm explicit manual production release');
+check(checkoutIndex >= 0 && authorityIndex >= 0 && checkoutIndex < authorityIndex, 'repository must be checked out before the always-run release-state classifier can report an authorization refusal');
+check(workflow.includes('github.actor }}" != "github-actions[bot]"'), 'automated workflow dispatches must remain excluded from production release authority');
 
 if (failures.length) {
   console.error(`PRODUCTION RELEASE STATE TEST FAILED: ${failures.length}`);

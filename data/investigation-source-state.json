@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T08:46:31.494Z",
+  "updated": "2026-08-03T09:34:58.676Z",
   "lastMode": "daily",
   "sources": {
     "doj-epstein-disclosures": {
@@ -7,7 +7,7 @@
       "lane": "epstein-disclosure",
       "authority": "primary-official",
       "url": "https://www.justice.gov/epstein/doj-disclosures",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/epstein/doj-disclosures",
@@ -21,20 +21,20 @@
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "doj-justice-news": {
       "label": "U.S. Department of Justice — Justice News",
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.justice.gov/news",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2201,
-      "bodyHash": "6bf8d9e24b25e2bb8586f9070b31455590d4eb094a0829dbe6cd78108419827d",
+      "bytes": 2217,
+      "bodyHash": "83edb4e34a42dce2c00547b0506db4a1a7f9d8fb914d17e03e6bb1fda839ccab",
       "changed": true,
       "itemCount": 1,
       "error": "",
@@ -42,41 +42,41 @@
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "doj-oig-reports": {
       "label": "U.S. Department of Justice Office of Inspector General — Reports",
       "lane": "oversight-audit",
       "authority": "primary-official",
       "url": "https://oig.justice.gov/reports",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62531,
       "bodyHash": "675c59bc37a463e6f8005f1efe7121567374758c2880887a459dd0969a1c0962",
-      "changed": true,
+      "changed": false,
       "itemCount": 14,
       "error": "",
       "resourceId": "investigation-source-doj-oig-reports",
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "sec-current-filings": {
       "label": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
       "lane": "money-contracts",
       "authority": "primary-official",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
       "bytes": 22609,
-      "bodyHash": "c63dd0982bb589325b841a7c3342e214df3b37a1d74897c5d6cd772f3815d8ac",
+      "bodyHash": "66a017db7d6ffd6d12bbd2950a19e92d1d70c6285df1dbd334c467b601edf254",
       "changed": true,
       "itemCount": 40,
       "error": "",
@@ -84,20 +84,20 @@
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "sec-litigation-releases": {
       "label": "U.S. Securities and Exchange Commission — Litigation Releases",
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 232703,
-      "bodyHash": "c7dba2df73ce9a0936e41205a82ee7ddc7a113aaeca634c279107f7944fbac30",
+      "bytes": 232707,
+      "bodyHash": "46b1f1258534aeee074abe7d6ded9080b5704e1392e53c0f3bbc50d87df29c3a",
       "changed": true,
       "itemCount": 76,
       "error": "",
@@ -105,14 +105,14 @@
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "federal-register-latest": {
       "label": "Federal Register — Latest Documents",
       "lane": "oversight-audit",
       "authority": "primary-official",
       "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "failed-policy",
       "statusCode": null,
       "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
@@ -126,41 +126,41 @@
       "utilityScore": null,
       "costConfirmedZero": true,
       "brokerAttempts": 0,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "usaspending-recent-contracts": {
       "label": "USAspending.gov — Recent Contract Awards",
       "lane": "money-contracts",
       "authority": "primary-official",
       "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
       "contentType": "application/json",
       "bytes": 59676,
       "bodyHash": "e6cf8edd32b19a4034aa2071522ff6e8780ddb89a0c0d1a40547a312cafa1c0e",
-      "changed": true,
+      "changed": false,
       "itemCount": 100,
       "error": "",
       "resourceId": "investigation-source-usaspending-recent-contracts",
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "treasury-ofac-recent-actions": {
       "label": "U.S. Treasury OFAC — Recent Actions",
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://ofac.treasury.gov/recent-actions",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 43653,
-      "bodyHash": "851eb06fa7e536da4aa5f7bdda254ec813704120867525c667b67896a76ad0d9",
+      "bytes": 43664,
+      "bodyHash": "a9376d57595f2f5963f92cf79488d8b3d8663009778c339d44829619caf294d7",
       "changed": true,
       "itemCount": 19,
       "error": "",
@@ -168,14 +168,14 @@
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "house-oversight-releases": {
       "label": "U.S. House Committee on Oversight and Government Reform — Releases",
       "lane": "oversight-audit",
       "authority": "primary-official",
       "url": "https://oversight.house.gov/release/",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://oversight.house.gov/release/",
@@ -189,14 +189,14 @@
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "wikileaks-publications": {
       "label": "WikiLeaks — Publications",
       "lane": "declassified-leaks",
       "authority": "document-archive",
       "url": "https://wikileaks.org/-Leaks-.html",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "failed-policy",
       "statusCode": null,
       "finalUrl": "https://wikileaks.org/-Leaks-.html",
@@ -210,20 +210,20 @@
       "utilityScore": null,
       "costConfirmedZero": true,
       "brokerAttempts": 0,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "uk-sfo-news": {
       "label": "UK Serious Fraud Office — News And Communications",
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
       "bytes": 102000,
-      "bodyHash": "4e0ed4956ac93c3d46f07fc8211ffc49d8a4083b7dc81365ed0f3dde6fdd803a",
+      "bodyHash": "3f31da88375b0d112bdd3d95377e3813671a03eaf49ce41f755b2d2338edb55c",
       "changed": true,
       "itemCount": 15,
       "error": "",
@@ -231,14 +231,14 @@
       "utilityScore": 89.05,
       "costConfirmedZero": true,
       "brokerAttempts": 1,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     },
     "eppo-news": {
       "label": "European Public Prosecutor's Office — News",
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://www.eppo.europa.eu/media/news_en",
-      "checkedAt": "2026-08-03T08:45:47.693Z",
+      "checkedAt": "2026-08-03T09:33:53.880Z",
       "status": "failed-policy",
       "statusCode": null,
       "finalUrl": "https://www.eppo.europa.eu/media/news_en",
@@ -252,7 +252,7 @@
       "utilityScore": null,
       "costConfirmedZero": true,
       "brokerAttempts": 0,
-      "lastAttempt": "2026-08-03T08:45:47.693Z"
+      "lastAttempt": "2026-08-03T09:33:53.880Z"
     }
   },
   "integrityVersion": "2.1.0"

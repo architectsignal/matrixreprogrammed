@@ -12,7 +12,7 @@ function read(rel) {
 }
 function count(text, token) { return String(text).split(token).length - 1; }
 
-const runtimeVersion = '20260725-video-v5';
+const runtimeVersion = '20260803-video-v6';
 const videoParts = ['assets/matrix-intro-video-1.txt', 'assets/matrix-intro-video-2.txt'];
 const partText = videoParts.map(read);
 if (partText.some(part => part.length < 1000)) fail('one or more video asset parts are unexpectedly small');
@@ -62,6 +62,9 @@ else {
     const generatedDecoded = Buffer.from(generatedBase64, 'base64');
     if (generatedDecoded.length !== decoded.length) fail(`generated video byte count mismatch: ${generatedDecoded.length} !== ${decoded.length}`);
     if (generatedDecoded.slice(4, 8).toString('ascii') !== 'ftyp') fail('generated intro data does not decode to MP4');
+    const strictBrowserDecoded = Buffer.from(atob(generatedBase64), 'binary');
+    if (strictBrowserDecoded.compare(decoded) !== 0) fail('browser-strict Base64 decode changed the generated MP4 bytes');
+    if (generatedBase64 !== generatedDecoded.toString('base64')) fail('generated intro data is not canonical Base64');
   } catch (error) {
     fail(`generated intro data could not be decoded: ${error.message}`);
   }
@@ -72,7 +75,8 @@ for (const marker of [runtimeVersion, 'globalThis.__MATRIX_INTRO_BASE64__', 'glo
 
 for (const marker of [
   runtimeVersion,
-  'matrix-homepage-intro-seen-v5',
+  'matrix-homepage-intro-seen-v6',
+  'normalizeBase64',
   'globalThis.__MATRIX_INTRO_BASE64__',
   'URL.createObjectURL',
   'URL.revokeObjectURL',
@@ -104,7 +108,7 @@ for (const marker of [
   runtimeVersion,
   'homepage-mask-intro-data.js',
   'globalThis.__MATRIX_INTRO_BASE64__',
-  'Buffer.from(base64',
+  "decoded.toString('base64')",
   'homepage-mask-intro-data.js?v=${runtimeVersion}',
   'homepage-mask-intro.css?v=${runtimeVersion}',
   'homepage-mask-intro.js?v=${runtimeVersion}',

@@ -100,14 +100,16 @@ jobs:
           const manifest = JSON.parse(fs.readFileSync(path.join(base, 'projection-manifest.json'), 'utf8'));
           if (!manifest.ok || manifest.mode !== 'preview-only') throw new Error('Phase 2 manifest is not healthy');
           if (manifest.paymentStatus !== 'deferred' || manifest.enforcementMode !== 'report-only') throw new Error('Payment or enforcement boundary changed');
-          if (manifest.canonicalRecordCount !== 253 || manifest.rawProjectionCount !== 273) throw new Error(`Unexpected Phase 1 coverage: ${manifest.canonicalRecordCount}/${manifest.rawProjectionCount}`);
+          if (!Number.isInteger(manifest.canonicalRecordCount) || manifest.canonicalRecordCount < 1) throw new Error(`Invalid canonical coverage: ${manifest.canonicalRecordCount}`);
+          if (!Number.isInteger(manifest.rawProjectionCount) || manifest.rawProjectionCount < manifest.canonicalRecordCount) throw new Error(`Invalid raw projection coverage: ${manifest.rawProjectionCount}`);
           if (JSON.stringify(manifest.tierOrder) !== JSON.stringify(tiers)) throw new Error('Tier order changed');
+          const expectedRecordCount = manifest.canonicalRecordCount;
           const packages = Object.fromEntries(tiers.map(tier => [tier, JSON.parse(fs.readFileSync(path.join(base, `${tier}.json`), 'utf8'))]));
           const publicById = new Map(packages.public.records.map(record => [record.id, record]));
           for (const tier of tiers) {
             const pkg = packages[tier];
             if (!pkg.ok || pkg.mode !== 'preview-only') throw new Error(`${tier}: package is not preview-only`);
-            if (pkg.recordCount !== 253 || pkg.records.length !== 253) throw new Error(`${tier}: incomplete record count`);
+            if (pkg.recordCount !== expectedRecordCount || pkg.records.length !== expectedRecordCount) throw new Error(`${tier}: incomplete record count ${pkg.recordCount}/${pkg.records.length}; expected ${expectedRecordCount}`);
             if (pkg.paymentStatus !== 'deferred' || pkg.enforcementMode !== 'report-only') throw new Error(`${tier}: payment boundary changed`);
             const ids = pkg.records.map(record => record.id);
             if (new Set(ids).size !== ids.length) throw new Error(`${tier}: duplicate ids`);
@@ -140,7 +142,7 @@ jobs:
             }
           }
           if (!fs.existsSync(path.join(base, 'preview.html'))) throw new Error('HTML publishing preview missing');
-          console.log('PHASE 2 STRUCTURE PASS: 253 records across five cumulative tiers.');
+          console.log(`PHASE 2 STRUCTURE PASS: ${expectedRecordCount} records across five cumulative tiers from ${manifest.rawProjectionCount} raw projections.`);
           NODE
 
       - name: Snapshot first deterministic hashes

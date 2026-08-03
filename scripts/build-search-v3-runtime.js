@@ -20,7 +20,7 @@ const compactionProfiles = [
   { id: 'ultra-safe', title: 116, description: 48, listItems: 6, listChars: 28, scalar: 52, sourceUrl: 200, sparseDefaults: true, mergeTerms: true, termItems: 8 },
   { id: 'minimum-route-safe', title: 104, description: 24, listItems: 5, listChars: 24, scalar: 44, sourceUrl: 150, sparseDefaults: true, mergeTerms: true, termItems: 6 },
   { id: 'emergency-route-safe', title: 90, description: 0, listItems: 4, listChars: 20, scalar: 34, sourceUrl: 120, sparseDefaults: true, mergeTerms: true, termItems: 5 },
-  { id: 'deployment-safe', title: 84, description: 0, listItems: 3, listChars: 18, scalar: 30, sourceUrl: 100, sparseDefaults: true, mergeTerms: true, termItems: 4 }
+  { id: 'deployment-safe', title: 62, description: 0, listItems: 3, listChars: 14, scalar: 24, sourceUrl: 80, sparseDefaults: true, mergeTerms: true, termItems: 3 }
 ];
 
 function clean(value = '') { return String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(); }

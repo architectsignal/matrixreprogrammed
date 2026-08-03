@@ -7,6 +7,10 @@ const downloadsDir = path.join(root, 'downloads');
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 if (!fs.existsSync(downloadsDir)) fs.mkdirSync(downloadsDir, { recursive: true });
 
+// Several current public pages link to the cinematic investigation pathway map.
+// Rebuild that route on a clean checkout before quality and link audits run.
+require('./run-cinematic-link-structure.js');
+
 const ignored = new Set(['site-quality-report.html','site-freshness-report.html']);
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html') && !ignored.has(file));
 const banned = [/sales door/i,/Use this page as/i,/Archive route/i,/Database-driven archive/i,/Source:\s*data\//i,/Live generated pages/i,/generated pages/i,/placeholder copy/i,/pending functionality/i,/awaiting API/i,/author-facing/i,/ChatGPT/i,/TODO/i,/FIXME/i,/lorem ipsum/i,/coming soon/i,/Primary route/i,/Reader path/i,/source pathway/i,/download outputs/i,/JSON outputs/i,/Phase \d+/i,/generated output/i,/generated file/i,/builder/i,/scaffold/i];

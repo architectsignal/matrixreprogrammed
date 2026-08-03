@@ -59,6 +59,50 @@ function requireText(relative, markers) {
   }
 }
 
+function repairDailyPowerMissingRecordRoute() {
+  const staleRoute = 'entity-briefs/control-structure.html';
+  const canonicalRoute = 'entity-timelines/control-structure.html';
+  const canonicalTarget = path.join(root, canonicalRoute);
+  if (!fs.existsSync(canonicalTarget) || !fs.statSync(canonicalTarget).isFile()) {
+    throw new Error(`Daily Power canonical missing-record target is unavailable: ${canonicalRoute}`);
+  }
+
+  const htmlFile = path.join(root, 'daily-power-conclusions.html');
+  if (!fs.existsSync(htmlFile)) throw new Error('daily-power-conclusions.html is missing');
+  const beforeHtml = fs.readFileSync(htmlFile, 'utf8');
+  const afterHtml = beforeHtml.split(staleRoute).join(canonicalRoute);
+  if (afterHtml !== beforeHtml) fs.writeFileSync(htmlFile, afterHtml);
+  if (afterHtml.includes(staleRoute) || !afterHtml.includes(canonicalRoute)) {
+    throw new Error('Daily Power HTML did not resolve the Control Structure missing-record route');
+  }
+
+  const dataFile = path.join(root, 'data', 'daily-power-conclusions.json');
+  const data = JSON.parse(fs.readFileSync(dataFile, 'utf8'));
+  let dataChanged = false;
+  for (const conclusion of Array.isArray(data.conclusions) ? data.conclusions : []) {
+    if (conclusion.route === staleRoute) {
+      conclusion.route = canonicalRoute;
+      dataChanged = true;
+    }
+    if (conclusion.integrity && conclusion.integrity.route === staleRoute) {
+      conclusion.integrity.route = canonicalRoute;
+      dataChanged = true;
+    }
+  }
+  const renderedData = JSON.stringify(data, null, 2);
+  if (renderedData.includes(staleRoute) || !renderedData.includes(canonicalRoute)) {
+    throw new Error('Daily Power data did not resolve the Control Structure missing-record route');
+  }
+  if (dataChanged) fs.writeFileSync(dataFile, `${renderedData}\n`);
+
+  report.dailyPowerRoute = {
+    staleRoute,
+    canonicalRoute,
+    htmlChanged: afterHtml !== beforeHtml,
+    dataChanged
+  };
+}
+
 if (!fs.existsSync(site)) throw new Error('_site is missing; run the normal build first');
 
 run('scripts/expand-death-files-100.js');
@@ -97,6 +141,10 @@ copy('behind-the-curtain-capstone.html');
 run('scripts/reconcile-power-family-capstone.js');
 run('scripts/patch-power-family-public-gateways.js');
 run('scripts/reconcile-release-homepage-order.js');
+repairDailyPowerMissingRecordRoute();
+copy('daily-power-conclusions.html');
+copy('data/daily-power-conclusions.json');
+copy('entity-timelines/control-structure.html');
 
 const deathData = JSON.parse(fs.readFileSync(path.join(root, 'data', 'death-files.json'), 'utf8'));
 if (!Array.isArray(deathData.dossiers) || deathData.dossiers.length !== 100) {
@@ -123,6 +171,8 @@ requireText('death-files.html', ['THE DEATH FILES.', 'id="dossiers"', 'death-fil
 requireText('death-files-pattern-lab.html', ['DEATH PATTERN LAB.', 'A cluster is not a conspiracy']);
 requireText('death-files-methodology.html', ['HOW THE DEATH FILES WORK.', 'Three-Layer Conclusion System']);
 requireText('behind-the-curtain-capstone.html', ['id="wallenberg-ecosystem"', 'id="investor-ownership"', 'id="investor-board"']);
+requireText('daily-power-conclusions.html', ['entity-timelines/control-structure.html', 'Most important missing record']);
+requireText('entity-timelines/control-structure.html', ['CONTROL STRUCTURE', 'Evidence boundary']);
 
 for (const relative of dossierPages) {
   const content = fs.readFileSync(path.join(root, relative), 'utf8');
@@ -131,7 +181,7 @@ for (const relative of dossierPages) {
 const capstone = fs.readFileSync(path.join(root, 'behind-the-curtain-capstone.html'), 'utf8');
 if (capstone.includes('search-system.js')) throw new Error('Capstone still references missing search-system.js');
 
-for (const relative of ['index.html', 'independent-links.html', 'elite-family-tracker.html', 'death-files.html', 'death-files-pattern-lab.html', 'death-files-methodology.html', 'behind-the-curtain-capstone.html']) {
+for (const relative of ['index.html', 'independent-links.html', 'elite-family-tracker.html', 'death-files.html', 'death-files-pattern-lab.html', 'death-files-methodology.html', 'behind-the-curtain-capstone.html', 'daily-power-conclusions.html', 'entity-timelines/control-structure.html']) {
   const deployed = path.join(site, relative);
   if (!fs.existsSync(deployed)) throw new Error(`Deployable core route missing: _site/${relative}`);
 }
@@ -140,14 +190,18 @@ for (const marker of ['matrix-construction-banner', 'death-files.html', 'indepen
   if (!deployedHome.includes(marker)) throw new Error(`Deployable homepage lost protected marker: ${marker}`);
 }
 if (deployedHome.includes('track-the-families.html')) throw new Error('Deployable homepage still references obsolete Track the Families route');
+const deployedDailyPower = fs.readFileSync(path.join(site, 'daily-power-conclusions.html'), 'utf8');
+if (deployedDailyPower.includes('entity-briefs/control-structure.html') || !deployedDailyPower.includes('entity-timelines/control-structure.html')) {
+  throw new Error('Deployable Daily Power page contains a stale Control Structure route');
+}
 
 report.ok = true;
 report.deathDossiers = deathData.dossiers.length;
 report.deathPages = ['death-files.html', ...generatedDeathPages];
-report.protectedRoutes = ['/', '/independent-links.html', '/elite-family-tracker.html', '/death-files.html', '/behind-the-curtain-capstone.html', ...generatedDeathPages.map(name => `/${name}`)];
+report.protectedRoutes = ['/', '/independent-links.html', '/elite-family-tracker.html', '/death-files.html', '/behind-the-curtain-capstone.html', '/daily-power-conclusions.html', '/entity-timelines/control-structure.html', ...generatedDeathPages.map(name => `/${name}`)];
 report.existingIntroPreserved = true;
 report.canonicalHomepageOwnerAppliedLast = true;
 report.canonicalPowerFamilyOwnerAppliedLast = true;
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Core public surfaces finalized: construction banner, Top 100 Links, live family tracker and exactly ${dossierPages.length} readable Death Files dossiers copied into the Cloudflare bundle; canonical homepage and capstone owners were applied last.`);
+console.log(`Core public surfaces finalized: construction banner, Top 100 Links, live family tracker, Daily Power missing-record route and exactly ${dossierPages.length} readable Death Files dossiers copied into the Cloudflare bundle; canonical homepage and capstone owners were applied last.`);

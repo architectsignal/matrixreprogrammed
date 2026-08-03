@@ -30,6 +30,12 @@ jobs:
     environment: production
     timeout-minutes: 120
     steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
       - name: Confirm explicit manual production release
         shell: bash
         run: |
@@ -42,12 +48,6 @@ jobs:
             echo 'Production release refused: automated workflow dispatches are not release authority.'
             exit 1
           }
-
-      - name: Checkout latest main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
 
       - name: Enforce Cloudflare budget or one-day owner exception
         env:

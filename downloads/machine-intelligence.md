@@ -1,21 +1,15 @@
 # Machine Intelligence
 
-Updated: 2026-08-03T10:05:09.116Z
+Updated: 2026-08-03T15:15:26.167Z
 
 Current records: 18
-Previous records: 12
-New records: 6
+Previous records: 18
+New records: 0
 Changed records: 0
 Relationship candidates: 25
 
 ## New Records
 
-- charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
-- charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
-- charged / sued: Civil Rights Corps v. LaSalle — courtlistener-court-records — https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/
-- charged / sued: United States v. Anten — courtlistener-court-records — https://www.courtlistener.com/opinion/10935302/united-states-v-anten/
-- charged / sued: Punxsutawney Hunting Club v. PGC — courtlistener-court-records — https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/
-- charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
 
 ## Relationship Candidates
 

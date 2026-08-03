@@ -61,15 +61,20 @@ jobs:
           const member = fs.readFileSync('src/worker-member-experience.js', 'utf8');
           const forum = fs.readFileSync('src/worker-forum-persistence.js', 'utf8');
           const client = fs.readFileSync('forum.js', 'utf8');
+          const repairSource = fs.readFileSync('scripts/repair-forum-member-posting.js', 'utf8');
+          const versionMatch = repairSource.match(/const VERSION = '([^']+)'/);
+          assert(versionMatch, 'canonical forum client version owner missing');
+          const clientAsset = `forum.js?v=${versionMatch[1]}`;
           assert(legacy.includes('matrix_session_v2='), 'shared v2 cookie missing');
           assert(legacy.includes('authClearCookies()'), 'dual-cookie logout missing');
           assert(member.includes("cookieValue(request,'matrix_session_v2')||cookieValue(request,'matrix_session')"), 'member session fallback missing');
           assert(forum.includes('D1 forum read-after-write confirmation failed'), 'D1 read-after-write gate missing');
           assert(!forum.includes('INSERT OR IGNORE INTO forum_posts'), 'silent forum insert remains');
           assert((client.match(/credentials:'include'/g) || []).length >= 4, 'credentialed forum requests missing');
+          assert(/fetch\(\s*['"]\/api\/member\/me[\s\S]{0,260}?credentials\s*:\s*['"]include['"]/m.test(client), 'credentialed member-session check missing');
           assert(client.includes("data.saved !== true"), 'client accepts unconfirmed save');
           for (const page of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html']) {
-            assert(fs.readFileSync(page, 'utf8').includes('forum.js?v=20260720-forum-member-posting-v3'), `${page} is not cache-busted`);
+            assert(fs.readFileSync(page, 'utf8').includes(clientAsset), `${page} is not cache-busted with ${clientAsset}`);
           }
           NODE
 

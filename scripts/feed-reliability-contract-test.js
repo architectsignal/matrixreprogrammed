@@ -20,7 +20,13 @@ const deadUrls = [
 ];
 
 need(feeds.length === 7, `Expected seven maintained public-record feeds; found ${feeds.length}`);
-for (const dead of deadUrls) need(!JSON.stringify(feeds).includes(dead), `Retired failing feed remains configured: ${dead}`);
+const configuredUrls = feeds.map(feed => String(feed.url || '').trim());
+for (const dead of deadUrls) need(!configuredUrls.includes(dead), `Retired failing feed remains configured: ${dead}`);
+
+const replacementHistory = feeds.map(feed => String(feed.replacementFor || '').trim()).filter(Boolean);
+need(replacementHistory.length === 6, 'The six retired feed replacements are not explicitly documented');
+need(new Set(replacementHistory).size === 6, 'Replacement history contains duplicate retired endpoints');
+for (const dead of deadUrls) need(replacementHistory.includes(dead), `Retired endpoint is missing from replacement history: ${dead}`);
 
 const direct = feeds.filter(feed => feed.feedMode === 'direct-official-rss');
 const discovery = feeds.filter(feed => feed.feedMode === 'official-domain-discovery');
@@ -31,7 +37,7 @@ need(discovery.every(feed => feed.sourceTier === 'discovery'), 'Official-domain 
 need(discovery.every(feed => /news\.google\.com\/rss\/search/i.test(feed.url)), 'A discovery fallback does not use the bounded RSS discovery endpoint');
 need(feeds.every(feed => /^https:\/\//.test(feed.canonicalSource || '')), 'A maintained feed is missing its canonical source page');
 need(feeds.every(feed => /^https:\/\//.test(feed.url || '')), 'A maintained feed is missing its HTTPS collection endpoint');
-need(feeds.filter(feed => feed.replacementFor).length === 6, 'The six retired feed replacements are not explicitly documented');
+need(feeds.every(feed => !feed.replacementFor || feed.replacementFor !== feed.url), 'A replacement feed still points at the endpoint it claims to supersede');
 
 const fixtureConfig = { sourceFeeds: [
   { name: 'Direct', url: 'https://example.test/direct.xml', canonicalSource: 'https://example.test/', feedMode: 'direct-official-rss', sourceTier: 'primary-or-official' },
@@ -72,7 +78,8 @@ const output = {
   directOfficialFeeds: direct.length,
   officialDomainDiscoveryFeeds: discovery.length,
   retiredFeedsReplaced: deadUrls.length,
-  boundary: 'Agency-owned RSS may be classified as primary or official. Google News domain monitoring remains discovery until the reader opens and verifies the underlying agency page. Failed collection attempts preserve the last-good timestamp and never create synthetic freshness.',
+  replacementHistoryPreserved: replacementHistory.length,
+  boundary: 'Agency-owned RSS may be classified as primary or official. Google News domain monitoring remains discovery until the reader opens and verifies the underlying agency page. Retired URLs remain only as explicit replacement history, never as active collection endpoints. Failed collection attempts preserve the last-good timestamp and never create synthetic freshness.',
   failures
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });

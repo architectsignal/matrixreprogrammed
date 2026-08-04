@@ -49,7 +49,7 @@ const requiredSource = [
   'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-release-metadata.js',
   'migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql',
   'scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/repair-generated-site-artifacts.js','scripts/cloudflare-focused-pressure-wrapper.js',
-  'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js','scripts/verify-live-ai-management.mjs','scripts/ai-management-autonomy-test.mjs',
+  'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js','scripts/verify-live-ai-management.mjs','scripts/ai-management-autonomy-test.mjs','scripts/verify-one-shot-production-authorization.js',
   '.github/workflows/deploy.yml','.github/workflows/deploy-production.yml','.github/workflows/one-shot-dispatch-controlled-production.yml','wrangler.toml','wrangler.jsonc'
 ];
 const requiredBuilt = [
@@ -169,6 +169,7 @@ if (/"PAYPAL_[A-Z0-9_]+"\s*:/.test(wranglerJsonc)) hard.push('wrangler.jsonc con
 const canonicalDeploy = read('.github/workflows/deploy.yml');
 const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const dispatchDeploy = read('.github/workflows/one-shot-dispatch-controlled-production.yml');
+const productionAuthorization = read('scripts/verify-one-shot-production-authorization.js');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
 const aiLiveVerifier = read('scripts/verify-live-ai-management.mjs');
@@ -180,6 +181,17 @@ const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL 
 const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im;
 const d1MutationCommand = /\b(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
 const hardFreeze = [canonicalDeploy, fallbackDeploy, dispatchDeploy].every(explicitFreeze);
+const canonicalAuthorizationReady =
+  canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED')
+  && canonicalDeploy.includes('MATRIX_PRODUCTION_CONFIRMATION: ${{ inputs.confirmation }}')
+  && canonicalDeploy.includes('MATRIX_PRODUCTION_ACTOR: ${{ github.actor }}')
+  && canonicalDeploy.includes('MATRIX_WORKFLOW_EVENT: ${{ github.event_name }}')
+  && canonicalDeploy.includes('node scripts/verify-one-shot-production-authorization.js')
+  && productionAuthorization.includes("const exactConfirmation = 'DEPLOY MATRIX REPROGRAMMED';")
+  && productionAuthorization.includes('confirmation === exactConfirmation')
+  && productionAuthorization.includes("eventName === 'workflow_dispatch'")
+  && productionAuthorization.includes('resolveFirstParentMarkerCommit')
+  && productionAuthorization.includes("merge-base', '--is-ancestor");
 if (hardFreeze) {
   for (const [label, workflow] of [['canonical', canonicalDeploy], ['fallback', fallbackDeploy], ['dispatcher', dispatchDeploy]]) {
     if (!workflow.includes('workflow_dispatch:') || /^\s*(?:push|pull_request|schedule):/m.test(workflow)) hard.push(`${label} frozen workflow must be manual only`);
@@ -193,7 +205,7 @@ if (hardFreeze) {
   }
 } else {
   if (!canonicalDeploy.includes('workflow_dispatch:') || /^\s*(?:push|pull_request):/m.test(canonicalDeploy)) hard.push('canonical deploy must be manually dispatched only');
-  if (!canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED') || !canonicalDeploy.includes('Production release refused: confirmation text did not match.')) hard.push('canonical deploy missing exact owner confirmation gate');
+  if (!canonicalAuthorizationReady) hard.push('canonical deploy missing guarded owner/one-shot confirmation authority');
   if (!canonicalDeploy.includes('group: matrixreprogrammed-production') || !/cancel-in-progress:\s*false/.test(canonicalDeploy)) hard.push('canonical deploy must queue and never interrupt D1 migrations');
   if (!canonicalDeploy.includes('d1 time-travel info matrix-members --json') || !canonicalDeploy.includes('d1-rollback-proof.json') || !canonicalDeploy.includes('restoreCommand') || canonicalDeploy.includes('d1 export matrix-members --remote')) hard.push('canonical deploy missing validated D1 Time Travel rollback');
   const preservesSandbox = canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal');
@@ -238,7 +250,7 @@ const report = {
   deploymentMode: hardFreeze ? 'hard-freeze' : 'deployment-enabled',
   deploymentModel: hardFreeze
     ? 'Cloudflare production is hard frozen. Canonical, fallback and dispatcher workflows are manual, inert and mutation-free while Git intelligence updates continue.'
-    : 'One manually confirmed canonical release is active. The fallback remains hard frozen and the dispatcher cannot mutate Cloudflare or D1 directly.',
+    : 'One guarded canonical Cloudflare release is active through explicit human dispatch or a fresh repository-owned one-shot marker. The fallback remains hard frozen and the dispatcher cannot mutate Cloudflare or D1 directly.',
   rollbackModel: hardFreeze
     ? 'No D1 migration is permitted while frozen; migration and rollback readiness assets remain preserved for a future explicitly restored deployment workflow.'
     : 'The canonical release captures a validated Cloudflare D1 Time Travel bookmark before migrations with an exact restore command.',
@@ -249,7 +261,7 @@ const report = {
   paymentStatus: 'PayPal runtime values are dashboard-managed and deployment-preserved; the Worker creates subscriptions and redirects to the official approval URL while checkout still requires credentials, the matching environment switch, D1 activation, live confirmation and three active plans.',
   boundary: hardFreeze
     ? 'Production is blocked unless all three workflow locks are deliberately replaced. Any executable Wrangler deploy, D1 mutation, automatic trigger or PayPal activation inside a frozen workflow fails this guard.'
-    : 'Deployment is blocked on automatic canonical triggers, missing owner confirmation, interruptible canonical migration concurrency, missing rollback protection, a mutable fallback, direct dispatcher mutation, legacy health overwrite, stale or absent release metadata aliases, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction, prompt transfer, paid AI fallback or unguarded payment activation.'
+    : 'Deployment is blocked on automatic canonical triggers, missing guarded confirmation authority, interruptible canonical migration concurrency, missing rollback protection, a mutable fallback, direct dispatcher mutation, legacy health overwrite, stale or absent release metadata aliases, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction, prompt transfer, paid AI fallback or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));
@@ -278,4 +290,4 @@ if (hard.length) {
 }
 console.log(hardFreeze
   ? `PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)}: production workflows are hard frozen, mutation-free and release readiness remains preserved.`
-  : `PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with final release metadata aliases, manual confirmation, a non-interrupting canonical migration queue, Time Travel rollback, frozen fallback, strict D1 forums, prompt-local zero-spend AI and SDK-free runtime-gated PayPal.`);
+  : `PRODUCTION DEPLOY GUARD PASSED for ${String(expectedSha).slice(0, 12)} with final release metadata aliases, guarded human/one-shot authorization, a non-interrupting canonical migration queue, Time Travel rollback, frozen fallback, strict D1 forums, prompt-local zero-spend AI and SDK-free runtime-gated PayPal.`);

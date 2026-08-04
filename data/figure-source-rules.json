@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-24",
-  "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.",
+  "updated": "2026-08-04",
+  "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules identify the source family and publication boundary; high-stakes figures still require the attributable record date and public review before promotion.",
   "defaultAction": "flag-for-review",
   "rules": [
     {
@@ -10,8 +10,13 @@
       "figurePatterns": ["feeds", "items", "source lanes", "updates", "bulletins"],
       "sourceType": "rss-feed-lane",
       "sourceFiles": ["data/live-intel-sources.json", "data/live-intel.json"],
+      "sourceName": "Live Intel generated source ledger",
+      "publisher": "Matrix Reprogrammed source collector",
+      "sourceDatePolicy": "report-generated-at",
+      "scope": "Counts of collected feed items, source lanes, updates and bulletins only; not the truth of every underlying claim.",
+      "evidenceClassification": "site-generated-operational-count",
       "updatePolicy": "auto-update-allowed",
-      "reviewNote": "Feed-derived counts may update weekly through the Live Intel Action because they come from the generated data object, not hand-written claims."
+      "reviewNote": "Feed-derived counts may update through the Live Intel Action because they come from the generated source ledger, not hand-written claims."
     },
     {
       "id": "epstein-watch-counts",
@@ -20,8 +25,13 @@
       "figurePatterns": ["source lanes", "bulletins", "sources"],
       "sourceType": "site-owned-source-watch-data",
       "sourceFiles": ["data/epstein-evidence-watch.json"],
+      "sourceName": "Epstein Evidence Watch registry",
+      "publisher": "Matrix Reprogrammed",
+      "sourceDatePolicy": "per-record-source-date-required",
+      "scope": "Source-lane and bulletin counts only; no inference about a named person's knowledge, conduct or guilt.",
+      "evidenceClassification": "site-owned-source-watch-count",
       "updatePolicy": "manual-review-before-public-claim",
-      "reviewNote": "Counts generated from the Epstein source-watch file can update, but claims about people or wrongdoing must remain evidence-boundary protected."
+      "reviewNote": "Counts generated from the source-watch file can update, but claims about people, victims or wrongdoing require role context and human review."
     },
     {
       "id": "human-cost-dashboard",
@@ -30,8 +40,13 @@
       "figurePatterns": ["deaths", "claims", "cases", "%", "million", "billion"],
       "sourceType": "external-statistical-source-required",
       "sourceFiles": ["data/human-cost.json"],
+      "sourceName": "Human Cost source registry",
+      "publisher": "Named original public authority required",
+      "sourceDatePolicy": "per-record-source-date-required",
+      "scope": "Deaths, cases, claims, compensation and other human-cost figures with jurisdiction and period context.",
+      "evidenceClassification": "official-or-primary-statistical-record-required",
       "updatePolicy": "manual-review-only",
-      "reviewNote": "Human cost figures are high-risk. Update only when the source file contains a dated source label and the statistic is checked against the original public source."
+      "reviewNote": "Human-cost figures are high-risk. Update only when the source record contains a named publisher and date and has been checked against the original public source."
     },
     {
       "id": "migration-dashboard",
@@ -40,8 +55,13 @@
       "figurePatterns": ["migrants", "refugees", "asylum", "border", "%", "million"],
       "sourceType": "official-statistical-source-required",
       "sourceFiles": ["data/migration*.json", "data/human-cost.json"],
+      "sourceName": "Migration source registry",
+      "publisher": "Named official statistical authority required",
+      "sourceDatePolicy": "per-record-source-date-required",
+      "scope": "Migration, asylum, border and related crime figures separated by country, period, population and offence definition.",
+      "evidenceClassification": "dated-official-statistical-source-required",
       "updatePolicy": "manual-review-only",
-      "reviewNote": "Migration figures must be tied to dated official datasets or named reports. Do not auto-rewrite from generic news snippets."
+      "reviewNote": "Migration figures must be tied to dated official datasets or named reports. Generic news snippets cannot authorize a public number change."
     },
     {
       "id": "vaccine-claims-payouts",
@@ -50,8 +70,13 @@
       "figurePatterns": ["claims", "payouts", "injury", "death", "deaths", "%", "$", "€", "£"],
       "sourceType": "official-compensation-or-regulatory-source-required",
       "sourceFiles": ["data/human-cost.json"],
+      "sourceName": "Health compensation and regulatory source registry",
+      "publisher": "Named compensation authority, regulator or public-health agency required",
+      "sourceDatePolicy": "per-record-source-date-required",
+      "scope": "Claims, awards, alleged injuries, deaths and rates with scheme, jurisdiction, eligibility and period boundaries.",
+      "evidenceClassification": "official-health-or-regulatory-source-required",
       "updatePolicy": "manual-review-only",
-      "reviewNote": "Health-related figures are high-stakes. Flag weekly, but require official compensation/regulatory source review before publication changes."
+      "reviewNote": "Health-related figures are high-stakes. Flag automatically, but require the attributable official record and human review before publication changes."
     },
     {
       "id": "book-counts-and-site-inventory",
@@ -60,8 +85,13 @@
       "figurePatterns": ["books", "pages", "packs", "feeds", "offers", "briefs", "outputs"],
       "sourceType": "site-generated-inventory",
       "sourceFiles": ["data/books.json", "search-index.json"],
+      "sourceName": "Generated book and route inventory",
+      "publisher": "Matrix Reprogrammed build system",
+      "sourceDatePolicy": "report-generated-at",
+      "scope": "Repository-owned inventory counts only.",
+      "evidenceClassification": "site-generated-operational-count",
       "updatePolicy": "auto-update-allowed",
-      "reviewNote": "Site inventory counts can update automatically because they are derived from generated site data."
+      "reviewNote": "Site inventory counts can update automatically because they are derived from generated repository data."
     },
     {
       "id": "crime-state-figures",
@@ -70,8 +100,13 @@
       "figurePatterns": ["indictment", "arrests", "money", "$", "€", "£", "million", "billion", "claims", "cases"],
       "sourceType": "court-or-official-release-required",
       "sourceFiles": ["data/evidence-vault.json", "data/power-atlas.json"],
+      "sourceName": "Court and official-release source registry",
+      "publisher": "Named court, prosecutor, regulator or public agency required",
+      "sourceDatePolicy": "per-record-source-date-required",
+      "scope": "Allegations, charges, convictions, seizures, arrests, prosecutions and attributed criminal-network figures.",
+      "evidenceClassification": "court-or-official-record-required",
       "updatePolicy": "manual-review-only",
-      "reviewNote": "Crime and prosecution figures must come from court records, official releases, or cited public-record sources before updating."
+      "reviewNote": "Crime and prosecution figures must come from attributable court records, official releases or cited primary public records before updating."
     },
     {
       "id": "static-historical-context",
@@ -80,8 +115,13 @@
       "figurePatterns": ["18", "19", "20"],
       "sourceType": "static-context",
       "sourceFiles": [],
+      "sourceName": "Page-attached historical source",
+      "publisher": "Named archival or publication source required",
+      "sourceDatePolicy": "preserve-existing-historical-date",
+      "scope": "Historical years, publication dates and archival context already attached to the page.",
+      "evidenceClassification": "static-historical-context",
       "updatePolicy": "do-not-auto-update",
-      "reviewNote": "Historical years, publication dates, and context dates should not be rewritten by freshness automation."
+      "reviewNote": "Historical years, publication dates and context dates must not be rewritten by freshness automation."
     }
   ]
 }

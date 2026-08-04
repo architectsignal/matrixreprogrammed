@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-08-04T14:39:14.323Z
+Updated: 2026-08-04T19:55:57.374Z
 
 ## Evidence-led conclusion
 

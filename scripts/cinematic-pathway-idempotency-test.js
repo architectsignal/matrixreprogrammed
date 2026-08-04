@@ -17,6 +17,17 @@ function read(relative) { return fs.readFileSync(path.join(temporaryRoot, relati
 function hash(relative) { return crypto.createHash('sha256').update(read(relative)).digest('hex'); }
 function assert(condition, message) { if (!condition) throw new Error(message); }
 function count(source, expression) { return (source.match(expression) || []).length; }
+function countExactClassToken(source, className, tagName = '') {
+  const expression = /<([a-z][a-z0-9:-]*)\b[^>]*\bclass\s*=\s*(["'])([^"']*)\2[^>]*>/gi;
+  const wantedTag = String(tagName || '').toLowerCase();
+  let total = 0;
+  let match;
+  while ((match = expression.exec(source))) {
+    if (wantedTag && match[1].toLowerCase() !== wantedTag) continue;
+    if (match[3].trim().split(/\s+/).filter(Boolean).includes(className)) total += 1;
+  }
+  return total;
+}
 function runFinalizer() {
   const result = spawnSync(process.execPath, [finalizer], {
     cwd: temporaryRoot,
@@ -29,8 +40,8 @@ function runFinalizer() {
 }
 
 const legacySection = '<section class="matrix-pathways" aria-labelledby="matrix-pathways-title"><div><h2 id="matrix-pathways-title">Legacy duplicate</h2><p>Remove this duplicate.</p></div></section>';
-const canonicalSection = '<!-- cinematic-pathways:start --><section class="matrix-pathways extra" aria-labelledby="matrix-pathways-title"><div><h2 id="matrix-pathways-title">Canonical pathway</h2><p>Preserve this selected content.</p></div></section><!-- cinematic-pathways:end -->';
-const secondMarker = '<!-- cinematic-pathways:start --><section class="matrix-pathways" aria-labelledby="matrix-pathways-title-old"><div><h2 id="matrix-pathways-title-old">Newest canonical pathway</h2><p>Keep the newest marker block.</p></div></section><!-- cinematic-pathways:end -->';
+const canonicalSection = '<!-- cinematic-pathways:start --><section class="matrix-pathways extra" aria-labelledby="matrix-pathways-title"><div class="matrix-pathways-head"><span class="matrix-pathways-eyebrow">Investigate</span><h2 id="matrix-pathways-title">Canonical pathway</h2><a class="matrix-pathways-map-link" href="investigation-pathways.html">Map</a></div><div class="matrix-pathways-sequence">Discover · Verify</div><p class="matrix-pathways-boundary">Preserve this selected content.</p></section><!-- cinematic-pathways:end -->';
+const secondMarker = '<!-- cinematic-pathways:start --><section class="matrix-pathways" aria-labelledby="matrix-pathways-title-old"><div class="matrix-pathways-head"><span class="matrix-pathways-eyebrow">Newest</span><h2 id="matrix-pathways-title-old">Newest canonical pathway</h2><a class="matrix-pathways-map-link" href="investigation-pathways.html">Map</a></div><div class="matrix-pathways-sequence">Discover · Verify</div><p class="matrix-pathways-boundary">Keep the newest marker block.</p></section><!-- cinematic-pathways:end -->';
 const fixture = `<!doctype html><html><head><title>Black File</title></head><body><main><h1>Black File</h1>${legacySection}${canonicalSection}${secondMarker}</main><footer>Footer</footer></body></html>`;
 const nestedFixture = `<!doctype html><html><body><main><h1>Nested</h1>${legacySection}${canonicalSection}</main></body></html>`;
 const untouched = '<!doctype html><html><body><main><h1>No cinematic pathways</h1></main></body></html>';
@@ -52,7 +63,12 @@ try {
 
   for (const relative of files.slice(0, 4)) {
     const html = read(relative);
-    assert(count(html, /class=["'][^"']*\bmatrix-pathways\b[^"']*["']/gi) === 1, `${relative}: expected one pathway section.`);
+    assert(countExactClassToken(html, 'matrix-pathways', 'section') === 1, `${relative}: expected one pathway section.`);
+    assert(countExactClassToken(html, 'matrix-pathways-head') === 1, `${relative}: descendant pathway classes were not preserved.`);
+    assert(countExactClassToken(html, 'matrix-pathways-eyebrow') === 1, `${relative}: pathway eyebrow was not preserved.`);
+    assert(countExactClassToken(html, 'matrix-pathways-map-link') === 1, `${relative}: pathway map link was not preserved.`);
+    assert(countExactClassToken(html, 'matrix-pathways-sequence') === 1, `${relative}: pathway sequence was not preserved.`);
+    assert(countExactClassToken(html, 'matrix-pathways-boundary') === 1, `${relative}: pathway boundary was not preserved.`);
     assert(count(html, /<!--\s*cinematic-pathways:start\s*-->/gi) === 1, `${relative}: expected one start marker.`);
     assert(count(html, /<!--\s*cinematic-pathways:end\s*-->/gi) === 1, `${relative}: expected one end marker.`);
     assert(count(html, /id=["']matrix-pathways-title-black-file["']/gi) === 1, `${relative}: expected one route-specific title ID.`);
@@ -65,7 +81,7 @@ try {
 
   for (const relative of files.slice(4)) {
     const html = read(relative);
-    assert(count(html, /class=["'][^"']*\bmatrix-pathways\b[^"']*["']/gi) === 1, `${relative}: expected one nested pathway section.`);
+    assert(countExactClassToken(html, 'matrix-pathways', 'section') === 1, `${relative}: expected one nested pathway section.`);
     assert(count(html, /id=["']matrix-pathways-title-books-example["']/gi) === 1, `${relative}: expected a nested route-specific title ID.`);
     assert(/aria-labelledby=["']matrix-pathways-title-books-example["']/i.test(html), `${relative}: nested aria-labelledby mismatch.`);
   }

@@ -22,6 +22,19 @@ function sectionRegex(flags = 'gi') { return new RegExp(sectionPattern, flags); 
 function normalizeRoute(value) { return String(value || '').split(path.sep).join('/'); }
 function escapeRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
+function countExactClassToken(html, className, tagName = '') {
+  const expression = /<([a-z][a-z0-9:-]*)\b[^>]*\bclass\s*=\s*(["'])([^"']*)\2[^>]*>/gi;
+  const wantedTag = String(tagName || '').toLowerCase();
+  let count = 0;
+  let match;
+  while ((match = expression.exec(String(html || '')))) {
+    if (wantedTag && match[1].toLowerCase() !== wantedTag) continue;
+    const tokens = match[3].trim().split(/\s+/).filter(Boolean);
+    if (tokens.includes(className)) count += 1;
+  }
+  return count;
+}
+
 function routeSlug(relative) {
   const withoutHtml = normalizeRoute(relative).replace(/\.html$/i, '');
   const slug = withoutHtml
@@ -119,7 +132,10 @@ function finalizeHtml(html, relative) {
   clean = clean.replace(sectionRegex('gi'), '');
   const next = insertBeforeBoundary(clean, canonicalBlock);
 
-  const sectionCount = (next.match(/class=["'][^"']*\bmatrix-pathways\b[^"']*["']/gi) || []).length;
+  // A word-boundary regex also matches descendant classes such as
+  // matrix-pathways-head and matrix-pathways-boundary. Count the exact class
+  // token on <section> elements so a valid full pathway block is not rejected.
+  const sectionCount = countExactClassToken(next, 'matrix-pathways', 'section');
   const canonicalIdCount = (next.match(new RegExp(`\\bid=["']${escapeRegExp(titleId)}["']`, 'gi')) || []).length;
   const legacyIdCount = (next.match(/\bid=["']matrix-pathways-title["']/gi) || []).length;
   if (sectionCount !== 1) throw new Error(`${relative}: expected one cinematic pathway section, found ${sectionCount}.`);
@@ -179,4 +195,4 @@ fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 console.log(`Cinematic pathway ID finalization passed: ${results.length} page(s) checked, ${changed.length} normalized, ${duplicatesRemoved} duplicate section(s) removed.`);
 
-module.exports = { finalizeHtml, routeSlug };
+module.exports = { finalizeHtml, routeSlug, countExactClassToken };

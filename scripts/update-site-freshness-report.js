@@ -245,7 +245,8 @@ function buildReviewItem(page, figure, category) {
   let publicReviewStatus = 'verification-pending';
   if (!rule) publicReviewStatus = 'verification-pending';
   else if (metadata.updatePolicy === 'do-not-auto-update') publicReviewStatus = 'static-context-no-update';
-  else if (metadata.updatePolicy === 'auto-update-allowed' && missingBeforeStatus.length === 0) {
+  else if (missingBeforeStatus.length > 0) publicReviewStatus = 'verification-pending';
+  else if (metadata.updatePolicy === 'auto-update-allowed') {
     publicReviewStatus = 'eligible-controlled-refresh';
   } else if (/manual-review/.test(metadata.updatePolicy || '')) {
     publicReviewStatus = 'manual-review-required';

@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-08-03T16:11:28.713Z",
+  "checkedAt": "2026-08-04T16:17:48.648Z",
   "ok": true,
   "status": "success",
-  "workflowRunId": 30829403131,
+  "workflowRunId": 30927901433,
   "runAttempt": 1,
-  "headSha": "5ef11b375eabef539d532dee8553c3c7b380c5cf",
+  "headSha": "097788e4c4cee4624376a3d50e4543151c901d01",
   "reconciliation": {
     "ok": true,
-    "generatedAt": "2026-08-03T16:11:22.415Z",
+    "generatedAt": "2026-08-04T16:17:42.967Z",
     "actions": [
       {
         "type": "run",
@@ -30,7 +30,7 @@
         "target": "search-index.json",
         "routes": 6,
         "format": "compact",
-        "sizeMiB": 21.97
+        "sizeMiB": 1.11
       },
       {
         "type": "patch",
@@ -92,7 +92,7 @@
           "--output"
         ],
         "status": 0,
-        "stdout": "Public marker scrub complete: 150 HTML file(s) patched across 3473 HTML surfaces; valid public routes preserved.\n",
+        "stdout": "Public residue scrub complete: 96 HTML file(s) patched; 3483 HTML document(s) verified across 3485 candidate route files. Compatibility/internal payloads, retired forum-export references and malformed reader fields are absent from public HTML.\n",
         "stderr": ""
       },
       {
@@ -108,7 +108,7 @@
       {
         "name": "compact search index remains under 22 MiB",
         "ok": true,
-        "detail": "21.97 MiB"
+        "detail": "1.11 MiB"
       },
       {
         "name": "nine documented family structures",
@@ -315,7 +315,7 @@
   },
   "productionGuard": {
     "ok": true,
-    "checkedAt": "2026-08-03T16:11:24.558Z",
+    "checkedAt": "2026-08-04T16:17:45.074Z",
     "hardIssues": [],
     "broadPeopleCount": 80,
     "pyramidLevels": 12,
@@ -330,7 +330,7 @@
   },
   "publicGateways": {
     "ok": true,
-    "generatedAt": "2026-08-03T16:11:22.391Z",
+    "generatedAt": "2026-08-04T16:17:42.942Z",
     "verified": [
       "index.html",
       "start-here.html",
@@ -351,7 +351,7 @@
   },
   "newsletter": {
     "ok": true,
-    "generatedAt": "2026-08-03T16:11:22.351Z",
+    "generatedAt": "2026-08-04T16:17:42.927Z",
     "verified": [
       "newsletter.html",
       "_site/newsletter.html",
@@ -377,12 +377,14 @@
       "entity-briefs/apple-inc.html",
       "entity-briefs/avgo.html",
       "entity-briefs/broadcom-inc.html",
+      "entity-briefs/california-supreme-court.html",
       "entity-briefs/centers-for-medicare-and-medicaid-services.html",
       "entity-briefs/civil-rights-corps-v-lasalle.html",
       "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
       "entity-briefs/court-of-appeals-for-the-second-circuit.html",
       "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
       "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "entity-briefs/gilead-tenofovir-cases.html",
       "entity-briefs/googl.html",
       "entity-briefs/health-and-human-services-department.html",
       "entity-briefs/homeland-security-department.html",
@@ -392,6 +394,7 @@
       "entity-briefs/nvda.html",
       "entity-briefs/nvidia-corp.html",
       "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "entity-briefs/s283862.html",
       "entity-briefs/securities-and-exchange-commission.html",
       "entity-briefs/supreme-court-of-pennsylvania.html",
       "entity-briefs/supreme-court-of-rhode-island.html",
@@ -411,12 +414,14 @@
       "entity-exposure/apple-inc.html",
       "entity-exposure/avgo.html",
       "entity-exposure/broadcom-inc.html",
+      "entity-exposure/california-supreme-court.html",
       "entity-exposure/centers-for-medicare-and-medicaid-services.html",
       "entity-exposure/civil-rights-corps-v-lasalle.html",
       "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
       "entity-exposure/court-of-appeals-for-the-second-circuit.html",
       "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html",
       "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "entity-exposure/gilead-tenofovir-cases.html",
       "entity-exposure/googl.html",
       "entity-exposure/health-and-human-services-department.html",
       "entity-exposure/homeland-security-department.html",
@@ -426,6 +431,7 @@
       "entity-exposure/nvda.html",
       "entity-exposure/nvidia-corp.html",
       "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
+      "entity-exposure/s283862.html",
       "entity-exposure/securities-and-exchange-commission.html",
       "entity-exposure/supreme-court-of-pennsylvania.html",
       "entity-exposure/supreme-court-of-rhode-island.html",

@@ -14,10 +14,14 @@ const outputIgnored = new Set([
   'evidence-archive', 'source-snapshots', 'browsertrix-output'
 ]);
 
-const markerPattern = '<!--\\s*cinematic-pathways:start\\s*-->[\\s\\S]*?<!--\\s*cinematic-pathways:end\\s*-->\\s*';
+// Marker comments can become nested when legacy generators wrap an already
+// marked pathway block. Never remove the content between marker comments:
+// select and remove exact pathway <section> elements, then remove marker
+// comments individually. This preserves the page hero, H1 and reader copy.
+const markerCommentPattern = '<!--\\s*cinematic-pathways:(?:start|end)\\s*-->\\s*';
 const sectionPattern = '<section\\b(?=[^>]*\\bclass\\s*=\\s*["\\\'][^"\\\']*\\bmatrix-pathways\\b[^"\\\']*["\\\'])[^>]*>[\\s\\S]*?<\\/section>\\s*';
 
-function markerRegex(flags = 'gi') { return new RegExp(markerPattern, flags); }
+function markerCommentRegex(flags = 'gi') { return new RegExp(markerCommentPattern, flags); }
 function sectionRegex(flags = 'gi') { return new RegExp(sectionPattern, flags); }
 function normalizeRoute(value) { return String(value || '').split(path.sep).join('/'); }
 function escapeRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -116,25 +120,30 @@ function insertBeforeBoundary(html, block) {
 function finalizeHtml(html, relative) {
   if (!/matrix-pathways/i.test(html)) return { html, changed: false, sectionsBefore: 0 };
 
-  const markers = [...html.matchAll(markerRegex('gi'))].map(match => match[0]);
+  const markerComments = [...html.matchAll(markerCommentRegex('gi'))].map(match => match[0]);
   const sections = [...html.matchAll(sectionRegex('gi'))].map(match => match[0]);
-  if (!markers.length && !sections.length) return { html, changed: false, sectionsBefore: 0 };
+  if (!sections.length) {
+    const cleanMarkers = html.replace(markerCommentRegex('gi'), '');
+    return {
+      html: cleanMarkers,
+      changed: cleanMarkers !== html,
+      sectionsBefore: 0,
+      markerCommentsBefore: markerComments.length,
+      duplicatesRemoved: 0
+    };
+  }
 
-  const selectedBlock = markers.at(-1) || sections.at(-1);
-  const selectedSection = selectedBlock.match(sectionRegex('i'))?.[0] || '';
-  if (!selectedSection) throw new Error(`${relative}: could not extract the cinematic pathway section.`);
-
+  const selectedSection = sections.at(-1);
   const titleId = `matrix-pathways-title-${routeSlug(relative)}`;
   const section = canonicalSection(selectedSection, titleId);
   const canonicalBlock = `<!-- cinematic-pathways:start -->${section}<!-- cinematic-pathways:end -->`;
 
-  let clean = html.replace(markerRegex('gi'), '');
-  clean = clean.replace(sectionRegex('gi'), '');
+  // Remove only exact pathway sections and marker comments. A block regex from
+  // start to end would delete arbitrary page content when markers are nested.
+  let clean = html.replace(sectionRegex('gi'), '');
+  clean = clean.replace(markerCommentRegex('gi'), '');
   const next = insertBeforeBoundary(clean, canonicalBlock);
 
-  // A word-boundary regex also matches descendant classes such as
-  // matrix-pathways-head and matrix-pathways-boundary. Count the exact class
-  // token on <section> elements so a valid full pathway block is not rejected.
   const sectionCount = countExactClassToken(next, 'matrix-pathways', 'section');
   const canonicalIdCount = (next.match(new RegExp(`\\bid=["']${escapeRegExp(titleId)}["']`, 'gi')) || []).length;
   const legacyIdCount = (next.match(/\bid=["']matrix-pathways-title["']/gi) || []).length;
@@ -146,7 +155,7 @@ function finalizeHtml(html, relative) {
     html: next,
     changed: next !== html,
     sectionsBefore: sections.length,
-    markerBlocksBefore: markers.length,
+    markerCommentsBefore: markerComments.length,
     titleId,
     duplicatesRemoved: Math.max(0, sections.length - 1)
   };
@@ -166,7 +175,7 @@ function processRoot(base, label, ignoredDirectories) {
       root: label,
       changed: result.changed,
       sectionsBefore: result.sectionsBefore,
-      markerBlocksBefore: result.markerBlocksBefore || 0,
+      markerCommentsBefore: result.markerCommentsBefore || 0,
       duplicatesRemoved: result.duplicatesRemoved || 0,
       titleId: result.titleId || ''
     });
@@ -189,7 +198,7 @@ const report = {
   changed: changed.length,
   duplicatesRemoved,
   files: results,
-  boundary: 'Every document receives at most one cinematic pathway section and one deterministic route-specific heading ID. The content and evidence boundary of the selected canonical section are preserved.'
+  boundary: 'Every document receives at most one cinematic pathway section and one deterministic route-specific heading ID. Nested marker comments cannot consume the page hero, H1, evidence content or reader copy.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);

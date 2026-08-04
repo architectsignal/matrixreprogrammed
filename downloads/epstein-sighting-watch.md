@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-03T19:57:23.715Z
+Generated: 2026-08-04T03:36:51.130Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: low
+- Internet claim activity: medium
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -49,15 +49,15 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
-- Type: sighting-claim
+### Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity - ABC News - Breaking News, Latest News and Videos
+- Type: debunk/fake-media-risk
 - Status: unverified-claim
-- Evidence level: 3
+- Evidence level: 5
 - Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
-- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
+- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQZE5ScWZ6TjZiSXNZbFdxU0toeDFERXVMNndVeDV0Vi0ya2F6Mk05MEpJVFVXMWlpR3ZzeWlCSnFFUlV5VG9laFl4TmJlYkxYTkZvNVh0ajJYdzNESC1iOEFzTWdDY2lqZElIOWdIMTdPOWdRajAtUUt5WWlia3pxbUx5SzBrN1BqaXJNSG9ETzlTRHU1VEQwQXhXNzllTW1ncXBqNTB30gGrAUFVX3lxTE5BQzkxZkhnOWhtR3hvWHltZTd4OGdXd3FQajNMNTFBNnNqRHJ2S0o1dHBWX2ctMmVjV2hISWZxd2NyRF9hWW4ydlp6eHd6QUlOR1EzVHd2azl5dmlUbkstU3F0UjhfUi1hNnlnZHlnR1N0YjRGUDRTQjdwcXNGSFgtbUwtU3JFM1BHcjdVaEhtdDBSQ3AzcHMtZ1B4OEhqRjZ1ZWNfbUUxTy03bw?oc=5
+- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
-What we know about Melania Trump and Jeffrey Epstein ABC News - Breaking News, Latest News and Videos
+Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity ABC News - Breaking News, Latest News and Videos
 
 ### Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking - ABC News - Breaking News, Latest News and Videos
 - Type: sighting-claim
@@ -68,3 +68,23 @@ What we know about Melania Trump and Jeffrey Epstein ABC News - Breaking News, L
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking ABC News - Breaking News, Latest News and Videos
+
+### Victims to settle case against Epstein's longtime attorney, accountant: Documents - ABC News - Breaking News, Latest News and Videos
+- Type: debunk/fake-media-risk
+- Status: unverified-claim
+- Evidence level: 3
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOZjdfbkxJREl6NDAxNGpDcEwtVTdYcm40akZMd0pJVWVhTzdDcG9iZXRMb0F1S0sxdHNsSU1kY3ZCUzVndU1hNTA2ZzA4emNrREh1dHFhemhZa2M5WmdnbHlWbEtzWVdUZVR1eWVkWGhpVC1oYTRoTlRtNWZMMkJ6WHpWSExyWlRZTEtrZ09ZSG02bTJyM2dpRWQ1WU41dGZzWjlyLW5CWmlWbFkwZ1HSAbMBQVVfeXFMTlpSdUlfYXZtTU5VblB4T2o1MkNoYXNlelNNYmljRndEbEJjaF9oZGx3Wk5Lc2JPVGMwLTVEZm05Z3lEQi1QTnlfNXNySnhBSWRGOThqdE9WTWhPdjAwLVBhRFhWRDVqMldyNi1vRWpMQUpwRTlmR293RnYxbmFtLTBvNm84NnpzX1JOSjQ3STZfRGZuNzlIR0xlMFN2QlB6T1cwUVB0dEs1Ui10Sy12SkZfZzQ?oc=5
+- Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
+
+Victims to settle case against Epstein's longtime attorney, accountant: Documents ABC News - Breaking News, Latest News and Videos
+
+### What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
+- Type: sighting-claim
+- Status: unverified-claim
+- Evidence level: 3
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
+- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
+
+What we know about Melania Trump and Jeffrey Epstein ABC News - Breaking News, Latest News and Videos

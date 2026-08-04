@@ -44,6 +44,9 @@ need(Array.isArray(quality.issues) && quality.issues.length === 0, 'P1 quality f
 need(routes.ok === true, 'P1 quality route report is not healthy');
 need(routes.checkedSurfaces >= 15, `Expected at least 15 quality surfaces; found ${routes.checkedSurfaces}`);
 need(Array.isArray(routes.issues) && routes.issues.length === 0, 'P1 reader routes have unresolved issues');
+need(routes.canonicalBusinessGuide === 'downloads/wealth-guides/business-builder.pdf', 'P1 route owner is not bound to the generated Business Creation guide');
+need(routes.sourceGuidePresent === true, 'P1 route owner could not verify the source Business Creation guide');
+need(routes.deployableGuidePresent === true, 'P1 route owner could not verify the deployable Business Creation guide');
 
 for (const heading of ['What this is', 'Strongest record', 'Why it matters', 'What it does not prove', 'What to do next']) {
   need(finalizer.includes(`<h3>${heading}</h3>`), `P1 quality finalizer missing section: ${heading}`);
@@ -59,8 +62,13 @@ need(finalizer.includes('Appearance in a contact book, flight log, photograph or
 need(finalizer.includes('A shared symbol does not by itself prove membership, command, secret coordination'), 'Freemasonry symbol boundary is missing');
 need(finalizer.includes('A transaction or holding does not establish beneficial control'), 'Market activity evidence boundary is missing');
 
-for (const forbidden of ['READER PATH', 'source pathway', 'Phase \\d+', '\\bbuilder\\b']) {
-  need(finalizer.includes(forbidden) || finalizer.includes(forbidden.replace('\\', '')), `P1 scaffold cleanup contract missing: ${forbidden}`);
+// Prove the cleanup owner and its reader-facing replacements exist. The test
+// must not require forbidden public phrases to remain embedded verbatim merely
+// so it can find them in source code; every rendered result below is inspected
+// independently for residual scaffold copy.
+need(finalizer.includes('function cleanScaffold'), 'P1 scaffold cleanup owner is missing');
+for (const replacement of ['INVESTIGATION ROUTE', 'Investigation Route', 'source trail', 'Research layer', "'system'"]) {
+  need(finalizer.includes(replacement), `P1 scaffold replacement is missing: ${replacement}`);
 }
 need(aliasOwner.includes("require('./finalize-p1-public-quality.js')"), 'Final route owner does not reapply P1 quality after late generators');
 need(aliasOwner.includes("require('./finalize-p1-public-quality-routes.js')"), 'Final route owner does not reapply complete P1 reader routes');
@@ -92,8 +100,8 @@ const report = {
   targetPages: expectedPages.length,
   checkedSurfaces: quality.results?.length || 0,
   readerRouteSurfaces: routes.checkedSurfaces || 0,
-  canonicalBusinessGuide: preparation.canonicalBusinessGuide,
-  boundary: 'The P1 pass improves reader comprehension and routing without changing evidence records, allegations, D1 state, membership, payments or production deployment. Every promoted download must resolve to a generated file.',
+  canonicalBusinessGuide: routes.canonicalBusinessGuide,
+  boundary: 'The P1 pass improves reader comprehension and routing without changing evidence records, allegations, D1 state, membership, payments or production deployment. Every promoted download must resolve to a generated file, and forbidden scaffold language is checked in rendered output rather than retained in production code.',
   issues
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });

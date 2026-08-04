@@ -1,0 +1,71 @@
+name: P1 Feature Maturity and Honest Empty States
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p1-feature-maturity.yml'
+      - 'data/public-answer-clocks.json'
+      - 'data/lived-consequence-receipts.json'
+      - 'data/evidence-half-life.json'
+      - 'data/power-diff.json'
+      - 'scripts/finalize-feature-maturity.js'
+      - 'scripts/feature-maturity-contract-test.js'
+      - 'scripts/finalize-public-route-aliases.js'
+      - 'public-answer-clock.html'
+      - 'lived-consequence-receipts.html'
+      - 'evidence-half-life.html'
+      - 'power-diff.html'
+      - 'index.html'
+      - 'start-here.html'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/p1-feature-maturity.yml'
+      - 'data/public-answer-clocks.json'
+      - 'data/lived-consequence-receipts.json'
+      - 'data/evidence-half-life.json'
+      - 'data/power-diff.json'
+      - 'scripts/finalize-feature-maturity.js'
+      - 'scripts/feature-maturity-contract-test.js'
+      - 'scripts/finalize-public-route-aliases.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: p1-feature-maturity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Prove pilot features remain honest and secondary
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout proposed maturity policy
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Prove honest empty states and activation boundaries
+        run: node scripts/feature-maturity-contract-test.js
+
+      - name: Upload feature maturity proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-feature-maturity-${{ github.run_id }}
+          path: |
+            data/feature-maturity.json
+            downloads/feature-maturity-report.json
+            downloads/feature-maturity-contract-test.json
+          if-no-files-found: error
+          retention-days: 30

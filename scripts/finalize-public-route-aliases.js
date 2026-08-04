@@ -33,10 +33,15 @@ function walk(directory, output = []) {
   return output;
 }
 
+const maturityReport = require('./finalize-feature-maturity.js');
+if (!maturityReport.ok) throw new Error('Feature maturity finalization failed closed before search and alias synchronization.');
+
 const report = {
   ok: false,
   generatedAt: new Date().toISOString(),
   sitePresent: fs.existsSync(site),
+  featureMaturityFinalized: maturityReport.ok === true,
+  primaryPromotionWithheld: maturityReport.primaryPromotionWithheld || [],
   searchFinalized: false,
   htmlFiles: 0,
   synchronizedAliases: 0,
@@ -44,12 +49,12 @@ const report = {
   directoryConflicts: [],
   unexpectedDirectoryConflicts: [],
   mismatches: [],
-  boundary: 'Every deployable .html route has a byte-identical extensionless file unless its extensionless name is a real namespace directory. Approved namespace collisions are served by exact Worker aliases.'
+  boundary: 'Feature maturity is finalized before search. Every deployable .html route then receives a byte-identical extensionless file unless its extensionless name is a real namespace directory. Approved namespace collisions are served by exact Worker aliases.'
 };
 
 if (!report.sitePresent) {
-  report.ok = true;
-  report.skipped = '_site is absent; search and alias finalization run after deployable output exists.';
+  report.ok = report.featureMaturityFinalized;
+  report.skipped = '_site is absent; feature maturity was finalized in source, while search and alias synchronization wait for deployable output.';
 } else {
   const searchReport = require('./finalize-clean-public-search.js');
   if (!searchReport.ok) throw new Error('Clean public search finalization failed closed before route alias synchronization.');
@@ -102,7 +107,8 @@ if (!report.sitePresent) {
     }
   }
 
-  report.ok = report.searchFinalized
+  report.ok = report.featureMaturityFinalized
+    && report.searchFinalized
     && report.mismatches.length === 0
     && report.unexpectedDirectoryConflicts.length === 0
     && report.directoryConflicts.length === directoryConflicts.size
@@ -121,7 +127,7 @@ if (!report.ok) {
 }
 
 console.log(report.sitePresent
-  ? `Public route aliases finalized after clean search: ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired, ${report.directoryConflicts.length} approved namespace collisions.`
-  : 'Public route alias finalization skipped safely because _site is absent.');
+  ? `Feature maturity and public route aliases finalized: ${report.primaryPromotionWithheld.length} pilot feature(s) withheld from primary promotion; ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired, ${report.directoryConflicts.length} approved namespace collisions.`
+  : `Feature maturity finalized in source; ${report.primaryPromotionWithheld.length} pilot feature(s) withheld while deployable alias output is absent.`);
 
 module.exports = report;

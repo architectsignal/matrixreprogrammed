@@ -37,6 +37,7 @@ const report = {
   ok: false,
   generatedAt: new Date().toISOString(),
   sitePresent: fs.existsSync(site),
+  searchFinalized: false,
   htmlFiles: 0,
   synchronizedAliases: 0,
   identicalAliases: 0,
@@ -48,8 +49,12 @@ const report = {
 
 if (!report.sitePresent) {
   report.ok = true;
-  report.skipped = '_site is absent; alias finalization runs after deployable output exists.';
+  report.skipped = '_site is absent; search and alias finalization run after deployable output exists.';
 } else {
+  const searchReport = require('./finalize-clean-public-search.js');
+  if (!searchReport.ok) throw new Error('Clean public search finalization failed closed before route alias synchronization.');
+  report.searchFinalized = true;
+
   const htmlFiles = walk(site).sort();
   report.htmlFiles = htmlFiles.length;
 
@@ -97,7 +102,8 @@ if (!report.sitePresent) {
     }
   }
 
-  report.ok = report.mismatches.length === 0
+  report.ok = report.searchFinalized
+    && report.mismatches.length === 0
     && report.unexpectedDirectoryConflicts.length === 0
     && report.directoryConflicts.length === directoryConflicts.size
     && report.identicalAliases + report.directoryConflicts.length === report.htmlFiles;
@@ -115,7 +121,7 @@ if (!report.ok) {
 }
 
 console.log(report.sitePresent
-  ? `Public route aliases finalized: ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired, ${report.directoryConflicts.length} approved namespace collisions.`
+  ? `Public route aliases finalized after clean search: ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired, ${report.directoryConflicts.length} approved namespace collisions.`
   : 'Public route alias finalization skipped safely because _site is absent.');
 
 module.exports = report;

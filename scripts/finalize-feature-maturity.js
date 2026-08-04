@@ -27,6 +27,9 @@ function writeJson(file, value) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
 }
+function escapeRegExp(value) {
+  return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 
 const answerClock = readJson('data/public-answer-clocks.json', { count: 0, runningCount: 0, clocks: [] });
 const receipts = readJson('data/lived-consequence-receipts.json', { count: 0, receipts: [] });
@@ -125,9 +128,10 @@ function patchFeaturePage(file, feature) {
   if (!/<!doctype\s+html|<html\b/i.test(html)) return false;
   const before = html;
   html = ensureStyle(html);
-  html = html.replace(new RegExp(`${markerStart.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\s\S]*?${markerEnd.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'gi'), '');
+  const maturityExpression = new RegExp(`${escapeRegExp(markerStart)}[\\s\\S]*?${escapeRegExp(markerEnd)}`, 'gi');
+  html = html.replace(maturityExpression, '');
   html = html.replace(/<body\b([^>]*)>/i, (match, attributes) => {
-    let attrs = attributes.replace(/\sdata-feature-maturity=["'][^"']*["']/gi, '');
+    const attrs = attributes.replace(/\sdata-feature-maturity=["'][^"']*["']/gi, '');
     return `<body${attrs} data-feature-maturity="${feature.stage}">`;
   });
   const block = maturityBlock(feature);
@@ -149,7 +153,7 @@ function removePrimaryNavPromotions(file, withheldRoutes) {
   html = html.replace(/<nav\b[\s\S]*?<\/nav>/gi, nav => {
     let next = nav;
     for (const route of withheldRoutes) {
-      const escaped = route.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const escaped = escapeRegExp(route);
       next = next.replace(new RegExp(`<a\\b[^>]*href=["'](?:\\.\\/|/)?${escaped}(?:[?#][^"']*)?["'][^>]*>[\\s\\S]*?<\\/a>`, 'gi'), '');
     }
     return next;
@@ -187,7 +191,7 @@ function navContainsWithheld(file) {
   if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return [];
   const html = fs.readFileSync(file, 'utf8');
   const nav = (html.match(/<nav\b[\s\S]*?<\/nav>/gi) || []).join('\n');
-  return withheldRoutes.filter(route => new RegExp(`href=["'](?:\\./|/)?${route.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?:[?#][^"']*)?["']`, 'i').test(nav));
+  return withheldRoutes.filter(route => new RegExp(`href=["'](?:\\./|/)?${escapeRegExp(route)}(?:[?#][^"']*)?["']`, 'i').test(nav));
 }
 
 for (const base of roots) {

@@ -58,8 +58,8 @@ function patch(file) {
   const relative = path.relative(root, file).replace(/\\/g, '/');
   html = html
     .replace('<p class="lead internal-only">One weekly email', '<p class="lead">One weekly email')
-    .replace(/<input name="name"\s+reader field="Name">/g, '<input name="name" type="text" placeholder="Name" autocomplete="name" aria-label="Name">')
-    .replace(/<input type="email" name="email" required\s+reader field="you@example\.com">/g, '<input type="email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">')
+    .replace(/<input\b(?=[^>]*\bname=["']name["'])[^>]*>/gi, '<input name="name" type="text" placeholder="Name" autocomplete="name" aria-label="Name">')
+    .replace(/<input\b(?=[^>]*\bname=["']email["'])[^>]*>/gi, '<input type="email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">')
     .replace(/<!-- newsletter-public-value:start -->[\s\S]*?<!-- newsletter-public-value:end -->/g, '');
   html = canonicalizeConsent(html, relative);
   if (!html.includes('</main>')) throw new Error(`${relative} has no </main> insertion boundary`);

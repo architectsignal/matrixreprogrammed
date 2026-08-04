@@ -1,0 +1,93 @@
+name: P0 Search Engine Recrawl
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p0-search-engine-recrawl.yml'
+      - 'scripts/p0-submit-indexnow-recrawl.mjs'
+      - 'scripts/p0-indexnow-recrawl-contract-test.js'
+      - 'data/p0-recrawl-priority-urls.json'
+      - '017590d943864dbd81899fab0c15e0d8.txt'
+  workflow_run:
+    workflows:
+      - P0 Live Public Completion Gate
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: 'Optional exact live SHA. Leave blank to use the commit-bound live manifest after the P0 live gate has passed.'
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: p0-search-engine-recrawl-${{ github.event.workflow_run.id || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  contract:
+    name: Prove recrawl submission is bounded and post-release only
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout proposed recrawl gate
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify P0 IndexNow contract
+        run: node scripts/p0-indexnow-recrawl-contract-test.js
+
+      - name: Upload recrawl contract
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p0-indexnow-recrawl-contract-${{ github.run_id }}
+          path: downloads/p0-indexnow-recrawl-contract-test.json
+          if-no-files-found: error
+          retention-days: 30
+
+  submit:
+    name: Submit clean canonical production URLs to IndexNow
+    needs: contract
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event != 'pull_request')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify exact live release and request recrawl
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          EXPECTED_LIVE_SHA: ${{ inputs.expected_sha || '' }}
+          INDEXNOW_ATTEMPTS: '4'
+          INDEXNOW_DELAY_MS: '3000'
+        run: node scripts/p0-submit-indexnow-recrawl.mjs
+
+      - name: Upload recrawl receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p0-indexnow-recrawl-${{ github.run_id }}
+          path: downloads/p0-indexnow-recrawl.json
+          if-no-files-found: error
+          retention-days: 60

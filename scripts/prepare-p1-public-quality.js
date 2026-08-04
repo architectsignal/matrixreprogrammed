@@ -14,18 +14,32 @@ const targets = [
   'subject-index.html', 'subject-trust-evidence-method.html', 'tracker-dashboard.html'
 ];
 const changes = [];
+const guideRepairs = [];
 
 function patch(file) {
   if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return;
   const before = fs.readFileSync(file, 'utf8');
   if (!/<!doctype\s+html|<html\b/i.test(before)) return;
-  const after = before
+  const relative = path.relative(root, file).split(path.sep).join('/');
+  let after = before
     .replace(/\bsource\s+pathways\b/gi, 'source trails')
     .replace(/\breader\s+pathways\b/gi, 'investigation routes')
     .replace(/\bphase\s+routes\b/gi, 'research routes');
+
+  // A legacy PDF catalogue label called the current Business Creation Engine
+  // “Business system” and derived a non-existent business-system.pdf filename.
+  // The canonical detailed guide and generated asset are business-builder.pdf.
+  if (/download-center(?:\.html)?$/i.test(relative)) {
+    const beforeRepair = after;
+    after = after
+      .replace(/downloads\/wealth-guides\/business-system\.pdf/gi, 'downloads/wealth-guides/business-builder.pdf')
+      .replace(/Wealth Guides\/Business system/gi, 'Business Creation Engine');
+    if (after !== beforeRepair) guideRepairs.push(relative);
+  }
+
   if (after !== before) {
     fs.writeFileSync(file, after);
-    changes.push(path.relative(root, file).split(path.sep).join('/'));
+    changes.push(relative);
   }
 }
 
@@ -38,14 +52,24 @@ for (const relative of targets) {
   }
 }
 
+const sourceGuide = path.join(root, 'downloads', 'wealth-guides', 'business-builder.pdf');
+const outputGuide = path.join(site, 'downloads', 'wealth-guides', 'business-builder.pdf');
 const report = {
-  ok: true,
+  ok: fs.existsSync(sourceGuide) && (!fs.existsSync(site) || fs.existsSync(outputGuide)),
   generatedAt: new Date().toISOString(),
   targetPages: targets,
   changes,
-  boundary: 'Plural legacy scaffold labels are normalized before the page-specific P1 quality owner runs; evidence records and substantive reader copy are unchanged.'
+  guideRepairs,
+  canonicalBusinessGuide: 'downloads/wealth-guides/business-builder.pdf',
+  canonicalBusinessGuidePresent: fs.existsSync(sourceGuide),
+  deployableBusinessGuidePresent: !fs.existsSync(site) || fs.existsSync(outputGuide),
+  boundary: 'Plural legacy scaffold labels and the obsolete Business system PDF alias are normalized before the page-specific P1 quality owner runs; evidence records and substantive reader copy are unchanged.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'p1-public-quality-preparation.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`P1 public-quality preparation complete: ${changes.length} source/output surface(s) normalized.`);
+if (!report.ok) {
+  console.error('P1 public-quality preparation failed: the canonical Business Creation Engine PDF is missing.');
+  process.exit(1);
+}
+console.log(`P1 public-quality preparation complete: ${changes.length} source/output surface(s) normalized; ${guideRepairs.length} stale Business system route(s) repaired.`);
 module.exports = report;

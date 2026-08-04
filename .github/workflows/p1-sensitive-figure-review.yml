@@ -1,0 +1,54 @@
+name: P1 Sensitive Figure Review Queue
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p1-sensitive-figure-review.yml'
+      - 'data/figure-source-rules.json'
+      - 'data/sensitive-figure-policy.json'
+      - 'scripts/update-site-freshness-report.js'
+      - 'scripts/figure-source-rules-pressure-test.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Build and prove the sensitive figure review queue
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout proposed figure policy
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check the scanner and pressure test
+        run: |
+          node --check scripts/update-site-freshness-report.js
+          node --check scripts/figure-source-rules-pressure-test.js
+
+      - name: Build the repository-wide review queue
+        run: node scripts/update-site-freshness-report.js
+
+      - name: Prove metadata, disposition and repeat-safety boundaries
+        run: node scripts/figure-source-rules-pressure-test.js
+
+      - name: Upload sensitive figure proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-sensitive-figure-review-${{ github.run_id }}
+          path: |
+            data/site-freshness-report.json
+            downloads/site-freshness-report.md
+            site-freshness-report.html
+          if-no-files-found: error
+          retention-days: 30

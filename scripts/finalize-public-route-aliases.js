@@ -38,6 +38,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   sitePresent: fs.existsSync(site),
   publicQualityFinalized: false,
+  publicQualityRoutesFinalized: false,
   searchFinalized: false,
   htmlFiles: 0,
   synchronizedAliases: 0,
@@ -55,6 +56,10 @@ if (!report.sitePresent) {
   const publicQualityReport = require('./finalize-p1-public-quality.js');
   if (!publicQualityReport.ok) throw new Error('P1 public-quality finalization failed closed before search and route aliases.');
   report.publicQualityFinalized = true;
+
+  const publicQualityRoutesReport = require('./finalize-p1-public-quality-routes.js');
+  if (!publicQualityRoutesReport.ok) throw new Error('P1 public-quality route finalization failed closed before search and route aliases.');
+  report.publicQualityRoutesFinalized = true;
 
   const searchReport = require('./finalize-clean-public-search.js');
   if (!searchReport.ok) throw new Error('Clean public search finalization failed closed before route alias synchronization.');
@@ -108,6 +113,7 @@ if (!report.sitePresent) {
   }
 
   report.ok = report.publicQualityFinalized
+    && report.publicQualityRoutesFinalized
     && report.searchFinalized
     && report.mismatches.length === 0
     && report.unexpectedDirectoryConflicts.length === 0
@@ -127,7 +133,7 @@ if (!report.ok) {
 }
 
 console.log(report.sitePresent
-  ? `Public route aliases finalized after P1 quality and clean search: ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired, ${report.directoryConflicts.length} approved namespace collisions.`
+  ? `Public route aliases finalized after P1 quality, complete reader routes and clean search: ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired, ${report.directoryConflicts.length} approved namespace collisions.`
   : 'Public route alias finalization skipped safely because _site is absent.');
 
 module.exports = report;

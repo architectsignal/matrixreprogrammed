@@ -26,6 +26,18 @@
   ],
   "categories": [
     {
+      "id": "interface-display-control",
+      "label": "Reader interface or display control",
+      "sensitivity": "low",
+      "priority": 110,
+      "queue": false,
+      "filePatterns": ["evidence-reader.html", "*pdf-reader*", "*document-reader*"],
+      "figureTypes": ["percentage", "count"],
+      "contextTerms": ["zoom", "previous", "next", "page link", "open pdf", "find", "copy page link"],
+      "scope": "A reader-interface value such as PDF zoom or pagination, not a public factual claim.",
+      "defaultEvidenceClassification": "interface-control"
+    },
+    {
       "id": "commercial-price",
       "label": "Commercial price or voluntary support amount",
       "sensitivity": "low",
@@ -115,9 +127,9 @@
       "sensitivity": "high",
       "priority": 70,
       "queue": true,
-      "filePatterns": ["*market*", "*money*", "*asset*", "*billionaire*", "*blackrock*", "*finance*", "*wealth*", "*holding*"],
+      "filePatterns": ["*market*", "*money*", "*asset*", "*billionaire*", "*blackrock*", "*finance*", "*wealth*", "*holding*", "*evidence-graph*"],
       "figureTypes": ["percentage", "money", "count"],
-      "contextTerms": ["holding", "holdings", "ownership", "assets", "market", "revenue", "fund", "investment", "million", "billion", "trillion", "control"],
+      "contextTerms": ["holding", "holdings", "ownership", "assets", "asset manager", "aum", "market", "revenue", "fund", "investment", "million", "billion", "trillion", "control"],
       "scope": "A financial, market, ownership, holdings or beneficial-control figure requiring entity, period, currency and filing context.",
       "defaultEvidenceClassification": "dated-filing-or-official-financial-record-required"
     },

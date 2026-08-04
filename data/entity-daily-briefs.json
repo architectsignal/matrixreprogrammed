@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T10:05:09.155Z",
+  "updated": "2026-08-04T03:36:28.978Z",
   "title": "Entity Daily Briefs",
   "purpose": "User-friendly daily briefs for tracked people, institutions, companies, agencies and control-structure contributors.",
   "boundary": "Briefs summarize public-record signals with evidence grades. They do not replace source review.",
@@ -8,7 +8,7 @@
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "name": "Appellate Division of the Supreme Court of the State of New York",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "D & A Grandview, LLC v. 60 Davidson, LLC",
@@ -68,7 +68,7 @@
       "id": "centers-for-medicare-and-medicaid-services",
       "name": "Centers for Medicare & Medicaid Services",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Centers for Medicare & Medicaid Services is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
@@ -110,7 +110,7 @@
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Health and Human Services Department is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
@@ -152,7 +152,7 @@
       "id": "2021-08825",
       "name": "2021-08825",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "2021-08825 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Williams v. Biggs"
@@ -194,7 +194,7 @@
       "id": "2024-13374",
       "name": "2024-13374",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "2024-13374 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "D & A Grandview, LLC v. 60 Davidson, LLC"
@@ -233,52 +233,10 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "2025-0045-appeal",
-      "name": "2025-0045-Appeal.",
-      "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
-      "at_a_glance": "2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
-      ],
-      "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
-      "evidence_grade": "legal record present",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Supreme Court of Rhode Island",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch 2025-0045-Appeal. across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
       "id": "23-wap-2023",
       "name": "23 WAP 2023",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "23 WAP 2023 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Punxsutawney Hunting Club v. PGC"
@@ -320,7 +278,7 @@
       "id": "24-2251",
       "name": "24-2251",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "24-2251 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Civil Rights Corps v. LaSalle"
@@ -362,7 +320,7 @@
       "id": "24-7261",
       "name": "24-7261",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "24-7261 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "United States v. Anten"
@@ -401,10 +359,52 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
+      "id": "california-supreme-court",
+      "name": "California Supreme Court",
+      "type": "observed entity",
+      "updated": "2026-08-04T03:36:28.978Z",
+      "at_a_glance": "California Supreme Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Gilead Tenofovir Cases"
+      ],
+      "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
+      "evidence_grade": "legal record present",
+      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
+      "source_routes": [
+        {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued"
+        }
+      ],
+      "connections": [
+        {
+          "with": "Gilead Tenofovir Cases",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "S283862",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch California Supreme Court across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
       "id": "civil-rights-corps-v-lasalle",
       "name": "Civil Rights Corps v. LaSalle",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Civil Rights Corps v. LaSalle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Civil Rights Corps v. LaSalle"
@@ -446,7 +446,7 @@
       "id": "court-of-appeals-for-the-ninth-circuit",
       "name": "Court of Appeals for the Ninth Circuit",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Court of Appeals for the Ninth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "United States v. Anten"
@@ -488,7 +488,7 @@
       "id": "court-of-appeals-for-the-second-circuit",
       "name": "Court of Appeals for the Second Circuit",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Civil Rights Corps v. LaSalle"
@@ -530,7 +530,7 @@
       "id": "d-and-a-grandview-llc-v-60-davidson-llc",
       "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "D & A Grandview, LLC v. 60 Davidson, LLC is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "D & A Grandview, LLC v. 60 Davidson, LLC"
@@ -569,33 +569,33 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
-      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "id": "gilead-tenofovir-cases",
+      "name": "Gilead Tenofovir Cases",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
-      "at_a_glance": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-04T03:36:28.978Z",
+      "at_a_glance": "Gilead Tenofovir Cases is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
+        "Gilead Tenofovir Cases"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Supreme Court of Rhode Island",
+          "with": "California Supreme Court",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2025-0045-Appeal.",
+          "with": "S283862",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -605,7 +605,7 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority across courtlistener-court-records.",
+        "Watch Gilead Tenofovir Cases across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
@@ -614,7 +614,7 @@
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Homeland Security Department is currently tracked as observed entity with 2 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
@@ -649,7 +649,7 @@
       "id": "punxsutawney-hunting-club-v-pgc",
       "name": "Punxsutawney Hunting Club v. PGC",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Punxsutawney Hunting Club v. PGC is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Punxsutawney Hunting Club v. PGC"
@@ -688,10 +688,52 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
+      "id": "s283862",
+      "name": "S283862",
+      "type": "observed entity",
+      "updated": "2026-08-04T03:36:28.978Z",
+      "at_a_glance": "S283862 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Gilead Tenofovir Cases"
+      ],
+      "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
+      "evidence_grade": "legal record present",
+      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
+      "source_routes": [
+        {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued"
+        }
+      ],
+      "connections": [
+        {
+          "with": "Gilead Tenofovir Cases",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "California Supreme Court",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch S283862 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
       "id": "supreme-court-of-pennsylvania",
       "name": "Supreme Court of Pennsylvania",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Supreme Court of Pennsylvania is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Punxsutawney Hunting Club v. PGC"
@@ -730,52 +772,10 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "supreme-court-of-rhode-island",
-      "name": "Supreme Court of Rhode Island",
-      "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
-      "at_a_glance": "Supreme Court of Rhode Island is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority"
-      ],
-      "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
-      "evidence_grade": "legal record present",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued"
-        }
-      ],
-      "connections": [
-        {
-          "with": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "2025-0045-Appeal.",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Supreme Court of Rhode Island across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
       "id": "united-states-v-anten",
       "name": "United States v. Anten",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "United States v. Anten is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "United States v. Anten"
@@ -817,7 +817,7 @@
       "id": "williams-v-biggs",
       "name": "Williams v. Biggs",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Williams v. Biggs is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Williams v. Biggs"
@@ -859,7 +859,7 @@
       "id": "aapl",
       "name": "AAPL",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "AAPL is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Apple Inc. (AAPL)"
@@ -895,7 +895,7 @@
       "id": "alphabet-inc",
       "name": "Alphabet Inc.",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Alphabet Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Alphabet Inc. (GOOGL)"
@@ -931,7 +931,7 @@
       "id": "amazon-com-inc",
       "name": "AMAZON COM INC",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "AMAZON COM INC is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "AMAZON COM INC (AMZN)"
@@ -967,7 +967,7 @@
       "id": "amzn",
       "name": "AMZN",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "AMZN is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "AMAZON COM INC (AMZN)"
@@ -1003,7 +1003,7 @@
       "id": "apple-inc",
       "name": "Apple Inc.",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Apple Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Apple Inc. (AAPL)"
@@ -1039,7 +1039,7 @@
       "id": "avgo",
       "name": "AVGO",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "AVGO is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Broadcom Inc. (AVGO)"
@@ -1075,7 +1075,7 @@
       "id": "broadcom-inc",
       "name": "Broadcom Inc.",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Broadcom Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Broadcom Inc. (AVGO)"
@@ -1111,7 +1111,7 @@
       "id": "googl",
       "name": "GOOGL",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "GOOGL is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Alphabet Inc. (GOOGL)"
@@ -1147,7 +1147,7 @@
       "id": "microsoft-corp",
       "name": "MICROSOFT CORP",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "MICROSOFT CORP is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "MICROSOFT CORP (MSFT)"
@@ -1183,7 +1183,7 @@
       "id": "msft",
       "name": "MSFT",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "MSFT is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "MICROSOFT CORP (MSFT)"
@@ -1219,7 +1219,7 @@
       "id": "nvda",
       "name": "NVDA",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "NVDA is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "NVIDIA CORP (NVDA)"
@@ -1255,7 +1255,7 @@
       "id": "nvidia-corp",
       "name": "NVIDIA CORP",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "NVIDIA CORP is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "NVIDIA CORP (NVDA)"
@@ -1291,7 +1291,7 @@
       "id": "nuclear-regulatory-commission",
       "name": "Nuclear Regulatory Commission",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Nuclear Regulatory Commission is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Modernizing Security Requirements"
@@ -1320,7 +1320,7 @@
       "id": "securities-and-exchange-commission",
       "name": "Securities and Exchange Commission",
       "type": "observed entity",
-      "updated": "2026-08-03T10:05:09.155Z",
+      "updated": "2026-08-04T03:36:28.978Z",
       "at_a_glance": "Securities and Exchange Commission is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Electronic Delivery of Information Under the Federal Securities Laws"

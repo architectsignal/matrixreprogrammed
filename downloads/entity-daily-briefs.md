@@ -1,6 +1,6 @@
 # Entity Daily Briefs
 
-Updated: 2026-08-03T10:05:09.155Z
+Updated: 2026-08-04T03:36:28.978Z
 
 Briefs generated: 34
 
@@ -54,16 +54,6 @@ Evidence: legal record present
 
 Watch next: Watch 2024-13374 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 2025-0045-Appeal.
-
-At a glance: 2025-0045-Appeal. is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch 2025-0045-Appeal. across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
 ## 23 WAP 2023
 
 At a glance: 23 WAP 2023 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -93,6 +83,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch 24-7261 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## California Supreme Court
+
+At a glance: California Supreme Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch California Supreme Court across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Civil Rights Corps v. LaSalle
 
@@ -134,15 +134,15 @@ Evidence: legal record present
 
 Watch next: Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
+## Gilead Tenofovir Cases
 
-At a glance: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: Gilead Tenofovir Cases is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch Gilead Tenofovir Cases across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Homeland Security Department
 
@@ -164,6 +164,16 @@ Evidence: legal record present
 
 Watch next: Watch Punxsutawney Hunting Club v. PGC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## S283862
+
+At a glance: S283862 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch S283862 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Supreme Court of Pennsylvania
 
 At a glance: Supreme Court of Pennsylvania is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -173,16 +183,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Supreme Court of Pennsylvania across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Supreme Court of Rhode Island
-
-At a glance: Supreme Court of Rhode Island is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Supreme Court of Rhode Island across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## United States v. Anten
 

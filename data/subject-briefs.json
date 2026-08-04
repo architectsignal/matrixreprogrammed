@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T10:05:09.295Z",
+  "updated": "2026-08-04T03:36:29.112Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -335,6 +335,12 @@
       ],
       "latest_records": [
         {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
           "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
           "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
           "grade": "charged / sued",
@@ -363,15 +369,12 @@
           "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
           "grade": "charged / sued",
           "lane": "courtlistener-court-records"
-        },
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued",
-          "lane": "courtlistener-court-records"
         }
       ],
       "top_entities": [
+        "Gilead Tenofovir Cases",
+        "California Supreme Court",
+        "S283862",
         "D & A Grandview, LLC v. 60 Davidson, LLC",
         "Appellate Division of the Supreme Court of the State of New York",
         "2024-13374",
@@ -385,10 +388,7 @@
         "24-7261",
         "Punxsutawney Hunting Club v. PGC",
         "Supreme Court of Pennsylvania",
-        "23 WAP 2023",
-        "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-        "Supreme Court of Rhode Island",
-        "2025-0045-Appeal."
+        "23 WAP 2023"
       ],
       "relationship_candidates": [],
       "missing_records": [

@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-08-03T10:05:09.204Z
+Updated: 2026-08-04T03:36:29.024Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -11,6 +11,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## California Supreme Court
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: California Supreme Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Court of Appeals for the Ninth Circuit
 
@@ -42,16 +52,6 @@ Highest evidence: charged / sued
 
 Reading: Supreme Court of Pennsylvania deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Supreme Court of Rhode Island
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Supreme Court of Rhode Island deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## 2021-08825
 
 Score: 179
@@ -71,16 +71,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: 2024-13374 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 2025-0045-Appeal.
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 2025-0045-Appeal. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## 23 WAP 2023
 
@@ -132,7 +122,7 @@ Highest evidence: charged / sued
 
 Reading: D & A Grandview, LLC v. 60 Davidson, LLC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority
+## Gilead Tenofovir Cases
 
 Score: 179
 
@@ -140,7 +130,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: Gilead Tenofovir Cases deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Punxsutawney Hunting Club v. PGC
 
@@ -151,6 +141,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Punxsutawney Hunting Club v. PGC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## S283862
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: S283862 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## United States v. Anten
 

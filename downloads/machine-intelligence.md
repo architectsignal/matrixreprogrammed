@@ -1,25 +1,28 @@
 # Machine Intelligence
 
-Updated: 2026-08-03T10:05:09.116Z
+Updated: 2026-08-04T03:36:28.945Z
 
 Current records: 18
-Previous records: 12
+Previous records: 18
 New records: 6
-Changed records: 0
+Changed records: 6
 Relationship candidates: 25
 
 ## New Records
 
+- charged / sued: Gilead Tenofovir Cases — courtlistener-court-records — https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/
 - charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
 - charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
 - charged / sued: Civil Rights Corps v. LaSalle — courtlistener-court-records — https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/
 - charged / sued: United States v. Anten — courtlistener-court-records — https://www.courtlistener.com/opinion/10935302/united-states-v-anten/
 - charged / sued: Punxsutawney Hunting Club v. PGC — courtlistener-court-records — https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/
-- charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
 
 ## Relationship Candidates
 
 - Score 18: Health and Human Services Department ↔ Centers for Medicare & Medicaid Services — public-record co-occurrence
+- Score 10: Gilead Tenofovir Cases ↔ California Supreme Court — public-record co-occurrence
+- Score 10: Gilead Tenofovir Cases ↔ S283862 — public-record co-occurrence
+- Score 10: California Supreme Court ↔ S283862 — public-record co-occurrence
 - Score 10: D & A Grandview, LLC v. 60 Davidson, LLC ↔ Appellate Division of the Supreme Court of the State of New York — public-record co-occurrence
 - Score 10: D & A Grandview, LLC v. 60 Davidson, LLC ↔ 2024-13374 — public-record co-occurrence
 - Score 10: Appellate Division of the Supreme Court of the State of New York ↔ 2024-13374 — public-record co-occurrence
@@ -35,9 +38,6 @@ Relationship candidates: 25
 - Score 10: Punxsutawney Hunting Club v. PGC ↔ Supreme Court of Pennsylvania — public-record co-occurrence
 - Score 10: Punxsutawney Hunting Club v. PGC ↔ 23 WAP 2023 — public-record co-occurrence
 - Score 10: Supreme Court of Pennsylvania ↔ 23 WAP 2023 — public-record co-occurrence
-- Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ Supreme Court of Rhode Island — public-record co-occurrence
-- Score 10: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority ↔ 2025-0045-Appeal. — public-record co-occurrence
-- Score 10: Supreme Court of Rhode Island ↔ 2025-0045-Appeal. — public-record co-occurrence
 - Score 9: Apple Inc. ↔ AAPL — weak co-occurrence signal
 - Score 9: NVIDIA CORP ↔ NVDA — weak co-occurrence signal
 - Score 9: Alphabet Inc. ↔ GOOGL — weak co-occurrence signal

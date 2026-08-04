@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T10:04:53.253Z",
+  "updated": "2026-08-04T03:36:12.574Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "courtlistener-court-records",
   "name": "CourtListener court record signal",
@@ -11,9 +11,119 @@
   "itemCount": 6,
   "raw": {
     "count": 23276,
-    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgyMTcyODAwMDAwJnM9MTA4Nzk2NzUmdD1vJmQ9MjAyNi0wOC0wMyZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
+    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgyMTcyODAwMDAwJnM9MTA4Nzk3NDcmdD1vJmQ9MjAyNi0wOC0wMyZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
     "previous": null,
     "results": [
+      {
+        "absolute_url": "/opinion/10938615/gilead-tenofovir-cases/",
+        "attorney": "",
+        "caseName": "Gilead Tenofovir Cases",
+        "caseNameFull": "",
+        "citation": [],
+        "citeCount": 0,
+        "cluster_id": 10938615,
+        "court": "California Supreme Court",
+        "court_citation_string": "Cal.",
+        "court_id": "cal",
+        "court_jurisdiction": "S",
+        "dateArgued": null,
+        "dateFiled": "2026-08-03",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "S283862",
+        "docket_id": 73710786,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-08-03T17:03:23.715239Z",
+          "date_created": "2026-08-03T17:03:23.612429Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [
+              902769,
+              1123831,
+              1153547,
+              1166422,
+              1175924,
+              1180351,
+              1239280,
+              1377843,
+              1427255,
+              2610015,
+              2616264,
+              2623115,
+              2624656,
+              2681899,
+              3299279,
+              3301360,
+              3598878,
+              4103813,
+              4231251,
+              4307717,
+              4402011,
+              4968490,
+              5447918,
+              5452254,
+              6105781,
+              6106065,
+              9435372,
+              9529666,
+              9530085,
+              9531833,
+              9531957,
+              9536569,
+              9548405,
+              9559641,
+              9560387,
+              9561597,
+              9568529,
+              9593290,
+              9593576,
+              9613420,
+              9622743,
+              9632125,
+              9748769,
+              9782589,
+              9785431,
+              9800000,
+              9807846,
+              9823497
+            ],
+            "download_url": "https://www.courts.ca.gov/opinions/documents/S283862.PDF",
+            "id": 11406193,
+            "joined_by_ids": [],
+            "local_path": "pdf/2026/08/03/gilead_tenofovir_cases.pdf",
+            "meta": {
+              "timestamp": "2026-08-03T17:04:53.407324Z",
+              "date_created": "2026-08-03T17:03:23.616797Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "b99cad02b0d27abacf5b0e3ec5b9d9ea158e5898",
+            "snippet": "        IN THE SUPREME COURT OF\n               CALIFORNIA\n\n                GILEAD TENOFOVIR CASES.\n\n                           S283862\n\n            First Appellate District, Division Four\n                           A165558\n\n        San Francisco City and County Superior Court\n                       JCCP No. 5043\n\n\n\n                        August 3, 2026\n\nJustice Groban authored the opinion of the Court, in which\nJustices Corrigan, Liu, Kruger, and Desautels* concurred.\n\n\nChief Justice Guerrero f",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11406193
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": ""
+      },
       {
         "absolute_url": "/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
         "attorney": "",
@@ -1853,89 +1963,6 @@
         "scdb_id": "",
         "sibling_ids": [
           11347266
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
-      },
-      {
-        "absolute_url": "/opinion/10879675/in-the-matter-of-robert-james-hardy/",
-        "attorney": "",
-        "caseName": "In the Matter of Robert James Hardy",
-        "caseNameFull": "",
-        "citation": [],
-        "citeCount": 0,
-        "cluster_id": 10879675,
-        "court": "Indiana Supreme Court",
-        "court_citation_string": "Ind.",
-        "court_id": "ind",
-        "court_jurisdiction": "S",
-        "dateArgued": null,
-        "dateFiled": "2026-06-23",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "24S-DI-00438",
-        "docket_id": 73520626,
-        "judge": "Rush, Massa, Slaughter, Goff, Molter",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-24T18:00:20.921389Z",
-          "date_created": "2026-06-24T17:59:52.647279Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": 4347,
-            "cites": [
-              852742,
-              852823,
-              868783,
-              2060384,
-              2241908,
-              2482347,
-              4248625,
-              5142126,
-              7077394,
-              7077519,
-              7080289,
-              9432405,
-              9726123,
-              9779769,
-              10487578
-            ],
-            "download_url": "https://public.courts.in.gov/Decisions/api/Document/Opinion?Id=McFWkjyaUGbgF44pAoLp56i6MmksEKbgp8-fZM01G9vNb_RhFrf4C9BFLqwD-IaK0",
-            "id": 11347194,
-            "joined_by_ids": [],
-            "local_path": "pdf/2026/06/23/in_the_matter_of_robert_james_hardy_1.pdf",
-            "meta": {
-              "timestamp": "2026-06-24T20:54:19.921248Z",
-              "date_created": "2026-06-24T17:59:52.719149Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "5674406d336928d339d44b85619ede65aa5a8106",
-            "snippet": "                    IN THE\n\nIndiana Supreme Court\n                                                            FILED\n       Supreme Court Case No. 24S-DI-438                Jun 23 2026, 1:33 pm\n\n                                                            CLERK\n                                                        Indiana Supreme Court\nIn the Matter of Robert James Hardy Jr.,                   Court of Appeals\n                                                             and Tax Court\n\n          ",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [
-          4321,
-          4347
-        ],
-        "panel_names": [
-          "Mark S. Massa",
-          "Loretta H. Rush"
-        ],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11347194
         ],
         "source": "C",
         "status": "Published",

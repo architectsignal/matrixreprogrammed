@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T10:05:09.204Z",
+  "updated": "2026-08-04T03:36:29.024Z",
   "title": "Entity Exposure Index",
   "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
   "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
@@ -99,6 +99,67 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "california-supreme-court",
+      "name": "California Supreme Court",
+      "exposure_score": 184,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Gilead Tenofovir Cases",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "S283862",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch California Supreme Court across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving California Supreme Court."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "California Supreme Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -285,67 +346,6 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "supreme-court-of-rhode-island",
-      "name": "Supreme Court of Rhode Island",
-      "exposure_score": 184,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        },
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "2025-0045-Appeal.",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Supreme Court of Rhode Island across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Supreme Court of Rhode Island."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "Supreme Court of Rhode Island deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
       "id": "2021-08825",
       "name": "2021-08825",
       "exposure_score": 179,
@@ -463,66 +463,6 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "2024-13374 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "2025-0045-appeal",
-      "name": "2025-0045-Appeal.",
-      "exposure_score": 179,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued"
-          ]
-        },
-        {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "Supreme Court of Rhode Island",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch 2025-0045-Appeal. across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 2025-0045-Appeal.."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "2025-0045-Appeal. deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -826,8 +766,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is",
-      "name": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
+      "id": "gilead-tenofovir-cases",
+      "name": "Gilead Tenofovir Cases",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -836,8 +776,8 @@
       ],
       "records": [
         {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -846,8 +786,8 @@
           ]
         },
         {
-          "title": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority",
-          "url": "https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/",
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -861,13 +801,13 @@
       ],
       "relationships": [
         {
-          "with": "Supreme Court of Rhode Island",
+          "with": "California Supreme Court",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2025-0045-Appeal.",
+          "with": "S283862",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -877,12 +817,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority across courtlistener-court-records.",
+        "Watch Gilead Tenofovir Cases across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority."
+        "Watch courtlistener-court-records for follow-up records involving Gilead Tenofovir Cases."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "Gilead Tenofovir Cases deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -943,6 +883,66 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "Punxsutawney Hunting Club v. PGC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
+      "id": "s283862",
+      "name": "S283862",
+      "exposure_score": 179,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued"
+          ]
+        },
+        {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "Gilead Tenofovir Cases",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "California Supreme Court",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch S283862 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving S283862."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "S283862 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {

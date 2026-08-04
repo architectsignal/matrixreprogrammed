@@ -1,6 +1,6 @@
 # Machine Digest
 
-Updated: 2026-08-03T10:04:53.253Z
+Updated: 2026-08-04T03:36:12.574Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
@@ -22,12 +22,12 @@ Entity observations: 34
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- charged / sued: Gilead Tenofovir Cases — courtlistener-court-records — https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/
 - charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
 - charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
 - charged / sued: Civil Rights Corps v. LaSalle — courtlistener-court-records — https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/
 - charged / sued: United States v. Anten — courtlistener-court-records — https://www.courtlistener.com/opinion/10935302/united-states-v-anten/
 - charged / sued: Punxsutawney Hunting Club v. PGC — courtlistener-court-records — https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/
-- charged / sued: Galbin Fernandez, in his capacity as the Administrator of the Estate of Eva Pena v. Rhode Island Public Transit Authority — courtlistener-court-records — https://www.courtlistener.com/opinion/10928510/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva/
 
 ## Entity Observations
 
@@ -49,6 +49,9 @@ Entity observations: 34
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AVGO: 1 mention(s), lanes: sec-edgar-filings
+- Gilead Tenofovir Cases: 1 mention(s), lanes: courtlistener-court-records
+- California Supreme Court: 1 mention(s), lanes: courtlistener-court-records
+- S283862: 1 mention(s), lanes: courtlistener-court-records
 - D & A Grandview, LLC v. 60 Davidson, LLC: 1 mention(s), lanes: courtlistener-court-records
 - 2024-13374: 1 mention(s), lanes: courtlistener-court-records
 - Williams v. Biggs: 1 mention(s), lanes: courtlistener-court-records
@@ -58,6 +61,3 @@ Entity observations: 34
 - 24-2251: 1 mention(s), lanes: courtlistener-court-records
 - United States v. Anten: 1 mention(s), lanes: courtlistener-court-records
 - Court of Appeals for the Ninth Circuit: 1 mention(s), lanes: courtlistener-court-records
-- 24-7261: 1 mention(s), lanes: courtlistener-court-records
-- Punxsutawney Hunting Club v. PGC: 1 mention(s), lanes: courtlistener-court-records
-- Supreme Court of Pennsylvania: 1 mention(s), lanes: courtlistener-court-records

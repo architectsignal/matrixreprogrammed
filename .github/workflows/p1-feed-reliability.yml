@@ -1,0 +1,78 @@
+name: P1 Live Intelligence Feed Reliability
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p1-feed-reliability.yml'
+      - 'data/content-routes.json'
+      - 'data/live-intel-sources.json'
+      - 'scripts/update-seven-day-intel.js'
+      - 'scripts/build-feed-reliability-report.js'
+      - 'scripts/feed-reliability-contract-test.js'
+      - 'scripts/feed-reliability-live-test.js'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/p1-feed-reliability.yml'
+      - 'data/content-routes.json'
+      - 'data/live-intel-sources.json'
+      - 'scripts/update-seven-day-intel.js'
+      - 'scripts/build-feed-reliability-report.js'
+      - 'scripts/feed-reliability-contract-test.js'
+      - 'scripts/feed-reliability-live-test.js'
+  schedule:
+    - cron: '23 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: p1-feed-reliability-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Replace dead feeds and prove current collection
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout proposed feed configuration
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Prove feed classification and last-good boundaries
+        run: node scripts/feed-reliability-contract-test.js
+
+      - name: Collect the current seven-day public record window
+        run: node scripts/update-seven-day-intel.js
+
+      - name: Build persistent feed reliability state
+        run: node scripts/build-feed-reliability-report.js
+
+      - name: Pressure test current replacement feeds
+        run: node scripts/feed-reliability-live-test.js
+
+      - name: Upload feed reliability proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-feed-reliability-${{ github.run_id }}
+          path: |
+            data/live-intel.json
+            data/feed-reliability-state.json
+            downloads/seven-day-intel.json
+            downloads/feed-reliability-report.json
+            downloads/feed-reliability-report.md
+            downloads/feed-reliability-contract-test.json
+            downloads/feed-reliability-live-test.json
+          if-no-files-found: error
+          retention-days: 30

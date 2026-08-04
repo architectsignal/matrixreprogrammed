@@ -1,14 +1,111 @@
 {
-  "updated": "2026-08-04T07:58:52.657Z",
+  "updated": "2026-08-04T14:39:14.325Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [],
-  "topEntityChanges": [
+  "topMovements": [
     {
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
+      "key": "federal-register-policy-2026-15833-1",
+      "hash": "eee50b6194bab7cc",
+      "summary": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+      "date": "2026-08-04",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
     },
+    {
+      "key": "federal-register-policy-2026-14679-2",
+      "hash": "85c7ab5a5e58ef57",
+      "summary": "Electronic Delivery of Information Under the Federal Securities Laws",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
+      "date": "2026-07-21",
+      "names": [
+        "Securities and Exchange Commission"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-14439-3",
+      "hash": "e56f0fe8a67af816",
+      "summary": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+      "date": "2026-07-17",
+      "names": [
+        "Homeland Security Department"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13656-4",
+      "hash": "6a9c71ad3895251d",
+      "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
+      "date": "2026-07-07",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13602-5",
+      "hash": "a821d1e6bac4383f",
+      "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+      "date": "2026-07-06",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-13057-6",
+      "hash": "cef328f0f25acf82",
+      "summary": "Alien Registration Form and Evidence of Registration",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+      "date": "2026-06-29",
+      "names": [
+        "Homeland Security Department"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0001045810-1",
+      "hash": "9f9e8c247c3c0466",
+      "summary": "NVIDIA CORP (NVDA)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-08-04",
+      "names": [
+        "NVIDIA CORP",
+        "NVDA"
+      ]
+    },
+    {
+      "key": "sec-edgar-filings-cik0000320193-2",
+      "hash": "21e78d96c811c66f",
+      "summary": "Apple Inc. (AAPL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-08-04",
+      "names": [
+        "Apple Inc.",
+        "AAPL"
+      ]
+    }
+  ],
+  "topEntityChanges": [
     {
       "name": "Centers for Medicare & Medicaid Services",
       "judgement": "Worth watching because records and relationship signals both exist.",
@@ -18,6 +115,11 @@
       "name": "Health and Human Services Department",
       "judgement": "Worth watching because records and relationship signals both exist.",
       "route": "entity-briefs/health-and-human-services-department.html"
+    },
+    {
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
     },
     {
       "name": "2021-08825",
@@ -627,7 +729,7 @@
             "documented association"
           ],
           "source_events": [
-            "sec-edgar-filings-cik0001045810-2"
+            "sec-edgar-filings-cik0001045810-1"
           ],
           "control_layers": [
             "money",
@@ -950,9 +1052,14 @@
         "education": 20,
         "foundations-ngos": 20
       },
-      "control_score": 84,
-      "level": "high priority",
+      "control_score": 88,
+      "level": "elite priority",
       "latest_records": [
+        {
+          "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+          "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+          "grade": "documented association"
+        },
         {
           "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
           "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
@@ -979,12 +1086,6 @@
   ],
   "missingRecords": [
     {
-      "entity": "Appellate Division of the Supreme Court of the State of New York",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Centers for Medicare & Medicaid Services",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/centers-for-medicare-and-medicaid-services.html",
@@ -994,6 +1095,12 @@
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/health-and-human-services-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
       "type": "entity brief"
     },
     {
@@ -1155,7 +1262,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 60,
+      "records": 64,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1199,6 +1306,91 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
+      "name": "Default Judgment",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 43,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Final Judgment - Bongiorno",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 43,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Final Judgment - Suzee Han",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Final Judgment - Suzee Han inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 43,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Final Judgment - Titanium Capital LLC",
+      "documentedRole": "Contract",
+      "roleGroup": "corporate ownership and capital",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 43,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Judgment - Gerard Ryan",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 43,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
       "name": "Information and narrative control",
       "documentedRole": "Documented in the linked public record",
       "roleGroup": "media and information access",
@@ -1217,125 +1409,6 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
-      "name": "Default Judgment",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 40,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Bongiorno",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 40,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Chad J. Miller",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Final Judgment - Chad J. Miller inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 40,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Jeffrey Puzzullo",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Final Judgment - Jeffrey Puzzullo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 40,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Suzee Han",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Final Judgment - Suzee Han inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 40,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Final Judgment - Titanium Capital LLC",
-      "documentedRole": "Contract",
-      "roleGroup": "corporate ownership and capital",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 40,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
-      "name": "Judgment - Gerard Ryan",
-      "documentedRole": "Contract",
-      "roleGroup": "documented person or institution",
-      "authority": "",
-      "instrument": "",
-      "action": "Contract",
-      "whyItMatters": "This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-      "sourceRoute": "daily-command-brief.html",
-      "records": 40,
-      "sources": [
-        "data/entity-registry.json"
-      ],
-      "summaries": [],
-      "specificity": 9,
-      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
-    },
-    {
       "name": "Amended Judgment - Spartan Trading Company, LLC",
       "documentedRole": "Contract",
       "roleGroup": "corporate ownership and capital",
@@ -1344,7 +1417,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Amended Judgment - Spartan Trading Company, LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1361,7 +1434,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1378,7 +1451,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Consent Motion for Entry of Final Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1395,7 +1468,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Consent of and Final Judgment as to Gautam Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1412,7 +1485,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Consent of and Final Judgment as to Sagar Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1429,7 +1502,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Andrew Kaufman inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1446,7 +1519,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Arthur inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1463,7 +1536,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Bin Hao inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1480,7 +1553,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Brent Cranmer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1497,7 +1570,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Daniel McCormick inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1514,7 +1587,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - DaveGlo Investment Group, Inc. inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1531,7 +1604,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - David P. Ortiz inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1548,7 +1621,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Eliseo Jojo Prisno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1565,7 +1638,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Estate of Richard Myre inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1582,7 +1655,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Flagg inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1599,7 +1672,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Geoffrey Allen Wall inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1616,7 +1689,7 @@
       "action": "Contract",
       "whyItMatters": "This record places Final Judgment - Henry Abdo inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1625,15 +1698,49 @@
       "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
     },
     {
-      "name": "Final Judgment - Jeffrey De Laveaga",
+      "name": "Final Judgment - Lloyd",
       "documentedRole": "Contract",
       "roleGroup": "documented person or institution",
       "authority": "",
       "instrument": "",
       "action": "Contract",
-      "whyItMatters": "This record places Final Judgment - Jeffrey De Laveaga inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "whyItMatters": "This record places Final Judgment - Lloyd inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
       "sourceRoute": "daily-command-brief.html",
-      "records": 39,
+      "records": 42,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Final Judgment - Mark Jacobs",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Final Judgment - Mark Jacobs inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 42,
+      "sources": [
+        "data/entity-registry.json"
+      ],
+      "summaries": [],
+      "specificity": 9,
+      "boundary": "The cited material establishes only the recorded role, action, ownership, contract, filing or relationship. It does not prove shared motive, wrongdoing or central command."
+    },
+    {
+      "name": "Final Judgment - Michael Bowen",
+      "documentedRole": "Contract",
+      "roleGroup": "documented person or institution",
+      "authority": "",
+      "instrument": "",
+      "action": "Contract",
+      "whyItMatters": "This record places Final Judgment - Michael Bowen inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
+      "sourceRoute": "daily-command-brief.html",
+      "records": 42,
       "sources": [
         "data/entity-registry.json"
       ],
@@ -1816,188 +1923,5 @@
       "route": "timers.html#surveillance-state"
     }
   ],
-  "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity.",
-  "dailyWatch": {
-    "updated": "2026-08-04T07:58:58.976Z",
-    "date": "2026-08-04",
-    "route": "daily-watch.html",
-    "person": {
-      "type": "person",
-      "name": "Bill Gates",
-      "entityResolution": {
-        "status": "authoritatively-resolved",
-        "registryId": "",
-        "registryType": "",
-        "graphId": "bill-gates",
-        "graphType": "profile route",
-        "reviewStatus": "",
-        "directFreshRecords": 0
-      },
-      "selectionBasis": "Highest registry-resolved structural relevance to the leading evidence lanes. No fresh accusation is inferred, and this position changes only when stronger source-linked evidence clears the promotion threshold.",
-      "whatWasFound": "profile route",
-      "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
-      "investigativeLanes": [
-        "Procurement and public-private implementation",
-        "Money, banking and payment access"
-      ],
-      "howItFits": "This person fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how procurement and public-private implementation, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
-      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
-      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
-      "evidenceStrength": "E2–E4 — resolved structural public records requiring direct review",
-      "confidence": "moderate",
-      "sourceRoutes": [
-        "billionaire-briefs/bill-gates.html"
-      ],
-      "nextQuestions": [
-        "What exact legal, financial, ownership, appointment or operational authority does Bill Gates possess?",
-        "Which dated primary record establishes the current action?",
-        "What oversight, competing authority, opt-out or appeal limits the power?",
-        "What new evidence would strengthen, narrow, replace or falsify this position?"
-      ],
-      "rankingScore": 91,
-      "rankingStatus": "incumbent-held-position",
-      "incumbentSince": "2026-07-27T17:29:36.861Z",
-      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-      "challengerHeld": "Elon Musk",
-      "challengerScore": 91,
-      "retentionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
-    },
-    "institution": {
-      "type": "institution",
-      "name": "Securities and Exchange Commission",
-      "entityResolution": {
-        "status": "authoritatively-resolved",
-        "registryId": "entity-governmentagency-23b03f6532d999f0229b",
-        "registryType": "GovernmentAgency",
-        "graphId": "securities-and-exchange-commission",
-        "graphType": "missing record",
-        "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 17
-      },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 17 fresh records plus 11 retained evidence references.",
-      "whatWasFound": "named-in-public-record, refined-from-organization",
-      "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
-      "investigativeLanes": [
-        "Procurement and public-private implementation"
-      ],
-      "howItFits": "This institution fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
-      "effectOnLane": "moderately-strengthens",
-      "whatItPointsToward": "Closer examination of how procurement and public-private implementation operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
-      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
-      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
-      "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "entity-briefs/securities-and-exchange-commission.html",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26598-gotbit-consulting.pdf",
-        "data/daily-investigation-conclusions.json",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26597.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-        "https://www.sec.gov/files/judg26592-semisub.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf"
-      ],
-      "nextQuestions": [
-        "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
-        "Which dated primary record establishes the current action?",
-        "What oversight, competing authority, opt-out or appeal limits the power?",
-        "What new evidence would strengthen, narrow, replace or falsify this position?"
-      ],
-      "rankingScore": 143,
-      "rankingStatus": "retained-current-leader",
-      "incumbentSince": "2026-07-27T17:29:36.861Z",
-      "lastPromotedAt": "2026-07-27T17:29:36.861Z"
-    },
-    "family": {
-      "type": "family",
-      "name": "Wallenberg family and foundations",
-      "entityResolution": {
-        "status": "resolved-family-access-record",
-        "familyId": "wallenberg",
-        "directFreshRecords": 0
-      },
-      "selectionBasis": "Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation.",
-      "whatWasFound": "No new wrongdoing finding is asserted. The family is elevated because the leading lanes overlap with documented access across Industrial ownership, Banking, Defence industry, Telecommunications, Pharmaceuticals, Research funding, Board networks.",
-      "whyItMatters": "The Wallenberg Foundations hold decisive voting influence in Investor AB, with the largest foundation alone holding more than 42 percent of votes as of June 2026. The ecosystem states that the three largest foundations collectively hold 50 percent of Investor's votes. Family members hold senior board positions while Investor uses board participation across a portfolio spanning finance, defence, industrials, pharmaceuticals and technology.",
-      "investigativeLanes": [
-        "Information, media and platform access",
-        "Money, banking and payment access",
-        "Procurement and public-private implementation",
-        "Power-family succession and institutional access"
-      ],
-      "howItFits": "The family lane tests whether legal succession, voting pools, foundations, holding companies, trustee powers, appointments or repeated gatekeeping preserve institutional access across generations. The mechanism—not the surname—is the evidence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "A focused review of industrial ownership, banking, defence industry, telecommunications and whether documented control rights or appointments connect the family to current policy, capital or infrastructure developments.",
-      "alternativeExplanation": "The ecosystem demonstrates exceptional corporate continuity and board access, but it is not equivalent to control of the Swedish state or every company in which Investor owns shares.",
-      "whatItDoesNotProve": "The evidence does not support claims that the Wallenbergs secretly direct Sweden, NATO or European institutions as a unified private government.",
-      "evidenceStrength": "E4–E5 — structural public records; no direct new allegation",
-      "confidence": "high",
-      "sourceRoutes": [
-        "behind-the-curtain-capstone.html",
-        "behind-the-curtain-access.html",
-        "https://www.wallenberg.com/en/ecosystem",
-        "https://www.investorab.com/investors-media/the-investor-share/ownership-structure/",
-        "https://www.investorab.com/about-investor/board-management/board-of-directors"
-      ],
-      "nextQuestions": [
-        "Which current decision, transaction or appointment directly involves Wallenberg family and foundations?",
-        "Who holds final voting, trustee or appointment authority?",
-        "Which structures are independently managed or legally constrained?",
-        "What evidence would lower or replace the family-access assessment?"
-      ],
-      "rankingScore": 122,
-      "rankingStatus": "incumbent-held-position",
-      "incumbentSince": "2026-07-27T17:29:36.861Z",
-      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-      "challengerHeld": "Al Maktoum family",
-      "challengerScore": 122,
-      "retentionReason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent."
-    },
-    "boundary": "Selection means the entity deserves focused source review. It is not a guilt ranking, accusation, declaration of hidden control, call for action against the entity, or proof of participation in another person's wrongdoing.",
-    "rankingPolicy": {
-      "mode": "stable-incumbent-evidence-promotion",
-      "promotionMargin": 14,
-      "rule": "A card changes only when a different entity has direct new source-linked evidence and its ranking score reaches or exceeds the incumbent score plus the promotion margin. Ties, novelty and minor fluctuations never replace a card.",
-      "decisions": {
-        "person": {
-          "changed": false,
-          "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
-          "incumbent": "Bill Gates",
-          "incumbentScore": 91,
-          "challenger": "Elon Musk",
-          "challengerScore": 91,
-          "required": 105,
-          "marginRequired": 14
-        },
-        "institution": {
-          "changed": false,
-          "reason": "The same entity remains the current evidence leader.",
-          "incumbentScore": 143,
-          "challengerScore": 143,
-          "marginRequired": 14
-        },
-        "family": {
-          "changed": false,
-          "reason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent.",
-          "incumbent": "Wallenberg family and foundations",
-          "incumbentScore": 122,
-          "challenger": "Al Maktoum family",
-          "challengerScore": 122,
-          "required": 136,
-          "marginRequired": 14
-        }
-      }
-    },
-    "dossierRoute": "data/daily-watch-dossiers.json"
-  }
+  "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity."
 }

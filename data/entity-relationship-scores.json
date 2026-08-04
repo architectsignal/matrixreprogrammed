@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T03:36:28.945Z",
+  "updated": "2026-08-04T14:39:12.626Z",
   "title": "Entity Relationship Scores",
   "purpose": "Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.",
   "boundary": "Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.",
@@ -8,7 +8,7 @@
       "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
       "from": "Health and Human Services Department",
       "to": "Centers for Medicare & Medicaid Services",
-      "count": 2,
+      "count": 3,
       "lanes": [
         "federal-register-policy"
       ],
@@ -19,17 +19,18 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-13656-3",
-        "federal-register-policy-2026-13602-4"
+        "federal-register-policy-2026-15833-1",
+        "federal-register-policy-2026-13656-4",
+        "federal-register-policy-2026-13602-5"
       ],
       "control_layers": [
         "policy",
         "emergency_power",
         "identity_access"
       ],
-      "score": 18,
+      "score": 27,
       "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
+      "relationship_type": "repeated public-record co-occurrence",
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
@@ -519,33 +520,6 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
-      "id": "aapl__apple-inc",
-      "from": "Apple Inc.",
-      "to": "AAPL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0000320193-1"
-      ],
-      "control_layers": [
-        "money",
-        "companies",
-        "ownership"
-      ],
-      "score": 9,
-      "grade": "candidate",
-      "relationship_type": "weak co-occurrence signal",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
       "id": "nvda__nvidia-corp",
       "from": "NVIDIA CORP",
       "to": "NVDA",
@@ -560,7 +534,34 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0001045810-2"
+        "sec-edgar-filings-cik0001045810-1"
+      ],
+      "control_layers": [
+        "money",
+        "companies",
+        "ownership"
+      ],
+      "score": 9,
+      "grade": "candidate",
+      "relationship_type": "weak co-occurrence signal",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "aapl__apple-inc",
+      "from": "Apple Inc.",
+      "to": "AAPL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-2"
       ],
       "control_layers": [
         "money",

@@ -1,8 +1,28 @@
 # Entity Daily Briefs
 
-Updated: 2026-08-04T03:36:28.978Z
+Updated: 2026-08-04T14:39:12.662Z
 
-Briefs generated: 34
+Briefs generated: 33
+
+## Centers for Medicare & Medicaid Services
+
+At a glance: Centers for Medicare & Medicaid Services is currently tracked as observed entity with 3 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: documented public-record association
+
+Watch next: Watch Centers for Medicare & Medicaid Services across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
+
+## Health and Human Services Department
+
+At a glance: Health and Human Services Department is currently tracked as observed entity with 3 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: documented public-record association
+
+Watch next: Watch Health and Human Services Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -13,26 +33,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Centers for Medicare & Medicaid Services
-
-At a glance: Centers for Medicare & Medicaid Services is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Centers for Medicare & Medicaid Services across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
-
-## Health and Human Services Department
-
-At a glance: Health and Human Services Department is currently tracked as observed entity with 2 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: documented public-record association
-
-Watch next: Watch Health and Human Services Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
 ## 2021-08825
 
@@ -323,16 +323,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: documented public-record association
 
 Watch next: Watch NVIDIA CORP across sec-edgar-filings.; Check whether new sec-edgar-filings records repeat this name.
-
-## Nuclear Regulatory Commission
-
-At a glance: Nuclear Regulatory Commission is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: A source route exists. More records are needed before drawing a stronger conclusion.
-
-Evidence: documented public-record association
-
-Watch next: Watch Nuclear Regulatory Commission across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
 ## Securities and Exchange Commission
 

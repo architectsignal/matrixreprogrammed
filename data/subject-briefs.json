@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T03:36:29.112Z",
+  "updated": "2026-08-04T14:39:12.799Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -12,6 +12,12 @@
         "public-private-contracts"
       ],
       "latest_records": [
+        {
+          "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+          "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
         {
           "title": "Electronic Delivery of Information Under the Federal Securities Laws",
           "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
@@ -41,20 +47,13 @@
           "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Modernizing Security Requirements",
-          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
-        "Securities and Exchange Commission",
-        "Homeland Security Department",
         "Health and Human Services Department",
         "Centers for Medicare & Medicaid Services",
-        "Nuclear Regulatory Commission"
+        "Securities and Exchange Commission",
+        "Homeland Security Department"
       ],
       "relationship_candidates": [],
       "missing_records": [
@@ -91,17 +90,10 @@
           "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Modernizing Security Requirements",
-          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
-        "Homeland Security Department",
-        "Nuclear Regulatory Commission"
+        "Homeland Security Department"
       ],
       "relationship_candidates": [],
       "missing_records": [
@@ -128,6 +120,12 @@
       ],
       "latest_records": [
         {
+          "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+          "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
           "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
           "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
           "grade": "documented association",
@@ -149,7 +147,7 @@
           "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
           "from": "Health and Human Services Department",
           "to": "Centers for Medicare & Medicaid Services",
-          "count": 2,
+          "count": 3,
           "lanes": [
             "federal-register-policy"
           ],
@@ -160,17 +158,18 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-13656-3",
-            "federal-register-policy-2026-13602-4"
+            "federal-register-policy-2026-15833-1",
+            "federal-register-policy-2026-13656-4",
+            "federal-register-policy-2026-13602-5"
           ],
           "control_layers": [
             "policy",
             "emergency_power",
             "identity_access"
           ],
-          "score": 18,
+          "score": 27,
           "grade": "candidate",
-          "relationship_type": "public-record co-occurrence",
+          "relationship_type": "repeated public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],
@@ -197,6 +196,12 @@
         "identity-access"
       ],
       "latest_records": [
+        {
+          "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+          "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
         {
           "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
           "url": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
@@ -239,6 +244,12 @@
       ],
       "latest_records": [
         {
+          "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+          "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
           "title": "Electronic Delivery of Information Under the Federal Securities Laws",
           "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
           "grade": "documented association",
@@ -267,27 +278,20 @@
           "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Modernizing Security Requirements",
-          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
-        "Securities and Exchange Commission",
-        "Homeland Security Department",
         "Health and Human Services Department",
         "Centers for Medicare & Medicaid Services",
-        "Nuclear Regulatory Commission"
+        "Securities and Exchange Commission",
+        "Homeland Security Department"
       ],
       "relationship_candidates": [
         {
           "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
           "from": "Health and Human Services Department",
           "to": "Centers for Medicare & Medicaid Services",
-          "count": 2,
+          "count": 3,
           "lanes": [
             "federal-register-policy"
           ],
@@ -298,17 +302,18 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-13656-3",
-            "federal-register-policy-2026-13602-4"
+            "federal-register-policy-2026-15833-1",
+            "federal-register-policy-2026-13656-4",
+            "federal-register-policy-2026-13602-5"
           ],
           "control_layers": [
             "policy",
             "emergency_power",
             "identity_access"
           ],
-          "score": 18,
+          "score": 27,
           "grade": "candidate",
-          "relationship_type": "public-record co-occurrence",
+          "relationship_type": "repeated public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],
@@ -415,6 +420,12 @@
       ],
       "latest_records": [
         {
+          "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+          "url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+          "grade": "documented association",
+          "lane": "federal-register-policy"
+        },
+        {
           "title": "Electronic Delivery of Information Under the Federal Securities Laws",
           "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
           "grade": "documented association",
@@ -443,27 +454,20 @@
           "url": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
           "grade": "documented association",
           "lane": "federal-register-policy"
-        },
-        {
-          "title": "Modernizing Security Requirements",
-          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
-          "grade": "documented association",
-          "lane": "federal-register-policy"
         }
       ],
       "top_entities": [
-        "Securities and Exchange Commission",
-        "Homeland Security Department",
         "Health and Human Services Department",
         "Centers for Medicare & Medicaid Services",
-        "Nuclear Regulatory Commission"
+        "Securities and Exchange Commission",
+        "Homeland Security Department"
       ],
       "relationship_candidates": [
         {
           "id": "centers-for-medicare-and-medicaid-services__health-and-human-services-department",
           "from": "Health and Human Services Department",
           "to": "Centers for Medicare & Medicaid Services",
-          "count": 2,
+          "count": 3,
           "lanes": [
             "federal-register-policy"
           ],
@@ -474,17 +478,18 @@
             "documented association"
           ],
           "source_events": [
-            "federal-register-policy-2026-13656-3",
-            "federal-register-policy-2026-13602-4"
+            "federal-register-policy-2026-15833-1",
+            "federal-register-policy-2026-13656-4",
+            "federal-register-policy-2026-13602-5"
           ],
           "control_layers": [
             "policy",
             "emergency_power",
             "identity_access"
           ],
-          "score": 18,
+          "score": 27,
           "grade": "candidate",
-          "relationship_type": "public-record co-occurrence",
+          "relationship_type": "repeated public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         }
       ],

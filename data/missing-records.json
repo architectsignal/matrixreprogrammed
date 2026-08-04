@@ -1,15 +1,9 @@
 {
-  "updated": "2026-08-04T03:36:29.112Z",
+  "updated": "2026-08-04T14:39:12.799Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
   "records": [
-    {
-      "entity": "Appellate Division of the Supreme Court of the State of New York",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "type": "entity brief"
-    },
     {
       "entity": "Centers for Medicare & Medicaid Services",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
@@ -20,6 +14,12 @@
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/health-and-human-services-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
       "type": "entity brief"
     },
     {
@@ -197,12 +197,6 @@
       "type": "entity brief"
     },
     {
-      "entity": "Nuclear Regulatory Commission",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/nuclear-regulatory-commission.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Securities and Exchange Commission",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/securities-and-exchange-commission.html",
@@ -311,12 +305,6 @@
       "type": "record review"
     },
     {
-      "entity": "Homeland Security Department",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/homeland-security-department.html",
-      "type": "record review"
-    },
-    {
       "entity": "Centers for Medicare & Medicaid Services",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
@@ -326,6 +314,12 @@
       "entity": "Health and Human Services Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/health-and-human-services-department.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Homeland Security Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/homeland-security-department.html",
       "type": "record review"
     },
     {
@@ -398,12 +392,6 @@
       "entity": "NVIDIA CORP",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/nvidia-corp.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Nuclear Regulatory Commission",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/nuclear-regulatory-commission.html",
       "type": "record review"
     },
     {

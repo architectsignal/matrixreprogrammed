@@ -1,9 +1,49 @@
 {
-  "updated": "2026-08-04T03:36:12.574Z",
+  "updated": "2026-08-04T14:38:54.063Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "title": "Entity Observations",
   "purpose": "Repeated names detected from public-record pulls. These are candidates for Power Entity Engine review, not proof of wrongdoing.",
   "observations": [
+    {
+      "id": "health-and-human-services-department",
+      "name": "Health and Human Services Department",
+      "count": 3,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-15833-1",
+        "federal-register-policy-2026-13656-4",
+        "federal-register-policy-2026-13602-5"
+      ],
+      "last_seen": "2026-07-06"
+    },
+    {
+      "id": "centers-for-medicare-and-medicaid-services",
+      "name": "Centers for Medicare & Medicaid Services",
+      "count": 3,
+      "lanes": [
+        "federal-register-policy"
+      ],
+      "record_types": [
+        "rule_or_notice"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "federal-register-policy-2026-15833-1",
+        "federal-register-policy-2026-13656-4",
+        "federal-register-policy-2026-13602-5"
+      ],
+      "last_seen": "2026-07-06"
+    },
     {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
@@ -18,48 +58,10 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-14439-2",
-        "federal-register-policy-2026-13057-5"
+        "federal-register-policy-2026-14439-3",
+        "federal-register-policy-2026-13057-6"
       ],
       "last_seen": "2026-06-29"
-    },
-    {
-      "id": "health-and-human-services-department",
-      "name": "Health and Human Services Department",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-13656-3",
-        "federal-register-policy-2026-13602-4"
-      ],
-      "last_seen": "2026-07-06"
-    },
-    {
-      "id": "centers-for-medicare-and-medicaid-services",
-      "name": "Centers for Medicare & Medicaid Services",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-13656-3",
-        "federal-register-policy-2026-13602-4"
-      ],
-      "last_seen": "2026-07-06"
     },
     {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
@@ -94,63 +96,9 @@
         "documented association"
       ],
       "source_events": [
-        "federal-register-policy-2026-14679-1"
+        "federal-register-policy-2026-14679-2"
       ],
       "last_seen": "2026-07-21"
-    },
-    {
-      "id": "nuclear-regulatory-commission",
-      "name": "Nuclear Regulatory Commission",
-      "count": 1,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-12989-6"
-      ],
-      "last_seen": "2026-06-26"
-    },
-    {
-      "id": "apple-inc",
-      "name": "Apple Inc.",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0000320193-1"
-      ],
-      "last_seen": "2026-08-04"
-    },
-    {
-      "id": "aapl",
-      "name": "AAPL",
-      "count": 1,
-      "lanes": [
-        "sec-edgar-filings"
-      ],
-      "record_types": [
-        "company_registry_snapshot"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "sec-edgar-filings-cik0000320193-1"
-      ],
-      "last_seen": "2026-08-04"
     },
     {
       "id": "nvidia-corp",
@@ -166,7 +114,7 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0001045810-2"
+        "sec-edgar-filings-cik0001045810-1"
       ],
       "last_seen": "2026-08-04"
     },
@@ -184,7 +132,43 @@
         "documented association"
       ],
       "source_events": [
-        "sec-edgar-filings-cik0001045810-2"
+        "sec-edgar-filings-cik0001045810-1"
+      ],
+      "last_seen": "2026-08-04"
+    },
+    {
+      "id": "apple-inc",
+      "name": "Apple Inc.",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-2"
+      ],
+      "last_seen": "2026-08-04"
+    },
+    {
+      "id": "aapl",
+      "name": "AAPL",
+      "count": 1,
+      "lanes": [
+        "sec-edgar-filings"
+      ],
+      "record_types": [
+        "company_registry_snapshot"
+      ],
+      "evidence_grades": [
+        "documented association"
+      ],
+      "source_events": [
+        "sec-edgar-filings-cik0000320193-2"
       ],
       "last_seen": "2026-08-04"
     },

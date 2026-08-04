@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T03:36:29.112Z",
+  "updated": "2026-08-04T14:39:12.799Z",
   "title": "Brief Quality Report",
   "boundary": "Quality scores prioritize source strength, relationship depth, missing-record pressure and reader clarity.",
   "briefs": [
@@ -16,9 +16,9 @@
     {
       "id": "centers-for-medicare-and-medicaid-services",
       "name": "Centers for Medicare & Medicaid Services",
-      "score": 73,
-      "level": "high priority",
-      "source_strength": 50,
+      "score": 91,
+      "level": "elite priority",
+      "source_strength": 75,
       "relationship_depth": 20,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
@@ -26,9 +26,9 @@
     {
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",
-      "score": 73,
-      "level": "high priority",
-      "source_strength": 50,
+      "score": 91,
+      "level": "elite priority",
+      "source_strength": 75,
       "relationship_depth": 20,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
@@ -320,16 +320,6 @@
       "level": "active watch",
       "source_strength": 25,
       "relationship_depth": 20,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "nuclear-regulatory-commission",
-      "name": "Nuclear Regulatory Commission",
-      "score": 43,
-      "level": "active watch",
-      "source_strength": 25,
-      "relationship_depth": 0,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
     },

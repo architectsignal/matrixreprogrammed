@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-08-04T03:36:29.024Z
+Updated: 2026-08-04T14:39:12.712Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -172,6 +172,26 @@ Highest evidence: charged / sued
 
 Reading: Williams v. Biggs deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## Centers for Medicare & Medicaid Services
+
+Score: 134
+
+Level: critical public-record exposure
+
+Highest evidence: documented association
+
+Reading: Centers for Medicare & Medicaid Services deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Health and Human Services Department
+
+Score: 134
+
+Level: critical public-record exposure
+
+Highest evidence: documented association
+
+Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## Homeland Security Department
 
 Score: 118
@@ -181,26 +201,6 @@ Level: critical public-record exposure
 Highest evidence: documented association
 
 Reading: Homeland Security Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Centers for Medicare & Medicaid Services
-
-Score: 89
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Centers for Medicare & Medicaid Services deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Health and Human Services Department
-
-Score: 89
-
-Level: high public-record exposure
-
-Highest evidence: documented association
-
-Reading: Health and Human Services Department deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## AAPL
 
@@ -321,16 +321,6 @@ Level: moderate public-record exposure
 Highest evidence: documented association
 
 Reading: NVIDIA CORP deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## Nuclear Regulatory Commission
-
-Score: 40
-
-Level: moderate public-record exposure
-
-Highest evidence: documented association
-
-Reading: Nuclear Regulatory Commission deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Securities and Exchange Commission
 

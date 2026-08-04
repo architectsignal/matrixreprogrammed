@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-08-04T03:36:29.112Z
+Updated: 2026-08-04T14:39:12.799Z
 
 ## Top Contractor Signals
 
@@ -14,9 +14,9 @@ Updated: 2026-08-04T03:36:29.112Z
 
 ## Missing Records
 
-- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Health and Human Services Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 23 WAP 2023: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -46,7 +46,6 @@ Updated: 2026-08-04T03:36:29.112Z
 - MSFT: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - NVDA: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - NVIDIA CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Nuclear Regulatory Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Securities and Exchange Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - California Supreme Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -54,3 +53,4 @@ Updated: 2026-08-04T03:36:29.112Z
 - Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Supreme Court of Pennsylvania: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

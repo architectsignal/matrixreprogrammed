@@ -8,6 +8,7 @@ const read = relative => fs.readFileSync(path.join(root, relative), 'utf8');
 const issues = [];
 const need = (condition, message) => { if (!condition) issues.push(message); };
 
+const preparation = JSON.parse(read('downloads/p1-public-quality-preparation.json'));
 const quality = JSON.parse(read('downloads/p1-public-quality-finalization.json'));
 const routes = JSON.parse(read('downloads/p1-public-quality-routes.json'));
 const finalizer = read('scripts/finalize-p1-public-quality.js');
@@ -32,6 +33,10 @@ const expectedPages = [
   'tracker-dashboard.html'
 ];
 
+need(preparation.ok === true, 'P1 quality preparation report is not healthy');
+need(preparation.canonicalBusinessGuide === 'downloads/wealth-guides/business-builder.pdf', 'Canonical Business Creation guide route changed');
+need(preparation.canonicalBusinessGuidePresent === true, 'Canonical Business Creation guide is missing from source output');
+need(preparation.deployableBusinessGuidePresent === true, 'Canonical Business Creation guide is missing from deployable output');
 need(quality.ok === true, 'P1 quality finalization report is not healthy');
 need(quality.targetCount === 15, `Expected 15 weak pages; found ${quality.targetCount}`);
 need(JSON.stringify(quality.targetPages) === JSON.stringify(expectedPages), 'P1 weak-page target set changed');
@@ -69,13 +74,26 @@ for (const result of quality.results || []) {
   need((result.scaffold || []).length === 0, `${result.file} retains visible scaffold copy`);
 }
 
+for (const relative of ['download-center.html', '_site/download-center.html', '_site/download-center']) {
+  const file = path.join(root, relative);
+  if (!fs.existsSync(file) || !fs.statSync(file).isFile()) continue;
+  const html = fs.readFileSync(file, 'utf8');
+  need(!html.includes('downloads/wealth-guides/business-system.pdf'), `${relative} retains the dead Business system PDF route`);
+  need(html.includes('downloads/wealth-guides/business-builder.pdf'), `${relative} does not link to the generated Business Creation Engine PDF`);
+}
+need(fs.existsSync(path.join(root, 'downloads', 'wealth-guides', 'business-builder.pdf')), 'Generated Business Creation Engine PDF is missing');
+if (fs.existsSync(path.join(root, '_site'))) {
+  need(fs.existsSync(path.join(root, '_site', 'downloads', 'wealth-guides', 'business-builder.pdf')), 'Deployable Business Creation Engine PDF is missing');
+}
+
 const report = {
   ok: issues.length === 0,
   generatedAt: new Date().toISOString(),
   targetPages: expectedPages.length,
   checkedSurfaces: quality.results?.length || 0,
   readerRouteSurfaces: routes.checkedSurfaces || 0,
-  boundary: 'The P1 pass improves reader comprehension and routing without changing evidence records, allegations, D1 state, membership, payments or production deployment.',
+  canonicalBusinessGuide: preparation.canonicalBusinessGuide,
+  boundary: 'The P1 pass improves reader comprehension and routing without changing evidence records, allegations, D1 state, membership, payments or production deployment. Every promoted download must resolve to a generated file.',
   issues
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
@@ -85,4 +103,4 @@ if (issues.length) {
   issues.slice(0, 100).forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`P1 PUBLIC QUALITY CONTRACT PASSED: ${report.targetPages} weak pages receive page-specific guidance, six reader routes, review dates and evidence limits.`);
+console.log(`P1 PUBLIC QUALITY CONTRACT PASSED: ${report.targetPages} weak pages receive page-specific guidance, six reader routes, review dates, evidence limits and verified downloads.`);

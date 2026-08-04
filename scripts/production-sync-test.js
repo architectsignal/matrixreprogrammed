@@ -15,6 +15,7 @@ const check = (name, ok) => { if (!ok) failures.push(name); };
 const canonicalDeploy = read('.github/workflows/deploy.yml');
 const fallbackDeploy = read('.github/workflows/deploy-production.yml');
 const dispatchDeploy = read('.github/workflows/one-shot-dispatch-controlled-production.yml');
+const productionAuthorization = read('scripts/verify-one-shot-production-authorization.js');
 const refreshRunner = read('scripts/run-production-intelligence-refresh.js');
 const legacyRepair = read('scripts/repair-generated-site-artifacts.js');
 const regressionWrapper = read('scripts/cloudflare-focused-pressure-wrapper.js');
@@ -61,7 +62,18 @@ if (hardFreeze) {
 } else {
   check('canonical deploy refreshes intelligence through guarded runner or legacy inline chain', guardedRefreshRunner || legacyInlineRefresh);
   check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request):/m.test(canonicalDeploy));
-  check('canonical deploy requires exact release confirmation', canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED') && canonicalDeploy.includes('Production release refused: confirmation text did not match.'));
+  check('canonical deploy requires exact release confirmation',
+    canonicalDeploy.includes('DEPLOY MATRIX REPROGRAMMED')
+    && canonicalDeploy.includes('MATRIX_PRODUCTION_CONFIRMATION: ${{ inputs.confirmation }}')
+    && canonicalDeploy.includes('MATRIX_PRODUCTION_ACTOR: ${{ github.actor }}')
+    && canonicalDeploy.includes('MATRIX_WORKFLOW_EVENT: ${{ github.event_name }}')
+    && canonicalDeploy.includes('node scripts/verify-one-shot-production-authorization.js')
+    && productionAuthorization.includes("const exactConfirmation = 'DEPLOY MATRIX REPROGRAMMED';")
+    && productionAuthorization.includes('confirmation === exactConfirmation')
+    && productionAuthorization.includes("eventName === 'workflow_dispatch'")
+    && productionAuthorization.includes('resolveFirstParentMarkerCommit')
+    && productionAuthorization.includes("merge-base', '--is-ancestor")
+  );
   check('canonical deploy queues rather than interrupts migrations', canonicalDeploy.includes('group: matrixreprogrammed-production') && /cancel-in-progress:\s*false/.test(canonicalDeploy));
   check('canonical deploy verifies live SHA and AI control plane', canonicalDeploy.includes('verify-live-production.js') && canonicalDeploy.includes('verify-live-ai-management.mjs'));
   check('canonical deploy performs exactly one reviewed Worker deploy', (canonicalDeploy.match(/wrangler@latest deploy --config \.wrangler-production\.toml 2>&1/g) || []).length === 1);
@@ -141,7 +153,7 @@ const report = {
   deploymentMode: hardFreeze ? 'hard-freeze' : 'deployment-enabled',
   deploymentModel: hardFreeze
     ? 'Cloudflare production is hard frozen. Git intelligence updates continue, while canonical, fallback and dispatcher workflows are inert and mutation-free.'
-    : 'One manually confirmed canonical Cloudflare production release is active. The fallback remains hard frozen and the dispatcher cannot mutate Cloudflare or D1 directly.',
+    : 'One guarded canonical Cloudflare production release is active through explicit human dispatch or a fresh repository-owned one-shot marker. The fallback remains hard frozen and the dispatcher cannot mutate Cloudflare or D1 directly.',
   rollbackModel: hardFreeze
     ? 'No production migration may run while frozen. Migration files, strict Worker, reconciliation and guard assets remain preserved for a future explicitly restored release workflow.'
     : 'The single canonical migration path captures and validates a Cloudflare D1 Time Travel bookmark before every migration chain and records the exact restore command.',
@@ -158,4 +170,4 @@ if (failures.length) {
 }
 console.log(hardFreeze
   ? 'Production synchronization assurance passed: all production workflows are hard frozen, mutation-free and deployment readiness remains preserved in Git.'
-  : 'Production synchronization assurance passed: one manually confirmed rollback-protected Cloudflare release, guarded intelligence refresh, frozen non-mutating fallback, strict read-after-write forums, prompt-local zero-spend AI and SDK-free runtime-gated PayPal.');
+  : 'Production synchronization assurance passed: one guarded rollback-protected Cloudflare release, guarded intelligence refresh, frozen non-mutating fallback, strict read-after-write forums, prompt-local zero-spend AI and SDK-free runtime-gated PayPal.');

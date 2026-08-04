@@ -109,6 +109,21 @@
       "reviewNote": "Crime and prosecution figures must come from attributable court records, official releases or cited primary public records before updating."
     },
     {
+      "id": "financial-filing-figures",
+      "label": "Financial filings, assets under management, holdings, and market figures",
+      "filePatterns": ["evidence-graph.html", "market-activity.html", "money", "asset-manager", "holdings", "finance", "wealth"],
+      "figurePatterns": ["aum", "assets", "asset manager", "holdings", "market", "million", "billion", "trillion", "$", "€", "£", "q1", "q2", "q3", "q4"],
+      "sourceType": "dated-financial-filing-required",
+      "sourceFiles": ["data/market-activity.json", "data/market-holdings", "data/evidence-graph.json"],
+      "sourceName": "Financial filing and market source registry",
+      "publisher": "Named issuer, regulator, exchange, or official filing repository required",
+      "sourceDatePolicy": "per-record-source-date-required",
+      "scope": "Assets under management, holdings, ownership, revenue, market value, and other financial figures separated by entity, currency, reporting period, and filing type.",
+      "evidenceClassification": "dated-filing-or-official-financial-record-required",
+      "updatePolicy": "manual-review-only",
+      "reviewNote": "Financial figures require the attributable filing or official release and its reporting period. A current-watch label is not a substitute for a source date."
+    },
+    {
       "id": "static-historical-context",
       "label": "Static historical publication years and archival dates",
       "filePatterns": ["books.html", "book-", "source-", "trust-", "evidence-"],

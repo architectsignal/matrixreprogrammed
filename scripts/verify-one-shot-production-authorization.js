@@ -10,7 +10,7 @@ const reportPath = path.join(root, 'downloads', 'one-shot-production-authorizati
 const exactConfirmation = 'DEPLOY MATRIX REPROGRAMMED';
 const exactAuthorization = 'exactly one controlled Cloudflare production deployment';
 // Legacy token retained because deploy.yml already recognizes this exact value.
-// The marker and date checks below bind it to the explicit 2026-08-03 owner override.
+// The marker and date checks below bind it to the explicit 2026-08-04 owner override.
 const ownerExceptionAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
 
 function git(args) {
@@ -59,15 +59,15 @@ function validateMarker(content, options = {}) {
       'One-shot marker contains an unrecognized billable-build exception.'
     );
     requireValue(
-      /owner-authorized single billable build on 2026-08-03/i.test(fields.Boundary || ''),
-      'One-shot marker does not bind the billable-build exception to 2026-08-03.'
+      /owner-authorized single billable build on 2026-08-04/i.test(fields.Boundary || ''),
+      'One-shot marker does not bind the billable-build exception to 2026-08-04.'
     );
     requireValue(
       /all other .* gates .* mandatory/i.test(fields.Boundary || ''),
       'One-shot marker does not preserve the non-budget release gates.'
     );
     requireValue(
-      /owner-authorized single billable-build exception on 2026-08-03/i.test(fields['Required proof'] || ''),
+      /owner-authorized single billable-build exception on 2026-08-04/i.test(fields['Required proof'] || ''),
       'One-shot marker does not require the dated owner exception proof.'
     );
   } else {
@@ -132,21 +132,21 @@ function validTriggerSubject(subject, allowPrTest = false) {
 }
 
 function runSelfTest() {
-  const now = new Date('2026-08-03T18:35:00Z');
-  const valid = `${exactConfirmation}\nRequested: 2026-08-03T18:30:00Z\nRelease: pr201-pr197-repaired-runtime-production-20260803-1830z\nTarget: current main 526c62c9deae9780de37e21ad77156f1eb053520 containing merged PR #197\nAuthorization: ${exactAuthorization}\nRequired proof: complete production build and fresh Cloudflare zero-overage budget approval\nPurpose: deploy the merged PR #197 repaired release\nBoundary: do not bypass the Cloudflare billing-period lock or zero-spend policy\nNonce: pr201-pr197-controlled-production-20260803T183000Z\n`;
+  const now = new Date('2026-08-04T07:35:00Z');
+  const valid = `${exactConfirmation}\nRequested: 2026-08-04T07:30:00Z\nRelease: pr205-repaired-runtime-production-20260804-0730z\nTarget: current main 3988c99a19aa9072b3f752e17e0ad4cde12371e8 containing merged PR #204\nAuthorization: ${exactAuthorization}\nRequired proof: complete production build and fresh Cloudflare zero-overage budget approval\nPurpose: deploy the merged PR #204 repaired release\nBoundary: do not bypass the Cloudflare billing-period lock or zero-spend policy\nNonce: pr205-controlled-production-20260804T073000Z\n`;
   const parsed = validateMarker(valid, { now, maxAgeHours: 6 });
-  requireValue(parsed.targetSha === '526c62c9deae9780de37e21ad77156f1eb053520', 'Self-test target parsing failed.');
-  requireValue(validTriggerSubject('Dispatch guarded PR #197 production release'), 'Self-test rejected a valid merged dispatch subject.');
+  requireValue(parsed.targetSha === '3988c99a19aa9072b3f752e17e0ad4cde12371e8', 'Self-test target parsing failed.');
+  requireValue(validTriggerSubject('Dispatch guarded PR #205 production release'), 'Self-test rejected a valid merged dispatch subject.');
   requireValue(!validTriggerSubject('Request guarded production release after authority repair'), 'Self-test accepted a branch request subject in production mode.');
   requireValue(validTriggerSubject('Request guarded production release after authority repair', true), 'Self-test rejected a branch request subject in isolated PR-test mode.');
 
-  const exceptionMarker = `${exactConfirmation}\nRequested: 2026-08-03T18:30:00Z\nRelease: pr201-pr197-one-time-billable-production-20260803-1830z\nTarget: current main 526c62c9deae9780de37e21ad77156f1eb053520 containing merged PR #197\nAuthorization: ${exactAuthorization}\nBilling exception: ${ownerExceptionAuthorization}\nRequired proof: complete production build and owner-authorized single billable-build exception on 2026-08-03\nPurpose: deploy the merged PR #197 repaired release\nBoundary: owner-authorized single billable build on 2026-08-03; all other zero-spend, credential, rollback and verification gates remain mandatory\nNonce: pr201-pr197-owner-billable-production-20260803T183000Z\n`;
+  const exceptionMarker = `${exactConfirmation}\nRequested: 2026-08-04T07:30:00Z\nRelease: pr205-one-time-billable-production-20260804-0730z\nTarget: current main 3988c99a19aa9072b3f752e17e0ad4cde12371e8 containing merged PR #204\nAuthorization: ${exactAuthorization}\nBilling exception: ${ownerExceptionAuthorization}\nRequired proof: complete production build and owner-authorized single billable-build exception on 2026-08-04\nPurpose: deploy the merged PR #204 repaired release\nBoundary: owner-authorized single billable build on 2026-08-04; all other zero-spend, credential, rollback and verification gates remain mandatory\nNonce: pr205-owner-billable-production-20260804T073000Z\n`;
   const exception = validateMarker(exceptionMarker, { now, maxAgeHours: 6 });
   requireValue(exception.billingException === ownerExceptionAuthorization, 'Self-test owner exception parsing failed.');
 
   let staleRejected = false;
   try {
-    validateMarker(valid.replace('2026-08-03T18:30:00Z', '2026-08-02T18:30:00Z'), { now, maxAgeHours: 6 });
+    validateMarker(valid.replace('2026-08-04T07:30:00Z', '2026-08-03T07:30:00Z'), { now, maxAgeHours: 6 });
   } catch { staleRejected = true; }
   requireValue(staleRejected, 'Self-test did not reject a stale marker.');
 

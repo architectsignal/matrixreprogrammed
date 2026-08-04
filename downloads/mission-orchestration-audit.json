@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T15:52:56.128Z",
+  "generatedAt": "2026-08-04T07:58:59.576Z",
   "overall": "ready",
   "summary": {
     "total": 52,
@@ -9,7 +9,7 @@
   },
   "homepageMode": "search-first-accountability",
   "watch": {
-    "date": "2026-08-03",
+    "date": "2026-08-04",
     "person": "Bill Gates",
     "institution": "Securities and Exchange Commission",
     "family": "Wallenberg family and foundations",
@@ -17,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 3146,
+    "archivedFindings": 3488,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -88,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "3146 archived findings retained.",
+      "detail": "3488 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -268,7 +268,7 @@
     {
       "id": "history-and-weekly-delta",
       "ok": true,
-      "detail": "8 history entries; weekly delta ready.",
+      "detail": "9 history entries; weekly delta ready.",
       "fix": "Retain ranking history and weekly changes."
     },
     {
@@ -280,7 +280,7 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Search-first homepage: headerEnd=4048; search=137536; accountabilityHitList=138800.",
+      "detail": "Search-first homepage: headerEnd=4106; search=137263; accountabilityHitList=138527.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {

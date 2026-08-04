@@ -1,0 +1,91 @@
+name: P0 Live Public Completion Gate
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p0-live-public-smoke.yml'
+      - 'scripts/p0-live-public-smoke.mjs'
+      - 'scripts/p0-live-public-smoke-contract-test.js'
+  workflow_run:
+    workflows:
+      - Matrix Reprogrammed Controlled Production Deploy
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: 'Optional exact live SHA. Leave blank to use the commit-bound live manifest.'
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+concurrency:
+  group: p0-live-public-completion-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    name: Prove the live gate is exact and non-mutating
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout proposed gate
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify P0 live-gate contract
+        run: node scripts/p0-live-public-smoke-contract-test.js
+
+      - name: Upload gate contract
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p0-live-public-smoke-contract-${{ github.run_id }}
+          path: downloads/p0-live-public-smoke-contract-test.json
+          if-no-files-found: error
+          retention-days: 30
+
+  verify:
+    name: Verify exact live SHA and public journeys
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Verify P0 live public completion
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          EXPECTED_LIVE_SHA: ${{ inputs.expected_sha || '' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          P0_SMOKE_ATTEMPTS: '36'
+          P0_SMOKE_DELAY_MS: '10000'
+        run: node scripts/p0-live-public-smoke.mjs
+
+      - name: Upload P0 live proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p0-live-public-smoke-${{ github.run_id }}
+          path: downloads/p0-live-public-smoke.json
+          if-no-files-found: error
+          retention-days: 60

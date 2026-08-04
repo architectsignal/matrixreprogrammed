@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-04T03:36:51.077Z
-Live Intel source window: 2026-08-04T03:36:45.921Z
+Generated: 2026-08-04T09:07:30.479Z
+Live Intel source window: 2026-08-04T09:07:26.174Z
 Latest source publication: 2026-08-03T22:56:29.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-14 current Epstein-lane record leads remain inside the active source window.
+13 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -45,23 +45,13 @@ Victims to settle case against Epstein's longtime attorney, accountant: Document
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
-- Published: 2026-08-03T15:39:07.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
-
-What we know about Melania Trump and Jeffrey Epstein ABC News - Breaking News, Latest News and Videos
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - theguardian.com
+### Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
 - Published: 2026-08-03T12:00:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
 
-Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? theguardian.com
+Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? The Guardian
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -85,13 +75,13 @@ With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News 
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - theguardian.com
+### Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
 - Published: 2026-07-30T18:14:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
 
-Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ theguardian.com
+Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ The Guardian
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -125,13 +115,13 @@ Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannic
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
 - Published: 2026-07-30T00:48:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
 
-U.S. Senate unanimously opposes clemency for Ghislaine Maxwell AnewZ
+U.S. Senate unanimously opposes clemency for Ghislaine Maxwell anewz.tv
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -145,13 +135,13 @@ Epstein accuser’s family blasts former Obama White House lawyer who said her a
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
+### Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
 - Published: 2026-07-29T21:23:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
 
-Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell theguardian.com
+Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The Guardian
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

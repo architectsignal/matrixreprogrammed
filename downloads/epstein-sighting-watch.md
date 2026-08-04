@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-04T03:36:51.130Z
+Generated: 2026-08-04T09:07:30.542Z
 
 ## Official Boundary
 
@@ -78,13 +78,3 @@ Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking A
 - Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
 Victims to settle case against Epstein's longtime attorney, accountant: Documents ABC News - Breaking News, Latest News and Videos
-
-### What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
-- Type: sighting-claim
-- Status: unverified-claim
-- Evidence level: 3
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
-- Likely explanation: Media claim needs source custody, date, location, identity verification, and counter-source review.
-
-What we know about Melania Trump and Jeffrey Epstein ABC News - Breaking News, Latest News and Videos

@@ -11,7 +11,7 @@ Medium priority pages: 1483
 Pages with missing rules: 744
 Auto-update eligible figures: 3
 Manual-review figures: 106
-Missing-rule figures: 1555
+Missing-rule figures: 1559
 
 ## High Priority Pages
 - _site/review-dashboard.html: 24 figure/stat markers; 24 missing rules. Add figure-source rules before automatic replacement.
@@ -35,6 +35,7 @@ Missing-rule figures: 1555
 - _site/cinematic-hit-list.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - _site/hit-list.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - cinematic-hit-list.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
+- daily-brain-brief.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - hit-list.html: 6 figure/stat markers; 6 missing rules. Add figure-source rules before automatic replacement.
 - source-changes.html: 40 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - _site/dossier-george-nader.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
@@ -43,7 +44,6 @@ Missing-rule figures: 1555
 - _site/power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - intel-archive.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 - making-money.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
-- power-structure-map.html: 4 figure/stat markers; 4 missing rules. Add figure-source rules before automatic replacement.
 
 ## Missing Source Rules
 - _site/review-dashboard.html: 24 figure(s) need source rules.
@@ -67,6 +67,7 @@ Missing-rule figures: 1555
 - _site/cinematic-hit-list.html: 6 figure(s) need source rules.
 - _site/hit-list.html: 6 figure(s) need source rules.
 - cinematic-hit-list.html: 6 figure(s) need source rules.
+- daily-brain-brief.html: 6 figure(s) need source rules.
 - hit-list.html: 6 figure(s) need source rules.
 - source-changes.html: 4 figure(s) need source rules.
 - _site/dossier-george-nader.html: 4 figure(s) need source rules.
@@ -85,7 +86,6 @@ Missing-rule figures: 1555
 - _site/death-file-boris-nemtsov.html: 3 figure(s) need source rules.
 - _site/death-file-carlos-pizarro-leongomez.html: 3 figure(s) need source rules.
 - _site/death-file-daniel-pearl.html: 3 figure(s) need source rules.
-- _site/death-file-danny-casolaro.html: 3 figure(s) need source rules.
 
 ## Auto-Update Boundary
 - Live Intel and site inventory counts may be updated automatically only when a rule allows it.

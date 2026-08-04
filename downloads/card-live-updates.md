@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-04T03:36:51.189Z
-Live Intel source window: 2026-08-04T03:36:45.921Z
-Tracked cards: 976
-Cards with current matched records: 93
-Cards with no new verified record: 883
+Generated: 2026-08-04T09:07:30.604Z
+Live Intel source window: 2026-08-04T09:07:26.174Z
+Tracked cards: 970
+Cards with current matched records: 92
+Cards with no new verified record: 878
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -365,18 +365,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 2025-0045-APPEAL.
 - Route: entity-timelines/2025-0045-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## 2025-0045-APPEAL.
-- Route: entity-briefs/2025-0045-appeal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## 2025-0045-APPEAL.
-- Route: entity-exposure/2025-0045-appeal.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2472,18 +2460,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
-## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
-- Route: entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
-- Route: entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
 ## Gates family
 - Route: power-families/gates-family.html
 - Status: no-new-verified-record-in-current-window
@@ -2580,8 +2556,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 3
 - Latest record: 2026-07-30T11:19:00.000Z
 - 2026-07-30T11:19:00.000Z — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India — https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
-- 2026-07-30T00:48:00.000Z — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ — https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
-- 2026-07-29T21:23:00.000Z — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com — https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+- 2026-07-30T00:48:00.000Z — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv — https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+- 2026-07-29T21:23:00.000Z — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
 
 ## Giancarlo Devasini
 - Route: follow-the-money/people/giancarlo-devasini.html
@@ -3140,10 +3116,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## JEFFREY EPSTEIN
 - Route: dossier-jeffrey-epstein-criminal.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-03T15:39:07.000Z
-- 2026-08-03T15:39:07.000Z — What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Jens Stoltenberg
 - Route: top-52/jens-stoltenberg.html
@@ -5197,18 +5172,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## SUPREME COURT OF RHODE ISLAND
 - Route: entity-timelines/supreme-court-of-rhode-island.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## SUPREME COURT OF RHODE ISLAND
-- Route: entity-briefs/supreme-court-of-rhode-island.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## SUPREME COURT OF RHODE ISLAND
-- Route: entity-exposure/supreme-court-of-rhode-island.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

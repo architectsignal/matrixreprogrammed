@@ -11,7 +11,7 @@
   "pagesWithMissingRules": 744,
   "autoUpdateEligibleFigures": 3,
   "manualReviewFigures": 106,
-  "missingRuleFigures": 1555,
+  "missingRuleFigures": 1559,
   "pages": [
     {
       "file": "_site/review-dashboard.html",
@@ -3056,6 +3056,89 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
+      "file": "daily-brain-brief.html",
+      "priority": "High",
+      "figureCount": 6,
+      "missingRuleCount": 6,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [
+        {
+          "value": "2 Lanes",
+          "context": "oute Entity Observation Signals ENTITY OBSERVATION Homeland Security Department Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Health and Human Services Department Mentions: 2 Lanes: federal-r",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "2 Lanes",
+          "context": "federal-register-policy ENTITY OBSERVATION Health and Human Services Department Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: f",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "2 Lanes",
+          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "2 Lanes",
+          "context": "TY OBSERVATION Appellate Division of the Supreme Court of the State of New York Mentions: 2 Lanes: courtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Lanes",
+          "context": "urtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Lanes",
+          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register-policy Evidence And Confidence Layer DAILY BRAIN CONFIDENCE CARDS The daily synthesis is se",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "RAMMED Matrix Brain Outcomes Snapshot Records Control Map LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-04 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
+        },
+        {
+          "value": "2026",
+          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-04T07:58:13.254Z Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja This"
+        },
+        {
+          "value": "2026",
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-jud"
+        },
+        {
+          "value": "2026",
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment This source belongs in the government-enforcement lane because it may iden"
+        },
+        {
+          "value": "2026",
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
+        },
+        {
+          "value": "2026",
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment - Andrew Kaufman This source belongs in the government-enforcement lane be"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
       "file": "hit-list.html",
       "priority": "High",
       "figureCount": 6,
@@ -3848,27 +3931,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "wrongdoing, concealment or intent. Public JSON Daily Conclusions GRADE B content changed 2026-08-03 U.S. Securities and Exchange Commission — Current EDGAR Filings What is established: The normalized con"
+          "context": "wrongdoing, concealment or intent. Public JSON Daily Conclusions GRADE B content changed 2026-08-04 U.S. Securities and Exchange Commission — Current EDGAR Filings What is established: The normalized con"
         },
         {
           "value": "2026",
-          "context": "oved document may explain the difference. Additions detected Latest Filings - Mon, 03 Aug 2026 11:52:11 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-0"
+          "context": "oved document may explain the difference. Additions detected Latest Filings - Tue, 04 Aug 2026 03:58:15 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-0"
         },
         {
           "value": "2026",
-          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-03T11:52:11-04:00 N-PX - Beaird Harris Wealth Management, LLC (0001908938) (Filer) &lt;b&gt;Filed:&lt;/b&g"
+          "context": "DT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-04T03:58:15-04:00 3 - Bet on America II HoldCo LLC (0002080281) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026"
         },
         {
           "value": "2026",
-          "context": "-PX - Beaird Harris Wealth Management, LLC (0001908938) (Filer) &lt;b&gt;Filed:&lt;/b&gt; 2026-08-03 &lt;b&gt;AccNo:&lt;/b&gt; 0001908938-26-000004 &lt;b&gt;Size:&lt;/b&gt; 3 KB 2026-08-03T11:51:44-04:00"
+          "context": "04:00 3 - Bet on America II HoldCo LLC (0002080281) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2026-08-03 &lt;b&gt;AccNo:&lt;/b&gt; 0001193125-26-331221 &lt;b&gt;Size:&lt;/b&gt; 9 KB 2026-08-03T21:59:17-04:00"
         },
         {
           "value": "2026",
-          "context": "; 2026-08-03 &lt;b&gt;AccNo:&lt;/b&gt; 0001908938-26-000004 &lt;b&gt;Size:&lt;/b&gt; 3 KB 2026-08-03T11:51:44-04:00 urn:tag:sec.gov,2008:accession-number=0001908938-26-000004 4/A - TYSON JOHN H (000101903"
+          "context": "; 2026-08-03 &lt;b&gt;AccNo:&lt;/b&gt; 0001193125-26-331221 &lt;b&gt;Size:&lt;/b&gt; 9 KB 2026-08-03T21:59:17-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331221 3 - Bet on America II Sponsor"
         },
         {
           "value": "2008",
-          "context": "1908938-26-000004 &lt;b&gt;Size:&lt;/b&gt; 3 KB 2026-08-03T11:51:44-04:00 urn:tag:sec.gov,2008:accession-number=0001908938-26-000004 4/A - TYSON JOHN H (0001019032) (Reporting) &lt;b&gt;Filed:&lt;/b&gt; 2"
+          "context": "1193125-26-331221 &lt;b&gt;Size:&lt;/b&gt; 9 KB 2026-08-03T21:59:17-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331221 3 - Bet on America II Sponsor LLC (0002080254) (Reporting) &lt;b&gt;Fil"
         }
       ],
       "needsSourceRule": true,
@@ -19231,61 +19314,6 @@
         {
           "value": "2026",
           "context": "a claim stronger than the record supports. Open Source Evidence Route Current Live Intel 2026-07-25 · archived unknown · War Machine And Intelligence State ‘I am somebody’: Street-smart youth take their"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "weekly-investigation-report.html",
-      "priority": "High",
-      "figureCount": 2,
-      "missingRuleCount": 2,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "€100",
-          "context": "Search Connections GRADE A · established wrongdoing · SEVERITY 5 Italy: Ten convicted in €100 million VAT fraud case involving plastics trade Source: European Public Prosecutor&#39;s Office — News · 30 J",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "€100",
-          "context": "xplanation before making a broad conclusion. Open Starting Record Italy: Ten convicted in €100 million VAT fraud case involving plastics trade Open and preserve the underlying primary document or official",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search weekly Intelligence · 3 Aug 2026, 15:52 UTC WEEKLY INVESTIGATION REPORT. The machine found evidence routes requiring attention. The strongest"
-        },
-        {
-          "value": "2026",
-          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-08-04 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
-        },
-        {
-          "value": "2026",
-          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-08-04 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
-        },
-        {
-          "value": "2028",
-          "context": "LLC — Department of Agriculture Source: USAspending.gov — Recent Contract Awards · 30 Apr 2028, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
-        },
-        {
-          "value": "2027",
-          "context": "C — District of Columbia Courts Source: USAspending.gov — Recent Contract Awards · 12 Jul 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
-        },
-        {
-          "value": "2027",
-          "context": "autics and Space Administration Source: USAspending.gov — Recent Contract Awards · 30 Apr 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
         }
       ],
       "needsSourceRule": true,
@@ -42986,46 +43014,6 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
-      "file": "daily-brain-brief.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "RAMMED Matrix Brain Outcomes Snapshot Records Control Map LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-03 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
-        },
-        {
-          "value": "2026",
-          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-03T09:33:53.880Z Final Judgment - Geoffrey Allen Wall This source belongs in the government-enforcement la"
-        },
-        {
-          "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
-        },
-        {
-          "value": "2026",
-          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-03T09:33:53.880Z Final Judgment - Mark Jacobs This source belongs in the government-enforcement lane becau"
-        },
-        {
-          "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26582-mark-jacobs.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-"
-        },
-        {
-          "value": "2026",
-          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-03T09:33:53.880Z Final Judgment -Christopher McKnight This source belongs in the government-enforcement la"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
       "file": "daily-brief-master.html",
       "priority": "High",
       "figureCount": 0,
@@ -43059,7 +43047,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "clusion · evidence → inference → scenario What the combined evidence means today Updated: 2026-08-04 The strongest current pattern is practical convergence: standards, law, procurement, private infrastruc"
+          "context": "mand Brief Entity Briefs Contractors Submit Source Search LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-04 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
+        },
+        {
+          "value": "2026",
+          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-04T07:58:13.254Z Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja This"
+        },
+        {
+          "value": "2026",
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-jud"
+        },
+        {
+          "value": "2026",
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment This source belongs in the government-enforcement lane because it may iden"
+        },
+        {
+          "value": "2026",
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
+        },
+        {
+          "value": "2026",
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment - Andrew Kaufman This source belongs in the government-enforcement lane be"
         }
       ],
       "needsSourceRule": false,
@@ -43079,15 +43087,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T03:36:51.077Z &gt; source window: 2026-08-04T03:36:45.921Z &gt; current leads: 14 &gt; latest publicati"
+          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T09:07:30.479Z &gt; source window: 2026-08-04T09:07:26.174Z &gt; current leads: 13 &gt; latest publicati"
         },
         {
           "value": "2026",
-          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T03:36:51.077Z &gt; source window: 2026-08-04T03:36:45.921Z &gt; current leads: 14 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundar"
+          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T09:07:30.479Z &gt; source window: 2026-08-04T09:07:26.174Z &gt; current leads: 13 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundar"
         },
         {
           "value": "2026",
-          "context": "; source window: 2026-08-04T03:36:45.921Z &gt; current leads: 14 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
+          "context": "; source window: 2026-08-04T09:07:26.174Z &gt; current leads: 13 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
         },
         {
           "value": "2026",
@@ -43119,7 +43127,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search daily Intelligence · 3 Aug 2026, 15:52 UTC DAILY INVESTIGATION CONCLUSIONS. The machine found evidence routes requiring attention. The strong"
+          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search daily Intelligence · 4 Aug 2026, 07:58 UTC DAILY INVESTIGATION CONCLUSIONS. The machine found evidence routes requiring attention. The strong"
         },
         {
           "value": "2026",
@@ -43159,27 +43167,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "nked by evidence strength and bounded against accusation. LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-03 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
+          "context": "nked by evidence strength and bounded against accusation. LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-04 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
         },
         {
           "value": "2026",
-          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-03T15:52:10.468Z Final Judgment - Geoffrey Allen Wall This source belongs in the government-enforcement la"
+          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-04T07:58:13.254Z Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja This"
         },
         {
           "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-jud"
         },
         {
           "value": "2026",
-          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-03T15:52:10.468Z Final Judgment - Mark Jacobs This source belongs in the government-enforcement lane becau"
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment This source belongs in the government-enforcement lane because it may iden"
         },
         {
           "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26582-mark-jacobs.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
         },
         {
           "value": "2026",
-          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-03T15:52:10.468Z Final Judgment -Christopher McKnight This source belongs in the government-enforcement la"
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment - Andrew Kaufman This source belongs in the government-enforcement lane be"
         }
       ],
       "needsSourceRule": false,
@@ -46064,23 +46072,23 @@
         },
         {
           "value": "2026",
-          "context": "on is treated as established without supporting evidence. LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-03 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
+          "context": "and Reports Signal Board Contact the Machine My Watchlist LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-04 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
         },
         {
           "value": "2026",
-          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-03T08:45:47.693Z Final Judgment - Geoffrey Allen Wall This source belongs in the government-enforcement la"
+          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-04T07:58:13.254Z Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja This"
         },
         {
           "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-jud"
         },
         {
           "value": "2026",
-          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-03T08:45:47.693Z Final Judgment - Mark Jacobs This source belongs in the government-enforcement lane becau"
+          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment This source belongs in the government-enforcement lane because it may iden"
         },
         {
           "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26582-mark-jacobs.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-"
+          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
         }
       ],
       "needsSourceRule": false,
@@ -46943,23 +46951,23 @@
         },
         {
           "value": "2026",
-          "context": "ion Every Source Check Search The Machine INVESTIGATION PULSE &gt; Last source run: 3 Aug 2026, 15:52 UTC &gt; Registered sources: 20 &gt; Sources fetched last run: 9 &gt; Source failures: 3 &gt; Findings"
+          "context": "ion Every Source Check Search The Machine INVESTIGATION PULSE &gt; Last source run: 4 Aug 2026, 07:58 UTC &gt; Registered sources: 20 &gt; Sources fetched last run: 9 &gt; Source failures: 3 &gt; Findings"
         },
         {
           "value": "2026",
-          "context": "Allen Wall Source: U.S. Securities and Exchange Commission — Litigation Releases · 3 Aug 2026, 15:52 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
+          "context": "jesh Taneja Source: U.S. Securities and Exchange Commission — Litigation Releases · 4 Aug 2026, 07:58 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         },
         {
           "value": "2026",
-          "context": "Mark Jacobs Source: U.S. Securities and Exchange Commission — Litigation Releases · 3 Aug 2026, 15:52 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
+          "context": "al Judgment Source: U.S. Securities and Exchange Commission — Litigation Releases · 4 Aug 2026, 07:58 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         },
         {
           "value": "2026",
-          "context": "er McKnight Source: U.S. Securities and Exchange Commission — Litigation Releases · 3 Aug 2026, 15:52 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
+          "context": "rew Kaufman Source: U.S. Securities and Exchange Commission — Litigation Releases · 4 Aug 2026, 07:58 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         },
         {
           "value": "2026",
-          "context": "Sagar Adani Source: U.S. Securities and Exchange Commission — Litigation Releases · 3 Aug 2026, 15:52 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
+          "context": "ichard Myre Source: U.S. Securities and Exchange Commission — Litigation Releases · 4 Aug 2026, 07:58 UTC Conclusion: Mechanism: Trace the source-linked chain through the named entity, legal authority, ow"
         }
       ],
       "needsSourceRule": false,
@@ -47066,11 +47074,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-08-04T03:36:45.921Z &gt; Latest source publication: 2026-08-03T22:56:29.000Z &gt; State: 4 new items this col"
+          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-08-04T09:07:26.174Z &gt; Latest source publication: 2026-08-03T22:56:29.000Z &gt; State: No newly published i"
         },
         {
           "value": "2026",
-          "context": "TATUS &gt; Collection completed: 2026-08-04T03:36:45.921Z &gt; Latest source publication: 2026-08-03T22:56:29.000Z &gt; State: 4 new items this collection &gt; Current items: 41 &gt; Successful feeds: 7 /"
+          "context": "TATUS &gt; Collection completed: 2026-08-04T09:07:26.174Z &gt; Latest source publication: 2026-08-03T22:56:29.000Z &gt; State: No newly published item this collection &gt; Current items: 39 &gt; Successfu"
         },
         {
           "value": "2026",
@@ -47086,7 +47094,7 @@
         },
         {
           "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · Declassified Files And Public Archives · Google News / declassified files Discovery source Pentagon r"
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · War Machine And Intelligence State · UN News Primary / official source DR Congo: New centre opens at"
         }
       ],
       "needsSourceRule": false,
@@ -47816,23 +47824,23 @@
         },
         {
           "value": "2026",
-          "context": "-world currency, one-world religion or coordinated control. OUTCOME ENGINE\\n&gt; updated: 2026-08-03T15:52:32.500Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
+          "context": "-world currency, one-world religion or coordinated control. OUTCOME ENGINE\\n&gt; updated: 2026-08-04T07:58:38.174Z\\n&gt; briefings: 5\\n&gt; scenarios: 14\\n&gt; signals: 5\\n&gt; rebuilds during daily site"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 5 institution classes. Supporting records/signals: 6 Freshness: 2026-08-03 15:52:32.500Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 5 institution classes. Supporting records/signals: 6 Freshness: 2026-08-04 07:58:38.174Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-08-03 15:52:32.500Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-08-04 07:58:38.174Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-08-03 15:52:32.500Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 6 institution classes. Supporting records/signals: 6 Freshness: 2026-08-04 07:58:38.174Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         },
         {
           "value": "2026",
-          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-08-03 15:52:32.500Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
+          "context": "6 named record types and 7 institution classes. Supporting records/signals: 6 Freshness: 2026-08-04 07:58:38.174Z Scoring or decision rule: Current situation + named records + institutional mechanism + e"
         }
       ],
       "needsSourceRule": false,
@@ -49965,6 +49973,46 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "weekly-investigation-report.html",
+      "priority": "High",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "Conclusions Weekly Report Source Ledger Evidence Vault Search weekly Intelligence · 4 Aug 2026, 07:58 UTC WEEKLY INVESTIGATION REPORT. The machine found evidence routes requiring attention. The strongest"
+        },
+        {
+          "value": "2026",
+          "context": "are not guilt. Leaks are leads until authenticated and corroborated. Public review date: 2026-08-04 Investigation Machine Source Ledger Search Evidence INVESTIGATION STATUS &gt; Sources scheduled: 12 &gt"
+        },
+        {
+          "value": "1914",
+          "context": "es scheduled: 12 &gt; Sources fetched: 9 &gt; Changed sources: 7 &gt; Findings in window: 1914 &gt; Established wrongdoing: 33 &gt; Official actions: 0 &gt; Leak/document leads: 0 Method The machine ranks"
+        },
+        {
+          "value": "2026",
+          "context": "ey, office, contract, authority, implementation and missing evidence. Public review date: 2026-08-04 HOW THE MACHINE REACHES A DEFENSIBLE CONCLUSION. 1. Establish the record status Official source rule: a"
+        },
+        {
+          "value": "2028",
+          "context": "LLC — Department of Agriculture Source: USAspending.gov — Recent Contract Awards · 30 Apr 2028, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+        },
+        {
+          "value": "2027",
+          "context": "C — District of Columbia Courts Source: USAspending.gov — Recent Contract Awards · 12 Jul 2027, 00:00 UTC Conclusion: A dated source update exists and should be compared with prior records. Mechanism: Tra"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "weekly-watch-delta.html",
       "priority": "High",
       "figureCount": 0,
@@ -49978,11 +50026,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "Matrix Reprogrammed MATRIX REPROGRAMMED Daily Watch Daily Brief Live Intel Weekly delta · 2026-07-28 to 2026-08-03 WHO KEPT RETURNING—AND WHY? A seven-day record of changing person, institution and family"
+          "context": "Matrix Reprogrammed MATRIX REPROGRAMMED Daily Watch Daily Brief Live Intel Weekly delta · 2026-07-29 to 2026-08-04 WHO KEPT RETURNING—AND WHY? A seven-day record of changing person, institution and family"
         },
         {
           "value": "2026",
-          "context": "ammed MATRIX REPROGRAMMED Daily Watch Daily Brief Live Intel Weekly delta · 2026-07-28 to 2026-08-03 WHO KEPT RETURNING—AND WHY? A seven-day record of changing person, institution and family research prio"
+          "context": "ammed MATRIX REPROGRAMMED Daily Watch Daily Brief Live Intel Weekly delta · 2026-07-29 to 2026-08-04 WHO KEPT RETURNING—AND WHY? A seven-day record of changing person, institution and family research prio"
         },
         {
           "value": "2026",
@@ -74674,27 +74722,27 @@
       "dates": [
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-03 15:52:49.446Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-04 07:58:53.567Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-03 15:52:49.446Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-04 07:58:53.567Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-03 15:52:49.446Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-04 07:58:53.567Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-03 15:52:49.446Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-04 07:58:53.567Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-03 15:52:49.446Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-04 07:58:53.567Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         },
         {
           "value": "2026",
-          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-03 15:52:49.446Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
+          "context": "nce, notes, type and any matching brain score. Supporting records/signals: 111 Freshness: 2026-08-04 07:58:53.567Z Scoring or decision rule: Base 20 + note signals + route signal + category signal + cappe"
         }
       ],
       "needsSourceRule": false,
@@ -76896,23 +76944,23 @@
         },
         {
           "value": "2026",
-          "context": "Department of Justice — Epstein Disclosures Lane: epstein-disclosure Last attempt: 3 Aug 2026, 15:52 UTC Last success: First scheduled source run pending Items: 80 · Changed: no Open Source Platform prim"
+          "context": "Department of Justice — Epstein Disclosures Lane: epstein-disclosure Last attempt: 4 Aug 2026, 07:58 UTC Last success: First scheduled source run pending Items: 80 · Changed: no Open Source Platform prim"
         },
         {
           "value": "2026",
-          "context": ".S. Department of Justice — Justice News Lane: government-enforcement Last attempt: 3 Aug 2026, 15:52 UTC Last success: First scheduled source run pending Items: 1 · Changed: yes Open Source Platform prim"
+          "context": ".S. Department of Justice — Justice News Lane: government-enforcement Last attempt: 4 Aug 2026, 07:58 UTC Last success: First scheduled source run pending Items: 1 · Changed: yes Open Source Platform prim"
         },
         {
           "value": "2026",
-          "context": "f Justice Office of Inspector General — Reports Lane: oversight-audit Last attempt: 3 Aug 2026, 15:52 UTC Last success: First scheduled source run pending Items: 14 · Changed: no Open Source Platform prim"
+          "context": "f Justice Office of Inspector General — Reports Lane: oversight-audit Last attempt: 4 Aug 2026, 07:58 UTC Last success: First scheduled source run pending Items: 14 · Changed: yes Open Source Platform pri"
         },
         {
           "value": "2026",
-          "context": "and Exchange Commission — Current EDGAR Filings Lane: money-contracts Last attempt: 3 Aug 2026, 15:52 UTC Last success: First scheduled source run pending Items: 40 · Changed: yes Open Source Platform pri"
+          "context": "and Exchange Commission — Current EDGAR Filings Lane: money-contracts Last attempt: 4 Aug 2026, 07:58 UTC Last success: First scheduled source run pending Items: 40 · Changed: yes Open Source Platform pri"
         },
         {
           "value": "2026",
-          "context": "xchange Commission — Litigation Releases Lane: government-enforcement Last attempt: 3 Aug 2026, 15:52 UTC Last success: First scheduled source run pending Items: 76 · Changed: yes Open Source Platform pri"
+          "context": "xchange Commission — Litigation Releases Lane: government-enforcement Last attempt: 4 Aug 2026, 07:58 UTC Last success: First scheduled source run pending Items: 73 · Changed: yes Open Source Platform pri"
         }
       ],
       "needsSourceRule": false,

@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-04T03:36:45.921Z
+Collection completed: 2026-08-04T09:07:26.174Z
 Latest source publication: 2026-08-03T22:56:29.000Z
-Collection status: fresh-items-added
-New items this collection: 4
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-4 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -44,18 +44,6 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Victims to settle case against Epstein's longtime attorney, accountant: Documents - ABC News - Breaking News, Latest News and Videos
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Pentagon releases declassified UFO files from various federal agencies - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMiogFBVV95cUxQbHVBS3VqSGpNSmgxTWtIa2c3aDI2WE5vS2pfVXRFNjNZd3BlWUdILWh6b245RDMtOXk3Yk91UXktV3k4ckR1dTh1R1lVbFR4MFpLRnhXVmFMMGNsaWs3SXpaTHdzekxQNmRUQkktTHMwTjU3d3V2Z2R4akdIeEM4VGlnNFFzTVVzTXprS1AyT2l3MWdGaDJxUEFiWjBMc3BwMVHSAacBQVVfeXFMUGJvM2xwYk1mVU9OYW1haDlYZlhfaF83ekszcWZrbXRWTzMtZXNOOXNYR1loRThfWElkd3NiVllpX1ZuOGV1eDQ2NHQ5aDR2M1FKZDJmb0Y5TDYzTE53T0lNQ0FvUXQ3QmtYb09QVlRRRGV2eWFjOVJFcUVCVkF1YUlkSkRGclM0eUJVV0VLSl9UZmtBb1ZKUVRtTFhoUUFXWnFiQ1hqSzQ?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Pentagon releases declassified UFO files from various federal agencies - ABC News - Breaking News, Latest News and Videos
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
-  - Source: https://news.google.com/rss/articles/CBMie0FVX3lxTE9udmVnRm1XdUliTWpieDNOT0lzOGxZdGxIZW1vR1dSU3hXZDlQWUtybWZaZ1NUS0FoajJ4WXk4TWdlOHNpNjAxNk5fWmlMa2gwWnpuek5lZUp5a1ZUdkNLWFp6bTdfUXhXYlhlRzVWVzF6eDV2UzZlTlctTdIBgAFBVV95cUxOdkZROEhjMnYwRER3dzh4ZDFNMjRxb2ZwSGo4SU1yUDlfdHVReHlqVXRTVy1xblcyZWZMbjl4M2NqcFYtZnZuT0t6b3Uxc1VkeWZGS25XR0NMMWpEQVRFVFoyRW5hcjRDZXhXVnR1eEYtRGhiQlBoaUh2aEF6YkN0Ug?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — DR Congo: New centre opens at heart of record Ebola outbreak
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168064
   - Source class: primary-or-official
@@ -86,11 +74,11 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Mothers still lack support to breastfeed, UN warns
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - theguardian.com
+- 2026-08-03 — Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
   - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - theguardian.com
+  - Video hook: New public-record signal: Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-02 — Trapped by a Facebook job advert, freed by a stranger in a taxi
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168058
@@ -134,11 +122,11 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - theguardian.com
+- 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
   - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - theguardian.com
+  - Video hook: New public-record signal: Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168052
@@ -194,11 +182,11 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+- 2026-07-30 — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
   - Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+  - Video hook: New public-record signal: U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
   - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
@@ -206,11 +194,11 @@ New items this collection: 4
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
+- 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
+  - Video hook: New public-record signal: Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-29 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168048

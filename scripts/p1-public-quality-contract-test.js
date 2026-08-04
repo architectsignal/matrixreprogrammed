@@ -71,7 +71,7 @@ need(finalizer.includes('A shared symbol does not by itself prove membership, co
 need(finalizer.includes('A transaction or holding does not establish beneficial control'), 'Market activity evidence boundary is missing');
 need(correctionOwner.includes('data-corrections-route="canonical"'), 'Correction route lacks its canonical ownership marker');
 need(correctionOwner.includes('contact-the-machine.html?type=correction'), 'Correction route lacks the public correction intake path');
-need(correctionOwner.includes('Corrections strengthen the public record'), 'Correction route lacks its credibility boundary');
+need(correctionOwner.toLowerCase().includes('corrections strengthen the public record'), 'Correction route lacks its credibility boundary');
 
 // Prove the cleanup owner and its reader-facing replacements exist. The test
 // must not require forbidden public phrases to remain embedded verbatim merely

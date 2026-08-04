@@ -2,10 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
+const { spawnSync } = require('child_process');
 const { classify } = require('./classify-production-release-state.js');
 
 const root = process.cwd();
 const workflow = fs.readFileSync(path.join(root, '.github', 'workflows', 'deploy.yml'), 'utf8');
+const authorizationPath = path.join(root, 'scripts', 'verify-one-shot-production-authorization.js');
+const authorization = fs.readFileSync(authorizationPath, 'utf8');
 const failures = [];
 const check = (ok, message) => { if (!ok) failures.push(message); };
 
@@ -21,17 +24,56 @@ check(receiptFailure.redeployRequired === false && /Do not redeploy/i.test(recei
 check(!aiFailure.ok && aiFailure.state === 'deployed-live-verification-failed', 'AI control-plane failure is not distinguished from receipt failure');
 check(!liveFailure.ok && liveFailure.state === 'deployed-live-verification-failed', 'live-verification failure is not distinguished from receipt failure');
 check(!deployFailure.ok && deployFailure.state === 'deployment-not-completed', 'pre-deployment failure is not distinguished from a deployment failure');
+
 for (const marker of ['workers_dev = true','Resolve canonical workers.dev endpoint','id: cloudflare_deploy','id: ai_verify','id: pyramid_verify','id: live_verify','id: receipt','continue-on-error: true','AI_VERIFY_OUTCOME','classify-production-release-state.js','production-release-state.json']) {
   check(workflow.includes(marker), `controlled production workflow missing release-state marker: ${marker}`);
 }
+
 const checkoutIndex = workflow.indexOf('- name: Checkout latest main');
-const authorityIndex = workflow.indexOf('- name: Confirm explicit manual production release');
-check(checkoutIndex >= 0 && authorityIndex >= 0 && checkoutIndex < authorityIndex, 'repository must be checked out before the always-run release-state classifier can report an authorization refusal');
-check(workflow.includes('github.actor }}" != "github-actions[bot]"'), 'automated workflow dispatches must remain excluded from production release authority');
+const authorityIndex = workflow.indexOf('- name: Confirm explicit production release authority');
+check(
+  checkoutIndex >= 0 && authorityIndex >= 0 && checkoutIndex < authorityIndex,
+  'repository must be checked out before the guarded production authority verifier runs'
+);
+
+for (const marker of [
+  'MATRIX_PRODUCTION_CONFIRMATION: ${{ inputs.confirmation }}',
+  'MATRIX_PRODUCTION_ACTOR: ${{ github.actor }}',
+  'MATRIX_WORKFLOW_EVENT: ${{ github.event_name }}',
+  'MATRIX_BILLING_EXCEPTION: ${{ inputs.billing_exception }}',
+  'run: node scripts/verify-one-shot-production-authorization.js'
+]) {
+  check(workflow.includes(marker), `controlled production workflow missing guarded authority input: ${marker}`);
+}
+
+// Explicit human dispatches and the repository-owned one-shot bot dispatcher are
+// separate authority paths. The bot path is allowed only when a fresh marker,
+// first-parent trigger commit, current main and authorized target all agree.
+for (const marker of [
+  "if (actor !== 'github-actions[bot]')",
+  'resolveFirstParentMarkerCommit',
+  'validTriggerSubject',
+  'headSha === originMain',
+  "merge-base', '--is-ancestor', marker.targetSha, 'HEAD'",
+  'fresh-merged-one-shot-dispatch',
+  'fresh-merged-one-shot-owner-exception',
+  'triggerAgeHours >= -0.1 && triggerAgeHours <= maxAgeHours'
+]) {
+  check(authorization.includes(marker), `one-shot production verifier missing security boundary: ${marker}`);
+}
+
+const authorizationSelfTest = spawnSync(process.execPath, [authorizationPath, '--self-test'], {
+  cwd: root,
+  encoding: 'utf8'
+});
+check(
+  authorizationSelfTest.status === 0,
+  `one-shot production authorization self-test failed: ${(authorizationSelfTest.stderr || authorizationSelfTest.stdout || '').trim()}`
+);
 
 if (failures.length) {
   console.error(`PRODUCTION RELEASE STATE TEST FAILED: ${failures.length}`);
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('Production release state test passed: deploy, live verification and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');
+console.log('Production release state test passed: guarded human/one-shot authority, deployment, live verification and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');

@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-04T09:07:30.479Z
-Live Intel source window: 2026-08-04T09:07:26.174Z
+Generated: 2026-08-04T14:39:29.784Z
+Live Intel source window: 2026-08-04T14:39:23.787Z
 Latest source publication: 2026-08-03T22:56:29.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-13 current Epstein-lane record leads remain inside the active source window.
+14 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -142,6 +142,16 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
 
 Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell The Guardian
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KTEN
+- Published: 2026-07-29T20:44:34.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMiiwJBVV95cUxNaEJkVlh2QWhGLWNlS0h3V1N2eEhZU2hmLXFmSzNEY3lncUU2WkNpTlNNRnZuN1NvUW03STBHLVpWd0F0bzZxNkVrMGpYX3o5c0FKTG96ckhVUmhsU3dKeXptaWIyNTM0NVhXamk0TkNsSUJuMGpqc2VnQnUxSTdrRFhZd0tac1hZMUY3WjZIZDNpT2pOdnZNeUFPU3BwOWhHMmE3MlhLM1hHcWV2RzBHbTRPOXhvMzJOdHYwZHFINkpIbmtRWHIxM2hPV1ZyODU4aENfNHRrbVpTREpSU0lCRUpwZk1ZYzgzaHZJTTY3TDZ5d3VIeDlWeEZhZXhEVEtpcjhKZW10bmlqV3c?oc=5
+
+Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ KTEN
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

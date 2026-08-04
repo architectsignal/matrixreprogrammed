@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-04T09:07:30.604Z
-Live Intel source window: 2026-08-04T09:07:26.174Z
-Tracked cards: 970
-Cards with current matched records: 92
-Cards with no new verified record: 878
+Generated: 2026-08-04T14:39:29.890Z
+Live Intel source window: 2026-08-04T14:39:23.787Z
+Tracked cards: 976
+Cards with current matched records: 89
+Cards with no new verified record: 887
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -365,6 +365,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## 2025-0045-APPEAL.
 - Route: entity-timelines/2025-0045-appeal.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2025-0045-APPEAL.
+- Route: entity-briefs/2025-0045-appeal.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## 2025-0045-APPEAL.
+- Route: entity-exposure/2025-0045-appeal.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window
@@ -2460,6 +2472,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
+- Route: entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## GALBIN FERNANDEZ, IN HIS CAPACITY AS THE ADMINISTRATOR OF THE ESTATE OF EVA PENA V. RHODE ISLAND PUBLIC TRANSIT AUTHORITY
+- Route: entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Gates family
 - Route: power-families/gates-family.html
 - Status: no-new-verified-record-in-current-window
@@ -4104,24 +4128,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## NUCLEAR REGULATORY COMMISSION
 - Route: entity-timelines/nuclear-regulatory-commission.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Nuclear Regulatory Commission — Entity Observation
 
 ## NUCLEAR REGULATORY COMMISSION
 - Route: entity-briefs/nuclear-regulatory-commission.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Nuclear Regulatory Commission — Entity Observation
 
 ## NUCLEAR REGULATORY COMMISSION
 - Route: entity-exposure/nuclear-regulatory-commission.html
-- Status: current-records-matched
-- Current matched records: 1
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
 - Latest record: none in current window
-- undated — Nuclear Regulatory Commission — Entity Observation
 
 ## NVDA
 - Route: entity-timelines/nvda.html
@@ -5176,6 +5197,18 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 0
 - Latest record: none in current window
 
+## SUPREME COURT OF RHODE ISLAND
+- Route: entity-briefs/supreme-court-of-rhode-island.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
+## SUPREME COURT OF RHODE ISLAND
+- Route: entity-exposure/supreme-court-of-rhode-island.html
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
+
 ## Supreme Court of the United States
 - Route: entity-timelines/supreme-court-of-the-united-states.html
 - Status: no-new-verified-record-in-current-window
@@ -5847,26 +5880,23 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-31T12:00:00.000Z
 - 2026-07-31T12:00:00.000Z — Wildfire smoke poses hidden health threat — https://news.un.org/feed/view/en/story/2026/07/1168060
-- 2026-07-28T12:00:00.000Z — HIV, hepatitis, STI gains at risk as funding falls, WHO warns — https://news.un.org/feed/view/en/story/2026/07/1168040
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-31T12:00:00.000Z
 - 2026-07-31T12:00:00.000Z — Wildfire smoke poses hidden health threat — https://news.un.org/feed/view/en/story/2026/07/1168060
-- 2026-07-28T12:00:00.000Z — HIV, hepatitis, STI gains at risk as funding falls, WHO warns — https://news.un.org/feed/view/en/story/2026/07/1168040
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-07-31T12:00:00.000Z
 - 2026-07-31T12:00:00.000Z — Wildfire smoke poses hidden health threat — https://news.un.org/feed/view/en/story/2026/07/1168060
-- 2026-07-28T12:00:00.000Z — HIV, hepatitis, STI gains at risk as funding falls, WHO warns — https://news.un.org/feed/view/en/story/2026/07/1168040
 
 ## World Resources Institute
 - Route: think-tanks/world-resources-institute.html

@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-04T09:07:26.174Z
-Latest source publication: 2026-08-03T22:56:29.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection completed: 2026-08-04T14:39:23.787Z
+Latest source publication: 2026-08-04T12:00:00.000Z
+Collection status: fresh-items-added
+New items this collection: 2
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+2 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ The collector completed successfully, but no newly published source item entered
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-08-04 — Afghanistan hunger crisis intensifies as millions left without food aid
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168069
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Afghanistan hunger crisis intensifies as millions left without food aid
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity - ABC News - Breaking News, Latest News and Videos
   - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQZE5ScWZ6TjZiSXNZbFdxU0toeDFERXVMNndVeDV0Vi0ya2F6Mk05MEpJVFVXMWlpR3ZzeWlCSnFFUlV5VG9laFl4TmJlYkxYTkZvNVh0ajJYdzNESC1iOEFzTWdDY2lqZElIOWdIMTdPOWdRajAtUUt5WWlia3pxbUx5SzBrN1BqaXJNSG9ETzlTRHU1VEQwQXhXNzllTW1ncXBqNTB30gGrAUFVX3lxTE5BQzkxZkhnOWhtR3hvWHltZTd4OGdXd3FQajNMNTFBNnNqRHJ2S0o1dHBWX2ctMmVjV2hISWZxd2NyRF9hWW4ydlp6eHd6QUlOR1EzVHd2azl5dmlUbkstU3F0UjhfUi1hNnlnZHlnR1N0YjRGUDRTQjdwcXNGSFgtbUwtU3JFM1BHcjdVaEhtdDBSQ3AzcHMtZ1B4OEhqRjZ1ZWNfbUUxTy03bw?oc=5
   - Source class: primary-or-official
@@ -200,6 +206,12 @@ The collector completed successfully, but no newly published source item entered
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-29 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KTEN
+  - Source: https://news.google.com/rss/articles/CBMiiwJBVV95cUxNaEJkVlh2QWhGLWNlS0h3V1N2eEhZU2hmLXFmSzNEY3lncUU2WkNpTlNNRnZuN1NvUW03STBHLVpWd0F0bzZxNkVrMGpYX3o5c0FKTG96ckhVUmhsU3dKeXptaWIyNTM0NVhXamk0TkNsSUJuMGpqc2VnQnUxSTdrRFhZd0tac1hZMUY3WjZIZDNpT2pOdnZNeUFPU3BwOWhHMmE3MlhLM1hHcWV2RzBHbTRPOXhvMzJOdHYwZHFINkpIbmtRWHIxM2hPV1ZyODU4aENfNHRrbVpTREpSU0lCRUpwZk1ZYzgzaHZJTTY3TDZ5d3VIeDlWeEZhZXhEVEtpcjhKZW10bmlqV3c?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KTEN
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-29 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168048
   - Source class: primary-or-official
@@ -223,40 +235,4 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168039
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — Climate alarm ‘blaring from every direction’
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168042
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Climate alarm ‘blaring from every direction’
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — Forced online scams: IOM warns trafficking networks are booming
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168038
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Forced online scams: IOM warns trafficking networks are booming
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — HIV, hepatitis, STI gains at risk as funding falls, WHO warns
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168040
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: HIV, hepatitis, STI gains at risk as funding falls, WHO warns
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — Mount Olympus and D-Day beaches among new World Heritage Sites
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168043
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Mount Olympus and D-Day beaches among new World Heritage Sites
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168037
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

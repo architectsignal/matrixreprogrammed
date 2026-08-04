@@ -5,13 +5,13 @@
   "sourceRulesUpdated": "2026-06-24",
   "sourceRuleCount": 8,
   "scannedPages": 3414,
-  "flaggedPages": 3097,
+  "flaggedPages": 3099,
   "highPriorityPages": 1612,
-  "mediumPriorityPages": 1483,
-  "pagesWithMissingRules": 744,
+  "mediumPriorityPages": 1485,
+  "pagesWithMissingRules": 745,
   "autoUpdateEligibleFigures": 3,
   "manualReviewFigures": 106,
-  "missingRuleFigures": 1559,
+  "missingRuleFigures": 1562,
   "pages": [
     {
       "file": "_site/review-dashboard.html",
@@ -19265,6 +19265,62 @@
       "recommendation": "Add figure-source rules before automatic replacement."
     },
     {
+      "file": "entity-registry.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "$100",
+          "context": "Application for Final Commitment for a Long-Term Loan or Financial Guarantee in Excess of $100 Million: AP300129XX Roles: contract-or-award-record Evidence references Federal Register — Latest Documents ·",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [
+        {
+          "value": "04 Feed",
+          "context": "nd document routes. → 03 Research tools Use the lawful OSINT and verification workflow. → 04 Feed the machine Connect the record to a live investigation and its next evidence requirement. → Evidence System:",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
+        },
+        {
+          "value": "2026",
+          "context": "-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        },
+        {
+          "value": "2026",
+          "context": "al Register — Latest Documents · Grade A · established-wrongdoing SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: The finding applies only to the co"
+        },
+        {
+          "value": "2026",
+          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        },
+        {
+          "value": "2026",
+          "context": "sion — Litigation Releases · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        },
+        {
+          "value": "2026",
+          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
       "file": "intel-vault.html",
       "priority": "High",
       "figureCount": 2,
@@ -19314,6 +19370,61 @@
         {
           "value": "2026",
           "context": "a claim stronger than the record supports. Open Source Evidence Route Current Live Intel 2026-07-25 · archived unknown · War Machine And Intelligence State ‘I am somebody’: Street-smart youth take their"
+        }
+      ],
+      "needsSourceRule": true,
+      "recommendation": "Add figure-source rules before automatic replacement."
+    },
+    {
+      "file": "live-intel.html",
+      "priority": "High",
+      "figureCount": 2,
+      "missingRuleCount": 2,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [
+        {
+          "value": "14 million",
+          "context": "ntensifies as millions left without food aid Afghanistan’s dire hunger crisis now affects 14 million people including babies fed on little more than weak tea and bread by their despairing and dirt-poor parents.",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "14 million",
+          "context": "ntensifies as millions left without food aid Afghanistan’s dire hunger crisis now affects 14 million people including babies fed on little more than weak tea and bread by their despairing and dirt-poor parents.",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        }
+      ],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2026",
+          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-08-04T14:39:23.787Z &gt; Latest source publication: 2026-08-04T12:00:00.000Z &gt; State: 2 new items this col"
+        },
+        {
+          "value": "2026",
+          "context": "TATUS &gt; Collection completed: 2026-08-04T14:39:23.787Z &gt; Latest source publication: 2026-08-04T12:00:00.000Z &gt; State: 2 new items this collection &gt; Current items: 35 &gt; Successful feeds: 7 /"
+        },
+        {
+          "value": "2026",
+          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-08-04 · War Machine And Intelligence State · UN News Primary / official source Afghanistan hunger crisis inte"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
+        },
+        {
+          "value": "2026",
+          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
         }
       ],
       "needsSourceRule": true,
@@ -23270,54 +23381,6 @@
         {
           "value": "2026",
           "context": "low the evidence route before drawing a conclusion. Open Source Evidence Route Book Route 2026-06-16 · Google News / declassified files Pentagon releases 72 UFO files: Military reports reveal new sighting"
-        }
-      ],
-      "needsSourceRule": true,
-      "recommendation": "Add figure-source rules before automatic replacement."
-    },
-    {
-      "file": "entity-registry.html",
-      "priority": "High",
-      "figureCount": 1,
-      "missingRuleCount": 1,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [
-        {
-          "value": "$100",
-          "context": "Application for Final Commitment for a Long-Term Loan or Financial Guarantee in Excess of $100 Million: AP300129XX Roles: contract-or-award-record Evidence references Federal Register — Latest Documents ·",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        }
-      ],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A"
-        },
-        {
-          "value": "2026",
-          "context": "-03-31 · Grade A · inferred-from-consecutive-official-13f-filings SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
-        },
-        {
-          "value": "2026",
-          "context": "al Register — Latest Documents · Grade A · established-wrongdoing SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: The finding applies only to the co"
-        },
-        {
-          "value": "2026",
-          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
-        },
-        {
-          "value": "2026",
-          "context": "sion — Litigation Releases · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
-        },
-        {
-          "value": "2026",
-          "context": "egister — Latest Documents · Grade B · unreviewed-source-document SEC Form 13F comparison 2026-03-31 · Grade A · inferred-from-consecutive-official-13f-filings Boundary: Extracted document text is an unre"
         }
       ],
       "needsSourceRule": true,
@@ -39531,7 +39594,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "· evidence → inference → scenario How JEFF BEZOS fits into the wider control map Updated: 2026-08-04 Documented actor map Final Judgment - Jeffrey Puzzullo — Contract (documented person or institution) Fi"
+          "context": "· evidence → inference → scenario How JEFF BEZOS fits into the wider control map Updated: 2026-08-04 Documented actor map SEC Complaint — Documented in the linked public record (documented person or insti"
         }
       ],
       "needsSourceRule": false,
@@ -43028,6 +43091,10 @@
         {
           "value": "2026",
           "context": "clusion · evidence → inference → scenario What the combined evidence means today Updated: 2026-08-04 The strongest current pattern is practical convergence: standards, law, procurement, private infrastruc"
+        },
+        {
+          "value": "1920",
+          "context": "ility: Health records and emergency credentials can become cross-border access controls. (1920 matched signals) Data, cloud and AI infrastructure: Shared data and automated decisions can centralise practi"
         }
       ],
       "needsSourceRule": false,
@@ -43047,27 +43114,11 @@
       "dates": [
         {
           "value": "2026",
-          "context": "mand Brief Entity Briefs Contractors Submit Source Search LIVE EVIDENCE PRIORITY SYSTEM · 2026-08-04 THE DAILY INTELLIGENCE HIT LIST. One person. One institution. One family. These positions do not rotate"
+          "context": "clusion · evidence → inference → scenario What the combined evidence means today Updated: 2026-08-04 The strongest current pattern is practical convergence: standards, law, procurement, private infrastruc"
         },
         {
-          "value": "2026",
-          "context": "m. Legal status, convictions, charges and official action 16 conviction-or-final-judgment 2026-08-04T07:58:13.254Z Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja This"
-        },
-        {
-          "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/status26583-taneja.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-jud"
-        },
-        {
-          "value": "2026",
-          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment This source belongs in the government-enforcement lane because it may iden"
-        },
-        {
-          "value": "2026",
-          "context": "does not justify unrelated accusations. https://www.sec.gov/files/litigation/litreleases/2026/judg26564.pdf https://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 202"
-        },
-        {
-          "value": "2026",
-          "context": "tps://www.sec.gov/enforcement-litigation/litigation-releases conviction-or-final-judgment 2026-08-04T07:58:13.254Z Final Judgment - Andrew Kaufman This source belongs in the government-enforcement lane be"
+          "value": "1920",
+          "context": "ility: Health records and emergency credentials can become cross-border access controls. (1920 matched signals) Data, cloud and AI infrastructure: Shared data and automated decisions can centralise practi"
         }
       ],
       "needsSourceRule": false,
@@ -43087,15 +43138,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T09:07:30.479Z &gt; source window: 2026-08-04T09:07:26.174Z &gt; current leads: 13 &gt; latest publicati"
+          "context": "proven fact kept separate. Open JSON Download Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T14:39:29.784Z &gt; source window: 2026-08-04T14:39:23.787Z &gt; current leads: 14 &gt; latest publicati"
         },
         {
           "value": "2026",
-          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T09:07:30.479Z &gt; source window: 2026-08-04T09:07:26.174Z &gt; current leads: 13 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundar"
+          "context": "d Brief DAILY EPSTEIN UPDATE &gt; generated: 2026-08-04T14:39:29.784Z &gt; source window: 2026-08-04T14:39:23.787Z &gt; current leads: 14 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundar"
         },
         {
           "value": "2026",
-          "context": "; source window: 2026-08-04T09:07:26.174Z &gt; current leads: 13 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
+          "context": "; source window: 2026-08-04T14:39:23.787Z &gt; current leads: 14 &gt; latest publication: 2026-08-03T22:56:29.000Z Evidence Boundary The machine tracks documents, court records, official actions, oversigh"
         },
         {
           "value": "2026",
@@ -44526,7 +44577,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44550,7 +44601,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44574,7 +44625,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44598,7 +44649,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44622,7 +44673,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44646,7 +44697,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44670,7 +44721,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -44702,7 +44753,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44726,7 +44777,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44750,7 +44801,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44774,7 +44825,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44798,11 +44849,19 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
           "context": "losure of Teaching Hospitals and Opportunities To Apply for Available Slots Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
@@ -44830,7 +44889,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44854,7 +44913,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44878,7 +44937,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44902,7 +44961,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2024",
@@ -44958,7 +45017,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -44982,7 +45041,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -45006,11 +45065,19 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
           "context": "losure of Teaching Hospitals and Opportunities To Apply for Available Slots Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
@@ -45038,7 +45105,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -45062,7 +45129,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -45086,7 +45153,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -45134,7 +45201,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -45158,7 +45225,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -45182,7 +45249,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -45210,7 +45277,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -45234,7 +45301,7 @@
         },
         {
           "value": "2026",
-          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
+          "context": "; type: observed entity &gt; evidence: documented public-record association &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement A source route exists"
         }
       ],
       "needsSourceRule": false,
@@ -45258,7 +45325,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2023",
@@ -45314,7 +45381,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         }
       ],
       "needsSourceRule": false,
@@ -45338,7 +45405,7 @@
         },
         {
           "value": "2026",
-          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T03:36:28.978Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
+          "context": "AT A GLANCE &gt; type: observed entity &gt; evidence: legal record present &gt; updated: 2026-08-04T14:39:12.662Z &gt; boundary: public-record tracking brief Plain-English Judgement Worth watching becaus"
         },
         {
           "value": "2021",
@@ -45366,7 +45433,7 @@
         },
         {
           "value": "2026",
-          "context": "urrency, one-world religion or coordinated control. ENTITY BRIEFING FACTORY &gt; updated: 2026-08-04T03:36:28.978Z &gt; briefs generated: 34 &gt; pages generated: 34 &gt; style: user friendly &gt; boundar"
+          "context": "urrency, one-world religion or coordinated control. ENTITY BRIEFING FACTORY &gt; updated: 2026-08-04T14:39:12.662Z &gt; briefs generated: 33 &gt; pages generated: 33 &gt; style: user friendly &gt; boundar"
         },
         {
           "value": "2021",
@@ -46129,6 +46196,10 @@
         {
           "value": "2026",
           "context": "idence → inference → scenario How UNITED NATIONS fits into the wider control map Updated: 2026-08-04 Documented actor map SEC Complaint — Documented in the linked public record (documented person or insti"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         }
       ],
       "needsSourceRule": false,
@@ -47055,46 +47126,6 @@
         {
           "value": "2026",
           "context": "the same subject record rather than silently replacing earlier history. Registry checked 2026-08-03. MATRIX REPROGRAMMED — decode the illusion, follow the signal. Campaign boundary: launch rooms are reus"
-        }
-      ],
-      "needsSourceRule": false,
-      "recommendation": "No obvious dynamic figures detected."
-    },
-    {
-      "file": "live-intel.html",
-      "priority": "High",
-      "figureCount": 0,
-      "missingRuleCount": 0,
-      "autoAllowedCount": 0,
-      "manualReviewCount": 0,
-      "staticCount": 0,
-      "percentages": [],
-      "money": [],
-      "crisisFigures": [],
-      "dates": [
-        {
-          "value": "2026",
-          "context": "ata Markdown Brief Intel Vault Books / Store LIVE INTEL STATUS &gt; Collection completed: 2026-08-04T09:07:26.174Z &gt; Latest source publication: 2026-08-03T22:56:29.000Z &gt; State: No newly published i"
-        },
-        {
-          "value": "2026",
-          "context": "TATUS &gt; Collection completed: 2026-08-04T09:07:26.174Z &gt; Latest source publication: 2026-08-03T22:56:29.000Z &gt; State: No newly published item this collection &gt; Current items: 39 &gt; Successfu"
-        },
-        {
-          "value": "2026",
-          "context": "t an evidence date. The newest source date is shown separately. Latest Actionable Updates 2026-08-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · Epstein Files, Timeline And Court Records · Google News / Epstein timeline and files Primary / offici"
-        },
-        {
-          "value": "2026",
-          "context": "3/ Open the source, then use the evidence route, source card, free brief, and book path. 2026-08-03 · War Machine And Intelligence State · UN News Primary / official source DR Congo: New centre opens at"
         }
       ],
       "needsSourceRule": false,
@@ -48989,6 +49020,10 @@
         },
         {
           "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
+        },
+        {
+          "value": "2027",
           "context": "pportunities To Apply for Available Slots · documented association · source Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
         }
       ],
@@ -49013,6 +49048,10 @@
         },
         {
           "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
+        },
+        {
+          "value": "2027",
           "context": "pportunities To Apply for Available Slots · documented association · source Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
         }
       ],
@@ -49034,6 +49073,10 @@
         {
           "value": "2026",
           "context": "nce → scenario How DIGITAL ID AND ACCESS SYSTEMS fits into the wider control map Updated: 2026-08-04 Documented actor map Information and narrative control — Documented in the linked public record (media"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
@@ -49090,6 +49133,10 @@
         {
           "value": "2026",
           "context": "scenario How FOUNDATION AND NGO POLICY INFLUENCE fits into the wider control map Updated: 2026-08-04 Documented actor map SEC Complaint — Documented in the linked public record (documented person or insti"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
@@ -49154,6 +49201,10 @@
         {
           "value": "2026",
           "context": "→ scenario How HEALTH DATA AND EMERGENCY SYSTEMS fits into the wider control map Updated: 2026-08-04 Documented actor map Exercise or conversion of derivative security — reportedTransaction (security, int"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
@@ -50403,22 +50454,22 @@
       "money": [],
       "crisisFigures": [
         {
-          "value": "2 Lanes",
-          "context": "disclosure Entity Observations ENTITY OBSERVATION Homeland Security Department Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Health and Human Services Department Mentions: 2 Lanes: federal-r",
+          "value": "3 Lanes",
+          "context": "ure Entity Observations ENTITY OBSERVATION Health and Human Services Department Mentions: 3 Lanes: federal-register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 3 Lanes: f",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "3 Lanes",
+          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 3 Lanes: federal-register-policy ENTITY OBSERVATION Homeland Security Department Mentions: 2 Lanes: federal-register-",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "2 Lanes",
-          "context": "federal-register-policy ENTITY OBSERVATION Health and Human Services Department Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: f",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "2 Lanes",
-          "context": "register-policy ENTITY OBSERVATION Centers for Medicare &amp; Medicaid Services Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
+          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Homeland Security Department Mentions: 2 Lanes: federal-register-policy ENTITY OBSERVATION Appellate Division of the Supreme Court of the State of New York",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -50432,49 +50483,42 @@
         },
         {
           "value": "1 Lanes",
-          "context": "urtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register",
+          "context": "urtlistener-court-records ENTITY OBSERVATION Securities and Exchange Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATI",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "Lanes: federal-register-policy ENTITY OBSERVATION Nuclear Regulatory Commission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Apple Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATIO",
+          "context": "ssion Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVDA Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Apple Inc.",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "ission Mentions: 1 Lanes: federal-register-policy ENTITY OBSERVATION Apple Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AAPL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVIDIA COR",
+          "context": "VATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVDA Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Apple Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AAPL",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "RVATION Apple Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AAPL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVD",
+          "context": "RVATION NVDA Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Apple Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AAPL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Alphabet I",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "VATION AAPL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVDA Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Alphabet I",
+          "context": "RVATION Apple Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AAPL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Alphabet Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION G",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "VATION NVIDIA CORP Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION NVDA Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Alphabet Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION G",
-          "classification": "missing-source-rule",
-          "updatePolicy": "flag-for-review",
-          "matchedRules": []
-        },
-        {
-          "value": "1 Lanes",
-          "context": "TION NVDA Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Alphabet Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION GOOGL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION MICROSOFT",
+          "context": "TION AAPL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Alphabet Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION GOOGL Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION MICROSOFT",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -50516,14 +50560,21 @@
         },
         {
           "value": "1 Lanes",
-          "context": "TION AMZN Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings MATRIX REPROGRAMMED — public",
+          "context": "TION AMZN Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Gilead Ten",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
         },
         {
           "value": "1 Lanes",
-          "context": "TION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings MATRIX REPROGRAMMED — public records feed the machine.",
+          "context": "TION Broadcom Inc. Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION AVGO Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Gilead Tenofovir Cases Mentions: 1 Lanes: courtlistener-court-records M",
+          "classification": "missing-source-rule",
+          "updatePolicy": "flag-for-review",
+          "matchedRules": []
+        },
+        {
+          "value": "1 Lanes",
+          "context": "Mentions: 1 Lanes: sec-edgar-filings ENTITY OBSERVATION Gilead Tenofovir Cases Mentions: 1 Lanes: courtlistener-court-records MATRIX REPROGRAMMED — public records feed the machine.",
           "classification": "missing-source-rule",
           "updatePolicy": "flag-for-review",
           "matchedRules": []
@@ -50532,11 +50583,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-08-04T03:36:12.574Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
+          "context": "rd routes. Record Events JSON Entity Observations Pull Index MACHINE DIGEST &gt; updated: 2026-08-04T14:38:54.063Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds rea"
         },
         {
           "value": "2026",
-          "context": "ex MACHINE DIGEST &gt; updated: 2026-08-04T03:36:12.574Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
+          "context": "ex MACHINE DIGEST &gt; updated: 2026-08-04T14:38:54.063Z &gt; runner: machine-feed-runner-2026-07-04-b &gt; feed lanes attempted: 7 &gt; feeds reached: 4 &gt; normalized events: 18 &gt; entity observation"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
         },
         {
           "value": "2027",
@@ -75380,6 +75435,70 @@
       "recommendation": "No obvious dynamic figures detected."
     },
     {
+      "file": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
+        },
+        {
+          "value": "2027",
+          "context": "lable Slots — General public-record exposure route — documented association Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
+        },
+        {
+          "value": "2027",
+          "context": "lable Slots — General public-record exposure route — documented association Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
+      "file": "entity-exposure/health-and-human-services-department.html",
+      "priority": "Medium",
+      "figureCount": 0,
+      "missingRuleCount": 0,
+      "autoAllowedCount": 0,
+      "manualReviewCount": 0,
+      "staticCount": 0,
+      "percentages": [],
+      "money": [],
+      "crisisFigures": [],
+      "dates": [
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
+        },
+        {
+          "value": "2027",
+          "context": "lable Slots — General public-record exposure route — documented association Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
+        },
+        {
+          "value": "2027",
+          "context": "lable Slots — General public-record exposure route — documented association Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
+        }
+      ],
+      "needsSourceRule": false,
+      "recommendation": "No obvious dynamic figures detected."
+    },
+    {
       "file": "entity-exposure-index.html",
       "priority": "Medium",
       "figureCount": 0,
@@ -75393,7 +75512,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-08-04T03:36:29.024Z &gt; profiles: 34 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
+          "context": "andidates and missing records. Exposure JSON Download Index EXPOSURE ENGINE &gt; updated: 2026-08-04T14:39:12.712Z &gt; profiles: 33 &gt; method: evidence ladder + source routes &gt; boundary: not a verdi"
         },
         {
           "value": "2021",
@@ -77800,7 +77919,15 @@
       "dates": [
         {
           "value": "2026",
-          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-08-04T03:36:28.945Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 6 &gt; changed recor"
+          "context": "review. Change JSON Relationship Scores Machine Digest MACHINE INTELLIGENCE &gt; updated: 2026-08-04T14:39:12.626Z &gt; current records: 18 &gt; previous records: 18 &gt; new records: 8 &gt; changed recor"
+        },
+        {
+          "value": "2027",
+          "context": "ong-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain H"
+        },
+        {
+          "value": "2027",
+          "context": "lots Lane: federal-register-policy Open source route documented association Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Progra"
         },
         {
           "value": "2024",
@@ -77813,14 +77940,6 @@
         {
           "value": "2021",
           "context": "rance in records. It is not a claim of private coordination. SCORE 10 Williams v. Biggs ↔ 2021-08825 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means rep"
-        },
-        {
-          "value": "2021",
-          "context": "coordination. SCORE 10 Appellate Division of the Supreme Court of the State of New York ↔ 2021-08825 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means rep"
-        },
-        {
-          "value": "2023",
-          "context": "s not a claim of private coordination. SCORE 10 Punxsutawney Hunting Club v. PGC ↔ 23 WAP 2023 public-record co-occurrence Lanes: courtlistener-court-records Boundary: Relationship scoring means repeated"
         }
       ],
       "needsSourceRule": false,
@@ -80336,7 +80455,7 @@
       "dates": [
         {
           "value": "2026",
-          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-08-04T03:36:29.076Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
+          "context": "ates and missing records. Contractor JSON Download Brief CONTRACTOR TRACKER &gt; updated: 2026-08-04T14:39:12.763Z &gt; profiles: 7 &gt; source routes: 8 &gt; method: contracts + people + records + missin"
         }
       ],
       "needsSourceRule": false,
@@ -80450,11 +80569,11 @@
         },
         {
           "value": "2026",
-          "context": "types: MissingRecord → Source Source: UK Serious Fraud Office — News And Communications · 2026-07-31 What the record establishes: The normalized content returned by the registered source differs from the"
+          "context": "Record → Source Source: U.S. Securities and Exchange Commission — Current EDGAR Filings · 2026-08-03 What the record establishes: The normalized content returned by the registered source differs from the"
         },
         {
           "value": "2026",
-          "context": "uments Entity types: MissingRecord → Source Source: Federal Register — Latest Documents · 2026-07-29 What the record establishes: The normalized content returned by the registered source differs from the"
+          "context": "types: MissingRecord → Source Source: UK Serious Fraud Office — News And Communications · 2026-07-31 What the record establishes: The normalized content returned by the registered source differs from the"
         }
       ],
       "needsSourceRule": false,

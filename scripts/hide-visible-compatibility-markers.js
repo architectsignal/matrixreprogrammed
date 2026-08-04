@@ -44,6 +44,9 @@ function walk(dir, out = []) {
   }
   return out;
 }
+function isHtmlDocument(content) {
+  return /<!doctype html|<html\b/i.test(String(content || ''));
+}
 function removeExistingVault(html) {
   return html
     .replace(/\s*<div\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/div>/gi, '')
@@ -71,7 +74,7 @@ function patch(file) {
   let html;
   try { html = fs.readFileSync(file, 'utf8'); }
   catch { return false; }
-  if (!/<!doctype html|<html\b/i.test(html)) return false;
+  if (!isHtmlDocument(html)) return false;
   const before = html;
   html = removeExistingVault(html);
   html = removeRetiredForumExports(html);
@@ -84,9 +87,15 @@ function patch(file) {
 const files = targets.flatMap(target => walk(target));
 const touched = files.filter(patch).length;
 const remaining = [];
+let checkedHtmlFiles = 0;
 for (const file of files) {
   let html = '';
   try { html = fs.readFileSync(file, 'utf8'); } catch { continue; }
+  // Extensionless Cloudflare aliases share the same namespace as extensionless
+  // JSON/data assets (for example `_site/search-index`). This stage owns public
+  // HTML only; the final clean-search gate separately audits every search asset.
+  if (!isHtmlDocument(html)) continue;
+  checkedHtmlFiles += 1;
   for (const token of forbiddenPublicResidue) {
     if (html.includes(token)) remaining.push(`${path.relative(root, file)}:${token}`);
   }
@@ -96,4 +105,4 @@ if (remaining.length) {
   remaining.slice(0, 100).forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Public residue scrub complete: ${touched} HTML file(s) patched across ${files.length} HTML surfaces; compatibility/internal payloads, retired forum-export references and malformed reader fields are absent.`);
+console.log(`Public residue scrub complete: ${touched} HTML file(s) patched; ${checkedHtmlFiles} HTML document(s) verified across ${files.length} candidate route files. Compatibility/internal payloads, retired forum-export references and malformed reader fields are absent from public HTML.`);

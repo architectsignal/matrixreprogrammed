@@ -8,6 +8,7 @@ on:
       - 'data/sensitive-figure-policy.json'
       - 'scripts/update-site-freshness-report.js'
       - 'scripts/figure-source-rules-pressure-test.js'
+      - 'scripts/sensitive-figure-classification-regression-test.js'
   workflow_dispatch:
 
 permissions:
@@ -30,16 +31,20 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Syntax-check the scanner and pressure test
+      - name: Syntax-check the scanner and pressure tests
         run: |
           node --check scripts/update-site-freshness-report.js
           node --check scripts/figure-source-rules-pressure-test.js
+          node --check scripts/sensitive-figure-classification-regression-test.js
 
       - name: Build the repository-wide review queue
         run: node scripts/update-site-freshness-report.js
 
       - name: Prove metadata, disposition and repeat-safety boundaries
         run: node scripts/figure-source-rules-pressure-test.js
+
+      - name: Prove controls stay excluded and financial figures stay source-gated
+        run: node scripts/sensitive-figure-classification-regression-test.js
 
       - name: Upload sensitive figure proof
         if: always()

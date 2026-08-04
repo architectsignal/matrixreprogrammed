@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-04T14:39:29.890Z
-Live Intel source window: 2026-08-04T14:39:23.787Z
+Generated: 2026-08-04T19:56:21.723Z
+Live Intel source window: 2026-08-04T19:56:16.205Z
 Tracked cards: 976
-Cards with current matched records: 89
-Cards with no new verified record: 887
+Cards with current matched records: 90
+Cards with no new verified record: 886
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -1699,9 +1699,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## CONTROL STRUCTURE
 - Route: entity-timelines/control-structure.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-07-31T18:22:00.000Z
+- 2026-07-31T18:22:00.000Z — Toppan Security demos interoperability with French national digital ID wallet - Biometric Update — https://news.google.com/rss/articles/CBMitwFBVV95cUxPQnB1NnVvUmhXX2xZSS1PT0tBU0hNY3hNVU00eHMyQmxwLWdqdG80bzE5aDk3QjI3SGx0bUMzZFdRc0tFTmpHWlNDVUFoS0loZEZFTGZpSU50SV9iX2tMS1BBbFdpaHdOT05saGFLSDlDbU9uSDcxMGhfTnZUSkRoQkFnazA0WkdNQWt6NkRuaVN6YVNxcTA4d1ExSXQ1Q3lreXl1VnJIaWhBV1ViaHgweGdDeEh4VlU?oc=5
 
 ## CONTROL SYSTEM TRACKER.
 - Route: control-system-tracker.html

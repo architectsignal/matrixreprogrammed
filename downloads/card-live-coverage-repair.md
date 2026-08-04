@@ -1,10 +1,10 @@
 # Card Live Coverage Repair
 
-Generated: 2026-08-04T14:39:31.133Z
+Generated: 2026-08-04T19:56:22.986Z
 
 - Result: PASS
 - Tracked cards: 977
-- Runtime injected or corrected: 153
+- Runtime injected or corrected: 152
 - Andrew Tate routes: controlled-opposition/andrew-tate.html, card-artwork-batches/batch-006.html, card-artwork-batches.html, controlled-opposition-deck.html
 - Missing routes: none
 

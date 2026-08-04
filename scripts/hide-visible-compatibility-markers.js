@@ -7,8 +7,6 @@ const targets = outputOnly && fs.existsSync(path.join(root, '_site')) ? [path.jo
 const ignoredDirs = new Set(['.git', '.github', 'node_modules', '.wrangler', 'scripts', 'tools', 'netlify', 'evidence-archive', 'source-snapshots', 'browsertrix-output']);
 if (!outputOnly) ignoredDirs.add('_site');
 
-// Only remove the malformed legacy compatibility tokens. Do not remove legitimate
-// public routes such as downloads/forum-posts.json, or stable section identifiers.
 const malformedTokens = [
   'new-intelligence-toolspreservedaftervisiblede-duplication',
   'AuthorityHubroutepreservedaftervisiblede-duplication',
@@ -24,16 +22,15 @@ const malformedTokens = [
   'figure-source-statuspreservedaftervisiblede-duplication'
 ];
 
-const cleanCompatibilityRoutes = [
+const forbiddenPublicResidue = [
+  ...malformedTokens,
+  'preservedaftervisiblede-duplication',
+  'compatibility-marker-vault',
+  'public-copy-internal-vault',
+  'compatibility-routes-preserved-with-clean-public-copy',
   'downloads/forum-posts.json',
   'downloads/forum-posts.md',
-  'feed-center.html',
-  'share-center.html',
-  'launch-room.html',
-  'offer-center.html',
-  'source-document-vault.html',
-  'evidence-vault.html',
-  'black-file.html'
+  ' reader field='
 ];
 
 function escRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -47,23 +44,25 @@ function walk(dir, out = []) {
   }
   return out;
 }
-function safeCompatibilityBlock() {
-  const payload = {
-    status: 'compatibility-routes-preserved-with-clean-public-copy',
-    checked: new Date().toISOString().slice(0, 10),
-    routes: cleanCompatibilityRoutes
-  };
-  return `<script type="application/json" id="compatibility-marker-vault" data-cleanup-marker="deep-cleanup">${JSON.stringify(payload)}</script>`;
+function isHtmlDocument(content) {
+  return /<!doctype html|<html\b/i.test(String(content || ''));
 }
 function removeExistingVault(html) {
   return html
     .replace(/\s*<div\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/div>/gi, '')
     .replace(/\s*<script\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/\s*<script\b(?=[^>]*\bid=["']public-copy-internal-vault["'])[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/\s*<div\b(?=[^>]*\bclass=["'][^"']*\bcompatibility-markers\b[^"']*["'])[^>]*>[\s\S]*?<\/div>/gi, '');
 }
+function removeRetiredForumExports(html) {
+  return html
+    .replace(/\s*<a\b(?=[^>]*\bhref=["'][^"']*downloads\/forum-posts\.(?:json|md)["'])[^>]*>[\s\S]*?<\/a>/gi, '')
+    .replace(/\bdownloads\/forum-posts\.(?:json|md)\b/gi, 'forum.html');
+}
+function repairMalformedFields(html) {
+  return html.replace(/\sreader\s+field=(["'])(.*?)\1/gi, (_match, quote, value) => ` placeholder=${quote}${value}${quote}`);
+}
 function removeVisibleMarkerText(html) {
-  // Compatibility leaks were emitted as plain text nodes. Remove the whole text
-  // node when it contains the malformed suffix, leaving surrounding markup intact.
   html = html.replace(/>([^<]*preservedaftervisiblede-duplication[^<]*)</gi, '><');
   html = html.replace(/<!--[\s\S]*?preservedaftervisiblede-duplication[\s\S]*?-->/gi, '');
   for (const token of malformedTokens) html = html.replace(new RegExp(escRegExp(token), 'g'), '');
@@ -75,14 +74,12 @@ function patch(file) {
   let html;
   try { html = fs.readFileSync(file, 'utf8'); }
   catch { return false; }
-  if (!/<!doctype html|<html\b/i.test(html)) return false;
+  if (!isHtmlDocument(html)) return false;
   const before = html;
   html = removeExistingVault(html);
+  html = removeRetiredForumExports(html);
+  html = repairMalformedFields(html);
   html = removeVisibleMarkerText(html);
-  const vault = safeCompatibilityBlock();
-  if (html.includes('</main>')) html = html.replace('</main>', `${vault}</main>`);
-  else if (html.includes('</body>')) html = html.replace('</body>', `${vault}</body>`);
-  else html += vault;
   if (html !== before) fs.writeFileSync(file, html);
   return html !== before;
 }
@@ -90,15 +87,22 @@ function patch(file) {
 const files = targets.flatMap(target => walk(target));
 const touched = files.filter(patch).length;
 const remaining = [];
+let checkedHtmlFiles = 0;
 for (const file of files) {
   let html = '';
   try { html = fs.readFileSync(file, 'utf8'); } catch { continue; }
-  for (const token of malformedTokens) if (html.includes(token)) remaining.push(`${path.relative(root, file)}:${token}`);
-  if (html.includes('preservedaftervisiblede-duplication')) remaining.push(`${path.relative(root, file)}:preservedaftervisiblede-duplication`);
+  // Extensionless Cloudflare aliases share the same namespace as extensionless
+  // JSON/data assets (for example `_site/search-index`). This stage owns public
+  // HTML only; the final clean-search gate separately audits every search asset.
+  if (!isHtmlDocument(html)) continue;
+  checkedHtmlFiles += 1;
+  for (const token of forbiddenPublicResidue) {
+    if (html.includes(token)) remaining.push(`${path.relative(root, file)}:${token}`);
+  }
 }
 if (remaining.length) {
-  console.error(`Public marker scrub failed: ${remaining.length} marker leak(s) remain.`);
+  console.error(`Public residue scrub failed: ${remaining.length} leak(s) remain.`);
   remaining.slice(0, 100).forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Public marker scrub complete: ${touched} HTML file(s) patched across ${files.length} HTML surfaces; valid public routes preserved.`);
+console.log(`Public residue scrub complete: ${touched} HTML file(s) patched; ${checkedHtmlFiles} HTML document(s) verified across ${files.length} candidate route files. Compatibility/internal payloads, retired forum-export references and malformed reader fields are absent from public HTML.`);

@@ -111,4 +111,8 @@ if (fs.existsSync(path.join(root, '_site'))) {
 }
 
 if (!report.ok) throw new Error('Public audit boundary reconciliation failed closed.');
-console.log(`Public audit boundaries reconciled: ${checks.length} checks, ${changes.length} file change(s).`);
+const aliasRoutingReport = require('./patch-public-route-aliases.js');
+if (!aliasRoutingReport.ok) throw new Error('Public route namespace alias routing failed closed.');
+const aliasReport = require('./finalize-public-route-aliases.js');
+if (!aliasReport.ok) throw new Error('Public route alias finalization failed closed.');
+console.log(`Public audit boundaries reconciled: ${checks.length} checks, ${changes.length} file change(s); namespace routes and deployable aliases finalized.`);

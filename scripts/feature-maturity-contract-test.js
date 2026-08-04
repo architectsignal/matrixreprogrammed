@@ -33,8 +33,22 @@ function runFinalizer() {
   if (result.stderr) process.stderr.write(result.stderr);
   need(result.status === 0, `Feature maturity finalizer exited ${result.status}`);
 }
-function digest(relative) {
-  return crypto.createHash('sha256').update(fs.readFileSync(path.join(root, relative))).digest('hex');
+function count(text, expression) { return (String(text || '').match(expression) || []).length; }
+function semanticState(relative) {
+  const html = fs.readFileSync(path.join(root, relative), 'utf8');
+  const block = html.match(/<!-- feature-maturity:start -->[\s\S]*?<!-- feature-maturity:end -->/i)?.[0] || '';
+  const bodyState = html.match(/<body\b[^>]*data-feature-maturity=["']([^"']+)["'][^>]*>/i)?.[1] || '';
+  return {
+    blockHash: crypto.createHash('sha256').update(block).digest('hex'),
+    blockBytes: Buffer.byteLength(block),
+    markerStarts: count(html, /<!-- feature-maturity:start -->/gi),
+    markerEnds: count(html, /<!-- feature-maturity:end -->/gi),
+    maturitySections: count(html, /<section\b[^>]*class=["'][^"']*\bfeature-maturity\b[^"']*["']/gi),
+    styleBlocks: count(html, /id=["']feature-maturity-style["']/gi),
+    bodyState,
+    h1Count: count(html, /<h1\b/gi),
+    mainCount: count(html, /<main\b/gi)
+  };
 }
 function navText(relative) {
   const file = path.join(root, relative);
@@ -48,9 +62,18 @@ const syntax = spawnSync(process.execPath, ['--check', finalizerPath], { cwd: ro
 need(syntax.status === 0, `Feature maturity syntax failed: ${syntax.stderr || syntax.stdout || syntax.status}`);
 
 runFinalizer();
-const firstHashes = Object.fromEntries(pages.map(relative => [relative, digest(relative)]));
+const firstStates = Object.fromEntries(pages.map(relative => [relative, semanticState(relative)]));
 runFinalizer();
-for (const [relative, hash] of Object.entries(firstHashes)) need(digest(relative) === hash, `${relative} maturity finalization is not idempotent`);
+const secondStates = Object.fromEntries(pages.map(relative => [relative, semanticState(relative)]));
+for (const relative of pages) {
+  const first = firstStates[relative];
+  const second = secondStates[relative];
+  need(JSON.stringify(second) === JSON.stringify(first), `${relative} maturity semantics changed across repeated finalization`);
+  need(second.markerStarts === 1 && second.markerEnds === 1, `${relative} does not contain exactly one maturity marker pair`);
+  need(second.maturitySections === 1, `${relative} does not contain exactly one maturity section`);
+  need(second.styleBlocks === 1, `${relative} does not contain exactly one maturity style block`);
+  need(second.h1Count >= 1 && second.mainCount === 1, `${relative} lost its reader page structure`);
+}
 
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'data', 'feature-maturity.json'), 'utf8'));
 need(manifest.ok === true, 'Feature maturity manifest is not healthy');
@@ -102,7 +125,8 @@ const report = {
   classifiedFeatures: manifest.features?.length || 0,
   primaryPromotionWithheld: manifest.primaryPromotionWithheld || [],
   stages: Object.fromEntries((manifest.features || []).map(feature => [feature.id, feature.stage])),
-  boundary: 'Pilot systems stay publicly inspectable for transparency or intake, but primary promotion remains withheld until the defining verified output actually exists. The finalizer never creates clocks, receipts, recalls, historical baselines or material differences.',
+  repeatSafety: secondStates,
+  boundary: 'Pilot systems stay publicly inspectable for transparency or intake, but primary promotion remains withheld until the defining verified output actually exists. Repeat safety means one stable maturity block, body state and style block without duplicated sections or reader-content loss. The finalizer never creates clocks, receipts, recalls, historical baselines or material differences.',
   failures
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -112,4 +136,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('FEATURE MATURITY CONTRACT PASSED: four pilot systems receive honest empty/baseline states, no synthetic output and no primary-navigation promotion.');
+console.log('FEATURE MATURITY CONTRACT PASSED: four pilot systems receive honest empty/baseline states, semantic repeat safety, no synthetic output and no primary-navigation promotion.');

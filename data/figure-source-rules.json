@@ -1,6 +1,6 @@
 {
-  "updated": "2026-06-24",
-  "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static historical context.",
+  "updated": "2026-08-04",
+  "policy": "Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts, vaccine counts, crime figures, money amounts, and court statistics must not be silently rewritten unless they match an explicit source rule. Source rules can mark a page or figure as auto-update eligible, manual review only, or static structural/historical context. Navigation ordinals, historical-year labels and record identifiers are classified separately from quantitative public claims.",
   "defaultAction": "flag-for-review",
   "rules": [
     {
@@ -62,6 +62,36 @@
       "sourceFiles": ["data/books.json", "search-index.json"],
       "updatePolicy": "auto-update-allowed",
       "reviewNote": "Site inventory counts can update automatically because they are derived from generated site data."
+    },
+    {
+      "id": "generated-system-inventory",
+      "label": "Generated investigation, document, route and system inventory",
+      "filePatterns": ["investigation-pathways.html", "document-library.html", "machine-digest.html", "site-brain-router.html", "weekly-investigation-report.html", "review-dashboard.html", "dossier-pack-", "card-", "download-center.html", "source-changes.html", "daily-brain-brief.html", "timers.html", "hit-list.html", "intel-archive.html"],
+      "figurePatterns": ["pages", "files", "sources", "books", "feeds", "lanes", "maps", "offers", "updates", "bulletins", "routes", "records", "items"],
+      "sourceType": "site-generated-inventory",
+      "sourceFiles": ["search-index.json", "data/document-library.json", "data/investigation-status.json", "data/investigation-ledger.json", "data/site-brain-router.json", "data/monetisation-dashboard.json"],
+      "updatePolicy": "auto-update-allowed",
+      "reviewNote": "These are counts of generated public routes, source records or system objects. They may update from the named build data, but the underlying evidence and conclusions retain their own evidence boundaries."
+    },
+    {
+      "id": "site-owned-commerce-configuration",
+      "label": "Site-controlled membership, product and voluntary support amounts",
+      "filePatterns": ["membership.html", "store.html", "card-deck-store.html", "premium-reports.html", "review-dashboard.html", "investigation-pathways.html", "custom-research.html", "monetisation", "offer-center.html", "sales-ladder.html"],
+      "figurePatterns": ["€", "$", "£", "donation", "price", "monthly", "per month", "support", "checkout", "report", "tracker", "guide", "bundle", "research"],
+      "sourceType": "site-owned-commercial-configuration",
+      "sourceFiles": ["data/membership-tiers.json", "data/membership-feature-matrix.json", "data/monetisation-dashboard.json"],
+      "updatePolicy": "manual-review-only",
+      "reviewNote": "These amounts are controlled by the project rather than external evidence. They may change only through the canonical membership or product configuration and require checkout/copy review before publication. They must never be mistaken for evidence about a person or institution."
+    },
+    {
+      "id": "market-activity-sec-values",
+      "label": "SEC-derived market activity and position values",
+      "filePatterns": ["market-activity.html", "market-watchlist.html", "big-three-asset-managers.html", "palantir-watch.html"],
+      "figurePatterns": ["$", "€", "£", "shares", "transaction", "position", "holding", "filing", "market value"],
+      "sourceType": "official-sec-filing-derived",
+      "sourceFiles": ["data/market-activity.json", "data/market-activity-state.json", "data/market-activity-watchlist.json"],
+      "updatePolicy": "manual-review-only",
+      "reviewNote": "Values come from official SEC disclosures or comparisons derived from them. A filing does not prove motive, current ownership, execution price, investment merit, coordination or wrongdoing. Recheck the filing and period before changing a public figure."
     },
     {
       "id": "crime-state-figures",

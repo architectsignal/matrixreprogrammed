@@ -27,8 +27,6 @@ const forbiddenPublicResidue = [
   'preservedaftervisiblede-duplication',
   'compatibility-marker-vault',
   'compatibility-routes-preserved-with-clean-public-copy',
-  'data-cleanup-marker="deep-cleanup"',
-  "data-cleanup-marker='deep-cleanup'",
   'downloads/forum-posts.json',
   'downloads/forum-posts.md'
 ];

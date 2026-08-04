@@ -26,9 +26,11 @@ const forbiddenPublicResidue = [
   ...malformedTokens,
   'preservedaftervisiblede-duplication',
   'compatibility-marker-vault',
+  'public-copy-internal-vault',
   'compatibility-routes-preserved-with-clean-public-copy',
   'downloads/forum-posts.json',
-  'downloads/forum-posts.md'
+  'downloads/forum-posts.md',
+  ' reader field='
 ];
 
 function escRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
@@ -46,12 +48,16 @@ function removeExistingVault(html) {
   return html
     .replace(/\s*<div\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/div>/gi, '')
     .replace(/\s*<script\b(?=[^>]*\bid=["']compatibility-marker-vault["'])[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/\s*<script\b(?=[^>]*\bid=["']public-copy-internal-vault["'])[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/\s*<div\b(?=[^>]*\bclass=["'][^"']*\bcompatibility-markers\b[^"']*["'])[^>]*>[\s\S]*?<\/div>/gi, '');
 }
 function removeRetiredForumExports(html) {
   return html
     .replace(/\s*<a\b(?=[^>]*\bhref=["'][^"']*downloads\/forum-posts\.(?:json|md)["'])[^>]*>[\s\S]*?<\/a>/gi, '')
     .replace(/\bdownloads\/forum-posts\.(?:json|md)\b/gi, 'forum.html');
+}
+function repairMalformedFields(html) {
+  return html.replace(/\sreader\s+field=(["'])(.*?)\1/gi, (_match, quote, value) => ` placeholder=${quote}${value}${quote}`);
 }
 function removeVisibleMarkerText(html) {
   html = html.replace(/>([^<]*preservedaftervisiblede-duplication[^<]*)</gi, '><');
@@ -69,6 +75,7 @@ function patch(file) {
   const before = html;
   html = removeExistingVault(html);
   html = removeRetiredForumExports(html);
+  html = repairMalformedFields(html);
   html = removeVisibleMarkerText(html);
   if (html !== before) fs.writeFileSync(file, html);
   return html !== before;
@@ -89,4 +96,4 @@ if (remaining.length) {
   remaining.slice(0, 100).forEach(item => console.error(`- ${item}`));
   process.exit(1);
 }
-console.log(`Public residue scrub complete: ${touched} HTML file(s) patched across ${files.length} HTML surfaces; compatibility payloads and retired forum-export references are absent.`);
+console.log(`Public residue scrub complete: ${touched} HTML file(s) patched across ${files.length} HTML surfaces; compatibility/internal payloads, retired forum-export references and malformed reader fields are absent.`);

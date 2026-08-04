@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T11:05:16.955Z",
+  "generatedAt": "2026-08-04T09:48:38.358Z",
   "summary": {
     "checks": 66,
     "failures": 0,
-    "results": 33577,
-    "primarySources": 29680,
-    "relationships": 13467
+    "results": 31745,
+    "primarySources": 29855,
+    "relationships": 13555
   },
   "checks": [
     {
@@ -17,7 +17,7 @@
     {
       "name": "search index contains Phase 1-3 depth",
       "ok": true,
-      "detail": "33577 results"
+      "detail": "31745 results"
     },
     {
       "name": "search URLs are unique",
@@ -27,7 +27,7 @@
     {
       "name": "Search V3 metadata present",
       "ok": true,
-      "detail": "33577/33577"
+      "detail": "31745/31745"
     },
     {
       "name": "normalised field sourceType",
@@ -97,17 +97,17 @@
     {
       "name": "query corruption bribery fraud",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=a64418c3b3a948ed46fb9e10, daily-investigation-conclusions.html?finding=9bed98ec77ed21dbc416e0ca, daily-investigation-conclusions.html?finding=9767eb9045ad96382a68ea1c, daily-investigation-conclusions.html?finding=c3d8ec437ee5ff940f815a56, daily-investigation-conclusions.html?finding=c87076d5dbb810268d1f5103"
+      "detail": "daily-investigation-conclusions.html?finding=a64418c3b3a948ed46fb9e10, daily-investigation-conclusions.html?finding=9bed98ec77ed21dbc416e0ca, daily-investigation-conclusions.html?finding=9767eb9045ad96382a68ea1c, daily-investigation-conclusions.html?finding=e9b174537887f34bf82f8ba6, daily-investigation-conclusions.html?finding=c87076d5dbb810268d1f5103"
     },
     {
       "name": "query Epstein DOJ disclosures",
       "ok": true,
-      "detail": "entity-registry.html#entity-contract-2c48f9d59d60bb3fb17f, entity-registry.html#entity-contract-4ecee6be45f5e9ec4cec, entity-registry.html#entity-contract-bc5d5a7b6218af137717, entity-registry.html#entity-contract-f35d2bd2e5fbd01f0a70, relationship-registry.html?relationship=relationship-76d4cf8f613f8434efc7"
+      "detail": "entity-registry.html#entity-contract-9ef2c7b7cce62b931a29, entity-registry.html#entity-contract-2c48f9d59d60bb3fb17f, entity-registry.html#entity-contract-4ecee6be45f5e9ec4cec, entity-registry.html#entity-contract-bc5d5a7b6218af137717, relationship-registry.html?relationship=relationship-76d4cf8f613f8434efc7"
     },
     {
       "name": "query WikiLeaks cables",
       "ok": true,
-      "detail": "entity-registry.html#entity-source-wikileaks-publications, entity-registry.html#entity-entity-organization-95d24cdfe2337f461182, relationship-registry.html?relationship=relationship-0f8c1717e78c1fb6bf17, investigation-source-ledger.html?source=wikileaks-publications, daily-investigation-conclusions.html?finding=8e673792d3f44ea145dd5c04"
+      "detail": "entity-registry.html#entity-source-wikileaks-publications, entity-registry.html#entity-entity-organization-95d24cdfe2337f461182, relationship-registry.html?relationship=relationship-0f8c1717e78c1fb6bf17, investigation-source-ledger.html?source=wikileaks-publications, daily-investigation-conclusions.html?finding=8aca52e279a3ab648d483aad"
     },
     {
       "name": "query government contracts",
@@ -132,7 +132,7 @@
     {
       "name": "query company ownership contract agency",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-ace94fd99602766f1dbd, relationship-registry.html?relationship=relationship-45a91131402a990020f8, entity-registry.html#entity-contract-39d48c42c159c3567e81, entity-registry.html#entity-contract-758d6edb90360cfb244a, relationship-registry.html?relationship=relationship-d2f69b5c3d5f95eedbcb"
+      "detail": "relationship-registry.html?relationship=relationship-45a91131402a990020f8, entity-registry.html#entity-contract-39d48c42c159c3567e81, entity-registry.html#entity-contract-758d6edb90360cfb244a, relationship-registry.html?relationship=relationship-d2f69b5c3d5f95eedbcb, entity-registry.html#entity-contract-ef39c5d72df862ecd402"
     },
     {
       "name": "query missing record redaction log",
@@ -307,7 +307,7 @@
     {
       "name": "facet total matches index",
       "ok": true,
-      "detail": "33577 vs 33577"
+      "detail": "31745 vs 31745"
     },
     {
       "name": "facet evidenceGrade",

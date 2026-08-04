@@ -7,6 +7,7 @@ on:
       - 'scripts/prepare-p1-public-quality.js'
       - 'scripts/finalize-p1-public-quality.js'
       - 'scripts/finalize-p1-public-quality-routes.js'
+      - 'scripts/ensure-corrections-route.js'
       - 'scripts/p1-public-quality-contract-test.js'
       - 'scripts/finalize-public-route-aliases.js'
       - 'newsletter.html'
@@ -50,6 +51,7 @@ jobs:
         run: |
           node --check scripts/prepare-p1-public-quality.js
           node --check scripts/finalize-p1-public-quality.js
+          node --check scripts/ensure-corrections-route.js
           node --check scripts/finalize-p1-public-quality-routes.js
           node --check scripts/p1-public-quality-contract-test.js
 
@@ -70,6 +72,7 @@ jobs:
           path: |
             downloads/p1-public-quality-preparation.json
             downloads/p1-public-quality-finalization.json
+            downloads/corrections-route-finalization.json
             downloads/p1-public-quality-routes.json
             downloads/p1-public-quality-contract-test.json
           if-no-files-found: error

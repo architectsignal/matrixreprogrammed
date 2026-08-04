@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+const correctionsRoute = require('./ensure-corrections-route.js');
+if (!correctionsRoute.ok) throw new Error('The canonical corrections route failed closed.');
 const roots = [root, path.join(root, '_site')]
   .filter((value, index, all) => all.indexOf(value) === index && fs.existsSync(value));
 const requiredRoutes = [
@@ -79,24 +81,30 @@ if (!fs.existsSync(sourceGuide)) issues.push(`${canonicalBusinessGuide}: generat
 if (fs.existsSync(path.join(root, '_site')) && !fs.existsSync(deployableGuide)) issues.push(`_site/${canonicalBusinessGuide}: generated deployable PDF missing`);
 
 const report = {
-  ok: results.length >= 15 && issues.length === 0,
+  ok: correctionsRoute.ok && results.length >= 15 && issues.length === 0,
   generatedAt: new Date().toISOString(),
   checkedSurfaces: results.length,
   requiredRoutes,
+  correctionsRoute: {
+    ok: correctionsRoute.ok,
+    canonicalRoute: correctionsRoute.canonicalRoute,
+    targets: correctionsRoute.targets
+  },
   canonicalBusinessGuide,
   sourceGuidePresent: fs.existsSync(sourceGuide),
   deployableGuidePresent: !fs.existsSync(path.join(root, '_site')) || fs.existsSync(deployableGuide),
   results,
   issues,
-  boundary: 'Every P1 quality page exposes direct reader routes to evidence, current change, books, video, a free briefing and corrections. The free-brief route is distinct from newsletter subscription, and every promoted PDF route must resolve to a generated file.'
+  boundary: 'Every P1 quality page exposes direct reader routes to evidence, current change, books, video, a free briefing and the durable corrections route. The free-brief route is distinct from newsletter subscription, and every promoted PDF route must resolve to a generated file.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 if (!report.ok) {
   console.error('P1 PUBLIC QUALITY ROUTE FINALIZATION FAILED');
+  if (!correctionsRoute.ok) console.error('- canonical corrections route is unhealthy');
   if (results.length < 15) console.error(`- only ${results.length} P1 quality surfaces were found`);
   issues.slice(0, 100).forEach(issue => console.error(`- ${issue}`));
   process.exit(1);
 }
-console.log(`P1 PUBLIC QUALITY ROUTES PASSED: ${results.length} source/output surfaces expose all six reader routes and only generated PDF assets.`);
+console.log(`P1 PUBLIC QUALITY ROUTES PASSED: ${results.length} source/output surfaces expose all six reader routes, the corrections destination and only generated PDF assets.`);
 module.exports = report;

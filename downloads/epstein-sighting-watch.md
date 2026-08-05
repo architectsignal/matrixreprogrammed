@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-05T14:32:58.553Z
+Generated: 2026-08-05T19:54:27.864Z
 
 ## Official Boundary
 
@@ -59,7 +59,7 @@ Image/video sightings require extra caution because AI, edits, recycled photos, 
 
 Burnham considering inquiry into Epstein, minister says RTE.ie
 
-### How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
+### How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com
 - Type: related-claim-traffic
 - Status: unverified-claim
 - Evidence level: 5
@@ -67,4 +67,4 @@ Burnham considering inquiry into Epstein, minister says RTE.ie
 - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-How Jeffrey Epstein's Island Became a Nightmare for Influencers Business Insider
+How Jeffrey Epstein's Island Became a Nightmare for Influencers businessinsider.com

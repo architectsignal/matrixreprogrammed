@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-05T14:32:58.284Z
-Live Intel source window: 2026-08-05T14:32:51.811Z
+Generated: 2026-08-05T19:54:27.812Z
+Live Intel source window: 2026-08-05T19:54:21.457Z
 Latest source publication: 2026-08-05T07:12:07.000Z
 Status: current-seven-day-record-window
 
@@ -35,13 +35,13 @@ Lawmakers push for a more robust Epstein Files Transparency Act – but would Tr
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
+### How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com
 - Published: 2026-08-03T09:00:00.000Z
 - Source: Google News / Epstein sighting and alive claims
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
 
-How Jeffrey Epstein's Island Became a Nightmare for Influencers Business Insider
+How Jeffrey Epstein's Island Became a Nightmare for Influencers businessinsider.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

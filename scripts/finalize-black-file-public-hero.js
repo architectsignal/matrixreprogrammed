@@ -60,7 +60,9 @@ function findBalancedSections(html, predicate) {
 }
 function mergeRanges(ranges) {
   const sorted = ranges
-    .filter(range => Number.isFinite(range.start) && Number.isFinite(range.end) && range.end > range.start)
+    .filter(range => Number.isFinite(range.start)
+      && Number.isFinite(range.end)
+      && range.end > range.start)
     .map(range => ({ start: range.start, end: range.end }))
     .sort((a, b) => a.start - b.start || a.end - b.end);
   const merged = [];
@@ -81,33 +83,91 @@ function removeRanges(source, ranges) {
 function countExactHeroSections(html) {
   return findBalancedSections(html, tag => hasExactClass(tag, 'hero')).length;
 }
+function insertCanonicalHero(html) {
+  const source = String(html || '');
+  const boundaries = [
+    {
+      id: 'main-open',
+      test: /<main\b[^>]*>/i,
+      insert: value => value.replace(/(<main\b[^>]*>)\s*/i, `$1\n${canonicalHero}\n`)
+    },
+    {
+      id: 'body-open',
+      test: /<body\b[^>]*>/i,
+      insert: value => value.replace(/(<body\b[^>]*>)\s*/i, `$1\n${canonicalHero}\n`)
+    },
+    {
+      id: 'before-footer',
+      test: /<footer\b/i,
+      insert: value => value.replace(/<footer\b/i, `${canonicalHero}\n<footer`)
+    },
+    {
+      id: 'before-body-close',
+      test: /<\/body>/i,
+      insert: value => value.replace(/<\/body>/i, `${canonicalHero}\n</body>`)
+    },
+    {
+      id: 'html-open',
+      test: /<html\b[^>]*>/i,
+      insert: value => value.replace(/(<html\b[^>]*>)\s*/i, `$1\n${canonicalHero}\n`)
+    },
+    {
+      id: 'before-html-close',
+      test: /<\/html>/i,
+      insert: value => value.replace(/<\/html>/i, `${canonicalHero}\n</html>`)
+    }
+  ];
+  for (const boundary of boundaries) {
+    if (!boundary.test.test(source)) continue;
+    const output = boundary.insert(source);
+    if (output !== source) return { html: output, insertionBoundary: boundary.id };
+  }
+  throw new Error(
+    'Black File source has no stable insertion boundary '
+    + '(<main>, <body>, <footer>, </body>, <html> or </html>).'
+  );
+}
 function finalizeHtml(input) {
   const before = String(input || '');
-  if (!/<!doctype\s+html|<html\b/i.test(before)) throw new Error('Black File source is not an HTML document.');
-  if (!/<main\b[^>]*>/i.test(before)) throw new Error('Black File source has no stable <main> insertion boundary.');
+  if (!/<!doctype\s+html|<html\b/i.test(before)) {
+    throw new Error('Black File source is not an HTML document.');
+  }
 
   let html = before.replace(markerComment, '');
   const heroSections = findBalancedSections(html, tag => hasExactClass(tag, 'hero'));
   html = removeRanges(html, heroSections);
-  html = html.replace(/(<main\b[^>]*>)\s*/i, `$1\n${canonicalHero}\n`);
+  const inserted = insertCanonicalHero(html);
+  html = inserted.html;
 
   const heroCount = countExactHeroSections(html);
   const h1Count = countStaticH1(html);
   const markerStarts = (html.match(/<!--\s*black-file-public-hero:start\s*-->/gi) || []).length;
   const markerEnds = (html.match(/<!--\s*black-file-public-hero:end\s*-->/gi) || []).length;
   const leadCount = (staticMarkup(html).match(/\bid=["']black-file-public-lead["']/gi) || []).length;
-  if (heroCount !== 1) throw new Error(`Black File hero finalization found ${heroCount} exact hero sections.`);
-  if (h1Count !== 1) throw new Error(`Black File hero finalization found ${h1Count} visible static H1 elements.`);
-  if (markerStarts !== 1 || markerEnds !== 1) throw new Error(`Black File hero marker pair is ${markerStarts}/${markerEnds}.`);
-  if (leadCount !== 1) throw new Error(`Black File canonical lead count is ${leadCount}.`);
-  if (!/<h1>THE BLACK FILE<\/h1>/i.test(staticMarkup(html))) throw new Error('Black File canonical H1 text is missing.');
-  if (!/href=["']#request["']/i.test(canonicalHero) || !/\bid=["']request["']/i.test(staticMarkup(html))) {
+  if (heroCount !== 1) {
+    throw new Error(`Black File hero finalization found ${heroCount} exact hero sections.`);
+  }
+  if (h1Count !== 1) {
+    throw new Error(`Black File hero finalization found ${h1Count} visible static H1 elements.`);
+  }
+  if (markerStarts !== 1 || markerEnds !== 1) {
+    throw new Error(`Black File hero marker pair is ${markerStarts}/${markerEnds}.`);
+  }
+  if (leadCount !== 1) {
+    throw new Error(`Black File canonical lead count is ${leadCount}.`);
+  }
+  if (!/<h1>THE BLACK FILE<\/h1>/i.test(staticMarkup(html))) {
+    throw new Error('Black File canonical H1 text is missing.');
+  }
+  if (!/href=["']#request["']/i.test(canonicalHero)
+    || !/\bid=["']request["']/i.test(staticMarkup(html))) {
     throw new Error('Black File request CTA does not resolve to the page request target.');
   }
 
   return {
     html,
     changed: html !== before,
+    insertionBoundary: inserted.insertionBoundary,
     removedHeroSections: heroSections.length,
     h1Count,
     heroCount,
@@ -128,6 +188,7 @@ if (sourceResult.changed) fs.writeFileSync(sourceFile, sourceResult.html);
 const surfaces = [{
   file: 'black-file.html',
   changed: sourceResult.changed,
+  insertionBoundary: sourceResult.insertionBoundary,
   removedHeroSections: sourceResult.removedHeroSections,
   sha256: digest(sourceResult.html)
 }];
@@ -143,7 +204,10 @@ if (fs.existsSync(site) && fs.statSync(site).isDirectory()) {
   surfaces.push({
     file: '_site/black-file.html',
     changed: siteBefore !== sourceResult.html,
-    removedHeroSections: siteBefore ? findBalancedSections(siteBefore, tag => hasExactClass(tag, 'hero')).length : 0,
+    insertionBoundary: sourceResult.insertionBoundary,
+    removedHeroSections: siteBefore
+      ? findBalancedSections(siteBefore, tag => hasExactClass(tag, 'hero')).length
+      : 0,
     sha256: digest(sourceResult.html)
   });
 
@@ -157,7 +221,10 @@ if (fs.existsSync(site) && fs.statSync(site).isDirectory()) {
   surfaces.push({
     file: '_site/black-file',
     changed: aliasBefore !== sourceResult.html,
-    removedHeroSections: aliasBefore ? findBalancedSections(aliasBefore, tag => hasExactClass(tag, 'hero')).length : 0,
+    insertionBoundary: sourceResult.insertionBoundary,
+    removedHeroSections: aliasBefore
+      ? findBalancedSections(aliasBefore, tag => hasExactClass(tag, 'hero')).length
+      : 0,
     sha256: digest(sourceResult.html)
   });
 }
@@ -165,9 +232,15 @@ if (fs.existsSync(site) && fs.statSync(site).isDirectory()) {
 for (const surface of surfaces) {
   const file = path.join(root, surface.file);
   const html = fs.readFileSync(file, 'utf8');
-  if (digest(html) !== digest(sourceResult.html)) throw new Error(`${surface.file} drifted from the canonical Black File source.`);
-  if (countStaticH1(html) !== 1) throw new Error(`${surface.file} does not contain exactly one visible static H1.`);
-  if (countExactHeroSections(html) !== 1) throw new Error(`${surface.file} does not contain exactly one hero section.`);
+  if (digest(html) !== digest(sourceResult.html)) {
+    throw new Error(`${surface.file} drifted from the canonical Black File source.`);
+  }
+  if (countStaticH1(html) !== 1) {
+    throw new Error(`${surface.file} does not contain exactly one visible static H1.`);
+  }
+  if (countExactHeroSections(html) !== 1) {
+    throw new Error(`${surface.file} does not contain exactly one hero section.`);
+  }
 }
 
 const report = {
@@ -175,19 +248,34 @@ const report = {
   generatedAt: new Date().toISOString(),
   canonicalH1: 'THE BLACK FILE',
   canonicalLeadId: 'black-file-public-lead',
+  sourceInsertionBoundary: sourceResult.insertionBoundary,
+  fallbackInsertionSupported: true,
+  supportedInsertionBoundaries: [
+    'main-open',
+    'body-open',
+    'before-footer',
+    'before-body-close',
+    'html-open',
+    'before-html-close'
+  ],
   surfaces,
   sourceSha256: digest(sourceResult.html),
-  boundary: 'The Black File public hero is a narrow canonical surface owner. It restores one visible H1 and one hero across source and deployable aliases without changing downstream archive, evidence, pathway, form or dossier content.'
+  boundary: 'The Black File public hero is a narrow canonical surface owner. It restores one visible H1 and one hero across source and deployable aliases, including late documents without a main wrapper, without changing downstream archive, evidence, pathway, form or dossier content.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Black File public hero finalized across ${surfaces.length} surface(s); ${surfaces.filter(surface => surface.changed).length} changed.`);
+console.log(
+  `Black File public hero finalized across ${surfaces.length} surface(s); `
+  + `${surfaces.filter(surface => surface.changed).length} changed; `
+  + `boundary=${sourceResult.insertionBoundary}.`
+);
 
 module.exports = {
   ...report,
   report,
   canonicalHero,
   finalizeHtml,
+  insertCanonicalHero,
   countStaticH1,
   countExactHeroSections,
   findBalancedSections,

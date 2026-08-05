@@ -1,11 +1,11 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-08-04T11:42:00Z
-Release: pr210-owner-billable-production-20260804-114200z
-Target: current main f49603987cdba6099aeba46ad2255d221d7eb819 containing merged PR #210, merged PR #209, merged PR #208, merged PR #207, merged PR #206, merged PR #205, merged PR #204 and the repaired runtime release
+Requested: 2026-08-05T09:17:00Z
+Release: pr224-final-site-production-20260805-091700z
+Target: current main c266a7a4a0b5d91822c67f3454dac493548a3604 containing merged PR #224 and the complete repaired site
 Authorization: exactly one controlled Cloudflare production deployment
 Billing exception: OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02
-Tracking: resolve the exact production run, cancel later queued duplicates and record the selected run ID
-Required proof: complete production build; owner-authorized single billable-build exception on 2026-08-04; verified D1 Time Travel rollback bookmark; repeat-safe migrations; AI_RESOURCE_ZERO_SPEND_LOCK=true; credentials; exact deployed SHA; live route verification; and no regression to membership, email, PayPal, contact intake, evidence boundaries or existing public pages
-Purpose: deploy the merged PR #210 final production-guard authority repair together with merged PR #209 production synchronization repair, merged PR #208 release-state repair, merged PR #207 cinematic verification repair, merged PR #206 owner-paid release window, merged PR #204 generated-route repair and the merged PR #197 runtime release
-Boundary: owner-authorized single billable build on 2026-08-04; all other zero-spend controls, credentials, D1 rollback, migrations, evidence classification, payment safeguards, human-review gates and live-verification gates remain mandatory
-Nonce: pr210-owner-billable-controlled-production-20260804T114200Z
+Tracking: dispatch exactly one run whose resolved head SHA equals current main; never reuse a failed, cancelled or wrong-SHA run
+Required proof: complete production build; owner-authorized single billable-build exception on 2026-08-05; verified D1 Time Travel rollback bookmark; repeat-safe migrations; AI_RESOURCE_ZERO_SPEND_LOCK=true; valid credentials; exact deployed SHA; live route verification; and no regression to membership, email, PayPal, contact intake, evidence labels or existing public pages
+Purpose: deploy the merged PR #224 final repaired site, including public quality, feed reliability, Black File, canonical routes, clean search, publish-all evidence labels and public maturity labels
+Boundary: owner-authorized single billable build on 2026-08-05; all other zero-spend, credential, rollback, migration, evidence-label, payment, human-review and live-verification gates remain mandatory
+Nonce: pr224-final-site-controlled-production-20260805T091700Z-c266a7a4

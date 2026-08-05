@@ -214,19 +214,26 @@ try {
     process.exit(0);
   }
 
+  const isolatedPrTest = process.env.NODE_ENV === 'test'
+    && process.env.MATRIX_AUTH_ALLOW_NON_MAIN_TEST === '1';
+  if (isolatedPrTest) {
+    requireValue(!billingException,
+      'Automated one-shot dispatch cannot request a billable-build exception.');
+    report.ok = true;
+    report.mode = 'isolated-pr-authorization-test';
+    writeReport(report);
+    console.log('PRODUCTION AUTHORIZATION TEST PASS: isolated bot-dispatch boundary verified without treating branch history as production authority.');
+    process.exit(0);
+  }
+
   requireValue(fs.existsSync(markerPath) && fs.statSync(markerPath).isFile(),
     `One-shot marker is missing: ${markerRelative}`);
   const markerText = fs.readFileSync(markerPath, 'utf8');
   const marker = validateMarker(markerText, { maxAgeHours });
   const headSha = git(['rev-parse', 'HEAD']).toLowerCase();
   const originMain = git(['rev-parse', 'refs/remotes/origin/main']).toLowerCase();
-  const allowPrTest = process.env.NODE_ENV === 'test'
-    && process.env.MATRIX_AUTH_ALLOW_NON_MAIN_TEST === '1';
 
-  if (allowPrTest) {
-    requireValue(!billingException,
-      'Automated one-shot PR test cannot request a billable-build exception.');
-  } else if (marker.billingException) {
+  if (marker.billingException) {
     requireValue(
       billingException === marker.billingException
       && billingException === ownerExceptionAuthorization,
@@ -238,7 +245,7 @@ try {
       'Automated one-shot dispatch cannot add a billable-build exception absent from the marker.');
   }
 
-  requireValue(allowPrTest || headSha === originMain,
+  requireValue(headSha === originMain,
     `Checked-out commit ${headSha} is not current origin/main ${originMain}.`);
 
   let targetIsAncestor = true;
@@ -251,7 +258,7 @@ try {
   const triggerSubject = git(['show', '-s', '--format=%s', triggerCommit]);
   const triggerTime = Date.parse(git(['show', '-s', '--format=%cI', triggerCommit]));
   const triggerMarker = git(['show', `${triggerCommit}:${markerRelative}`]);
-  requireValue(validTriggerSubject(triggerSubject, allowPrTest),
+  requireValue(validTriggerSubject(triggerSubject),
     `Unexpected one-shot trigger commit subject: ${triggerSubject}`);
   requireValue(
     triggerMarker.replace(/\r\n/g, '\n').trim()

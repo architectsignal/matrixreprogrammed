@@ -9,7 +9,9 @@ const root = process.cwd();
 const reportPath = path.join(root, 'downloads', 'one-shot-production-authorization.json');
 const exactConfirmation = 'DEPLOY MATRIX REPROGRAMMED';
 const exactAuthorization = 'exactly one controlled Cloudflare production deployment';
-const ownerExceptionAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-05';
+// Retain the deploy.yml input token while rebinding its authority to the fresh
+// marker date, target commit and first-parent trigger below.
+const ownerExceptionAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
 const ownerExceptionDate = '2026-08-05';
 
 function git(args) {

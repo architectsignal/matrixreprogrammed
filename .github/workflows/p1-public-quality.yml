@@ -1,0 +1,79 @@
+name: P1 Public Quality
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p1-public-quality.yml'
+      - 'scripts/prepare-p1-public-quality.js'
+      - 'scripts/finalize-p1-public-quality.js'
+      - 'scripts/finalize-p1-public-quality-routes.js'
+      - 'scripts/ensure-corrections-route.js'
+      - 'scripts/p1-public-quality-contract-test.js'
+      - 'scripts/finalize-public-route-aliases.js'
+      - 'newsletter.html'
+      - 'market-activity.html'
+      - 'site-population-audit.html'
+      - 'claim-classifier.html'
+      - 'dark-speculation-lab.html'
+      - 'download-center.html'
+      - 'institution-profile.html'
+      - 'public-consequence-contracts.html'
+      - 'source-document-vault.html'
+      - 'subject-dog-architect.html'
+      - 'subject-epstein-black-file.html'
+      - 'subject-freemasonry-symbol-system.html'
+      - 'subject-index.html'
+      - 'subject-trust-evidence-method.html'
+      - 'tracker-dashboard.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Finalize and prove the 15 weakest public pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout proposed public-quality pass
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check P1 finalizers
+        run: |
+          node --check scripts/prepare-p1-public-quality.js
+          node --check scripts/finalize-p1-public-quality.js
+          node --check scripts/ensure-corrections-route.js
+          node --check scripts/finalize-p1-public-quality-routes.js
+          node --check scripts/p1-public-quality-contract-test.js
+
+      - name: Apply page-specific reader-quality finalization
+        run: |
+          node scripts/prepare-p1-public-quality.js
+          node scripts/finalize-p1-public-quality.js
+          node scripts/finalize-p1-public-quality-routes.js
+
+      - name: Verify page quality, routes and evidence boundaries
+        run: node scripts/p1-public-quality-contract-test.js
+
+      - name: Upload P1 public-quality proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-public-quality-${{ github.run_id }}
+          path: |
+            downloads/p1-public-quality-preparation.json
+            downloads/p1-public-quality-finalization.json
+            downloads/corrections-route-finalization.json
+            downloads/p1-public-quality-routes.json
+            downloads/p1-public-quality-contract-test.json
+          if-no-files-found: error
+          retention-days: 30

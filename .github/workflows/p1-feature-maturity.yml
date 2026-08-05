@@ -1,0 +1,58 @@
+name: P1 Public Feature Maturity Labels
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p1-feature-maturity.yml'
+      - 'scripts/finalize-feature-maturity.js'
+      - 'scripts/feature-maturity-contract-test.js'
+      - 'scripts/finalize-public-route-aliases.js'
+      - 'data/public-answer-clocks.json'
+      - 'data/lived-consequence-receipts.json'
+      - 'data/evidence-half-life.json'
+      - 'data/power-diff.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Keep pilot systems public with honest maturity labels
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout proposed release
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check maturity owners
+        run: |
+          node --check scripts/finalize-feature-maturity.js
+          node --check scripts/feature-maturity-contract-test.js
+          node --check scripts/finalize-public-route-aliases.js
+
+      - name: Finalize public maturity labels
+        run: node scripts/finalize-feature-maturity.js
+
+      - name: Prove zero withholding and zero synthetic output
+        run: node scripts/feature-maturity-contract-test.js
+
+      - name: Upload maturity proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-feature-maturity-labels-${{ github.run_id }}
+          path: |
+            data/feature-maturity.json
+            downloads/feature-maturity-report.json
+            downloads/feature-maturity-contract-test.json
+          if-no-files-found: error
+          retention-days: 30

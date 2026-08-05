@@ -10,7 +10,7 @@ on:
 
 permissions:
   actions: write
-  contents: write
+  contents: read
 
 concurrency:
   group: authorized-production-dispatch
@@ -19,27 +19,68 @@ concurrency:
 jobs:
   dispatch:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout exact current main
+        uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Discover or dispatch exactly one corrected production run
+      - name: Dispatch or resolve exactly one run for this SHA
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
+            const { execFileSync } = require('child_process');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            const marker = fs.readFileSync('.github/production-deploy.trigger', 'utf8').trim();
-            if (!marker.startsWith('DEPLOY MATRIX REPROGRAMMED')) {
+            const markerPath = '.github/production-deploy.trigger';
+            const markerText = fs.readFileSync(markerPath, 'utf8').replace(/\r\n/g, '\n').trim();
+            const lines = markerText.split('\n');
+            if (lines[0]?.trim() !== 'DEPLOY MATRIX REPROGRAMMED') {
               core.setFailed('Production dispatch refused: authorization marker did not match.');
               return;
             }
+            const fields = {};
+            for (const line of lines.slice(1)) {
+              const index = line.indexOf(':');
+              if (index < 1) continue;
+              fields[line.slice(0, index).trim()] = line.slice(index + 1).trim();
+            }
+            const requestedAt = Date.parse(fields.Requested || '');
+            if (!Number.isFinite(requestedAt)) {
+              core.setFailed('Production dispatch refused: Requested timestamp is invalid.');
+              return;
+            }
+            const ageMinutes = (Date.now() - requestedAt) / 60000;
+            if (ageMinutes < -2 || ageMinutes > 120) {
+              core.setFailed(`Production dispatch refused: marker age ${ageMinutes.toFixed(1)} minutes is outside 0-120 minutes.`);
+              return;
+            }
+            if (!/^pr\d+-[a-z0-9][a-z0-9-]{20,}$/i.test(fields.Nonce || '')) {
+              core.setFailed('Production dispatch refused: nonce is missing or too weak.');
+              return;
+            }
+            const billingException = fields['Billing exception'] || '';
+            if (billingException !== 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02') {
+              core.setFailed('Production dispatch refused: the one-use billing exception token is missing.');
+              return;
+            }
 
-            const cutoff = new Date('2026-07-24T10:09:00Z');
+            const expectedHead = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim().toLowerCase();
+            const targetSha = String(fields.Target || '').match(/\b[0-9a-f]{40}\b/i)?.[0]?.toLowerCase() || '';
+            if (!targetSha) {
+              core.setFailed('Production dispatch refused: target SHA is missing.');
+              return;
+            }
+            try {
+              execFileSync('git', ['merge-base', '--is-ancestor', targetSha, expectedHead]);
+            } catch {
+              core.setFailed(`Production dispatch refused: target ${targetSha} is not an ancestor of current main ${expectedHead}.`);
+              return;
+            }
+
             const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
             const target = workflows.data.workflows.find(
               workflow => workflow.name === 'Matrix Reprogrammed Controlled Production Deploy'
@@ -49,38 +90,47 @@ jobs:
               return;
             }
 
-            async function recentRun() {
+            async function matchingRun() {
               const response = await github.rest.actions.listWorkflowRuns({
                 owner,
                 repo,
                 workflow_id: target.id,
                 branch: 'main',
                 event: 'workflow_dispatch',
-                per_page: 30
+                per_page: 50
               });
               return response.data.workflow_runs
-                .filter(run => new Date(run.created_at) >= cutoff)
+                .filter(run => run.head_sha?.toLowerCase() === expectedHead)
+                .filter(run => new Date(run.created_at).getTime() >= requestedAt - 120000)
+                .filter(run => run.conclusion !== 'failure' && run.conclusion !== 'cancelled')
                 .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))[0] || null;
             }
 
-            let run = await recentRun();
-            let action = 'reused-existing-corrected-run';
+            let run = await matchingRun();
+            let action = 'reused-exact-sha-run';
             if (!run) {
-              action = 'dispatched-corrected-run-once';
+              action = 'dispatched-exact-sha-run';
               await github.rest.actions.createWorkflowDispatch({
                 owner,
                 repo,
                 workflow_id: target.id,
                 ref: 'main',
-                inputs: { confirmation: 'DEPLOY MATRIX REPROGRAMMED' }
+                inputs: {
+                  confirmation: 'DEPLOY MATRIX REPROGRAMMED',
+                  billing_exception: billingException
+                }
               });
-              for (let attempt = 1; attempt <= 18 && !run; attempt++) {
+              for (let attempt = 1; attempt <= 24 && !run; attempt += 1) {
                 await new Promise(resolve => setTimeout(resolve, 5000));
-                run = await recentRun();
+                run = await matchingRun();
               }
             }
             if (!run) {
-              core.setFailed('Authorized production run could not be resolved.');
+              core.setFailed(`Authorized production run for ${expectedHead} could not be resolved.`);
+              return;
+            }
+            if (run.head_sha?.toLowerCase() !== expectedHead) {
+              core.setFailed(`Resolved run ${run.id} targets ${run.head_sha}, not ${expectedHead}.`);
               return;
             }
 
@@ -88,9 +138,11 @@ jobs:
               ok: true,
               action,
               recordedAt: new Date().toISOString(),
-              cutoff: cutoff.toISOString(),
+              requestedAt: new Date(requestedAt).toISOString(),
+              markerNonce: fields.Nonce,
+              authorizedTarget: targetSha,
+              expectedHead,
               workflowId: target.id,
-              supersedesFailedRun: 30083740775,
               run: {
                 id: run.id,
                 status: run.status,
@@ -102,28 +154,23 @@ jobs:
                 event: run.event,
                 url: run.html_url
               },
-              boundary: 'The first authorized run failed before deployment. This records or dispatches one corrected run and reuses it on all later checks.'
+              boundary: 'This dispatcher never reuses a run for another SHA and never commits a status file after dispatch. Credentials, D1 rollback, migrations, zero-spend controls and exact live verification remain mandatory.'
             };
-            fs.mkdirSync('data', { recursive: true });
-            fs.writeFileSync('data/authorized-production-run.json', JSON.stringify(payload, null, 2) + '\n');
-            core.info(`${action}: run ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''}).`);
+            fs.mkdirSync('downloads', { recursive: true });
+            fs.writeFileSync('downloads/authorized-production-run.json', JSON.stringify(payload, null, 2) + '\n');
+            core.summary
+              .addHeading('Authorized Production Dispatch')
+              .addRaw(`Action: ${action}\n`)
+              .addRaw(`Expected SHA: ${expectedHead}\n`)
+              .addRaw(`Run: ${run.id} (${run.status}${run.conclusion ? `/${run.conclusion}` : ''})\n`)
+              .write();
+            core.info(`${action}: exact-SHA run ${run.id} for ${expectedHead}.`);
 
-      - name: Commit production run identity
-        run: |
-          set -euo pipefail
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/authorized-production-run.json
-          if git diff --cached --quiet; then
-            echo 'Authorized production run identity already current.'
-            exit 0
-          fi
-          git commit -m 'Record authorized corrected production run'
-          for attempt in 1 2 3 4; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              exit 0
-            fi
-            git rebase --abort 2>/dev/null || true
-          done
-          exit 1
+      - name: Upload dispatch identity
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: authorized-production-dispatch-${{ github.run_id }}
+          path: downloads/authorized-production-run.json
+          if-no-files-found: error
+          retention-days: 30

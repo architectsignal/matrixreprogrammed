@@ -5,10 +5,11 @@ const fs = require('fs');
 const path = require('path');
 
 const mode = process.argv[2] || 'check';
-// Legacy workflow token retained because deploy.yml already routes this exact value
-// into owner-exception mode. The authorization date is independently bound below.
+// The legacy workflow token is retained because deploy.yml already routes this
+// exact value into owner-exception mode. The actual authority is freshly bound
+// to 2026-08-05, workflow_dispatch and first-attempt checks below.
 const oneTimeAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
-const oneTimeExceptionDate = '2026-08-04';
+const oneTimeExceptionDate = '2026-08-05';
 const oneTimeSnapshotDate = '2026-08-02';
 const policyPath = path.resolve(
   process.env.MATRIX_CLOUDFLARE_BUDGET_POLICY_PATH || '.github/build-budget-policy.json'

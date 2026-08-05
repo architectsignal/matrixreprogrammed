@@ -11,9 +11,6 @@ const reportPath = path.join(root, 'downloads', 'black-file-public-hero-finaliza
 const markerComment = /<!--\s*black-file-public-hero:(?:start|end)\s*-->\s*/gi;
 const canonicalHero = '<!-- black-file-public-hero:start --><section class="hero wrap" data-black-file-public-hero="canonical"><div class="eyebrow">Free reader-initiation file</div><h1>THE BLACK FILE</h1><p class="lead" id="black-file-public-lead">The world does not run on headlines. It runs on systems. Download the expanded Black File and enter the Matrix Reprogrammed archive through hidden structures behind symbols, intelligence, crime, war, media, money, psychology, Epstein files, human cost, migration, and control.</p><div class="cta-row"><a class="btn" href="#request">Request Access</a><a class="btn alt" href="downloads/the-black-file-matrix-reprogrammed.pdf" download>Download The PDF</a><a class="btn alt" href="black-file-thank-you.html">Access Page</a><a class="btn alt" href="books.html">Enter Archive</a></div></section><!-- black-file-public-hero:end -->';
 
-function slash(value) {
-  return String(value || '').split(path.sep).join('/');
-}
 function digest(value) {
   return crypto.createHash('sha256').update(value).digest('hex');
 }
@@ -187,6 +184,8 @@ fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 console.log(`Black File public hero finalized across ${surfaces.length} surface(s); ${surfaces.filter(surface => surface.changed).length} changed.`);
 
 module.exports = {
+  ...report,
+  report,
   canonicalHero,
   finalizeHtml,
   countStaticH1,

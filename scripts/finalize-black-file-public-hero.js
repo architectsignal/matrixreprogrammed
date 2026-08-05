@@ -9,7 +9,9 @@ const site = path.join(root, '_site');
 const sourceFile = path.join(root, 'black-file.html');
 const reportPath = path.join(root, 'downloads', 'black-file-public-hero-finalization.json');
 const markerComment = /<!--\s*black-file-public-hero:(?:start|end)\s*-->\s*/gi;
+const requestFallbackBlock = /<!--\s*black-file-public-request-fallback:start\s*-->[\s\S]*?<!--\s*black-file-public-request-fallback:end\s*-->\s*/gi;
 const canonicalHero = '<!-- black-file-public-hero:start --><section class="hero wrap" data-black-file-public-hero="canonical"><div class="eyebrow">Free reader-initiation file</div><h1>THE BLACK FILE</h1><p class="lead" id="black-file-public-lead">The world does not run on headlines. It runs on systems. Download the expanded Black File and enter the Matrix Reprogrammed archive through hidden structures behind symbols, intelligence, crime, war, media, money, psychology, Epstein files, human cost, migration, and control.</p><div class="cta-row"><a class="btn" href="#request">Request Access</a><a class="btn alt" href="downloads/the-black-file-matrix-reprogrammed.pdf" download>Download The PDF</a><a class="btn alt" href="black-file-thank-you.html">Access Page</a><a class="btn alt" href="books.html">Enter Archive</a></div></section><!-- black-file-public-hero:end -->';
+const canonicalRequestFallback = '<!-- black-file-public-request-fallback:start --><section class="section wrap" data-black-file-public-request-fallback="canonical"><div id="request" class="card redline"><h2>OPEN THE BLACK FILE</h2><p>The original request form is not present in this generated route. The complete Black File remains available through the direct PDF and archive access routes below.</p><div class="cta-row"><a class="btn" href="downloads/the-black-file-matrix-reprogrammed.pdf" download>Download The PDF</a><a class="btn alt" href="black-file-thank-you.html">Open Access Page</a><a class="btn alt" href="books.html">Enter Archive</a></div><p class="warning"><strong>Evidence boundary:</strong> this access block restores navigation only. It does not add, confirm, remove or reclassify any claim or record.</p></div></section><!-- black-file-public-request-fallback:end -->';
 
 function digest(value) {
   return crypto.createHash('sha256').update(value).digest('hex');
@@ -28,6 +30,9 @@ function staticMarkup(html) {
 }
 function countStaticH1(html) {
   return (staticMarkup(html).match(/<h1\b/gi) || []).length;
+}
+function countRequestTargets(html) {
+  return (staticMarkup(html).match(/\bid=["']request["']/gi) || []).length;
 }
 function findBalancedSections(html, predicate) {
   const source = String(html || '');
@@ -127,28 +132,48 @@ function insertCanonicalHero(html) {
     + '(<main>, <body>, <footer>, </body>, <html> or </html>).'
   );
 }
+function ensureRequestTarget(html) {
+  const source = String(html || '').replace(requestFallbackBlock, '');
+  if (countRequestTargets(source) > 0) {
+    return { html: source, requestFallbackInserted: false };
+  }
+  if (!source.includes(canonicalHero)) {
+    throw new Error('Black File canonical hero is missing before request-target repair.');
+  }
+  return {
+    html: source.replace(canonicalHero, `${canonicalHero}\n${canonicalRequestFallback}`),
+    requestFallbackInserted: true
+  };
+}
 function finalizeHtml(input) {
   const before = String(input || '');
   if (!/<!doctype\s+html|<html\b/i.test(before)) {
     throw new Error('Black File source is not an HTML document.');
   }
 
-  let html = before.replace(markerComment, '');
+  let html = before.replace(markerComment, '').replace(requestFallbackBlock, '');
   const heroSections = findBalancedSections(html, tag => hasExactClass(tag, 'hero'));
   html = removeRanges(html, heroSections);
   const inserted = insertCanonicalHero(html);
-  html = inserted.html;
+  const requestTarget = ensureRequestTarget(inserted.html);
+  html = requestTarget.html;
 
   const heroCount = countExactHeroSections(html);
   const h1Count = countStaticH1(html);
+  const requestTargetCount = countRequestTargets(html);
   const markerStarts = (html.match(/<!--\s*black-file-public-hero:start\s*-->/gi) || []).length;
   const markerEnds = (html.match(/<!--\s*black-file-public-hero:end\s*-->/gi) || []).length;
   const leadCount = (staticMarkup(html).match(/\bid=["']black-file-public-lead["']/gi) || []).length;
+  const fallbackStarts = (html.match(/<!--\s*black-file-public-request-fallback:start\s*-->/gi) || []).length;
+  const fallbackEnds = (html.match(/<!--\s*black-file-public-request-fallback:end\s*-->/gi) || []).length;
   if (heroCount !== 1) {
     throw new Error(`Black File hero finalization found ${heroCount} exact hero sections.`);
   }
   if (h1Count !== 1) {
     throw new Error(`Black File hero finalization found ${h1Count} visible static H1 elements.`);
+  }
+  if (requestTargetCount < 1) {
+    throw new Error('Black File request CTA does not resolve to a page request target.');
   }
   if (markerStarts !== 1 || markerEnds !== 1) {
     throw new Error(`Black File hero marker pair is ${markerStarts}/${markerEnds}.`);
@@ -156,24 +181,33 @@ function finalizeHtml(input) {
   if (leadCount !== 1) {
     throw new Error(`Black File canonical lead count is ${leadCount}.`);
   }
+  if (requestTarget.requestFallbackInserted && (fallbackStarts !== 1 || fallbackEnds !== 1)) {
+    throw new Error(`Black File request fallback marker pair is ${fallbackStarts}/${fallbackEnds}.`);
+  }
+  if (!requestTarget.requestFallbackInserted && (fallbackStarts !== 0 || fallbackEnds !== 0)) {
+    throw new Error('Black File retained a fallback request block despite having a canonical request target.');
+  }
   if (!/<h1>THE BLACK FILE<\/h1>/i.test(staticMarkup(html))) {
     throw new Error('Black File canonical H1 text is missing.');
   }
-  if (!/href=["']#request["']/i.test(canonicalHero)
-    || !/\bid=["']request["']/i.test(staticMarkup(html))) {
-    throw new Error('Black File request CTA does not resolve to the page request target.');
+  if (!/href=["']#request["']/i.test(canonicalHero)) {
+    throw new Error('Black File canonical hero lost its request CTA.');
   }
 
   return {
     html,
     changed: html !== before,
     insertionBoundary: inserted.insertionBoundary,
+    requestFallbackInserted: requestTarget.requestFallbackInserted,
     removedHeroSections: heroSections.length,
     h1Count,
     heroCount,
+    requestTargetCount,
     markerStarts,
     markerEnds,
-    leadCount
+    leadCount,
+    fallbackStarts,
+    fallbackEnds
   };
 }
 
@@ -189,6 +223,7 @@ const surfaces = [{
   file: 'black-file.html',
   changed: sourceResult.changed,
   insertionBoundary: sourceResult.insertionBoundary,
+  requestFallbackInserted: sourceResult.requestFallbackInserted,
   removedHeroSections: sourceResult.removedHeroSections,
   sha256: digest(sourceResult.html)
 }];
@@ -205,6 +240,7 @@ if (fs.existsSync(site) && fs.statSync(site).isDirectory()) {
     file: '_site/black-file.html',
     changed: siteBefore !== sourceResult.html,
     insertionBoundary: sourceResult.insertionBoundary,
+    requestFallbackInserted: sourceResult.requestFallbackInserted,
     removedHeroSections: siteBefore
       ? findBalancedSections(siteBefore, tag => hasExactClass(tag, 'hero')).length
       : 0,
@@ -222,6 +258,7 @@ if (fs.existsSync(site) && fs.statSync(site).isDirectory()) {
     file: '_site/black-file',
     changed: aliasBefore !== sourceResult.html,
     insertionBoundary: sourceResult.insertionBoundary,
+    requestFallbackInserted: sourceResult.requestFallbackInserted,
     removedHeroSections: aliasBefore
       ? findBalancedSections(aliasBefore, tag => hasExactClass(tag, 'hero')).length
       : 0,
@@ -241,6 +278,9 @@ for (const surface of surfaces) {
   if (countExactHeroSections(html) !== 1) {
     throw new Error(`${surface.file} does not contain exactly one hero section.`);
   }
+  if (countRequestTargets(html) < 1) {
+    throw new Error(`${surface.file} does not contain a working request target.`);
+  }
 }
 
 const report = {
@@ -249,7 +289,9 @@ const report = {
   canonicalH1: 'THE BLACK FILE',
   canonicalLeadId: 'black-file-public-lead',
   sourceInsertionBoundary: sourceResult.insertionBoundary,
+  requestFallbackInserted: sourceResult.requestFallbackInserted,
   fallbackInsertionSupported: true,
+  missingRequestTargetRecoverySupported: true,
   supportedInsertionBoundaries: [
     'main-open',
     'body-open',
@@ -260,22 +302,26 @@ const report = {
   ],
   surfaces,
   sourceSha256: digest(sourceResult.html),
-  boundary: 'The Black File public hero is a narrow canonical surface owner. It restores one visible H1 and one hero across source and deployable aliases, including late documents without a main wrapper, without changing downstream archive, evidence, pathway, form or dossier content.'
+  boundary: 'The Black File public hero is a narrow canonical surface owner. It restores one visible H1, one hero and a working request target across source and deployable aliases, including late documents without a main wrapper or request form, without changing downstream archive, evidence, pathway, dossier or claim content.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 console.log(
   `Black File public hero finalized across ${surfaces.length} surface(s); `
   + `${surfaces.filter(surface => surface.changed).length} changed; `
-  + `boundary=${sourceResult.insertionBoundary}.`
+  + `boundary=${sourceResult.insertionBoundary}; `
+  + `requestFallback=${sourceResult.requestFallbackInserted}.`
 );
 
 module.exports = {
   ...report,
   report,
   canonicalHero,
+  canonicalRequestFallback,
   finalizeHtml,
   insertCanonicalHero,
+  ensureRequestTarget,
+  countRequestTargets,
   countStaticH1,
   countExactHeroSections,
   findBalancedSections,

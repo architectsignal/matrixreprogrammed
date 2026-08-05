@@ -7,6 +7,8 @@ on:
       - 'black-file.html'
       - 'scripts/finalize-black-file-public-hero.js'
       - 'scripts/black-file-public-hero-test.js'
+      - 'scripts/black-file-postbuild-contract-test.js'
+      - 'scripts/reconcile-public-audit-boundaries.js'
       - 'scripts/exhaustive-public-site-audit-v2.js'
       - 'scripts/patch-release-metadata-routing.js'
   workflow_dispatch:
@@ -31,12 +33,17 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Syntax-check the finalizer and regression
+      - name: Syntax-check the finalizer and regressions
         run: |
           node --check scripts/finalize-black-file-public-hero.js
           node --check scripts/black-file-public-hero-test.js
+          node --check scripts/black-file-postbuild-contract-test.js
+          node --check scripts/reconcile-public-audit-boundaries.js
           node --check scripts/exhaustive-public-site-audit-v2.js
           node --check scripts/patch-release-metadata-routing.js
+
+      - name: Prove canonical postbuild, deploy and audit ordering
+        run: node scripts/black-file-postbuild-contract-test.js
 
       - name: Prove damaged and duplicate heroes reconcile repeat-safely
         run: node scripts/black-file-public-hero-test.js
@@ -69,6 +76,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: black-file-public-hero-${{ github.run_id }}
-          path: downloads/black-file-public-hero-finalization.json
+          path: |
+            downloads/black-file-public-hero-finalization.json
+            downloads/black-file-postbuild-contract-test.json
           if-no-files-found: error
           retention-days: 30

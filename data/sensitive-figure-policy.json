@@ -1,0 +1,161 @@
+{
+  "updated": "2026-08-04",
+  "policy": "Sensitive public figures are review records, not decoration. A number touching alleged criminal conduct, victims, health, death, migration, money, public policy or risk must carry source identity, publisher, source date, scope, evidence classification, update policy and public-review status before controlled refresh or promotion.",
+  "queueLimit": 1000,
+  "requiredFields": [
+    "sourceName",
+    "publisher",
+    "sourceDate",
+    "scope",
+    "evidenceClassification",
+    "updatePolicy",
+    "publicReviewStatus"
+  ],
+  "prominentFilePatterns": [
+    "index.html",
+    "news.html",
+    "live-intel.html",
+    "daily-*brief*.html",
+    "latest-public-drops.html",
+    "dashboard-*.html",
+    "epstein-files.html",
+    "hit-list.html",
+    "cinematic-hit-list.html",
+    "timers.html",
+    "public-answer-clock.html"
+  ],
+  "categories": [
+    {
+      "id": "interface-display-control",
+      "label": "Reader interface or display control",
+      "sensitivity": "low",
+      "priority": 110,
+      "queue": false,
+      "filePatterns": ["evidence-reader.html", "*pdf-reader*", "*document-reader*"],
+      "figureTypes": ["percentage", "count"],
+      "contextTerms": ["zoom", "previous", "next", "page link", "open pdf", "find", "copy page link"],
+      "scope": "A reader-interface value such as PDF zoom or pagination, not a public factual claim.",
+      "defaultEvidenceClassification": "interface-control"
+    },
+    {
+      "id": "commercial-price",
+      "label": "Commercial price or voluntary support amount",
+      "sensitivity": "low",
+      "priority": 100,
+      "queue": false,
+      "filePatterns": ["*store*", "*offer*", "*membership*", "*review-dashboard*", "*book-*"],
+      "figureTypes": ["money"],
+      "contextTerms": ["price", "free preview", "support", "donation", "monthly", "membership", "pdf report", "deck bundle"],
+      "scope": "Site-owned product price or voluntary support amount.",
+      "defaultEvidenceClassification": "site-owned-commercial-setting"
+    },
+    {
+      "id": "site-operational-inventory",
+      "label": "Site-generated inventory or system count",
+      "sensitivity": "low",
+      "priority": 95,
+      "queue": false,
+      "filePatterns": ["*review-dashboard*", "*site-population*", "*deploy-status*", "*search*", "*feed-center*", "*download-center*", "*books*", "*share-center*", "*offer-center*", "*optin-center*"],
+      "figureTypes": ["count"],
+      "contextTerms": ["pages", "sources", "feeds", "books", "outputs", "routes", "records", "files", "cards", "items", "updates", "lanes"],
+      "scope": "Count generated from the repository or build output.",
+      "defaultEvidenceClassification": "site-generated-operational-count"
+    },
+    {
+      "id": "epstein-victim-sensitive",
+      "label": "Epstein, victim, minor or sexual-abuse figure",
+      "sensitivity": "critical",
+      "priority": 90,
+      "queue": true,
+      "filePatterns": ["*epstein*", "*victim*", "*predator*"],
+      "figureTypes": ["percentage", "money", "count"],
+      "contextTerms": ["victim", "minor", "sexual", "abuse", "trafficking", "flight", "associate", "claims", "cases", "files"],
+      "scope": "A figure connected to victims, minors, sexual abuse, trafficking, Epstein records or named associations.",
+      "defaultEvidenceClassification": "primary-record-and-role-context-required"
+    },
+    {
+      "id": "criminal-allegation-court",
+      "label": "Criminal allegation, court or prosecution figure",
+      "sensitivity": "critical",
+      "priority": 85,
+      "queue": true,
+      "filePatterns": ["*crime*", "*cartel*", "*criminal*", "*predator*", "*hit-list*", "*controlled-opposition*", "*dossier*"],
+      "figureTypes": ["percentage", "money", "count"],
+      "contextTerms": ["convicted", "conviction", "charged", "charges", "arrest", "indictment", "lawsuit", "court", "prosecution", "criminal", "crime", "money laundering", "allegation"],
+      "scope": "A figure that may affect a person's legal status, alleged conduct, prosecution, conviction or criminal-network description.",
+      "defaultEvidenceClassification": "court-or-official-record-required"
+    },
+    {
+      "id": "health-vaccine-medical",
+      "label": "Health, vaccine, medical injury or compensation figure",
+      "sensitivity": "critical",
+      "priority": 82,
+      "queue": true,
+      "filePatterns": ["*vaccine*", "*health*", "*biosecurity*", "*human-cost*"],
+      "figureTypes": ["percentage", "money", "count"],
+      "contextTerms": ["vaccine", "injury", "adverse", "medical", "health", "payout", "compensation", "cases", "deaths", "mortality"],
+      "scope": "A high-stakes health, safety, injury, mortality, compensation or regulatory statistic.",
+      "defaultEvidenceClassification": "official-health-or-regulatory-source-required"
+    },
+    {
+      "id": "death-casualty-human-cost",
+      "label": "Death, casualty, missing-person or human-cost figure",
+      "sensitivity": "critical",
+      "priority": 80,
+      "queue": true,
+      "filePatterns": ["*death*", "*human-cost*", "*war*", "*conflict*", "*casualt*"],
+      "figureTypes": ["percentage", "money", "count"],
+      "contextTerms": ["death", "deaths", "killed", "casualty", "casualties", "missing", "victim", "fatal", "mortality"],
+      "scope": "A figure describing deaths, casualties, victims, missing people or other human consequences.",
+      "defaultEvidenceClassification": "named-official-or-primary-human-cost-source-required"
+    },
+    {
+      "id": "migration-crime-demographic",
+      "label": "Migration, asylum, border, crime-rate or demographic figure",
+      "sensitivity": "high",
+      "priority": 75,
+      "queue": true,
+      "filePatterns": ["*migration*", "*asylum*", "*border*", "news.html", "*demographic*"],
+      "figureTypes": ["percentage", "money", "count"],
+      "contextTerms": ["migrant", "migrants", "refugee", "refugees", "asylum", "border", "immigration", "crime rate", "population", "demographic"],
+      "scope": "A migration, asylum, border, population or related crime statistic requiring jurisdiction and period context.",
+      "defaultEvidenceClassification": "dated-official-statistical-source-required"
+    },
+    {
+      "id": "financial-market-control",
+      "label": "Money, market, holdings, ownership or control figure",
+      "sensitivity": "high",
+      "priority": 70,
+      "queue": true,
+      "filePatterns": ["*market*", "*money*", "*asset*", "*billionaire*", "*blackrock*", "*finance*", "*wealth*", "*holding*", "*evidence-graph*"],
+      "figureTypes": ["percentage", "money", "count"],
+      "contextTerms": ["holding", "holdings", "ownership", "assets", "asset manager", "aum", "market", "revenue", "fund", "investment", "million", "billion", "trillion", "control"],
+      "scope": "A financial, market, ownership, holdings or beneficial-control figure requiring entity, period, currency and filing context.",
+      "defaultEvidenceClassification": "dated-filing-or-official-financial-record-required"
+    },
+    {
+      "id": "risk-clock-probability",
+      "label": "Risk clock, probability, score or threshold figure",
+      "sensitivity": "high",
+      "priority": 68,
+      "queue": true,
+      "filePatterns": ["*timer*", "*clock*", "*risk*", "*probability*", "index.html"],
+      "figureTypes": ["percentage"],
+      "contextTerms": ["risk", "probability", "score", "threshold", "clock", "timer", "confidence", "%"],
+      "scope": "A modelled risk, probability, confidence, threshold or clock score rather than an observed fact.",
+      "defaultEvidenceClassification": "model-output-with-evidence-and-method-boundary-required"
+    },
+    {
+      "id": "public-policy-statistic",
+      "label": "Public policy, institutional or current-affairs statistic",
+      "sensitivity": "high",
+      "priority": 60,
+      "queue": true,
+      "filePatterns": ["news.html", "*dashboard*", "*policy*", "*institution*", "*latest-public-drops*"],
+      "figureTypes": ["percentage", "money", "count"],
+      "contextTerms": ["rate", "percentage", "cases", "claims", "payout", "policy", "public", "government", "institution", "current", "latest"],
+      "scope": "A current public-policy or institutional statistic requiring a named publisher, period and jurisdiction.",
+      "defaultEvidenceClassification": "dated-official-or-primary-public-record-required"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+name: P1 Sensitive Figure Publication Labels
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p1-sensitive-figure-review.yml'
+      - 'data/figure-source-rules.json'
+      - 'data/sensitive-figure-policy.json'
+      - 'data/sensitive-publication-policy.json'
+      - 'scripts/update-site-freshness-report.js'
+      - 'scripts/update-site-freshness-report-v4.js'
+      - 'scripts/figure-source-rules-pressure-test.js'
+      - 'scripts/figure-source-rules-pressure-test-v4.js'
+      - 'scripts/sensitive-figure-classification-regression-test.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Publish every sensitive figure with an evidence-status label
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout proposed publication policy
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check the scanner and pressure tests
+        run: |
+          node --check scripts/update-site-freshness-report.js
+          node --check scripts/update-site-freshness-report-v4.js
+          node --check scripts/figure-source-rules-pressure-test.js
+          node --check scripts/figure-source-rules-pressure-test-v4.js
+          node --check scripts/sensitive-figure-classification-regression-test.js
+
+      - name: Build the repository-wide labelled publication queue
+        run: node scripts/update-site-freshness-report.js
+
+      - name: Prove publish-all metadata and repeat-safety boundaries
+        run: node scripts/figure-source-rules-pressure-test.js
+
+      - name: Prove controls stay excluded and sensitive figures stay visibly labelled
+        run: node scripts/sensitive-figure-classification-regression-test.js
+
+      - name: Reject any retired withholding status
+        run: |
+          if grep -R -E 'withhold-prominent-publication|withhold-from-automated-promotion' \
+            data/site-freshness-report.json downloads/site-freshness-report.md site-freshness-report.html; then
+            echo "A retired withholding status remains in generated publication output."
+            exit 1
+          fi
+          node - <<'NODE'
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('data/site-freshness-report.json', 'utf8'));
+          const review = report.sensitiveFigureReview || {};
+          if (review.withheldFigures !== 0) throw new Error(`Expected zero withheld figures; found ${review.withheldFigures}`);
+          if (review.publishedSensitiveFigures !== review.totalUniqueSensitiveFigures) {
+            throw new Error('Not every sensitive figure is published');
+          }
+          if (!(review.items || []).every(item =>
+            item.publicationAllowed === true
+            && item.labelRequired === true
+            && item.humanReviewStatus === 'not-human-reviewed'
+            && typeof item.publicLabel === 'string'
+            && item.publicLabel.length > 10
+          )) throw new Error('A published sensitive item lacks its mandatory review/evidence label');
+          console.log(`Publish-all boundary passed for ${review.items.length} labelled sensitive figures.`);
+          NODE
+
+      - name: Upload sensitive publication proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p1-sensitive-publication-labels-${{ github.run_id }}
+          path: |
+            data/site-freshness-report.json
+            data/sensitive-publication-policy.json
+            downloads/site-freshness-report.md
+            site-freshness-report.html
+          if-no-files-found: error
+          retention-days: 30

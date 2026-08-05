@@ -1,14 +1,218 @@
 {
-  "updated": "2026-08-04T07:58:15.262Z",
+  "updated": "2026-08-05T07:59:26.636Z",
   "summary": {
     "registeredSources": 20,
     "checkedThisRun": 12,
-    "changesThisRun": 2,
-    "retainedChanges": 100,
+    "changesThisRun": 4,
+    "retainedChanges": 104,
     "unavailableSources": 4
   },
   "evidenceBoundary": "A source change, failure or restoration is a transparency event, not automatic evidence of wrongdoing, concealment or intent.",
   "changes": [
+    {
+      "id": "a05ee5719c4986b9a2e665d1",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-05T07:59:26.636Z",
+      "detectedAt": "2026-08-05T07:59:26.636Z",
+      "changeType": "content-changed",
+      "previousHash": "7409ac4e3884b77aefb7f12cfe28501eb10c23ce6af75ed1dadaa33a6e5b09b2",
+      "currentHash": "d9db66484aaff7d6aba800f093c60020f24e57f0df5c6e83560a77ba4182f9cc",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Wed, 05 Aug 2026 03:59:26 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-05T03:59:26-04:00 4 - Straub Philip (0001533581) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333541 <b>Size:</b> 4 KB 2026-08-04T21:55:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333541 4 - GARMIN LTD (0001121788) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333541 <b>Size:</b> 4 KB 2026-08-04T21:55:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333541 4 - KAO MIN H (0001134100) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333540 <b>Size:</b> 5 KB 2026-08-04T21:55:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333540 4 - GARMIN LTD (0001121788) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333540 <b>Size:</b> 5 KB 2026-08-04T21:55:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333540 3 - Yeung Siu Keung (0002148503) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085366 <b>Size:</b> 3 KB 2026-08-04T21:48:35-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085366 3 - Epsium Enterprise Ltd (0001883437) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085366 <b>Size:</b> 3 KB 2026-08-04T21:48:35-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085366 4 - van Houte Hans (0001817217) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001817217-26-000012 <b>Size:</b> 7 KB 2026-08-04T21:41:21-04:00 urn:tag:sec.gov,2008:accession-number=0001817217-26-000012 4 - Nurix Therapeutics, Inc.",
+        "(0001549595) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001817217-26-000012 <b>Size:</b> 7 KB 2026-08-04T21:41:21-04:00 urn:tag:sec.gov,2008:accession-number=0001817217-26-000012 4 - Alzamend Neuro, Inc.",
+        "(0001677077) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001214659-26-009596 <b>Size:</b> 13 KB 2026-08-04T21:38:33-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009596 4 - Hyperscale Data, Inc.",
+        "(0000896493) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001214659-26-009596 <b>Size:</b> 13 KB 2026-08-04T21:38:33-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009596 3 - Alzamend Neuro, Inc.",
+        "(0001677077) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001214659-26-009595 <b>Size:</b> 10 KB 2026-08-04T21:37:25-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009595 3 - Hyperscale Data, Inc.",
+        "(0000896493) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001214659-26-009595 <b>Size:</b> 10 KB 2026-08-04T21:37:25-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009595 4 - Alzamend Neuro, Inc.",
+        "(0001677077) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001214659-26-009594 <b>Size:</b> 14 KB 2026-08-04T21:35:49-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009594 4 - AULT MILTON C III (0001212502) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001214659-26-009594 <b>Size:</b> 14 KB 2026-08-04T21:35:49-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009594 4 - Zhu Justin (0002082678) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085356 <b>Size:</b> 5 KB 2026-08-04T21:35:00-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085356 4 - WhiteFiber, Inc.",
+        "(0002042022) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085356 <b>Size:</b> 5 KB 2026-08-04T21:35:00-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085356 4 - WhiteFiber, Inc.",
+        "(0002042022) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085354 <b>Size:</b> 5 KB 2026-08-04T21:31:45-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085354 4 - Shih Ichi (0001468081) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085354 <b>Size:</b> 5 KB 2026-08-04T21:31:45-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085354 3 - Rulf Michael (0002146929) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085353 <b>Size:</b> 3 KB 2026-08-04T21:30:50-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085353 3 - WhiteFiber, Inc.",
+        "(0002042022) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085353 <b>Size:</b> 3 KB 2026-08-04T21:30:50-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085353 3 - Zhu Justin (0002082678) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085352 <b>Size:</b> 4 KB 2026-08-04T21:30:14-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085352 3 - WhiteFiber, Inc.",
+        "(0002042022) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001213900-26-085352 <b>Size:</b> 4 KB 2026-08-04T21:30:14-04:00 urn:tag:sec.gov,2008:accession-number=0001213900-26-085352 4 - Repass Wolfe (0002057456) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333520 <b>Size:</b> 20 KB 2026-08-04T21:30:12-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333520 4 - Fold Holdings, Inc.",
+        "(0001889123) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333520 <b>Size:</b> 20 KB 2026-08-04T21:30:12-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333520 4 - Vista Energy, S.A.B.",
+        "(0001762506) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333519 <b>Size:</b> 5 KB 2026-08-04T21:30:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333519 4 - Galuccio Miguel Matias (0001703610) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333519 <b>Size:</b> 5 KB 2026-08-04T21:30:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333519 4 - GAROBY JUAN MARIA (0002012083) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333518 <b>Size:</b> 5 KB 2026-08-04T21:30:09-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333518 4 - Vista Energy, S.A.B.",
+        "(0001762506) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333518 <b>Size:</b> 5 KB 2026-08-04T21:30:09-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333518 4 - Dickman Thomas J (0002057497) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333517 <b>Size:</b> 10 KB 2026-08-04T21:30:07-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333517 4 - Fold Holdings, Inc.",
+        "(0001889123) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333517 <b>Size:</b> 10 KB 2026-08-04T21:30:07-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333517 4 - Reeves William Brian Poppic (0002057455) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333516 <b>Size:</b> 15 KB 2026-08-04T21:30:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333516 4 - Fold Holdings, Inc.",
+        "(0001889123) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333516 <b>Size:</b> 15 KB 2026-08-04T21:30:06-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333516 4 - VERA PINTO PABLO MANUEL (0002012085) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333515 <b>Size:</b> 5 KB 2026-08-04T21:30:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333515 4 - Vista Energy, S.A.B.",
+        "(0001762506) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333515 <b>Size:</b> 5 KB 2026-08-04T21:30:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333515 4 - CHERNACOV ALEJANDRO (0002012075) (Reporting) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333514 <b>Size:</b> 5 KB 2026-08-04T21:30:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333514 4 - Vista Energy, S.A.B.",
+        "(0001762506) (Issuer) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0001193125-26-333514 <b>Size:</b> 5 KB 2026-08-04T21:30:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-333514 SCHEDULE 13D/A - Oasis Management Co Ltd.",
+        "(0001317904) (Filed by) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0000902664-26-003314 <b>Size:</b> 16 KB 2026-08-04T21:24:19-04:00 urn:tag:sec.gov,2008:accession-number=0000902664-26-003314 SCHEDULE 13D/A - STRATUS PROPERTIES INC (0000885508) (Subject) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0000902664-26-003314 <b>Size:</b> 16 KB 2026-08-04T21:24:19-04:00 urn:tag:sec.gov,2008:accession-number=0000902664-26-003314 SCHEDULE 13G - Elatam Group PTY LTD ATF Elatam Family Trust (0002116122) (Filed by) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0002116122-26-000001 <b>Size:</b> 115 KB 2026-08-04T21:18:44-04:00 urn:tag:sec.gov,2008:accession-number=0002116122-26-000001 SCHEDULE 13G - Idaho Copper Corp (0001263364) (Subject) <b>Filed:</b> 2026-08-04 <b>AccNo:</b> 0002116122-26-000001 <b>Size:</b> 115 KB 2026-08-04T21:18:44-04:00 urn:tag:sec.gov,2008:accession-number=0002116122-26-000001"
+      ],
+      "removals": [
+        "Latest Filings - Tue, 04 Aug 2026 03:58:15 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-04T03:58:15-04:00 3 - Bet on America II HoldCo LLC (0002080281) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331221 <b>Size:</b> 9 KB 2026-08-03T21:59:17-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331221 3 - Bet on America II Sponsor LLC (0002080254) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331221 <b>Size:</b> 9 KB 2026-08-03T21:59:17-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331221 3 - BOA Acquisition Corp.",
+        "II (0002080216) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331221 <b>Size:</b> 9 KB 2026-08-03T21:59:17-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331221 3 - Friedman Benjamin A.",
+        "(0001849257) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331221 <b>Size:</b> 9 KB 2026-08-03T21:59:17-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331221 4 - He Eric (0002115403) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331208 <b>Size:</b> 7 KB 2026-08-03T21:55:02-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331208 4 - Agora, Inc.",
+        "(0001802883) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331208 <b>Size:</b> 7 KB 2026-08-03T21:55:02-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331208 3 - Berlin Jared Michael (0002089242) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331202 <b>Size:</b> 4 KB 2026-08-03T21:51:49-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331202 3 - BOA Acquisition Corp.",
+        "II (0002080216) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331202 <b>Size:</b> 4 KB 2026-08-03T21:51:49-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331202 3 - BOA Acquisition Corp.",
+        "II (0002080216) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331198 <b>Size:</b> 4 KB 2026-08-03T21:48:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331198 3 - FRIEDMAN DEAN A (0001199019) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331198 <b>Size:</b> 4 KB 2026-08-03T21:48:10-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331198 3 - Kahan Jason Scott (0002088401) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331195 <b>Size:</b> 4 KB 2026-08-03T21:46:07-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331195 3 - BOA Acquisition Corp.",
+        "II (0002080216) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331195 <b>Size:</b> 4 KB 2026-08-03T21:46:07-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331195 3 - Sassover Jonathan (0002089523) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331193 <b>Size:</b> 4 KB 2026-08-03T21:44:21-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331193 3 - BOA Acquisition Corp.",
+        "II (0002080216) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331193 <b>Size:</b> 4 KB 2026-08-03T21:44:21-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331193 3 - BOA Acquisition Corp.",
+        "II (0002080216) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331190 <b>Size:</b> 4 KB 2026-08-03T21:41:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331190 3 - Friedman Brian D (0001849291) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331190 <b>Size:</b> 4 KB 2026-08-03T21:41:45-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331190 3 - BOA Acquisition Corp.",
+        "II (0002080216) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331189 <b>Size:</b> 4 KB 2026-08-03T21:41:14-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331189 3 - Schorr Seth (0001944554) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001193125-26-331189 <b>Size:</b> 4 KB 2026-08-03T21:41:14-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-331189 4 - BUSH ANTOINETTE COOK (0001209364) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001209364-26-000002 <b>Size:</b> 5 KB 2026-08-03T21:40:26-04:00 urn:tag:sec.gov,2008:accession-number=0001209364-26-000002 4 - Ares Management Corp (0001176948) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001209364-26-000002 <b>Size:</b> 5 KB 2026-08-03T21:40:26-04:00 urn:tag:sec.gov,2008:accession-number=0001209364-26-000002 4 - BHUTANI ASHISH (0001287727) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001287727-26-000004 <b>Size:</b> 5 KB 2026-08-03T21:39:47-04:00 urn:tag:sec.gov,2008:accession-number=0001287727-26-000004 4 - Ares Management Corp (0001176948) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001287727-26-000004 <b>Size:</b> 5 KB 2026-08-03T21:39:47-04:00 urn:tag:sec.gov,2008:accession-number=0001287727-26-000004 4 - Naughton Eileen (0001378072) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001378072-26-000002 <b>Size:</b> 5 KB 2026-08-03T21:39:03-04:00 urn:tag:sec.gov,2008:accession-number=0001378072-26-000002 4 - Ares Management Corp (0001176948) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001378072-26-000002 <b>Size:</b> 5 KB 2026-08-03T21:39:03-04:00 urn:tag:sec.gov,2008:accession-number=0001378072-26-000002 4 - Olian Judy D.",
+        "(0001605729) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001605729-26-000015 <b>Size:</b> 5 KB 2026-08-03T21:38:24-04:00 urn:tag:sec.gov,2008:accession-number=0001605729-26-000015 4 - Ares Management Corp (0001176948) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001605729-26-000015 <b>Size:</b> 5 KB 2026-08-03T21:38:24-04:00 urn:tag:sec.gov,2008:accession-number=0001605729-26-000015 4 - Lynton Michael (0001606115) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001606115-26-000003 <b>Size:</b> 5 KB 2026-08-03T21:37:34-04:00 urn:tag:sec.gov,2008:accession-number=0001606115-26-000003 4 - Ares Management Corp (0001176948) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001606115-26-000003 <b>Size:</b> 5 KB 2026-08-03T21:37:34-04:00 urn:tag:sec.gov,2008:accession-number=0001606115-26-000003 4 - Joubert Paul G.",
+        "(0001438584) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001438584-26-000002 <b>Size:</b> 5 KB 2026-08-03T21:35:42-04:00 urn:tag:sec.gov,2008:accession-number=0001438584-26-000002 4 - Ares Management Corp (0001176948) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001438584-26-000002 <b>Size:</b> 5 KB 2026-08-03T21:35:42-04:00 urn:tag:sec.gov,2008:accession-number=0001438584-26-000002 3 - NFR CAPITAL Ltd (0002146057) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001493152-26-035902 <b>Size:</b> 7 KB 2026-08-03T21:25:21-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035902 3 - East West Ave Acquisition Corp.",
+        "(0002100704) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001493152-26-035902 <b>Size:</b> 7 KB 2026-08-03T21:25:21-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035902 4 - Verjee Irfan (0002140379) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001493152-26-035900 <b>Size:</b> 5 KB 2026-08-03T21:19:14-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035900 4 - East West Ave Acquisition Corp.",
+        "(0002100704) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001493152-26-035900 <b>Size:</b> 5 KB 2026-08-03T21:19:14-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035900 4 - Parikh Samir (0002140899) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001493152-26-035898 <b>Size:</b> 5 KB 2026-08-03T21:16:33-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035898 4 - East West Ave Acquisition Corp.",
+        "(0002100704) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001493152-26-035898 <b>Size:</b> 5 KB 2026-08-03T21:16:33-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-035898 4 - Zhuge Yue (0002038003) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0002038003-26-000006 <b>Size:</b> 9 KB 2026-08-03T21:15:30-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000006 4 - New Oriental Education & Technology Group Inc.",
+        "(0001372920) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0002038003-26-000006 <b>Size:</b> 9 KB 2026-08-03T21:15:30-04:00 urn:tag:sec.gov,2008:accession-number=0002038003-26-000006 4 - Kleinerman Christian (0001979088) (Reporting) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001979088-26-000015 <b>Size:</b> 12 KB 2026-08-03T21:15:19-04:00 urn:tag:sec.gov,2008:accession-number=0001979088-26-000015 4 - Snowflake Inc.",
+        "(0001640147) (Issuer) <b>Filed:</b> 2026-08-03 <b>AccNo:</b> 0001979088-26-000015 <b>Size:</b> 12 KB 2026-08-03T21:15:19-04:00 urn:tag:sec.gov,2008:accession-number=0001979088-26-000015"
+      ],
+      "additionCount": 19,
+      "removalCount": 17,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "f966f8c917641cd736660f92",
+      "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "lane": "government-enforcement",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-05T07:59:26.636Z",
+      "detectedAt": "2026-08-05T07:59:26.636Z",
+      "changeType": "content-changed",
+      "previousHash": "8b3c31e07446639e2039339e0c34c009f2b3f009c566c7be966107441fa315af",
+      "currentHash": "1813702a9ceb6521a0292c1e445b7c55357ae04e9ab4c904eaf458c39c9640bc",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "additions": [
+        "LR-26500 See Also: Final Judgment - Bin Hao Pagination Current page 1 Page 2 Page 3 &hellip; 120 Next Last 1 to 100 of 11925 items Return to top SEC homepage About the SEC Budget & Performance Careers Commission Votes Contact Contracts Transparency Accessibility & Disability Artificial Intelligence FOIA Inspector General No FEAR Act Data Ombuds SEC Excess Personal Property Guidance Websites Investor.gov Related Sites USA.gov Site Information Plain Writing Privacy & Security Site Map Stay connected."
+      ],
+      "removals": [
+        "LR-26500 See Also: Final Judgment - Bin Hao March 12, 2026 Nader Al-Naji, Buse Desticioğlu Al-Naji, Joumana Bahouth Al-Naji, Intangible Holdings, LLC, Firestorm Media, LLC, Viridian City, LLC, and DeSo Foundation Release No.",
+        "LR-26499 See Also: Joint Stipulation of Dismissal Pagination Current page 1 Page 2 Page 3 &hellip; 120 Next Last 1 to 100 of 11924 items Return to top SEC homepage About the SEC Budget & Performance Careers Commission Votes Contact Contracts Transparency Accessibility & Disability Artificial Intelligence FOIA Inspector General No FEAR Act Data Ombuds SEC Excess Personal Property Guidance Websites Investor.gov Related Sites USA.gov Site Information Plain Writing Privacy & Security Site Map Stay connected."
+      ],
+      "additionCount": 1,
+      "removalCount": 2,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "f9b326734f170d730fc634f5",
+      "title": "content changed: Federal Register — Latest Documents",
+      "sourceId": "federal-register-latest",
+      "sourceLabel": "Federal Register — Latest Documents",
+      "sourceUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "lane": "oversight-audit",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-05T07:59:26.636Z",
+      "detectedAt": "2026-08-05T07:59:26.636Z",
+      "changeType": "content-changed",
+      "previousHash": "5ae27260cdfcf24d34bed4945a4f3f7fdb3d41a8e200341d78cd3d1dc0ae3afa",
+      "currentHash": "c27c53bb44561327ac2f58b3c348ba16fb11622237585c5014a2f93a4b3cc9a4",
+      "httpStatus": 200,
+      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "additions": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU4MDE2MDAwMDAsIjIwMjYtMTU4MTkiXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "removals": [
+        "{ \"count\": 10000, \"description\": \"All Documents\", \"next_page_url\": \"https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=100&search_after_cursor=WzE3ODU3MTUyMDAwMDAsIjIwMjYtMTU2MTciXQ\", \"results\": [ {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {} ], \"total_pages\": 50 }"
+      ],
+      "additionCount": 1,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "b1e5189be9fa36ea97b5f8c0",
+      "title": "content changed: UK Serious Fraud Office — News And Communications",
+      "sourceId": "uk-sfo-news",
+      "sourceLabel": "UK Serious Fraud Office — News And Communications",
+      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-05T07:59:26.636Z",
+      "detectedAt": "2026-08-05T07:59:26.636Z",
+      "changeType": "content-changed",
+      "previousHash": "083fac5ac3d86def7d3d888cae48fc7747aeef48e8e6fdeda28171a08d7f91f9",
+      "currentHash": "c031233b56367326139c8c536f702b238453356597326f172e9b2fbdcf55cf2a",
+      "httpStatus": 200,
+      "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "additions": [
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance Is the message I’ve had from the SFO genuine?",
+        "12 November 2024 Notice See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
+      ],
+      "removals": [
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance SFO DPA with Ultra Electronics Holdings Limited (formerly plc) 18 June 2026 Guidance See all guidance and regulation News and communications SFO announces investigation into suspected telecoms company fraud 22 June 2026 Press release SFO to secure further £491,000 from Jakarta expat scammer 19 June 2026 Press release See all news and communications Policy papers and consultations SFO Privacy Policy 2 June 2026 Policy paper Raising a Concern (Whistleblowing) Policy 1 December 2024 Policy paper See all policy papers and consultations Transparency and freedom of information releases 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all transparency and freedom of information releases Our management Graham McNulty QPM Interim Director Matthew Wagstaff Director of Legal Services Freya Grimwood OBE Interim Chief Operating Officer Emma Luxton Director of Operations Claire Bassett Chair of the Board James Thomson CBE Non-Executive Director Caroline Firstbrook Non-Executive Director Simon McKinnon CB CBE Non-Executive Director Contact SFO Office address 2-4 Cockspur Street London SW1Y 5BS United Kingdom Email public.enquiries@sfo.gov.uk Telephone 020 7362 8100 For journalists with a news related enquiry please contact news@sfo.gov.uk or +44 (0)7557 009842."
+      ],
+      "additionCount": 2,
+      "removalCount": 1,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "6e48acd2ac94f914a7fd7ae5",
       "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

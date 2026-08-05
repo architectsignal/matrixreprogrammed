@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-08-05T06:27:59.105Z",
+  "updated": "2026-08-05T08:00:10.400Z",
   "date": "2026-08-05",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 24166
+      "signalCount": 24305
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 17804
+      "signalCount": 17812
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 11948
+      "signalCount": 11861
     }
   ],
   "person": {
@@ -73,9 +73,9 @@
       "graphId": "securities-and-exchange-commission",
       "graphType": "missing record",
       "reviewStatus": "machine-extracted-unreviewed",
-      "directFreshRecords": 17
+      "directFreshRecords": 16
     },
-    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 17 fresh records plus 11 retained evidence references.",
+    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 16 fresh records plus 11 retained evidence references.",
     "whatWasFound": "named-in-public-record, refined-from-organization",
     "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
     "investigativeLanes": [
@@ -212,7 +212,7 @@
     "institution": {
       "route": "daily-watch.html#institution-dossier",
       "totals": {
-        "matchedFindings": 1207,
+        "matchedFindings": 1280,
         "legalRecords": 16,
         "safeguardingOverlaps": 0,
         "moneyRecords": 16,

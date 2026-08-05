@@ -1,18 +1,18 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-05T06:27:36.423Z",
+  "generatedAt": "2026-08-05T08:00:05.876Z",
   "investigationData": {
     "ok": true,
-    "generatedAt": "2026-08-05T06:27:35.746Z",
+    "generatedAt": "2026-08-05T08:00:05.185Z",
     "sourceState": {
       "sources": 12,
       "created": 0,
-      "lastAttemptRepaired": 0
+      "lastAttemptRepaired": 12
     },
     "ledger": {
-      "before": 2500,
+      "before": 2851,
       "active": 2500,
-      "archivedThisRun": 0,
+      "archivedThisRun": 351,
       "duplicateIdsRepaired": 0,
       "invalidUrlsArchived": 0,
       "activeLimit": 2500,
@@ -27,7 +27,7 @@
   },
   "criminalAccountability": {
     "ok": true,
-    "generatedAt": "2026-08-05T06:27:36.091Z",
+    "generatedAt": "2026-08-05T08:00:05.549Z",
     "subjects": 20,
     "current": 15,
     "historical": 5,
@@ -60,15 +60,15 @@
   },
   "criminalDossierCoverage": {
     "ok": true,
-    "generatedAt": "2026-08-05T06:27:36.395Z",
+    "generatedAt": "2026-08-05T08:00:05.854Z",
     "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
     "minimumPredatorsInPowerTarget": 100,
     "approvedPredatorsInPowerDossiers": 20,
     "remainingToTarget": 80,
     "targetReached": false,
-    "dossierPagesDetected": 216,
+    "dossierPagesDetected": 226,
     "registryMatchedPages": 40,
-    "noApprovedMatchPages": 176,
+    "noApprovedMatchPages": 186,
     "missingNativeRoutes": [],
     "missingPanels": [],
     "coverage": [
@@ -993,6 +993,96 @@
       {
         "route": "_site/institution-briefs/world-health-organization.html",
         "title": "WORLD HEALTH ORGANIZATION",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-2021-08825.html",
+        "title": "2021-08825 — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-2024-13374.html",
+        "title": "2024-13374 — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-23-wap-2023.html",
+        "title": "23 WAP 2023 — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-24-2251.html",
+        "title": "24-2251 — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-24-7261.html",
+        "title": "24-7261 — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+        "title": "APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-california-supreme-court.html",
+        "title": "CALIFORNIA SUPREME COURT — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-centers-for-medicare-and-medicaid-services.html",
+        "title": "CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-civil-rights-corps-v-lasalle.html",
+        "title": "CIVIL RIGHTS CORPS V. LASALLE — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "_site/reports/entity-health-and-human-services-department.html",
+        "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2020,7 +2110,7 @@
   },
   "criminalWaveBuild": {
     "ok": true,
-    "generatedAt": "2026-08-05T06:27:36.070Z",
+    "generatedAt": "2026-08-05T08:00:05.530Z",
     "mode": "single-authoritative-hydration-with-verification-only",
     "idempotent": true,
     "waveFiles": [
@@ -2114,10 +2204,10 @@
   },
   "criminalDossierTest": {
     "ok": true,
-    "generatedAt": "2026-08-05T06:27:36.422Z",
+    "generatedAt": "2026-08-05T08:00:05.876Z",
     "target": 100,
     "approvedDossiers": 20,
-    "dossierPagesChecked": 216,
+    "dossierPagesChecked": 226,
     "failures": []
   },
   "relationshipGraph": {

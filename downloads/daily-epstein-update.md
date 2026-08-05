@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-05T09:07:02.409Z
-Live Intel source window: 2026-08-05T09:06:54.206Z
+Generated: 2026-08-05T14:32:58.284Z
+Live Intel source window: 2026-08-05T14:32:51.811Z
 Latest source publication: 2026-08-05T07:12:07.000Z
 Status: current-seven-day-record-window
 
@@ -125,13 +125,13 @@ U.S. Senate unanimously opposes clemency for Ghislaine Maxwell AnewZ
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
 - Published: 2026-07-30T00:26:21.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
 
-Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ KQ2
+Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ kq2.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

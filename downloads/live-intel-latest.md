@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-05T09:06:54.206Z
-Latest source publication: 2026-08-05T07:12:07.000Z
+Collection completed: 2026-08-05T14:32:51.811Z
+Latest source publication: 2026-08-05T14:00:00.000Z
 Collection status: fresh-items-added
-New items this collection: 34
+New items this collection: 8
 
 ## Freshness truth
-34 new source item(s) entered the seven-day window during this collection.
+8 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,17 +26,53 @@ New items this collection: 34
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-08-05 — Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)
+  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in
+  - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)
+  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hOHVXelEtWHd0RGxjQ1JKdFEtZ0VfeTluV25OaTYweEtUUC03RE03emswa3BoeFBVQ2NlQkFuWUc3X1FTUGRibVNGRVhKcndLektTY2RCS0RUSm03QlhiSG1R?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Quarterly Refunding Statement of Deputy Assistant Secretary for Federal Finance Brian Smith - U.S. Department of the Treasury (.gov)
+  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE94VjJtRnc5VEVWSXIwZFhsSVBZUFhaZkpfQ2x4VVh0dW9yZXhxV0tVdWFyRnY4c21aYWpudGdmUXJtWUh4eEk1YlJwS3FlMHFpTkJqUTA3UHpTNHNZNkdQVDVn?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Quarterly Refunding Statement of Deputy Assistant Secretary for Federal Finance Brian Smith - U.S. Department of the Treasury (.gov)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)
+  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9mdXEwVFFRdk9COThNQ0JlV3hhV3RHNVRnSHU5ZU9BME44WlJZV2dDWVJtVlBQV3FTdkRmWDF6RC15dm1EUWRWS19ZeFVxaUtvU1c1Y05tdXE1aTlzRkM0ekx3?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Strengthening El Niño to push 49 million more people into acute hunger
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168079
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Strengthening El Niño to push 49 million more people into acute hunger
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Burnham considering inquiry into Epstein, minister says - RTE.ie
   - Source: https://news.google.com/rss/articles/CBMieEFVX3lxTE5uZ2JnUDRhbXNYcHNDNVZDa1RlS1lfaTNhSnlCN3NBcHkyQ0xyS3hBdXZVTFF5eDY4RUhjZ1FLX3FpVE9XcU1Wcm5pVkQtbkVZaUV3ZTNFeWpJeEJoN2FUbWJ4Y0xjTlREb1Rzb2JHLUtKS2ZkWTJ0Qw?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Burnham considering inquiry into Epstein, minister says - RTE.ie
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-04 — Thomas Ciancutti Part 03 - FBI (.gov)
+- 2026-08-04 — Thomas Ciancutti Part 03 - vault.fbi.gov
   - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE9RUXhVMEVXWmVYSkVxdzYyTnUtVENvSHZUdlJTOFhxMHp3cl84SHkwb21Ua21oQUlQVVFRSUE1SWRRT2h3VjBNbTdUbDhmVlAtUmUyX082S091dTRBY0tXX1JMeUpOaEU2UjJlTW43MlJFVU9obnVJ?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Thomas Ciancutti Part 03 - FBI (.gov)
+  - Video hook: New public-record signal: Thomas Ciancutti Part 03 - vault.fbi.gov
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-04 — U.S.-UK Financial Regulatory Working Group Summer 2026: Joint Statement - U.S. Department of the Treasury (.gov)
   - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE1McXNySDRFd18ta3dJWHFZWFRpRE0tN0VzNlR1TWRnekR1WnZKVkFCWERXdFFfdGFWSGhMNVdtTlZ0QmNLX3Z2RGhpN2lyLVhSU09xS1NKNDM2ZWFDMzdLYjV3?oc=5
@@ -230,17 +266,23 @@ New items this collection: 34
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Economy Statement for the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Donald West Part 05 (Final) - FBI (.gov)
+- 2026-08-03 — Treasury Announces Marketable Borrowing Estimates - U.S. Department of the Treasury (.gov)
+  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5VVnIwemJfQVpXbXRJMVd0RmtQeWwwckFxYzk5LVhXdFlWVEs5c1VvcXpwaldjMzFiZVFYUmhhVDg3VFA0M2pYRU9KQTNheWpkd09oWGlwN2RrWDZBRl9YZm1n?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Treasury Announces Marketable Borrowing Estimates - U.S. Department of the Treasury (.gov)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Donald West Part 05 (Final) - vault.fbi.gov
   - Source: https://news.google.com/rss/articles/CBMickFVX3lxTFB1ZmFyd05XMEdrSGJkOFp3OC01SEhjcUdIcVJ0V1ZIN2hfLUlaRy00WjRXeVR2bnRlelpHMERiZkRyOEQwczUzeE05TGJjalhuZFh2NHNJRVE1V0ZtYlhabTc5SjRFVUYxUjVvNllXeTdZdw?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Donald West Part 05 (Final) - FBI (.gov)
+  - Video hook: New public-record signal: Donald West Part 05 (Final) - vault.fbi.gov
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — BOMBROB & Operation Punchout Part 33 - FBI (.gov)
+- 2026-08-03 — BOMBROB & Operation Punchout Part 33 - vault.fbi.gov
   - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxQSkJ3eFZWbFptTm52YWJPT0VNZkxDOWNoR3hDQ2lGdzdzQ1RReFRCZ0pLSHQ3c2drSm1DOTdhMnl2Y0RMalpYSXQ4THBaRWdvYi1jcnloTU1MLUY5MUJURHowYm45Z1VydmNGQ1dlNnVCcVlxZlZQa21GQWdHekdyNFYxYTg4eHVWam5Wb3ZxbEFuS2VWTDhz?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: BOMBROB & Operation Punchout Part 33 - FBI (.gov)
+  - Video hook: New public-record signal: BOMBROB & Operation Punchout Part 33 - vault.fbi.gov
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — DR Congo: New centre opens at heart of record Ebola outbreak
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168064
@@ -302,11 +344,11 @@ New items this collection: 34
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Recovery in Ukraine, one life at a time
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Visitor Login - stage.qa.archives.gov
+- 2026-07-31 — Visitor Login - National Archives (.gov)
   - Source: https://news.google.com/rss/articles/CBMixAFBVV95cUxNbkd4N0Fob190c2R4NjlSaWx5WG1tLWZoTzQyY2FSdFloYkxPbThJRkdCMGRTV0RRTEFRTGYtSm5OYWRhaDhDY2tEMHpWdzM2b3c4dXF3WnNMZVloeWF3ZUlyb3hUWmVBQTVmakFWM1BKV0tQRjluenlQVHhuRzk2MHo3ZGM0STVxWTh3czcxLUpvVGd6eHBhQ3doazRteFBmSnNXcjFVeFI1YmxQYmRORk1mc091QkZDSEFYTDB1Vzgxajg1?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Visitor Login - stage.qa.archives.gov
+  - Video hook: New public-record signal: Visitor Login - National Archives (.gov)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-31 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
   - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
@@ -422,11 +464,11 @@ New items this collection: 34
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+- 2026-07-30 — Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
   - Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
+  - Video hook: New public-record signal: Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-29 — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
@@ -434,33 +476,9 @@ New items this collection: 34
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — Treasury Disrupts Iranian Regime’s Strait of Hormuz Extortion Network - U.S. Department of the Treasury (.gov)
-  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9PRFU2RDNFOGZpRmhMXzExRU03QUFoY3pXOHRDY2twVXVrekJNWDFLdmg2OVNERVpNajZqeFJDTGNtM3Z5eUtJWm5xcXRuRGVhLXBueHF1b1l0WW1EV05YenFn?oc=5
+- 2026-07-29 — World Wrestling Entertainment Part 01 - vault.fbi.gov
+  - Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxPbGNHT0xJQlBsbDRHQXQ2clZuTk5IUjhEY1d4MElvRThYMXNYU01FamFjck1ySkt2Qnh0Y0hvZW9ZOFB5amNmQm5kZTFwQ3JxRnJzMHc0WUJpcHNUVHhkaDVJUHo5WWVQeTVsMV9TM0F6eTZWSDNEVWZ0bjFhZjBjZjVITElWRmY2TGR3aGVmZ3k5cUYzQld3c0ZB?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Treasury Disrupts Iranian Regime’s Strait of Hormuz Extortion Network - U.S. Department of the Treasury (.gov)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168048
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — Hunger hampers Ebola response as cases top 3,200 in DR Congo
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168047
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Hunger hampers Ebola response as cases top 3,200 in DR Congo
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168045
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168049
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
+  - Video hook: New public-record signal: World Wrestling Entertainment Part 01 - vault.fbi.gov
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

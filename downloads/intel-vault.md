@@ -1,11 +1,36 @@
 # Intel Vault
 
-Updated: 2026-08-05T09:06:54.206Z
+Updated: 2026-08-05T14:32:51.811Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Treasury Disrupts Iranian Regime’s Strait of Hormuz Extortion Network - U.S. Department of the Treasury (.gov)
+- Published: 2026-07-29T14:31:22.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9PRFU2RDNFOGZpRmhMXzExRU03QUFoY3pXOHRDY2twVXVrekJNWDFLdmg2OVNERVpNajZqeFJDTGNtM3Z5eUtJWm5xcXRuRGVhLXBueHF1b1l0WW1EV05YenFn?oc=5
+- Source class: discovery
+
+### Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168048
+- Source class: primary-or-official
+
+### Hunger hampers Ebola response as cases top 3,200 in DR Congo
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168047
+- Source class: primary-or-official
+
+### UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168045
+- Source class: primary-or-official
+
+### World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168049
+- Source class: primary-or-official
 
 ### A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
 - Published: 2026-07-28T12:00:00.000Z

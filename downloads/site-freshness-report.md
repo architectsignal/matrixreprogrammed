@@ -5,25 +5,25 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 Report version: site-freshness-v4
 Source rules: 9
 Scanned pages: 3478
-Flagged pages: 3375
-High priority pages: 1748
-Medium priority pages: 1587
-Pages with missing rules: 1413
+Flagged pages: 3284
+High priority pages: 1728
+Medium priority pages: 1516
+Pages with missing rules: 1385
 Auto-update eligible figures: 14
 Manual-review figures: 420
-Missing-rule figures: 2945
+Missing-rule figures: 2889
 
 ## Sensitive Figure Publication Labels
 No sensitive item is withheld solely because it lacks complete source metadata, confirmation, or human review. Every item remains publishable only with an explicit evidence-status label that states whether it is source-linked, unconfirmed, source-incomplete, a model output, or not human reviewed. A label is not proof or a verdict.
 
-Unique sensitive figures: 1017
-Published sensitive figures: 1017
-Published with an evidence-status label: 1017
+Unique sensitive figures: 1018
+Published sensitive figures: 1018
+Published with an evidence-status label: 1018
 Withheld figures: 0
-Prominent figures not human reviewed: 99
-Not eligible for automated promotion: 1017
+Prominent figures not human reviewed: 100
+Not eligible for automated promotion: 1018
 Eligible for controlled refresh: 0
-Machine-readable items published: 1017
+Machine-readable items published: 1018
 Truncated items: 0
 
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · cinematic-hit-list.html · $125,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
@@ -35,13 +35,9 @@ Truncated items: 0
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · hit-list.html · $125,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · hit-list.html · 04 Feed · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · hit-list.html · $125,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $3.9 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $3.9 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $3.9 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $3.9 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **SOURCE METADATA INCOMPLETE · NOT CONFIRMED · NOT HUMAN REVIEWED** · news.html · 37% · Death, casualty, missing-person or human-cost figure · missing: sourceDate
 - **SOURCE METADATA INCOMPLETE · NOT CONFIRMED · NOT HUMAN REVIEWED** · news.html · 38% · Epstein, victim, minor or sexual-abuse figure · missing: sourceDate
@@ -126,6 +122,10 @@ Truncated items: 0
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-danny-casolaro.html · 1991 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-danny-casolaro.html · 1991 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-danny-casolaro.html · 1 source · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-danny-casolaro.html · 03 Map · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-daphne-caruana-galizia.html · 03 Map · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-daphne-caruana-galizia.html · 2017 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-daphne-caruana-galizia.html · 2017 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 
 ## High Priority Pages
 - _site/timers.html: 40 figure/stat markers; 40 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
@@ -141,10 +141,9 @@ Truncated items: 0
 - _site/document-library.html: 20 figure/stat markers; 20 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/premium-reports.html: 20 figure/stat markers; 20 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - document-library.html: 20 figure/stat markers; 20 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
+- live-intel.html: 20 figure/stat markers; 20 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - premium-reports.html: 20 figure/stat markers; 20 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/machine-digest.html: 19 figure/stat markers; 19 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
-- machine-digest.html: 19 figure/stat markers; 19 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
-- live-intel.html: 15 figure/stat markers; 15 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/palantir-watch.html: 11 figure/stat markers; 11 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - palantir-watch.html: 11 figure/stat markers; 11 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/daily-brain-brief.html: 10 figure/stat markers; 10 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
@@ -158,6 +157,7 @@ Truncated items: 0
 - dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - hit-list.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/one-world-currency-theory.html: 6 figure/stat markers; 6 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
+- one-world-currency-theory.html: 6 figure/stat markers; 6 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 
 ## Missing Source Rules
 - _site/timers.html: 40 figure(s) need source rules.
@@ -173,10 +173,9 @@ Truncated items: 0
 - _site/document-library.html: 20 figure(s) need source rules.
 - _site/premium-reports.html: 20 figure(s) need source rules.
 - document-library.html: 20 figure(s) need source rules.
+- live-intel.html: 20 figure(s) need source rules.
 - premium-reports.html: 20 figure(s) need source rules.
 - _site/machine-digest.html: 19 figure(s) need source rules.
-- machine-digest.html: 19 figure(s) need source rules.
-- live-intel.html: 15 figure(s) need source rules.
 - _site/palantir-watch.html: 11 figure(s) need source rules.
 - palantir-watch.html: 11 figure(s) need source rules.
 - _site/daily-brain-brief.html: 10 figure(s) need source rules.
@@ -200,6 +199,7 @@ Truncated items: 0
 - one-world-religion-theory.html: 5 figure(s) need source rules.
 - _site/source-changes.html: 4 figure(s) need source rules.
 - source-changes.html: 4 figure(s) need source rules.
+- _site/book-proof-god.html: 4 figure(s) need source rules.
 
 ## Publication Boundary
 - Nothing in the sensitive queue is hidden or withheld from publication.

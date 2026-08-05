@@ -114,7 +114,7 @@ jobs:
                 owner,
                 repo,
                 workflow_id: target.id,
-                ref: expectedHead,
+                ref: 'main',
                 inputs: {
                   confirmation: 'DEPLOY MATRIX REPROGRAMMED',
                   billing_exception: billingException

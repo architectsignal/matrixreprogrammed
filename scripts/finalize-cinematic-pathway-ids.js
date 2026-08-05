@@ -16,15 +16,23 @@ const outputIgnored = new Set([
 
 // Marker comments can become nested when legacy generators wrap an already
 // marked pathway block. Never remove the content between marker comments:
-// select and remove exact pathway <section> elements, then remove marker
-// comments individually. This preserves the page hero, H1 and reader copy.
+// select and remove balanced <section> elements whose class list contains the
+// exact matrix-pathways token, then remove marker comments individually. This
+// preserves the page hero, H1, reader copy and descendant pathway sections.
 const markerCommentPattern = '<!--\\s*cinematic-pathways:(?:start|end)\\s*-->\\s*';
-const sectionPattern = '<section\\b(?=[^>]*\\bclass\\s*=\\s*["\\\'][^"\\\']*\\bmatrix-pathways\\b[^"\\\']*["\\\'])[^>]*>[\\s\\S]*?<\\/section>\\s*';
 
 function markerCommentRegex(flags = 'gi') { return new RegExp(markerCommentPattern, flags); }
-function sectionRegex(flags = 'gi') { return new RegExp(sectionPattern, flags); }
 function normalizeRoute(value) { return String(value || '').split(path.sep).join('/'); }
 function escapeRegExp(value) { return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function classTokensFromTag(tag) {
+  const match = String(tag || '').match(/\bclass\s*=\s*(["'])([^"']*)\1/i);
+  return match ? match[2].trim().split(/\s+/).filter(Boolean) : [];
+}
+
+function hasExactClassToken(tag, className) {
+  return classTokensFromTag(tag).includes(className);
+}
 
 function countExactClassToken(html, className, tagName = '') {
   const expression = /<([a-z][a-z0-9:-]*)\b[^>]*\bclass\s*=\s*(["'])([^"']*)\2[^>]*>/gi;
@@ -37,6 +45,66 @@ function countExactClassToken(html, className, tagName = '') {
     if (tokens.includes(className)) count += 1;
   }
   return count;
+}
+
+function findBalancedPathwaySections(html) {
+  const source = String(html || '');
+  const tagExpression = /<\/?section\b[^>]*>/gi;
+  const stack = [];
+  const sections = [];
+  let match;
+
+  while ((match = tagExpression.exec(source))) {
+    const tag = match[0];
+    const closing = /^<\s*\/section\b/i.test(tag);
+    if (!closing) {
+      const node = {
+        start: match.index,
+        openEnd: tagExpression.lastIndex,
+        openTag: tag,
+        pathway: hasExactClassToken(tag, 'matrix-pathways')
+      };
+      if (/\/\s*>$/.test(tag)) {
+        if (node.pathway) sections.push({ ...node, end: tagExpression.lastIndex, html: tag });
+      } else {
+        stack.push(node);
+      }
+      continue;
+    }
+
+    if (!stack.length) continue;
+    const node = stack.pop();
+    if (!node.pathway) continue;
+    sections.push({
+      ...node,
+      end: tagExpression.lastIndex,
+      html: source.slice(node.start, tagExpression.lastIndex)
+    });
+  }
+
+  return sections.sort((a, b) => a.start - b.start || a.end - b.end);
+}
+
+function mergeRanges(ranges) {
+  const sorted = ranges
+    .map(range => ({ start: Number(range.start), end: Number(range.end) }))
+    .filter(range => Number.isFinite(range.start) && Number.isFinite(range.end) && range.end > range.start)
+    .sort((a, b) => a.start - b.start || a.end - b.end);
+  const merged = [];
+  for (const range of sorted) {
+    const previous = merged.at(-1);
+    if (!previous || range.start > previous.end) merged.push({ ...range });
+    else previous.end = Math.max(previous.end, range.end);
+  }
+  return merged;
+}
+
+function removeRanges(source, ranges) {
+  let output = String(source || '');
+  for (const range of mergeRanges(ranges).sort((a, b) => b.start - a.start)) {
+    output = `${output.slice(0, range.start)}${output.slice(range.end)}`;
+  }
+  return output;
 }
 
 function routeSlug(relative) {
@@ -121,7 +189,7 @@ function finalizeHtml(html, relative) {
   if (!/matrix-pathways/i.test(html)) return { html, changed: false, sectionsBefore: 0 };
 
   const markerComments = [...html.matchAll(markerCommentRegex('gi'))].map(match => match[0]);
-  const sections = [...html.matchAll(sectionRegex('gi'))].map(match => match[0]);
+  const sections = findBalancedPathwaySections(html);
   if (!sections.length) {
     const cleanMarkers = html.replace(markerCommentRegex('gi'), '');
     return {
@@ -133,14 +201,15 @@ function finalizeHtml(html, relative) {
     };
   }
 
-  const selectedSection = sections.at(-1);
+  const selectedSection = sections.at(-1).html;
   const titleId = `matrix-pathways-title-${routeSlug(relative)}`;
   const section = canonicalSection(selectedSection, titleId);
   const canonicalBlock = `<!-- cinematic-pathways:start -->${section}<!-- cinematic-pathways:end -->`;
 
-  // Remove only exact pathway sections and marker comments. A block regex from
-  // start to end would delete arbitrary page content when markers are nested.
-  let clean = html.replace(sectionRegex('gi'), '');
+  // Remove only balanced parent pathway sections with the exact class token.
+  // Descendant classes such as matrix-pathways-head are retained inside the
+  // selected section and can never consume unrelated hero or H1 content.
+  let clean = removeRanges(html, sections);
   clean = clean.replace(markerCommentRegex('gi'), '');
   const next = insertBeforeBoundary(clean, canonicalBlock);
 
@@ -198,10 +267,16 @@ const report = {
   changed: changed.length,
   duplicatesRemoved,
   files: results,
-  boundary: 'Every document receives at most one cinematic pathway section and one deterministic route-specific heading ID. Nested marker comments cannot consume the page hero, H1, evidence content or reader copy.'
+  boundary: 'Every document receives at most one balanced cinematic pathway parent section and one deterministic route-specific heading ID. Descendant pathway classes and nested marker comments cannot consume the page hero, H1, evidence content or reader copy.'
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 console.log(`Cinematic pathway ID finalization passed: ${results.length} page(s) checked, ${changed.length} normalized, ${duplicatesRemoved} duplicate section(s) removed.`);
 
-module.exports = { finalizeHtml, routeSlug, countExactClassToken };
+module.exports = {
+  finalizeHtml,
+  routeSlug,
+  countExactClassToken,
+  findBalancedPathwaySections,
+  hasExactClassToken
+};

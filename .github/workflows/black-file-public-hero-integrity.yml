@@ -1,0 +1,83 @@
+name: Black File Public Hero Integrity
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/black-file-public-hero-integrity.yml'
+      - 'black-file.html'
+      - 'scripts/finalize-black-file-public-hero.js'
+      - 'scripts/black-file-public-hero-test.js'
+      - 'scripts/black-file-postbuild-contract-test.js'
+      - 'scripts/reconcile-public-audit-boundaries.js'
+      - 'scripts/exhaustive-public-site-audit-v2.js'
+      - 'scripts/patch-release-metadata-routing.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Preserve one visible Black File H1 at final boundaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout proposed Black File owner
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Syntax-check the finalizer and regressions
+        run: |
+          node --check scripts/finalize-black-file-public-hero.js
+          node --check scripts/black-file-public-hero-test.js
+          node --check scripts/black-file-postbuild-contract-test.js
+          node --check scripts/reconcile-public-audit-boundaries.js
+          node --check scripts/exhaustive-public-site-audit-v2.js
+          node --check scripts/patch-release-metadata-routing.js
+
+      - name: Prove canonical postbuild, deploy and audit ordering
+        run: node scripts/black-file-postbuild-contract-test.js
+
+      - name: Prove damaged and duplicate heroes reconcile repeat-safely
+        run: node scripts/black-file-public-hero-test.js
+
+      - name: Finalize the real source and deployable aliases
+        run: node scripts/finalize-black-file-public-hero.js
+
+      - name: Verify the final public H1 contract
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const paths = ['black-file.html'];
+          if (fs.existsSync('_site')) paths.push('_site/black-file.html', '_site/black-file');
+          for (const file of paths) {
+            if (!fs.existsSync(file) || !fs.statSync(file).isFile()) throw new Error(`${file} is missing`);
+            const html = fs.readFileSync(file, 'utf8')
+              .replace(/<!--[\s\S]*?-->/g, ' ')
+              .replace(/<(script|style|template|textarea)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, ' ');
+            const h1s = html.match(/<h1\b/gi) || [];
+            if (h1s.length !== 1) throw new Error(`${file} has ${h1s.length} visible H1 elements`);
+            if (!/<h1>THE BLACK FILE<\/h1>/i.test(html)) throw new Error(`${file} lacks the canonical H1`);
+            if (!/data-black-file-public-hero=["']canonical["']/i.test(html)) throw new Error(`${file} lacks the canonical hero marker`);
+            if (!/id=["']black-file-public-lead["']/i.test(html)) throw new Error(`${file} lacks the canonical lead`);
+          }
+          console.log(`Black File H1 contract passed across ${paths.length} surface(s).`);
+          NODE
+
+      - name: Upload Black File hero proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: black-file-public-hero-${{ github.run_id }}
+          path: |
+            downloads/black-file-public-hero-finalization.json
+            downloads/black-file-postbuild-contract-test.json
+          if-no-files-found: error
+          retention-days: 30

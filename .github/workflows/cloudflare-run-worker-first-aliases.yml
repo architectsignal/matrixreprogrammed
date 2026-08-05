@@ -1,0 +1,73 @@
+name: Cloudflare run_worker_first Alias Integrity
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/cloudflare-run-worker-first-aliases.yml'
+      - 'scripts/patch-public-route-aliases.js'
+      - 'scripts/reconcile-public-audit-boundaries.js'
+      - 'src/worker-production.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Prove strict aliases without redundant wildcard coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout proposed alias owner
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Syntax-check and self-test the route owner
+        run: |
+          node --check scripts/patch-public-route-aliases.js
+          node scripts/patch-public-route-aliases.js --self-test
+
+      - name: Reconcile the real Worker and Wrangler configurations
+        run: node scripts/patch-public-route-aliases.js
+
+      - name: Verify the sanitized report
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const report = JSON.parse(fs.readFileSync('downloads/public-route-alias-routing.json', 'utf8'));
+          if (report.ok !== true) throw new Error('Alias routing report is unhealthy');
+          if (report.redundantRoutes.toml.length || report.redundantRoutes.jsonc.length) {
+            throw new Error('A redundant exact route remains under wildcard coverage');
+          }
+          const card = report.coverage.find(item => item.requestPath === '/card-artwork-batches');
+          if (!card || card.toml.exact || card.jsonc.exact) throw new Error('Card artwork exact route was not removed');
+          if (card.toml.wildcard !== '/card-artwork-batches*' || card.jsonc.wildcard !== '/card-artwork-batches*') {
+            throw new Error('Card artwork wildcard coverage was not preserved');
+          }
+          console.log('Alias report proves wildcard-only card artwork routing and exact routing for uncovered namespace collisions.');
+          NODE
+
+      - name: Bundle the exact Cloudflare configuration without deploying
+        run: npx --yes wrangler@latest deploy --dry-run
+
+      - name: Upload alias-integrity proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-alias-integrity-${{ github.run_id }}
+          path: downloads/public-route-alias-routing.json
+          if-no-files-found: error
+          retention-days: 30

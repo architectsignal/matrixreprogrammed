@@ -63,7 +63,11 @@ function patch(relative, kind, transform) {
       fs.writeFileSync(file, after);
       changes.push(targetRelative.split(path.sep).join('/'));
     }
-    checks.push({ file: targetRelative.split(path.sep).join('/'), kind, ok: after.includes(`data-public-audit-reconciliation="${kind}"`) });
+    checks.push({
+      file: targetRelative.split(path.sep).join('/'),
+      kind,
+      ok: after.includes(`data-public-audit-reconciliation="${kind}"`)
+    });
   }
 }
 
@@ -100,8 +104,36 @@ const report = {
   checkedDate,
   changes,
   checks,
-  boundary: 'Operational review dates never replace source publication, event or retrieval dates. Unauthenticated interpretations are visibly labelled SPECULATION and cannot support factual conclusions.'
+  blackFileHeroFinalized: false,
+  blackFileHeroSurfaces: [],
+  namespaceAliasesFinalized: false,
+  deployableAliasesFinalized: false,
+  boundary: 'Operational review dates never replace source publication, event or retrieval dates. Unauthenticated interpretations are visibly labelled SPECULATION and cannot support factual conclusions. The canonical Black File hero is finalized before the final deployable alias pass.'
 };
+
+if (!report.ok) throw new Error('Public audit boundary reconciliation failed closed.');
+
+const aliasRoutingReport = require('./patch-public-route-aliases.js');
+if (!aliasRoutingReport.ok) throw new Error('Public route namespace alias routing failed closed.');
+report.namespaceAliasesFinalized = true;
+
+// This postbuild script is the last normal npm-build owner. Finalize the Black
+// File public hero here so Test Site artifacts, local previews, release audits
+// and production deployment all receive the same canonical H1—not merely the
+// later deploy-guard or exhaustive-audit paths.
+const blackFileHeroReport = require('./finalize-black-file-public-hero.js');
+if (!blackFileHeroReport.ok) throw new Error('Black File public hero finalization failed closed during postbuild.');
+report.blackFileHeroFinalized = true;
+report.blackFileHeroSurfaces = blackFileHeroReport.surfaces || [];
+
+const aliasReport = require('./finalize-public-route-aliases.js');
+if (!aliasReport.ok) throw new Error('Public route alias finalization failed closed.');
+report.deployableAliasesFinalized = true;
+report.ok = report.ok
+  && report.namespaceAliasesFinalized
+  && report.blackFileHeroFinalized
+  && report.deployableAliasesFinalized;
+
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 if (fs.existsSync(path.join(root, '_site'))) {
@@ -110,9 +142,5 @@ if (fs.existsSync(path.join(root, '_site'))) {
   fs.copyFileSync(reportPath, destination);
 }
 
-if (!report.ok) throw new Error('Public audit boundary reconciliation failed closed.');
-const aliasRoutingReport = require('./patch-public-route-aliases.js');
-if (!aliasRoutingReport.ok) throw new Error('Public route namespace alias routing failed closed.');
-const aliasReport = require('./finalize-public-route-aliases.js');
-if (!aliasReport.ok) throw new Error('Public route alias finalization failed closed.');
-console.log(`Public audit boundaries reconciled: ${checks.length} checks, ${changes.length} file change(s); namespace routes and deployable aliases finalized.`);
+if (!report.ok) throw new Error('Public audit boundary reconciliation did not complete every final owner.');
+console.log(`Public audit boundaries reconciled: ${checks.length} checks, ${changes.length} file change(s); Black File hero, namespace routes and deployable aliases finalized.`);

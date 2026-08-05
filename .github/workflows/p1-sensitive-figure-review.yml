@@ -10,6 +10,7 @@ on:
       - 'scripts/update-site-freshness-report.js'
       - 'scripts/update-site-freshness-report-v4.js'
       - 'scripts/figure-source-rules-pressure-test.js'
+      - 'scripts/figure-source-rules-pressure-test-v4.js'
       - 'scripts/sensitive-figure-classification-regression-test.js'
   workflow_dispatch:
 
@@ -38,6 +39,7 @@ jobs:
           node --check scripts/update-site-freshness-report.js
           node --check scripts/update-site-freshness-report-v4.js
           node --check scripts/figure-source-rules-pressure-test.js
+          node --check scripts/figure-source-rules-pressure-test-v4.js
           node --check scripts/sensitive-figure-classification-regression-test.js
 
       - name: Build the repository-wide labelled publication queue

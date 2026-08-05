@@ -24,13 +24,75 @@
     {"key":"manipulation-immunity","title":"MANIPULATION IMMUNITY","localUrl":"https://matrixreprogrammed.com/book-manipulation-immunity.html","amazonUs":"https://www.amazon.com/dp/B0G4H5V19Z","amazonUk":"https://www.amazon.co.uk/dp/B0G4H5V19Z","description":"Dark psychology defense, coercive influence, emotional control, narcissistic loops, and mental sovereignty.","keywords":["psychology","manipulation","narcissist","influence","mind control","propaganda","emotional control"]}
   ],
   "sourceFeeds": [
-    { "name": "CIA Reading Room", "label": "Declassified", "url": "https://www.cia.gov/readingroom/rss.xml", "weight": 9 },
-    { "name": "FBI Vault", "label": "Declassified", "url": "https://vault.fbi.gov/recently-added/RSS", "weight": 9 },
-    { "name": "DOJ News", "label": "Court Record", "url": "https://www.justice.gov/news/rss.xml", "weight": 8 },
-    { "name": "US Treasury Press Releases", "label": "Sanctions", "url": "https://home.treasury.gov/news/press-releases/rss", "weight": 8 },
-    { "name": "Europol News", "label": "Crime-State Overlap", "url": "https://www.europol.europa.eu/media-press/newsroom/rss.xml", "weight": 7 },
-    { "name": "UN News", "label": "War File", "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml", "weight": 5 },
-    { "name": "WikiLeaks", "label": "Archive Drop", "url": "https://wikileaks.org/feed.xml", "weight": 7 }
+    {
+      "name": "CIA Reports and Studies Discovery",
+      "label": "Official-domain discovery",
+      "url": "https://news.google.com/rss/search?q=site%3Acia.gov%2Fresources%2Freports+OR+site%3Acia.gov%2Fresources%2Fcsi+when%3A365d&hl=en-US&gl=US&ceid=US%3Aen",
+      "canonicalSource": "https://www.cia.gov/resources/reports/",
+      "feedMode": "official-domain-discovery",
+      "sourceTier": "discovery",
+      "replacementFor": "https://www.cia.gov/readingroom/rss.xml",
+      "weight": 7
+    },
+    {
+      "name": "FBI Vault Discovery",
+      "label": "Official-domain discovery",
+      "url": "https://news.google.com/rss/search?q=site%3Avault.fbi.gov+OR+site%3Afbi.gov%2Fvault+when%3A365d&hl=en-US&gl=US&ceid=US%3Aen",
+      "canonicalSource": "https://vault.fbi.gov/recently-added",
+      "feedMode": "official-domain-discovery",
+      "sourceTier": "discovery",
+      "replacementFor": "https://vault.fbi.gov/recently-added/RSS",
+      "weight": 7
+    },
+    {
+      "name": "DOJ News",
+      "label": "Court Record",
+      "url": "https://www.justice.gov/news/rss",
+      "canonicalSource": "https://www.justice.gov/news",
+      "feedMode": "direct-official-rss",
+      "sourceTier": "primary-or-official",
+      "replacementFor": "https://www.justice.gov/news/rss.xml",
+      "weight": 8
+    },
+    {
+      "name": "US Treasury Press Release Discovery",
+      "label": "Official-domain discovery",
+      "url": "https://news.google.com/rss/search?q=site%3Ahome.treasury.gov%2Fnews%2Fpress-releases+when%3A30d&hl=en-US&gl=US&ceid=US%3Aen",
+      "canonicalSource": "https://home.treasury.gov/news/press-releases",
+      "feedMode": "official-domain-discovery",
+      "sourceTier": "discovery",
+      "replacementFor": "https://home.treasury.gov/news/press-releases/rss",
+      "weight": 7
+    },
+    {
+      "name": "Europol News Discovery",
+      "label": "Official-domain discovery",
+      "url": "https://news.google.com/rss/search?q=site%3Aeuropol.europa.eu%2Fmedia-press%2Fnewsroom%2Fnews+when%3A30d&hl=en&gl=GB&ceid=GB%3Aen",
+      "canonicalSource": "https://www.europol.europa.eu/media-press/newsroom/news",
+      "feedMode": "official-domain-discovery",
+      "sourceTier": "discovery",
+      "replacementFor": "https://www.europol.europa.eu/media-press/newsroom/rss.xml",
+      "weight": 7
+    },
+    {
+      "name": "UN News",
+      "label": "War File",
+      "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+      "canonicalSource": "https://news.un.org/",
+      "feedMode": "direct-official-rss",
+      "sourceTier": "primary-or-official",
+      "weight": 5
+    },
+    {
+      "name": "National Archives News Discovery",
+      "label": "Public archive discovery",
+      "url": "https://news.google.com/rss/search?q=site%3Aarchives.gov%2Fnews+OR+site%3Aarchives.gov%2Fdeclassification+when%3A365d&hl=en-US&gl=US&ceid=US%3Aen",
+      "canonicalSource": "https://www.archives.gov/news",
+      "feedMode": "official-domain-discovery",
+      "sourceTier": "discovery",
+      "replacementFor": "https://wikileaks.org/feed.xml",
+      "weight": 7
+    }
   ],
   "highPriorityTerms": [
     "epstein", "maxwell", "child trafficking", "child exploitation", "sexual exploitation", "trafficking", "children", "missing", "declassified", "classified", "vault", "cia", "fbi", "nsa", "intelligence", "surveillance", "wikileaks", "archive", "court", "filing", "sanction", "ofac", "cartel", "mafia", "laundering", "corruption", "war", "proxy", "ukraine", "russia", "china", "iran", "israel", "gaza", "red sea", "houthi", "hamas", "hezbollah", "icc", "icj", "nato", "cyber", "censorship"

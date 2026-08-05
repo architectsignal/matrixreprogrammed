@@ -68,7 +68,7 @@ try {
   write(
     'epstein-files.html',
     '<!doctype html><html><body><main><h1>Epstein Files</h1>'
-    + '<p>An unverified upload alleges 7 victim claims without an attributable source record.</p>'
+    + '<p>An unverified upload alleges 7 claims involving alleged victims without an attributable source record.</p>'
     + '</main></body></html>'
   );
 

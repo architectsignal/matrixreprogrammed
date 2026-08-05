@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-04T19:56:21.622Z
-Live Intel source window: 2026-08-04T19:56:16.205Z
+Generated: 2026-08-05T03:32:06.476Z
+Live Intel source window: 2026-08-05T03:32:01.513Z
 Latest source publication: 2026-08-03T22:56:29.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-14 current Epstein-lane record leads remain inside the active source window.
+15 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -46,12 +46,22 @@ Victims to settle case against Epstein's longtime attorney, accountant: Document
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
 ### Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
-- Published: 2026-08-03T12:00:00.000Z
+- Published: 2026-08-03T14:55:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
 
 Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? The Guardian
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
+### How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
+- Published: 2026-08-03T09:00:00.000Z
+- Source: Google News / Epstein sighting and alive claims
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
+
+How Jeffrey Epstein's Island Became a Nightmare for Influencers Business Insider
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

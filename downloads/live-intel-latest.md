@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-04T19:56:16.205Z
+Collection completed: 2026-08-05T03:32:01.513Z
 Latest source publication: 2026-08-04T12:00:00.000Z
 Collection status: fresh-items-added
-New items this collection: 1
+New items this collection: 6
 
 ## Freshness truth
-1 new source item(s) entered the seven-day window during this collection.
+6 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,11 +26,41 @@ New items this collection: 1
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-08-04 — ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168076
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-04 — Afghanistan hunger crisis intensifies as millions left without food aid
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168069
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Afghanistan hunger crisis intensifies as millions left without food aid
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Africans bear the brunt of biodiversity loss
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168078
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Africans bear the brunt of biodiversity loss
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168077
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — New Ebola vaccine trial launches as outbreak spreads in DR Congo
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168072
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: New Ebola vaccine trial launches as outbreak spreads in DR Congo
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Strait of Hormuz disruption hits energy, fertilizer and industrial trade
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168074
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Strait of Hormuz disruption hits energy, fertilizer and industrial trade
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity - ABC News - Breaking News, Latest News and Videos
   - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQZE5ScWZ6TjZiSXNZbFdxU0toeDFERXVMNndVeDV0Vi0ya2F6Mk05MEpJVFVXMWlpR3ZzeWlCSnFFUlV5VG9laFl4TmJlYkxYTkZvNVh0ajJYdzNESC1iOEFzTWdDY2lqZElIOWdIMTdPOWdRajAtUUt5WWlia3pxbUx5SzBrN1BqaXJNSG9ETzlTRHU1VEQwQXhXNzllTW1ncXBqNTB30gGrAUFVX3lxTE5BQzkxZkhnOWhtR3hvWHltZTd4OGdXd3FQajNMNTFBNnNqRHJ2S0o1dHBWX2ctMmVjV2hISWZxd2NyRF9hWW4ydlp6eHd6QUlOR1EzVHd2azl5dmlUbkstU3F0UjhfUi1hNnlnZHlnR1N0YjRGUDRTQjdwcXNGSFgtbUwtU3JFM1BHcjdVaEhtdDBSQ3AzcHMtZ1B4OEhqRjZ1ZWNfbUUxTy03bw?oc=5
@@ -49,6 +79,12 @@ New items this collection: 1
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Victims to settle case against Epstein's longtime attorney, accountant: Documents - ABC News - Breaking News, Latest News and Videos
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — DR Congo: New centre opens at heart of record Ebola outbreak
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168064
@@ -80,11 +116,11 @@ New items this collection: 1
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Mothers still lack support to breastfeed, UN warns
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
+- 2026-08-03 — How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
+  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-02 — Trapped by a Facebook job advert, freed by a stranger in a taxi
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168058

@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-04T19:56:21.667Z
+Generated: 2026-08-05T03:32:06.524Z
 
 ## Official Boundary
 
@@ -78,3 +78,13 @@ Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking A
 - Likely explanation: Could be AI, edited media, old footage, or caption laundering. Preserve original source chain before sharing.
 
 Victims to settle case against Epstein's longtime attorney, accountant: Documents ABC News - Breaking News, Latest News and Videos
+
+### How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+How Jeffrey Epstein's Island Became a Nightmare for Influencers Business Insider

@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-04T19:56:21.723Z
-Live Intel source window: 2026-08-04T19:56:16.205Z
+Generated: 2026-08-05T03:32:06.581Z
+Live Intel source window: 2026-08-05T03:32:01.513Z
 Tracked cards: 976
-Cards with current matched records: 90
-Cards with no new verified record: 886
+Cards with current matched records: 91
+Cards with no new verified record: 885
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -3141,9 +3141,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## JEFFREY EPSTEIN
 - Route: dossier-jeffrey-epstein-criminal.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-03T09:00:00.000Z
+- 2026-08-03T09:00:00.000Z — How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider — https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
 
 ## Jens Stoltenberg
 - Route: top-52/jens-stoltenberg.html
@@ -5881,22 +5882,25 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-31T12:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-08-04T12:00:00.000Z
+- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 - 2026-07-31T12:00:00.000Z — Wildfire smoke poses hidden health threat — https://news.un.org/feed/view/en/story/2026/07/1168060
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-31T12:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-08-04T12:00:00.000Z
+- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 - 2026-07-31T12:00:00.000Z — Wildfire smoke poses hidden health threat — https://news.un.org/feed/view/en/story/2026/07/1168060
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-31T12:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-08-04T12:00:00.000Z
+- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 - 2026-07-31T12:00:00.000Z — Wildfire smoke poses hidden health threat — https://news.un.org/feed/view/en/story/2026/07/1168060
 
 ## World Resources Institute

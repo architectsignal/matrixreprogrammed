@@ -70,7 +70,7 @@ jobs:
           const source = fs.readFileSync('.github/workflows/authorized-production-dispatch.yml', 'utf8');
           const required = [
             "run.head_sha?.toLowerCase() === expectedHead",
-            "ref: expectedHead",
+            "ref: 'main'",
             "billing_exception: billingException",
             "run.conclusion !== 'failure'",
             "never reuses a run for another SHA"

@@ -1,0 +1,34 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-05T06:30:57.868Z",
+  "changed": [
+    "forum.html"
+  ],
+  "checks": [
+    {
+      "relative": "forum.html",
+      "noPaidPassWording": true,
+      "noRawForumExportMarker": true,
+      "validPlaceholders": true,
+      "publicReadingPromise": true,
+      "verifiedFreePosting": true
+    },
+    {
+      "relative": "dark-speculation-forum.html",
+      "noPaidPassWording": true,
+      "noRawForumExportMarker": true,
+      "validPlaceholders": true,
+      "publicReadingPromise": true,
+      "verifiedFreePosting": true
+    },
+    {
+      "relative": "epstein-alive-board.html",
+      "noPaidPassWording": true,
+      "noRawForumExportMarker": true,
+      "validPlaceholders": true,
+      "publicReadingPromise": true,
+      "verifiedFreePosting": true
+    }
+  ],
+  "boundary": "Public forum pages expose verified free-member posting and the authoritative D1 board without paid-pass wording, malformed fields or retired local-export filenames."
+}

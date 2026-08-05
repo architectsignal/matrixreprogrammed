@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-08-03T06:55:51.055Z",
+  "generatedAt": "2026-08-05T06:19:55.375Z",
   "pageCount": 132,
   "output": "downloads/production-deploy-guard-report.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Production Deploy Guard",
-    "contentHash": "916f503a4c1c09cb87fb0e82f5b6ab4000f0fc1074fbfe26a412bfec546f0796",
+    "contentHash": "eb295d437c4364c129646906005b602a5af6df0c74f4e882f88a2c8b703ddd9a",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
+      "network-defence",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
@@ -41,7 +42,7 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "network-defence",
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -116,6 +117,7 @@
       "ASC-REVIEW-5F86F35C103C9621",
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-98888270E5A6D011",
+      "ASC-REVIEW-9D11F4BC82BF8C95",
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
@@ -144,9 +146,7 @@
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
       "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-AD7847E11513D899",
-      "ASC-REVIEW-C2C7140B7B6F51FF"
+      "ASC-REVIEW-B3BA7D663A9BE4B2"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 138,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 138,
-      "moneyRecordCount": 137
+      "relationshipCount": 137,
+      "moneyRecordCount": 135
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 138 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Health And Development Philanthropy: ecosystem hint; Bill Gates → Microsoft Legacy: ecosystem hint; European Commission → migration: institution layer; Knights Templar Legacy Claims → Banking History: overlap hint; Knights Templar Legacy Claims → Church State Power: overlap hint; Knights Templar Legacy Claims → Crusades: overlap hint; Knights Templar Legacy Claims → Freemasonry Ritual Echoes: overlap hint",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "10. Device, Network & Incident Defence; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Health And Development Philanthropy: ecosystem hint; Bill Gates → Microsoft Legacy: ecosystem hint; European Commission → migration: institution layer; Knights Templar Legacy Claims → Banking History: overlap hint; Knights Templar Legacy Claims → Church State Power: overlap hint; Knights Templar Legacy Claims → Crusades: overlap hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 138 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "10. Device, Network & Incident Defence",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Bill Gates → Health And Development Philanthropy: ecosystem hint",
           "Bill Gates → Microsoft Legacy: ecosystem hint",
           "European Commission → migration: institution layer",
           "Knights Templar Legacy Claims → Banking History: overlap hint",
           "Knights Templar Legacy Claims → Church State Power: overlap hint",
-          "Knights Templar Legacy Claims → Crusades: overlap hint",
-          "Knights Templar Legacy Claims → Freemasonry Ritual Echoes: overlap hint"
+          "Knights Templar Legacy Claims → Crusades: overlap hint"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-03T06:55:51.055Z"
+    "intelligenceFreshnessDate": "2026-08-05T06:19:55.375Z"
   }
 }

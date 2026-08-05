@@ -1,27 +1,16 @@
 # Site Brain Router
 
-Updated: 2026-08-03T07:02:20.951Z
+Updated: 2026-08-05T06:26:53.138Z
 
-Inputs: 3183
+Inputs: 3215
 
-Routed sources: 3183
+Routed sources: 3215
 
 Conclusions: 14
 
-Missing-record queue: 3183
+Missing-record queue: 3215
 
 ## Conclusions
-### People dossier
-Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
 ### Institution dossier
 Conclusion: 5 source route(s) currently point to Institution dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
@@ -44,10 +33,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Jurisdictions of Power dossier
-Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
+### Financial/currency route
+Conclusion: 5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -99,17 +88,6 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Secret Societies dossier
-Conclusion: 5 source route(s) currently point to Secret Societies dossier. Treat this as an update-priority cluster, not proof of a final claim.
-
-Why it matters: Secret Societies dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
-
-Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
-
-Confidence: watch
-
-Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
-
 ### Controlled Opposition / media route
 Conclusion: 5 source route(s) currently point to Controlled Opposition / media route. Treat this as an update-priority cluster, not proof of a final claim.
 
@@ -121,10 +99,10 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
-### Financial/currency route
-Conclusion: 5 source route(s) currently point to Financial/currency route. Treat this as an update-priority cluster, not proof of a final claim.
+### People dossier
+Conclusion: 5 source route(s) currently point to People dossier. Treat this as an update-priority cluster, not proof of a final claim.
 
-Why it matters: Financial/currency route is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+Why it matters: People dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 
@@ -154,10 +132,32 @@ Confidence: watch
 
 Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
 
+### Secret Societies dossier
+Conclusion: 5 source route(s) currently point to Secret Societies dossier. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Secret Societies dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
 ### Power Families / Black Nobility
 Conclusion: 5 source route(s) currently point to Power Families / Black Nobility. Treat this as an update-priority cluster, not proof of a final claim.
 
 Why it matters: Power Families / Black Nobility is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
+
+Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
+
+Confidence: watch
+
+Next action: Route reviewed sources into the specific dossier, clock, brief and source ledger; downgrade or remove any claim unsupported by primary records.
+
+### Jurisdictions of Power dossier
+Conclusion: 5 source route(s) currently point to Jurisdictions of Power dossier. Treat this as an update-priority cluster, not proof of a final claim.
+
+Why it matters: Jurisdictions of Power dossier is part of the Matrix Reprogrammed mission map and should connect records to cards, clocks, briefs and missing-record queues.
 
 Boundary: This conclusion is generated from source routing metadata. It shows where to investigate, not what has been proven beyond the source material.
 

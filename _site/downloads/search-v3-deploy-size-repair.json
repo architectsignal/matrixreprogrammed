@@ -1,19 +1,19 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T07:04:13.184Z",
+  "generatedAt": "2026-08-05T06:28:55.060Z",
   "changed": false,
   "owner": "patch-search-v3-compaction-headroom.js profiles plus this compatibility guard",
   "finalProfile": {
     "id": "deployment-safe",
-    "title": 84,
+    "title": 67,
     "description": 0,
     "listItems": 3,
-    "listChars": 18,
-    "scalar": 30,
-    "sourceUrl": 100,
+    "listChars": 16,
+    "scalar": 24,
+    "sourceUrl": 80,
     "sparseDefaults": true,
     "mergeTerms": true,
-    "termItems": 4
+    "termItems": 3
   },
   "strategy": "Preserve every searchable internal URL, consolidate duplicate routes, remove repeated default metadata, keep one browser date and retain bounded direct sources for primary or high-authority records.",
   "boundary": "Complete source URLs and unabridged metadata remain available on linked result pages, registries, the evidence network and document library."

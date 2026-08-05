@@ -1,7 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T21:21:59.781Z",
-  "changed": [],
+  "generatedAt": "2026-08-03T11:03:57.320Z",
+  "changed": [
+    "dark-speculation-forum.html"
+  ],
   "boards": [
     "main",
     "speculation",
@@ -9,6 +11,6 @@
   ],
   "postingAccess": "verified free member session",
   "obsoletePaidSignalPassRemoved": true,
-  "versionedForumClient": "20260720-forum-member-posting-v3",
+  "versionedForumClient": "20260803-forum-resilient-fetch-v4",
   "boundary": "All three public boards use the same passwordless verified-member session and Cloudflare D1 persistence contract."
 }

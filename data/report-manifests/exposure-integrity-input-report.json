@@ -1,18 +1,12 @@
 {
-  "generatedAt": "2026-08-03T06:50:56.406Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-05T06:14:30.519Z",
+  "pageCount": 134,
   "output": "downloads/exposure-integrity-input-report.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Exposure Integrity Input Report",
-    "contentHash": "001e20f7eae69fb8bea19a6ad253d5c1d9b9817b4181eed69230f46991912dc7",
+    "contentHash": "f184349ef4234afd920c73008d2b27db0e38b538990e56a174caed1d8287727c",
     "sourceIds": [
-      "ASC-REVIEW-B9D6F588FF54AD31",
-      "ASC-REVIEW-03A8457B74049A13",
-      "ASC-REVIEW-AD4A5A51C1AD5BFD",
-      "ASC-REVIEW-B7720C9C5A09A4B4",
-      "ASC-REVIEW-7C6630BA6B2598AA",
-      "ASC-REVIEW-0BDE78366651B0AB",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -26,10 +20,6 @@
       "ASC-REVIEW-FE9A5B02284E30E4",
       "ASC-REVIEW-21E454816F050A34",
       "9086b5de8aac89f84189be72",
-      "e083e748ec6311742c2416e5",
-      "ASC-REVIEW-5EA0FB3A48583D82",
-      "ASC-REVIEW-32D4420F5F198DA2",
-      "ASC-REVIEW-2F0D540A3C8B64CE",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -68,10 +58,10 @@
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-B59332D029E64DD4",
+      "ASC-REVIEW-70CF6D90A6CB7871",
       "ASC-REVIEW-398C265AD47ACC74",
-      "ASC-REVIEW-DAB5BBAD900386F9",
-      "ASC-REVIEW-85B553D0178BFBA1",
-      "ASC-REVIEW-2B2EECE9A18DFF2C",
+      "ASC-REVIEW-677320A9C058E658",
+      "ASC-REVIEW-E14F8DDD0D2D554A",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -93,6 +83,7 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-E56C50DA1B850591",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
@@ -112,6 +103,8 @@
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-14DA4C1F787B63ED",
       "ASC-REVIEW-98888270E5A6D011",
+      "ASC-REVIEW-9D11F4BC82BF8C95",
+      "ASC-REVIEW-8E3624D7001AD018",
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
@@ -146,16 +139,23 @@
       "ASC-REVIEW-2750F333FF6B37B3",
       "ASC-REVIEW-B6BEE1135257F502",
       "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF"
+      "ASC-REVIEW-68286C2A2CB861AF",
+      "ASC-REVIEW-2527E3DEA85AE958",
+      "ASC-REVIEW-AF658BEE2D866332",
+      "ASC-REVIEW-1C806B2577C4D44C",
+      "ASC-REVIEW-A04C87BD046475D3",
+      "ASC-REVIEW-3A6BF3064A28E236",
+      "ASC-REVIEW-9455E984D4DBC196",
+      "ASC-REVIEW-3B7DCAEF5ABCE701"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 138,
-      "newEntityCount": 2,
+      "disputedClaimCount": 139,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 131,
-      "moneyRecordCount": 122
+      "relationshipCount": 130,
+      "moneyRecordCount": 128
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Daily Intelligence Hit List",
+        "conclusion": "The most defensible current assessment is based on “Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Speculatively, the graph hint in “Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer — blackwater-constellis-lineage.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 131 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Italy: Ten convicted in €100 million VAT fraud case involving plastics trade; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
+        "inference": "The indexed set contains 130 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 131 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 130 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
-          "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
-          "Booz Allen Hamilton → Ai Data: execution layer"
+          "Booz Allen Hamilton → Ai Data: execution layer",
+          "Booz Allen Hamilton → Consulting: execution layer",
+          "Booz Allen Hamilton → Intelligence: execution layer",
+          "Booz Allen Hamilton → Public Money: execution layer",
+          "CACI International → Defense Technology: execution layer",
+          "CACI International → Intelligence: execution layer",
+          "CACI International → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-05T06:14:30.519Z"
   }
 }

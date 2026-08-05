@@ -1,14 +1,24 @@
 {
-  "updated": "2026-08-03T06:45:17.947Z",
+  "updated": "2026-08-05T06:08:13.497Z",
   "title": "Brief Quality Report",
   "boundary": "Quality scores prioritize source strength, relationship depth, missing-record pressure and reader clarity.",
   "briefs": [
     {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "score": 100,
+      "level": "elite priority",
+      "source_strength": 50,
+      "relationship_depth": 80,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "centers-for-medicare-and-medicaid-services",
       "name": "Centers for Medicare & Medicaid Services",
-      "score": 73,
-      "level": "high priority",
-      "source_strength": 50,
+      "score": 91,
+      "level": "elite priority",
+      "source_strength": 75,
       "relationship_depth": 20,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
@@ -16,10 +26,170 @@
     {
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",
-      "score": 73,
-      "level": "high priority",
-      "source_strength": 50,
+      "score": 91,
+      "level": "elite priority",
+      "source_strength": 75,
       "relationship_depth": 20,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "2021-08825",
+      "name": "2021-08825",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "2024-13374",
+      "name": "2024-13374",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "23-wap-2023",
+      "name": "23 WAP 2023",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "24-2251",
+      "name": "24-2251",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "24-7261",
+      "name": "24-7261",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "california-supreme-court",
+      "name": "California Supreme Court",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "civil-rights-corps-v-lasalle",
+      "name": "Civil Rights Corps v. LaSalle",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "court-of-appeals-for-the-ninth-circuit",
+      "name": "Court of Appeals for the Ninth Circuit",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "court-of-appeals-for-the-second-circuit",
+      "name": "Court of Appeals for the Second Circuit",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "d-and-a-grandview-llc-v-60-davidson-llc",
+      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "gilead-tenofovir-cases",
+      "name": "Gilead Tenofovir Cases",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "punxsutawney-hunting-club-v-pgc",
+      "name": "Punxsutawney Hunting Club v. PGC",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "s283862",
+      "name": "S283862",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "supreme-court-of-pennsylvania",
+      "name": "Supreme Court of Pennsylvania",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "united-states-v-anten",
+      "name": "United States v. Anten",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "williams-v-biggs",
+      "name": "Williams v. Biggs",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
     },
@@ -150,16 +320,6 @@
       "level": "active watch",
       "source_strength": 25,
       "relationship_depth": 20,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "nuclear-regulatory-commission",
-      "name": "Nuclear Regulatory Commission",
-      "score": 43,
-      "level": "active watch",
-      "source_strength": 25,
-      "relationship_depth": 0,
       "missing_record_pressure": 14,
       "reader_friendliness": 85
     },

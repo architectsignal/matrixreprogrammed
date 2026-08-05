@@ -1,18 +1,16 @@
 {
-  "generatedAt": "2026-08-03T06:55:05.586Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-05T06:19:07.684Z",
+  "pageCount": 133,
   "output": "downloads/phase7-paypal-sandbox-rehearsal-test.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "PayPal sandbox rehearsal",
-    "contentHash": "f1e6b230fce848e3372b42f4241a47af56cc3c7b8b3c8b0dee7d3127c156b98e",
+    "contentHash": "23dfab15b5b0df087f529ab51697aec444877d4eba0f7acbfaadf249e721e01c",
     "sourceIds": [
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
-      "ASC-REVIEW-64E0D2BCFC6FF23D",
-      "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
@@ -22,14 +20,6 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
       "26b90533dbf7d2ed42f02de6",
-      "ASC-REVIEW-5EA0FB3A48583D82",
-      "ASC-REVIEW-B9D6F588FF54AD31",
-      "ASC-REVIEW-03A8457B74049A13",
-      "ASC-REVIEW-AD4A5A51C1AD5BFD",
-      "ASC-REVIEW-B7720C9C5A09A4B4",
-      "ASC-REVIEW-7C6630BA6B2598AA",
-      "ASC-REVIEW-0BDE78366651B0AB",
-      "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -146,7 +136,17 @@
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F"
+      "ASC-REVIEW-8EBEC47E70E33B9F",
+      "ASC-REVIEW-4FDBCEA6F4D74FFD",
+      "ASC-REVIEW-CD1B68F215696D25",
+      "ASC-REVIEW-B3BA7D663A9BE4B2",
+      "ASC-REVIEW-AD7847E11513D899",
+      "ASC-REVIEW-C2C7140B7B6F51FF",
+      "ASC-REVIEW-2750F333FF6B37B3",
+      "ASC-REVIEW-B6BEE1135257F502",
+      "ASC-REVIEW-5F9BB287023DE81E",
+      "ASC-REVIEW-68286C2A2CB861AF",
+      "ASC-REVIEW-2527E3DEA85AE958"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -155,7 +155,7 @@
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 132,
-      "moneyRecordCount": 115
+      "moneyRecordCount": 124
     },
     "evidenceBasedConclusions": [
       {
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 132 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
+        "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -200,10 +200,10 @@
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",
           "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
-          "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
-          "INDUSTRIAL BANK — District of Columbia Courts",
           "MINDCUBED LLC — District of Columbia Courts",
-          "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission"
+          "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
+          "ROGUE VALLEY H2O LLC — Department of Agriculture",
+          "SMITHS DETECTION INC. — Court Services and Offender Supervision Agency"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-03T06:55:05.586Z"
+    "intelligenceFreshnessDate": "2026-08-05T06:19:07.684Z"
   }
 }

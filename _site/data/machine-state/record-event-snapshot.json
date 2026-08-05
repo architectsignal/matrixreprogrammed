@@ -1,8 +1,21 @@
 {
-  "updated": "2026-08-03T06:45:17.774Z",
+  "updated": "2026-08-05T06:08:13.314Z",
   "records": [
     {
-      "key": "federal-register-policy-2026-14679-1",
+      "key": "federal-register-policy-2026-15833-1",
+      "hash": "eee50b6194bab7cc",
+      "summary": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
+      "source_lane": "federal-register-policy",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+      "date": "2026-08-04",
+      "names": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ]
+    },
+    {
+      "key": "federal-register-policy-2026-14679-2",
       "hash": "85c7ab5a5e58ef57",
       "summary": "Electronic Delivery of Information Under the Federal Securities Laws",
       "source_lane": "federal-register-policy",
@@ -14,7 +27,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-14439-2",
+      "key": "federal-register-policy-2026-14439-3",
       "hash": "e56f0fe8a67af816",
       "summary": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
       "source_lane": "federal-register-policy",
@@ -26,7 +39,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-13656-3",
+      "key": "federal-register-policy-2026-13656-4",
       "hash": "6a9c71ad3895251d",
       "summary": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
       "source_lane": "federal-register-policy",
@@ -39,7 +52,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-13602-4",
+      "key": "federal-register-policy-2026-13602-5",
       "hash": "a821d1e6bac4383f",
       "summary": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
       "source_lane": "federal-register-policy",
@@ -52,7 +65,7 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-13057-5",
+      "key": "federal-register-policy-2026-13057-6",
       "hash": "cef328f0f25acf82",
       "summary": "Alien Registration Form and Evidence of Registration",
       "source_lane": "federal-register-policy",
@@ -64,51 +77,39 @@
       ]
     },
     {
-      "key": "federal-register-policy-2026-12989-6",
-      "hash": "3ca943a16dfd1f22",
-      "summary": "Modernizing Security Requirements",
-      "source_lane": "federal-register-policy",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.federalregister.gov/documents/2026/06/26/2026-12989/modernizing-security-requirements",
-      "date": "2026-06-26",
-      "names": [
-        "Nuclear Regulatory Commission"
-      ]
-    },
-    {
-      "key": "sec-edgar-filings-cik0000320193-1",
-      "hash": "1652fd5eaa86d7d5",
-      "summary": "Apple Inc. (AAPL)",
-      "source_lane": "sec-edgar-filings",
-      "evidence_grade": "documented association",
-      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-03",
-      "names": [
-        "Apple Inc.",
-        "AAPL"
-      ]
-    },
-    {
-      "key": "sec-edgar-filings-cik0001045810-2",
-      "hash": "f4a23a0a863bebd6",
+      "key": "sec-edgar-filings-cik0001045810-1",
+      "hash": "f927d66d3946c1ba",
       "summary": "NVIDIA CORP (NVDA)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-03",
+      "date": "2026-08-05",
       "names": [
         "NVIDIA CORP",
         "NVDA"
       ]
     },
     {
+      "key": "sec-edgar-filings-cik0000320193-2",
+      "hash": "17cbe7e13bc73ec3",
+      "summary": "Apple Inc. (AAPL)",
+      "source_lane": "sec-edgar-filings",
+      "evidence_grade": "documented association",
+      "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+      "date": "2026-08-05",
+      "names": [
+        "Apple Inc.",
+        "AAPL"
+      ]
+    },
+    {
       "key": "sec-edgar-filings-cik0001652044-3",
-      "hash": "f591c8821bfe12e2",
+      "hash": "57dd6dbcfcb4bc0a",
       "summary": "Alphabet Inc. (GOOGL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-03",
+      "date": "2026-08-05",
       "names": [
         "Alphabet Inc.",
         "GOOGL"
@@ -116,12 +117,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000789019-4",
-      "hash": "99e3c6861560d950",
+      "hash": "682d6970827fe6be",
       "summary": "MICROSOFT CORP (MSFT)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-03",
+      "date": "2026-08-05",
       "names": [
         "MICROSOFT CORP",
         "MSFT"
@@ -129,12 +130,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001018724-5",
-      "hash": "e56ce0dafb3b302d",
+      "hash": "d13054986d7bf840",
       "summary": "AMAZON COM INC (AMZN)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-03",
+      "date": "2026-08-05",
       "names": [
         "AMAZON COM INC",
         "AMZN"
@@ -142,15 +143,99 @@
     },
     {
       "key": "sec-edgar-filings-cik0001730168-6",
-      "hash": "6bab6e790f427e9d",
+      "hash": "f77783c095112346",
       "summary": "Broadcom Inc. (AVGO)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-03",
+      "date": "2026-08-05",
       "names": [
         "Broadcom Inc.",
         "AVGO"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10938615-1",
+      "hash": "aa3122aba427467b",
+      "summary": "Gilead Tenofovir Cases",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+      "date": "2026-08-03",
+      "names": [
+        "Gilead Tenofovir Cases",
+        "California Supreme Court",
+        "S283862"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936935-2",
+      "hash": "b742dac477765570",
+      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+      "date": "2026-07-29",
+      "names": [
+        "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-13374"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936889-3",
+      "hash": "ac792fbc60ee4406",
+      "summary": "Williams v. Biggs",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+      "date": "2026-07-29",
+      "names": [
+        "Williams v. Biggs",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-08825"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936118-4",
+      "hash": "444a161f0f618fcb",
+      "summary": "Civil Rights Corps v. LaSalle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+      "date": "2026-07-29",
+      "names": [
+        "Civil Rights Corps v. LaSalle",
+        "Court of Appeals for the Second Circuit",
+        "24-2251"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10935302-5",
+      "hash": "19b5109d3f39cd51",
+      "summary": "United States v. Anten",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+      "date": "2026-07-27",
+      "names": [
+        "United States v. Anten",
+        "Court of Appeals for the Ninth Circuit",
+        "24-7261"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10933234-6",
+      "hash": "93db7550ff8da9da",
+      "summary": "Punxsutawney Hunting Club v. PGC",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
+      "date": "2026-07-21",
+      "names": [
+        "Punxsutawney Hunting Club v. PGC",
+        "Supreme Court of Pennsylvania",
+        "23 WAP 2023"
       ]
     }
   ]

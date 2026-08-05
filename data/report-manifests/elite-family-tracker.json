@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-03T06:49:29.747Z",
+  "generatedAt": "2026-08-05T06:12:55.425Z",
   "pageCount": 101,
   "output": "downloads/elite-family-tracker.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Elite Family Tracker",
-    "contentHash": "58c201bfb7ceea1acff78547359e12430435ae1368b80a1ccb43b4393fdefbd1",
+    "contentHash": "6b980360ccfbb37502e75aed16eae737bf25fea00f49baf55d6a94ed933b3a71",
     "sourceIds": [
       "9086b5de8aac89f84189be72",
-      "e083e748ec6311742c2416e5",
+      "c90bf38664c0409003c1069a",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
@@ -18,6 +18,7 @@
       "7c05d9244c4620950350cf27",
       "53245eb712fc0413483084ad",
       "9f27e4d750de830ccb16df4b",
+      "ca5f30bd425897b0a2d24282",
       "c8803902a0ab06e78b2a16fa",
       "orsini-family",
       "76a719654ec3312153163154",
@@ -34,6 +35,7 @@
       "4961972398d896435d33f3f7",
       "594100b62a47db521fe2a128",
       "71e0563ca7b139c37c302956",
+      "e72d22f4f28eb53e3173d0a6",
       "34805734b1ad3b73f0ede0d8",
       "erik-prince",
       "gautam-adani",
@@ -45,7 +47,6 @@
       "a76edf5945d2f4910bd413ef",
       "18930d440aed009547436b81",
       "65debd126cdfa5f7547a3eca",
-      "e72d22f4f28eb53e3173d0a6",
       "3c9c23f7f9a1cec81ef90f59",
       "klaus-schwab",
       "jamie-dimon",
@@ -59,8 +60,8 @@
       "jane-fraser",
       "miriam-adelson",
       "mackenzie-scott",
-      "df05ffb58eba98170947c704",
-      "178ddce9da2a47a4b67a0394",
+      "52da7fea618d4b59e2918320",
+      "6b368b0610cf8ccaa0fecd94",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "3a8c1f1e8620cb3f09a2c7ab",
@@ -133,7 +134,8 @@
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
       "f59da50ababa3ddae79a8f1c",
-      "7198c204fd0f39a8d6faf5b4",
+      "87f4b2c1cfdb7a8ab91a0909",
+      "9ff3f69fbb488abdddaea4d0",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-C369A84AD971DD75",
@@ -144,31 +146,29 @@
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-52F3C5EC8401656D",
-      "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-B5FCD410F732DBED"
+      "ASC-REVIEW-52F3C5EC8401656D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 39,
+      "primarySourceCount": 8,
+      "disputedClaimCount": 37,
       "newEntityCount": 8,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 51,
-      "moneyRecordCount": 54
+      "relationshipCount": 50,
+      "moneyRecordCount": 53
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Elite Family Tracker.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Amended Order Granting in Part and Denying in Part Remedies and Entry of Final Judgment,” the strongest indexed record by source grade and evidence status.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux,” the strongest indexed record by source grade and evidence status.",
         "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 51 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Wallenberg family and foundations; Wallenberg family and foundations; Wallenberg family and foundations; Orsini family; Elite Power Theory",
+        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Wallenberg family and foundations; Wallenberg family and foundations; Wallenberg family and foundations; Wallenberg family and foundations; Orsini family",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 51 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -202,8 +202,8 @@
           "Wallenberg family and foundations",
           "Wallenberg family and foundations",
           "Wallenberg family and foundations",
-          "Orsini family",
-          "Elite Power Theory"
+          "Wallenberg family and foundations",
+          "Orsini family"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
+    "intelligenceFreshnessDate": "2026-08-04T07:58:13.254Z"
   }
 }

@@ -1,10 +1,10 @@
 # Matrix Reprogrammed Daily Drop
 
-Updated: 2026-08-03T06:45:26.758Z
+Updated: 2026-08-05T06:08:22.792Z
 
 ## Status
 
-- Live Intel items: 51
+- Live Intel items: 58
 - Epstein items: 8
 - Epstein source lanes: 7
 - People/entities tracked: 12
@@ -12,59 +12,59 @@ Updated: 2026-08-03T06:45:26.758Z
 
 ## Latest Items
 
-- 2026-08-02 — Trapped by a Facebook job advert, freed by a stranger in a taxi
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168058
+- 2026-08-04 — ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168076
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-08-01 — Recovery in Ukraine, one life at a time
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168053
+- 2026-08-04 — Afghanistan hunger crisis intensifies as millions left without food aid
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168069
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-31 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org
-  - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
-  - Evidence: Primary or official public-record lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-31 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168062
+- 2026-08-04 — Africans bear the brunt of biodiversity loss
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168078
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-31 — Strong El Niño ahead, UN weather agency warns
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168059
+- 2026-08-04 — Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168077
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-31 — Wildfire smoke poses hidden health threat
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168060
+- 2026-08-04 — New Ebola vaccine trial launches as outbreak spreads in DR Congo
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168072
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-31 — Christopher Wray's Gift to Attorney General Garland
-  - Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland
+- 2026-08-04 — Strait of Hormuz disruption hits energy, fertilizer and industrial trade
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168074
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- 2026-08-04 — Anomalous Health Incidents
+  - Source: https://vault.fbi.gov/anomalous-health-incidents
   - Evidence: Primary or official public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- 2026-07-31 — Christopher Wray's Gift to Attorney General Garland (Final)
-  - Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland/christopher-wrays-gift-to-attorney-general-garland-final/view
+- 2026-08-04 — Anomalous Health Incidents Part 01
+  - Source: https://vault.fbi.gov/anomalous-health-incidents/anomalous-health-incidents-part-01/view
   - Evidence: Primary or official public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
-  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
+- 2026-08-04 — Anomalous Health Incidents Part 02
+  - Source: https://vault.fbi.gov/anomalous-health-incidents/anomalous-health-incidents-part-02/view
+  - Evidence: Primary or official public-record lead
+  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- 2026-08-04 — Thomas Ciancutti Part 03
+  - Source: https://vault.fbi.gov/thomas-ciancutti/thomas-ciancutti-part-03/view
+  - Evidence: Primary or official public-record lead
+  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- 2026-08-03 — Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQZE5ScWZ6TjZiSXNZbFdxU0toeDFERXVMNndVeDV0Vi0ya2F6Mk05MEpJVFVXMWlpR3ZzeWlCSnFFUlV5VG9laFl4TmJlYkxYTkZvNVh0ajJYdzNESC1iOEFzTWdDY2lqZElIOWdIMTdPOWdRajAtUUt5WWlia3pxbUx5SzBrN1BqaXJNSG9ETzlTRHU1VEQwQXhXNzllTW1ncXBqNTB30gGrAUFVX3lxTE5BQzkxZkhnOWhtR3hvWHltZTd4OGdXd3FQajNMNTFBNnNqRHJ2S0o1dHBWX2ctMmVjV2hISWZxd2NyRF9hWW4ydlp6eHd6QUlOR1EzVHd2azl5dmlUbkstU3F0UjhfUi1hNnlnZHlnR1N0YjRGUDRTQjdwcXNGSFgtbUwtU3JFM1BHcjdVaEhtdDBSQ3AzcHMtZ1B4OEhqRjZ1ZWNfbUUxTy03bw?oc=5
   - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
-  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
+- 2026-08-03 — Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxPU0sxVk0xV3dnbkJmZXMtWWJ6WFMxemhZdHpoOWdCSnMyNnhpMjk0S0JlVGtOT2otMVd1MkpPSzM3VG8zdHkteHhiNGI4MFh1YmZSRmRYTXNFWWJRUVZxN3IzSzV3aHZiZVVEdGdzc1RsRnNJbERLX3JSRzNMRGt6MS1IOHdGVTVOb1ZteHdjd2RrMDM5V0V1V1R6dWtJZkZVa0dZOTBpNmYtSG93d2fSAbMBQVVfeXFMTTJKQVhNallicGJScUl4eXVhcVVObUdPSmI3bkIzc1JaT0FCX1ZFWXZoZzJyZHJsMFpGQmhETnoxSmdvUFRpTW9pam9BVnJVUERoUThEczg3N0tVSjBCMmpLVlFtYy0xUk8wR0REdkRnNUZPTUVJcDR6ZUdnbjRpRVRzR25wYW04Ui1MbmRNTU1nVFpsQnQ1NDY3dHpDVzZHdkllXzJLdjhRYkJhRkpSaXpDek0?oc=5
   - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-30 — Epstein files: How victims remain exposed to identification - DW.com
-  - Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
-  - Evidence: Seven-day public-record lead
+- 2026-08-03 — Victims to settle case against Epstein's longtime attorney, accountant: Documents - ABC News - Breaking News, Latest News and Videos
+  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOZjdfbkxJREl6NDAxNGpDcEwtVTdYcm40akZMd0pJVWVhTzdDcG9iZXRMb0F1S0sxdHNsSU1kY3ZCUzVndU1hNTA2ZzA4emNrREh1dHFhemhZa2M5WmdnbHlWbEtzWVdUZVR1eWVkWGhpVC1oYTRoTlRtNWZMMkJ6WHpWSExyWlRZTEtrZ09ZSG02bTJyM2dpRWQ1WU41dGZzWjlyLW5CWmlWbFkwZ1HSAbMBQVVfeXFMTlpSdUlfYXZtTU5VblB4T2o1MkNoYXNlelNNYmljRndEbEJjaF9oZGx3Wk5Lc2JPVGMwLTVEZm05Z3lEQi1QTnlfNXNySnhBSWRGOThqdE9WTWhPdjAwLVBhRFhWRDVqMldyNi1vRWpMQUpwRTlmR293RnYxbmFtLTBvNm84NnpzX1JOSjQ3STZfRGZuNzlIR0xlMFN2QlB6T1cwUVB0dEs1Ui10Sy12SkZfZzQ?oc=5
+  - Evidence: Primary or official public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- 2026-07-30 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168052
+- 2026-08-03 — Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
+  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
   - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-30 — Fear grows as freedoms shrink in Uganda
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168057
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- 2026-07-30 — Middle East crisis: Humanitarian fallout ‘worsening by the day’
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168055
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.

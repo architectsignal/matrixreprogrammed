@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-08-03T06:59:50.314Z
+Updated: 2026-08-05T06:24:16.113Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -50,6 +50,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Atlas Lane Populations: downloads/atlas-lane-populations.pdf
 - Auto Evidence Pipeline Report: downloads/auto-evidence-pipeline-report.pdf
 - Automatic Orchestrator Final Audit: downloads/automatic-orchestrator-final-audit.pdf
+- Behind The Curtain Production Guard: downloads/behind-the-curtain-production-guard.pdf
 - Big Three Asset Manager Tracker: downloads/big-three-asset-managers.pdf
 - Big Three Search Routes Report: downloads/big-three-search-routes-report.pdf
 - Black File Exposé Engine: downloads/black-file-exposes.pdf

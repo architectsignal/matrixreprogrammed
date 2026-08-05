@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-08-03T07:01:58.774Z
+Generated: 2026-08-05T06:26:34.444Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -17,31 +17,31 @@ Generated: 2026-08-03T07:01:58.774Z
 ## Top items
 - 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/centers-for-medicare-and-medicaid-services.html
 - 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/health-and-human-services-department.html
+- 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
+- 85 — 2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2021-08825.html
+- 85 — 2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2024-13374.html
+- 85 — 23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/23-wap-2023.html
+- 85 — 24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/24-2251.html
+- 85 — 24-7261 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/24-7261.html
+- 85 — California Supreme Court — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/california-supreme-court.html
+- 85 — Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/civil-rights-corps-v-lasalle.html
+- 85 — Court of Appeals for the Ninth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-ninth-circuit.html
+- 85 — Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-second-circuit.html
+- 85 — D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html
+- 85 — Gilead Tenofovir Cases — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/gilead-tenofovir-cases.html
 - 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/homeland-security-department.html
+- 85 — Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/punxsutawney-hunting-club-v-pgc.html
+- 85 — S283862 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/s283862.html
+- 85 — Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-pennsylvania.html
+- 85 — United States v. Anten — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/united-states-v-anten.html
+- 85 — Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/williams-v-biggs.html
 - 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/aapl.html
 - 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/alphabet-inc.html
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 85 — AVGO — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/avgo.html
-- 85 — Broadcom Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/broadcom-inc.html
-- 85 — GOOGL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/googl.html
-- 85 — MICROSOFT CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/microsoft-corp.html
-- 85 — MSFT — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/msft.html
-- 85 — NVDA — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nvda.html
-- 85 — NVIDIA CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nvidia-corp.html
-- 85 — Nuclear Regulatory Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/nuclear-regulatory-commission.html
-- 85 — Securities and Exchange Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/securities-and-exchange-commission.html
-- 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/homeland-security-department.html
-- 85 — Centers for Medicare & Medicaid Services — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/centers-for-medicare-and-medicaid-services.html
-- 85 — Health and Human Services Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/health-and-human-services-department.html
-- 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/aapl.html
-- 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/alphabet-inc.html
-- 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/amazon-com-inc.html
-- 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/amzn.html
-- 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-exposure/apple-inc.html
-- 72 — Trapped by a Facebook job advert, freed by a stranger in a taxi — live-intel.html
-- 72 — Recovery in Ukraine, one life at a time — live-intel.html
-- 72 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org — live-intel.html
-- 72 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’ — live-intel.html
-- 72 — Strong El Niño ahead, UN weather agency warns — live-intel.html
+- 72 — ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war — live-intel.html
+- 72 — Afghanistan hunger crisis intensifies as millions left without food aid — live-intel.html
+- 72 — Africans bear the brunt of biodiversity loss — live-intel.html
+- 72 — Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms — live-intel.html
+- 72 — New Ebola vaccine trial launches as outbreak spreads in DR Congo — live-intel.html

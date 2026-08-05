@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T06:53:52.825Z",
-  "pageCount": 137,
+  "generatedAt": "2026-08-05T06:17:46.704Z",
+  "pageCount": 133,
   "output": "downloads/missing-record-missions-report.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Missing Record Missions Report",
-    "contentHash": "b7076e9610a3f162de7e2308c0ba0e8b14946bce48906db1801258314953883c",
+    "contentHash": "17d71ec6a5f94d1cb7f9505749ed7b484a8ae9362333531b5cdd644fd87af47d",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -17,14 +17,6 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-5EA0FB3A48583D82",
-      "ASC-REVIEW-B9D6F588FF54AD31",
-      "ASC-REVIEW-03A8457B74049A13",
-      "ASC-REVIEW-AD4A5A51C1AD5BFD",
-      "ASC-REVIEW-B7720C9C5A09A4B4",
-      "ASC-REVIEW-7C6630BA6B2598AA",
-      "ASC-REVIEW-0BDE78366651B0AB",
-      "ASC-REVIEW-32D4420F5F198DA2",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -62,7 +54,6 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-DAB5BBAD900386F9",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -146,7 +137,16 @@
       "ASC-REVIEW-954EF610F9B32B24",
       "ASC-REVIEW-CA2354BF2081EB62",
       "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585"
+      "ASC-REVIEW-7527D6692621D585",
+      "ASC-REVIEW-D6340B09DE08EAC5",
+      "ASC-REVIEW-52C3694FF95479F1",
+      "ASC-REVIEW-3EB368ED00ADD23E",
+      "ASC-REVIEW-C47A1B7DA11B68C4",
+      "ASC-REVIEW-C7A00AFA602DD2A9",
+      "ASC-REVIEW-C2A19D091C2D1254",
+      "ASC-REVIEW-FF5E6B71C62F4EBB",
+      "ASC-REVIEW-BC9A7DE25FDF5F78",
+      "ASC-REVIEW-3266CA18BAEC4ACB"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 140,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 139,
-      "moneyRecordCount": 131
+      "relationshipCount": 140,
+      "moneyRecordCount": 140
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 139 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 140 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 139 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 140 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-03T06:53:52.825Z"
+    "intelligenceFreshnessDate": "2026-08-05T06:17:46.704Z"
   }
 }

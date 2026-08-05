@@ -1,26 +1,20 @@
 {
-  "generatedAt": "2026-08-03T06:59:22.375Z",
-  "pageCount": 95,
+  "generatedAt": "2026-08-05T06:23:45.983Z",
+  "pageCount": 94,
   "output": "downloads/tracker-page-completion-report.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Tracker Page Completion Report",
-    "contentHash": "2c33ee7cbd116ce0a7d01ea8d64fe0e9b38f3bd5d1356191455eac7272adc7ee",
+    "contentHash": "4809ff36efc6db090365fea140db953c0fdc7d4b16d0426eec1b2e217020134a",
     "sourceIds": [
       "14d04c0943d24cbe6a1926db",
+      "contractor-blackwater-xe-academi-constellis-lineage",
       "e72d22f4f28eb53e3173d0a6",
       "2a08155834dfe110b47424e6",
       "fda7c458a0606ad4e31f2c55",
       "24a844c3ddb5aecaad25e9bc",
       "57c45b5418e8e6b512f06603",
       "EFS-001-R006",
-      "e083e748ec6311742c2416e5",
-      "5460c0408472ce834da2b82f",
-      "0491ca77f4f2c9b90f832c2e",
-      "aa119272f233de638bb1e02d",
-      "0286171e0bf7415859b35948",
-      "e5f914fb3ce4e13fe16181c4",
-      "255a3ae9592a4cdd47fc9851",
       "b4cb47ea50dc901364239e9f",
       "a14c474ff4f291b0a260ee46",
       "2d4be12850f5299709adc82a",
@@ -40,10 +34,11 @@
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
       "26b90533dbf7d2ed42f02de6",
-      "contractor-blackwater-xe-academi-constellis-lineage",
+      "b0cde383147509fbfd4f4472",
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
+      "missing-records-report",
       "9f77464e401ac59ad1adb812",
       "30ad4c24b86fb43ebd917c6b",
       "05e609f8ccfd225cfc787019",
@@ -146,21 +141,26 @@
       "48af9fa2970ea18e6c6d2f1a",
       "49868f40a51da1e94caf3909",
       "a78f5c8ec206e2294c0fb2a3",
-      "fe4097a90c116091bfcd6b9a"
+      "fe4097a90c116091bfcd6b9a",
+      "753c0fcc9bce996faa0e1fe0",
+      "ad12d0b6d67db8eaa3cdebc3",
+      "a255ce612cc71923d32622bc",
+      "cc04a097f9c7d8a405a594dd",
+      "be9c03a4046991f701cfd984"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 28,
+      "primarySourceCount": 23,
       "disputedClaimCount": 0,
-      "newEntityCount": 8,
+      "newEntityCount": 18,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 90,
+      "relationshipCount": 95,
       "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 28 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 23 A/B-grade public-record items are materially relevant to Tracker Page Completion Report.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); DOJ Epstein Library and 3.5 million-page transparency release (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report",
+        "inference": "The indexed set contains 95 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; CACI International — Contractor Power Report; Booz Allen Hamilton — Contractor Power Report; SAIC / Leidos lineage — Contractor Power Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,13 +194,13 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 95 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report",
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",
           "Official health investigations documented abuse and enabling access",
           "Broadmoor investigation examined Savile's access and abuse",
-          "Blackwater / Xe / Academi / Constellis lineage — Contractor Power Report",
           "CACI International — Contractor Power Report",
           "Booz Allen Hamilton — Contractor Power Report",
           "SAIC / Leidos lineage — Contractor Power Report"
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
   }
 }

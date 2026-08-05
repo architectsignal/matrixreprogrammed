@@ -1,13 +1,13 @@
 {
-  "checkedAt": "2026-08-02T10:16:12.856Z",
-  "ok": false,
-  "status": "failure",
-  "workflowRunId": 30743366740,
+  "checkedAt": "2026-08-04T16:17:48.648Z",
+  "ok": true,
+  "status": "success",
+  "workflowRunId": 30927901433,
   "runAttempt": 1,
-  "headSha": "34a9eaf98cb047d42287e6182362d194f7dbe0ab",
+  "headSha": "097788e4c4cee4624376a3d50e4543151c901d01",
   "reconciliation": {
-    "ok": false,
-    "generatedAt": "2026-08-02T10:16:08.629Z",
+    "ok": true,
+    "generatedAt": "2026-08-04T16:17:42.967Z",
     "actions": [
       {
         "type": "run",
@@ -30,12 +30,12 @@
         "target": "search-index.json",
         "routes": 6,
         "format": "compact",
-        "sizeMiB": 23.36
+        "sizeMiB": 1.11
       },
       {
         "type": "patch",
         "target": "sitemap.xml",
-        "added": 4
+        "added": 0
       },
       {
         "type": "patch",
@@ -92,7 +92,7 @@
           "--output"
         ],
         "status": 0,
-        "stdout": "Public marker scrub complete: 677 HTML file(s) patched across 3467 HTML surfaces; valid public routes preserved.\n",
+        "stdout": "Public residue scrub complete: 96 HTML file(s) patched; 3483 HTML document(s) verified across 3485 candidate route files. Compatibility/internal payloads, retired forum-export references and malformed reader fields are absent from public HTML.\n",
         "stderr": ""
       },
       {
@@ -107,8 +107,8 @@
     "checks": [
       {
         "name": "compact search index remains under 22 MiB",
-        "ok": false,
-        "detail": "23.36 MiB"
+        "ok": true,
+        "detail": "1.11 MiB"
       },
       {
         "name": "nine documented family structures",
@@ -311,11 +311,180 @@
         "detail": ""
       }
     ],
-    "errors": [
-      "compact search index remains under 22 MiB: 23.36 MiB"
-    ]
+    "errors": []
   },
-  "productionGuard": null,
-  "publicGateways": null,
-  "newsletter": null
+  "productionGuard": {
+    "ok": true,
+    "checkedAt": "2026-08-04T16:17:45.074Z",
+    "hardIssues": [],
+    "broadPeopleCount": 80,
+    "pyramidLevels": 12,
+    "chokePoints": 10,
+    "documentedFamilies": 9,
+    "curatedLivingProfiles": 18,
+    "typedFamilyLinks": 18,
+    "professionalGatekeepers": 5,
+    "curatedSources": 20,
+    "historicalAnnexFamilies": 13,
+    "symbolicDossiers": 4
+  },
+  "publicGateways": {
+    "ok": true,
+    "generatedAt": "2026-08-04T16:17:42.942Z",
+    "verified": [
+      "index.html",
+      "start-here.html",
+      "_site/index.html",
+      "_site/index",
+      "_site/start-here.html",
+      "_site/start-here"
+    ],
+    "patched": [
+      "index.html",
+      "start-here.html",
+      "_site/index.html",
+      "_site/index",
+      "_site/start-here.html",
+      "_site/start-here"
+    ],
+    "errors": []
+  },
+  "newsletter": {
+    "ok": true,
+    "generatedAt": "2026-08-04T16:17:42.927Z",
+    "verified": [
+      "newsletter.html",
+      "_site/newsletter.html",
+      "_site/newsletter"
+    ],
+    "patched": [
+      "newsletter.html",
+      "_site/newsletter.html",
+      "_site/newsletter"
+    ],
+    "synchronized": [
+      "entity-briefs/2021-08825.html",
+      "entity-briefs/2024-13374.html",
+      "entity-briefs/2025-0045-appeal.html",
+      "entity-briefs/23-wap-2023.html",
+      "entity-briefs/24-2251.html",
+      "entity-briefs/24-7261.html",
+      "entity-briefs/aapl.html",
+      "entity-briefs/alphabet-inc.html",
+      "entity-briefs/amazon-com-inc.html",
+      "entity-briefs/amzn.html",
+      "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "entity-briefs/apple-inc.html",
+      "entity-briefs/avgo.html",
+      "entity-briefs/broadcom-inc.html",
+      "entity-briefs/california-supreme-court.html",
+      "entity-briefs/centers-for-medicare-and-medicaid-services.html",
+      "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
+      "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "entity-briefs/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "entity-briefs/gilead-tenofovir-cases.html",
+      "entity-briefs/googl.html",
+      "entity-briefs/health-and-human-services-department.html",
+      "entity-briefs/homeland-security-department.html",
+      "entity-briefs/microsoft-corp.html",
+      "entity-briefs/msft.html",
+      "entity-briefs/nuclear-regulatory-commission.html",
+      "entity-briefs/nvda.html",
+      "entity-briefs/nvidia-corp.html",
+      "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "entity-briefs/s283862.html",
+      "entity-briefs/securities-and-exchange-commission.html",
+      "entity-briefs/supreme-court-of-pennsylvania.html",
+      "entity-briefs/supreme-court-of-rhode-island.html",
+      "entity-briefs/united-states-v-anten.html",
+      "entity-briefs/williams-v-biggs.html",
+      "entity-exposure/2021-08825.html",
+      "entity-exposure/2024-13374.html",
+      "entity-exposure/2025-0045-appeal.html",
+      "entity-exposure/23-wap-2023.html",
+      "entity-exposure/24-2251.html",
+      "entity-exposure/24-7261.html",
+      "entity-exposure/aapl.html",
+      "entity-exposure/alphabet-inc.html",
+      "entity-exposure/amazon-com-inc.html",
+      "entity-exposure/amzn.html",
+      "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "entity-exposure/apple-inc.html",
+      "entity-exposure/avgo.html",
+      "entity-exposure/broadcom-inc.html",
+      "entity-exposure/california-supreme-court.html",
+      "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+      "entity-exposure/civil-rights-corps-v-lasalle.html",
+      "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
+      "entity-exposure/court-of-appeals-for-the-second-circuit.html",
+      "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "entity-exposure/galbin-fernandez-in-his-capacity-as-the-administrator-of-the-estate-of-eva-pena-v-rhode-is.html",
+      "entity-exposure/gilead-tenofovir-cases.html",
+      "entity-exposure/googl.html",
+      "entity-exposure/health-and-human-services-department.html",
+      "entity-exposure/homeland-security-department.html",
+      "entity-exposure/microsoft-corp.html",
+      "entity-exposure/msft.html",
+      "entity-exposure/nuclear-regulatory-commission.html",
+      "entity-exposure/nvda.html",
+      "entity-exposure/nvidia-corp.html",
+      "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
+      "entity-exposure/s283862.html",
+      "entity-exposure/securities-and-exchange-commission.html",
+      "entity-exposure/supreme-court-of-pennsylvania.html",
+      "entity-exposure/supreme-court-of-rhode-island.html",
+      "entity-exposure/united-states-v-anten.html",
+      "entity-exposure/williams-v-biggs.html",
+      "follow-the-money/making-money.html",
+      "reports/billionaire-bernard-arnault.html",
+      "reports/billionaire-bill-gates.html",
+      "reports/billionaire-elon-musk.html",
+      "reports/billionaire-jeff-bezos.html",
+      "reports/billionaire-jensen-huang.html",
+      "reports/billionaire-larry-ellison.html",
+      "reports/billionaire-mark-zuckerberg.html",
+      "reports/billionaire-michael-bloomberg.html",
+      "reports/billionaire-peter-thiel.html",
+      "reports/billionaire-warren-buffett.html",
+      "reports/contractor-blackwater-xe-academi-constellis-lineage.html",
+      "reports/contractor-booz-allen-hamilton.html",
+      "reports/contractor-caci-international.html",
+      "reports/contractor-dyncorp-amentum-lineage.html",
+      "reports/contractor-g4s-allied-universal-security-lineage.html",
+      "reports/contractor-palantir-government-platforms.html",
+      "reports/contractor-saic-leidos-lineage.html",
+      "reports/contradiction-watch-report.html",
+      "reports/daily-revelation-report.html",
+      "reports/entity-aapl.html",
+      "reports/entity-alphabet-inc.html",
+      "reports/entity-amazon-com-inc.html",
+      "reports/entity-amzn.html",
+      "reports/entity-apple-inc.html",
+      "reports/entity-avgo.html",
+      "reports/entity-broadcom-inc.html",
+      "reports/entity-centers-for-medicare-and-medicaid-services.html",
+      "reports/entity-health-and-human-services-department.html",
+      "reports/entity-homeland-security-department.html",
+      "reports/institution-european-commission.html",
+      "reports/institution-federal-reserve.html",
+      "reports/institution-international-monetary-fund.html",
+      "reports/institution-nato.html",
+      "reports/institution-united-nations.html",
+      "reports/institution-world-bank.html",
+      "reports/institution-world-economic-forum.html",
+      "reports/institution-world-health-organization.html",
+      "reports/missing-records-report.html",
+      "reports/subject-ai-surveillance-and-data-systems.html",
+      "reports/subject-banking-and-payment-rails.html",
+      "reports/subject-digital-id-and-access-systems.html",
+      "reports/subject-disclosure-gaps-and-missing-files.html",
+      "reports/subject-foundation-and-ngo-policy-influence.html",
+      "reports/subject-gold-reserve-and-custody-systems.html",
+      "reports/subject-health-data-and-emergency-systems.html",
+      "reports/subject-private-contractor-power.html"
+    ],
+    "errors": []
+  }
 }

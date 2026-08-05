@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-08-05T03:31:54.795Z",
+  "updated": "2026-08-05T06:30:57.581Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 47213,
+    "recordsInspected": 47216,
     "criticalClocks": [
       {
         "slug": "childrens-digital-identity-age-gating",
@@ -483,7 +483,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-08-03T07:06:00.659Z",
+        "generatedAt": "2026-08-05T06:30:50.458Z",
         "previousAutomaticScore": 93,
         "automaticScoreMovement": 0,
         "automaticUpdateReason": "Evidence change: 11 fresh records, 9 primary/official, 7 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -637,7 +637,7 @@
         "scoreMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
         "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
         "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-        "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+        "calculationBasis": "3 curated current drops, 6 linked policy lanes, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
         "plainEnglishConclusion": "Digital ID, AI governance, platform transparency, payment identity, public/private security integration and health-emergency governance remain active. July 2026 refresh adds AI Act implementation, EUDI wallet rollout/oversharing risk, WHO Pandemic Agreement/PABS implementation, and digital euro legislation/readiness signals. Policy convergence tracker lanes: Agenda 2030 / Global Standards / Policy Harmonisation · Digital ID / Biometrics / Identity Wallets · War / Security / Emergency Powers · Speech / Platforms / Search / Payment Access · Health Governance / Biosecurity / Emergency Health Powers · Migration / Borders / Biometric Travel.",
         "readerQuestion": "Are national policies being aligned through global standards without clear democratic oversight?",
         "missionThemes": [
@@ -780,6 +780,14 @@
             "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
           },
           {
+            "title": "Every EU Member State must make at least one European Digital Identity Wallet available by the end of 2026",
+            "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+            "sourceRoute": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+            "published": "2026-06-26T00:00:00.000Z",
+            "evidenceLevel": "Official EU implementation page · statutory rollout",
+            "claimBoundary": "This clock is an evidence-linked research pressure indicator. It does not prove hidden intent, inevitability, a coordinated agenda, criminal conduct or guilt. Its score may move only when dated evidence changes the exact variable measured."
+          },
+          {
             "title": "WHO Pandemic Agreement remains adopted but not fully open for ratification until PABS annex is negotiated",
             "route": "control-system-tracker.html#health-and-biosecurity",
             "sourceRoute": "control-system-tracker.html#health-and-biosecurity",
@@ -875,14 +883,8 @@
           },
           {
             "title": "Linked evidence record",
-            "route": "evidence-vault.html",
-            "sourceRoute": "evidence-vault.html",
-            "evidenceLevel": "source-linked record"
-          },
-          {
-            "title": "Linked evidence record",
-            "route": "search.html",
-            "sourceRoute": "search.html",
+            "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+            "sourceRoute": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
             "evidenceLevel": "source-linked record"
           }
         ],
@@ -900,6 +902,7 @@
           "black-file.html",
           "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
           "https://www.who.int/health-topics/who-pandemic-agreement",
+          "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
           "evidence-vault.html",
           "search.html"
         ],
@@ -918,7 +921,7 @@
           "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
         ],
         "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-        "generatedAt": "2026-08-03T07:06:00.659Z",
+        "generatedAt": "2026-08-05T06:30:50.458Z",
         "id": "surveillance-state",
         "name": "Surveillance State Clock",
         "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -938,7 +941,7 @@
         "id": "procurement-vendors",
         "title": "Procurement and public-private implementation",
         "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 24171,
+        "signalCount": 24168,
         "actors": [
           "Consolidated Sanctions List (Non-SDN Lists)",
           "Default Judgment",
@@ -952,14 +955,14 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 17808,
+        "signalCount": 17648,
         "actors": []
       },
       {
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 11973,
+        "signalCount": 11923,
         "actors": [
           "Information and narrative control",
           "Search OFAC&#039;s Sanctions Lists"
@@ -969,14 +972,14 @@
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 4401,
+        "signalCount": 4314,
         "actors": []
       },
       {
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 3322,
+        "signalCount": 2978,
         "actors": [
           "Exercise or conversion of derivative security",
           "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
@@ -986,14 +989,14 @@
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 2724,
+        "signalCount": 2346,
         "actors": []
       },
       {
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 1920,
+        "signalCount": 1733,
         "actors": [
           "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
         ]
@@ -1002,7 +1005,7 @@
         "id": "data-ai-cloud",
         "title": "Data, cloud and AI infrastructure",
         "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
-        "signalCount": 571,
+        "signalCount": 515,
         "actors": []
       }
     ],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T07:07:11.891Z",
+  "generatedAt": "2026-08-05T06:32:15.596Z",
   "title": "Reverse Accountability Search Index",
   "mission": "Matrix Reprogrammed is a public accountability system where anyone can search a consequence, trace it backwards through decisions, authority and money, follow the unanswered questions, and return to see what actually happened.",
   "publicPromise": "Search the consequence. Trace the power. Follow the outcome.",
@@ -9,16 +9,16 @@
   "records": [
     {
       "schemaVersion": 1,
-      "id": "consequence-war-machine-2026-07-31-a82191f1",
-      "title": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’",
+      "id": "consequence-war-machine-2026-08-04-d78aa5d5",
+      "title": "‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war",
       "lane": "war-machine",
       "laneTitle": "War Machine And Intelligence State",
-      "actionDate": "2026-07-31T12:00:00.000Z",
-      "consequenceSummary": "Violence and civilian casualties are rising across the Middle East – from Israeli airstrikes in Gaza to continued hostilities in Lebanon and the West Bank – UN agencies reported on Friday as the Secretary-General declared “the fighting must stop”.",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-31-a82191f1",
+      "actionDate": "2026-08-04T12:00:00.000Z",
+      "consequenceSummary": "As Russia’s invasion of Ukraine continues, with both sides stepping up airstrikes and drone attacks in recent weeks deep inside each other&#039;s territory, the UN Children’s Fund (UNICEF) appealed on Tuesday for greater protection for the war’s youngest victims.",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-08-04-d78aa5d5",
       "source": {
         "label": "UN News",
-        "url": "https://news.un.org/feed/view/en/story/2026/07/1168062",
+        "url": "https://news.un.org/feed/view/en/story/2026/08/1168076",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "evidence-vault.html"
       },
@@ -26,7 +26,7 @@
         {
           "type": "consequence",
           "label": "Observed consequence or public issue",
-          "value": "Violence and civilian casualties are rising across the Middle East – from Israeli airstrikes in Gaza to continued hostilities in Lebanon and the West Bank – UN agencies reported on Friday as the Secretary-General declared “the fighting must stop”."
+          "value": "As Russia’s invasion of Ukraine continues, with both sides stepping up airstrikes and drone attacks in recent weeks deep inside each other&#039;s territory, the UN Children’s Fund (UNICEF) appealed on Tuesday for greater protection for the war’s youngest victims."
         },
         {
           "type": "implementation",
@@ -52,108 +52,12 @@
         {
           "type": "outcome",
           "label": "Outcome checkpoint",
-          "value": "30-day consequence check due 2026-08-30: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-03: Was the action actually implemented, and which authority or institution carried it out?",
           "status": "scheduled"
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "checkpoints": [
-        {
-          "id": "consequence-war-machine-2026-07-31-a82191f1-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-30T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-war-machine-2026-07-31-a82191f1-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-29T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-war-machine-2026-07-31-a82191f1-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-31T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "knownBeneficiaries": [],
-      "affectedGroups": [],
-      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "searchableText": "Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’ war-machine War Machine And Intelligence State Violence and civilian casualties are rising across the Middle East – from Israeli airstrikes in Gaza to continued hostilities in Lebanon and the West Bank – UN agencies reported on Friday as the Secretary-General declared “the fighting must stop”. Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? UN News official-or-primary-lead Violence and civilian casualties are rising across the Middle East – from Israeli airstrikes in Gaza to continued hostilities in Lebanon and the West Bank – UN agencies reported on Friday as the Secretary-General declared “the fighting must stop”. Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-08-30: Was the action actually implemented, and which authority or institution carried it out?",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-07-31-a82191f1",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-07-31-a82191f1",
-      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-07-31-a82191f1",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-07-31-a82191f1",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-07-31-a82191f1",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-07-31-a82191f1-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-07-31-a82191f1#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-war-machine-2026-07-31-1d19fb5b",
-      "title": "Strong El Niño ahead, UN weather agency warns",
-      "lane": "war-machine",
-      "laneTitle": "War Machine And Intelligence State",
-      "actionDate": "2026-07-31T12:00:00.000Z",
-      "consequenceSummary": "As much of the world faces grapples with above normal temperatures and major rainfall changes, the UN Meteorological Organization (WMO) warned on Friday that El Niño, a powerful climate pattern shaping global weather, will intensify starting next month.",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-31-1d19fb5b",
-      "source": {
-        "label": "UN News",
-        "url": "https://news.un.org/feed/view/en/story/2026/07/1168059",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "evidence-vault.html"
-      },
-      "path": [
-        {
-          "type": "consequence",
-          "label": "Observed consequence or public issue",
-          "value": "As much of the world faces grapples with above normal temperatures and major rainfall changes, the UN Meteorological Organization (WMO) warned on Friday that El Niño, a powerful climate pattern shaping global weather, will intensify starting next month."
-        },
-        {
-          "type": "implementation",
-          "label": "Implementation",
-          "value": "Unverified lead stage",
-          "status": "unlocked-pending-primary-decision-record"
-        },
-        {
-          "type": "authority",
-          "label": "Decision and authority",
-          "value": "Not yet resolved from a primary decision record · Not yet attached"
-        },
-        {
-          "type": "money",
-          "label": "Money and beneficiaries",
-          "value": "What public or private money funds the action?"
-        },
-        {
-          "type": "justification",
-          "label": "Stated justification and promised benefit",
-          "value": "Not yet extracted from a primary decision record · Not yet locked"
-        },
-        {
-          "type": "outcome",
-          "label": "Outcome checkpoint",
-          "value": "30-day consequence check due 2026-08-30: Was the action actually implemented, and which authority or institution carried it out?",
-          "status": "scheduled"
-        }
-      ],
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Strong El Niño ahead, UN weather agency warns”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -164,26 +68,26 @@
       ],
       "checkpoints": [
         {
-          "id": "consequence-war-machine-2026-07-31-1d19fb5b-30d",
+          "id": "consequence-war-machine-2026-08-04-d78aa5d5-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-08-30T12:00:00.000Z",
+          "dueAt": "2026-09-03T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-war-machine-2026-07-31-1d19fb5b-90d",
+          "id": "consequence-war-machine-2026-08-04-d78aa5d5-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-10-29T12:00:00.000Z",
+          "dueAt": "2026-11-02T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-war-machine-2026-07-31-1d19fb5b-365d",
+          "id": "consequence-war-machine-2026-08-04-d78aa5d5-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-07-31T12:00:00.000Z",
+          "dueAt": "2027-08-04T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -191,35 +95,35 @@
       "knownBeneficiaries": [],
       "affectedGroups": [],
       "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "searchableText": "Strong El Niño ahead, UN weather agency warns war-machine War Machine And Intelligence State As much of the world faces grapples with above normal temperatures and major rainfall changes, the UN Meteorological Organization (WMO) warned on Friday that El Niño, a powerful climate pattern shaping global weather, will intensify starting next month. Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Strong El Niño ahead, UN weather agency warns”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? Which primary records would materially confirm, challenge or resolve the accountability record for war? UN News official-or-primary-lead As much of the world faces grapples with above normal temperatures and major rainfall changes, the UN Meteorological Organization (WMO) warned on Friday that El Niño, a powerful climate pattern shaping global weather, will intensify starting next month. Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-08-30: Was the action actually implemented, and which authority or institution carried it out?",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-07-31-1d19fb5b",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-07-31-1d19fb5b",
-      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-07-31-1d19fb5b",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-07-31-1d19fb5b",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-07-31-1d19fb5b",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-07-31-1d19fb5b-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-07-31-1d19fb5b#submit"
+      "searchableText": "‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war war-machine War Machine And Intelligence State As Russia’s invasion of Ukraine continues, with both sides stepping up airstrikes and drone attacks in recent weeks deep inside each other&#039;s territory, the UN Children’s Fund (UNICEF) appealed on Tuesday for greater protection for the war’s youngest victims. Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? Which primary records would materially confirm, challenge or resolve the accountability record for war? UN News official-or-primary-lead As Russia’s invasion of Ukraine continues, with both sides stepping up airstrikes and drone attacks in recent weeks deep inside each other&#039;s territory, the UN Children’s Fund (UNICEF) appealed on Tuesday for greater protection for the war’s youngest victims. Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-09-03: Was the action actually implemented, and which authority or institution carried it out?",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-08-04-d78aa5d5",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-08-04-d78aa5d5",
+      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-08-04-d78aa5d5",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-08-04-d78aa5d5",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-08-04-d78aa5d5",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-08-04-d78aa5d5-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-08-04-d78aa5d5#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-epstein-files-2026-07-31-b0ba52f7",
-      "title": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "actionDate": "2026-07-31T02:05:57.000Z",
-      "consequenceSummary": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation",
-      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-31-b0ba52f7",
+      "id": "consequence-war-machine-2026-08-04-d38a9f89",
+      "title": "New Ebola vaccine trial launches as outbreak spreads in DR Congo",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "actionDate": "2026-08-04T12:00:00.000Z",
+      "consequenceSummary": "Results may be months away, but efforts are advancing towards enhanced treatment and the world’s first vaccine for the Bundibugyo species of Ebola, the World Health Organization (WHO) said on Tuesday as deaths and cases rise in the largest ever outbreak on record in the Democratic Republic of the Congo (DRC).",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-08-04-d38a9f89",
       "source": {
-        "label": "Google News / Epstein timeline and files",
-        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5",
+        "label": "UN News",
+        "url": "https://news.un.org/feed/view/en/story/2026/08/1168072",
         "classification": "official-or-primary-lead",
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder"
+        "evidenceRoute": "evidence-vault.html"
       },
       "path": [
         {
           "type": "consequence",
           "label": "Observed consequence or public issue",
-          "value": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation"
+          "value": "Results may be months away, but efforts are advancing towards enhanced treatment and the world’s first vaccine for the Bundibugyo species of Ebola, the World Health Organization (WHO) said on Tuesday as deaths and cases rise in the largest ever outbreak on record in the Democratic Republic of the Congo (DRC)."
         },
         {
           "type": "implementation",
@@ -245,12 +149,396 @@
         {
           "type": "outcome",
           "label": "Outcome checkpoint",
-          "value": "30-day consequence check due 2026-08-30: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-03: Was the action actually implemented, and which authority or institution carried it out?",
           "status": "scheduled"
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “New Ebola vaccine trial launches as outbreak spreads in DR Congo”, and did the evidence support the stated or implied justification?",
+        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
+        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "What public or private money funds the action?",
+        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+        "Who receives the direct and indirect financial benefit?"
+      ],
+      "checkpoints": [
+        {
+          "id": "consequence-war-machine-2026-08-04-d38a9f89-30d",
+          "label": "30-day consequence check",
+          "daysAfterAction": 30,
+          "dueAt": "2026-09-03T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "id": "consequence-war-machine-2026-08-04-d38a9f89-90d",
+          "label": "90-day consequence check",
+          "daysAfterAction": 90,
+          "dueAt": "2026-11-02T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "id": "consequence-war-machine-2026-08-04-d38a9f89-365d",
+          "label": "365-day consequence check",
+          "daysAfterAction": 365,
+          "dueAt": "2027-08-04T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "knownBeneficiaries": [],
+      "affectedGroups": [],
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "searchableText": "New Ebola vaccine trial launches as outbreak spreads in DR Congo war-machine War Machine And Intelligence State Results may be months away, but efforts are advancing towards enhanced treatment and the world’s first vaccine for the Bundibugyo species of Ebola, the World Health Organization (WHO) said on Tuesday as deaths and cases rise in the largest ever outbreak on record in the Democratic Republic of the Congo (DRC). Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “New Ebola vaccine trial launches as outbreak spreads in DR Congo”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? UN News official-or-primary-lead Results may be months away, but efforts are advancing towards enhanced treatment and the world’s first vaccine for the Bundibugyo species of Ebola, the World Health Organization (WHO) said on Tuesday as deaths and cases rise in the largest ever outbreak on record in the Democratic Republic of the Congo (DRC). Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-09-03: Was the action actually implemented, and which authority or institution carried it out?",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-08-04-d38a9f89",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-08-04-d38a9f89",
+      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-08-04-d38a9f89",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-08-04-d38a9f89",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-08-04-d38a9f89",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-08-04-d38a9f89-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-08-04-d38a9f89#submit"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "consequence-epstein-files-2026-08-03-061628a5",
+      "title": "Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian",
+      "lane": "epstein-files",
+      "laneTitle": "Epstein Files, Timeline And Court Records",
+      "actionDate": "2026-08-03T14:55:00.000Z",
+      "consequenceSummary": "Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? The Guardian",
+      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-08-03-061628a5",
+      "source": {
+        "label": "Google News / Epstein timeline and files",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5",
+        "classification": "official-or-primary-lead",
+        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder"
+      },
+      "path": [
+        {
+          "type": "consequence",
+          "label": "Observed consequence or public issue",
+          "value": "Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? The Guardian"
+        },
+        {
+          "type": "implementation",
+          "label": "Implementation",
+          "value": "Unverified lead stage",
+          "status": "unlocked-pending-primary-decision-record"
+        },
+        {
+          "type": "authority",
+          "label": "Decision and authority",
+          "value": "Not yet resolved from a primary decision record · Not yet attached"
+        },
+        {
+          "type": "money",
+          "label": "Money and beneficiaries",
+          "value": "What public or private money funds the action?"
+        },
+        {
+          "type": "justification",
+          "label": "Stated justification and promised benefit",
+          "value": "Not yet extracted from a primary decision record · Not yet locked"
+        },
+        {
+          "type": "outcome",
+          "label": "Outcome checkpoint",
+          "value": "30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+          "status": "scheduled"
+        }
+      ],
+      "unansweredQuestions": [
+        "What measurable public consequence followed “Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian”, and did the evidence support the stated or implied justification?",
+        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
+        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "What public or private money funds the action?",
+        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+        "Who receives the direct and indirect financial benefit?"
+      ],
+      "checkpoints": [
+        {
+          "id": "consequence-epstein-files-2026-08-03-061628a5-30d",
+          "label": "30-day consequence check",
+          "daysAfterAction": 30,
+          "dueAt": "2026-09-02T14:55:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "id": "consequence-epstein-files-2026-08-03-061628a5-90d",
+          "label": "90-day consequence check",
+          "daysAfterAction": 90,
+          "dueAt": "2026-11-01T14:55:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "id": "consequence-epstein-files-2026-08-03-061628a5-365d",
+          "label": "365-day consequence check",
+          "daysAfterAction": 365,
+          "dueAt": "2027-08-03T14:55:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "knownBeneficiaries": [],
+      "affectedGroups": [],
+      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
+      "searchableText": "Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian epstein-files Epstein Files, Timeline And Court Records Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? The Guardian Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? Google News / Epstein timeline and files official-or-primary-lead Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? The Guardian Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-epstein-files-2026-08-03-061628a5",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-epstein-files-2026-08-03-061628a5",
+      "powerDiffRoute": "power-diff.html#diff-consequence-epstein-files-2026-08-03-061628a5",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-epstein-files-2026-08-03-061628a5",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-epstein-files-2026-08-03-061628a5",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-epstein-files-2026-08-03-061628a5-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-epstein-files-2026-08-03-061628a5#submit"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "consequence-war-machine-2026-08-03-6387b0a2",
+      "title": "Drone strikes threaten civilians and aid operations in Sudan",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "actionDate": "2026-08-03T12:00:00.000Z",
+      "consequenceSummary": "Drone strikes are posing deadly risks to civilians in Sudan and hampering humanitarian efforts to reach them as attacks continue to affect conflict-hit areas, the UN aid coordination office OCHA said on Monday.",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-08-03-6387b0a2",
+      "source": {
+        "label": "UN News",
+        "url": "https://news.un.org/feed/view/en/story/2026/08/1168068",
+        "classification": "official-or-primary-lead",
+        "evidenceRoute": "evidence-vault.html"
+      },
+      "path": [
+        {
+          "type": "consequence",
+          "label": "Observed consequence or public issue",
+          "value": "Drone strikes are posing deadly risks to civilians in Sudan and hampering humanitarian efforts to reach them as attacks continue to affect conflict-hit areas, the UN aid coordination office OCHA said on Monday."
+        },
+        {
+          "type": "implementation",
+          "label": "Implementation",
+          "value": "Unverified lead stage",
+          "status": "unlocked-pending-primary-decision-record"
+        },
+        {
+          "type": "authority",
+          "label": "Decision and authority",
+          "value": "Not yet resolved from a primary decision record · Not yet attached"
+        },
+        {
+          "type": "money",
+          "label": "Money and beneficiaries",
+          "value": "What public or private money funds the action?"
+        },
+        {
+          "type": "justification",
+          "label": "Stated justification and promised benefit",
+          "value": "Not yet extracted from a primary decision record · Not yet locked"
+        },
+        {
+          "type": "outcome",
+          "label": "Outcome checkpoint",
+          "value": "30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+          "status": "scheduled"
+        }
+      ],
+      "unansweredQuestions": [
+        "What measurable public consequence followed “Drone strikes threaten civilians and aid operations in Sudan”, and did the evidence support the stated or implied justification?",
+        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
+        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "What public or private money funds the action?",
+        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+        "Who receives the direct and indirect financial benefit?"
+      ],
+      "checkpoints": [
+        {
+          "id": "consequence-war-machine-2026-08-03-6387b0a2-30d",
+          "label": "30-day consequence check",
+          "daysAfterAction": 30,
+          "dueAt": "2026-09-02T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "id": "consequence-war-machine-2026-08-03-6387b0a2-90d",
+          "label": "90-day consequence check",
+          "daysAfterAction": 90,
+          "dueAt": "2026-11-01T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "id": "consequence-war-machine-2026-08-03-6387b0a2-365d",
+          "label": "365-day consequence check",
+          "daysAfterAction": 365,
+          "dueAt": "2027-08-03T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "knownBeneficiaries": [],
+      "affectedGroups": [],
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "searchableText": "Drone strikes threaten civilians and aid operations in Sudan war-machine War Machine And Intelligence State Drone strikes are posing deadly risks to civilians in Sudan and hampering humanitarian efforts to reach them as attacks continue to affect conflict-hit areas, the UN aid coordination office OCHA said on Monday. Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Drone strikes threaten civilians and aid operations in Sudan”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? UN News official-or-primary-lead Drone strikes are posing deadly risks to civilians in Sudan and hampering humanitarian efforts to reach them as attacks continue to affect conflict-hit areas, the UN aid coordination office OCHA said on Monday. Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-08-03-6387b0a2",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-08-03-6387b0a2",
+      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-08-03-6387b0a2",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-08-03-6387b0a2",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-08-03-6387b0a2",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-08-03-6387b0a2-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-08-03-6387b0a2#submit"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "consequence-war-machine-2026-08-03-6687b55b",
+      "title": "Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "actionDate": "2026-08-03T12:00:00.000Z",
+      "consequenceSummary": "Israeli forces reportedly killed more than two dozen Palestinians in Gaza and violated Lebanese airspace more than 100 times over the weekend despite ongoing ceasefire agreements, UN agencies and peacekeepers said on Monday.",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-08-03-6687b55b",
+      "source": {
+        "label": "UN News",
+        "url": "https://news.un.org/feed/view/en/story/2026/08/1168067",
+        "classification": "official-or-primary-lead",
+        "evidenceRoute": "evidence-vault.html"
+      },
+      "path": [
+        {
+          "type": "consequence",
+          "label": "Observed consequence or public issue",
+          "value": "Israeli forces reportedly killed more than two dozen Palestinians in Gaza and violated Lebanese airspace more than 100 times over the weekend despite ongoing ceasefire agreements, UN agencies and peacekeepers said on Monday."
+        },
+        {
+          "type": "implementation",
+          "label": "Implementation",
+          "value": "Unverified lead stage",
+          "status": "unlocked-pending-primary-decision-record"
+        },
+        {
+          "type": "authority",
+          "label": "Decision and authority",
+          "value": "Not yet resolved from a primary decision record · Not yet attached"
+        },
+        {
+          "type": "money",
+          "label": "Money and beneficiaries",
+          "value": "What public or private money funds the action?"
+        },
+        {
+          "type": "justification",
+          "label": "Stated justification and promised benefit",
+          "value": "Not yet extracted from a primary decision record · Not yet locked"
+        },
+        {
+          "type": "outcome",
+          "label": "Outcome checkpoint",
+          "value": "30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+          "status": "scheduled"
+        }
+      ],
+      "unansweredQuestions": [
+        "What measurable public consequence followed “Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes”, and did the evidence support the stated or implied justification?",
+        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
+        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "What public or private money funds the action?",
+        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+        "Who receives the direct and indirect financial benefit?"
+      ],
+      "checkpoints": [
+        {
+          "id": "consequence-war-machine-2026-08-03-6687b55b-30d",
+          "label": "30-day consequence check",
+          "daysAfterAction": 30,
+          "dueAt": "2026-09-02T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "id": "consequence-war-machine-2026-08-03-6687b55b-90d",
+          "label": "90-day consequence check",
+          "daysAfterAction": 90,
+          "dueAt": "2026-11-01T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "id": "consequence-war-machine-2026-08-03-6687b55b-365d",
+          "label": "365-day consequence check",
+          "daysAfterAction": 365,
+          "dueAt": "2027-08-03T12:00:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "knownBeneficiaries": [],
+      "affectedGroups": [],
+      "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
+      "searchableText": "Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes war-machine War Machine And Intelligence State Israeli forces reportedly killed more than two dozen Palestinians in Gaza and violated Lebanese airspace more than 100 times over the weekend despite ongoing ceasefire agreements, UN agencies and peacekeepers said on Monday. Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? UN News official-or-primary-lead Israeli forces reportedly killed more than two dozen Palestinians in Gaza and violated Lebanese airspace more than 100 times over the weekend despite ongoing ceasefire agreements, UN agencies and peacekeepers said on Monday. Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-08-03-6687b55b",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-08-03-6687b55b",
+      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-08-03-6687b55b",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-08-03-6687b55b",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-08-03-6687b55b",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-08-03-6687b55b-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-08-03-6687b55b#submit"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "consequence-war-machine-2026-08-03-6887b881",
+      "title": "Mothers still lack support to breastfeed, UN warns",
+      "lane": "war-machine",
+      "laneTitle": "War Machine And Intelligence State",
+      "actionDate": "2026-08-03T12:00:00.000Z",
+      "consequenceSummary": "Breastfeeding rates are rising worldwide, but millions of mothers and families still lack the services and protection they need to feed their babies safely, the UN has warned.",
+      "route": "public-consequence-contracts.html#consequence-war-machine-2026-08-03-6887b881",
+      "source": {
+        "label": "UN News",
+        "url": "https://news.un.org/feed/view/en/story/2026/08/1168065",
+        "classification": "official-or-primary-lead",
+        "evidenceRoute": "evidence-vault.html"
+      },
+      "path": [
+        {
+          "type": "consequence",
+          "label": "Observed consequence or public issue",
+          "value": "Breastfeeding rates are rising worldwide, but millions of mothers and families still lack the services and protection they need to feed their babies safely, the UN has warned."
+        },
+        {
+          "type": "implementation",
+          "label": "Implementation",
+          "value": "Unverified lead stage",
+          "status": "unlocked-pending-primary-decision-record"
+        },
+        {
+          "type": "authority",
+          "label": "Decision and authority",
+          "value": "Not yet resolved from a primary decision record · Not yet attached"
+        },
+        {
+          "type": "money",
+          "label": "Money and beneficiaries",
+          "value": "What public or private money funds the action?"
+        },
+        {
+          "type": "justification",
+          "label": "Stated justification and promised benefit",
+          "value": "Not yet extracted from a primary decision record · Not yet locked"
+        },
+        {
+          "type": "outcome",
+          "label": "Outcome checkpoint",
+          "value": "30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+          "status": "scheduled"
+        }
+      ],
+      "unansweredQuestions": [
+        "What measurable public consequence followed “Mothers still lack support to breastfeed, UN warns”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -261,218 +549,26 @@
       ],
       "checkpoints": [
         {
-          "id": "consequence-epstein-files-2026-07-31-b0ba52f7-30d",
+          "id": "consequence-war-machine-2026-08-03-6887b881-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-08-30T02:05:57.000Z",
+          "dueAt": "2026-09-02T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-epstein-files-2026-07-31-b0ba52f7-90d",
+          "id": "consequence-war-machine-2026-08-03-6887b881-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-10-29T02:05:57.000Z",
+          "dueAt": "2026-11-01T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-epstein-files-2026-07-31-b0ba52f7-365d",
+          "id": "consequence-war-machine-2026-08-03-6887b881-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-07-31T02:05:57.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "knownBeneficiaries": [],
-      "affectedGroups": [],
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "searchableText": "With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation epstein-files Epstein Files, Timeline And Court Records With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? Which primary records would materially confirm, challenge or resolve the accountability record for war? Google News / Epstein timeline and files official-or-primary-lead With a unanimous Maxwell vote, the US Senate issues a warning to Trump ABC News & Headlines – Australian Broadcasting Corporation Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-08-30: Was the action actually implemented, and which authority or institution carried it out?",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-epstein-files-2026-07-31-b0ba52f7",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-epstein-files-2026-07-31-b0ba52f7",
-      "powerDiffRoute": "power-diff.html#diff-consequence-epstein-files-2026-07-31-b0ba52f7",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-epstein-files-2026-07-31-b0ba52f7",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-epstein-files-2026-07-31-b0ba52f7",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-epstein-files-2026-07-31-b0ba52f7-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-epstein-files-2026-07-31-b0ba52f7#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-epstein-files-2026-07-30-2a83e994",
-      "title": "Epstein files: How victims remain exposed to identification - DW.com",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "actionDate": "2026-07-30T16:07:32.000Z",
-      "consequenceSummary": "Epstein files: How victims remain exposed to identification DW.com",
-      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-30-2a83e994",
-      "source": {
-        "label": "Google News / Epstein sighting and alive claims",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5",
-        "classification": "public-source-lead",
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder"
-      },
-      "path": [
-        {
-          "type": "consequence",
-          "label": "Observed consequence or public issue",
-          "value": "Epstein files: How victims remain exposed to identification DW.com"
-        },
-        {
-          "type": "implementation",
-          "label": "Implementation",
-          "value": "Unverified lead stage",
-          "status": "unlocked-pending-primary-decision-record"
-        },
-        {
-          "type": "authority",
-          "label": "Decision and authority",
-          "value": "Not yet resolved from a primary decision record · Not yet attached"
-        },
-        {
-          "type": "money",
-          "label": "Money and beneficiaries",
-          "value": "What public or private money funds the action?"
-        },
-        {
-          "type": "justification",
-          "label": "Stated justification and promised benefit",
-          "value": "Not yet extracted from a primary decision record · Not yet locked"
-        },
-        {
-          "type": "outcome",
-          "label": "Outcome checkpoint",
-          "value": "30-day consequence check due 2026-08-29: Was the action actually implemented, and which authority or institution carried it out?",
-          "status": "scheduled"
-        }
-      ],
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Epstein files: How victims remain exposed to identification - DW.com”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "checkpoints": [
-        {
-          "id": "consequence-epstein-files-2026-07-30-2a83e994-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-29T16:07:32.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-epstein-files-2026-07-30-2a83e994-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-28T16:07:32.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-epstein-files-2026-07-30-2a83e994-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-30T16:07:32.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "knownBeneficiaries": [],
-      "affectedGroups": [],
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "searchableText": "Epstein files: How victims remain exposed to identification - DW.com epstein-files Epstein Files, Timeline And Court Records Epstein files: How victims remain exposed to identification DW.com Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Epstein files: How victims remain exposed to identification - DW.com”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? Google News / Epstein sighting and alive claims public-source-lead Epstein files: How victims remain exposed to identification DW.com Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-08-29: Was the action actually implemented, and which authority or institution carried it out?",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-epstein-files-2026-07-30-2a83e994",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-epstein-files-2026-07-30-2a83e994",
-      "powerDiffRoute": "power-diff.html#diff-consequence-epstein-files-2026-07-30-2a83e994",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-epstein-files-2026-07-30-2a83e994",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-epstein-files-2026-07-30-2a83e994",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-epstein-files-2026-07-30-2a83e994-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-epstein-files-2026-07-30-2a83e994#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-war-machine-2026-07-30-1619f056",
-      "title": "Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities",
-      "lane": "war-machine",
-      "laneTitle": "War Machine And Intelligence State",
-      "actionDate": "2026-07-30T12:00:00.000Z",
-      "consequenceSummary": "Aid workers and first responders raced to help people across Ukraine after a wave of deadly Russian missile and drone strikes overnight as concerns mounted over military activity near nuclear power plants on Thursday.",
-      "route": "public-consequence-contracts.html#consequence-war-machine-2026-07-30-1619f056",
-      "source": {
-        "label": "UN News",
-        "url": "https://news.un.org/feed/view/en/story/2026/07/1168052",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "evidence-vault.html"
-      },
-      "path": [
-        {
-          "type": "consequence",
-          "label": "Observed consequence or public issue",
-          "value": "Aid workers and first responders raced to help people across Ukraine after a wave of deadly Russian missile and drone strikes overnight as concerns mounted over military activity near nuclear power plants on Thursday."
-        },
-        {
-          "type": "implementation",
-          "label": "Implementation",
-          "value": "Unverified lead stage",
-          "status": "unlocked-pending-primary-decision-record"
-        },
-        {
-          "type": "authority",
-          "label": "Decision and authority",
-          "value": "Not yet resolved from a primary decision record · Not yet attached"
-        },
-        {
-          "type": "money",
-          "label": "Money and beneficiaries",
-          "value": "What public or private money funds the action?"
-        },
-        {
-          "type": "justification",
-          "label": "Stated justification and promised benefit",
-          "value": "Not yet extracted from a primary decision record · Not yet locked"
-        },
-        {
-          "type": "outcome",
-          "label": "Outcome checkpoint",
-          "value": "30-day consequence check due 2026-08-29: Was the action actually implemented, and which authority or institution carried it out?",
-          "status": "scheduled"
-        }
-      ],
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "checkpoints": [
-        {
-          "id": "consequence-war-machine-2026-07-30-1619f056-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-29T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-war-machine-2026-07-30-1619f056-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-28T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-war-machine-2026-07-30-1619f056-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-30T12:00:00.000Z",
+          "dueAt": "2027-08-03T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -480,110 +576,14 @@
       "knownBeneficiaries": [],
       "affectedGroups": [],
       "evidenceBoundary": "Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.",
-      "searchableText": "Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities war-machine War Machine And Intelligence State Aid workers and first responders raced to help people across Ukraine after a wave of deadly Russian missile and drone strikes overnight as concerns mounted over military activity near nuclear power plants on Thursday. Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? UN News official-or-primary-lead Aid workers and first responders raced to help people across Ukraine after a wave of deadly Russian missile and drone strikes overnight as concerns mounted over military activity near nuclear power plants on Thursday. Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-08-29: Was the action actually implemented, and which authority or institution carried it out?",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-07-30-1619f056",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-07-30-1619f056",
-      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-07-30-1619f056",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-07-30-1619f056",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-07-30-1619f056",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-07-30-1619f056-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-07-30-1619f056#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-epstein-files-2026-07-30-1f471233",
-      "title": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "actionDate": "2026-07-30T05:00:00.000Z",
-      "consequenceSummary": "Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica",
-      "route": "public-consequence-contracts.html#consequence-epstein-files-2026-07-30-1f471233",
-      "source": {
-        "label": "Google News / Epstein timeline and files",
-        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder"
-      },
-      "path": [
-        {
-          "type": "consequence",
-          "label": "Observed consequence or public issue",
-          "value": "Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica"
-        },
-        {
-          "type": "implementation",
-          "label": "Implementation",
-          "value": "Unverified lead stage",
-          "status": "unlocked-pending-primary-decision-record"
-        },
-        {
-          "type": "authority",
-          "label": "Decision and authority",
-          "value": "Not yet resolved from a primary decision record · Not yet attached"
-        },
-        {
-          "type": "money",
-          "label": "Money and beneficiaries",
-          "value": "What public or private money funds the action?"
-        },
-        {
-          "type": "justification",
-          "label": "Stated justification and promised benefit",
-          "value": "Not yet extracted from a primary decision record · Not yet locked"
-        },
-        {
-          "type": "outcome",
-          "label": "Outcome checkpoint",
-          "value": "30-day consequence check due 2026-08-29: Was the action actually implemented, and which authority or institution carried it out?",
-          "status": "scheduled"
-        }
-      ],
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "checkpoints": [
-        {
-          "id": "consequence-epstein-files-2026-07-30-1f471233-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-08-29T05:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-epstein-files-2026-07-30-1f471233-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-10-28T05:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-epstein-files-2026-07-30-1f471233-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-07-30T05:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "knownBeneficiaries": [],
-      "affectedGroups": [],
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "searchableText": "Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica epstein-files Epstein Files, Timeline And Court Records Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? Google News / Epstein timeline and files official-or-primary-lead Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-08-29: Was the action actually implemented, and which authority or institution carried it out?",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-epstein-files-2026-07-30-1f471233",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-epstein-files-2026-07-30-1f471233",
-      "powerDiffRoute": "power-diff.html#diff-consequence-epstein-files-2026-07-30-1f471233",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-epstein-files-2026-07-30-1f471233",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-epstein-files-2026-07-30-1f471233",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-epstein-files-2026-07-30-1f471233-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-epstein-files-2026-07-30-1f471233#submit"
+      "searchableText": "Mothers still lack support to breastfeed, UN warns war-machine War Machine And Intelligence State Breastfeeding rates are rising worldwide, but millions of mothers and families still lack the services and protection they need to feed their babies safely, the UN has warned. Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked   What measurable public consequence followed “Mothers still lack support to breastfeed, UN warns”, and did the evidence support the stated or implied justification? Which law, vote, order, filing, contract or delegated authority made the action possible? Who receives direct financial, institutional, political or operational benefit if this action is implemented? Which groups carry the cost, risk, restriction or unintended consequence? What public or private money funds the action? Which contracts, grants, subsidies, asset positions or procurement routes are connected? Who receives the direct and indirect financial benefit? Which primary records would materially confirm, challenge or resolve the accountability record for war? UN News official-or-primary-lead Breastfeeding rates are rising worldwide, but millions of mothers and families still lack the services and protection they need to feed their babies safely, the UN has warned. Unverified lead stage Not yet resolved from a primary decision record · Not yet attached What public or private money funds the action? Not yet extracted from a primary decision record · Not yet locked 30-day consequence check due 2026-09-02: Was the action actually implemented, and which authority or institution carried it out?",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-war-machine-2026-08-03-6887b881",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-war-machine-2026-08-03-6887b881",
+      "powerDiffRoute": "power-diff.html#diff-consequence-war-machine-2026-08-03-6887b881",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-war-machine-2026-08-03-6887b881",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-war-machine-2026-08-03-6887b881",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-war-machine-2026-08-03-6887b881-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-war-machine-2026-08-03-6887b881#submit"
     }
   ]
 }

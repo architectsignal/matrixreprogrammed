@@ -1,14 +1,14 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-08-03T07:02:46.907Z
+Updated: 2026-08-05T06:27:20.663Z
 
-Files scanned: 6723
+Files scanned: 6835
 
-High issues: 3658
+High issues: 3864
 
 Review issues: 15
 
-Intake areas: 3191
+Intake areas: 2671
 
 Weak intake areas: 1
 
@@ -108,6 +108,7 @@ Weak intake areas: 1
 - _site/authority-war-machine.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/automation/social-access-and-publishing-plan.md: /chatgpt/i — Potentially visible internal, broken, or author-facing text.
 - _site/automation/social-access-and-publishing-plan.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/behind-the-curtain-access.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/behind-the-curtain.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/big-three/blackrock.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/big-three/state-street.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -502,12 +503,11 @@ Weak intake areas: 1
 - _site/data/history/money-intelligence/2026-07-31.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/history/money-intelligence/2026-08-01.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/history/money-intelligence/2026-08-02.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/history/money-intelligence/2026-08-03.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/homepage-command-surface.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/human-cost.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/identity-affiliation-overlay.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/illuminati-secret-society-theory.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/independent-links-1.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/independent-links-2.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
 - _site/site-population-audit.html: boundary=false, action=false, fallback=false

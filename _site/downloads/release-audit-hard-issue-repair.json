@@ -1,11 +1,28 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T07:03:34.621Z",
-  "exposureProfiles": 17,
+  "generatedAt": "2026-08-05T06:28:15.171Z",
+  "exposureProfiles": 33,
   "generatedExposurePages": [
-    "entity-exposure/homeland-security-department.html",
+    "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+    "entity-exposure/california-supreme-court.html",
+    "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
+    "entity-exposure/court-of-appeals-for-the-second-circuit.html",
+    "entity-exposure/supreme-court-of-pennsylvania.html",
+    "entity-exposure/2021-08825.html",
+    "entity-exposure/2024-13374.html",
+    "entity-exposure/23-wap-2023.html",
+    "entity-exposure/24-2251.html",
+    "entity-exposure/24-7261.html",
+    "entity-exposure/civil-rights-corps-v-lasalle.html",
+    "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html",
+    "entity-exposure/gilead-tenofovir-cases.html",
+    "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
+    "entity-exposure/s283862.html",
+    "entity-exposure/united-states-v-anten.html",
+    "entity-exposure/williams-v-biggs.html",
     "entity-exposure/centers-for-medicare-and-medicaid-services.html",
     "entity-exposure/health-and-human-services-department.html",
+    "entity-exposure/homeland-security-department.html",
     "entity-exposure/aapl.html",
     "entity-exposure/alphabet-inc.html",
     "entity-exposure/amazon-com-inc.html",
@@ -18,7 +35,6 @@
     "entity-exposure/msft.html",
     "entity-exposure/nvda.html",
     "entity-exposure/nvidia-corp.html",
-    "entity-exposure/nuclear-regulatory-commission.html",
     "entity-exposure/securities-and-exchange-commission.html"
   ],
   "repairedPages": [
@@ -30,12 +46,46 @@
     "follow-the-money.html"
   ],
   "syncedAssets": [
-    "entity-exposure/homeland-security-department.html",
-    "entity-exposure/homeland-security-department",
+    "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+    "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+    "entity-exposure/california-supreme-court.html",
+    "entity-exposure/california-supreme-court",
+    "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
+    "entity-exposure/court-of-appeals-for-the-ninth-circuit",
+    "entity-exposure/court-of-appeals-for-the-second-circuit.html",
+    "entity-exposure/court-of-appeals-for-the-second-circuit",
+    "entity-exposure/supreme-court-of-pennsylvania.html",
+    "entity-exposure/supreme-court-of-pennsylvania",
+    "entity-exposure/2021-08825.html",
+    "entity-exposure/2021-08825",
+    "entity-exposure/2024-13374.html",
+    "entity-exposure/2024-13374",
+    "entity-exposure/23-wap-2023.html",
+    "entity-exposure/23-wap-2023",
+    "entity-exposure/24-2251.html",
+    "entity-exposure/24-2251",
+    "entity-exposure/24-7261.html",
+    "entity-exposure/24-7261",
+    "entity-exposure/civil-rights-corps-v-lasalle.html",
+    "entity-exposure/civil-rights-corps-v-lasalle",
+    "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html",
+    "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc",
+    "entity-exposure/gilead-tenofovir-cases.html",
+    "entity-exposure/gilead-tenofovir-cases",
+    "entity-exposure/punxsutawney-hunting-club-v-pgc.html",
+    "entity-exposure/punxsutawney-hunting-club-v-pgc",
+    "entity-exposure/s283862.html",
+    "entity-exposure/s283862",
+    "entity-exposure/united-states-v-anten.html",
+    "entity-exposure/united-states-v-anten",
+    "entity-exposure/williams-v-biggs.html",
+    "entity-exposure/williams-v-biggs",
     "entity-exposure/centers-for-medicare-and-medicaid-services.html",
     "entity-exposure/centers-for-medicare-and-medicaid-services",
     "entity-exposure/health-and-human-services-department.html",
     "entity-exposure/health-and-human-services-department",
+    "entity-exposure/homeland-security-department.html",
+    "entity-exposure/homeland-security-department",
     "entity-exposure/aapl.html",
     "entity-exposure/aapl",
     "entity-exposure/alphabet-inc.html",
@@ -60,8 +110,6 @@
     "entity-exposure/nvda",
     "entity-exposure/nvidia-corp.html",
     "entity-exposure/nvidia-corp",
-    "entity-exposure/nuclear-regulatory-commission.html",
-    "entity-exposure/nuclear-regulatory-commission",
     "entity-exposure/securities-and-exchange-commission.html",
     "entity-exposure/securities-and-exchange-commission",
     "epstein-email-network.html",
@@ -81,14 +129,174 @@
   ],
   "checks": [
     {
-      "name": "exposure page homeland-security-department",
+      "name": "exposure page appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "ok": true,
-      "detail": "entity-exposure/homeland-security-department.html"
+      "detail": "entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
     },
     {
-      "name": "built exposure page homeland-security-department",
+      "name": "built exposure page appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "ok": true,
-      "detail": "_site/entity-exposure/homeland-security-department.html"
+      "detail": "_site/entity-exposure/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
+    },
+    {
+      "name": "exposure page california-supreme-court",
+      "ok": true,
+      "detail": "entity-exposure/california-supreme-court.html"
+    },
+    {
+      "name": "built exposure page california-supreme-court",
+      "ok": true,
+      "detail": "_site/entity-exposure/california-supreme-court.html"
+    },
+    {
+      "name": "exposure page court-of-appeals-for-the-ninth-circuit",
+      "ok": true,
+      "detail": "entity-exposure/court-of-appeals-for-the-ninth-circuit.html"
+    },
+    {
+      "name": "built exposure page court-of-appeals-for-the-ninth-circuit",
+      "ok": true,
+      "detail": "_site/entity-exposure/court-of-appeals-for-the-ninth-circuit.html"
+    },
+    {
+      "name": "exposure page court-of-appeals-for-the-second-circuit",
+      "ok": true,
+      "detail": "entity-exposure/court-of-appeals-for-the-second-circuit.html"
+    },
+    {
+      "name": "built exposure page court-of-appeals-for-the-second-circuit",
+      "ok": true,
+      "detail": "_site/entity-exposure/court-of-appeals-for-the-second-circuit.html"
+    },
+    {
+      "name": "exposure page supreme-court-of-pennsylvania",
+      "ok": true,
+      "detail": "entity-exposure/supreme-court-of-pennsylvania.html"
+    },
+    {
+      "name": "built exposure page supreme-court-of-pennsylvania",
+      "ok": true,
+      "detail": "_site/entity-exposure/supreme-court-of-pennsylvania.html"
+    },
+    {
+      "name": "exposure page 2021-08825",
+      "ok": true,
+      "detail": "entity-exposure/2021-08825.html"
+    },
+    {
+      "name": "built exposure page 2021-08825",
+      "ok": true,
+      "detail": "_site/entity-exposure/2021-08825.html"
+    },
+    {
+      "name": "exposure page 2024-13374",
+      "ok": true,
+      "detail": "entity-exposure/2024-13374.html"
+    },
+    {
+      "name": "built exposure page 2024-13374",
+      "ok": true,
+      "detail": "_site/entity-exposure/2024-13374.html"
+    },
+    {
+      "name": "exposure page 23-wap-2023",
+      "ok": true,
+      "detail": "entity-exposure/23-wap-2023.html"
+    },
+    {
+      "name": "built exposure page 23-wap-2023",
+      "ok": true,
+      "detail": "_site/entity-exposure/23-wap-2023.html"
+    },
+    {
+      "name": "exposure page 24-2251",
+      "ok": true,
+      "detail": "entity-exposure/24-2251.html"
+    },
+    {
+      "name": "built exposure page 24-2251",
+      "ok": true,
+      "detail": "_site/entity-exposure/24-2251.html"
+    },
+    {
+      "name": "exposure page 24-7261",
+      "ok": true,
+      "detail": "entity-exposure/24-7261.html"
+    },
+    {
+      "name": "built exposure page 24-7261",
+      "ok": true,
+      "detail": "_site/entity-exposure/24-7261.html"
+    },
+    {
+      "name": "exposure page civil-rights-corps-v-lasalle",
+      "ok": true,
+      "detail": "entity-exposure/civil-rights-corps-v-lasalle.html"
+    },
+    {
+      "name": "built exposure page civil-rights-corps-v-lasalle",
+      "ok": true,
+      "detail": "_site/entity-exposure/civil-rights-corps-v-lasalle.html"
+    },
+    {
+      "name": "exposure page d-and-a-grandview-llc-v-60-davidson-llc",
+      "ok": true,
+      "detail": "entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html"
+    },
+    {
+      "name": "built exposure page d-and-a-grandview-llc-v-60-davidson-llc",
+      "ok": true,
+      "detail": "_site/entity-exposure/d-and-a-grandview-llc-v-60-davidson-llc.html"
+    },
+    {
+      "name": "exposure page gilead-tenofovir-cases",
+      "ok": true,
+      "detail": "entity-exposure/gilead-tenofovir-cases.html"
+    },
+    {
+      "name": "built exposure page gilead-tenofovir-cases",
+      "ok": true,
+      "detail": "_site/entity-exposure/gilead-tenofovir-cases.html"
+    },
+    {
+      "name": "exposure page punxsutawney-hunting-club-v-pgc",
+      "ok": true,
+      "detail": "entity-exposure/punxsutawney-hunting-club-v-pgc.html"
+    },
+    {
+      "name": "built exposure page punxsutawney-hunting-club-v-pgc",
+      "ok": true,
+      "detail": "_site/entity-exposure/punxsutawney-hunting-club-v-pgc.html"
+    },
+    {
+      "name": "exposure page s283862",
+      "ok": true,
+      "detail": "entity-exposure/s283862.html"
+    },
+    {
+      "name": "built exposure page s283862",
+      "ok": true,
+      "detail": "_site/entity-exposure/s283862.html"
+    },
+    {
+      "name": "exposure page united-states-v-anten",
+      "ok": true,
+      "detail": "entity-exposure/united-states-v-anten.html"
+    },
+    {
+      "name": "built exposure page united-states-v-anten",
+      "ok": true,
+      "detail": "_site/entity-exposure/united-states-v-anten.html"
+    },
+    {
+      "name": "exposure page williams-v-biggs",
+      "ok": true,
+      "detail": "entity-exposure/williams-v-biggs.html"
+    },
+    {
+      "name": "built exposure page williams-v-biggs",
+      "ok": true,
+      "detail": "_site/entity-exposure/williams-v-biggs.html"
     },
     {
       "name": "exposure page centers-for-medicare-and-medicaid-services",
@@ -109,6 +317,16 @@
       "name": "built exposure page health-and-human-services-department",
       "ok": true,
       "detail": "_site/entity-exposure/health-and-human-services-department.html"
+    },
+    {
+      "name": "exposure page homeland-security-department",
+      "ok": true,
+      "detail": "entity-exposure/homeland-security-department.html"
+    },
+    {
+      "name": "built exposure page homeland-security-department",
+      "ok": true,
+      "detail": "_site/entity-exposure/homeland-security-department.html"
     },
     {
       "name": "exposure page aapl",
@@ -229,16 +447,6 @@
       "name": "built exposure page nvidia-corp",
       "ok": true,
       "detail": "_site/entity-exposure/nvidia-corp.html"
-    },
-    {
-      "name": "exposure page nuclear-regulatory-commission",
-      "ok": true,
-      "detail": "entity-exposure/nuclear-regulatory-commission.html"
-    },
-    {
-      "name": "built exposure page nuclear-regulatory-commission",
-      "ok": true,
-      "detail": "_site/entity-exposure/nuclear-regulatory-commission.html"
     },
     {
       "name": "exposure page securities-and-exchange-commission",

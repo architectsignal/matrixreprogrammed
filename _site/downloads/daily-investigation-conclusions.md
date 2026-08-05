@@ -1,6 +1,6 @@
 # Daily Investigation Conclusions
 
-Generated: 2026-08-02T08:22:21.766Z
+Generated: 2026-08-04T07:58:13.254Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -11,12 +11,12 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 - sourcesScheduled: 12
 - sourcesFetched: 9
 - sourceFailures: 3
-- changedSources: 5
-- findingsInWindow: 503
-- establishedWrongdoingFindings: 7
+- changedSources: 7
+- findingsInWindow: 741
+- establishedWrongdoingFindings: 11
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
-- meaningfulSourceChanges: 5
+- meaningfulSourceChanges: 8
 
 ## Permanent Evidence Method
 
@@ -150,6 +150,24 @@ Next records: Open and preserve the primary document or official case page.; Ide
 
 Source URL: https://www.usaspending.gov/award/9523ZY26P0022
 
+### Final Judgment - Gotbit Consulting LLC
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
+
+Implication: undefined
+
+Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+
+Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26598-gotbit-consulting.pdf
+
 ### Final Judgment
 
 Grade: A · Status: established-wrongdoing · Severity: 5
@@ -166,43 +184,7 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26516.pdf
-
-### Final Judgment - Ali Derakhshanfar
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf
-
-### Final Judgment by Default
-
-Grade: A · Status: established-wrongdoing · Severity: 5
-
-Source: U.S. Securities and Exchange Commission — Litigation Releases
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26536.pdf
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26597.pdf
 
 ### Final Judgment
 
@@ -222,7 +204,7 @@ Next records: Open and preserve the underlying primary document or official case
 
 Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf
 
-### Final Judgment - Geoffrey Allen Wall
+### Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux
 
 Grade: A · Status: established-wrongdoing · Severity: 5
 
@@ -238,13 +220,13 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26524.pdf
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf
 
-### SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency
+### Final Judgment - Ali Derakhshanfar
 
-Grade: B · Status: record-update · Severity: 1
+Grade: A · Status: established-wrongdoing · Severity: 5
 
-Source: USAspending.gov — Recent Contract Awards
+Source: U.S. Securities and Exchange Commission — Litigation Releases
 
 Conclusion: undefined
 
@@ -252,29 +234,65 @@ Mechanism: Trace the source-linked chain through the named entity, legal authori
 
 Implication: undefined
 
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.usaspending.gov/award/9594CS26F0051
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf
 
-### HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration
+### Final Judgment - Sal N. Ortiz
 
-Grade: B · Status: record-update · Severity: 1
+Grade: A · Status: established-wrongdoing · Severity: 5
 
-Source: USAspending.gov — Recent Contract Awards
+Source: U.S. Securities and Exchange Commission — Litigation Releases
 
-Conclusion: A dated source update exists and should be compared with prior records.
+Conclusion: undefined
 
-Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
 
-Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+Implication: undefined
 
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
 
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.usaspending.gov/award/80NSSC26P1028
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf
+
+### Final Judgment - Semisub, Inc.
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
+
+Implication: undefined
+
+Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+
+Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
+
+Source URL: https://www.sec.gov/files/judg26592-semisub.pdf
+
+### Final Judgment - Jamey Denise Jackson
+
+Grade: A · Status: established-wrongdoing · Severity: 5
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: undefined
+
+Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
+
+Implication: undefined
+
+Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
+
+Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
+
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf
 
 ### Final Judgment
 
@@ -292,9 +310,9 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf
 
-### Final Judgment - Bongiorno
+### Revised Final Judgment
 
 Grade: A · Status: established-wrongdoing · Severity: 5
 
@@ -310,13 +328,13 @@ Boundary: The finding applies only to the conduct, parties and legal outcome sta
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf
 
-### DELL MARKETING L.P. — District of Columbia Courts
+### Final Judgment
 
-Grade: B · Status: record-update · Severity: 1
+Grade: A · Status: established-wrongdoing · Severity: 5
 
-Source: USAspending.gov — Recent Contract Awards
+Source: U.S. Securities and Exchange Commission — Litigation Releases
 
 Conclusion: undefined
 
@@ -324,29 +342,83 @@ Mechanism: Trace the source-linked chain through the named entity, legal authori
 
 Implication: undefined
 
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+Boundary: The finding applies only to the conduct, parties and legal outcome stated in the official record. It does not justify unrelated accusations.
 
 Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
 
-Source URL: https://www.usaspending.gov/award/95C67826P0299
+Source URL: https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf
 
-### INDUSTRIAL BANK — District of Columbia Courts
+### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 
-Grade: B · Status: record-update · Severity: 1
+Grade: B · Status: source-change · Severity: 2
 
-Source: USAspending.gov — Recent Contract Awards
+Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
 
-Conclusion: A dated source update exists and should be compared with prior records.
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
 
-Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
 
-Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
 
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
 
-Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
 
-Source URL: https://www.usaspending.gov/award/95C67826P0279
+Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
+
+### content changed: U.S. Securities and Exchange Commission — Litigation Releases
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Securities and Exchange Commission — Litigation Releases
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.sec.gov/enforcement-litigation/litigation-releases
+
+### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Securities and Exchange Commission — Current EDGAR Filings
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
+
+### content changed: U.S. Treasury OFAC — Recent Actions
+
+Grade: B · Status: source-change · Severity: 2
+
+Source: U.S. Treasury OFAC — Recent Actions
+
+Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
+
+Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
+
+Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
+
+Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
+
+Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
+
+Source URL: https://ofac.treasury.gov/recent-actions
 
 ### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 
@@ -384,11 +456,11 @@ Next records: Open the current source and identify the exact added, removed or a
 
 Source URL: https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom
 
-### content changed: Federal Register — Latest Documents
+### content changed: European Public Prosecutor's Office — News
 
 Grade: B · Status: source-change · Severity: 2
 
-Source: Federal Register — Latest Documents
+Source: European Public Prosecutor's Office — News
 
 Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
 
@@ -400,25 +472,7 @@ Boundary: The change alone does not establish wrongdoing, deliberate concealment
 
 Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
 
-Source URL: https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest
-
-### content changed: UK Serious Fraud Office — News And Communications
-
-Grade: B · Status: source-change · Severity: 2
-
-Source: UK Serious Fraud Office — News And Communications
-
-Conclusion: The normalized content returned by the registered source differs from the previously preserved version.
-
-Mechanism: The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.
-
-Implication: A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.
-
-Boundary: The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.
-
-Next records: Open the current source and identify the exact added, removed or altered record.; Compare the preserved hashes and versions before drawing a substantive conclusion.; Check for a replacement URL, correction notice, archive copy or official explanation.
-
-Source URL: https://www.gov.uk/government/organisations/serious-fraud-office
+Source URL: https://www.eppo.europa.eu/media/news_en
 
 ### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 

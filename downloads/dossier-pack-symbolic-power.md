@@ -46,7 +46,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-03T06:44:56.558Z
+Updated: 2026-08-05T06:07:54.796Z
 Items: 12
 
 - 2026-07-16 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
@@ -89,16 +89,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-10 — Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein - PBS
-  - Source: https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSG5OV2xCdUcwQU9ERE5STGRyajdveDZYUXFwRFRCTXVsNUFCYU1RS0diV2R6anc0aFd1YWNqUU1JMjFNVmhzbEczeHVXNFZWSU5qXzJIeTcwa2VYSHVtY3dQWHkyVndaa3E2eVZyRHVtcjBLQjVnY2ZZMm5MekdLSmRENS1JVUpMQ3FUSUNMLThtNnF6UDdpU1lqOEZRZk16ZnRmc0FOX2pjU1ZPRVNqTm5ycFZieWpmSGM1SjB0ZllZRF9VZTJ5dUxWQkpNelEyQUJN0gHYAUFVX3lxTE43bFA3cFNfVTZsdmJKaWNYdXhEVDJEc3pvT08xQUpQUWladjV1RTBBb2RqN2FzcnR2STM5UmsxWXdaUDVDYk5mWTFHcktOTDA4YVNSLWU0QTVCaXFsd3NPWEZVRm5qV3lsOUNOYnF1a0Z1QURXbUFhck84WU1iV1ZSNjdsWVBnYnh0THhZenNWTkg4UXIyYVM5clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-10 — Longtime Epstein assistant denies knowledge of his crimes to House Oversight Committee - MS NOW
-  - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxOOFMxVzYtYjVSWXhXeFZFQVRSRXlnOW0yTUhYcW9JclprZi1PajBELTREemQzNnE1QmJWaEdoS1g1UE94RFFheXhZT2xhMnVySk5lS1hEMTRGMVFMUjAyQmZpeXZTekM2WldVdlZUWEpPUUNCWTNlRUVxSktXRkVOUmNGbEVaV3FVWV9lMXlqX3hVeTBv?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
   - Evidence: Primary or official public-record lead
@@ -107,6 +97,16 @@ Items: 12
 - 2026-07-30 — Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
   - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5
   - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-30 — Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-22 — French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK)
+  - Source: https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
+  - Evidence: Seven-day public-record lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 
@@ -136,10 +136,10 @@ Items: 12
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
 - Axios / federal court order report: Judge orders DOJ to release more Epstein records or justify redactions by July 2 — https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order
 - Google News / Epstein timeline and files: 'I did not know': Former Epstein secretary Lesley Groff denies any awareness of boss' sex crimes - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMiowFBVV95cUxOLVdoa3J5RzRHZDlnbnVUWWhfaXNXSFZUUkN6MDA0VTlOUDV6UDB1ZTNSY3g5Y3dob1hWTjB1alQ5eld3ZjEzN1dMOXpCcFRMUnh3Y1lqTFBRNENKOTZsakxGTlJEOEZsZm5LdEpCalJjX0RDWjRROGdnVkprb19kSHl3MnlrLVFJd2Fobkl1R0x0UHBNZ01nRjlEdnhXekV2ZXFv0gGoAUFVX3lxTE5kWWltOWVuUnluaGktcFo0VEp0c1RwR2hhNnNpcDZKQUhOMF9wcnVwNHA3Z09BQWQzZy1oSUdkXzJKSkRKanRaT1FXSTdoeThOVGhLY1JmZnR5WmRwR3BBQUFUdlhzdVUxN0EtdzZtdFJzUGliM1JBeXhtY0QzZWJkUnlVaER0VUtHM0I1czI4c1kxc1lkQ2lBV3FHQS0yTUxZOGtzX1RYbA?oc=5
-- Google News / Epstein timeline and files: Key takeaways from Bill Gates' interview with House committee about his relationship with Jeffrey Epstein - PBS — https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSG5OV2xCdUcwQU9ERE5STGRyajdveDZYUXFwRFRCTXVsNUFCYU1RS0diV2R6anc0aFd1YWNqUU1JMjFNVmhzbEczeHVXNFZWSU5qXzJIeTcwa2VYSHVtY3dQWHkyVndaa3E2eVZyRHVtcjBLQjVnY2ZZMm5MekdLSmRENS1JVUpMQ3FUSUNMLThtNnF6UDdpU1lqOEZRZk16ZnRmc0FOX2pjU1ZPRVNqTm5ycFZieWpmSGM1SjB0ZllZRF9VZTJ5dUxWQkpNelEyQUJN0gHYAUFVX3lxTE43bFA3cFNfVTZsdmJKaWNYdXhEVDJEc3pvT08xQUpQUWladjV1RTBBb2RqN2FzcnR2STM5UmsxWXdaUDVDYk5mWTFHcktOTDA4YVNSLWU0QTVCaXFsd3NPWEZVRm5qV3lsOUNOYnF1a0Z1QURXbUFhck84WU1iV1ZSNjdsWVBnYnh0THhZenNWTkg4UXIyYVM5clNfNjZVaTBvZmZXbm9ISFRYOXdBcl9uV3BVdnhqbDNMSVJiang2NnA5VGtDMFh3dlgzT2tVSXNZZV9qTGJQdQ?oc=5
-- Google News / Epstein timeline and files: Longtime Epstein assistant denies knowledge of his crimes to House Oversight Committee - MS NOW — https://news.google.com/rss/articles/CBMilAFBVV95cUxOOFMxVzYtYjVSWXhXeFZFQVRSRXlnOW0yTUhYcW9JclprZi1PajBELTREemQzNnE1QmJWaEdoS1g1UE94RFFheXhZT2xhMnVySk5lS1hEMTRGMVFMUjAyQmZpeXZTekM2WldVdlZUWEpPUUNCWTNlRUVxSktXRkVOUmNGbEVaV3FVWV9lMXlqX3hVeTBv?oc=5
 - Google News / Epstein timeline and files: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation — https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
 - Google News / Epstein timeline and files: Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV — https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5
+- Google News / Epstein timeline and files: Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV — https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
+- Google News / Epstein sighting and alive claims: French modelling scout with links to Epstein found dead: prosecutors - The Standard (HK) — https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWlVKdjA3TXF3R1pXRm93cnZ3cWloeUhONEJMQnY3a2hoNU5MT3YyNF9PYlRHbm9zMmNpNXpwOTE1Q0YzbGRfUnI4RGV1TFNMczZ6aWNISFZiUlBKM25kY1lCaHg2UngyeXRmSjlkLTJMN1hKV1d5dWppdEZtRWRhNlhqbk5uTGRkbXYzVVhpVjIyQXc1X0dBczdPU2tYZkpjenY4UjRYNDBkWktpOFRHdUFweTF1bE5aWFlv?oc=5
 
 ## Book Routes
 

@@ -1,15 +1,14 @@
 {
-  "generatedAt": "2026-08-03T06:53:32.637Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-05T06:17:24.985Z",
+  "pageCount": 124,
   "output": "downloads/member-forum-integration-test.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Member Forum Integration Test",
-    "contentHash": "f5501fc34aba81067b614e028fc5b8871ad936802095929740ab48fd4c3a2c95",
+    "contentHash": "731a5279cad526802d847d44eb62376bed700b0a243690c47017bf27bd310f7d",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-E6C400911BD1A158",
-      "e083e748ec6311742c2416e5",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -33,18 +32,22 @@
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
+      "declassified-files-2026-08-04-97c54014",
+      "declassified-files-2026-08-04-9cf12b0f",
+      "declassified-files-2026-08-04-9f86d514",
+      "declassified-files-2026-08-04-1ec8f84b",
+      "c90bf38664c0409003c1069a",
+      "declassified-files-2026-08-03-ca8737b9",
+      "declassified-files-2026-08-03-dd0ce198",
+      "declassified-files-2026-08-03-449e1af7",
+      "declassified-files-2026-08-03-9c902136",
+      "declassified-files-2026-08-03-c89ca789",
+      "declassified-files-2026-08-03-fcc8d24a",
+      "declassified-files-2026-08-03-79c56827",
+      "declassified-files-2026-08-03-77817848",
+      "declassified-files-2026-08-03-db0ef3d6",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "declassified-files-2026-07-29-7116ac17",
-      "declassified-files-2026-07-29-6057124d",
-      "declassified-files-2026-07-29-1c57583d",
-      "declassified-files-2026-07-28-bb7df4f6",
-      "declassified-files-2026-07-28-dc596165",
-      "declassified-files-2026-07-28-82e502f5",
-      "declassified-files-2026-07-28-e360ff06",
-      "declassified-files-2026-07-28-d82c8cb5",
-      "declassified-files-2026-07-28-47e74d46",
-      "declassified-files-2026-07-28-d6d67d44",
       "war-machine-2026-07-24-192b3e30",
       "b4cb47ea50dc901364239e9f",
       "abdul-halim-khan-conviction-2026",
@@ -141,24 +144,21 @@
       "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
-      "ASC-REVIEW-376546BBB3F711C2",
-      "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18"
+      "ASC-REVIEW-376546BBB3F711C2"
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 21,
-      "disputedClaimCount": 115,
+      "primarySourceCount": 24,
+      "disputedClaimCount": 112,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 125,
-      "moneyRecordCount": 110
+      "moneyRecordCount": 107
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Christopher Wray's Gift to Attorney General Garland (data/latest-public-drops.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Member Forum Integration Test.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Anomalous Health Incidents (data/live-intel.json); Anomalous Health Incidents Part 01 (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -166,8 +166,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Anomalous Health Incidents,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Anomalous Health Incidents This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -216,6 +216,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-04T04:00:00.000Z"
   }
 }

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T07:05:26.350Z",
+  "generatedAt": "2026-08-05T06:30:10.734Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "31376 entries"
+      "detail": "31738 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "31376 unique routes"
+      "detail": "31738 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -125,17 +125,17 @@
     {
       "name": "local query government contracts USAspending procurement",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-4e0950628d25b3504921, daily-investigation-conclusions.html?finding=e86287f396e1ee800a7ee796, daily-investigation-conclusions.html?finding=4c372edcf20b760ae3305f10"
+      "detail": "daily-investigation-conclusions.html?finding=e86287f396e1ee800a7ee796, daily-investigation-conclusions.html?finding=4c372edcf20b760ae3305f10, daily-investigation-conclusions.html?finding=1046ef03dded2bdd333fad31"
     },
     {
       "name": "local query Epstein DOJ disclosures redactions",
       "ok": true,
-      "detail": "relationship-registry.html?relationship=relationship-144dc1ba32dda0c19858, relationship-registry.html?relationship=relationship-c8eca50c2a447829fb7f, relationship-registry.html?relationship=relationship-1f3f0d9444a4820b4ec5"
+      "detail": "daily-investigation-conclusions.html?finding=ac66f1d6ad13fe6df31bcc0a, daily-investigation-conclusions.html?finding=80b4716fe6b53fdae666e318, daily-investigation-conclusions.html?finding=2ebbbb1a52cfa3ac5cd61bf1"
     },
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "source-changes.html?change=62862e6ca90495adc0788a2d, source-changes.html?change=a53bf480df4e4883383a08e0, source-changes.html?change=a334a207405ec629b4be337d"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, entity-registry.html#entity-source-sec-current-filings, relationship-registry.html?relationship=relationship-c4989c311bc16d4f93cc"
     }
   ],
   "failures": []

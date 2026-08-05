@@ -2,6 +2,296 @@
 
 Reusable claim/source/evidence-boundary cards.
 
+## ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168076
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Afghanistan hunger crisis intensifies as millions left without food aid
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168069
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Africans bear the brunt of biodiversity loss
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168078
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168077
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## New Ebola vaccine trial launches as outbreak spreads in DR Congo
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168072
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Strait of Hormuz disruption hits energy, fertilizer and industrial trade
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168074
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Anomalous Health Incidents
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/anomalous-health-incidents
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Anomalous Health Incidents Part 01
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/anomalous-health-incidents/anomalous-health-incidents-part-01/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Anomalous Health Incidents Part 02
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/anomalous-health-incidents/anomalous-health-incidents-part-02/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Thomas Ciancutti Part 03
+
+- Date: 2026-08-04
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/thomas-ciancutti/thomas-ciancutti-part-03/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity - ABC News - Breaking News, Latest News and Videos
+
+- Date: 2026-08-03
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQZE5ScWZ6TjZiSXNZbFdxU0toeDFERXVMNndVeDV0Vi0ya2F6Mk05MEpJVFVXMWlpR3ZzeWlCSnFFUlV5VG9laFl4TmJlYkxYTkZvNVh0ajJYdzNESC1iOEFzTWdDY2lqZElIOWdIMTdPOWdRajAtUUt5WWlia3pxbUx5SzBrN1BqaXJNSG9ETzlTRHU1VEQwQXhXNzllTW1ncXBqNTB30gGrAUFVX3lxTE5BQzkxZkhnOWhtR3hvWHltZTd4OGdXd3FQajNMNTFBNnNqRHJ2S0o1dHBWX2ctMmVjV2hISWZxd2NyRF9hWW4ydlp6eHd6QUlOR1EzVHd2azl5dmlUbkstU3F0UjhfUi1hNnlnZHlnR1N0YjRGUDRTQjdwcXNGSFgtbUwtU3JFM1BHcjdVaEhtdDBSQ3AzcHMtZ1B4OEhqRjZ1ZWNfbUUxTy03bw?oc=5
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
+## Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking - ABC News - Breaking News, Latest News and Videos
+
+- Date: 2026-08-03
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxPU0sxVk0xV3dnbkJmZXMtWWJ6WFMxemhZdHpoOWdCSnMyNnhpMjk0S0JlVGtOT2otMVd1MkpPSzM3VG8zdHkteHhiNGI4MFh1YmZSRmRYTXNFWWJRUVZxN3IzSzV3aHZiZVVEdGdzc1RsRnNJbERLX3JSRzNMRGt6MS1IOHdGVTVOb1ZteHdjd2RrMDM5V0V1V1R6dWtJZkZVa0dZOTBpNmYtSG93d2fSAbMBQVVfeXFMTTJKQVhNallicGJScUl4eXVhcVVObUdPSmI3bkIzc1JaT0FCX1ZFWXZoZzJyZHJsMFpGQmhETnoxSmdvUFRpTW9pam9BVnJVUERoUThEczg3N0tVSjBCMmpLVlFtYy0xUk8wR0REdkRnNUZPTUVJcDR6ZUdnbjRpRVRzR25wYW04Ui1MbmRNTU1nVFpsQnQ1NDY3dHpDVzZHdkllXzJLdjhRYkJhRkpSaXpDek0?oc=5
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
+## Victims to settle case against Epstein's longtime attorney, accountant: Documents - ABC News - Breaking News, Latest News and Videos
+
+- Date: 2026-08-03
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOZjdfbkxJREl6NDAxNGpDcEwtVTdYcm40akZMd0pJVWVhTzdDcG9iZXRMb0F1S0sxdHNsSU1kY3ZCUzVndU1hNTA2ZzA4emNrREh1dHFhemhZa2M5WmdnbHlWbEtzWVdUZVR1eWVkWGhpVC1oYTRoTlRtNWZMMkJ6WHpWSExyWlRZTEtrZ09ZSG02bTJyM2dpRWQ1WU41dGZzWjlyLW5CWmlWbFkwZ1HSAbMBQVVfeXFMTlpSdUlfYXZtTU5VblB4T2o1MkNoYXNlelNNYmljRndEbEJjaF9oZGx3Wk5Lc2JPVGMwLTVEZm05Z3lEQi1QTnlfNXNySnhBSWRGOThqdE9WTWhPdjAwLVBhRFhWRDVqMldyNi1vRWpMQUpwRTlmR293RnYxbmFtLTBvNm84NnpzX1JOSjQ3STZfRGZuNzlIR0xlMFN2QlB6T1cwUVB0dEs1Ui10Sy12SkZfZzQ?oc=5
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
+## Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
+
+- Date: 2026-08-03
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
+## DR Congo: New centre opens at heart of record Ebola outbreak
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168064
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Drone strikes threaten civilians and aid operations in Sudan
+
+- Date: 2026-08-03
+- Evidence class: Settlement / silence-management lane
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168068
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## In Somalia, AI is helping deliver food to hungry families
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168066
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes
+
+- Date: 2026-08-03
+- Evidence class: Settlement / silence-management lane
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168067
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## Mothers still lack support to breastfeed, UN warns
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168065
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: evidence-vault.html
+
+## How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
+
+- Date: 2026-08-03
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
+
+## Arctic Frost Part 05
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/arctic-frost/arctic-frost-part-05/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## BOMBROB & Operation Punchout Part 33
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/bombrob-and-operation-punchout/bombrob-operation-punchout-part-33/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## BOMBROB & Operation Punchout Part 34
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/bombrob-and-operation-punchout/bombrob-operation-punchout-part-34/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Donald West
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/donald-west
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Donald West Part 01
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/donald-west/donald-west-part-01/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Donald West Part 02
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/donald-west/donald-west-part-02/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Donald West Part 03
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/donald-west/donald-west-part-03/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Donald West Part 04
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/donald-west/donald-west-part-04/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
+## Donald West Part 05 (Final)
+
+- Date: 2026-08-03
+- Evidence class: Primary or official public-record lead
+- Source: https://vault.fbi.gov/donald-west/donald-west-part-05-final/view
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- Next: evidence-vault-index.html
+
 ## Trapped by a Facebook job advert, freed by a stranger in a taxi
 
 - Date: 2026-08-02
@@ -11,6 +301,16 @@ Reusable claim/source/evidence-boundary cards.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 - Next: evidence-vault.html
+
+## Epstein records back in court as federal judge questions DOJ redactions - WPEC
+
+- Date: 2026-08-01
+- Evidence class: Court finding / conviction lane
+- Source: https://news.google.com/rss/articles/CBMijgNBVV95cUxOVlNTU2lxUGpwQnotYU1vUnJDSm1ydXBVb3plWG9wTHNOZGI3UmZBcC00dWp4QnZILTNWNmxha2hvVkROcnRKN0R6aGZqOUlsRExZSG1xOFlmS3k3azFKU3RZUzQybzl3ZFdhSi1LQUZuLUR2TkwtVlRkQWxuQUttUmRjSF9HcjdQaEFKQlp2bUp6VU9EWXRWcUNhUlFlbTFHYXJhazFTbl9LVENTTXZUUjVLSkZTQzVWRDNxeFlxaHlta0NEMjdCd2tjbUtCaXRiSWNxdVZ6MklQLXI4emRWT2RnNDlWaFBwOGtLZHhGMmMxaHAwbjViTVdnekctemVfM1k4bWh1Nmt1RE51TmMxTGVEOGxUenkxa2JqOFNYWV83VU8ycWppMm5wSnVaRFVjU09CREpXV1hKZ251ZDdybVpEUUwzRWhOSVpOTHd6R3JTR1VEbzVSZVM0ZEpfRW5mZkhxTFd4NzI0NllXdDRzWFdMYkFLYWRCVUZJbGhYamZlb1BEV2REWXBJZ1VoQQ?oc=5
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+- Next: epstein-files.html#epstein-evidence-ladder
 
 ## Recovery in Ukraine, one life at a time
 
@@ -22,7 +322,7 @@ Reusable claim/source/evidence-boundary cards.
 - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
 - Next: evidence-vault.html
 
-## Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org
+## Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
 
 - Date: 2026-07-31
 - Evidence class: Court finding / conviction lane
@@ -31,6 +331,16 @@ Reusable claim/source/evidence-boundary cards.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
+
+## Toppan Security demos interoperability with French national digital ID wallet - Biometric Update
+
+- Date: 2026-07-31
+- Evidence class: Seven-day public-record lead
+- Source: https://news.google.com/rss/articles/CBMitwFBVV95cUxPQnB1NnVvUmhXX2xZSS1PT0tBU0hNY3hNVU00eHMyQmxwLWdqdG80bzE5aDk3QjI3SGx0bUMzZFdRc0tFTmpHWlNDVUFoS0loZEZFTGZpSU50SV9iX2tMS1BBbFdpaHdOT05saGFLSDlDbU9uSDcxMGhfTnZUSkRoQkFnazA0WkdNQWt6NkRuaVN6YVNxcTA4d1ExSXQ1Q3lreXl1VnJIaWhBV1ViaHgweGdDeEh4VlU?oc=5
+- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
+- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
+- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+- Next: atlas-index.html
 
 ## Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
 
@@ -91,313 +401,3 @@ Reusable claim/source/evidence-boundary cards.
 - Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
 - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
 - Next: epstein-files.html#epstein-evidence-ladder
-
-## Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - The Guardian
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Epstein files: How victims remain exposed to identification - DW.com
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMilgFBVV95cUxOWFpGRXBJV2JKUVJnWVV4LUNZTVFPdmtCcXJJWkF4ZjlRbnJEVUo0X09CckxtSzJIMV8wak5sWkpaYkFXdDRCeGJoN05RMU5EdmRWOEhUcU5oTFQtcjVCVGx3anAwM2dPNTZianpNY3BMS2d2bC1aUFM2M3oyWVRxUWo1b3dvNm9tU2stRmI1blRfM0o3MVHSAZYBQVVfeXFMUEpzbXI0TmE3bU5OaUdDb25xWkotdW5RREpJM0F4aG94Rms5WVM3WEtIcWpycWlZS1I3M1pHWFF1c2hrWHJ5d1hWeE9hdldBQWRlUnYyRWp5ZjJEM3ExdGtGS3JLTzhIRjRZMG5HNzFveWVLMVVlTUhaTENLYkVnY1pHT1hFN2NTSUY5V0kxbkYwVFNqQ2JR?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
-
-- Date: 2026-07-30
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168052
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Fear grows as freedoms shrink in Uganda
-
-- Date: 2026-07-30
-- Evidence class: Settlement / silence-management lane
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168057
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Middle East crisis: Humanitarian fallout ‘worsening by the day’
-
-- Date: 2026-07-30
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168055
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Returning Afghans face growing risk of trafficking as crises deepen
-
-- Date: 2026-07-30
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168051
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## The climate pattern putting millions at risk: El Niño explained
-
-- Date: 2026-07-30
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168056
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Wildfires: Prevention is the best defence, UN says
-
-- Date: 2026-07-30
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168054
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Epstein survivors’ lawsuits against Les Wexner combined into one case - nbc4i.com
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VdIBvwFBVV95cUxNTHNIS3NmNFlGUUxqZDFYUUV4Um5Db2xDVVV0Ql9vNFJyRUNINkNlZ3dBaWxrTEtjNUJydnNpaGx4dVdzSHlzRU1BelQxQVRnLVZ4MnZnRnFjYXdKd0tMUWFmQm1mQ1BkNmdCVk00NEI4dFliWmlFMHpkaGRxbnN3RGdJekdTcjVPQlp1aEFoUEhlaDA2XzlsRS1uUWZ3czJtS3lGdlVpUXpRVE5LWkdGRHNoNTdZMm02TDA1ZG90VQ?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - KQ2
-
-- Date: 2026-07-30
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian
-
-- Date: 2026-07-29
-- Evidence class: Court finding / conviction lane
-- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-- Next: epstein-files.html#epstein-evidence-ladder
-
-## Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
-
-- Date: 2026-07-29
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168048
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Hunger hampers Ebola response as cases top 3,200 in DR Congo
-
-- Date: 2026-07-29
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168047
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
-
-- Date: 2026-07-29
-- Evidence class: Settlement / silence-management lane
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168045
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
-
-- Date: 2026-07-29
-- Evidence class: Sourced reporting lane
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168049
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## World Wrestling Entertainment
-
-- Date: 2026-07-29
-- Evidence class: Primary or official public-record lead
-- Source: https://vault.fbi.gov/world-wrestling-entertainment
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- Next: evidence-vault-index.html
-
-## World Wrestling Entertainment Part 01
-
-- Date: 2026-07-29
-- Evidence class: Primary or official public-record lead
-- Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-01/view
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- Next: evidence-vault-index.html
-
-## World Wrestling Entertainment Part 02 (Final)
-
-- Date: 2026-07-29
-- Evidence class: Primary or official public-record lead
-- Source: https://vault.fbi.gov/world-wrestling-entertainment/world-wrestling-entertainment-part-02-final/view
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- Next: evidence-vault-index.html
-
-## A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168039
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Climate alarm ‘blaring from every direction’
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168042
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Forced online scams: IOM warns trafficking networks are booming
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168038
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## HIV, hepatitis, STI gains at risk as funding falls, WHO warns
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168040
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Mount Olympus and D-Day beaches among new World Heritage Sites
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168043
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
-
-- Date: 2026-07-28
-- Evidence class: Sourced reporting lane
-- Source: https://news.un.org/feed/view/en/story/2026/07/1168037
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-- Next: evidence-vault.html
-
-## Brian Wells
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://vault.fbi.gov/brian-wells
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- Next: evidence-vault-index.html
-
-## Brian Wells Part 01
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://vault.fbi.gov/brian-wells/brian-wells-part-01/view
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- Next: evidence-vault-index.html
-
-## Brian Wells Part 02 (Final)
-
-- Date: 2026-07-28
-- Evidence class: Primary or official public-record lead
-- Source: https://vault.fbi.gov/brian-wells/brian-wells-part-02-final/view
-- Record supports: This current source item can be tested against the underlying record and connected to the relevant evidence lane.
-- Not proven: This card does not prove criminal guilt, knowledge, intent, or participation unless the source itself is a court finding, plea, conviction, or other binding record.
-- Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-- Next: evidence-vault-index.html

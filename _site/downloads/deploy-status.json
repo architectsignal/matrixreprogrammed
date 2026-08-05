@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "f606a7113c8dd293af2399859b35f279ac014f7b",
-  "buildShortSha": "f606a7113c8d",
-  "generatedAt": "2026-08-03T07:00:29.472Z",
+  "buildSha": "1b8860686837c70b971c46f3c69927caa3db48ef",
+  "buildShortSha": "1b8860686837",
+  "generatedAt": "2026-08-05T06:25:01.466Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -345,7 +345,7 @@
       "marker": "MAP THE STRUCTURE.",
       "exists": true,
       "markerPresent": true,
-      "hash": "547522b779a71aae"
+      "hash": "f023ce86063023df"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "647f143bf0e41e3c"
+      "hash": "c314e691b4cef7f1"
     },
     {
       "name": "Epstein Command Center",
@@ -361,7 +361,7 @@
       "marker": "Evidence Boundary",
       "exists": true,
       "markerPresent": true,
-      "hash": "33607d11b75f9e7f"
+      "hash": "86818aac8ddc84eb"
     },
     {
       "name": "Epstein People Tracker",
@@ -369,7 +369,7 @@
       "marker": "People / Entity Tracker",
       "exists": true,
       "markerPresent": true,
-      "hash": "33607d11b75f9e7f"
+      "hash": "86818aac8ddc84eb"
     },
     {
       "name": "Epstein Timeline Map",
@@ -377,7 +377,7 @@
       "marker": "Timeline + Cross-Reference Map",
       "exists": true,
       "markerPresent": true,
-      "hash": "33607d11b75f9e7f"
+      "hash": "86818aac8ddc84eb"
     },
     {
       "name": "Epstein Evidence Ladder",
@@ -385,7 +385,7 @@
       "marker": "Evidence Strength Ladder",
       "exists": true,
       "markerPresent": true,
-      "hash": "33607d11b75f9e7f"
+      "hash": "86818aac8ddc84eb"
     },
     {
       "name": "Actual Files Cockpit",
@@ -393,7 +393,7 @@
       "marker": "Actual Files Cockpit",
       "exists": true,
       "markerPresent": true,
-      "hash": "33607d11b75f9e7f"
+      "hash": "86818aac8ddc84eb"
     },
     {
       "name": "Network Architecture Matrix",
@@ -401,7 +401,7 @@
       "marker": "Network Architecture Matrix",
       "exists": true,
       "markerPresent": true,
-      "hash": "33607d11b75f9e7f"
+      "hash": "86818aac8ddc84eb"
     },
     {
       "name": "Main Signal Board",
@@ -409,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "6fab463cb155fae1"
+      "hash": "fe2d673aae77901a"
     },
     {
       "name": "Dark Speculation Board",
@@ -417,7 +417,7 @@
       "marker": "data-board=\"speculation\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "d5d783a2f3383d45"
+      "hash": "f6b0678a7e4d68bd"
     },
     {
       "name": "Epstein Sighting Board",
@@ -425,7 +425,7 @@
       "marker": "data-board=\"epstein-alive\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "e9d4490bc323bc0c"
+      "hash": "8b4d4acc099b3653"
     },
     {
       "name": "Forum Worker",
@@ -455,9 +455,9 @@
   "hashes": {
     "worker": "7a389d78f08ef04d",
     "package": "50745fe92ac53001",
-    "epsteinFiles": "33607d11b75f9e7f",
-    "liveIntel": "647f143bf0e41e3c",
-    "homepage": "547522b779a71aae"
+    "epsteinFiles": "86818aac8ddc84eb",
+    "liveIntel": "c314e691b4cef7f1",
+    "homepage": "f023ce86063023df"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

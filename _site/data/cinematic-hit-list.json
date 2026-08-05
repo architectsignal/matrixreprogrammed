@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T07:07:10.060Z",
+  "generatedAt": "2026-08-05T06:32:13.605Z",
   "title": "The Investigative Hit List",
   "subtitle": "Power. Evidence. Missing records. Next move.",
   "boundary": "The Hit List is an investigative-priority and navigation surface, not a threat list, guilt ranking or call for harassment. Inclusion means the entity has documented power relevance, an evidence-backed accountability record, a significant unresolved evidence gap or a clearly labelled public claim requiring investigation.",
@@ -46,7 +46,7 @@
       "rule": "The claim lacks a reliable evidence chain, conflicts with stronger evidence or has been materially disproved."
     }
   },
-  "count": 266,
+  "count": 275,
   "entries": [
     {
       "id": "abdul-halim-khan",
@@ -1571,7 +1571,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 6,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "blackwater-xe-academi-constellis-lineage",
@@ -1620,7 +1620,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "booz-allen-hamilton",
@@ -1669,7 +1669,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "caci-international",
@@ -1718,7 +1718,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "dyncorp-amentum-lineage",
@@ -1767,7 +1767,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "elon-musk",
@@ -1816,7 +1816,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "european-commission",
@@ -1865,7 +1865,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "federal-reserve",
@@ -1914,7 +1914,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "g4s-allied-universal-security-lineage",
@@ -1963,7 +1963,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "international-monetary-fund",
@@ -2012,7 +2012,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "jeff-bezos",
@@ -2061,7 +2061,56 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "jensen-huang",
+      "name": "Jensen Huang",
+      "entityType": "profile route",
+      "priorityCode": "B",
+      "priorityLabel": "Power and access review",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Jensen Huang is a high-connectivity power node with documented institutional, capital, policy or operational relevance.",
+      "powerMechanism": "high priority · NVIDIA · AI chips · data-center infrastructure",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "billionaire-briefs/jensen-huang.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#water-security",
+          "title": "Water Security Clock",
+          "score": 6,
+          "clockScore": 65
+        },
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 4,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#corporate-state-convergence",
+          "title": "Corporate-State Convergence Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#cbdc-rollout",
+          "title": "CBDC Rollout Clock",
+          "score": 3,
+          "clockScore": 86
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 3,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "mark-zuckerberg",
@@ -2110,7 +2159,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "nato",
@@ -2159,7 +2208,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "palantir-government-platforms",
@@ -2208,7 +2257,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "saic-leidos-lineage",
@@ -2257,7 +2306,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "state-street-state-street-investment-management",
@@ -2306,7 +2355,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 6,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "united-nations",
@@ -2317,7 +2366,7 @@
       "primaryClassification": "speculation",
       "primaryClassificationLabel": "Speculation",
       "plainEnglishReason": "United Nations is a high-connectivity power node with documented institutional, capital, policy or operational relevance.",
-      "powerMechanism": "high priority · foundations-ngos · migration · health",
+      "powerMechanism": "elite priority · foundations-ngos · migration · health",
       "documentedEvidence": [],
       "allegationsOrHypotheses": [],
       "doesNotProve": [
@@ -2355,7 +2404,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "vanguard",
@@ -2404,7 +2453,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 6,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "warren-buffett",
@@ -2453,7 +2502,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "world-bank",
@@ -2502,7 +2551,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "world-economic-forum",
@@ -2551,7 +2600,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "world-health-organization",
@@ -2600,7 +2649,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-adoption-trafficking",
@@ -4032,6 +4081,496 @@
       "lastReviewed": "2026-06-29"
     },
     {
+      "id": "2021-08825",
+      "name": "2021-08825",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "2021-08825 is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/2021-08825.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-2021-08825-confirm-the-primary-record-page-pdf-docket-filing",
+      "name": "2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/2021-08825.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "2024-13374",
+      "name": "2024-13374",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "2024-13374 is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/2024-13374.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-2024-13374-confirm-the-primary-record-page-pdf-docket-filing",
+      "name": "2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/2024-13374.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "23-wap-2023",
+      "name": "23 WAP 2023",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "23 WAP 2023 is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/23-wap-2023.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-23-wap-2023-confirm-the-primary-record-page-pdf-docket-filin",
+      "name": "23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/23-wap-2023.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "24-2251",
+      "name": "24-2251",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "24-2251 is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/24-2251.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-24-2251-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "name": "24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/24-2251.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "24-7261",
+      "name": "24-7261",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "24-7261 is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/24-7261.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-24-7261-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "name": "24-7261 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "24-7261 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/24-7261.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
       "id": "aapl",
       "name": "AAPL",
       "entityType": "missing record",
@@ -4078,105 +4617,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-aapl-confirm-the-primary-record-page-pdf-docket-filing-award",
-      "name": "AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/aapl.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "ai-routes",
-      "name": "AI routes",
-      "entityType": "system route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "AI routes is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#media-ownership-concentration",
-          "title": "Media Ownership Concentration Clock",
-          "score": 4,
-          "clockScore": 68
-        },
-        {
-          "route": "timers.html#free-speech-information-access",
-          "title": "Free Speech and Information Access Clock",
-          "score": 3,
-          "clockScore": 66
-        },
-        {
-          "route": "timers.html#government-transparency-missing-records",
-          "title": "Government Transparency and Missing Records Clock",
-          "score": 3,
-          "clockScore": 63
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 3,
-          "clockScore": 60
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "ai-data",
@@ -4217,7 +4658,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "aladdin-risk-and-portfolio-platform",
@@ -4264,7 +4705,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "alphabet-inc",
@@ -4313,56 +4754,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-alphabet-inc-confirm-the-primary-record-page-pdf-docket-fili",
-      "name": "Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/alphabet-inc.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "amazon-com-inc",
@@ -4411,56 +4803,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-amazon-com-inc-confirm-the-primary-record-page-pdf-docket-fi",
-      "name": "AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/amazon-com-inc.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "amzn",
@@ -4509,56 +4852,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-amzn-confirm-the-primary-record-page-pdf-docket-filing-award",
-      "name": "AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/amzn.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-antarctica-hidden-civilization",
@@ -4619,6 +4913,104 @@
       "lastReviewed": "2026-06-29"
     },
     {
+      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Appellate Division of the Supreme Court of the State of New York is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-war-as-control-accelerator",
+          "title": "War and crisis as control-system accelerator Clock",
+          "score": 4,
+          "clockScore": 50
+        },
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-appellate-division-of-the-supreme-court-of-the-state-of-new",
+      "name": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-war-as-control-accelerator",
+          "title": "War and crisis as control-system accelerator Clock",
+          "score": 5,
+          "clockScore": 50
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
       "id": "apple-inc",
       "name": "Apple Inc.",
       "entityType": "missing record",
@@ -4665,56 +5057,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-apple-inc-confirm-the-primary-record-page-pdf-docket-filing",
-      "name": "Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/apple-inc.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-archons-loosh",
@@ -4813,7 +5156,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "asset-managers",
@@ -4862,7 +5205,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "avgo",
@@ -4911,56 +5254,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-avgo-confirm-the-primary-record-page-pdf-docket-filing-award",
-      "name": "AVGO — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "AVGO — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/avgo.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "banking",
@@ -5001,7 +5295,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "banking-history",
@@ -5048,7 +5342,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "banks-and-finance",
@@ -5095,7 +5389,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "bernard-arnault",
@@ -5144,7 +5438,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "bilderberg-meeting",
@@ -5193,7 +5487,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "blue-origin",
@@ -5228,7 +5522,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "bohemian-grove-bohemian-club",
@@ -5277,7 +5571,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "border-systems",
@@ -5324,7 +5618,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "breakspear",
@@ -5373,7 +5667,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "broadcom-inc",
@@ -5422,56 +5716,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-broadcom-inc-confirm-the-primary-record-page-pdf-docket-fili",
-      "name": "Broadcom Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "Broadcom Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/broadcom-inc.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "business-elites",
@@ -5518,7 +5763,105 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "california-supreme-court",
+      "name": "California Supreme Court",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "California Supreme Court is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/california-supreme-court.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-california-supreme-court-confirm-the-primary-record-page-pdf",
+      "name": "California Supreme Court — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "California Supreme Court — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/california-supreme-court.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "capital-networks",
@@ -5565,7 +5908,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-cataclysm-cycle",
@@ -5670,7 +6013,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "centers-for-medicare-medicaid-services",
@@ -5719,7 +6062,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "feed-centers-for-medicare-medicaid-services-confirm-the-primary-r",
@@ -5768,7 +6111,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "central-banks-and-money-rails",
@@ -5817,7 +6160,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "charity-networks",
@@ -5858,7 +6201,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "church-links",
@@ -5887,7 +6230,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "church-state-power",
@@ -5934,18 +6277,18 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
-      "id": "cloud-routes",
-      "name": "cloud routes",
-      "entityType": "system route",
+      "id": "civil-rights-corps-v-lasalle",
+      "name": "Civil Rights Corps v. LaSalle",
+      "entityType": "missing record",
       "priorityCode": "D",
       "priorityLabel": "Research and provenance queue",
       "primaryClassification": "speculation",
       "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "cloud routes is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with records",
+      "plainEnglishReason": "Civil Rights Corps v. LaSalle is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "documentedEvidence": [],
       "allegationsOrHypotheses": [],
       "doesNotProve": [
@@ -5953,37 +6296,86 @@
       ],
       "missingRecords": [],
       "dossierRoutes": [
-        "search.html"
+        "entity-briefs/civil-rights-corps-v-lasalle.html"
       ],
       "timerRoutes": [
         {
-          "route": "timers.html#media-ownership-concentration",
-          "title": "Media Ownership Concentration Clock",
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
           "score": 4,
-          "clockScore": 68
+          "clockScore": 78
         },
         {
-          "route": "timers.html#free-speech-information-access",
-          "title": "Free Speech and Information Access Clock",
-          "score": 3,
-          "clockScore": 66
+          "route": "timers.html#spec-food-land-water-control",
+          "title": "Food, land and water as control infrastructure Clock",
+          "score": 4,
+          "clockScore": 46
         },
         {
-          "route": "timers.html#government-transparency-missing-records",
-          "title": "Government Transparency and Missing Records Clock",
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
           "score": 3,
-          "clockScore": 63
+          "clockScore": 93
         },
         {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
           "score": 3,
-          "clockScore": 60
+          "clockScore": 76
         }
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-civil-rights-corps-v-lasalle-confirm-the-primary-record-page",
+      "name": "Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/civil-rights-corps-v-lasalle.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 5,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-food-land-water-control",
+          "title": "Food, land and water as control infrastructure Clock",
+          "score": 5,
+          "clockScore": 46
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "cloud-infrastructure",
@@ -6030,7 +6422,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "clubs-and-networks",
@@ -6071,7 +6463,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "contractors",
@@ -6100,7 +6492,203 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "court-of-appeals-for-the-ninth-circuit",
+      "name": "Court of Appeals for the Ninth Circuit",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Court of Appeals for the Ninth Circuit is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/court-of-appeals-for-the-ninth-circuit.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-court-of-appeals-for-the-ninth-circuit-confirm-the-primary-r",
+      "name": "Court of Appeals for the Ninth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Court of Appeals for the Ninth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/court-of-appeals-for-the-ninth-circuit.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "court-of-appeals-for-the-second-circuit",
+      "name": "Court of Appeals for the Second Circuit",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Court of Appeals for the Second Circuit is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/court-of-appeals-for-the-second-circuit.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-fake-messiah-hologram",
+          "title": "Fake messiah hologram event Clock",
+          "score": 4,
+          "clockScore": 4
+        },
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-court-of-appeals-for-the-second-circuit-confirm-the-primary",
+      "name": "Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/court-of-appeals-for-the-second-circuit.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-fake-messiah-hologram",
+          "title": "Fake messiah hologram event Clock",
+          "score": 5,
+          "clockScore": 4
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "courts",
@@ -6149,7 +6737,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "courts-and-filings",
@@ -6198,7 +6786,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "custody-and-administration",
@@ -6227,18 +6815,18 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
-      "id": "data-routes",
-      "name": "data routes",
-      "entityType": "system route",
+      "id": "d-a-grandview-llc-v-60-davidson-llc",
+      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "entityType": "missing record",
       "priorityCode": "D",
       "priorityLabel": "Research and provenance queue",
       "primaryClassification": "speculation",
       "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "data routes is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with records",
+      "plainEnglishReason": "D & A Grandview, LLC v. 60 Davidson, LLC is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "documentedEvidence": [],
       "allegationsOrHypotheses": [],
       "doesNotProve": [
@@ -6246,37 +6834,86 @@
       ],
       "missingRecords": [],
       "dossierRoutes": [
-        "search.html"
+        "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html"
       ],
       "timerRoutes": [
         {
-          "route": "timers.html#media-ownership-concentration",
-          "title": "Media Ownership Concentration Clock",
-          "score": 4,
-          "clockScore": 68
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
         },
         {
-          "route": "timers.html#free-speech-information-access",
-          "title": "Free Speech and Information Access Clock",
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
           "score": 3,
-          "clockScore": 66
+          "clockScore": 78
         },
         {
-          "route": "timers.html#government-transparency-missing-records",
-          "title": "Government Transparency and Missing Records Clock",
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
           "score": 3,
-          "clockScore": 63
+          "clockScore": 76
         },
         {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
           "score": 3,
-          "clockScore": 60
+          "clockScore": 72
         }
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-d-a-grandview-llc-v-60-davidson-llc-confirm-the-primary-reco",
+      "name": "D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "data-center-infrastructure",
@@ -6323,7 +6960,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "defense",
@@ -6352,7 +6989,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "defense-and-diplomacy",
@@ -6381,7 +7018,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "defense-technology",
@@ -6416,7 +7053,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-demonic-possession-elites",
@@ -6639,7 +7276,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "education-and-policy",
@@ -6686,7 +7323,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "education-systems",
@@ -6733,7 +7370,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "elite-education",
@@ -6780,7 +7417,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-elites-eat-children",
@@ -7003,7 +7640,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "energy-history",
@@ -7050,7 +7687,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "facilities",
@@ -7085,7 +7722,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-fake-messiah-hologram",
@@ -7192,7 +7829,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "food",
@@ -7241,7 +7878,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "founders-fund",
@@ -7270,7 +7907,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "freemasonry",
@@ -7319,7 +7956,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "freemasonry-ritual-echoes",
@@ -7366,7 +8003,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-frequency-mind-control",
@@ -7471,7 +8108,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "gates-foundation",
@@ -7500,7 +8137,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-giants-hidden",
@@ -7561,6 +8198,104 @@
       "lastReviewed": "2026-06-29"
     },
     {
+      "id": "gilead-tenofovir-cases",
+      "name": "Gilead Tenofovir Cases",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Gilead Tenofovir Cases is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/gilead-tenofovir-cases.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-gilead-tenofovir-cases-confirm-the-primary-record-page-pdf-d",
+      "name": "Gilead Tenofovir Cases — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Gilead Tenofovir Cases — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/gilead-tenofovir-cases.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
       "id": "googl",
       "name": "GOOGL",
       "entityType": "missing record",
@@ -7607,105 +8342,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-googl-confirm-the-primary-record-page-pdf-docket-filing-awar",
-      "name": "GOOGL — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "GOOGL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/googl.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "government-agencies",
-      "name": "government agencies",
-      "entityType": "public route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "government agencies is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with named records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#wwiii-escalation",
-          "title": "WWIII Escalation Clock",
-          "score": 7,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#energy-shock",
-          "title": "Energy Shock Clock",
-          "score": 7,
-          "clockScore": 65
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 7,
-          "clockScore": 60
-        },
-        {
-          "route": "timers.html#food-system-stress",
-          "title": "Food System Stress Clock",
-          "score": 7,
-          "clockScore": 58
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "government-contracts",
@@ -7754,7 +8391,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-grey-aliens-government",
@@ -7861,7 +8498,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "health",
@@ -7910,7 +8547,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "health-and-human-services-department",
@@ -7959,7 +8596,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "feed-health-and-human-services-department-confirm-the-primary-rec",
@@ -8008,7 +8645,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "health-and-development-philanthropy",
@@ -8055,7 +8692,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "health-and-relief-operations",
@@ -8102,7 +8739,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "health-data",
@@ -8149,7 +8786,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "health-data-systems",
@@ -8196,7 +8833,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "historic-banking",
@@ -8237,7 +8874,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "historic-church-office",
@@ -8266,7 +8903,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "homeland-security-department",
@@ -8315,7 +8952,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "feed-homeland-security-department-confirm-the-primary-record-page",
@@ -8364,7 +9001,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "identity",
@@ -8413,56 +9050,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "identity-routes",
-      "name": "identity routes",
-      "entityType": "system route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "identity routes is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#free-speech-information-access",
-          "title": "Free Speech and Information Access Clock",
-          "score": 6,
-          "clockScore": 66
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 6,
-          "clockScore": 60
-        },
-        {
-          "route": "timers.html#media-ownership-concentration",
-          "title": "Media Ownership Concentration Clock",
-          "score": 4,
-          "clockScore": 68
-        },
-        {
-          "route": "timers.html#childrens-digital-identity-age-gating",
-          "title": "Children’s Digital Identity and Age-Gating Clock",
-          "score": 3,
-          "clockScore": 93
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "identity-access",
@@ -8509,7 +9097,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "index-funds-and-etfs",
@@ -8538,7 +9126,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "information",
@@ -8587,7 +9175,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "institutional-access",
@@ -8634,7 +9222,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "insurance",
@@ -8669,7 +9257,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "intelligence",
@@ -8698,7 +9286,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "intelligence-adjacent-systems",
@@ -8745,56 +9333,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "international-bodies",
-      "name": "international bodies",
-      "entityType": "public route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "international bodies is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with named records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#wwiii-escalation",
-          "title": "WWIII Escalation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#energy-shock",
-          "title": "Energy Shock Clock",
-          "score": 4,
-          "clockScore": 65
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 4,
-          "clockScore": 60
-        },
-        {
-          "route": "timers.html#food-system-stress",
-          "title": "Food System Stress Clock",
-          "score": 4,
-          "clockScore": 58
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "investment-management",
@@ -8835,56 +9374,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "jensen-huang",
-      "name": "Jensen Huang",
-      "entityType": "profile route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "Jensen Huang is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "high priority · NVIDIA · AI chips · data-center infrastructure",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "billionaire-briefs/jensen-huang.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#water-security",
-          "title": "Water Security Clock",
-          "score": 6,
-          "clockScore": 65
-        },
-        {
-          "route": "timers.html#childrens-digital-identity-age-gating",
-          "title": "Children’s Digital Identity and Age-Gating Clock",
-          "score": 4,
-          "clockScore": 93
-        },
-        {
-          "route": "timers.html#corporate-state-convergence",
-          "title": "Corporate-State Convergence Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#cbdc-rollout",
-          "title": "CBDC Rollout Clock",
-          "score": 3,
-          "clockScore": 86
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "knights-templar-legacy-claims",
@@ -8933,7 +9423,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "land-and-estate-records",
@@ -8980,7 +9470,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "land-and-titles",
@@ -9027,7 +9517,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "larry-ellison",
@@ -9076,7 +9566,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "live-intel-drops",
@@ -9125,7 +9615,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "logistics",
@@ -9154,7 +9644,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "luxury-networks",
@@ -9195,7 +9685,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "market-services",
@@ -9242,7 +9732,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "media",
@@ -9289,56 +9779,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "media-routes",
-      "name": "media routes",
-      "entityType": "system route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "media routes is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#media-ownership-concentration",
-          "title": "Media Ownership Concentration Clock",
-          "score": 5,
-          "clockScore": 68
-        },
-        {
-          "route": "timers.html#free-speech-information-access",
-          "title": "Free Speech and Information Access Clock",
-          "score": 3,
-          "clockScore": 66
-        },
-        {
-          "route": "timers.html#government-transparency-missing-records",
-          "title": "Government Transparency and Missing Records Clock",
-          "score": 3,
-          "clockScore": 63
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 3,
-          "clockScore": 60
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "media-and-culture",
@@ -9385,7 +9826,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "media-and-culture-influence-routes",
@@ -9432,7 +9873,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "media-data-terminals",
@@ -9479,7 +9920,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "media-narrative",
@@ -9526,7 +9967,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "medici",
@@ -9575,7 +10016,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "michael-bloomberg",
@@ -9624,7 +10065,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "microsoft-corp",
@@ -9673,56 +10114,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-microsoft-corp-confirm-the-primary-record-page-pdf-docket-fi",
-      "name": "MICROSOFT CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "MICROSOFT CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/microsoft-corp.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "migration",
@@ -9771,7 +10163,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "military-and-civic-networks",
@@ -9818,7 +10210,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "missing-records",
@@ -9867,7 +10259,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "mission-history",
@@ -9914,7 +10306,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "modern-groups-claiming-lineage",
@@ -9961,7 +10353,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-monarch-programming",
@@ -10068,7 +10460,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "monuments-and-architecture",
@@ -10109,7 +10501,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "msft",
@@ -10158,56 +10550,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-msft-confirm-the-primary-record-page-pdf-docket-filing-award",
-      "name": "MSFT — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "MSFT — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/msft.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-music-occult-programming",
@@ -10312,105 +10655,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "nuclear-regulatory-commission",
-      "name": "Nuclear Regulatory Commission",
-      "entityType": "missing record",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "Nuclear Regulatory Commission is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/nuclear-regulatory-commission.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#childrens-digital-identity-age-gating",
-          "title": "Children’s Digital Identity and Age-Gating Clock",
-          "score": 3,
-          "clockScore": 93
-        },
-        {
-          "route": "timers.html#ai-breakout",
-          "title": "AI Breakout Clock",
-          "score": 3,
-          "clockScore": 88
-        },
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 3,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 3,
-          "clockScore": 76
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-nuclear-regulatory-commission-confirm-the-primary-record-pag",
-      "name": "Nuclear Regulatory Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "Nuclear Regulatory Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/nuclear-regulatory-commission.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "nvda",
@@ -10459,56 +10704,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-nvda-confirm-the-primary-record-page-pdf-docket-filing-award",
-      "name": "NVDA — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "NVDA — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/nvda.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "nvidia-corp",
@@ -10557,56 +10753,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-nvidia-corp-confirm-the-primary-record-page-pdf-docket-filin",
-      "name": "NVIDIA CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "NVIDIA CORP — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/nvidia-corp.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "opus-dei",
@@ -10655,7 +10802,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "orsini",
@@ -10704,7 +10851,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "ownership-concentration-across-public-companies",
@@ -10751,56 +10898,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "payment-routes",
-      "name": "payment routes",
-      "entityType": "system route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "payment routes is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#media-ownership-concentration",
-          "title": "Media Ownership Concentration Clock",
-          "score": 4,
-          "clockScore": 68
-        },
-        {
-          "route": "timers.html#free-speech-information-access",
-          "title": "Free Speech and Information Access Clock",
-          "score": 4,
-          "clockScore": 66
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 4,
-          "clockScore": 60
-        },
-        {
-          "route": "timers.html#government-transparency-missing-records",
-          "title": "Government Transparency and Missing Records Clock",
-          "score": 3,
-          "clockScore": 63
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "peter-thiel",
@@ -10849,56 +10947,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "platform-routes",
-      "name": "platform routes",
-      "entityType": "system route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "platform routes is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#media-ownership-concentration",
-          "title": "Media Ownership Concentration Clock",
-          "score": 7,
-          "clockScore": 68
-        },
-        {
-          "route": "timers.html#free-speech-information-access",
-          "title": "Free Speech and Information Access Clock",
-          "score": 6,
-          "clockScore": 66
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 6,
-          "clockScore": 60
-        },
-        {
-          "route": "timers.html#surveillance-state",
-          "title": "Surveillance State Clock",
-          "score": 3,
-          "clockScore": 92
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "policy",
@@ -10945,7 +10994,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "policy-forums",
@@ -10994,7 +11043,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "policy-networks",
@@ -11041,7 +11090,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "political-and-technology-networks",
@@ -11088,7 +11137,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "political-figures",
@@ -11123,7 +11172,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "political-rule",
@@ -11164,7 +11213,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "politics-where-membership-is-publicly-documented",
@@ -11211,7 +11260,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-predictive-programming",
@@ -11316,7 +11365,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "private-markets-infrastructure-expansion",
@@ -11363,7 +11412,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-project-blue-beam",
@@ -11468,7 +11517,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "public-controversy-court-records-where-available",
@@ -11503,7 +11552,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "public-money",
@@ -11550,7 +11599,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "public-private-contracts",
@@ -11597,7 +11646,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "public-private-power",
@@ -11644,7 +11693,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "public-private-routes",
@@ -11691,7 +11740,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "publishing-and-memoir-claims",
@@ -11720,7 +11769,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "publishing-and-symbolism",
@@ -11749,7 +11798,105 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "punxsutawney-hunting-club-v-pgc",
+      "name": "Punxsutawney Hunting Club v. PGC",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Punxsutawney Hunting Club v. PGC is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/punxsutawney-hunting-club-v-pgc.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-red-shoes-child-skin",
+          "title": "Red shoes made from children's skin Clock",
+          "score": 4,
+          "clockScore": 7
+        },
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-punxsutawney-hunting-club-v-pgc-confirm-the-primary-record-p",
+      "name": "Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/punxsutawney-hunting-club-v-pgc.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-red-shoes-child-skin",
+          "title": "Red shoes made from children's skin Clock",
+          "score": 5,
+          "clockScore": 7
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "rail-and-finance-holdings",
@@ -11796,7 +11943,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-red-shoes-child-skin",
@@ -11855,55 +12002,6 @@
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
       "lastReviewed": "2026-06-29"
-    },
-    {
-      "id": "regulators",
-      "name": "regulators",
-      "entityType": "public route",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "regulators is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "expand with named records",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "search.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#rule-of-law-accountability",
-          "title": "Rule of Law and Institutional Accountability Clock",
-          "score": 6,
-          "clockScore": 56
-        },
-        {
-          "route": "timers.html#wwiii-escalation",
-          "title": "WWIII Escalation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#energy-shock",
-          "title": "Energy Shock Clock",
-          "score": 4,
-          "clockScore": 65
-        },
-        {
-          "route": "timers.html#civil-unrest",
-          "title": "Civil Unrest Clock",
-          "score": 4,
-          "clockScore": 60
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
     },
     {
       "id": "claim-reincarnation-trap",
@@ -12068,7 +12166,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "risk-clocks",
@@ -12117,7 +12215,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "rockefeller",
@@ -12166,7 +12264,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "rothschild",
@@ -12215,7 +12313,105 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "s283862",
+      "name": "S283862",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "S283862 is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/s283862.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-s283862-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "name": "S283862 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "S283862 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/s283862.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "sanctions-and-enforcement",
@@ -12264,7 +12460,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-saturn-black-cube",
@@ -12371,7 +12567,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "securities-and-exchange-commission",
@@ -12420,56 +12616,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
-    },
-    {
-      "id": "feed-securities-and-exchange-commission-confirm-the-primary-recor",
-      "name": "Securities and Exchange Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "entityType": "deep intel item",
-      "priorityCode": "D",
-      "priorityLabel": "Research and provenance queue",
-      "primaryClassification": "speculation",
-      "primaryClassificationLabel": "Speculation",
-      "plainEnglishReason": "Securities and Exchange Commission — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
-      "powerMechanism": "missing record · Score 85",
-      "documentedEvidence": [],
-      "allegationsOrHypotheses": [],
-      "doesNotProve": [
-        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
-      ],
-      "missingRecords": [],
-      "dossierRoutes": [
-        "entity-briefs/securities-and-exchange-commission.html"
-      ],
-      "timerRoutes": [
-        {
-          "route": "timers.html#spec-supply-chain-slavery",
-          "title": "Modern slavery hidden in supply chains Clock",
-          "score": 4,
-          "clockScore": 78
-        },
-        {
-          "route": "timers.html#spec-debt-slavery",
-          "title": "Debt slavery / migrant labour exploitation Clock",
-          "score": 4,
-          "clockScore": 76
-        },
-        {
-          "route": "timers.html#spec-organ-trafficking",
-          "title": "Organ trafficking networks Clock",
-          "score": 4,
-          "clockScore": 72
-        },
-        {
-          "route": "timers.html#spec-digital-id-permission-layer",
-          "title": "Digital ID as the permission layer Clock",
-          "score": 4,
-          "clockScore": 70
-        }
-      ],
-      "sourceRoutes": [],
-      "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "security",
@@ -12518,7 +12665,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "skull-and-bones",
@@ -12567,7 +12714,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "society-of-jesus",
@@ -12616,7 +12763,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "sovereign-military-order-of-malta",
@@ -12665,7 +12812,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 5,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "state-ceremony",
@@ -12712,7 +12859,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "state-diplomacy",
@@ -12759,7 +12906,105 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "supreme-court-of-pennsylvania",
+      "name": "Supreme Court of Pennsylvania",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Supreme Court of Pennsylvania is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/supreme-court-of-pennsylvania.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-supreme-court-of-pennsylvania-confirm-the-primary-record-pag",
+      "name": "Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/supreme-court-of-pennsylvania.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "surveillance",
@@ -12806,7 +13051,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "systemically-important-financial-infrastructure",
@@ -12853,7 +13098,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-tartaria-reset",
@@ -12940,7 +13185,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 2,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "think-tanks-and-policy-shops",
@@ -12989,7 +13234,105 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 0,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "united-states-v-anten",
+      "name": "United States v. Anten",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "United States v. Anten is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/united-states-v-anten.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-united-states-v-anten-confirm-the-primary-record-page-pdf-do",
+      "name": "United States v. Anten — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "United States v. Anten — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/united-states-v-anten.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "us-political-biographies",
@@ -13024,7 +13367,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "vatican-and-catholic-diplomacy",
@@ -13053,7 +13396,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "vatican-structures",
@@ -13082,7 +13425,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 1,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "war",
@@ -13131,7 +13474,105 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 3,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "williams-v-biggs",
+      "name": "Williams v. Biggs",
+      "entityType": "missing record",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Williams v. Biggs is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/williams-v-biggs.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#childrens-digital-identity-age-gating",
+          "title": "Children’s Digital Identity and Age-Gating Clock",
+          "score": 3,
+          "clockScore": 93
+        },
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 3,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 3,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 3,
+          "clockScore": 72
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
+    },
+    {
+      "id": "feed-williams-v-biggs-confirm-the-primary-record-page-pdf-docket",
+      "name": "Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "entityType": "deep intel item",
+      "priorityCode": "D",
+      "priorityLabel": "Research and provenance queue",
+      "primaryClassification": "speculation",
+      "primaryClassificationLabel": "Speculation",
+      "plainEnglishReason": "Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record. is mapped because of documented power relevance or an unresolved evidence question.",
+      "powerMechanism": "missing record · Score 85",
+      "documentedEvidence": [],
+      "allegationsOrHypotheses": [],
+      "doesNotProve": [
+        "Inclusion does not establish guilt, coordination, shared motive or criminal conduct."
+      ],
+      "missingRecords": [],
+      "dossierRoutes": [
+        "entity-briefs/williams-v-biggs.html"
+      ],
+      "timerRoutes": [
+        {
+          "route": "timers.html#spec-supply-chain-slavery",
+          "title": "Modern slavery hidden in supply chains Clock",
+          "score": 4,
+          "clockScore": 78
+        },
+        {
+          "route": "timers.html#spec-debt-slavery",
+          "title": "Debt slavery / migrant labour exploitation Clock",
+          "score": 4,
+          "clockScore": 76
+        },
+        {
+          "route": "timers.html#spec-organ-trafficking",
+          "title": "Organ trafficking networks Clock",
+          "score": 4,
+          "clockScore": 72
+        },
+        {
+          "route": "timers.html#spec-digital-id-permission-layer",
+          "title": "Digital ID as the permission layer Clock",
+          "score": 4,
+          "clockScore": 70
+        }
+      ],
+      "sourceRoutes": [],
+      "unresolvedRelationshipCount": 0,
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "windsor",
@@ -13180,7 +13621,7 @@
       ],
       "sourceRoutes": [],
       "unresolvedRelationshipCount": 4,
-      "lastReviewed": "2026-08-03"
+      "lastReviewed": "2026-08-05"
     },
     {
       "id": "claim-adrenochrome",

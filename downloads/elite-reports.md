@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-08-03T07:01:53.036Z
+Generated: 2026-08-05T06:26:28.772Z
 
 ## Daily Revelation Report
 
-Trapped by a Facebook job advert, freed by a stranger in a taxi
+‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
 
 Source: daily-command-brief.html
 
@@ -20,49 +20,49 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Homeland Security Department — Entity Report
-
-A source route exists. More records are needed before drawing a stronger conclusion.
-
-Source: entity-daily-briefs.html
-
-## AAPL — Entity Report
+## Appellate Division of the Supreme Court of the State of New York — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Alphabet Inc. — Entity Report
+## 2021-08825 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AMAZON COM INC — Entity Report
+## 2024-13374 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AMZN — Entity Report
+## 23 WAP 2023 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Apple Inc. — Entity Report
+## 24-2251 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## AVGO — Entity Report
+## 24-7261 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## Broadcom Inc. — Entity Report
+## California Supreme Court — Entity Report
+
+Worth watching because records and relationship signals both exist.
+
+Source: entity-daily-briefs.html
+
+## Civil Rights Corps v. LaSalle — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

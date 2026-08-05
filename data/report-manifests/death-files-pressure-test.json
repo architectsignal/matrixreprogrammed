@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-03T06:48:36.208Z",
-  "pageCount": 86,
+  "generatedAt": "2026-08-05T06:11:55.279Z",
+  "pageCount": 84,
   "output": "downloads/death-files-pressure-test.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Death Files Pressure Test",
-    "contentHash": "296b01f0cfdddc87d8fe8fc222a25099f83b2b70ba6e2a18651777d1b9d52a96",
+    "contentHash": "52b17f25d3aa318ae88fb76fc3b5526ccdc45ba2efab41dd3434725283d15601",
     "sourceIds": [
+      "f23b46f2bc4add9b859f5a15",
       "88269481cf5b04b7b0f83b58",
       "6d665d935673091233751767",
       "41af4eba97b7eb1c0afb301f",
@@ -57,7 +58,6 @@
       "96b50a0ea1ae9a6b5767f2c2",
       "cb7ce67fe443d7c98b486d34",
       "18d7736864f2c8ac625f018d",
-      "e083e748ec6311742c2416e5",
       "david-james-clarke-conviction-2026",
       "abdul-halim-khan-conviction-2026",
       "huw-edwards-iico-conviction-2024",
@@ -92,7 +92,8 @@
       "epstein-federal-indictment-2019",
       "deutsche-bank-epstein-dfs-2020",
       "0a84f04558f5013c0790203c",
-      "82750a3e20c221986cd0cabe",
+      "0a2f50e1ba80b77a33962020",
+      "c90bf38664c0409003c1069a",
       "conor-mcgrath-iico-conviction-2026",
       "maxwell-appeal-2025",
       "adam-taylor-nca-conviction-2024",
@@ -107,6 +108,8 @@
       "665a5072d96b9757a6ee9d2d",
       "4e5cc6449bcc7ddf1c878ee0",
       "7419d29b3a469a40362a11f4",
+      "a09615abd1b1ed83f2b74ff4",
+      "c3bd2d306202dfc2e2374303",
       "71e0563ca7b139c37c302956",
       "44505b4afb60938c8117ad31",
       "701229696b57f88191742d4f",
@@ -120,16 +123,13 @@
       "b7e4a66335a706ef5097117f",
       "f4b44414c2c9ee4fd9b0ea74",
       "ecd4a1111010f13b2d74bf8c",
-      "10420eb4159dd9ba47a3f7cb",
-      "2254daad4526bf026ecf1244",
-      "421097c38f7e1597d6f37887",
-      "440a73a5b6c1002efa765acb",
-      "4c07add2a6d4eb22cadecd27",
-      "388e2e8c136c6891fe3af13a",
-      "5546f85d1ba69563adc9bffd",
-      "53201d6b1babefc058e6d6ac",
-      "538941a6b0f31a954f98439a",
-      "57155b538497645f1d15d258"
+      "3cf5cc7d81a861e661d671e1",
+      "24df4b20a8912e1efd6f8bb3",
+      "e448d6f8b39d975bd4f11d10",
+      "87f4b2c1cfdb7a8ab91a0909",
+      "56ec707bd4959bd2bc107b17",
+      "c90bc49de7a224bb4d0c54d8",
+      "467bed6e1a3e2944d3f693f0"
     ],
     "metrics": {
       "evidenceCount": 123,
@@ -143,7 +143,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 75 A/B-grade public-record items are materially relevant to Death Files Pressure Test.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -151,7 +151,7 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Final Judgment - Lloyd,” the strongest indexed record by source grade and evidence status.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment,” the strongest indexed record by source grade and evidence status.",
         "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
@@ -201,6 +201,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T08:22:21.766Z"
+    "intelligenceFreshnessDate": "2026-08-04T07:58:13.254Z"
   }
 }

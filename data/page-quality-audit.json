@@ -1,10 +1,15 @@
 {
   "ok": true,
-  "updated": "2026-08-03T07:02:21.236Z",
-  "filesScanned": 756,
+  "updated": "2026-08-05T06:26:53.438Z",
+  "filesScanned": 758,
   "highIssues": 0,
-  "reviewIssues": 8,
+  "reviewIssues": 9,
   "issues": [
+    {
+      "file": "black-file.html",
+      "severity": "review",
+      "issue": "missing H1"
+    },
     {
       "file": "controlled-opposition-profile.html",
       "severity": "review",

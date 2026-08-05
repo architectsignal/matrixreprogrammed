@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T06:50:17.151Z",
+  "generatedAt": "2026-08-05T06:13:47.542Z",
   "pageCount": 108,
   "output": "downloads/epstein-network-deep-dive.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Epstein Network Deep Dive Matrix",
-    "contentHash": "3aa9f04a29972b0f5fb59c6b64e18605c10ca8f5660c90b572f5894d171b0ca2",
+    "contentHash": "2d6d1961f9335770e29e5647bbb3dcf010a9fcfa45e7260b9e0e766da52149a8",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -16,9 +16,10 @@
       "16cde9bd4c87e916ff1e4fb7",
       "bbf59ae4094608bcd2c37305",
       "ecd4a1111010f13b2d74bf8c",
-      "e083e748ec6311742c2416e5",
+      "c90bf38664c0409003c1069a",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
+      "3a425f0d5d683952bc0ad7ac",
       "cf94b367bfb0237448d49649",
       "d23398b8ca4c7124399c9504",
       "a01fc28e9fb6ce85637a3248",
@@ -30,7 +31,6 @@
       "665a5072d96b9757a6ee9d2d",
       "4e5cc6449bcc7ddf1c878ee0",
       "7419d29b3a469a40362a11f4",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "8165fb4ec7543f1da0762496",
       "19ae23289f4be13ad5f7e317",
@@ -55,7 +55,6 @@
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
       "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-AF18512452F699D2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-96665FE56FA75D90",
       "3a8c1f1e8620cb3f09a2c7ab",
@@ -64,7 +63,6 @@
       "EP-AI-001",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-8708EF2A4E1C3023",
-      "ASC-REVIEW-64E0D2BCFC6FF23D",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "a19f1d67009a0b031677b2af",
@@ -72,8 +70,7 @@
       "69f071adbd84f39904a53107",
       "0defb9debab95a663872bf25",
       "bdd7e454126ebfa6319a594c",
-      "ASC-REVIEW-85B553D0178BFBA1",
-      "ASC-REVIEW-2B2EECE9A18DFF2C",
+      "ASC-REVIEW-677320A9C058E658",
       "7f0eb9ddb996aecbeeda522d",
       "deb382cdbfe57b57793d739e",
       "b7e4a66335a706ef5097117f",
@@ -88,7 +85,7 @@
       "ASC-REVIEW-398C265AD47ACC74",
       "ASC-REVIEW-285205442D5C5D56",
       "ASC-REVIEW-3266CA18BAEC4ACB",
-      "ASC-REVIEW-9ABCBA0136F7F0F3",
+      "ASC-REVIEW-25B371012CBA1315",
       "d6936ce262c4c18cb75c6e44",
       "96d8ea15e49544e3f1cafd06",
       "7a0ce047ee750826a59e7474",
@@ -110,10 +107,12 @@
       "ASC-REVIEW-E88A7B581690918F",
       "ASC-REVIEW-F26BA2899C21B0EA",
       "ASC-REVIEW-0914587401D9BDE0",
+      "ASC-REVIEW-E14F8DDD0D2D554A",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-E3E367656A99DD33",
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-B5A7582A4286A663",
+      "ASC-REVIEW-E56C50DA1B850591",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
@@ -121,6 +120,7 @@
       "ASC-REVIEW-375A853A96E42D84",
       "ASC-REVIEW-D5FA458F66004D27",
       "ASC-REVIEW-FE267E981A361906",
+      "ASC-REVIEW-8E3624D7001AD018",
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-39269A2C0471A66C",
       "ASC-REVIEW-FE9A5B02284E30E4",
@@ -146,7 +146,7 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-1EA1A54BAAF5A93D",
       "ASC-REVIEW-45FC68BFE6057AEE",
-      "ASC-REVIEW-44CBDE6F2AE4CA62"
+      "ASC-REVIEW-007CC31B968E816A"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 80,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 74,
-      "moneyRecordCount": 65
+      "relationshipCount": 71,
+      "moneyRecordCount": 63
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 74 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; FCN, INC. — Court Services and Offender Supervision Agency; INDUSTRIAL BANK — District of Columbia Courts",
+        "inference": "The indexed set contains 71 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; FCN, INC. — Court Services and Offender Supervision Agency; MINDCUBED LLC — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 74 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 71 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
@@ -203,7 +203,7 @@
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "FCN, INC. — Court Services and Offender Supervision Agency",
-          "INDUSTRIAL BANK — District of Columbia Courts"
+          "MINDCUBED LLC — District of Columbia Courts"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-04T00:00:00.000Z"
   }
 }

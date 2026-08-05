@@ -1,18 +1,18 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-04T07:58:54.498Z",
+  "generatedAt": "2026-08-05T06:27:36.423Z",
   "investigationData": {
     "ok": true,
-    "generatedAt": "2026-08-04T07:58:53.853Z",
+    "generatedAt": "2026-08-05T06:27:35.746Z",
     "sourceState": {
       "sources": 12,
       "created": 0,
-      "lastAttemptRepaired": 12
+      "lastAttemptRepaired": 0
     },
     "ledger": {
-      "before": 2851,
+      "before": 2500,
       "active": 2500,
-      "archivedThisRun": 351,
+      "archivedThisRun": 0,
       "duplicateIdsRepaired": 0,
       "invalidUrlsArchived": 0,
       "activeLimit": 2500,
@@ -27,7 +27,7 @@
   },
   "criminalAccountability": {
     "ok": true,
-    "generatedAt": "2026-08-04T07:58:54.219Z",
+    "generatedAt": "2026-08-05T06:27:36.091Z",
     "subjects": 20,
     "current": 15,
     "historical": 5,
@@ -60,15 +60,15 @@
   },
   "criminalDossierCoverage": {
     "ok": true,
-    "generatedAt": "2026-08-04T07:58:54.477Z",
+    "generatedAt": "2026-08-05T06:27:36.395Z",
     "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
     "minimumPredatorsInPowerTarget": 100,
     "approvedPredatorsInPowerDossiers": 20,
     "remainingToTarget": 80,
     "targetReached": false,
-    "dossierPagesDetected": 226,
+    "dossierPagesDetected": 216,
     "registryMatchedPages": 40,
-    "noApprovedMatchPages": 186,
+    "noApprovedMatchPages": 176,
     "missingNativeRoutes": [],
     "missingPanels": [],
     "coverage": [
@@ -993,96 +993,6 @@
       {
         "route": "_site/institution-briefs/world-health-organization.html",
         "title": "WORLD HEALTH ORGANIZATION",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-aapl.html",
-        "title": "AAPL — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-alphabet-inc.html",
-        "title": "ALPHABET INC. — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-amazon-com-inc.html",
-        "title": "AMAZON COM INC — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-amzn.html",
-        "title": "AMZN — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-apple-inc.html",
-        "title": "APPLE INC. — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-avgo.html",
-        "title": "AVGO — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-broadcom-inc.html",
-        "title": "BROADCOM INC. — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-centers-for-medicare-and-medicaid-services.html",
-        "title": "CENTERS FOR MEDICARE &AMP; MEDICAID SERVICES — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-health-and-human-services-department.html",
-        "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "_site/reports/entity-homeland-security-department.html",
-        "title": "HOMELAND SECURITY DEPARTMENT — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2017,8 +1927,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-aapl.html",
-        "title": "AAPL — ENTITY REPORT",
+        "route": "reports/entity-2021-08825.html",
+        "title": "2021-08825 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2026,8 +1936,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-alphabet-inc.html",
-        "title": "ALPHABET INC. — ENTITY REPORT",
+        "route": "reports/entity-2024-13374.html",
+        "title": "2024-13374 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2035,8 +1945,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-amazon-com-inc.html",
-        "title": "AMAZON COM INC — ENTITY REPORT",
+        "route": "reports/entity-23-wap-2023.html",
+        "title": "23 WAP 2023 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2044,8 +1954,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-amzn.html",
-        "title": "AMZN — ENTITY REPORT",
+        "route": "reports/entity-24-2251.html",
+        "title": "24-2251 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2053,8 +1963,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-apple-inc.html",
-        "title": "APPLE INC. — ENTITY REPORT",
+        "route": "reports/entity-24-7261.html",
+        "title": "24-7261 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2062,8 +1972,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-avgo.html",
-        "title": "AVGO — ENTITY REPORT",
+        "route": "reports/entity-appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+        "title": "APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2071,8 +1981,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-broadcom-inc.html",
-        "title": "BROADCOM INC. — ENTITY REPORT",
+        "route": "reports/entity-california-supreme-court.html",
+        "title": "CALIFORNIA SUPREME COURT — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2089,8 +1999,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-health-and-human-services-department.html",
-        "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
+        "route": "reports/entity-civil-rights-corps-v-lasalle.html",
+        "title": "CIVIL RIGHTS CORPS V. LASALLE — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2098,8 +2008,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-homeland-security-department.html",
-        "title": "HOMELAND SECURITY DEPARTMENT — ENTITY REPORT",
+        "route": "reports/entity-health-and-human-services-department.html",
+        "title": "HEALTH AND HUMAN SERVICES DEPARTMENT — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2110,7 +2020,7 @@
   },
   "criminalWaveBuild": {
     "ok": true,
-    "generatedAt": "2026-08-04T07:58:54.199Z",
+    "generatedAt": "2026-08-05T06:27:36.070Z",
     "mode": "single-authoritative-hydration-with-verification-only",
     "idempotent": true,
     "waveFiles": [
@@ -2204,10 +2114,10 @@
   },
   "criminalDossierTest": {
     "ok": true,
-    "generatedAt": "2026-08-04T07:58:54.498Z",
+    "generatedAt": "2026-08-05T06:27:36.422Z",
     "target": 100,
     "approvedDossiers": 20,
-    "dossierPagesChecked": 226,
+    "dossierPagesChecked": 216,
     "failures": []
   },
   "relationshipGraph": {

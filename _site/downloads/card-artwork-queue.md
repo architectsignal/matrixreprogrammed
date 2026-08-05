@@ -1,6 +1,6 @@
 # Next Card Artwork Queue
 
-Updated: 2026-08-03T07:02:20.562Z
+Updated: 2026-08-05T06:26:52.695Z
 
 Queue size: 10
 

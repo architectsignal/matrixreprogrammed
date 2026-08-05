@@ -53,6 +53,11 @@
     "binding": "ASSETS",
     "directory": "./_site",
     "run_worker_first": [
+      "/follow-the-money",
+      "/making-money",
+      "/card-artwork-batches",
+      "/subject-briefs",
+      "/entity-timelines",
       "/api/*",
       "/.netlify/functions/*",
       "/newsletter-signup",

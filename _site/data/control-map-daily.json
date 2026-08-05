@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-03T07:02:09.249Z",
+  "updated": "2026-08-05T06:26:43.023Z",
   "title": "Daily / Weekly Visual Control Map",
   "boundary": "The visual map is generated from site data. Nodes are evidence routes, not verdicts.",
   "periods": {
@@ -175,6 +175,12 @@
           "type": "profile route"
         },
         {
+          "name": "Bill Gates",
+          "score": 100,
+          "route": "billionaire-briefs/bill-gates.html",
+          "type": "profile route"
+        },
+        {
           "name": "Mark Zuckerberg",
           "score": 100,
           "route": "billionaire-briefs/mark-zuckerberg.html",
@@ -196,12 +202,6 @@
           "name": "DynCorp / Amentum lineage",
           "score": 100,
           "route": "contractor-briefs/dyncorp-amentum-lineage.html",
-          "type": "contractor route"
-        },
-        {
-          "name": "CACI International",
-          "score": 100,
-          "route": "contractor-briefs/caci-intelligence-contractor.html",
           "type": "contractor route"
         }
       ]

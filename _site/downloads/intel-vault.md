@@ -1,11 +1,41 @@
 # Intel Vault
 
-Updated: 2026-08-03T07:05:59.850Z
+Updated: 2026-08-05T06:30:49.469Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
+- Published: 2026-07-28T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168039
+- Source class: primary-or-official
+
+### Climate alarm ‘blaring from every direction’
+- Published: 2026-07-28T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168042
+- Source class: primary-or-official
+
+### Forced online scams: IOM warns trafficking networks are booming
+- Published: 2026-07-28T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168038
+- Source class: primary-or-official
+
+### HIV, hepatitis, STI gains at risk as funding falls, WHO warns
+- Published: 2026-07-28T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168040
+- Source class: primary-or-official
+
+### Mount Olympus and D-Day beaches among new World Heritage Sites
+- Published: 2026-07-28T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168043
+- Source class: primary-or-official
+
+### Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
+- Published: 2026-07-28T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168037
+- Source class: primary-or-official
 
 ### Group in Congress pushing for more Epstein transparency - American Press
 - Published: 2026-07-27T00:13:58.000Z

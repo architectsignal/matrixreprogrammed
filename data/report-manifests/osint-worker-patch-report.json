@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-08-03T06:54:37.863Z",
-  "pageCount": 81,
+  "generatedAt": "2026-08-05T06:18:37.107Z",
+  "pageCount": 82,
   "output": "downloads/osint-worker-patch-report.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Osint Worker Patch Report",
-    "contentHash": "80e745383a45141f7f4014188e98c2c9fd418a61b5df627d9e25954f117affe1",
+    "contentHash": "b90861a1ee4466ccd81fc5fd31a137f1f5bb1e5585ff9348c0dae37a47fcfe03",
     "sourceIds": [
       "savile-health-investigations-2014",
+      "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -144,8 +145,7 @@
       "private-equity-silver-lake",
       "private-equity-vista-equity-partners",
       "private-equity-hellman-friedman",
-      "private-equity-clayton-dubilier-rice",
-      "private-equity-permira"
+      "private-equity-clayton-dubilier-rice"
     ],
     "metrics": {
       "evidenceCount": 139,
@@ -154,12 +154,12 @@
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 22,
-      "moneyRecordCount": 119
+      "moneyRecordCount": 118
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 129 A/B-grade public-record items are materially relevant to Osint Worker Patch Report.",
-        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",

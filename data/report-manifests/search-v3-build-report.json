@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T06:57:17.885Z",
+  "generatedAt": "2026-08-05T06:21:30.624Z",
   "pageCount": 91,
   "output": "downloads/search-v3-build-report.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Search V3 Build Report",
-    "contentHash": "f283e1cbc34ffa7f8c108aa1a51edc701c874358554a45f7119fdb3d8e9fe25f",
+    "contentHash": "23ce3ad43c6b1c427f5c15a571359cd19fbae5aa017f2b6b13034b09f96f72c2",
     "sourceIds": [
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
@@ -37,8 +37,6 @@
       "f44c3c7309a5f0779a57e655",
       "275d6c3caca158f7a3e15780",
       "1769af26a7bda813406cd8f5",
-      "companies-aapl",
-      "technology-control-aapl",
       "360e80c162081c85d2c680ef",
       "a71a8be091652489b843ecf6",
       "06baa45bea3e2e15eb80eff9",
@@ -84,6 +82,8 @@
       "deb382cdbfe57b57793d739e",
       "4961972398d896435d33f3f7",
       "9e8310c49b990aa62d2b0921",
+      "b0cde383147509fbfd4f4472",
+      "c3bd2d306202dfc2e2374303",
       "deutsche-bank-epstein-dfs-2020",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
@@ -148,16 +148,16 @@
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 110,
+      "primarySourceCount": 112,
       "disputedClaimCount": 3,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 12,
-      "moneyRecordCount": 71
+      "moneyRecordCount": 69
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 110 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
+        "conclusion": "The indexed record establishes that 112 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
         "evidence": "IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); DOJ OIG documented FBI handling failures (data/criminal-conduct-registry.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/criminal-conduct-registry.json); Westminster inquiry examined political and policing responses (data/criminal-conduct-registry.json); IICSA found serious Church failures and examined prominent support (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-05T03:32:06.476Z
-Live Intel source window: 2026-08-05T03:32:01.513Z
+Generated: 2026-08-05T06:26:26.736Z
+Live Intel source window: 2026-08-05T06:26:10.665Z
 Latest source publication: 2026-08-03T22:56:29.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-15 current Epstein-lane record leads remain inside the active source window.
+16 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -65,6 +65,16 @@ How Jeffrey Epstein's Island Became a Nightmare for Influencers Business Insider
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
+### Epstein records back in court as federal judge questions DOJ redactions - WPEC
+- Published: 2026-08-01T18:18:55.000Z
+- Source: Google News / Epstein timeline and files
+- Class: Discovery lead — open and grade the underlying publisher record
+- URL: https://news.google.com/rss/articles/CBMijgNBVV95cUxOVlNTU2lxUGpwQnotYU1vUnJDSm1ydXBVb3plWG9wTHNOZGI3UmZBcC00dWp4QnZILTNWNmxha2hvVkROcnRKN0R6aGZqOUlsRExZSG1xOFlmS3k3azFKU3RZUzQybzl3ZFdhSi1LQUZuLUR2TkwtVlRkQWxuQUttUmRjSF9HcjdQaEFKQlp2bUp6VU9EWXRWcUNhUlFlbTFHYXJhazFTbl9LVENTTXZUUjVLSkZTQzVWRDNxeFlxaHlta0NEMjdCd2tjbUtCaXRiSWNxdVZ6MklQLXI4emRWT2RnNDlWaFBwOGtLZHhGMmMxaHAwbjViTVdnekctemVfM1k4bWh1Nmt1RE51TmMxTGVEOGxUenkxa2JqOFNYWV83VU8ycWppMm5wSnVaRFVjU09CREpXV1hKZ251ZDdybVpEUUwzRWhOSVpOTHd6R3JTR1VEbzVSZVM0ZEpfRW5mZkhxTFd4NzI0NllXdDRzWFdMYkFLYWRCVUZJbGhYamZlb1BEV2REWXBJZ1VoQQ?oc=5
+
+Epstein records back in court as federal judge questions DOJ redactions WPEC
+
+Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
+
 ### Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - PBS
 - Published: 2026-07-31T19:07:23.000Z
 - Source: Google News / Epstein timeline and files
@@ -95,13 +105,13 @@ Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent cre
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
+### US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
 - Published: 2026-07-30T11:19:00.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
 
-US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell The Times of India
+US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell timesofindia.indiatimes.com
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

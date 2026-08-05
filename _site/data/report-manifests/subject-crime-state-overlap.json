@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T06:59:46.704Z",
-  "pageCount": 108,
+  "generatedAt": "2026-08-05T06:24:12.341Z",
+  "pageCount": 105,
   "output": "downloads/subject-crime-state-overlap.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Crime-State Overlap Brief",
-    "contentHash": "2ae5d4cde73ee0de2ce2adc59a3ae2e52d1d5155cac6bd8647f823f399bcc804",
+    "contentHash": "1c643f723ff899030e33f8efc067d70ce1c5ebe2c9a01b1eebace197f68fb5bb",
     "sourceIds": [
       "aa45c75a112060231ce901ba",
       "a0a974f7d560e8b12930c956",
@@ -23,7 +23,7 @@
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "88ef9baf356c096816236956",
-      "e083e748ec6311742c2416e5",
+      "c90bf38664c0409003c1069a",
       "26b90533dbf7d2ed42f02de6",
       "67f26a2a1ba1e136d90bd1ad",
       "97ac8917477bc1c860f869f7",
@@ -42,8 +42,8 @@
       "e3b688a222b2865bb0e23e66",
       "8165fb4ec7543f1da0762496",
       "e116361cb7791d4be20113e1",
+      "c3bd2d306202dfc2e2374303",
       "535d2f595c3ec1621e13dd0f",
-      "daily-revelation-report",
       "contractor-blackwater-xe-academi-constellis-lineage",
       "f992e3db8b98b0e46bc59c59",
       "3a425f0d5d683952bc0ad7ac",
@@ -95,15 +95,9 @@
       "34805734b1ad3b73f0ede0d8",
       "356f10eff5c6f147fc33ebeb",
       "9eef1e9157e568d5641addcb",
-      "5460c0408472ce834da2b82f",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
-      "0491ca77f4f2c9b90f832c2e",
-      "aa119272f233de638bb1e02d",
       "war-machine-2026-07-28-20290a9e",
-      "0286171e0bf7415859b35948",
-      "e5f914fb3ce4e13fe16181c4",
-      "255a3ae9592a4cdd47fc9851",
       "war-machine-2026-07-24-192b3e30",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "five-eyes-ai-cyber-warning-2026-06-22",
@@ -134,32 +128,38 @@
       "665a5072d96b9757a6ee9d2d",
       "9bc66da5c53d37d8c3d59e13",
       "9dad49e7d690ef5780b5a6bf",
+      "b0cde383147509fbfd4f4472",
       "923ae9ac41d6f53640024870",
       "contractor-caci-international",
       "contractor-booz-allen-hamilton",
       "contractor-saic-leidos-lineage",
-      "pdf-subject-crime-state-overlap-d1106194550d",
+      "pdf-subject-crime-state-overlap-68fc06b6ec40",
       "e2ac57ffd11f45bcdfb24c2e",
       "epstein-federal-indictment-2019",
       "fincen",
       "cdffd8cd0165511bb5f825ef",
       "b2892adcc3f96c248535748e",
       "22961124092ffbfa9297f5d0",
-      "35733d144352d0255d4b0f95"
+      "35733d144352d0255d4b0f95",
+      "0c5f51804baf8e9e2c1fdd0b",
+      "a21f3d8e98268d5e01e1eb7c",
+      "04178dd78ae55a022df89f05",
+      "eb79eba926106673fc0305cc",
+      "ef50253c90923f8fe305c4cf"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 24,
+      "primarySourceCount": 25,
       "disputedClaimCount": 0,
-      "newEntityCount": 19,
+      "newEntityCount": 20,
       "updatedAssessmentCount": 1,
       "relationshipCount": 39,
       "moneyRecordCount": 34
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Crime-State Overlap Brief.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); U.S. Department of Justice (data/evidence-vault.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Crime-State Overlap Brief.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); U.S. Department of Justice (data/evidence-vault.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -167,8 +167,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -217,6 +217,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-02T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-04T00:00:00.000Z"
   }
 }

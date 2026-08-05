@@ -1,6 +1,6 @@
 # Daily / Weekly Visual Control Map
 
-Generated: 2026-08-03T07:02:09.249Z
+Generated: 2026-08-05T06:26:43.023Z
 
 Boundary: The visual map is generated from site data. Nodes are evidence routes, not verdicts.
 
@@ -34,11 +34,11 @@ Boundary: The visual map is generated from site data. Nodes are evidence routes,
 - 100 — State Street / State Street Investment Management — big-three/state-street.html
 - 100 — Elon Musk — billionaire-briefs/elon-musk.html
 - 100 — Jeff Bezos — billionaire-briefs/jeff-bezos.html
+- 100 — Bill Gates — billionaire-briefs/bill-gates.html
 - 100 — Mark Zuckerberg — billionaire-briefs/mark-zuckerberg.html
 - 100 — Warren Buffett — billionaire-briefs/warren-buffett.html
 - 100 — Blackwater / Xe / Academi / Constellis lineage — contractor-briefs/blackwater-constellis-lineage.html
 - 100 — DynCorp / Amentum lineage — contractor-briefs/dyncorp-amentum-lineage.html
-- 100 — CACI International — contractor-briefs/caci-intelligence-contractor.html
 
 ## User Actions: open, prove, disprove, watch next
 - 80 — Strongest route today — institution-briefs/world-economic-forum.html

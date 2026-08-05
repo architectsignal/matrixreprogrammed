@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-05T03:32:01.513Z
+Collection completed: 2026-08-05T06:30:49.469Z
 Latest source publication: 2026-08-04T12:00:00.000Z
-Collection status: fresh-items-added
-New items this collection: 6
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-6 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -61,6 +61,30 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Strait of Hormuz disruption hits energy, fertilizer and industrial trade
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Anomalous Health Incidents
+  - Source: https://vault.fbi.gov/anomalous-health-incidents
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Anomalous Health Incidents
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Anomalous Health Incidents Part 01
+  - Source: https://vault.fbi.gov/anomalous-health-incidents/anomalous-health-incidents-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Anomalous Health Incidents Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Anomalous Health Incidents Part 02
+  - Source: https://vault.fbi.gov/anomalous-health-incidents/anomalous-health-incidents-part-02/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Anomalous Health Incidents Part 02
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Thomas Ciancutti Part 03
+  - Source: https://vault.fbi.gov/thomas-ciancutti/thomas-ciancutti-part-03/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Thomas Ciancutti Part 03
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity - ABC News - Breaking News, Latest News and Videos
   - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQZE5ScWZ6TjZiSXNZbFdxU0toeDFERXVMNndVeDV0Vi0ya2F6Mk05MEpJVFVXMWlpR3ZzeWlCSnFFUlV5VG9laFl4TmJlYkxYTkZvNVh0ajJYdzNESC1iOEFzTWdDY2lqZElIOWdIMTdPOWdRajAtUUt5WWlia3pxbUx5SzBrN1BqaXJNSG9ETzlTRHU1VEQwQXhXNzllTW1ncXBqNTB30gGrAUFVX3lxTE5BQzkxZkhnOWhtR3hvWHltZTd4OGdXd3FQajNMNTFBNnNqRHJ2S0o1dHBWX2ctMmVjV2hISWZxd2NyRF9hWW4ydlp6eHd6QUlOR1EzVHd2azl5dmlUbkstU3F0UjhfUi1hNnlnZHlnR1N0YjRGUDRTQjdwcXNGSFgtbUwtU3JFM1BHcjdVaEhtdDBSQ3AzcHMtZ1B4OEhqRjZ1ZWNfbUUxTy03bw?oc=5
@@ -122,11 +146,71 @@ New items this collection: 6
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Arctic Frost Part 05
+  - Source: https://vault.fbi.gov/arctic-frost/arctic-frost-part-05/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Arctic Frost Part 05
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — BOMBROB & Operation Punchout Part 33
+  - Source: https://vault.fbi.gov/bombrob-and-operation-punchout/bombrob-operation-punchout-part-33/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: BOMBROB & Operation Punchout Part 33
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — BOMBROB & Operation Punchout Part 34
+  - Source: https://vault.fbi.gov/bombrob-and-operation-punchout/bombrob-operation-punchout-part-34/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: BOMBROB & Operation Punchout Part 34
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Donald West
+  - Source: https://vault.fbi.gov/donald-west
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Donald West
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Donald West Part 01
+  - Source: https://vault.fbi.gov/donald-west/donald-west-part-01/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Donald West Part 01
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Donald West Part 02
+  - Source: https://vault.fbi.gov/donald-west/donald-west-part-02/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Donald West Part 02
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Donald West Part 03
+  - Source: https://vault.fbi.gov/donald-west/donald-west-part-03/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Donald West Part 03
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Donald West Part 04
+  - Source: https://vault.fbi.gov/donald-west/donald-west-part-04/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Donald West Part 04
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Donald West Part 05 (Final)
+  - Source: https://vault.fbi.gov/donald-west/donald-west-part-05-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Donald West Part 05 (Final)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-02 — Trapped by a Facebook job advert, freed by a stranger in a taxi
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168058
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Trapped by a Facebook job advert, freed by a stranger in a taxi
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-01 — Epstein records back in court as federal judge questions DOJ redactions - WPEC
+  - Source: https://news.google.com/rss/articles/CBMijgNBVV95cUxOVlNTU2lxUGpwQnotYU1vUnJDSm1ydXBVb3plWG9wTHNOZGI3UmZBcC00dWp4QnZILTNWNmxha2hvVkROcnRKN0R6aGZqOUlsRExZSG1xOFlmS3k3azFKU3RZUzQybzl3ZFdhSi1LQUZuLUR2TkwtVlRkQWxuQUttUmRjSF9HcjdQaEFKQlp2bUp6VU9EWXRWcUNhUlFlbTFHYXJhazFTbl9LVENTTXZUUjVLSkZTQzVWRDNxeFlxaHlta0NEMjdCd2tjbUtCaXRiSWNxdVZ6MklQLXI4emRWT2RnNDlWaFBwOGtLZHhGMmMxaHAwbjViTVdnekctemVfM1k4bWh1Nmt1RE51TmMxTGVEOGxUenkxa2JqOFNYWV83VU8ycWppMm5wSnVaRFVjU09CREpXV1hKZ251ZDdybVpEUUwzRWhOSVpOTHd6R3JTR1VEbzVSZVM0ZEpfRW5mZkhxTFd4NzI0NllXdDRzWFdMYkFLYWRCVUZJbGhYamZlb1BEV2REWXBJZ1VoQQ?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Epstein records back in court as federal judge questions DOJ redactions - WPEC
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-01 — Recovery in Ukraine, one life at a time
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168053
@@ -163,6 +247,18 @@ New items this collection: 6
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Wildfire smoke poses hidden health threat
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-31 — Christopher Wray's Gift to Attorney General Garland
+  - Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Christopher Wray's Gift to Attorney General Garland
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-07-31 — Christopher Wray's Gift to Attorney General Garland (Final)
+  - Source: https://vault.fbi.gov/christopher-wrays-gift-to-attorney-general-garland/christopher-wrays-gift-to-attorney-general-garland-final/view
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Christopher Wray's Gift to Attorney General Garland (Final)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
   - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
@@ -212,11 +308,11 @@ New items this collection: 6
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Wildfires: Prevention is the best defence, UN says
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
+- 2026-07-30 — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
   - Source: https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India
+  - Video hook: New public-record signal: US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-30 — Epstein survivors’ lawsuits against Les Wexner combined into one case - NBC4 WCMH-TV
   - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOTGhwZ3ZDeTRVSFlHN1JhTDQzZFhWOXpkUjJTXzllaE5lbGs4R0JNSjRqX0c4UWRHblJ5V2FBRHhFSE5ieHNjczVIM2xFTXctVTJwLVVsNll6YThZOFYzbzZPX1VfU3ZXb0htZnd4VDJ3eXkxRDN0TXM1c0J1VGVDTk9sUVE2a2RBZklHVlRLTTFVcWFIV1ozWFVjVW1SQUNwLUQwTzBsYTlKRnpLZnBjVWtZRnZNdFd4UHfSAb8BQVVfeXFMTUxzSEtzZjRZRlFMamQxWFFFeFJuQ29sQ1VVdEJfbzRSckVDSDZDZWd3QWlsa0xLYzVCcnZzaWhseHVXc0h5c0VNQXpUMUFUZy1WeDJ2Z0ZxY2F3SndLTFFhZkJtZkNQZDZnQlZNNDRCOHRZYlppRTB6ZGhkcW5zd0RnSXpHU3I1T0JadWhBaFBIZWgwNl85bEUtblFmd3MybUt5RnZVaVF6UVROS1pHRkRzaDU3WTJtNkwwNWRvdFU?oc=5

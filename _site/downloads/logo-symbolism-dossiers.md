@@ -1,6 +1,6 @@
 # Logo Symbolism Dossiers
 
-Generated: 2026-08-03T07:02:09.269Z
+Generated: 2026-08-05T06:26:43.041Z
 
 Boundary: Logo readings are commentary lanes. Official links and public documents are evidence lanes. Symbolism never proves conduct by itself.
 

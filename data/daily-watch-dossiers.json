@@ -1,7 +1,7 @@
 {
   "ok": true,
   "schemaVersion": "1.0.0",
-  "updated": "2026-08-04T07:58:58.976Z",
+  "updated": "2026-08-05T06:27:59.105Z",
   "rankingPolicy": {
     "mode": "stable-incumbent-evidence-promotion",
     "promotionMargin": 14,
@@ -9,12 +9,9 @@
     "decisions": {
       "person": {
         "changed": false,
-        "reason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent.",
-        "incumbent": "Bill Gates",
+        "reason": "The same entity remains the current evidence leader.",
         "incumbentScore": 91,
-        "challenger": "Elon Musk",
         "challengerScore": 91,
-        "required": 105,
         "marginRequired": 14
       },
       "institution": {
@@ -39,16 +36,16 @@
   "person": {
     "slot": "person",
     "name": "Bill Gates",
-    "generatedAt": "2026-08-04T07:58:58.976Z",
+    "generatedAt": "2026-08-05T06:27:59.105Z",
     "ranking": {
       "score": 91,
-      "status": "incumbent-held-position",
+      "status": "retained-current-leader",
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "replacedEntity": "",
-      "challengerHeld": "Elon Musk",
-      "challengerScore": 91,
-      "promotionReason": "Elon Musk did not carry enough direct fresh evidence to replace the incumbent."
+      "challengerHeld": "",
+      "challengerScore": null,
+      "promotionReason": ""
     },
     "executiveAssessment": {
       "whatWasFound": "profile route",
@@ -77,7 +74,7 @@
         "health and development philanthropy",
         "health"
       ],
-      "graphScore": 70
+      "graphScore": 100
     },
     "familyAccess": null,
     "legalAndWrongdoingRecord": [],
@@ -139,7 +136,7 @@
   "institution": {
     "slot": "institution",
     "name": "Securities and Exchange Commission",
-    "generatedAt": "2026-08-04T07:58:58.976Z",
+    "generatedAt": "2026-08-05T06:27:59.105Z",
     "ranking": {
       "score": 143,
       "status": "retained-current-leader",
@@ -1712,7 +1709,7 @@
   "family": {
     "slot": "family",
     "name": "Wallenberg family and foundations",
-    "generatedAt": "2026-08-04T07:58:58.976Z",
+    "generatedAt": "2026-08-05T06:27:59.105Z",
     "ranking": {
       "score": 122,
       "status": "incumbent-held-position",

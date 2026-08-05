@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-05T06:32:40.112Z",
+  "beforeRecords": 1953,
+  "finalRecords": 1951,
+  "semanticRecords": 1951,
+  "removed": [
+    {
+      "url": "downloads/forum-posts.json",
+      "reason": "retired-local-forum-export"
+    },
+    {
+      "url": "downloads/forum-posts.md",
+      "reason": "retired-local-forum-export"
+    }
+  ],
+  "forumRoutes": 1,
+  "checkedFiles": [
+    "search-index.json",
+    "search-semantic-index.json",
+    "search.js",
+    "search.html",
+    "data/search-index.json",
+    "data/search-facets.json",
+    "data/search-health.json",
+    "_site/search-index.json",
+    "_site/search-semantic-index.json",
+    "_site/search.js",
+    "_site/search.html",
+    "_site/data/search-index.json",
+    "_site/data/search-facets.json",
+    "_site/data/search-health.json"
+  ],
+  "leaks": [],
+  "boundary": "The final public search corpus is rebuilt from cleaned reader-facing routes. Retired local forum exports and compatibility payloads are excluded; the authoritative public Signal Board remains searchable."
+}

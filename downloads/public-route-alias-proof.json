@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-05T06:32:39.685Z",
+  "sitePresent": true,
+  "searchFinalized": true,
+  "htmlFiles": 1741,
+  "synchronizedAliases": 47,
+  "identicalAliases": 1736,
+  "directoryConflicts": [
+    {
+      "html": "card-artwork-batches.html",
+      "directory": "card-artwork-batches",
+      "approved": true
+    },
+    {
+      "html": "entity-timelines.html",
+      "directory": "entity-timelines",
+      "approved": true
+    },
+    {
+      "html": "follow-the-money.html",
+      "directory": "follow-the-money",
+      "approved": true
+    },
+    {
+      "html": "making-money.html",
+      "directory": "making-money",
+      "approved": true
+    },
+    {
+      "html": "subject-briefs.html",
+      "directory": "subject-briefs",
+      "approved": true
+    }
+  ],
+  "unexpectedDirectoryConflicts": [],
+  "mismatches": [],
+  "boundary": "Every deployable .html route has a byte-identical extensionless file unless its extensionless name is a real namespace directory. Approved namespace collisions are served by exact Worker aliases."
+}

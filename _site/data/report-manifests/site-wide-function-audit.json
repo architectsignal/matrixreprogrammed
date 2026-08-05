@@ -1,28 +1,27 @@
 {
-  "generatedAt": "2026-08-02T12:27:23.194Z",
-  "pageCount": 119,
+  "generatedAt": "2026-08-05T06:22:44.504Z",
+  "pageCount": 120,
   "output": "downloads/site-wide-function-audit.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Site-Wide Function Audit",
-    "contentHash": "0aeb0d6e5d65cdfbf5a6e9d2e2ae45cffd35f80922e26383c1a5b86bf94091e8",
+    "contentHash": "84f06b512e0339a27f1adcba45ae9f47a4d78a9a62bc668719090129a5e661c9",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
-      "e083e748ec6311742c2416e5",
+      "c90bf38664c0409003c1069a",
       "3a425f0d5d683952bc0ad7ac",
       "9f3052b5d8cec138a2a37e8c",
       "008875ef7bf45eb14dccb254",
       "71e0563ca7b139c37c302956",
-      "72ef7895f95288946ccb3cff",
       "e72d22f4f28eb53e3173d0a6",
+      "72ef7895f95288946ccb3cff",
       "9f77464e401ac59ad1adb812",
       "360e80c162081c85d2c680ef",
       "e4a0df7a70409789454722e7",
       "7f5b91c14c671bd24b8bbd81",
       "41772e5c9af7970ddd7d5aac",
       "b5a32a76f19d554c484e917f",
-      "a4c15f7c3d808369b294115e",
       "157cdab04b61ae6309c0c713",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
@@ -92,7 +91,6 @@
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
       "dcec2a45ef35362072af05e3",
-      "ec968f2ec6ba82128b4cd91b",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "ASC-REVIEW-481745ED8153AA11",
@@ -146,20 +144,22 @@
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
       "ASC-REVIEW-8A2ACAFD47272636",
-      "ASC-REVIEW-39269A2C0471A66C"
+      "ASC-REVIEW-39269A2C0471A66C",
+      "ASC-REVIEW-53BD0E17B018491C",
+      "ASC-REVIEW-0177F61D444ED739"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 99,
+      "primarySourceCount": 11,
+      "disputedClaimCount": 101,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 105,
-      "moneyRecordCount": 103
+      "relationshipCount": 106,
+      "moneyRecordCount": 104
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Site-Wide Function Audit.",
+        "conclusion": "The indexed record establishes that 11 A/B-grade public-record items are materially relevant to Site-Wide Function Audit.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 105 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 106 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; 10. Device, Network & Incident Defence; BlackRock → Private Markets Infrastructure Expansion: capital layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 105 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 106 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",

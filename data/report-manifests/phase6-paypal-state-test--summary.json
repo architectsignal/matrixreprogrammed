@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-03T06:55:02.650Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-05T06:19:04.494Z",
+  "pageCount": 135,
   "output": "downloads/phase6-paypal-state-test/summary.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "Phase6 Paypal State Test/Summary",
-    "contentHash": "3c02a509f4e3260177cfc9012843cfe51d89ba3d436619fcad0440f1f79de7c0",
+    "contentHash": "cd052683beff32f89b92f4fa5549e0c81b0eec2d11079d3f0f4158e7235a0c37",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -19,6 +19,9 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-A5C911DFEE587573",
+      "ASC-REVIEW-EEA884898BA116BF",
+      "ASC-REVIEW-CAEB4FE9EDC04A54",
+      "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -47,6 +50,7 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
+      "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -56,6 +60,7 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-E14F8DDD0D2D554A",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -141,12 +146,7 @@
       "ASC-REVIEW-3C0E3174433D0A74",
       "ASC-REVIEW-954EF610F9B32B24",
       "ASC-REVIEW-CA2354BF2081EB62",
-      "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585",
-      "ASC-REVIEW-D6340B09DE08EAC5",
-      "ASC-REVIEW-52C3694FF95479F1",
-      "ASC-REVIEW-3EB368ED00ADD23E",
-      "ASC-REVIEW-C47A1B7DA11B68C4"
+      "ASC-REVIEW-8A44FB8AADF1FB38"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 140,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 138,
-      "moneyRecordCount": 138
+      "relationshipCount": 137,
+      "moneyRecordCount": 133
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 138 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 138 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-03T06:55:02.650Z"
+    "intelligenceFreshnessDate": "2026-08-05T06:19:04.494Z"
   }
 }

@@ -1,7 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-02T21:21:59.777Z",
-  "changed": [],
+  "generatedAt": "2026-08-03T11:03:57.314Z",
+  "changed": [
+    "forum.js"
+  ],
   "existingLegacySessions": "accepted on their current host",
   "newSessions": "matrix_session_v2 shared across apex and www",
   "logout": "revokes D1 session and clears v2 plus legacy cookies",

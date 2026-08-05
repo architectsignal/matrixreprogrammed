@@ -33,10 +33,18 @@ function walk(directory, output = []) {
   return output;
 }
 
+const featureMaturityReport = require('./finalize-feature-maturity.js');
+if (!featureMaturityReport.ok) {
+  throw new Error('Feature maturity labels failed closed before public-quality, search and alias finalization.');
+}
+
 const report = {
   ok: false,
   generatedAt: new Date().toISOString(),
   sitePresent: fs.existsSync(site),
+  featureMaturityFinalized: featureMaturityReport.ok === true,
+  publicFeatureRoutes: featureMaturityReport.publicRoutes || [],
+  withheldFeatureRoutes: featureMaturityReport.withheldRoutes || [],
   publicQualityPrepared: false,
   publicQualityFinalized: false,
   publicQualityRoutesFinalized: false,
@@ -47,12 +55,12 @@ const report = {
   directoryConflicts: [],
   unexpectedDirectoryConflicts: [],
   mismatches: [],
-  boundary: 'Every deployable .html route has a byte-identical extensionless file unless its extensionless name is a real namespace directory. Approved namespace collisions are served by exact Worker aliases.'
+  boundary: 'Every feature route remains public with an honest maturity label. Every deployable .html route then has a byte-identical extensionless file unless its extensionless name is a real namespace directory; approved namespace collisions are served by exact Worker aliases.'
 };
 
 if (!report.sitePresent) {
-  report.ok = true;
-  report.skipped = '_site is absent; public quality, search and alias finalization run after deployable output exists.';
+  report.ok = report.featureMaturityFinalized && report.withheldFeatureRoutes.length === 0;
+  report.skipped = '_site is absent; source maturity labels are finalized while public quality, search and alias output wait for deployable assets.';
 } else {
   const publicQualityPreparation = require('./prepare-p1-public-quality.js');
   if (!publicQualityPreparation.ok) throw new Error('P1 public-quality preparation failed closed.');
@@ -80,7 +88,11 @@ if (!report.sitePresent) {
 
     if (fs.existsSync(aliasFile) && fs.statSync(aliasFile).isDirectory()) {
       const expectedDirectory = directoryConflicts.get(relativeHtml);
-      const item = { html: relativeHtml, directory: relativeAlias, approved: expectedDirectory === relativeAlias };
+      const item = {
+        html: relativeHtml,
+        directory: relativeAlias,
+        approved: expectedDirectory === relativeAlias
+      };
       report.directoryConflicts.push(item);
       if (!item.approved) report.unexpectedDirectoryConflicts.push(item);
       continue;
@@ -88,36 +100,62 @@ if (!report.sitePresent) {
 
     fs.mkdirSync(path.dirname(aliasFile), { recursive: true });
     const htmlHash = digest(htmlFile);
-    const aliasHash = fs.existsSync(aliasFile) && fs.statSync(aliasFile).isFile() ? digest(aliasFile) : '';
+    const aliasHash = fs.existsSync(aliasFile) && fs.statSync(aliasFile).isFile()
+      ? digest(aliasFile)
+      : '';
     if (htmlHash !== aliasHash) {
       fs.copyFileSync(htmlFile, aliasFile);
       report.synchronizedAliases += 1;
     }
 
-    const finalAliasHash = fs.existsSync(aliasFile) && fs.statSync(aliasFile).isFile() ? digest(aliasFile) : '';
+    const finalAliasHash = fs.existsSync(aliasFile) && fs.statSync(aliasFile).isFile()
+      ? digest(aliasFile)
+      : '';
     if (finalAliasHash === htmlHash) report.identicalAliases += 1;
-    else report.mismatches.push({ html: relativeHtml, alias: relativeAlias, htmlHash, aliasHash: finalAliasHash });
+    else report.mismatches.push({
+      html: relativeHtml,
+      alias: relativeAlias,
+      htmlHash,
+      aliasHash: finalAliasHash
+    });
   }
 
   for (const [htmlRoute, directoryRoute] of directoryConflicts) {
     const htmlFile = path.join(site, htmlRoute);
     const directory = path.join(site, directoryRoute);
     if (!fs.existsSync(htmlFile) || !fs.statSync(htmlFile).isFile()) {
-      report.mismatches.push({ html: htmlRoute, alias: directoryRoute, error: 'canonical HTML route missing' });
+      report.mismatches.push({
+        html: htmlRoute,
+        alias: directoryRoute,
+        error: 'canonical HTML route missing'
+      });
     }
     if (!fs.existsSync(directory) || !fs.statSync(directory).isDirectory()) {
-      report.mismatches.push({ html: htmlRoute, alias: directoryRoute, error: 'expected namespace directory missing' });
+      report.mismatches.push({
+        html: htmlRoute,
+        alias: directoryRoute,
+        error: 'expected namespace directory missing'
+      });
     }
   }
 
-  const observedConflicts = new Set(report.directoryConflicts.map(item => `${item.html}|${item.directory}`));
+  const observedConflicts = new Set(
+    report.directoryConflicts.map(item => `${item.html}|${item.directory}`)
+  );
   for (const [htmlRoute, directoryRoute] of directoryConflicts) {
     if (!observedConflicts.has(`${htmlRoute}|${directoryRoute}`)) {
-      report.mismatches.push({ html: htmlRoute, alias: directoryRoute, error: 'approved namespace collision was not observed' });
+      report.mismatches.push({
+        html: htmlRoute,
+        alias: directoryRoute,
+        error: 'approved namespace collision was not observed'
+      });
     }
   }
 
-  report.ok = report.publicQualityPrepared
+  report.ok = report.featureMaturityFinalized
+    && report.publicFeatureRoutes.length === 4
+    && report.withheldFeatureRoutes.length === 0
+    && report.publicQualityPrepared
     && report.publicQualityFinalized
     && report.publicQualityRoutesFinalized
     && report.searchFinalized
@@ -139,7 +177,7 @@ if (!report.ok) {
 }
 
 console.log(report.sitePresent
-  ? `Public route aliases finalized after P1 preparation, page quality, complete reader routes and clean search: ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired, ${report.directoryConflicts.length} approved namespace collisions.`
-  : 'Public route alias finalization skipped safely because _site is absent.');
+  ? `Public maturity labels, page quality, clean search and route aliases finalized: ${report.publicFeatureRoutes.length} public pilot/active routes, zero withheld, ${report.identicalAliases} byte-identical aliases, ${report.synchronizedAliases} repaired and ${report.directoryConflicts.length} approved namespace collisions.`
+  : 'Public feature maturity labels finalized with zero withholding; deployable search and aliases wait for _site.');
 
 module.exports = report;

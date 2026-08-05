@@ -1,0 +1,118 @@
+name: Final Site Release Contract
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/final-release-contract.yml'
+      - '.github/workflows/authorized-production-dispatch.yml'
+      - '.github/workflows/deploy.yml'
+      - 'scripts/verify-one-shot-production-authorization.js'
+      - 'scripts/cloudflare-usage-budget-guard.js'
+      - 'scripts/finalize-feature-maturity.js'
+      - 'scripts/feature-maturity-contract-test.js'
+      - 'scripts/finalize-public-route-aliases.js'
+      - 'wrangler.toml'
+      - 'wrangler.jsonc'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  verify:
+    name: Prove final exact-SHA release controls
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout proposed final release
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Syntax-check release owners
+        run: |
+          node --check scripts/verify-one-shot-production-authorization.js
+          node --check scripts/cloudflare-usage-budget-guard.js
+          node --check scripts/finalize-feature-maturity.js
+          node --check scripts/feature-maturity-contract-test.js
+          node --check scripts/finalize-public-route-aliases.js
+
+      - name: Prove fresh one-shot authorization parsing
+        run: node scripts/verify-one-shot-production-authorization.js --self-test
+
+      - name: Prove the one-use billable-build exception
+        env:
+          CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02
+          GITHUB_EVENT_NAME: workflow_dispatch
+          GITHUB_RUN_ATTEMPT: '1'
+        run: node scripts/cloudflare-usage-budget-guard.js owner-exception
+
+      - name: Prove every pilot route stays public and labelled
+        run: |
+          node scripts/finalize-feature-maturity.js
+          node scripts/feature-maturity-contract-test.js
+
+      - name: Prove dispatcher targets only the exact current SHA
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const source = fs.readFileSync('.github/workflows/authorized-production-dispatch.yml', 'utf8');
+          const required = [
+            "run.head_sha?.toLowerCase() === expectedHead",
+            "ref: expectedHead",
+            "billing_exception: billingException",
+            "run.conclusion !== 'failure'",
+            "never reuses a run for another SHA"
+          ];
+          for (const marker of required) {
+            if (!source.includes(marker)) throw new Error(`Dispatcher missing ${marker}`);
+          }
+          if (/cutoff = new Date\('2026-07-24/i.test(source)) throw new Error('Dispatcher retains the stale fixed cutoff');
+          if (source.includes('git commit -m')) throw new Error('Dispatcher mutates main after dispatch');
+          console.log('EXACT-SHA DISPATCH CONTRACT PASSED');
+          NODE
+
+      - name: Prove canonical deploy workflow still owns mutation gates
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const source = fs.readFileSync('.github/workflows/deploy.yml', 'utf8');
+          for (const marker of [
+            'node scripts/verify-one-shot-production-authorization.js',
+            'node scripts/cloudflare-usage-budget-guard.js owner-exception',
+            'Capture D1 rollback bookmark',
+            'Apply repeat-safe D1 migration chain',
+            'Production deploy guard',
+            'npx --yes wrangler@latest deploy',
+            'Verify live deployment and exact commit',
+            'billing_exception'
+          ]) if (!source.includes(marker)) throw new Error(`Canonical deploy workflow missing ${marker}`);
+          console.log('CANONICAL MUTATION-GATE CONTRACT PASSED');
+          NODE
+
+      - name: Bundle strict Cloudflare Worker without deploying
+        run: npx --yes wrangler@latest deploy --dry-run --outdir .wrangler/final-release-contract
+
+      - name: Upload focused release proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-release-contract-${{ github.run_id }}
+          path: |
+            data/feature-maturity.json
+            downloads/feature-maturity-report.json
+            downloads/feature-maturity-contract-test.json
+            .wrangler/final-release-contract
+          if-no-files-found: error
+          retention-days: 30

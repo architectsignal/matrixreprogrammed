@@ -1,6 +1,7 @@
 import productionWorker from './worker-production.js';
 import aiManagementWorker from './worker-ai-management.js';
 import { isAiManagementRoute } from './worker-ai-management.js';
+import bespokeInvestigationWorker, { isBespokeInvestigationRoute } from './worker-bespoke-investigations.js';
 import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
@@ -59,10 +60,49 @@ function forbidden() {
   });
 }
 
+function bespokeUnavailable(reason, detail = '') {
+  return new Response(JSON.stringify({
+    ok: false,
+    saved: false,
+    paymentCreated: false,
+    error: 'Bespoke investigation case management is unavailable. No payment or legacy success response was accepted.',
+    reason,
+    detail: String(detail || '').slice(0, 500),
+    checkedAt: new Date().toISOString()
+  }, null, 2), {
+    status: 503,
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'cache-control': 'no-store',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'referrer-policy': 'strict-origin-when-cross-origin',
+      'x-matrix-origin': 'cloudflare-worker-bespoke-boundary'
+    }
+  });
+}
+
+async function handleBespokeInvestigationRoute(request, env, ctx) {
+  try {
+    const response = await bespokeInvestigationWorker.fetch(request, env, ctx);
+    const origin = response.headers.get('x-matrix-origin');
+    if (origin !== 'cloudflare-worker-bespoke-investigations') {
+      return bespokeUnavailable('non-authoritative-bespoke-response-blocked', `Origin was ${origin || 'missing'}`);
+    }
+    return response;
+  } catch (error) {
+    return bespokeUnavailable('bespoke-investigation-worker-exception', error?.message || error);
+  }
+}
+
 export default {
   async fetch(request, env, ctx) {
     const runtimeEnv = withAiManagementAdminToken(env);
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    if (isBespokeInvestigationRoute(path)) {
+      return handleBespokeInvestigationRoute(request, runtimeEnv, ctx);
+    }
 
     if (isMatrixSynergyRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();

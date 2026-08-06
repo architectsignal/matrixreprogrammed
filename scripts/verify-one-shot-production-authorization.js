@@ -12,7 +12,7 @@ const exactAuthorization = 'exactly one controlled Cloudflare production deploym
 // Retain the deploy.yml input token while rebinding its authority to the fresh
 // marker date, target commit and first-parent trigger below.
 const ownerExceptionAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
-const ownerExceptionDate = '2026-08-05';
+const ownerExceptionDate = '2026-08-06';
 
 function git(args) {
   return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();

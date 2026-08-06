@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-05T19:54:27.917Z
-Live Intel source window: 2026-08-05T19:54:21.457Z
+Generated: 2026-08-06T03:35:59.128Z
+Live Intel source window: 2026-08-06T03:35:52.471Z
 Tracked cards: 969
-Cards with current matched records: 94
-Cards with no new verified record: 875
+Cards with current matched records: 98
+Cards with no new verified record: 871
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -735,9 +735,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Andrew Tate
 - Route: controlled-opposition/andrew-tate.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Tate brothers’ US extradition case a ‘step towards accountability,’ says independent expert — https://news.un.org/feed/view/en/story/2026/08/1168085
 
 ## Anguilla
 - Route: jurisdictions-of-power/anguilla.html
@@ -1862,9 +1863,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## DAILY COMMAND BRIEF
 - Route: daily-command-brief.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Registered Sex Offender Sentenced to 25 Years in Prison for Commanding the Exploitation of a Then-Four-Year-Old Child in New Jersey and Producing Child Pornography — https://www.justice.gov/usao-nj/pr/registered-sex-offender-sentenced-25-years-prison-commanding-exploitation-then-four-year
 
 ## Daniel Gilbert
 - Route: follow-the-money/people/daniel-gilbert.html
@@ -1977,9 +1979,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## District Court, District of Columbia
 - Route: entity-timelines/district-court-district-of-columbia.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Repeat Narcotics Dealer Found Guilty by Federal Jury in Distributing PCP at a Southwest D.C. Rec Center — https://www.justice.gov/usao-dc/pr/repeat-narcotics-dealer-found-guilty-federal-jury-distributing-pcp-southwest-dc-rec
 
 ## Ditchley Foundation network
 - Route: secret-societies/ditchley-foundation-network.html
@@ -2560,12 +2563,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GHISLAINE MAXWELL
 - Route: dossier-ghislaine-maxwell-criminal.html
-- Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-30T11:19:00.000Z
-- 2026-07-30T11:19:00.000Z — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - The Times of India — https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
-- 2026-07-30T00:48:00.000Z — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ — https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
-- 2026-07-29T21:23:00.000Z — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com — https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Giancarlo Devasini
 - Route: follow-the-money/people/giancarlo-devasini.html
@@ -2816,22 +2816,25 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-timelines/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 - undated — Homeland Security Department — Entity Observation
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-briefs/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 - undated — Homeland Security Department — Entity Observation
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-exposure/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 - undated — Homeland Security Department — Entity Observation
 
 ## Hong Kong
@@ -2998,9 +3001,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## INVESTIGATIONS
 - Route: investigations.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 
 ## Ireland
 - Route: jurisdictions-of-power/ireland.html
@@ -3168,8 +3172,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Jersey
 - Route: jurisdictions-of-power/jersey.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-08-04T12:00:00.000Z
+- Current matched records: 3
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Registered Sex Offender Sentenced to 25 Years in Prison for Commanding the Exploitation of a Then-Four-Year-Old Child in New Jersey and Producing Child Pornography — https://www.justice.gov/usao-nj/pr/registered-sex-offender-sentenced-25-years-prison-commanding-exploitation-then-four-year
 - 2026-08-04T12:00:00.000Z — Maryland Man Sentenced to 60 Months in Prison for His Role in Commercial Burglary Ring in New Jersey, New York, Pennsylvania, Maryland, and Delaware — https://www.justice.gov/usao-nj/pr/maryland-man-sentenced-60-months-prison-his-role-commercial-burglary-ring-new-jersey-new
 - 2026-08-04T12:00:00.000Z — United States Attorney's Office Joining Law Enforcement, Community Leaders and Residents for National Night Out Events in New Jersey — https://www.justice.gov/usao-nj/pr/united-states-attorneys-office-joining-law-enforcement-community-leaders-and-residents
 
@@ -4079,9 +4084,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## New York City
 - Route: jurisdictions-of-power/new-york-city.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 
 ## Newhouse family
 - Route: power-families/newhouse-family.html
@@ -5082,8 +5088,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## STATE DEPARTMENT
 - Route: entity-timelines/state-department.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-04T12:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — South Florida Man Pleads Guilty to Posting Online Threats Against Secretary of State Marco Rubio and Special Envoy Kristi Noem — https://www.justice.gov/usao-sdfl/pr/south-florida-man-pleads-guilty-posting-online-threats-against-secretary-state-marco
 - 2026-08-04T12:00:00.000Z — Man Currently Serving a State Prison Sentence Pleads Guilty to Threatening Several U.S. Senators and Former Vice President Kamala Harris — https://www.justice.gov/usao-edar/pr/man-currently-serving-state-prison-sentence-pleads-guilty-threatening-several-us
 
 ## State Street
@@ -5686,8 +5693,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-04T12:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Repeat Narcotics Dealer Found Guilty by Federal Jury in Distributing PCP at a Southwest D.C. Rec Center — https://www.justice.gov/usao-dc/pr/repeat-narcotics-dealer-found-guilty-federal-jury-distributing-pcp-southwest-dc-rec
 - 2026-08-04T12:00:00.000Z — Members of Violent D.C. Street Crew Convicted of Drug Trafficking, Murder Charges — https://www.justice.gov/usao-dc/pr/members-violent-dc-street-crew-convicted-drug-trafficking-murder-charges
 
 ## WEEKLY INVESTIGATION REPORT.

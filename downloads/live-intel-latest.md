@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-06T06:30:32.603Z
-Latest source publication: 2026-08-06T05:07:20.000Z
-Collection status: current-window-refreshed-no-new-items
-New items this collection: 0
+Collection completed: 2026-08-06T14:34:51.930Z
+Latest source publication: 2026-08-06T12:00:00.000Z
+Collection status: fresh-items-added
+New items this collection: 23
 
 ## Freshness truth
-The collector completed successfully, but no newly published source item entered the current evidence window.
+23 new source item(s) entered the seven-day window during this collection.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,84 @@ The collector completed successfully, but no newly published source item entered
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-08-06 — August Federal Grand Jury 2026-A Indictments Announced
+  - Source: https://www.justice.gov/usao-ndok/pr/august-federal-grand-jury-2026-indictments-announced
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: August Federal Grand Jury 2026-A Indictments Announced
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Consumer Bankruptcy Firm Waives $90K in Fees After USTP Inquiry Reveals Lapses in Diligence
+  - Source: https://www.justice.gov/opa/pr/consumer-bankruptcy-firm-waives-90k-fees-after-ustp-inquiry-reveals-lapses-diligence
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Consumer Bankruptcy Firm Waives $90K in Fees After USTP Inquiry Reveals Lapses in Diligence
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Homeland Security Task Force Investigation Delivers Federal Jury Conviction of Pensacola Armed Drug Trafficker
+  - Source: https://www.justice.gov/usao-ndfl/pr/homeland-security-task-force-investigation-delivers-federal-jury-conviction-pensacola
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Homeland Security Task Force Investigation Delivers Federal Jury Conviction of Pensacola Armed Drug Trafficker
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Illinois Man Sentenced to 15 Months in Prison for Failing to Pay Employment Taxes
+  - Source: https://www.justice.gov/usao-edwi/pr/illinois-man-sentenced-15-months-prison-failing-pay-employment-taxes
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Illinois Man Sentenced to 15 Months in Prison for Failing to Pay Employment Taxes
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Kalamazoo Drug Trafficker Sentenced to 18 Years for Gun and Drug Crimes
+  - Source: https://www.justice.gov/usao-wdmi/pr/2026_0806_Walker_Sentencing_PR
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Kalamazoo Drug Trafficker Sentenced to 18 Years for Gun and Drug Crimes
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Milwaukee County Man Sentenced to 18 Months in Federal Prison for Wire Fraud Involving Government Benefit Programs
+  - Source: https://www.justice.gov/usao-edwi/pr/milwaukee-county-man-sentenced-18-months-federal-prison-wire-fraud-involving
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Milwaukee County Man Sentenced to 18 Months in Federal Prison for Wire Fraud Involving Government Benefit Programs
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Prior Federal Drug Trafficker Sentenced to 14 Years in Prison
+  - Source: https://www.justice.gov/usao-wdnc/pr/prior-federal-drug-trafficker-sentenced-14-years-prison
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Prior Federal Drug Trafficker Sentenced to 14 Years in Prison
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Rapid City Man Sentenced to 9 Years in Federal Prison for Receipt of Child Pornography
+  - Source: https://www.justice.gov/usao-sd/pr/rapid-city-man-sentenced-9-years-federal-prison-receipt-child-pornography
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Rapid City Man Sentenced to 9 Years in Federal Prison for Receipt of Child Pornography
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Recidivist Sex Offender Sentenced to 20 Years in Prison for Distributing Child Sexual Abuse Material
+  - Source: https://www.justice.gov/usao-wdnc/pr/recidivist-sex-offender-sentenced-20-years-prison-distributing-child-sexual-abuse
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Recidivist Sex Offender Sentenced to 20 Years in Prison for Distributing Child Sexual Abuse Material
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — ‘Wanton, intentional infliction of incredible pain’ by gangs in Haiti
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168090
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: ‘Wanton, intentional infliction of incredible pain’ by gangs in Haiti
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Gaza: 300 children killed in 300 days of Israeli-Hamas ‘ceasefire’
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168088
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Gaza: 300 children killed in 300 days of Israeli-Hamas ‘ceasefire’
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Security Council LIVE: Warnings of famine and collapse as South Sudan&#039;s peace deal frays
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168089
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Security Council LIVE: Warnings of famine and collapse as South Sudan&#039;s peace deal frays
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia - Europol
+  - Source: https://news.google.com/rss/articles/CBMizgFBVV95cUxOUHZtc0V2cGZkbDd4OGVBS1lLSlFtOGFCVDJILWJrS2lmZ3NhNEN4X0RPdF8xNVZZVGhrbUxGSUZNVk56VEYxQ1ZNTjBXYW9rSS1xSDZUY2hkZHU3cDdDYTJsZkVmT09KZVdoczF3Q29TRFgwOEVEbU5FUDJJM0M5VG80T2hGZ2NOZmFMSWRuRUxDUUo5SXQ1ajFZUk9YQzlLV093NUVTb0phYTJlTy1HcENVb0lpamJ3WWw1SGZLMUFpeWxLMDE2M09YaWdrUQ?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia - Europol
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-06 — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
   - Source: https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
   - Source class: discovery
@@ -67,6 +145,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Alexandria Man Indicted for Murder of Federal Agent, Attempted Murder of Another Federal Agent, and Related Firearm Crimes
+  - Source: https://www.justice.gov/usao-wdla/pr/alexandria-man-indicted-murder-federal-agent-attempted-murder-another-federal-agent
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Alexandria Man Indicted for Murder of Federal Agent, Attempted Murder of Another Federal Agent, and Related Firearm Crimes
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash
   - Source: https://www.justice.gov/usao-ndga/pr/bahamian-drug-trafficker-faces-federal-cocaine-charges-following-sea-rescue-plane
@@ -152,6 +236,12 @@ The collector completed successfully, but no newly published source item entered
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: East St. Louis Felon Admits Shooting Homeless Man
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Falconer man pleads guilty to production of child pornography shortly after federal trial begins
+  - Source: https://www.justice.gov/usao-wdny/pr/falconer-man-pleads-guilty-production-child-pornography-shortly-after-federal-trial
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Falconer man pleads guilty to production of child pornography shortly after federal trial begins
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Federal Corrections Officer and Wife Plead Guilty to Smuggling Contraband, Including Drugs, to Lompoc Inmate
   - Source: https://www.justice.gov/usao-cdca/pr/federal-corrections-officer-and-wife-plead-guilty-smuggling-contraband-including-drugs
   - Source class: primary-or-official
@@ -169,6 +259,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Final Defendant Sentenced in Montgomery Dry Cleaning Business Robbery Case
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Former Denver Man Sentenced To 42 Months For Complex Fraud Scheme
+  - Source: https://www.justice.gov/usao-co/pr/former-denver-man-sentenced-42-months-complex-fraud-scheme
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Former Denver Man Sentenced To 42 Months For Complex Fraud Scheme
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography
   - Source: https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
@@ -188,6 +284,12 @@ The collector completed successfully, but no newly published source item entered
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Global Veterinary Drug Distributor Agrees to $100,000 Settlement
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Guatemalan man pleads guilty to crashing into a Border Patrol vehicle
+  - Source: https://www.justice.gov/usao-wdny/pr/guatemalan-man-pleads-guilty-crashing-border-patrol-vehicle
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Guatemalan man pleads guilty to crashing into a Border Patrol vehicle
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Homeland Security Task Force Arrests Members of Dade City Fentanyl Trafficking Organization on Federal Drug Charges
   - Source: https://www.justice.gov/usao-mdfl/pr/homeland-security-task-force-arrests-members-dade-city-fentanyl-trafficking
   - Source class: primary-or-official
@@ -205,6 +307,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Individual Arrested for Arson of Historic Brooklyn Church
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Iranian National Pleads Guilty to Conspiracy to Commit Healthcare Fraud
+  - Source: https://www.justice.gov/usao-or/pr/iranian-national-pleads-guilty-conspiracy-commit-healthcare-fraud
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Iranian National Pleads Guilty to Conspiracy to Commit Healthcare Fraud
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Jury Convicts Orleans Parish Man of Maintaining Residence for Fentanyl Distribution and Possessing Machinegun to Further Drug Trafficking Conspiracy
   - Source: https://www.justice.gov/usao-edla/pr/jury-convicts-orleans-parish-man-maintaining-residence-fentanyl-distribution-and
@@ -230,11 +338,29 @@ The collector completed successfully, but no newly published source item entered
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Las Vegas Woman Sentenced to Prison in $5M Refund Fraud Scheme
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Leader of drug trafficking organization that sold fentanyl, cocaine, and meth in ‘The Jungle’ and International District sentenced to ten years in prison
+  - Source: https://www.justice.gov/usao-wdwa/pr/leader-drug-trafficking-organization-sold-fentanyl-cocaine-and-meth-jungle-and
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Leader of drug trafficking organization that sold fentanyl, cocaine, and meth in ‘The Jungle’ and International District sentenced to ten years in prison
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Lebanon Woman Sentenced for Child Sex Trafficking and Exploitation Charges
   - Source: https://www.justice.gov/usao-mdtn/pr/lebanon-woman-sentenced-child-sex-trafficking-and-exploitation-charges
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Lebanon Woman Sentenced for Child Sex Trafficking and Exploitation Charges
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Local man with 56,000 child sexual abuse files sent to prison
+  - Source: https://www.justice.gov/usao-sdtx/pr/local-man-56000-child-sexual-abuse-files-sent-prison
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Local man with 56,000 child sexual abuse files sent to prison
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Mexican illegal alien pleads guilty in fentanyl conspiracy
+  - Source: https://www.justice.gov/usao-sdoh/pr/mexican-illegal-alien-pleads-guilty-fentanyl-conspiracy
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Mexican illegal alien pleads guilty in fentanyl conspiracy
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Nevada Doctor Charged with $95 Million Wound Care Fraud on Medicare
   - Source: https://www.justice.gov/usao-nv/pr/nevada-doctor-charged-95-million-wound-care-fraud-medicare
@@ -277,6 +403,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Pittsburgh Man Pleads Guilty to Drug and Firearm Charges
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Prior sex offender arrested on new child pornography charges
+  - Source: https://www.justice.gov/usao-wdny/pr/prior-sex-offender-arrested-new-child-pornography-charges-0
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Prior sex offender arrested on new child pornography charges
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Registered Sex Offender Sentenced to 25 Years in Prison for Commanding the Exploitation of a Then-Four-Year-Old Child in New Jersey and Producing Child Pornography
   - Source: https://www.justice.gov/usao-nj/pr/registered-sex-offender-sentenced-25-years-prison-commanding-exploitation-then-four-year
@@ -349,6 +481,12 @@ The collector completed successfully, but no newly published source item entered
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: U.S. Attorney's Office joins law enforcement, community leaders, and residents for National Night Out events in Kansas
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — Hiroshima fosters hope, 81 years on from nuclear catastrophe
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168087
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Hiroshima fosters hope, 81 years on from nuclear catastrophe
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Security Council LIVE: Ambassadors briefed on continuing ISIL terror threat
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168080
@@ -607,142 +745,4 @@ The collector completed successfully, but no newly published source item entered
   - Source class: discovery
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Donald West Part 05 (Final) - vault.fbi.gov
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — BOMBROB & Operation Punchout Part 33 - vault.fbi.gov
-  - Source: https://news.google.com/rss/articles/CBMilwFBVV95cUxQSkJ3eFZWbFptTm52YWJPT0VNZkxDOWNoR3hDQ2lGdzdzQ1RReFRCZ0pLSHQ3c2drSm1DOTdhMnl2Y0RMalpYSXQ4THBaRWdvYi1jcnloTU1MLUY5MUJURHowYm45Z1VydmNGQ1dlNnVCcVlxZlZQa21GQWdHekdyNFYxYTg4eHVWam5Wb3ZxbEFuS2VWTDhz?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: BOMBROB & Operation Punchout Part 33 - vault.fbi.gov
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Donald West Part 01 - vault.fbi.gov
-  - Source: https://news.google.com/rss/articles/CBMiakFVX3lxTE5OQ1l2UEYwbWhGaHNGUEZ4RnIzWFBFN3ZxWG1ESjVPT3dGZVBlRFY0cVgtXzRDRHBvcEpYWEZZYXp5aFd1UGs5WGRDM1J5UkxhRmN2UzR3aFh4MjNBb2F1Nk1SNmFZckZVM2c?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Donald West Part 01 - vault.fbi.gov
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — DR Congo: New centre opens at heart of record Ebola outbreak
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168064
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: DR Congo: New centre opens at heart of record Ebola outbreak
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Drone strikes threaten civilians and aid operations in Sudan
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168068
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Drone strikes threaten civilians and aid operations in Sudan
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — In Somalia, AI is helping deliver food to hungry families
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168066
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: In Somalia, AI is helping deliver food to hungry families
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168067
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Mothers still lack support to breastfeed, UN warns
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168065
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Mothers still lack support to breastfeed, UN warns
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - theguardian.com
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - theguardian.com
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com
-  - Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-02 — Trapped by a Facebook job advert, freed by a stranger in a taxi
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168058
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Trapped by a Facebook job advert, freed by a stranger in a taxi
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-01 — Epstein records back in court as federal judge questions DOJ redactions - WPEC
-  - Source: https://news.google.com/rss/articles/CBMijgNBVV95cUxOVlNTU2lxUGpwQnotYU1vUnJDSm1ydXBVb3plWG9wTHNOZGI3UmZBcC00dWp4QnZILTNWNmxha2hvVkROcnRKN0R6aGZqOUlsRExZSG1xOFlmS3k3azFKU3RZUzQybzl3ZFdhSi1LQUZuLUR2TkwtVlRkQWxuQUttUmRjSF9HcjdQaEFKQlp2bUp6VU9EWXRWcUNhUlFlbTFHYXJhazFTbl9LVENTTXZUUjVLSkZTQzVWRDNxeFlxaHlta0NEMjdCd2tjbUtCaXRiSWNxdVZ6MklQLXI4emRWT2RnNDlWaFBwOGtLZHhGMmMxaHAwbjViTVdnekctemVfM1k4bWh1Nmt1RE51TmMxTGVEOGxUenkxa2JqOFNYWV83VU8ycWppMm5wSnVaRFVjU09CREpXV1hKZ251ZDdybVpEUUwzRWhOSVpOTHd6R3JTR1VEbzVSZVM0ZEpfRW5mZkhxTFd4NzI0NllXdDRzWFdMYkFLYWRCVUZJbGhYamZlb1BEV2REWXBJZ1VoQQ?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Epstein records back in court as federal judge questions DOJ redactions - WPEC
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-01 — Recovery in Ukraine, one life at a time
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168053
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Recovery in Ukraine, one life at a time
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Visitor Login - National Archives (.gov)
-  - Source: https://news.google.com/rss/articles/CBMixAFBVV95cUxNbkd4N0Fob190c2R4NjlSaWx5WG1tLWZoTzQyY2FSdFloYkxPbThJRkdCMGRTV0RRTEFRTGYtSm5OYWRhaDhDY2tEMHpWdzM2b3c4dXF3WnNMZVloeWF3ZUlyb3hUWmVBQTVmakFWM1BKV0tQRjluenlQVHhuRzk2MHo3ZGM0STVxWTh3czcxLUpvVGd6eHBhQ3doazRteFBmSnNXcjFVeFI1YmxQYmRORk1mc091QkZDSEFYTDB1Vzgxajg1?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Visitor Login - National Archives (.gov)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org
-  - Source: https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — G7 2026 CROSS BORDER COORDINATION EXERCISE (CBCE) - U.S. Department of the Treasury (.gov)
-  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE0tQXJkYkNTeGhYV2ZfcXU4Nm50Z2lURXcyWlBfTDgzaEFrMjI4bVpRem0wSHRBdWdubUVWM0gyRExvWFROSVhoZGp1cF9GU0JielZtMHE4R3g2U2RQNU9YbnlB?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: G7 2026 CROSS BORDER COORDINATION EXERCISE (CBCE) - U.S. Department of the Treasury (.gov)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168062
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Middle East: Civilian death toll climbs in Gaza, Lebanon and West Bank as UN chief demands ‘the fighting must stop’
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Strong El Niño ahead, UN weather agency warns
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168059
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Strong El Niño ahead, UN weather agency warns
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Wildfire smoke poses hidden health threat
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168060
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Wildfire smoke poses hidden health threat
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — Season 4 of The Europol Podcast available now - europol.europa.eu
-  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNZk9xdDlGWjI1MktwbGpueHVzNklEZ2ZQSjE0MmVnRUIzenhDN1o4N0JGOFBzWTExNzl1eVNXaktnYWhzYnNVV3JCLTZOWUtTVnpzUmw5Q1B0TGVyYVhiOHZkdTJpYlIwQmE0aUhPS1JrRFNfM3hVUXluODdZUWRPZlVSNWhBZkJFMzdFY3hscUI0ajlnVFRYNTNmblNxQQ?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Season 4 of The Europol Podcast available now - europol.europa.eu
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-31 — With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
-  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxNYkxBdi1aeUFRcXFSblFhQ0xyMzM4U1dISUNMVHpwZEZCa1NCZV9UenEtQWxweTZTeEZ5UkNIbmU5d2trNFg1YzhRZWtheWJOcUZSWHJSRTBJUGtOcW1lZi0yZkJJVE1DUXdiOTNmYUVBbk1TcXVLVDZrSDZ2M0dqSjBUWWZjMDl6aUFMVmVzaHpCZUM3OTc1X1lDOXpUZw?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: With a unanimous Maxwell vote, the US Senate issues a warning to Trump - ABC News & Headlines – Australian Broadcasting Corporation
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - theguardian.com
-  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxNbE5YdmhENk9ESmtMa1N6WWVUbFEtUWVKTFNjTzduY1N3RmNwX0cwdFZVak9IbHQ2STRVV3pkcUlzdVROa0c1UldlTU5BZl9TYmM3ZE80TWVvQl9IWjZIVEZHclVhWm83WWVabzFlTTRRU0dvWkktUEE5QThBeDk1MWNkNGdFRVRtd25GMFlmWEQzS2RQVTVldTZWMA?oc=5
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Ex-White House counsel says Epstein accuser’s testimony ‘lacked inherent credibility’ - theguardian.com
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Treasury Cracks Down on Global Networks Enabling Iran’s Mahan Air and IRGC - U.S. Department of the Treasury (.gov)
-  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5kQjZ1R0RfakhpM0ZfMWt3LXpNWUtKbVIySjdlWXhxY0ljV21rckx4Q1ZFMUpmUjhNTXRleEt5QWxuaUtya09VOUF6OEQwYmRrbmh0ZFVKRURvb0pWcW5vMzlB?oc=5
-  - Source class: discovery
-  - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Treasury Cracks Down on Global Networks Enabling Iran’s Mahan Air and IRGC - U.S. Department of the Treasury (.gov)
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168052
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-06T06:25:31.707Z
+Generated: 2026-08-06T14:35:09.197Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: medium
+- Internet claim activity: low
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -68,13 +68,3 @@ New Mexico sues DOJ for unredacted Jeffrey Epstein files The Jerusalem Post
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
 Burnham considering inquiry into Epstein, minister says RTE.ie
-
-### How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-How Jeffrey Epstein's Island Became a Nightmare for Influencers businessinsider.com

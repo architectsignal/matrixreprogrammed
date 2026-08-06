@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-08-06T06:30:32.603Z
+Updated: 2026-08-06T14:34:51.930Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
+- Published: 2026-07-30T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168052
+- Source class: primary-or-official
 
 ### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
 - Published: 2026-07-30T00:48:00.000Z

@@ -45,7 +45,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-05T06:07:54.796Z
+Updated: 2026-08-06T06:11:30.830Z
 Items: 12
 
 - 2026-06-19 — What's missing from the Epstein files? Questions persist about unexplained redactions, missing documents, email gaps - CBS News
@@ -55,11 +55,6 @@ Items: 12
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
   - Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-13 — Dershowitz Asked to Testify Before House Oversight Committee in July on Epstein Ties - The Harvard Crimson
-  - Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxOVThYdEZPejFKbEF4QkRDdjl2TkdkaG1qMWJ0OC12dWxrdXkxbU52OGdiTGlrNTljTGI5QzExOXlSNUhTWXk0ZUhfbzBWWFJxNWpLZ2p5QXdIX3UwQjBoV1hnbWlwVmRyNUJZME5Zd0FWYjFSZ01sMV9NODBjX1F4ZW40cjM?oc=5
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
@@ -108,6 +103,11 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
+  - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -127,7 +127,6 @@ Items: 12
 - Book route: amazon store books — amazon-store-books.html
 - Google News / Epstein timeline and files: What's missing from the Epstein files? Questions persist about unexplained redactions, missing documents, email gaps - CBS News — https://news.google.com/rss/articles/CBMiaEFVX3lxTE5VbXJQZVZ1RWEyaG5uTDM2R01PcVNXamlkYkY1MlVySWMtVDhudE5wcFJnOU43WnpoTC1DeFN6b1pSQXNwU1J6NkJZekUzdkY5SFhrWGZmSzZuWGZkOTRfQkk2MFM5blc4?oc=5
 - Google News / Epstein timeline and files: Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square — https://news.google.com/rss/articles/CBMilAFBVV95cUxQaXV0X1NfdjdRQndISTA4SE5EVldEQTVibE92aHVkM0Jla3NaSUhUdG15OF93RzdxNU9nN1l0YXhlc0RFODZHQ3RsZWVtRE9WcU5zQkFpYzV5UzA2TFdJQ1lQcmhyMFZDQUdUSUMtSUxaLVdUcE0wV2pQMmZ3N2g3Q3VZNHJaX1dPLV9LWE9zNXJYQ1ZZ0gGaAUFVX3lxTFBWbFA4SmlxY2lPRUZaWl9RY1VXQ09RNWJSSzdvSGlMdjBoVFZ1aWJEUHU5dTZJZXZJX0lfd3phMUhvcGd5VHNKVVktYXBxRUhUb01NcklGdHMwM0s4cWg0QXkzdzlwZS1odDFDVGV5eGFrWXhpczdQZnd2OFNHN1g0b0tnNzkzSzFpLWRmLS1lSFViVGJIMWlzNWc?oc=5
-- Google News / Epstein timeline and files: Dershowitz Asked to Testify Before House Oversight Committee in July on Epstein Ties - The Harvard Crimson — https://news.google.com/rss/articles/CBMihAFBVV95cUxOVThYdEZPejFKbEF4QkRDdjl2TkdkaG1qMWJ0OC12dWxrdXkxbU52OGdiTGlrNTljTGI5QzExOXlSNUhTWXk0ZUhfbzBWWFJxNWpLZ2p5QXdIX3UwQjBoV1hnbWlwVmRyNUJZME5Zd0FWYjFSZ01sMV9NODBjX1F4ZW40cjM?oc=5
 - Google News / Epstein timeline and files: Billionaire Leon Black subpoenaed to return to House Epstein committee in 3 weeks, this time under oath - CBS News — https://news.google.com/rss/articles/CBMif0FVX3lxTE5sOXdTelVIRHM3Njl2OEtLbl9UWXBrM3JaRmNTU0VyNVY5Skc1a2NmMm1KUEZqUlY2OExJS0ZPMnZJTjVsYzdtTENGT0pudUJ5Y0N1VW0wQlJZVFA2RHliNzB6ajgtVkhscW03UlhJTFdUS0Via1ZWd3dHWXhDZmM?oc=5
 - Google News / Epstein timeline and files: Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 - Google News / Epstein timeline and files: House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider — https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5
@@ -137,6 +136,7 @@ Items: 12
 - Google News / Epstein timeline and files: Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media — https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTFxWUo4SDRJMDNIU2VhV0JPYWVZU2E3QVlmQUxTbDdqcFFjd2VMYnRUTHVLQ0RuNTJmRFJwb0Z3NktNd2lOd3J2amJ6NmxZMGNVcmhQcDZxRW9YNXFvM2licEx4ZHlBZU1NUmg0UkVBRWc1TGxQU2ZhVjZ5WjN1eWFfSjdkS21ibkRuVnJqVlk5VHppVGwxdXVZUEdFN1A0djQ1bk9Da0hxWmxFWV93?oc=5
 - Google News / Epstein timeline and files: Trump’s DOJ blasts Ghislaine Maxwell’s latest attempt to get out of jail - The Independent — https://news.google.com/rss/articles/CBMiwgFBVV95cUxOSTVORlR3dDR0S1lsVk8zMVNGTlhPWTlXdEtNRjFFcWwxSzdMSGZlOTNQMy1HQ2Y3bGk0eEFYb2E3bDI4NndLZmJ1eUpNNlMzdnJNaUpoU2FJXzFoZ3lwcHFTYVpWTW8xVFhZU2kwT1F4WWtjM2VITXowb2JHLWJSdTdzbm9VU3ByR3ZUSTNLOEFwSWtqcFNSUVoxbWpuVkZWUGxBam5mQ1VLQjZRek8wN0VoWjRVNnJFZTE2RFU4UHFCUQ?oc=5
 - Google News / Epstein sighting and alive claims: Epstein associate Ghislaine Maxwell says new evidence undermines conviction; US prosecutors disagree - The Standard (HK) — https://news.google.com/rss/articles/CBMi5gFBVV95cUxQSW8tbk5tUGlKM256ZXZNZS1xSkJ5X1F1UVd0TEZDM0NObnNRLW5FSW9OMEI0SW1rNVc3Y0Z2bGtUNWd4bUZBMW9nWmNnRFFRVEZqempMOUJDc0dFSy1oVG9BZTBWcDhnYmRObFctQXZYaW1VbVQ2eWVTaVYwUTlSQVFZUnZ6UXdjRXpBemlkcE84T3V4NndRazhCNHUxdFN2R2dsemItQkFoSldFWVB4OVkxRkYxdUgyZTFhSWRCVkhQWldHNWszVEc5TFVoWkRuNnlDOFhWT0tEOWtVQWpPcWg1bk1PQQ?oc=5
+- Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 
 ## Book Routes
 

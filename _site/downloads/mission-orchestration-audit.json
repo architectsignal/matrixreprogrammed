@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-05T06:27:59.944Z",
+  "generatedAt": "2026-08-06T06:28:18.635Z",
   "overall": "ready",
   "summary": {
     "total": 52,
@@ -9,7 +9,7 @@
   },
   "homepageMode": "legacy-cinematic",
   "watch": {
-    "date": "2026-08-05",
+    "date": "2026-08-06",
     "person": "Bill Gates",
     "institution": "Securities and Exchange Commission",
     "family": "Wallenberg family and foundations",
@@ -17,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 3488,
+    "archivedFindings": 3829,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -88,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "3488 archived findings retained.",
+      "detail": "3829 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -268,7 +268,7 @@
     {
       "id": "history-and-weekly-delta",
       "ok": true,
-      "detail": "10 history entries; weekly delta ready.",
+      "detail": "11 history entries; weekly delta ready.",
       "fix": "Retain ranking history and weekly changes."
     },
     {

@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-05T06:07:54.796Z
+Updated: 2026-08-06T06:11:30.830Z
 Items: 12
 
 - 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
@@ -76,11 +76,11 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-06-17 — Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP
-  - Source: https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-08-05 — Strengthening El Niño to push 49 million more people into acute hunger
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168079
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-04 — ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168076
   - Evidence: Primary or official public-record lead
@@ -134,7 +134,7 @@ Items: 12
 - Google News / control structure: South Africa boosts Smart ID adoption through expanded bank network - Biometric Update — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTGFRRVhwdkc0SmpBRDFFNWp6V0FSOFNFY1lxcjNEazBmTDNJYWNTWV9ObUUzczE3OWZvYlN4WlBuNElxZV85SlZidXpxbldMZHVLUkZIbDNMQzExamFKX3FFWHZfLUZzNjdVODhkeS16TW4tZFV3ZjFxQjVlLXdhOGE5ckZibDRRMV9fQ2M2SGVrY2NTbzM4VUlMMmpwYjNHYTZDYUY4WU9iZw?oc=5
 - Google News / control structure: State Digital Surveillance Risk Landscape - Recorded Future — https://news.google.com/rss/articles/CBMiiAFBVV95cUxPemdfSmx2NjRSMHJzTUlLYkdoalV6RVNrdGpoNURfbmFrOTR4bFAxdGxCQWFlaWctRkg0NnpDSzR0Z3k4SXFKTkxYcFRnU1J1bGxPT1NiT1BvZk51N2FWYk9rakpqLWZqUHExdjk2eG52Y3pRaW1HYnJ0NkRmdVJsb3o5LTItN0dP?oc=5
 - UN News: After an Ebola centre was attacked, peacekeepers moved in next door — https://news.un.org/feed/view/en/story/2026/07/1168018
-- Google News / crime state overlap: Ex-Cyprus President May Face Criminal Charges in Corruption Probe - Organized Crime and Corruption Reporting Project | OCCRP — https://news.google.com/rss/articles/CBMimwFBVV95cUxONHdRdVVFRmpBUmMzQ2ZET25jd0FiYVk4UFBXdWZpTno1QnMxSVFicDZ3Mm9GcWZ2c2FNdGhZV280VFdsNUJqRzJMeUNxLThZV2NhaDh0UEMtbTd2R2szaUVrT0tlTHNmemlaMGVocnYxcWI0dDNtWERkRmpTblpxTWVoWWdBS0JhLUljRE9KZksxRG9VUWJBRW43QQ?oc=5
+- UN News: Strengthening El Niño to push 49 million more people into acute hunger — https://news.un.org/feed/view/en/story/2026/08/1168079
 - UN News: ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war — https://news.un.org/feed/view/en/story/2026/08/1168076
 - UN News: New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 - UN News: Mothers still lack support to breastfeed, UN warns — https://news.un.org/feed/view/en/story/2026/08/1168065

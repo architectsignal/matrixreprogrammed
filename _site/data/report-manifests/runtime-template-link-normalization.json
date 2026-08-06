@@ -1,21 +1,17 @@
 {
-  "generatedAt": "2026-08-05T06:21:16.209Z",
-  "pageCount": 121,
+  "generatedAt": "2026-08-06T06:22:58.630Z",
+  "pageCount": 123,
   "output": "downloads/runtime-template-link-normalization.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Runtime Template Link Normalization",
-    "contentHash": "9713a4a0991781039f208d1ed8472fabd411ff67023d5cbf03b01889fb89af8b",
+    "contentHash": "523a0c1f47c712fc0296a0214b01a13ecb9715d713b8d53165c0fc0e9ecab9cc",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "14d04c0943d24cbe6a1926db",
-      "a9e66bc9426226e67c8c2a53",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "b0cde383147509fbfd4f4472",
-      "c74062f25d42345a4023fffc",
-      "24a844c3ddb5aecaad25e9bc",
-      "57c45b5418e8e6b512f06603",
-      "823832d7e29801164e3b932b",
+      "14d04c0943d24cbe6a1926db",
+      "20114e0234b7a725cce22060",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -48,18 +44,13 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
       "5675c580ac294a0724082c96",
+      "b1e5189be9fa36ea97b5f8c0",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
-      "bf6c308da5e2405498aa1589",
-      "4ce8c274e4026b388465398a",
-      "2805e85b9db723fe437ab21b",
-      "89688da0c2e3dfaa40c9cbc3",
-      "16170d5c0a07b9047860cb2c",
-      "2a08155834dfe110b47424e6",
-      "9dbf027fbe3a7b1e4c9a25bf",
-      "fda7c458a0606ad4e31f2c55",
-      "6870853125c87df94afa1744",
-      "7bc907db47c7f04d6b1a86b6",
+      "c74062f25d42345a4023fffc",
+      "24a844c3ddb5aecaad25e9bc",
+      "57c45b5418e8e6b512f06603",
+      "823832d7e29801164e3b932b",
       "7ed151a515391f967d229642",
       "0c5f51804baf8e9e2c1fdd0b",
       "eb79eba926106673fc0305cc",
@@ -69,14 +60,14 @@
       "9848ec4b4c3f6c2693269839",
       "360e80c162081c85d2c680ef",
       "88ef9baf356c096816236956",
+      "source-change-a05ee5719c4986b9a2e665d1",
+      "source-change-f966f8c917641cd736660f92",
+      "source-change-f9b326734f170d730fc634f5",
+      "source-change-b1e5189be9fa36ea97b5f8c0",
       "source-change-6e48acd2ac94f914a7fd7ae5",
       "source-change-f23b46f2bc4add9b859f5a15",
       "source-change-a09615abd1b1ed83f2b74ff4",
       "source-change-b0cde383147509fbfd4f4472",
-      "source-change-0bf350b54332a373d71a7c86",
-      "source-change-b0403e3a18fe2637c0f94aa3",
-      "source-change-c3bd2d306202dfc2e2374303",
-      "source-change-62862e6ca90495adc0788a2d",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "janner-iicsa-2022",
@@ -146,21 +137,30 @@
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E"
+      "ASC-REVIEW-1CDBDA84057D802E",
+      "ASC-REVIEW-5F2C7C064DEAB967",
+      "ASC-REVIEW-008D94FCB408C868",
+      "ASC-REVIEW-5F86F35C103C9621",
+      "ASC-REVIEW-285205442D5C5D56",
+      "ASC-REVIEW-9553A9554C0E8D6A",
+      "ASC-REVIEW-375A853A96E42D84",
+      "ASC-REVIEW-D5FA458F66004D27",
+      "ASC-REVIEW-FE267E981A361906",
+      "ASC-REVIEW-E48690C00EA31793"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 38,
-      "disputedClaimCount": 86,
+      "primarySourceCount": 39,
+      "disputedClaimCount": 95,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 83,
-      "moneyRecordCount": 78
+      "relationshipCount": 92,
+      "moneyRecordCount": 86
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Runtime Template Link Normalization.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); Site Population Audit (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); U.S. Department of Justice (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Runtime Template Link Normalization.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json); Site Population Audit (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 83 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 92 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Site Population Audit; IICSA documented predatory activities and institutional failures; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 83 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 92 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Site Population Audit",
           "IICSA documented predatory activities and institutional failures",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-04T07:58:15.262Z"
+    "intelligenceFreshnessDate": "2026-08-05T07:59:26.636Z"
   }
 }

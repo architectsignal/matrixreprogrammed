@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-05T06:15:10.199Z",
-  "pageCount": 126,
+  "generatedAt": "2026-08-06T06:17:53.167Z",
+  "pageCount": 125,
   "output": "downloads/forum-member-posting-test.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Forum Member Posting Test",
-    "contentHash": "0a1473a250286a6c6f5f9ab35babef6eaa4ad39ee31c54854e4e586a6f715404",
+    "contentHash": "ef924b87260636a615ae234087f4b8f2b4777b410c6609f88eba2707e70b5ae0",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "c1520a15d6e62871a66c558e",
-      "c90bf38664c0409003c1069a",
+      "0730bb615248f676888d3235",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "44505b4afb60938c8117ad31",
@@ -22,6 +22,7 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-20316213EFD183CC",
+      "3a425f0d5d683952bc0ad7ac",
       "d7398c0c72a085a05c90422c",
       "9848ec4b4c3f6c2693269839",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -29,13 +30,10 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
-      "3a425f0d5d683952bc0ad7ac",
       "bdd7e454126ebfa6319a594c",
+      "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
-      "ASC-REVIEW-CAEB4FE9EDC04A54",
-      "ASC-REVIEW-B3323A8802757521",
-      "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-C973762B151D5947",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -46,9 +44,11 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-C4FF23A268F50458",
+      "ASC-REVIEW-2FAF91DDDD6143CD",
+      "ASC-REVIEW-9395B56F60B42FEA",
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
       "ASC-REVIEW-44C67F19172A6285",
+      "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -70,9 +70,11 @@
       "2529322b7b5345fd6f575174",
       "f44c3c7309a5f0779a57e655",
       "4961972398d896435d33f3f7",
+      "9e8903fd8dfa9b54a1d6db30",
       "self-checks",
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
+      "88ef9baf356c096816236956",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -116,6 +118,7 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-E250944258ED0360",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -131,6 +134,7 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-B6CA713526831DEB",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
@@ -142,20 +146,16 @@
       "ASC-REVIEW-008D94FCB408C868",
       "ASC-REVIEW-5F86F35C103C9621",
       "ASC-REVIEW-E48690C00EA31793",
-      "ASC-REVIEW-14DA4C1F787B63ED",
-      "ASC-REVIEW-98888270E5A6D011",
-      "ASC-REVIEW-0F0776894447C197",
-      "ASC-REVIEW-6E0BEE85BA956CBF",
-      "ASC-REVIEW-F9B27A08465F560B"
+      "ASC-REVIEW-14DA4C1F787B63ED"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 13,
-      "disputedClaimCount": 115,
+      "disputedClaimCount": 113,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 110,
-      "moneyRecordCount": 93
+      "relationshipCount": 108,
+      "moneyRecordCount": 89
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 108 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Knights Templar Legacy Claims → Freemasonry Ritual Echoes: overlap hint; The strongest public pattern is convergence across access systems.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 108 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-04T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
   }
 }

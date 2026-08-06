@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-08-05T06:24:16.113Z
+Updated: 2026-08-06T06:25:28.878Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -77,7 +77,10 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Card Live Coverage Repair: downloads/card-live-coverage-repair.pdf
 - Card Live Intelligence Updates: downloads/card-live-updates.pdf
 - Case Status Dashboard: downloads/case-status-dashboard.pdf
+- Cinematic Link Structure Report: downloads/cinematic-link-structure-report.pdf
+- Cinematic Pathway Id Finalization: downloads/cinematic-pathway-id-finalization.pdf
 - Matrix Reprogrammed Claim Classifier: downloads/claim-classifier.pdf
+- Clean Public Search Report: downloads/clean-public-search-report.pdf
 - Clock Meaning Contract Report: downloads/clock-meaning-contract-report.pdf
 - WWIII Escalation Clock: downloads/clock-wall.pdf
 - Cloudflare Canonical Member Origin: downloads/cloudflare-canonical-member-origin.pdf
@@ -218,6 +221,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Forum Page Consistency Repair: downloads/forum-page-consistency-repair.pdf
 - Forum Persistence D1 Test: downloads/forum-persistence-d1-test.pdf
 - Forum Posts Export: downloads/forum-posts.pdf
+- Forum Public Surfaces Finalize: downloads/forum-public-surfaces-finalize.pdf
 - Forum Session Compatibility Repair: downloads/forum-session-compatibility-repair.pdf
 - Full Site Audit Target Detection Patch: downloads/full-site-audit-target-detection-patch.pdf
 - Full Site Function and Tool Audit: downloads/full-site-function-tool-audit.pdf
@@ -274,6 +278,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Machine Entity Output Sanitizer: downloads/machine-entity-output-sanitizer.pdf
 - Machine Feed Object Name Patch: downloads/machine-feed-object-name-patch.pdf
 - Machine Intelligence: downloads/machine-intelligence.pdf
+- Maintenance Marker Removal: downloads/maintenance-marker-removal.pdf
 - Manual Deep Site Audit: downloads/manual-deep-site-audit.pdf
 - Market Activity Test: downloads/market-activity-test.pdf
 - Master Brief Engine: downloads/master-brief-engine.pdf
@@ -386,6 +391,8 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Public Output Secret Audit: downloads/public-output-secret-audit.pdf
 - Public Page Heading Reconciliation: downloads/public-page-heading-reconciliation.pdf
 - Public Record Intake Manifest: downloads/public-record-intake.pdf
+- Public Route Alias Proof: downloads/public-route-alias-proof.pdf
+- Public Route Alias Routing: downloads/public-route-alias-routing.pdf
 - Public Runtime Controls Output: downloads/public-runtime-controls-output.pdf
 - Public Runtime Controls: downloads/public-runtime-controls.pdf
 - Public Site Error Repair: downloads/public-site-error-repair.pdf
@@ -414,6 +421,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Restore Public Core Routes: downloads/restore-public-core-routes.pdf
 - Reverse Accountability Platform Pressure Test: downloads/reverse-accountability-platform-pressure-test.pdf
 - Reverse Accountability Platform Report: downloads/reverse-accountability-platform-report.pdf
+- Review Dashboard Truth Repair: downloads/review-dashboard-truth-repair.pdf
 - Matrix Reprogrammed Review Dashboard: downloads/review-dashboard.pdf
 - Review Queue Speculation Page Patch: downloads/review-queue-speculation-page-patch.pdf
 - Review Queue Speculation Publication: downloads/review-queue-speculation-publication.pdf
@@ -461,6 +469,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Site Relationship Map: downloads/site-relationship-map.pdf
 - Site-Wide Function Audit: downloads/site-wide-function-audit.pdf
 - Source Adapter Contract Test: downloads/source-adapter-contract-test.pdf
+- Source Card Surfaces Finalize: downloads/source-card-surfaces-finalize.pdf
 - Source Cards: downloads/source-cards.pdf
 - Source Change Monitor Report: downloads/source-change-monitor-report.pdf
 - Source Change Preservation Hardening Report: downloads/source-change-preservation-hardening-report.pdf

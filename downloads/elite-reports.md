@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-08-05T06:26:28.772Z
+Generated: 2026-08-06T06:27:12.998Z
 
 ## Daily Revelation Report
 
-‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
+New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
 
 Source: daily-command-brief.html
 

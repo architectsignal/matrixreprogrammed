@@ -1,7 +1,7 @@
 {
   "ok": true,
   "mode": "daily",
-  "checkedAt": "2026-08-04T07:58:13.254Z",
+  "checkedAt": "2026-08-05T07:59:25.534Z",
   "selectedSources": 12,
   "fetchedSources": 9,
   "skippedSources": 0,
@@ -37,7 +37,7 @@
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
       "bytes": 2196,
-      "bodyHash": "53e0706c79b796fc44a7f6aa284ff497dccb7715396ec5b51d11219be30eb4fb",
+      "bodyHash": "ee2a2be2e94f677d4980c3e611a4bae957b0230e649168b54e4985779809e5d6",
       "itemCount": 1,
       "error": "",
       "resourceId": "investigation-source-doj-epstein-disclosures",
@@ -53,8 +53,8 @@
       "statusCode": 200,
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 62599,
-      "bodyHash": "9ba9e1893e768569d41a48a401f8ee264443bf0164ec56d0a2e4e1a5237634a3",
+      "bytes": 62531,
+      "bodyHash": "74f19110beb5546d5b00759cbd1f86d06fae9a68871ddbb2a60990565bea20dc",
       "itemCount": 14,
       "error": "",
       "resourceId": "investigation-source-doj-oig-reports",
@@ -70,8 +70,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
-      "bytes": 22740,
-      "bodyHash": "f8f9e774ec1eda7a8281af16bc53bcea8fdad40f2554e5b082d5090cd25b9225",
+      "bytes": 22803,
+      "bodyHash": "c873e6eb6a707c59b212774e72df714c28f3216c6087c7b3ffee473754506ae8",
       "itemCount": 40,
       "error": "",
       "resourceId": "investigation-source-sec-current-filings",
@@ -87,8 +87,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 231621,
-      "bodyHash": "98d0b1f846e248e637107b77a38cf489f92b0e12e845a70fa40ff2741f199a94",
+      "bytes": 230999,
+      "bodyHash": "cf1b4ad39992498dc9e8ef51a0ee23cd8f7d61a5b271c799aa4cd9b6df97ae59",
       "itemCount": 73,
       "error": "",
       "resourceId": "investigation-source-sec-current-filings",
@@ -116,8 +116,8 @@
       "statusCode": 200,
       "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
       "contentType": "application/json",
-      "bytes": 53040,
-      "bodyHash": "68ecc016d0f9c44bf31d77d74ca8f6be598261876d9f2e6bf8da004417b5c9cb",
+      "bytes": 60236,
+      "bodyHash": "77f9e25f339813acfc0839edd6a6e12cfaf783ebdaf2fd506e1aee151c771872",
       "itemCount": 100,
       "error": "",
       "resourceId": "investigation-source-usaspending-recent-contracts",
@@ -133,8 +133,8 @@
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 44655,
-      "bodyHash": "980371a49a8d6dcff69e220f271c986038dca3fbc0acdf7e4b1d63fac08edffc",
+      "bytes": 44656,
+      "bodyHash": "0a5288cbe0c033eb66f0c97a915bbb382ca8b2f8b1700e3b1c681d25b79f35d6",
       "itemCount": 19,
       "error": "",
       "resourceId": "investigation-source-treasury-ofac-recent-actions",
@@ -179,8 +179,8 @@
       "statusCode": 200,
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
-      "bytes": 102000,
-      "bodyHash": "52e247a6d3541c9e7da3cfd62e622061f8432f035bade4fae50200a2f3d88900",
+      "bytes": 101985,
+      "bodyHash": "53b58ad18e2473f6a96fd68d5f51917386ce89d58a84df009d0625492915e087",
       "itemCount": 15,
       "error": "",
       "resourceId": "investigation-source-uk-sfo-news",
@@ -212,8 +212,8 @@
   },
   "resourceDecisions": [
     {
-      "actionId": "action-c1368fb0-42cb-44c9-b399-2376507684ff",
-      "jobId": "job-4a285be1-03e6-454b-a343-f264f85725d0",
+      "actionId": "action-7225b9b2-c0f4-4b86-9671-2866b7cf5913",
+      "jobId": "job-7bbce03c-5753-4e6a-bd09-61108932a0ce",
       "selectedResource": "investigation-source-doj-epstein-disclosures",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -479,20 +479,20 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 148,
+      "latency": 147,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-04T07:58:13.442Z"
+      "createdAt": "2026-08-05T07:59:25.715Z"
     },
     {
-      "actionId": "action-b5e8eba8-d923-4736-8b19-e47b8c4b19a6",
-      "jobId": "job-e963f29f-acd2-47a1-af8f-49b27e0ed818",
-      "selectedResource": "investigation-source-sec-current-filings",
+      "actionId": "action-68884f90-144a-427a-9e29-d021b9a19eea",
+      "jobId": "job-fd129088-1ad5-4d98-8877-b8450d489e2c",
+      "selectedResource": "investigation-source-doj-epstein-disclosures",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-sec-current-filings",
-        "investigation-source-sec-litigation-releases"
+        "investigation-source-doj-epstein-disclosures",
+        "investigation-source-doj-justice-news"
       ],
       "excludedResources": [
         {
@@ -504,21 +504,21 @@
           "compatibility": null
         },
         {
-          "resource_id": "investigation-source-doj-epstein-disclosures",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-doj-justice-news",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
           "resource_id": "investigation-source-doj-oig-reports",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-sec-current-filings",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-sec-litigation-releases",
           "reasons": [
             "resource-host-scope-mismatch"
           ],
@@ -752,16 +752,16 @@
       ],
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
-      "quotaAfter": 23,
-      "latency": 129,
+      "quotaAfter": 22,
+      "latency": 130,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-04T07:58:13.474Z"
+      "createdAt": "2026-08-05T07:59:25.747Z"
     },
     {
-      "actionId": "action-6d0c2131-31bf-4812-8a93-408c73e1d2ec",
-      "jobId": "job-5c4f48f1-f511-4ebe-a251-3e473c87cb90",
+      "actionId": "action-91cbc007-36fb-4d4b-a890-2344473dc5b9",
+      "jobId": "job-793241b9-bb30-4031-af2e-ca98da40b498",
       "selectedResource": null,
       "utilityScore": null,
       "candidateResources": [],
@@ -1041,16 +1041,16 @@
       "costConfirmedZero": true,
       "validationResult": "not-dispatched",
       "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE",
-      "createdAt": "2026-08-04T07:58:13.478Z"
+      "createdAt": "2026-08-05T07:59:25.749Z"
     },
     {
-      "actionId": "action-91a8926b-fb38-47f7-958d-1a180e9e4d82",
-      "jobId": "job-bcf24738-7591-4834-98c6-9d436c77cd6f",
-      "selectedResource": "investigation-source-doj-epstein-disclosures",
+      "actionId": "action-8cd6e9d2-3ed4-4af7-a005-dbaa2ce95e97",
+      "jobId": "job-1b02a2e5-8447-4be8-b3b3-16264a27898a",
+      "selectedResource": "investigation-source-sec-current-filings",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-doj-epstein-disclosures",
-        "investigation-source-doj-justice-news"
+        "investigation-source-sec-current-filings",
+        "investigation-source-sec-litigation-releases"
       ],
       "excludedResources": [
         {
@@ -1062,7 +1062,287 @@
           "compatibility": null
         },
         {
+          "resource_id": "investigation-source-doj-epstein-disclosures",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-doj-justice-news",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
           "resource_id": "investigation-source-doj-oig-reports",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-federal-register-latest",
+          "reasons": [
+            "provider-health-unknown-stale-or-unhealthy",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-usaspending-recent-contracts",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-treasury-ofac-recent-actions",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-fbi-vault-recent",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-cia-reading-room",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-gao-reports",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-house-oversight-releases",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-wikileaks-publications",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "quality-below-requirement",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-icij-offshore-leaks",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-uk-sfo-news",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-eppo-news",
+          "reasons": [
+            "provider-health-unknown-stale-or-unhealthy",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-hatvp-open-data",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-cour-des-comptes-publications",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-fec-updates",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-openfec-api",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        }
+      ],
+      "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
+      "quotaBefore": 24,
+      "quotaAfter": 23,
+      "latency": 310,
+      "costConfirmedZero": true,
+      "validationResult": "passed",
+      "error": null,
+      "createdAt": "2026-08-05T07:59:25.937Z"
+    },
+    {
+      "actionId": "action-1877357b-c5f5-4964-b8ac-d4f918876bd2",
+      "jobId": "job-a3e23ef9-d201-441b-93b4-f0e894d87691",
+      "selectedResource": "investigation-source-doj-oig-reports",
+      "utilityScore": 89.05,
+      "candidateResources": [
+        "investigation-source-doj-oig-reports"
+      ],
+      "excludedResources": [
+        {
+          "resource_id": "local-deterministic-v1",
+          "reasons": [
+            "job-type-unsupported",
+            "capability-unsupported"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-doj-epstein-disclosures",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-doj-justice-news",
           "reasons": [
             "resource-host-scope-mismatch"
           ],
@@ -1310,16 +1590,16 @@
       ],
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
-      "quotaAfter": 22,
-      "latency": 146,
+      "quotaAfter": 23,
+      "latency": 392,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-04T07:58:13.490Z"
+      "createdAt": "2026-08-05T07:59:26.016Z"
     },
     {
-      "actionId": "action-f9bd1dfc-0b0f-4b57-8610-1462afff942b",
-      "jobId": "job-b479c643-5221-42bf-a424-625cebec6af0",
+      "actionId": "action-425c9cd3-658d-4afa-87de-20dc8e736340",
+      "jobId": "job-1589cc08-35fd-4138-850e-065fbc04332c",
       "selectedResource": "investigation-source-treasury-ofac-recent-actions",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -1591,289 +1871,15 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 71,
+      "latency": 81,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-04T07:58:13.563Z"
+      "createdAt": "2026-08-05T07:59:26.023Z"
     },
     {
-      "actionId": "action-c91623bf-ec05-45f5-ba9d-090d5f530785",
-      "jobId": "job-169ca4b1-0622-4017-9da9-19cc52f6fae9",
-      "selectedResource": "investigation-source-sec-current-filings",
-      "utilityScore": 89.05,
-      "candidateResources": [
-        "investigation-source-sec-current-filings",
-        "investigation-source-sec-litigation-releases"
-      ],
-      "excludedResources": [
-        {
-          "resource_id": "local-deterministic-v1",
-          "reasons": [
-            "job-type-unsupported",
-            "capability-unsupported"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-doj-epstein-disclosures",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-doj-justice-news",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-doj-oig-reports",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-federal-register-latest",
-          "reasons": [
-            "provider-health-unknown-stale-or-unhealthy",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-usaspending-recent-contracts",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-treasury-ofac-recent-actions",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-fbi-vault-recent",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-cia-reading-room",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-gao-reports",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-house-oversight-releases",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-wikileaks-publications",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "quality-below-requirement",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-icij-offshore-leaks",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-uk-sfo-news",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-eppo-news",
-          "reasons": [
-            "provider-health-unknown-stale-or-unhealthy",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-hatvp-open-data",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-cour-des-comptes-publications",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-fec-updates",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-openfec-api",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        }
-      ],
-      "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
-      "quotaBefore": 24,
-      "quotaAfter": 22,
-      "latency": 136,
-      "costConfirmedZero": true,
-      "validationResult": "passed",
-      "error": null,
-      "createdAt": "2026-08-04T07:58:13.589Z"
-    },
-    {
-      "actionId": "action-02ec18cc-2659-4d76-a2f1-d208786c9d37",
-      "jobId": "job-b81caab5-4edd-44f0-8a09-32c331fcc74e",
+      "actionId": "action-98e9857e-23d8-4b60-891c-c359825a3411",
+      "jobId": "job-c4ab0838-55d3-41c0-8081-da82bea92191",
       "selectedResource": null,
       "utilityScore": null,
       "candidateResources": [],
@@ -2152,15 +2158,16 @@
       "costConfirmedZero": true,
       "validationResult": "not-dispatched",
       "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE",
-      "createdAt": "2026-08-04T07:58:13.598Z"
+      "createdAt": "2026-08-05T07:59:26.026Z"
     },
     {
-      "actionId": "action-0cc8b002-bc73-406b-9693-758973a14225",
-      "jobId": "job-0ff22956-deb2-4e50-b6c3-691f69a74439",
-      "selectedResource": "investigation-source-house-oversight-releases",
+      "actionId": "action-1e8207ef-b7b5-4741-8929-e336854d8968",
+      "jobId": "job-445ff34b-4c6b-486c-ba32-c4d1f166647e",
+      "selectedResource": "investigation-source-sec-current-filings",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-house-oversight-releases"
+        "investigation-source-sec-current-filings",
+        "investigation-source-sec-litigation-releases"
       ],
       "excludedResources": [
         {
@@ -2187,20 +2194,6 @@
         },
         {
           "resource_id": "investigation-source-doj-oig-reports",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-sec-current-filings",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-sec-litigation-releases",
           "reasons": [
             "resource-host-scope-mismatch"
           ],
@@ -2284,6 +2277,13 @@
             "provider-health-unknown-stale-or-unhealthy",
             "terms-check-missing-or-expired",
             "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-house-oversight-releases",
+          "reasons": [
             "resource-host-scope-mismatch"
           ],
           "compatibility": null
@@ -2427,16 +2427,16 @@
       ],
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
-      "quotaAfter": 23,
-      "latency": 36,
+      "quotaAfter": 22,
+      "latency": 333,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-04T07:58:13.603Z"
+      "createdAt": "2026-08-05T07:59:26.060Z"
     },
     {
-      "actionId": "action-06b78fb0-fd8a-4ada-9ec6-43d169e8159b",
-      "jobId": "job-3500222a-ffce-4146-8a6d-ababcbf0e438",
+      "actionId": "action-59b7f6f6-387f-4b06-9cf6-9d0246b6ff71",
+      "jobId": "job-4d01a4ec-d766-40b7-9aee-25b8f3e78b99",
       "selectedResource": null,
       "utilityScore": null,
       "candidateResources": [],
@@ -2716,15 +2716,15 @@
       "costConfirmedZero": true,
       "validationResult": "not-dispatched",
       "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE",
-      "createdAt": "2026-08-04T07:58:13.607Z"
+      "createdAt": "2026-08-05T07:59:26.067Z"
     },
     {
-      "actionId": "action-d2e4d9cd-e97f-4cf4-bc29-956c14180336",
-      "jobId": "job-4df1612a-3d92-47e1-90e9-6e6621eb1691",
-      "selectedResource": "investigation-source-usaspending-recent-contracts",
+      "actionId": "action-e28cf6f7-d500-49a0-837a-1eb8acca2491",
+      "jobId": "job-da00d060-2efe-4d22-80f3-a8498e83b97b",
+      "selectedResource": "investigation-source-house-oversight-releases",
       "utilityScore": 89.05,
       "candidateResources": [
-        "investigation-source-usaspending-recent-contracts"
+        "investigation-source-house-oversight-releases"
       ],
       "excludedResources": [
         {
@@ -2751,279 +2751,6 @@
         },
         {
           "resource_id": "investigation-source-doj-oig-reports",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-sec-current-filings",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-sec-litigation-releases",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-federal-register-latest",
-          "reasons": [
-            "provider-health-unknown-stale-or-unhealthy",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-treasury-ofac-recent-actions",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-fbi-vault-recent",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-cia-reading-room",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-gao-reports",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-house-oversight-releases",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-wikileaks-publications",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "quality-below-requirement",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-icij-offshore-leaks",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-uk-sfo-news",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-eppo-news",
-          "reasons": [
-            "provider-health-unknown-stale-or-unhealthy",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-hatvp-open-data",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-cour-des-comptes-publications",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-fec-updates",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-openfec-api",
-          "reasons": [
-            "resource-disabled",
-            "manual-approval-required",
-            "automation-not-approved",
-            "implementation-not-approved",
-            "zero-spend-invariant:billing-risk-not-none",
-            "zero-spend-invariant:zero-cost-not-verified",
-            "zero-spend-invariant:quota-not-verified",
-            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
-            "billing-risk-not-zero",
-            "quota-unverified",
-            "provider-health-unknown-stale-or-unhealthy",
-            "terms-check-missing-or-expired",
-            "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        }
-      ],
-      "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
-      "quotaBefore": 50,
-      "quotaAfter": 49,
-      "latency": 173,
-      "costConfirmedZero": true,
-      "validationResult": "passed",
-      "error": null,
-      "createdAt": "2026-08-04T07:58:13.654Z"
-    },
-    {
-      "actionId": "action-33f58b52-ec37-484c-bf9d-b1ae2c931c31",
-      "jobId": "job-4e4674a6-f320-4ea4-8070-92061427e159",
-      "selectedResource": "investigation-source-doj-oig-reports",
-      "utilityScore": 89.05,
-      "candidateResources": [
-        "investigation-source-doj-oig-reports"
-      ],
-      "excludedResources": [
-        {
-          "resource_id": "local-deterministic-v1",
-          "reasons": [
-            "job-type-unsupported",
-            "capability-unsupported"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-doj-epstein-disclosures",
-          "reasons": [
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-doj-justice-news",
           "reasons": [
             "resource-host-scope-mismatch"
           ],
@@ -3121,13 +2848,6 @@
             "provider-health-unknown-stale-or-unhealthy",
             "terms-check-missing-or-expired",
             "quota-check-missing-or-stale",
-            "resource-host-scope-mismatch"
-          ],
-          "compatibility": null
-        },
-        {
-          "resource_id": "investigation-source-house-oversight-releases",
-          "reasons": [
             "resource-host-scope-mismatch"
           ],
           "compatibility": null
@@ -3272,15 +2992,15 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 538,
+      "latency": 115,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-04T07:58:13.877Z"
+      "createdAt": "2026-08-05T07:59:26.134Z"
     },
     {
-      "actionId": "action-923f2293-c61e-434e-9ba0-719eed9902a5",
-      "jobId": "job-0302a3a1-208f-4129-a356-0b86a717ecd4",
+      "actionId": "action-ee8bc41f-0b0f-46a2-b588-3549a282dd59",
+      "jobId": "job-276e02d5-9ec7-4f49-9ebf-c96fb5b15085",
       "selectedResource": "investigation-source-uk-sfo-news",
       "utilityScore": 89.05,
       "candidateResources": [
@@ -3552,11 +3272,291 @@
       "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
       "quotaBefore": 24,
       "quotaAfter": 23,
-      "latency": 1404,
+      "latency": 141,
       "costConfirmedZero": true,
       "validationResult": "passed",
       "error": null,
-      "createdAt": "2026-08-04T07:58:15.005Z"
+      "createdAt": "2026-08-05T07:59:26.170Z"
+    },
+    {
+      "actionId": "action-d3c4a380-140f-436b-bca1-1bbc4bd85eee",
+      "jobId": "job-7e7a39d7-cd0c-4936-864c-be48309f76fc",
+      "selectedResource": "investigation-source-usaspending-recent-contracts",
+      "utilityScore": 89.05,
+      "candidateResources": [
+        "investigation-source-usaspending-recent-contracts"
+      ],
+      "excludedResources": [
+        {
+          "resource_id": "local-deterministic-v1",
+          "reasons": [
+            "job-type-unsupported",
+            "capability-unsupported"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-doj-epstein-disclosures",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-doj-justice-news",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-doj-oig-reports",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-sec-current-filings",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-sec-litigation-releases",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-federal-register-latest",
+          "reasons": [
+            "provider-health-unknown-stale-or-unhealthy",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-treasury-ofac-recent-actions",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-fbi-vault-recent",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-cia-reading-room",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-gao-reports",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-house-oversight-releases",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-wikileaks-publications",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "quality-below-requirement",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-icij-offshore-leaks",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-uk-sfo-news",
+          "reasons": [
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-eppo-news",
+          "reasons": [
+            "provider-health-unknown-stale-or-unhealthy",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-hatvp-open-data",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-cour-des-comptes-publications",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-fec-updates",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        },
+        {
+          "resource_id": "investigation-source-openfec-api",
+          "reasons": [
+            "resource-disabled",
+            "manual-approval-required",
+            "automation-not-approved",
+            "implementation-not-approved",
+            "zero-spend-invariant:billing-risk-not-none",
+            "zero-spend-invariant:zero-cost-not-verified",
+            "zero-spend-invariant:quota-not-verified",
+            "zero-spend-invariant:zero-cost-evidence-missing-or-stale",
+            "billing-risk-not-zero",
+            "quota-unverified",
+            "provider-health-unknown-stale-or-unhealthy",
+            "terms-check-missing-or-expired",
+            "quota-check-missing-or-stale",
+            "resource-host-scope-mismatch"
+          ],
+          "compatibility": null
+        }
+      ],
+      "decisionReason": "Highest-utility resource that passed every hard zero-spend exclusion.",
+      "quotaBefore": 50,
+      "quotaAfter": 49,
+      "latency": 622,
+      "costConfirmedZero": true,
+      "validationResult": "passed",
+      "error": null,
+      "createdAt": "2026-08-05T07:59:26.376Z"
     }
   ],
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",

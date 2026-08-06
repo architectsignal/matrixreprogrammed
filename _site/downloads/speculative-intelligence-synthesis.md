@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-08-05T06:30:57.581Z
+Updated: 2026-08-06T06:30:39.276Z
 
 ## Evidence-led conclusion
 
@@ -21,7 +21,6 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **Final Judgment - Suzee Han** — Contract. Why it matters: This record places Final Judgment - Suzee Han inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Titanium Capital LLC** — Contract. Why it matters: This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Judgment - Gerard Ryan** — Contract. Why it matters: This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Information and narrative control** — Documented in the linked public record. Why it matters: This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Amended Judgment - Spartan Trading Company, LLC** — Contract. Why it matters: This record places Amended Judgment - Spartan Trading Company, LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners** — Contract. Why it matters: This record places Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consent Motion for Entry of Final Judgment** — Contract. Why it matters: This record places Consent Motion for Entry of Final Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
@@ -32,6 +31,7 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **Final Judgment - Bin Hao** — Contract. Why it matters: This record places Final Judgment - Bin Hao inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Brent Cranmer** — Contract. Why it matters: This record places Final Judgment - Brent Cranmer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Daniel McCormick** — Contract. Why it matters: This record places Final Judgment - Daniel McCormick inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Final Judgment - DaveGlo Investment Group, Inc.** — Contract. Why it matters: This record places Final Judgment - DaveGlo Investment Group, Inc. inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 
 ## How the systems fit together
 

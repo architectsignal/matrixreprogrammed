@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-05T06:32:39.678Z",
+  "aliases": [
+    {
+      "requestPath": "/follow-the-money",
+      "assetPath": "/follow-the-money.html"
+    },
+    {
+      "requestPath": "/making-money",
+      "assetPath": "/making-money.html"
+    },
+    {
+      "requestPath": "/card-artwork-batches",
+      "assetPath": "/card-artwork-batches.html"
+    },
+    {
+      "requestPath": "/subject-briefs",
+      "assetPath": "/subject-briefs.html"
+    },
+    {
+      "requestPath": "/entity-timelines",
+      "assetPath": "/entity-timelines.html"
+    }
+  ],
+  "changed": [
+    "src/worker-production.js",
+    "wrangler.toml",
+    "wrangler.jsonc"
+  ],
+  "failures": [],
+  "boundary": "Exact extensionless routes that collide with real namespace directories are handled by the strict production Worker and served from their canonical root .html assets. Nested namespace files remain unchanged."
+}

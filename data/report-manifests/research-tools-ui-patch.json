@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-08-05T06:21:05.781Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-06T06:22:48.989Z",
+  "pageCount": 131,
   "output": "downloads/research-tools-ui-patch.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Research Tools Ui Patch",
-    "contentHash": "2eb9f59c1c8ab87b6668d0dd711ae323cabee3cd5a4adbc52ab6c684da41ea0d",
+    "contentHash": "8f56f9db7d75bb5f8c0be413f5db519001a310e38c3e095bedac01a1e6e04a48",
     "sourceIds": [
-      "c90bf38664c0409003c1069a",
+      "crime-state-overlap-2026-08-05-07a090a9",
+      "0730bb615248f676888d3235",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -20,6 +21,23 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
       "14d04c0943d24cbe6a1926db",
+      "crime-state-overlap-2026-08-05-48acd085",
+      "crime-state-overlap-2026-08-05-d35ac19f",
+      "crime-state-overlap-2026-08-04-a4791905",
+      "crime-state-overlap-2026-08-04-365d2c2e",
+      "declassified-files-2026-08-04-97c54014",
+      "declassified-files-2026-08-04-9cf12b0f",
+      "declassified-files-2026-08-04-9f86d514",
+      "declassified-files-2026-08-04-1ec8f84b",
+      "declassified-files-2026-08-03-ca8737b9",
+      "declassified-files-2026-08-03-dd0ce198",
+      "declassified-files-2026-08-03-449e1af7",
+      "declassified-files-2026-08-03-9c902136",
+      "declassified-files-2026-08-03-c89ca789",
+      "declassified-files-2026-08-03-fcc8d24a",
+      "declassified-files-2026-08-03-79c56827",
+      "declassified-files-2026-08-03-77817848",
+      "declassified-files-2026-08-03-db0ef3d6",
       "declassified-files-2026-07-31-1b573a3b",
       "declassified-files-2026-07-31-cc395014",
       "b4cb47ea50dc901364239e9f",
@@ -86,6 +104,7 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-B6CA713526831DEB",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-54C7773F8BEDE2F4",
@@ -114,6 +133,7 @@
       "ASC-REVIEW-53BD0E17B018491C",
       "ASC-REVIEW-0177F61D444ED739",
       "ASC-REVIEW-FE9A5B02284E30E4",
+      "ASC-REVIEW-7A6012CFE49184A4",
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-B1D0DFCBB6CF0079",
@@ -126,41 +146,21 @@
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
-      "ASC-REVIEW-0F86A972B08C9E18",
-      "ASC-REVIEW-00A30F616825A65E",
-      "ASC-REVIEW-7640579815B0B893",
-      "ASC-REVIEW-36CFBB8E5F6A4E74",
-      "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-AD7847E11513D899",
-      "ASC-REVIEW-C2C7140B7B6F51FF",
-      "ASC-REVIEW-2750F333FF6B37B3",
-      "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236"
+      "ASC-REVIEW-0F86A972B08C9E18"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 10,
-      "disputedClaimCount": 129,
+      "primarySourceCount": 28,
+      "disputedClaimCount": 111,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 131,
-      "moneyRecordCount": 127
+      "relationshipCount": 129,
+      "moneyRecordCount": 108
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Research Tools Ui Patch.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); Christopher Wray's Gift to Attorney General Garland (data/latest-public-drops.json); Christopher Wray's Gift to Attorney General Garland (Final) (data/latest-public-drops.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); Westminster inquiry examined political and policing responses (data/criminal-conduct-registry.json)",
+        "conclusion": "The indexed record establishes that 28 A/B-grade public-record items are materially relevant to Research Tools Ui Patch.",
+        "evidence": "Las Vegas Woman Sentenced to Prison in $5M Refund Fraud Scheme (data/live-intel.json); SEC FILING FEED. (data/search-index.json); East St. Louis Felon Admits Shooting Homeless Man (data/live-intel.json); Homeland Security Task Force Arrests Members of Dade City Fentanyl Trafficking Organization on Federal Drug Charges (data/live-intel.json); Chinese Manufacturing Subsidiary Settles Paycheck Protection Program Loan Fraud Allegations for Over $5 Million (data/live-intel.json); Members of Violent D.C. Street Crew Convicted of Drug Trafficking, Murder Charges (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Christopher Wray's Gift to Attorney General Garland,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Christopher Wray's Gift to Attorney General Garland This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Las Vegas Woman Sentenced to Prison in $5M Refund Fraud Scheme,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "LAS VEGAS — A Las Vegas woman was sentenced today to 30 months in prison for conspiring to defraud the United States by filing false tax returns with the IRS and diverting portions of the resulting tax refunds to herself and her codefendant. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 131 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "inference": "The indexed set contains 129 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Las Vegas Woman Sentenced to Prison in $5M Refund Fraud Scheme; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 131 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 129 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Las Vegas Woman Sentenced to Prison in $5M Refund Fraud Scheme",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
           "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "CACI International → Intelligence: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-04T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-05T12:00:00.000Z"
   }
 }

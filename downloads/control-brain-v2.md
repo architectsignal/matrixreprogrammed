@@ -1,6 +1,6 @@
 # Control Brain V2
 
-Generated: 2026-08-05T06:26:28.792Z
+Generated: 2026-08-06T06:27:13.016Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 

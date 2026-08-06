@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-08-05T06:19:59.102Z",
+  "generatedAt": "2026-08-06T06:21:51.812Z",
   "pageCount": 132,
   "output": "downloads/production-receipt-email-safety-patch.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Production Receipt Email Safety Patch",
-    "contentHash": "d86e1d93c9bcb7c27c8b09b6b9ca0cd22739b1515f1ecfe261a2ae92d99d0161",
+    "contentHash": "11f7e9306d7ad0cde537fab2789dad1dfbae5fe48cea9a9e8e876593565b989b",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
+      "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
-      "ASC-REVIEW-CAEB4FE9EDC04A54",
-      "ASC-REVIEW-B3323A8802757521",
-      "ASC-REVIEW-A90E36DF59A2A3C2",
-      "ASC-REVIEW-C4FF23A268F50458",
+      "ASC-REVIEW-2FAF91DDDD6143CD",
+      "ASC-REVIEW-9395B56F60B42FEA",
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
       "ASC-REVIEW-44C67F19172A6285",
+      "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -50,7 +50,7 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-E76F1740FFF4E811",
+      "ASC-REVIEW-7E32B4EA7D93ED00",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -118,6 +118,7 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-B6CA713526831DEB",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
@@ -143,10 +144,9 @@
       "ASC-REVIEW-53BD0E17B018491C",
       "ASC-REVIEW-0177F61D444ED739",
       "ASC-REVIEW-FE9A5B02284E30E4",
+      "ASC-REVIEW-7A6012CFE49184A4",
       "ASC-REVIEW-9B9644A27C9A796C",
-      "ASC-REVIEW-5D6BEB26E7D5659F",
-      "ASC-REVIEW-B1D0DFCBB6CF0079",
-      "ASC-REVIEW-4C256A755BDBA2D3"
+      "ASC-REVIEW-5D6BEB26E7D5659F"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 128,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 117,
-      "moneyRecordCount": 101
+      "relationshipCount": 115,
+      "moneyRecordCount": 99
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 117 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: European Public Prosecutor's Office — News; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions",
+        "inference": "The indexed set contains 115 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 117 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 115 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: European Public Prosecutor's Office — News",
+          "content changed: Federal Register — Latest Documents",
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-          "content changed: U.S. Treasury OFAC — Recent Actions"
+          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+          "content changed: U.S. Treasury OFAC — Recent Actions",
+          "content changed: UK Serious Fraud Office — News And Communications"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

@@ -1,8 +1,8 @@
 {
   "ok": true,
-  "buildSha": "1b8860686837c70b971c46f3c69927caa3db48ef",
-  "buildShortSha": "1b8860686837",
-  "generatedAt": "2026-08-05T06:25:01.466Z",
+  "buildSha": "87a77c35ea75df8a0583bd8d700df41f9b50d069",
+  "buildShortSha": "87a77c35ea75",
+  "generatedAt": "2026-08-06T06:26:09.759Z",
   "deploymentTarget": "Cloudflare Workers / Pages static assets via wrangler",
   "buildCommand": "npm run build",
   "workerScript": "src/worker.js",
@@ -345,7 +345,7 @@
       "marker": "MAP THE STRUCTURE.",
       "exists": true,
       "markerPresent": true,
-      "hash": "f023ce86063023df"
+      "hash": "2db9bf58931d14fb"
     },
     {
       "name": "Live Intel",
@@ -353,7 +353,7 @@
       "marker": "Latest Actionable Updates",
       "exists": true,
       "markerPresent": true,
-      "hash": "c314e691b4cef7f1"
+      "hash": "320a2020b04e39c7"
     },
     {
       "name": "Epstein Command Center",
@@ -409,7 +409,7 @@
       "marker": "data-board=\"main\"",
       "exists": true,
       "markerPresent": true,
-      "hash": "fe2d673aae77901a"
+      "hash": "292049b931f93eb2"
     },
     {
       "name": "Dark Speculation Board",
@@ -456,8 +456,8 @@
     "worker": "7a389d78f08ef04d",
     "package": "50745fe92ac53001",
     "epsteinFiles": "86818aac8ddc84eb",
-    "liveIntel": "c314e691b4cef7f1",
-    "homepage": "f023ce86063023df"
+    "liveIntel": "320a2020b04e39c7",
+    "homepage": "2db9bf58931d14fb"
   },
   "pressureTests": {
     "packageIncludesBuild": true,

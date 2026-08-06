@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-05T06:12:17.427Z",
+  "generatedAt": "2026-08-06T06:15:23.338Z",
   "pageCount": 133,
   "output": "downloads/detailed-wealth-guide-enrichment.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Detailed Wealth Guide Enrichment",
-    "contentHash": "eb5ea90842070c2f206f1c9234a862eafea913999efd44b6d2a4e9ec2cc6b355",
+    "contentHash": "8a2281b51b1934d16a5335885fa6ff67ad3286ab73a52d69b006ab0cbe833de9",
     "sourceIds": [
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-4D93FE8E0666D181",
@@ -15,11 +15,9 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
-      "ASC-REVIEW-CAEB4FE9EDC04A54",
-      "ASC-REVIEW-B3323A8802757521",
-      "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -29,9 +27,11 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-C4FF23A268F50458",
+      "ASC-REVIEW-2FAF91DDDD6143CD",
+      "ASC-REVIEW-9395B56F60B42FEA",
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
       "ASC-REVIEW-44C67F19172A6285",
+      "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -39,7 +39,7 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "3a425f0d5d683952bc0ad7ac",
-      "c90bf38664c0409003c1069a",
+      "0730bb615248f676888d3235",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -77,13 +77,13 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-677320A9C058E658",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
+      "ASC-REVIEW-1E865C671E08BD05",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -98,7 +98,6 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
-      "ASC-REVIEW-774FD6AB4E46BCE8",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
@@ -146,7 +145,8 @@
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25"
+      "ASC-REVIEW-CD1B68F215696D25",
+      "ASC-REVIEW-B3BA7D663A9BE4B2"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 138,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 131,
-      "moneyRecordCount": 116
+      "relationshipCount": 132,
+      "moneyRecordCount": 117
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 131 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 132 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 131 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 132 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-04T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
   }
 }

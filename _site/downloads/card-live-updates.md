@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-05T06:26:26.758Z
-Live Intel source window: 2026-08-05T06:26:10.665Z
+Generated: 2026-08-06T06:27:10.222Z
+Live Intel source window: 2026-08-06T06:26:56.413Z
 Tracked cards: 968
-Cards with current matched records: 91
-Cards with no new verified record: 877
+Cards with current matched records: 98
+Cards with no new verified record: 870
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -735,9 +735,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Andrew Tate
 - Route: controlled-opposition/andrew-tate.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Tate brothers’ US extradition case a ‘step towards accountability,’ says independent expert — https://news.un.org/feed/view/en/story/2026/08/1168085
 
 ## Anguilla
 - Route: jurisdictions-of-power/anguilla.html
@@ -1689,8 +1690,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: entity-timelines/control-structure.html
 - Status: current-records-matched
 - Current matched records: 1
-- Latest record: 2026-07-31T18:22:00.000Z
-- 2026-07-31T18:22:00.000Z — Toppan Security demos interoperability with French national digital ID wallet - Biometric Update — https://news.google.com/rss/articles/CBMitwFBVV95cUxPQnB1NnVvUmhXX2xZSS1PT0tBU0hNY3hNVU00eHMyQmxwLWdqdG80bzE5aDk3QjI3SGx0bUMzZFdRc0tFTmpHWlNDVUFoS0loZEZFTGZpSU50SV9iX2tMS1BBbFdpaHdOT05saGFLSDlDbU9uSDcxMGhfTnZUSkRoQkFnazA0WkdNQWt6NkRuaVN6YVNxcTA4d1ExSXQ1Q3lreXl1VnJIaWhBV1ViaHgweGdDeEh4VlU?oc=5
+- Latest record: 2026-08-05T13:54:20.000Z
+- 2026-08-05T13:54:20.000Z — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in — https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5
 
 ## CONTROL SYSTEM TRACKER.
 - Route: control-system-tracker.html
@@ -1826,10 +1827,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Cyprus
 - Route: jurisdictions-of-power/cyprus.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-29T12:00:00.000Z
-- 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## CYRIL SMITH
 - Route: dossier-cyril-smith.html
@@ -1863,9 +1863,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## DAILY COMMAND BRIEF
 - Route: daily-command-brief.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Registered Sex Offender Sentenced to 25 Years in Prison for Commanding the Exploitation of a Then-Four-Year-Old Child in New Jersey and Producing Child Pornography — https://www.justice.gov/usao-nj/pr/registered-sex-offender-sentenced-25-years-prison-commanding-exploitation-then-four-year
 
 ## Daniel Gilbert
 - Route: follow-the-money/people/daniel-gilbert.html
@@ -1935,9 +1936,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Delaware
 - Route: jurisdictions-of-power/delaware.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-04T12:00:00.000Z
+- 2026-08-04T12:00:00.000Z — Maryland Man Sentenced to 60 Months in Prison for His Role in Commercial Burglary Ring in New Jersey, New York, Pennsylvania, Maryland, and Delaware — https://www.justice.gov/usao-nj/pr/maryland-man-sentenced-60-months-prison-his-role-commercial-burglary-ring-new-jersey-new
 
 ## della Rovere
 - Route: black-nobility/della-rovere.html
@@ -1977,9 +1979,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## District Court, District of Columbia
 - Route: entity-timelines/district-court-district-of-columbia.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Repeat Narcotics Dealer Found Guilty by Federal Jury in Distributing PCP at a Southwest D.C. Rec Center — https://www.justice.gov/usao-dc/pr/repeat-narcotics-dealer-found-guilty-federal-jury-distributing-pcp-southwest-dc-rec
 
 ## Ditchley Foundation network
 - Route: secret-societies/ditchley-foundation-network.html
@@ -2337,9 +2340,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Federal Bureau of Investigation
 - Route: institutions/federal-bureau-of-investigation.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Operation Clean Sweep Produces Major Arrests and Seizures in Onondaga County — https://www.justice.gov/usao-ndny/pr/operation-clean-sweep-produces-major-arrests-and-seizures-onondaga-county
 
 ## FEDERAL PROCUREMENT POLICY OFFICE
 - Route: entity-timelines/federal-procurement-policy-office.html
@@ -2559,12 +2563,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## GHISLAINE MAXWELL
 - Route: dossier-ghislaine-maxwell-criminal.html
-- Status: current-records-matched
-- Current matched records: 3
-- Latest record: 2026-07-30T11:19:00.000Z
-- 2026-07-30T11:19:00.000Z — US Senate unanimously opposes Presidential pardon for Epstein associate Ghislaine Maxwell - timesofindia.indiatimes.com — https://news.google.com/rss/articles/CBMi8gFBVV95cUxQS2tBNFJCa2VsT1YxZUhUZEJVc2hnZzZaVU96QUxuUlQwZ2xDMXhJNG5WSExLYzhQOHROZ3c4WmVUdENVQ202VkJ3MFE3ZnpnZHVPUjlmWlJlR2tPQi0wTTJpdGJuUGlZSS1zcUJFY2lKc2JyZjFfWWxiM1VSUThpU3pOd3dtS3RMd3YwMGJtMEVDR3Nac2ZCSzYwdTg1aGVXdlg5QTRNNmtwd3VmMXBZTTF3Qlk4RkduSXVDQmR6cXIxSzl6dktrVXFJVi1ZLXQ1M3Fwa3VBbkIyZXJNOGlIWlFNbTVSTWZhLUhYWkVtc3NRZ9IB9wFBVV95cUxQVV9rM0d3a29jaWNYcmY0VzJPR3Q4ZzNoOEotZkR6MFNJRlRRcFhFSUljS1NsUmR3X0dIZlJVdklsYmJhTFhIaWJmZF90Tzc0QUVhck02dlFhZnZOLWU0VVJBYmszOUpiQnYta0NwdWNCYzBLMUtneV9tN1lWUVp0RHVaSlA1ZkpJS2JONjlITHk0YVJYX1hUS2YtSTZMRENHRWlfaUpGMmNEc19fZVVPbDZRVjJGUXpBc1BhRGlvM0lhVlVpNGoyNmh4Ymp3Vy04ZDdoak1lNmRpV0lyVVpaa19iNDJ5YjNIRXRYQi1HLW92M1VvVDM0?oc=5
-- 2026-07-30T00:48:00.000Z — U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - anewz.tv — https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
-- 2026-07-29T21:23:00.000Z — Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - The Guardian — https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Giancarlo Devasini
 - Route: follow-the-money/people/giancarlo-devasini.html
@@ -2678,10 +2679,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-08-03T22:56:29.000Z
-- 2026-08-03T22:56:29.000Z — Leslie Wexner, in deposition, claims he had no knowledge of Epstein's criminal activity - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMipgFBVV95cUxQZE5ScWZ6TjZiSXNZbFdxU0toeDFERXVMNndVeDV0Vi0ya2F6Mk05MEpJVFVXMWlpR3ZzeWlCSnFFUlV5VG9laFl4TmJlYkxYTkZvNVh0ajJYdzNESC1iOEFzTWdDY2lqZElIOWdIMTdPOWdRajAtUUt5WWlia3pxbUx5SzBrN1BqaXJNSG9ETzlTRHU1VEQwQXhXNzllTW1ncXBqNTB30gGrAUFVX3lxTE5BQzkxZkhnOWhtR3hvWHltZTd4OGdXd3FQajNMNTFBNnNqRHJ2S0o1dHBWX2ctMmVjV2hISWZxd2NyRF9hWW4ydlp6eHd6QUlOR1EzVHd2azl5dmlUbkstU3F0UjhfUi1hNnlnZHlnR1N0YjRGUDRTQjdwcXNGSFgtbUwtU3JFM1BHcjdVaEhtdDBSQ3AzcHMtZ1B4OEhqRjZ1ZWNfbUUxTy03bw?oc=5
-- 2026-08-03T22:08:41.000Z — Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMirgFBVV95cUxPU0sxVk0xV3dnbkJmZXMtWWJ6WFMxemhZdHpoOWdCSnMyNnhpMjk0S0JlVGtOT2otMVd1MkpPSzM3VG8zdHkteHhiNGI4MFh1YmZSRmRYTXNFWWJRUVZxN3IzSzV3aHZiZVVEdGdzc1RsRnNJbERLX3JSRzNMRGt6MS1IOHdGVTVOb1ZteHdjd2RrMDM5V0V1V1R6dWtJZkZVa0dZOTBpNmYtSG93d2fSAbMBQVVfeXFMTTJKQVhNallicGJScUl4eXVhcVVObUdPSmI3bkIzc1JaT0FCX1ZFWXZoZzJyZHJsMFpGQmhETnoxSmdvUFRpTW9pam9BVnJVUERoUThEczg3N0tVSjBCMmpLVlFtYy0xUk8wR0REdkRnNUZPTUVJcDR6ZUdnbjRpRVRzR25wYW04Ui1MbmRNTU1nVFpsQnQ1NDY3dHpDVzZHdkllXzJLdjhRYkJhRkpSaXpDek0?oc=5
-- 2026-08-03T20:47:26.000Z — Victims to settle case against Epstein's longtime attorney, accountant: Documents - ABC News - Breaking News, Latest News and Videos — https://news.google.com/rss/articles/CBMirgFBVV95cUxOZjdfbkxJREl6NDAxNGpDcEwtVTdYcm40akZMd0pJVWVhTzdDcG9iZXRMb0F1S0sxdHNsSU1kY3ZCUzVndU1hNTA2ZzA4emNrREh1dHFhemhZa2M5WmdnbHlWbEtzWVdUZVR1eWVkWGhpVC1oYTRoTlRtNWZMMkJ6WHpWSExyWlRZTEtrZ09ZSG02bTJyM2dpRWQ1WU41dGZzWjlyLW5CWmlWbFkwZ1HSAbMBQVVfeXFMTlpSdUlfYXZtTU5VblB4T2o1MkNoYXNlelNNYmljRndEbEJjaF9oZGx3Wk5Lc2JPVGMwLTVEZm05Z3lEQi1QTnlfNXNySnhBSWRGOThqdE9WTWhPdjAwLVBhRFhWRDVqMldyNi1vRWpMQUpwRTlmR293RnYxbmFtLTBvNm84NnpzX1JOSjQ3STZfRGZuNzlIR0xlMFN2QlB6T1cwUVB0dEs1Ui10Sy12SkZfZzQ?oc=5
+- Latest record: 2026-08-06T05:07:20.000Z
+- 2026-08-06T05:07:20.000Z — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post — https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
+- 2026-08-05T17:41:34.000Z — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wVmJLXzRGNlRtcnZrVE80SWdSZ2l0U3kyOTFBU3VjRjNvUUdIR1JFN25VSDc5ZENZc241bDFsZHphYzd1NUNlcjFfQldpb2xBQUZwdnBCdmNnUDVwY0pUbm53?oc=5
+- 2026-08-05T14:00:00.000Z — Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -2815,22 +2816,25 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-timelines/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 - undated — Homeland Security Department — Entity Observation
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-briefs/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 - undated — Homeland Security Department — Entity Observation
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-exposure/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: none in current window
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 - undated — Homeland Security Department — Entity Observation
 
 ## Hong Kong
@@ -2997,9 +3001,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## INVESTIGATIONS
 - Route: investigations.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 
 ## Ireland
 - Route: jurisdictions-of-power/ireland.html
@@ -3124,9 +3129,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## JEFFREY EPSTEIN
 - Route: dossier-jeffrey-epstein-criminal.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-03T09:00:00.000Z
-- 2026-08-03T09:00:00.000Z — How Jeffrey Epstein's Island Became a Nightmare for Influencers - Business Insider — https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
+- Current matched records: 2
+- Latest record: 2026-08-06T05:07:20.000Z
+- 2026-08-06T05:07:20.000Z — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post — https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
+- 2026-08-03T09:00:00.000Z — How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com — https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
 
 ## Jens Stoltenberg
 - Route: top-52/jens-stoltenberg.html
@@ -3166,9 +3172,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Jersey
 - Route: jurisdictions-of-power/jersey.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 3
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Registered Sex Offender Sentenced to 25 Years in Prison for Commanding the Exploitation of a Then-Four-Year-Old Child in New Jersey and Producing Child Pornography — https://www.justice.gov/usao-nj/pr/registered-sex-offender-sentenced-25-years-prison-commanding-exploitation-then-four-year
+- 2026-08-04T12:00:00.000Z — Maryland Man Sentenced to 60 Months in Prison for His Role in Commercial Burglary Ring in New Jersey, New York, Pennsylvania, Maryland, and Delaware — https://www.justice.gov/usao-nj/pr/maryland-man-sentenced-60-months-prison-his-role-commercial-burglary-ring-new-jersey-new
+- 2026-08-04T12:00:00.000Z — United States Attorney's Office Joining Law Enforcement, Community Leaders and Residents for National Night Out Events in New Jersey — https://www.justice.gov/usao-nj/pr/united-states-attorneys-office-joining-law-enforcement-community-leaders-and-residents
 
 ## Jesuit order public route
 - Route: secret-societies/jesuit-order-public-route.html
@@ -4076,9 +4085,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## New York City
 - Route: jurisdictions-of-power/new-york-city.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
 
 ## Newhouse family
 - Route: power-families/newhouse-family.html
@@ -5078,9 +5088,11 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## STATE DEPARTMENT
 - Route: entity-timelines/state-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — South Florida Man Pleads Guilty to Posting Online Threats Against Secretary of State Marco Rubio and Special Envoy Kristi Noem — https://www.justice.gov/usao-sdfl/pr/south-florida-man-pleads-guilty-posting-online-threats-against-secretary-state-marco
+- 2026-08-04T12:00:00.000Z — Man Currently Serving a State Prison Sentence Pleads Guilty to Threatening Several U.S. Senators and Former Vice President Kamala Harris — https://www.justice.gov/usao-edar/pr/man-currently-serving-state-prison-sentence-pleads-guilty-threatening-several-us
 
 ## State Street
 - Route: institutions/state-street.html
@@ -5369,9 +5381,12 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## TREASURY DEPARTMENT
 - Route: entity-timelines/treasury-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 8
+- Latest record: 2026-08-05T17:41:34.000Z
+- 2026-08-05T17:41:34.000Z — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wVmJLXzRGNlRtcnZrVE80SWdSZ2l0U3kyOTFBU3VjRjNvUUdIR1JFN25VSDc5ZENZc241bDFsZHphYzd1NUNlcjFfQldpb2xBQUZwdnBCdmNnUDVwY0pUbm53?oc=5
+- 2026-08-05T14:00:00.000Z — Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5
+- 2026-08-05T12:30:00.000Z — Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hOHVXelEtWHd0RGxjQ1JKdFEtZ0VfeTluV25OaTYweEtUUC03RE03emswa3BoeFBVQ2NlQkFuWUc3X1FTUGRibVNGRVhKcndLektTY2RCS0RUSm03QlhiSG1R?oc=5
 
 ## Trilateral Commission
 - Route: institutions/trilateral-commission.html
@@ -5459,17 +5474,15 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## United Nations
 - Route: institutions/united-nations.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-29T12:00:00.000Z
-- 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## UNITED NATIONS
 - Route: institution-briefs/united-nations.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-07-29T12:00:00.000Z
-- 2026-07-29T12:00:00.000Z — Cyprus: Guterres calls for renewed trust and a new meeting on the way forward — https://news.un.org/feed/view/en/story/2026/07/1168048
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## UNITED STATES AGENCY FOR GLOBAL MEDIA
 - Route: entity-timelines/united-states-agency-for-global-media.html
@@ -5680,9 +5693,11 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 2
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Repeat Narcotics Dealer Found Guilty by Federal Jury in Distributing PCP at a Southwest D.C. Rec Center — https://www.justice.gov/usao-dc/pr/repeat-narcotics-dealer-found-guilty-federal-jury-distributing-pcp-southwest-dc-rec
+- 2026-08-04T12:00:00.000Z — Members of Violent D.C. Street Crew Convicted of Drug Trafficking, Murder Charges — https://www.justice.gov/usao-dc/pr/members-violent-dc-street-crew-convicted-drug-trafficking-murder-charges
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html

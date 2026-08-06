@@ -1,10 +1,16 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-05T03:32:01.513Z",
-  "queueRecords": 246,
-  "imported": 246,
+  "generatedAt": "2026-08-06T03:35:52.471Z",
+  "queueRecords": 324,
+  "imported": 323,
   "retainedCuratedItems": 4,
-  "totalPublishedSpeculationItems": 250,
-  "rejected": [],
+  "totalPublishedSpeculationItems": 327,
+  "rejected": [
+    {
+      "id": "crime-state-overlap-2026-08-05-a91149f1",
+      "title": "Orlando Men Sentenced for Attempting to Coerce and Entice a Minor to Engage in Sexually Explicit Conduct",
+      "reason": "prohibited private/sensitive-content pattern"
+    }
+  ],
   "boundary": "Review items auto-publish only as unverified speculation. Verified evidence, accusations, alarm rankings and criminal-conduct findings are unchanged."
 }

@@ -1,6 +1,6 @@
 # Mission Orchestration Audit
 
-Generated: 2026-08-05T06:27:59.944Z
+Generated: 2026-08-06T06:28:18.635Z
 Overall: ready
 Homepage mode: legacy-cinematic
 Passed: 52/52
@@ -22,7 +22,7 @@ Promotion margin: 14
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
-- **PASS · ledger-archive-preserved:** 3488 archived findings retained.
+- **PASS · ledger-archive-preserved:** 3829 archived findings retained.
 - **PASS · daily-watch-data:** Watch status: ready.
 - **PASS · watch-person-fields:** person: Bill Gates; missing none.
 - **PASS · watch-person-rank:** person score 91; status retained-current-leader.
@@ -52,7 +52,7 @@ Promotion margin: 14
 - **PASS · dossier-institution-assessment:** institution executive assessment checked.
 - **PASS · dossier-family-structure:** family dossier Wallenberg family and foundations; missing arrays none.
 - **PASS · dossier-family-assessment:** family executive assessment checked.
-- **PASS · history-and-weekly-delta:** 10 history entries; weekly delta ready.
+- **PASS · history-and-weekly-delta:** 11 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
 - **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5501; hitList=5510; nextLegacyPanel=-1.
 - **PASS · accountability-card-ui:** 3 cinematic dossier cards found.

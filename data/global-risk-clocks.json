@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T06:30:50.458Z",
+  "updated": "2026-08-06T06:30:33.459Z",
   "title": "Global Risk Clocks",
   "summary": "Evidence-fed pressure indexes with plain-language meanings, score methods, movement, control-system relevance, source trails, counter-signals and useful actions.",
   "homepageRule": "Only clocks at 90 percent or above may surface on the homepage. Alerts may surface only when active, source-linked and within their active window.",
@@ -95,26 +95,6 @@
           "matchScore": 9
         },
         {
-          "title": "Best source intake priority",
-          "summary": "The highest-priority source drop is ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "medium",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 9
-        },
-        {
-          "title": "‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war",
-          "summary": "As Russia’s invasion of Ukraine continues, with both sides stepping up airstrikes and drone attacks in recent weeks deep inside each other&#039;s territory, the UN Children’s Fund (UNICEF) appealed on Tuesday for greater protection for the war’s youngest victims.",
-          "route": "https://news.un.org/feed/view/en/story/2026/08/1168076",
-          "published": "2026-08-04T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 8
-        },
-        {
           "title": "‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war",
           "summary": "",
           "route": "https://news.un.org/feed/view/en/story/2026/08/1168076",
@@ -152,16 +132,6 @@
           "evidenceLevel": "",
           "confidence": "[object Object]",
           "sourceFile": "data/ai-speculative-conclusions.json",
-          "matchScore": 8
-        },
-        {
-          "title": "‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war",
-          "summary": "",
-          "route": "live-intel.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/deep-intel-feed-matrix.json",
           "matchScore": 8
         },
         {
@@ -215,12 +185,42 @@
           "matchScore": 6
         },
         {
+          "title": "Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 5
+        },
+        {
+          "title": "UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation",
+          "summary": "Violence in the occupied West Bank is worsening as the Israeli Government continues to approve new settlements while settlers and Israeli security forces have “often” acted together to attack local Palestinian communities, the UN’s human rights office (OHCHR) warned on Wednesday.",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168045",
+          "published": "2026-07-29T12:00:00.000Z",
+          "evidenceLevel": "Primary or official public-record lead",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/intel-vault.json",
+          "matchScore": 5
+        },
+        {
           "title": "Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
           "summary": "Regional tensions are mounting as the US-Iran war continues and a rising number of Israeli attacks are threatening Gaza’s fragile October ceasefire that ended two years of war with Hamas. Security Council members heard briefings followed by an open debate on Tuesday. UN News app users click here for live coverage.",
           "route": "https://news.un.org/feed/view/en/story/2026/07/1168037",
           "published": "2026-07-28T12:00:00.000Z",
           "evidenceLevel": "Primary or official public-record lead",
           "confidence": "rss-fetched",
+          "sourceFile": "data/intel-vault.json",
+          "matchScore": 5
+        },
+        {
+          "title": "Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine",
+          "summary": "Pentagon releases 72 UFO files: Military reports reveal new sightings RBC-Ukraine",
+          "route": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
+          "published": "2026-06-16T07:00:00.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
+          "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
           "matchScore": 5
         }
@@ -237,7 +237,10 @@
         "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOEw5SmxLdFhVamFFRHlrY3E5ZzJnemRWZmh5c2Jpb1hhTnRSQ24xbHZYWFRSZC1Sa016R0NSaWpzU3dMc04zYmF2bW5OWU5kcjRiVU52VnNHc2tlMFVzYWJhV3BDYnR0TGREYVB4bVg2TndFWjJzX29lRG5OOFVnR3h1eENKQ0JMMVhBNVZ2RUk?oc=5",
         "dashboard-conflict.html",
         "answer-engine.html",
+        "https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4",
+        "https://news.un.org/feed/view/en/story/2026/07/1168045",
         "https://news.un.org/feed/view/en/story/2026/07/1168037",
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -251,7 +254,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "wwiii-escalation",
       "name": "WWIII Escalation Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -501,7 +504,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "ai-breakout",
       "name": "AI Breakout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -830,7 +833,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "surveillance-state",
       "name": "Surveillance State Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1116,7 +1119,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "financial-reset",
       "name": "Financial Reset Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -1398,7 +1401,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "cbdc-rollout",
       "name": "CBDC Rollout Clock",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -1656,7 +1659,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "cyber-blackout",
       "name": "Cyber Blackout Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -1678,7 +1681,7 @@
       "scoreMeaning": "Some relevant signals exist, but the mechanism is weak, early or contested.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 1 primary-or-official evidence indicator. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "UAP hearings, whistleblower claims, NASA/DoD statements and anomalous-object reporting remain watch-level. No July 2026 source in this refresh warrants escalation.",
       "readerQuestion": "What documented change would make Alien Disclosure Clock more or less important?",
       "missionThemes": [
@@ -1741,7 +1744,7 @@
           "title": "Major disclosure releases produce institution-level fallout before person-level clarity",
           "summary": "[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low",
           "sourceFile": "data/probability-snapshot.json",
@@ -1776,16 +1779,6 @@
           "confidence": "",
           "sourceFile": "data/probability-signal-feed-002.json",
           "matchScore": 5
-        },
-        {
-          "title": "Pentagon releases declassified UFO files from various federal agencies - ABC News - Breaking News, Latest News and Videos",
-          "summary": "Pentagon releases declassified UFO files from various federal agencies ABC News - Breaking News, Latest News and Videos",
-          "route": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbHVBS3VqSGpNSmgxTWtIa2c3aDI2WE5vS2pfVXRFNjNZd3BlWUdILWh6b245RDMtOXk3Yk91UXktV3k4ckR1dTh1R1lVbFR4MFpLRnhXVmFMMGNsaWs3SXpaTHdzekxQNmRUQkktTHMwTjU3d3V2Z2R4akdIeEM4VGlnNFFzTVVzTXprS1AyT2l3MWdGaDJxUEFiWjBMc3BwMVHSAacBQVVfeXFMUGJvM2xwYk1mVU9OYW1haDlYZlhfaF83ekszcWZrbXRWTzMtZXNOOXNYR1loRThfWElkd3NiVllpX1ZuOGV1eDQ2NHQ5aDR2M1FKZDJmb0Y5TDYzTE53T0lNQ0FvUXQ3QmtYb09QVlRRRGV2eWFjOVJFcUVCVkF1YUlkSkRGclM0eUJVV0VLSl9UZmtBb1ZKUVRtTFhoUUFXWnFiQ1hqSzQ?oc=5",
-          "published": "2026-08-03T18:44:59.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 4
         },
         {
           "title": "Pentagon releases 72 UFO files: Military reports reveal new sightings - RBC-Ukraine",
@@ -1851,18 +1844,28 @@
           "title": "Alien Registration Form and Evidence of Registration",
           "summary": "",
           "route": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
-          "published": "2026-08-05T06:08:13.359Z",
+          "published": "2026-08-06T06:11:49.808Z",
           "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/entity-timelines.json",
           "matchScore": 3
         },
         {
-          "title": "Anomalous Health Incidents",
+          "title": "Illegal alien couple sentenced to 10 years in prison for cocaine, gun crimes",
           "summary": "",
+          "route": "https://www.justice.gov/usao-sdoh/pr/illegal-alien-couple-sentenced-10-years-prison-cocaine-gun-crimes",
+          "published": "2026-08-04T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 3
+        },
+        {
+          "title": "Anomalous Health Incidents",
+          "summary": "Anomalous Health Incidents",
           "route": "https://vault.fbi.gov/anomalous-health-incidents",
           "published": "2026-08-04T04:00:00.000Z",
-          "evidenceLevel": "",
+          "evidenceLevel": "Primary or official public-record lead",
           "confidence": "rss-fetched",
           "sourceFile": "data/live-intel.json",
           "matchScore": 3
@@ -1873,12 +1876,12 @@
         "evidence-vault.html",
         "https://www.axios.com/2026/06/26/epstein-files-doj-lawsuit-judge-release-unredacted-july-order",
         "surveillance-hub.html",
-        "https://news.google.com/rss/articles/CBMiogFBVV95cUxQbHVBS3VqSGpNSmgxTWtIa2c3aDI2WE5vS2pfVXRFNjNZd3BlWUdILWh6b245RDMtOXk3Yk91UXktV3k4ckR1dTh1R1lVbFR4MFpLRnhXVmFMMGNsaWs3SXpaTHdzekxQNmRUQkktTHMwTjU3d3V2Z2R4akdIeEM4VGlnNFFzTVVzTXprS1AyT2l3MWdGaDJxUEFiWjBMc3BwMVHSAacBQVVfeXFMUGJvM2xwYk1mVU9OYW1haDlYZlhfaF83ekszcWZrbXRWTzMtZXNOOXNYR1loRThfWElkd3NiVllpX1ZuOGV1eDQ2NHQ5aDR2M1FKZDJmb0Y5TDYzTE53T0lNQ0FvUXQ3QmtYb09QVlRRRGV2eWFjOVJFcUVCVkF1YUlkSkRGclM0eUJVV0VLSl9UZmtBb1ZKUVRtTFhoUUFXWnFiQ1hqSzQ?oc=5",
         "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV3RQZGFwZ044aFNzWVNUWnlWekZhR1puVXYtRXpwMDB2Wjhyb3RweUozUVlJRURYSzBoOHFHTWQ5THNLUEdXVGNra0xXQzYwQnJvcXRSNjFnejZ1VEhSRW9SeWZlcFpiTmkzR09vQlQwTGRsbzRHNl9Nd3FOOW43Uy1leS1Bcm5VeUpIRUxUSmhiU0o0a1E?oc=5",
         "https://news.google.com/rss/articles/CBMifkFVX3lxTFA5dUEwVGxlanJRaDUxSmNsb0FFaEhiOXlwVVVZZVpzYjBxZDg2Q2s0bUlOUndCdE91Y2IwWnBNeTNFNU03dGhaazJSMml4QmxIQmdGY2NCQllmOVdNc2xSRHpfa2lNV2VJWkxqaEJLSTNfQnMwTTNTYjZ1bW9QQQ?oc=5",
         "https://news.google.com/rss/articles/CBMifkFVX3lxTE9KWFVPTlkwWGhvRFBISU1GZ0xWdFByakx3Y2JaT2lkdFhIRGJxV3l0NjB1X3AwQURFNXo5Z1ZId1BkNzlUMVphUUN1cDctN29DVlVsN2Mxb3U2aGJybkY4bWZHQ05lT2hsNlV2VUlqRDJSV1N3R2NHZnhUQ0FnZw?oc=5",
         "https://www.justice.gov/epstein/doj-disclosures/data-set-9-files",
         "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
+        "https://www.justice.gov/usao-sdoh/pr/illegal-alien-couple-sentenced-10-years-prison-cocaine-gun-crimes",
         "https://vault.fbi.gov/anomalous-health-incidents",
         "search.html"
       ],
@@ -1891,7 +1894,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "alien-disclosure",
       "name": "Alien Disclosure Clock",
       "bandMeaning": "Some relevant signals exist, but the mechanism is weak, early or contested.",
@@ -1934,7 +1937,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "WHO states the Pandemic Agreement was adopted in May 2025, but the PABS annex remains the key next step before signing/ratification. July 2026 IGWG meetings keep the health-governance implementation lane active without implying direct WHO control over national measures. Policy convergence tracker lanes: Health Governance / Biosecurity / Emergency Health Powers.",
       "readerQuestion": "Is public health becoming a governance operating system?",
       "missionThemes": [
@@ -2080,16 +2083,6 @@
           "matchScore": 6
         },
         {
-          "title": "HIV, hepatitis, STI gains at risk as funding falls, WHO warns",
-          "summary": "Years of progress in tackling HIV, viral hepatitis and sexually transmitted infections (STIs) are at risk of stalling, leaving millions of people without access to life-saving prevention, testing and treatment, the World Health Organizatio…",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168040",
-          "published": "2026-07-28T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 6
-        },
-        {
           "title": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather",
           "summary": "The EEA's June 2026 resilience update highlights severe drought, flooding, wildfires and record temperatures, with uneven adaptation and direct consequences for water, agriculture, infrastructure and public health.",
           "route": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
@@ -2128,6 +2121,16 @@
           "confidence": "[object Object]",
           "sourceFile": "data/ai-speculative-conclusions.json",
           "matchScore": 6
+        },
+        {
+          "title": "Larry Ellison → Health Data Systems: ecosystem hint",
+          "summary": "Speculatively, the graph hint in “Larry Ellison → Health Data Systems: ecosystem hint — larry-ellison.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 6
         }
       ],
       "sourceRoutes": [
@@ -2155,7 +2158,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "pandemic-biosecurity",
       "name": "Pandemic / Biosecurity Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -2347,10 +2350,20 @@
           "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
           "summary": "",
           "route": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
-          "published": "2026-08-05T06:08:13.359Z",
+          "published": "2026-08-06T06:11:49.808Z",
           "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/entity-timelines.json",
+          "matchScore": 3
+        },
+        {
+          "title": "Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
           "matchScore": 3
         },
         {
@@ -2392,16 +2405,6 @@
           "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
           "matchScore": 3
-        },
-        {
-          "title": "Surveillance shadows No Kings protests - Biometric Update",
-          "summary": "Surveillance shadows No Kings protests Biometric Update",
-          "route": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5",
-          "published": "2025-10-20T07:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 3
         }
       ],
       "sourceRoutes": [
@@ -2415,11 +2418,11 @@
         "https://pace.coe.int/en/files/36013/html",
         "answer-engine.html",
         "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
+        "https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4",
         "https://www.who.int/health-topics/who-pandemic-agreement",
         "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/democracy-eu-citizenship-anti-corruption/democracy-and-electoral-rights_en",
         "https://news.google.com/rss/articles/CBMigAFBVV95cUxNalhVZlYtbFZ1a1Q2MDJKU0E3UUhzSHAzTUNXQW5VbW9jVUdtQjNDZWZjLTlSbWU2NGRXalNjRHNtQnJIRDI0Z0wzM1RfT3dYXzhWVHducXliZ0FPVVB1Q2ZEMWhkc2dWcGNndGluYkpWXzFpWlFvUHljZjMzTFRWbg?oc=5",
         "https://news.google.com/rss/articles/CBMiswFBVV95cUxOY1Rxa3BCTlN6dk9LRjhIcjlyZDd5ejRoOTZaM2h3ODh2LXk5a3plWU5DS3VxVWdLcDF0alp5Mlo4TzBadW9qTWx0Ny1oZGdBbjN2Z1pEU3JqT21FdGN4emJTcnVNQnprNmtnMU14MG5HalJfS0pWN3U2VUdjclRmdnZ6UlU5WmlEOEFkbFphZDQwcGQtSjJ5dEktOHdNRlVuYXJNRnNGYzg2OTlYNDdMaVBPNA?oc=5",
-        "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeWhoY1FLdWozU1BqNnlRZG9ITXBUSXNzd0pzN05qWkdvRS1TckZyQjctMzFrQjFLZUYtNGVCQ3Rad0RSb3ZiOWo5b1JvbFRPeVZ4QkUwWC1UdjF6dGZsU2h1SmxPSXlpemRwa1ZUc1lSVXJvLU1NN1M2bER2RVlLa1JwTQ?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -2435,7 +2438,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "civil-unrest",
       "name": "Civil Unrest Clock",
       "bandMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
@@ -2478,7 +2481,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "0 curated current drops, 2 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "0 curated current drops, 2 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Food and land-system stress remains elevated through conflict, weather, aid funding, water scarcity, input prices and supply-chain concentration. No new July source was attached in this refresh. Policy convergence tracker lanes: Climate / Energy / Carbon / Mobility · Food / Water / Land / Supply Chains.",
       "readerQuestion": "Are energy and climate systems becoming a behaviour-management layer?",
       "missionThemes": [
@@ -2600,6 +2603,26 @@
           "matchScore": 5
         },
         {
+          "title": "Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 4
+        },
+        {
+          "title": "Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+          "summary": "The UN emergency food agency appealed for immediate funding on Wednesday, warning that deepening hunger is undermining the response to an Ebola outbreak in the Democratic Republic of the Congo (DRC) that has now infected more than 3,200 people.",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+          "published": "2026-07-29T12:00:00.000Z",
+          "evidenceLevel": "Primary or official public-record lead",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/intel-vault.json",
+          "matchScore": 4
+        },
+        {
           "title": "Trump authorizes use of AI for defense supply chain mapping - DefenseScoop",
           "summary": "Trump authorizes use of AI for defense supply chain mapping DefenseScoop",
           "route": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5",
@@ -2648,26 +2671,6 @@
           "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
           "matchScore": 4
-        },
-        {
-          "title": "Hegseth declares Anthropic a supply chain risk, restricting military contractors from doing business with AI giant - CBS News",
-          "summary": "Hegseth declares Anthropic a supply chain risk, restricting military contractors from doing business with AI giant CBS News",
-          "route": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hN2ZRRGw0OWtGNTZ4aWFDM1NsYWk4WWJVcXNlQ1h3TlBJamRmS2VlalY1VElhTjdwMnhSS3dnaWdGTko5VVRHSndnWFhzVmlmU0E4NjJ2MmFrUEZGcXBiUW13angxUGtqdnptcERVZ2xNUjczV2RwakRXR3FCcU3SAYQBQVVfeXFMUHlrdlJCdTBJUzJRWk9LSFVoT0VLS1ZvN2dMVTl4bmp6bEw4bXVXWGFTcTJOOWFZbHV1LXNOeThsWWFxUXVuZHBUVDFjeEd0N1A4RXdlb2NQcHJIRzc1VFlnbVk3TUFfQjc5NzFkTWpNQWk2cXF5NWt1ZUVqR21sRlU5cVIw?oc=5",
-          "published": "2026-02-28T08:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Orsini → Land And Titles: layer hint",
-          "summary": "Speculatively, the graph hint in “Orsini → Land And Titles: layer hint — orsini.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "[object Object]",
-          "sourceFile": "data/ai-speculative-conclusions.json",
-          "matchScore": 4
         }
       ],
       "sourceRoutes": [
@@ -2681,12 +2684,13 @@
         "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260527~92140c5054.en.html",
         "institutions/food-and-agriculture-organization.html",
         "entity-timelines/ministry-of-agriculture-maritime-fisheries-rural-development-water-and-forests-mapmdref.html",
+        "https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4",
+        "https://news.un.org/feed/view/en/story/2026/07/1168047",
         "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNU9jcnZNcm5BeHJVMVoxT2R1c29DMG9GTjRlVWxrNWxBU0tVd2dFa2YwZlU1LURfeHhvRlE4emJRMG1EUjM1NHkyY2liWUhTOWdCSXZzaF8tQ043dnoyMzF1U19HMzctbjZEdUM4dnJjU2VmOGYxUm1XcWhkRmxfM1RXUHBsOU1xb2c?oc=5",
         "https://www.eea.europa.eu/en/newsroom/news/renewables-lower-energy-prices-and-play-key-role-to-reduce-vulnerability-to-fossil-fuel-supply-shocks",
         "https://news.google.com/rss/articles/CBMiugFBVV95cUxPczJpTmZyYjRQdlpzdVRBd2VYSmtYM0huMlpVNkFnS0VRc1JMTVQ1OFNvUWNlLVNPSkpuZzBHU1hwSUR5dG40Z2RSS3I2TXhadlBON3dqR1JSSnlZaE1UVXNWT1ZyMFpVWUlCejdCdmpkREJPMU5SWVIxQTd5OXZaU21yUlpuaHZwZ0xmRVNZeTdOWldJT3FyWDNyeWxFcXliaTV4NWhZOGhSX2JKZm9XalI2Rk9XV0ZHMkE?oc=5",
         "https://news.google.com/rss/articles/CBMingFBVV95cUxQTXdBSWw3VmZVMXgwYzNSOXpTUW45dkZORGd2dFNZblppaXJWTHRpcHJNS0ZqdWM4NXlFOUlNQkJmYWdFdkFrVGhQNi04ZldnWElwb2VUSy00YW1ZdXhnYXp0aEpUR3BGdEQwX2NQM2hQNkVRUXlwOGlXajJ5X1dDM256cE1UQXQ0R0tMUExMSXJfc2ZuR0x0cWRxU0Zzdw?oc=5",
         "https://news.google.com/rss/articles/CBMiggFBVV95cUxQRFBGcDdOQmJCUm45clBLUXZpR3N5YWlfZFByOTRlbklxLWNRU2dKM0ZWUFNtVEZBSWxGampJa2Z5Wk5NOGdKVW50cEozSHJiNEtpWkhCY2RzMUwyY3htVHpVeHJYaWhNdFRONEtIejRDc0hFQlFWUmxEejN1cThMRUl3?oc=5",
-        "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hN2ZRRGw0OWtGNTZ4aWFDM1NsYWk4WWJVcXNlQ1h3TlBJamRmS2VlalY1VElhTjdwMnhSS3dnaWdGTko5VVRHSndnWFhzVmlmU0E4NjJ2MmFrUEZGcXBiUW13angxUGtqdnptcERVZ2xNUjczV2RwakRXR3FCcU3SAYQBQVVfeXFMUHlrdlJCdTBJUzJRWk9LSFVoT0VLS1ZvN2dMVTl4bmp6bEw4bXVXWGFTcTJOOWFZbHV1LXNOeThsWWFxUXVuZHBUVDFjeEd0N1A4RXdlb2NQcHJIRzc1VFlnbVk3TUFfQjc5NzFkTWpNQWk2cXF5NWt1ZUVqR21sRlU5cVIw?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -2701,7 +2705,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "food-system-stress",
       "name": "Food System Stress Clock",
       "bandMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
@@ -2965,7 +2969,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "energy-shock",
       "name": "Energy Shock Clock",
       "bandMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
@@ -3318,7 +3322,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "id": "machine-convergence",
       "name": "Machine Convergence",
       "bandMeaning": "The named system is operating, expanding or approaching a major decision point. This still does not prove the strongest speculative interpretation.",
@@ -3575,7 +3579,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
@@ -3585,7 +3589,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:25:02.118Z",
+          "published": "2026-08-06T06:26:10.327Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/conclusion-engine.json",
@@ -3697,10 +3701,10 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 66,
       "automaticScoreMovement": 0,
-      "automaticUpdateReason": "Evidence change: 7 fresh records, 6 primary/official, 5 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
+      "automaticUpdateReason": "Evidence change: 6 fresh records, 5 primary/official, 4 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
         "mode": "standard-evidence-gated",
@@ -3710,9 +3714,9 @@
       },
       "automaticEvidenceCounts": {
         "total": 14,
-        "fresh": 7,
-        "primaryOrOfficial": 6,
-        "implementation": 5,
+        "fresh": 6,
+        "primaryOrOfficial": 5,
+        "implementation": 4,
         "counterSignals": 0,
         "caseRecords": 0,
         "authenticatedMechanisms": 0
@@ -3970,9 +3974,9 @@
         }
       ],
       "timerUpdateRule": "Raise when identity becomes mandatory for a major service or integrates with payments, travel, health, work, benefits, age verification or speech. Lower when anonymous, offline or non-digital alternatives are legally protected and practically usable.",
-      "evidenceFingerprint": "37987f28b135c799617b5263bf5d06b9f2ce7f7bfd84e6fcf02f4e423fc93c8f",
-      "lastEvidenceChangeAt": "2026-08-05T06:25:53.657Z",
-      "automaticUpdateStatus": "evidence-changed-score-updated",
+      "evidenceFingerprint": "e0f58967f45117dc0fd88f229eb1672acac7b696f3e88e69363723fbe4c3e619",
+      "lastEvidenceChangeAt": "2026-08-06T06:11:21.390Z",
+      "automaticUpdateStatus": "evidence-unchanged-score-held",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
       "scoreBand": "Active",
@@ -4091,7 +4095,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
@@ -4101,7 +4105,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:25:02.118Z",
+          "published": "2026-08-06T06:26:10.327Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/conclusion-engine.json",
@@ -4185,10 +4189,10 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 84,
-      "automaticScoreMovement": 2,
-      "automaticUpdateReason": "Evidence change: 15 fresh records, 12 primary/official, 8 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
+      "automaticScoreMovement": 0,
+      "automaticUpdateReason": "Evidence change: 16 fresh records, 12 primary/official, 8 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
         "mode": "standard-evidence-gated",
@@ -4197,8 +4201,8 @@
         "requirement": "Raise when identity becomes mandatory for a major service or integrates with payments, travel, health, work, benefits, age verification or speech."
       },
       "automaticEvidenceCounts": {
-        "total": 21,
-        "fresh": 15,
+        "total": 22,
+        "fresh": 16,
         "primaryOrOfficial": 12,
         "implementation": 8,
         "counterSignals": 0,
@@ -4305,7 +4309,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks whether temporary crisis powers, exceptional procurement, surveillance authorities, military support or restrictions are being renewed, normalised or transferred into ordinary law.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -4414,6 +4418,16 @@
           "matchScore": 4
         },
         {
+          "title": "Hunger hampers Ebola response as cases top 3,200 in DR Congo",
+          "summary": "The UN emergency food agency appealed for immediate funding on Wednesday, warning that deepening hunger is undermining the response to an Ebola outbreak in the Democratic Republic of the Congo (DRC) that has now infected more than 3,200 people.",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168047",
+          "published": "2026-07-29T12:00:00.000Z",
+          "evidenceLevel": "Primary or official public-record lead",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/intel-vault.json",
+          "matchScore": 3
+        },
+        {
           "title": "‘Women do not stop giving birth in an emergency’ – one month after Venezuela quakes",
           "summary": "One month after twin earthquakes rocked Venezuela, thousands of women and girls continue to face difficulty in accessing essential healthcare and protection services, a senior official with the UN reproductive and sexual health agency UNFPA said on Friday.",
           "route": "https://news.un.org/feed/view/en/story/2026/07/1168021",
@@ -4472,16 +4486,6 @@
           "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 3
-        },
-        {
-          "title": "Trump Seeks New Powers to Pressure ‘Underperforming’ Weapons Makers - The New York Times",
-          "summary": "Trump Seeks New Powers to Pressure ‘Underperforming’ Weapons Makers The New York Times",
-          "route": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNGR5a3NvT1B0bXAwQjQ3Nms3cENvMlE1MlIxTlE3b0o3U3A5NzBUNUxpWWtSOXkxWnBXWDFiVkVKQnVCUUV2WTdwa3d5SHVYZ0VPVGRsVE9BLXIyVXhCV1preWFJRHFucXlZVndvY3FjeUtxbEZiM19zOXBvM0JXNjNlTVhQcndOdkVFWldqZEs?oc=5",
-          "published": "2026-01-09T08:00:00.000Z",
-          "evidenceLevel": "Seven-day public-record lead",
-          "confidence": "archived-intel-vault",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 3
         }
       ],
       "sourceRoutes": [
@@ -4494,13 +4498,13 @@
         "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQWE0SDJnd1p1d3VKdEdaQ1lTbTVZUmJZZ01vMm0tQkxQaDNVOWF1eUNFcmt2VjJzZ2EtV1RJMldac1hJakFWaU5pcFc4dzZHb3Zjcm1ZNm5WM3FuS29pREVDYW1ldHNISXBqUmloclNvT21NUE5xY05ld0xKSFZOQnIzeWh5LU1Ma1dWaTRR?oc=5",
         "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRUd4UWhiakFwa1VwejRQY2J5UlRVQzBqMmJBaVZqLU0zY0dJSTE4RlRQeTB2MzFYSFlpSnFqci10TXdIVTlCZDV5X3prMlg3VDdxc3BIa0szMmtDVzh5S1Z4bmdKR09yaFgxWFdtdl9WLXVPWElyVlJ4YXppNUZsbEF1V2tSZzhBRmJKbU5LRUVfQQ?oc=5",
         "timers.html#surveillance-state",
+        "https://news.un.org/feed/view/en/story/2026/07/1168047",
         "https://news.un.org/feed/view/en/story/2026/07/1168021",
         "https://news.un.org/feed/view/en/story/2026/07/1168025",
         "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
         "https://digital-strategy.ec.europa.eu/en/news/commission-urges-member-states-rollout-eu-age-verification-app",
         "https://news.google.com/rss/articles/CBMizwFBVV95cUxNcjFzYzR1aWxmU0pfdnpKQ1VLWnR2ZWRneGwyZTRFQXJycUwxTE5xSjdZbUFYQzFVbGs4RTR0UVpQQzQybEJsUXZURFRVdkxPSWZYbmZrNUxJUFNDaTM5SEQ0V01KcnlxX0lVQlBiNzdLMHctUEJ4Z1ItaTVUQXNrREItYV9Qc0dtTnZDNV9vTnFLV25IellsVTNkV21MM1pXOHd3Ul9sM25zdXB6WllINHczNDhsNmVWR1I2R2IxWWdNN3dyTGZCc3cxUFF5TFk?oc=5",
         "https://digital-strategy.ec.europa.eu/en/news/commission-issues-guidelines-protect-media-content-online-platforms",
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNGR5a3NvT1B0bXAwQjQ3Nms3cENvMlE1MlIxTlE3b0o3U3A5NzBUNUxpWWtSOXkxWnBXWDFiVkVKQnVCUUV2WTdwa3d5SHVYZ0VPVGRsVE9BLXIyVXhCV1preWFJRHFucXlZVndvY3FjeUtxbEZiM19zOXBvM0JXNjNlTVhQcndOdkVFWldqZEs?oc=5",
         "search.html"
       ],
       "missingEvidence": [
@@ -4513,7 +4517,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 56,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -4880,7 +4884,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 70,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5206,7 +5210,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 72,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5467,7 +5471,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
@@ -5477,7 +5481,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:25:02.118Z",
+          "published": "2026-08-06T06:26:10.327Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/conclusion-engine.json",
@@ -5547,7 +5551,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 66,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -5667,16 +5671,16 @@
       "automaticUpdate": true,
       "policyConvergenceLinks": [],
       "timerUpdateRule": "Raise when legally required records are delayed, removed, sealed, redacted without adequate explanation or contradicted by later disclosures. Lower when records are released, restored, independently audited and made searchable with clear provenance.",
-      "evidenceFingerprint": "1e7fc002c8ccb204bbcb6818b79539e476cd1df662fa78d999628b6b7300f7ae",
-      "lastEvidenceChangeAt": "2026-08-05T06:25:53.658Z",
-      "automaticUpdateStatus": "evidence-changed-score-updated",
+      "evidenceFingerprint": "5a754145b00e7926b6c31f07e3d4d368cd19d2bd480bc056a30c4f5196517a99",
+      "lastEvidenceChangeAt": "2026-08-06T06:11:21.391Z",
+      "automaticUpdateStatus": "evidence-unchanged-score-held",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
       "scoreBand": "Elevated",
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "2 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "2 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 5 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks disclosure delays, unexplained redactions, sealed records, deleted pages, missing procurement documents, overdue audits, ignored information requests and official corrections.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -5701,106 +5705,6 @@
           "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/deep-intel-feed-matrix.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Elite Power Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "New World Order Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "One-World Currency Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 5 — Court, regulator, sworn record, or official finding",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "One-World Religion Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Illuminati / Secret Society Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Jurisdictional Power Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Institutional Capture Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Emergency Power Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Media / Narrative Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 9
-        },
-        {
-          "title": "Black File / Missing Record Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 3 — Multiple public sources",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
           "matchScore": 9
         },
         {
@@ -5835,7 +5739,7 @@
         },
         {
           "title": "Most important missing record",
-          "summary": "The scenario “Most important missing record — appellate-division-of-the-supreme-court-of-the-state-of-new-york.html” could indicate a future convergence route only if later records document the stated authority, implementation and cross-institutional links. The current output is a modelled research hypothesis, not a factual forecast.",
+          "summary": "The scenario “Most important missing record — centers-for-medicare-and-medicaid-services.html” could indicate a future convergence route only if later records document the stated authority, implementation and cross-institutional links. The current output is a modelled research hypothesis, not a factual forecast.",
           "route": "",
           "published": "",
           "evidenceLevel": "",
@@ -5852,6 +5756,106 @@
           "confidence": "Active",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 8
+        },
+        {
+          "title": "AI Breakout Clock",
+          "summary": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August",
+          "route": "answer-engine.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "High",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 8
+        },
+        {
+          "title": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
+          "summary": "A dated source update exists and should be compared with prior records.",
+          "route": "https://www.usaspending.gov/award/HC101326FB686",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "medium-high",
+          "sourceFile": "data/daily-investigation-conclusions.json",
+          "matchScore": 8
+        },
+        {
+          "title": "U.S. National Archives",
+          "summary": "National archival records, historical government material, and public collections.",
+          "route": "https://www.archives.gov/",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/evidence-vault.json",
+          "matchScore": 8
+        },
+        {
+          "title": "Signal intake",
+          "summary": "Collect source routes, verified records, filing metadata, news items, public-contract routes, regulator routes and missing-record updates.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/probability-lab-core.json",
+          "matchScore": 8
+        },
+        {
+          "title": "OpenAI policy route exists but private deployment records remain missing",
+          "summary": "Official policy pages can support policy-boundary checks, but private deployments require separate records.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "route verified / content pending",
+          "confidence": "",
+          "sourceFile": "data/probability-signal-feed-001.json",
+          "matchScore": 8
+        },
+        {
+          "title": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries",
+          "summary": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
+          "route": "https://commission.europa.eu/publications/2026-rule-law-report-communication-and-country-chapters_en",
+          "published": "2026-07-17T00:00:00.000Z",
+          "evidenceLevel": "Official multi-country monitoring report",
+          "confidence": "",
+          "sourceFile": "data/current-clock-evidence.json",
+          "matchScore": 7
+        },
+        {
+          "title": "2026 Rule of Law Report says media-market concentration and editorial independence concerns persist",
+          "summary": "The Commission reports ongoing EMFA implementation and continuing concerns over media-market concentration, public-service-media independence, journalist safety and state-advertising transparency.",
+          "route": "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
+          "published": "2026-07-17T00:00:00.000Z",
+          "evidenceLevel": "Official EU multi-country monitoring",
+          "confidence": "",
+          "sourceFile": "data/current-clock-evidence.json",
+          "matchScore": 7
+        },
+        {
+          "title": "European Ombudsman publishes 2025 annual accountability and transparency report",
+          "summary": "The European Ombudsman published its annual report in April 2026, framing transparency, accountability, citizen rights and meaningful engagement as central safeguards amid declining public trust.",
+          "route": "https://www.ombudsman.europa.eu/doc/annual-report/223854",
+          "published": "2026-04-22T00:00:00.000Z",
+          "evidenceLevel": "Official independent oversight report",
+          "confidence": "",
+          "sourceFile": "data/current-clock-evidence.json",
+          "matchScore": 7
+        },
+        {
+          "title": "Epstein records back in court as federal judge questions DOJ redactions - WPEC",
+          "summary": "A wider mission interpretation of “Epstein records back in court as federal judge questions DOJ redactions - WPEC — CBMijgNBVV95cUxOVlNTU2lxUGpwQnotYU1vUnJDSm1ydXBVb3plWG9wTHNOZGI3UmZBcC00dWp4QnZILTNWNmxha2hvVkROcnRK” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 7
+        },
+        {
+          "title": "Platform and policy routes exist for information visibility checks",
+          "summary": "Policy and transparency routes can later confirm how platforms describe enforcement, requests and visibility systems.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "route verified",
+          "confidence": "",
+          "sourceFile": "data/probability-signal-feed-002.json",
+          "matchScore": 7
         }
       ],
       "sourceRoutes": [
@@ -5862,6 +5866,10 @@
         "private-contractor-tracker.html",
         "https://news.google.com/rss/articles/CBMilAFBVV95cUxOTldxWW5YamIzV1dLQkQzQTliaUpLWDFQRVB5anNFcGRGZ0ZSYTBaVDVhREVBOG5IVmctcmItQTItdmY4UjlkWEhOOGVxQnVCOEx6bE02UTlUVGdPMFJicUxnOEJPeFVXT1J0YWVDaF9vN1I4OXZPZ212TFd3ZVIyQUc4TTJ0YXZtUEZMbWtWUGlWZXJY0gGaAUFVX3lxTE94cUJZY0c5TnRpYmtRT1hJYktCYVF2MmhmSzNnT0RYekk1eFNqaDJ2a0hZUDYxV1ZGWkZ0YU5WUmJHek5md20weUtjQXJqX3diMklMLTdlR3djR2RxMDZMWTBTY2JxMjhwZk1EZ3lNc2RNYmJfZ3FzSVQ5QUhFU1EzbWMwV1otRFpCZEFaVURtN3Z2S2s3RlpZTlE?oc=5",
         "surveillance-hub.html",
+        "answer-engine.html",
+        "https://www.usaspending.gov/award/HC101326FB686",
+        "https://www.archives.gov/",
+        "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
         "search.html"
       ],
       "missingEvidence": [
@@ -5873,9 +5881,9 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 63,
-      "automaticScoreMovement": 1,
+      "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 3 primary/official, 1 implementation signals, 0 counter-signals, 2 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
@@ -6047,8 +6055,8 @@
       "automaticUpdate": true,
       "policyConvergenceLinks": [],
       "timerUpdateRule": "Raise when final judgments are ignored, enforcement is delayed, penalties are immaterial, repeat violations continue or oversight is obstructed. Lower when judgments are enforced, sanctions are proportionate and independent review produces corrective action.",
-      "evidenceFingerprint": "ae40d29b5ccbf579eb73cc7b5da40580123a0926791552a199662b59e965c6f0",
-      "lastEvidenceChangeAt": "2026-08-05T06:07:34.633Z",
+      "evidenceFingerprint": "6b5a79f7947e1be0ecb4a9b3605759d7eb21e9b7fc94fb976a6e6a4378c64719",
+      "lastEvidenceChangeAt": "2026-08-06T06:11:21.392Z",
       "automaticUpdateStatus": "evidence-unchanged-score-held",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
@@ -6056,7 +6064,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "5 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 15 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "5 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 13 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks whether powerful institutions and office-holders are investigated, judged, sanctioned and compelled to comply with courts, regulators, audits and disclosure duties.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -6154,6 +6162,16 @@
           "matchScore": 8
         },
         {
+          "title": "content changed: UK Serious Fraud Office — News And Communications",
+          "summary": "A broader control interpretation of “content changed: UK Serious Fraud Office — News And Communications — serious-fraud-office” would become more plausible only if later records show repeatable cross-institutional authority, funding, implementation or protection beyond the cited event. The current record does not establish that.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 8
+        },
+        {
           "title": "Highest clock pressure",
           "summary": "The scenario “Highest clock pressure — timers.html” could indicate a future convergence route only if later records document the stated authority, implementation and cross-institutional links. The current output is a modelled research hypothesis, not a factual forecast.",
           "route": "",
@@ -6214,23 +6232,13 @@
           "matchScore": 8
         },
         {
-          "title": "A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule",
-          "summary": "A woman is stopped for buying groceries alone. The shopkeeper who served her is slapped and hauled in for questioning. A teacher is turned away from her own classroom for wearing the wrong cloak.",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168039",
-          "published": "2026-07-28T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/intel-vault.json",
-          "matchScore": 7
-        },
-        {
-          "title": "A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule",
-          "summary": "A woman is stopped for buying groceries alone. The shopkeeper who served her is slapped and hauled in for questioning. A teacher is turned away from her own classroom for wearing the wrong cloak.",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168039",
-          "published": "2026-07-28T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/live-intel.json",
+          "title": "Tate brothers’ US extradition case a ‘step towards accountability,’ says independent expert",
+          "summary": "An independent UN human rights expert has welcomed ongoing proceedings in the United States to extradite “manosphere” bloggers Andrew and Tristan Tate to the United Kingdom, calling the case an important step towards accountability for serious allegations of violence against women and girls.",
+          "route": "https://news.un.org/feed/view/en/story/2026/08/1168085",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/card-live-updates.json",
           "matchScore": 7
         }
       ],
@@ -6248,7 +6256,7 @@
         "control-system-tracker.html#digital-id",
         "surveillance-hub.html",
         "answer-engine.html",
-        "https://news.un.org/feed/view/en/story/2026/07/1168039",
+        "https://news.un.org/feed/view/en/story/2026/08/1168085",
         "search.html"
       ],
       "missingEvidence": [
@@ -6260,7 +6268,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 56,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 13 fresh records, 13 primary/official, 9 implementation signals, 0 counter-signals, 9 case records and 8 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6661,7 +6669,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 76,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 6 fresh records, 5 primary/official, 2 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -6967,7 +6975,7 @@
           "title": "Geopolitical stress increases demand for monitoring and resilience systems",
           "summary": "[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low",
           "sourceFile": "data/probability-snapshot.json",
@@ -7043,7 +7051,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 50,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 5 fresh records, 4 primary/official, 1 implementation signals, 1 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7164,7 +7172,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 1 linked policy lane, 16 matching evidence/feed items, including 5 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks medicine shortages, treatment waiting times, insurance or payment barriers, hospital capacity, workforce shortages, emergency access and digital-health eligibility requirements.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -7256,7 +7264,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
@@ -7266,7 +7274,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:25:02.118Z",
+          "published": "2026-08-06T06:26:10.327Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/conclusion-engine.json",
@@ -7280,16 +7288,6 @@
           "evidenceLevel": "Primary or official public-record lead",
           "confidence": "rss-fetched",
           "sourceFile": "data/intel-vault.json",
-          "matchScore": 7
-        },
-        {
-          "title": "HIV, hepatitis, STI gains at risk as funding falls, WHO warns",
-          "summary": "Years of progress in tackling HIV, viral hepatitis and sexually transmitted infections (STIs) are at risk of stalling, leaving millions of people without access to life-saving prevention, testing and treatment, the World Health Organizatio…",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168040",
-          "published": "2026-07-28T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/live-intel.json",
           "matchScore": 7
         },
         {
@@ -7341,6 +7339,16 @@
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 7
+        },
+        {
+          "title": "Access infrastructure is a measurable power layer.",
+          "summary": "Digital identity, AI governance and digital-payment projects place more public rules inside technical systems. The measurable route is law to standard to vendor to software to access decision.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/conclusions-engine-batch-001.json",
+          "matchScore": 7
         }
       ],
       "sourceRoutes": [
@@ -7366,7 +7374,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 61,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7550,8 +7558,8 @@
         }
       ],
       "timerUpdateRule": "Raise when official tariff, arrears, disconnection, fuel-poverty or business-cost indicators worsen. Lower when real energy burden, arrears and disconnections fall with reliable supply.",
-      "evidenceFingerprint": "812f61b0087c6c8ce19f3f9cdaea498290ba212156918299a900322d3e74523f",
-      "lastEvidenceChangeAt": "2026-08-02T11:36:47.670Z",
+      "evidenceFingerprint": "c71f57642e9a8e093a5bba221ef45d879ad24bd22cc6b8f5477de82205071f23",
+      "lastEvidenceChangeAt": "2026-08-06T06:11:21.393Z",
       "automaticUpdateStatus": "evidence-unchanged-score-held",
       "scoreLabel": "Pressure index — not event probability",
       "scoreType": "pressureIndex",
@@ -7559,7 +7567,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "5 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 15 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "5 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 14 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks household and small-business energy affordability through tariffs, wholesale prices, taxes, disconnections, fuel poverty, subsidies and grid costs.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -7669,16 +7677,6 @@
         },
         {
           "title": "Strait of Hormuz disruption hits energy, fertilizer and industrial trade",
-          "summary": "Disruption in the Strait of Hormuz has exposed the vulnerability of global trade to a single maritime chokepoint, with early data showing sharp falls in exports of energy, fertilizers and industrial products.",
-          "route": "https://news.un.org/feed/view/en/story/2026/08/1168074",
-          "published": "2026-08-04T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 3
-        },
-        {
-          "title": "Strait of Hormuz disruption hits energy, fertilizer and industrial trade",
           "summary": "",
           "route": "https://news.un.org/feed/view/en/story/2026/08/1168074",
           "published": "2026-08-04T12:00:00.000Z",
@@ -7736,6 +7734,16 @@
           "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
           "matchScore": 3
+        },
+        {
+          "title": "Rockefeller → Energy History: layer hint",
+          "summary": "Speculatively, the graph hint in “Rockefeller → Energy History: layer hint — rockefeller.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 3
         }
       ],
       "sourceRoutes": [
@@ -7768,7 +7776,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 62,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 5 fresh records, 5 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -7780,7 +7788,7 @@
         "requirement": "Raise when official tariff, arrears, disconnection, fuel-poverty or business-cost indicators worsen."
       },
       "automaticEvidenceCounts": {
-        "total": 6,
+        "total": 5,
         "fresh": 5,
         "primaryOrOfficial": 5,
         "implementation": 1,
@@ -8109,7 +8117,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 65,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -8493,7 +8501,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 64,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 11 fresh records, 5 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 1 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -8623,7 +8631,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "2 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "2 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 5 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks election administration, campaign finance, foreign interference findings, districting, voter access, recounts, auditability, political violence and acceptance of lawful outcomes.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -8651,6 +8659,16 @@
           "matchScore": 10
         },
         {
+          "title": "U.S. Attorney Announces District Election Officer to Ensure Voting Integrity in West Tennessee",
+          "summary": "A wider mission interpretation of “U.S. Attorney Announces District Election Officer to Ensure Voting Integrity in West Tennessee — us-attorney-announces-district-election-officer-ensure-voting-integrity-west-tennessee” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 8
+        },
+        {
           "title": "Digital Identity and Permissioned Access Clock",
           "summary": "Tracks whether digital identity, biometrics or identity wallets are becoming required for banking, travel, healthcare, employment, benefits, education, age verification, online access or public services.",
           "route": "control-system-tracker.html#digital-id",
@@ -8659,6 +8677,16 @@
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 7
+        },
+        {
+          "title": "U.S. Attorney Announces District Election Officer to Ensure Voting Integrity in West Tennessee",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-wdtn/pr/us-attorney-announces-district-election-officer-ensure-voting-integrity-west-tennessee",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 6
         },
         {
           "title": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
@@ -8708,16 +8736,6 @@
           "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/card-live-updates.json",
-          "matchScore": 5
-        },
-        {
-          "title": "New Ebola vaccine trial launches as outbreak spreads in DR Congo",
-          "summary": "Results may be months away, but efforts are advancing towards enhanced treatment and the world’s first vaccine for the Bundibugyo species of Ebola, the World Health Organization (WHO) said on Tuesday as deaths and cases rise in the largest ever outbreak on record in the Democratic Republic of the Congo (DRC).",
-          "route": "https://news.un.org/feed/view/en/story/2026/08/1168072",
-          "published": "2026-08-04T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
           "matchScore": 5
         },
         {
@@ -8789,16 +8807,6 @@
           "confidence": "",
           "sourceFile": "data/daily-command-brief.json",
           "matchScore": 5
-        },
-        {
-          "title": "Surveillance State Clock",
-          "summary": "",
-          "route": "timers.html#surveillance-state",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/daily-command-brief.json",
-          "matchScore": 5
         }
       ],
       "sourceRoutes": [
@@ -8807,13 +8815,13 @@
         "https://commission.europa.eu/publications/2026-rule-law-report-communication-and-country-chapters_en",
         "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/democracy-eu-citizenship-anti-corruption/democracy-and-electoral-rights_en",
         "control-system-tracker.html#digital-id",
+        "https://www.justice.gov/usao-wdtn/pr/us-attorney-announces-district-election-officer-ensure-voting-integrity-west-tennessee",
         "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260603_1~2801335beb.en.html",
         "surveillance-hub.html",
         "https://news.un.org/feed/view/en/story/2026/08/1168072",
         "https://single-market-economy.ec.europa.eu/news/commission-launches-platform-aggregate-demand-raw-materials-and-boost-diversification-2026-04-13_en",
         "timers.html#childrens-digital-identity-age-gating",
         "answer-engine.html",
-        "timers.html#surveillance-state",
         "search.html"
       ],
       "missingEvidence": [
@@ -8825,7 +8833,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 56,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -9160,7 +9168,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 63,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -9317,7 +9325,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "3 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "3 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 9 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks concentration of news ownership, distribution, advertising, search discovery, platform reach, private equity control and cross-ownership that can narrow independent information routes.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -9476,21 +9484,21 @@
           "matchScore": 6
         },
         {
-          "title": "Information and narrative control",
-          "summary": "This record places Information and narrative control inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.",
-          "route": "daily-command-brief.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/daily-command-brief.json",
-          "matchScore": 6
-        },
-        {
           "title": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries",
           "summary": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
           "route": "https://commission.europa.eu/publications/2026-rule-law-report-communication-and-country-chapters_en",
           "published": "2026-07-17T00:00:00.000Z",
           "evidenceLevel": "Official multi-country monitoring report",
+          "confidence": "",
+          "sourceFile": "data/current-clock-evidence.json",
+          "matchScore": 5
+        },
+        {
+          "title": "Australia's under-16 social-media account restriction is in force",
+          "summary": "From 10 December 2025, age-restricted social-media platforms must take reasonable steps to prevent Australians under 16 from creating or keeping accounts. The regulator reports continuing compliance monitoring.",
+          "route": "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions",
+          "published": "2026-06-18T00:00:00.000Z",
+          "evidenceLevel": "Official regulator · law in force · active compliance",
           "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 5
@@ -9506,7 +9514,7 @@
         "follow-the-money/media.html",
         "https://www.infrastructure.gov.au/department/media/news/updates-social-media-minimum-age-rules",
         "surveillance-hub.html",
-        "daily-command-brief.html",
+        "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions",
         "evidence-vault.html"
       ],
       "missingEvidence": [
@@ -9519,10 +9527,10 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 68,
       "automaticScoreMovement": 0,
-      "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
+      "automaticUpdateReason": "Evidence change: 2 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
       "automaticEvidenceGate": {
         "claimClass": "",
         "mode": "standard-evidence-gated",
@@ -9532,9 +9540,9 @@
       },
       "automaticEvidenceCounts": {
         "total": 3,
-        "fresh": 3,
-        "primaryOrOfficial": 3,
-        "implementation": 2,
+        "fresh": 2,
+        "primaryOrOfficial": 2,
+        "implementation": 1,
         "counterSignals": 0,
         "caseRecords": 0,
         "authenticatedMechanisms": 0
@@ -9978,7 +9986,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 93,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 11 fresh records, 9 primary/official, 7 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -10368,7 +10376,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 70,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 4 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -10731,7 +10739,7 @@
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
       "boundary": "This timer visualises evidence pressure and implementation convergence. It is not proof of motive, inevitability, guilt, a single central controller, one-world government, one-world currency or one-world religion.",
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 66,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: standard-evidence-gate. Repetition alone does not move the score.",
@@ -11076,7 +11084,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 42,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -11290,7 +11298,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "3 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "3 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 7 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “One-world currency through CBDC and tokenized finance”. The score measures evidential pressure around the claim, not truth, guilt or event probability.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -11409,16 +11417,6 @@
           "matchScore": 8
         },
         {
-          "title": "One-World Currency Theory",
-          "summary": "This gives readers a disciplined way to explore a powerful narrative while separating records, analysis, inference, speculation and missing documents.",
-          "route": "",
-          "published": "",
-          "evidenceLevel": "Evidence 5 — Court, regulator, sworn record, or official finding",
-          "confidence": "published_speculation",
-          "sourceFile": "data/speculative-conclusions.json",
-          "matchScore": 8
-        },
-        {
           "title": "Digital euro rulebook entered a new draft stage in July 2026 with a 2027 pilot and possible first issuance in 2029",
           "summary": "The ECB published draft rulebook version 0.91 in July 2026. It says the digital euro would be distributed through banks, work online and offline, and could be ready for potential issuance in 2029 if legislation is adopted in 2026.",
           "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
@@ -11467,6 +11465,16 @@
           "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 6
+        },
+        {
+          "title": "A formal one-world government conclusion is not supported by the current evidence threshold",
+          "summary": "Current records may show international coordination and functional convergence, but they do not establish one sovereign authority with central taxation, compulsory jurisdiction and removal of meaningful national veto.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 6
         }
       ],
       "sourceRoutes": [
@@ -11497,7 +11505,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 48,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 5 fresh records, 3 primary/official, 3 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -11947,7 +11955,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 4 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 3 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -12375,7 +12383,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 70,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 9 fresh records, 7 primary/official, 6 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -12808,7 +12816,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 36,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 6 fresh records, 4 primary/official, 4 implementation signals, 0 counter-signals, 0 case records and 4 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -13175,7 +13183,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
@@ -13185,7 +13193,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:25:02.118Z",
+          "published": "2026-08-06T06:26:10.327Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/conclusion-engine.json",
@@ -13278,7 +13286,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 25,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 3 primary/official, 4 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: multi-primary-implementation-gate-passed. Repetition alone does not move the score.",
@@ -13506,7 +13514,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "2 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 8 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "2 curated current drops, 1 linked policy lane, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “War and crisis as control-system accelerator”. The score measures evidential pressure around the claim, not truth, guilt or event probability.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -13615,26 +13623,6 @@
           "matchScore": 8
         },
         {
-          "title": "Afghanistan hunger crisis intensifies as millions left without food aid",
-          "summary": "Afghanistan’s dire hunger crisis now affects 14 million people including babies fed on little more than weak tea and bread by their despairing and dirt-poor parents.",
-          "route": "https://news.un.org/feed/view/en/story/2026/08/1168069",
-          "published": "2026-08-04T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 7
-        },
-        {
-          "title": "Africans bear the brunt of biodiversity loss",
-          "summary": "For millions across Africa and the developing world, the biodiversity crisis is not an abstract problem – it’s the soil that no longer yields bountiful harvests and the fish that no longer return to coastal waters.",
-          "route": "https://news.un.org/feed/view/en/story/2026/08/1168078",
-          "published": "2026-08-04T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 7
-        },
-        {
           "title": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather",
           "summary": "The EEA's June 2026 resilience update highlights severe drought, flooding, wildfires and record temperatures, with uneven adaptation and direct consequences for water, agriculture, infrastructure and public health.",
           "route": "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
@@ -13683,6 +13671,26 @@
           "confidence": "Active",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 7
+        },
+        {
+          "title": "AI Breakout Clock",
+          "summary": "The EU AI Act is now an active implementation lane: GPAI obligations are already active, transparency rules are due in August 2026, and high-risk AI obligations continue through 2027–2028. The Commission also lists July 2026 cybersecurity-and-AI work, keeping the AI/cyber governance lane high. Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August 2026 and high-risk timelines clarified Latest public drops: 2026-07-07 EU AI Act implementation enters 2026 enforcement phase with transparency rules due August",
+          "route": "answer-engine.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "High",
+          "sourceFile": "data/conclusion-engine.json",
+          "matchScore": 7
+        },
+        {
+          "title": "Tate brothers’ US extradition case a ‘step towards accountability,’ says independent expert",
+          "summary": "An independent UN human rights expert has welcomed ongoing proceedings in the United States to extradite “manosphere” bloggers Andrew and Tristan Tate to the United Kingdom, calling the case an important step towards accountability for serious allegations of violence against women and girls.",
+          "route": "https://news.un.org/feed/view/en/story/2026/08/1168085",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/card-live-updates.json",
+          "matchScore": 6
         }
       ],
       "sourceRoutes": [
@@ -13696,10 +13704,10 @@
         "surveillance-hub.html",
         "https://pace.coe.int/en/files/36013/html",
         "timers.html",
-        "https://news.un.org/feed/view/en/story/2026/08/1168069",
-        "https://news.un.org/feed/view/en/story/2026/08/1168078",
         "https://www.eea.europa.eu/en/newsroom/news/extreme-weather-and-uneven-climate-adaptation-challenge-europes-resilience",
         "https://agriculture.ec.europa.eu/media/news/strengthening-eu-farming-resilience-study-confirms-key-adaptation-pathways-2026-05-20_en",
+        "answer-engine.html",
+        "https://news.un.org/feed/view/en/story/2026/08/1168085",
         "evidence-vault.html",
         "search.html"
       ],
@@ -13712,7 +13720,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 50,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 3 implementation signals, 0 counter-signals, 0 case records and 2 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -14118,7 +14126,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 54,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -14528,7 +14536,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 46,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -14919,7 +14927,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -15297,7 +15305,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -15648,7 +15656,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 3,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -15851,7 +15859,7 @@
           "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
           "route": "",
-          "published": "2026-08-04T07:58:15.262Z",
+          "published": "2026-08-05T07:59:26.636Z",
           "evidenceLevel": "B",
           "confidence": "source-change",
           "sourceFile": "data/daily-investigation-conclusions.json",
@@ -15861,27 +15869,27 @@
           "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
           "route": "",
-          "published": "2026-08-04T07:58:15.262Z",
+          "published": "2026-08-05T07:59:26.636Z",
           "evidenceLevel": "B",
           "confidence": "source-change",
           "sourceFile": "data/daily-investigation-conclusions.json",
           "matchScore": 6
         },
         {
-          "title": "content changed: U.S. Treasury OFAC — Recent Actions",
+          "title": "content changed: Federal Register — Latest Documents",
           "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
           "route": "",
-          "published": "2026-08-03T15:52:11.495Z",
+          "published": "2026-08-05T07:59:26.636Z",
           "evidenceLevel": "B",
           "confidence": "source-change",
           "sourceFile": "data/daily-investigation-conclusions.json",
           "matchScore": 6
         },
         {
-          "title": "content changed: European Public Prosecutor's Office — News",
+          "title": "content changed: UK Serious Fraud Office — News And Communications",
           "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
           "route": "",
-          "published": "2026-08-03T08:45:48.703Z",
+          "published": "2026-08-05T07:59:26.636Z",
           "evidenceLevel": "B",
           "confidence": "source-change",
           "sourceFile": "data/daily-investigation-conclusions.json",
@@ -16002,7 +16010,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: authenticated-mechanism-gate-held. Repetition alone does not move the score.",
@@ -16155,7 +16163,7 @@
       "scoreMeaning": "Multiple signals or early implementation exist. Pull missing records and track movement.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 5 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “Blackmail islands and elite compromise networks”. The score measures evidential pressure around the claim, not truth, guilt or event probability.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -16303,6 +16311,16 @@
           "matchScore": 6
         },
         {
+          "title": "Treasury Cracks Down on Global Networks Enabling Iran’s Mahan Air and IRGC - U.S. Department of the Treasury (.gov)",
+          "summary": "",
+          "route": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5kQjZ1R0RfakhpM0ZfMWt3LXpNWUtKbVIySjdlWXhxY0ljV21rckx4Q1ZFMUpmUjhNTXRleEt5QWxuaUtya09VOUF6OEQwYmRrbmh0ZFVKRURvb0pWcW5vMzlB?oc=5",
+          "published": "2026-07-30T17:31:40.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 5
+        },
+        {
           "title": "Forced online scams: IOM warns trafficking networks are booming",
           "summary": "A job advert can hide a criminal network, and a single click can lead to a nightmare. Hundreds of thousands of people are trafficked every year on the promise of legitimate work abroad, only to be held captive and forced into online scam operations.",
           "route": "https://news.un.org/feed/view/en/story/2026/07/1168038",
@@ -16310,16 +16328,6 @@
           "evidenceLevel": "Primary or official public-record lead",
           "confidence": "rss-fetched",
           "sourceFile": "data/intel-vault.json",
-          "matchScore": 5
-        },
-        {
-          "title": "Forced online scams: IOM warns trafficking networks are booming",
-          "summary": "A job advert can hide a criminal network, and a single click can lead to a nightmare. Hundreds of thousands of people are trafficked every year on the promise of legitimate work abroad, only to be held captive and forced into online scam o…",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168038",
-          "published": "2026-07-28T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/live-intel.json",
           "matchScore": 5
         },
         {
@@ -16342,6 +16350,7 @@
         "power-atlas.html",
         "control-system-tracker.html#digital-id",
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5kQjZ1R0RfakhpM0ZfMWt3LXpNWUtKbVIySjdlWXhxY0ljV21rckx4Q1ZFMUpmUjhNTXRleEt5QWxuaUtya09VOUF6OEQwYmRrbmh0ZFVKRURvb0pWcW5vMzlB?oc=5",
         "https://news.un.org/feed/view/en/story/2026/07/1168038",
         "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
         "evidence-vault.html",
@@ -16355,7 +16364,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 60,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -16687,13 +16696,13 @@
           "matchScore": 4
         },
         {
-          "title": "Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking - ABC News - Breaking News, Latest News and Videos",
-          "summary": "Epstein's accountant says he didn't see any 'red flags' for abuse, trafficking ABC News - Breaking News, Latest News and Videos",
-          "route": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPU0sxVk0xV3dnbkJmZXMtWWJ6WFMxemhZdHpoOWdCSnMyNnhpMjk0S0JlVGtOT2otMVd1MkpPSzM3VG8zdHkteHhiNGI4MFh1YmZSRmRYTXNFWWJRUVZxN3IzSzV3aHZiZVVEdGdzc1RsRnNJbERLX3JSRzNMRGt6MS1IOHdGVTVOb1ZteHdjd2RrMDM5V0V1V1R6dWtJZkZVa0dZOTBpNmYtSG93d2fSAbMBQVVfeXFMTTJKQVhNallicGJScUl4eXVhcVVObUdPSmI3bkIzc1JaT0FCX1ZFWXZoZzJyZHJsMFpGQmhETnoxSmdvUFRpTW9pam9BVnJVUERoUThEczg3N0tVSjBCMmpLVlFtYy0xUk8wR0REdkRnNUZPTUVJcDR6ZUdnbjRpRVRzR25wYW04Ui1MbmRNTU1nVFpsQnQ1NDY3dHpDVzZHdkllXzJ",
-          "published": "2026-08-03T22:08:41.000Z",
+          "title": "Hunterdon County Felon Pleads Guilty to Possessing Videos and Images of Child Sexual Abuse",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-nj/pr/hunterdon-county-felon-pleads-guilty-possessing-videos-and-images-child-sexual-abuse",
+          "published": "2026-08-04T12:00:00.000Z",
           "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/card-live-updates.json",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
           "matchScore": 3
         }
       ],
@@ -16706,7 +16715,7 @@
         "control-system-tracker.html#digital-id",
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
         "downloads/public-answer-clock-pressure-test.pdf",
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPU0sxVk0xV3dnbkJmZXMtWWJ6WFMxemhZdHpoOWdCSnMyNnhpMjk0S0JlVGtOT2otMVd1MkpPSzM3VG8zdHkteHhiNGI4MFh1YmZSRmRYTXNFWWJRUVZxN3IzSzV3aHZiZVVEdGdzc1RsRnNJbERLX3JSRzNMRGt6MS1IOHdGVTVOb1ZteHdjd2RrMDM5V0V1V1R6dWtJZkZVa0dZOTBpNmYtSG93d2fSAbMBQVVfeXFMTTJKQVhNallicGJScUl4eXVhcVVObUdPSmI3bkIzc1JaT0FCX1ZFWXZoZzJyZHJsMFpGQmhETnoxSmdvUFRpTW9pam9BVnJVUERoUThEczg3N0tVSjBCMmpLVlFtYy0xUk8wR0REdkRnNUZPTUVJcDR6ZUdnbjRpRVRzR25wYW04Ui1MbmRNTU1nVFpsQnQ1NDY3dHpDVzZHdkllXzJ",
+        "https://www.justice.gov/usao-nj/pr/hunterdon-county-felon-pleads-guilty-possessing-videos-and-images-child-sexual-abuse",
         "evidence-vault.html",
         "search.html"
       ],
@@ -16718,7 +16727,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 15,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: case-record-gate-passed. Repetition alone does not move the score.",
@@ -17093,7 +17102,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 8,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 0 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -17443,7 +17452,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 7,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -17746,7 +17755,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
@@ -17756,7 +17765,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:25:02.118Z",
+          "published": "2026-08-06T06:26:10.327Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/conclusion-engine.json",
@@ -17795,7 +17804,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 0 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -17934,7 +17943,7 @@
       "scoreMeaning": "Little current implementation evidence. Keep on file; no urgent action.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 11 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "0 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 5 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “Demonic possession of elites”. The score measures evidential pressure around the claim, not truth, guilt or event probability.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -18002,6 +18011,36 @@
           "matchScore": 6
         },
         {
+          "title": "Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography",
+          "summary": "United States Attorney for the Southern District of New York, Jamie McDonald, Acting Special Agent in Charge of the New York Field Office of Homeland Security Investigations (“HSI”), Pete Gizas, and Commissioner of the New York City Police Department (“NYPD”), Jessica S. Tisch, announced today that VICTOR ALVELO has been charged with possessing approximately thousands of images and videos depicting child pornography, including images that depict pre-pubescent children engaging in sexually explicit conduct.",
+          "route": "https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/card-live-updates.json",
+          "matchScore": 5
+        },
+        {
+          "title": "Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-ndin/pr/columbia-city-man-sentenced-120-months-prison-and-120-months-supervised-release",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 5
+        },
+        {
+          "title": "Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 5
+        },
+        {
           "title": "UNCTAD reports record trade growth alongside shipping, energy and logistics price pressure",
           "summary": "UNCTAD's July/August 2026 update estimates strong first-half trade growth but says a significant share reflects higher prices, with Strait of Hormuz disruptions raising energy, transport, logistics and production costs.",
           "route": "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
@@ -18032,6 +18071,36 @@
           "matchScore": 5
         },
         {
+          "title": "Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography",
+          "summary": "A wider mission interpretation of “Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography — columbia-city-man-sentenced-120-months-prison-and-120-months-supervised-release” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 5
+        },
+        {
+          "title": "Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography",
+          "summary": "A wider mission interpretation of “Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — former-general-superintendent-new-york-city-department-sanitation-charged-possession” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
+          "matchScore": 5
+        },
+        {
+          "title": "Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography",
+          "summary": "",
+          "route": "live-intel.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/deep-intel-feed-matrix.json",
+          "matchScore": 5
+        },
+        {
           "title": "Euro-area banks tightened standards for housing loans and consumer credit in the second quarter of 2026",
           "summary": "The ECB's July 2026 bank lending survey found moderate tightening for firms and net tightening for housing loans and consumer credit, with banks expecting further tightening across categories.",
           "route": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260721~44ee50f75c.en.html",
@@ -18050,66 +18119,6 @@
           "confidence": "",
           "sourceFile": "data/current-clock-evidence.json",
           "matchScore": 4
-        },
-        {
-          "title": "Digital euro rulebook entered a new draft stage in July 2026 with a 2027 pilot and possible first issuance in 2029",
-          "summary": "The ECB published draft rulebook version 0.91 in July 2026. It says the digital euro would be distributed through banks, work online and offline, and could be ready for potential issuance in 2029 if legislation is adopted in 2026.",
-          "route": "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
-          "published": "2026-07-17T00:00:00.000Z",
-          "evidenceLevel": "Official central-bank project update · rulebook and pilot preparation",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 4
-        },
-        {
-          "title": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries",
-          "summary": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
-          "route": "https://commission.europa.eu/publications/2026-rule-law-report-communication-and-country-chapters_en",
-          "published": "2026-07-17T00:00:00.000Z",
-          "evidenceLevel": "Official multi-country monitoring report",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 4
-        },
-        {
-          "title": "2026 Rule of Law Report says media-market concentration and editorial independence concerns persist",
-          "summary": "The Commission reports ongoing EMFA implementation and continuing concerns over media-market concentration, public-service-media independence, journalist safety and state-advertising transparency.",
-          "route": "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
-          "published": "2026-07-17T00:00:00.000Z",
-          "evidenceLevel": "Official EU multi-country monitoring",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 4
-        },
-        {
-          "title": "UK age checks are deployed at unprecedented scale under the Online Safety Act",
-          "summary": "Ofcom's July 2026 statutory report states that many services are required to use highly effective age assurance and that age checks have been deployed at unprecedented scale.",
-          "route": "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
-          "published": "2026-07-15T00:00:00.000Z",
-          "evidenceLevel": "Official regulator · statutory report · active enforcement",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 4
-        },
-        {
-          "title": "EU house prices continued rising in the first quarter of 2026",
-          "summary": "Eurostat reported annual house-price increases of 4.7% in the euro area and 5.1% in the EU in the first quarter of 2026.",
-          "route": "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-02072026-bp",
-          "published": "2026-07-02T00:00:00.000Z",
-          "evidenceLevel": "Official statistics · quarterly house-price index",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 4
-        },
-        {
-          "title": "Every EU Member State must make at least one European Digital Identity Wallet available by the end of 2026",
-          "summary": "The European Commission says Member States will make wallets available to citizens, residents and businesses by the end of 2026. More than 550 companies and public authorities across 26 Member States and associated countries have participated in large-scale pilots.",
-          "route": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
-          "published": "2026-06-26T00:00:00.000Z",
-          "evidenceLevel": "Official EU implementation page · statutory rollout",
-          "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
-          "matchScore": 4
         }
       ],
       "sourceRoutes": [
@@ -18118,16 +18127,13 @@
         "control-system-tracker.html#digital-id",
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
         "timers.html",
+        "https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession",
+        "https://www.justice.gov/usao-ndin/pr/columbia-city-man-sentenced-120-months-prison-and-120-months-supervised-release",
         "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
         "https://pace.coe.int/en/files/36013/html",
+        "live-intel.html",
         "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260721~44ee50f75c.en.html",
         "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-17072026-ap",
-        "https://www.ecb.europa.eu/euro/digital_euro/html/index.en.html",
-        "https://commission.europa.eu/publications/2026-rule-law-report-communication-and-country-chapters_en",
-        "https://digital-strategy.ec.europa.eu/en/news/2026-rule-law-report-strengthens-europes-prosperity-security-and-democratic-resilience",
-        "https://www.ofcom.org.uk/online-safety/protecting-children/use-of-age-assurance-report-2026",
-        "https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-02072026-bp",
-        "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
         "evidence-vault.html",
         "search.html"
       ],
@@ -18139,7 +18145,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 3,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -18449,7 +18455,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 2,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -18759,7 +18765,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 2,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -18883,7 +18889,7 @@
       "scoreMeaning": "Little current implementation evidence. Keep on file; no urgent action.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 2 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “Reptilian elite bloodlines”. The score measures evidential pressure around the claim, not truth, guilt or event probability.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -19031,33 +19037,33 @@
           "matchScore": 4
         },
         {
-          "title": "UNCTAD reports record trade growth alongside shipping, energy and logistics price pressure",
-          "summary": "UNCTAD's July/August 2026 update estimates strong first-half trade growth but says a significant share reflects higher prices, with Strait of Hormuz disruptions raising energy, transport, logistics and production costs.",
-          "route": "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
-          "published": "2026-07-21T00:00:00.000Z",
-          "evidenceLevel": "Official UN trade assessment",
+          "title": "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in",
+          "summary": "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe The420.in",
+          "route": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5",
+          "published": "2026-08-05T13:54:20.000Z",
+          "evidenceLevel": "",
           "confidence": "",
-          "sourceFile": "data/current-clock-evidence.json",
+          "sourceFile": "data/card-live-updates.json",
           "matchScore": 3
         },
         {
-          "title": "Elite child sacrifice networks",
-          "summary": "elite child sacrifice · ritual abuse elite · satanic panic · trafficking blackmail",
-          "route": "",
-          "published": "2026-06-29",
-          "evidenceLevel": "unproven",
+          "title": "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in",
+          "summary": "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe The420.in",
+          "route": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5",
+          "published": "2026-08-05T13:54:20.000Z",
+          "evidenceLevel": "Seven-day public-record lead",
           "confidence": "",
-          "sourceFile": "data/exposure-evidence-ledger.json",
+          "sourceFile": "data/conclusion-engine.json",
           "matchScore": 3
         },
         {
-          "title": "Elites eating children",
-          "summary": "elites eat children · cannibal elite conspiracy · ritual cannibalism",
-          "route": "",
-          "published": "2026-06-29",
-          "evidenceLevel": "unproven",
-          "confidence": "",
-          "sourceFile": "data/exposure-evidence-ledger.json",
+          "title": "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in",
+          "summary": "",
+          "route": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5",
+          "published": "2026-08-05T13:54:20.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
           "matchScore": 3
         }
       ],
@@ -19069,7 +19075,7 @@
         "control-system-tracker.html#digital-id",
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
         "downloads/public-answer-clock-pressure-test.pdf",
-        "https://unctad.org/publication/global-trade-update-julyaugust-2026-global-trade-continues-expand-amid-rising-price",
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5",
         "evidence-vault.html",
         "search.html"
       ],
@@ -19081,7 +19087,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 2,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -19446,7 +19452,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 3 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 0 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -19635,7 +19641,7 @@
       "scoreMeaning": "Little current implementation evidence. Keep on file; no urgent action.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "2 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 6 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "2 curated current drops, 0 linked policy lanes, 16 matching evidence/feed items, including 5 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “Dulce Base experiments”. The score measures evidential pressure around the claim, not truth, guilt or event probability.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -19803,13 +19809,13 @@
           "matchScore": 4
         },
         {
-          "title": "After an Ebola centre was attacked, peacekeepers moved in next door",
-          "summary": "A new mobile UN peacekeeping base in the Democratic Republic of the Congo (DRC) has allowed local authorities to continue responding to the fast-moving Ebola outbreak there after violence disrupted the work of medics at a treatment centre set up to contain the spread.",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168018",
-          "published": "2026-07-24T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
+          "title": "Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-vt/pr/brooklyn-man-charged-distribution-cocaine-base-and-cocaine",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
           "confidence": "rss-fetched",
-          "sourceFile": "data/intel-vault.json",
+          "sourceFile": "data/live-intel.json",
           "matchScore": 3
         }
       ],
@@ -19824,7 +19830,7 @@
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
         "https://www.infrastructure.gov.au/department/media/news/updates-social-media-minimum-age-rules",
         "downloads/public-answer-clock-pressure-test.pdf",
-        "https://news.un.org/feed/view/en/story/2026/07/1168018",
+        "https://www.justice.gov/usao-vt/pr/brooklyn-man-charged-distribution-cocaine-base-and-cocaine",
         "evidence-vault.html",
         "search.html"
       ],
@@ -19836,7 +19842,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -20227,7 +20233,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 34,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-held. Repetition alone does not move the score.",
@@ -20603,7 +20609,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -20913,20 +20919,20 @@
           "matchScore": 4
         },
         {
-          "title": "Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms",
-          "summary": "Gaza remains unsafe for civilians as Israeli attacks continue, including on schools and canvas classrooms, despite the October Israel-Hamas ceasefire that ended two years of war, the Office for the Coordination of Humanitarian Affairs (OCHA) warned on Tuesday.",
-          "route": "https://news.un.org/feed/view/en/story/2026/08/1168077",
-          "published": "2026-08-04T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "",
-          "sourceFile": "data/conclusion-engine.json",
-          "matchScore": 3
-        },
-        {
           "title": "Security Council LIVE: Updates on Gaza, West Bank amid regional tensions",
           "summary": "Regional tensions are mounting as the US-Iran war continues and a rising number of Israeli attacks are threatening Gaza’s fragile October ceasefire that ended two years of war with Hamas. Security Council members heard briefings followed by an open debate on Tuesday. UN News app users click here for live coverage.",
           "route": "https://news.un.org/feed/view/en/story/2026/07/1168037",
           "published": "2026-07-28T12:00:00.000Z",
+          "evidenceLevel": "Primary or official public-record lead",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/intel-vault.json",
+          "matchScore": 3
+        },
+        {
+          "title": "‘I am somebody’: Street-smart youth take their declaration to the UN",
+          "summary": "When Samantha Richards and Angela Hifume walked into the Hall of Flags at United Nations Headquarters last week, they carried more than a folder of paper. They carried the voices of hundreds of street-connected children who had never expected anyone to listen.",
+          "route": "https://news.un.org/feed/view/en/story/2026/07/1168015",
+          "published": "2026-07-25T12:00:00.000Z",
           "evidenceLevel": "Primary or official public-record lead",
           "confidence": "rss-fetched",
           "sourceFile": "data/intel-vault.json",
@@ -20941,8 +20947,8 @@
         "control-system-tracker.html#digital-id",
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
         "downloads/public-answer-clock-pressure-test.pdf",
-        "https://news.un.org/feed/view/en/story/2026/08/1168077",
         "https://news.un.org/feed/view/en/story/2026/07/1168037",
+        "https://news.un.org/feed/view/en/story/2026/07/1168015",
         "evidence-vault.html",
         "search.html"
       ],
@@ -20954,7 +20960,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 28,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -21304,7 +21310,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -21641,7 +21647,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 8,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -21951,7 +21957,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 9,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 1 fresh records, 0 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -22290,7 +22296,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 68,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 2 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -22591,7 +22597,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:27:21.715Z",
+          "published": "2026-08-06T06:27:50.949Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/probability-snapshot.json",
@@ -22601,7 +22607,7 @@
           "title": "Digital identity and payment rails become more linked to access control",
           "summary": "[object Object],[object Object]",
           "route": "",
-          "published": "2026-08-05T06:25:02.118Z",
+          "published": "2026-08-06T06:26:10.327Z",
           "evidenceLevel": "",
           "confidence": "low-medium",
           "sourceFile": "data/conclusion-engine.json",
@@ -22678,7 +22684,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 6,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -22938,7 +22944,7 @@
           "title": "Alien Registration Form and Evidence of Registration",
           "summary": "",
           "route": "https://www.federalregister.gov/documents/2026/06/29/2026-13057/alien-registration-form-and-evidence-of-registration",
-          "published": "2026-08-05T06:08:13.359Z",
+          "published": "2026-08-06T06:11:49.808Z",
           "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/entity-timelines.json",
@@ -23068,7 +23074,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 2 case records and 2 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -23446,7 +23452,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -23822,7 +23828,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 52,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 4 fresh records, 3 primary/official, 4 implementation signals, 0 counter-signals, 3 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -24239,7 +24245,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 78,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-record-gate-passed. Repetition alone does not move the score.",
@@ -24476,6 +24482,16 @@
           "matchScore": 6
         },
         {
+          "title": "Members of Violent D.C. Street Crew Convicted of Drug Trafficking, Murder Charges",
+          "summary": "Four members of the violent “Push Dat Sh*t” (PDS) street crew were found guilty yesterday by a federal jury in connection with their roles in a drug trafficking conspiracy that distributed marijuana and oxycodone in Southeast Washington, D.C. and used machine guns to protect their drug-dealing territory and kill an innocent bystander, announced U.S. Attorney Jeanine Ferris Pirro.",
+          "route": "https://www.justice.gov/usao-dc/pr/members-violent-dc-street-crew-convicted-drug-trafficking-murder-charges",
+          "published": "2026-08-04T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/card-live-updates.json",
+          "matchScore": 5
+        },
+        {
           "title": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries",
           "summary": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
           "route": "https://commission.europa.eu/publications/2026-rule-law-report-communication-and-country-chapters_en",
@@ -24534,16 +24550,6 @@
           "confidence": "",
           "sourceFile": "data/money-intelligence-registry.json",
           "matchScore": 5
-        },
-        {
-          "title": "Middle East crisis: Humanitarian fallout ‘worsening by the day’",
-          "summary": "",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168055",
-          "published": "2026-07-30T12:00:00.000Z",
-          "evidenceLevel": "",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 4
         },
         {
           "title": "France enacted a digital-majority framework requiring parental consent below 15 and technical verification",
@@ -24612,13 +24618,13 @@
         "https://www.coe.int/en/web/anti-human-trafficking/-/greta-publishes-its-fourth-report-on-france",
         "https://www.interpol.int/News-and-Events/News/2026/Over-1-000-arrested-in-global-crackdown-on-human-trafficking-networks",
         "timers.html",
+        "https://www.justice.gov/usao-dc/pr/members-violent-dc-street-crew-convicted-drug-trafficking-murder-charges",
         "https://commission.europa.eu/publications/2026-rule-law-report-communication-and-country-chapters_en",
         "https://www.ema.europa.eu/en/human-regulatory-overview/post-authorisation/medicine-shortages-availability-issues/medicine-shortage-communications-msc",
         "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/democracy-eu-citizenship-anti-corruption/democracy-and-electoral-rights_en",
         "https://commission.europa.eu/news-and-media/news/stronger-eu-wide-rules-fight-corruption-take-effect-2026-06-01_en",
         "control-system-tracker.html#digital-id",
         "follow-the-money/political-money.html",
-        "https://news.un.org/feed/view/en/story/2026/07/1168055",
         "https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000047799537",
         "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
@@ -24636,7 +24642,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 58,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 1 case records and 0 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -24813,7 +24819,7 @@
       "scoreMeaning": "Documented implementation or integration is substantial. The reader should inspect the mechanism and safeguards.",
       "scoreDefinition": "A 0–100 visual index of how strongly documented signals, implementation activity and system integration are pressing in the direction named by a timer. It is not the probability that a dramatic event will happen.",
       "scoreMethod": "Start from the last reviewed editorial baseline. Update only when dated source-linked evidence meets the timer's published trigger rule. Record the reason, source, actor, jurisdiction, implementation stage, counter-signal and movement.",
-      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 4 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
+      "calculationBasis": "1 curated current drop, 0 linked policy lanes, 16 matching evidence/feed items, including 3 primary-or-official evidence indicators. The editorial score is not automatically increased by volume alone.",
       "plainEnglishConclusion": "Tracks source-linked evidence, counter-sources and falsifiers around the classified claim “Organ trafficking networks”. The score measures evidential pressure around the claim, not truth, guilt or event probability.",
       "missionThemes": [],
       "controlSystemMeaning": "This clock tracks a system-pressure lane. It does not identify a single controller or prove a final coordinated plan.",
@@ -24871,16 +24877,6 @@
           "matchScore": 6
         },
         {
-          "title": "Forced online scams: IOM warns trafficking networks are booming",
-          "summary": "A job advert can hide a criminal network, and a single click can lead to a nightmare. Hundreds of thousands of people are trafficked every year on the promise of legitimate work abroad, only to be held captive and forced into online scam o…",
-          "route": "https://news.un.org/feed/view/en/story/2026/07/1168038",
-          "published": "2026-07-28T12:00:00.000Z",
-          "evidenceLevel": "Primary or official public-record lead",
-          "confidence": "rss-fetched",
-          "sourceFile": "data/live-intel.json",
-          "matchScore": 6
-        },
-        {
           "title": "Elite child sacrifice networks",
           "summary": "elite child sacrifice · ritual abuse elite · satanic panic · trafficking blackmail",
           "route": "",
@@ -24911,6 +24907,16 @@
           "matchScore": 6
         },
         {
+          "title": "Homeland Security Task Force Arrests Members of Dade City Fentanyl Trafficking Organization on Federal Drug Charges",
+          "summary": "",
+          "route": "https://www.justice.gov/usao-mdfl/pr/homeland-security-task-force-arrests-members-dade-city-fentanyl-trafficking",
+          "published": "2026-08-05T12:00:00.000Z",
+          "evidenceLevel": "",
+          "confidence": "rss-fetched",
+          "sourceFile": "data/live-intel.json",
+          "matchScore": 5
+        },
+        {
           "title": "Organised Crime Index 2025: South Africa a continental hotspot for criminal networks - Mail & Guardian",
           "summary": "Organised Crime Index 2025: South Africa a continental hotspot for criminal networks Mail & Guardian",
           "route": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOLVlTazM3V2FEZ01nZ0dnV19Zay0yY2Z0RlNSRzJuTFVHZFU5WGQzUHZnRFRHTVhsdGhhT19qZ25CQ2duWEhWWjBvR2dtU1psQThMbHpwdTlrYUlRZV8xSTdDS093ZklqV0pnVk5ramxIWDVQd3pBRW12eVpwaGdIZm1tQ3ZsYTJKUnNsQ1dUcndQZzFvcG5qejhiZ2M1bkgxM2ljTHNNMzF3VkJzVDI5X0pGRTBKUEJpYTEzOW85WU5nOWVHOE9RTlRR?oc=5",
@@ -24918,6 +24924,16 @@
           "evidenceLevel": "Seven-day public-record lead",
           "confidence": "archived-intel-vault",
           "sourceFile": "data/intel-vault.json",
+          "matchScore": 5
+        },
+        {
+          "title": "Homeland Security Task Force Arrests Members of Dade City Fentanyl Trafficking Organization on Federal Drug Charges",
+          "summary": "A wider mission interpretation of “Homeland Security Task Force Arrests Members of Dade City Fentanyl Trafficking Organization on Federal Drug Charges — homeland-security-task-force-arrests-members-dade-city-fentanyl-trafficking” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "[object Object]",
+          "sourceFile": "data/ai-speculative-conclusions.json",
           "matchScore": 5
         },
         {
@@ -24979,16 +24995,6 @@
           "confidence": "",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 4
-        },
-        {
-          "title": "Highest clock pressure",
-          "summary": "",
-          "route": "timers.html",
-          "published": "",
-          "evidenceLevel": "",
-          "confidence": "",
-          "sourceFile": "data/daily-brief-master.json",
-          "matchScore": 4
         }
       ],
       "sourceRoutes": [
@@ -24998,6 +25004,7 @@
         "crime-hub.html",
         "https://news.un.org/feed/view/en/story/2026/07/1168038",
         "timers.html",
+        "https://www.justice.gov/usao-mdfl/pr/homeland-security-task-force-arrests-members-dade-city-fentanyl-trafficking",
         "https://news.google.com/rss/articles/CBMiygFBVV95cUxOLVlTazM3V2FEZ01nZ0dnV19Zay0yY2Z0RlNSRzJuTFVHZFU5WGQzUHZnRFRHTVhsdGhhT19qZ25CQ2duWEhWWjBvR2dtU1psQThMbHpwdTlrYUlRZV8xSTdDS093ZklqV0pnVk5ramxIWDVQd3pBRW12eVpwaGdIZm1tQ3ZsYTJKUnNsQ1dUcndQZzFvcG5qejhiZ2M1bkgxM2ljTHNNMzF3VkJzVDI5X0pGRTBKUEJpYTEzOW85WU5nOWVHOE9RTlRR?oc=5",
         "control-system-tracker.html#digital-id",
         "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
@@ -25012,7 +25019,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 72,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 0 case records and 1 authenticated-mechanism indicators. Gate: primary-record-gate-passed. Repetition alone does not move the score.",
@@ -25377,7 +25384,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 76,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: primary-record-gate-passed. Repetition alone does not move the score.",
@@ -25737,7 +25744,7 @@
           "title": "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
           "summary": "",
           "route": "https://www.federalregister.gov/documents/2026/08/04/2026-15833/medicare-program-hospital-inpatient-prospective-payment-systems-for-acute-care-hospitals-ipps-and",
-          "published": "2026-08-05T06:08:13.359Z",
+          "published": "2026-08-06T06:11:49.808Z",
           "evidenceLevel": "",
           "confidence": "",
           "sourceFile": "data/entity-timelines.json",
@@ -25765,7 +25772,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 38,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: case-record-gate-held. Repetition alone does not move the score.",
@@ -26143,7 +26150,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 24,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -26496,7 +26503,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 42,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -26860,7 +26867,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 18,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: case-record-gate-held. Repetition alone does not move the score.",
@@ -27251,7 +27258,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 10,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: authenticated-mechanism-gate-held. Repetition alone does not move the score.",
@@ -27645,7 +27652,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 40,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 3 fresh records, 2 primary/official, 2 implementation signals, 0 counter-signals, 0 case records and 2 authenticated-mechanism indicators. Gate: primary-mechanism-gate-passed. Repetition alone does not move the score.",
@@ -27880,16 +27887,6 @@
           "matchScore": 7
         },
         {
-          "title": "content changed: U.S. Treasury OFAC — Recent Actions",
-          "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-          "route": "",
-          "published": "2026-08-03T15:52:11.495Z",
-          "evidenceLevel": "B",
-          "confidence": "source-change",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 6
-        },
-        {
           "title": "ILO finds real but uneven GenAI productivity effects and limited evidence of large-scale displacement so far",
           "summary": "The ILO's June 2026 review finds real but uneven productivity gains, limited large-scale job displacement to date, and rising risks around inequality, younger-worker opportunities, autonomy and job quality.",
           "route": "https://www.ilo.org/publications/impact-genai-jobs-productivity-and-work-organization-review-empirical",
@@ -27998,6 +27995,16 @@
           "confidence": "",
           "sourceFile": "data/readable-user-briefs.json",
           "matchScore": 6
+        },
+        {
+          "title": "Live intel drops",
+          "summary": "Recent public-source items already pulled into the site",
+          "route": "live-intel.html",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/readable-user-briefs.json",
+          "matchScore": 6
         }
       ],
       "sourceRoutes": [
@@ -28020,7 +28027,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 4,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 1 implementation signals, 0 counter-signals, 1 case records and 1 authenticated-mechanism indicators. Gate: automatic-increase-disabled-for-claim-class. Repetition alone does not move the score.",
@@ -28376,7 +28383,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 5,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -28726,7 +28733,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 44,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 0 implementation signals, 0 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",
@@ -28926,16 +28933,6 @@
           "matchScore": 9
         },
         {
-          "title": "content changed: European Public Prosecutor's Office — News",
-          "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-          "route": "",
-          "published": "2026-08-03T08:45:48.703Z",
-          "evidenceLevel": "B",
-          "confidence": "source-change",
-          "sourceFile": "data/daily-investigation-conclusions.json",
-          "matchScore": 7
-        },
-        {
           "title": "Current strongest public signal",
           "summary": "Children’s Digital Identity and Age-Gating Clock is currently the strongest pressure signal at 93/100.",
           "route": "",
@@ -29054,6 +29051,16 @@
           "confidence": "High",
           "sourceFile": "data/conclusion-engine.json",
           "matchScore": 6
+        },
+        {
+          "title": "Influence is strongest where money and implementation meet.",
+          "summary": "Filings, public awards, political-finance records and proxy votes can establish a decision chain from capital or access to public implementation.",
+          "route": "",
+          "published": "",
+          "evidenceLevel": "",
+          "confidence": "",
+          "sourceFile": "data/conclusions-engine-batch-001.json",
+          "matchScore": 6
         }
       ],
       "sourceRoutes": [
@@ -29080,7 +29087,7 @@
         "Compare supporting records with counter-evidence and legal or implementation status.",
         "Track whether the system remains optional or becomes mandatory, integrated, financially enforced or difficult to exit."
       ],
-      "generatedAt": "2026-08-05T06:30:50.458Z",
+      "generatedAt": "2026-08-06T06:30:33.459Z",
       "previousAutomaticScore": 12,
       "automaticScoreMovement": 0,
       "automaticUpdateReason": "Evidence change: 2 fresh records, 1 primary/official, 0 implementation signals, 1 counter-signals, 0 case records and 0 authenticated-mechanism indicators. Gate: no-threshold-movement. Repetition alone does not move the score.",

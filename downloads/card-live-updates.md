@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-06T03:35:59.128Z
-Live Intel source window: 2026-08-06T03:35:52.471Z
-Tracked cards: 969
+Generated: 2026-08-06T06:27:10.222Z
+Live Intel source window: 2026-08-06T06:26:56.413Z
+Tracked cards: 968
 Cards with current matched records: 98
-Cards with no new verified record: 871
+Cards with no new verified record: 870
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -2679,10 +2679,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-08-05T17:41:34.000Z
+- Latest record: 2026-08-06T05:07:20.000Z
+- 2026-08-06T05:07:20.000Z — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post — https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
 - 2026-08-05T17:41:34.000Z — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wVmJLXzRGNlRtcnZrVE80SWdSZ2l0U3kyOTFBU3VjRjNvUUdIR1JFN25VSDc5ZENZc241bDFsZHphYzd1NUNlcjFfQldpb2xBQUZwdnBCdmNnUDVwY0pUbm53?oc=5
 - 2026-08-05T14:00:00.000Z — Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5
-- 2026-08-05T13:54:20.000Z — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in — https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -3129,8 +3129,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## JEFFREY EPSTEIN
 - Route: dossier-jeffrey-epstein-criminal.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-03T09:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-08-06T05:07:20.000Z
+- 2026-08-06T05:07:20.000Z — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post — https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
 - 2026-08-03T09:00:00.000Z — How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com — https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
 
 ## Jens Stoltenberg
@@ -5700,12 +5701,6 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
-
-## Welcome To Matrix Reprogrammed
-- Route: index.html
 - Status: no-new-verified-record-in-current-window
 - Current matched records: 0
 - Latest record: none in current window

@@ -1,11 +1,56 @@
 # Intel Vault
 
-Updated: 2026-08-05T06:30:49.469Z
+Updated: 2026-08-06T06:30:32.603Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### U.S. Senate unanimously opposes clemency for Ghislaine Maxwell - AnewZ
+- Published: 2026-07-30T00:48:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUEwxcktXNG1ScTVmam1ib0czY1pDeGhNenQwanJ1RllCTDRPX0E5cWpzMWJQT0xkUWtiSzBzUEx1cVVNNEFvX29xTWd2VWE4LXFnQTV6QWxKd1BORHZIbWx6N1hDS1BlU19kbEZ0NU9ueWxDVDR6OVVyMHhhMDRGN1lTc0JDSDQwZElWWDdSYVc1eXdpdDhKSGxJM24tUnpCaXY1dkFTMlQ?oc=5
+- Source class: primary-or-official
+
+### Epstein accuser’s family blasts former Obama White House lawyer who said her assertions ‘lacked inherent credibility’ - kq2.com
+- Published: 2026-07-30T00:26:21.000Z
+- Source: https://news.google.com/rss/articles/CBMi9wFBVV95cUxNLXktWFhrcXV1ZDQyZjhhbXJpVThfY3RIUzh2TWdXajJKQm1pVjREWWo4WHgySXg0dEtaSllTZnhHbEhhMk5ydGpLTnU0X3NsZTBHUFZ4Nm1vTkhJazJFbF9NLS0zNGROdlJXMlBBdjhuTkl1OVpzMEZSODAwRURQYkhpRklzdy14OGdKSm01aVRZNEVTM0tXc0NXTkpOTFNZeE45QTdBdTFRWUlnb2dVMXlnVmVrR3pINlRYbG96OEVEZFRzUHZNMUx2emdHTktUYTQybWxadU9ydGwxb3FMRzVhTk9WS1JXUFlscXN3eVNvQTlFYV84?oc=5
+- Source class: primary-or-official
+
+### Senate unanimously passes resolution opposing pardon for Ghislaine Maxwell - theguardian.com
+- Published: 2026-07-29T21:23:00.000Z
+- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxPZXpWS0Y4Tm1naUpkdWpGTjQxaVFEbFBJQzY4MjZXV2toaE5NZVlJYVAyU0t5ckc5VWozMm93S04xT1Ytb25YVmJ4c2RDMC1JYUlhbFdfakVoa2hEVlBhbWdqaGl5REtMMWRCSEY0WGpEaU9naE5IZ0tOdjRsR3BRaDNfaGdWY2dKeXluWThWMmtzSlpa?oc=5
+- Source class: primary-or-official
+
+### World Wrestling Entertainment Part 01 - vault.fbi.gov
+- Published: 2026-07-29T20:52:42.000Z
+- Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxPbGNHT0xJQlBsbDRHQXQ2clZuTk5IUjhEY1d4MElvRThYMXNYU01FamFjck1ySkt2Qnh0Y0hvZW9ZOFB5amNmQm5kZTFwQ3JxRnJzMHc0WUJpcHNUVHhkaDVJUHo5WWVQeTVsMV9TM0F6eTZWSDNEVWZ0bjFhZjBjZjVITElWRmY2TGR3aGVmZ3k5cUYzQld3c0ZB?oc=5
+- Source class: discovery
+
+### Treasury Disrupts Iranian Regime’s Strait of Hormuz Extortion Network - U.S. Department of the Treasury (.gov)
+- Published: 2026-07-29T14:31:22.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9PRFU2RDNFOGZpRmhMXzExRU03QUFoY3pXOHRDY2twVXVrekJNWDFLdmg2OVNERVpNajZqeFJDTGNtM3Z5eUtJWm5xcXRuRGVhLXBueHF1b1l0WW1EV05YenFn?oc=5
+- Source class: discovery
+
+### Cyprus: Guterres calls for renewed trust and a new meeting on the way forward
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168048
+- Source class: primary-or-official
+
+### Hunger hampers Ebola response as cases top 3,200 in DR Congo
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168047
+- Source class: primary-or-official
+
+### UN warns West Bank settler violence hits ‘all-time high’ as calls grow to end occupation
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168045
+- Source class: primary-or-official
+
+### World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
+- Published: 2026-07-29T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/07/1168049
+- Source class: primary-or-official
 
 ### A hijab inspection, a slap, a warning letter: Inside three months of Taliban rule
 - Published: 2026-07-28T12:00:00.000Z

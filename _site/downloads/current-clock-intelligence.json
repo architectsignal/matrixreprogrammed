@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-05T06:26:00.630Z",
+  "generatedAt": "2026-08-06T06:26:55.657Z",
   "policy": "Every Mission Timer is evaluated against a dated current-evidence window. Current status, official-source count, implementation stage, jurisdiction coverage and evidence gaps are published separately from speculation.",
   "recalibrations": [
     {
@@ -17,8 +17,8 @@
       "score": 76,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 7,
-      "officialCount": 3,
+      "currentEvidenceCount": 5,
+      "officialCount": 2,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
@@ -90,7 +90,7 @@
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 11,
-      "officialCount": 1,
+      "officialCount": 2,
       "implementationCount": 1,
       "lawCount": 0,
       "jurisdictions": []
@@ -113,7 +113,7 @@
       "score": 60,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 6,
+      "currentEvidenceCount": 7,
       "officialCount": 3,
       "implementationCount": 1,
       "lawCount": 0,
@@ -125,8 +125,8 @@
       "score": 58,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 6,
-      "officialCount": 3,
+      "currentEvidenceCount": 8,
+      "officialCount": 4,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
@@ -137,7 +137,7 @@
       "score": 65,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 7,
+      "currentEvidenceCount": 6,
       "officialCount": 5,
       "implementationCount": 0,
       "lawCount": 0,
@@ -175,7 +175,7 @@
     {
       "slug": "digital-identity-permissioned-access",
       "title": "Digital Identity and Permissioned Access Clock",
-      "score": 86,
+      "score": 84,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
       "currentEvidenceCount": 14,
@@ -257,7 +257,7 @@
     {
       "slug": "government-transparency-missing-records",
       "title": "Government Transparency and Missing Records Clock",
-      "score": 64,
+      "score": 63,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
       "currentEvidenceCount": 4,
@@ -879,8 +879,8 @@
       "score": 68,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 3,
-      "officialCount": 2,
+      "currentEvidenceCount": 2,
+      "officialCount": 1,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []

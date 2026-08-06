@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-06T03:35:52.471Z
-Latest source publication: 2026-08-05T17:41:34.000Z
-Collection status: fresh-items-added
-New items this collection: 28
+Collection completed: 2026-08-06T06:30:32.603Z
+Latest source publication: 2026-08-06T05:07:20.000Z
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-28 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -26,6 +26,12 @@ New items this collection: 28
 - Crime State Overlap: crime-hub.html
 
 ## Current Items
+- 2026-08-06 — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
+  - Source: https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
+  - Source class: discovery
+  - Evidence: Seven-day public-record lead
+  - Video hook: New public-record signal: New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov)
   - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wVmJLXzRGNlRtcnZrVE80SWdSZ2l0U3kyOTFBU3VjRjNvUUdIR1JFN25VSDc5ZENZc241bDFsZHphYzd1NUNlcjFfQldpb2xBQUZwdnBCdmNnUDVwY0pUbm53?oc=5
   - Source class: discovery
@@ -386,6 +392,12 @@ New items this collection: 28
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Burnham considering inquiry into Epstein, minister says - RTE.ie
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Senate report: Three big banks ignored red flags on Epstein - American Banker
+  - Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxPd1F0UE90MjdBYnlEc2htMFEybm41LWk5cHFUZ0hBNlBrQjFsM09UOE84aGV5d2hCVS05NHREaFc2WkhPaTRVcnBJRHdUNGh2OExkdkZWWGluSDVTd29CYk9CVWpSTjIxMlFTZmkwXy1WYmFVWjBfdUE3WU02cTlNSTFWUEZRT2NaQ2lSQ0FUTzZtYk8yalVnTUhB?oc=5
+  - Source class: primary-or-official
+  - Evidence: Primary or official public-record lead
+  - Video hook: New public-record signal: Senate report: Three big banks ignored red flags on Epstein - American Banker
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-04 — Thomas Ciancutti Part 03 - vault.fbi.gov
   - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE9RUXhVMEVXWmVYSkVxdzYyTnUtVENvSHZUdlJTOFhxMHp3cl84SHkwb21Ua21oQUlQVVFRSUE1SWRRT2h3VjBNbTdUbDhmVlAtUmUyX082S091dTRBY0tXX1JMeUpOaEU2UjJlTW43MlJFVU9obnVJ?oc=5
   - Source class: discovery
@@ -602,11 +614,11 @@ New items this collection: 28
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: BOMBROB & Operation Punchout Part 33 - vault.fbi.gov
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-03 — Donald West Part 01 - FBI (.gov)
+- 2026-08-03 — Donald West Part 01 - vault.fbi.gov
   - Source: https://news.google.com/rss/articles/CBMiakFVX3lxTE5OQ1l2UEYwbWhGaHNGUEZ4RnIzWFBFN3ZxWG1ESjVPT3dGZVBlRFY0cVgtXzRDRHBvcEpYWEZZYXp5aFd1UGs5WGRDM1J5UkxhRmN2UzR3aFh4MjNBb2F1Nk1SNmFZckZVM2c?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Donald West Part 01 - FBI (.gov)
+  - Video hook: New public-record signal: Donald West Part 01 - vault.fbi.gov
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — DR Congo: New centre opens at heart of record Ebola outbreak
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168064
@@ -733,16 +745,4 @@ New items this collection: 28
   - Source class: primary-or-official
   - Evidence: Primary or official public-record lead
   - Video hook: New public-record signal: Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Fear grows as freedoms shrink in Uganda
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168057
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Fear grows as freedoms shrink in Uganda
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-30 — Middle East crisis: Humanitarian fallout ‘worsening by the day’
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168055
-  - Source class: primary-or-official
-  - Evidence: Primary or official public-record lead
-  - Video hook: New public-record signal: Middle East crisis: Humanitarian fallout ‘worsening by the day’
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.

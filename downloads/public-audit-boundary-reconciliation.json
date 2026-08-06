@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-05T06:32:39.676Z",
-  "checkedDate": "2026-08-05",
+  "generatedAt": "2026-08-06T06:32:06.903Z",
+  "checkedDate": "2026-08-06",
   "changes": [
     "accountability-watch.html",
     "_site/accountability-watch.html",
@@ -604,5 +604,34 @@
       "ok": true
     }
   ],
-  "boundary": "Operational review dates never replace source publication, event or retrieval dates. Unauthenticated interpretations are visibly labelled SPECULATION and cannot support factual conclusions."
+  "blackFileHeroFinalized": true,
+  "blackFileHeroSurfaces": [
+    {
+      "file": "black-file.html",
+      "changed": true,
+      "insertionBoundary": "body-open",
+      "requestFallbackInserted": true,
+      "removedHeroSections": 0,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851"
+    },
+    {
+      "file": "_site/black-file.html",
+      "changed": true,
+      "insertionBoundary": "body-open",
+      "requestFallbackInserted": true,
+      "removedHeroSections": 0,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851"
+    },
+    {
+      "file": "_site/black-file",
+      "changed": true,
+      "insertionBoundary": "body-open",
+      "requestFallbackInserted": true,
+      "removedHeroSections": 0,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851"
+    }
+  ],
+  "namespaceAliasesFinalized": true,
+  "deployableAliasesFinalized": true,
+  "boundary": "Operational review dates never replace source publication, event or retrieval dates. Unauthenticated interpretations are visibly labelled SPECULATION and cannot support factual conclusions. The canonical Black File hero is finalized before the final deployable alias pass."
 }

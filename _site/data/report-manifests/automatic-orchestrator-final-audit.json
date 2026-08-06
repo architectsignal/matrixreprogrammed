@@ -1,21 +1,22 @@
 {
-  "generatedAt": "2026-08-05T06:08:51.214Z",
+  "generatedAt": "2026-08-06T06:12:22.518Z",
   "pageCount": 115,
   "output": "downloads/automatic-orchestrator-final-audit.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Automatic Orchestrator Final Audit",
-    "contentHash": "482e7fe04c51e9f87a79651c8415587ea9b9758420968fdeef46cb5e2e9ac6ac",
+    "contentHash": "bf0f8c09410414eac50636fa3f161be7050f57ea86fbe9a05c0269748f220509",
     "sourceIds": [
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
+      "3a425f0d5d683952bc0ad7ac",
       "157cdab04b61ae6309c0c713",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "0730bb615248f676888d3235",
       "26b90533dbf7d2ed42f02de6",
       "b0cde383147509fbfd4f4472",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -23,7 +24,6 @@
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "1ee57e70dacfa67f04323529",
-      "c90bf38664c0409003c1069a",
       "ASC-REVIEW-C973762B151D5947",
       "ASC-REVIEW-9E85403F3389F334",
       "f23b46f2bc4add9b859f5a15",
@@ -51,12 +51,13 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-193FF58B0FB47FAD",
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-398C265AD47ACC74",
+      "ASC-REVIEW-1E865C671E08BD05",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
@@ -81,7 +82,9 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-D6340B09DE08EAC5",
       "ASC-REVIEW-44F136F26F8A52B2",
-      "ASC-REVIEW-AEF1AB530D7509D2",
+      "ASC-REVIEW-B66A4F66565A8C1E",
+      "ASC-REVIEW-8D7E899D68D3AA41",
+      "ASC-REVIEW-D0B9CAEC22479898",
       "ASC-REVIEW-F75F4FFBA085D396",
       "ASC-REVIEW-0F8586CC2CBF8ED4",
       "ASC-REVIEW-ECFD914DA00A7C36",
@@ -107,15 +110,15 @@
       "b079bec5bc869b0463d0584c",
       "bdd7e454126ebfa6319a594c",
       "ASC-002",
+      "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
-      "ASC-REVIEW-CAEB4FE9EDC04A54",
-      "ASC-REVIEW-B3323A8802757521",
-      "ASC-REVIEW-A90E36DF59A2A3C2",
       "ASC-REVIEW-6CCC0D5E0B3EA09D",
       "ASC-REVIEW-CEC93F9808F62E6E",
       "ASC-REVIEW-D809754852C14D1D",
       "ASC-REVIEW-1D0E514392976CFC",
+      "ASC-REVIEW-861EBE2805F13D36",
+      "ASC-REVIEW-AFD96AE0BCA26187",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-5F69F7CCEE3F7274",
@@ -135,18 +138,15 @@
       "ASC-REVIEW-4E0C4B2A65FF8D42",
       "ASC-REVIEW-995324D0659C1960",
       "ASC-REVIEW-BD5CE46383C9383C",
+      "ASC-REVIEW-EE1C48494066159E",
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-B6FFC8BFA47BBF5F",
-      "ASC-REVIEW-AE10394716B1B048",
-      "ASC-REVIEW-7D46B24F1934A153",
-      "ASC-REVIEW-CD6BF83E3EF0E941",
-      "ASC-REVIEW-F5CA53DC99863DAC",
-      "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-B59332D029E64DD4"
+      "ASC-REVIEW-FE3653EEB8123DA6",
+      "ASC-REVIEW-72A2357084C62D28",
+      "ASC-REVIEW-0D4E0949E1727957",
+      "ASC-REVIEW-2C44CF7E385BEC5A",
+      "ASC-REVIEW-DC55A436F8F9A135"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 93,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 88,
-      "moneyRecordCount": 81
+      "relationshipCount": 79,
+      "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Bill Gates → Microsoft Legacy: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Follow The Money Watch; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Gates Foundation: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Bill Gates → Microsoft Legacy: ecosystem hint",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-04T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-05T06:19:55.375Z",
+  "generatedAt": "2026-08-06T06:21:48.722Z",
   "pageCount": 132,
   "output": "downloads/production-deploy-guard-report.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Production Deploy Guard",
-    "contentHash": "eb295d437c4364c129646906005b602a5af6df0c74f4e882f88a2c8b703ddd9a",
+    "contentHash": "cc53b582fc365f467c9044d9fe6de32ff067cb1451b060e17ef264d74816089e",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "network-defence",
@@ -42,6 +42,7 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -88,7 +89,7 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-E3E367656A99DD33",
+      "ASC-REVIEW-8916AC7C45074C05",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
@@ -117,7 +118,7 @@
       "ASC-REVIEW-5F86F35C103C9621",
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-98888270E5A6D011",
-      "ASC-REVIEW-9D11F4BC82BF8C95",
+      "ASC-REVIEW-993903F8F1D5F9E3",
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2"
+      "ASC-REVIEW-CD1B68F215696D25"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 138,
+      "disputedClaimCount": 137,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 137,
-      "moneyRecordCount": 135
+      "relationshipCount": 136,
+      "moneyRecordCount": 134
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "10. Device, Network & Incident Defence; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Health And Development Philanthropy: ecosystem hint; Bill Gates → Microsoft Legacy: ecosystem hint; European Commission → migration: institution layer; Knights Templar Legacy Claims → Banking History: overlap hint; Knights Templar Legacy Claims → Church State Power: overlap hint; Knights Templar Legacy Claims → Crusades: overlap hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "10. Device, Network & Incident Defence",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T06:19:55.375Z"
+    "intelligenceFreshnessDate": "2026-08-06T06:21:48.722Z"
   }
 }

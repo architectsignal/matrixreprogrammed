@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-08-05T06:18:12.841Z",
-  "pageCount": 75,
+  "generatedAt": "2026-08-06T06:20:24.382Z",
+  "pageCount": 74,
   "output": "downloads/money-public-market-refresh.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Money Public Market Refresh",
-    "contentHash": "2d57d66b42473d1da2bb2138b5d116889320739edd2de8488c2ff5cb56247c4a",
+    "contentHash": "6675230310b71ca2170c881f884fe70298a510d0f684338a71c5f188528cf325",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
       "26b90533dbf7d2ed42f02de6",
-      "b0cde383147509fbfd4f4472",
       "7ee9141a42ad539f58a57e50",
       "1ee57e70dacfa67f04323529",
       "157cdab04b61ae6309c0c713",
@@ -19,7 +18,9 @@
       "a42c91c655cd066504ed6515",
       "7dcf4ef18ea1f86d01068773",
       "511ed227bb4be58b582ebb8d",
-      "c90bf38664c0409003c1069a",
+      "0730bb615248f676888d3235",
+      "b0cde383147509fbfd4f4472",
+      "investment-vehicles-ivv",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -33,17 +34,24 @@
       "energy-resources",
       "defence-security-bksy",
       "jeffrey-epstein",
+      "companies-nvda",
+      "companies-aapl",
+      "companies-msft",
+      "companies-amzn",
+      "companies-meta",
       "investment-vehicles-vgt",
       "investment-vehicles-xlk",
       "investment-vehicles-vcit",
       "investment-vehicles-vgit",
       "investment-vehicles-xle",
+      "9f77464e401ac59ad1adb812",
       "6d665d935673091233751767",
       "d7398c0c72a085a05c90422c",
       "5ce17839086eddf839270b1a",
       "c1520a15d6e62871a66c558e",
       "b7e4a66335a706ef5097117f",
       "ASC-REVIEW-19181472DB04522E",
+      "ASC-REVIEW-2E9D74DCA057FDC2",
       "ASC-REVIEW-B8034056CD461A0D",
       "5295a33003172878f9880122",
       "media",
@@ -137,29 +145,21 @@
       "energy-resources-ccj",
       "energy-resources-2082-sr",
       "energy-resources-nvtk-me",
-      "energy-resources-dewa-ae",
-      "energy-resources-wec",
-      "energy-resources-ntpc-ns",
-      "energy-resources-vg",
-      "energy-resources-ec",
-      "energy-resources-cez-pr",
-      "energy-resources-ptt-r-bk",
-      "energy-resources-ongc-ns",
-      "energy-resources-300274-sz"
+      "energy-resources-dewa-ae"
     ],
     "metrics": {
       "evidenceCount": 139,
       "primarySourceCount": 22,
-      "disputedClaimCount": 2,
+      "disputedClaimCount": 3,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
       "relationshipCount": 7,
-      "moneyRecordCount": 110
+      "moneyRecordCount": 108
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -216,6 +216,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-04T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
   }
 }

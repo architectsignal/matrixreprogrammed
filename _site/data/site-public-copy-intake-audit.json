@@ -2,13 +2,13 @@
   "title": "Site Public Copy And Intake Audit",
   "summary": {
     "ok": false,
-    "intakeOk": false,
-    "updated": "2026-08-05T06:27:20.663Z",
-    "filesScanned": 6835,
-    "highIssues": 3864,
+    "intakeOk": true,
+    "updated": "2026-08-06T06:27:50.068Z",
+    "filesScanned": 6873,
+    "highIssues": 4102,
     "reviewIssues": 15,
-    "intakeAreas": 2671,
-    "weakIntakeAreas": 1
+    "intakeAreas": 2254,
+    "weakIntakeAreas": 0
   },
   "issues": [
     {
@@ -175,6 +175,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/answer-black-file.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/answer-blackrock.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -193,6 +199,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/answer-cia.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/answer-deep-state.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -200,6 +212,12 @@
     {
       "severity": "high",
       "file": "_site/answer-documented-association.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/answer-dog-the-architect.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -217,13 +235,37 @@
     },
     {
       "severity": "high",
+      "file": "_site/answer-evidence-boundary.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/answer-false-flag.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
     {
       "severity": "high",
+      "file": "_site/answer-freemasonry.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/answer-human-cost.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/answer-index.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/answer-migration.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -236,6 +278,18 @@
     {
       "severity": "high",
       "file": "_site/answer-mkultra.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/answer-mossad.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/answer-nsa.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -589,6 +643,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/auto-evidence-pipeline.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/automation/social-access-and-publishing-plan.md",
       "pattern": "/chatgpt/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -601,7 +661,19 @@
     },
     {
       "severity": "high",
+      "file": "_site/aviation-evidence-policy.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/behind-the-curtain-access.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/behind-the-curtain-symbolic-capstone.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -626,6 +698,12 @@
     {
       "severity": "high",
       "file": "_site/big-three/vanguard.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/big-three-asset-managers.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -692,6 +770,36 @@
     {
       "severity": "high",
       "file": "_site/billionaire-control-tracker.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-file-epstein-banking-lane.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-file-epstein-protection-network.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-file-epstein-release-machine.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-file-expose.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/black-file-thank-you.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1219,7 +1327,19 @@
     },
     {
       "severity": "high",
+      "file": "_site/book-masons-in-the-united-nations.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/book-masons-media.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/book-masons-money.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1327,7 +1447,25 @@
     },
     {
       "severity": "high",
+      "file": "_site/brain.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/brief-disclosure-watch.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/brief-power-infrastructure.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/campaign-black-file-launch.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1340,6 +1478,24 @@
     {
       "severity": "high",
       "file": "_site/campaign-intelligence-dossiers-push.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/campaign-symbolic-power-push.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/campaign-trust-evidence-push.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/campaign-war-machine-push.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1495,6 +1651,18 @@
     },
     {
       "severity": "high",
+      "file": "_site/card-downloads.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/case-status-dashboard.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/cinematic-hit-list.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1574,6 +1742,12 @@
     {
       "severity": "high",
       "file": "_site/control-map-daily.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/control-structure.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1897,7 +2071,31 @@
     },
     {
       "severity": "high",
+      "file": "_site/controlled-opposition-deck.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/controlled-opposition-profile.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/convergence-hypotheses.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/conversion-funnel.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/corrections-policy.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1922,6 +2120,12 @@
     {
       "severity": "high",
       "file": "_site/cross-reference-map.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/custom-research.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -1963,6 +2167,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/daily-missing-records.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/daily-power-conclusions.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -1970,6 +2180,12 @@
     {
       "severity": "high",
       "file": "_site/daily-watch.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dark-psychology.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2108,6 +2324,30 @@
     {
       "severity": "high",
       "file": "_site/dark-web-safety.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dashboard-conflict.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dashboard-epstein.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dashboard-human-cost.html",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/dashboard-migration.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2306,12 +2546,6 @@
     {
       "severity": "high",
       "file": "_site/data/card-live-updates.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/change-detection.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2689,12 +2923,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/epstein-homepage-alerts.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/data/epstein-investigator-status.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2755,12 +2983,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/evidence-half-life.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/data/evidence-network-map.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2788,245 +3010,9 @@
       "file": "_site/data/evidence-timeline.json",
       "pattern": "/\\[object Object\\]/i",
       "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/evidence-timeline.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/evidence-vault.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/evidence-weighted-relationship-graph.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/exposure-evidence-ledger.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/exposure-integrity-engine.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/follow-the-money-top-100.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/follow-the-money-watch.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/full-site-function-tool-audit-policy.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "review",
-      "file": "_site/data/full-site-function-tool-audit-policy.json",
-      "pattern": "/compatibility marker/i",
-      "note": "Review whether this text is intentionally visible."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/full-vrc-review-batch-002.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/geographic-power-atlas-data.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/geographic-power-atlas-seed.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/geographic-power-atlas.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/global-risk-clocks.json",
-      "pattern": "/\\[object Object\\]/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/global-risk-clocks.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/gold-reserves-worldwide.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/heroes-fighting-matrix/keys.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "review",
-      "file": "_site/data/heroes-fighting-matrix/keys.json",
-      "pattern": "/TODO/i",
-      "note": "Review whether this text is intentionally visible."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/heroes-fighting-matrix/shields.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/heroes-fighting-matrix/torches.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-20.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-21.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-22.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-23.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-25.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-26.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-27.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-28.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-30.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-07-31.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-08-01.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-08-02.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/history/money-intelligence/2026-08-03.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/homepage-command-surface.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/human-cost.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/identity-affiliation-overlay.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/illuminati-secret-society-theory.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
   "intake": [
-    {
-      "file": "_site/about.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/access-denied.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
     {
       "file": "_site/accountability-review-inbox.html",
       "hasBoundary": true,
@@ -3077,13 +3063,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/agenda-2030.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/ai-speculative-conclusions.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -3098,70 +3077,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/answer-bilderberg-group.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-black-file.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-blackrock.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-cartels.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-cbdc-surveillance.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-cia.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/answer-deep-state.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-documented-association.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-dog-the-architect.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-engine.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -3175,13 +3091,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/answer-evidence-boundary.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/answer-false-flag.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -3189,56 +3098,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/answer-freemasonry.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-human-cost.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-index.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-migration.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-military-industrial-complex.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/answer-mkultra.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-mossad.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/answer-nsa.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -3651,13 +3511,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/auto-evidence-pipeline.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/aviation-evidence-policy.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -3665,21 +3518,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/behind-the-curtain-access.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/behind-the-curtain-capstone.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/behind-the-curtain-symbolic-capstone.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -3715,13 +3554,6 @@
     },
     {
       "file": "_site/big-three-asset-managers.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/billing-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -3798,20 +3630,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/billionaire-control-tracker.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/billionaire-watch.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/black-file-epstein-banking-lane.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -3819,35 +3637,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/black-file-epstein-protection-network.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/black-file-epstein-release-machine.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/black-file-expose.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/black-file-index.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/black-file-thank-you.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -3862,13 +3652,6 @@
     },
     {
       "file": "_site/black-file.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/black-files.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4246,83 +4029,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-ab-the-brand.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-albanian-mafia-operations.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-albanian-mafia.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-analyze-anyone-60-seconds.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-analyze-anyone.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-as-above-so-below.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-automatic.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-black-file.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-black-nobility.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-blackwater.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-cartels.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-cia.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -4337,175 +4043,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-dark-arts-codex.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-1.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-13.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-14.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-15.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-16.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-17.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-18.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-19.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-20.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-21.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-22.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-23.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-24.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-degree-25.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-26.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-27.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-28.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-29.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-30.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-31.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-32.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-33.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-one.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-degree-three.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4519,27 +4057,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-drone-defence.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-earth.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-elite-toolkit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-false-flags.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -4547,21 +4064,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-fire.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-freemasons-degree-1.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-freemasons-degree-3-master-mason.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4582,56 +4085,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-grid.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-hegelian-crisis-dialectic.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-identity-trap.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-illustrated-guide-masonic-symbols.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-intelligence-dossiers.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-interruption.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-keep-calm-dont-panic.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-keep-calm.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4645,84 +4099,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-law.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-manipulation-immunity.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masonic-architecture-33.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masonic-process.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masonic-symbols.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masons-in-the-united-nations.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masons-media.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masons-money.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masons-monuments.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-masons-moon.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-masons-united-nations.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-medicine.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4736,28 +4113,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-mind-control-seven-days.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-mossad.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-ndrangheta-operations.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-ndrangheta.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4771,105 +4127,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/book-outlaws.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-power-overlap.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-proof-god.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-read-people.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-schooling.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-secret-societies-intro.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-spot-manipulator.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-spot-narcissist.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-stop-fix-yourself.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-symbol.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-triad.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/book-universe.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-water.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-wwiii-will-really-look-like.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/book-wwiii.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -4883,62 +4141,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/brain.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/brief-disclosure-watch.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/brief-gold-reserves.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/brief-policy-systems.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/brief-power-infrastructure.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/brief-quality-report.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/campaign-black-file-launch.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/campaign-crime-state-overlap-push.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/campaign-intelligence-dossiers-push.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -4946,21 +4148,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/campaign-symbolic-power-push.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/campaign-trust-evidence-push.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/campaign-war-machine-push.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5142,21 +4330,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/card-artwork-batches.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": false,
-      "status": "ok"
-    },
-    {
       "file": "_site/card-artwork-queue.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/card-batch-tracker.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5177,35 +4351,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/card-downloads.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/card-intelligence-feed.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/card-production-pipeline.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/card-system-health.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/case-status-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5304,27 +4450,6 @@
     },
     {
       "file": "_site/contractor-briefs/palantir-government-platforms.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/contradiction-watch.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/control-brain.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/control-map-daily.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5709,21 +4834,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/controlled-opposition-deck.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/controlled-opposition-profile.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/convergence-hypotheses.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5765,13 +4876,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/cross-reference-map.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/custom-research.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -5780,13 +4884,6 @@
     },
     {
       "file": "_site/daily-brain-brief.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/daily-brief-master.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5808,13 +4905,6 @@
     },
     {
       "file": "_site/daily-drop.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/daily-epstein-update.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -5843,13 +4933,6 @@
     },
     {
       "file": "_site/daily-watch.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/dark-psychology.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -6017,13 +5100,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/dashboard-conflict.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/dashboard-epstein.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6031,21 +5107,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/dashboard-human-cost.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/dashboard-intelligence.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/dashboard-migration.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7130,27 +6192,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/deck-expansion-hub.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/deep-intel-feed.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/deploy-health.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/deploy-status.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7158,56 +6199,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/distribution-articles.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/distribution-center.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/distribution-longform-video.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/distribution-newsletter.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/distribution-podcast.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/distribution-shorts.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/distribution-social-threads.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/document-library.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7529,13 +6521,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/elite-family-tracker.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/elite-power-theory.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7550,21 +6535,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/email-status.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/emergency-power-theory.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entities.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7662,13 +6633,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/entity-timelines/25-365.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/entity-timelines/25-581.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7691,13 +6655,6 @@
     },
     {
       "file": "_site/entity-timelines/ac48383.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-timelines/accountability-now-usa-v-griess.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7781,6 +6738,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/california-supreme-court.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/centers-for-medicare-and-medicaid-services.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7789,13 +6753,6 @@
     },
     {
       "file": "_site/entity-timelines/chattogram-water-supply-and-sewerage-authority.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-timelines/civil-action-no-2026-1385.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7865,13 +6822,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/entity-timelines/district-court-district-of-columbia.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/entity-timelines/energy-department.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -7908,6 +6858,13 @@
     },
     {
       "file": "_site/entity-timelines/general-services-administration.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-timelines/gilead-tenofovir-cases.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8061,6 +7018,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/s283862.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/sawas-v-elzanaty.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -8096,13 +7060,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/entity-timelines/supreme-court-of-the-united-states.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/entity-timelines/the-new-york-and-presbyterian-hospital-v-new-york-state-nurses-association.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -8118,20 +7075,6 @@
     },
     {
       "file": "_site/entity-timelines/treasury-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-timelines/trump-v-barbara-revisions-7-01-26.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/entity-timelines/trump-v-barbara.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8187,20 +7130,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/epstein-billionaire-tracker.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/epstein-capital-class-map.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/epstein-conclusions.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -8209,13 +7138,6 @@
     },
     {
       "file": "_site/epstein-email-network.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/epstein-entity-map.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8264,13 +7186,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/epstein-missing-records.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/epstein-review-queue.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -8299,13 +7214,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/epstein-source-ledger.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/epstein-theory-lab.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -8328,13 +7236,6 @@
     },
     {
       "file": "_site/evidence-archive.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/evidence-graph.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8411,21 +7312,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/evidence-pull-list.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/evidence-reader.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/evidence-task-engine.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8482,13 +7369,6 @@
     },
     {
       "file": "_site/feed-main-signal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/findings-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -8586,706 +7466,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/follow-the-money/people/abigail-johnson.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/alain-wertheimer.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/alexey-mordashov-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/alice-walton.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/aliko-dangote.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/amancio-ortega.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/andrea-pignataro.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/andreas-von-bechtolsheim-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/bernard-arnault-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/bill-gates.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/carlos-slim-helu-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/changpeng-zhao.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/charles-koch-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/colin-huang.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/cyrus-poonawalla.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/daniel-gilbert.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/dieter-schwarz.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/dilip-shanghvi.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/eduardo-saverin.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/elaine-marshall-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/elon-musk.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/emmanuel-besnier.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/eric-schmidt.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/eyal-ofer.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/francois-pinault-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/francoise-bettencourt-meyers-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/gautam-adani.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/gerard-wertheimer.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/german-larrea-mota-velasco-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/giancarlo-devasini.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/gianluigi-aponte.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/giovanni-ferrero.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/he-xiangjian-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/henry-samueli.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/idan-ofer.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/iris-fontbona-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/israel-englander.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jack-ma.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jacqueline-mars.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jay-y-lee.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jean-louis-van-der-velde.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jeff-bezos.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jeff-yass.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jensen-huang.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/jim-walton-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/john-mars.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/julia-koch-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/ken-griffin.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/klaus-michael-kuehne.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/lakshmi-mittal.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/larry-ellison.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/larry-page.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/lei-jun.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/len-blavatnik.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/leonid-mikhelson-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/li-ka-shing.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/lukas-walton.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/lyndal-stephens-greth-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/ma-huateng.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/mackenzie-scott.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/marilyn-simons-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/mark-mateschitz.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/mark-zuckerberg.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/masayoshi-son.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/melinda-french-gates.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/michael-bloomberg.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/michael-dell.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/michal-strnad.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/miriam-adelson-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/mukesh-ambani.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/paolo-ardoino.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/peter-thiel.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/pham-nhat-vuong.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/phil-knight-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/prajogo-pangestu.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/rafaela-aponte-diamant.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/reinhold-wuerth-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/rick-cohen-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/rob-walton-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/robert-pera.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/robin-zeng.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/savitri-jindal-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/sergey-brin.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/shiv-nadar.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/stefan-quandt.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/stephen-schwarzman.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/steve-ballmer.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/suleiman-kerimov-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/susanne-klatten.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/tadashi-yanai-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/thomas-frist-jr-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/thomas-peterffy.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/vagit-alekperov.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/vicky-safra-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/vladimir-potanin.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/warren-buffett.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/william-ding.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/zhang-yiming.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/zheng-shuliang-and-family.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/follow-the-money/people/zhong-shanshan.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/follow-the-money/philanthropic-networks.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -9363,13 +7543,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/full-vrc-review-batch-002.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/funnel-black-file.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -9398,21 +7571,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/funnel-map.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/funnel-power-map.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/gateway-process.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -9468,13 +7627,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/human-cost-hub.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/illuminati-secret-society-theory.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -9490,13 +7642,6 @@
     },
     {
       "file": "_site/index.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/index_v2.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -9979,13 +8124,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/intel-drop-vault.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/intel-vault.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -10021,7 +8159,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/investigation-source-ledger.html",
+      "file": "_site/investigation-pathways.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -10441,21 +8579,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/machine-digest.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/machine-intelligence.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/main-player-profiles.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -10602,28 +8726,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/making-money/guides/acquire-ip.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/making-money/guides/acquire-newsletters.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/acquire-websites.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/angel-investing.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -10637,315 +8740,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/making-money/guides/bonds.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/business-ownership.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/buy-small-business.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/cash-management.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/compounding.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/consulting.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/content-business.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/credit-building.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/debt-reduction.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/digital-products.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/distressed-assets.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/dividends.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/ecommerce.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/emergency-funds.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/exporting.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/franchise.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/freelancing.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/making-money/guides/government-contracts.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/high-value-skills.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/holding-company.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/importing.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/increase-earned-income.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/index-funds.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/ip-licensing.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/local-business.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/manufacturing.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/micro-saas.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/online-business.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/partnerships.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/private-companies.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/property-investing.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/property-management.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/property-renovation.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/publishing-books.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/renting-property.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/reselling.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/retirement-accounts.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/royalties.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/salary-negotiation.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/service-business.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/shares.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/small-farm.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/subscription-business.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/tax-efficient-structures.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/making-money/guides/vendor-finance.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -11015,20 +8810,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/masonic-esoteric.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/matrix-brain.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/media-narrative-theory.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -11064,31 +8845,10 @@
       "status": "ok"
     },
     {
-      "file": "_site/migration-flow.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/migration-hub.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/missing-files.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/missing-record-missions.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
+      "hasFallback": true,
       "status": "ok"
     },
     {
@@ -11107,13 +8867,6 @@
     },
     {
       "file": "_site/money-graph.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/money-profile.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -11155,13 +8908,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/news.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/newsletter.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -11183,28 +8929,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/offer-dog-architect-collector.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/offer-full-archive.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/offer-intelligence-dossiers.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/offer-starter-library.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -11219,13 +8944,6 @@
     },
     {
       "file": "_site/offer-trust-evidence-kit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/one-world-convergence.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -11358,49 +9076,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/palantir-watch.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/path-crime-state-overlap.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/path-dog-architect.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/path-evidence-trust.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/path-intelligence-dossiers.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/path-mind-control-psychology.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/path-survival-war.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -11785,27 +9461,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/policy-deck.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/policy-watch.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/power-architecture-watchlist.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/power-atlas.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -11813,21 +9468,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/power-conclusions.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/power-diff.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": false,
-      "status": "ok"
-    },
-    {
-      "file": "_site/power-dossiers.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12205,13 +9846,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/power-families-deck.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/power-research-method.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -12229,18 +9863,11 @@
       "file": "_site/power-supply-chain.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
-      "status": "ok"
-    },
-    {
-      "file": "_site/predators-in-power.html",
-      "hasBoundary": true,
-      "hasAction": true,
       "hasFallback": true,
       "status": "ok"
     },
     {
-      "file": "_site/prediction-engine.html",
+      "file": "_site/predators-in-power.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12255,13 +9882,6 @@
     },
     {
       "file": "_site/private-contractor-tracker.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/probability-lab.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12296,28 +9916,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/public-record-intake.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/public-source-evidence.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/reader-conclusions.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/record-intake-queue.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12327,18 +9926,11 @@
       "file": "_site/red-team-mirror.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
-      "status": "ok"
-    },
-    {
-      "file": "_site/relationship-registry.html",
-      "hasBoundary": true,
-      "hasAction": true,
       "hasFallback": true,
       "status": "ok"
     },
     {
-      "file": "_site/religious-path.html",
+      "file": "_site/relationship-registry.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12355,18 +9947,11 @@
       "file": "_site/reverse-accountability-search.html",
       "hasBoundary": true,
       "hasAction": true,
-      "hasFallback": false,
-      "status": "ok"
-    },
-    {
-      "file": "_site/review-dashboard.html",
-      "hasBoundary": true,
-      "hasAction": true,
       "hasFallback": true,
       "status": "ok"
     },
     {
-      "file": "_site/review-lanes.html",
+      "file": "_site/review-dashboard.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12380,28 +9965,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/schema-claim-taxonomy.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/schema-crawler-map.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/schema-index.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/schema-site-graph.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12786,27 +10350,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/secret-societies-deck.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/secret-societies-hub.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/secret-societies-tracker.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/security-privacy.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -12821,20 +10364,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/share-kit-black-file-starter.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/share-kit-crime-state-overlap.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/share-kit-intelligence-network.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -12842,21 +10371,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/share-kit-symbolic-power.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/share-kit-trust-evidence.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/share-kit-war-machine.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12891,49 +10406,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/site-population-audit.html",
-      "hasBoundary": false,
-      "hasAction": false,
-      "hasFallback": false,
-      "status": "review"
-    },
-    {
-      "file": "_site/site-quality-report.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-card-index.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-cards.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-cbp-statistics.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/source-changes.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-cia-reading-room.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -12947,34 +10420,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/source-fbi-vault.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-frontex-map.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-hrsa-cicp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-hrsa-vicp.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/source-intake.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -12982,63 +10427,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/source-iom-missing-migrants.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-justice-department.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-national-archives.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-route-cards.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-treasury-ofac.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-unhcr-statistics.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-vaers.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/speculation-needs-review.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/speculation-review.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13066,20 +10455,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/src/money-profile.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/start-here.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/store.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -13088,13 +10463,6 @@
     },
     {
       "file": "_site/structural-power-capstone.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/structural-power-map.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13227,49 +10595,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/surveillance-hub.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/survival-war.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/system-feed-index.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/systems-category-map.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/thank-you-book-path.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/thank-you-evidence-starter.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/thank-you-intel-weekly.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -13654,13 +10980,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/think-tanks-deck.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/timers.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14032,161 +11351,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/top-52-art/batch-1/booz-allen-hamilton.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/caci-international.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/christine-lagarde.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/elon-musk.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/emmanuel-macron.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/federal-reserve.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/jamie-dimon.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/jeff-bezos.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/jerome-powell.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/klaus-schwab.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/larry-fink.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/tony-blair.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/warren-buffett.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art/batch-1/world-health-organization.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-art-studio.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-batch1-art-queue.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-generated-art.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/top-52-power-deck.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": false,
-      "status": "ok"
-    },
-    {
-      "file": "_site/tracker-core.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/tracker-dashboard.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/tracking-feed.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/transmissions.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/trigger-watchtower.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14249,34 +11414,6 @@
       "status": "ok"
     },
     {
-      "file": "_site/update-lane-answer-engine.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/update-lane-book-universe.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/update-lane-distribution-sales.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/update-lane-evidence-vault.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/update-lane-funnels-trust.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14284,49 +11421,7 @@
       "status": "ok"
     },
     {
-      "file": "_site/update-lane-intel-desk.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/update-lane-power-atlas.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
       "file": "_site/update-monitor.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/upgrade-targets.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/verified-record-cards-batch-001.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/verified-record-cards.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/verified-source-cards.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14348,20 +11443,6 @@
     },
     {
       "file": "_site/weekly-investigation-report.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/weekly-watch-delta.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/who-holds-power.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14768,13 +11849,6 @@
     },
     {
       "file": "black-file-theory.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "black-file.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -20725,6 +17799,13 @@
     },
     {
       "file": "site-intelligence-system-audit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "source-cards.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

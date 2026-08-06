@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-06T06:32:07.070Z",
+  "reviewed": "2026-08-04",
+  "canonicalRoute": "corrections.html",
+  "policyRoute": "trust-corrections.html",
+  "targets": [
+    {
+      "file": "corrections.html",
+      "changed": true
+    },
+    {
+      "file": "_site/corrections.html",
+      "changed": true
+    },
+    {
+      "file": "_site/corrections",
+      "changed": true
+    }
+  ],
+  "metadataChanges": [
+    "sitemap.xml",
+    "llms.txt",
+    "_site/sitemap.xml",
+    "_site/llms.txt"
+  ],
+  "issues": [],
+  "boundary": "The correction route accepts precise, source-backed challenges. It does not auto-delete records, publish private material or treat unsupported disagreement as counter-evidence."
+}

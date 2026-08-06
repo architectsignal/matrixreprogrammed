@@ -1,0 +1,46 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-06T06:32:06.914Z",
+  "canonicalH1": "THE BLACK FILE",
+  "canonicalLeadId": "black-file-public-lead",
+  "sourceInsertionBoundary": "body-open",
+  "requestFallbackInserted": true,
+  "fallbackInsertionSupported": true,
+  "missingRequestTargetRecoverySupported": true,
+  "supportedInsertionBoundaries": [
+    "main-open",
+    "body-open",
+    "before-footer",
+    "before-body-close",
+    "html-open",
+    "before-html-close"
+  ],
+  "surfaces": [
+    {
+      "file": "black-file.html",
+      "changed": true,
+      "insertionBoundary": "body-open",
+      "requestFallbackInserted": true,
+      "removedHeroSections": 0,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851"
+    },
+    {
+      "file": "_site/black-file.html",
+      "changed": true,
+      "insertionBoundary": "body-open",
+      "requestFallbackInserted": true,
+      "removedHeroSections": 0,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851"
+    },
+    {
+      "file": "_site/black-file",
+      "changed": true,
+      "insertionBoundary": "body-open",
+      "requestFallbackInserted": true,
+      "removedHeroSections": 0,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851"
+    }
+  ],
+  "sourceSha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+  "boundary": "The Black File public hero is a narrow canonical surface owner. It restores one visible H1, one hero and a working request target across source and deployable aliases, including late documents without a main wrapper or request form, without changing downstream archive, evidence, pathway, dossier or claim content."
+}

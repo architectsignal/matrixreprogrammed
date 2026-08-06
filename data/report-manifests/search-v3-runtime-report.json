@@ -1,12 +1,14 @@
 {
-  "generatedAt": "2026-08-05T06:21:38.078Z",
-  "pageCount": 126,
+  "generatedAt": "2026-08-06T06:23:16.814Z",
+  "pageCount": 127,
   "output": "downloads/search-v3-runtime-report.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Search V3 Runtime Report",
-    "contentHash": "9aaaed5c63403d77e6203171be7acb802238bc34307a5d2b2fc500fcf031362c",
+    "contentHash": "ec61f711ebefd77e9a568367947db9a8e9e39fba55978b940ed4faaae02ce840",
     "sourceIds": [
+      "594100b62a47db521fe2a128",
+      "34805734b1ad3b73f0ede0d8",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "44505b4afb60938c8117ad31",
@@ -27,14 +29,14 @@
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
+      "source-change-a05ee5719c4986b9a2e665d1",
+      "source-change-f966f8c917641cd736660f92",
+      "source-change-f9b326734f170d730fc634f5",
+      "source-change-b1e5189be9fa36ea97b5f8c0",
       "source-change-6e48acd2ac94f914a7fd7ae5",
       "source-change-f23b46f2bc4add9b859f5a15",
       "source-change-a09615abd1b1ed83f2b74ff4",
       "source-change-b0cde383147509fbfd4f4472",
-      "source-change-0bf350b54332a373d71a7c86",
-      "source-change-b0403e3a18fe2637c0f94aa3",
-      "source-change-c3bd2d306202dfc2e2374303",
-      "source-change-62862e6ca90495adc0788a2d",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -64,7 +66,7 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
-      "c90bf38664c0409003c1069a",
+      "0730bb615248f676888d3235",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -144,17 +146,15 @@
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
-      "ASC-REVIEW-8A2ACAFD47272636",
-      "ASC-REVIEW-39269A2C0471A66C",
-      "ASC-REVIEW-53BD0E17B018491C"
+      "ASC-REVIEW-8A2ACAFD47272636"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 34,
-      "disputedClaimCount": 98,
+      "disputedClaimCount": 96,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 97,
+      "relationshipCount": 95,
       "moneyRecordCount": 96
     },
     "evidenceBasedConclusions": [
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 95 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 95 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "MINDCUBED LLC — District of Columbia Courts",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

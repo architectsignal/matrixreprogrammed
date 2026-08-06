@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-03T07:06:26.505Z",
+  "generatedAt": "2026-08-05T06:31:19.473Z",
   "problems": [],
   "canonicalMembershipPatch": {
     "status": 0,
@@ -11,7 +11,7 @@
     {
       "script": "scripts/repair-forum-member-posting.js",
       "status": 0,
-      "stdout": "Forum member posting repair applied: forum.js, forum.html, dark-speculation-forum.html, epstein-alive-board.html, member-login.html.\n",
+      "stdout": "Forum member posting repair applied: already current.\n",
       "stderr": ""
     },
     {

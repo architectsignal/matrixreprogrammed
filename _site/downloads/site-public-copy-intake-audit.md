@@ -1,16 +1,16 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-08-05T06:27:20.663Z
+Updated: 2026-08-06T06:27:50.068Z
 
-Files scanned: 6835
+Files scanned: 6873
 
-High issues: 3864
+High issues: 4102
 
 Review issues: 15
 
-Intake areas: 2671
+Intake areas: 2254
 
-Weak intake areas: 1
+Weak intake areas: 0
 
 ## High Issues
 - .cloudflare/pages-output/data/heroes-fighting-matrix/keys.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -37,17 +37,26 @@ Weak intake areas: 1
 - _site/ai-speculative-conclusions.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/amazon-store-books.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-bilderberg-group.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-black-file.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-blackrock.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-cartels.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-cbdc-surveillance.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-cia.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-deep-state.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-documented-association.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-dog-the-architect.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-engine.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-epstein-files.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-evidence-boundary.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-false-flag.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-freemasonry.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-human-cost.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-index.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-migration.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-military-industrial-complex.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-mkultra.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-mossad.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/answer-nsa.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-operation-gladio.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-project-paperclip.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/answer-world-economic-forum.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -106,13 +115,17 @@ Weak intake areas: 1
 - _site/authority-intelligence.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/authority-symbolic-power.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/authority-war-machine.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/auto-evidence-pipeline.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/automation/social-access-and-publishing-plan.md: /chatgpt/i — Potentially visible internal, broken, or author-facing text.
 - _site/automation/social-access-and-publishing-plan.md: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/aviation-evidence-policy.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/behind-the-curtain-access.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/behind-the-curtain-symbolic-capstone.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/behind-the-curtain.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/big-three/blackrock.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/big-three/state-street.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/big-three/vanguard.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/big-three-asset-managers.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/billionaire-briefs/bernard-arnault.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/billionaire-briefs/bill-gates.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/billionaire-briefs/elon-musk.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -124,6 +137,11 @@ Weak intake areas: 1
 - _site/billionaire-briefs/peter-thiel.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/billionaire-briefs/warren-buffett.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/billionaire-control-tracker.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/black-file-epstein-banking-lane.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/black-file-epstein-protection-network.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/black-file-epstein-release-machine.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/black-file-expose.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/black-file-thank-you.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-file-theory.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-file.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-files.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -211,7 +229,9 @@ Weak intake areas: 1
 - _site/book-keep-calm.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/book-kgb.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/book-law.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/book-masons-in-the-united-nations.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/book-masons-media.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/book-masons-money.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/book-masons-monuments.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/book-masons-united-nations.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/book-medicine.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -229,9 +249,15 @@ Weak intake areas: 1
 - _site/book-wwiii-will-really-look-like.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/book-wwiii.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/books.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/brain.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/brief-disclosure-watch.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/brief-power-infrastructure.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/campaign-black-file-launch.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/campaign-crime-state-overlap-push.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/campaign-intelligence-dossiers-push.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/campaign-symbolic-power-push.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/campaign-trust-evidence-push.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/campaign-war-machine-push.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/card-artwork-batches/batch-001.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/card-artwork-batches/batch-002.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/card-artwork-batches/batch-003.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -257,6 +283,8 @@ Weak intake areas: 1
 - _site/card-artwork-batches/batch-023.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/card-artwork-batches/batch-024.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/card-artwork-queue.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/card-downloads.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/case-status-dashboard.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/cinematic-hit-list.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/claim-classifier.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/codex.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -271,6 +299,7 @@ Weak intake areas: 1
 - _site/contradiction-watch.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/control-brain.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/control-map-daily.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/control-structure.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/control-system-tracker.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/controlled-opposition/alex-jones.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/controlled-opposition/andrew-tate.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -324,19 +353,26 @@ Weak intake areas: 1
 - _site/controlled-opposition/tucker-carlson.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/controlled-opposition/tulsi-gabbard.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/controlled-opposition/vivek-ramaswamy.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/controlled-opposition-deck.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/controlled-opposition-profile.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/convergence-hypotheses.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/conversion-funnel.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/corrections-policy.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/crime-dossiers.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/crime-hub.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/criminal-investigations.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/cross-reference-map.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/custom-research.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-brain-brief.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-brief-master.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-command-brief.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-drop.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-epstein-update.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-investigation-conclusions.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/daily-missing-records.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-power-conclusions.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-watch.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/dark-psychology.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/dark-speculation-33-club.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/dark-speculation-all-seeing-eye-network.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/dark-speculation-black-eye-club.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -360,6 +396,10 @@ Weak intake areas: 1
 - _site/dark-speculation-saturn-black-cube.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/dark-speculation-white-rabbit-network.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/dark-web-safety.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/dashboard-conflict.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/dashboard-epstein.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/dashboard-human-cost.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/dashboard-migration.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/access-route-policy.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/accountability-innovation-roadmap.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/accountability-question-ledger.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -393,7 +433,6 @@ Weak intake areas: 1
 - _site/data/card-download-manifest.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/card-intelligence-feed.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/card-live-updates.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/change-detection.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/cinematic-hit-list.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/clock-wall.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/conclusion-engine-policy.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -456,7 +495,6 @@ Weak intake areas: 1
 - _site/data/epstein-email-signals.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-file-cockpit.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-file-index.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/epstein-homepage-alerts.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-investigator-status.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-network-architecture.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-network-deep-dive.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -467,47 +505,11 @@ Weak intake areas: 1
 - _site/data/epstein-relationship-sync-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-research-targets.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-watch.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/evidence-half-life.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-network-map.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-pull-list.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-reader-manifest.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-task-engine.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-timeline.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/evidence-timeline.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/evidence-vault.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/evidence-weighted-relationship-graph.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/exposure-evidence-ledger.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/exposure-integrity-engine.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/follow-the-money-top-100.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/follow-the-money-watch.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/full-site-function-tool-audit-policy.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/full-vrc-review-batch-002.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/geographic-power-atlas-data.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/geographic-power-atlas-seed.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/geographic-power-atlas.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/global-risk-clocks.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/global-risk-clocks.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/gold-reserves-worldwide.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/heroes-fighting-matrix/keys.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/heroes-fighting-matrix/shields.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/heroes-fighting-matrix/torches.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-20.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-21.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-22.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-23.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-25.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-26.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-27.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-28.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-30.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-07-31.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-08-01.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-08-02.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/history/money-intelligence/2026-08-03.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/homepage-command-surface.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/human-cost.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/identity-affiliation-overlay.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/illuminati-secret-society-theory.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
-- _site/site-population-audit.html: boundary=false, action=false, fallback=false
+None

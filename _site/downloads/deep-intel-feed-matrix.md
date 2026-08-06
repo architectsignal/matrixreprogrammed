@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-08-05T06:26:34.444Z
+Generated: 2026-08-06T06:27:17.615Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-08-05T06:26:34.444Z
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 72 — ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war — live-intel.html
-- 72 — Afghanistan hunger crisis intensifies as millions left without food aid — live-intel.html
-- 72 — Africans bear the brunt of biodiversity loss — live-intel.html
-- 72 — Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms — live-intel.html
-- 72 — New Ebola vaccine trial launches as outbreak spreads in DR Congo — live-intel.html
+- 72 — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post — live-intel.html
+- 72 — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in — live-intel.html
+- 72 — Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov) — live-intel.html

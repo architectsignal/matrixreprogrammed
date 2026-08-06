@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-06T03:35:59.070Z
+Generated: 2026-08-06T06:25:31.707Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: low
+- Internet claim activity: medium
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -48,6 +48,16 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 - Likely explanation: Synthetic image, altered image, old footage, compression artefact, or repost without origin.
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
+
+### New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
+- Type: related-claim-traffic
+- Status: public-record-relevance
+- Evidence level: 7
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+New Mexico sues DOJ for unredacted Jeffrey Epstein files The Jerusalem Post
 
 ### Burnham considering inquiry into Epstein, minister says - RTE.ie
 - Type: related-claim-traffic

@@ -1,0 +1,31 @@
+{
+  "updated": "2026-08-05",
+  "publicationRule": "publish-all-with-evidence-status-label",
+  "withholdingAllowed": false,
+  "policy": "No sensitive item is withheld solely because it lacks complete source metadata, confirmation, or human review. Every item remains publishable only with an explicit evidence-status label that states whether it is source-linked, unconfirmed, source-incomplete, a model output, or not human reviewed. A label is not proof or a verdict.",
+  "defaultHumanReviewStatus": "not-human-reviewed",
+  "defaultConfirmationStatus": "unconfirmed",
+  "requiredPublicationFields": [
+    "publicationAllowed",
+    "publicationStatus",
+    "publicLabel",
+    "humanReviewStatus",
+    "confirmationStatus",
+    "evidenceStatus",
+    "labelRequired"
+  ],
+  "labels": {
+    "noAttributableSource": "UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED",
+    "sourceIncomplete": "SOURCE METADATA INCOMPLETE · NOT CONFIRMED · NOT HUMAN REVIEWED",
+    "sourcedNotReviewed": "SOURCED · NOT CONFIRMED · NOT HUMAN REVIEWED",
+    "sourceCompleteNotReviewed": "SOURCE-LINKED · NOT HUMAN REVIEWED",
+    "modelOutput": "MODEL OUTPUT · NOT A CONFIRMED EVENT · NOT HUMAN REVIEWED",
+    "staticContext": "STATIC SOURCE CONTEXT · NOT HUMAN REVIEWED"
+  },
+  "boundaries": [
+    "Publication does not convert an allegation, estimate, model score, association, or unsupported claim into fact.",
+    "Unreviewed items may not be described as human-confirmed evidence.",
+    "Automated refresh or promotion remains limited to complete source rules even though publication itself is allowed.",
+    "Corrections, counter-evidence, and later human-review decisions must remain visible and update the label rather than silently deleting history."
+  ]
+}

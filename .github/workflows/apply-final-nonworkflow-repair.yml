@@ -114,13 +114,14 @@ jobs:
             node - <<'NODE'
           const fs = require('fs');
           const source = fs.readFileSync('scripts/final-production-reconcile.js', 'utf8');
+          const finalizerCall = "run('scripts/finalize-black-file-postbuild.js');";
           const mirror = source.indexOf('authoritativeUpdateMirrors.forEach(copy);');
-          const finalizer = source.indexOf("run('scripts/finalize-black-file-postbuild.js');");
-          const report = source.indexOf('persistReport();');
+          const finalizer = source.indexOf(finalizerCall);
+          const report = source.lastIndexOf('\npersistReport();');
           if (!(mirror >= 0 && finalizer > mirror && report > finalizer)) {
             throw new Error('Black File finalizer is not after the last deploy-time page copy and before final reporting.');
           }
-          const after = source.slice(finalizer + 1, report);
+          const after = source.slice(finalizer + finalizerCall.length, report);
           if (/\brun\(['"]scripts\//.test(after)) {
             throw new Error('A script mutator still runs after the Black File finalizer.');
           }
@@ -130,7 +131,12 @@ jobs:
             git diff --check
             printf '%s\n' "${allowed[@]}" | sort > "$RUNNER_TEMP/allowed.txt"
             { git diff --name-only; git ls-files --others --exclude-standard; } | sort -u > "$RUNNER_TEMP/actual.txt"
-            diff -u "$RUNNER_TEMP/allowed.txt" "$RUNNER_TEMP/actual.txt"
+            unexpected="$(comm -23 "$RUNNER_TEMP/actual.txt" "$RUNNER_TEMP/allowed.txt")"
+            if [[ -n "$unexpected" ]]; then
+              echo 'Unexpected paths entered the final non-workflow repair:' >&2
+              printf '%s\n' "$unexpected" >&2
+              return 1
+            fi
             git add -- "${allowed[@]}"
             if git diff --cached --quiet; then
               echo "changed=false" >> "$GITHUB_OUTPUT"

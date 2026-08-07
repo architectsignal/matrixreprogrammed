@@ -66,7 +66,6 @@ jobs:
             downloads/black-file-postbuild-alias-regression-test.json
             downloads/black-file-postbuild-finalization.json
             downloads/black-file-public-hero-finalization.json
-            downloads/pinned-production-release-contract-test.json
             package.json
             scripts/align-mission-acceptance-copy.js
             scripts/black-file-postbuild-alias-regression-test.js
@@ -171,6 +170,5 @@ jobs:
             downloads/black-file-postbuild-finalization.json
             downloads/black-file-postbuild-alias-regression-test.json
             downloads/black-file-public-hero-finalization.json
-            downloads/pinned-production-release-contract-test.json
           if-no-files-found: ignore
           retention-days: 30

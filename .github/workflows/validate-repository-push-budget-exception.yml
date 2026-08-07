@@ -1,0 +1,32 @@
+name: Validate Repository Push Budget Exception
+
+on:
+  push:
+    branches:
+      - agent/final-pinned-production-20260807
+    paths:
+      - '.github/workflows/validate-repository-push-budget-exception.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact repaired main
+        uses: actions/checkout@v4
+        with:
+          ref: d1206b9e42a6a26b8a83a8d5e47757fee33faa76
+          fetch-depth: 1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Prove dispatch and exact one-file push lanes
+        run: |
+          node --check scripts/cloudflare-usage-budget-guard.js
+          node --check scripts/cloudflare-usage-budget-guard-test.js
+          node scripts/cloudflare-usage-budget-guard-test.js

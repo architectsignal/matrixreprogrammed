@@ -45,29 +45,45 @@ function replaceRequired(source, before, after, label) {
   write(relative, source);
 }
 
-// The canonical recovery membership template must understand the authoritative
-// email lifecycle response and must not render PayPal while checkoutEnabled=false.
-// The same repaired template is authoritative for the source page and any existing
-// Cloudflare output so a late legacy generator cannot leave placeholder pricing or
-// client behaviour behind immediately before deployment.
+// The modern membership page and its server-created PayPal approval redirect are
+// canonical. Validate them without copying the retired inline-SDK recovery
+// template into public output, then keep source and Cloudflare output exact.
 {
-  const relative = 'scripts/templates/membership-auth/membership.template';
-  let source = read(relative);
-  source = replaceRequired(
-    source,
-    "      signupStatus.className = 'status ok';\n      signupStatus.textContent = data.emailSent ? 'Check your email for your verification link.' : 'Your account was saved, but the verification email could not be sent. Please try again later.';\n      if (data.emailSent) signupForm.reset();",
-    "      const emailSent = Boolean(data.emailSent || (data.verification && data.verification.sent));\n      signupStatus.className = emailSent ? 'status ok' : 'status pending';\n      signupStatus.textContent = emailSent ? 'Check your email for your verification link.' : 'Your account was saved. Verification delivery is queued and will retry when email delivery is available.';\n      if (emailSent) signupForm.reset();",
-    'membership email response compatibility'
-  );
-  source = replaceRequired(
-    source,
-    "      if (!response.ok || !config.configured || !config.clientId) {\n        systemStatus.className = 'status pending';\n        systemStatus.textContent = 'Paid memberships are being configured. Free Member access remains available.';\n        setAllPlanMessages('Coming soon. No payment can be taken yet.');\n        return;\n      }\n      await loadSdk(config.clientId);",
-    "      if (!response.ok || !config.configured || !config.clientId) {\n        systemStatus.className = 'status pending';\n        systemStatus.textContent = 'Paid memberships are being configured. Free Member access remains available.';\n        setAllPlanMessages('Checkout is not configured. No payment can be taken.');\n        return;\n      }\n      if (!config.checkoutEnabled) {\n        systemStatus.className = 'status pending';\n        systemStatus.textContent = 'PayPal is installed but checkout remains disabled behind the server activation gates. No payment can be taken.';\n        setAllPlanMessages('Checkout disabled. Free Member access remains available.');\n        return;\n      }\n      await loadSdk(config.clientId);",
-    'membership PayPal activation boundary'
-  );
-  write(relative, source);
-  write('membership.html', source);
-  if (fs.existsSync(at('_site/membership.html'))) write('_site/membership.html', source);
+  const membershipRelative = 'membership.html';
+  const paypalClientRelative = 'paypal-membership.js';
+  const membership = read(membershipRelative);
+  const paypalClient = read(paypalClientRelative);
+  const membershipMarkers = [
+    'Free Member',
+    'paypal-membership.js',
+    'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
+  ];
+  for (const marker of membershipMarkers) {
+    if (!membership.includes(marker)) throw new Error(`Canonical membership page is missing: ${marker}`);
+  }
+  if (membership.includes('Coming soon — no payment taken')) {
+    throw new Error('Canonical membership page contains retired placeholder payment copy');
+  }
+  const redirectMarkers = [
+    '/api/paypal/subscription/create',
+    'Continue securely to PayPal',
+    'location.assign',
+    "'/api/paypal/config'"
+  ];
+  for (const marker of redirectMarkers) {
+    if (!paypalClient.includes(marker)) throw new Error(`Server-created PayPal redirect client is missing: ${marker}`);
+  }
+  if (paypalClient.includes('paypal.com/sdk/js') || paypalClient.includes('window.paypal') || paypalClient.includes('loadSdk(')) {
+    throw new Error('Retired browser PayPal SDK logic re-entered the canonical membership runtime');
+  }
+  if (fs.existsSync(at('_site/membership.html'))) {
+    read('_site/membership.html');
+    write('_site/membership.html', membership);
+  }
+  if (fs.existsSync(at('_site/paypal-membership.js'))) {
+    read('_site/paypal-membership.js');
+    write('_site/paypal-membership.js', paypalClient);
+  }
 }
 
 // Authentication remains implemented by the mature legacy module for now, but
@@ -118,7 +134,7 @@ const report = {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
     freeSignup: 'supports verification.sent and queued delivery truthfully',
     paypal: 'checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans',
-    membershipSource: 'the repaired template is synchronized into source and existing Cloudflare output before contract verification',
+    membershipSource: 'the canonical membership page and server-created PayPal redirect client are validated and synchronized without template replacement',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }
 };

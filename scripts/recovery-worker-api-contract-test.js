@@ -28,8 +28,8 @@ for (const relative of [
   'src/worker-paypal-subscriptions.js',
   'src/worker-email-lifecycle.js',
   'src/worker-access-gate.js',
-  'scripts/templates/membership-auth/membership.template',
   'membership.html',
+  'paypal-membership.js',
   'migrations/0001_membership_foundation.sql',
   'migrations/phase5_member_experience.sql',
   'migrations/phase6_paypal_subscriptions.sql',
@@ -43,8 +43,8 @@ const forum = read('src/worker-forum-persistence.js');
 const paypal = read('src/worker-paypal-subscriptions.js');
 const email = read('src/worker-email-lifecycle.js');
 const access = read('src/worker-access-gate.js');
-const template = read('scripts/templates/membership-auth/membership.template');
 const membership = read('membership.html');
+const paypalClient = read('paypal-membership.js');
 const foundation = read('migrations/0001_membership_foundation.sql');
 const experience = read('migrations/phase5_member_experience.sql');
 const paypalMigration = read('migrations/phase6_paypal_subscriptions.sql');
@@ -101,12 +101,18 @@ checks.paypalFailClosed = paypal.includes('const plansReady=')
   && paypalRuntimeManaged;
 need(checks.paypalFailClosed, 'PayPal checkout does not require credentials, environment switch, D1 switch, confirmation, active plans and the exact live activation phrase, or Wrangler does not preserve dashboard-managed variables');
 
-checks.membershipClientContract = template.includes('data.verification && data.verification.sent')
-  && template.includes('if (!config.checkoutEnabled)')
-  && template.indexOf('if (!config.checkoutEnabled)') < template.indexOf('await loadSdk(config.clientId)')
-  && membership.includes('data.verification && data.verification.sent')
-  && membership.includes('if (!config.checkoutEnabled)');
-need(checks.membershipClientContract, 'Membership UI does not match the authoritative signup response or PayPal activation contract');
+checks.membershipClientContract = membership.includes('Free Member')
+  && membership.includes('paypal-membership.js')
+  && membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.')
+  && !membership.includes('Coming soon — no payment taken')
+  && paypalClient.includes('/api/paypal/subscription/create')
+  && paypalClient.includes('Continue securely to PayPal')
+  && paypalClient.includes('location.assign')
+  && paypalClient.includes("'/api/paypal/config'")
+  && !paypalClient.includes('paypal.com/sdk/js')
+  && !paypalClient.includes('window.paypal')
+  && !paypalClient.includes('loadSdk(');
+need(checks.membershipClientContract, 'Membership UI does not preserve the modern free/optional-donation tiers and server-created PayPal approval redirect contract');
 
 checks.emailFailClosed = email.includes('function providerConfigured(env){return Boolean(env?.BREVO_API_KEY&&env?.MEMBERS_FROM_EMAIL)}')
   && email.includes("if(!env?.EMAIL_WEBHOOK_SECRET||!secureEqual(secret,env.EMAIL_WEBHOOK_SECRET))")

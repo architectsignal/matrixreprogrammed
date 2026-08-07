@@ -5,14 +5,19 @@ const fs = require('fs');
 const path = require('path');
 
 const mode = process.argv[2] || 'check';
-// The legacy workflow token is retained because deploy.yml already routes this
-// exact value into owner-exception mode. The actual authority is freshly bound
-// to 2026-08-06, workflow_dispatch and first-attempt checks below.
+// The legacy workflow token is retained because the controlled production
+// workflows already route this exact value into owner-exception mode. The
+// authority is freshly bound to 2026-08-07, the first run attempt and either a
+// workflow_dispatch event or a verified one-file repository-credential push.
 const oneTimeAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
 const oneTimeExceptionDate = '2026-08-07';
 const oneTimeSnapshotDate = '2026-08-02';
 const policyPath = path.resolve(
   process.env.MATRIX_CLOUDFLARE_BUDGET_POLICY_PATH || '.github/build-budget-policy.json'
+);
+const repositoryAuthorizationPath = path.resolve(
+  process.env.MATRIX_REPOSITORY_PRODUCTION_AUTHORIZATION_REPORT
+    || 'downloads/repository-credential-production-authorization.json'
 );
 
 function fail(message) {
@@ -30,6 +35,62 @@ function requireFiniteNumber(value, label) {
 
 function isTrue(value) {
   return String(value || '').trim().toLowerCase() === 'true';
+}
+
+function fullSha(value) {
+  return /^[0-9a-f]{40}$/i.test(String(value || '').trim())
+    ? String(value).trim().toLowerCase()
+    : '';
+}
+
+function repositoryCredentialPushAuthorization() {
+  if (process.env.GITHUB_EVENT_NAME !== 'push') {
+    return { ok: false, reason: 'event-is-not-push' };
+  }
+
+  let authorization;
+  try {
+    authorization = JSON.parse(fs.readFileSync(repositoryAuthorizationPath, 'utf8'));
+  } catch (error) {
+    return {
+      ok: false,
+      reason: `authorization-report-unavailable:${error.message}`
+    };
+  }
+
+  const githubSha = fullSha(process.env.GITHUB_SHA);
+  const headSha = fullSha(authorization.headSha);
+  const workflowSha = fullSha(authorization.workflowSha);
+  const parentSha = fullSha(authorization.parentSha);
+  const targetSha = fullSha(authorization.targetSha);
+  const changedFiles = Array.isArray(authorization.changedFiles)
+    ? authorization.changedFiles.map(value => String(value || '').trim()).filter(Boolean)
+    : [];
+
+  const checks = {
+    reportOk: authorization.ok === true,
+    mode: authorization.mode === 'repository-credential-one-shot-push',
+    actor: authorization.actor === 'architectsignal',
+    event: authorization.event === 'push',
+    ref: authorization.ref === 'refs/heads/main',
+    billing: authorization.billingExceptionAuthorized === true,
+    credentialSource: authorization.credentialSource === 'repository-secrets-without-production-environment',
+    noError: !authorization.error,
+    exactChangedFile: changedFiles.length === 1
+      && changedFiles[0] === '.github/repository-credential-production.trigger',
+    exactHead: Boolean(githubSha) && headSha === githubSha,
+    workflowHead: !workflowSha || workflowSha === headSha,
+    parentTarget: Boolean(parentSha) && parentSha === targetSha
+  };
+
+  const failed = Object.entries(checks)
+    .filter(([, value]) => !value)
+    .map(([key]) => key);
+  return {
+    ok: failed.length === 0,
+    reason: failed.length ? `failed:${failed.join(',')}` : 'verified',
+    authorization
+  };
 }
 
 let policy;
@@ -101,18 +162,32 @@ try {
       fail(`The one-time exception is not bound to the locked ${oneTimeSnapshotDate} owner usage snapshot.`);
       process.exit();
     }
-    if (process.env.GITHUB_EVENT_NAME && process.env.GITHUB_EVENT_NAME !== 'workflow_dispatch') {
-      fail(`The one-time exception requires workflow_dispatch, not ${process.env.GITHUB_EVENT_NAME}.`);
+
+    const workflowEvent = String(process.env.GITHUB_EVENT_NAME || '').trim();
+    const repositoryPush = repositoryCredentialPushAuthorization();
+    const allowedEvent = !workflowEvent
+      || workflowEvent === 'workflow_dispatch'
+      || repositoryPush.ok;
+    if (!allowedEvent) {
+      fail(
+        `The one-time exception requires workflow_dispatch or a verified repository-credential push, `
+        + `not ${workflowEvent || 'unknown'} (${repositoryPush.reason}).`
+      );
       process.exit();
     }
     if (process.env.GITHUB_RUN_ATTEMPT && process.env.GITHUB_RUN_ATTEMPT !== '1') {
       fail('The one-time exception cannot be used for a workflow re-run attempt.');
       process.exit();
     }
+
+    const lane = repositoryPush.ok
+      ? 'verified one-file repository-credential push'
+      : 'workflow_dispatch';
     console.log(
       'Cloudflare one-time owner exception PASS: one billable production build is authorized only on ' +
-      `${oneTimeExceptionDate} Europe/London against the recorded ${oneTimeSnapshotDate} snapshot ` +
-      'of 5,470 billable minutes and $27.34. All non-budget release gates remain mandatory.'
+      `${oneTimeExceptionDate} Europe/London through ${lane}, against the recorded ` +
+      `${oneTimeSnapshotDate} snapshot of 5,470 billable minutes and $27.34. ` +
+      'All non-budget release gates remain mandatory.'
     );
     process.exit();
   }

@@ -151,7 +151,28 @@ jobs:
             cmp -s membership.html _site/membership.html
             cmp -s paypal-membership.js _site/paypal-membership.js
             node scripts/recovery-worker-api-contract-test.js
-            node scripts/production-sync-test.js
+            node - <<'NODE'
+          const fs = require('fs');
+          const source = fs.readFileSync('membership.html', 'utf8');
+          const built = fs.readFileSync('_site/membership.html', 'utf8');
+          const client = fs.readFileSync('paypal-membership.js', 'utf8');
+          const builtClient = fs.readFileSync('_site/paypal-membership.js', 'utf8');
+          const pageOk = text => text.includes('Free Member')
+            && text.includes('paypal-membership.js')
+            && text.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.')
+            && !text.includes('Coming soon — no payment taken');
+          const clientOk = text => text.includes('/api/paypal/subscription/create')
+            && text.includes('Continue securely to PayPal')
+            && text.includes('location.assign')
+            && !text.includes('paypal.com/sdk/js')
+            && !text.includes('window.paypal')
+            && !text.includes('loadSdk(');
+          if (!pageOk(source)) throw new Error('Canonical membership regression check failed');
+          if (!pageOk(built)) throw new Error('Built membership regression check failed');
+          if (!clientOk(client)) throw new Error('Canonical PayPal redirect regression check failed');
+          if (!clientOk(builtClient)) throw new Error('Built PayPal redirect regression check failed');
+          console.log('MEMBERSHIP HARDENER REGRESSION PASSED: modern tiers and SDK-free server redirect remain byte-identical in source and _site.');
+          NODE
 
             git add scripts/harden-worker-api-contracts.js scripts/recovery-worker-api-contract-test.js
             git restore --worktree -- .

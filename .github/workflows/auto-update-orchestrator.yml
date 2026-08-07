@@ -177,6 +177,10 @@ jobs:
 
       - name: Commit all validated automatic updates once
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; skipping automated commit, push and deploy handoff."
+            exit 0
+          fi
           git config user.name "matrix-auto-update-bot"
           git config user.email "actions@github.com"
           git add -A
@@ -184,7 +188,7 @@ jobs:
             echo "All collectors and hard gates passed; no generated output changed."
             exit 0
           fi
-          git commit -m "Automatic site update $(date -u +%F) [deploy]"
+          git commit -m "Automatic site update $(date -u +%F)"
           for attempt in 1 2 3; do
             git push && exit 0
             echo "Push failed on attempt $attempt. Rebasing validated outputs and retrying."

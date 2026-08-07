@@ -56,7 +56,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
-        run: bash "$RUNNER_TEMP/final-pinned-release/bootstrap.sh" "$GITHUB_WORKSPACE" "$RUNNER_TEMP/final-pinned-release"
+        run: GITHUB_EVENT_NAME=workflow_dispatch GITHUB_RUN_ATTEMPT=1 bash "$RUNNER_TEMP/final-pinned-release/bootstrap.sh" "$GITHUB_WORKSPACE" "$RUNNER_TEMP/final-pinned-release"
 
       - name: Upload bootstrap identity
         if: always()

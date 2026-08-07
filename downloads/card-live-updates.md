@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-06T14:35:09.245Z
-Live Intel source window: 2026-08-06T14:34:51.930Z
+Generated: 2026-08-07T00:15:43.612Z
+Live Intel source window: 2026-08-07T00:15:36.507Z
 Tracked cards: 969
-Cards with current matched records: 98
-Cards with no new verified record: 871
+Cards with current matched records: 94
+Cards with no new verified record: 875
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -1936,10 +1936,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Delaware
 - Route: jurisdictions-of-power/delaware.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-04T12:00:00.000Z
-- 2026-08-04T12:00:00.000Z — Maryland Man Sentenced to 60 Months in Prison for His Role in Commercial Burglary Ring in New Jersey, New York, Pennsylvania, Maryland, and Delaware — https://www.justice.gov/usao-nj/pr/maryland-man-sentenced-60-months-prison-his-role-commercial-burglary-ring-new-jersey-new
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## della Rovere
 - Route: black-nobility/della-rovere.html
@@ -1980,8 +1979,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## District Court, District of Columbia
 - Route: entity-timelines/district-court-district-of-columbia.html
 - Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-05T12:00:00.000Z
+- Current matched records: 2
+- Latest record: 2026-08-06T12:00:00.000Z
+- 2026-08-06T12:00:00.000Z — Repeat Felon Sentenced After Ghost Gun, Drugs Recovered at Southeast D.C. Apartment Complex — https://www.justice.gov/usao-dc/pr/repeat-felon-sentenced-after-ghost-gun-drugs-recovered-southeast-dc-apartment-complex
 - 2026-08-05T12:00:00.000Z — Repeat Narcotics Dealer Found Guilty by Federal Jury in Distributing PCP at a Southwest D.C. Rec Center — https://www.justice.gov/usao-dc/pr/repeat-narcotics-dealer-found-guilty-federal-jury-distributing-pcp-southwest-dc-rec
 
 ## Ditchley Foundation network
@@ -2679,10 +2679,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-08-06T08:32:46.000Z
+- Latest record: 2026-08-06T19:40:00.000Z
+- 2026-08-06T19:40:00.000Z — Remarks from Secretary of the Treasury Scott Bessent at Event with Arizona Bankers in Phoenix - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE02dDJiaHdUb0tycm0tVUh0RTNjaEhTREhCMVV5ZjAwTFd2amNSbE1ZVTNVMndiRGx4MW13cDNOWDdtT3dLSlVMNFdyQ3hsVXd4Sk91bTFlOHh0OTZwMU91OU1B?oc=5
+- 2026-08-06T19:20:19.000Z — 100-HQ-442529 Part 24 - FBI (.gov) — https://news.google.com/rss/articles/CBMib0FVX3lxTE5IWllEWDN4LTBxN2RZckxzdlpERmlzY2lMLUFIV2kwS0tWTEh6NVRTT1FURXRQRlJtNkp1VVhVY0dvZ3JSdTF1bVpxQ1QzdFVrcjdlcTZJQ2Y4TGxGNkhJTkotTG11UHFSN3FpMVN0Yw?oc=5
 - 2026-08-06T08:32:46.000Z — Syrian migrant smugglers arrested in coordinated strike in Germany and Serbia - Europol — https://news.google.com/rss/articles/CBMizgFBVV95cUxOUHZtc0V2cGZkbDd4OGVBS1lLSlFtOGFCVDJILWJrS2lmZ3NhNEN4X0RPdF8xNVZZVGhrbUxGSUZNVk56VEYxQ1ZNTjBXYW9rSS1xSDZUY2hkZHU3cDdDYTJsZkVmT09KZVdoczF3Q29TRFgwOEVEbU5FUDJJM0M5VG80T2hGZ2NOZmFMSWRuRUxDUUo5SXQ1ajFZUk9YQzlLV093NUVTb0phYTJlTy1HcENVb0lpamJ3WWw1SGZLMUFpeWxLMDE2M09YaWdrUQ?oc=5
-- 2026-08-06T05:07:20.000Z — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post — https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
-- 2026-08-05T17:41:34.000Z — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wVmJLXzRGNlRtcnZrVE80SWdSZ2l0U3kyOTFBU3VjRjNvUUdIR1JFN25VSDc5ZENZc241bDFsZHphYzd1NUNlcjFfQldpb2xBQUZwdnBCdmNnUDVwY0pUbm53?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -3172,11 +3172,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Jersey
 - Route: jurisdictions-of-power/jersey.html
 - Status: current-records-matched
-- Current matched records: 3
+- Current matched records: 1
 - Latest record: 2026-08-05T12:00:00.000Z
 - 2026-08-05T12:00:00.000Z — Registered Sex Offender Sentenced to 25 Years in Prison for Commanding the Exploitation of a Then-Four-Year-Old Child in New Jersey and Producing Child Pornography — https://www.justice.gov/usao-nj/pr/registered-sex-offender-sentenced-25-years-prison-commanding-exploitation-then-four-year
-- 2026-08-04T12:00:00.000Z — Maryland Man Sentenced to 60 Months in Prison for His Role in Commercial Burglary Ring in New Jersey, New York, Pennsylvania, Maryland, and Delaware — https://www.justice.gov/usao-nj/pr/maryland-man-sentenced-60-months-prison-his-role-commercial-burglary-ring-new-jersey-new
-- 2026-08-04T12:00:00.000Z — United States Attorney's Office Joining Law Enforcement, Community Leaders and Residents for National Night Out Events in New Jersey — https://www.justice.gov/usao-nj/pr/united-states-attorneys-office-joining-law-enforcement-community-leaders-and-residents
 
 ## Jesuit order public route
 - Route: secret-societies/jesuit-order-public-route.html
@@ -5088,10 +5086,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## STATE DEPARTMENT
 - Route: entity-timelines/state-department.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-08-05T12:00:00.000Z
 - 2026-08-05T12:00:00.000Z — South Florida Man Pleads Guilty to Posting Online Threats Against Secretary of State Marco Rubio and Special Envoy Kristi Noem — https://www.justice.gov/usao-sdfl/pr/south-florida-man-pleads-guilty-posting-online-threats-against-secretary-state-marco
-- 2026-08-04T12:00:00.000Z — Man Currently Serving a State Prison Sentence Pleads Guilty to Threatening Several U.S. Senators and Former Vice President Kamala Harris — https://www.justice.gov/usao-edar/pr/man-currently-serving-state-prison-sentence-pleads-guilty-threatening-several-us
 
 ## State Street
 - Route: institutions/state-street.html
@@ -5382,10 +5379,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: entity-timelines/treasury-department.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-08-05T17:41:34.000Z
+- Latest record: 2026-08-06T19:40:00.000Z
+- 2026-08-06T19:40:00.000Z — Remarks from Secretary of the Treasury Scott Bessent at Event with Arizona Bankers in Phoenix - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE02dDJiaHdUb0tycm0tVUh0RTNjaEhTREhCMVV5ZjAwTFd2amNSbE1ZVTNVMndiRGx4MW13cDNOWDdtT3dLSlVMNFdyQ3hsVXd4Sk91bTFlOHh0OTZwMU91OU1B?oc=5
 - 2026-08-05T17:41:34.000Z — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wVmJLXzRGNlRtcnZrVE80SWdSZ2l0U3kyOTFBU3VjRjNvUUdIR1JFN25VSDc5ZENZc241bDFsZHphYzd1NUNlcjFfQldpb2xBQUZwdnBCdmNnUDVwY0pUbm53?oc=5
 - 2026-08-05T14:00:00.000Z — Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5
-- 2026-08-05T12:30:00.000Z — Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hOHVXelEtWHd0RGxjQ1JKdFEtZ0VfeTluV25OaTYweEtUUC03RE03emswa3BoeFBVQ2NlQkFuWUc3X1FTUGRibVNGRVhKcndLektTY2RCS0RUSm03QlhiSG1R?oc=5
 
 ## Trilateral Commission
 - Route: institutions/trilateral-commission.html
@@ -5694,9 +5691,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
 - Current matched records: 2
-- Latest record: 2026-08-05T12:00:00.000Z
+- Latest record: 2026-08-06T12:00:00.000Z
+- 2026-08-06T12:00:00.000Z — D.C. Business Owner Pleads Guilty to Stealing More than $1 Million in COVID-19 Relief Funds — https://www.justice.gov/usao-dc/pr/dc-business-owner-pleads-guilty-stealing-more-1-million-covid-19-relief-funds
 - 2026-08-05T12:00:00.000Z — Repeat Narcotics Dealer Found Guilty by Federal Jury in Distributing PCP at a Southwest D.C. Rec Center — https://www.justice.gov/usao-dc/pr/repeat-narcotics-dealer-found-guilty-federal-jury-distributing-pcp-southwest-dc-rec
-- 2026-08-04T12:00:00.000Z — Members of Violent D.C. Street Crew Convicted of Drug Trafficking, Murder Charges — https://www.justice.gov/usao-dc/pr/members-violent-dc-street-crew-convicted-drug-trafficking-murder-charges
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html
@@ -5853,24 +5850,21 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-04T12:00:00.000Z
-- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-04T12:00:00.000Z
-- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-04T12:00:00.000Z
-- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## World Resources Institute
 - Route: think-tanks/world-resources-institute.html

@@ -130,4 +130,5 @@ jobs:
           name: final-pinned-repair-${{ github.run_id }}
           path: ${{ runner.temp }}/final-pinned-repair-artifact
           if-no-files-found: error
+          include-hidden-files: true
           retention-days: 30

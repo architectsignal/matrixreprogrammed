@@ -1,0 +1,158 @@
+name: Build Final Pinned Git Commit Object
+run-name: Build tested dangling repair commit for atomic main fast-forward
+
+on:
+  push:
+    branches:
+      - agent/final-pinned-production-20260807
+    paths:
+      - '.github/workflows/build-final-pinned-git-commit-object.yml'
+      - '.github/final-pinned-git-object.trigger'
+      - '.github/final-pinned-production-bootstrap.tar.gz.b64.part*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  build-commit-object:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repair controller
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Unpack immutable repair tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/final-pinned-release" "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          cat .github/final-pinned-production-bootstrap.tar.gz.b64.part* | base64 --decode > "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          tar -xzf "$RUNNER_TEMP/final-pinned-release.tar.gz" -C "$RUNNER_TEMP"
+
+      - name: Create tested dangling commit object without changing main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RECEIPT: ${{ runner.temp }}/final-pinned-git-object-receipt.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          BASE_SHA="$(git rev-parse origin/main)"
+          BASE_TREE="$(git rev-parse "$BASE_SHA^{tree}")"
+          git checkout -B final-pinned-object-work "$BASE_SHA"
+          git clean -fdx
+
+          python "$RUNNER_TEMP/final-pinned-release/apply_final_pinned_release_fix.py" "$GITHUB_WORKSPACE" --allow-newer
+          node scripts/finalize-black-file-postbuild.js
+          node scripts/black-file-postbuild-alias-regression-test.js
+          node scripts/pinned-production-release-contract-test.js
+          GITHUB_EVENT_NAME=workflow_dispatch GITHUB_RUN_ATTEMPT=1 node scripts/verify-one-shot-production-authorization.js --self-test
+          GITHUB_EVENT_NAME=workflow_dispatch GITHUB_RUN_ATTEMPT=1 node scripts/cloudflare-usage-budget-guard-test.js
+          perl -0pi -e 's/\n+\z/\n/' .github/workflows/review-queue-speculation-publish.yml
+          git diff --check
+
+          expected=(
+            .github/production-release.freeze
+            .github/workflows/authorized-production-dispatch.yml
+            .github/workflows/auto-update-orchestrator.yml
+            .github/workflows/black-file-public-hero-integrity.yml
+            .github/workflows/capture-current-deploy-status.yml
+            .github/workflows/deploy.yml
+            .github/workflows/epstein-ai-detective.yml
+            .github/workflows/live-intel-update.yml
+            .github/workflows/permanent-release-metadata-repair.yml
+            .github/workflows/pinned-production-release-integrity.yml
+            .github/workflows/release-status-snapshot.yml
+            .github/workflows/review-queue-speculation-publish.yml
+            black-file
+            downloads/black-file-postbuild-alias-regression-test.json
+            downloads/black-file-postbuild-finalization.json
+            downloads/black-file-public-hero-finalization.json
+            downloads/pinned-production-release-contract-test.json
+            package.json
+            scripts/align-mission-acceptance-copy.js
+            scripts/black-file-postbuild-alias-regression-test.js
+            scripts/cloudflare-usage-budget-guard.js
+            scripts/finalize-black-file-postbuild.js
+            scripts/pinned-production-release-contract-test.js
+            scripts/prepare-final-pinned-production-marker.js
+            scripts/release-freeze-guard.js
+            scripts/verify-live-production.js
+            scripts/verify-one-shot-production-authorization.js
+          )
+          printf '%s\n' "${expected[@]}" | sort > "$RUNNER_TEMP/expected-paths.txt"
+          { git diff --name-only; git ls-files --others --exclude-standard; } | sort -u > "$RUNNER_TEMP/actual-paths.txt"
+          diff -u "$RUNNER_TEMP/expected-paths.txt" "$RUNNER_TEMP/actual-paths.txt"
+
+          CURRENT_MAIN="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)"
+          test "$CURRENT_MAIN" = "$BASE_SHA"
+
+          : > "$RUNNER_TEMP/tree-elements.jsonl"
+          for file in "${expected[@]}"; do
+            test -f "$file"
+            base64 -w0 "$file" > "$RUNNER_TEMP/blob.b64"
+            jq -n --rawfile content "$RUNNER_TEMP/blob.b64" '{content:$content,encoding:"base64"}' > "$RUNNER_TEMP/blob-request.json"
+            BLOB_SHA="$(gh api --method POST "repos/$GITHUB_REPOSITORY/git/blobs" --input "$RUNNER_TEMP/blob-request.json" --jq .sha)"
+            jq -n --arg path "$file" --arg sha "$BLOB_SHA" '{path:$path,mode:"100644",type:"blob",sha:$sha}' >> "$RUNNER_TEMP/tree-elements.jsonl"
+          done
+
+          BASE_TREE="$BASE_TREE" node - <<'NODE'
+          const fs = require('fs');
+          const entries = fs.readFileSync(process.env.RUNNER_TEMP + '/tree-elements.jsonl', 'utf8')
+            .trim().split('\n').filter(Boolean).map(JSON.parse);
+          fs.writeFileSync(process.env.RUNNER_TEMP + '/tree-request.json', JSON.stringify({
+            base_tree: process.env.BASE_TREE,
+            tree: entries
+          }));
+          NODE
+          TREE_SHA="$(gh api --method POST "repos/$GITHUB_REPOSITORY/git/trees" --input "$RUNNER_TEMP/tree-request.json" --jq .sha)"
+
+          jq -n --arg message 'Fix final Black File postbuild and pin controlled production release [skip ci]' --arg tree "$TREE_SHA" --arg parent "$BASE_SHA" '{message:$message,tree:$tree,parents:[$parent]}' > "$RUNNER_TEMP/commit-request.json"
+          COMMIT_SHA="$(gh api --method POST "repos/$GITHUB_REPOSITORY/git/commits" --input "$RUNNER_TEMP/commit-request.json" --jq .sha)"
+
+          CURRENT_MAIN="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)"
+          test "$CURRENT_MAIN" = "$BASE_SHA"
+          API_TREE="$(gh api "repos/$GITHUB_REPOSITORY/git/commits/$COMMIT_SHA" --jq .tree.sha)"
+          test "$API_TREE" = "$TREE_SHA"
+
+          BASE_SHA="$BASE_SHA" BASE_TREE="$BASE_TREE" TREE_SHA="$TREE_SHA" COMMIT_SHA="$COMMIT_SHA" RECEIPT="$RECEIPT" python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          expected = Path(os.environ['RUNNER_TEMP'] + '/expected-paths.txt').read_text().splitlines()
+          files = []
+          for relative in expected:
+              data = Path(relative).read_bytes()
+              files.append({'path': relative, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+          payload = {
+              'ok': True,
+              'baseSha': os.environ['BASE_SHA'],
+              'baseTree': os.environ['BASE_TREE'],
+              'treeSha': os.environ['TREE_SHA'],
+              'commitSha': os.environ['COMMIT_SHA'],
+              'fileCount': len(files),
+              'files': files,
+              'mainUnchanged': True,
+              'boundary': 'The tested commit object is dangling. This workflow did not update main, dispatch production, mutate D1 or upload a Worker.'
+          }
+          Path(os.environ['RECEIPT']).write_text(json.dumps(payload, indent=2) + '\n')
+          print(json.dumps(payload, indent=2))
+          PY
+
+      - name: Upload Git object receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-pinned-git-object-${{ github.run_id }}
+          path: ${{ runner.temp }}/final-pinned-git-object-receipt.json
+          if-no-files-found: error
+          retention-days: 30

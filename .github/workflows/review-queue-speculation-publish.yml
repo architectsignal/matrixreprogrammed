@@ -53,6 +53,10 @@ jobs:
         id: publish
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; skipping automated commit, push and deploy handoff."
+            exit 0
+          fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           published=false
@@ -70,7 +74,7 @@ jobs:
               echo "No review-queue publication changes"
               break
             fi
-            git commit -m "Publish review queue as unverified speculation [deploy]"
+            git commit -m "Publish review queue as unverified speculation"
             if git push origin HEAD:main; then
               published=true
               break
@@ -78,12 +82,5 @@ jobs:
             echo "Main advanced during publication; rebuilding from the newest main (attempt $attempt)."
           done
           echo "published=$published" >> "$GITHUB_OUTPUT"
-      - name: Dispatch guarded production deployment
-        if: steps.publish.outputs.published == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
-            --repo "$GITHUB_REPOSITORY" \
-            --ref main \
-            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
+      - name: Record controlled deployment handoff
+        run: echo "Scheduled intelligence and review publishers never dispatch production. The sole authorized dispatcher carries billing_exception and target_sha."

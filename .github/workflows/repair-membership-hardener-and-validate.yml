@@ -1,0 +1,168 @@
+name: Repair Membership Hardener and Validate Production Sync
+run-name: Repair membership hardener without weakening production gates
+
+on:
+  push:
+    branches:
+      - agent/final-pinned-production-20260807
+    paths:
+      - '.github/workflows/repair-membership-hardener-and-validate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repair controller
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Patch, test and publish exact membership repair
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "matrix-membership-release-controller"
+          git config user.email "actions@users.noreply.github.com"
+
+          apply_patch() {
+            python - <<'PY'
+          from pathlib import Path
+
+          hardener_path = Path('scripts/harden-worker-api-contracts.js')
+          hardener = hardener_path.read_text(encoding='utf-8')
+          start_marker = '// The canonical recovery membership template must understand the authoritative'
+          end_marker = '// Authentication remains implemented by the mature legacy module for now, but'
+          if start_marker not in hardener or end_marker not in hardener:
+              raise SystemExit('Membership hardener replacement boundaries are missing')
+          start = hardener.index(start_marker)
+          end = hardener.index(end_marker, start)
+          replacement = r'''// The modern membership page and its server-created PayPal approval redirect are
+          // canonical. Validate them without copying the retired inline-SDK recovery
+          // template into public output, then keep source and Cloudflare output exact.
+          {
+            const membershipRelative = 'membership.html';
+            const paypalClientRelative = 'paypal-membership.js';
+            const membership = read(membershipRelative);
+            const paypalClient = read(paypalClientRelative);
+            const membershipMarkers = [
+              'Free Member',
+              'paypal-membership.js',
+              'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
+            ];
+            for (const marker of membershipMarkers) {
+              if (!membership.includes(marker)) throw new Error(`Canonical membership page is missing: ${marker}`);
+            }
+            if (membership.includes('Coming soon — no payment taken')) {
+              throw new Error('Canonical membership page contains retired placeholder payment copy');
+            }
+            const redirectMarkers = [
+              '/api/paypal/subscription/create',
+              'Continue securely to PayPal',
+              'location.assign',
+              "'/api/paypal/config'"
+            ];
+            for (const marker of redirectMarkers) {
+              if (!paypalClient.includes(marker)) throw new Error(`Server-created PayPal redirect client is missing: ${marker}`);
+            }
+            if (paypalClient.includes('paypal.com/sdk/js') || paypalClient.includes('window.paypal') || paypalClient.includes('loadSdk(')) {
+              throw new Error('Retired browser PayPal SDK logic re-entered the canonical membership runtime');
+            }
+            if (fs.existsSync(at('_site/membership.html'))) {
+              read('_site/membership.html');
+              write('_site/membership.html', membership);
+            }
+            if (fs.existsSync(at('_site/paypal-membership.js'))) {
+              read('_site/paypal-membership.js');
+              write('_site/paypal-membership.js', paypalClient);
+            }
+          }
+
+          '''
+          hardener = hardener[:start] + replacement + hardener[end:]
+          old_report = "membershipSource: 'the repaired template is synchronized into source and existing Cloudflare output before contract verification',"
+          new_report = "membershipSource: 'the canonical membership page and server-created PayPal redirect client are validated and synchronized without template replacement',"
+          if old_report in hardener:
+              hardener = hardener.replace(old_report, new_report, 1)
+          elif new_report not in hardener:
+              raise SystemExit('Membership hardener report contract anchor is missing')
+          hardener_path.write_text(hardener, encoding='utf-8')
+
+          recovery_path = Path('scripts/recovery-worker-api-contract-test.js')
+          recovery = recovery_path.read_text(encoding='utf-8')
+          old_required = "  'scripts/templates/membership-auth/membership.template',\n  'membership.html',"
+          new_required = "  'membership.html',\n  'paypal-membership.js',"
+          if old_required in recovery:
+              recovery = recovery.replace(old_required, new_required, 1)
+          elif new_required not in recovery:
+              raise SystemExit('Recovery membership required-file anchor is missing')
+          old_reads = "const template = read('scripts/templates/membership-auth/membership.template');\nconst membership = read('membership.html');"
+          new_reads = "const membership = read('membership.html');\nconst paypalClient = read('paypal-membership.js');"
+          if old_reads in recovery:
+              recovery = recovery.replace(old_reads, new_reads, 1)
+          elif new_reads not in recovery:
+              raise SystemExit('Recovery membership read anchor is missing')
+          contract_start = recovery.index('checks.membershipClientContract =')
+          contract_end = recovery.index('\n\nchecks.emailFailClosed =', contract_start)
+          contract = r'''checks.membershipClientContract = membership.includes('Free Member')
+            && membership.includes('paypal-membership.js')
+            && membership.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.')
+            && !membership.includes('Coming soon — no payment taken')
+            && paypalClient.includes('/api/paypal/subscription/create')
+            && paypalClient.includes('Continue securely to PayPal')
+            && paypalClient.includes('location.assign')
+            && paypalClient.includes("'/api/paypal/config'")
+            && !paypalClient.includes('paypal.com/sdk/js')
+            && !paypalClient.includes('window.paypal')
+            && !paypalClient.includes('loadSdk(');
+          need(checks.membershipClientContract, 'Membership UI does not preserve the modern free/optional-donation tiers and server-created PayPal approval redirect contract');'''
+          recovery = recovery[:contract_start] + contract + recovery[contract_end:]
+          recovery_path.write_text(recovery, encoding='utf-8')
+          PY
+          }
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B membership-hardener-repair origin/main
+            git clean -fdx
+            apply_patch
+
+            node --check scripts/harden-worker-api-contracts.js
+            node --check scripts/recovery-worker-api-contract-test.js
+
+            before_membership="$(sha256sum membership.html | cut -d' ' -f1)"
+            before_paypal="$(sha256sum paypal-membership.js | cut -d' ' -f1)"
+            node scripts/harden-worker-api-contracts.js
+            test "$before_membership" = "$(sha256sum membership.html | cut -d' ' -f1)"
+            test "$before_paypal" = "$(sha256sum paypal-membership.js | cut -d' ' -f1)"
+            cmp -s membership.html _site/membership.html
+            cmp -s paypal-membership.js _site/paypal-membership.js
+            node scripts/recovery-worker-api-contract-test.js
+            node scripts/production-sync-test.js
+
+            git add scripts/harden-worker-api-contracts.js scripts/recovery-worker-api-contract-test.js
+            git restore --worktree -- .
+            git clean -fd
+            git diff --cached --check
+            test "$(git diff --cached --name-only | wc -l)" -eq 2
+            git commit -m "Preserve server-redirect membership runtime during final hardening"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "main advanced during attempt $attempt; rebuilding and retesting against latest main."
+          done
+          echo 'Unable to publish membership hardener repair after three tested attempts.' >&2
+          exit 1

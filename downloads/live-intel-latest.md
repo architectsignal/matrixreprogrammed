@@ -1,12 +1,12 @@
 # Live Intel Machine
 
-Collection completed: 2026-08-07T00:15:36.507Z
+Collection completed: 2026-08-07T03:17:01.613Z
 Latest source publication: 2026-08-06T19:40:00.000Z
-Collection status: fresh-items-added
-New items this collection: 27
+Collection status: current-window-refreshed-no-new-items
+New items this collection: 0
 
 ## Freshness truth
-27 new source item(s) entered the seven-day window during this collection.
+The collector completed successfully, but no newly published source item entered the current evidence window.
 
 ## Rules
 - Prefer primary sources, court records, official releases, archives, and dated reporting.
@@ -284,11 +284,11 @@ New items this collection: 27
   - Evidence: Seven-day public-record lead
   - Video hook: New public-record signal: Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-05 — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in
+- 2026-08-05 — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in
   - Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5
   - Source class: discovery
   - Evidence: Seven-day public-record lead
-  - Video hook: New public-record signal: Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in
+  - Video hook: New public-record signal: Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)
   - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hOHVXelEtWHd0RGxjQ1JKdFEtZ0VfeTluV25OaTYweEtUUC03RE03emswa3BoeFBVQ2NlQkFuWUc3X1FTUGRibVNGRVhKcndLektTY2RCS0RUSm03QlhiSG1R?oc=5

@@ -11,7 +11,7 @@ Medium priority pages: 1496
 Pages with missing rules: 1383
 Auto-update eligible figures: 12
 Manual-review figures: 442
-Missing-rule figures: 2900
+Missing-rule figures: 2898
 
 ## Sensitive Figure Publication Labels
 No sensitive item is withheld solely because it lacks complete source metadata, confirmation, or human review. Every item remains publishable only with an explicit evidence-status label that states whether it is source-linked, unconfirmed, source-incomplete, a model output, or not human reviewed. A label is not proof or a verdict.

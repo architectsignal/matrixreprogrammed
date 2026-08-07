@@ -44,6 +44,10 @@ jobs:
       - name: Commit permanent repair
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; skipping automated commit, push and deploy handoff."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/worker-production.js scripts/verify-live-production.js downloads/release-metadata-routing-patch.json downloads/live-verifier-intelligence-routes-patch.json
@@ -51,7 +55,7 @@ jobs:
             echo "Permanent release metadata routing is already committed."
             exit 0
           fi
-          git commit -m "Make release proof routing permanent [deploy]"
+          git commit -m "Make release proof routing permanent"
           for attempt in 1 2 3; do
             git fetch origin main
             if git rebase origin/main && git push origin HEAD:main; then

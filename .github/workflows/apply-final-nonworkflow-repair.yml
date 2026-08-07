@@ -1,0 +1,170 @@
+name: Apply Final Non-Workflow Production Repair
+run-name: Apply tested Black File and exact-live verification repair to main
+
+on:
+  push:
+    branches:
+      - agent/final-pinned-production-20260807
+    paths:
+      - '.github/workflows/apply-final-nonworkflow-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout repair controller
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Unpack immutable repair package
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/final-pinned-release" "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          cat .github/final-pinned-production-bootstrap.tar.gz.b64.part* | base64 --decode > "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          tar -xzf "$RUNNER_TEMP/final-pinned-release.tar.gz" -C "$RUNNER_TEMP"
+          python -m py_compile "$RUNNER_TEMP/final-pinned-release/apply_final_pinned_release_fix.py"
+
+      - name: Apply tested non-workflow repair to latest frozen main
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "matrix-final-release-controller"
+          git config user.email "actions@users.noreply.github.com"
+
+          workflow_paths=(
+            .github/workflows/authorized-production-dispatch.yml
+            .github/workflows/auto-update-orchestrator.yml
+            .github/workflows/black-file-public-hero-integrity.yml
+            .github/workflows/capture-current-deploy-status.yml
+            .github/workflows/deploy.yml
+            .github/workflows/epstein-ai-detective.yml
+            .github/workflows/live-intel-update.yml
+            .github/workflows/permanent-release-metadata-repair.yml
+            .github/workflows/release-status-snapshot.yml
+            .github/workflows/review-queue-speculation-publish.yml
+          )
+          allowed=(
+            .github/production-release.freeze
+            black-file
+            downloads/black-file-postbuild-alias-regression-test.json
+            downloads/black-file-postbuild-finalization.json
+            downloads/black-file-public-hero-finalization.json
+            downloads/pinned-production-release-contract-test.json
+            package.json
+            scripts/align-mission-acceptance-copy.js
+            scripts/black-file-postbuild-alias-regression-test.js
+            scripts/cloudflare-usage-budget-guard.js
+            scripts/final-production-reconcile.js
+            scripts/finalize-black-file-postbuild.js
+            scripts/pinned-production-release-contract-test.js
+            scripts/prepare-final-pinned-production-marker.js
+            scripts/release-freeze-guard.js
+            scripts/verify-live-production.js
+            scripts/verify-one-shot-production-authorization.js
+          )
+
+          apply_latest() {
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fdx
+
+            python "$RUNNER_TEMP/final-pinned-release/apply_final_pinned_release_fix.py" "$GITHUB_WORKSPACE" --allow-newer --skip-validation
+
+            git restore --source=HEAD -- "${workflow_paths[@]}"
+            rm -f .github/workflows/pinned-production-release-integrity.yml
+
+            python - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/final-production-reconcile.js')
+          text = path.read_text(encoding='utf-8')
+          needle = "authoritativeUpdateMirrors.forEach(copy);\nreport.authoritativeUpdateMirrors = authoritativeUpdateMirrors;\n"
+          insertion = needle + "\n// Final Black File ownership must run after every broad generator, sanitizer,\n// audit and authoritative mirror copy. No later statement in this release\n// reconciler mutates a page; the remaining work is validation and reporting.\nrun('scripts/finalize-black-file-postbuild.js');\n"
+          if insertion not in text:
+              if text.count(needle) != 1:
+                  raise SystemExit('Final production reconcile insertion boundary is missing or ambiguous')
+              text = text.replace(needle, insertion)
+          path.write_text(text, encoding='utf-8')
+          PY
+
+            node --check scripts/final-production-reconcile.js
+            node --check scripts/finalize-black-file-postbuild.js
+            node --check scripts/black-file-postbuild-alias-regression-test.js
+            node --check scripts/verify-live-production.js
+            node scripts/finalize-black-file-postbuild.js
+            node scripts/black-file-postbuild-alias-regression-test.js
+            GITHUB_EVENT_NAME=workflow_dispatch GITHUB_RUN_ATTEMPT=1 node scripts/verify-one-shot-production-authorization.js --self-test
+            GITHUB_EVENT_NAME=workflow_dispatch GITHUB_RUN_ATTEMPT=1 node scripts/cloudflare-usage-budget-guard-test.js
+            node - <<'NODE'
+          const fs = require('fs');
+          const source = fs.readFileSync('scripts/final-production-reconcile.js', 'utf8');
+          const mirror = source.indexOf('authoritativeUpdateMirrors.forEach(copy);');
+          const finalizer = source.indexOf("run('scripts/finalize-black-file-postbuild.js');");
+          const report = source.indexOf('persistReport();');
+          if (!(mirror >= 0 && finalizer > mirror && report > finalizer)) {
+            throw new Error('Black File finalizer is not after the last deploy-time page copy and before final reporting.');
+          }
+          const after = source.slice(finalizer + 1, report);
+          if (/\brun\(['"]scripts\//.test(after)) {
+            throw new Error('A script mutator still runs after the Black File finalizer.');
+          }
+          console.log('FINAL PRODUCTION RECONCILE ORDER PASSED');
+          NODE
+
+            git diff --check
+            printf '%s\n' "${allowed[@]}" | sort > "$RUNNER_TEMP/allowed.txt"
+            { git diff --name-only; git ls-files --others --exclude-standard; } | sort -u > "$RUNNER_TEMP/actual.txt"
+            diff -u "$RUNNER_TEMP/allowed.txt" "$RUNNER_TEMP/actual.txt"
+            git add -- "${allowed[@]}"
+            if git diff --cached --quiet; then
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              return 0
+            fi
+            if git diff --cached --name-only | grep -q '^.github/workflows/'; then
+              echo 'Workflow file entered the non-workflow repair commit.' >&2
+              return 1
+            fi
+            git commit -m "Finalize Black File after the last production mutator"
+          }
+
+          for attempt in 1 2 3; do
+            apply_latest
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Frozen main advanced during repair attempt $attempt; rebuilding against the newest main."
+          done
+          echo 'Unable to publish the final non-workflow repair after three attempts.' >&2
+          exit 1
+
+      - name: Upload repair receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-nonworkflow-repair-${{ github.run_id }}
+          path: |
+            downloads/black-file-postbuild-finalization.json
+            downloads/black-file-postbuild-alias-regression-test.json
+            downloads/black-file-public-hero-finalization.json
+            downloads/pinned-production-release-contract-test.json
+          if-no-files-found: ignore
+          retention-days: 30

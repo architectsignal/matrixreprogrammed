@@ -1,8 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-08-07T03:15:58.528Z
+Updated: 2026-08-07T07:40:42.125Z
 
-Briefs generated: 16
+Briefs generated: 32
 
 ## Centers for Medicare & Medicaid Services
 
@@ -24,6 +24,126 @@ Evidence: documented public-record association
 
 Watch next: Watch Health and Human Services Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
+## Appellate Division of the Supreme Court of the State of New York
+
+At a glance: Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Court of Appeals for the Ninth Circuit
+
+At a glance: Court of Appeals for the Ninth Circuit is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Court of Appeals for the Ninth Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 2021-08825
+
+At a glance: 2021-08825 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 2021-08825 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 2024-13374
+
+At a glance: 2024-13374 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 2024-13374 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 23-55704
+
+At a glance: 23-55704 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 23-55704 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 24-2251
+
+At a glance: 24-2251 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 24-2251 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 24-7261
+
+At a glance: 24-7261 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 24-7261 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## California Supreme Court
+
+At a glance: California Supreme Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch California Supreme Court across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Civil Rights Corps v. LaSalle
+
+At a glance: Civil Rights Corps v. LaSalle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Civil Rights Corps v. LaSalle across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Court of Appeals for the Second Circuit
+
+At a glance: Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Court of Appeals for the Second Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## D & A Grandview, LLC v. 60 Davidson, LLC
+
+At a glance: D & A Grandview, LLC v. 60 Davidson, LLC is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Gilead Tenofovir Cases
+
+At a glance: Gilead Tenofovir Cases is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Gilead Tenofovir Cases across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Homeland Security Department
 
 At a glance: Homeland Security Department is currently tracked as observed entity with 2 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).
@@ -33,6 +153,46 @@ Judgement: A source route exists. More records are needed before drawing a stron
 Evidence: documented public-record association
 
 Watch next: Watch Homeland Security Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
+
+## In Re: Koi Design LLC v. Marron Lawyers, Apc
+
+At a glance: In Re: Koi Design LLC v. Marron Lawyers, Apc is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch In Re: Koi Design LLC v. Marron Lawyers, Apc across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## S283862
+
+At a glance: S283862 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch S283862 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## United States v. Anten
+
+At a glance: United States v. Anten is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch United States v. Anten across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Williams v. Biggs
+
+At a glance: Williams v. Biggs is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Williams v. Biggs across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## AAPL
 

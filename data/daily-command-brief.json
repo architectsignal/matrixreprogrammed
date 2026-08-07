@@ -1,8 +1,93 @@
 {
-  "updated": "2026-08-07T03:16:00.182Z",
+  "updated": "2026-08-07T07:40:43.747Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [],
+  "topMovements": [
+    {
+      "key": "courtlistener-court-records-10940847-1",
+      "hash": "53dbd24d613df2c5",
+      "summary": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/",
+      "date": "2026-08-06",
+      "names": [
+        "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+        "Court of Appeals for the Ninth Circuit",
+        "23-55704"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10938615-2",
+      "hash": "aa3122aba427467b",
+      "summary": "Gilead Tenofovir Cases",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+      "date": "2026-08-03",
+      "names": [
+        "Gilead Tenofovir Cases",
+        "California Supreme Court",
+        "S283862"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936935-3",
+      "hash": "b742dac477765570",
+      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+      "date": "2026-07-29",
+      "names": [
+        "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-13374"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936889-4",
+      "hash": "ac792fbc60ee4406",
+      "summary": "Williams v. Biggs",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+      "date": "2026-07-29",
+      "names": [
+        "Williams v. Biggs",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2021-08825"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10936118-5",
+      "hash": "444a161f0f618fcb",
+      "summary": "Civil Rights Corps v. LaSalle",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+      "date": "2026-07-29",
+      "names": [
+        "Civil Rights Corps v. LaSalle",
+        "Court of Appeals for the Second Circuit",
+        "24-2251"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10935302-6",
+      "hash": "19b5109d3f39cd51",
+      "summary": "United States v. Anten",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+      "date": "2026-07-27",
+      "names": [
+        "United States v. Anten",
+        "Court of Appeals for the Ninth Circuit",
+        "24-7261"
+      ]
+    }
+  ],
   "topEntityChanges": [
     {
       "name": "Centers for Medicare & Medicaid Services",
@@ -15,44 +100,44 @@
       "route": "entity-briefs/health-and-human-services-department.html"
     },
     {
-      "name": "Homeland Security Department",
-      "judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
-      "route": "entity-briefs/homeland-security-department.html"
+      "name": "Appellate Division of the Supreme Court of the State of New York",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
     },
     {
-      "name": "AAPL",
+      "name": "Court of Appeals for the Ninth Circuit",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/aapl.html"
+      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html"
     },
     {
-      "name": "Alphabet Inc.",
+      "name": "2021-08825",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/alphabet-inc.html"
+      "route": "entity-briefs/2021-08825.html"
     },
     {
-      "name": "AMAZON COM INC",
+      "name": "2024-13374",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/amazon-com-inc.html"
+      "route": "entity-briefs/2024-13374.html"
     },
     {
-      "name": "AMZN",
+      "name": "23-55704",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/amzn.html"
+      "route": "entity-briefs/23-55704.html"
     },
     {
-      "name": "Apple Inc.",
+      "name": "24-2251",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/apple-inc.html"
+      "route": "entity-briefs/24-2251.html"
     },
     {
-      "name": "AVGO",
+      "name": "24-7261",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/avgo.html"
+      "route": "entity-briefs/24-7261.html"
     },
     {
-      "name": "Broadcom Inc.",
+      "name": "California Supreme Court",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/broadcom-inc.html"
+      "route": "entity-briefs/california-supreme-court.html"
     }
   ],
   "topContractors": [
@@ -936,9 +1021,105 @@
       "type": "entity brief"
     },
     {
+      "entity": "Appellate Division of the Supreme Court of the State of New York",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals for the Ninth Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2021-08825",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2021-08825.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "2024-13374",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/2024-13374.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "23-55704",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/23-55704.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "24-2251",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/24-2251.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "24-7261",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/24-7261.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "California Supreme Court",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/california-supreme-court.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Civil Rights Corps v. LaSalle",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals for the Second Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Gilead Tenofovir Cases",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/gilead-tenofovir-cases.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Homeland Security Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/homeland-security-department.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/in-re-koi-design-llc-v-marron-lawyers-apc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "S283862",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/s283862.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "United States v. Anten",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/united-states-v-anten.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Williams v. Biggs",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/williams-v-biggs.html",
       "type": "entity brief"
     },
     {
@@ -946,102 +1127,6 @@
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/aapl.html",
       "type": "entity brief"
-    },
-    {
-      "entity": "Alphabet Inc.",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/alphabet-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AMAZON COM INC",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/amazon-com-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AMZN",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/amzn.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Apple Inc.",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/apple-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "AVGO",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/avgo.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Broadcom Inc.",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/broadcom-inc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "GOOGL",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/googl.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "MICROSOFT CORP",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/microsoft-corp.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "MSFT",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/msft.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "NVDA",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/nvda.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "NVIDIA CORP",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/nvidia-corp.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Securities and Exchange Commission",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/securities-and-exchange-commission.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Centers for Medicare & Medicaid Services",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Health and Human Services Department",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/health-and-human-services-department.html",
-      "type": "record review"
-    },
-    {
-      "entity": "Homeland Security Department",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/homeland-security-department.html",
-      "type": "record review"
-    },
-    {
-      "entity": "AAPL",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/aapl.html",
-      "type": "record review"
     }
   ],
   "contradictions": [],

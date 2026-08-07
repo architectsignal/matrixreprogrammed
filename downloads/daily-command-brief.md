@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-08-07T03:15:58.658Z
+Updated: 2026-08-07T07:40:42.259Z
 
 ## Top Contractor Signals
 
@@ -16,7 +16,23 @@ Updated: 2026-08-07T03:15:58.658Z
 
 - Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Health and Human Services Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 23-55704: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 24-2251: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 24-7261: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- California Supreme Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Civil Rights Corps v. LaSalle: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- D & A Grandview, LLC v. 60 Davidson, LLC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Gilead Tenofovir Cases: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Homeland Security Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- In Re: Koi Design LLC v. Marron Lawyers, Apc: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- S283862: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- United States v. Anten: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Williams v. Biggs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Alphabet Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AMAZON COM INC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -30,27 +46,11 @@ Updated: 2026-08-07T03:15:58.658Z
 - NVDA: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - NVIDIA CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Securities and Exchange Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Health and Human Services Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Homeland Security Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Alphabet Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AMAZON COM INC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AMZN: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Apple Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AVGO: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Broadcom Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- GOOGL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- MICROSOFT CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- MSFT: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- NVDA: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- NVIDIA CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Securities and Exchange Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Blackwater / Xe / Academi / Constellis lineage: USAspending awards
-- Blackwater / Xe / Academi / Constellis lineage: Court records
-- Blackwater / Xe / Academi / Constellis lineage: Congressional hearing material
-- Blackwater / Xe / Academi / Constellis lineage: SEC or corporate records where available
-- Blackwater / Xe / Academi / Constellis lineage: Sanctions / debarment checks
-- Blackwater / Xe / Academi / Constellis lineage: News signals verified against primary records
-- Blackwater / Xe / Academi / Constellis lineage: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- DynCorp / Amentum lineage: USAspending awards
+- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- California Supreme Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 23-55704: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- 24-2251: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T03:15:58.658Z",
+  "updated": "2026-08-07T07:40:42.259Z",
   "title": "Subject Brief Engine",
   "boundary": "Subject pages group records by control topic with evidence grades.",
   "subjects": [
@@ -338,8 +338,62 @@
         "disclosure-gaps",
         "courts-law"
       ],
-      "latest_records": [],
-      "top_entities": [],
+      "latest_records": [
+        {
+          "title": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+          "url": "https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Gilead Tenofovir Cases",
+          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Williams v. Biggs",
+          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "Civil Rights Corps v. LaSalle",
+          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        },
+        {
+          "title": "United States v. Anten",
+          "url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
+          "grade": "charged / sued",
+          "lane": "courtlistener-court-records"
+        }
+      ],
+      "top_entities": [
+        "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+        "Court of Appeals for the Ninth Circuit",
+        "23-55704",
+        "Gilead Tenofovir Cases",
+        "California Supreme Court",
+        "S283862",
+        "D & A Grandview, LLC v. 60 Davidson, LLC",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-13374",
+        "Williams v. Biggs",
+        "2021-08825",
+        "Civil Rights Corps v. LaSalle",
+        "Court of Appeals for the Second Circuit",
+        "24-2251",
+        "United States v. Anten",
+        "24-7261"
+      ],
       "relationship_candidates": [],
       "missing_records": [
         "Primary record route",

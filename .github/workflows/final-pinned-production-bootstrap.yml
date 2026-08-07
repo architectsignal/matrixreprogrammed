@@ -1,0 +1,68 @@
+name: Final Pinned Production Bootstrap
+run-name: Final pinned release — freeze, repair, pin and authorize one deploy
+
+on:
+  push:
+    branches:
+      - agent/final-pinned-production-20260807
+    paths:
+      - '.github/final-pinned-production-bootstrap.trigger'
+      - '.github/workflows/final-pinned-production-bootstrap.yml'
+      - '.github/final-pinned-production-bootstrap.tar.gz.b64.part*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: final-pinned-production-bootstrap
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  repair-pin-dispatch:
+    name: Repair current main and authorize exactly one pinned production run
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout release controller
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Unpack immutable release controller outside the changing worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/final-pinned-release" "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          cat .github/final-pinned-production-bootstrap.tar.gz.b64.part* | base64 --decode > "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          tar -xzf "$RUNNER_TEMP/final-pinned-release.tar.gz" -C "$RUNNER_TEMP"
+          python -m py_compile "$RUNNER_TEMP/final-pinned-release/apply_final_pinned_release_fix.py"
+          node --check "$RUNNER_TEMP/final-pinned-release/payload/scripts/finalize-black-file-postbuild.js"
+          node --check "$RUNNER_TEMP/final-pinned-release/payload/scripts/black-file-postbuild-alias-regression-test.js"
+          node --check "$RUNNER_TEMP/final-pinned-release/payload/scripts/pinned-production-release-contract-test.js"
+          node --check "$RUNNER_TEMP/final-pinned-release/payload/scripts/prepare-final-pinned-production-marker.js"
+
+      - name: Apply repair, freeze automated writers, resolve exact SHA and dispatch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: bash "$RUNNER_TEMP/final-pinned-release/bootstrap.sh" "$GITHUB_WORKSPACE" "$RUNNER_TEMP/final-pinned-release"
+
+      - name: Upload bootstrap identity
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-pinned-production-bootstrap-${{ github.run_id }}
+          path: downloads/final-pinned-production-bootstrap.json
+          if-no-files-found: ignore
+          retention-days: 30

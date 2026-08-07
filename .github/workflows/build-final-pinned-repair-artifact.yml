@@ -1,0 +1,133 @@
+name: Build Final Pinned Repair Artifact
+run-name: Build atomic main repair artifact
+
+on:
+  push:
+    branches:
+      - agent/final-pinned-production-20260807
+    paths:
+      - '.github/workflows/build-final-pinned-repair-artifact.yml'
+      - '.github/final-pinned-repair-artifact.trigger'
+      - '.github/final-pinned-production-bootstrap.tar.gz.b64.part*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  build-artifact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout repair controller
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Unpack immutable repair tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/final-pinned-release" "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          cat .github/final-pinned-production-bootstrap.tar.gz.b64.part* | base64 --decode > "$RUNNER_TEMP/final-pinned-release.tar.gz"
+          tar -xzf "$RUNNER_TEMP/final-pinned-release.tar.gz" -C "$RUNNER_TEMP"
+
+      - name: Build and validate exact-main repair tree
+        env:
+          ARTIFACT_ROOT: ${{ runner.temp }}/final-pinned-repair-artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          BASE_SHA="$(git rev-parse origin/main)"
+          git checkout -B final-pinned-artifact-work "$BASE_SHA"
+          git clean -fdx
+
+          python "$RUNNER_TEMP/final-pinned-release/apply_final_pinned_release_fix.py" "$GITHUB_WORKSPACE" --allow-newer
+          node scripts/finalize-black-file-postbuild.js
+          node scripts/black-file-postbuild-alias-regression-test.js
+          node scripts/pinned-production-release-contract-test.js
+          GITHUB_EVENT_NAME=workflow_dispatch GITHUB_RUN_ATTEMPT=1 node scripts/verify-one-shot-production-authorization.js --self-test
+          GITHUB_EVENT_NAME=workflow_dispatch GITHUB_RUN_ATTEMPT=1 node scripts/cloudflare-usage-budget-guard-test.js
+          perl -0pi -e 's/\n+\z/\n/' .github/workflows/review-queue-speculation-publish.yml
+          git diff --check
+
+          expected=(
+            .github/production-release.freeze
+            .github/workflows/authorized-production-dispatch.yml
+            .github/workflows/auto-update-orchestrator.yml
+            .github/workflows/black-file-public-hero-integrity.yml
+            .github/workflows/capture-current-deploy-status.yml
+            .github/workflows/deploy.yml
+            .github/workflows/epstein-ai-detective.yml
+            .github/workflows/live-intel-update.yml
+            .github/workflows/permanent-release-metadata-repair.yml
+            .github/workflows/pinned-production-release-integrity.yml
+            .github/workflows/release-status-snapshot.yml
+            .github/workflows/review-queue-speculation-publish.yml
+            black-file
+            downloads/black-file-postbuild-alias-regression-test.json
+            downloads/black-file-postbuild-finalization.json
+            downloads/black-file-public-hero-finalization.json
+            downloads/pinned-production-release-contract-test.json
+            package.json
+            scripts/align-mission-acceptance-copy.js
+            scripts/black-file-postbuild-alias-regression-test.js
+            scripts/cloudflare-usage-budget-guard.js
+            scripts/finalize-black-file-postbuild.js
+            scripts/pinned-production-release-contract-test.js
+            scripts/prepare-final-pinned-production-marker.js
+            scripts/release-freeze-guard.js
+            scripts/verify-live-production.js
+            scripts/verify-one-shot-production-authorization.js
+          )
+          printf '%s\n' "${expected[@]}" | sort > "$RUNNER_TEMP/expected-paths.txt"
+          { git diff --name-only; git ls-files --others --exclude-standard; } | sort -u > "$RUNNER_TEMP/actual-paths.txt"
+          diff -u "$RUNNER_TEMP/expected-paths.txt" "$RUNNER_TEMP/actual-paths.txt"
+
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE_SHA"
+
+          rm -rf "$ARTIFACT_ROOT"
+          mkdir -p "$ARTIFACT_ROOT/files"
+          for file in "${expected[@]}"; do
+            test -f "$file"
+            mkdir -p "$ARTIFACT_ROOT/files/$(dirname "$file")"
+            cp "$file" "$ARTIFACT_ROOT/files/$file"
+          done
+          BASE_SHA="$BASE_SHA" ARTIFACT_ROOT="$ARTIFACT_ROOT" python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          root = Path(os.environ['ARTIFACT_ROOT'])
+          files_root = root / 'files'
+          entries = []
+          for path in sorted(p for p in files_root.rglob('*') if p.is_file()):
+              relative = path.relative_to(files_root).as_posix()
+              data = path.read_bytes()
+              entries.append({'path': relative, 'bytes': len(data), 'sha256': hashlib.sha256(data).hexdigest()})
+          payload = {
+              'ok': True,
+              'baseSha': os.environ['BASE_SHA'],
+              'fileCount': len(entries),
+              'files': entries,
+              'boundary': 'Atomic Git-data publication only: no Cloudflare build, D1 mutation, Worker upload or production dispatch occurred while creating this artifact.'
+          }
+          (root / 'manifest.json').write_text(json.dumps(payload, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps(payload, indent=2))
+          PY
+
+      - name: Upload atomic repair artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-pinned-repair-${{ github.run_id }}
+          path: ${{ runner.temp }}/final-pinned-repair-artifact
+          if-no-files-found: error
+          retention-days: 30

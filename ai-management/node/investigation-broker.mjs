@@ -149,6 +149,7 @@ export function createInvestigationBroker({
   additionalResources = null,
   root = process.cwd()
 } = {}) {
+  const brokerClock = () => new Date(now.getTime());
   const discovered = Array.isArray(additionalResources) ? additionalResources : loadAutonomousResources(root);
   const policyLedger = loadInvestigationSourcePolicies(root);
   const combined = [createLocalResource(now.toISOString()), ...sources.map(source => investigationSourceResource(source, {
@@ -159,7 +160,11 @@ export function createInvestigationBroker({
   })), ...discovered];
   const resources = [...new Map(combined.map(resource => [resource.resource_id, resource])).values()];
   const registry = new ResourceRegistry(resources);
-  const logger = new StructuredAuditLogger({ actor: 'investigation-runner', agent: 'ai-investigator-resource-broker' });
+  const logger = new StructuredAuditLogger({
+    actor: 'investigation-runner',
+    agent: 'ai-investigator-resource-broker',
+    clock: brokerClock
+  });
   const broker = new ResourceBroker({
     registry,
     adapters: [
@@ -173,6 +178,7 @@ export function createInvestigationBroker({
       externalEnabled: enabled(environment.AI_RESOURCE_EXTERNAL_ENABLED, true),
       localOnly: enabled(environment.AI_RESOURCE_LOCAL_ONLY, false)
     },
+    clock: brokerClock,
     sleep,
     random
   });

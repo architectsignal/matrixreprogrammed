@@ -51,6 +51,18 @@ jobs:
           node --check "$RUNNER_TEMP/final-pinned-release/payload/scripts/black-file-postbuild-alias-regression-test.js"
           node --check "$RUNNER_TEMP/final-pinned-release/payload/scripts/pinned-production-release-contract-test.js"
           node --check "$RUNNER_TEMP/final-pinned-release/payload/scripts/prepare-final-pinned-production-marker.js"
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          path = Path(os.environ['RUNNER_TEMP']) / 'final-pinned-release' / 'bootstrap.sh'
+          source = path.read_text(encoding='utf-8')
+          needle = '    git diff --check\n'
+          replacement = "    perl -0pi -e 's/\\n+\\z/\\n/' .github/workflows/review-queue-speculation-publish.yml\n    git diff --check\n"
+          if source.count(needle) != 1:
+              raise SystemExit('bootstrap diff-check insertion point is missing or ambiguous')
+          path.write_text(source.replace(needle, replacement), encoding='utf-8')
+          PY
+          bash -n "$RUNNER_TEMP/final-pinned-release/bootstrap.sh"
 
       - name: Apply repair, freeze automated writers, resolve exact SHA and dispatch
         env:

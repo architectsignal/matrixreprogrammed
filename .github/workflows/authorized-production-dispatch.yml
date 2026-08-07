@@ -21,11 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Checkout exact current main
+      - name: Checkout exact authorized dispatcher event SHA
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
           fetch-depth: 0
+
+      - name: Require controlled production release freeze
+        run: node scripts/release-freeze-guard.js --require-frozen
 
       - name: Dispatch or resolve exactly one run for this SHA
         uses: actions/github-script@v7
@@ -117,7 +120,8 @@ jobs:
                 ref: 'main',
                 inputs: {
                   confirmation: 'DEPLOY MATRIX REPROGRAMMED',
-                  billing_exception: billingException
+                  billing_exception: billingException,
+                  target_sha: expectedHead
                 }
               });
               for (let attempt = 1; attempt <= 24 && !run; attempt += 1) {
@@ -143,6 +147,8 @@ jobs:
               authorizedTarget: targetSha,
               expectedHead,
               workflowId: target.id,
+              forwardedBillingException: Boolean(billingException),
+              pinnedTargetSha: expectedHead,
               run: {
                 id: run.id,
                 status: run.status,
@@ -154,7 +160,7 @@ jobs:
                 event: run.event,
                 url: run.html_url
               },
-              boundary: 'This dispatcher never reuses a run for another SHA and never commits a status file after dispatch. Credentials, D1 rollback, migrations, zero-spend controls and exact live verification remain mandatory.'
+              boundary: 'This dispatcher forwards the marker billing exception and exact target_sha, never reuses a run for another SHA and never commits a status file after dispatch. Credentials, D1 rollback, migrations, zero-spend controls and exact live verification remain mandatory.'
             };
             fs.mkdirSync('downloads', { recursive: true });
             fs.writeFileSync('downloads/authorized-production-run.json', JSON.stringify(payload, null, 2) + '\n');

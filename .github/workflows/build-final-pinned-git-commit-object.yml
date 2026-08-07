@@ -104,7 +104,7 @@ jobs:
             base64 -w0 "$file" > "$RUNNER_TEMP/blob.b64"
             jq -n --rawfile content "$RUNNER_TEMP/blob.b64" '{content:$content,encoding:"base64"}' > "$RUNNER_TEMP/blob-request.json"
             BLOB_SHA="$(gh api --method POST "repos/$GITHUB_REPOSITORY/git/blobs" --input "$RUNNER_TEMP/blob-request.json" --jq .sha)"
-            jq -n --arg path "$file" --arg sha "$BLOB_SHA" '{path:$path,mode:"100644",type:"blob",sha:$sha}' >> "$RUNNER_TEMP/tree-elements.jsonl"
+            jq -cn --arg path "$file" --arg sha "$BLOB_SHA" '{path:$path,mode:"100644",type:"blob",sha:$sha}' >> "$RUNNER_TEMP/tree-elements.jsonl"
           done
 
           BASE_TREE="$BASE_TREE" node - <<'NODE'

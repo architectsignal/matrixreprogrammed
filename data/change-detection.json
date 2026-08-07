@@ -1,150 +1,16 @@
 {
-  "updated": "2026-08-07T07:40:42.090Z",
+  "updated": "2026-08-07T13:38:41.279Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-08-07T03:15:58.490Z",
+  "previousUpdated": "2026-08-07T07:40:42.090Z",
   "currentRecordCount": 18,
-  "previousRecordCount": 12,
-  "newRecords": [
-    {
-      "key": "courtlistener-court-records-10940847-1",
-      "hash": "53dbd24d613df2c5",
-      "summary": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/",
-      "date": "2026-08-06",
-      "names": [
-        "In Re: Koi Design LLC v. Marron Lawyers, Apc",
-        "Court of Appeals for the Ninth Circuit",
-        "23-55704"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10938615-2",
-      "hash": "aa3122aba427467b",
-      "summary": "Gilead Tenofovir Cases",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
-      "date": "2026-08-03",
-      "names": [
-        "Gilead Tenofovir Cases",
-        "California Supreme Court",
-        "S283862"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10936935-3",
-      "hash": "b742dac477765570",
-      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
-      "date": "2026-07-29",
-      "names": [
-        "D & A Grandview, LLC v. 60 Davidson, LLC",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2024-13374"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10936889-4",
-      "hash": "ac792fbc60ee4406",
-      "summary": "Williams v. Biggs",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
-      "date": "2026-07-29",
-      "names": [
-        "Williams v. Biggs",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2021-08825"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10936118-5",
-      "hash": "444a161f0f618fcb",
-      "summary": "Civil Rights Corps v. LaSalle",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
-      "date": "2026-07-29",
-      "names": [
-        "Civil Rights Corps v. LaSalle",
-        "Court of Appeals for the Second Circuit",
-        "24-2251"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10935302-6",
-      "hash": "19b5109d3f39cd51",
-      "summary": "United States v. Anten",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/",
-      "date": "2026-07-27",
-      "names": [
-        "United States v. Anten",
-        "Court of Appeals for the Ninth Circuit",
-        "24-7261"
-      ]
-    }
-  ],
+  "previousRecordCount": 18,
+  "newRecords": [],
   "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
-  "clockTriggers": [
-    {
-      "id": "courtlistener-court-records-10940847-1",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/"
-    },
-    {
-      "id": "courtlistener-court-records-10938615-2",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Gilead Tenofovir Cases",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/"
-    },
-    {
-      "id": "courtlistener-court-records-10936935-3",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/"
-    },
-    {
-      "id": "courtlistener-court-records-10936889-4",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Williams v. Biggs",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/"
-    },
-    {
-      "id": "courtlistener-court-records-10936118-5",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "Civil Rights Corps v. LaSalle",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/"
-    },
-    {
-      "id": "courtlistener-court-records-10935302-6",
-      "lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "summary": "United States v. Anten",
-      "trigger": "Review courtlistener-court-records for clock movement.",
-      "source_url": "https://www.courtlistener.com/opinion/10935302/united-states-v-anten/"
-    }
-  ],
+  "clockTriggers": [],
   "repeatedEntities": [
     {
       "id": "health-and-human-services-department",

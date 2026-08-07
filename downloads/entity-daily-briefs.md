@@ -1,6 +1,6 @@
 # Entity Daily Briefs
 
-Updated: 2026-08-07T07:40:42.125Z
+Updated: 2026-08-07T13:38:41.313Z
 
 Briefs generated: 32
 

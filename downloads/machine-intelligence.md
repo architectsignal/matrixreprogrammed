@@ -1,21 +1,15 @@
 # Machine Intelligence
 
-Updated: 2026-08-07T07:40:42.090Z
+Updated: 2026-08-07T13:38:41.279Z
 
 Current records: 18
-Previous records: 12
-New records: 6
+Previous records: 18
+New records: 0
 Changed records: 0
 Relationship candidates: 25
 
 ## New Records
 
-- charged / sued: In Re: Koi Design LLC v. Marron Lawyers, Apc — courtlistener-court-records — https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/
-- charged / sued: Gilead Tenofovir Cases — courtlistener-court-records — https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/
-- charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
-- charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
-- charged / sued: Civil Rights Corps v. LaSalle — courtlistener-court-records — https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/
-- charged / sued: United States v. Anten — courtlistener-court-records — https://www.courtlistener.com/opinion/10935302/united-states-v-anten/
 
 ## Relationship Candidates
 

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T14:34:55.731Z",
+  "updated": "2026-08-07T03:16:00.182Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [],
@@ -15,44 +15,44 @@
       "route": "entity-briefs/health-and-human-services-department.html"
     },
     {
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
+      "name": "Homeland Security Department",
+      "judgement": "A source route exists. More records are needed before drawing a stronger conclusion.",
+      "route": "entity-briefs/homeland-security-department.html"
     },
     {
-      "name": "2021-08825",
+      "name": "AAPL",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/2021-08825.html"
+      "route": "entity-briefs/aapl.html"
     },
     {
-      "name": "2024-13374",
+      "name": "Alphabet Inc.",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/2024-13374.html"
+      "route": "entity-briefs/alphabet-inc.html"
     },
     {
-      "name": "23 WAP 2023",
+      "name": "AMAZON COM INC",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/23-wap-2023.html"
+      "route": "entity-briefs/amazon-com-inc.html"
     },
     {
-      "name": "24-2251",
+      "name": "AMZN",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/24-2251.html"
+      "route": "entity-briefs/amzn.html"
     },
     {
-      "name": "24-7261",
+      "name": "Apple Inc.",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/24-7261.html"
+      "route": "entity-briefs/apple-inc.html"
     },
     {
-      "name": "California Supreme Court",
+      "name": "AVGO",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/california-supreme-court.html"
+      "route": "entity-briefs/avgo.html"
     },
     {
-      "name": "Civil Rights Corps v. LaSalle",
+      "name": "Broadcom Inc.",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html"
+      "route": "entity-briefs/broadcom-inc.html"
     }
   ],
   "topContractors": [
@@ -135,71 +135,11 @@
           "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
           "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
           "grade": "documented association"
-        },
-        {
-          "title": "Punxsutawney Hunting Club v. PGC",
-          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
-          "grade": "charged / sued"
         }
       ],
       "entity_briefs": [],
       "record_reviews": [],
-      "relationship_candidates": [
-        {
-          "id": "punxsutawney-hunting-club-v-pgc__supreme-court-of-pennsylvania",
-          "from": "Punxsutawney Hunting Club v. PGC",
-          "to": "Supreme Court of Pennsylvania",
-          "count": 1,
-          "lanes": [
-            "courtlistener-court-records"
-          ],
-          "record_types": [
-            "court_record_signal"
-          ],
-          "evidence_grades": [
-            "charged / sued"
-          ],
-          "source_events": [
-            "courtlistener-court-records-10933234-6"
-          ],
-          "control_layers": [
-            "courts",
-            "litigation",
-            "disclosure"
-          ],
-          "score": 10,
-          "grade": "candidate",
-          "relationship_type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "23-wap-2023__punxsutawney-hunting-club-v-pgc",
-          "from": "Punxsutawney Hunting Club v. PGC",
-          "to": "23 WAP 2023",
-          "count": 1,
-          "lanes": [
-            "courtlistener-court-records"
-          ],
-          "record_types": [
-            "court_record_signal"
-          ],
-          "evidence_grades": [
-            "charged / sued"
-          ],
-          "source_events": [
-            "courtlistener-court-records-10933234-6"
-          ],
-          "control_layers": [
-            "courts",
-            "litigation",
-            "disclosure"
-          ],
-          "score": 10,
-          "grade": "candidate",
-          "relationship_type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "relationship_candidates": [],
       "missing_records": [
         "Current beneficial ownership and voting-control record where relevant",
         "Public contracts touching the ecosystem",
@@ -996,112 +936,112 @@
       "type": "entity brief"
     },
     {
-      "entity": "Appellate Division of the Supreme Court of the State of New York",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "2021-08825",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2021-08825.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "2024-13374",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2024-13374.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "23 WAP 2023",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/23-wap-2023.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "24-2251",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/24-2251.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "24-7261",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/24-7261.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "California Supreme Court",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/california-supreme-court.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Civil Rights Corps v. LaSalle",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Court of Appeals for the Ninth Circuit",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Court of Appeals for the Second Circuit",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Gilead Tenofovir Cases",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/gilead-tenofovir-cases.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "Homeland Security Department",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/homeland-security-department.html",
       "type": "entity brief"
     },
     {
-      "entity": "Punxsutawney Hunting Club v. PGC",
+      "entity": "AAPL",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "route": "entity-briefs/aapl.html",
       "type": "entity brief"
     },
     {
-      "entity": "S283862",
+      "entity": "Alphabet Inc.",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/s283862.html",
+      "route": "entity-briefs/alphabet-inc.html",
       "type": "entity brief"
     },
     {
-      "entity": "Supreme Court of Pennsylvania",
+      "entity": "AMAZON COM INC",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
+      "route": "entity-briefs/amazon-com-inc.html",
       "type": "entity brief"
     },
     {
-      "entity": "United States v. Anten",
+      "entity": "AMZN",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/united-states-v-anten.html",
+      "route": "entity-briefs/amzn.html",
       "type": "entity brief"
     },
     {
-      "entity": "Williams v. Biggs",
+      "entity": "Apple Inc.",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/williams-v-biggs.html",
+      "route": "entity-briefs/apple-inc.html",
       "type": "entity brief"
+    },
+    {
+      "entity": "AVGO",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/avgo.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Broadcom Inc.",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/broadcom-inc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "GOOGL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/googl.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "MICROSOFT CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/microsoft-corp.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "MSFT",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/msft.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "NVDA",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nvda.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "NVIDIA CORP",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/nvidia-corp.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Securities and Exchange Commission",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/securities-and-exchange-commission.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Centers for Medicare & Medicaid Services",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/centers-for-medicare-and-medicaid-services.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Health and Human Services Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/health-and-human-services-department.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Homeland Security Department",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/homeland-security-department.html",
+      "type": "record review"
+    },
+    {
+      "entity": "AAPL",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/aapl.html",
+      "type": "record review"
     }
   ],
   "contradictions": [],

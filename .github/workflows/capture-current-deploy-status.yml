@@ -38,6 +38,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; skipping automated commit, push and deploy handoff."
+            exit 0
+          fi
           git config user.name 'matrix-deploy-status-bot'
           git config user.email 'actions@users.noreply.github.com'
 

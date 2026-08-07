@@ -70,6 +70,10 @@ jobs:
           SOURCE_SNAPSHOT_DIR: ${{ runner.temp }}/matrix-live-intel-source
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; skipping automated commit, push and deploy handoff."
+            exit 0
+          fi
           git config user.name "matrix-live-intel-bot"
           git config user.email "actions@users.noreply.github.com"
 
@@ -188,7 +192,7 @@ jobs:
               exit 0
             fi
 
-            git commit -m "Refresh Live Intel, Epstein and card intelligence $(date -u +%FT%H:%MZ) [deploy]"
+            git commit -m "Refresh Live Intel, Epstein and card intelligence $(date -u +%FT%H:%MZ)"
             if git push origin HEAD:main; then
               echo "changed=true" >> "$GITHUB_OUTPUT"
               echo "commit_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
@@ -200,16 +204,8 @@ jobs:
           echo "Validated intelligence output could not be published after three latest-main rebuilds."
           exit 1
 
-      - name: Dispatch guarded production deployment
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          gh workflow run deploy.yml \
-            --ref main \
-            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
-          echo "Controlled production deployment dispatched for main commit ${{ steps.publish.outputs.commit_sha }}."
+      - name: Record controlled deployment handoff
+        run: echo "Scheduled intelligence and review publishers never dispatch production. The sole authorized dispatcher carries billing_exception and target_sha."
 
       - name: Upload collection and dependant proof
         if: always()

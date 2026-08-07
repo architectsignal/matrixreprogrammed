@@ -141,6 +141,11 @@ runRequired('scripts/normalize-runtime-template-links.js');
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');
 runRequired('scripts/public-control-target-audit.js');
+// Reassert the canonical Black File hero and pathway title after every late
+// mutator but before the exhaustive function/tool audit. The package-level
+// postbuild owner repeats this after reconciliation and alias finalization.
+runRequired('scripts/finalize-black-file-postbuild.js');
+runRequired('scripts/black-file-postbuild-alias-regression-test.js');
 runRequired('scripts/full-site-function-tool-audit.js', fs.existsSync(path.join(root, '_site')) ? ['--postbuild'] : []);
 
 console.log(`Mission acceptance copy aligned across source and Cloudflare output (${[...new Set(touched)].length} file(s) updated); homepage and membership canonical owners, investigation registry safety, machine-feed object-name sanitation, public secret scrubbing, KV traffic repair, entity sanitation, generated-page consistency, final source/output generated-link repair, obsolete family-route reconciliation, precise audit route detection, deploy search compaction, dossier fallback, empty and dynamic control repair, editorial hardening, marker scrub, tracker script repair, final live audit/source-link repair, dossier Epstein/criminal accountability overlays, Exposure Integrity Engine, persistent Predators in Power Hit List routing, cinematic Hit List, search-first accountability homepage, refined Open Question Ledger, Accountability Twins, bounded daily tracking, classified evidence, reviewed outcomes, live D1 status, the human Accountability Review Inbox, the voiced mission intro and Reverse Accountability Search passed.`);

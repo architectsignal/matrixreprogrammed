@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-07T05:48:06.459Z",
+  "source": "black-file.html",
+  "sourceSha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+  "genericTitleId": "matrix-pathways-title",
+  "canonicalTitleId": "matrix-pathways-title-black-file",
+  "pathwayChecks": {
+    "genericIdCount": 0,
+    "genericAriaCount": 0,
+    "canonicalIdCount": 1,
+    "canonicalAriaCount": 1,
+    "exactPathwaySectionCount": 1
+  },
+  "surfaces": [
+    {
+      "relative": "black-file.html",
+      "changed": false,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+      "checks": {
+        "oneH1": true,
+        "canonicalH1": true,
+        "oneCanonicalHero": true,
+        "requestTarget": true,
+        "genericIdCount": 0,
+        "genericAriaCount": 0,
+        "canonicalIdCount": 1,
+        "canonicalAriaCount": 1,
+        "byteIdentical": true
+      }
+    },
+    {
+      "relative": "black-file",
+      "changed": false,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+      "checks": {
+        "oneH1": true,
+        "canonicalH1": true,
+        "oneCanonicalHero": true,
+        "requestTarget": true,
+        "genericIdCount": 0,
+        "genericAriaCount": 0,
+        "canonicalIdCount": 1,
+        "canonicalAriaCount": 1,
+        "byteIdentical": true
+      }
+    },
+    {
+      "relative": "_site/black-file.html",
+      "changed": false,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+      "checks": {
+        "oneH1": true,
+        "canonicalH1": true,
+        "oneCanonicalHero": true,
+        "requestTarget": true,
+        "genericIdCount": 0,
+        "genericAriaCount": 0,
+        "canonicalIdCount": 1,
+        "canonicalAriaCount": 1,
+        "byteIdentical": true
+      }
+    },
+    {
+      "relative": "_site/black-file",
+      "changed": false,
+      "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+      "checks": {
+        "oneH1": true,
+        "canonicalH1": true,
+        "oneCanonicalHero": true,
+        "requestTarget": true,
+        "genericIdCount": 0,
+        "genericAriaCount": 0,
+        "canonicalIdCount": 1,
+        "canonicalAriaCount": 1,
+        "byteIdentical": true
+      }
+    }
+  ],
+  "boundary": "This local deterministic finalizer runs after the last ordinary page mutator, removes every exact generic matrix-pathways-title reference, creates exactly one matrix-pathways-title-black-file target and synchronizes source, extensionless and _site aliases byte-for-byte. It performs no network, D1 or Cloudflare mutation."
+}

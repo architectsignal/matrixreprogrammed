@@ -155,6 +155,11 @@ const authoritativeUpdateMirrors = [
 authoritativeUpdateMirrors.forEach(copy);
 report.authoritativeUpdateMirrors = authoritativeUpdateMirrors;
 
+// Final Black File ownership must run after every broad generator, sanitizer,
+// audit and authoritative mirror copy. No later statement in this release
+// reconciler mutates a page; the remaining work is validation and reporting.
+run('scripts/finalize-black-file-postbuild.js');
+
 // The exact regression that paused the release is now proved after the last
 // mutator, against both canonical source and the Cloudflare output.
 for (const [rel, marker] of [

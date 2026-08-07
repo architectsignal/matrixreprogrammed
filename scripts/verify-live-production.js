@@ -34,6 +34,11 @@ const routeMarkers = {
   '/data-lab': 'PUBLIC DATA',
   '/evidence-archive': 'EVIDENCE ARCHIVE',
   '/search': 'START WITH WHAT HAPPENED.',
+  '/member-login': 'SIGN IN WITHOUT A PASSWORD.',
+  '/forum': 'FREE SPEECH.',
+  '/newsletter': 'GET THE WEEKLY FILE.',
+  '/evidence-vault': 'SOURCES BEFORE SIGNALS.',
+  '/black-file': 'THE BLACK FILE',
   '/deploy-health.json': '"workerScript": "src/worker-production-autonomy.js"'
 };
 

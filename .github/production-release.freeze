@@ -1,0 +1,6 @@
+MATRIX REPROGRAMMED PRODUCTION RELEASE FREEZE
+State: active
+Release: pr224-final-black-file-pinned-production
+Purpose: prevent scheduled intelligence, review-queue, metadata and status automations from moving main or directly dispatching production during the one controlled release
+Boundary: collection, validation and artifact upload may continue; automated commit, push and production-dispatch steps must skip until exact live-SHA and live-route verification pass
+Removal: delete this marker only after the controlled deployment receipt proves Cloudflare upload, D1 rollback/migrations, exact live SHA and protected live-route checks

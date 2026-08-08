@@ -45,6 +45,32 @@ const canonicalMembershipPrices = [
 if (!source.includes(legacyMembershipPrices)) throw new Error('Recovery membership legacy price assertions are missing');
 source = source.replace(legacyMembershipPrices, canonicalMembershipPrices);
 
+// Free membership now uses the same passwordless account authority as every
+// other member session. The membership page links into that flow; it no longer
+// owns a second embedded account-creation form or a duplicate signup API.
+const legacyMembershipSignup = [
+  "    const form = page.locator('#membership-signup');",
+  "    await form.locator('#member-name').fill('Recovery Member');",
+  "    await form.locator('#member-email').fill('recovery-member@example.invalid');",
+  "    await form.locator('#member-consent').check();",
+  "    await form.locator('button[type=\"submit\"]').click();",
+  "    await page.waitForFunction(() => /check your email|check your inbox/i.test(document.querySelector('#signup-status')?.textContent || ''), null, { timeout: 10000 });",
+  "    const payload = await page.evaluate(() => window.__membershipSignupPayload || null);",
+  "    assert(payload?.marketingConsent === true, 'Membership signup omitted explicit marketing consent');",
+  "    assert(payload?.email === 'recovery-member@example.invalid', 'Membership signup sent the wrong email');"
+].join('\n');
+const canonicalFreeMemberRoute = [
+  "    const freeAccount = page.locator('#join-free-member a[href^=\"member-login.html\"]').first();",
+  "    assert(await freeAccount.count() === 1, 'Free Member account route is missing');",
+  "    const freeHref = await freeAccount.getAttribute('href');",
+  "    assert(/member-login\\.html/.test(freeHref || ''), 'Free Member account route does not use passwordless member login');",
+  "    assert(/return=%2Fmember-dashboard\\.html/i.test(freeHref || ''), 'Free Member account route does not return to the member dashboard');",
+  "    assert(/Free Member access never creates a PayPal subscription/i.test(body), 'Free Member billing boundary is missing');"
+].join('\n');
+if (!source.includes(legacyMembershipSignup)) throw new Error('Recovery membership legacy signup assertions are missing');
+source = source.replace(legacyMembershipSignup, canonicalFreeMemberRoute);
+source = source.replace("'Membership tiers and free signup'", "'Membership tiers and free account route'");
+
 // The production forum endpoint returns 201 only after a Cloudflare D1
 // read-after-write confirmation and identifies the authoritative storage lane.
 const forumMockBefore = "persistent: true, saved: true, post: { id: 'recovery-post'";

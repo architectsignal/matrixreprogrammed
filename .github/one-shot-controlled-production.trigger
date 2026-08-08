@@ -1,11 +1,11 @@
 DEPLOY MATRIX REPROGRAMMED
-Requested: 2026-08-06T12:14:00Z
-Release: pr224-final-site-production-20260806-121400z
-Target: current main 171d2cc7d3eb664e2a4b9cda6f926e2f387221fd containing merged PR #224, the complete repaired site and the successful Cloudflare production credential preflight
+Requested: 2026-08-08T15:37:30Z
+Release: pr226-zero-spend-production-20260808-153730z
+Target: current main 7ec081adb721e5c47b6b0ebc99eb67c4d5721c3d containing merged PR #226 and the validated Probability Machine release
 Authorization: exactly one controlled Cloudflare production deployment
-Billing exception: OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02
+Billing exception:
 Tracking: dispatch exactly one run whose resolved head SHA equals current main; never reuse a failed, cancelled or wrong-SHA run
-Required proof: complete production build; owner-authorized single billable-build exception on 2026-08-06; verified D1 Time Travel rollback bookmark; repeat-safe migrations; AI_RESOURCE_ZERO_SPEND_LOCK=true; valid credentials; exact deployed SHA; live route verification; and no regression to membership, email, PayPal, contact intake, evidence labels or existing public pages
-Purpose: deploy the merged PR #224 final repaired site, including public quality, feed reliability, Black File, canonical routes, clean search, publish-all evidence labels and public maturity labels
-Boundary: owner-authorized single billable build on 2026-08-06; all other zero-spend, credential, rollback, migration, evidence-label, payment, human-review and live-verification gates remain mandatory
-Nonce: pr224-final-site-controlled-production-20260806T121400Z-171d2cc7
+Required proof: complete production build and fresh Cloudflare zero-overage budget approval; verified D1 Time Travel rollback bookmark; repeat-safe migrations; AI_RESOURCE_ZERO_SPEND_LOCK=true; valid credentials; exact deployed SHA; live route verification; and no regression to membership, email, PayPal, contact intake, evidence labels or existing public pages
+Purpose: deploy the merged PR #226 repaired release including the Probability Machine and membership hardening fixes
+Boundary: zero-spend production only; do not bypass the Cloudflare billing-period lock; all credential, rollback, migration, evidence-label, payment, human-review and live-verification gates remain mandatory
+Nonce: pr226-zero-spend-controlled-production-20260808T153730Z-7ec081ad

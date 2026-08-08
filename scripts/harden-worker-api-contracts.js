@@ -52,13 +52,17 @@ function replaceRequired(source, before, after, label) {
   write(relative, source);
 }
 
-// The modern membership page and its server-created PayPal approval redirect are
-// canonical. Validate them without copying the retired inline-SDK recovery
-// template into public output, then keep source and every Cloudflare route mirror exact.
+// The protected membership template and server-created PayPal approval redirect
+// are canonical. Full builds may temporarily mutate membership.html before this
+// hardener runs, so use the protected template as authority whenever it exists,
+// then repair source and every Cloudflare route mirror exactly.
 {
   const membershipRelative = 'membership.html';
+  const membershipTemplateRelative = 'scripts/templates/membership-auth/membership.template';
   const paypalClientRelative = 'paypal-membership.js';
-  const membership = read(membershipRelative);
+  const membership = fs.existsSync(at(membershipTemplateRelative))
+    ? read(membershipTemplateRelative)
+    : read(membershipRelative);
   const paypalClient = read(paypalClientRelative);
   const membershipMarkers = [
     'Free Member',
@@ -82,6 +86,10 @@ function replaceRequired(source, before, after, label) {
   }
   if (paypalClient.includes('paypal.com/sdk/js') || paypalClient.includes('window.paypal') || paypalClient.includes('loadSdk(')) {
     throw new Error('Retired browser PayPal SDK logic re-entered the canonical membership runtime');
+  }
+  if (fs.existsSync(at(membershipTemplateRelative))) {
+    read(membershipRelative);
+    write(membershipRelative, membership);
   }
   for (const relative of ['_site/membership.html', '_site/membership']) {
     syncIfFile(relative, membership);
@@ -137,7 +145,7 @@ const report = {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
     freeSignup: 'supports verification.sent and queued delivery truthfully',
     paypal: 'checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans',
-    membershipSource: 'the canonical membership page and server-created PayPal redirect client are validated and synchronized across .html, extensionless and JavaScript output without template replacement',
+    membershipSource: 'the protected membership template is authoritative when present, and the server-created PayPal redirect client is validated and synchronized across source, .html, extensionless and JavaScript output without template regression',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }
 };

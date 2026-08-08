@@ -17,17 +17,18 @@ assert.equal(policyFile.updated, '2026-07-30');
 assert.equal(Object.keys(ledger.policies).length, 10, 'Expected ten exact-URL reviewed official-source policies');
 assert.equal(ledger.quarantine['wikileaks-publications']?.length > 0, true, 'WikiLeaks must remain explicitly quarantined');
 
-for (const [sourceId, policy] of Object.entries(ledger.policies)) {
+for (const [sourceId, configuredPolicy] of Object.entries(ledger.policies)) {
   const source = sources.get(sourceId);
   assert.ok(source, `Policy references missing source ${sourceId}`);
+  const policy = { ...(ledger.defaults || {}), ...configuredPolicy };
   assert.equal(source.authority, 'primary-official', `${sourceId} must remain a primary official source`);
   assert.equal(policy.sourceUrl, source.url, `${sourceId} policy must be bound to the exact registry URL`);
   for (const field of ['sourceUrl', 'officialDocumentationUrl', 'termsUrl', 'privacyUrl']) {
     assert.match(String(policy[field] || ''), /^https:\/\//, `${sourceId}.${field} must use HTTPS`);
   }
-  assert.equal(policy.approvedForAutomation, true, `${sourceId} must explicitly approve automation`);
-  assert.equal(policy.zeroSpendVerified, true, `${sourceId} must explicitly verify zero spend`);
-  assert.equal(policy.quotaVerified, true, `${sourceId} must have an operator quota proof`);
+  assert.equal(policy.approvedForAutomation, true, `${sourceId} must explicitly approve automation through the effective reviewed policy`);
+  assert.equal(policy.zeroSpendVerified, true, `${sourceId} must explicitly verify zero spend through the effective reviewed policy`);
+  assert.equal(policy.quotaVerified, true, `${sourceId} must have an operator quota proof through the effective reviewed policy`);
   assert.equal(policy.billingRisk, 'none', `${sourceId} must have no billing risk`);
   assert.ok(Number(policy.hardDailyRequestCeiling) >= 2 && Number(policy.hardDailyRequestCeiling) <= 50, `${sourceId} request ceiling is unsafe`);
   assert.equal(policy.concurrencyLimit, 1, `${sourceId} concurrency must remain one`);

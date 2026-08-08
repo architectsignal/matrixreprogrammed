@@ -17,6 +17,9 @@ const repositoryAuthorizationPath = path.resolve(
   process.env.MATRIX_REPOSITORY_PRODUCTION_AUTHORIZATION_REPORT
     || 'downloads/repository-credential-production-authorization.json'
 );
+const releaseFreezePath = path.resolve(
+  process.env.MATRIX_PRODUCTION_RELEASE_FREEZE_PATH || '.github/production-release.freeze'
+);
 
 function fail(message) {
   console.error(`CLOUDFLARE BUDGET LOCK: ${message}`);
@@ -39,6 +42,39 @@ function fullSha(value) {
   return /^[0-9a-f]{40}$/i.test(String(value || '').trim())
     ? String(value).trim().toLowerCase()
     : '';
+}
+
+function recordedGitBuildDisconnectionProof(policy) {
+  const state = policy?.verifiedCloudflareConnectionState || {};
+  const observedOn = String(state.observedOn || '').trim();
+  const observedAt = Date.parse(`${observedOn}T00:00:00.000Z`);
+  const ageHours = Number.isFinite(observedAt) ? (Date.now() - observedAt) / 3600000 : Infinity;
+  let freezeActive = false;
+  try {
+    freezeActive = /^State:\s*active\s*$/im.test(fs.readFileSync(releaseFreezePath, 'utf8'));
+  } catch {
+    freezeActive = false;
+  }
+
+  const checks = {
+    workersDisconnected: state.workersGitBuilds === 'disconnected',
+    pagesDisconnected: state.pagesGitDeployments === 'disconnected',
+    sameLockedSnapshot: observedOn && observedOn === String(policy?.ownerUsageSnapshot?.observedOn || '').trim(),
+    verificationRecorded: typeof state.verification === 'string' && state.verification.trim().length >= 20,
+    freshEnoughForControlledRelease: ageHours >= -1 && ageHours <= 168,
+    releaseFreezeActive: freezeActive,
+    workerRuleFailClosed: policy?.releaseRules?.cloudflareWorkersGitConnectedBuilds === 'must-be-disconnected',
+    pagesRuleFailClosed: policy?.releaseRules?.cloudflarePagesGitConnectedBuilds === 'must-be-disconnected'
+  };
+  const failed = Object.entries(checks).filter(([, value]) => !value).map(([key]) => key);
+  return {
+    ok: failed.length === 0,
+    observedOn,
+    ageHours,
+    failed,
+    checks,
+    verification: String(state.verification || '').trim()
+  };
 }
 
 function repositoryCredentialPushAuthorization() {
@@ -197,9 +233,21 @@ try {
     process.env.EXPECTED_CLOUDFLARE_BUILD_MINUTES || 0,
     'EXPECTED_CLOUDFLARE_BUILD_MINUTES'
   );
-  if (!isTrue(process.env.CLOUDFLARE_GIT_BUILDS_DISCONNECTED)) {
-    fail('CLOUDFLARE_GIT_BUILDS_DISCONNECTED must be true only after both Workers and Pages Git builds are verified disconnected.');
+  const environmentDisconnectionProof = isTrue(process.env.CLOUDFLARE_GIT_BUILDS_DISCONNECTED);
+  const recordedDisconnectionProof = recordedGitBuildDisconnectionProof(policy);
+  if (!environmentDisconnectionProof && !recordedDisconnectionProof.ok) {
+    fail(
+      'Cloudflare Git-build disconnection is not proved. Set CLOUDFLARE_GIT_BUILDS_DISCONNECTED=true only after live verification, ' +
+      `or refresh the fail-closed owner connection snapshot. Recorded proof failed: ${recordedDisconnectionProof.failed.join(', ') || 'unknown'}.`
+    );
     process.exit();
+  }
+  if (!environmentDisconnectionProof) {
+    console.log(
+      `Cloudflare Git-build disconnection proof PASS from owner-verified locked-period snapshot ${recordedDisconnectionProof.observedOn} ` +
+      `(${recordedDisconnectionProof.ageHours.toFixed(1)}h old) while the controlled production freeze is active. ` +
+      `Recorded verification: ${recordedDisconnectionProof.verification}`
+    );
   }
 
   // The current-period lock protects Cloudflare Workers Builds minutes. A

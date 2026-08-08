@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
+// The living-intelligence regression is one of the final Cloudflare build owners.
+// Reassert the current Phase 6 membership page and server-created PayPal redirect
+// before validating forum/member integration, so an older recovery template cannot
+// become the deployable membership surface late in the build.
+require('./patch-membership-tiers.js');
+require('./patch-paypal-server-redirect.js');
+
 // Run after the canonical forum owner so deployable pages cannot retain paid-pass
 // wording, malformed form attributes or retired browser-export filenames.
 require('./finalize-forum-public-surfaces.js');
@@ -11,8 +18,9 @@ const read = relative => fs.readFileSync(at(relative), 'utf8');
 const issues = [];
 const need = (condition, message) => { if (!condition) issues.push(message); };
 
-const template = read('scripts/templates/membership-auth/membership.template');
+const template = read('templates/phase6-membership.template');
 const membership = read('membership.html');
+const paypalClient = read('paypal-membership.js');
 const matrix = JSON.parse(read('data/membership-feature-matrix.json'));
 const forumClient = read('forum.js');
 const forumWorker = read('src/worker-forum-persistence.js');
@@ -20,13 +28,21 @@ const memberWorker = read('src/worker-member-experience.js');
 const productionWorker = read('src/worker-production.js');
 
 for (const html of [template, membership]) {
+  need(html.includes('Free Member'), 'Free Member tier is missing');
   need(html.includes('€0'), 'Free Member price is missing');
-  need(html.includes('€3/month'), 'Supporter €3 price is missing');
-  need(html.includes('€6/month'), 'Intelligence €6 price is missing');
-  need(html.includes('€9/month'), 'Research Pro €9 price is missing');
+  need(html.includes('€3 donation / month'), 'Supporter €3 price is missing');
+  need(html.includes('€6 donation / month'), 'Intelligence €6 price is missing');
+  need(html.includes('€9 donation / month'), 'Research Pro €9 price is missing');
   need(!/€19\/month|€49\/month/.test(html), 'Legacy €19/€49 membership pricing remains');
+  need(!html.includes('Coming soon — no payment taken'), 'Retired placeholder payment copy remains');
   need(html.includes('Free Member access never creates a PayPal subscription'), 'Free Member billing boundary is missing');
+  need(html.includes('paypal-membership.js'), 'Server-created PayPal redirect client is not loaded');
+  need(html.includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'), 'Paid activation boundary is missing');
 }
+need(paypalClient.includes('/api/paypal/subscription/create'), 'PayPal client does not use the server-created subscription route');
+need(paypalClient.includes('Continue securely to PayPal'), 'PayPal client lacks the secure approval action');
+need(paypalClient.includes('location.assign'), 'PayPal client does not redirect to the provider approval URL');
+need(!paypalClient.includes('paypal.com/sdk/js') && !paypalClient.includes('window.paypal') && !paypalClient.includes('loadSdk('), 'Retired browser PayPal SDK runtime returned');
 
 const priceById = Object.fromEntries((matrix.tiers || []).map(tier => [tier.id, tier.priceEurMonthly]));
 need(priceById.free === 0, 'Feature matrix Free Member price must be €0');
@@ -68,6 +84,7 @@ const report = {
   ok: issues.length === 0,
   generatedAt: new Date().toISOString(),
   membershipPrices: priceById,
+  membershipSurface: 'phase6-canonical-server-redirect',
   forumReading: 'public',
   forumPosting: 'verified-free-member-session',
   forumPublicSurface: 'clean-authoritative-d1',
@@ -80,5 +97,5 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log('MEMBER/FORUM INTEGRATION TEST PASSED: €0/€3/€6/€9 tiers, clean public pages and verified-member D1 forum posting.');
+console.log('MEMBER/FORUM INTEGRATION TEST PASSED: canonical €0/€3/€6/€9 membership, server-created PayPal redirect, clean public pages and verified-member D1 forum posting.');
 require('./recovery-worker-api-contract-test.js');

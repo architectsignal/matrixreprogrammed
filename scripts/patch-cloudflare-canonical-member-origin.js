@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const workerPath = path.join(root, 'src', 'worker-production.js');
@@ -31,66 +32,46 @@ const renderedAfter = after.replace(/\n/g, newline);
 const workerChanged = renderedAfter !== rawBefore;
 if (workerChanged) fs.writeFileSync(workerPath, renderedAfter);
 
-// Public cleanup and reader-governor passes are allowed to normalize presentation
-// markup, but the membership runtime needs stable tier hooks. Repair those hooks
-// from durable tier content before the strict membership/API hardening checks run.
-let membershipTierContractsChanged = false;
-if (fs.existsSync(membershipPath)) {
-  const rawMembership = fs.readFileSync(membershipPath, 'utf8');
-  const membershipNewline = rawMembership.includes('\r\n') ? '\r\n' : '\n';
-  let membership = rawMembership.replace(/\r\n/g, '\n');
-  const tierContracts = [
-    {
-      id: 'join-free-member',
-      price: '0',
-      anchors: ['data-tier-price="0"', 'Create or access free account', '€0 / forever', 'no card required']
-    },
-    {
-      id: 'join-supporter',
-      price: '3',
-      anchors: ['data-tier-price="3"', 'paypal-button-supporter', '€3 donation / month']
-    },
-    {
-      id: 'join-intelligence-member',
-      price: '6',
-      anchors: ['data-tier-price="6"', 'paypal-button-intelligence', '€6 donation / month']
-    },
-    {
-      id: 'join-research-pro',
-      price: '9',
-      anchors: ['data-tier-price="9"', 'paypal-button-research_pro', '€9 donation / month']
-    }
-  ];
+// Generic public-page cleanup is allowed to improve presentation, but membership
+// is a transactional runtime surface with authentication and payment hooks. If a
+// late generator replaces that structure, restore the exact membership page from
+// the checked-out release SHA instead of reconstructing or weakening it.
+const requiredMembershipMarkers = [
+  'id="join-free-member"',
+  'data-tier-price="0"',
+  'id="join-supporter"',
+  'data-tier-price="3"',
+  'id="join-intelligence-member"',
+  'data-tier-price="6"',
+  'id="join-research-pro"',
+  'data-tier-price="9"',
+  'paypal-membership.js',
+  'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
+];
+const membershipIsCanonical = source => requiredMembershipMarkers.every(marker => source.includes(marker));
 
-  for (const tier of tierContracts) {
-    const idMarker = `id="${tier.id}"`;
-    const priceMarker = `data-tier-price="${tier.price}"`;
-    if (membership.includes(idMarker) && membership.includes(priceMarker)) continue;
-
-    let anchorIndex = -1;
-    for (const anchor of tier.anchors) {
-      anchorIndex = membership.indexOf(anchor);
-      if (anchorIndex >= 0) break;
-    }
-    if (anchorIndex < 0) {
-      throw new Error(`Canonical membership tier could not be recovered: ${tier.id}`);
-    }
-
-    const articleStart = membership.lastIndexOf('<article', anchorIndex);
-    const articleEnd = articleStart >= 0 ? membership.indexOf('>', articleStart) : -1;
-    if (articleStart < 0 || articleEnd < 0 || articleEnd < anchorIndex && membership.indexOf('</article>', articleStart) < anchorIndex) {
-      throw new Error(`Canonical membership tier article is missing: ${tier.id}`);
-    }
-
-    let opening = membership.slice(articleStart, articleEnd + 1);
-    if (!opening.includes(idMarker)) opening = opening.replace('<article', `<article id="${tier.id}"`);
-    if (!opening.includes(priceMarker)) opening = opening.replace('<article', `<article data-tier-price="${tier.price}"`);
-    membership = `${membership.slice(0, articleStart)}${opening}${membership.slice(articleEnd + 1)}`;
+let membershipCanonicalRestored = false;
+if (!fs.existsSync(membershipPath)) throw new Error('Canonical membership page is missing');
+let membership = fs.readFileSync(membershipPath, 'utf8').replace(/\r\n/g, '\n');
+if (!membershipIsCanonical(membership)) {
+  let checkedInMembership = '';
+  try {
+    checkedInMembership = execFileSync('git', ['show', 'HEAD:membership.html'], {
+      cwd: root,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'pipe']
+    }).replace(/\r\n/g, '\n');
+  } catch (error) {
+    throw new Error(`Canonical membership runtime was rewritten and the exact checked-in page could not be restored: ${error?.message || error}`);
   }
-
-  const renderedMembership = membership.replace(/\n/g, membershipNewline);
-  membershipTierContractsChanged = renderedMembership !== rawMembership;
-  if (membershipTierContractsChanged) fs.writeFileSync(membershipPath, renderedMembership);
+  if (!membershipIsCanonical(checkedInMembership)) {
+    const missing = requiredMembershipMarkers.filter(marker => !checkedInMembership.includes(marker));
+    throw new Error(`Checked-in membership runtime is not canonical: ${missing.join(', ')}`);
+  }
+  const membershipNewline = fs.readFileSync(membershipPath, 'utf8').includes('\r\n') ? '\r\n' : '\n';
+  fs.writeFileSync(membershipPath, checkedInMembership.replace(/\n/g, membershipNewline));
+  membership = checkedInMembership;
+  membershipCanonicalRestored = true;
 }
 
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -98,11 +79,12 @@ fs.writeFileSync(reportPath, JSON.stringify({
   ok: true,
   generatedAt: new Date().toISOString(),
   changed: workerChanged,
-  membershipTierContractsChanged,
+  membershipCanonicalRestored,
   canonicalOrigin: 'https://matrixreprogrammed.com',
   redirectStatus: 308,
   checks,
-  reason: 'Host-only authentication cookies must not split member state between www and the apex Cloudflare Worker origin. Stable membership tier hooks are self-healed before strict API hardening so public presentation cleanup cannot break member checkout contracts.'
+  membershipMarkersVerified: requiredMembershipMarkers.length,
+  reason: 'Host-only authentication cookies must not split member state between www and the apex Cloudflare Worker origin. Membership is a protected transactional surface: if a generic generated-page pass rewrites its runtime structure, the exact page from the checked-out release SHA is restored before strict API hardening.'
 }, null, 2));
 console.log(`Cloudflare canonical member origin ${workerChanged ? 'repaired' : 'already current'}.`);
-if (membershipTierContractsChanged) console.log('Canonical membership tier structure repaired before hardening.');
+if (membershipCanonicalRestored) console.log('Canonical membership runtime restored exactly from the checked-out release SHA.');

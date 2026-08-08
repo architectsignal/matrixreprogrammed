@@ -51,12 +51,24 @@ jobs:
       - name: Prove fresh one-shot authorization parsing
         run: node scripts/verify-one-shot-production-authorization.js --self-test
 
-      - name: Prove the one-use billable-build exception
+      - name: Prove locked-period zero-build Wrangler release lane
+        env:
+          CLOUDFLARE_GIT_BUILDS_DISCONNECTED: 'true'
+          EXPECTED_CLOUDFLARE_BUILD_MINUTES: '0'
+        run: node scripts/cloudflare-usage-budget-guard.js release
+
+      - name: Prove expired billable-build exception stays closed
         env:
           CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02
           GITHUB_EVENT_NAME: workflow_dispatch
           GITHUB_RUN_ATTEMPT: '1'
-        run: node scripts/cloudflare-usage-budget-guard.js owner-exception
+        shell: bash
+        run: |
+          if node scripts/cloudflare-usage-budget-guard.js owner-exception; then
+            echo 'Expired one-time billable-build exception unexpectedly passed.' >&2
+            exit 1
+          fi
+          echo 'EXPIRED BILLABLE-BUILD EXCEPTION REMAINS CLOSED'
 
       - name: Prove every pilot route stays public and labelled
         run: |
@@ -71,16 +83,19 @@ jobs:
           const required = [
             "run.head_sha?.toLowerCase() === expectedHead",
             "ref: 'main'",
-            "billing_exception: billingException",
+            "billing_exception: ''",
             "run.conclusion !== 'failure'",
-            "never reuses a run for another SHA"
+            "run.conclusion !== 'cancelled'",
+            "dated billable-build exception cannot be reused",
+            "zero-spend controlled production lane"
           ];
           for (const marker of required) {
             if (!source.includes(marker)) throw new Error(`Dispatcher missing ${marker}`);
           }
+          if (source.includes('target_sha:')) throw new Error('Dispatcher still sends the retired target_sha workflow input');
           if (/cutoff = new Date\('2026-07-24/i.test(source)) throw new Error('Dispatcher retains the stale fixed cutoff');
           if (source.includes('git commit -m')) throw new Error('Dispatcher mutates main after dispatch');
-          console.log('EXACT-SHA DISPATCH CONTRACT PASSED');
+          console.log('EXACT-SHA ZERO-SPEND DISPATCH CONTRACT PASSED');
           NODE
 
       - name: Prove canonical deploy workflow still owns mutation gates
@@ -90,7 +105,9 @@ jobs:
           const source = fs.readFileSync('.github/workflows/deploy.yml', 'utf8');
           for (const marker of [
             'node scripts/verify-one-shot-production-authorization.js',
+            'node scripts/cloudflare-usage-budget-guard.js release',
             'node scripts/cloudflare-usage-budget-guard.js owner-exception',
+            "EXPECTED_CLOUDFLARE_BUILD_MINUTES: '0'",
             'Capture D1 rollback bookmark',
             'Apply repeat-safe D1 migration chain',
             'Production deploy guard',

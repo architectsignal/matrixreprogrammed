@@ -26,6 +26,25 @@ const publicReadingReplacement = "    assert(/reading is public|reading stays pu
 if (!source.includes(publicReadingAssertion)) throw new Error('Recovery forum public-reading assertion is missing');
 source = source.replace(publicReadingAssertion, publicReadingReplacement);
 
+// Membership pricing is owned by the canonical tier metadata. The public copy
+// intentionally describes paid plans as recurring donations, so browser proof
+// must validate the tier cards and amounts rather than one retired text format.
+const legacyMembershipPrices = [
+  "    assert(body.includes('€3/month'), 'Supporter price is not €3/month');",
+  "    assert(body.includes('€6/month'), 'Intelligence price is not €6/month');",
+  "    assert(body.includes('€9/month'), 'Research Pro price is not €9/month');"
+].join('\n');
+const canonicalMembershipPrices = [
+  "    for (const [id, price, label] of [['join-supporter','3','Supporter'],['join-intelligence-member','6','Intelligence'],['join-research-pro','9','Research Pro']]) {",
+  "      const card = page.locator(`#${id}`);",
+  "      assert(await card.count() === 1, `${label} tier card is missing`);",
+  "      assert((await card.getAttribute('data-tier-price')) === price, `${label} canonical price is not €${price}`);",
+  "      assert((await card.innerText()).includes(`€${price}`), `${label} displayed €${price} amount is missing`);",
+  "    }"
+].join('\n');
+if (!source.includes(legacyMembershipPrices)) throw new Error('Recovery membership legacy price assertions are missing');
+source = source.replace(legacyMembershipPrices, canonicalMembershipPrices);
+
 // The production forum endpoint returns 201 only after a Cloudflare D1
 // read-after-write confirmation and identifies the authoritative storage lane.
 const forumMockBefore = "persistent: true, saved: true, post: { id: 'recovery-post'";

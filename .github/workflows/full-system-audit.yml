@@ -74,7 +74,13 @@ jobs:
           INVESTIGATION_TIMEOUT_MS: '25000'
         run: |
           node scripts/repair-investigation-source-registry.js
-          node scripts/run-investigation-machine.js daily
+          if ! node scripts/run-investigation-machine.js daily; then
+            if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+              echo "::warning::Live investigation refresh unavailable in PR CI; continuing with the preserved evidence ledger for deterministic audit. Production and scheduled collection remain fail-closed."
+            else
+              exit 1
+            fi
+          fi
           node scripts/update-live-intel.js
           node scripts/record-live-intel-check.js
           node scripts/update-seven-day-intel.js

@@ -1,6 +1,6 @@
 # Daily Command Brief
 
-Updated: 2026-08-07T19:20:28.918Z
+Updated: 2026-08-08T02:21:31.901Z
 
 ## Top Contractor Signals
 
@@ -17,21 +17,22 @@ Updated: 2026-08-07T19:20:28.918Z
 - Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Health and Human Services Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 23-55704: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - 24-2251: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 24-7261: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - California Supreme Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- CC-2025-0631: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Civil Rights Corps v. LaSalle: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - D & A Grandview, LLC v. 60 Davidson, LLC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Gerena Betancourt v. Negociado De La Policía De Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Gilead Tenofovir Cases: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Homeland Security Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - In Re: Koi Design LLC v. Marron Lawyers, Apc: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - S283862: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- United States v. Anten: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Supreme Court of Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Williams v. Biggs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Alphabet Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
@@ -47,10 +48,9 @@ Updated: 2026-08-07T19:20:28.918Z
 - NVIDIA CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Securities and Exchange Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - California Supreme Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- CC-2025-0631: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
 - Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 23-55704: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 24-2251: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Gerena Betancourt v. Negociado De La Policía De Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Supreme Court of Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.

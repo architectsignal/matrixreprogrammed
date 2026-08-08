@@ -1,8 +1,8 @@
 # Entity Daily Briefs
 
-Updated: 2026-08-07T19:20:28.781Z
+Updated: 2026-08-08T02:21:31.773Z
 
-Briefs generated: 32
+Briefs generated: 33
 
 ## Centers for Medicare & Medicaid Services
 
@@ -33,16 +33,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Court of Appeals for the Ninth Circuit
-
-At a glance: Court of Appeals for the Ninth Circuit is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Court of Appeals for the Ninth Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## 2021-08825
 
@@ -84,16 +74,6 @@ Evidence: legal record present
 
 Watch next: Watch 24-2251 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 24-7261
-
-At a glance: 24-7261 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch 24-7261 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
 ## California Supreme Court
 
 At a glance: California Supreme Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -104,6 +84,16 @@ Evidence: legal record present
 
 Watch next: Watch California Supreme Court across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## CC-2025-0631
+
+At a glance: CC-2025-0631 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch CC-2025-0631 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Civil Rights Corps v. LaSalle
 
 At a glance: Civil Rights Corps v. LaSalle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -113,6 +103,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Civil Rights Corps v. LaSalle across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Court of Appeals for the Ninth Circuit
+
+At a glance: Court of Appeals for the Ninth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Court of Appeals for the Ninth Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Court of Appeals for the Second Circuit
 
@@ -133,6 +133,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Gerena Betancourt v. Negociado De La Policía De Puerto Rico
+
+At a glance: Gerena Betancourt v. Negociado De La Policía De Puerto Rico is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Gerena Betancourt v. Negociado De La Policía De Puerto Rico across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Gilead Tenofovir Cases
 
@@ -174,15 +184,15 @@ Evidence: legal record present
 
 Watch next: Watch S283862 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## United States v. Anten
+## Supreme Court of Puerto Rico
 
-At a glance: United States v. Anten is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: Supreme Court of Puerto Rico is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch United States v. Anten across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch Supreme Court of Puerto Rico across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Williams v. Biggs
 

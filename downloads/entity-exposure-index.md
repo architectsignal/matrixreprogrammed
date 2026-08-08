@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-08-07T19:20:28.830Z
+Updated: 2026-08-08T02:21:31.817Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -12,16 +12,6 @@ Highest evidence: charged / sued
 
 Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Court of Appeals for the Ninth Circuit
-
-Score: 368
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Court of Appeals for the Ninth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## California Supreme Court
 
 Score: 184
@@ -32,6 +22,26 @@ Highest evidence: charged / sued
 
 Reading: California Supreme Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
+## CC-2025-0631
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: CC-2025-0631 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Court of Appeals for the Ninth Circuit
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals for the Ninth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
 ## Court of Appeals for the Second Circuit
 
 Score: 184
@@ -41,6 +51,26 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Gerena Betancourt v. Negociado De La Policía De Puerto Rico
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Gerena Betancourt v. Negociado De La Policía De Puerto Rico deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Supreme Court of Puerto Rico
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Supreme Court of Puerto Rico deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## 2021-08825
 
@@ -81,16 +111,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: 24-2251 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## 24-7261
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: 24-7261 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Civil Rights Corps v. LaSalle
 
@@ -141,16 +161,6 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: S283862 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## United States v. Anten
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: United States v. Anten deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Williams v. Biggs
 

@@ -1,21 +1,11 @@
 {
-  "updated": "2026-08-07T19:20:28.918Z",
+  "updated": "2026-08-08T02:21:31.901Z",
   "title": "Brief Quality Report",
   "boundary": "Quality scores prioritize source strength, relationship depth, missing-record pressure and reader clarity.",
   "briefs": [
     {
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "name": "Appellate Division of the Supreme Court of the State of New York",
-      "score": 100,
-      "level": "elite priority",
-      "source_strength": 50,
-      "relationship_depth": 80,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
-      "id": "court-of-appeals-for-the-ninth-circuit",
-      "name": "Court of Appeals for the Ninth Circuit",
       "score": 100,
       "level": "elite priority",
       "source_strength": 50,
@@ -84,16 +74,6 @@
       "reader_friendliness": 85
     },
     {
-      "id": "24-7261",
-      "name": "24-7261",
-      "score": 67,
-      "level": "high priority",
-      "source_strength": 25,
-      "relationship_depth": 40,
-      "missing_record_pressure": 14,
-      "reader_friendliness": 85
-    },
-    {
       "id": "california-supreme-court",
       "name": "California Supreme Court",
       "score": 67,
@@ -104,8 +84,28 @@
       "reader_friendliness": 85
     },
     {
+      "id": "cc-2025-0631",
+      "name": "CC-2025-0631",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
       "id": "civil-rights-corps-v-lasalle",
       "name": "Civil Rights Corps v. LaSalle",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "court-of-appeals-for-the-ninth-circuit",
+      "name": "Court of Appeals for the Ninth Circuit",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -126,6 +126,16 @@
     {
       "id": "d-and-a-grandview-llc-v-60-davidson-llc",
       "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "score": 67,
+      "level": "high priority",
+      "source_strength": 25,
+      "relationship_depth": 40,
+      "missing_record_pressure": 14,
+      "reader_friendliness": 85
+    },
+    {
+      "id": "gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico",
+      "name": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,
@@ -164,8 +174,8 @@
       "reader_friendliness": 85
     },
     {
-      "id": "united-states-v-anten",
-      "name": "United States v. Anten",
+      "id": "supreme-court-of-puerto-rico",
+      "name": "Supreme Court of Puerto Rico",
       "score": 67,
       "level": "high priority",
       "source_strength": 25,

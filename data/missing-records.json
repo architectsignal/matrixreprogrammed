@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T19:20:28.918Z",
+  "updated": "2026-08-08T02:21:31.901Z",
   "title": "Missing Record Machine",
   "purpose": "Turn gaps into watch triggers: contracts, dockets, filings, ownership records, oversight reports, counter-sources and primary documents.",
   "boundary": "A missing record is a watch trigger, not proof.",
@@ -20,12 +20,6 @@
       "entity": "Appellate Division of the Supreme Court of the State of New York",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Court of Appeals for the Ninth Circuit",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
       "type": "entity brief"
     },
     {
@@ -53,21 +47,27 @@
       "type": "entity brief"
     },
     {
-      "entity": "24-7261",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/24-7261.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "California Supreme Court",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/california-supreme-court.html",
       "type": "entity brief"
     },
     {
+      "entity": "CC-2025-0631",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/cc-2025-0631.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Civil Rights Corps v. LaSalle",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Court of Appeals for the Ninth Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/court-of-appeals-for-the-ninth-circuit.html",
       "type": "entity brief"
     },
     {
@@ -80,6 +80,12 @@
       "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
       "type": "entity brief"
     },
     {
@@ -107,9 +113,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "United States v. Anten",
+      "entity": "Supreme Court of Puerto Rico",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/united-states-v-anten.html",
+      "route": "entity-briefs/supreme-court-of-puerto-rico.html",
       "type": "entity brief"
     },
     {
@@ -203,21 +209,39 @@
       "type": "record review"
     },
     {
-      "entity": "Court of Appeals for the Ninth Circuit",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
-      "type": "record review"
-    },
-    {
       "entity": "California Supreme Court",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/california-supreme-court.html",
       "type": "record review"
     },
     {
+      "entity": "CC-2025-0631",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/cc-2025-0631.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Court of Appeals for the Ninth Circuit",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/court-of-appeals-for-the-ninth-circuit.html",
+      "type": "record review"
+    },
+    {
       "entity": "Court of Appeals for the Second Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/court-of-appeals-for-the-second-circuit.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
+      "type": "record review"
+    },
+    {
+      "entity": "Supreme Court of Puerto Rico",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-exposure/supreme-court-of-puerto-rico.html",
       "type": "record review"
     },
     {
@@ -242,12 +266,6 @@
       "entity": "24-2251",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/24-2251.html",
-      "type": "record review"
-    },
-    {
-      "entity": "24-7261",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/24-7261.html",
       "type": "record review"
     },
     {
@@ -278,12 +296,6 @@
       "entity": "S283862",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-exposure/s283862.html",
-      "type": "record review"
-    },
-    {
-      "entity": "United States v. Anten",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-exposure/united-states-v-anten.html",
       "type": "record review"
     },
     {

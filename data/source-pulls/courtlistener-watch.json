@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T19:20:10.090Z",
+  "updated": "2026-08-08T02:21:15.604Z",
   "runner_version": "machine-feed-runner-2026-07-04-b",
   "lane": "courtlistener-court-records",
   "name": "CourtListener court record signal",
@@ -10,10 +10,91 @@
   "evidence_grade": "charged / sued",
   "itemCount": 6,
   "raw": {
-    "count": 23280,
-    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgyMjU5MjAwMDAwJnM9MTA4Nzk1NDkmdD1vJmQ9MjAyNi0wOC0wNyZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
+    "count": 23281,
+    "next": "https://www.courtlistener.com/api/rest/v4/search/?cursor=cz0xNzgyMzQ1NjAwMDAwJnM9MTA4ODAyMjEmdD1vJmQ9MjAyNi0wOC0wNyZwPTI%3D&order_by=dateFiled+desc&q=Epstein&type=o",
     "previous": null,
     "results": [
+      {
+        "absolute_url": "/opinion/10942382/gerena-betancourt-v-negociado-de-la-policia-de-puerto-rico/",
+        "attorney": "",
+        "caseName": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+        "caseNameFull": "",
+        "citation": [
+          "2026 TSPR 86"
+        ],
+        "citeCount": 0,
+        "cluster_id": 10942382,
+        "court": "Supreme Court of Puerto Rico",
+        "court_citation_string": "",
+        "court_id": "prsupreme",
+        "court_jurisdiction": "TS",
+        "dateArgued": null,
+        "dateFiled": "2026-08-07",
+        "dateReargued": null,
+        "dateReargumentDenied": null,
+        "docketNumber": "CC-2025-0631",
+        "docket_id": 73736972,
+        "judge": "",
+        "lexisCite": "",
+        "meta": {
+          "timestamp": "2026-08-07T20:17:21.943349Z",
+          "date_created": "2026-08-07T20:17:21.683674Z",
+          "score": {
+            "bm25": null
+          }
+        },
+        "neutralCite": "",
+        "non_participating_judge_ids": [],
+        "opinions": [
+          {
+            "author_id": null,
+            "cites": [
+              8556396,
+              8557522,
+              8558111,
+              8558404,
+              8561559,
+              8561818,
+              8563153,
+              8563181,
+              8564212,
+              8564515,
+              8564757,
+              8565901,
+              8565961,
+              8566355,
+              8567163,
+              11058735,
+              11214945
+            ],
+            "download_url": "https://dts.poderjudicial.pr/ts/2026/2026tspr86.pdf",
+            "id": 11409966,
+            "joined_by_ids": [],
+            "local_path": "pdf/2026/08/07/gerena_betancourt_v._negociado_de_la_policía_de_puerto_rico.pdf",
+            "meta": {
+              "timestamp": "2026-08-07T20:20:26.036294Z",
+              "date_created": "2026-08-07T20:17:21.738642Z"
+            },
+            "ordering_key": null,
+            "per_curiam": false,
+            "sha1": "a74add89b1da34424d4ff2f5d39a66fa712c02ce",
+            "snippet": "                   EN EL TRIBUNAL SUPREMO DE PUERTO RICO\n\n\n     Agente Roberto L. Gerena\n         Betancourt #5330\n                                               Certiorari\n              Recurrido\n\n                   v.                         2026 TSPR 86\n\n    Negociado de la Policía de                218 DPR ___\n            Puerto Rico\n\n            Peticionarios\n\n\n\nNúmero del Caso:    CC-2025-0631\n\n\nFecha:   7 de agosto de 2026\n\n\nTribunal de Apelaciones:\n\n     Panel Especial\n\n\nOficina del Proc",
+            "type": "combined-opinion"
+          }
+        ],
+        "panel_ids": [],
+        "panel_names": [],
+        "posture": "",
+        "procedural_history": "",
+        "scdb_id": "",
+        "sibling_ids": [
+          11409966
+        ],
+        "source": "C",
+        "status": "Published",
+        "suitNature": "",
+        "syllabus": ""
+      },
       {
         "absolute_url": "/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/",
         "attorney": "",
@@ -1929,79 +2010,6 @@
         "scdb_id": "",
         "sibling_ids": [
           11347740
-        ],
-        "source": "C",
-        "status": "Published",
-        "suitNature": "",
-        "syllabus": ""
-      },
-      {
-        "absolute_url": "/opinion/10879549/roberto-g-pantoja-as-sellers-representative-v-fpmcm-llc/",
-        "attorney": "",
-        "caseName": "Roberto G. Pantoja, as Sellers' Representative v. FPMCM, LLC",
-        "caseNameFull": "",
-        "citation": [],
-        "citeCount": 0,
-        "cluster_id": 10879549,
-        "court": "Court of Chancery of Delaware",
-        "court_citation_string": "Del. Ch.",
-        "court_id": "delch",
-        "court_jurisdiction": "SA",
-        "dateArgued": null,
-        "dateFiled": "2026-06-24",
-        "dateReargued": null,
-        "dateReargumentDenied": null,
-        "docketNumber": "C.A. No. 2025-1108-BWD",
-        "docket_id": 73524912,
-        "judge": "",
-        "lexisCite": "",
-        "meta": {
-          "timestamp": "2026-06-24T15:05:56.407512Z",
-          "date_created": "2026-06-24T15:04:11.350048Z",
-          "score": {
-            "bm25": null
-          }
-        },
-        "neutralCite": "",
-        "non_participating_judge_ids": [],
-        "opinions": [
-          {
-            "author_id": null,
-            "cites": [
-              1443950,
-              1476448,
-              1933730,
-              2104866,
-              2209546,
-              2294957,
-              2298525,
-              2319183,
-              2402127,
-              4028767,
-              9431908
-            ],
-            "download_url": "https://courts.delaware.gov/opinions/download.aspx?id=397150",
-            "id": 11347068,
-            "joined_by_ids": [],
-            "local_path": "pdf/2026/06/24/roberto_g._pantoja_as_sellers_representative_v._fpmcm_llc.pdf",
-            "meta": {
-              "timestamp": "2026-06-24T15:44:35.391792Z",
-              "date_created": "2026-06-24T15:04:11.353776Z"
-            },
-            "ordering_key": null,
-            "per_curiam": false,
-            "sha1": "a5a57ec73b2dd4cabc42f71d9ba4d11c7b4bfa15",
-            "snippet": "   IN THE COURT OF CHANCERY OF THE STATE OF DELAWARE\n\nROBERTO G. PANTOJA, AS                  )\nSELLERS’ REPRESENTATIVE,                )\n                                        )\n           Plaintiff,                   )\n                                        )\n     v.                                 ) C.A. No. 2025-1108-BWD\n                                        )\nFPMCM, LLC,                             )\n                                        )\n           Defendant.                   )\n\n  ",
-            "type": "combined-opinion"
-          }
-        ],
-        "panel_ids": [],
-        "panel_names": [],
-        "posture": "",
-        "procedural_history": "",
-        "scdb_id": "",
-        "sibling_ids": [
-          11347068
         ],
         "source": "C",
         "status": "Published",

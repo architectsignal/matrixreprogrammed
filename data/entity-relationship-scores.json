@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T19:20:28.744Z",
+  "updated": "2026-08-08T02:21:31.739Z",
   "title": "Entity Relationship Scores",
   "purpose": "Score repeated public-record co-occurrences between names found in record events. These are candidates for review by the Power Entity Engine.",
   "boundary": "Scores are based on records, lanes, evidence grades and repetition. They are relationship candidates, not conclusions.",
@@ -34,6 +34,87 @@
       "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
     },
     {
+      "id": "gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico__supreme-court-of-puerto-rico",
+      "from": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "to": "Supreme Court of Puerto Rico",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10942382-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "cc-2025-0631__gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico",
+      "from": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "to": "CC-2025-0631",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10942382-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
+      "id": "cc-2025-0631__supreme-court-of-puerto-rico",
+      "from": "Supreme Court of Puerto Rico",
+      "to": "CC-2025-0631",
+      "count": 1,
+      "lanes": [
+        "courtlistener-court-records"
+      ],
+      "record_types": [
+        "court_record_signal"
+      ],
+      "evidence_grades": [
+        "charged / sued"
+      ],
+      "source_events": [
+        "courtlistener-court-records-10942382-1"
+      ],
+      "control_layers": [
+        "courts",
+        "litigation",
+        "disclosure"
+      ],
+      "score": 10,
+      "grade": "candidate",
+      "relationship_type": "public-record co-occurrence",
+      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+    },
+    {
       "id": "court-of-appeals-for-the-ninth-circuit__in-re-koi-design-llc-v-marron-lawyers-apc",
       "from": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
       "to": "Court of Appeals for the Ninth Circuit",
@@ -48,7 +129,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10940847-1"
+        "courtlistener-court-records-10940847-2"
       ],
       "control_layers": [
         "courts",
@@ -75,7 +156,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10940847-1"
+        "courtlistener-court-records-10940847-2"
       ],
       "control_layers": [
         "courts",
@@ -102,7 +183,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10940847-1"
+        "courtlistener-court-records-10940847-2"
       ],
       "control_layers": [
         "courts",
@@ -129,7 +210,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10938615-2"
+        "courtlistener-court-records-10938615-3"
       ],
       "control_layers": [
         "courts",
@@ -156,7 +237,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10938615-2"
+        "courtlistener-court-records-10938615-3"
       ],
       "control_layers": [
         "courts",
@@ -183,7 +264,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10938615-2"
+        "courtlistener-court-records-10938615-3"
       ],
       "control_layers": [
         "courts",
@@ -210,7 +291,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936935-3"
+        "courtlistener-court-records-10936935-4"
       ],
       "control_layers": [
         "courts",
@@ -237,7 +318,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936935-3"
+        "courtlistener-court-records-10936935-4"
       ],
       "control_layers": [
         "courts",
@@ -264,7 +345,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936935-3"
+        "courtlistener-court-records-10936935-4"
       ],
       "control_layers": [
         "courts",
@@ -291,7 +372,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936889-4"
+        "courtlistener-court-records-10936889-5"
       ],
       "control_layers": [
         "courts",
@@ -318,7 +399,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936889-4"
+        "courtlistener-court-records-10936889-5"
       ],
       "control_layers": [
         "courts",
@@ -345,7 +426,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936889-4"
+        "courtlistener-court-records-10936889-5"
       ],
       "control_layers": [
         "courts",
@@ -372,7 +453,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936118-5"
+        "courtlistener-court-records-10936118-6"
       ],
       "control_layers": [
         "courts",
@@ -399,7 +480,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936118-5"
+        "courtlistener-court-records-10936118-6"
       ],
       "control_layers": [
         "courts",
@@ -426,88 +507,7 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936118-5"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "court-of-appeals-for-the-ninth-circuit__united-states-v-anten",
-      "from": "United States v. Anten",
-      "to": "Court of Appeals for the Ninth Circuit",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10935302-6"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "24-7261__united-states-v-anten",
-      "from": "United States v. Anten",
-      "to": "24-7261",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10935302-6"
-      ],
-      "control_layers": [
-        "courts",
-        "litigation",
-        "disclosure"
-      ],
-      "score": 10,
-      "grade": "candidate",
-      "relationship_type": "public-record co-occurrence",
-      "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-    },
-    {
-      "id": "24-7261__court-of-appeals-for-the-ninth-circuit",
-      "from": "Court of Appeals for the Ninth Circuit",
-      "to": "24-7261",
-      "count": 1,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10935302-6"
+        "courtlistener-court-records-10936118-6"
       ],
       "control_layers": [
         "courts",

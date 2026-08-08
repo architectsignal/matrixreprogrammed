@@ -1,12 +1,12 @@
 # Machine Digest
 
-Updated: 2026-08-07T19:20:10.090Z
+Updated: 2026-08-08T02:21:15.604Z
 Runner: machine-feed-runner-2026-07-04-b
 
 Feed lanes attempted: 7
 Feeds reached: 4
 Normalized events: 18
-Entity observations: 32
+Entity observations: 33
 
 ## Latest Events
 
@@ -22,19 +22,18 @@ Entity observations: 32
 - documented association: MICROSOFT CORP (MSFT) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: AMAZON COM INC (AMZN) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
 - documented association: Broadcom Inc. (AVGO) — sec-edgar-filings — https://www.sec.gov/search-filings/edgar-application-programming-interfaces
+- charged / sued: Gerena Betancourt v. Negociado De La Policía De Puerto Rico — courtlistener-court-records — https://www.courtlistener.com/opinion/10942382/gerena-betancourt-v-negociado-de-la-policia-de-puerto-rico/
 - charged / sued: In Re: Koi Design LLC v. Marron Lawyers, Apc — courtlistener-court-records — https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/
 - charged / sued: Gilead Tenofovir Cases — courtlistener-court-records — https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/
 - charged / sued: D & A Grandview, LLC v. 60 Davidson, LLC — courtlistener-court-records — https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/
 - charged / sued: Williams v. Biggs — courtlistener-court-records — https://www.courtlistener.com/opinion/10936889/williams-v-biggs/
 - charged / sued: Civil Rights Corps v. LaSalle — courtlistener-court-records — https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/
-- charged / sued: United States v. Anten — courtlistener-court-records — https://www.courtlistener.com/opinion/10935302/united-states-v-anten/
 
 ## Entity Observations
 
 - Health and Human Services Department: 3 mention(s), lanes: federal-register-policy
 - Centers for Medicare & Medicaid Services: 3 mention(s), lanes: federal-register-policy
 - Homeland Security Department: 2 mention(s), lanes: federal-register-policy
-- Court of Appeals for the Ninth Circuit: 2 mention(s), lanes: courtlistener-court-records
 - Appellate Division of the Supreme Court of the State of New York: 2 mention(s), lanes: courtlistener-court-records
 - Securities and Exchange Commission: 1 mention(s), lanes: federal-register-policy
 - NVIDIA CORP: 1 mention(s), lanes: sec-edgar-filings
@@ -49,7 +48,11 @@ Entity observations: 32
 - AMZN: 1 mention(s), lanes: sec-edgar-filings
 - Broadcom Inc.: 1 mention(s), lanes: sec-edgar-filings
 - AVGO: 1 mention(s), lanes: sec-edgar-filings
+- Gerena Betancourt v. Negociado De La Policía De Puerto Rico: 1 mention(s), lanes: courtlistener-court-records
+- Supreme Court of Puerto Rico: 1 mention(s), lanes: courtlistener-court-records
+- CC-2025-0631: 1 mention(s), lanes: courtlistener-court-records
 - In Re: Koi Design LLC v. Marron Lawyers, Apc: 1 mention(s), lanes: courtlistener-court-records
+- Court of Appeals for the Ninth Circuit: 1 mention(s), lanes: courtlistener-court-records
 - 23-55704: 1 mention(s), lanes: courtlistener-court-records
 - Gilead Tenofovir Cases: 1 mention(s), lanes: courtlistener-court-records
 - California Supreme Court: 1 mention(s), lanes: courtlistener-court-records
@@ -58,6 +61,3 @@ Entity observations: 32
 - 2024-13374: 1 mention(s), lanes: courtlistener-court-records
 - Williams v. Biggs: 1 mention(s), lanes: courtlistener-court-records
 - 2021-08825: 1 mention(s), lanes: courtlistener-court-records
-- Civil Rights Corps v. LaSalle: 1 mention(s), lanes: courtlistener-court-records
-- Court of Appeals for the Second Circuit: 1 mention(s), lanes: courtlistener-court-records
-- 24-2251: 1 mention(s), lanes: courtlistener-court-records

@@ -1,0 +1,52 @@
+name: Membership Final Hardening Regression
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/harden-worker-api-contracts.js'
+      - 'scripts/membership-final-hardening-regression-test.js'
+      - 'membership.html'
+      - 'paypal-membership.js'
+      - '.github/workflows/membership-final-hardening-regression.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/harden-worker-api-contracts.js'
+      - 'scripts/membership-final-hardening-regression-test.js'
+      - 'membership.html'
+      - 'paypal-membership.js'
+      - '.github/workflows/membership-final-hardening-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  test:
+    name: Preserve canonical membership output after late hardening
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run membership final-hardening regression
+        run: node scripts/membership-final-hardening-regression-test.js
+
+      - name: Upload regression proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: membership-final-hardening-regression-${{ github.run_id }}
+          path: downloads/membership-final-hardening-regression-test.json
+          if-no-files-found: error
+          retention-days: 30

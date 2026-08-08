@@ -11,7 +11,6 @@ const read = relative => fs.readFileSync(at(relative), 'utf8');
 const issues = [];
 const need = (condition, message) => { if (!condition) issues.push(message); };
 
-const template = read('scripts/templates/membership-auth/membership.template');
 const membership = read('membership.html');
 const matrix = JSON.parse(read('data/membership-feature-matrix.json'));
 const forumClient = read('forum.js');
@@ -19,14 +18,32 @@ const forumWorker = read('src/worker-forum-persistence.js');
 const memberWorker = read('src/worker-member-experience.js');
 const productionWorker = read('src/worker-production.js');
 
-for (const html of [template, membership]) {
-  need(html.includes('€0'), 'Free Member price is missing');
-  need(html.includes('€3/month'), 'Supporter €3 price is missing');
-  need(html.includes('€6/month'), 'Intelligence €6 price is missing');
-  need(html.includes('€9/month'), 'Research Pro €9 price is missing');
-  need(!/€19\/month|€49\/month/.test(html), 'Legacy €19/€49 membership pricing remains');
-  need(html.includes('Free Member access never creates a PayPal subscription'), 'Free Member billing boundary is missing');
+const articleById = id => {
+  const marker = `id="${id}"`;
+  const markerAt = membership.indexOf(marker);
+  if (markerAt < 0) return '';
+  const start = membership.lastIndexOf('<article', markerAt);
+  const end = membership.indexOf('</article>', markerAt);
+  if (start < 0 || end < 0) return '';
+  return membership.slice(start, end + '</article>'.length);
+};
+
+const canonicalTiers = [
+  { id: 'join-free-member', label: 'Free Member', price: 0 },
+  { id: 'join-supporter', label: 'Supporter', price: 3 },
+  { id: 'join-intelligence-member', label: 'Intelligence Member', price: 6 },
+  { id: 'join-research-pro', label: 'Research Pro', price: 9 }
+];
+for (const tier of canonicalTiers) {
+  const article = articleById(tier.id);
+  need(Boolean(article), `${tier.label} tier is missing from membership.html`);
+  need(new RegExp(`data-tier-price=["']${tier.price}["']`, 'i').test(article), `${tier.label} canonical tier price must be €${tier.price}`);
+  need(article.includes(`€${tier.price}`), `${tier.label} displayed €${tier.price} amount is missing`);
 }
+need(!/€19\s*(?:\/\s*month|per\s+month)|€49\s*(?:\/\s*month|per\s+month)/i.test(membership), 'Legacy €19/€49 membership pricing remains');
+need(membership.includes('Free Member access never creates a PayPal subscription'), 'Free Member billing boundary is missing');
+need(/same underlying public-source evidence/i.test(membership), 'Membership page does not preserve the same-evidence access promise');
+need((membership.match(/donation\s*\/\s*month/gi) || []).length >= 3, 'Paid tiers no longer disclose their monthly donation cadence');
 
 const priceById = Object.fromEntries((matrix.tiers || []).map(tier => [tier.id, tier.priceEurMonthly]));
 need(priceById.free === 0, 'Feature matrix Free Member price must be €0');
@@ -80,5 +97,5 @@ if (issues.length) {
   for (const issue of issues) console.error(`- ${issue}`);
   process.exit(1);
 }
-console.log('MEMBER/FORUM INTEGRATION TEST PASSED: €0/€3/€6/€9 tiers, clean public pages and verified-member D1 forum posting.');
+console.log('MEMBER/FORUM INTEGRATION TEST PASSED: canonical €0/€3/€6/€9 tier contracts, clean public pages and verified-member D1 forum posting.');
 require('./recovery-worker-api-contract-test.js');

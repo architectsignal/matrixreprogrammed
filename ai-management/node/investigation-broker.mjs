@@ -90,13 +90,18 @@ function runtimeZeroSpendAttestation(policy, now) {
 
 function investigationResourceCompatibility(resource, job) {
   if (resource?.adapter_id !== 'approved-public-source-http') return { eligible: true, reasons: [] };
-  const requestedSourceId = String(job?.metadata?.source_id || '');
+  const requestedSourceId = String(job?.metadata?.source_id || job?.payload?.source_id || '');
   const resourceSourceId = String(resource?.metadata?.investigation_source_id || '');
-  if (!requestedSourceId) return { eligible: false, reasons: ['investigation-source-id-missing'] };
-  if (!resourceSourceId || resourceSourceId !== requestedSourceId) {
-    return { eligible: false, reasons: ['investigation-source-policy-scope-mismatch'] };
+  const requestedUrl = String(job?.payload?.url || '');
+  const resourceUrl = String(resource?.metadata?.exact_source_url || '');
+  const reasons = [];
+  if (!requestedUrl || !resourceUrl || requestedUrl !== resourceUrl) {
+    reasons.push('investigation-source-url-scope-mismatch');
   }
-  return { eligible: true, reasons: [] };
+  if (requestedSourceId && (!resourceSourceId || resourceSourceId !== requestedSourceId)) {
+    reasons.push('investigation-source-policy-scope-mismatch');
+  }
+  return { eligible: reasons.length === 0, reasons };
 }
 
 export function investigationSourceResource(source, { priorState = {}, now = new Date(), dailyLimit = 100, policyLedger = {} } = {}) {

@@ -7,13 +7,31 @@ import { ResourceBroker } from '../resource-broker/resource-broker.mjs';
 import { DeterministicLocalAdapter } from '../provider-adapters/local/deterministic-local.mjs';
 import { ApprovedPublicSourceHttpAdapter } from '../provider-adapters/datasets/approved-public-source-http.mjs';
 
+const MAX_HEALTH_EVIDENCE_AGE_MS = 14 * 86400000;
+
 function safeHostname(value) {
   try { return new URL(value).hostname.toLowerCase(); } catch { return ''; }
 }
 
-function recentSuccessfulHealth(prior, now, maximumAgeMs = 14 * 86400000) {
-  const checked = Date.parse(prior?.checkedAt || '');
-  return prior?.status === 'fetched' && Number.isFinite(checked) && now.getTime() - checked >= 0 && now.getTime() - checked <= maximumAgeMs;
+function timestampCurrent(value, now, maximumAgeMs) {
+  const checked = Date.parse(String(value || ''));
+  const age = Number.isFinite(checked) ? now.getTime() - checked : Infinity;
+  return Number.isFinite(checked) && age >= 0 && age <= maximumAgeMs;
+}
+
+function recentSuccessfulHealth(prior, now, maximumAgeMs = MAX_HEALTH_EVIDENCE_AGE_MS) {
+  return prior?.status === 'fetched' && timestampCurrent(prior?.checkedAt, now, maximumAgeMs);
+}
+
+function sourceHealthEvidence(prior, policy, now, maximumAgeMs = MAX_HEALTH_EVIDENCE_AGE_MS) {
+  if (timestampCurrent(prior?.checkedAt, now, maximumAgeMs)) {
+    if (prior?.status === 'fetched') return { status: 'healthy', checkedAt: prior.checkedAt };
+    if (String(prior?.status || '').startsWith('failed')) return { status: 'degraded', checkedAt: prior.checkedAt };
+  }
+  if (timestampCurrent(policy?.bootstrapHealthVerifiedAt, now, maximumAgeMs)) {
+    return { status: 'healthy', checkedAt: policy.bootstrapHealthVerifiedAt };
+  }
+  return { status: 'unknown', checkedAt: null };
 }
 
 function loadAutonomousResources(root = process.cwd()) {
@@ -47,15 +65,52 @@ function policyForSource(source, policyLedger = {}) {
   return { ...verified, ...(source.resourcePolicy || {}) };
 }
 
+function reviewedPolicyWindowCurrent(policy, now) {
+  const lastTermsCheck = Date.parse(String(policy?.lastTermsCheck || ''));
+  const revalidationDue = Date.parse(String(policy?.termsRevalidationDue || ''));
+  return Number.isFinite(lastTermsCheck) && lastTermsCheck <= now.getTime() &&
+    Number.isFinite(revalidationDue) && revalidationDue > now.getTime();
+}
+
+function runtimeZeroSpendAttestation(policy, now) {
+  const ceiling = Number(policy?.hardDailyRequestCeiling);
+  const operatorQuota = policy?.quotaVerified === true && Number.isFinite(ceiling) && ceiling > 0;
+  const structurallyNoChargePath = policy?.approvedForAutomation === true &&
+    policy?.zeroSpendVerified === true &&
+    String(policy?.billingRisk || '') === 'none';
+  const current = structurallyNoChargePath && operatorQuota && reviewedPolicyWindowCurrent(policy, now);
+  return {
+    current,
+    checkedAt: current ? now.toISOString() : null,
+    reason: current
+      ? 'Exact reviewed public-source policy is still inside its terms revalidation window; the adapter has no credential, payment, paid-fallback or overage path and quota is locally operator-capped.'
+      : 'The reviewed policy is incomplete, outside its revalidation window, or lacks a bounded zero-spend quota.'
+  };
+}
+
+function investigationResourceCompatibility(resource, job) {
+  if (resource?.adapter_id !== 'approved-public-source-http') return { eligible: true, reasons: [] };
+  const requestedSourceId = String(job?.metadata?.source_id || '');
+  const resourceSourceId = String(resource?.metadata?.investigation_source_id || '');
+  if (!requestedSourceId) return { eligible: false, reasons: ['investigation-source-id-missing'] };
+  if (!resourceSourceId || resourceSourceId !== requestedSourceId) {
+    return { eligible: false, reasons: ['investigation-source-policy-scope-mismatch'] };
+  }
+  return { eligible: true, reasons: [] };
+}
+
 export function investigationSourceResource(source, { priorState = {}, now = new Date(), dailyLimit = 100, policyLedger = {} } = {}) {
   const policy = policyForSource(source, policyLedger);
   const approved = policy.approvedForAutomation === true && policy.zeroSpendVerified === true;
   const prior = priorState.sources?.[source.id] || {};
-  const healthy = recentSuccessfulHealth(prior, now) || policy.bootstrapHealthVerifiedAt === now.toISOString().slice(0, 10);
+  const health = sourceHealthEvidence(prior, policy, now);
+  const runtimeAttestation = runtimeZeroSpendAttestation(policy, now);
   const authorityScore = source.authority === 'primary-official' ? 94 : source.authority === 'credible-investigative-archive' ? 82 : 72;
   const limit = Math.max(1, Number(policy.hardDailyRequestCeiling || dailyLimit));
   const quarantinedReason = policyLedger.quarantine?.[source.id] || null;
-  const zeroCostEvidenceAt = policy.zeroCostEvidenceAt || policy.lastPricingCheck || policy.lastTermsCheck || null;
+  const storedZeroCostEvidenceAt = policy.zeroCostEvidenceAt || policy.lastPricingCheck || policy.lastTermsCheck || null;
+  const zeroCostEvidenceAt = runtimeAttestation.checkedAt || storedZeroCostEvidenceAt;
+  const quotaCheckAt = runtimeAttestation.checkedAt || policy.lastQuotaCheck || policy.lastTermsCheck || null;
   return {
     resource_id: `investigation-source-${source.id}`,
     provider_name: source.label,
@@ -89,7 +144,7 @@ export function investigationSourceResource(source, { priorState = {}, now = new
     monetary_cost_per_unit_eur: 0,
     zero_cost_verified: policy.zeroSpendVerified === true,
     zero_cost_evidence_at: zeroCostEvidenceAt,
-    last_pricing_check: policy.lastPricingCheck || zeroCostEvidenceAt,
+    last_pricing_check: zeroCostEvidenceAt,
     paid_fallback: false,
     overage_possible: false,
     auto_upgrade_enabled: false,
@@ -100,18 +155,18 @@ export function investigationSourceResource(source, { priorState = {}, now = new
     privacy_score: 95,
     provenance_score: authorityScore,
     quota_efficiency_score: 90,
-    last_health_check: healthy ? (prior.checkedAt || `${now.toISOString().slice(0, 10)}T00:00:00.000Z`) : null,
-    health_status: healthy ? 'healthy' : 'unknown',
+    last_health_check: health.checkedAt,
+    health_status: health.status,
     last_terms_check: policy.lastTermsCheck || null,
     terms_revalidation_due: policy.termsRevalidationDue || null,
-    last_quota_check: policy.lastQuotaCheck || policy.lastTermsCheck || null,
+    last_quota_check: quotaCheckAt,
     last_success: prior.status === 'fetched' ? prior.checkedAt : null,
     last_failure: prior.status?.startsWith('failed') ? prior.checkedAt : null,
     consecutive_failures: prior.status?.startsWith('failed') ? 1 : 0,
     cooldown_until: null,
     average_latency: 0,
-    success_rate: prior.status === 'fetched' ? 1 : 0.8,
-    error_rate: prior.status === 'fetched' ? 0 : 0.2,
+    success_rate: prior.status === 'fetched' ? 1 : prior.status?.startsWith('failed') ? 0.8 : 0.8,
+    error_rate: prior.status === 'fetched' ? 0 : prior.status?.startsWith('failed') ? 0.2 : 0.2,
     supported_job_types: ['public-data.fetch'],
     maximum_payload: 8 * 1024 * 1024,
     rate_limit: `${limit} requests with 10% emergency reserve`,
@@ -123,6 +178,13 @@ export function investigationSourceResource(source, { priorState = {}, now = new
     enabled: approved,
     manual_approval_required: !approved,
     allowed_hosts: [safeHostname(source.url)].filter(Boolean),
+    metadata: {
+      investigation_source_id: source.id,
+      exact_source_url: source.url,
+      runtime_zero_spend_attested: runtimeAttestation.current,
+      runtime_zero_spend_reason: runtimeAttestation.reason,
+      quota_evidence_kind: 'operator-capped-local'
+    },
     notes: approved
       ? `Exact-URL verified source policy for ${source.id}; zero-spend and operator quota boundaries enforced.`
       : quarantinedReason || `Source ${source.id} awaits terms, quota, health and automation approval.`,
@@ -169,14 +231,15 @@ export function createInvestigationBroker({
     registry,
     adapters: [
       new DeterministicLocalAdapter(),
-      new ApprovedPublicSourceHttpAdapter({ fetchImpl, userAgent, maximumBytes })
+      new ApprovedPublicSourceHttpAdapter({ fetchImpl, userAgent, maximumBytes, clock: brokerClock })
     ],
     quotaManager: new InMemoryQuotaManager(),
     logger,
     policyContext: {
       zeroSpendLock: enabled(environment.AI_RESOURCE_ZERO_SPEND_LOCK, true),
       externalEnabled: enabled(environment.AI_RESOURCE_EXTERNAL_ENABLED, true),
-      localOnly: enabled(environment.AI_RESOURCE_LOCAL_ONLY, false)
+      localOnly: enabled(environment.AI_RESOURCE_LOCAL_ONLY, false),
+      resourceEligibilityEvaluator: investigationResourceCompatibility
     },
     clock: brokerClock,
     sleep,
@@ -194,9 +257,14 @@ export function createInvestigationBroker({
 
 export const investigationBrokerInternals = {
   safeHostname,
+  timestampCurrent,
   recentSuccessfulHealth,
+  sourceHealthEvidence,
   enabled,
   loadAutonomousResources,
   loadInvestigationSourcePolicies,
-  policyForSource
+  policyForSource,
+  reviewedPolicyWindowCurrent,
+  runtimeZeroSpendAttestation,
+  investigationResourceCompatibility
 };

@@ -1,0 +1,176 @@
+name: Autonomous Machine Phase 1
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/autonomous-machine/**'
+      - 'docs/autonomous-intelligence-machine/**'
+      - 'data/autonomous-machine/**'
+      - '.github/workflows/autonomous-machine-phase1.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  phase1-self-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify Phase 1 publication remains disabled
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1-self-test.js
+
+      - name: Verify Phase 1.1 official RSS remains review only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.1-self-test.js
+
+      - name: Verify Phase 1.2 creates route proposals only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.2-self-test.js
+
+      - name: Verify Phase 1.3 creates signed handoffs only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.3-self-test.js
+
+      - name: Verify Phase 1.4 creates staging previews only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.4-self-test.js
+
+      - name: Verify Phase 1.5 applies previews to disposable copies only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.5-self-test.js
+
+      - name: Verify Phase 1.6 creates advisory signed change requests only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.6-self-test.js
+
+      - name: Verify Phase 1.7 creates signed human decisions only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.7-self-test.js
+
+      - name: Verify Phase 1.8 creates read-only mapping plans only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.8-self-test.js
+
+      - name: Verify Phase 1.9 creates signed execution plan decisions only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.9-self-test.js
+
+      - name: Verify Phase 1.10 creates time-limited authorisation requests only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.10-self-test.js
+
+      - name: Verify Phase 1.11 creates signed authorisation decisions only
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.11-self-test.js
+
+      - name: Verify Phase 1.12 creates token requests without token material
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.12-self-test.js
+
+      - name: Verify Phase 1.13 creates signed token decisions without token material
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.13-self-test.js
+
+      - name: Verify Phase 1.14 creates issuance requests without token material
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.14-self-test.js
+
+      - name: Verify Phase 1.15 creates signed issuance decisions without token material
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.15-self-test.js
+
+      - name: Verify Phase 1.16 requests token material generation without secrets
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.16-self-test.js
+
+      - name: Verify Phase 1.17 creates signed generation decisions without secrets
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.17-self-test.js
+
+      - name: Verify Phase 1.18 requests entropy generation without entropy output
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.18-self-test.js
+
+      - name: Verify Phase 1.19 creates signed entropy decisions without entropy output
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.19-self-test.js
+
+      - name: Verify Phase 1.20 requests entropy source selection without selecting a source
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.20-self-test.js
+
+      - name: Verify Phase 1.21 creates signed source-selection decisions without selecting a source
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.21-self-test.js
+
+      - name: Verify Phase 1.22 binds only the approved source class
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.22-self-test.js
+
+      - name: Verify Phase 1.23 creates signed source-binding decisions without selecting a provider
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.23-self-test.js
+
+      - name: Verify Phase 1.24 defines provider policy without selecting a provider
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.24-self-test.js
+
+      - name: Verify Phase 1.25 creates signed provider-policy decisions without selecting a provider
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.25-self-test.js
+
+      - name: Verify Phase 1.26 requests anonymous provider evaluation without identity or selection
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.26-self-test.js
+
+      - name: Verify Phase 1.27 creates signed anonymous evaluation decisions without identity or results
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.27-self-test.js
+
+      - name: Verify Phase 1.28 requests anonymous criteria review without identity, evidence or results
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.28-self-test.js
+
+      - name: Verify Phase 1.29 creates signed criteria-review decisions while all criteria remain not started
+        env:
+          AIM_PUBLICATION_MODE: disabled
+        run: node scripts/autonomous-machine/phase1.29-self-test.js

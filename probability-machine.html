@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probability Machine | Matrix Reprogrammed</title>
+  <meta name="description" content="Turn a future scenario into a measurable proposition, evidence-weighted estimate, confidence score and uncertainty range.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="probability-machine.css">
+</head>
+<body class="probability-machine-page">
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="page probability-shell">
+    <header class="probability-topbar wrap">
+      <a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil"> MATRIX REPROGRAMMED</a>
+      <nav aria-label="Probability Machine navigation">
+        <a href="#forecast-console">Forecast</a>
+        <a href="#methodology">Method</a>
+        <a href="timers.html">Risk Timers</a>
+        <a href="evidence-vault.html">Evidence Vault</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="probability-hero wrap" aria-labelledby="probability-title">
+        <p class="probability-kicker">Matrix Probability Engine · Research Preview</p>
+        <h1 id="probability-title">ASK THE FUTURE<br><span>A MEASURABLE QUESTION.</span></h1>
+        <p class="probability-lead">The machine compiles a scenario, applies a deterministic forecasting ensemble, measures disagreement and publishes what would change its mind.</p>
+        <div class="probability-boundary">
+          <strong>Evidence boundary:</strong> the percentage is an estimate of a defined future event. It is not proof of motive, guilt, coordination or inevitability. Existing risk-timer scores remain pressure indices and are not relabelled as probabilities.
+        </div>
+      </section>
+
+      <section id="forecast-console" class="probability-console wrap" aria-labelledby="forecast-console-title">
+        <div class="console-grid">
+          <form id="probability-form" class="scenario-form">
+            <div class="console-heading">
+              <p class="probability-kicker">Scenario compiler</p>
+              <h2 id="forecast-console-title">Enter the scenario</h2>
+            </div>
+            <label for="scenario-question">Future question</label>
+            <textarea id="scenario-question" name="question" rows="5" maxlength="600" required>Will France become a surveillance state by 2035?</textarea>
+            <p class="field-help">Include a jurisdiction and deadline for a narrower range. Phase one supports surveillance-state scenarios.</p>
+
+            <div class="example-scenarios" aria-label="Example scenarios">
+              <button type="button" data-example="Will France become a surveillance state by 2035?">France 2035</button>
+              <button type="button" data-example="Will the United Kingdom meet the surveillance-state threshold by 2032?">UK 2032</button>
+              <button type="button" data-example="Will the European Union become a surveillance state by 2040?">EU 2040</button>
+            </div>
+
+            <details class="advanced-signals">
+              <summary>Advanced signal controls</summary>
+              <p>Optional values run from 0 (absent or reversing) to 1 (mature and accelerating). Leave unchanged to use the deliberately generic public seed. Jurisdiction-specific coefficients load only from the private runtime configuration.</p>
+              <div id="signal-controls" class="signal-controls"></div>
+            </details>
+
+            <button class="btn probability-submit" type="submit">RUN THE PROBABILITY MACHINE</button>
+            <p id="probability-status" class="probability-status" role="status" aria-live="polite">Engine standing by.</p>
+          </form>
+
+          <section id="probability-result" class="probability-result" aria-live="polite" aria-busy="false" hidden>
+            <div class="result-topline">
+              <span id="result-band" class="result-band">ANALYSING</span>
+              <span id="result-model-mode" class="result-model-mode">research preview</span>
+            </div>
+            <div class="probability-dial" id="probability-dial" aria-label="Forecast probability">
+              <div class="dial-core">
+                <strong id="result-probability">0%</strong>
+                <span>central estimate</span>
+              </div>
+            </div>
+            <div class="result-metrics">
+              <article><span>Credible range</span><strong id="result-range">—</strong></article>
+              <article><span>Confidence</span><strong id="result-confidence">—</strong></article>
+              <article><span>Model disagreement</span><strong id="result-disagreement">—</strong></article>
+            </div>
+            <div class="machine-verdict">
+              <p class="probability-kicker">The machine's proposition</p>
+              <h2 id="result-proposition">Waiting for a scenario.</h2>
+              <p id="result-verdict"></p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="result-detail" class="result-detail wrap" hidden>
+        <div class="result-columns">
+          <article class="result-panel">
+            <p class="probability-kicker">What drives it higher</p>
+            <h2>Pressure factors</h2>
+            <ol id="result-drivers"></ol>
+          </article>
+          <article class="result-panel">
+            <p class="probability-kicker">What drives it lower</p>
+            <h2>Counter-forces</h2>
+            <ol id="result-counter-drivers"></ol>
+          </article>
+        </div>
+
+        <article class="result-panel model-panel">
+          <p class="probability-kicker">Forecast ensemble</p>
+          <h2>Independent component estimates</h2>
+          <div id="result-components" class="component-grid"></div>
+        </article>
+
+        <div class="result-columns">
+          <article class="result-panel">
+            <p class="probability-kicker">Evidence still missing</p>
+            <h2>Why the range is wide</h2>
+            <ul id="result-missing"></ul>
+          </article>
+          <article class="result-panel">
+            <p class="probability-kicker">What would falsify it</p>
+            <h2>Tests that could lower or resolve the forecast</h2>
+            <ul id="result-falsifiers"></ul>
+          </article>
+        </div>
+
+        <article class="result-panel audit-panel">
+          <p class="probability-kicker">Audit receipt</p>
+          <dl>
+            <div><dt>Forecast run</dt><dd id="result-run-id">—</dd></div>
+            <div><dt>Engine version</dt><dd id="result-engine">—</dd></div>
+            <div><dt>Generated</dt><dd id="result-generated">—</dd></div>
+            <div><dt>Calibration</dt><dd id="result-calibration">—</dd></div>
+          </dl>
+          <p id="result-boundary" class="probability-boundary"></p>
+          <ul id="result-warnings" class="warning-list"></ul>
+        </article>
+      </section>
+
+      <section id="methodology" class="methodology wrap" aria-labelledby="methodology-title">
+        <p class="probability-kicker">Under the cinematic surface</p>
+        <h2 id="methodology-title">The number is not selected by an AI chatbot.</h2>
+        <div class="method-grid">
+          <article><strong>1</strong><h3>Compile</h3><p>Convert free text into a jurisdiction, deadline and resolution rule.</p></article>
+          <article><strong>2</strong><h3>Estimate</h3><p>Combine base rates, structural signals, evidence updates and counterweights.</p></article>
+          <article><strong>3</strong><h3>Calibrate</h3><p>Shrink uncertain estimates and widen the range when component models disagree.</p></article>
+          <article><strong>4</strong><h3>Resolve</h3><p>Store future outcomes and measure Brier score, log loss and reliability.</p></article>
+        </div>
+        <p id="engine-health" class="engine-health">Checking public engine health…</p>
+      </section>
+    </main>
+
+    <footer class="wrap probability-footer">
+      <p>Matrix Probability Engine research preview. Deterministic calculation, explicit uncertainty, generic public fallback, no external paid model call.</p>
+    </footer>
+  </div>
+  <script src="matrix.js" defer></script>
+  <script src="probability-machine.js" defer></script>
+</body>
+</html>

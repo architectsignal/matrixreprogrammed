@@ -5,10 +5,8 @@ const fs = require('fs');
 const path = require('path');
 
 const mode = process.argv[2] || 'check';
-// The legacy workflow token is retained because the controlled production
-// workflows already route this exact value into owner-exception mode. The
-// authority is freshly bound to 2026-08-07, the first run attempt and either a
-// workflow_dispatch event or a verified one-file repository-credential push.
+// The legacy workflow token is retained only for historical validation. It is
+// date-bound and cannot be reused by the ordinary production dispatcher.
 const oneTimeAuthorization = 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02';
 const oneTimeExceptionDate = '2026-08-07';
 const oneTimeSnapshotDate = '2026-08-02';
@@ -195,21 +193,62 @@ try {
     throw new Error(`Unknown mode ${JSON.stringify(mode)}; use check, release or owner-exception.`);
   }
 
-  if (budget.currentBillingPeriodLocked) {
-    fail(budget.lockReason || 'The current billing period is locked.');
-    process.exit();
-  }
+  const expected = requireFiniteNumber(
+    process.env.EXPECTED_CLOUDFLARE_BUILD_MINUTES || 0,
+    'EXPECTED_CLOUDFLARE_BUILD_MINUTES'
+  );
   if (!isTrue(process.env.CLOUDFLARE_GIT_BUILDS_DISCONNECTED)) {
     fail('CLOUDFLARE_GIT_BUILDS_DISCONNECTED must be true only after both Workers and Pages Git builds are verified disconnected.');
     process.exit();
   }
+
+  // The current-period lock protects Cloudflare Workers Builds minutes. A
+  // controlled release built in GitHub Actions and uploaded with Wrangler is a
+  // zero-Workers-Build-minute lane when EXPECTED_CLOUDFLARE_BUILD_MINUTES=0.
+  // Keep the lock absolute for any release that expects even one Workers Builds
+  // minute, while allowing the already-designed external-CI Wrangler lane.
+  if (budget.currentBillingPeriodLocked) {
+    if (expected !== 0) {
+      fail(budget.lockReason || 'The current billing period is locked.');
+      process.exit();
+    }
+
+    const metrics = policy.ownerUsageSnapshot?.metrics || {};
+    const nonBuildRisks = Object.entries(metrics)
+      .filter(([name]) => name !== 'workersBuildMinutes')
+      .filter(([, metric]) => {
+        const billable = Number(metric?.billable || 0);
+        const cost = Number(metric?.costUsd || 0);
+        const total = Number(metric?.total || 0);
+        const includedMetric = Number(metric?.included || 0);
+        return !Number.isFinite(billable)
+          || !Number.isFinite(cost)
+          || !Number.isFinite(total)
+          || !Number.isFinite(includedMetric)
+          || billable !== 0
+          || cost !== 0
+          || (includedMetric > 0 && total >= includedMetric);
+      })
+      .map(([name]) => name);
+    if (nonBuildRisks.length) {
+      fail(`Locked-period Wrangler lane refused because non-build snapshot risk exists for: ${nonBuildRisks.join(', ')}.`);
+      process.exit();
+    }
+
+    console.log(
+      'Cloudflare locked-period zero-build PASS: Git-connected builds are disconnected, ' +
+      'EXPECTED_CLOUDFLARE_BUILD_MINUTES=0, and every recorded non-build Cloudflare metric remains non-billable and below its included allowance. ' +
+      'The existing Workers Builds overage is not authorized to increase.'
+    );
+    process.exit();
+  }
+
   if (!isTrue(process.env.CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED)) {
     fail('CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED must be true after checking every metered product.');
     process.exit();
   }
 
   const used = requireFiniteNumber(process.env.CLOUDFLARE_BUILD_MINUTES_USED, 'CLOUDFLARE_BUILD_MINUTES_USED');
-  const expected = requireFiniteNumber(process.env.EXPECTED_CLOUDFLARE_BUILD_MINUTES || 0, 'EXPECTED_CLOUDFLARE_BUILD_MINUTES');
   const checkedAt = Date.parse(process.env.CLOUDFLARE_USAGE_CHECKED_AT_UTC || '');
   if (!Number.isFinite(checkedAt)) {
     fail('CLOUDFLARE_USAGE_CHECKED_AT_UTC must be a valid ISO-8601 timestamp.');

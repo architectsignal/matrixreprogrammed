@@ -65,9 +65,12 @@ jobs:
               core.setFailed('Production dispatch refused: nonce is missing or too weak.');
               return;
             }
-            const billingException = fields['Billing exception'] || '';
-            if (billingException !== 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02') {
-              core.setFailed('Production dispatch refused: the one-use billing exception token is missing.');
+
+            // Dated billable-build exceptions are deliberately non-reusable. This
+            // dispatcher only launches the ordinary zero-spend production lane.
+            const billingException = String(fields['Billing exception'] || '').trim();
+            if (billingException) {
+              core.setFailed('Production dispatch refused: a dated billable-build exception cannot be reused; use the zero-spend release lane.');
               return;
             }
 
@@ -120,8 +123,7 @@ jobs:
                 ref: 'main',
                 inputs: {
                   confirmation: 'DEPLOY MATRIX REPROGRAMMED',
-                  billing_exception: billingException,
-                  target_sha: expectedHead
+                  billing_exception: ''
                 }
               });
               for (let attempt = 1; attempt <= 24 && !run; attempt += 1) {
@@ -147,7 +149,7 @@ jobs:
               authorizedTarget: targetSha,
               expectedHead,
               workflowId: target.id,
-              forwardedBillingException: Boolean(billingException),
+              forwardedBillingException: false,
               pinnedTargetSha: expectedHead,
               run: {
                 id: run.id,
@@ -160,7 +162,7 @@ jobs:
                 event: run.event,
                 url: run.html_url
               },
-              boundary: 'This dispatcher forwards the marker billing exception and exact target_sha, never reuses a run for another SHA and never commits a status file after dispatch. Credentials, D1 rollback, migrations, zero-spend controls and exact live verification remain mandatory.'
+              boundary: 'This dispatcher launches only the zero-spend controlled production lane, resolves exactly the workflow_dispatch run created for the authorized main SHA and never reuses a failed, cancelled or wrong-SHA run. Credentials, budget controls, D1 rollback, migrations and exact live verification remain mandatory.'
             };
             fs.mkdirSync('downloads', { recursive: true });
             fs.writeFileSync('downloads/authorized-production-run.json', JSON.stringify(payload, null, 2) + '\n');

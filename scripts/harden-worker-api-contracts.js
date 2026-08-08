@@ -46,20 +46,27 @@ function replaceRequired(source, before, after, label) {
 }
 
 // The modern membership page and its server-created PayPal approval redirect are
-// canonical. Validate them without copying the retired inline-SDK recovery
-// template into public output, then keep source and Cloudflare output exact.
+// canonical. Validate stable structural contracts rather than presentation copy,
+// then keep source and Cloudflare output exact.
 {
   const membershipRelative = 'membership.html';
   const paypalClientRelative = 'paypal-membership.js';
   const membership = read(membershipRelative);
   const paypalClient = read(paypalClientRelative);
   const membershipMarkers = [
-    'Free Member',
+    'id="join-free-member"',
+    'data-tier-price="0"',
+    'id="join-supporter"',
+    'data-tier-price="3"',
+    'id="join-intelligence-member"',
+    'data-tier-price="6"',
+    'id="join-research-pro"',
+    'data-tier-price="9"',
     'paypal-membership.js',
     'Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'
   ];
   for (const marker of membershipMarkers) {
-    if (!membership.includes(marker)) throw new Error(`Canonical membership page is missing: ${marker}`);
+    if (!membership.includes(marker)) throw new Error(`Canonical membership page is missing structural contract: ${marker}`);
   }
   if (membership.includes('Coming soon — no payment taken')) {
     throw new Error('Canonical membership page contains retired placeholder payment copy');
@@ -134,7 +141,7 @@ const report = {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
     freeSignup: 'supports verification.sent and queued delivery truthfully',
     paypal: 'checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans',
-    membershipSource: 'the canonical membership page and server-created PayPal redirect client are validated and synchronized without template replacement',
+    membershipSource: 'the canonical membership page and server-created PayPal redirect client are validated structurally and synchronized without template replacement',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }
 };

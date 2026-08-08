@@ -1,0 +1,113 @@
+{
+  "version": "2026-08-08-v1",
+  "status": "research-preview",
+  "boundary": "These definitions make forecasts measurable. They do not establish that a jurisdiction has crossed a threshold, prove intent, or convert an evidence-pressure score into event probability.",
+  "scenarios": [
+    {
+      "id": "surveillance_state",
+      "slug": "surveillance-state",
+      "title": "Surveillance State",
+      "questionTemplate": "By 31 December {horizon}, will {jurisdiction} meet at least 6 of the 9 Matrix Surveillance-State Threshold conditions for 12 consecutive months?",
+      "resolutionRule": {
+        "minimumConditions": 6,
+        "totalConditions": 9,
+        "persistenceMonths": 12,
+        "outcomes": [
+          "occurred",
+          "did_not_occur",
+          "unresolved",
+          "invalidated",
+          "definition_changed"
+        ]
+      },
+      "conditions": [
+        {
+          "id": "biometric_identity",
+          "label": "Widespread biometric identification"
+        },
+        {
+          "id": "population_facial_recognition",
+          "label": "Population-scale facial recognition"
+        },
+        {
+          "id": "universal_digital_identity",
+          "label": "Mandatory or near-universal digital identity"
+        },
+        {
+          "id": "communications_retention",
+          "label": "Systematic communications metadata retention"
+        },
+        {
+          "id": "cross_database_profiling",
+          "label": "Automated cross-database citizen profiling"
+        },
+        {
+          "id": "algorithmic_enforcement",
+          "label": "Large-scale algorithmic policing or risk scoring"
+        },
+        {
+          "id": "anonymous_payment_erosion",
+          "label": "Material erosion of practical anonymous payment"
+        },
+        {
+          "id": "movement_monitoring",
+          "label": "Broad automated location or movement monitoring"
+        },
+        {
+          "id": "legal_system_integration",
+          "label": "Legal power to integrate at least five systems"
+        }
+      ],
+      "signalDimensions": [
+        {
+          "id": "identity_infrastructure",
+          "label": "Identity infrastructure",
+          "direction": "raises"
+        },
+        {
+          "id": "observation_infrastructure",
+          "label": "Observation infrastructure",
+          "direction": "raises"
+        },
+        {
+          "id": "data_integration",
+          "label": "Cross-system data integration",
+          "direction": "raises"
+        },
+        {
+          "id": "legal_capability",
+          "label": "Legal and administrative capability",
+          "direction": "raises"
+        },
+        {
+          "id": "algorithmic_enforcement",
+          "label": "Algorithmic enforcement capacity",
+          "direction": "raises"
+        },
+        {
+          "id": "financial_traceability",
+          "label": "Financial traceability pressure",
+          "direction": "raises"
+        },
+        {
+          "id": "institutional_counterweights",
+          "label": "Courts, rights enforcement and practical redress",
+          "direction": "lowers"
+        }
+      ],
+      "requiredPublicationFields": [
+        "central_probability",
+        "credible_range",
+        "confidence",
+        "model_disagreement",
+        "drivers",
+        "counter_drivers",
+        "missing_evidence",
+        "falsification_conditions",
+        "model_version",
+        "forecast_run_id"
+      ]
+    }
+  ],
+  "calibrationBoundary": "Public runtime uses a generic low-confidence fallback unless a private calibrated profile is loaded from PROBABILITY_MODEL_CONFIG_JSON."
+}

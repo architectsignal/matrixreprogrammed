@@ -112,7 +112,7 @@ jobs:
             'Apply repeat-safe D1 migration chain',
             'Production deploy guard',
             'npx --yes wrangler@latest deploy',
-            'Verify live deployment and exact commit',
+            'Verify live routes, exact SHA and protected boundaries',
             'billing_exception'
           ]) if (!source.includes(marker)) throw new Error(`Canonical deploy workflow missing ${marker}`);
           console.log('CANONICAL MUTATION-GATE CONTRACT PASSED');

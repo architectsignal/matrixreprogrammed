@@ -63,12 +63,27 @@ let secondReport = null;
 try {
   for (const relative of [
     'scripts/harden-worker-api-contracts.js',
+    'scripts/templates/membership-auth/membership.template',
     'src/worker-paypal-subscriptions.js',
     'src/worker.js',
     'src/worker-production.js',
     'membership.html',
     'paypal-membership.js'
   ]) copy(relative);
+
+  const membershipTemplateRelative = 'scripts/templates/membership-auth/membership.template';
+  const canonicalMembership = read(membershipTemplateRelative);
+  const canonicalPayPalClient = read('paypal-membership.js');
+  const canonicalMembershipHash = hash(canonicalMembership);
+  const canonicalPayPalHash = hash(canonicalPayPalClient);
+
+  // Reproduce the real full-build failure: the root membership page has already
+  // been mutated before the late API hardener runs, while the protected template
+  // still contains the canonical modern membership implementation.
+  fs.writeFileSync(
+    tempPath('membership.html'),
+    '<!doctype html><title>Mutated root membership output</title><p>Coming soon — no payment taken</p><script src="https://www.paypal.com/sdk/js"></script>\n'
+  );
 
   fs.mkdirSync(tempPath('_site'), { recursive: true });
   fs.writeFileSync(
@@ -84,34 +99,31 @@ try {
     'window.paypal = {}; function loadSdk() { return true; }\n'
   );
 
-  const canonicalMembership = read('membership.html');
-  const canonicalPayPalClient = read('paypal-membership.js');
-  const canonicalMembershipHash = hash(canonicalMembership);
-  const canonicalPayPalHash = hash(canonicalPayPalClient);
-
   firstRun = runHardener();
   record('first hardening run exits successfully', firstRun.status === 0, firstRun.stderr || firstRun.stdout);
 
   firstReport = JSON.parse(read('downloads/worker-api-contract-hardening.json'));
   const firstChanged = new Set(firstReport.changed || []);
-  for (const relative of ['_site/membership.html', '_site/membership', '_site/paypal-membership.js']) {
+  for (const relative of ['membership.html', '_site/membership.html', '_site/membership', '_site/paypal-membership.js']) {
     record(`${relative} repaired on first run`, firstChanged.has(relative), JSON.stringify(firstReport.changed || []));
   }
 
-  record('canonical membership source remains byte-identical', hash(read('membership.html')) === canonicalMembershipHash);
+  record('protected membership template remains byte-identical', hash(read(membershipTemplateRelative)) === canonicalMembershipHash);
+  record('root membership repaired from protected template', read('membership.html') === canonicalMembership);
   record('canonical PayPal client remains byte-identical', hash(read('paypal-membership.js')) === canonicalPayPalHash);
-  record('_site membership HTML matches canonical source', read('_site/membership.html') === canonicalMembership);
-  record('_site extensionless membership matches canonical source', read('_site/membership') === canonicalMembership);
+  record('_site membership HTML matches protected template', read('_site/membership.html') === canonicalMembership);
+  record('_site extensionless membership matches protected template', read('_site/membership') === canonicalMembership);
   record('_site PayPal client matches canonical source', read('_site/paypal-membership.js') === canonicalPayPalClient);
-  record('modern free membership marker preserved', read('_site/membership.html').includes('Free Member'));
-  record('server redirect script marker preserved', read('_site/membership.html').includes('paypal-membership.js'));
-  record('paid activation boundary preserved', read('_site/membership.html').includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'));
-  record('retired placeholder copy removed', !read('_site/membership.html').includes('Coming soon — no payment taken'));
+  record('modern free membership marker preserved', read('membership.html').includes('Free Member'));
+  record('server redirect script marker preserved', read('membership.html').includes('paypal-membership.js'));
+  record('paid activation boundary preserved', read('membership.html').includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.'));
+  record('retired placeholder copy removed from root and deploy output', !read('membership.html').includes('Coming soon — no payment taken') && !read('_site/membership.html').includes('Coming soon — no payment taken'));
   record('server-created subscription route preserved', read('_site/paypal-membership.js').includes('/api/paypal/subscription/create'));
   record('secure redirect action preserved', read('_site/paypal-membership.js').includes('Continue securely to PayPal') && read('_site/paypal-membership.js').includes('location.assign'));
   record('browser PayPal SDK remains absent', !read('_site/paypal-membership.js').includes('paypal.com/sdk/js') && !read('_site/paypal-membership.js').includes('window.paypal') && !read('_site/paypal-membership.js').includes('loadSdk('));
 
   const firstState = {
+    membershipRoot: hash(read('membership.html')),
     membershipHtml: hash(read('_site/membership.html')),
     membershipExtensionless: hash(read('_site/membership')),
     paypalClient: hash(read('_site/paypal-membership.js'))
@@ -121,6 +133,7 @@ try {
   record('second hardening run exits successfully', secondRun.status === 0, secondRun.stderr || secondRun.stdout);
   secondReport = JSON.parse(read('downloads/worker-api-contract-hardening.json'));
   record('second hardening run is idempotent', Array.isArray(secondReport.changed) && secondReport.changed.length === 0, JSON.stringify(secondReport.changed || []));
+  record('root membership remains stable on second run', hash(read('membership.html')) === firstState.membershipRoot);
   record('membership HTML remains stable on second run', hash(read('_site/membership.html')) === firstState.membershipHtml);
   record('extensionless membership remains stable on second run', hash(read('_site/membership')) === firstState.membershipExtensionless);
   record('PayPal client remains stable on second run', hash(read('_site/paypal-membership.js')) === firstState.paypalClient);
@@ -150,4 +163,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`MEMBERSHIP FINAL HARDENING REGRESSION PASSED: ${checks.length} checks; source, .html, extensionless and PayPal client mirrors remain canonical and idempotent.`);
+console.log(`MEMBERSHIP FINAL HARDENING REGRESSION PASSED: ${checks.length} checks; protected template, root source, .html, extensionless and PayPal client mirrors remain canonical and idempotent.`);

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signal Path | Matrix Reprogrammed</title>
+  <meta name="description" content="Choose what you want from Matrix Reprogrammed and let the Signal Path rank the shortest useful next actions." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .sp-shell{width:min(1180px,calc(100% - 1rem));margin:0 auto;padding:1rem 0 4rem}.sp-hero{padding:clamp(2rem,6vw,6rem) 0 1.5rem}.sp-kicker{color:#4cff98;font-size:.68rem;font-weight:950;letter-spacing:.17em}.sp-hero h1{max-width:900px;margin:.55rem 0;font-size:clamp(2.4rem,8vw,6rem);line-height:.9}.sp-hero p{max-width:800px;color:#c8d5cc;line-height:1.58}.sp-console{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:1rem;margin-top:1rem}.sp-panel{border:1px solid rgba(76,255,152,.22);border-radius:22px;padding:1rem;background:linear-gradient(160deg,rgba(6,24,17,.94),rgba(0,0,0,.98));box-shadow:0 18px 55px rgba(0,0,0,.42)}.sp-lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}.sp-lane{min-height:76px;border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:.72rem;background:rgba(255,255,255,.025);color:#eef7f1;text-align:left;cursor:pointer}.sp-lane strong{display:block}.sp-lane small{display:block;margin-top:.24rem;color:#8fa398;line-height:1.35}.sp-lane.active{border-color:rgba(76,255,152,.55);background:rgba(76,255,152,.07);box-shadow:inset 0 0 24px rgba(76,255,152,.04)}.sp-score{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem;margin:.8rem 0}.sp-score div{border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:.55rem}.sp-score span{display:block;color:#758c7e;font-size:.62rem;text-transform:uppercase}.sp-score strong{font-size:1.05rem}.sp-offers{display:grid;gap:.65rem}.sp-offer{border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:.8rem;background:rgba(255,255,255,.025)}.sp-offer:first-child{border-color:rgba(244,216,137,.45);background:linear-gradient(140deg,rgba(244,216,137,.07),rgba(255,255,255,.02))}.sp-offer span{color:#6af1a6;font-size:.61rem;font-weight:900;letter-spacing:.1em}.sp-offer h3{margin:.28rem 0 .35rem}.sp-offer p{margin:.2rem 0 .7rem;color:#bac9c0;line-height:1.45;font-size:.86rem}.sp-offer a{display:inline-flex;min-height:40px;align-items:center;border:1px solid rgba(76,255,152,.4);border-radius:10px;padding:.55rem .72rem;color:#fff;text-decoration:none;font-weight:850;background:rgba(33,142,79,.28)}.sp-rules{margin-top:1rem;color:#90a298;font-size:.76rem;line-height:1.5}.sp-live{display:inline-flex;align-items:center;gap:.4rem;color:#77f4ab;font-size:.68rem;font-weight:900}.sp-live:before{content:'';width:.48rem;height:.48rem;border-radius:50%;background:#46ff93;box-shadow:0 0 12px #46ff93}@media(max-width:850px){.sp-console{grid-template-columns:1fr}.sp-lanes{grid-template-columns:1fr 1fr}}@media(max-width:520px){.sp-lanes,.sp-score{grid-template-columns:1fr}.sp-hero{padding-top:1rem}}
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="page">
+    <header class="wrap topbar">
+      <a class="brand" href="index.html">MATRIX REPROGRAMMED</a>
+      <nav class="nav"><a href="search.html">Search</a><a href="daily-watch.html">Daily Watch</a><a href="membership.html">Membership</a><a href="books.html">Books</a></nav>
+    </header>
+    <main class="sp-shell">
+      <section class="sp-hero">
+        <div class="sp-kicker">REVENUE INTELLIGENCE / USER-CONTROLLED ROUTING</div>
+        <h1>CHOOSE YOUR SIGNAL.</h1>
+        <p>Tell the site what you actually want. Signal Path ranks the shortest useful routes from the current archive instead of showing everybody the same funnel.</p>
+      </section>
+      <section class="sp-console">
+        <div class="sp-panel">
+          <div class="sp-live">Session-local model active</div>
+          <h2>What are you here to do?</h2>
+          <div class="sp-lanes" id="sp-lanes">
+            <button class="sp-lane" data-lane="investigate"><strong>Investigate</strong><small>Sources, dossiers, evidence and unresolved questions.</small></button>
+            <button class="sp-lane" data-lane="read"><strong>Read</strong><small>Books, reports and deeper archive routes.</small></button>
+            <button class="sp-lane" data-lane="support"><strong>Support</strong><small>Membership and recurring support.</small></button>
+            <button class="sp-lane" data-lane="watch"><strong>Watch</strong><small>Daily changes and return loops.</small></button>
+            <button class="sp-lane" data-lane="build"><strong>Build</strong><small>Business, income and practical guides.</small></button>
+            <button class="sp-lane" data-lane="mystery"><strong>Decode</strong><small>D.O.G, symbolism and hidden-system routes.</small></button>
+          </div>
+          <div class="sp-score" id="sp-score"></div>
+          <p class="sp-rules">The model uses only this browser session. It does not need your name, email, demographic profile or inferred identity. Commercial routes do not change evidence strength.</p>
+        </div>
+        <div class="sp-panel">
+          <div class="sp-kicker">NEXT BEST ACTION</div>
+          <h2>Your ranked routes</h2>
+          <div class="sp-offers" id="sp-offers"><p>Loading the route model…</p></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap"><p><strong>MATRIX REPROGRAMMED</strong> — search power, follow the evidence, choose your next signal.</p></footer>
+  </div>
+  <script src="matrix.js"></script>
+  <script src="analytics.js"></script>
+  <script>
+    (() => {
+      const laneButtons = Array.from(document.querySelectorAll('.sp-lane'));
+      const offers = document.getElementById('sp-offers');
+      const score = document.getElementById('sp-score');
+      function render() {
+        const api = window.MatrixRevenueIntelligence;
+        if (!api) return;
+        const state = api.getState();
+        const ranked = api.rankOffers().slice(0, 3);
+        laneButtons.forEach((button) => button.classList.toggle('active', button.dataset.lane === state.topLane));
+        score.innerHTML = Object.entries(state.scores).map(([lane, value]) => `<div><span>${lane}</span><strong>${Math.round(value)}</strong></div>`).join('');
+        offers.innerHTML = ranked.map((offer, index) => `<article class="sp-offer"><span>${index === 0 ? 'PRIMARY ROUTE' : 'ALTERNATIVE'} · ${offer.lane.toUpperCase()}</span><h3>${offer.title}</h3><p>Match score ${Math.round(offer.score)}. This recommendation changes as you explicitly choose lanes or use the archive.</p><a href="${offer.href}">Open route</a></article>`).join('');
+      }
+      laneButtons.forEach((button) => button.addEventListener('click', () => { window.MatrixRevenueIntelligence?.signal(button.dataset.lane, 7, 'signal_path_selector'); render(); }));
+      window.addEventListener('matrix:revenue-ready', render);
+      window.setTimeout(render, 400);
+    })();
+  </script>
+</body>
+</html>

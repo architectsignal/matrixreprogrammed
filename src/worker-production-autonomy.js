@@ -6,6 +6,7 @@ import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from '.
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
 import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';
+import revenueAnalyticsWorker, { isRevenueAnalyticsRoute } from './worker-revenue-analytics.js';
 
 function cleanToken(value) {
   return String(value || '').trim();
@@ -76,10 +77,30 @@ function probabilityUnavailable(reason) {
   });
 }
 
+function analyticsUnavailable(reason) {
+  console.log('MR_REVENUE_ANALYTICS_UNAVAILABLE', String(reason || 'unknown').slice(0, 240));
+  return new Response(null, {
+    status: 204,
+    headers: {
+      'cache-control': 'no-store',
+      'x-matrix-origin': 'cloudflare-worker-revenue-analytics',
+      'x-matrix-analytics': 'dropped'
+    }
+  });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const runtimeEnv = withAiManagementAdminToken(env);
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    if (isRevenueAnalyticsRoute(path)) {
+      try {
+        return await revenueAnalyticsWorker.fetch(request, runtimeEnv, ctx);
+      } catch (error) {
+        return analyticsUnavailable(error?.message || error);
+      }
+    }
 
     if (isScenarioProbabilityRoute(path)) {
       try {

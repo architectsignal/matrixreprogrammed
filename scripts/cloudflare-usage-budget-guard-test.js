@@ -33,8 +33,14 @@ function run(policy, mode = 'release', overrides = {}) {
 }
 
 const locked = run(sourcePolicy);
-assert.notStrictEqual(locked.status, 0, 'The owner-reported overage period must be locked.');
-assert.match(locked.stderr, /5,470 billable build minutes/);
+assert.strictEqual(locked.status, 0, locked.stderr);
+assert.match(locked.stdout, /locked-period zero-build PASS/);
+
+const lockedBuildDenied = run(sourcePolicy, 'release', {
+  EXPECTED_CLOUDFLARE_BUILD_MINUTES: '1'
+});
+assert.notStrictEqual(lockedBuildDenied.status, 0, 'The locked period must reject any Cloudflare Workers Build minute.');
+assert.match(lockedBuildDenied.stderr, /5,470 billable build minutes/);
 
 const exceptionDenied = run(sourcePolicy, 'owner-exception', {
   GITHUB_EVENT_NAME: 'workflow_dispatch',
@@ -42,18 +48,16 @@ const exceptionDenied = run(sourcePolicy, 'owner-exception', {
 });
 assert.notStrictEqual(exceptionDenied.status, 0, 'The one-day exception must fail without the exact owner phrase.');
 
-const exceptionAllowed = run(sourcePolicy, 'owner-exception', {
+const expiredExceptionDenied = run(sourcePolicy, 'owner-exception', {
   CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
   GITHUB_EVENT_NAME: 'workflow_dispatch',
   GITHUB_RUN_ATTEMPT: '1'
 });
-assert.strictEqual(exceptionAllowed.status, 0, exceptionAllowed.stderr);
-assert.match(exceptionAllowed.stdout, /one-time owner exception PASS/);
-assert.match(exceptionAllowed.stdout, /workflow_dispatch/);
+assert.notStrictEqual(expiredExceptionDenied.status, 0, 'The historical one-day exception must be expired and unusable.');
+assert.match(expiredExceptionDenied.stderr, /valid only on 2026-08-07/);
 
 const triggerSha = 'a'.repeat(40);
 const parentSha = 'b'.repeat(40);
-fs.rmSync(authorizationReportPath, { force: true });
 const repositoryPushDenied = run(sourcePolicy, 'owner-exception', {
   CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
   GITHUB_EVENT_NAME: 'push',
@@ -61,8 +65,8 @@ const repositoryPushDenied = run(sourcePolicy, 'owner-exception', {
   GITHUB_SHA: triggerSha
 });
 assert.notStrictEqual(repositoryPushDenied.status, 0,
-  'An ordinary push without a verified repository-credential receipt must fail closed.');
-assert.match(repositoryPushDenied.stderr, /verified repository-credential push/i);
+  'An ordinary push must not revive the expired historical exception.');
+assert.match(repositoryPushDenied.stderr, /valid only on 2026-08-07/);
 
 fs.writeFileSync(authorizationReportPath, `${JSON.stringify({
   ok: true,
@@ -80,14 +84,15 @@ fs.writeFileSync(authorizationReportPath, `${JSON.stringify({
   error: ''
 }, null, 2)}\n`);
 
-const repositoryPushAllowed = run(sourcePolicy, 'owner-exception', {
+const repositoryPushReceiptStillDenied = run(sourcePolicy, 'owner-exception', {
   CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
   GITHUB_EVENT_NAME: 'push',
   GITHUB_RUN_ATTEMPT: '1',
   GITHUB_SHA: triggerSha
 });
-assert.strictEqual(repositoryPushAllowed.status, 0, repositoryPushAllowed.stderr);
-assert.match(repositoryPushAllowed.stdout, /verified one-file repository-credential push/);
+assert.notStrictEqual(repositoryPushReceiptStillDenied.status, 0,
+  'Even a historical repository receipt must not bypass the expired date lock.');
+assert.match(repositoryPushReceiptStillDenied.stderr, /valid only on 2026-08-07/);
 
 const mismatchedRepositoryPush = run(sourcePolicy, 'owner-exception', {
   CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
@@ -97,7 +102,7 @@ const mismatchedRepositoryPush = run(sourcePolicy, 'owner-exception', {
 });
 assert.notStrictEqual(mismatchedRepositoryPush.status, 0,
   'A repository-credential receipt for another SHA must fail closed.');
-assert.match(mismatchedRepositoryPush.stderr, /exactHead/);
+assert.match(mismatchedRepositoryPush.stderr, /valid only on 2026-08-07/);
 
 const rerunDenied = run(sourcePolicy, 'owner-exception', {
   CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
@@ -107,7 +112,7 @@ const rerunDenied = run(sourcePolicy, 'owner-exception', {
 });
 assert.notStrictEqual(rerunDenied.status, 0,
   'The billable-build exception must not be reusable by a workflow rerun.');
-assert.match(rerunDenied.stderr, /cannot be used for a workflow re-run attempt/);
+assert.match(rerunDenied.stderr, /valid only on 2026-08-07/);
 
 const nextPeriod = structuredClone(sourcePolicy);
 nextPeriod.status = 'enforced';

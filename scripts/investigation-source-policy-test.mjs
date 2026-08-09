@@ -12,6 +12,19 @@ const registry = JSON.parse(fs.readFileSync(path.join(root, 'data', 'investigati
 const policyFile = JSON.parse(fs.readFileSync(path.join(root, 'ai-management', 'config', 'investigation-source-policies.json'), 'utf8'));
 const ledger = investigationBrokerInternals.loadInvestigationSourcePolicies(root);
 const sources = new Map((registry.sources || []).map(source => [source.id, source]));
+const productionRefreshSource = fs.readFileSync(path.join(root, 'scripts', 'run-production-intelligence-refresh.js'), 'utf8');
+
+const dependentFreshnessBuilders = [
+  'scripts/build-daily-epstein-update.js',
+  'scripts/build-card-live-updates.js',
+  'scripts/build-daily-watch.js'
+];
+const upstreamRefreshPosition = productionRefreshSource.indexOf("['scripts/update-seven-day-intel.js']");
+assert.ok(upstreamRefreshPosition >= 0, 'Production refresh must update the authoritative seven-day source window');
+for (const script of dependentFreshnessBuilders) {
+  const position = productionRefreshSource.indexOf(`['${script}']`);
+  assert.ok(position > upstreamRefreshPosition, `${script} must rebuild its freshness-governed dataset after the upstream source window`);
+}
 
 assert.equal(policyFile.updated, '2026-07-30');
 assert.equal(Object.keys(ledger.policies).length, 10, 'Expected ten exact-URL reviewed official-source policies');

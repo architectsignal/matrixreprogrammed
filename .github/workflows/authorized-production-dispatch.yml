@@ -122,8 +122,7 @@ jobs:
                 workflow_id: target.id,
                 ref: 'main',
                 inputs: {
-                  confirmation: 'DEPLOY MATRIX REPROGRAMMED',
-                  billing_exception: ''
+                  confirmation: 'DEPLOY MATRIX REPROGRAMMED'
                 }
               });
               for (let attempt = 1; attempt <= 24 && !run; attempt += 1) {

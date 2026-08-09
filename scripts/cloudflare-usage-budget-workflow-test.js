@@ -39,9 +39,14 @@ for (const file of workflowFiles) {
 }
 
 const canonicalDeploy = fs.readFileSync(path.join(workflowsDirectory, 'deploy.yml'), 'utf8');
-assert.match(canonicalDeploy, /OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02/);
-assert.match(canonicalDeploy, /cloudflare-usage-budget-guard\.js owner-exception/);
 assert.match(canonicalDeploy, /cloudflare-usage-budget-guard\.js release/);
+assert.doesNotMatch(canonicalDeploy, /owner-exception|billing_exception|ONE BILLABLE BUILD/,
+  'The canonical deploy must not expose the expired billable-build exception.');
+assert.strictEqual(
+  fs.existsSync(path.join(workflowsDirectory, 'repository-credential-controlled-production-deploy.yml')),
+  false,
+  'The obsolete push-triggered repository-credential production lane must remain retired.'
+);
 
-assert(directMutationWorkflows.length >= 9, 'Expected the known direct Cloudflare mutation workflows to be audited.');
+assert(directMutationWorkflows.length >= 8, 'Expected the known direct Cloudflare mutation workflows to be audited.');
 console.log(`Cloudflare workflow budget PASS: ${directMutationWorkflows.length} direct mutation workflows are guarded and manual-only.`);

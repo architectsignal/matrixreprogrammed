@@ -78,8 +78,15 @@ for (const file of files) {
   const kind = typeOf(name);
   html = addCss(clean(html), file);
   html = insertTop(html, strip(file));
-  if (name === 'index.html') html = insertTop(html, cinematic());
-  else html = insertTop(html, guide(file, kind));
+  const searchFirstHomepage = name === 'index.html'
+    && html.includes('class="accountability-home"')
+    && html.includes('id="accountability-search"')
+    && html.includes('id="accountability-hit-list"');
+  if (name === 'index.html') {
+    if (!searchFirstHomepage) html = insertTop(html, cinematic());
+  } else {
+    html = insertTop(html, guide(file, kind));
+  }
   if (/epstein|speculation|dark|sighting|alive/i.test(name)) html = insertBottom(html, review(file));
   if (html !== before) { fs.writeFileSync(file, html); touched++; }
 }

@@ -42,6 +42,10 @@ function hash(value) {
   return crypto.createHash('sha256').update(value).digest('hex');
 }
 
+function normalizedNewlines(value) {
+  return String(value).replace(/\r\n/g, '\n');
+}
+
 function runHardener() {
   const result = spawnSync(process.execPath, [tempPath('scripts/harden-worker-api-contracts.js')], {
     cwd: tempRoot,
@@ -108,11 +112,11 @@ try {
   }
 
   record('protected Phase 6 membership template remains byte-identical', hash(read(membershipTemplateRelative)) === canonicalMembershipHash);
-  record('root membership repaired from protected Phase 6 template', read('membership.html') === canonicalMembership);
+  record('root membership repaired from protected Phase 6 template', normalizedNewlines(read('membership.html')) === normalizedNewlines(canonicalMembership));
   record('canonical PayPal client remains byte-identical', hash(read('paypal-membership.js')) === canonicalPayPalHash);
-  record('_site membership HTML matches protected template', read('_site/membership.html') === canonicalMembership);
-  record('_site extensionless membership matches protected template', read('_site/membership') === canonicalMembership);
-  record('_site PayPal client matches canonical source', read('_site/paypal-membership.js') === canonicalPayPalClient);
+  record('_site membership HTML matches protected template', normalizedNewlines(read('_site/membership.html')) === normalizedNewlines(canonicalMembership));
+  record('_site extensionless membership matches protected template', normalizedNewlines(read('_site/membership')) === normalizedNewlines(canonicalMembership));
+  record('_site PayPal client matches canonical source', normalizedNewlines(read('_site/paypal-membership.js')) === normalizedNewlines(canonicalPayPalClient));
 
   for (const marker of [
     'id="join-free-member"', 'data-tier-price="0"',

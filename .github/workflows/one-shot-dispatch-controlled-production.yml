@@ -106,11 +106,10 @@ jobs:
                 workflow_id: target.id,
                 ref: 'main',
                 inputs: {
-                  confirmation: 'DEPLOY MATRIX REPROGRAMMED',
-                  billing_exception: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02'
+                  confirmation: 'DEPLOY MATRIX REPROGRAMMED'
                 }
               });
-              core.info(`Dispatched one owner-authorized billable production workflow ${target.id}.`);
+              core.info(`Dispatched one zero-spend production workflow ${target.id}.`);
 
               for (let attempt = 0; attempt < 30 && !selected; attempt += 1) {
                 await sleep(2000);
@@ -140,7 +139,7 @@ jobs:
               status: selected.status,
               updatedAt: selected.updated_at,
               url: selected.html_url,
-              ownerAuthorizedBillableBuild: true,
+              ownerAuthorizedBillableBuild: false,
               triggerCommit: context.sha
             };
 
@@ -162,7 +161,7 @@ jobs:
               repo,
               path: statusPath,
               branch: 'main',
-              message: `Record owner-authorized production run ${selected.id}`,
+              message: `Record zero-spend production run ${selected.id}`,
               content: Buffer.from(`${JSON.stringify(payload, null, 2)}\n`).toString('base64'),
               ...(existingSha ? { sha: existingSha } : {})
             });

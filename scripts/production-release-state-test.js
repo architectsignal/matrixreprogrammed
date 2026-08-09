@@ -40,7 +40,6 @@ for (const marker of [
   'MATRIX_PRODUCTION_CONFIRMATION: ${{ inputs.confirmation }}',
   'MATRIX_PRODUCTION_ACTOR: ${{ github.actor }}',
   'MATRIX_WORKFLOW_EVENT: ${{ github.event_name }}',
-  'MATRIX_BILLING_EXCEPTION: ${{ inputs.billing_exception }}',
   'run: node scripts/verify-one-shot-production-authorization.js'
 ]) {
   check(workflow.includes(marker), `controlled production workflow missing guarded authority input: ${marker}`);
@@ -56,11 +55,12 @@ for (const marker of [
   'headSha === originMain',
   "merge-base', '--is-ancestor', marker.targetSha, 'HEAD'",
   'fresh-merged-one-shot-dispatch',
-  'fresh-merged-one-shot-owner-exception',
   'triggerAgeHours >= -0.1 && triggerAgeHours <= maxAgeHours'
 ]) {
   check(authorization.includes(marker), `one-shot production verifier missing security boundary: ${marker}`);
 }
+check(!workflow.includes('billing_exception') && !workflow.includes('owner-exception'),
+  'controlled production workflow retains a retired billable-build exception path');
 
 const authorizationSelfTest = spawnSync(process.execPath, [authorizationPath, '--self-test'], {
   cwd: root,

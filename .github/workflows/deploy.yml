@@ -7,11 +7,6 @@ on:
         description: 'Type DEPLOY MATRIX REPROGRAMMED to authorize the controlled production release'
         required: true
         type: string
-      billing_exception:
-        description: 'One-day owner exception; leave blank unless the 2026-08-02 billable build is explicitly authorized'
-        required: false
-        default: ''
-        type: string
 
 concurrency:
   group: matrixreprogrammed-production
@@ -41,24 +36,16 @@ jobs:
           MATRIX_PRODUCTION_CONFIRMATION: ${{ inputs.confirmation }}
           MATRIX_PRODUCTION_ACTOR: ${{ github.actor }}
           MATRIX_WORKFLOW_EVENT: ${{ github.event_name }}
-          MATRIX_BILLING_EXCEPTION: ${{ inputs.billing_exception }}
         run: node scripts/verify-one-shot-production-authorization.js
 
-      - name: Enforce Cloudflare budget or one-day owner exception
+      - name: Enforce the zero-build Cloudflare budget lane
         env:
           CLOUDFLARE_GIT_BUILDS_DISCONNECTED: ${{ vars.CLOUDFLARE_GIT_BUILDS_DISCONNECTED }}
           CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED: ${{ vars.CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED }}
           CLOUDFLARE_BUILD_MINUTES_USED: ${{ vars.CLOUDFLARE_BUILD_MINUTES_USED }}
           CLOUDFLARE_USAGE_CHECKED_AT_UTC: ${{ vars.CLOUDFLARE_USAGE_CHECKED_AT_UTC }}
           EXPECTED_CLOUDFLARE_BUILD_MINUTES: '0'
-          CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: ${{ inputs.billing_exception }}
-        shell: bash
-        run: |
-          if [[ "$CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION" == "OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02" ]]; then
-            node scripts/cloudflare-usage-budget-guard.js owner-exception
-          else
-            node scripts/cloudflare-usage-budget-guard.js release
-          fi
+        run: node scripts/cloudflare-usage-budget-guard.js release
 
       - name: Record exact main commit to deploy
         run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"

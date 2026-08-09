@@ -83,7 +83,6 @@ jobs:
           const required = [
             "run.head_sha?.toLowerCase() === expectedHead",
             "ref: 'main'",
-            "billing_exception: ''",
             "run.conclusion !== 'failure'",
             "run.conclusion !== 'cancelled'",
             "dated billable-build exception cannot be reused",
@@ -93,6 +92,7 @@ jobs:
             if (!source.includes(marker)) throw new Error(`Dispatcher missing ${marker}`);
           }
           if (source.includes('target_sha:')) throw new Error('Dispatcher still sends the retired target_sha workflow input');
+          if (source.includes('billing_exception:')) throw new Error('Dispatcher still sends a retired billing exception');
           if (/cutoff = new Date\('2026-07-24/i.test(source)) throw new Error('Dispatcher retains the stale fixed cutoff');
           if (source.includes('git commit -m')) throw new Error('Dispatcher mutates main after dispatch');
           console.log('EXACT-SHA ZERO-SPEND DISPATCH CONTRACT PASSED');
@@ -106,15 +106,14 @@ jobs:
           for (const marker of [
             'node scripts/verify-one-shot-production-authorization.js',
             'node scripts/cloudflare-usage-budget-guard.js release',
-            'node scripts/cloudflare-usage-budget-guard.js owner-exception',
             "EXPECTED_CLOUDFLARE_BUILD_MINUTES: '0'",
             'Capture D1 rollback bookmark',
             'Apply repeat-safe D1 migration chain',
             'Production deploy guard',
             'npx --yes wrangler@latest deploy',
-            'Verify live routes, exact SHA and protected boundaries',
-            'billing_exception'
+            'Verify live routes, exact SHA and protected boundaries'
           ]) if (!source.includes(marker)) throw new Error(`Canonical deploy workflow missing ${marker}`);
+          if (/billing_exception|owner-exception/.test(source)) throw new Error('Canonical deploy workflow retains a retired billable-build path');
           console.log('CANONICAL MUTATION-GATE CONTRACT PASSED');
           NODE
 

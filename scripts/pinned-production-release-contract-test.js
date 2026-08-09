@@ -27,16 +27,15 @@ if (freezeActive) {
   need(/^MATRIX REPROGRAMMED PRODUCTION RELEASE FREEZE\s*$/m.test(freezeText), 'Active release-freeze marker is malformed.');
 }
 
-need(/target_sha:\s*[\s\S]*?required:\s*true/i.test(deploy), 'Controlled deploy does not require target_sha.');
-need(/ref:\s*\$\{\{\s*inputs\.target_sha\s*\}\}/.test(deploy), 'Controlled deploy does not checkout inputs.target_sha.');
-need(/Verify exact pinned release SHA/.test(deploy), 'Controlled deploy does not verify the exact pinned SHA.');
+need(/Record exact main commit to deploy/.test(deploy), 'Controlled deploy does not record its exact main SHA.');
+need(/DEPLOY_COMMIT_SHA=\$\(git rev-parse HEAD\)/.test(deploy), 'Controlled deploy does not pin the checked-out main SHA.');
 need(/ref:\s*\$\{\{\s*github\.sha\s*\}\}/.test(dispatcher), 'Authorized dispatcher does not checkout the exact event SHA.');
-need(/target_sha:\s*expectedHead/.test(dispatcher), 'Authorized dispatcher does not forward target_sha.');
-need(/billing_exception:\s*billingException/.test(dispatcher), 'Authorized dispatcher does not forward the marker billing_exception.');
+need(/run\.head_sha\?\.toLowerCase\(\) === expectedHead/.test(dispatcher), 'Authorized dispatcher does not resolve the exact event SHA.');
+need(!/billing_exception:/.test(dispatcher), 'Authorized dispatcher still forwards a retired billing exception.');
 need(/release-freeze-guard\.js\s+--require-frozen/.test(dispatcher), 'Authorized dispatcher does not require an active controlled-production freeze.');
 need(/--is-frozen/.test(freezeGuard), 'Release freeze guard lacks the non-mutating --is-frozen contract.');
-need(/oneTimeExceptionDate = '2026-08-07'/.test(budgetGuard), 'Cloudflare owner exception is not rebound to 2026-08-07.');
-need(/ownerExceptionDate = '2026-08-07'/.test(oneShotVerifier), 'One-shot owner exception is not rebound to 2026-08-07.');
+need(/mode === 'owner-exception'/.test(budgetGuard), 'Cloudflare guard no longer proves historical owner exceptions remain closed.');
+need(!/ownerExceptionDate|ownerExceptionAuthorization/.test(oneShotVerifier), 'One-shot verifier retains a retired owner-exception authority path.');
 for (const route of ['/', '/search', '/member-login', '/forum', '/newsletter', '/evidence-vault', '/black-file']) {
   need(liveVerifier.includes(`'${route}':`), `Live verifier does not contain required route ${route}.`);
 }
@@ -71,7 +70,7 @@ const report = {
   generatedAt: new Date().toISOString(),
   freezeActive,
   checked: { directDispatchWorkflows, writerWorkflows },
-  boundary: 'Only the authorized production dispatcher may invoke the controlled deploy. It must forward the marker billing exception and an exact target SHA. Scheduled intelligence and status workflows may continue read/build work but cannot commit, push or dispatch while the release-freeze marker exists.',
+  boundary: 'Only the authorized production dispatcher may invoke the controlled zero-spend deploy. It must resolve the exact event SHA and cannot forward a billing exception. Scheduled intelligence and status workflows may continue read/build work but cannot commit, push or dispatch while the release-freeze marker exists.',
   problems,
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });

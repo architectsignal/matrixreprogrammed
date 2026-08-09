@@ -123,7 +123,7 @@ jobs:
           exit 1
 
       - name: Record controlled deployment handoff
-        run: echo "Scheduled intelligence and review publishers never dispatch production. The sole authorized dispatcher carries billing_exception and target_sha."
+        run: echo "Scheduled intelligence and review publishers never dispatch production. The sole authorized dispatcher resolves an exact main SHA through the zero-spend lane."
 
       - name: Upload investigator proof
         if: always()

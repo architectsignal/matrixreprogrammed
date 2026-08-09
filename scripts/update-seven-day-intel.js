@@ -67,10 +67,13 @@ function itemKey(item = {}) {
   return url || `${normalizedTitle(item.title)}|${String(item.published || '').slice(0, 10)}`;
 }
 function sourceTier(feed = {}, url = '') {
-  if (feed.sourceTier) return feed.sourceTier;
   const haystack = `${feed.label || ''} ${feed.name || ''} ${url}`.toLowerCase();
+  // Aggregators are discovery routes even when their query text mentions an
+  // official body, court or regulator. Only the linked underlying record can
+  // earn a factual/official classification after direct verification.
+  if (/news\.google\.com|google news/.test(haystack)) return 'discovery';
+  if (feed.sourceTier) return feed.sourceTier;
   if (/cia\.gov|fbi\.gov|justice\.gov|treasury\.gov|europol\.europa\.eu|news\.un\.org|official|court|regulator/.test(haystack)) return 'primary-or-official';
-  if (/google news/.test(haystack)) return 'discovery';
   return 'reputable-secondary';
 }
 function laneFromOfficialFeed(feed = {}) {
@@ -204,19 +207,20 @@ function itemFromLead(raw, lanes, index, fetchedAt) {
   const url = clean(raw.url || raw.route || '', 1200);
   if (!title || !published || !url) return null;
   const key = itemKey({ title, published, url });
+  const classifiedSourceTier = sourceTier({ label: sourceLabel, sourceTier: raw.sourceTier }, url);
   return {
     id: clean(raw.id || `${laneId}-${published.slice(0, 10)}-${stableId(key)}`, 180),
     lane: laneId,
     laneTitle: clean(raw.laneTitle || lane.title || laneId, 300),
     sourceLabel,
-    sourceTier: clean(raw.sourceTier || sourceTier({ label: sourceLabel }, url), 80),
+    sourceTier: clean(classifiedSourceTier, 80),
     sourceWeight: Number(raw.sourceWeight || 1),
     title,
     url,
     published,
     fetchedAt,
     summary: clean(raw.summary || title, 1200),
-    evidenceLevel: clean(raw.evidenceLevel || (raw.sourceTier === 'primary-or-official' ? 'Primary or official public-record lead' : 'Seven-day public-record lead'), 180),
+    evidenceLevel: clean(classifiedSourceTier === 'primary-or-official' ? (raw.evidenceLevel || 'Primary or official public-record lead') : 'Discovery lead — verify the underlying publisher record before treating this item as factual evidence', 180),
     evidenceBoundary: clean(raw.evidenceBoundary || evidenceBoundaryForLane(laneId), 1000),
     whyItMatters: clean(raw.whyItMatters || 'This current source item can be tested against the underlying record and connected to the relevant evidence lane.', 800),
     nextAction: clean(raw.nextAction || 'Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.', 800),

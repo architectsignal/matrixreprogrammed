@@ -65,11 +65,9 @@ warnText('forum.js', '/forum-feed-epstein-alive');
 warnText('forum.js', '/submit-main-post');
 warnText('forum.js', '/submit-speculation-post');
 warnText('forum.js', '/submit-epstein-alive-post');
-warnText('forum.js', 'LOCAL_POSTS_KEY');
-warnText('forum.js', 'loadFallback');
 warnText('forum.js', 'Signal Board is syncing');
 warnText('forum.js', 'pending sync');
-for (const phrase of ['backend unavailable', 'Backend detail', 'Cloudflare Static Forum Mode', 'saved on this device', 'Cloudflare test route']) warnNoText('forum.js', phrase);
+for (const phrase of ['LOCAL_POSTS_KEY', 'loadFallback', 'backend unavailable', 'Backend detail', 'Cloudflare Static Forum Mode', 'saved on this device', 'Cloudflare test route']) warnNoText('forum.js', phrase);
 
 const data = exists('data/global-risk-clocks.json') ? JSON.parse(read('data/global-risk-clocks.json')) : {};
 const wall = exists('data/clock-wall.json') ? JSON.parse(read('data/clock-wall.json')) : {};

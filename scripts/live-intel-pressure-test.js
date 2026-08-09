@@ -114,6 +114,16 @@ for (const file of ['scripts/update-live-intel.js', 'scripts/update-seven-day-in
 requireIncludes('scripts/update-seven-day-intel.js', '<entry\\b', 'Atom feed support');
 requireIncludes('scripts/update-seven-day-intel.js', 'primary-or-official', 'official source classification');
 requireIncludes('scripts/update-seven-day-intel.js', 'Synthetic current-date fallback stories are forbidden', 'synthetic freshness prohibition');
+
+const liveIntel = JSON.parse(fs.readFileSync(path.join(root, 'data/live-intel.json'), 'utf8'));
+const aggregatorFactClaims = (liveIntel.feedResults || []).filter(item => {
+  try {
+    return new URL(item.url).hostname.toLowerCase() === 'news.google.com' && item.sourceTier === 'primary-or-official';
+  } catch {
+    return false;
+  }
+});
+if (aggregatorFactClaims.length) fail(`Google News discovery items were promoted to the factual tier: ${aggregatorFactClaims.length}`);
 requireIncludes('scripts/build-live-intel-machine.js', 'routeAliases', 'Live Intel route normalizer');
 requireIncludes('scripts/build-live-intel-machine.js', 'truthfulFreshnessMetadata', 'truthful freshness export');
 requireIncludes('scripts/build-live-intel-machine.js', 'offer-intelligence-dossiers.html', 'valid intelligence offer route');

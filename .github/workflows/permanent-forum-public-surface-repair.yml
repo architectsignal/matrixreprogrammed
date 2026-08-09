@@ -132,8 +132,8 @@ jobs:
           assert(!builtSpeculation.includes('paypal.me/njmgroup/1')&&!builtSpeculation.includes('unlock-signal-pass'),'deployable speculation board still has paid Signal Pass');
           assert(speculation.includes('id="forum-member-status"')&&builtSpeculation.includes('id="forum-member-status"'),'speculation board member status missing');
           for(const page of ['forum.html','dark-speculation-forum.html','epstein-alive-board.html']){
-            assert(read(page).includes('forum.js?v=20260720-forum-member-posting-v3'),`${page} source cache bust missing`);
-            assert(read('_site/'+page).includes('forum.js?v=20260720-forum-member-posting-v3'),`${page} deployable cache bust missing`);
+            assert(read(page).includes('forum.js?v=20260720-forum-member-posting-v4'),`${page} source cache bust missing`);
+            assert(read('_site/'+page).includes('forum.js?v=20260720-forum-member-posting-v4'),`${page} deployable cache bust missing`);
           }
           const proof={
             ok:true,

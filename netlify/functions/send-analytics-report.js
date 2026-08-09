@@ -28,6 +28,11 @@ function topLines(title, rows, limit = 10) {
   return lines.join('\n');
 }
 
+function percent(numerator, denominator) {
+  if (!denominator) return '0.0%';
+  return `${((numerator / denominator) * 100).toFixed(1)}%`;
+}
+
 function buildReport(date, events) {
   const eventCounts = countBy(events, 'name');
   const pageCounts = countBy(events.filter(e => e.name === 'page_view'), 'page');
@@ -35,8 +40,15 @@ function buildReport(date, events) {
   const amazonClicks = events.filter(e => e.name === 'amazon_click');
   const rumbleClicks = events.filter(e => e.name === 'rumble_click');
   const blackFileClicks = events.filter(e => e.name === 'black_file_click');
-  const formSubmits = events.filter(e => e.name === 'form_submit');
+  const formSubmits = events.filter(e => e.name === 'form_submit' || e.name === 'email_submit');
   const outbound = events.filter(e => /_click$/.test(e.name));
+
+  const revenueViews = events.filter(e => e.name === 'revenue_offer_view');
+  const revenueClicks = events.filter(e => e.name === 'revenue_offer_click');
+  const revenueCycles = events.filter(e => e.name === 'revenue_offer_cycle');
+  const revenueDismisses = events.filter(e => e.name === 'revenue_signal_dismiss');
+  const explicitSignals = events.filter(e => e.name === 'revenue_explicit_signal');
+  const revenueEvents = events.filter(e => /^revenue_/.test(e.name));
 
   return [
     `Matrix Reprogrammed Analytics Report — ${date}`,
@@ -46,17 +58,32 @@ function buildReport(date, events) {
     `Amazon clicks: ${amazonClicks.length}`,
     `Rumble clicks: ${rumbleClicks.length}`,
     `Black File clicks: ${blackFileClicks.length}`,
-    `Form submits: ${formSubmits.length}`,
+    `Form/email submits: ${formSubmits.length}`,
+    '',
+    'SIGNAL PATH REVENUE ENGINE',
+    `Offer views: ${revenueViews.length}`,
+    `Offer clicks: ${revenueClicks.length}`,
+    `View → click rate: ${percent(revenueClicks.length, revenueViews.length)}`,
+    `Alternative offers requested: ${revenueCycles.length}`,
+    `Signal panel dismisses: ${revenueDismisses.length}`,
+    `Explicit visitor signals: ${explicitSignals.length}`,
+    topLines('Top clicked Signal Path offers', countBy(revenueClicks, 'offer_id')),
+    topLines('Top Signal Path lanes', countBy(revenueEvents.filter(e => e.top_lane), 'top_lane')),
+    topLines('Top offer-view sources', countBy(revenueViews, 'source')),
     topLines('Top event types', eventCounts),
     topLines('Top pages', pageCounts),
     topLines('Top routes', routeCounts),
     topLines('Top click targets', countBy(outbound, 'href')),
     '',
     'Read this like a funnel:',
+    '- Signal Path view → click rate measures whether adaptive routing creates useful commercial movement.',
+    '- Membership offer clicks = recurring-revenue intent.',
     '- Amazon clicks = direct buyer intent.',
     '- Black File clicks/forms = list-building intent.',
-    '- Intel Desk clicks = content-interest signal.',
+    '- Daily Watch activity = return-visitor intent.',
     '- Rumble clicks = audience migration signal.',
+    '',
+    'Do not optimize only for clicks. Preserve evidence quality, visitor trust and repeat use.',
     '',
     'Matrix Reprogrammed'
   ].join('\n');

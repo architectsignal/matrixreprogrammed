@@ -1,0 +1,75 @@
+name: Investigation Source Policy Recovery
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/node/investigation-broker.mjs'
+      - 'ai-management/config/investigation-source-policies.json'
+      - 'ai-management/policy-engine/zero-spend-policy.mjs'
+      - 'ai-management/policy-engine/zero-spend-invariant.mjs'
+      - 'ai-management/provider-adapters/datasets/approved-public-source-http.mjs'
+      - 'data/investigation-source-registry.json'
+      - 'scripts/investigation-source-policy-test.mjs'
+      - 'scripts/run-production-intelligence-refresh.js'
+      - 'scripts/production-freshness-guard.js'
+      - 'data/production-freshness-policy.json'
+      - '.github/workflows/investigation-source-policy.yml'
+  push:
+    paths:
+      - 'ai-management/node/investigation-broker.mjs'
+      - 'ai-management/config/investigation-source-policies.json'
+      - 'ai-management/policy-engine/zero-spend-policy.mjs'
+      - 'ai-management/policy-engine/zero-spend-invariant.mjs'
+      - 'ai-management/provider-adapters/datasets/approved-public-source-http.mjs'
+      - 'data/investigation-source-registry.json'
+      - 'scripts/investigation-source-policy-test.mjs'
+      - 'scripts/run-production-intelligence-refresh.js'
+      - 'scripts/production-freshness-guard.js'
+      - 'data/production-freshness-policy.json'
+      - '.github/workflows/investigation-source-policy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  source-policy-recovery:
+    name: Prove exact-source zero-spend recovery
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install exact dependencies
+        run: npm ci
+
+      - name: Check broker and regression syntax
+        run: |
+          node --check ai-management/node/investigation-broker.mjs
+          node --check scripts/investigation-source-policy-test.mjs
+          node --check scripts/run-production-intelligence-refresh.js
+          node --check scripts/production-freshness-guard.js
+
+      - name: Run aged-policy recovery regression
+        run: node scripts/investigation-source-policy-test.mjs
+
+      - name: Run fail-closed production intelligence refresh canary
+        env:
+          INVESTIGATION_MODE: daily
+          INVESTIGATION_CONCURRENCY: '4'
+          INVESTIGATION_TIMEOUT_MS: '25000'
+          MATRIX_REQUIRE_PRODUCTION_FRESHNESS: '1'
+          AI_RESOURCE_ZERO_SPEND_LOCK: 'true'
+          AI_RESOURCE_EXTERNAL_ENABLED: 'true'
+          AI_RESOURCE_LOCAL_ONLY: 'false'
+        run: node scripts/run-production-intelligence-refresh.js

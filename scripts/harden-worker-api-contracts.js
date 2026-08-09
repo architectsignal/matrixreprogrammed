@@ -25,6 +25,13 @@ function write(relative, content) {
   return true;
 }
 
+function syncIfFile(relative, content) {
+  const file = at(relative);
+  if (!fs.existsSync(file) || fs.statSync(file).isDirectory()) return false;
+  read(relative);
+  return write(relative, content);
+}
+
 function replaceRequired(source, before, after, label) {
   if (source.includes(after)) return source;
   if (!source.includes(before)) throw new Error(`${label} anchor is missing`);
@@ -45,13 +52,18 @@ function replaceRequired(source, before, after, label) {
   write(relative, source);
 }
 
-// The modern membership page and its server-created PayPal approval redirect are
-// canonical. Validate stable structural contracts rather than presentation copy,
-// then keep source and Cloudflare output exact.
+// The Phase 6 membership template is the protected source of truth. A late build
+// owner may temporarily mutate membership.html before this hardener runs, so the
+// root page must never be trusted as canonical while the protected template exists.
+// Repair source and every deployable route mirror from that template, then keep the
+// server-created PayPal redirect client exact across Cloudflare output.
 {
   const membershipRelative = 'membership.html';
+  const membershipTemplateRelative = 'templates/phase6-membership.template';
   const paypalClientRelative = 'paypal-membership.js';
-  const membership = read(membershipRelative);
+  const membership = fs.existsSync(at(membershipTemplateRelative))
+    ? read(membershipTemplateRelative)
+    : read(membershipRelative);
   const paypalClient = read(paypalClientRelative);
   const membershipMarkers = [
     'id="join-free-member"',
@@ -83,14 +95,13 @@ function replaceRequired(source, before, after, label) {
   if (paypalClient.includes('paypal.com/sdk/js') || paypalClient.includes('window.paypal') || paypalClient.includes('loadSdk(')) {
     throw new Error('Retired browser PayPal SDK logic re-entered the canonical membership runtime');
   }
-  if (fs.existsSync(at('_site/membership.html'))) {
-    read('_site/membership.html');
-    write('_site/membership.html', membership);
+  if (fs.existsSync(at(membershipTemplateRelative))) {
+    syncIfFile(membershipRelative, membership);
   }
-  if (fs.existsSync(at('_site/paypal-membership.js'))) {
-    read('_site/paypal-membership.js');
-    write('_site/paypal-membership.js', paypalClient);
+  for (const relative of ['_site/membership.html', '_site/membership']) {
+    syncIfFile(relative, membership);
   }
+  syncIfFile('_site/paypal-membership.js', paypalClient);
 }
 
 // Authentication remains implemented by the mature legacy module for now, but
@@ -141,7 +152,7 @@ const report = {
     passwordlessAuth: 'explicit production-owned route set with response-origin validation',
     freeSignup: 'supports verification.sent and queued delivery truthfully',
     paypal: 'checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans',
-    membershipSource: 'the canonical membership page and server-created PayPal redirect client are validated structurally and synchronized without template replacement',
+    membershipSource: 'the protected Phase 6 membership template is authoritative when present; source, HTML, extensionless and server-created PayPal redirect output are synchronized without trusting a late-mutated root page',
     externalActions: 'no email delivery or PayPal request is performed by this hardening script'
   }
 };

@@ -14,7 +14,8 @@
     ['dog-the-architect.html','dog'],
     ['transmissions.html','rumble_network'],
     ['videos.html','video_drops'],
-    ['forum.html','forum']
+    ['forum.html','forum'],
+    ['signal-path.html','signal_path']
   ];
 
   function currentRoute(){
@@ -67,6 +68,7 @@
     if (/optin-|optin-center|lead-magnet|seven-day-intel/i.test(pathname)) type = 'brief_open';
     if (/downloads\/lead-magnet|downloads\/source-cards|\.md$|\.json$/i.test(pathname)) type = 'brief_download';
     if (/forum\.html/i.test(pathname)) type = 'forum_open';
+    if (/signal-path\.html/i.test(pathname)) type = 'signal_path_click';
     return { type, href: url.href, host, text };
   }
 
@@ -88,4 +90,14 @@
   }, true);
 
   providerSend('page_view', {});
+})();
+
+(function installRevenueIntelligence(){
+  if (window.MatrixRevenueIntelligence || document.querySelector('script[data-matrix-revenue-intelligence]')) return;
+  const base = new URL('.', document.currentScript?.src || document.baseURI);
+  const script = document.createElement('script');
+  script.src = new URL('revenue-intelligence.js?v=1.0.0', base).href;
+  script.defer = true;
+  script.dataset.matrixRevenueIntelligence = 'true';
+  document.head.appendChild(script);
 })();

@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-08-06T06:18:00.955Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-09T04:54:36.696Z",
+  "pageCount": 134,
   "output": "downloads/full-site-function-tool-audit.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Full Site Function and Tool Audit",
-    "contentHash": "217d8af7592f3bbfff54974fa59702357310368046ec5b31a322aff692524016",
+    "contentHash": "d307f0318e7942ed4c7cae609b15457f33b5172114a7be04ac52bba5b850a3a7",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "9f77464e401ac59ad1adb812",
       "ASC-REVIEW-7B1A15ED77443F13",
+      "33b99270b28ac9825f7ccfdd",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
@@ -18,12 +19,14 @@
       "ASC-REVIEW-7E32B4EA7D93ED00",
       "3a425f0d5d683952bc0ad7ac",
       "e72d22f4f28eb53e3173d0a6",
-      "0730bb615248f676888d3235",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
-      "EP-AI-002",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-481745ED8153AA11",
@@ -67,7 +70,7 @@
       "9f3052b5d8cec138a2a37e8c",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
-      "ASC-REVIEW-EEA884898BA116BF",
+      "ASC-REVIEW-612BDE5576885761",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -100,9 +103,8 @@
       "ASC-REVIEW-2FAF91DDDD6143CD",
       "ASC-REVIEW-9395B56F60B42FEA",
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
-      "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-11047BCC813B0EA8",
-      "ASC-REVIEW-9F528AA6CAAA62B3",
+      "ASC-REVIEW-672E0A2FF16C31B8",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -114,10 +116,12 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
+      "ASC-REVIEW-B1927A1DC608FBA7",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
       "ASC-REVIEW-CA4FFDF74622515D",
+      "ASC-REVIEW-29094A2EF0BEB10F",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
@@ -131,6 +135,7 @@
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-861C2A74B4636B6F",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
@@ -141,21 +146,16 @@
       "ASC-REVIEW-5F2C7C064DEAB967",
       "ASC-REVIEW-5F86F35C103C9621",
       "ASC-REVIEW-285205442D5C5D56",
-      "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27",
-      "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-E48690C00EA31793",
-      "ASC-REVIEW-14DA4C1F787B63ED"
+      "ASC-REVIEW-9553A9554C0E8D6A"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 131,
+      "disputedClaimCount": 132,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 118,
-      "moneyRecordCount": 100
+      "relationshipCount": 111,
+      "moneyRecordCount": 97
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 118 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; Influence should be mapped through infrastructure, filings and contracts.; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 118 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

@@ -1,6 +1,6 @@
 # Source Document Vault
 
-Updated: 2026-08-06T06:11:58.454Z
+Updated: 2026-08-09T04:48:10.194Z
 
 A document route is a starting point, not a conclusion. Readers should open the file, identify the record type, check the date, read the context, and classify what it supports before drawing a conclusion.
 

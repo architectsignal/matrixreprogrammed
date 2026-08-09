@@ -1,11 +1,22 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-05T06:32:39.685Z",
+  "generatedAt": "2026-08-06T06:32:06.919Z",
   "sitePresent": true,
+  "featureMaturityFinalized": true,
+  "publicFeatureRoutes": [
+    "public-answer-clock.html",
+    "lived-consequence-receipts.html",
+    "evidence-half-life.html",
+    "power-diff.html"
+  ],
+  "withheldFeatureRoutes": [],
+  "publicQualityPrepared": true,
+  "publicQualityFinalized": true,
+  "publicQualityRoutesFinalized": true,
   "searchFinalized": true,
-  "htmlFiles": 1741,
+  "htmlFiles": 1742,
   "synchronizedAliases": 47,
-  "identicalAliases": 1736,
+  "identicalAliases": 1737,
   "directoryConflicts": [
     {
       "html": "card-artwork-batches.html",
@@ -35,5 +46,5 @@
   ],
   "unexpectedDirectoryConflicts": [],
   "mismatches": [],
-  "boundary": "Every deployable .html route has a byte-identical extensionless file unless its extensionless name is a real namespace directory. Approved namespace collisions are served by exact Worker aliases."
+  "boundary": "Every feature route remains public with an honest maturity label. Every deployable .html route then has a byte-identical extensionless file unless its extensionless name is a real namespace directory; approved namespace collisions are served by exact Worker aliases."
 }

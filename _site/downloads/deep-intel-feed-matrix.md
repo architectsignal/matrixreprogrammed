@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-08-06T06:27:17.615Z
+Generated: 2026-08-09T05:04:57.712Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -20,28 +20,28 @@ Generated: 2026-08-06T06:27:17.615Z
 - 85 — Appellate Division of the Supreme Court of the State of New York — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html
 - 85 — 2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2021-08825.html
 - 85 — 2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/2024-13374.html
-- 85 — 23 WAP 2023 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/23-wap-2023.html
+- 85 — 23-55704 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/23-55704.html
 - 85 — 24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/24-2251.html
-- 85 — 24-7261 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/24-7261.html
 - 85 — California Supreme Court — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/california-supreme-court.html
+- 85 — CC-2025-0631 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/cc-2025-0631.html
 - 85 — Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/civil-rights-corps-v-lasalle.html
 - 85 — Court of Appeals for the Ninth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-ninth-circuit.html
 - 85 — Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/court-of-appeals-for-the-second-circuit.html
 - 85 — D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html
+- 85 — Gerena Betancourt v. Negociado De La Policía De Puerto Rico — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html
 - 85 — Gilead Tenofovir Cases — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/gilead-tenofovir-cases.html
 - 85 — Homeland Security Department — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/homeland-security-department.html
-- 85 — Punxsutawney Hunting Club v. PGC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/punxsutawney-hunting-club-v-pgc.html
+- 85 — In Re: Koi Design LLC v. Marron Lawyers, Apc — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/in-re-koi-design-llc-v-marron-lawyers-apc.html
 - 85 — S283862 — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/s283862.html
-- 85 — Supreme Court of Pennsylvania — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-pennsylvania.html
-- 85 — United States v. Anten — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/united-states-v-anten.html
+- 85 — Supreme Court of Puerto Rico — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/supreme-court-of-puerto-rico.html
 - 85 — Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/williams-v-biggs.html
 - 85 — AAPL — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/aapl.html
 - 85 — Alphabet Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/alphabet-inc.html
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 72 — New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post — live-intel.html
-- 72 — Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov) — live-intel.html
-- 72 — Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov) — live-intel.html
-- 72 — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in — live-intel.html
-- 72 — Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — For Brazil’s Indigenous youth, visibility is resistance — live-intel.html
+- 72 — Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — Treasury Continues to Follow the Money in Minnesota to Eliminate Fraud - U.S. Department of the Treasury (.gov) — live-intel.html

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:21:38.177Z",
-  "pageCount": 97,
+  "generatedAt": "2026-08-09T04:58:40.187Z",
+  "pageCount": 96,
   "output": "downloads/predators-in-power.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Predators in Power",
-    "contentHash": "c69c8980af97588b7f5e1df0a45ccb2e4b0cf40a084232e74c8c210eb1ed9b01",
+    "contentHash": "741ab9159a0f5f61053ca4fa5156e6b5bb636fc2f57ff7f0b57507d776b8ad5e",
     "sourceIds": [
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
@@ -26,9 +26,9 @@
       "6d8df9af51b8078e703b2748",
       "eda53ad65d382819ea249e14",
       "4e5cc6449bcc7ddf1c878ee0",
+      "33b99270b28ac9825f7ccfdd",
       "c414ea6b5bea3390d2a8ce5c",
       "9dad49e7d690ef5780b5a6bf",
-      "0730bb615248f676888d3235",
       "c8eeb5656d86646c1e6dc75c",
       "7f0eb9ddb996aecbeeda522d",
       "69f071adbd84f39904a53107",
@@ -124,7 +124,7 @@
       "hadden-federal-conviction-sentence-2023",
       "53245eb712fc0413483084ad",
       "9f27e4d750de830ccb16df4b",
-      "ca5f30bd425897b0a2d24282",
+      "3a425f0d5d683952bc0ad7ac",
       "c8803902a0ab06e78b2a16fa",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
@@ -136,9 +136,7 @@
       "greenberg-guilty-plea-2021",
       "raniere-conviction-sentence-2020",
       "savile-health-investigations-2014",
-      "3a425f0d5d683952bc0ad7ac",
       "a5e5d4ec4df4352ea242ea3f",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
       "nader-child-exploitation-sentence-2020",
       "epstein-sdny-charges-2019",
       "nassar-federal-conviction-2017",
@@ -146,20 +144,22 @@
       "9848ec4b4c3f6c2693269839",
       "c1520a15d6e62871a66c558e",
       "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-CE46DBEB6BCAAE01"
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-F62F7FFFBED4C0DC"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 66,
-      "disputedClaimCount": 4,
+      "primarySourceCount": 65,
+      "disputedClaimCount": 6,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 15,
-      "moneyRecordCount": 8
+      "moneyRecordCount": 7
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 66 A/B-grade public-record items are materially relevant to Predators in Power.",
+        "conclusion": "The indexed record establishes that 65 A/B-grade public-record items are materially relevant to Predators in Power.",
         "evidence": "Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja (data/weekly-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json); Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,

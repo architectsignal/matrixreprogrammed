@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:23:07.439Z",
+  "generatedAt": "2026-08-09T05:00:20.092Z",
   "pageCount": 134,
   "output": "downloads/search-semantic-index-report.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Search Semantic Index Report",
-    "contentHash": "0de1c723d6c31a5f1a7772aafdb40bb36496c22690de70e11eae3d8bf7abb0f6",
+    "contentHash": "d123df7f4d6753a3aefa8d97f48224d036cc8a4f56d31d47108b04c4f0c0ae34",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -19,6 +19,7 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
       "71e0563ca7b139c37c302956",
+      "ASC-REVIEW-612BDE5576885761",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -47,7 +48,7 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-9F528AA6CAAA62B3",
+      "ASC-REVIEW-672E0A2FF16C31B8",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
@@ -98,6 +99,7 @@
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-14DA4C1F787B63ED",
       "ASC-REVIEW-98888270E5A6D011",
+      "ASC-REVIEW-7181CCFC5771EBAD",
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
@@ -106,7 +108,6 @@
       "ASC-REVIEW-53BD0E17B018491C",
       "ASC-REVIEW-0177F61D444ED739",
       "ASC-REVIEW-FE9A5B02284E30E4",
-      "ASC-REVIEW-7A6012CFE49184A4",
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-B1D0DFCBB6CF0079",
@@ -145,8 +146,7 @@
       "ASC-REVIEW-954EF610F9B32B24",
       "ASC-REVIEW-CA2354BF2081EB62",
       "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585",
-      "ASC-REVIEW-D6340B09DE08EAC5"
+      "ASC-REVIEW-7527D6692621D585"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 139,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 136,
-      "moneyRecordCount": 134
+      "relationshipCount": 135,
+      "moneyRecordCount": 133
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 135 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 135 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T06:23:07.439Z"
+    "intelligenceFreshnessDate": "2026-08-09T05:00:20.092Z"
   }
 }

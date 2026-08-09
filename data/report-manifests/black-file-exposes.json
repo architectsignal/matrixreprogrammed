@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:12:28.821Z",
-  "pageCount": 97,
+  "generatedAt": "2026-08-09T04:48:43.055Z",
+  "pageCount": 95,
   "output": "downloads/black-file-exposes.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Black File Exposé Engine",
-    "contentHash": "44e734fa51e25f66c67319495b2f8d95b0978acc82bcbcc8a9117261c0ed426c",
+    "contentHash": "b3afd071c39b891cb80ef2c5019730ed1a84a3bc44d873280bca5cecc1082fd5",
     "sourceIds": [
       "ecd4a1111010f13b2d74bf8c",
       "72ef7895f95288946ccb3cff",
@@ -13,7 +13,7 @@
       "1769af26a7bda813406cd8f5",
       "3a425f0d5d683952bc0ad7ac",
       "EFS-001-R006",
-      "0730bb615248f676888d3235",
+      "33b99270b28ac9825f7ccfdd",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "9f3052b5d8cec138a2a37e8c",
@@ -24,10 +24,10 @@
       "5295a33003172878f9880122",
       "EFS-001-R007",
       "d0b647e325275daa6d824a49",
+      "cee347fbc3752c6e0f890457",
       "96d8ea15e49544e3f1cafd06",
       "594100b62a47db521fe2a128",
       "34805734b1ad3b73f0ede0d8",
-      "cee347fbc3752c6e0f890457",
       "a354895c18c7e12ab408462d",
       "665a5072d96b9757a6ee9d2d",
       "7f5b91c14c671bd24b8bbd81",
@@ -97,7 +97,6 @@
       "4e5cc6449bcc7ddf1c878ee0",
       "EPSTEIN-TRIGGER-2026-07-03",
       "b7e4a66335a706ef5097117f",
-      "ASC-REVIEW-E250944258ED0360",
       "19ae23289f4be13ad5f7e317",
       "7f0eb9ddb996aecbeeda522d",
       "e6dd95e595093e11aa17005a",
@@ -121,8 +120,6 @@
       "7ee9141a42ad539f58a57e50",
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f23b46f2bc4add9b859f5a15",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-32A64F4FD3617829",
@@ -134,32 +131,35 @@
       "e116361cb7791d4be20113e1",
       "0defb9debab95a663872bf25",
       "275d6c3caca158f7a3e15780",
+      "71e0563ca7b139c37c302956",
       "c3bd2d306202dfc2e2374303",
+      "4c372edcf20b760ae3305f10",
       "EP-AI-001",
       "EP-AI-002",
-      "71e0563ca7b139c37c302956",
-      "4c372edcf20b760ae3305f10",
-      "ASC-REVIEW-5A774507A02DF22B",
       "MF-003",
       "9848ec4b4c3f6c2693269839",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "9b9816cd15ea0d816c77affa",
-      "b49c319c09a07b245b24f74a"
+      "b49c319c09a07b245b24f74a",
+      "ASC-REVIEW-2C44CF7E385BEC5A",
+      "ASC-REVIEW-22761878E6565094",
+      "ASC-REVIEW-4B31270D299062F0",
+      "ASC-REVIEW-BC92D8AABD2393C5"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 57,
-      "disputedClaimCount": 18,
+      "primarySourceCount": 55,
+      "disputedClaimCount": 20,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 13,
-      "moneyRecordCount": 9
+      "relationshipCount": 14,
+      "moneyRecordCount": 11
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 57 A/B-grade public-record items are materially relevant to Black File Exposé Engine.",
+        "conclusion": "The indexed record establishes that 55 A/B-grade public-record items are materially relevant to Black File Exposé Engine.",
         "evidence": "DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); Court Record lane — Government of the USVI v. JPMorgan Chase Bank, N.A. (data/tracker-core-investigations.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 13 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; The strongest public pattern is convergence across access systems.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; MINDCUBED LLC — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 13 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",

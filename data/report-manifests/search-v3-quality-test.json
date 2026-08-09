@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:23:15.621Z",
-  "pageCount": 106,
+  "generatedAt": "2026-08-09T05:00:29.030Z",
+  "pageCount": 105,
   "output": "downloads/search-v3-quality-test.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Search V3 Quality Test",
-    "contentHash": "5b9a7fd75008561c75975ab21ad3d5e42697f7cf554eb6d983715b0eb8c7c83c",
+    "contentHash": "f6ac3a1828a82ff0bf3e73c1d7c104311d2f8762ee9e1082cb580e4968b87516",
     "sourceIds": [
       "71e0563ca7b139c37c302956",
       "daee19f2c0d92279cc9a7569",
@@ -34,6 +34,7 @@
       "aa125ed22fe885dd57f96c32",
       "f73c11ef3163b1800592aabe",
       "b49c319c09a07b245b24f74a",
+      "33b99270b28ac9825f7ccfdd",
       "eaca580893e48ba4540be8c1",
       "cbd43dc6e172416afa728307",
       "27bb5692041861e72397b352",
@@ -56,7 +57,6 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "0730bb615248f676888d3235",
       "9cb9631a2f2749b86bc69e0a",
       "f8da9551192fb7f98b4efa86",
       "e10c38338a42062da8899449",
@@ -89,10 +89,11 @@
       "c4545fe318d34c16a8f8fe7a",
       "f44c3c7309a5f0779a57e655",
       "9e8310c49b990aa62d2b0921",
+      "594100b62a47db521fe2a128",
       "6d665d935673091233751767",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "c414ea6b5bea3390d2a8ce5c",
       "cf94b367bfb0237448d49649",
@@ -100,8 +101,8 @@
       "665a5072d96b9757a6ee9d2d",
       "9bc66da5c53d37d8c3d59e13",
       "9dad49e7d690ef5780b5a6bf",
-      "c3bd2d306202dfc2e2374303",
       "9f77464e401ac59ad1adb812",
+      "c3bd2d306202dfc2e2374303",
       "44505b4afb60938c8117ad31",
       "d7398c0c72a085a05c90422c",
       "5ce17839086eddf839270b1a",
@@ -109,10 +110,6 @@
       "7f5b91c14c671bd24b8bbd81",
       "b7e4a66335a706ef5097117f",
       "41772e5c9af7970ddd7d5aac",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-a09615abd1b1ed83f2b74ff4",
       "nassar-fbi-oig-2021",
       "ASC-REVIEW-2FAF91DDDD6143CD",
       "ASC-REVIEW-11047BCC813B0EA8",
@@ -131,7 +128,6 @@
       "8d0375496d59f1d012deaead",
       "0defb9debab95a663872bf25",
       "7419d29b3a469a40362a11f4",
-      "594100b62a47db521fe2a128",
       "orsini-family",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
@@ -140,26 +136,30 @@
       "bdd7e454126ebfa6319a594c",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-b0cde383147509fbfd4f4472",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
-      "ASC-REVIEW-EEA884898BA116BF"
+      "ASC-REVIEW-6809880AE2446DD1",
+      "ASC-REVIEW-9F5E6DCB06093895",
+      "ASC-REVIEW-F26BA2899C21B0EA",
+      "ASC-REVIEW-9395B56F60B42FEA",
+      "ASC-REVIEW-B6FFC8BFA47BBF5F",
+      "ASC-REVIEW-52F3C5EC8401656D",
+      "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-32A64F4FD3617829",
+      "ASC-REVIEW-4C256A755BDBA2D3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 61,
-      "disputedClaimCount": 23,
+      "primarySourceCount": 53,
+      "disputedClaimCount": 31,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 22,
-      "moneyRecordCount": 12
+      "relationshipCount": 29,
+      "moneyRecordCount": 18
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 61 A/B-grade public-record items are materially relevant to Search V3 Quality Test.",
+        "conclusion": "The indexed record establishes that 53 A/B-grade public-record items are materially relevant to Search V3 Quality Test.",
         "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 29 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema; MINDCUBED LLC — District of Columbia Courts; Follow The Money Watch; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 29 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Matrix Reprogrammed Structured Investigation Schema",

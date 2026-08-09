@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-06T06:28:04.930Z",
+  "generatedAt": "2026-08-09T05:05:48.700Z",
   "investigationData": {
     "ok": true,
-    "generatedAt": "2026-08-06T06:28:04.292Z",
+    "generatedAt": "2026-08-09T05:05:48.045Z",
     "sourceState": {
       "sources": 12,
       "created": 0,
@@ -20,14 +20,14 @@
       "fullMissionConclusions": 2500
     },
     "conclusionProducts": {
-      "dailyFindingsEnriched": 26,
+      "dailyFindingsEnriched": 24,
       "weeklyFindingsEnriched": 48
     },
     "boundary": "This repair normalises provenance, active-ledger capacity and user-facing meaning. It does not change a legal allegation into an established fact or remove archived evidence from the historical record."
   },
   "criminalAccountability": {
     "ok": true,
-    "generatedAt": "2026-08-06T06:28:04.616Z",
+    "generatedAt": "2026-08-09T05:05:48.395Z",
     "subjects": 20,
     "current": 15,
     "historical": 5,
@@ -60,7 +60,7 @@
   },
   "criminalDossierCoverage": {
     "ok": true,
-    "generatedAt": "2026-08-06T06:28:04.905Z",
+    "generatedAt": "2026-08-09T05:05:48.677Z",
     "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
     "minimumPredatorsInPowerTarget": 100,
     "approvedPredatorsInPowerDossiers": 20,
@@ -1945,8 +1945,8 @@
         "statusPanelPresent": true
       },
       {
-        "route": "reports/entity-23-wap-2023.html",
-        "title": "23 WAP 2023 — ENTITY REPORT",
+        "route": "reports/entity-23-55704.html",
+        "title": "23-55704 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1956,15 +1956,6 @@
       {
         "route": "reports/entity-24-2251.html",
         "title": "24-2251 — ENTITY REPORT",
-        "matchedSubject": "",
-        "matchStatus": "no-approved-match",
-        "approvedRecords": 0,
-        "criminalDossierRoute": "",
-        "statusPanelPresent": true
-      },
-      {
-        "route": "reports/entity-24-7261.html",
-        "title": "24-7261 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -1983,6 +1974,15 @@
       {
         "route": "reports/entity-california-supreme-court.html",
         "title": "CALIFORNIA SUPREME COURT — ENTITY REPORT",
+        "matchedSubject": "",
+        "matchStatus": "no-approved-match",
+        "approvedRecords": 0,
+        "criminalDossierRoute": "",
+        "statusPanelPresent": true
+      },
+      {
+        "route": "reports/entity-cc-2025-0631.html",
+        "title": "CC-2025-0631 — ENTITY REPORT",
         "matchedSubject": "",
         "matchStatus": "no-approved-match",
         "approvedRecords": 0,
@@ -2020,7 +2020,7 @@
   },
   "criminalWaveBuild": {
     "ok": true,
-    "generatedAt": "2026-08-06T06:28:04.597Z",
+    "generatedAt": "2026-08-09T05:05:48.375Z",
     "mode": "single-authoritative-hydration-with-verification-only",
     "idempotent": true,
     "waveFiles": [
@@ -2114,7 +2114,7 @@
   },
   "criminalDossierTest": {
     "ok": true,
-    "generatedAt": "2026-08-06T06:28:04.929Z",
+    "generatedAt": "2026-08-09T05:05:48.700Z",
     "target": 100,
     "approvedDossiers": 20,
     "dossierPagesChecked": 216,

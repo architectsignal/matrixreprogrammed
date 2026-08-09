@@ -48,11 +48,11 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-06T06:11:30.830Z
+Updated: 2026-08-09T04:47:45.247Z
 Items: 12
 
-- 2026-08-05 — Justice Department Withdraws Business Review Letter Issued to Proxy Advisory Firm
-  - Source: https://www.justice.gov/opa/pr/justice-department-withdraws-business-review-letter-issued-proxy-advisory-firm
+- 2026-08-06 — Consumer Bankruptcy Firm Waives $90K in Fees After USTP Inquiry Reveals Lapses in Diligence
+  - Source: https://www.justice.gov/opa/pr/consumer-bankruptcy-firm-waives-90k-fees-after-ustp-inquiry-reveals-lapses-diligence
   - Evidence: Primary or official public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -61,6 +61,21 @@ Items: 12
   - Evidence: Seven-day public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-08-06 — D.C. Business Owner Pleads Guilty to Stealing More than $1 Million in COVID-19 Relief Funds
+  - Source: https://www.justice.gov/usao-dc/pr/dc-business-owner-pleads-guilty-stealing-more-1-million-covid-19-relief-funds
+  - Evidence: Primary or official public-record lead
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Former Goldman Sachs Investment Banker Convicted of Foreign Bribery and Money Laundering
+  - Source: https://www.justice.gov/usao-edny/pr/former-goldman-sachs-investment-banker-convicted-foreign-bribery-and-money-laundering
+  - Evidence: Primary or official public-record lead
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-06 — Homeland Security Task Force Investigation Delivers Federal Jury Conviction of Pensacola Armed Drug Trafficker
+  - Source: https://www.justice.gov/usao-ndfl/pr/homeland-security-task-force-investigation-delivers-federal-jury-conviction-pensacola
+  - Evidence: Primary or official public-record lead
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-05 — Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)
   - Source: https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4
   - Evidence: Primary or official public-record lead
@@ -71,43 +86,28 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-04 — Owner of Brockton Store “Banks & Brancos” Pleads Guilty to Drug Trafficking and Firearm Crimes
-  - Source: https://www.justice.gov/usao-ma/pr/owner-brockton-store-banks-brancos-pleads-guilty-drug-trafficking-and-firearm-crimes
+- 2026-08-07 — August Underway with 271 New Federal Immigration Cases in Western District of Texas
+  - Source: https://www.justice.gov/usao-wdtx/pr/august-underway-271-new-federal-immigration-cases-western-district-texas
   - Evidence: Primary or official public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-04 — Rhode Island Woman Pleads Guilty to Operating Unlicensed Money Transmitting Business
-  - Source: https://www.justice.gov/usao-ri/pr/rhode-island-woman-pleads-guilty-operating-unlicensed-money-transmitting-business
+- 2026-08-07 — Convicted Felon Sentenced for Illegal Gun Possession
+  - Source: https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession
   - Evidence: Primary or official public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-04 — South Florida Resident Pleads Guilty in D.C. to Smuggling Firearms from Florida to Haiti
-  - Source: https://www.justice.gov/usao-dc/pr/south-florida-resident-pleads-guilty-dc-smuggling-firearms-florida-haiti
+- 2026-08-07 — Former USDA Program Director Sentenced in $400,000 Fraud Scheme
+  - Source: https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme
   - Evidence: Primary or official public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-04 — South Florida Resident Pleads Guilty to Smuggling Firearms from Florida to Haiti as Part of Homeland Security Task Force Initiative
-  - Source: https://www.justice.gov/opa/pr/south-florida-resident-pleads-guilty-smuggling-firearms-florida-haiti-part-homeland-security
+- 2026-08-07 — Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah
+  - Source: https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah
   - Evidence: Primary or official public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-05 — Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash
-  - Source: https://www.justice.gov/usao-ndga/pr/bahamian-drug-trafficker-faces-federal-cocaine-charges-following-sea-rescue-plane
-  - Evidence: Primary or official public-record lead
-  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-05 — Convicted Felon Sentenced to Over 17 Years in Federal Prison for Drug Trafficking Offenses
-  - Source: https://www.justice.gov/usao-ndfl/pr/convicted-felon-sentenced-over-17-years-federal-prison-drug-trafficking-offenses
-  - Evidence: Primary or official public-record lead
-  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-05 — Fentanyl Near Playground Leads to Ohio Man’s Conviction
-  - Source: https://www.justice.gov/usao-ndwv/pr/fentanyl-near-playground-leads-ohio-mans-conviction
-  - Evidence: Primary or official public-record lead
-  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-05 — Homeland Security Task Force: Dual Dominican and French National Admits Role in Firearms Trafficking Scheme
-  - Source: https://www.justice.gov/usao-ct/pr/homeland-security-task-force-dominican-national-admits-role-firearms-trafficking-scheme
+- 2026-08-07 — Master of Shadow Fleet Tanker Sentenced in D.C. for Evading U.S. Coast Guard During Weeks-Long Pursuit
+  - Source: https://www.justice.gov/usao-dc/pr/master-shadow-fleet-tanker-sentenced-dc-evading-us-coast-guard-during-weeks-long-pursuit
   - Evidence: Primary or official public-record lead
   - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -129,18 +129,18 @@ Items: 12
 - Book route: book triad — book-triad.html
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
-- DOJ News: Justice Department Withdraws Business Review Letter Issued to Proxy Advisory Firm — https://www.justice.gov/opa/pr/justice-department-withdraws-business-review-letter-issued-proxy-advisory-firm
+- DOJ News: Consumer Bankruptcy Firm Waives $90K in Fees After USTP Inquiry Reveals Lapses in Diligence — https://www.justice.gov/opa/pr/consumer-bankruptcy-firm-waives-90k-fees-after-ustp-inquiry-reveals-lapses-diligence
 - Google News / crime state overlap: Cartels, Law Enforcement, and Counternarcotics--Dr. John P. Sullivan of Small Wars Journal - Small Wars Journal — https://news.google.com/rss/articles/CBMipwFBVV95cUxOUk1ONjZzZmpFQmpOdGgxdW8zNW5Bdjc3TFpsd2E5cEowaVdyU0tHVjM2eDBqQ0tZV0twcjhkYlhUczBILXVaVm1fSFVEM0hfcVh0ZzZOXzhLc2JKaWVxSWZadndyNDRIV3BHN2lpanhDM0hmR01BSDRKU3pBbV82U1VSVEpoMV93TDU1SkNTVk5SWlhOODB4cFZSWjdUbjVOeGl1Q3JIbw?oc=5
+- DOJ News: D.C. Business Owner Pleads Guilty to Stealing More than $1 Million in COVID-19 Relief Funds — https://www.justice.gov/usao-dc/pr/dc-business-owner-pleads-guilty-stealing-more-1-million-covid-19-relief-funds
+- DOJ News: Former Goldman Sachs Investment Banker Convicted of Foreign Bribery and Money Laundering — https://www.justice.gov/usao-edny/pr/former-goldman-sachs-investment-banker-convicted-foreign-bribery-and-money-laundering
+- DOJ News: Homeland Security Task Force Investigation Delivers Federal Jury Conviction of Pensacola Armed Drug Trafficker — https://www.justice.gov/usao-ndfl/pr/homeland-security-task-force-investigation-delivers-federal-jury-conviction-pensacola
 - DOJ News: Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026) — https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4
 - DOJ News: Former St. Louis Aldermanic Candidate Admits Committing Social Security Fraud — https://www.justice.gov/usao-edmo/pr/former-st-louis-aldermanic-candidate-admits-committing-social-security-fraud
-- DOJ News: Owner of Brockton Store “Banks & Brancos” Pleads Guilty to Drug Trafficking and Firearm Crimes — https://www.justice.gov/usao-ma/pr/owner-brockton-store-banks-brancos-pleads-guilty-drug-trafficking-and-firearm-crimes
-- DOJ News: Rhode Island Woman Pleads Guilty to Operating Unlicensed Money Transmitting Business — https://www.justice.gov/usao-ri/pr/rhode-island-woman-pleads-guilty-operating-unlicensed-money-transmitting-business
-- DOJ News: South Florida Resident Pleads Guilty in D.C. to Smuggling Firearms from Florida to Haiti — https://www.justice.gov/usao-dc/pr/south-florida-resident-pleads-guilty-dc-smuggling-firearms-florida-haiti
-- DOJ News: South Florida Resident Pleads Guilty to Smuggling Firearms from Florida to Haiti as Part of Homeland Security Task Force Initiative — https://www.justice.gov/opa/pr/south-florida-resident-pleads-guilty-smuggling-firearms-florida-haiti-part-homeland-security
-- DOJ News: Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash — https://www.justice.gov/usao-ndga/pr/bahamian-drug-trafficker-faces-federal-cocaine-charges-following-sea-rescue-plane
-- DOJ News: Convicted Felon Sentenced to Over 17 Years in Federal Prison for Drug Trafficking Offenses — https://www.justice.gov/usao-ndfl/pr/convicted-felon-sentenced-over-17-years-federal-prison-drug-trafficking-offenses
-- DOJ News: Fentanyl Near Playground Leads to Ohio Man’s Conviction — https://www.justice.gov/usao-ndwv/pr/fentanyl-near-playground-leads-ohio-mans-conviction
-- DOJ News: Homeland Security Task Force: Dual Dominican and French National Admits Role in Firearms Trafficking Scheme — https://www.justice.gov/usao-ct/pr/homeland-security-task-force-dominican-national-admits-role-firearms-trafficking-scheme
+- DOJ News: August Underway with 271 New Federal Immigration Cases in Western District of Texas — https://www.justice.gov/usao-wdtx/pr/august-underway-271-new-federal-immigration-cases-western-district-texas
+- DOJ News: Convicted Felon Sentenced for Illegal Gun Possession — https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession
+- DOJ News: Former USDA Program Director Sentenced in $400,000 Fraud Scheme — https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme
+- DOJ News: Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah — https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah
+- DOJ News: Master of Shadow Fleet Tanker Sentenced in D.C. for Evading U.S. Coast Guard During Weeks-Long Pursuit — https://www.justice.gov/usao-dc/pr/master-shadow-fleet-tanker-sentenced-dc-evading-us-coast-guard-during-weeks-long-pursuit
 
 ## Book Routes
 

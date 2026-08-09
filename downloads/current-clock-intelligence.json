@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-06T06:26:55.657Z",
+  "generatedAt": "2026-08-09T05:04:32.966Z",
   "policy": "Every Mission Timer is evaluated against a dated current-evidence window. Current status, official-source count, implementation stage, jurisdiction coverage and evidence gaps are published separately from speculation.",
   "recalibrations": [
     {
@@ -17,8 +17,8 @@
       "score": 76,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 5,
-      "officialCount": 2,
+      "currentEvidenceCount": 9,
+      "officialCount": 5,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
@@ -90,7 +90,7 @@
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 11,
-      "officialCount": 2,
+      "officialCount": 1,
       "implementationCount": 1,
       "lawCount": 0,
       "jurisdictions": []
@@ -113,7 +113,7 @@
       "score": 60,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 7,
+      "currentEvidenceCount": 6,
       "officialCount": 3,
       "implementationCount": 1,
       "lawCount": 0,
@@ -125,7 +125,7 @@
       "score": 58,
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
-      "currentEvidenceCount": 8,
+      "currentEvidenceCount": 9,
       "officialCount": 4,
       "implementationCount": 0,
       "lawCount": 0,
@@ -138,7 +138,7 @@
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 6,
-      "officialCount": 5,
+      "officialCount": 4,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
@@ -178,9 +178,9 @@
       "score": 84,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
-      "currentEvidenceCount": 14,
-      "officialCount": 11,
-      "implementationCount": 10,
+      "currentEvidenceCount": 12,
+      "officialCount": 9,
+      "implementationCount": 9,
       "lawCount": 3,
       "jurisdictions": [
         "United Kingdom",
@@ -257,11 +257,11 @@
     {
       "slug": "government-transparency-missing-records",
       "title": "Government Transparency and Missing Records Clock",
-      "score": 63,
+      "score": 65,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
-      "currentEvidenceCount": 4,
-      "officialCount": 3,
+      "currentEvidenceCount": 5,
+      "officialCount": 4,
       "implementationCount": 1,
       "lawCount": 0,
       "jurisdictions": [

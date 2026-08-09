@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-06T06:27:13.016Z",
+  "updated": "2026-08-09T05:04:52.161Z",
   "boundary": "Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.",
   "metrics": {
     "nodes": 117,
@@ -24,12 +24,12 @@
       "missingPressure": 16,
       "contradictionPressure": 0,
       "records": [
+        "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+        "In Re: Koi Design LLC v. Marron Lawyers, Apc",
         "Gilead Tenofovir Cases",
         "D & A Grandview, LLC v. 60 Davidson, LLC",
         "Williams v. Biggs",
-        "Civil Rights Corps v. LaSalle",
-        "United States v. Anten",
-        "Punxsutawney Hunting Club v. PGC"
+        "Civil Rights Corps v. LaSalle"
       ],
       "missing": [
         "Primary record route",
@@ -599,16 +599,15 @@
         "energy",
         "public-private-contracts"
       ],
-      "score": 75,
+      "score": 74,
       "centrality": 5,
-      "evidenceConfidence": 10,
+      "evidenceConfidence": 9,
       "missingPressure": 20,
       "contradictionPressure": 0,
       "records": [
         "Electronic Delivery of Information Under the Federal Securities Laws",
         "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-        "Punxsutawney Hunting Club v. PGC"
+        "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies"
       ],
       "missing": [
         "Current beneficial ownership and voting-control record where relevant",
@@ -626,7 +625,7 @@
       "links": [
         "billionaire-control-tracker.html"
       ],
-      "summary": "Elon Musk is ranked 75/100 because of 5 relationship route(s), 5 control layer(s), 4 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
+      "summary": "Elon Musk is ranked 74/100 because of 5 relationship route(s), 5 control layer(s), 3 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s)."
     },
     {
       "id": "world-economic-forum",
@@ -1654,6 +1653,48 @@
     },
     {
       "from": "disclosure-gaps-and-missing-files",
+      "to": "gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "supreme-court-of-puerto-rico",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "cc-2025-0631",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "in-re-koi-design-llc-v-marron-lawyers-apc",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "court-of-appeals-for-the-ninth-circuit",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
+      "to": "23-55704",
+      "type": "subject entity route",
+      "weight": 2,
+      "source": "subject brief"
+    },
+    {
+      "from": "disclosure-gaps-and-missing-files",
       "to": "gilead-tenofovir-cases",
       "type": "subject entity route",
       "weight": 2,
@@ -1725,48 +1766,6 @@
     {
       "from": "disclosure-gaps-and-missing-files",
       "to": "24-2251",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "united-states-v-anten",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "court-of-appeals-for-the-ninth-circuit",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "24-7261",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "punxsutawney-hunting-club-v-pgc",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "supreme-court-of-pennsylvania",
-      "type": "subject entity route",
-      "weight": 2,
-      "source": "subject brief"
-    },
-    {
-      "from": "disclosure-gaps-and-missing-files",
-      "to": "23-wap-2023",
       "type": "subject entity route",
       "weight": 2,
       "source": "subject brief"

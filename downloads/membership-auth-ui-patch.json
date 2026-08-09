@@ -1,10 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-06T06:28:56.614Z",
+  "generatedAt": "2026-08-09T05:06:41.926Z",
   "platform": "Cloudflare Worker + D1 + Cloudflare Assets",
   "workerEntryPolicy": "The verified autonomy wrapper delegates every fetch unchanged to the strict production Worker and adds only the bounded AI scheduled lifecycle.",
   "changed": [
-    "_site/membership",
     "_site/member-login.html",
     "_site/member-login",
     "_site/member-dashboard.html",
@@ -15,7 +14,7 @@
     "member-login.html",
     "member-dashboard.html"
   ],
-  "paypalCheckout": true,
+  "paypalCheckout": "authenticated server-created PayPal approval redirect",
   "canonicalOriginPolicy": "All www requests receive a method-preserving 308 redirect to the apex Cloudflare Worker origin before authentication or asset routing",
   "paidAccessPolicy": "Server-verified PayPal ACTIVE subscriptions only; global checkout shutdown is evaluated first, then a second checkout is blocked for current state-backed and legacy active/trialing entitlements",
   "sessionCookiePolicy": "PayPal, billing, protected assets and member services accept matrix_session_v2 with legacy matrix_session fallback",
@@ -23,5 +22,5 @@
   "newsletterDeliveryPolicy": "Welcome email and selected first daily brief are delivered through the D1 outbox and Brevo lifecycle; the detailed intelligence builder falls back safely",
   "dashboardTierPolicy": "Free dashboards do not call Intelligence-only watchlist routes during initial loading; paid members are routed to billing management",
   "dataRoutePolicy": "Shared Cloudflare asset scripts use canonical root data routes so nested source pages and public routes load identical generated datasets",
-  "boundary": "Canonical membership, passwordless authentication, protected assets and PayPal subscription pages are restored before Cloudflare Assets are copied to both HTML and extensionless routes."
+  "boundary": "The modern membership page and server-created PayPal redirect client are canonical. Retired inline PayPal SDK templates are never copied into public output."
 }

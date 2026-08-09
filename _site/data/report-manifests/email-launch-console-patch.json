@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:16:05.729Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-09T04:52:29.731Z",
+  "pageCount": 130,
   "output": "downloads/email-launch-console-patch.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Email Launch Console Patch",
-    "contentHash": "20ca764d9c01659fba4e8f1ef8ab3e6cd2419ab83fd718967e75293ce6f0759b",
+    "contentHash": "46d0f91bbedc3329d91f175524d429e977c8f98d21ef8c838a8d78bef688b868",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-836A8E9D516E6FEC",
@@ -36,17 +36,18 @@
       "ASC-REVIEW-B6CA713526831DEB",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
-      "ASC-REVIEW-7A6012CFE49184A4",
-      "ASC-REVIEW-6BF4FBCFB00F1B1A",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-9ABCBA0136F7F0F3",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-7E32B4EA7D93ED00",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -58,6 +59,7 @@
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
+      "33b99270b28ac9825f7ccfdd",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -91,7 +93,6 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "0730bb615248f676888d3235",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -99,10 +100,12 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
-      "ASC-REVIEW-6CCC0D5E0B3EA09D",
-      "ASC-REVIEW-CEC93F9808F62E6E",
-      "ASC-REVIEW-D809754852C14D1D",
-      "ASC-REVIEW-1D0E514392976CFC",
+      "ASC-REVIEW-6476A61F00D66DFB",
+      "ASC-REVIEW-2733D1C88202921D",
+      "ASC-REVIEW-884743856D3E1385",
+      "ASC-REVIEW-E5A88F482A22427D",
+      "ASC-REVIEW-612BDE5576885761",
+      "ASC-REVIEW-EC518EFBF56BB985",
       "ASC-REVIEW-861EBE2805F13D36",
       "ASC-REVIEW-AFD96AE0BCA26187",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -130,7 +133,7 @@
       "ASC-REVIEW-4E0C4B2A65FF8D42",
       "ASC-REVIEW-995324D0659C1960",
       "ASC-REVIEW-BD5CE46383C9383C",
-      "ASC-REVIEW-EE1C48494066159E",
+      "ASC-REVIEW-111AEF27642D32DD",
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
@@ -141,12 +144,9 @@
       "ASC-REVIEW-DC55A436F8F9A135",
       "ASC-REVIEW-2721CEDC4D6A57D9",
       "ASC-REVIEW-C3297FF92B950118",
+      "ASC-REVIEW-A8D2D2229B2E32AE",
       "ASC-REVIEW-6770124E37F1FE36",
-      "ASC-REVIEW-1E701E5D91BF4446",
-      "ASC-REVIEW-38D60C73AE003DE8",
-      "ASC-REVIEW-F62F7FFFBED4C0DC",
-      "ASC-REVIEW-47D99B95C8C88B19",
-      "ASC-REVIEW-9F528AA6CAAA62B3"
+      "ASC-REVIEW-1E701E5D91BF4446"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 96,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 62,
-      "moneyRecordCount": 45
+      "relationshipCount": 61,
+      "moneyRecordCount": 47
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 62 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 61 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 62 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 61 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T07:59:25.534Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:18:31.505Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-09T04:55:10.613Z",
+  "pageCount": 132,
   "output": "downloads/internal-report-manifest-cleanup.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Internal Report Manifest Cleanup",
-    "contentHash": "86c9a67615e059fe3ef5c5d376b7093154e953a90edb05c34897911ab487e428",
+    "contentHash": "e09be71134a449092eb624ac8179e8a15fa8c955ce66f3e6ceeb8e882eee1048",
     "sourceIds": [
       "ASC-REVIEW-E6C400911BD1A158",
       "a6ebdb520cbf171e4f5b2247",
@@ -41,7 +41,6 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "source-change-b0cde383147509fbfd4f4472",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -62,13 +61,6 @@
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -108,7 +100,6 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-E250944258ED0360",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
@@ -146,20 +137,29 @@
       "ASC-REVIEW-9553A9554C0E8D6A",
       "ASC-REVIEW-375A853A96E42D84",
       "ASC-REVIEW-D5FA458F66004D27",
-      "ASC-REVIEW-FE267E981A361906"
+      "ASC-REVIEW-FE267E981A361906",
+      "ASC-REVIEW-E48690C00EA31793",
+      "ASC-REVIEW-14DA4C1F787B63ED",
+      "ASC-REVIEW-98888270E5A6D011",
+      "ASC-REVIEW-0F0776894447C197",
+      "ASC-REVIEW-6E0BEE85BA956CBF",
+      "ASC-REVIEW-F9B27A08465F560B",
+      "ASC-REVIEW-8A2ACAFD47272636",
+      "ASC-REVIEW-39269A2C0471A66C",
+      "ASC-REVIEW-53BD0E17B018491C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 49,
-      "disputedClaimCount": 90,
+      "primarySourceCount": 41,
+      "disputedClaimCount": 98,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 87,
-      "moneyRecordCount": 85
+      "relationshipCount": 96,
+      "moneyRecordCount": 94
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 49 A/B-grade public-record items are materially relevant to Internal Report Manifest Cleanup.",
+        "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Internal Report Manifest Cleanup.",
         "evidence": "Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment - Sal N. Ortiz (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 87 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 87 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

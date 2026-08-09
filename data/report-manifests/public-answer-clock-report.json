@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:21:53.669Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-09T04:58:57.111Z",
+  "pageCount": 132,
   "output": "downloads/public-answer-clock-report.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Public Answer Clock Report",
-    "contentHash": "00ec9c4cdd055ddb8818f6de12ed8d5424458a53cdf2cb1af2a31ba5ef7dd959",
+    "contentHash": "92c40afb0fdc385fc0cbc3773412fa0a12ea59c5c0736673b6c4dde03f64088e",
     "sourceIds": [
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -17,6 +17,7 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "eda53ad65d382819ea249e14",
       "4e5cc6449bcc7ddf1c878ee0",
+      "crime-state-overlap-2026-08-07-151b6c33",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -64,10 +65,15 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "54197b23c792a122f53a863b",
       "f44c3c7309a5f0779a57e655",
       "72ef7895f95288946ccb3cff",
+      "consequence-crime-state-overlap-2026-08-05-32f4a389",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
@@ -75,20 +81,21 @@
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
+      "crime-state-overlap-2026-08-07-8418d23a",
+      "crime-state-overlap-2026-08-07-a2296147",
+      "crime-state-overlap-2026-08-07-ab764161",
+      "crime-state-overlap-2026-08-07-f2fd0a89",
+      "crime-state-overlap-2026-08-07-7e664ee5",
+      "crime-state-overlap-2026-08-07-4f6b78a3",
+      "crime-state-overlap-2026-08-07-eea3ce1d",
+      "crime-state-overlap-2026-08-07-0aa1dddd",
+      "crime-state-overlap-2026-08-07-3cedbac3",
+      "crime-state-overlap-2026-08-06-fd5a45e4",
+      "crime-state-overlap-2026-08-06-c7e9a699",
+      "crime-state-overlap-2026-08-06-f9e1d171",
+      "crime-state-overlap-2026-08-06-32df9ad9",
       "crime-state-overlap-2026-08-05-32f4a389",
       "crime-state-overlap-2026-08-05-e7c03a19",
-      "crime-state-overlap-2026-08-05-3df37a60",
-      "crime-state-overlap-2026-08-05-29f20415",
-      "crime-state-overlap-2026-08-04-8ae5e944",
-      "crime-state-overlap-2026-08-04-4a494602",
-      "crime-state-overlap-2026-08-04-de085374",
-      "declassified-files-2026-08-03-c89ca789",
-      "declassified-files-2026-08-03-fcc8d24a",
-      "declassified-files-2026-08-03-79c56827",
-      "declassified-files-2026-08-03-77817848",
-      "declassified-files-2026-08-03-db0ef3d6",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
       "a71a8be091652489b843ecf6",
       "06baa45bea3e2e15eb80eff9",
       "epstein-nda-settlement-protection-lane-2026-06-26",
@@ -103,7 +110,6 @@
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
-      "ASC-REVIEW-CEC93F9808F62E6E",
       "ASC-REVIEW-861EBE2805F13D36",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -140,27 +146,21 @@
       "ASC-REVIEW-0C3383FAE797FF46",
       "ASC-REVIEW-7FBB26E1B0ECA17A",
       "ASC-REVIEW-ECBF89F9DB572E57",
-      "ASC-REVIEW-9CC26AD16796DAE5",
-      "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-52F3C5EC8401656D",
-      "ASC-REVIEW-D13048D78F8EA6E3",
-      "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-26C98CAD8AA9CE0A",
-      "ASC-REVIEW-D921C72A4BA2FDF3"
+      "ASC-REVIEW-9CC26AD16796DAE5"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 69,
-      "disputedClaimCount": 68,
+      "primarySourceCount": 72,
+      "disputedClaimCount": 65,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 80,
-      "moneyRecordCount": 57
+      "relationshipCount": 76,
+      "moneyRecordCount": 53
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 69 A/B-grade public-record items are materially relevant to Public Answer Clock Report.",
-        "evidence": "Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment - Sal N. Ortiz (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 72 A/B-grade public-record items are materially relevant to Public Answer Clock Report.",
+        "evidence": "Illegal alien breaks law, plays the victim, is found guilty, and sent to federal prison (data/live-intel.json); Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A federal grand jury in Bridgeport has returned an indictment charging HARRY BATCHELOR, JR., 29, of Bridgeport, with illegal transport and disposal of used oil. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Illegal alien breaks law, plays the victim, is found guilty, and sent to federal prison,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "A 37-year-old Mexican national has been sentenced for illegally reentering the country without authorization. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; Official health investigations documented abuse and enabling access",
+        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; Illegal alien breaks law, plays the victim, is found guilty, and sent to federal prison",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",
@@ -203,7 +203,7 @@
           "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
           "ROGUE VALLEY H2O LLC — Department of Agriculture",
           "SMITHS DETECTION INC. — Court Services and Offender Supervision Agency",
-          "Official health investigations documented abuse and enabling access"
+          "Illegal alien breaks law, plays the victim, is found guilty, and sent to federal prison"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

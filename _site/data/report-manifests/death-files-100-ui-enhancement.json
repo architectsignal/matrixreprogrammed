@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:14:59.569Z",
-  "pageCount": 111,
+  "generatedAt": "2026-08-09T04:51:26.030Z",
+  "pageCount": 113,
   "output": "downloads/death-files-100-ui-enhancement.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Death Files 100 Ui Enhancement",
-    "contentHash": "78416acc304a050034365ef1926628990b3090d0594d5cfe1086d6b4770e4fe7",
+    "contentHash": "4d88d39f8182af2ec73642830db769a756a35904058cc5d1c97ff7917f1023bf",
     "sourceIds": [
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
@@ -46,13 +46,6 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "declassified-files-2026-08-03-c89ca789",
-      "declassified-files-2026-08-03-fcc8d24a",
-      "declassified-files-2026-08-03-79c56827",
-      "declassified-files-2026-08-03-77817848",
-      "declassified-files-2026-08-03-db0ef3d6",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "nassar-fbi-oig-2021",
@@ -63,6 +56,10 @@
       "peter-ball-conviction-2015",
       "savile-health-investigations-2014",
       "epstein-florida-plea-2008",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "b1e5189be9fa36ea97b5f8c0",
       "b0cde383147509fbfd4f4472",
       "c3bd2d306202dfc2e2374303",
@@ -85,16 +82,23 @@
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
       "weekly-25",
-      "crime-state-overlap-2026-08-05-a91149f1",
-      "crime-state-overlap-2026-08-05-1aaa1f5b",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
+      "crime-state-overlap-2026-08-06-0c9d5dd9",
+      "33b99270b28ac9825f7ccfdd",
+      "declassified-files-2026-08-04-97c54014",
+      "declassified-files-2026-08-04-9cf12b0f",
+      "declassified-files-2026-08-04-9f86d514",
+      "declassified-files-2026-08-04-1ec8f84b",
+      "declassified-files-2026-08-03-ca8737b9",
+      "declassified-files-2026-08-03-dd0ce198",
+      "declassified-files-2026-08-03-449e1af7",
+      "declassified-files-2026-08-03-9c902136",
+      "declassified-files-2026-08-03-c89ca789",
+      "declassified-files-2026-08-03-fcc8d24a",
+      "declassified-files-2026-08-03-79c56827",
+      "declassified-files-2026-08-03-77817848",
+      "declassified-files-2026-08-03-db0ef3d6",
+      "declassified-files-2026-07-31-1b573a3b",
+      "declassified-files-2026-07-31-cc395014",
       "8212c1ebe163e30add33aeaf",
       "b866e2c7eb4ced9098559c86",
       "f3676fb7b03d3ee0516f2a19",
@@ -127,7 +131,9 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-A9879DBB68A52307",
@@ -136,26 +142,20 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
-      "4ae6a940305d15da61333450",
-      "54197b23c792a122f53a863b",
-      "45f5269389def99607b5a517",
-      "6f6462b75cdb929e0acbcde7",
-      "f44c3c7309a5f0779a57e655",
-      "4961972398d896435d33f3f7",
-      "26b90533dbf7d2ed42f02de6"
+      "4ae6a940305d15da61333450"
     ],
     "metrics": {
       "evidenceCount": 136,
-      "primarySourceCount": 111,
-      "disputedClaimCount": 25,
-      "newEntityCount": 0,
+      "primarySourceCount": 110,
+      "disputedClaimCount": 31,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 27,
-      "moneyRecordCount": 13
+      "relationshipCount": 34,
+      "moneyRecordCount": 15
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 111 A/B-grade public-record items are materially relevant to Death Files 100 Ui Enhancement.",
+        "conclusion": "The indexed record establishes that 110 A/B-grade public-record items are materially relevant to Death Files 100 Ui Enhancement.",
         "evidence": "IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); 2015 criminal charges relating to nine complainants (data/exposure-evidence-ledger.json); Broadmoor investigation examined Savile's access and abuse (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -164,8 +164,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Orlando Men Sentenced for Attempting to Coerce and Entice a Minor to Engage in Sexually Explicit Conduct,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Orlando, Florida – Richard Kowalczyk (46, Windermere) and Eric Patrick (31, Windermere) have been sentenced by U.S. District Judge Carlos Mendoza for attempted coercion and enticement of a minor to engage in sexual activity. Kowalczyk was sentenced to 14 years in federal prison and Patrick was sentenced to 10 years in federal prison. Patrick pleaded guilty in February 2026 and Kowalczyk pleaded guilty in April 2026. Both are also required to register as sex offenders. U.S. Attorney Gregory W. Kehoe made the announcement. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Dallas drug dealer sentenced to 30 years in federal prison in the Eastern District of Texas in connection with a 2022 overdose death,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "A Dallas drug dealer has been sentenced to 30 years in federal prison in the Eastern District of Texas in connection with an overdose death, announced U.S. Attorney Jay R. Combs. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -175,8 +175,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 27 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Donald West Part 01; Donald West Part 02; Donald West Part 03; Donald West Part 04; Donald West Part 05 (Final); Christopher Wray's Gift to Attorney General Garland",
+        "inference": "The indexed set contains 34 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Dallas drug dealer sentenced to 30 years in federal prison in the Eastern District of Texas in connection with a 2022 overdose death; Anomalous Health Incidents; Anomalous Health Incidents Part 01; Anomalous Health Incidents Part 02",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -190,16 +190,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 27 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 34 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Broadmoor investigation examined Savile's access and abuse",
-          "Donald West Part 01",
-          "Donald West Part 02",
-          "Donald West Part 03",
-          "Donald West Part 04",
-          "Donald West Part 05 (Final)",
-          "Christopher Wray's Gift to Attorney General Garland"
+          "Westminster inquiry examined political and policing responses",
+          "Official health investigations documented abuse and enabling access",
+          "Dallas drug dealer sentenced to 30 years in federal prison in the Eastern District of Texas in connection with a 2022 overdose death",
+          "Anomalous Health Incidents",
+          "Anomalous Health Incidents Part 01",
+          "Anomalous Health Incidents Part 02"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -214,6 +214,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T12:00:00.000Z"
   }
 }

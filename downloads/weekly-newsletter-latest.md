@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-08-06T06:25:33.416Z
+Generated: 2026-08-09T05:02:58.227Z
 
 ## Open Routes
 
@@ -11,103 +11,103 @@ Generated: 2026-08-06T06:25:33.416Z
 
 ## Latest Drops
 
-### New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
+### For Brazil’s Indigenous youth, visibility is resistance
+- Lane: War Machine And Intelligence State
+- Date: 2026-08-08T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168097
+As climate change reshapes Indigenous territories across Brazil, a new generation is turning to culture and digital platforms to defend their lands and their future.
+### Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-07T22:12:41.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5
+Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices U.S. Department of the Treasury (.gov)
+### Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-07T17:30:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fV0ZsRWo2dlNxVzdTQXFDTzBEWklsNjVWZFNsWXRaX2dwZ2NVaXRWUVJicHFzQVZiTElpYlhCQWY3SmFMSEVGNWFRbEY0MGEwX0ppa2k1X01PTzh1LVoxN3VB?oc=5
+Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks U.S. Department of the Treasury (.gov)
+### Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-07T17:30:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5
+Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance U.S. Department of the Treasury (.gov)
+### Treasury Continues to Follow the Money in Minnesota to Eliminate Fraud - U.S. Department of the Treasury (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-07T17:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5dmhZUzFZdDRYcmhTTlY2a3FwWDRwU25PRmNIc1pSVW5INWNtdXF6Rlk5dXA1Yjl6T1lOQlMtQjR0bVFRWXBUUV9PWTR6UUR5WC1HZ3o5SU9kWU1LcjZVMTBn?oc=5
+Treasury Continues to Follow the Money in Minnesota to Eliminate Fraud U.S. Department of the Treasury (.gov)
+### Untitled - FBI (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-07T16:58:14.000Z
+- Source: https://news.google.com/rss/articles/CBMivwJBVV95cUxOUnQ0ejhzSE1uUXZWZ0Z3MVZYYldpUjhxTHdzNWl3SmpvLVZ2SkxwbDh3WnpYOGJfLWptMU93Q2tiNG9aQ2xLdm5LQVFMWE9fZ3ZPR1ZPNDlTRFBTdTV6RHUwTFpwNGo0aHBBYlZkTlR3QTlyZldseFAxM1g4dnRNalhfXzVTU0Joa3RZUER0R1NycVRtZG5lSXhjQlVVdHJGWkRXbUtad2xkLUZxaEVKbGg5TjZqb1B2MmlIVm1oSmNlalo1dXhPSkZKLXBNWGtXdTRoUUZQV2l1dl9seG01OWNzLXNWNTBIVXMtcDRLcHp0TWZyUHlOWlVIaGtxbWRNYmNsbzJxc3RBTFl1VmIzdVJxNktaeDJTQ1lKanpvODhHY0x0dDlDOElBRjF0V0dSdEY5U2IyV2VWanNBWXM4?oc=5
+Untitled FBI (.gov)
+### Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 - FBI (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-07T16:56:11.000Z
+- Source: https://news.google.com/rss/articles/CBMirwJBVV95cUxPLWpWZlhXdE0xSDdhT2VhbFoxcEdTN0trZ3p5QTRrQU1fMWNxS3BIV2Ftc2pVbV9FNUJPWk1ILXRBN1RzcW9za054TGdmMldvRWZHQTB0R3QxVndEd0kxRE94T2FQZ0thUlc2VTA0dTVoZ2F4Zk1sT0JhOFBlQy1EdjFaSlhodkpjenBUdVNKbWp6QThZQjZWSy1rSnRwUVBTS3dYaGtfUGlsVjNNSTlEcW90WXctTVpDM3h3STlZMFoteDFUWHRPcXZFeW56ak0wRl8wLXFYTThuaXc4bHFVNHota3BBMFNtZ3NnVVF6bDBxanFtbm9GOF9aWEFrSTc3N1djNjhHZi1sQmcwV3E5X3BTS3ljN2JUYXZCRkxHUHlxRkNXZm1IaG1IenluaHc?oc=5
+Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 FBI (.gov)
+### Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 - FBI (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-07T16:56:11.000Z
+- Source: https://news.google.com/rss/articles/CBMirwJBVV95cUxQdHA5R3FUZ2N1ajkzOXB1MU9KaUJlcmU2R2dfZlBmc1hHY1NPdjBXWThMbjgtV0Jxck9rNWlWbFhONnVVc3J4VXM1SV81bTE4cTFlTU5reE9DODBVaHVZQmhzOXJpaHd3RE1ZR1c1Y0FJazdfVkF3MUkzejROcjhZT19xUlVaZG5yemE4WlA5ZWFxVWwwOEdock01ZzU2N0RRaWhDNWZXTWV6LTAzNTlLd195eGFWVFNfSVFYZzhfZHhJWmMwcXpaYUtTeWx4bllqSjV1NzBQWXlmbEgxSmJXbnhSbTBBc2s3OTZSZFJRd1F3eExTUFlZZHJzV0hSWkJsVnhvc3BkOXNyN083aXFqZzZLRnpNZU1QYzF3enpxTEhaVWhKWDVDNnhzaVdheG8?oc=5
+Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 FBI (.gov)
+### Jeffrey Epstein’s fortune: Who gets the money? - NewsNation
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-08-06T05:07:20.000Z
-- Source: https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
-New Mexico sues DOJ for unredacted Jeffrey Epstein files The Jerusalem Post
-### Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-05T17:41:34.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE1wVmJLXzRGNlRtcnZrVE80SWdSZ2l0U3kyOTFBU3VjRjNvUUdIR1JFN25VSDc5ZENZc241bDFsZHphYzd1NUNlcjFfQldpb2xBQUZwdnBCdmNnUDVwY0pUbm53?oc=5
-Media Credentialing Opens for the United States G20 Finance Ministerial in Asheville, North Carolina U.S. Department of the Treasury (.gov)
-### Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-05T14:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5
-Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts U.S. Department of the Treasury (.gov)
-### Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - The420.in
-- Lane: Elite Control Structure
-- Date: 2026-08-05T13:54:20.000Z
-- Source: https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5
-Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe The420.in
-### Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-05T12:30:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hOHVXelEtWHd0RGxjQ1JKdFEtZ0VfeTluV25OaTYweEtUUC03RE03emswa3BoeFBVQ2NlQkFuWUc3X1FTUGRibVNGRVhKcndLektTY2RCS0RUSm03QlhiSG1R?oc=5
-Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 U.S. Department of the Treasury (.gov)
-### Quarterly Refunding Statement of Deputy Assistant Secretary for Federal Finance Brian Smith - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-05T12:30:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE94VjJtRnc5VEVWSXIwZFhsSVBZUFhaZkpfQ2x4VVh0dW9yZXhxV0tVdWFyRnY4c21aYWpudGdmUXJtWUh4eEk1YlJwS3FlMHFpTkJqUTA3UHpTNHNZNkdQVDVn?oc=5
-Quarterly Refunding Statement of Deputy Assistant Secretary for Federal Finance Brian Smith U.S. Department of the Treasury (.gov)
-### Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-05T12:30:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE9mdXEwVFFRdk9COThNQ0JlV3hhV3RHNVRnSHU5ZU9BME44WlJZV2dDWVJtVlBQV3FTdkRmWDF6RC15dm1EUWRWS19ZeFVxaUtvU1c1Y05tdXE1aTlzRkM0ekx3?oc=5
-Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee U.S. Department of the Treasury (.gov)
-### Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash
+- Date: 2026-08-07T16:52:45.000Z
+- Source: https://news.google.com/rss/articles/CBMieEFVX3lxTE8tcW1oNXlHcldMSjlaenFvaDdOaFFZbFl3X0stbXJjSlNFZ1Q2OWxVNnE1VWRlSDFXMjgxajc1UU5pSGVxVklKb3NlNmZaWVZlWV9qUkowM2tSZDZkSkhJYW5mQkhsZjg1Q1dWTHRvMXhlbU5aODJLYtIBfkFVX3lxTFBtckZWS1ZZNzRmYk1aTm14TkotOHI1c0xZOXJRWWJYMHhqTkxRTWdvM21PdDNRUHR0c2dsTzlRLWk4YW1qeWVhOVJseUczY0VTbDQyY0dCazljdGxxWjVMeEF0ODdJdXd3WUVFWVNrbXg0NkI3eWRuMmVUX05HQQ?oc=5
+Jeffrey Epstein’s fortune: Who gets the money? NewsNation
+### Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-08-07T14:15:00.000Z
+- Source: https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5
+Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony New York Post
+### Exclusive: House Democrat urges Goldman Sachs to cut ties with former top lawyer over Epstein scrutiny - KVOA
+- Lane: Epstein Files, Timeline And Court Records
+- Date: 2026-08-07T14:07:28.000Z
+- Source: https://news.google.com/rss/articles/CBMiiAJBVV95cUxNRmVPZWVMcWJiZ040M2hZSDFkN3dzX3ItRVlKQXg1d1FLWkZ4b0JremxNNGJkRFplN3phcjFNT3RoVFVqOHBOdk05V2h6N2c3VDh5cXNQbHhwS29Zd2hnTUstNXFzRV9uTm9ITUNjVmx5bzhUZ1JqOW5JVUowcXRPRUxTR29PWFVxWGxibkoyOG9Bd2w1TjlZVkRqQ1oxQ2gybnktSDczSUthU0hHb1dqSmhVMkh0bFhGaGNhZndaMnZ4dnBBdngyekFTT2Mxdno5T2NOWVVPblVhQWs0NVU0b0RLRWRvX1ZsMEVoLWVseTROQ1NOLUx0cmlXaVhGRDYtUXBwX1BYeXU?oc=5
+Exclusive: House Democrat urges Goldman Sachs to cut ties with former top lawyer over Epstein scrutiny KVOA
+### August Underway with 271 New Federal Immigration Cases in Western District of Texas
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-ndga/pr/bahamian-drug-trafficker-faces-federal-cocaine-charges-following-sea-rescue-plane
-An indictment unsealed today in the Northern District of Georgia charges Jonathan Eric Gardiner, a convicted felon and Bahamian national, with federal drug importation and conspiracy offenses. U.S. officials arrested Gardiner after rescuing him from the Atlantic Ocean following a plane crash on May 14, 2026.
-### BCSO Investigator Receives Freedom 250 Hometown Hero Award from U.S. Attorney for the Western District of Texas
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-wdtx/pr/august-underway-271-new-federal-immigration-cases-western-district-texas
+Federal prosecutors in the Western District of Texas filed 271 new immigration and immigration-related criminal cases from July 31 through August 6
+### Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-wdtx/pr/bcso-investigator-receives-freedom-250-hometown-hero-award-us-attorney-western
-Bexar County Sheriff’s Office Violent Crimes Sergeant Che Lopez received the 'Freedom 250' Hometown Hero Award from the U.S. Attorney's Office for the Western District of Texas
-### Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470
+Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer
+### Convicted Felon Sentenced for Illegal Gun Possession
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-ct/pr/bridgeport-man-charged-dumping-used-oil-abandoned-property-hartford
-A federal grand jury in Bridgeport has returned an indictment charging HARRY BATCHELOR, JR., 29, of Bridgeport, with illegal transport and disposal of used oil.
-### Bridgeport Man Sentenced to 10 Years in Federal Prison for Drug and Firearm Offenses
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession
+Michael Ralph Collins, 33, a previously convicted felon residing in the District of Columbia, was sentenced in U.S. District Court today to 71 months in prison in connection with his unlawful possession of a loaded Ruger .45-caliber semiautomatic pistol that he stashed inside an open washing machine as he was pursued by police, announced U.S. Attorney Jeanine Ferris Pirro.
+### Federal Jury Finds Robert Ivers Guilty on All Counts in Threats Against United States Judge and Trial Witness
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-ct/pr/bridgeport-man-sentenced-10-years-federal-prison-drug-and-firearm-offenses
-MOETIES BROWN, 32, of Bridgeport, was sentenced today by U.S. District Judge Vernon D. Oliver in Hartford to 120 months of imprisonment and four years of supervised release for narcotics distribution and firearm possession offenses.
-### Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-mn/pr/federal-jury-finds-robert-ivers-guilty-all-counts-threats-against-united-states-judge
+Federal Jury Finds Robert Ivers Guilty on All Counts in Threats Against United States Judge and Trial Witness
+### Former USDA Program Director Sentenced in $400,000 Fraud Scheme
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-vt/pr/brooklyn-man-charged-distribution-cocaine-base-and-cocaine
-Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine
-### Canadian Man Pleads Guilty to Hacking U.S. Cloud Storage Provider and Extorting Its Customers for Millions
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme
+Kirk Perry, 62, a former United States Department of Agriculture (USDA) program director, was sentenced today to 24 months in prison in connection with a kickback scheme in which he and his nephew, Jamarea Grant, 32, of Cleveland, Ohio, conspired to bill the government nearly $400,000 for work that Grant did not actually perform, announced U.S. Attorney Jeanine Ferris Pirro.
+### Honduran National Sentenced for Illegal Reentry of a Removed Alien
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/opa/pr/canadian-man-pleads-guilty-hacking-us-cloud-storage-provider-and-extorting-its-customers
-Connor Riley Moucka, 26, of Kitchener, Ontario, pleaded guilty today to a widespread computer hacking conspiracy that resulted in the compromise of over 165 victim organizations, the theft of billions of sensitive customer records and the extortion of numerous victims.
-### Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0
+NEW ORLEANS, LOUISIANA –UBALDO YASIR AMAYA-COLINDRES (“AMAYA-COLINDRES”) , age 27, a citizen of Honduras, was sentenced on August 6, 2026, to 10 months imprisonment by U.S. District Judge Eldon E. Fallon, after previously pleading guilty to illegal re-entry of a removed alien, in violation of Title 8, United States Code, Section 1326(a), announced U.S. Attorney David I. Courcelle. The Court also sentenced AMAYA-COLINDRES to one (1) year of supervised release and ordered him to pay a mandatory $100 special assessment fee.
+### Illegal alien breaks law, plays the victim, is found guilty, and sent to federal prison
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-ndin/pr/columbia-city-man-sentenced-120-months-prison-and-120-months-supervised-release
-Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography
-### Convicted Drug Trafficker Sentenced for Violating Federal Controlled Substances Act
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-sdtx/pr/illegal-alien-breaks-law-plays-victim-found-guilty-and-sent-federal-prison
+A 37-year-old Mexican national has been sentenced for illegally reentering the country without authorization.
+### Illegal alien brothers sentenced for gun possession in the Eastern District of Texas
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-edla/pr/convicted-drug-trafficker-sentenced-violating-federal-controlled-substances-act-0
-NEW ORLEANS, LOUISIANA – YILEI ZHOU , age 36, a Chinese national, was sentenced today by United States District Judge Greg G. Guidry to 24 months’ imprisonment, 4 years of supervised release, and a $100.00 mandatory special assessment fee, after previously pleading guilty to conspiracy to distribute, and possess with intent to distribute, a mixture and substance containing one hundred (100) kilograms or more of a detectable amount of marijuana, in violation of Title 21, United States Code, Sections 841(a)(1), 841(b)(1)(B), and 846.
-### Convicted Felon Sentenced to Over 17 Years in Federal Prison for Drug Trafficking Offenses
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas
+A pair of illegal alien brothers have been sentenced to federal prison for firearms possession in the Eastern District of Texas, announced U.S. Attorney Jay R. Combs.
+### Illegal Alien from Ecuador Caught with Hidden App Containing Child Pornography, Will Spend 10 Years in Federal Prison
 - Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-ndfl/pr/convicted-felon-sentenced-over-17-years-federal-prison-drug-trafficking-offenses
-Tallahassee, Florida – Antonio Carlos Shine, 38, of Dania, Florida, was sentenced to 17 years and five months in federal prison for possession with intent to distribute more than 50 grams of methamphetamine and marijuana.
-### Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)
-- Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-pr/pr/convictions-through-guilty-pleas-and-sentencings-homeland-security-task-force-hstf-4
-SAN JUAN, Puerto Rico – The United States Attorney’s Office for the District of Puerto Rico, Héctor Ramírez-Carbó, Acting United States Attorney, in conjunction with our partner agencies in the Homeland Security Task Force (“HSTF”) announce the following prosecutorial results for the week of July 27 through July 31, 2026. The HSTF is a permanent, interagency law enforcement task force created by executive order to combat transnational criminal organizations—including cartels, trafficking networks, and foreign terrorist organizations.
-### Court Sentences Mobile County Man for Possessing a Firearm as a Convicted Felon
-- Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-sdal/pr/court-sentences-mobile-county-man-possessing-firearm-convicted-felon-1
-MOBILE, Ala. – On August 4, 2026, United States District Judge William H. Steele sentenced Andre Jerrard Davis, Sr., to 46 months in federal prison for possessing a firearm after having previously been convicted of multiple felony offenses.
-### Delco Man Pleads Guilty to Stalking by Mail, Witness Tampering
-- Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-edpa/pr/delco-man-pleads-guilty-stalking-mail-witness-tampering
-Delco Man Pleads Guilty to Stalking by Mail, Witness Tampering
-### DENHAM SPRINGS ACCOUNTANT PLEADS GUILTY TO WIRE FRAUD
-- Lane: Crime State Overlap
-- Date: 2026-08-05T12:00:00.000Z
-- Source: https://www.justice.gov/usao-mdla/pr/denham-springs-accountant-pleads-guilty-wire-fraud
-Anisha Devall Hunter, age 48, of Denham Springs, Louisiana, pleaded guilty before U.S. District Court Judge John W. deGravelles to two counts of wire fraud, announced U.S. Attorney Kurt L. Wall.
+- Date: 2026-08-07T12:00:00.000Z
+- Source: https://www.justice.gov/usao-wdtx/pr/illegal-alien-ecuador-caught-hidden-app-containing-child-pornography-will-spend-10
+Jefferson Chancay-Sanchez, an illegal alien from Ecuador, was sentenced in Del Rio to 10 years in federal prison for possessing child sexual abuse material

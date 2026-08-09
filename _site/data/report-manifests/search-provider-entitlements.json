@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:23:02.924Z",
+  "generatedAt": "2026-08-09T05:00:15.108Z",
   "pageCount": 105,
   "output": "downloads/search-provider-entitlements.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Search Provider Entitlements",
-    "contentHash": "ab29da25ae00f550fe3dc0a975e2177a18c512f03edcd3b5fe18fe02bdeffae7",
+    "contentHash": "c46869098c06d875f371385bc3d44f72d68bf1be4442a2fe7fea54cdcb8b1fe5",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "a354895c18c7e12ab408462d",
@@ -26,7 +26,9 @@
       "74fb2863cc9a8120f3c68b67",
       "deb382cdbfe57b57793d739e",
       "4961972398d896435d33f3f7",
+      "3a425f0d5d683952bc0ad7ac",
       "c1520a15d6e62871a66c558e",
+      "33b99270b28ac9825f7ccfdd",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -60,7 +62,6 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "0730bb615248f676888d3235",
       "eda53ad65d382819ea249e14",
       "3a8c1f1e8620cb3f09a2c7ab",
       "19ae23289f4be13ad5f7e317",
@@ -72,7 +73,6 @@
       "2529322b7b5345fd6f575174",
       "f44c3c7309a5f0779a57e655",
       "9e8310c49b990aa62d2b0921",
-      "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
       "9f77464e401ac59ad1adb812",
       "ecd4a1111010f13b2d74bf8c",
@@ -90,14 +90,6 @@
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
       "34805734b1ad3b73f0ede0d8",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
       "cyril-smith-iicsa-2018",
       "savile-health-investigations-2014",
       "ASC-002",
@@ -106,6 +98,7 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "d0b647e325275daa6d824a49",
       "d6936ce262c4c18cb75c6e44",
       "a76edf5945d2f4910bd413ef",
       "c414ea6b5bea3390d2a8ce5c",
@@ -131,12 +124,18 @@
       "5ce17839086eddf839270b1a",
       "9848ec4b4c3f6c2693269839",
       "7c05d9244c4620950350cf27",
-      "crime-state-overlap-2026-08-05-3fff1c4b",
-      "crime-state-overlap-2026-08-05-53f0cae4",
-      "crime-state-overlap-2026-08-05-07a090a9",
-      "crime-state-overlap-2026-08-05-29f20415",
-      "crime-state-overlap-2026-08-04-a4791905",
-      "crime-state-overlap-2026-08-04-365d2c2e",
+      "cee347fbc3752c6e0f890457",
+      "crime-state-overlap-2026-08-07-eea3ce1d",
+      "crime-state-overlap-2026-08-06-fb81c3ac",
+      "crime-state-overlap-2026-08-06-4f89a8dc",
+      "source-change-a05ee5719c4986b9a2e665d1",
+      "source-change-f966f8c917641cd736660f92",
+      "source-change-f9b326734f170d730fc634f5",
+      "source-change-b1e5189be9fa36ea97b5f8c0",
+      "source-change-6e48acd2ac94f914a7fd7ae5",
+      "source-change-f23b46f2bc4add9b859f5a15",
+      "source-change-a09615abd1b1ed83f2b74ff4",
+      "source-change-b0cde383147509fbfd4f4472",
       "maxwell-appeal-2025",
       "janner-iicsa-2022",
       "ASC-REVIEW-7291F43A6B9CBFA6",
@@ -146,20 +145,21 @@
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
-      "ASC-REVIEW-E88A7B581690918F"
+      "ASC-REVIEW-E88A7B581690918F",
+      "ASC-REVIEW-19181472DB04522E"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 67,
-      "disputedClaimCount": 15,
+      "primarySourceCount": 64,
+      "disputedClaimCount": 18,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 22,
-      "moneyRecordCount": 15
+      "relationshipCount": 20,
+      "moneyRecordCount": 16
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Search Provider Entitlements.",
+        "conclusion": "The indexed record establishes that 64 A/B-grade public-record items are materially relevant to Search Provider Entitlements.",
         "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026),” the strongest indexed record by source grade and evidence status.",
-        "evidence": "SAN JUAN, Puerto Rico – The United States Attorney’s Office for the District of Puerto Rico, Héctor Ramírez-Carbó, Acting United States Attorney, in conjunction with our partner agencies in the Homeland Security Task Force (“HSTF”) announce the following prosecutorial results for the week of July 27 through July 31, 2026. The HSTF is a permanent, interagency law enforcement task force created by executive order to combat transnational criminal organizations—including cartels, trafficking networks, and foreign terrorist organizations. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The defendant was unlawfully present in the U.S. after previously being deported. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 20 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; Matrix Reprogrammed Canonical Intelligence Record; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Conditional-access systems may become increasingly interconnected; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 20 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "MINDCUBED LLC — District of Columbia Courts",
           "Matrix Reprogrammed Canonical Intelligence Record",

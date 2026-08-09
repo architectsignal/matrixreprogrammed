@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T06:30:19.656Z",
+  "updated": "2026-08-09T05:08:13.889Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [],
@@ -30,9 +30,9 @@
       "route": "entity-briefs/2024-13374.html"
     },
     {
-      "name": "23 WAP 2023",
+      "name": "23-55704",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/23-wap-2023.html"
+      "route": "entity-briefs/23-55704.html"
     },
     {
       "name": "24-2251",
@@ -40,14 +40,14 @@
       "route": "entity-briefs/24-2251.html"
     },
     {
-      "name": "24-7261",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/24-7261.html"
-    },
-    {
       "name": "California Supreme Court",
       "judgement": "Worth watching because records and relationship signals both exist.",
       "route": "entity-briefs/california-supreme-court.html"
+    },
+    {
+      "name": "CC-2025-0631",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/cc-2025-0631.html"
     },
     {
       "name": "Civil Rights Corps v. LaSalle",
@@ -135,71 +135,11 @@
           "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
           "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
           "grade": "documented association"
-        },
-        {
-          "title": "Punxsutawney Hunting Club v. PGC",
-          "url": "https://www.courtlistener.com/opinion/10933234/punxsutawney-hunting-club-v-pgc/",
-          "grade": "charged / sued"
         }
       ],
       "entity_briefs": [],
       "record_reviews": [],
-      "relationship_candidates": [
-        {
-          "id": "punxsutawney-hunting-club-v-pgc__supreme-court-of-pennsylvania",
-          "from": "Punxsutawney Hunting Club v. PGC",
-          "to": "Supreme Court of Pennsylvania",
-          "count": 1,
-          "lanes": [
-            "courtlistener-court-records"
-          ],
-          "record_types": [
-            "court_record_signal"
-          ],
-          "evidence_grades": [
-            "charged / sued"
-          ],
-          "source_events": [
-            "courtlistener-court-records-10933234-6"
-          ],
-          "control_layers": [
-            "courts",
-            "litigation",
-            "disclosure"
-          ],
-          "score": 10,
-          "grade": "candidate",
-          "relationship_type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "id": "23-wap-2023__punxsutawney-hunting-club-v-pgc",
-          "from": "Punxsutawney Hunting Club v. PGC",
-          "to": "23 WAP 2023",
-          "count": 1,
-          "lanes": [
-            "courtlistener-court-records"
-          ],
-          "record_types": [
-            "court_record_signal"
-          ],
-          "evidence_grades": [
-            "charged / sued"
-          ],
-          "source_events": [
-            "courtlistener-court-records-10933234-6"
-          ],
-          "control_layers": [
-            "courts",
-            "litigation",
-            "disclosure"
-          ],
-          "score": 10,
-          "grade": "candidate",
-          "relationship_type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "relationship_candidates": [],
       "missing_records": [
         "Current beneficial ownership and voting-control record where relevant",
         "Public contracts touching the ecosystem",
@@ -1014,9 +954,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "23 WAP 2023",
+      "entity": "23-55704",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/23-wap-2023.html",
+      "route": "entity-briefs/23-55704.html",
       "type": "entity brief"
     },
     {
@@ -1026,15 +966,15 @@
       "type": "entity brief"
     },
     {
-      "entity": "24-7261",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/24-7261.html",
-      "type": "entity brief"
-    },
-    {
       "entity": "California Supreme Court",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/california-supreme-court.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "CC-2025-0631",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/cc-2025-0631.html",
       "type": "entity brief"
     },
     {
@@ -1062,6 +1002,12 @@
       "type": "entity brief"
     },
     {
+      "entity": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
+      "type": "entity brief"
+    },
+    {
       "entity": "Gilead Tenofovir Cases",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/gilead-tenofovir-cases.html",
@@ -1074,9 +1020,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "Punxsutawney Hunting Club v. PGC",
+      "entity": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/punxsutawney-hunting-club-v-pgc.html",
+      "route": "entity-briefs/in-re-koi-design-llc-v-marron-lawyers-apc.html",
       "type": "entity brief"
     },
     {
@@ -1086,15 +1032,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "Supreme Court of Pennsylvania",
+      "entity": "Supreme Court of Puerto Rico",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/supreme-court-of-pennsylvania.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "United States v. Anten",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/united-states-v-anten.html",
+      "route": "entity-briefs/supreme-court-of-puerto-rico.html",
       "type": "entity brief"
     },
     {
@@ -1822,8 +1762,8 @@
   ],
   "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity.",
   "dailyWatch": {
-    "updated": "2026-08-06T06:28:17.869Z",
-    "date": "2026-08-06",
+    "updated": "2026-08-09T05:06:02.931Z",
+    "date": "2026-08-09",
     "route": "daily-watch.html",
     "person": {
       "type": "person",
@@ -1875,9 +1815,9 @@
         "graphId": "securities-and-exchange-commission",
         "graphType": "missing record",
         "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 16
+        "directFreshRecords": 15
       },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 16 fresh records plus 11 retained evidence references.",
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 15 fresh records plus 11 retained evidence references.",
       "whatWasFound": "named-in-public-record, refined-from-organization",
       "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
       "investigativeLanes": [

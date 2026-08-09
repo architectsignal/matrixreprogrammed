@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-08-06T06:21:56.339Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-09T04:59:00.095Z",
+  "pageCount": 128,
   "output": "downloads/public-consequence-contracts-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Public Consequence Contracts Report",
-    "contentHash": "7a33b9cc6af6e2cbef885388e217dff595143c94ea0e50f23d945f99434950cb",
+    "contentHash": "16de4ebf6e76e9f3fd6ea7776007f08efe082f1c5a85052c058b360918a06f20",
     "sourceIds": [
+      "33b99270b28ac9825f7ccfdd",
       "f669b33c49b63e787cde3008",
+      "ASC-REVIEW-2FAF91DDDD6143CD",
       "3a425f0d5d683952bc0ad7ac",
-      "0730bb615248f676888d3235",
       "f485885c5a3e8953643e4c73",
       "8b7f7c669cb0890687a24e01",
-      "0206ddc18fa512b3355ca390",
       "b4cb47ea50dc901364239e9f",
       "e349935405c0c31e3807b5af",
       "f3676fb7b03d3ee0516f2a19",
@@ -25,27 +25,37 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
       "ASC-REVIEW-E617D0A88088FBF7",
       "ASC-REVIEW-E88A7B581690918F",
+      "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-2FAF91DDDD6143CD",
+      "ASC-REVIEW-9395B56F60B42FEA",
+      "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-4C256A755BDBA2D3",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "b0cde383147509fbfd4f4472",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-7E32B4EA7D93ED00",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "e72d22f4f28eb53e3173d0a6",
+      "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -54,9 +64,6 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "crime-state-overlap-2026-08-05-d627a744",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f9b326734f170d730fc634f5",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -90,15 +97,6 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "declassified-files-2026-08-03-c89ca789",
-      "declassified-files-2026-08-03-fcc8d24a",
-      "declassified-files-2026-08-03-79c56827",
-      "declassified-files-2026-08-03-77817848",
-      "declassified-files-2026-08-03-db0ef3d6",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
       "6f24413e4cc0832e80e3ca03",
       "cbe0915cb2d88f076ed7b91e",
       "b71592baee67a6754037f46c",
@@ -146,20 +144,22 @@
       "727266b666564a22456018bc",
       "5b02847b05c9c34963d8a042",
       "16397649363c800fecf2bfd0",
-      "janner-iicsa-2022"
+      "janner-iicsa-2022",
+      "peter-ball-iicsa-support-2019",
+      "cyril-smith-iicsa-2018"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 108,
-      "disputedClaimCount": 27,
+      "primarySourceCount": 98,
+      "disputedClaimCount": 38,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 42,
-      "moneyRecordCount": 34
+      "relationshipCount": 37,
+      "moneyRecordCount": 35
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 108 A/B-grade public-record items are materially relevant to Public Consequence Contracts Report.",
+        "conclusion": "The indexed record establishes that 98 A/B-grade public-record items are materially relevant to Public Consequence Contracts Report.",
         "evidence": "EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/global-risk-clocks.json); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Justice Department Secures Agreement with Connecticut Children’s to End Pediatric “Gender-Affirming Care”,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Today, the Department of Justice announced another resolution with a leading children’s medical center arising from the Department’s ongoing national investigation into violations of federal law in connection with the provision of sex-rejecting procedures on minors (otherwise known as “gender-affirming care”). Connecticut Children’s Medical Center has entered into agreements with the Department that entail a commitment not to perform sex-rejecting procedures on minors—including by administering puberty blockers and cross-sex hormones to and performing surgeries on children and adolescents. Connecticut Children’s has also agreed to pay a monetary penalty and dedicate an additional $500,000 in medical care for individuals living with the harmful consequences of “gender affirming care.” This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment - Gotbit Consulting LLC,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Bill Gates; Bill Gates; Bill Gates; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts",
+        "inference": "The indexed set contains 37 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: Federal Register — Latest Documents; Bill Gates; Bill Gates; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,9 +194,9 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 37 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Bill Gates",
+          "content changed: Federal Register — Latest Documents",
           "Bill Gates",
           "Bill Gates",
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

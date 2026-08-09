@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-06T06:25:31.707Z
+Generated: 2026-08-09T05:02:56.320Z
 
 ## Official Boundary
 
@@ -8,7 +8,7 @@ The official record treats Jeffrey Epstein as deceased as of August 10, 2019. Th
 
 - Official status: deceased
 - Verified survival evidence found: 0
-- Internet claim activity: medium
+- Internet claim activity: low
 - Hoax / lookalike / fake-media risk: high
 
 ## Rules
@@ -49,32 +49,12 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
+### New Mexico sues US Justice Department for access to unredacted Jeffrey Epstein files - The Jerusalem Post
 - Type: related-claim-traffic
-- Status: public-record-relevance
-- Evidence level: 7
+- Status: unverified-claim
+- Evidence level: 5
 - Location claim: Unverified / source dependent
 - Source: https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-New Mexico sues DOJ for unredacted Jeffrey Epstein files The Jerusalem Post
-
-### Burnham considering inquiry into Epstein, minister says - RTE.ie
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMieEFVX3lxTE5uZ2JnUDRhbXNYcHNDNVZDa1RlS1lfaTNhSnlCN3NBcHkyQ0xyS3hBdXZVTFF5eDY4RUhjZ1FLX3FpVE9XcU1Wcm5pVkQtbkVZaUV3ZTNFeWpJeEJoN2FUbWJ4Y0xjTlREb1Rzb2JHLUtKS2ZkWTJ0Qw?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-Burnham considering inquiry into Epstein, minister says RTE.ie
-
-### How Jeffrey Epstein's Island Became a Nightmare for Influencers - businessinsider.com
-- Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
-- Location claim: Unverified / source dependent
-- Source: https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWo3emtyUnZsSlIxZ0gxUkVRN1RUWjdKWVB2d2xBZjA4bDhBdWNXQURqOWxwYVhXR2dwMndUaU1EdmN6cWFsSUhGdE5UNG1MdUdmR2tzR3pOc0FJVk1INjFZVFBPVUpVeVZZb2UzcFA0MTFMZkNZTU1PWEFyUU8tVXBLRzIway1RWDZPdWVLWDVZM0lLNkFBbDBFOVZGRHJBUDJkR19IT0ZwYUhvdVhKaw?oc=5
-- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
-
-How Jeffrey Epstein's Island Became a Nightmare for Influencers businessinsider.com
+New Mexico sues US Justice Department for access to unredacted Jeffrey Epstein files The Jerusalem Post

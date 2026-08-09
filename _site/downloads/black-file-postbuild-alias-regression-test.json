@@ -1,0 +1,191 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-07T05:48:06.464Z",
+  "fixtureFirstPass": {
+    "label": "fixture-first-pass",
+    "sourceHash": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+    "surfaces": [
+      {
+        "relative": "black-file.html",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "black-file",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file.html",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      }
+    ]
+  },
+  "fixtureSecondPass": {
+    "label": "fixture-second-pass",
+    "sourceHash": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+    "surfaces": [
+      {
+        "relative": "black-file.html",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "black-file",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file.html",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      }
+    ]
+  },
+  "repository": {
+    "label": "repository-postbuild-surfaces",
+    "sourceHash": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+    "surfaces": [
+      {
+        "relative": "black-file.html",
+        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "black-file",
+        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file.html",
+        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file",
+        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      }
+    ]
+  },
+  "boundary": "The regression deliberately seeds duplicate generic and page-specific pathway IDs, then proves one deterministic page-specific ID across source, root extensionless, _site HTML and _site extensionless aliases. Repeated finalization is byte-stable."
+}

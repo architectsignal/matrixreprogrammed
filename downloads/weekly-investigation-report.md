@@ -16,7 +16,7 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 - establishedWrongdoingFindings: 33
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
-- meaningfulSourceChanges: 30
+- meaningfulSourceChanges: 16
 
 ## Permanent Evidence Method
 

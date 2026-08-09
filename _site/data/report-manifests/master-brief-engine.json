@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:19:39.621Z",
-  "pageCount": 110,
+  "generatedAt": "2026-08-09T04:56:25.788Z",
+  "pageCount": 111,
   "output": "downloads/master-brief-engine.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Master Brief Engine",
-    "contentHash": "3fe477ac2872b297e24fe9b0b1e96a9c5cca17b3f866b4d4662654485080ea7e",
+    "contentHash": "b50236bb4c285217b920db8adf1d7900ababb8a417172ede0345994f8fdebded",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "subject-digital-id-and-access-systems",
@@ -14,7 +14,7 @@
       "subject-health-data-and-emergency-systems",
       "subject-foundation-and-ngo-policy-influence",
       "3a425f0d5d683952bc0ad7ac",
-      "0730bb615248f676888d3235",
+      "33b99270b28ac9825f7ccfdd",
       "subject-private-contractor-power",
       "subject-disclosure-gaps-and-missing-files",
       "subject-gold-reserve-and-custody-systems",
@@ -66,7 +66,7 @@
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "88ef9baf356c096816236956",
-      "3ddad35957d23ca854284801",
+      "3d59403a27af6bf01c9828ba",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -128,12 +128,7 @@
       "ASC-002",
       "ASC-REVIEW-52F3C5EC8401656D",
       "united-nations",
-      "ed8ce4dc06093001d617c090",
-      "1a007f59d1038b011aaa1de9",
-      "01ea60ad139e7d845d371e18",
-      "355ee8ad2f1173ae18cf09d5",
       "f78aa074b866b31ae35d2518",
-      "e62fedc4597f32332cbf098a",
       "disclosure-gaps-and-missing-files",
       "billionaire-jeff-bezos",
       "billionaire-bill-gates",
@@ -146,20 +141,25 @@
       "institution-european-commission",
       "institution-united-nations",
       "missing-records-report",
-      "contradiction-watch-report"
+      "contradiction-watch-report",
+      "594100b62a47db521fe2a128",
+      "EP-AI-001",
+      "EP-AI-004",
+      "9086b5de8aac89f84189be72",
+      "jeffrey-epstein"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 67,
+      "primarySourceCount": 62,
       "disputedClaimCount": 22,
-      "newEntityCount": 97,
+      "newEntityCount": 98,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 58,
-      "moneyRecordCount": 21
+      "relationshipCount": 59,
+      "moneyRecordCount": 22
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Master Brief Engine.",
+        "conclusion": "The indexed record establishes that 62 A/B-grade public-record items are materially relevant to Master Brief Engine.",
         "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Federal conviction and 20-year sentence for sexually abusing patients (data/exposure-evidence-ledger.json); Guilty pleas to indecent assaults and misconduct in public office (data/exposure-evidence-ledger.json); Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Chan (data/global-risk-clocks.json); Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 58 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Digital ID and access systems — Subject Report; AI, surveillance and data systems — Subject Report; Banking and payment rails — Subject Report; Health data and emergency systems — Subject Report; Foundation and NGO policy influence — Subject Report; Private contractor power — Subject Report; Disclosure gaps and missing files — Subject Report; Gold, reserve and custody systems — Subject Report",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 58 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 59 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Digital ID and access systems — Subject Report",
           "AI, surveillance and data systems — Subject Report",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T03:35:42.610Z"
+    "intelligenceFreshnessDate": "2026-08-09T02:28:21.667Z"
   }
 }

@@ -1,6 +1,6 @@
 # Entity Daily Briefs
 
-Updated: 2026-08-06T06:11:49.808Z
+Updated: 2026-08-09T04:48:00.717Z
 
 Briefs generated: 33
 
@@ -54,15 +54,15 @@ Evidence: legal record present
 
 Watch next: Watch 2024-13374 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 23 WAP 2023
+## 23-55704
 
-At a glance: 23 WAP 2023 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: 23-55704 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch 23 WAP 2023 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch 23-55704 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## 24-2251
 
@@ -74,16 +74,6 @@ Evidence: legal record present
 
 Watch next: Watch 24-2251 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 24-7261
-
-At a glance: 24-7261 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch 24-7261 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
 ## California Supreme Court
 
 At a glance: California Supreme Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -93,6 +83,16 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch California Supreme Court across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## CC-2025-0631
+
+At a glance: CC-2025-0631 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch CC-2025-0631 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Civil Rights Corps v. LaSalle
 
@@ -134,6 +134,16 @@ Evidence: legal record present
 
 Watch next: Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
+## Gerena Betancourt v. Negociado De La Policía De Puerto Rico
+
+At a glance: Gerena Betancourt v. Negociado De La Policía De Puerto Rico is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Gerena Betancourt v. Negociado De La Policía De Puerto Rico across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
 ## Gilead Tenofovir Cases
 
 At a glance: Gilead Tenofovir Cases is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
@@ -154,15 +164,15 @@ Evidence: documented public-record association
 
 Watch next: Watch Homeland Security Department across federal-register-policy.; Check whether new federal-register-policy records repeat this name.
 
-## Punxsutawney Hunting Club v. PGC
+## In Re: Koi Design LLC v. Marron Lawyers, Apc
 
-At a glance: Punxsutawney Hunting Club v. PGC is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: In Re: Koi Design LLC v. Marron Lawyers, Apc is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch Punxsutawney Hunting Club v. PGC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch In Re: Koi Design LLC v. Marron Lawyers, Apc across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## S283862
 
@@ -174,25 +184,15 @@ Evidence: legal record present
 
 Watch next: Watch S283862 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Supreme Court of Pennsylvania
+## Supreme Court of Puerto Rico
 
-At a glance: Supreme Court of Pennsylvania is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Supreme Court of Pennsylvania across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## United States v. Anten
-
-At a glance: United States v. Anten is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: Supreme Court of Puerto Rico is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch United States v. Anten across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch Supreme Court of Puerto Rico across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Williams v. Biggs
 

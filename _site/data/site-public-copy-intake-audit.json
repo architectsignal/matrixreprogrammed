@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-08-06T06:27:50.068Z",
-    "filesScanned": 6873,
-    "highIssues": 4102,
+    "updated": "2026-08-09T05:05:35.897Z",
+    "filesScanned": 6919,
+    "highIssues": 4152,
     "reviewIssues": 15,
-    "intakeAreas": 2254,
+    "intakeAreas": 2263,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -4849,6 +4849,13 @@
     },
     {
       "file": "_site/corrections-policy.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/corrections.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -10406,6 +10413,20 @@
       "status": "ok"
     },
     {
+      "file": "_site/site-population-audit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/source-cards.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/source-changes.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -12989,6 +13010,13 @@
       "status": "ok"
     },
     {
+      "file": "corrections.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "crime-dossiers.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14284,6 +14312,13 @@
       "status": "ok"
     },
     {
+      "file": "entity-timelines/23-55704.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "entity-timelines/23-wap-2023.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14424,6 +14459,13 @@
       "status": "ok"
     },
     {
+      "file": "entity-timelines/cc-2025-0631.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "entity-timelines/centers-for-medicare-and-medicaid-services.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14543,6 +14585,13 @@
       "status": "ok"
     },
     {
+      "file": "entity-timelines/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "entity-timelines/gilead-tenofovir-cases.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -14565,6 +14614,13 @@
     },
     {
       "file": "entity-timelines/homeland-security-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-timelines/in-re-koi-design-llc-v-marron-lawyers-apc.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -14726,6 +14782,13 @@
     },
     {
       "file": "entity-timelines/supreme-court-of-pennsylvania.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "entity-timelines/supreme-court-of-puerto-rico.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17301,6 +17364,13 @@
       "status": "ok"
     },
     {
+      "file": "probability-machine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "probability-snapshot.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -17799,13 +17869,6 @@
     },
     {
       "file": "site-intelligence-system-audit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "source-cards.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

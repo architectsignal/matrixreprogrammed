@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-06T06:24:59.552Z",
+  "generatedAt": "2026-08-09T05:02:22.785Z",
   "pageCount": 123,
   "output": "downloads/tracker-core.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Tracker Core — Single Source Of Truth",
-    "contentHash": "6fffde0eab55b0a40d2860c101f2a33879a2cbcc3b729085c1ad3d266e880233",
+    "contentHash": "eb42398a2e4f15fed25fea4fe2dd28ecaa4c2798767f17d191c2bc5535f01a9b",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "3a425f0d5d683952bc0ad7ac",
-      "0730bb615248f676888d3235",
+      "33b99270b28ac9825f7ccfdd",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ecd4a1111010f13b2d74bf8c",
       "45f5269389def99607b5a517",
@@ -77,7 +77,9 @@
       "665a5072d96b9757a6ee9d2d",
       "bbf59ae4094608bcd2c37305",
       "74fb2863cc9a8120f3c68b67",
+      "594100b62a47db521fe2a128",
       "71e0563ca7b139c37c302956",
+      "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-6809880AE2446DD1",
@@ -127,10 +129,10 @@
       "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-F62F7FFFBED4C0DC",
-      "ASC-REVIEW-E250944258ED0360",
+      "ASC-REVIEW-713EBA586DECC926",
       "ASC-REVIEW-52F3C5EC8401656D",
+      "ASC-REVIEW-29094A2EF0BEB10F",
       "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-BF704DE865305985",
       "ASC-REVIEW-54C7773F8BEDE2F4",
       "ASC-REVIEW-603C7E693C77AF6C",
       "ASC-REVIEW-8F441C443ED90227",
@@ -139,23 +141,21 @@
       "ASC-REVIEW-375A853A96E42D84",
       "ASC-REVIEW-D5FA458F66004D27",
       "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-2D79E6224391549C",
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-32A64F4FD3617829",
-      "ASC-REVIEW-D3BC18307907E087",
-      "ASC-REVIEW-FB46D93D6179DCC7"
+      "ASC-REVIEW-63DEE163CCA699D8"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 41,
-      "disputedClaimCount": 69,
+      "disputedClaimCount": 67,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 60,
-      "moneyRecordCount": 53
+      "relationshipCount": 59,
+      "moneyRecordCount": 55
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 60 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; MINDCUBED LLC — District of Columbia Courts; FCN, INC. — Court Services and Offender Supervision Agency; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; The strongest public pattern is convergence across access systems.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 60 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 59 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",

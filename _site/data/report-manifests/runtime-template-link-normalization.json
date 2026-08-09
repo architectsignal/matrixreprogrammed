@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-06T06:22:58.630Z",
-  "pageCount": 123,
+  "generatedAt": "2026-08-09T05:00:10.404Z",
+  "pageCount": 120,
   "output": "downloads/runtime-template-link-normalization.pdf",
   "report": {
-    "version": 7,
+    "version": 8,
     "title": "Runtime Template Link Normalization",
-    "contentHash": "523a0c1f47c712fc0296a0214b01a13ecb9715d713b8d53165c0fc0e9ecab9cc",
+    "contentHash": "823b0712e4d1402c0004c4f00d832455102553021347293716b70e9f989e9bd9",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-8D34DAEE930AC84F",
-      "b0cde383147509fbfd4f4472",
       "14d04c0943d24cbe6a1926db",
       "20114e0234b7a725cce22060",
+      "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -43,6 +43,10 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "5675c580ac294a0724082c96",
       "b1e5189be9fa36ea97b5f8c0",
       "1769af26a7bda813406cd8f5",
@@ -60,14 +64,6 @@
       "9848ec4b4c3f6c2693269839",
       "360e80c162081c85d2c680ef",
       "88ef9baf356c096816236956",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "janner-iicsa-2022",
@@ -146,21 +142,25 @@
       "ASC-REVIEW-375A853A96E42D84",
       "ASC-REVIEW-D5FA458F66004D27",
       "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-E48690C00EA31793"
+      "ASC-REVIEW-E48690C00EA31793",
+      "ASC-REVIEW-14DA4C1F787B63ED",
+      "ASC-REVIEW-98888270E5A6D011",
+      "ASC-REVIEW-0F0776894447C197",
+      "ASC-REVIEW-6E0BEE85BA956CBF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 39,
-      "disputedClaimCount": 95,
+      "primarySourceCount": 31,
+      "disputedClaimCount": 103,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 92,
-      "moneyRecordCount": 86
+      "relationshipCount": 96,
+      "moneyRecordCount": 91
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 39 A/B-grade public-record items are materially relevant to Runtime Template Link Normalization.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json); Site Population Audit (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 31 A/B-grade public-record items are materially relevant to Runtime Template Link Normalization.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); Site Population Audit (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 92 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Site Population Audit; IICSA documented predatory activities and institutional failures; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 92 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Site Population Audit",
           "IICSA documented predatory activities and institutional failures",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T07:59:26.636Z"
+    "intelligenceFreshnessDate": "2025-10-06T00:00:00.000Z"
   }
 }

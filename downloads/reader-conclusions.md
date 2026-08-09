@@ -1,6 +1,6 @@
 # Reader Conclusions
 
-Updated: 2026-08-06T06:27:51.155Z
+Updated: 2026-08-09T05:05:36.690Z
 
 ## Power is routed through systems
 The strongest useful reading is not one throne but a stack of finance, policy, law, institutions, standards, platforms, foundations, universities, contractors, media routes and jurisdictions.

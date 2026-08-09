@@ -152,13 +152,14 @@ function recordPolicyProof(report, policyPath = '.github/build-budget-policy.jso
   const resolved = path.resolve(policyPath);
   const policy = JSON.parse(fs.readFileSync(resolved, 'utf8'));
   const previous = policy.verifiedCloudflareConnectionState || {};
+  const lockedSnapshotDate = String(policy?.ownerUsageSnapshot?.observedOn || previous.observedOn || '').trim();
   policy.verifiedCloudflareConnectionState = {
     ...previous,
-    observedOn: report.checkedAt.slice(0, 10),
+    observedOn: lockedSnapshotDate,
     observedAt: report.checkedAt,
     workersGitBuilds: 'disconnected',
     pagesGitDeployments: 'disconnected',
-    verification: `Live Cloudflare API proof: Worker ${report.worker.name} returned zero Workers Builds triggers; ${report.pages.relevantProjects.length} matching legacy Pages project(s) returned no Git source. ${report.pages.projectsEnumerated} Pages project(s) enumerated account-wide.`
+    verification: `Live Cloudflare API proof at ${report.checkedAt}: Worker ${report.worker.name} returned zero Workers Builds triggers; ${report.pages.relevantProjects.length} matching legacy Pages project(s) returned no Git source. ${report.pages.projectsEnumerated} Pages project(s) enumerated account-wide.`
   };
   fs.writeFileSync(resolved, `${JSON.stringify(policy, null, 2)}\n`);
 }

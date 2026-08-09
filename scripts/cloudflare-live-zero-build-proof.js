@@ -148,6 +148,21 @@ async function verifyCloudflareGitBuildDisconnection({
   };
 }
 
+function recordPolicyProof(report, policyPath = '.github/build-budget-policy.json') {
+  const resolved = path.resolve(policyPath);
+  const policy = JSON.parse(fs.readFileSync(resolved, 'utf8'));
+  const previous = policy.verifiedCloudflareConnectionState || {};
+  policy.verifiedCloudflareConnectionState = {
+    ...previous,
+    observedOn: report.checkedAt.slice(0, 10),
+    observedAt: report.checkedAt,
+    workersGitBuilds: 'disconnected',
+    pagesGitDeployments: 'disconnected',
+    verification: `Live Cloudflare API proof: Worker ${report.worker.name} returned zero Workers Builds triggers; ${report.pages.relevantProjects.length} matching legacy Pages project(s) returned no Git source. ${report.pages.projectsEnumerated} Pages project(s) enumerated account-wide.`
+  };
+  fs.writeFileSync(resolved, `${JSON.stringify(policy, null, 2)}\n`);
+}
+
 async function main() {
   const report = await verifyCloudflareGitBuildDisconnection({
     token: process.env.CLOUDFLARE_API_TOKEN,
@@ -162,11 +177,16 @@ async function main() {
   fs.mkdirSync(path.dirname(output), { recursive: true });
   fs.writeFileSync(output, `${JSON.stringify(report, null, 2)}\n`);
 
+  if (String(process.env.MATRIX_UPDATE_BUDGET_POLICY || '').toLowerCase() === 'true') {
+    recordPolicyProof(report, process.env.MATRIX_CLOUDFLARE_BUDGET_POLICY_PATH || '.github/build-budget-policy.json');
+  }
+
   const githubEnv = process.env.GITHUB_ENV;
-  if (!githubEnv) fail('GITHUB_ENV is required so the verified proof can be passed to the budget guard.');
-  fs.appendFileSync(githubEnv, `CLOUDFLARE_GIT_BUILDS_DISCONNECTED=true\n`);
-  fs.appendFileSync(githubEnv, `CLOUDFLARE_GIT_BUILDS_CHECKED_AT_UTC=${report.checkedAt}\n`);
-  fs.appendFileSync(githubEnv, `CLOUDFLARE_ZERO_BUILD_PROOF_PATH=${output}\n`);
+  if (githubEnv) {
+    fs.appendFileSync(githubEnv, `CLOUDFLARE_GIT_BUILDS_DISCONNECTED=true\n`);
+    fs.appendFileSync(githubEnv, `CLOUDFLARE_GIT_BUILDS_CHECKED_AT_UTC=${report.checkedAt}\n`);
+    fs.appendFileSync(githubEnv, `CLOUDFLARE_ZERO_BUILD_PROOF_PATH=${output}\n`);
+  }
   console.log(
     `Cloudflare live zero-build proof PASS: Worker ${report.worker.name} has 0 Workers Builds triggers; ` +
     `${report.pages.relevantProjects.length} relevant Pages project(s) have 0 Git sources.`
@@ -184,5 +204,6 @@ module.exports = {
   cloudflareGet,
   listPagesProjects,
   pageProjectRelevant,
+  recordPolicyProof,
   verifyCloudflareGitBuildDisconnection
 };

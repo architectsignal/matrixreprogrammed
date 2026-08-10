@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 501
 
       - name: Confirm explicit production release authority
         env:

@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-08-10T08:04:31.766Z
+Updated: 2026-08-10T13:44:30.138Z
 
 ## Evidence-led conclusion
 
@@ -28,10 +28,10 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **Consent of and Final Judgment as to Sagar Adani** — Contract. Why it matters: This record places Consent of and Final Judgment as to Sagar Adani inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Andrew Kaufman** — Contract. Why it matters: This record places Final Judgment - Andrew Kaufman inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Arthur** — Contract. Why it matters: This record places Final Judgment - Arthur inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Final Judgment - Bin Hao** — Contract. Why it matters: This record places Final Judgment - Bin Hao inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Brent Cranmer** — Contract. Why it matters: This record places Final Judgment - Brent Cranmer inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Daniel McCormick** — Contract. Why it matters: This record places Final Judgment - Daniel McCormick inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - DaveGlo Investment Group, Inc.** — Contract. Why it matters: This record places Final Judgment - DaveGlo Investment Group, Inc. inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Final Judgment - David P. Ortiz** — Contract. Why it matters: This record places Final Judgment - David P. Ortiz inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 
 ## How the systems fit together
 

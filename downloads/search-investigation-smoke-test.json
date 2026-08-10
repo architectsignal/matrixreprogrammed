@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-10T08:55:25.158Z",
+  "generatedAt": "2026-08-10T13:44:33.757Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "32334 entries"
+      "detail": "1963 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "32334 unique routes"
+      "detail": "1963 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -115,27 +115,27 @@
     {
       "name": "local query corruption bribery fraud official enforcement",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=868a4ad716b25353f953d783, daily-investigation-conclusions.html?finding=54cc8f31a1dedca55dcff45f, daily-investigation-conclusions.html?finding=e9b174537887f34bf82f8ba6"
+      "detail": "investigation-source-ledger.html?source=uk-sfo-news, investigation-source-ledger.html?source=doj-justice-news, daily-investigation-conclusions.html?finding=4c1d46d9bcb8caa374dec7d2"
     },
     {
       "name": "local query WikiLeaks documents cables archive",
       "ok": true,
-      "detail": "source-changes.html?change=ea3afacb89f4f277c87d1a79, source-changes.html?change=f9b326734f170d730fc634f5, source-changes.html?change=81d1ec66d255ebaf3f7d61de"
+      "detail": "investigation-source-ledger.html?source=wikileaks-publications, source-changes.html?change=ea3afacb89f4f277c87d1a79, source-changes.html?change=f9b326734f170d730fc634f5"
     },
     {
       "name": "local query government contracts USAspending procurement",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=e86287f396e1ee800a7ee796, daily-investigation-conclusions.html?finding=4c372edcf20b760ae3305f10, entity-registry.html#entity-entity-governmentagency-d1b189399623fd473eb0"
+      "detail": "daily-investigation-conclusions.html?finding=e86287f396e1ee800a7ee796, daily-investigation-conclusions.html?finding=4c372edcf20b760ae3305f10, source-changes.html?change=04c89ea38860e823b4e0ffd5"
     },
     {
       "name": "local query Epstein DOJ disclosures redactions",
       "ok": true,
-      "detail": "daily-investigation-conclusions.html?finding=23f04c9c39c6de29c864aaa3, investigation-source-ledger.html?source=doj-epstein-disclosures, entity-registry.html#entity-source-doj-epstein-disclosures"
+      "detail": "investigation-source-ledger.html?source=doj-epstein-disclosures, data/investigation-source-registry.json, epstein-files.html"
     },
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=sec-current-filings, entity-registry.html#entity-source-sec-current-filings, relationship-registry.html?relationship=relationship-c4989c311bc16d4f93cc"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=c9bd018a6544006f1e1f3018, source-changes.html?change=a05ee5719c4986b9a2e665d1"
     }
   ],
   "failures": []

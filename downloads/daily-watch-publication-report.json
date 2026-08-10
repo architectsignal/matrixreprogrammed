@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T05:06:03.356Z",
-  "watchDate": "2026-08-09",
+  "generatedAt": "2026-08-10T06:47:44.076Z",
+  "watchDate": "2026-08-10",
   "pages": [
     "index.html",
     "daily-command-brief.html",
@@ -24,9 +24,12 @@
       },
       "institution": {
         "changed": false,
-        "reason": "The same entity remains the current evidence leader.",
+        "reason": "U.S. Department reached 143, below the 157 points required to replace the incumbent.",
+        "incumbent": "Securities and Exchange Commission",
         "incumbentScore": 143,
+        "challenger": "U.S. Department",
         "challengerScore": 143,
+        "required": 157,
         "marginRequired": 14
       },
       "family": {
@@ -52,7 +55,7 @@
       "contradictionRecords": 0
     },
     "institution": {
-      "matchedFindings": 1280,
+      "matchedFindings": 1357,
       "legalRecords": 16,
       "safeguardingOverlaps": 0,
       "moneyRecords": 16,

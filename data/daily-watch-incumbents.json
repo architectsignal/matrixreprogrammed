@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "updated": "2026-08-09T05:06:02.931Z",
+  "updated": "2026-08-10T06:47:43.660Z",
   "promotionMargin": 14,
   "slots": {
     "person": {
@@ -44,7 +44,7 @@
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-and-refreshed",
-      "lastReviewedAt": "2026-08-09T05:06:02.931Z",
+      "lastReviewedAt": "2026-08-10T06:47:43.660Z",
       "challengerHeld": "Elon Musk",
       "challengerScore": 91
     },
@@ -97,14 +97,21 @@
           "Which dated primary record establishes the current action?",
           "What oversight, competing authority, opt-out or appeal limits the power?",
           "What new evidence would strengthen, narrow, replace or falsify this position?"
-        ]
+        ],
+        "rankingScore": 143,
+        "rankingStatus": "incumbent-held-position",
+        "incumbentSince": "2026-07-27T17:29:36.861Z",
+        "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+        "challengerHeld": "U.S. Department",
+        "challengerScore": 143,
+        "retentionReason": "U.S. Department reached 143, below the 157 points required to replace the incumbent."
       },
       "rankingScore": 143,
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-      "lastDecision": "incumbent-retained-and-refreshed",
-      "lastReviewedAt": "2026-08-09T05:06:02.931Z",
-      "challengerHeld": "U.S. Securities and Exchange Commission",
+      "lastDecision": "incumbent-retained-threshold-not-cleared",
+      "lastReviewedAt": "2026-08-10T06:47:43.660Z",
+      "challengerHeld": "U.S. Department",
       "challengerScore": 143
     },
     "family": {
@@ -157,7 +164,7 @@
       "incumbentSince": "2026-07-27T17:29:36.861Z",
       "lastPromotedAt": "2026-07-27T17:29:36.861Z",
       "lastDecision": "incumbent-retained-threshold-not-cleared",
-      "lastReviewedAt": "2026-08-09T05:06:02.931Z",
+      "lastReviewedAt": "2026-08-10T06:47:43.660Z",
       "challengerHeld": "Al Maktoum family",
       "challengerScore": 122
     }

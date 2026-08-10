@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T05:06:03.725Z",
+  "generatedAt": "2026-08-10T06:47:44.345Z",
   "overall": "ready",
   "summary": {
     "total": 52,
     "passed": 52,
     "failed": 0
   },
-  "homepageMode": "legacy-cinematic",
+  "homepageMode": "search-first-accountability",
   "watch": {
-    "date": "2026-08-09",
+    "date": "2026-08-10",
     "person": "Bill Gates",
     "institution": "Securities and Exchange Commission",
     "family": "Wallenberg family and foundations",
@@ -17,7 +17,7 @@
   },
   "dataDepth": {
     "activeFindings": 2500,
-    "archivedFindings": 3829,
+    "archivedFindings": 4280,
     "relationshipEdges": 172,
     "clocks": 81,
     "badFindings": 0,
@@ -64,7 +64,7 @@
     {
       "id": "authoritative-entity-resolution",
       "ok": true,
-      "detail": "Resolved person=Bill Gates; institution=Securities and Exchange Commission; family=Al Maktoum family.",
+      "detail": "Resolved person=Bill Gates; institution=U.S. Department; family=Al Maktoum family.",
       "fix": "Run build-daily-watch.js and reject document, report, archive, case or finding titles."
     },
     {
@@ -88,7 +88,7 @@
     {
       "id": "ledger-archive-preserved",
       "ok": true,
-      "detail": "3829 archived findings retained.",
+      "detail": "4280 archived findings retained.",
       "fix": "Preserve overflow, duplicates and invalid-provenance history."
     },
     {
@@ -136,7 +136,7 @@
     {
       "id": "watch-institution-rank",
       "ok": true,
-      "detail": "institution score 143; status retained-current-leader.",
+      "detail": "institution score 143; status incumbent-held-position.",
       "fix": "Run the stable ranking and dossier builder."
     },
     {
@@ -268,7 +268,7 @@
     {
       "id": "history-and-weekly-delta",
       "ok": true,
-      "detail": "12 history entries; weekly delta ready.",
+      "detail": "13 history entries; weekly delta ready.",
       "fix": "Retain ranking history and weekly changes."
     },
     {
@@ -280,13 +280,13 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Legacy homepage: headerEnd=5501; hitList=5510; nextLegacyPanel=-1.",
+      "detail": "Search-first homepage: headerEnd=4160; search=136784; accountabilityHitList=138048.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {
       "id": "accountability-card-ui",
       "ok": true,
-      "detail": "3 cinematic dossier cards found.",
+      "detail": "3 search-first accountability cards found.",
       "fix": "Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html."
     },
     {
@@ -334,7 +334,7 @@
     {
       "id": "sensitive-claim-safeguard",
       "ok": true,
-      "detail": "3 sensitive items; 0 unsafe.",
+      "detail": "6 sensitive items; 0 unsafe.",
       "fix": "Require exact status, provenance, limitation and review."
     }
   ],

@@ -1,6 +1,6 @@
 # Weekly Mission Watch Delta
 
-Period: 2026-08-03 to 2026-08-09
+Period: 2026-08-04 to 2026-08-10
 
 Bill Gates is the latest person watch and appeared on 5 recorded days during this window. The current lane effect is adds-context. Securities and Exchange Commission is the latest institution watch and appeared on 5 recorded days during this window. The current lane effect is moderately-strengthens. Wallenberg family and foundations is the latest family watch and appeared on 5 recorded days during this window. The current lane effect is adds-context.
 

@@ -84,6 +84,40 @@ function countAriaToken(html, id) {
   });
   return total;
 }
+function isHtmlDocument(value) {
+  return /<!doctype\s+html|<html\b/i.test(String(value || ''));
+}
+function recoverCanonicalSource() {
+  const diagnostics = [];
+  let sourceBefore = null;
+  if (fs.existsSync(sourcePath) && fs.statSync(sourcePath).isFile()) {
+    sourceBefore = fs.readFileSync(sourcePath, 'utf8');
+  }
+
+  for (const relative of surfaceRelatives) {
+    const file = path.join(root, relative);
+    if (!fs.existsSync(file) || !fs.statSync(file).isFile()) {
+      diagnostics.push({ relative: relative.split(path.sep).join('/'), exists: false, validHtml: false });
+      continue;
+    }
+    const html = fs.readFileSync(file, 'utf8');
+    const validHtml = isHtmlDocument(html);
+    diagnostics.push({
+      relative: relative.split(path.sep).join('/'),
+      exists: true,
+      validHtml,
+      sha256: sha256(html),
+    });
+    if (!validHtml) continue;
+
+    const recoveredFrom = relative.split(path.sep).join('/');
+    const recovered = sourceBefore !== html;
+    if (recovered) fs.writeFileSync(sourcePath, html);
+    return { recovered, recoveredFrom, diagnostics };
+  }
+
+  throw new Error(`No valid Black File HTML surface is available for canonical recovery: ${JSON.stringify(diagnostics)}`);
+}
 function normalizePathwayTitle(html) {
   let next = stripTargetIds(html);
   const sections = findBalancedSections(next, openTag => hasExactClass(openTag, 'matrix-pathways'));
@@ -141,9 +175,10 @@ function assertPublicContract(relative, html, expectedHash) {
   return checks;
 }
 
-if (!fs.existsSync(sourcePath) || !fs.statSync(sourcePath).isFile()) {
-  throw new Error('Black File source is missing: black-file.html');
-}
+// Late generators are allowed to mutate one public alias. Recover the canonical
+// source from the first surviving HTML sibling before invoking the strict hero
+// owner; if no sibling is a valid HTML document, fail closed with diagnostics.
+const sourceRecovery = recoverCanonicalSource();
 
 // Reuse the existing canonical hero owner first, then take final ownership of
 // pathway IDs and all source/deploy aliases after every ordinary page mutator.
@@ -179,16 +214,17 @@ const report = {
   ok: surfaces.length === 4 && surfaces.every(surface => surface.sha256 === canonicalHash),
   generatedAt: new Date().toISOString(),
   source: sourceRelative,
+  sourceRecovery,
   sourceSha256: canonicalHash,
   genericTitleId,
   canonicalTitleId,
   pathwayChecks: normalized.checks,
   surfaces,
-  boundary: 'This local deterministic finalizer runs after the last ordinary page mutator, removes every exact generic matrix-pathways-title reference, creates exactly one matrix-pathways-title-black-file target and synchronizes source, extensionless and _site aliases byte-for-byte. It performs no network, D1 or Cloudflare mutation.',
+  boundary: 'This local deterministic finalizer runs after the last ordinary page mutator, recovers the canonical Black File source from a surviving HTML sibling when one alias is corrupted, removes every exact generic matrix-pathways-title reference, creates exactly one matrix-pathways-title-black-file target and synchronizes source, extensionless and _site aliases byte-for-byte. It performs no network, D1 or Cloudflare mutation.',
 };
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 if (!report.ok) throw new Error('Black File postbuild finalization did not complete all four surfaces.');
-console.log(`BLACK FILE POSTBUILD FINALIZATION PASSED: ${surfaces.length} byte-identical surfaces; generic pathway ID removed; ${canonicalTitleId} unique.`);
+console.log(`BLACK FILE POSTBUILD FINALIZATION PASSED: ${surfaces.length} byte-identical surfaces; source=${sourceRecovery.recoveredFrom}${sourceRecovery.recovered ? ' recovered' : ''}; generic pathway ID removed; ${canonicalTitleId} unique.`);
 
 module.exports = report;

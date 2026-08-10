@@ -19,6 +19,12 @@ const commands = [
   ['scripts/build-investigation-pages.js'],
   ['scripts/build-mission-intelligence-10.js'],
   ['scripts/build-live-intel-machine.js'],
+  // These are direct dependants of the refreshed Live Intel window and are
+  // themselves production-freshness datasets. Rebuild them here before the
+  // strict source-only guard instead of relying on the separate scheduled
+  // Live Intel workflow to have run inside the previous 26 hours.
+  ['scripts/build-daily-epstein-update.js'],
+  ['scripts/build-card-live-updates.js'],
   ['scripts/patch-conclusion-integrity-cards.js'],
   ['scripts/build-behind-the-curtain-tier-registry.js'],
   ['scripts/patch-behind-the-curtain-tier-ui.js'],

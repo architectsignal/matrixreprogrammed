@@ -42,15 +42,25 @@ async function cloudflareGet(fetchImpl, token, pathname) {
 async function listPagesProjects(fetchImpl, token, accountId) {
   const projects = [];
   for (let page = 1; page <= 20; page += 1) {
+    // Let Cloudflare choose its supported page size. The Pages API currently
+    // rejects the historical per_page=100 override, so completeness is proven
+    // from result_info.total_pages instead of forcing a page size.
     const payload = await cloudflareGet(
       fetchImpl,
       token,
-      `/accounts/${encodeURIComponent(accountId)}/pages/projects?page=${page}&per_page=100`
+      `/accounts/${encodeURIComponent(accountId)}/pages/projects?page=${page}`
     );
     const batch = Array.isArray(payload.result) ? payload.result : [];
     projects.push(...batch);
-    const totalPages = Number(payload?.result_info?.total_pages || 1);
-    if (!Number.isFinite(totalPages) || page >= totalPages) break;
+
+    const totalPages = Number(payload?.result_info?.total_pages);
+    if (!Number.isInteger(totalPages) || totalPages < 1) {
+      fail('Cloudflare Pages project enumeration did not return a valid result_info.total_pages value.');
+    }
+    if (page > totalPages) {
+      fail(`Cloudflare Pages pagination returned inconsistent total_pages=${totalPages} on page ${page}.`);
+    }
+    if (page >= totalPages) break;
     if (page === 20) fail('Cloudflare Pages project enumeration exceeded 20 pages.');
   }
   return projects;
@@ -148,7 +158,7 @@ async function verifyCloudflareGitBuildDisconnection({
     },
     repository: `${repoOwner}/${repoName}`,
     siteDomain,
-    evidence: 'Cloudflare Workers Scripts + Workers Builds trigger listing + Pages project source listing',
+    evidence: 'Cloudflare Workers Scripts + Workers Builds trigger listing + complete Pages project source listing',
     boundary: 'Read-only Cloudflare API proof. Separate least-privilege tokens may be used for Workers Builds and Pages. No build, deployment, Pages mutation, Worker mutation, D1 mutation or billing action is performed.'
   };
 }

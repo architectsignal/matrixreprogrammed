@@ -11,11 +11,22 @@ function response(payload, status = 200) {
   };
 }
 
-function makeFetch({ workerTriggers = [], pagesProjects = [], failures = {}, requests = [] } = {}) {
+function makeFetch({
+  workerTriggers = [],
+  pagesProjects = [],
+  pagesByPage = null,
+  pagesResultInfo = null,
+  failures = {},
+  requests = []
+} = {}) {
   return async (url, options = {}) => {
     const parsed = new URL(url);
     const key = parsed.pathname;
-    requests.push({ key, authorization: options?.headers?.Authorization || '' });
+    requests.push({
+      key,
+      search: parsed.search,
+      authorization: options?.headers?.Authorization || ''
+    });
     if (failures[key]) return response({ success: false, errors: [{ message: failures[key] }] }, 403);
     if (key.endsWith('/workers/scripts')) {
       return response({ success: true, result: [{ id: 'matrixreprogrammed', tag: 'worker-tag-123' }] });
@@ -24,7 +35,14 @@ function makeFetch({ workerTriggers = [], pagesProjects = [], failures = {}, req
       return response({ success: true, result: workerTriggers });
     }
     if (key.endsWith('/pages/projects')) {
-      return response({ success: true, result: pagesProjects, result_info: { total_pages: 1 } });
+      const page = Number(parsed.searchParams.get('page') || 1);
+      const result = Array.isArray(pagesByPage)
+        ? (pagesByPage[page - 1] || [])
+        : pagesProjects;
+      const resultInfo = pagesResultInfo || {
+        total_pages: Array.isArray(pagesByPage) ? Math.max(1, pagesByPage.length) : 1
+      };
+      return response({ success: true, result, result_info: resultInfo });
     }
     return response({ success: false, errors: [{ message: `Unexpected URL ${url}` }] }, 404);
   };
@@ -68,7 +86,24 @@ async function expectReject(promise, pattern) {
   }
   for (const request of splitRequests.filter(item => item.key.includes('/pages/projects'))) {
     assert.equal(request.authorization, 'Bearer pages-read-token');
+    assert(!request.search.includes('per_page='), 'Pages proof must not force an unsupported per_page value');
   }
+
+  const paginationRequests = [];
+  const paginatedProof = await verifyCloudflareGitBuildDisconnection({
+    fetchImpl: makeFetch({
+      pagesByPage: [[unrelatedGitProject], [directUploadProject]],
+      requests: paginationRequests
+    }),
+    token: 'test-token',
+    accountId: 'account-123'
+  });
+  assert.equal(paginatedProof.pages.projectsEnumerated, 2);
+  assert.equal(paginatedProof.pages.relevantProjects.length, 1);
+  const pageRequests = paginationRequests.filter(item => item.key.endsWith('/pages/projects'));
+  assert.equal(pageRequests.length, 2);
+  assert.equal(pageRequests[0].search, '?page=1');
+  assert.equal(pageRequests[1].search, '?page=2');
 
   await expectReject(
     verifyCloudflareGitBuildDisconnection({
@@ -106,6 +141,15 @@ async function expectReject(promise, pattern) {
     /permission denied/
   );
 
+  await expectReject(
+    verifyCloudflareGitBuildDisconnection({
+      fetchImpl: makeFetch({ pagesProjects: [directUploadProject], pagesResultInfo: {} }),
+      token: 'test-token',
+      accountId: 'account-123'
+    }),
+    /valid result_info\.total_pages/
+  );
+
   const noLegacyPages = await verifyCloudflareGitBuildDisconnection({
     fetchImpl: makeFetch({ pagesProjects: [unrelatedGitProject] }),
     token: 'test-token',
@@ -124,7 +168,7 @@ async function expectReject(promise, pattern) {
     /Pages read token is required/
   );
 
-  console.log('Cloudflare live zero-build proof test passed: split least-privilege tokens are routed to the correct APIs; direct-upload/no-project Pages states pass, while Workers Builds triggers, matching Pages Git sources and API permission failures remain fail-closed.');
+  console.log('Cloudflare live zero-build proof test passed: split least-privilege tokens are routed correctly; Pages enumeration uses API-native pagination without forcing per_page; incomplete pagination metadata, Workers Builds triggers, matching Pages Git sources and permission failures remain fail-closed.');
 })().catch(error => {
   console.error(error.stack || error.message || error);
   process.exitCode = 1;

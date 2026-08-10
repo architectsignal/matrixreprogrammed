@@ -1,22 +1,14 @@
 {
-  "generatedAt": "2026-08-06T06:23:13.398Z",
+  "generatedAt": "2026-08-09T05:00:26.582Z",
   "pageCount": 132,
   "output": "downloads/search-v3-deploy-size-repair.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Search V3 Deploy Size Repair",
-    "contentHash": "744567f2de065790951c6fb303b18185c176142b64d8df52ab6d04795925f6c9",
+    "contentHash": "a13c863dd928c503a387e88315fdbd22f1b9669866057bee8ee6891e9b3ab088",
     "sourceIds": [
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
+      "33b99270b28ac9825f7ccfdd",
       "f46685c556b51609bbdf73a8",
-      "0730bb615248f676888d3235",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -37,6 +29,10 @@
       "ASC-REVIEW-D86EBD209FFF875A",
       "ASC-REVIEW-A5C911DFEE587573",
       "26b90533dbf7d2ed42f02de6",
+      "source-change-a05ee5719c4986b9a2e665d1",
+      "source-change-f966f8c917641cd736660f92",
+      "source-change-f9b326734f170d730fc634f5",
+      "source-change-b1e5189be9fa36ea97b5f8c0",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -69,6 +65,10 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
+      "source-change-6e48acd2ac94f914a7fd7ae5",
+      "source-change-f23b46f2bc4add9b859f5a15",
+      "source-change-a09615abd1b1ed83f2b74ff4",
+      "source-change-b0cde383147509fbfd4f4472",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Search V3 Deploy Size Repair.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json)",
+        "evidence": "Proposed Final Judgment - YouPlus, Inc. (data/weekly-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json); Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T07:59:26.636Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

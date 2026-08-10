@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-06T06:22:06.315Z",
+  "generatedAt": "2026-08-09T04:59:12.161Z",
   "pageCount": 123,
   "output": "downloads/public-data-lab-test.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Public Data Lab Test",
-    "contentHash": "1c2f712274d00e263e25f8f6093246f82c6f54d5d1f0eb05677cd9893bfff558",
+    "contentHash": "2055181f704ec72f25587327b823a5f8aaf0126b0ba60e42c480896892116f4f",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "0730bb615248f676888d3235",
+      "33b99270b28ac9825f7ccfdd",
       "osint",
       "72ef7895f95288946ccb3cff",
       "45f5269389def99607b5a517",
@@ -81,17 +81,20 @@
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "d0b647e325275daa6d824a49",
       "19ae23289f4be13ad5f7e317",
       "f8da9551192fb7f98b4efa86",
       "16cde9bd4c87e916ff1e4fb7",
       "bbf59ae4094608bcd2c37305",
       "9e8310c49b990aa62d2b0921",
       "275d6c3caca158f7a3e15780",
+      "EP-AI-003",
       "EP-AI-004",
       "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
       "6510364e9b1a1504b9f99521",
       "88ef9baf356c096816236956",
+      "cee347fbc3752c6e0f890457",
       "a27dd3c9a4cf6bbd952989d3",
       "dcec2a45ef35362072af05e3",
       "aa125ed22fe885dd57f96c32",
@@ -143,19 +146,16 @@
       "ASC-REVIEW-AFF7699289F993E4",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7"
+      "ASC-REVIEW-2638AEF62CDCC03A"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 40,
-      "disputedClaimCount": 76,
+      "disputedClaimCount": 75,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 68
+      "relationshipCount": 76,
+      "moneyRecordCount": 66
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "12. Lawful OSINT & Source Verification; MINDCUBED LLC — District of Columbia Courts; BlackRock → Private Markets Infrastructure Expansion: capital layer; Rockefeller → Public Private Routes: layer hint; MINDCUBED LLC — District of Columbia Courts; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Blackwater / Xe / Academi / Constellis lineage → Public Private Power: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "12. Lawful OSINT & Source Verification",
           "MINDCUBED LLC — District of Columbia Courts",

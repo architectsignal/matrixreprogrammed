@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-06T06:32:06.905Z",
+  "generatedAt": "2026-08-09T05:10:05.675Z",
   "aliases": [
     {
       "requestPath": "/follow-the-money",
@@ -24,9 +24,7 @@
     }
   ],
   "changed": [
-    "src/worker-production.js",
-    "wrangler.toml",
-    "wrangler.jsonc"
+    "src/worker-production.js"
   ],
   "coverage": [
     {

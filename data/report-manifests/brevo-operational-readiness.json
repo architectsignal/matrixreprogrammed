@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-06T06:12:37.551Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-09T04:48:55.985Z",
+  "pageCount": 128,
   "output": "downloads/brevo-operational-readiness.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Brevo Operational Readiness",
-    "contentHash": "44ee5fdea08333c9df4e86602bb5bbc040e4248de5c84b4eb03af6cdb2593e81",
+    "contentHash": "f113d2e0343c388eb3c9625282e268284415e425e0c188a7d4342e511a0fe7ee",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "0730bb615248f676888d3235",
       "3a425f0d5d683952bc0ad7ac",
+      "33b99270b28ac9825f7ccfdd",
       "72ef7895f95288946ccb3cff",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -23,9 +23,7 @@
       "71e0563ca7b139c37c302956",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
-      "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-2FAF91DDDD6143CD",
-      "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
       "19ae23289f4be13ad5f7e317",
@@ -43,6 +41,7 @@
       "1e4b1a921fd40d90384197fa",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
+      "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -54,6 +53,7 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-9395B56F60B42FEA",
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
+      "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -64,6 +64,7 @@
       "bbf59ae4094608bcd2c37305",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
+      "crime-state-overlap-2026-08-06-561822ee",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -128,7 +129,8 @@
       "275d6c3caca158f7a3e15780",
       "EP-AI-004",
       "1769af26a7bda813406cd8f5",
-      "crime-state-overlap-2026-08-05-a6e069b5",
+      "consequence-crime-state-overlap-2026-08-05-a6e069b5",
+      "crime-state-overlap-2026-08-07-7e664ee5",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -144,22 +146,20 @@
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
       "ASC-REVIEW-6809880AE2446DD1",
-      "ASC-REVIEW-D23512B8758FE6BB",
-      "ASC-REVIEW-9F5E6DCB06093895",
-      "ASC-REVIEW-E0C2B02D28255CC3"
+      "ASC-REVIEW-D23512B8758FE6BB"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 41,
-      "disputedClaimCount": 77,
+      "primarySourceCount": 43,
+      "disputedClaimCount": 75,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
-      "moneyRecordCount": 59
+      "relationshipCount": 78,
+      "moneyRecordCount": 58
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Brevo Operational Readiness.",
+        "conclusion": "The indexed record establishes that 43 A/B-grade public-record items are materially relevant to Brevo Operational Readiness.",
         "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Convicted Drug Trafficker Sentenced for Violating Federal Controlled Substances Act,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "NEW ORLEANS, LOUISIANA – YILEI ZHOU , age 36, a Chinese national, was sentenced today by United States District Judge Greg G. Guidry to 24 months’ imprisonment, 4 years of supervised release, and a $100.00 mandatory special assessment fee, after previously pleading guilty to conspiracy to distribute, and possess with intent to distribute, a mixture and substance containing one hundred (100) kilograms or more of a detectable amount of marijuana, in violation of Title 21, United States Code, Sections 841(a)(1), 841(b)(1)(B), and 846. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "SALT LAKE CITY , Utah – The final defendant, an illegal alien from Honduras who was involved in a drug trafficking crime, was sentenced to time served (16.5 months’ imprisonment) after approximately 13,000 fentanyl pills were seized by law enforcement during a controlled buy and the execution of a search warrant in 2025. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; Matrix Reprogrammed Canonical Intelligence Record",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",

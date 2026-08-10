@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:20:44.157Z",
-  "pageCount": 86,
+  "generatedAt": "2026-08-09T04:57:36.480Z",
+  "pageCount": 85,
   "output": "downloads/osint-worker-patch-report.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Osint Worker Patch Report",
-    "contentHash": "b0a877e19bcbcfa079e5ff59ba3ff14dc2beb11de6bde063f3055603af752c94",
+    "contentHash": "a4db675d9692ab8bf406dc508c125787c3ca35925ded214b708c099f41066e3b",
     "sourceIds": [
       "savile-health-investigations-2014",
       "b0cde383147509fbfd4f4472",
@@ -18,13 +18,6 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "crime-state-overlap-2026-08-05-3fff1c4b",
-      "declassified-files-2026-08-03-c89ca789",
-      "declassified-files-2026-08-03-fcc8d24a",
-      "declassified-files-2026-08-03-79c56827",
-      "declassified-files-2026-08-03-77817848",
-      "declassified-files-2026-08-03-db0ef3d6",
-      "declassified-files-2026-07-31-1b573a3b",
-      "declassified-files-2026-07-31-cc395014",
       "b4cb47ea50dc901364239e9f",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
@@ -47,8 +40,14 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-2E9D74DCA057FDC2",
+      "ASC-REVIEW-BC92D8AABD2393C5",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -145,21 +144,22 @@
       "private-equity-carlyle-group",
       "private-equity-tpg",
       "private-equity-cvc-capital-partners",
-      "private-equity-eqt"
+      "private-equity-eqt",
+      "private-equity-thoma-bravo"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 128,
-      "disputedClaimCount": 12,
+      "primarySourceCount": 122,
+      "disputedClaimCount": 18,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 30,
-      "moneyRecordCount": 109
+      "relationshipCount": 23,
+      "moneyRecordCount": 112
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 128 A/B-grade public-record items are materially relevant to Osint Worker Patch Report.",
-        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 122 A/B-grade public-record items are materially relevant to Osint Worker Patch Report.",
+        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -178,8 +178,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 30 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Official health investigations documented abuse and enabling access; Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026); Donald West Part 01; Donald West Part 02; Donald West Part 03; Donald West Part 04; Donald West Part 05 (Final); Christopher Wray's Gift to Attorney General Garland",
+        "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Official health investigations documented abuse and enabling access; Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026); Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -193,16 +193,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 30 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 23 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Official health investigations documented abuse and enabling access",
           "Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)",
-          "Donald West Part 01",
-          "Donald West Part 02",
-          "Donald West Part 03",
-          "Donald West Part 04",
-          "Donald West Part 05 (Final)",
-          "Christopher Wray's Gift to Attorney General Garland"
+          "Westminster inquiry examined political and policing responses",
+          "IICSA documented predatory activities and institutional failures",
+          "Broadmoor investigation examined Savile's access and abuse",
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+          "Booz Allen Hamilton → Ai Data: execution layer",
+          "Booz Allen Hamilton → Consulting: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

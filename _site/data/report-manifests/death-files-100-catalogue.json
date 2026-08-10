@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-06T06:14:58.983Z",
-  "pageCount": 94,
+  "generatedAt": "2026-08-09T04:51:25.441Z",
+  "pageCount": 91,
   "output": "downloads/death-files-100-catalogue.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Death Files 100 Catalogue",
-    "contentHash": "986142e348f07e518b6064caabbe5debd927d618c218f4a5e846bdc77e0ffcba",
+    "contentHash": "e36388fd0095ce8bba65da8549f1dc58d804b23ebaaefffee8be4f05cb6f496f",
     "sourceIds": [
+      "33b99270b28ac9825f7ccfdd",
       "f4b44414c2c9ee4fd9b0ea74",
-      "0730bb615248f676888d3235",
       "e856c4e44fa6c3a3dad142ce",
       "b7e4a66335a706ef5097117f",
       "360e80c162081c85d2c680ef",
@@ -67,12 +67,12 @@
       "e116361cb7791d4be20113e1",
       "0defb9debab95a663872bf25",
       "b1e5189be9fa36ea97b5f8c0",
-      "c3bd2d306202dfc2e2374303",
       "ecadede6696db6c7c3e6b7ec",
       "3a425f0d5d683952bc0ad7ac",
-      "fe3f3107cffaf5599a7b09f9",
       "085baf8dafdf6692a4203706",
       "72ef7895f95288946ccb3cff",
+      "consequence-crime-state-overlap-2026-08-05-500955ff",
+      "c3bd2d306202dfc2e2374303",
       "7ed151a515391f967d229642",
       "0c5f51804baf8e9e2c1fdd0b",
       "44505b4afb60938c8117ad31",
@@ -106,12 +106,14 @@
       "71e0563ca7b139c37c302956",
       "ec1316fb1fb70c83dc347bb6",
       "6510364e9b1a1504b9f99521",
+      "consequence-crime-state-overlap-2026-08-05-054b189c",
+      "consequence-crime-state-overlap-2026-08-05-c324ec51",
+      "consequence-crime-state-overlap-2026-08-05-02c58f32",
       "6d665d935673091233751767",
       "1c352ab364fbfca06ab12a57",
       "0a84f04558f5013c0790203c",
       "270841af2bd81407a26bed0b",
       "7c05d9244c4620950350cf27",
-      "crime-state-overlap-2026-08-05-69d5f660",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -143,22 +145,20 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "abdul-halim-khan-conviction-2026",
-      "conor-mcgrath-iico-conviction-2026",
-      "huw-edwards-iico-conviction-2024"
+      "abdul-halim-khan-conviction-2026"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 74,
+      "primarySourceCount": 75,
       "disputedClaimCount": 8,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 16,
-      "moneyRecordCount": 7
+      "relationshipCount": 14,
+      "moneyRecordCount": 6
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 74 A/B-grade public-record items are materially relevant to Death Files 100 Catalogue.",
+        "conclusion": "The indexed record establishes that 75 A/B-grade public-record items are materially relevant to Death Files 100 Catalogue.",
         "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -167,8 +167,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Operation Clean Sweep Produces Major Arrests and Seizures in Onondaga County,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Law Enforcement officials announced the results of Operation Clean Sweep – Onondaga County, a major enforcement initiative resulting in several arrests and significant seizures of firearms and narcotics.Onondaga County District Attorney William Fitzpatrick, First Assistant U.S. Attorney John A. Sarcone III, Bureau of Alcohol, Tobacco, Firearms and Explosives Special Agent in charge New York division Bryan DiGirolamo, Federal Bureau of Investigation Albany Field Office Special Agent in Charge Craig L. Tremaroli, Drug Enforcement Administration, New York Enforcement Division Special Agent in Charge Farhana Islam, Syracuse Police Chief Mark Rusin, Onondaga County Sheriff Tobias Shelley, and New York State Police Superintendent Steven G. James, made the announcement. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment -Steve Bajic,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -178,8 +178,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 16 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Securities and Exchange Commission; Securities and Exchange Commission; Securities and Exchange Commission; COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
+        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Securities and Exchange Commission; Securities and Exchange Commission; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -193,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 16 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Westminster inquiry examined political and policing responses",
@@ -201,8 +201,8 @@
           "Broadmoor investigation examined Savile's access and abuse",
           "Securities and Exchange Commission",
           "Securities and Exchange Commission",
-          "Securities and Exchange Commission",
-          "COMCAST GOVERNMENT SERVICES LLC — Department of Defense"
+          "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
+          "FCN, INC. — Court Services and Offender Supervision Agency"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -217,6 +217,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

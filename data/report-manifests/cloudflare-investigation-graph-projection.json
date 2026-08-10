@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-06T06:13:16.152Z",
-  "pageCount": 117,
+  "generatedAt": "2026-08-09T04:49:37.312Z",
+  "pageCount": 118,
   "output": "downloads/cloudflare-investigation-graph-projection.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Cloudflare Investigation Graph Projection",
-    "contentHash": "49de24871f71adc68256d772d02c0c325fd8bac89f21d19ddea16219f45b71aa",
+    "contentHash": "df0b9dd99af5a7746e003ddeb0f677ec8a871e5a1f5be5aca435a701730aa5ea",
     "sourceIds": [
-      "0730bb615248f676888d3235",
+      "33b99270b28ac9825f7ccfdd",
       "4ae6a940305d15da61333450",
       "a354895c18c7e12ab408462d",
       "d23398b8ca4c7124399c9504",
@@ -75,7 +75,6 @@
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
-      "crime-state-overlap-2026-08-05-0cb50fad",
       "b4cb47ea50dc901364239e9f",
       "a71a8be091652489b843ecf6",
       "f669b33c49b63e787cde3008",
@@ -93,23 +92,18 @@
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-E09138F879103681",
       "a76edf5945d2f4910bd413ef",
       "eda53ad65d382819ea249e14",
       "18930d440aed009547436b81",
       "4e5cc6449bcc7ddf1c878ee0",
       "deutsche-bank-epstein-dfs-2020",
+      "e72d22f4f28eb53e3173d0a6",
       "3d0d1e80633ac06c41189fd1",
       "c9ac739a94075c1cd23c4b5a",
       "d868ab139bf4fdfb6909e927",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "dc2f1f92efbedaed86cfd551",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
+      "crime-state-overlap-2026-08-05-9774017d",
+      "34b8919edbd894f3ab0e0be2",
       "5fc5de42d9379505849ac575",
       "60be8541e1c1d21d8b2d19fd",
       "388b609fd969af10879c06f9",
@@ -145,20 +139,26 @@
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-481745ED8153AA11",
-      "ASC-REVIEW-9719FEC8729E7FE2"
+      "ASC-REVIEW-9719FEC8729E7FE2",
+      "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-7291F43A6B9CBFA6",
+      "ASC-REVIEW-D0716C592606533B",
+      "ASC-REVIEW-EEA884898BA116BF",
+      "ASC-REVIEW-DA07BCFBB726AA49",
+      "ASC-REVIEW-CFB2B8804532DFFC"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 92,
-      "disputedClaimCount": 24,
+      "primarySourceCount": 84,
+      "disputedClaimCount": 31,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 33,
-      "moneyRecordCount": 17
+      "relationshipCount": 39,
+      "moneyRecordCount": 18
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 92 A/B-grade public-record items are materially relevant to Cloudflare Investigation Graph Projection.",
+        "conclusion": "The indexed record establishes that 84 A/B-grade public-record items are materially relevant to Cloudflare Investigation Graph Projection.",
         "evidence": "Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment - Sal N. Ortiz (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -178,8 +178,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 33 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; U.S. Attorney's Office Joins Communities Across Massachusetts for National Night Out; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
+        "inference": "The indexed set contains 39 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; MINDCUBED LLC — District of Columbia Courts; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -193,16 +193,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 33 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 39 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "MINDCUBED LLC — District of Columbia Courts",
-          "U.S. Attorney's Office Joins Communities Across Massachusetts for National Night Out",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer"
+          "Booz Allen Hamilton → Public Money: execution layer",
+          "CACI International → Defense Technology: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

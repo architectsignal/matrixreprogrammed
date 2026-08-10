@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-06T06:22:57.090Z",
-  "pageCount": 122,
+  "generatedAt": "2026-08-09T05:00:08.713Z",
+  "pageCount": 120,
   "output": "downloads/runtime-performance-budget-test.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Runtime Performance Budget Test",
-    "contentHash": "d3f04715936122fb85c6cd2a4b74d7193d792a3cca06763ed3788affe0b380f6",
+    "contentHash": "b3daf4f079304a8ce3cce32f98cbfd60920c8831ec72e507794477410c82b4ef",
     "sourceIds": [
-      "0730bb615248f676888d3235",
+      "33b99270b28ac9825f7ccfdd",
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
       "72ef7895f95288946ccb3cff",
@@ -35,9 +35,9 @@
       "7f0eb9ddb996aecbeeda522d",
       "665a5072d96b9757a6ee9d2d",
       "deb382cdbfe57b57793d739e",
-      "b0cde383147509fbfd4f4472",
       "EP-AI-002",
       "76a719654ec3312153163154",
+      "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -46,7 +46,6 @@
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "c5d9edd2562c4c00e3ddfdfb",
-      "source-change-f9b326734f170d730fc634f5",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -67,6 +66,7 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
+      "d0b647e325275daa6d824a49",
       "a76edf5945d2f4910bd413ef",
       "32fdb7636e52846298c14671",
       "f8da9551192fb7f98b4efa86",
@@ -80,15 +80,9 @@
       "d10a3c874af4d2b467263ee1",
       "6d665d935673091233751767",
       "b079bec5bc869b0463d0584c",
+      "cee347fbc3752c6e0f890457",
       "ecd4a1111010f13b2d74bf8c",
       "41772e5c9af7970ddd7d5aac",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
@@ -130,6 +124,7 @@
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-21C56289EDA1B8BD",
       "ASC-REVIEW-11446D58C9F4E2B6",
       "ASC-REVIEW-0F86A972B08C9E18",
@@ -146,21 +141,26 @@
       "ASC-REVIEW-68286C2A2CB861AF",
       "ASC-REVIEW-2527E3DEA85AE958",
       "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C"
+      "ASC-REVIEW-1C806B2577C4D44C",
+      "ASC-REVIEW-A04C87BD046475D3",
+      "ASC-REVIEW-3A6BF3064A28E236",
+      "ASC-REVIEW-BC92D8AABD2393C5",
+      "ASC-REVIEW-3266CA18BAEC4ACB",
+      "ASC-REVIEW-DF9D7EABC07B3635"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 23,
-      "disputedClaimCount": 88,
+      "primarySourceCount": 15,
+      "disputedClaimCount": 96,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 86,
-      "moneyRecordCount": 77
+      "relationshipCount": 90,
+      "moneyRecordCount": 82
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 23 A/B-grade public-record items are materially relevant to Runtime Performance Budget Test.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Runtime Performance Budget Test.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: Federal Register — Latest Documents,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Treasury OFAC — Recent Actions,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 86 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 86 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T07:59:26.636Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

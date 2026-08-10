@@ -1,6 +1,7 @@
 import productionWorker from './worker-production.js';
 import aiManagementWorker from './worker-ai-management.js';
 import { isAiManagementRoute } from './worker-ai-management.js';
+import scenarioProbabilityWorker, { isScenarioProbabilityRoute } from './worker-scenario-probability.js';
 import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
@@ -59,10 +60,37 @@ function forbidden() {
   });
 }
 
+function probabilityUnavailable(reason) {
+  return new Response(JSON.stringify({
+    ok: false,
+    error: 'The Probability Machine failed safely.',
+    reason: String(reason || 'unknown').slice(0, 300)
+  }, null, 2), {
+    status: 503,
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'cache-control': 'no-store',
+      'x-content-type-options': 'nosniff',
+      'x-matrix-origin': 'cloudflare-worker-scenario-probability'
+    }
+  });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const runtimeEnv = withAiManagementAdminToken(env);
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+
+    if (isScenarioProbabilityRoute(path)) {
+      try {
+        const response = await scenarioProbabilityWorker.fetch(request, runtimeEnv, ctx);
+        return response.headers.get('x-matrix-origin') === 'cloudflare-worker-scenario-probability'
+          ? response
+          : probabilityUnavailable('non-authoritative-probability-response');
+      } catch (error) {
+        return probabilityUnavailable(error?.message || error);
+      }
+    }
 
     if (isMatrixSynergyRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();

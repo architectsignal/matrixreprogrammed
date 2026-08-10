@@ -1,35 +1,253 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-06T06:31:45.883Z",
+  "generatedAt": "2026-08-09T05:09:42.794Z",
   "title": "The Accountability Twin: Public Consequence Contracts",
   "proposition": "Every consequential exercise of power should retain its original justification, evidence boundary, money questions, expected public benefit, falsifiers and dated outcome checks.",
   "differentiation": "This layer connects the source record, power map, money questions, public-interest claim, future checkpoints and eventual outcome assessment in one followable record.",
   "boundary": "A contract is an accountability framework, not a legal contract, accusation or prediction. Lead-stage contracts cannot receive an outcome verdict until a primary decision record locks the terms.",
-  "count": 14,
+  "count": 12,
   "contracts": [
     {
       "schemaVersion": 1,
-      "id": "consequence-epstein-files-2026-08-06-80b0f1a5",
+      "id": "consequence-declassified-files-2026-08-07-fa753b69",
       "rank": 1,
-      "title": "New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "actionDate": "2026-08-06T05:07:20.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "title": "Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)",
+      "lane": "declassified-files",
+      "laneTitle": "Declassified Files And Public Archives",
+      "actionDate": "2026-08-07T22:12:41.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
-        "label": "Google News / Epstein sighting and alive claims",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5",
+        "label": "US Treasury Press Release Discovery",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5",
         "classification": "public-source-lead",
-        "publishedAt": "2026-08-06T05:07:20.000Z",
+        "publishedAt": "2026-08-07T22:12:41.000Z",
+        "evidenceRoute": "evidence-vault-index.html"
+      },
+      "actionRecord": {
+        "headline": "Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)",
+        "summary": "Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices U.S. Department of the Treasury (.gov)",
+        "responsibleActor": "Not yet resolved from a primary decision record",
+        "authorityBasis": "Not yet attached",
+        "statedRationale": "Not yet extracted from a primary decision record",
+        "claimedPublicBenefit": "Not yet locked",
+        "implementationStatus": "Unverified lead stage"
+      },
+      "consequenceMap": {
+        "knownBeneficiaries": [],
+        "beneficiaryQuestion": "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "affectedGroups": [],
+        "affectedGroupQuestion": "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "moneyStatus": "unmapped",
+        "moneyQuestions": [
+          "What public or private money funds the action?",
+          "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+          "Who receives the direct and indirect financial benefit?"
+        ],
+        "authorityQuestion": "Which law, vote, order, filing, contract or delegated authority made the action possible?"
+      },
+      "checkpoints": [
+        {
+          "id": "consequence-declassified-files-2026-08-07-fa753b69-30d",
+          "label": "30-day consequence check",
+          "daysAfterAction": 30,
+          "dueAt": "2026-09-06T22:12:41.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "id": "consequence-declassified-files-2026-08-07-fa753b69-90d",
+          "label": "90-day consequence check",
+          "daysAfterAction": 90,
+          "dueAt": "2026-11-05T22:12:41.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "id": "consequence-declassified-files-2026-08-07-fa753b69-365d",
+          "label": "365-day consequence check",
+          "daysAfterAction": 365,
+          "dueAt": "2027-08-07T22:12:41.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "label": "Implementation",
+          "status": "definition-required",
+          "measure": "Attach a primary record and define what completed implementation would look like."
+        },
+        {
+          "label": "Claimed public benefit",
+          "status": "definition-required",
+          "measure": "Extract the official measurable benefit before judging success or failure."
+        },
+        {
+          "label": "Money and beneficiaries",
+          "status": "mapping-required",
+          "measure": "Map funding, contracts, grants, ownership changes and direct beneficiaries."
+        },
+        {
+          "label": "Costs and affected groups",
+          "status": "mapping-required",
+          "measure": "Measure public cost, restrictions, displacement, risk or other material effects."
+        }
+      ],
+      "falsifiers": [
+        "The primary record does not support the headline or summary used to create this lead-stage contract.",
+        "The responsible authority did not implement the stated action.",
+        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
+        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
+        "A credible alternative explanation better accounts for the observed outcome."
+      ],
+      "accountabilityQuestion": "What measurable public consequence followed “Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)”, and did the evidence support the stated or implied justification?",
+      "responseStatus": "No verified response request recorded",
+      "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
+      "followTarget": {
+        "entityId": "consequence-declassified-files-2026-08-07-fa753b69",
+        "entityType": "topic",
+        "label": "Consequence contract: Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)",
+        "route": "public-consequence-contracts.html#consequence-declassified-files-2026-08-07-fa753b69"
+      },
+      "version": 1,
+      "versionHistoryStatus": "current-snapshot-only"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "consequence-declassified-files-2026-08-07-a0d1b2f2",
+      "rank": 2,
+      "title": "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)",
+      "lane": "declassified-files",
+      "laneTitle": "Declassified Files And Public Archives",
+      "actionDate": "2026-08-07T17:30:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
+      "status": "lead-stage-contract",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
+      "source": {
+        "label": "US Treasury Press Release Discovery",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5",
+        "classification": "public-source-lead",
+        "publishedAt": "2026-08-07T17:30:00.000Z",
+        "evidenceRoute": "evidence-vault-index.html"
+      },
+      "actionRecord": {
+        "headline": "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)",
+        "summary": "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance U.S. Department of the Treasury (.gov)",
+        "responsibleActor": "Not yet resolved from a primary decision record",
+        "authorityBasis": "Not yet attached",
+        "statedRationale": "Not yet extracted from a primary decision record",
+        "claimedPublicBenefit": "Not yet locked",
+        "implementationStatus": "Unverified lead stage"
+      },
+      "consequenceMap": {
+        "knownBeneficiaries": [],
+        "beneficiaryQuestion": "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "affectedGroups": [],
+        "affectedGroupQuestion": "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "moneyStatus": "unmapped",
+        "moneyQuestions": [
+          "What public or private money funds the action?",
+          "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+          "Who receives the direct and indirect financial benefit?"
+        ],
+        "authorityQuestion": "Which law, vote, order, filing, contract or delegated authority made the action possible?"
+      },
+      "checkpoints": [
+        {
+          "id": "consequence-declassified-files-2026-08-07-a0d1b2f2-30d",
+          "label": "30-day consequence check",
+          "daysAfterAction": 30,
+          "dueAt": "2026-09-06T17:30:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
+        },
+        {
+          "id": "consequence-declassified-files-2026-08-07-a0d1b2f2-90d",
+          "label": "90-day consequence check",
+          "daysAfterAction": 90,
+          "dueAt": "2026-11-05T17:30:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
+        },
+        {
+          "id": "consequence-declassified-files-2026-08-07-a0d1b2f2-365d",
+          "label": "365-day consequence check",
+          "daysAfterAction": 365,
+          "dueAt": "2027-08-07T17:30:00.000Z",
+          "status": "scheduled",
+          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
+        }
+      ],
+      "outcomeMetrics": [
+        {
+          "label": "Implementation",
+          "status": "definition-required",
+          "measure": "Attach a primary record and define what completed implementation would look like."
+        },
+        {
+          "label": "Claimed public benefit",
+          "status": "definition-required",
+          "measure": "Extract the official measurable benefit before judging success or failure."
+        },
+        {
+          "label": "Money and beneficiaries",
+          "status": "mapping-required",
+          "measure": "Map funding, contracts, grants, ownership changes and direct beneficiaries."
+        },
+        {
+          "label": "Costs and affected groups",
+          "status": "mapping-required",
+          "measure": "Measure public cost, restrictions, displacement, risk or other material effects."
+        }
+      ],
+      "falsifiers": [
+        "The primary record does not support the headline or summary used to create this lead-stage contract.",
+        "The responsible authority did not implement the stated action.",
+        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
+        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
+        "A credible alternative explanation better accounts for the observed outcome."
+      ],
+      "accountabilityQuestion": "What measurable public consequence followed “Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)”, and did the evidence support the stated or implied justification?",
+      "responseStatus": "No verified response request recorded",
+      "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
+      "followTarget": {
+        "entityId": "consequence-declassified-files-2026-08-07-a0d1b2f2",
+        "entityType": "topic",
+        "label": "Consequence contract: Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)",
+        "route": "public-consequence-contracts.html#consequence-declassified-files-2026-08-07-a0d1b2f2"
+      },
+      "version": 1,
+      "versionHistoryStatus": "current-snapshot-only"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "consequence-epstein-files-2026-08-07-9c3b2188",
+      "rank": 3,
+      "title": "Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post",
+      "lane": "epstein-files",
+      "laneTitle": "Epstein Files, Timeline And Court Records",
+      "actionDate": "2026-08-07T14:15:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
+      "status": "lead-stage-contract",
+      "termsLock": "unlocked-pending-primary-decision-record",
+      "outcomeVerdict": "not-scored",
+      "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
+      "source": {
+        "label": "Google News / Epstein timeline and files",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5",
+        "classification": "official-or-primary-lead",
+        "publishedAt": "2026-08-07T14:15:00.000Z",
         "evidenceRoute": "epstein-files.html#epstein-evidence-ladder"
       },
       "actionRecord": {
-        "headline": "New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post",
-        "summary": "New Mexico sues DOJ for unredacted Jeffrey Epstein files The Jerusalem Post",
+        "headline": "Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post",
+        "summary": "Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony New York Post",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -51,26 +269,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-epstein-files-2026-08-06-80b0f1a5-30d",
+          "id": "consequence-epstein-files-2026-08-07-9c3b2188-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-05T05:07:20.000Z",
+          "dueAt": "2026-09-06T14:15:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-epstein-files-2026-08-06-80b0f1a5-90d",
+          "id": "consequence-epstein-files-2026-08-07-9c3b2188-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-04T05:07:20.000Z",
+          "dueAt": "2026-11-05T14:15:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-epstein-files-2026-08-06-80b0f1a5-365d",
+          "id": "consequence-epstein-files-2026-08-07-9c3b2188-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-06T05:07:20.000Z",
+          "dueAt": "2027-08-07T14:15:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -104,259 +322,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
       "followTarget": {
-        "entityId": "consequence-epstein-files-2026-08-06-80b0f1a5",
+        "entityId": "consequence-epstein-files-2026-08-07-9c3b2188",
         "entityType": "topic",
-        "label": "Consequence contract: New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post",
-        "route": "public-consequence-contracts.html#consequence-epstein-files-2026-08-06-80b0f1a5"
+        "label": "Consequence contract: Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post",
+        "route": "public-consequence-contracts.html#consequence-epstein-files-2026-08-07-9c3b2188"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-declassified-files-2026-08-05-1fa6b92d",
-      "rank": 2,
-      "title": "Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)",
-      "lane": "declassified-files",
-      "laneTitle": "Declassified Files And Public Archives",
-      "actionDate": "2026-08-05T14:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
-      "status": "lead-stage-contract",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
-      "source": {
-        "label": "US Treasury Press Release Discovery",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5",
-        "classification": "public-source-lead",
-        "publishedAt": "2026-08-05T14:00:00.000Z",
-        "evidenceRoute": "evidence-vault-index.html"
-      },
-      "actionRecord": {
-        "headline": "Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)",
-        "summary": "Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts U.S. Department of the Treasury (.gov)",
-        "responsibleActor": "Not yet resolved from a primary decision record",
-        "authorityBasis": "Not yet attached",
-        "statedRationale": "Not yet extracted from a primary decision record",
-        "claimedPublicBenefit": "Not yet locked",
-        "implementationStatus": "Unverified lead stage"
-      },
-      "consequenceMap": {
-        "knownBeneficiaries": [],
-        "beneficiaryQuestion": "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "affectedGroups": [],
-        "affectedGroupQuestion": "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "moneyStatus": "unmapped",
-        "moneyQuestions": [
-          "What public or private money funds the action?",
-          "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-          "Who receives the direct and indirect financial benefit?"
-        ],
-        "authorityQuestion": "Which law, vote, order, filing, contract or delegated authority made the action possible?"
-      },
-      "checkpoints": [
-        {
-          "id": "consequence-declassified-files-2026-08-05-1fa6b92d-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-09-04T14:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-declassified-files-2026-08-05-1fa6b92d-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-11-03T14:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-declassified-files-2026-08-05-1fa6b92d-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-08-05T14:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "outcomeMetrics": [
-        {
-          "label": "Implementation",
-          "status": "definition-required",
-          "measure": "Attach a primary record and define what completed implementation would look like."
-        },
-        {
-          "label": "Claimed public benefit",
-          "status": "definition-required",
-          "measure": "Extract the official measurable benefit before judging success or failure."
-        },
-        {
-          "label": "Money and beneficiaries",
-          "status": "mapping-required",
-          "measure": "Map funding, contracts, grants, ownership changes and direct beneficiaries."
-        },
-        {
-          "label": "Costs and affected groups",
-          "status": "mapping-required",
-          "measure": "Measure public cost, restrictions, displacement, risk or other material effects."
-        }
-      ],
-      "falsifiers": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome."
-      ],
-      "accountabilityQuestion": "What measurable public consequence followed “Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)”, and did the evidence support the stated or implied justification?",
-      "responseStatus": "No verified response request recorded",
-      "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
-      "followTarget": {
-        "entityId": "consequence-declassified-files-2026-08-05-1fa6b92d",
-        "entityType": "topic",
-        "label": "Consequence contract: Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)",
-        "route": "public-consequence-contracts.html#consequence-declassified-files-2026-08-05-1fa6b92d"
-      },
-      "version": 1,
-      "versionHistoryStatus": "current-snapshot-only"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-declassified-files-2026-08-05-ba9a8b20",
-      "rank": 3,
-      "title": "Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)",
-      "lane": "declassified-files",
-      "laneTitle": "Declassified Files And Public Archives",
-      "actionDate": "2026-08-05T12:30:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
-      "status": "lead-stage-contract",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
-      "source": {
-        "label": "US Treasury Press Release Discovery",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9hOHVXelEtWHd0RGxjQ1JKdFEtZ0VfeTluV25OaTYweEtUUC03RE03emswa3BoeFBVQ2NlQkFuWUc3X1FTUGRibVNGRVhKcndLektTY2RCS0RUSm03QlhiSG1R?oc=5",
-        "classification": "public-source-lead",
-        "publishedAt": "2026-08-05T12:30:00.000Z",
-        "evidenceRoute": "evidence-vault-index.html"
-      },
-      "actionRecord": {
-        "headline": "Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)",
-        "summary": "Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 U.S. Department of the Treasury (.gov)",
-        "responsibleActor": "Not yet resolved from a primary decision record",
-        "authorityBasis": "Not yet attached",
-        "statedRationale": "Not yet extracted from a primary decision record",
-        "claimedPublicBenefit": "Not yet locked",
-        "implementationStatus": "Unverified lead stage"
-      },
-      "consequenceMap": {
-        "knownBeneficiaries": [],
-        "beneficiaryQuestion": "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "affectedGroups": [],
-        "affectedGroupQuestion": "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "moneyStatus": "unmapped",
-        "moneyQuestions": [
-          "What public or private money funds the action?",
-          "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-          "Who receives the direct and indirect financial benefit?"
-        ],
-        "authorityQuestion": "Which law, vote, order, filing, contract or delegated authority made the action possible?"
-      },
-      "checkpoints": [
-        {
-          "id": "consequence-declassified-files-2026-08-05-ba9a8b20-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:30:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-declassified-files-2026-08-05-ba9a8b20-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:30:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-declassified-files-2026-08-05-ba9a8b20-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:30:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "outcomeMetrics": [
-        {
-          "label": "Implementation",
-          "status": "definition-required",
-          "measure": "Attach a primary record and define what completed implementation would look like."
-        },
-        {
-          "label": "Claimed public benefit",
-          "status": "definition-required",
-          "measure": "Extract the official measurable benefit before judging success or failure."
-        },
-        {
-          "label": "Money and beneficiaries",
-          "status": "mapping-required",
-          "measure": "Map funding, contracts, grants, ownership changes and direct beneficiaries."
-        },
-        {
-          "label": "Costs and affected groups",
-          "status": "mapping-required",
-          "measure": "Measure public cost, restrictions, displacement, risk or other material effects."
-        }
-      ],
-      "falsifiers": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome."
-      ],
-      "accountabilityQuestion": "What measurable public consequence followed “Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)”, and did the evidence support the stated or implied justification?",
-      "responseStatus": "No verified response request recorded",
-      "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
-      "followTarget": {
-        "entityId": "consequence-declassified-files-2026-08-05-ba9a8b20",
-        "entityType": "topic",
-        "label": "Consequence contract: Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)",
-        "route": "public-consequence-contracts.html#consequence-declassified-files-2026-08-05-ba9a8b20"
-      },
-      "version": 1,
-      "versionHistoryStatus": "current-snapshot-only"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-500955ff",
+      "id": "consequence-crime-state-overlap-2026-08-07-adb50e08",
       "rank": 4,
-      "title": "Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash",
+      "title": "Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ndga/pr/bahamian-drug-trafficker-faces-federal-cocaine-charges-following-sea-rescue-plane",
+        "url": "https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash",
-        "summary": "An indictment unsealed today in the Northern District of Georgia charges Jonathan Eric Gardiner, a convicted felon and Bahamian national, with federal drug importation and conspiracy offenses. U.S. officials arrested Gardiner after rescuing him from the Atlantic Ocean following a plane crash on May 14, 2026.",
+        "headline": "Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer",
+        "summary": "Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -378,26 +378,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-500955ff-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-adb50e08-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-500955ff-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-adb50e08-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-500955ff-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-adb50e08-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -431,41 +431,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-500955ff",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-adb50e08",
         "entityType": "topic",
-        "label": "Consequence contract: Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-500955ff"
+        "label": "Consequence contract: Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-adb50e08"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-054b189c",
+      "id": "consequence-crime-state-overlap-2026-08-07-8418d23a",
       "rank": 5,
-      "title": "BCSO Investigator Receives Freedom 250 Hometown Hero Award from U.S. Attorney for the Western District of Texas",
+      "title": "Convicted Felon Sentenced for Illegal Gun Possession",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-wdtx/pr/bcso-investigator-receives-freedom-250-hometown-hero-award-us-attorney-western",
+        "url": "https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "BCSO Investigator Receives Freedom 250 Hometown Hero Award from U.S. Attorney for the Western District of Texas",
-        "summary": "Bexar County Sheriff’s Office Violent Crimes Sergeant Che Lopez received the 'Freedom 250' Hometown Hero Award from the U.S. Attorney's Office for the Western District of Texas",
+        "headline": "Convicted Felon Sentenced for Illegal Gun Possession",
+        "summary": "Michael Ralph Collins, 33, a previously convicted felon residing in the District of Columbia, was sentenced in U.S. District Court today to 71 months in prison in connection with his unlawful possession of a loaded Ruger .45-caliber semiautomatic pistol that he stashed inside an open washing machine as he was pursued by police, announced U.S. Attorney Jeanine Ferris Pirro.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -487,26 +487,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-054b189c-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-8418d23a-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-054b189c-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-8418d23a-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-054b189c-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-8418d23a-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -540,41 +540,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “BCSO Investigator Receives Freedom 250 Hometown Hero Award from U.S. Attorney for the Western District of Texas”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Convicted Felon Sentenced for Illegal Gun Possession”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-054b189c",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-8418d23a",
         "entityType": "topic",
-        "label": "Consequence contract: BCSO Investigator Receives Freedom 250 Hometown Hero Award from U.S. Attorney for the Western District of Texas",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-054b189c"
+        "label": "Consequence contract: Convicted Felon Sentenced for Illegal Gun Possession",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-8418d23a"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-32f4a389",
+      "id": "consequence-crime-state-overlap-2026-08-07-dc3f30ce",
       "rank": 6,
-      "title": "Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford",
+      "title": "Former USDA Program Director Sentenced in $400,000 Fraud Scheme",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ct/pr/bridgeport-man-charged-dumping-used-oil-abandoned-property-hartford",
+        "url": "https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford",
-        "summary": "A federal grand jury in Bridgeport has returned an indictment charging HARRY BATCHELOR, JR., 29, of Bridgeport, with illegal transport and disposal of used oil.",
+        "headline": "Former USDA Program Director Sentenced in $400,000 Fraud Scheme",
+        "summary": "Kirk Perry, 62, a former United States Department of Agriculture (USDA) program director, was sentenced today to 24 months in prison in connection with a kickback scheme in which he and his nephew, Jamarea Grant, 32, of Cleveland, Ohio, conspired to bill the government nearly $400,000 for work that Grant did not actually perform, announced U.S. Attorney Jeanine Ferris Pirro.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -596,26 +596,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-32f4a389-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-dc3f30ce-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-32f4a389-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-dc3f30ce-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-32f4a389-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-dc3f30ce-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -649,41 +649,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Former USDA Program Director Sentenced in $400,000 Fraud Scheme”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-32f4a389",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-dc3f30ce",
         "entityType": "topic",
-        "label": "Consequence contract: Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-32f4a389"
+        "label": "Consequence contract: Former USDA Program Director Sentenced in $400,000 Fraud Scheme",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-dc3f30ce"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-b1ba4a77",
+      "id": "consequence-crime-state-overlap-2026-08-07-a2296147",
       "rank": 7,
-      "title": "Bridgeport Man Sentenced to 10 Years in Federal Prison for Drug and Firearm Offenses",
+      "title": "Honduran National Sentenced for Illegal Reentry of a Removed Alien",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ct/pr/bridgeport-man-sentenced-10-years-federal-prison-drug-and-firearm-offenses",
+        "url": "https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Bridgeport Man Sentenced to 10 Years in Federal Prison for Drug and Firearm Offenses",
-        "summary": "MOETIES BROWN, 32, of Bridgeport, was sentenced today by U.S. District Judge Vernon D. Oliver in Hartford to 120 months of imprisonment and four years of supervised release for narcotics distribution and firearm possession offenses.",
+        "headline": "Honduran National Sentenced for Illegal Reentry of a Removed Alien",
+        "summary": "NEW ORLEANS, LOUISIANA –UBALDO YASIR AMAYA-COLINDRES (“AMAYA-COLINDRES”) , age 27, a citizen of Honduras, was sentenced on August 6, 2026, to 10 months imprisonment by U.S. District Judge Eldon E. Fallon, after previously pleading guilty to illegal re-entry of a removed alien, in violation of Title 8, United States Code, Section 1326(a), announced U.S. Attorney David I. Courcelle. The Court also sentenced AMAYA-COLINDRES to one (1) year of supervised release and ordered him to pay a mandatory $100 special assessment fee.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -705,26 +705,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-b1ba4a77-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-a2296147-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-b1ba4a77-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-a2296147-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-b1ba4a77-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-a2296147-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -758,41 +758,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Bridgeport Man Sentenced to 10 Years in Federal Prison for Drug and Firearm Offenses”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Honduran National Sentenced for Illegal Reentry of a Removed Alien”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-b1ba4a77",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-a2296147",
         "entityType": "topic",
-        "label": "Consequence contract: Bridgeport Man Sentenced to 10 Years in Federal Prison for Drug and Firearm Offenses",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-b1ba4a77"
+        "label": "Consequence contract: Honduran National Sentenced for Illegal Reentry of a Removed Alien",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-a2296147"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-82b4cfe3",
+      "id": "consequence-crime-state-overlap-2026-08-07-ab764161",
       "rank": 8,
-      "title": "Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine",
+      "title": "Illegal alien brothers sentenced for gun possession in the Eastern District of Texas",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-vt/pr/brooklyn-man-charged-distribution-cocaine-base-and-cocaine",
+        "url": "https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine",
-        "summary": "Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine",
+        "headline": "Illegal alien brothers sentenced for gun possession in the Eastern District of Texas",
+        "summary": "A pair of illegal alien brothers have been sentenced to federal prison for firearms possession in the Eastern District of Texas, announced U.S. Attorney Jay R. Combs.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -814,26 +814,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-82b4cfe3-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-ab764161-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-82b4cfe3-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-ab764161-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-82b4cfe3-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-ab764161-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -867,41 +867,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Illegal alien brothers sentenced for gun possession in the Eastern District of Texas”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-82b4cfe3",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-ab764161",
         "entityType": "topic",
-        "label": "Consequence contract: Brooklyn Man Charged with Distribution of Cocaine Base and Cocaine",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-82b4cfe3"
+        "label": "Consequence contract: Illegal alien brothers sentenced for gun possession in the Eastern District of Texas",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-ab764161"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-100dcff9",
+      "id": "consequence-crime-state-overlap-2026-08-07-7e664ee5",
       "rank": 9,
-      "title": "Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography",
+      "title": "Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ndin/pr/columbia-city-man-sentenced-120-months-prison-and-120-months-supervised-release",
+        "url": "https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography",
-        "summary": "Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography",
+        "headline": "Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah",
+        "summary": "SALT LAKE CITY , Utah – The final defendant, an illegal alien from Honduras who was involved in a drug trafficking crime, was sentenced to time served (16.5 months’ imprisonment) after approximately 13,000 fentanyl pills were seized by law enforcement during a controlled buy and the execution of a search warrant in 2025.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -923,26 +923,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-100dcff9-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-7e664ee5-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-100dcff9-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-7e664ee5-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-100dcff9-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-7e664ee5-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -976,41 +976,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-100dcff9",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-7e664ee5",
         "entityType": "topic",
-        "label": "Consequence contract: Columbia City Man Sentenced to 120 Months in Prison and 120 Months Supervised Release For Possession of Child Pornography",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-100dcff9"
+        "label": "Consequence contract: Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-7e664ee5"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-a6e069b5",
+      "id": "consequence-crime-state-overlap-2026-08-07-4f6b78a3",
       "rank": 10,
-      "title": "Convicted Drug Trafficker Sentenced for Violating Federal Controlled Substances Act",
+      "title": "Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-edla/pr/convicted-drug-trafficker-sentenced-violating-federal-controlled-substances-act-0",
+        "url": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sentenced-two-and-half-years-federal-prison-firing-shots-near-border",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Convicted Drug Trafficker Sentenced for Violating Federal Controlled Substances Act",
-        "summary": "NEW ORLEANS, LOUISIANA – YILEI ZHOU , age 36, a Chinese national, was sentenced today by United States District Judge Greg G. Guidry to 24 months’ imprisonment, 4 years of supervised release, and a $100.00 mandatory special assessment fee, after previously pleading guilty to conspiracy to distribute, and possess with intent to distribute, a mixture and substance containing one hundred (100) kilograms or more of a detectable amount of marijuana, in violation of Title 21, United States Code, Sections 841(a)(1), 841(b)(1)(B), and 846.",
+        "headline": "Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago",
+        "summary": "HECTOR GOMEZ pleaded guilty to a federal charge of illegal possession of a firearm.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -1032,26 +1032,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-a6e069b5-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-4f6b78a3-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-a6e069b5-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-4f6b78a3-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-a6e069b5-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-4f6b78a3-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -1085,41 +1085,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Convicted Drug Trafficker Sentenced for Violating Federal Controlled Substances Act”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-a6e069b5",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-4f6b78a3",
         "entityType": "topic",
-        "label": "Consequence contract: Convicted Drug Trafficker Sentenced for Violating Federal Controlled Substances Act",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-a6e069b5"
+        "label": "Consequence contract: Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-4f6b78a3"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-c324ec51",
+      "id": "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
       "rank": 11,
-      "title": "Convicted Felon Sentenced to Over 17 Years in Federal Prison for Drug Trafficking Offenses",
+      "title": "Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ndfl/pr/convicted-felon-sentenced-over-17-years-federal-prison-drug-trafficking-offenses",
+        "url": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sexual-assault-conviction-sentenced-federal-prison-unlawfully-re",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Convicted Felon Sentenced to Over 17 Years in Federal Prison for Drug Trafficking Offenses",
-        "summary": "Tallahassee, Florida – Antonio Carlos Shine, 38, of Dania, Florida, was sentenced to 17 years and five months in federal prison for possession with intent to distribute more than 50 grams of methamphetamine and marijuana.",
+        "headline": "Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation",
+        "summary": "The defendant was unlawfully present in the U.S. after previously being deported.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -1141,26 +1141,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-c324ec51-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-eea3ce1d-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-c324ec51-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-eea3ce1d-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-c324ec51-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-eea3ce1d-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -1194,41 +1194,41 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Convicted Felon Sentenced to Over 17 Years in Federal Prison for Drug Trafficking Offenses”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-c324ec51",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
         "entityType": "topic",
-        "label": "Consequence contract: Convicted Felon Sentenced to Over 17 Years in Federal Prison for Drug Trafficking Offenses",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-c324ec51"
+        "label": "Consequence contract: Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-eea3ce1d"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"
     },
     {
       "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-f56f7000",
+      "id": "consequence-crime-state-overlap-2026-08-07-0aa1dddd",
       "rank": 12,
-      "title": "Court Sentences Mobile County Man for Possessing a Firearm as a Convicted Felon",
+      "title": "Illegal aliens sentenced for methamphetamine trafficking and firearms offenses",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
+      "actionDate": "2026-08-07T12:00:00.000Z",
+      "createdAt": "2026-08-09T05:09:42.794Z",
       "status": "lead-stage-contract",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-sdal/pr/court-sentences-mobile-county-man-possessing-firearm-convicted-felon-1",
+        "url": "https://www.justice.gov/usao-ks/pr/illegal-alien-sentenced-methamphetamine-trafficking",
         "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
+        "publishedAt": "2026-08-07T12:00:00.000Z",
         "evidenceRoute": "network-maps.html"
       },
       "actionRecord": {
-        "headline": "Court Sentences Mobile County Man for Possessing a Firearm as a Convicted Felon",
-        "summary": "MOBILE, Ala. – On August 4, 2026, United States District Judge William H. Steele sentenced Andre Jerrard Davis, Sr., to 46 months in federal prison for possessing a firearm after having previously been convicted of multiple felony offenses.",
+        "headline": "Illegal aliens sentenced for methamphetamine trafficking and firearms offenses",
+        "summary": "An illegal alien from Mexico was sentenced to 151 months in prison for drug trafficking.",
         "responsibleActor": "Not yet resolved from a primary decision record",
         "authorityBasis": "Not yet attached",
         "statedRationale": "Not yet extracted from a primary decision record",
@@ -1250,26 +1250,26 @@
       },
       "checkpoints": [
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-f56f7000-30d",
+          "id": "consequence-crime-state-overlap-2026-08-07-0aa1dddd-30d",
           "label": "30-day consequence check",
           "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
+          "dueAt": "2026-09-06T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-f56f7000-90d",
+          "id": "consequence-crime-state-overlap-2026-08-07-0aa1dddd-90d",
           "label": "90-day consequence check",
           "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
+          "dueAt": "2026-11-05T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
-          "id": "consequence-crime-state-overlap-2026-08-05-f56f7000-365d",
+          "id": "consequence-crime-state-overlap-2026-08-07-0aa1dddd-365d",
           "label": "365-day consequence check",
           "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
+          "dueAt": "2027-08-07T12:00:00.000Z",
           "status": "scheduled",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
@@ -1303,232 +1303,14 @@
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome."
       ],
-      "accountabilityQuestion": "What measurable public consequence followed “Court Sentences Mobile County Man for Possessing a Firearm as a Convicted Felon”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Illegal aliens sentenced for methamphetamine trafficking and firearms offenses”, and did the evidence support the stated or implied justification?",
       "responseStatus": "No verified response request recorded",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-f56f7000",
+        "entityId": "consequence-crime-state-overlap-2026-08-07-0aa1dddd",
         "entityType": "topic",
-        "label": "Consequence contract: Court Sentences Mobile County Man for Possessing a Firearm as a Convicted Felon",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-f56f7000"
-      },
-      "version": 1,
-      "versionHistoryStatus": "current-snapshot-only"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-02c58f32",
-      "rank": 13,
-      "title": "Fentanyl Near Playground Leads to Ohio Man’s Conviction",
-      "lane": "crime-state-overlap",
-      "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
-      "status": "lead-stage-contract",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
-      "source": {
-        "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ndwv/pr/fentanyl-near-playground-leads-ohio-mans-conviction",
-        "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
-        "evidenceRoute": "network-maps.html"
-      },
-      "actionRecord": {
-        "headline": "Fentanyl Near Playground Leads to Ohio Man’s Conviction",
-        "summary": "A Canton, Ohio man has admitted to having more than 40 grams of fentanyl near a playground in Ohio County, West Virginia, announced U.S. Attorney Matthew L. Harvey.",
-        "responsibleActor": "Not yet resolved from a primary decision record",
-        "authorityBasis": "Not yet attached",
-        "statedRationale": "Not yet extracted from a primary decision record",
-        "claimedPublicBenefit": "Not yet locked",
-        "implementationStatus": "Unverified lead stage"
-      },
-      "consequenceMap": {
-        "knownBeneficiaries": [],
-        "beneficiaryQuestion": "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "affectedGroups": [],
-        "affectedGroupQuestion": "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "moneyStatus": "unmapped",
-        "moneyQuestions": [
-          "What public or private money funds the action?",
-          "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-          "Who receives the direct and indirect financial benefit?"
-        ],
-        "authorityQuestion": "Which law, vote, order, filing, contract or delegated authority made the action possible?"
-      },
-      "checkpoints": [
-        {
-          "id": "consequence-crime-state-overlap-2026-08-05-02c58f32-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-crime-state-overlap-2026-08-05-02c58f32-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-crime-state-overlap-2026-08-05-02c58f32-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "outcomeMetrics": [
-        {
-          "label": "Implementation",
-          "status": "definition-required",
-          "measure": "Attach a primary record and define what completed implementation would look like."
-        },
-        {
-          "label": "Claimed public benefit",
-          "status": "definition-required",
-          "measure": "Extract the official measurable benefit before judging success or failure."
-        },
-        {
-          "label": "Money and beneficiaries",
-          "status": "mapping-required",
-          "measure": "Map funding, contracts, grants, ownership changes and direct beneficiaries."
-        },
-        {
-          "label": "Costs and affected groups",
-          "status": "mapping-required",
-          "measure": "Measure public cost, restrictions, displacement, risk or other material effects."
-        }
-      ],
-      "falsifiers": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome."
-      ],
-      "accountabilityQuestion": "What measurable public consequence followed “Fentanyl Near Playground Leads to Ohio Man’s Conviction”, and did the evidence support the stated or implied justification?",
-      "responseStatus": "No verified response request recorded",
-      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
-      "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-02c58f32",
-        "entityType": "topic",
-        "label": "Consequence contract: Fentanyl Near Playground Leads to Ohio Man’s Conviction",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-02c58f32"
-      },
-      "version": 1,
-      "versionHistoryStatus": "current-snapshot-only"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "consequence-crime-state-overlap-2026-08-05-d0414588",
-      "rank": 14,
-      "title": "Final Defendant Sentenced in Montgomery Dry Cleaning Business Robbery Case",
-      "lane": "crime-state-overlap",
-      "laneTitle": "Crime State Overlap",
-      "actionDate": "2026-08-05T12:00:00.000Z",
-      "createdAt": "2026-08-06T06:31:45.883Z",
-      "status": "lead-stage-contract",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "outcomeScoreRule": "No success, failure or beneficiary finding may be scored until a primary decision record defines the action, authority, stated purpose and measurable checkpoint.",
-      "source": {
-        "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-mdal/pr/final-defendant-sentenced-montgomery-dry-cleaning-business-robbery-case",
-        "classification": "official-or-primary-lead",
-        "publishedAt": "2026-08-05T12:00:00.000Z",
-        "evidenceRoute": "network-maps.html"
-      },
-      "actionRecord": {
-        "headline": "Final Defendant Sentenced in Montgomery Dry Cleaning Business Robbery Case",
-        "summary": "Final Defendant Sentenced in Montgomery Dry Cleaning Business Robbery Case",
-        "responsibleActor": "Not yet resolved from a primary decision record",
-        "authorityBasis": "Not yet attached",
-        "statedRationale": "Not yet extracted from a primary decision record",
-        "claimedPublicBenefit": "Not yet locked",
-        "implementationStatus": "Unverified lead stage"
-      },
-      "consequenceMap": {
-        "knownBeneficiaries": [],
-        "beneficiaryQuestion": "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "affectedGroups": [],
-        "affectedGroupQuestion": "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "moneyStatus": "unmapped",
-        "moneyQuestions": [
-          "What public or private money funds the action?",
-          "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-          "Who receives the direct and indirect financial benefit?"
-        ],
-        "authorityQuestion": "Which law, vote, order, filing, contract or delegated authority made the action possible?"
-      },
-      "checkpoints": [
-        {
-          "id": "consequence-crime-state-overlap-2026-08-05-d0414588-30d",
-          "label": "30-day consequence check",
-          "daysAfterAction": 30,
-          "dueAt": "2026-09-04T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "id": "consequence-crime-state-overlap-2026-08-05-d0414588-90d",
-          "label": "90-day consequence check",
-          "daysAfterAction": 90,
-          "dueAt": "2026-11-03T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "id": "consequence-crime-state-overlap-2026-08-05-d0414588-365d",
-          "label": "365-day consequence check",
-          "daysAfterAction": 365,
-          "dueAt": "2027-08-05T12:00:00.000Z",
-          "status": "scheduled",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "outcomeMetrics": [
-        {
-          "label": "Implementation",
-          "status": "definition-required",
-          "measure": "Attach a primary record and define what completed implementation would look like."
-        },
-        {
-          "label": "Claimed public benefit",
-          "status": "definition-required",
-          "measure": "Extract the official measurable benefit before judging success or failure."
-        },
-        {
-          "label": "Money and beneficiaries",
-          "status": "mapping-required",
-          "measure": "Map funding, contracts, grants, ownership changes and direct beneficiaries."
-        },
-        {
-          "label": "Costs and affected groups",
-          "status": "mapping-required",
-          "measure": "Measure public cost, restrictions, displacement, risk or other material effects."
-        }
-      ],
-      "falsifiers": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome."
-      ],
-      "accountabilityQuestion": "What measurable public consequence followed “Final Defendant Sentenced in Montgomery Dry Cleaning Business Robbery Case”, and did the evidence support the stated or implied justification?",
-      "responseStatus": "No verified response request recorded",
-      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
-      "followTarget": {
-        "entityId": "consequence-crime-state-overlap-2026-08-05-d0414588",
-        "entityType": "topic",
-        "label": "Consequence contract: Final Defendant Sentenced in Montgomery Dry Cleaning Business Robbery Case",
-        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-05-d0414588"
+        "label": "Consequence contract: Illegal aliens sentenced for methamphetamine trafficking and firearms offenses",
+        "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-0aa1dddd"
       },
       "version": 1,
       "versionHistoryStatus": "current-snapshot-only"

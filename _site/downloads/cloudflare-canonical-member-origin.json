@@ -1,7 +1,8 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-06T06:28:56.609Z",
+  "generatedAt": "2026-08-09T05:06:41.919Z",
   "changed": false,
+  "membershipCanonicalRestored": true,
   "canonicalOrigin": "https://matrixreprogrammed.com",
   "redirectStatus": 308,
   "checks": {
@@ -10,5 +11,6 @@
     "routesFromCanonicalUrl": true,
     "legacyDirectPathParserRemoved": true
   },
-  "reason": "Host-only authentication cookies must not split member state between www and the apex Cloudflare Worker origin."
+  "membershipMarkersVerified": 10,
+  "reason": "Host-only authentication cookies must not split member state between www and the apex Cloudflare Worker origin. Membership is a protected transactional surface: if a generic generated-page pass rewrites its runtime structure, the exact page from the checked-out release SHA is restored before strict API hardening."
 }

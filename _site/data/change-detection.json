@@ -1,9 +1,9 @@
 {
-  "updated": "2026-08-06T06:11:49.769Z",
+  "updated": "2026-08-09T04:48:00.667Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-08-06T03:35:42.574Z",
+  "previousUpdated": "2026-08-09T02:28:21.639Z",
   "currentRecordCount": 18,
   "previousRecordCount": 18,
   "newRecords": [],
@@ -85,8 +85,8 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936935-2",
-        "courtlistener-court-records-10936889-3"
+        "courtlistener-court-records-10936935-4",
+        "courtlistener-court-records-10936889-5"
       ],
       "last_seen": "2026-07-29"
     }

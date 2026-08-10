@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:23:09.916Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-09T05:00:22.780Z",
+  "pageCount": 134,
   "output": "downloads/search-v3-adjudicated-ranking-patch.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Search V3 Adjudicated Ranking Patch",
-    "contentHash": "69d92c991b98aa7e6643b17152b592f31f84142be666862434d174ad829aac3d",
+    "contentHash": "f92b812414ee2277fbc9dfb3eca11d252fe714453b0b312b46fa158505381207",
     "sourceIds": [
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
@@ -77,9 +77,9 @@
       "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-F62F7FFFBED4C0DC",
       "ASC-REVIEW-47D99B95C8C88B19",
-      "ASC-REVIEW-E250944258ED0360",
-      "ASC-REVIEW-75C693C304757153",
       "ASC-REVIEW-BF5A5D787C430742",
+      "ASC-REVIEW-BF377F1B7D8B25FC",
+      "ASC-REVIEW-861C2A74B4636B6F",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-FB46D93D6179DCC7",
@@ -98,10 +98,12 @@
       "cyril-smith-westminster-2020",
       "nassar-state-convictions-2018",
       "savile-health-investigations-2014",
-      "ASC-REVIEW-6CCC0D5E0B3EA09D",
-      "ASC-REVIEW-CEC93F9808F62E6E",
-      "ASC-REVIEW-D809754852C14D1D",
-      "ASC-REVIEW-1D0E514392976CFC",
+      "ASC-REVIEW-6476A61F00D66DFB",
+      "ASC-REVIEW-2733D1C88202921D",
+      "ASC-REVIEW-884743856D3E1385",
+      "ASC-REVIEW-E5A88F482A22427D",
+      "ASC-REVIEW-612BDE5576885761",
+      "ASC-REVIEW-EC518EFBF56BB985",
       "ASC-REVIEW-861EBE2805F13D36",
       "ASC-REVIEW-AFD96AE0BCA26187",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -128,7 +130,7 @@
       "ASC-REVIEW-4E0C4B2A65FF8D42",
       "ASC-REVIEW-995324D0659C1960",
       "ASC-REVIEW-BD5CE46383C9383C",
-      "ASC-REVIEW-EE1C48494066159E",
+      "ASC-REVIEW-111AEF27642D32DD",
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
@@ -139,14 +141,12 @@
       "ASC-REVIEW-DC55A436F8F9A135",
       "ASC-REVIEW-2721CEDC4D6A57D9",
       "ASC-REVIEW-C3297FF92B950118",
+      "ASC-REVIEW-A8D2D2229B2E32AE",
       "ASC-REVIEW-6770124E37F1FE36",
       "ASC-REVIEW-1E701E5D91BF4446",
       "ASC-REVIEW-38D60C73AE003DE8",
-      "ASC-REVIEW-9F528AA6CAAA62B3",
-      "ASC-REVIEW-D2068F12E3B02362",
-      "ASC-REVIEW-0A0F5EDC8CFFB406",
-      "ASC-REVIEW-F292B1C555E4049E",
-      "ASC-REVIEW-193FF58B0FB47FAD"
+      "ASC-REVIEW-7069086F3A015D62",
+      "ASC-REVIEW-713EBA586DECC926"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 88,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 62,
-      "moneyRecordCount": 45
+      "relationshipCount": 61,
+      "moneyRecordCount": 46
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 62 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 61 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "FCN, INC. — Court Services and Offender Supervision Agency; MINDCUBED LLC — District of Columbia Courts; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; MINDCUBED LLC — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 62 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 61 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "FCN, INC. — Court Services and Offender Supervision Agency",
           "MINDCUBED LLC — District of Columbia Courts",

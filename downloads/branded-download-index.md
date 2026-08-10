@@ -1,6 +1,6 @@
 # Branded Download PDF Index
 
-Updated: 2026-08-06T06:25:28.878Z
+Updated: 2026-08-09T05:02:53.189Z
 
 The library combines deep intelligence reports with the established premium structure: cover page, table of contents, evidence/proof routes, main players/entities, speculation boundary, current intelligence window, related books and reader actions.
 
@@ -54,6 +54,9 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Big Three Asset Manager Tracker: downloads/big-three-asset-managers.pdf
 - Big Three Search Routes Report: downloads/big-three-search-routes-report.pdf
 - Black File Exposé Engine: downloads/black-file-exposes.pdf
+- Black File Postbuild Alias Regression Test: downloads/black-file-postbuild-alias-regression-test.pdf
+- Black File Postbuild Finalization: downloads/black-file-postbuild-finalization.pdf
+- Black File Public Hero Finalization: downloads/black-file-public-hero-finalization.pdf
 - Black Files Series Hub: downloads/black-files-series.pdf
 - BlackRock Viral Video Claim Audit: downloads/blackrock-video-claim-audit.pdf
 - Brevo Operational Readiness: downloads/brevo-operational-readiness.pdf
@@ -100,6 +103,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Controlled Opposition Deck: downloads/controlled-opposition-deck.pdf
 - Convergence Control Lenses: downloads/convergence-control-lenses.pdf
 - Core Public Surfaces Finalize: downloads/core-public-surfaces-finalize.pdf
+- Corrections Route Finalization: downloads/corrections-route-finalization.pdf
 - Criminal Conduct Engine Pressure Test: downloads/criminal-conduct-engine-pressure-test.pdf
 - Criminal Conduct Engine Report: downloads/criminal-conduct-engine-report.pdf
 - Criminal Conduct Extensionless Sync: downloads/criminal-conduct-extensionless-sync.pdf
@@ -201,6 +205,7 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Exposure Integrity Pressure Test: downloads/exposure-integrity-pressure-test.pdf
 - Exposure Integrity Engine: downloads/exposure-integrity-report.pdf
 - Exposure Predators Hit List Link: downloads/exposure-predators-hit-list-link.pdf
+- Feature Maturity Report: downloads/feature-maturity-report.pdf
 - Final Contact Worker: downloads/final-contact-worker.pdf
 - Final Evidence Badge Dedupe: downloads/final-evidence-badge-dedupe.pdf
 - Final Forum Controlled Deploy: downloads/final-forum-controlled-deploy.pdf
@@ -326,6 +331,9 @@ Required deep sections: evidence-based conclusions, analytical inferences, specu
 - Osint Tools Test: downloads/osint-tools-test.pdf
 - Osint Worker Patch Report: downloads/osint-worker-patch-report.pdf
 - Outcome Briefings: downloads/outcome-briefings.pdf
+- P1 Public Quality Finalization: downloads/p1-public-quality-finalization.pdf
+- P1 Public Quality Preparation: downloads/p1-public-quality-preparation.pdf
+- P1 Public Quality Routes: downloads/p1-public-quality-routes.pdf
 - Page Quality Audit: downloads/page-quality-audit.pdf
 - Paypal Active Subscription Compatibility Test: downloads/paypal-active-subscription-compatibility-test.pdf
 - Paypal Membership Patch Report: downloads/paypal-membership-patch-report.pdf

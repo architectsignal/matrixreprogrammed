@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-06T06:12:19.011Z",
-  "pageCount": 92,
+  "generatedAt": "2026-08-09T04:48:32.320Z",
+  "pageCount": 89,
   "output": "downloads/atlas-lane-populations.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Atlas Lane Populations",
-    "contentHash": "99acef8412fb7123d6c6a41220e2ef1f4090e59d2e198146f0ff9c268531fc49",
+    "contentHash": "0c7488f7b09d7440a9a4a178cb1844879a63366c3c250a51d636f8007a59a5e0",
     "sourceIds": [
+      "33b99270b28ac9825f7ccfdd",
       "1769af26a7bda813406cd8f5",
-      "0730bb615248f676888d3235",
       "61ae0d83db697eca11852276",
       "1edbb4c1709e8e44ae019cae",
       "41597c33aa287b0fe4215a7a",
@@ -42,6 +42,7 @@
       "41aa56f8a3bb73081c043e7f",
       "98559a672dea896297ad4359",
       "people-of-interest",
+      "3a425f0d5d683952bc0ad7ac",
       "839d6054a3b1226dc066a1be",
       "f68ba7f32b85b738f72bbc25",
       "fa282655cc7293c0d94f5602",
@@ -52,7 +53,6 @@
       "56194c866d5e158a3c2c4368",
       "6b099c8f65670f8b2d296bca",
       "26b90533dbf7d2ed42f02de6",
-      "3a425f0d5d683952bc0ad7ac",
       "157cdab04b61ae6309c0c713",
       "dcec2a45ef35362072af05e3",
       "2110633b5119224d742a0f68",
@@ -84,7 +84,6 @@
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "384bb39bdc916ad6752ac63a",
-      "2828a0d0f67977aa4a3e373c",
       "de58872cc8483198b691c403",
       "7f5b91c14c671bd24b8bbd81",
       "tedros-adhanom-ghebreyesus",
@@ -119,11 +118,16 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "c3bd2d306202dfc2e2374303",
       "5143def4d109df60d6ae99db",
+      "594100b62a47db521fe2a128",
       "72ef7895f95288946ccb3cff",
       "76cf5cb1f42b219ea38128f4",
+      "consequence-crime-state-overlap-2026-08-05-500955ff",
+      "consequence-crime-state-overlap-2026-08-05-32f4a389",
+      "consequence-crime-state-overlap-2026-08-05-f56f7000",
+      "consequence-crime-state-overlap-2026-08-05-02c58f32",
       "9f77464e401ac59ad1adb812",
+      "c3bd2d306202dfc2e2374303",
       "44505b4afb60938c8117ad31",
       "7ee9141a42ad539f58a57e50",
       "1c352ab364fbfca06ab12a57",
@@ -135,31 +139,27 @@
       "a5e5d4ec4df4352ea242ea3f",
       "b7e4a66335a706ef5097117f",
       "15adccba38bd91644b561261",
+      "34805734b1ad3b73f0ede0d8",
       "larry-fink",
       "klaus-schwab",
       "emmanuel-macron",
       "christine-lagarde",
       "ajay-banga",
       "kristalina-georgieva",
-      "crime-state-overlap-2026-08-05-53f0cae4",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "c04c84ae4cc794d7c2f75d31"
+      "69e6c382b9dd5c119c8c9674"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 59,
+      "primarySourceCount": 58,
       "disputedClaimCount": 6,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 10,
-      "moneyRecordCount": 11
+      "relationshipCount": 8,
+      "moneyRecordCount": 12
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 59 A/B-grade public-record items are materially relevant to Atlas Lane Populations.",
+        "conclusion": "The indexed record establishes that 58 A/B-grade public-record items are materially relevant to Atlas Lane Populations.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Justice Department Withdraws Business Review Letter Issued to Proxy Advisory Firm,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Today, the Justice Department’s Antitrust Division (“Antitrust Division”) is withdrawing a 1987 Business Review Letter (the “1987 BRL” or the “Letter”) issued to Institutional Shareholder Services (“ISS”). ISS is a foreign-owned proxy advisory firm that advises its clients on how to vote shares their clients hold for thousands of corporate governance questions each year. ISS and Glass, Lewis & Co. LLC (“Glass Lewis”), control more than 90 percent of the proxy advisory market and their clients’ holdings represent a significant ownership stake in the United States’ largest publicly traded companies. As a result of this concentration of market power, ISS and Glass Lewis have tremendous influence in corporate governance matters and, based on their market dominance, shape the policies of America’s largest companies. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Commission’s Status Report Regarding Final Judgment Against Defendant Rajesh Taneja,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 10 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 8 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; MINDCUBED LLC — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Bill Gates; Bill Gates; Bill Gates; Bill Gates",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 10 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 8 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "MINDCUBED LLC — District of Columbia Courts",

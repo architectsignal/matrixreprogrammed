@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-07T05:48:06.464Z",
+  "generatedAt": "2026-08-09T05:10:07.414Z",
   "fixtureFirstPass": {
     "label": "fixture-first-pass",
     "sourceHash": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
@@ -127,11 +127,11 @@
   },
   "repository": {
     "label": "repository-postbuild-surfaces",
-    "sourceHash": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+    "sourceHash": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966",
     "surfaces": [
       {
         "relative": "black-file.html",
-        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "sha256": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966",
         "checks": {
           "byteIdentical": true,
           "oneH1": true,
@@ -145,7 +145,7 @@
       },
       {
         "relative": "black-file",
-        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "sha256": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966",
         "checks": {
           "byteIdentical": true,
           "oneH1": true,
@@ -159,7 +159,7 @@
       },
       {
         "relative": "_site/black-file.html",
-        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "sha256": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966",
         "checks": {
           "byteIdentical": true,
           "oneH1": true,
@@ -173,7 +173,7 @@
       },
       {
         "relative": "_site/black-file",
-        "sha256": "4ee91862a7fdf09e9ea4bd90ad2354f1f03b5e651c4253289203200ab43ac851",
+        "sha256": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966",
         "checks": {
           "byteIdentical": true,
           "oneH1": true,

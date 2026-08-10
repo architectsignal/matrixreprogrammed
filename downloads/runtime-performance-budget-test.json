@@ -1,11 +1,11 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-06T06:30:58.728Z",
+  "generatedAt": "2026-08-09T05:08:54.131Z",
   "checks": [
     {
       "name": "search-index.json compaction",
       "ok": true,
-      "detail": "33915 source records -> 31811 deployable records · 20.34 MiB · 2104 repeated findings, 0 exact duplicates and 0 invalid records removed"
+      "detail": "33922 source records -> 31818 deployable records · 20.34 MiB · 2104 repeated findings, 0 exact duplicates and 0 invalid records removed"
     },
     {
       "name": "search-index semantic preservation",
@@ -230,7 +230,7 @@
     {
       "name": "deployable HTML inspected",
       "ok": true,
-      "detail": "3479 routes"
+      "detail": "3491 routes"
     },
     {
       "name": "offscreen image lazy-loading",

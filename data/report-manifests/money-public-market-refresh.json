@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-08-06T06:20:24.382Z",
-  "pageCount": 74,
+  "generatedAt": "2026-08-09T04:57:14.499Z",
+  "pageCount": 78,
   "output": "downloads/money-public-market-refresh.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Money Public Market Refresh",
-    "contentHash": "6675230310b71ca2170c881f884fe70298a510d0f684338a71c5f188528cf325",
+    "contentHash": "616de6d4e272485ce5ecd4a74c42b0c4db203ab9e3dffba0666209fa36aa4ec0",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
       "26b90533dbf7d2ed42f02de6",
+      "33b99270b28ac9825f7ccfdd",
       "7ee9141a42ad539f58a57e50",
       "1ee57e70dacfa67f04323529",
       "157cdab04b61ae6309c0c713",
@@ -18,9 +19,8 @@
       "a42c91c655cd066504ed6515",
       "7dcf4ef18ea1f86d01068773",
       "511ed227bb4be58b582ebb8d",
-      "0730bb615248f676888d3235",
-      "b0cde383147509fbfd4f4472",
       "investment-vehicles-ivv",
+      "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
       "5594665950812895f468c11d",
@@ -50,10 +50,18 @@
       "5ce17839086eddf839270b1a",
       "c1520a15d6e62871a66c558e",
       "b7e4a66335a706ef5097117f",
+      "crime-state-overlap-2026-08-06-561822ee",
       "ASC-REVIEW-19181472DB04522E",
+      "ASC-REVIEW-29094A2EF0BEB10F",
       "ASC-REVIEW-2E9D74DCA057FDC2",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-B8034056CD461A0D",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "5295a33003172878f9880122",
+      "594100b62a47db521fe2a128",
       "media",
       "technology-control",
       "defence-security",
@@ -137,28 +145,20 @@
       "energy-resources-adanipower-ns",
       "energy-resources-rosn-me",
       "energy-resources-wds",
-      "energy-resources-ed",
-      "energy-resources-sse-l",
-      "energy-resources-pcg",
-      "energy-resources-lkoh-me",
-      "energy-resources-peg",
-      "energy-resources-ccj",
-      "energy-resources-2082-sr",
-      "energy-resources-nvtk-me",
-      "energy-resources-dewa-ae"
+      "energy-resources-ed"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 22,
-      "disputedClaimCount": 3,
+      "primarySourceCount": 23,
+      "disputedClaimCount": 9,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 7,
-      "moneyRecordCount": 108
+      "relationshipCount": 8,
+      "moneyRecordCount": 105
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
+        "conclusion": "The indexed record establishes that 23 A/B-grade public-record items are materially relevant to Money Public Market Refresh.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -167,10 +167,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "conclusion": "The most defensible current assessment is based on “Homeland Security Task Force Investigation Delivers Federal Jury Conviction of Pensacola Armed Drug Trafficker,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Pensacola, Florida – Jovon “Playa Pat” Booker, 33, of Pensacola, Florida, was convicted by a jury in federal court on one count of discharging a handgun in relation to a drug trafficking crime, and a separate count of possessing firearm in furtherance of a drug trafficking crime. Prior to the jury being selected in Pensacola, Booker pleaded guilty to one count of conspiracy to distribute a controlled substance, one count of conspiracy to commit money laundering, and five counts of money laundering through high end jewelry purchases. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -178,25 +178,26 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 7 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Jeffrey Epstein; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; Top 100 Technology-Control Companies; Top 100 Defence & Security Companies; Postmedia Network Canada",
+        "inference": "The indexed set contains 8 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Jeffrey Epstein; Homeland Security Task Force Investigation Delivers Federal Jury Conviction of Pensacola Armed Drug Trafficker; CACI International → Defense Technology: execution layer; State Street / State Street Investment Management → Market Services: capital layer; Top 100 Technology-Control Companies; Top 100 Defence & Security Companies; Postmedia Network Canada",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 7 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 8 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Jeffrey Epstein",
+          "Homeland Security Task Force Investigation Delivers Federal Jury Conviction of Pensacola Armed Drug Trafficker",
           "CACI International → Defense Technology: execution layer",
           "State Street / State Street Investment Management → Market Services: capital layer",
           "Top 100 Technology-Control Companies",
@@ -216,6 +217,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T12:00:00.000Z"
   }
 }

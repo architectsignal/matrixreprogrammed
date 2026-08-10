@@ -1,7 +1,7 @@
 {
   "ok": true,
   "overall": "fully-working",
-  "updated": "2026-08-06T06:28:18.391Z",
+  "updated": "2026-08-09T05:06:03.481Z",
   "mission": "Collect public records and current reporting, grade and connect the evidence, produce bounded conclusions and speculation, and feed clear visual clocks that show where practical control is concentrating.",
   "summary": {
     "green": 43,
@@ -443,7 +443,7 @@
       "id": "daily-automation",
       "stage": "Automate",
       "status": "green",
-      "finding": "208 workflow file(s) scanned for daily scheduling.",
+      "finding": "209 workflow file(s) scanned for daily scheduling.",
       "fix": "Keep one canonical daily intake/conclusion/clock workflow and retire overlapping legacy schedules.",
       "evidence": [
         ".github/workflows/accountability-review-inbox.yml",
@@ -612,6 +612,7 @@
         ".github/workflows/power-family-pr-integrity.yml",
         ".github/workflows/power-family-refresh-diagnostic.yml",
         ".github/workflows/predators-canonical-builder-gate.yml",
+        ".github/workflows/probability-machine.yml",
         ".github/workflows/production-failure-report.yml",
         ".github/workflows/production-refresh-rehearsal.yml",
         ".github/workflows/production-run-observer.yml",
@@ -829,6 +830,7 @@
         ".github/workflows/power-family-pr-integrity.yml",
         ".github/workflows/power-family-refresh-diagnostic.yml",
         ".github/workflows/predators-canonical-builder-gate.yml",
+        ".github/workflows/probability-machine.yml",
         ".github/workflows/production-failure-report.yml",
         ".github/workflows/production-refresh-rehearsal.yml",
         ".github/workflows/production-run-observer.yml",

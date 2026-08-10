@@ -1,17 +1,18 @@
 {
-  "generatedAt": "2026-08-06T06:17:53.167Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-09T04:54:28.081Z",
+  "pageCount": 126,
   "output": "downloads/forum-member-posting-test.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Forum Member Posting Test",
-    "contentHash": "ef924b87260636a615ae234087f4b8f2b4777b410c6609f88eba2707e70b5ae0",
+    "contentHash": "4eaabb354798835f5970f95f6a9fc4c88a27e5a5bdf40d77ce2eb949bdf4c223",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
+      "33b99270b28ac9825f7ccfdd",
       "c1520a15d6e62871a66c558e",
-      "0730bb615248f676888d3235",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
+      "3a425f0d5d683952bc0ad7ac",
       "44505b4afb60938c8117ad31",
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
@@ -22,7 +23,6 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-20316213EFD183CC",
-      "3a425f0d5d683952bc0ad7ac",
       "d7398c0c72a085a05c90422c",
       "9848ec4b4c3f6c2693269839",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -59,6 +59,7 @@
       "ASC-REVIEW-375A853A96E42D84",
       "ASC-REVIEW-FE267E981A361906",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-45FC68BFE6057AEE",
       "ASC-REVIEW-8EDA87E9301AAFAE",
@@ -118,10 +119,10 @@
       "ASC-REVIEW-ECBF89F9DB572E57",
       "ASC-REVIEW-9CC26AD16796DAE5",
       "ASC-REVIEW-2F50A2BA863FFF4F",
-      "ASC-REVIEW-E250944258ED0360",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-B1927A1DC608FBA7",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
@@ -145,8 +146,7 @@
       "ASC-REVIEW-5F2C7C064DEAB967",
       "ASC-REVIEW-008D94FCB408C868",
       "ASC-REVIEW-5F86F35C103C9621",
-      "ASC-REVIEW-E48690C00EA31793",
-      "ASC-REVIEW-14DA4C1F787B63ED"
+      "ASC-REVIEW-E48690C00EA31793"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 113,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 108,
+      "relationshipCount": 107,
       "moneyRecordCount": 89
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Forum Member Posting Test.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 108 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 107 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Knights Templar Legacy Claims → Freemasonry Ritual Echoes: overlap hint; The strongest public pattern is convergence across access systems.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 108 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 107 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

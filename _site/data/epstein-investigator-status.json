@@ -1,18 +1,18 @@
 {
   "version": "2.0",
-  "updated": "2026-08-06T03:55:18.719Z",
+  "updated": "2026-08-07T03:41:16.324Z",
   "status": "active public-record analysis",
   "source": "Matrix Reprogrammed Daily Epstein Update and linked public-record routes",
   "currentDataset": "data/daily-epstein-update.json",
-  "sourceWindowUpdated": "2026-08-06T03:35:52.471Z",
-  "corpusDocuments": 7,
-  "corpusPassages": 7,
-  "eligiblePassages": 7,
+  "sourceWindowUpdated": "2026-08-07T03:17:01.613Z",
+  "corpusDocuments": 3,
+  "corpusPassages": 3,
+  "eligiblePassages": 3,
   "queuedMissions": 0,
   "completedMissions": 4,
   "publishedConclusions": 4,
   "reviewDrafts": 0,
-  "lastMissionStatus": "Rebuilt 4 bounded hypotheses from 7 current Epstein record leads.",
+  "lastMissionStatus": "Rebuilt 4 bounded hypotheses from 3 current Epstein record leads.",
   "automaticPublicationScope": "Epstein system-level speculation page only",
   "engine": "deterministic public-record hypothesis builder",
   "docket": [
@@ -22,7 +22,7 @@
       "investigationLane": "epstein-public-record-docket",
       "criminalConductEstablished": false,
       "humanReviewed": false,
-      "generatedAt": "2026-08-06T03:55:18.719Z",
+      "generatedAt": "2026-08-07T03:41:16.323Z",
       "lastReviewedAt": null,
       "id": "EP-AI-001",
       "title": "Fragmented custody and disclosure rules may be the main bottleneck in the Epstein files",
@@ -34,20 +34,20 @@
       },
       "conclusion": "The most important obstacle to a complete public record may be fragmented custody, redaction rules, victim-protection duties, court restrictions and overlapping federal or state authority rather than one single unreleased master file.",
       "documentedSupport": [
-        "7 current lead(s) refer to files, records, redaction, release, disclosure or Justice Department access.",
+        "3 current lead(s) refer to files, records, redaction, release, disclosure or Justice Department access.",
         "The current source window distinguishes official records, oversight actions and discovery leads instead of treating all “Epstein files” as one evidentiary object."
       ],
       "sources": [
         {
           "label": "Current custody or disclosure lead",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5uZ2JnUDRhbXNYcHNDNVZDa1RlS1lfaTNhSnlCN3NBcHkyQ0xyS3hBdXZVTFF5eDY4RUhjZ1FLX3FpVE9XcU1Wcm5pVkQtbkVZaUV3ZTNFeWpJeEJoN2FUbWJ4Y0xjTlREb1Rzb2JHLUtKS2ZkWTJ0Qw?oc=5",
-          "locator": "Burnham considering inquiry into Epstein, minister says - RTE.ie",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5",
+          "locator": "New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post",
           "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
         },
         {
           "label": "Daily Epstein Update",
           "url": "daily-epstein-update.html",
-          "locator": "7 current record leads",
+          "locator": "3 current record leads",
           "evidenceClass": "current public-record window"
         },
         {
@@ -59,7 +59,7 @@
         {
           "label": "Daily Epstein JSON",
           "url": "data/daily-epstein-update.json",
-          "locator": "2026-08-06T03:35:59.017Z",
+          "locator": "2026-08-07T03:17:09.426Z",
           "evidenceClass": "machine-readable source window"
         }
       ],
@@ -93,32 +93,32 @@
       "investigationLane": "epstein-public-record-docket",
       "criminalConductEstablished": false,
       "humanReviewed": false,
-      "generatedAt": "2026-08-06T03:55:18.719Z",
+      "generatedAt": "2026-08-07T03:41:16.323Z",
       "lastReviewedAt": null,
       "id": "EP-AI-002",
       "title": "Oversight activity may increase records without producing a complete evidentiary picture",
-      "status": "evidence-supported",
+      "status": "developing",
       "confidence": {
-        "score": 62,
-        "band": "moderate analytic support",
+        "score": 40,
+        "band": "limited analytic support",
         "meaning": "Support for an oversight-process pattern, not a forecast that any inquiry will prove misconduct."
       },
       "conclusion": "Congressional interviews, hearings and document requests may expand the public record while still leaving unresolved differences between testimony, documentary corroboration, legal privilege and evidence of actual conduct.",
       "documentedSupport": [
-        "2 current lead(s) refer to congressional, committee, hearing, interview, testimony or oversight activity.",
+        "0 current lead(s) refer to congressional, committee, hearing, interview, testimony or oversight activity.",
         "The Daily Epstein system already separates mention, testimony, subpoena, allegation, settlement, charge and conviction as different evidence classes."
       ],
       "sources": [
         {
           "label": "Current oversight lead",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
-          "locator": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5",
+          "locator": "New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post",
           "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
         },
         {
           "label": "Daily Epstein Update",
           "url": "daily-epstein-update.html",
-          "locator": "7 current record leads",
+          "locator": "3 current record leads",
           "evidenceClass": "current public-record window"
         },
         {
@@ -130,7 +130,7 @@
         {
           "label": "Daily Epstein JSON",
           "url": "data/daily-epstein-update.json",
-          "locator": "2026-08-06T03:35:59.017Z",
+          "locator": "2026-08-07T03:17:09.426Z",
           "evidenceClass": "machine-readable source window"
         }
       ],
@@ -164,7 +164,7 @@
       "investigationLane": "epstein-public-record-docket",
       "criminalConductEstablished": false,
       "humanReviewed": false,
-      "generatedAt": "2026-08-06T03:55:18.719Z",
+      "generatedAt": "2026-08-07T03:41:16.323Z",
       "lastReviewedAt": null,
       "id": "EP-AI-003",
       "title": "Professional and institutional intermediaries may be more informative than raw contact lists",
@@ -176,20 +176,20 @@
       },
       "conclusion": "Records involving legal, financial, advisory, property, scheduling or institutional services may reveal how access and transactions were facilitated more clearly than a name appearing once in an address book, photograph or social record.",
       "documentedSupport": [
-        "2 current lead(s) mention legal, financial, advisory, executive or professional roles.",
+        "1 current lead(s) mention legal, financial, advisory, executive or professional roles.",
         "The site’s evidence boundary rejects guilt by association and therefore requires transaction, service, authority or knowledge records before drawing stronger conclusions."
       ],
       "sources": [
         {
           "label": "Current professional-intermediary lead",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOWJRS01xZm9VZGdUa0E3NUgwSWRKZjNhUV9uaHpLVFFIeExZNk1xZEV1OW5yUlRzeHhRUlpScU44cE1WVDlCV094MmRwVVF3R3pGM0E1VHhOY2dtZ29wSjdvWmpweVVCZFdTQW5ITnZSWndCcUhMTzZ5Y3ROZlp6VDczVldFS19wOTBiMV9zbnRXT0xUU2JUY25FOFRvSHNwMzEtb0Z5b3dwc1duUnFWd09yZXlWLTZxT1VCTGkwenhzQy1ZSzNF0gHMAUFVX3lxTFBIQ3Z5MmNudUdRRThNS3R5QnZPaThmRTRiLU1ydjFYNERyangzbm1rYVhES1pNX0dCTGZMT2RyTXZadTZaSm5XalJ1d21pTzJ2NVNOR21IS1BLalQ0YXRiR0MwT05KQWgybS1adlMya2gyWGFRQllrR1FuQmpjdURVa3lmMjRJNUxqbmJlSGlCb1l1YTE3X3NnX2NjNUFPcHpkTDNHN2syMmZwNGl6NjdWellOV0RyaEhkR3o1RWFxN0d4Y3k0SnczNTQwLQ?oc=5",
-          "locator": "Who is Kathryn Ruemmler? Former Obama White House attorney interviewed about Epstein emails - pbs.org",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPd1F0UE90MjdBYnlEc2htMFEybm41LWk5cHFUZ0hBNlBrQjFsM09UOE84aGV5d2hCVS05NHREaFc2WkhPaTRVcnBJRHdUNGh2OExkdkZWWGluSDVTd29CYk9CVWpSTjIxMlFTZmkwXy1WYmFVWjBfdUE3WU02cTlNSTFWUEZRT2NaQ2lSQ0FUTzZtYk8yalVnTUhB?oc=5",
+          "locator": "Senate report: Three big banks ignored red flags on Epstein - American Banker",
           "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
         },
         {
           "label": "Daily Epstein Update",
           "url": "daily-epstein-update.html",
-          "locator": "7 current record leads",
+          "locator": "3 current record leads",
           "evidenceClass": "current public-record window"
         },
         {
@@ -201,7 +201,7 @@
         {
           "label": "Daily Epstein JSON",
           "url": "data/daily-epstein-update.json",
-          "locator": "2026-08-06T03:35:59.017Z",
+          "locator": "2026-08-07T03:17:09.426Z",
           "evidenceClass": "machine-readable source window"
         }
       ],
@@ -235,7 +235,7 @@
       "investigationLane": "epstein-public-record-docket",
       "criminalConductEstablished": false,
       "humanReviewed": false,
-      "generatedAt": "2026-08-06T03:55:18.719Z",
+      "generatedAt": "2026-08-07T03:41:16.323Z",
       "lastReviewedAt": null,
       "id": "EP-AI-004",
       "title": "Unverified intelligence-service claims may spread faster than primary evidence",
@@ -248,19 +248,19 @@
       "conclusion": "Claims connecting Epstein to intelligence services may gain prominence through political statements and secondary reporting before documentary evidence is available, creating a high risk that repetition is mistaken for corroboration.",
       "documentedSupport": [
         "0 current lead(s) contain intelligence-service language or claims.",
-        "7 of 7 current lead(s) remain discovery or publisher leads requiring underlying-source review; 5 are labelled primary-or-official by the current collector."
+        "3 of 3 current lead(s) remain discovery or publisher leads requiring underlying-source review; 1 are labelled primary-or-official by the current collector."
       ],
       "sources": [
         {
           "label": "Current intelligence-claim lead",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5uZ2JnUDRhbXNYcHNDNVZDa1RlS1lfaTNhSnlCN3NBcHkyQ0xyS3hBdXZVTFF5eDY4RUhjZ1FLX3FpVE9XcU1Wcm5pVkQtbkVZaUV3ZTNFeWpJeEJoN2FUbWJ4Y0xjTlREb1Rzb2JHLUtKS2ZkWTJ0Qw?oc=5",
-          "locator": "Burnham considering inquiry into Epstein, minister says - RTE.ie",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5",
+          "locator": "New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post",
           "evidenceClass": "Discovery lead — open and grade the underlying publisher record"
         },
         {
           "label": "Daily Epstein Update",
           "url": "daily-epstein-update.html",
-          "locator": "7 current record leads",
+          "locator": "3 current record leads",
           "evidenceClass": "current public-record window"
         },
         {
@@ -272,7 +272,7 @@
         {
           "label": "Daily Epstein JSON",
           "url": "data/daily-epstein-update.json",
-          "locator": "2026-08-06T03:35:59.017Z",
+          "locator": "2026-08-07T03:17:09.426Z",
           "evidenceClass": "machine-readable source window"
         }
       ],

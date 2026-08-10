@@ -1,6 +1,6 @@
 # Top 52 Persons of Interest
 
-Generated: 2026-08-06T06:27:17.641Z
+Generated: 2026-08-09T05:04:57.742Z
 
 Boundary: The deck ranks public persons of interest by public-record influence routes and convergence signals. Institutions, companies, families, orders and projects feed into person cards as routes; they are not cards themselves. This is not an accusation list.
 

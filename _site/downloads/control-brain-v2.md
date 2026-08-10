@@ -1,6 +1,6 @@
 # Control Brain V2
 
-Generated: 2026-08-06T06:27:13.016Z
+Generated: 2026-08-09T05:04:52.161Z
 
 Boundary: Control Brain V2 uses public-record routes, site data, missing-record prompts and evidence labels. It does not perform private surveillance, personal location tracking, hacking, or unsupported accusations.
 
@@ -105,9 +105,9 @@ Source routes: institution-control-tracker.html
 
 ## Elon Musk
 
-Score: 75
+Score: 74
 
-Elon Musk is ranked 75/100 because of 5 relationship route(s), 5 control layer(s), 4 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
+Elon Musk is ranked 74/100 because of 5 relationship route(s), 5 control layer(s), 3 record signal(s), 5 missing-record prompt(s), and 0 review prompt(s).
 
 Source routes: billionaire-control-tracker.html
 

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-06T06:23:09.013Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-09T05:00:21.789Z",
+  "pageCount": 131,
   "output": "downloads/search-system-repair-report.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Search System Repair Report",
-    "contentHash": "c9b31aaf9728de6655b7de4e2c6d0c10ee0b1cdec1d5baea4259bbcfdcc4bf11",
+    "contentHash": "f5a37675c328c3996eab49020300b72b2ee9e34bb49445c9f1e98d264c722b85",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "9f77464e401ac59ad1adb812",
-      "0730bb615248f676888d3235",
+      "33b99270b28ac9825f7ccfdd",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -38,7 +38,6 @@
       "41772e5c9af7970ddd7d5aac",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
-      "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -54,7 +53,6 @@
       "ASC-REVIEW-2FAF91DDDD6143CD",
       "ASC-REVIEW-9395B56F60B42FEA",
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
-      "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0C3383FAE797FF46",
@@ -65,7 +63,6 @@
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-BF704DE865305985",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
       "ASC-REVIEW-6B883D09C63ED673",
@@ -84,6 +81,7 @@
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-B1D0DFCBB6CF0079",
       "ASC-REVIEW-4C256A755BDBA2D3",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
       "ASC-REVIEW-CD1B68F215696D25",
@@ -101,6 +99,9 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
@@ -111,6 +112,7 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
       "ASC-REVIEW-5F69F7CCEE3F7274",
@@ -128,13 +130,12 @@
       "ASC-REVIEW-927E79836853DFAE",
       "ASC-REVIEW-17CC1B265DD7385B",
       "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-9F528AA6CAAA62B3",
+      "ASC-REVIEW-44C67F19172A6285",
+      "ASC-REVIEW-672E0A2FF16C31B8",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
       "ASC-REVIEW-FF1A5D475493F22D",
-      "ASC-REVIEW-E250944258ED0360",
       "ASC-REVIEW-D13048D78F8EA6E3",
-      "ASC-REVIEW-8916AC7C45074C05",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
       "ASC-REVIEW-AFF7699289F993E4",
@@ -145,8 +146,7 @@
       "ASC-REVIEW-0649A6CC727CB73D",
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
-      "ASC-REVIEW-4A9786ACED74F01F",
-      "ASC-REVIEW-8274DB7F7415A742"
+      "ASC-REVIEW-4A9786ACED74F01F"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,7 +154,7 @@
       "disputedClaimCount": 131,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 120,
+      "relationshipCount": 119,
       "moneyRecordCount": 101
     },
     "evidenceBasedConclusions": [
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 120 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 119 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 120 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 119 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

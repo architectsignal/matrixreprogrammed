@@ -1,15 +1,16 @@
 {
-  "generatedAt": "2026-08-06T06:13:14.838Z",
+  "generatedAt": "2026-08-09T04:49:35.884Z",
   "pageCount": 127,
   "output": "downloads/cloudflare-canonical-member-origin.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Cloudflare Canonical Member Origin",
-    "contentHash": "c485abe1e4f054951fa275a4fbc5af3a95766223671c75b5d4b596c112725e19",
+    "contentHash": "18ade4d9edba97ab4faaeb2f126034eaeff54e0e0451b2dd749c24883e04a529",
     "sourceIds": [
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
+      "33b99270b28ac9825f7ccfdd",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -29,8 +30,8 @@
       "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
-      "c3bd2d306202dfc2e2374303",
       "71e0563ca7b139c37c302956",
+      "c3bd2d306202dfc2e2374303",
       "44505b4afb60938c8117ad31",
       "7ee9141a42ad539f58a57e50",
       "2931a84c2c7fe86982d5d6e5",
@@ -42,7 +43,6 @@
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
       "b7e4a66335a706ef5097117f",
-      "0730bb615248f676888d3235",
       "janner-iicsa-2022",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -126,14 +126,13 @@
       "ASC-REVIEW-53BD0E17B018491C",
       "ASC-REVIEW-0177F61D444ED739",
       "ASC-REVIEW-FE9A5B02284E30E4",
-      "ASC-REVIEW-7A6012CFE49184A4",
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
       "ASC-REVIEW-B1D0DFCBB6CF0079",
-      "ASC-REVIEW-757D8D44A7C45F2F",
       "ASC-REVIEW-4C256A755BDBA2D3",
       "ASC-REVIEW-90FA3F8805F271FF",
       "ASC-REVIEW-D33599099BE12C6C",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-8FE8E072E8149C71",
       "ASC-REVIEW-D63BAC3D4EA4E2FC",
       "ASC-REVIEW-FB46D93D6179DCC7",
@@ -146,7 +145,8 @@
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F"
+      "ASC-REVIEW-8EBEC47E70E33B9F",
+      "ASC-REVIEW-4FDBCEA6F4D74FFD"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 122,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 120,
+      "relationshipCount": 121,
       "moneyRecordCount": 112
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Cloudflare Canonical Member Origin.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 120 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 121 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 120 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 121 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:12:51.214Z",
+  "generatedAt": "2026-08-09T04:49:10.588Z",
   "pageCount": 73,
   "output": "downloads/card-art-registry.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Card Art Registry",
-    "contentHash": "3a31c976b94ec112a6974950d7c794e94d070dbae80a5d77238e15f64336550f",
+    "contentHash": "392c2ac4cbccf62d61a7b57ab34ced94ec8fb38e02df5f0e3ce0d3859c0c67ce",
     "sourceIds": [
       "people-of-interest",
       "bb5dfe90c29929d84ce60e6d",
@@ -25,10 +25,10 @@
       "e72d22f4f28eb53e3173d0a6",
       "bf773d3ec83b9b3768dfce6b",
       "8a10f165e16d0f8648cb8ec4",
-      "institutions",
       "594100b62a47db521fe2a128",
-      "1769af26a7bda813406cd8f5",
       "34805734b1ad3b73f0ede0d8",
+      "institutions",
+      "1769af26a7bda813406cd8f5",
       "tedros-adhanom-ghebreyesus",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
@@ -73,25 +73,26 @@
       "ray-dalio",
       "ant-nio-guterres",
       "priscilla-chan",
+      "d0b647e325275daa6d824a49",
+      "cee347fbc3752c6e0f890457",
       "mackenzie-scott",
+      "33b99270b28ac9825f7ccfdd",
       "controlled-opposition",
       "26b90533dbf7d2ed42f02de6",
       "7dcf4ef18ea1f86d01068773",
       "360e80c162081c85d2c680ef",
-      "0730bb615248f676888d3235",
-      "eb3448928554960651da56f6",
       "daily-revelation-report",
+      "eb3448928554960651da56f6",
       "b5a32a76f19d554c484e917f",
       "1ee57e70dacfa67f04323529",
-      "d0b647e325275daa6d824a49",
       "brookings-institution",
       "zuckerberg-chan-family",
       "world-economic-forum-policy-platform",
       "billionaire-elon-musk",
       "72ef7895f95288946ccb3cff",
       "9f77464e401ac59ad1adb812",
+      "abc7da99e67d2d4504f0888d",
       "7f5b91c14c671bd24b8bbd81",
-      "cee347fbc3752c6e0f890457",
       "larry-ellison",
       "alex-jones",
       "mark-sargent",
@@ -108,33 +109,32 @@
       "ambani-family",
       "adani-family",
       "rupert-family",
-      "soros-family",
-      "musk-family"
+      "soros-family"
     ],
     "metrics": {
       "evidenceCount": 103,
-      "primarySourceCount": 5,
+      "primarySourceCount": 6,
       "disputedClaimCount": 2,
       "newEntityCount": 26,
       "updatedAssessmentCount": 1,
       "relationshipCount": 14,
-      "moneyRecordCount": 71
+      "moneyRecordCount": 70
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Card Art Registry.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Card Art Registry.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026) (data/review-dashboard.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 88,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "conclusion": "The most defensible current assessment is based on “Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026),” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -150,7 +150,7 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
@@ -181,6 +181,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-06T06:13:58.834Z",
+  "generatedAt": "2026-08-09T04:50:23.295Z",
   "pageCount": 92,
   "output": "downloads/criminal-investigations.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Criminal Investigations",
-    "contentHash": "2d7449609318bf495ed944e27ec59eae6dc29e57a8ed17bc3b585d2a346beae7",
+    "contentHash": "6b77155a83c8462e4922c6b9b5582fc514db6ddbbef3a66bc304e333b6656770",
     "sourceIds": [
       "3a8c1f1e8620cb3f09a2c7ab",
       "8d2a26495075b1d71abf17c2",
@@ -88,8 +88,8 @@
       "epstein-florida-plea-2008",
       "nassar-fbi-oig-2021",
       "janner-iicsa-2022",
+      "33b99270b28ac9825f7ccfdd",
       "weiner-federal-conviction-2017",
-      "0730bb615248f676888d3235",
       "cyril-smith-iicsa-2018",
       "nassar-federal-conviction-2017",
       "greenberg-sentence-2022",
@@ -136,24 +136,25 @@
       "72ef7895f95288946ccb3cff",
       "bdd7e454126ebfa6319a594c",
       "epstein-sdny-charges-2019",
-      "3a425f0d5d683952bc0ad7ac",
       "360e80c162081c85d2c680ef",
       "26b90533dbf7d2ed42f02de6",
-      "4c372edcf20b760ae3305f10"
+      "3a425f0d5d683952bc0ad7ac",
+      "ASC-REVIEW-38D60C73AE003DE8",
+      "ASC-REVIEW-628CE018DB3F4505"
     ],
     "metrics": {
-      "evidenceCount": 133,
-      "primarySourceCount": 68,
-      "disputedClaimCount": 3,
+      "evidenceCount": 134,
+      "primarySourceCount": 67,
+      "disputedClaimCount": 5,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 6,
+      "relationshipCount": 7,
       "moneyRecordCount": 2
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 68 A/B-grade public-record items are materially relevant to Criminal Investigations.",
-        "evidence": "Twenty-one convictions for rape, sexual assault and child sexual offenses (data/exposure-evidence-ledger.json); Forty-five child sexual abuse convictions and 26-year sentence (data/exposure-evidence-ledger.json); Federal conviction and 60-year sentence for sex trafficking, extortion and forced labor (data/exposure-evidence-ledger.json); Federal conviction and 20-year sentence for sexually abusing patients (data/exposure-evidence-ledger.json); Federal jury convicted Maxwell of conspiring to sexually abuse minors (data/exposure-evidence-ledger.json); Federal conviction and 120-year sentence for racketeering and sex-trafficking offenses (data/exposure-evidence-ledger.json)",
+        "conclusion": "The indexed record establishes that 67 A/B-grade public-record items are materially relevant to Criminal Investigations.",
+        "evidence": "Twenty-one convictions for rape, sexual assault and child sexual offenses (data/exposure-evidence-ledger.json); Forty-five child sexual abuse convictions and 26-year sentence (data/exposure-evidence-ledger.json); Federal conviction and 60-year sentence for sex trafficking, extortion and forced labor (data/criminal-conduct-registry.json); Federal conviction and 20-year sentence for sexually abusing patients (data/exposure-evidence-ledger.json); Federal jury convicted Maxwell of conspiring to sexually abuse minors (data/exposure-evidence-ledger.json); Federal conviction and 120-year sentence for racketeering and sex-trafficking offenses (data/exposure-evidence-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -172,8 +173,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 6 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Conviction for indecent images and misconduct in public office; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Official health investigations documented abuse and enabling access; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Westminster inquiry examined political and policing responses",
+        "inference": "The indexed set contains 7 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Conviction for indecent images and misconduct in public office; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Official health investigations documented abuse and enabling access; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Westminster inquiry examined political and policing responses; Fort Myers Man Sentenced to 30 Years for Enticing Minors to Engage in Sexual Activity, and Receiving, Possessing and Accessing Child Sexual Abuse Images and Videos",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -187,14 +188,15 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 6 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 7 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Conviction for indecent images and misconduct in public office",
           "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
           "Official health investigations documented abuse and enabling access",
           "IICSA documented predatory activities and institutional failures",
           "Broadmoor investigation examined Savile's access and abuse",
-          "Westminster inquiry examined political and policing responses"
+          "Westminster inquiry examined political and policing responses",
+          "Fort Myers Man Sentenced to 30 Years for Enticing Minors to Engage in Sexual Activity, and Receiving, Possessing and Accessing Child Sexual Abuse Images and Videos"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -204,11 +206,11 @@
           "Routine institutional overlap",
           "Incomplete reporting rather than concealment"
         ],
-        "confidenceAssessment": "Highly uncertain",
+        "confidenceAssessment": "Plausible",
         "whatWouldTestTheHypothesis": "Unredacted correspondence, authenticated bank records, visitor logs, contracts, communications metadata, sworn testimony, ownership records and full court exhibits.",
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-11-12T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
   }
 }

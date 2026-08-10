@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-08-06T06:27:12.998Z
+Generated: 2026-08-09T05:04:52.137Z
 
 ## Daily Revelation Report
 
-New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
+For Brazil’s Indigenous youth, visibility is resistance
 
 Source: daily-command-brief.html
 
@@ -38,7 +38,7 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 23 WAP 2023 — Entity Report
+## 23-55704 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
@@ -50,13 +50,13 @@ Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## 24-7261 — Entity Report
+## California Supreme Court — Entity Report
 
 Worth watching because records and relationship signals both exist.
 
 Source: entity-daily-briefs.html
 
-## California Supreme Court — Entity Report
+## CC-2025-0631 — Entity Report
 
 Worth watching because records and relationship signals both exist.
 

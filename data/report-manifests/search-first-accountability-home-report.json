@@ -1,15 +1,16 @@
 {
-  "generatedAt": "2026-08-06T06:22:59.947Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-09T05:00:11.860Z",
+  "pageCount": 126,
   "output": "downloads/search-first-accountability-home-report.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Search First Accountability Home Report",
-    "contentHash": "79950e69872c0d98c24a964edcd28458d29dbb51cd3b40606367f14d6dd45d4f",
+    "contentHash": "75da7dda77c6b6a6d733c5b923d451046ef9497ee00ca79fab765221f6bd2637",
     "sourceIds": [
+      "33b99270b28ac9825f7ccfdd",
       "26b90533dbf7d2ed42f02de6",
-      "0730bb615248f676888d3235",
       "ASC-REVIEW-7B1A15ED77443F13",
+      "3a425f0d5d683952bc0ad7ac",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
@@ -21,7 +22,6 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "3a425f0d5d683952bc0ad7ac",
       "a5e5d4ec4df4352ea242ea3f",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -32,9 +32,12 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-E250944258ED0360",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-E09138F879103681",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "d23398b8ca4c7124399c9504",
       "2529322b7b5345fd6f575174",
       "b0cde383147509fbfd4f4472",
@@ -48,11 +51,6 @@
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
-      "crime-state-overlap-2026-08-05-53f0cae4",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
       "a6ebdb520cbf171e4f5b2247",
       "0360e7de068c826685da26fc",
       "8d20f4821e27b9c1e95134ef",
@@ -86,10 +84,6 @@
       "0f49174d32cf3a76ab0a5a0a",
       "7e07eab5317d0ed07e5fcdfd",
       "1e4b1a921fd40d90384197fa",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -97,7 +91,6 @@
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-96665FE56FA75D90",
-      "ASC-REVIEW-6CCC0D5E0B3EA09D",
       "ASC-REVIEW-AFD96AE0BCA26187",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -146,20 +139,27 @@
       "ASC-REVIEW-AFF7699289F993E4",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-2638AEF62CDCC03A"
+      "ASC-REVIEW-2638AEF62CDCC03A",
+      "ASC-REVIEW-E6C400911BD1A158",
+      "ASC-REVIEW-0649A6CC727CB73D",
+      "ASC-REVIEW-F42C454D9E75A8A7",
+      "ASC-REVIEW-9445AB7A6FE43B5B",
+      "ASC-REVIEW-B5FCD410F732DBED",
+      "ASC-REVIEW-4A9786ACED74F01F",
+      "ASC-REVIEW-836A8E9D516E6FEC"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 61,
-      "disputedClaimCount": 75,
+      "primarySourceCount": 52,
+      "disputedClaimCount": 84,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 68,
-      "moneyRecordCount": 60
+      "relationshipCount": 73,
+      "moneyRecordCount": 66
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 61 A/B-grade public-record items are materially relevant to Search First Accountability Home Report.",
+        "conclusion": "The indexed record establishes that 52 A/B-grade public-record items are materially relevant to Search First Accountability Home Report.",
         "evidence": "ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Justice Department Withdraws Business Review Letter Issued to Proxy Advisory Firm,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Today, the Justice Department’s Antitrust Division (“Antitrust Division”) is withdrawing a 1987 Business Review Letter (the “1987 BRL” or the “Letter”) issued to Institutional Shareholder Services (“ISS”). ISS is a foreign-owned proxy advisory firm that advises its clients on how to vote shares their clients hold for thousands of corporate governance questions each year. ISS and Glass, Lewis & Co. LLC (“Glass Lewis”), control more than 90 percent of the proxy advisory market and their clients’ holdings represent a significant ownership stake in the United States’ largest publicly traded companies. As a result of this concentration of market power, ISS and Glass Lewis have tremendous influence in corporate governance matters and, based on their market dominance, shape the policies of America’s largest companies. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Final Judgment - Gotbit Consulting LLC,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 68 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; MINDCUBED LLC — District of Columbia Courts; The strongest public pattern is convergence across access systems.; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 68 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "MINDCUBED LLC — District of Columbia Courts",

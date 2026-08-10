@@ -106,6 +106,13 @@ try {
     assert(surface.sha256 === hashes[surface.relative], `fixture repeat-safety failed for ${surface.relative}.`);
   }
 
+  // Reproduce the production failure: a late mutator replaces only the root
+  // source with non-HTML while the synchronized sibling aliases remain valid.
+  write(fixtureRoot, 'black-file.html', '{"lateMutator":"non-html"}\n');
+  runFinalizer(fixtureRoot);
+  const recovered = audit(fixtureRoot, 'fixture-root-source-recovery');
+  assert(recovered.sourceHash === second.sourceHash, 'fixture root recovery did not restore the canonical sibling HTML byte-for-byte.');
+
   runFinalizer(repositoryRoot);
   const real = audit(repositoryRoot, 'repository-postbuild-surfaces');
   const report = {
@@ -113,13 +120,14 @@ try {
     generatedAt: new Date().toISOString(),
     fixtureFirstPass: first,
     fixtureSecondPass: second,
+    fixtureRootSourceRecovery: recovered,
     repository: real,
-    boundary: 'The regression deliberately seeds duplicate generic and page-specific pathway IDs, then proves one deterministic page-specific ID across source, root extensionless, _site HTML and _site extensionless aliases. Repeated finalization is byte-stable.',
+    boundary: 'The regression deliberately seeds duplicate generic and page-specific pathway IDs, proves repeat-safe synchronization, corrupts only root black-file.html with non-HTML, proves recovery from a valid sibling, then verifies one deterministic page-specific ID across source, root extensionless, _site HTML and _site extensionless aliases.',
   };
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
   console.log('BLACK FILE POSTBUILD ALIAS REGRESSION PASSED');
-  console.log('Source, .html, extensionless and _site aliases are byte-identical with one page-specific pathway ID and no generic ID.');
+  console.log('Source corruption recovery, .html, extensionless and _site aliases are byte-identical with one page-specific pathway ID and no generic ID.');
 } finally {
   fs.rmSync(fixtureRoot, { recursive: true, force: true });
 }

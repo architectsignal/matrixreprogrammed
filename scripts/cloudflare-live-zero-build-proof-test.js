@@ -11,10 +11,11 @@ function response(payload, status = 200) {
   };
 }
 
-function makeFetch({ workerTriggers = [], pagesProjects = [], failures = {} } = {}) {
-  return async url => {
+function makeFetch({ workerTriggers = [], pagesProjects = [], failures = {}, requests = [] } = {}) {
+  return async (url, options = {}) => {
     const parsed = new URL(url);
     const key = parsed.pathname;
+    requests.push({ key, authorization: options?.headers?.Authorization || '' });
     if (failures[key]) return response({ success: false, errors: [{ message: failures[key] }] }, 403);
     if (key.endsWith('/workers/scripts')) {
       return response({ success: true, result: [{ id: 'matrixreprogrammed', tag: 'worker-tag-123' }] });
@@ -48,11 +49,13 @@ async function expectReject(promise, pattern) {
     source: { type: 'github', config: { owner: 'someone', repo_name: 'other-repo' } }
   };
 
+  const splitRequests = [];
   const proof = await verifyCloudflareGitBuildDisconnection({
-    fetchImpl: makeFetch({ pagesProjects: [directUploadProject, unrelatedGitProject] }),
-    token: 'test-token',
+    fetchImpl: makeFetch({ pagesProjects: [directUploadProject, unrelatedGitProject], requests: splitRequests }),
+    workerToken: 'workers-builds-token',
+    pagesToken: 'pages-read-token',
     accountId: 'account-123',
-    now: new Date('2026-08-09T15:00:00.000Z')
+    now: new Date('2026-08-10T08:40:00.000Z')
   });
   assert.equal(proof.ok, true);
   assert.equal(proof.worker.workersBuildTriggers, 0);
@@ -60,6 +63,12 @@ async function expectReject(promise, pattern) {
   assert.equal(proof.pages.projectsEnumerated, 2);
   assert.equal(proof.pages.relevantProjects.length, 1);
   assert.equal(proof.pages.gitSourcesConnected, 0);
+  for (const request of splitRequests.filter(item => item.key.includes('/workers/') || item.key.includes('/builds/workers/'))) {
+    assert.equal(request.authorization, 'Bearer workers-builds-token');
+  }
+  for (const request of splitRequests.filter(item => item.key.includes('/pages/projects'))) {
+    assert.equal(request.authorization, 'Bearer pages-read-token');
+  }
 
   await expectReject(
     verifyCloudflareGitBuildDisconnection({
@@ -105,7 +114,17 @@ async function expectReject(promise, pattern) {
   assert.equal(noLegacyPages.pages.relevantProjects.length, 0);
   assert.equal(noLegacyPages.pages.gitDeploymentsDisconnected, true);
 
-  console.log('Cloudflare live zero-build proof test passed: direct-upload/no-project Pages states pass, while Workers Builds triggers, matching Pages Git sources and API permission failures remain fail-closed.');
+  await expectReject(
+    verifyCloudflareGitBuildDisconnection({
+      fetchImpl: makeFetch(),
+      workerToken: 'workers-only',
+      pagesToken: '',
+      accountId: 'account-123'
+    }),
+    /Pages read token is required/
+  );
+
+  console.log('Cloudflare live zero-build proof test passed: split least-privilege tokens are routed to the correct APIs; direct-upload/no-project Pages states pass, while Workers Builds triggers, matching Pages Git sources and API permission failures remain fail-closed.');
 })().catch(error => {
   console.error(error.stack || error.message || error);
   process.exitCode = 1;

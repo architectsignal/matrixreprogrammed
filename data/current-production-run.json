@@ -1,12 +1,15 @@
 {
   "ok": false,
-  "observedAt": "2026-08-10T17:31:57.425Z",
-  "conclusion": "failure",
-  "createdAt": "2026-08-10T17:12:18Z",
-  "databaseId": 31412853878,
+  "observedAt": "2026-08-10T17:36:30.294Z",
+  "conclusion": "",
+  "createdAt": "2026-08-10T17:36:26Z",
+  "databaseId": 31414860642,
   "event": "workflow_dispatch",
-  "headSha": "b447e5cf9d376e4fe280320a74693e3f15d616c6",
-  "status": "completed",
-  "updatedAt": "2026-08-10T17:28:08Z",
-  "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/31412853878"
+  "headSha": "8cd9e53aaaab5a307d7a21f1944ff1cb2f5757f0",
+  "status": "queued",
+  "updatedAt": "2026-08-10T17:36:26Z",
+  "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/31414860642",
+  "forwardedBillingException": false,
+  "ownerAuthorizedBillableBuild": false,
+  "triggerCommit": "8cd9e53aaaab5a307d7a21f1944ff1cb2f5757f0"
 }

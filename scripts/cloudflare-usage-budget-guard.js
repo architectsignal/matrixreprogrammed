@@ -47,7 +47,7 @@ function fullSha(value) {
 function recordedGitBuildDisconnectionProof(policy) {
   const state = policy?.verifiedCloudflareConnectionState || {};
   const observedOn = String(state.observedOn || '').trim();
-  const observedAt = Date.parse(`${observedOn}T00:00:00.000Z`);
+  const observedAt = Date.parse(String(state.observedAt || `${observedOn}T00:00:00.000Z`));
   const ageHours = Number.isFinite(observedAt) ? (Date.now() - observedAt) / 3600000 : Infinity;
   let freezeActive = false;
   try {

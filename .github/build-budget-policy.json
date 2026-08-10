@@ -8,16 +8,66 @@
     "source": "Cloudflare Billing > Billable Usage; values supplied by the account owner",
     "approximateValues": true,
     "metrics": {
-      "workersBuildMinutes": { "included": 6000, "total": 11470, "billable": 5470, "costUsd": 27.34 },
-      "workersCpuMs": { "included": 30000000, "total": 584250, "billable": 0, "costUsd": 0 },
-      "workersStandardRequests": { "included": 10000000, "total": 555740, "billable": 0, "costUsd": 0 },
-      "d1RowsRead": { "included": 25000000000, "total": 3300000, "billable": 0, "costUsd": 0 },
-      "d1RowsWritten": { "included": 50000000, "total": 23770, "billable": 0, "costUsd": 0 },
-      "d1StorageGbMonths": { "included": 5, "total": 0, "billable": 0, "costUsd": 0 },
-      "kvReadOperations": { "included": 10000000, "total": 29480, "billable": 0, "costUsd": 0 },
-      "kvWriteOperations": { "included": 1000000, "total": 1210, "billable": 0, "costUsd": 0 },
-      "kvListOperations": { "included": 1000000, "total": 6, "billable": 0, "costUsd": 0 },
-      "kvStorageGbMonths": { "included": 1, "total": 0, "billable": 0, "costUsd": 0 }
+      "workersBuildMinutes": {
+        "included": 6000,
+        "total": 11470,
+        "billable": 5470,
+        "costUsd": 27.34
+      },
+      "workersCpuMs": {
+        "included": 30000000,
+        "total": 584250,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "workersStandardRequests": {
+        "included": 10000000,
+        "total": 555740,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "d1RowsRead": {
+        "included": 25000000000,
+        "total": 3300000,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "d1RowsWritten": {
+        "included": 50000000,
+        "total": 23770,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "d1StorageGbMonths": {
+        "included": 5,
+        "total": 0,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "kvReadOperations": {
+        "included": 10000000,
+        "total": 29480,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "kvWriteOperations": {
+        "included": 1000000,
+        "total": 1210,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "kvListOperations": {
+        "included": 1000000,
+        "total": 6,
+        "billable": 0,
+        "costUsd": 0
+      },
+      "kvStorageGbMonths": {
+        "included": 1,
+        "total": 0,
+        "billable": 0,
+        "costUsd": 0
+      }
     }
   },
   "verifiedCloudflareConnectionState": {
@@ -25,7 +75,8 @@
     "workersGitBuilds": "disconnected",
     "pagesGitDeployments": "disconnected",
     "canceledPagesPreviewDeploymentId": "b1e10ebf-6985-453d-ae7c-faf03b56fd5d",
-    "verification": "Worker settings offered Connect Git repository; Pages settings offered Connect after the queued preview was canceled."
+    "verification": "Live Cloudflare API proof at 2026-08-10T10:03:04.970Z: Worker matrixreprogrammed returned zero Workers Builds triggers; 1 matching legacy Pages project(s) returned no Git source. 1 Pages project(s) enumerated account-wide.",
+    "observedAt": "2026-08-10T10:03:04.970Z"
   },
   "cloudflareWorkersBuildMinutes": {
     "includedPerMonth": 6000,

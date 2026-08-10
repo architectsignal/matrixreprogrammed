@@ -1,7 +1,7 @@
 {
   "ok": true,
   "version": "1.1.0",
-  "updated": "2026-08-10T02:34:04.993Z",
+  "updated": "2026-08-10T08:04:31.766Z",
   "title": "Speculative Intelligence Synthesis",
   "evidenceLayer": {
     "status": "documented records and canonical site data",
@@ -21,7 +21,7 @@
       "data/entity-observations.json",
       "data/daily-investigation-conclusions.json"
     ],
-    "recordsInspected": 47259,
+    "recordsInspected": 47290,
     "criticalClocks": [
       {
         "slug": "childrens-digital-identity-age-gating",
@@ -941,7 +941,7 @@
         "id": "procurement-vendors",
         "title": "Procurement and public-private implementation",
         "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-        "signalCount": 24761,
+        "signalCount": 24635,
         "actors": [
           "Consolidated Sanctions List (Non-SDN Lists)",
           "Default Judgment",
@@ -955,14 +955,14 @@
         "id": "money-payments",
         "title": "Money, banking and payment access",
         "meaning": "Payment, custody and financial identity can make participation conditional.",
-        "signalCount": 17924,
+        "signalCount": 18011,
         "actors": []
       },
       {
         "id": "information-access",
         "title": "Information, media and platform access",
         "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-        "signalCount": 11631,
+        "signalCount": 11778,
         "actors": [
           "Search OFAC&#039;s Sanctions Lists"
         ]
@@ -971,14 +971,14 @@
         "id": "law-standards",
         "title": "Law, treaties and standards",
         "meaning": "Common rules can turn policy preference into cross-jurisdiction operating requirements.",
-        "signalCount": 4268,
+        "signalCount": 4167,
         "actors": []
       },
       {
         "id": "security-emergency",
         "title": "Security, intelligence and emergency powers",
         "meaning": "Crisis and security powers can accelerate integration and become permanent.",
-        "signalCount": 2879,
+        "signalCount": 2856,
         "actors": [
           "Exercise or conversion of derivative security",
           "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
@@ -988,14 +988,14 @@
         "id": "identity-biometrics",
         "title": "Identity, credentials and biometrics",
         "meaning": "Reusable identity can connect decisions across otherwise separate services.",
-        "signalCount": 2338,
+        "signalCount": 2345,
         "actors": []
       },
       {
         "id": "health-mobility",
         "title": "Health, biosecurity and mobility",
         "meaning": "Health records and emergency credentials can become cross-border access controls.",
-        "signalCount": 1712,
+        "signalCount": 1756,
         "actors": [
           "Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners"
         ]
@@ -1004,7 +1004,7 @@
         "id": "data-ai-cloud",
         "title": "Data, cloud and AI infrastructure",
         "meaning": "Shared data and automated decisions can centralise practical gatekeeping.",
-        "signalCount": 519,
+        "signalCount": 520,
         "actors": []
       }
     ],

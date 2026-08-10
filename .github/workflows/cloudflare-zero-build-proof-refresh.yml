@@ -63,11 +63,13 @@ jobs:
 
       - name: Prove Cloudflare integrated Git builds are disconnected
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_BUILDS_API_TOKEN }}
+          CLOUDFLARE_BUILDS_API_TOKEN: ${{ secrets.CLOUDFLARE_BUILDS_API_TOKEN }}
+          CLOUDFLARE_PAGES_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           MATRIX_UPDATE_BUDGET_POLICY: 'true'
         run: |
-          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_BUILDS_API_TOKEN"
+          test -n "$CLOUDFLARE_PAGES_API_TOKEN"
           node scripts/cloudflare-live-zero-build-proof.js
 
       - name: Upgrade budget guard to use precise live proof time

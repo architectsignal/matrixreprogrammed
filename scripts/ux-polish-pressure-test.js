@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
+require('./repair-black-file-document-shell.js');
 const problems = [];
 function exists(file) { return fs.existsSync(path.join(root, file)); }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
@@ -30,8 +31,23 @@ const bannedReaderCopy = [
   'book sells the deep dive'
 ];
 for (const file of ['scripts/cleanup-duplicates.js', 'fixes.css', 'package.json', 'netlify.toml', ...corePages]) requireFile(file);
+requireFile('member-dashboard.html');
+requireIncludes('member-dashboard.html', 'id="membership-action"', 'protected membership action');
+requireFile('admin-paypal-rehearsal.html');
+requireIncludes('admin-paypal-rehearsal.html', 'PAYPAL SANDBOX REHEARSAL.', 'protected PayPal rehearsal heading');
 
 for (const file of corePages) {
+  const html = read(file);
+  if (file === 'index.html' && html.includes('class="accountability-home"')) {
+    requireIncludes(file, 'accountability-topbar', 'search-first homepage header');
+    requireIncludes(file, 'accountability-nav-drawer', 'search-first Explore drawer');
+    requireIncludes(file, '<summary>Explore</summary>', 'search-first Explore trigger');
+    for (const route of ['books.html', 'amazon-store-books.html', 'power-atlas.html', 'evidence-vault.html', 'live-intel.html', 'videos.html', 'search.html', 'optin-center.html', 'offer-center.html', 'forum.html']) {
+      if (route === 'search.html' && html.includes('action="search.html"')) continue;
+      requireIncludes(file, `href="${route}"`, `search-first route ${route}`);
+    }
+    continue;
+  }
   requireIncludes(file, 'nav-shell', 'polished navigation shell');
   requireIncludes(file, 'nav-primary', 'primary navigation group');
   requireIncludes(file, 'nav-more', 'More navigation drawer');
@@ -42,7 +58,6 @@ for (const file of corePages) {
   for (const label of ['Opt-in Center', 'Offer Center', 'Signal Board']) {
     requireIncludes(file, label, `${label} secondary route`);
   }
-  const html = read(file);
   const primaryCount = countPrimaryLinks(html);
   if (primaryCount > 8) fail(`${file}: primary nav has ${primaryCount} links; expected 8 or fewer`);
   const copy = visibleCopy(html);
@@ -52,8 +67,11 @@ for (const file of corePages) {
 }
 
 const cleanup = read('scripts/cleanup-duplicates.js');
-for (const marker of ['nav-shell', 'nav-primary', 'nav-more', 'nav-drawer', 'Sell / Capture', 'Evidence & Trust', 'Control Maps', 'Freedom Ecosystem']) {
+for (const marker of ['nav-shell', 'nav-primary', 'nav-more', 'nav-drawer', 'canonicalHeader', 'Sell / Capture', 'Evidence & Trust', 'Control Maps', 'Freedom Ecosystem']) {
   if (!cleanup.includes(marker)) fail(`cleanup-duplicates.js missing UX nav marker: ${marker}`);
+}
+if (!cleanup.includes('return html.replace(/(<body\\b[^>]*>)\\s*/i, `$1${canonicalHeader}`)')) {
+  fail('cleanup-duplicates.js missing navigation recovery for pages with no header or nav');
 }
 for (const route of ['books.html', 'amazon-store-books.html', 'videos.html', 'news.html', 'power-atlas.html', 'evidence-vault.html', 'optin-center.html', 'offer-center.html', 'forum.html']) {
   if (!cleanup.includes(route)) fail(`cleanup-duplicates.js master nav missing ${route}`);

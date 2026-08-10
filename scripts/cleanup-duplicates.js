@@ -62,6 +62,7 @@ const secondaryNavGroups = [
 function navLink([href, label]) { return `<a href="${href}">${label}</a>`; }
 const secondaryNav = secondaryNavGroups.map(([title, links]) => `<div class="nav-group"><strong>${title}</strong>${links.map(navLink).join('')}</div>`).join('');
 const canonicalNav = `<nav class="nav nav-shell" aria-label="Primary navigation"><div class="nav-primary">${primaryNavLinks.map(navLink).join('')}</div><details class="nav-more"><summary>More</summary><div class="nav-drawer">${secondaryNav}</div></details></nav>`;
+const canonicalHeader = `<header class="wrap topbar"><a class="brand" href="index.html"><img src="sigil.png" alt="Matrix Reprogrammed sigil" /> MATRIX REPROGRAMMED</a>${canonicalNav}</header>`;
 
 const copyReplacements = [
   ['## Buy / Continue', '## Continue The Investigation'],
@@ -129,7 +130,24 @@ const regexReplacements = [
 function esc(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function read(file) { return fs.readFileSync(path.join(root, file), 'utf8'); }
 function write(file, html) { fs.writeFileSync(path.join(root, file), html); }
-function replaceNav(html) { return html.replace(/<nav class="nav[^"']*"[^>]*>[\s\S]*?<\/nav>/g, canonicalNav); }
+function replaceNav(html, file = '') {
+  if (file === 'index.html' && html.includes('class="accountability-home"') && html.includes('accountability-nav-drawer')) {
+    return html;
+  }
+  const navPattern = /<nav class="nav[^"']*"[^>]*>[\s\S]*?<\/nav>/g;
+  if (navPattern.test(html)) return html.replace(navPattern, canonicalNav);
+  // Account, checkout and other application surfaces use task-specific headers
+  // with required controls. Never replace those merely because they are not a
+  // public-site navigation header.
+  if (/<header\b[^>]*>[\s\S]*?<\/header>/i.test(html)) {
+    if (/^(?:admin-|member-|billing-)/i.test(file)) return html;
+    return html.replace(/<header\b[^>]*>[\s\S]*?<\/header>/i, canonicalHeader);
+  }
+  if (/<body\b[^>]*>/i.test(html)) {
+    return html.replace(/(<body\b[^>]*>)\s*/i, `$1${canonicalHeader}`);
+  }
+  return html;
+}
 function cleanEmptyPills(html) { return html.replace(/<p>(?:<span class="pill">[^<]+<\/span>\s*){2,}<\/p>/g, '').replace(/<p>\s*<\/p>/g, ''); }
 function cleanupImplementationCopy(html) {
   for (const [from, to] of copyReplacements) html = html.split(from).join(to);
@@ -144,7 +162,7 @@ function safeSearchJs() { return `(function(){const input=document.getElementByI
 
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html'));
 for (const file of htmlFiles) {
-  let html = cleanupImplementationCopy(cleanEmptyPills(replaceNav(read(file))));
+  let html = cleanupImplementationCopy(cleanEmptyPills(replaceNav(read(file), file)));
   if (file === 'index.html') html = cleanupHomepage(html);
   if (file === 'news.html') html = cleanupNewsDuplicates(html);
   if (file === 'timers.html') html = cleanupTimerRiskTerminal(html);
@@ -158,7 +176,7 @@ if (fs.existsSync(searchFile) && fs.existsSync(indexFile)) {
   const fallback = items.slice(0, 8).map(b => `<article class="card"><span class="label">${esc(b.category || 'Archive')}</span><h3>${esc(b.title)}</h3><p>${esc(b.description || b.subtitle || '')}</p><a class="btn" href="${esc(b.url)}">Open Door</a></article>`).join('');
   let html = cleanupImplementationCopy(read('search.html'));
   if (!html.includes('Showing the strongest entry points')) html = html.replace('<p class="filter-count" id="search-count"></p><div class="grid" id="search-results"></div>', `<p class="filter-count" id="search-count">Showing the strongest entry points. Type above to filter the full archive.</p><div class="grid" id="search-results">${fallback}</div>`);
-  write('search.html', replaceNav(html));
+  write('search.html', replaceNav(html, 'search.html'));
 }
-write('search.js', safeSearchJs());
+if (!fs.existsSync(path.join(root, 'search.js'))) write('search.js', safeSearchJs());
 console.log(`UX cleanup complete across ${htmlFiles.length} HTML files. Navigation shell, archive drawer, and public copy polished.`);

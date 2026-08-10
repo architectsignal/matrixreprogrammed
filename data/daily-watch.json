@@ -1,8 +1,8 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-08-09T06:12:24.854Z",
-  "date": "2026-08-09",
+  "updated": "2026-08-10T06:18:36.519Z",
+  "date": "2026-08-10",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
   "leadingEvidenceConclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Children’s Digital Identity and Age-Gating Clock is the highest canonical pressure index at 93%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 24866
+      "signalCount": 24664
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 18328
+      "signalCount": 18558
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 12064
+      "signalCount": 12046
     }
   ],
   "person": {
@@ -73,9 +73,9 @@
       "graphId": "securities-and-exchange-commission",
       "graphType": "missing record",
       "reviewStatus": "machine-extracted-unreviewed",
-      "directFreshRecords": 16
+      "directFreshRecords": 15
     },
-    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 16 fresh records plus 11 retained evidence references.",
+    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 15 fresh records plus 11 retained evidence references.",
     "whatWasFound": "named-in-public-record, refined-from-organization",
     "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
     "investigativeLanes": [
@@ -116,9 +116,9 @@
     "rankingStatus": "incumbent-held-position",
     "incumbentSince": "2026-07-27T17:29:36.861Z",
     "lastPromotedAt": "2026-07-27T17:29:36.861Z",
-    "challengerHeld": "Court Services and Offender Supervision Agency",
+    "challengerHeld": "U.S. Department",
     "challengerScore": 143,
-    "retentionReason": "Court Services and Offender Supervision Agency reached 143, below the 157 points required to replace the incumbent."
+    "retentionReason": "U.S. Department reached 143, below the 157 points required to replace the incumbent."
   },
   "family": {
     "type": "family",
@@ -181,10 +181,10 @@
       },
       "institution": {
         "changed": false,
-        "reason": "Court Services and Offender Supervision Agency reached 143, below the 157 points required to replace the incumbent.",
+        "reason": "U.S. Department reached 143, below the 157 points required to replace the incumbent.",
         "incumbent": "Securities and Exchange Commission",
         "incumbentScore": 143,
-        "challenger": "Court Services and Offender Supervision Agency",
+        "challenger": "U.S. Department",
         "challengerScore": 143,
         "required": 157,
         "marginRequired": 14
@@ -218,7 +218,7 @@
     "institution": {
       "route": "daily-watch.html#institution-dossier",
       "totals": {
-        "matchedFindings": 1357,
+        "matchedFindings": 1429,
         "legalRecords": 16,
         "safeguardingOverlaps": 0,
         "moneyRecords": 16,

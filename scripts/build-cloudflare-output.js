@@ -3,6 +3,8 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const root = process.cwd();
+require('./repair-black-file-document-shell.js');
+require('./repair-newsletter-client.js');
 const out = path.join(root, '_site');
 const allowedExt = new Set(['.html','.css','.js','.json','.xml','.txt','.md','.pdf','.png','.jpg','.jpeg','.webp','.svg','.ico','.gif','.mp4','.webm','.woff','.woff2','.csv','.wasm','.pf_fragment','.pf_index','.pf_meta','.pf_filter','.wacz']);
 const allowedRootFiles = new Set(['_headers','robots.txt','llms.txt','sitemap.xml','site-graph.json','claim-taxonomy.json','crawler-map.json','search-index.json','sigil.png','matrix.js','styles.css','fixes.css']);

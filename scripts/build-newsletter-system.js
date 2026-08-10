@@ -24,7 +24,10 @@ const client=`(function(){
   function boot(){document.querySelectorAll('form').forEach(form=>{if(!shouldCapture(form)||form.dataset.newsletterCapture==='active')return;form.dataset.newsletterCapture='active';form.addEventListener('submit',submit.bind(null,form));});}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
 })();`;
-write('newsletter.js',client);
+// The compact legacy client above is retained only as a historical generator
+// fixture. Production must keep the consent-bound D1/Cloudflare client, with
+// explicit preferences and authenticated same-origin requests.
+require('./repair-newsletter-client.js');
 
 let htmlPatched=0;for(const full of walkHtml(root)){let html=fs.readFileSync(full,'utf8');if(!/<input[^>]+(?:type=["']email["']|name=["']Email?["'])/i.test(html))continue;if(!html.includes('newsletter.js')){html=html.replace('</body>','<script src="newsletter.js"></script></body>');fs.writeFileSync(full,html);htmlPatched++}}
 

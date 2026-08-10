@@ -40,13 +40,24 @@ jobs:
               return;
             }
             const markerText = Buffer.from(markerResponse.data.content, 'base64').toString('utf8');
-            const requestedLine = markerText.split(/\r?\n/).find(line => line.startsWith('Requested:'));
-            const requestedAt = Date.parse(requestedLine?.slice('Requested:'.length).trim() || '');
+            const markerLines = markerText.replace(/\r\n/g, '\n').split('\n');
+            const markerFields = {};
+            for (const line of markerLines.slice(1)) {
+              const index = line.indexOf(':');
+              if (index < 1) continue;
+              markerFields[line.slice(0, index).trim()] = line.slice(index + 1).trim();
+            }
+            const requestedAt = Date.parse(markerFields.Requested || '');
             if (!Number.isFinite(requestedAt)) {
               core.setFailed('One-shot marker has no valid Requested timestamp.');
               return;
             }
             const cutoff = requestedAt - (2 * 60 * 1000);
+
+            // Never manufacture or reuse a dated billing exception. The dispatch
+            // input must be exactly what the fresh marker authorizes. The normal
+            // production lane is zero-spend, so a blank marker forwards blank.
+            const billingException = String(markerFields['Billing exception'] || '').trim();
 
             const workflowResponse = await github.rest.actions.listRepoWorkflows({
               owner,
@@ -107,10 +118,10 @@ jobs:
                 ref: 'main',
                 inputs: {
                   confirmation: 'DEPLOY MATRIX REPROGRAMMED',
-                  billing_exception: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02'
+                  billing_exception: billingException
                 }
               });
-              core.info(`Dispatched one owner-authorized billable production workflow ${target.id}.`);
+              core.info(`Dispatched one controlled production workflow ${target.id} with ${billingException ? 'the marker-authorized billing exception' : 'the zero-spend lane'}.`);
 
               for (let attempt = 0; attempt < 30 && !selected; attempt += 1) {
                 await sleep(2000);
@@ -140,7 +151,8 @@ jobs:
               status: selected.status,
               updatedAt: selected.updated_at,
               url: selected.html_url,
-              ownerAuthorizedBillableBuild: true,
+              forwardedBillingException: Boolean(billingException),
+              ownerAuthorizedBillableBuild: Boolean(billingException),
               triggerCommit: context.sha
             };
 
@@ -162,7 +174,7 @@ jobs:
               repo,
               path: statusPath,
               branch: 'main',
-              message: `Record owner-authorized production run ${selected.id}`,
+              message: `Record current controlled production run ${selected.id}`,
               content: Buffer.from(`${JSON.stringify(payload, null, 2)}\n`).toString('base64'),
               ...(existingSha ? { sha: existingSha } : {})
             });

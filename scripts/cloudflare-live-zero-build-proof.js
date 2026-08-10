@@ -81,6 +81,8 @@ function summarizePageProject(project) {
 async function verifyCloudflareGitBuildDisconnection({
   fetchImpl = globalThis.fetch,
   token,
+  workerToken,
+  pagesToken,
   accountId,
   workerName = 'matrixreprogrammed',
   repoOwner = 'architectsignal',
@@ -89,12 +91,15 @@ async function verifyCloudflareGitBuildDisconnection({
   now = new Date()
 } = {}) {
   if (typeof fetchImpl !== 'function') fail('A fetch implementation is required.');
-  if (!token) fail('CLOUDFLARE_API_TOKEN is required.');
+  const effectiveWorkerToken = String(workerToken || token || '').trim();
+  const effectivePagesToken = String(pagesToken || token || '').trim();
+  if (!effectiveWorkerToken) fail('A Cloudflare Workers Builds read token is required.');
+  if (!effectivePagesToken) fail('A Cloudflare Pages read token is required.');
   if (!accountId) fail('CLOUDFLARE_ACCOUNT_ID is required.');
 
   const scriptsPayload = await cloudflareGet(
     fetchImpl,
-    token,
+    effectiveWorkerToken,
     `/accounts/${encodeURIComponent(accountId)}/workers/scripts`
   );
   const scripts = Array.isArray(scriptsPayload.result) ? scriptsPayload.result : [];
@@ -105,7 +110,7 @@ async function verifyCloudflareGitBuildDisconnection({
 
   const triggersPayload = await cloudflareGet(
     fetchImpl,
-    token,
+    effectiveWorkerToken,
     `/accounts/${encodeURIComponent(accountId)}/builds/workers/${encodeURIComponent(workerTag)}/triggers`
   );
   const triggers = Array.isArray(triggersPayload.result) ? triggersPayload.result : [];
@@ -113,7 +118,7 @@ async function verifyCloudflareGitBuildDisconnection({
     fail(`Cloudflare Worker ${workerName} still has ${triggers.length} Workers Builds trigger(s); zero-build release refused.`);
   }
 
-  const projects = await listPagesProjects(fetchImpl, token, accountId);
+  const projects = await listPagesProjects(fetchImpl, effectivePagesToken, accountId);
   const relevantProjects = projects.filter(project => pageProjectRelevant(project, {
     workerName,
     repoOwner,
@@ -144,7 +149,7 @@ async function verifyCloudflareGitBuildDisconnection({
     repository: `${repoOwner}/${repoName}`,
     siteDomain,
     evidence: 'Cloudflare Workers Scripts + Workers Builds trigger listing + Pages project source listing',
-    boundary: 'Read-only Cloudflare API proof. No build, deployment, Pages mutation, Worker mutation, D1 mutation or billing action is performed.'
+    boundary: 'Read-only Cloudflare API proof. Separate least-privilege tokens may be used for Workers Builds and Pages. No build, deployment, Pages mutation, Worker mutation, D1 mutation or billing action is performed.'
   };
 }
 
@@ -167,6 +172,8 @@ function recordPolicyProof(report, policyPath = '.github/build-budget-policy.jso
 async function main() {
   const report = await verifyCloudflareGitBuildDisconnection({
     token: process.env.CLOUDFLARE_API_TOKEN,
+    workerToken: process.env.CLOUDFLARE_BUILDS_API_TOKEN,
+    pagesToken: process.env.CLOUDFLARE_PAGES_API_TOKEN,
     accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
     workerName: process.env.CLOUDFLARE_WORKER_NAME || 'matrixreprogrammed',
     repoOwner: process.env.MATRIX_GITHUB_OWNER || 'architectsignal',

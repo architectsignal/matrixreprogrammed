@@ -1,0 +1,131 @@
+name: One-shot Cloudflare Route-safe Production Repair
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/repair-cloudflare-route-deploy.trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: one-shot-cloudflare-route-safe-repair
+  cancel-in-progress: false
+
+jobs:
+  repair-and-dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fast-forward to current main
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git merge --ff-only origin/main
+
+      - name: Patch routine deploy to preserve existing Cloudflare zone routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('.github/workflows/deploy.yml')
+          text = path.read_text(encoding='utf-8')
+          marker = "          # Routine releases preserve existing Cloudflare zone routes and do not mutate them.\n"
+          if marker in text:
+              print('Route-safe deploy patch already present.')
+          else:
+              anchor = "          if '\\nworkers_dev = ' not in text:\n              text = text.replace('keep_vars = true\\n', 'keep_vars = true\\nworkers_dev = true\\n', 1)\n          config.write_text(text, encoding='utf-8')\n"
+              if text.count(anchor) != 1:
+                  raise SystemExit('Deploy workflow activation/config anchor is missing or ambiguous; refusing automatic repair.')
+              replacement = """          if '\\nworkers_dev = ' not in text:
+              text = text.replace('keep_vars = true\\n', 'keep_vars = true\\nworkers_dev = true\\n', 1)
+          # Routine releases preserve existing Cloudflare zone routes and do not mutate them.
+          # Route creation/change remains an explicit zone-authorized operation; routine releases
+          # update the Worker, assets, bindings and schedules, then prove the existing live routes.
+          route_block = '''routes = [
+  { pattern = \"matrixreprogrammed.com/*\", zone_name = \"matrixreprogrammed.com\" },
+  { pattern = \"www.matrixreprogrammed.com/*\", zone_name = \"matrixreprogrammed.com\" }
+]
+'''
+          if text.count(route_block) != 1:
+              raise SystemExit('Expected exactly one production routes block in the temporary Wrangler source config')
+          text = text.replace(route_block, '', 1)
+          config.write_text(text, encoding='utf-8')
+"""
+              text = text.replace(anchor, replacement, 1)
+              path.write_text(text, encoding='utf-8')
+              print('Installed route-safe temporary Wrangler configuration patch.')
+          PY
+          grep -F 'Routine releases preserve existing Cloudflare zone routes' .github/workflows/deploy.yml
+          grep -F "text = text.replace(route_block, '', 1)" .github/workflows/deploy.yml
+
+      - name: Refresh exact one-shot production authorization marker
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="$(git rev-parse HEAD)"
+          REQUESTED="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          cat > .github/production-deploy.trigger <<EOF
+          DEPLOY MATRIX REPROGRAMMED
+          Requested: ${REQUESTED}
+          Target: ${TARGET}
+          Authorization: exactly one controlled Cloudflare production deployment
+          Billing exception:
+          Purpose: deploy the current exact main after the route-safe production repair and reject stale, failed, cancelled or wrong-SHA runs
+          Boundary: owner-authorized single controlled zero-spend deployment; existing Cloudflare zone routes are preserved; all credential, budget, rollback, migration, evidence-label, payment, human-review and live-verification gates remain mandatory
+          Nonce: pr999-route-safe-repair-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}
+          EOF
+          sed -i 's/^          //' .github/production-deploy.trigger
+          head -1 .github/production-deploy.trigger | grep -Fx 'DEPLOY MATRIX REPROGRAMMED'
+
+      - name: Commit repair and remove one-shot helper
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/repair-cloudflare-route-deploy.trigger
+          rm -f .github/workflows/repair-cloudflare-route-deploy.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/workflows/deploy.yml .github/production-deploy.trigger .github/repair-cloudflare-route-deploy.trigger .github/workflows/repair-cloudflare-route-deploy.yml
+          if git diff --cached --quiet; then
+            echo 'No repair commit was required.'
+          else
+            git commit -m 'Fix route-safe controlled production deploy'
+            git push origin HEAD:main
+          fi
+          FINAL_SHA="$(git rev-parse HEAD)"
+          echo "final_sha=${FINAL_SHA}" >> "$GITHUB_OUTPUT"
+          echo "Route-safe repair committed at ${FINAL_SHA}."
+
+      - name: Dispatch existing authorized production controller
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const workflows = await github.rest.actions.listRepoWorkflows({ owner, repo, per_page: 100 });
+            const controller = workflows.data.workflows.find(w => w.name === 'Authorized Production Dispatch');
+            if (!controller) {
+              core.setFailed('Authorized Production Dispatch workflow not found.');
+              return;
+            }
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: controller.id,
+              ref: 'main'
+            });
+            core.info(`Dispatched Authorized Production Dispatch for repaired main ${{ steps.commit.outputs.final_sha }}.`);

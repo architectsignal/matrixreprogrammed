@@ -45,7 +45,7 @@ async function verifyOnce() {
   const manifest = parse(manifestResponse.text);
   const health = parse(healthResponse.text);
   if (!manifestResponse.ok || manifest?.commitSha !== expectedSha) failures.push({ route: manifestResponse.route, status: manifestResponse.status, reason: 'manifest SHA mismatch' });
-  if (!healthResponse.ok || health?.ok !== true || health?.buildSha !== expectedSha || health?.manifestSha !== expectedSha || health?.workerScript !== 'src/worker-production.js') failures.push({ route: healthResponse.route, status: healthResponse.status, reason: 'health SHA or strict Worker mismatch' });
+  if (!healthResponse.ok || health?.ok !== true || health?.buildSha !== expectedSha || health?.manifestSha !== expectedSha || health?.workerScript !== 'src/worker-production-autonomy.js') failures.push({ route: healthResponse.route, status: healthResponse.status, reason: 'health SHA or production autonomy Worker mismatch' });
 
   const memberData = parse(memberMe.text);
   const memberBoundaryPassed = memberMe.status === 401

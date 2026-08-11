@@ -42,34 +42,28 @@ jobs:
 
           path = Path('.github/workflows/deploy.yml')
           text = path.read_text(encoding='utf-8')
-          marker = "          # Routine releases preserve existing Cloudflare zone routes and do not mutate them.\n"
+          marker = '          # Preserve existing Cloudflare zone routes during routine releases.\n'
+          anchor = '          npx --yes wrangler@latest deploy --config .wrangler-production.toml 2>&1 | tee downloads/wrangler-deploy.log\n'
           if marker in text:
               print('Route-safe deploy patch already present.')
           else:
-              anchor = "          if '\\nworkers_dev = ' not in text:\n              text = text.replace('keep_vars = true\\n', 'keep_vars = true\\nworkers_dev = true\\n', 1)\n          config.write_text(text, encoding='utf-8')\n"
               if text.count(anchor) != 1:
-                  raise SystemExit('Deploy workflow activation/config anchor is missing or ambiguous; refusing automatic repair.')
-              replacement = """          if '\\nworkers_dev = ' not in text:
-              text = text.replace('keep_vars = true\\n', 'keep_vars = true\\nworkers_dev = true\\n', 1)
-          # Routine releases preserve existing Cloudflare zone routes and do not mutate them.
-          # Route creation/change remains an explicit zone-authorized operation; routine releases
-          # update the Worker, assets, bindings and schedules, then prove the existing live routes.
-          route_block = '''routes = [
-  { pattern = \"matrixreprogrammed.com/*\", zone_name = \"matrixreprogrammed.com\" },
-  { pattern = \"www.matrixreprogrammed.com/*\", zone_name = \"matrixreprogrammed.com\" }
-]
-'''
-          if text.count(route_block) != 1:
-              raise SystemExit('Expected exactly one production routes block in the temporary Wrangler source config')
-          text = text.replace(route_block, '', 1)
-          config.write_text(text, encoding='utf-8')
-"""
-              text = text.replace(anchor, replacement, 1)
+                  raise SystemExit('Exact Cloudflare deploy command is missing or ambiguous; refusing automatic repair.')
+              indent = '          '
+              route_strip = (
+                  indent
+                  + "python3 -c 'from pathlib import Path; p=Path(\".wrangler-production.toml\"); "
+                  + "t=p.read_text(encoding=\"utf-8\"); s=t.find(\"routes = [\\\\n\"); "
+                  + "e=t.find(\"\\\\n]\\\\n\", s); "
+                  + "assert s >= 0 and e > s and \"matrixreprogrammed.com/*\" in t[s:e] and \"www.matrixreprogrammed.com/*\" in t[s:e], \"production routes block missing\"; "
+                  + "p.write_text(t[:s] + t[e+3:], encoding=\"utf-8\")'\n"
+              )
+              text = text.replace(anchor, marker + route_strip + anchor, 1)
               path.write_text(text, encoding='utf-8')
-              print('Installed route-safe temporary Wrangler configuration patch.')
+              print('Installed route-safe deploy patch.')
           PY
-          grep -F 'Routine releases preserve existing Cloudflare zone routes' .github/workflows/deploy.yml
-          grep -F "text = text.replace(route_block, '', 1)" .github/workflows/deploy.yml
+          grep -F 'Preserve existing Cloudflare zone routes during routine releases.' .github/workflows/deploy.yml
+          grep -F 'python3 -c' .github/workflows/deploy.yml | grep -F '.wrangler-production.toml'
 
       - name: Refresh exact one-shot production authorization marker
         shell: bash
@@ -90,16 +84,14 @@ jobs:
           sed -i 's/^          //' .github/production-deploy.trigger
           head -1 .github/production-deploy.trigger | grep -Fx 'DEPLOY MATRIX REPROGRAMMED'
 
-      - name: Commit repair and remove one-shot helper
+      - name: Commit route-safe repair
         id: commit
         shell: bash
         run: |
           set -euo pipefail
-          rm -f .github/repair-cloudflare-route-deploy.trigger
-          rm -f .github/workflows/repair-cloudflare-route-deploy.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add .github/workflows/deploy.yml .github/production-deploy.trigger .github/repair-cloudflare-route-deploy.trigger .github/workflows/repair-cloudflare-route-deploy.yml
+          git add .github/workflows/deploy.yml .github/production-deploy.trigger
           if git diff --cached --quiet; then
             echo 'No repair commit was required.'
           else

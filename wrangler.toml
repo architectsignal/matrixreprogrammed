@@ -10,10 +10,10 @@ compatibility_date = "2026-06-25"
 # Runtime payment credentials and activation switches are managed in the Cloudflare dashboard.
 # keep_vars prevents Wrangler deployments from deleting unrelated dashboard values.
 keep_vars = true
-routes = [
-  { pattern = "matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" },
-  { pattern = "www.matrixreprogrammed.com/*", zone_name = "matrixreprogrammed.com" }
-]
+# Production custom-domain routes are already live and are managed in Cloudflare rather than by
+# routine Wrangler deploys. Keeping routes out of this deployment config prevents an account-scoped
+# Worker token from trying to mutate zone routes; the controlled release still proves both domains live.
+workers_dev = true
 
 [triggers]
 # Four of the five Workers Free cron slots are used. The AI-management lifecycle shares the

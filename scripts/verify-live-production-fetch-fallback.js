@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 const nativeFetch = global.fetch;
+const {
+  authoritativeFullProofHealthy,
+  supplementalFailureCanPreserveAuthoritativeSuccess
+} = require('./live-production-verification-policy.js');
 
 if (typeof nativeFetch !== 'function') {
   throw new Error('Global fetch is unavailable');
@@ -173,6 +177,22 @@ function promoteCompactProof(original) {
   writeJson('downloads/live-production-verification.json', promoted);
   return promoted.ok;
 }
+function preserveAuthoritativeSuccess(original, stage, supplementalProof) {
+  const current = {
+    ...original,
+    ok: true,
+    compactProtectedProof: readJson('downloads/live-protected-boundaries-compact.json'),
+    compactSurfaceProof: readJson('downloads/live-release-surfaces-compact.json'),
+    verifiedViaCompactWafSafeProof: false,
+    supplementalVerificationStatus: 'waf-blocked-after-authoritative-pass',
+    supplementalVerificationWafBlocked: true,
+    supplementalVerificationStage: stage,
+    supplementalVerificationCheckedAt: new Date().toISOString()
+  };
+  writeJson('downloads/live-production-verification.json', current);
+  console.warn(`Supplemental ${stage} proof was uniformly blocked by Cloudflare WAF after the authoritative exact-SHA production proof passed; preserving the stronger fail-closed production result.`);
+  return supplementalProof;
+}
 
 const originalExit = process.exit.bind(process);
 let runningSupplementalProofs = false;
@@ -185,6 +205,10 @@ process.exit = function matrixVerifiedExit(code = 0) {
   const originalReport = readJson('downloads/live-production-verification.json') || {};
   const wafFallback = numeric !== 0 && exactAllRouteWaf(originalReport);
   if (numeric !== 0 && !wafFallback) return originalExit(numeric);
+  if (numeric === 0 && !authoritativeFullProofHealthy(originalReport)) {
+    console.error('Authoritative live verifier exited successfully but its saved proof is incomplete or internally inconsistent.');
+    return originalExit(1);
+  }
 
   if (wafFallback) {
     console.warn('The full verifier was blocked uniformly by Cloudflare WAF. Cooling down before compact exact-SHA, Worker, D1 and public-surface proof.');
@@ -197,20 +221,37 @@ process.exit = function matrixVerifiedExit(code = 0) {
     COMPACT_BOUNDARY_VERIFY_ATTEMPTS: '3',
     COMPACT_BOUNDARY_VERIFY_DELAY_MS: '30000'
   });
-  if (protectedStatus !== 0) return originalExit(protectedStatus);
+  if (protectedStatus !== 0) {
+    const protectedProof = readJson('downloads/live-protected-boundaries-compact.json') || {};
+    if (numeric === 0 && supplementalFailureCanPreserveAuthoritativeSuccess(originalReport, protectedProof)) {
+      preserveAuthoritativeSuccess(originalReport, 'protected-boundaries', protectedProof);
+      return originalExit(0);
+    }
+    return originalExit(protectedStatus);
+  }
 
   blockingSleep(15000);
   const surfacesStatus = runProof('scripts/verify-live-release-surfaces-compact.js', 1024 * 1024 * 50, {
     COMPACT_LIVE_VERIFY_ATTEMPTS: '3',
     COMPACT_LIVE_VERIFY_DELAY_MS: '30000'
   });
-  if (surfacesStatus !== 0) return originalExit(surfacesStatus);
+  if (surfacesStatus !== 0) {
+    const surfacesProof = readJson('downloads/live-release-surfaces-compact.json') || {};
+    if (numeric === 0 && supplementalFailureCanPreserveAuthoritativeSuccess(originalReport, surfacesProof)) {
+      preserveAuthoritativeSuccess(originalReport, 'release-surfaces', surfacesProof);
+      return originalExit(0);
+    }
+    return originalExit(surfacesStatus);
+  }
 
   if (numeric === 0) {
     const current = readJson('downloads/live-production-verification.json') || originalReport;
     current.compactProtectedProof = readJson('downloads/live-protected-boundaries-compact.json');
     current.compactSurfaceProof = readJson('downloads/live-release-surfaces-compact.json');
     current.verifiedViaCompactWafSafeProof = false;
+    current.supplementalVerificationStatus = 'passed';
+    current.supplementalVerificationWafBlocked = false;
+    current.supplementalVerificationCheckedAt = new Date().toISOString();
     writeJson('downloads/live-production-verification.json', current);
     return originalExit(0);
   }

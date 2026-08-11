@@ -1,4 +1,4 @@
 RUN ONE-SHOT ROUTE-SAFE PRODUCTION REPAIR
-Requested: 2026-08-11T18:52:00Z
-Attempt: corrected-helper-v2
-Reason: preserve existing Cloudflare zone routes while deploying the latest Worker, assets, bindings and schedules through the normal controlled release lane
+Requested: 2026-08-11T18:56:00Z
+Attempt: privileged-apply-export
+Reason: generate the validated route-safe deploy workflow file as an artifact so the connected GitHub app can apply the workflow edit without weakening repository permissions

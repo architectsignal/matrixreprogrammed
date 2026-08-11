@@ -47,6 +47,10 @@ jobs:
       - name: Commit status when changed
         run: |
           set -euo pipefail
+          if [[ -f .github/production-release.freeze ]]; then
+            echo "Controlled production release freeze is active; observer remains read-only and will not move main."
+            exit 0
+          fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/current-production-run.json

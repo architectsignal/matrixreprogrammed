@@ -1,5 +1,26 @@
 PRAGMA foreign_keys = ON;
 
+CREATE TABLE IF NOT EXISTS matrix_learning_ledger (
+  lesson_id TEXT PRIMARY KEY,
+  cycle_index INTEGER NOT NULL CHECK (cycle_index >= 0),
+  domain TEXT NOT NULL CHECK (domain IN ('research','resource','compute','site','revenue','finance','model','deployment','governance')),
+  subject_id TEXT,
+  observation_json TEXT NOT NULL,
+  outcome_json TEXT NOT NULL DEFAULT '{}',
+  confidence REAL NOT NULL DEFAULT 0 CHECK (confidence BETWEEN 0 AND 1),
+  accepted INTEGER NOT NULL DEFAULT 0 CHECK (accepted IN (0,1)),
+  affects_ranking_only INTEGER NOT NULL DEFAULT 1 CHECK (affects_ranking_only=1),
+  policy_mutation_allowed INTEGER NOT NULL DEFAULT 0 CHECK (policy_mutation_allowed=0),
+  evidence_threshold_mutation_allowed INTEGER NOT NULL DEFAULT 0 CHECK (evidence_threshold_mutation_allowed=0),
+  financial_execution_allowed INTEGER NOT NULL DEFAULT 0 CHECK (financial_execution_allowed=0),
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_matrix_learning_ledger_domain
+  ON matrix_learning_ledger(domain, accepted, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_matrix_learning_ledger_subject
+  ON matrix_learning_ledger(subject_id, created_at DESC);
+
 CREATE TABLE IF NOT EXISTS matrix_revenue_events (
   event_id TEXT PRIMARY KEY,
   channel_id TEXT NOT NULL,

@@ -6,6 +6,7 @@ import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from '.
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
 import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';
+import { handleLevel5SelfFinancingRoute, isLevel5SelfFinancingRoute } from './worker-level5-self-financing.js';
 
 function cleanToken(value) {
   return String(value || '').trim();
@@ -95,6 +96,11 @@ export default {
     if (isMatrixSynergyRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();
       return handleMatrixSynergyRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
+    if (isLevel5SelfFinancingRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleLevel5SelfFinancingRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
     if (isCapacityGrowthRoute(path)) {

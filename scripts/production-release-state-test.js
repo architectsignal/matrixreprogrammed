@@ -9,6 +9,7 @@ const root = process.cwd();
 const workflow = fs.readFileSync(path.join(root, '.github', 'workflows', 'deploy.yml'), 'utf8');
 const authorizationPath = path.join(root, 'scripts', 'verify-one-shot-production-authorization.js');
 const authorization = fs.readFileSync(authorizationPath, 'utf8');
+const policyTestPath = path.join(root, 'scripts', 'live-production-verification-policy-test.js');
 const failures = [];
 const check = (ok, message) => { if (!ok) failures.push(message); };
 
@@ -71,9 +72,18 @@ check(
   `one-shot production authorization self-test failed: ${(authorizationSelfTest.stderr || authorizationSelfTest.stdout || '').trim()}`
 );
 
+const policyTest = spawnSync(process.execPath, [policyTestPath], {
+  cwd: root,
+  encoding: 'utf8'
+});
+check(
+  policyTest.status === 0,
+  `live production verification WAF policy test failed: ${(policyTest.stderr || policyTest.stdout || '').trim()}`
+);
+
 if (failures.length) {
   console.error(`PRODUCTION RELEASE STATE TEST FAILED: ${failures.length}`);
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('Production release state test passed: guarded human/one-shot authority, deployment, live verification and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');
+console.log('Production release state test passed: guarded human/one-shot authority, deployment, live verification, WAF-only supplemental policy and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');

@@ -1,25 +1,20 @@
 {
-  "generatedAt": "2026-08-09T04:58:01.942Z",
-  "pageCount": 142,
+  "generatedAt": "2026-08-11T05:00:42.814Z",
+  "pageCount": 146,
   "output": "downloads/phase6-data-integration.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Phase6 Data Integration",
-    "contentHash": "3a36411ce9edc70cfeab501399004a260154dd419c8988c488ab0ac268b298ec",
+    "contentHash": "e1bdb59e92c8c702c4f1c75d5d93a639b0b411a42f2c911ab0bfd3c8b0b48430",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
-      "companies-amzn",
-      "companies-meta",
-      "investment-vehicles-ivv",
-      "33b99270b28ac9825f7ccfdd",
+      "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-29094A2EF0BEB10F",
       "ASC-REVIEW-7B1A15ED77443F13",
-      "ASC-REVIEW-63DEE163CCA699D8",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-1EB618A4D39314B4",
-      "companies-aapl",
-      "companies-avgo",
+      "e4ca191d7d9f2eddeda78ad3",
+      "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-6476A61F00D66DFB",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-884743856D3E1385",
@@ -37,7 +32,6 @@
       "ASC-REVIEW-FE3653EEB8123DA6",
       "ASC-REVIEW-72A2357084C62D28",
       "ASC-REVIEW-0D4E0949E1727957",
-      "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-19181472DB04522E",
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
@@ -104,6 +98,7 @@
       "ASC-REVIEW-8CDF8AA54EE2122C",
       "ASC-REVIEW-E728A87FB5E518AA",
       "ASC-REVIEW-3CA74023188D71DE",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-0D66560BACB91907",
       "ASC-REVIEW-1A69D4DFD447B89E",
       "ASC-REVIEW-1F97D9BCB4ED9CEB",
@@ -127,6 +122,7 @@
       "ASC-REVIEW-89E0DBBB041A3168",
       "ASC-REVIEW-2E9D74DCA057FDC2",
       "ASC-REVIEW-C6718A14E0A753DE",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-80D43B2F22AC5B77",
       "ASC-REVIEW-F2DB3AB7FA9D7B0C",
       "ASC-REVIEW-67649B242FE10338",
@@ -146,16 +142,20 @@
       "ASC-REVIEW-60951B1D539429E9",
       "ASC-REVIEW-1576F2009DBA8B3D",
       "ASC-REVIEW-8D34DAEE930AC84F",
-      "ASC-REVIEW-E6D70696A19B3CDA"
+      "ASC-REVIEW-E6D70696A19B3CDA",
+      "ASC-REVIEW-20316213EFD183CC",
+      "ASC-REVIEW-03B26F1BFC110513",
+      "ASC-REVIEW-B66A4F66565A8C1E",
+      "ASC-REVIEW-CA09236EF68A2AE9"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 133,
+      "disputedClaimCount": 138,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 24,
-      "moneyRecordCount": 35
+      "relationshipCount": 27,
+      "moneyRecordCount": 30
     },
     "evidenceBasedConclusions": [
       {
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; State Street / State Street Investment Management → Systemically Important Financial Infrastructure: capital layer; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
+        "inference": "The indexed set contains 27 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; State Street / State Street Investment Management → Systemically Important Financial Infrastructure: capital layer; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 27 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",
           "State Street / State Street Investment Management → Systemically Important Financial Infrastructure: capital layer",
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
-          "Booz Allen Hamilton → Intelligence: execution layer",
-          "Booz Allen Hamilton → Public Money: execution layer"
+          "Booz Allen Hamilton → Intelligence: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
   }
 }

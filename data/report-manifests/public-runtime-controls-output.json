@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-08-09T04:59:26.956Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-11T05:02:07.352Z",
+  "pageCount": 138,
   "output": "downloads/public-runtime-controls-output.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Public Runtime Controls Output",
-    "contentHash": "473f05e47af92ad5f06eceb9e626d581abc3306ce25ebbd2c51873e7c2a212e9",
+    "contentHash": "e74128b50d71c9d3210716a637620c9b418e92344f6be48be90eabb86d30577a",
     "sourceIds": [
-      "33b99270b28ac9825f7ccfdd",
+      "source-change-d8732adccaaac4ea6376d2ba",
+      "source-change-c9bd018a6544006f1e1f3018",
+      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -18,9 +20,13 @@
       "ASC-REVIEW-11047BCC813B0EA8",
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-a09615abd1b1ed83f2b74ff4",
+      "crime-state-overlap-2026-08-10-d2755c34",
+      "source-change-ec7f3126268880506fc4f0ed",
+      "source-change-ea3afacb89f4f277c87d1a79",
+      "source-change-8057d390af5011731564579c",
+      "source-change-871096b65a90301ef4a126c3",
+      "e4ca191d7d9f2eddeda78ad3",
+      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -35,16 +41,10 @@
       "ASC-REVIEW-E05B1E35C7C80738",
       "ASC-REVIEW-B1927A1DC608FBA7",
       "ASC-REVIEW-51CC02522F48F499",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-D5DBFBBE76A72694",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-BDEA3B6AE6BFEDA7",
-      "ASC-REVIEW-E09138F879103681",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "d6936ce262c4c18cb75c6e44",
       "32fdb7636e52846298c14671",
       "19ae23289f4be13ad5f7e317",
@@ -57,14 +57,13 @@
       "275d6c3caca158f7a3e15780",
       "26b90533dbf7d2ed42f02de6",
       "511ed227bb4be58b582ebb8d",
-      "crime-state-overlap-2026-08-05-500955ff",
-      "crime-state-overlap-2026-08-05-a6e069b5",
-      "crime-state-overlap-2026-08-05-f56f7000",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-b0cde383147509fbfd4f4472",
+      "e3b055a4afb19163268d7257",
+      "a33968b32fce32bd9d6523f6",
+      "4c1d46d9bcb8caa374dec7d2",
+      "crime-state-overlap-2026-08-07-8418d23a",
+      "crime-state-overlap-2026-08-07-a2296147",
+      "crime-state-overlap-2026-08-07-7e664ee5",
+      "crime-state-overlap-2026-08-07-eea3ce1d",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
       "peter-ball-iicsa-support-2019",
@@ -146,21 +145,22 @@
       "ASC-REVIEW-D13048D78F8EA6E3",
       "ASC-REVIEW-06F8715410848053",
       "ASC-REVIEW-8DD2093F6ECB25D1",
-      "ASC-REVIEW-26C98CAD8AA9CE0A"
+      "ASC-REVIEW-26C98CAD8AA9CE0A",
+      "ASC-REVIEW-D921C72A4BA2FDF3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 16,
-      "disputedClaimCount": 110,
+      "primarySourceCount": 21,
+      "disputedClaimCount": 105,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 71,
-      "moneyRecordCount": 58
+      "relationshipCount": 76,
+      "moneyRecordCount": 59
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Public Runtime Controls Output.",
-        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash (data/latest-public-drops.json); Convicted Drug Trafficker Sentenced for Violating Federal Controlled Substances Act (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Public Runtime Controls Output.",
+        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json); One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply (data/live-intel.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Bahamian Drug Trafficker Faces Federal Cocaine Charges Following At-Sea Rescue from Plane Crash,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "An indictment unsealed today in the Northern District of Georgia charges Jonathan Eric Gardiner, a convicted felon and Bahamian national, with federal drug importation and conspiracy offenses. U.S. officials arrested Gardiner after rescuing him from the Atlantic Ocean following a plane crash on May 14, 2026. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Today, U.S. Attorney Jeanine Ferris Pirro marked the one-year anniversary of President Trump’s Federal Law Enforcement Surge in the District of Columbia. The surge implemented a significant increase in federal law enforcement resources, bolstering our teams with additional agents, advanced tools, and a no‑nonsense mandate that renewed the focus on cracking down on violent offenders, dismantling criminal networks, and restoring safety to District neighborhoods. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 71 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 71 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-10-01T00:00:00.000Z"
   }
 }

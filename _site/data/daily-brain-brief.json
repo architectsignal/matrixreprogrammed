@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T04:47:46.221Z",
+  "updated": "2026-08-11T04:50:27.666Z",
   "title": "Daily Brain Brief",
   "purpose": "Daily intelligence product generated from Matrix Reprogrammed outcome, probability, signal, policy, gold and disclosure feeds.",
   "boundary": "This is an evidence-graded briefing. It separates records, reporting, association, hypothesis and unsupported claim.",
@@ -215,7 +215,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-08-06T06:27:50.949Z",
+    "lastComputed": "2026-08-09T05:05:36.491Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "highestProbabilityScenario": {
@@ -329,7 +329,7 @@
       "FOIA routes",
       "verified record cards"
     ],
-    "lastComputed": "2026-08-06T06:27:50.949Z",
+    "lastComputed": "2026-08-09T05:05:36.491Z",
     "nextAction": "Review new signals, pull listed records, and update scenario probability when records change."
   },
   "missingRecords": [
@@ -588,7 +588,7 @@
     }
   ],
   "publicRecordFeed": {
-    "updated": "2026-08-09T04:47:46.288Z",
+    "updated": "2026-08-11T04:50:27.739Z",
     "eventCount": 18,
     "feedCount": 7,
     "reachedFeedCount": 4,
@@ -684,7 +684,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001045810-1",
-      "date": "2026-08-09",
+      "date": "2026-08-11",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "NVIDIA CORP (NVDA)",
@@ -698,7 +698,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000320193-2",
-      "date": "2026-08-09",
+      "date": "2026-08-11",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Apple Inc. (AAPL)",
@@ -712,7 +712,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001652044-3",
-      "date": "2026-08-09",
+      "date": "2026-08-11",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Alphabet Inc. (GOOGL)",
@@ -726,7 +726,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0000789019-4",
-      "date": "2026-08-09",
+      "date": "2026-08-11",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "MICROSOFT CORP (MSFT)",
@@ -740,7 +740,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001018724-5",
-      "date": "2026-08-09",
+      "date": "2026-08-11",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "AMAZON COM INC (AMZN)",
@@ -754,7 +754,7 @@
     },
     {
       "id": "sec-edgar-filings-cik0001730168-6",
-      "date": "2026-08-09",
+      "date": "2026-08-11",
       "lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "summary": "Broadcom Inc. (AVGO)",
@@ -768,7 +768,7 @@
     }
   ],
   "changeDetection": {
-    "updated": "2026-08-09T04:48:00.667Z",
+    "updated": "2026-08-11T04:50:43.360Z",
     "newRecordCount": 0,
     "changedRecordCount": 0,
     "removedRecordCount": 0,
@@ -781,7 +781,7 @@
   },
   "topChangeSignals": [],
   "privateContractorIntelligence": {
-    "updated": "2026-08-09T04:48:00.823Z",
+    "updated": "2026-08-11T04:50:43.524Z",
     "profileCount": 7,
     "route": "private-contractor-tracker.html",
     "json": "data/private-contractor-intelligence.json",
@@ -815,7 +815,7 @@
     "boundary": "This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt."
   },
   "masterBriefEngine": {
-    "updated": "2026-08-09T04:48:00.857Z",
+    "updated": "2026-08-11T04:50:43.559Z",
     "route": "daily-command-brief.html",
     "briefQualityRoute": "brief-quality-report.html",
     "missingRecordsRoute": "daily-missing-records.html",
@@ -828,8 +828,8 @@
     "boundary": "Master brief engine adds readable command intelligence without replacing source review."
   },
   "dailyWatch": {
-    "updated": "2026-08-09T05:06:02.931Z",
-    "date": "2026-08-09",
+    "updated": "2026-08-11T05:08:44.218Z",
+    "date": "2026-08-11",
     "route": "daily-watch.html",
     "person": {
       "type": "person",
@@ -881,9 +881,9 @@
         "graphId": "securities-and-exchange-commission",
         "graphType": "missing record",
         "reviewStatus": "machine-extracted-unreviewed",
-        "directFreshRecords": 15
+        "directFreshRecords": 5
       },
-      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 15 fresh records plus 11 retained evidence references.",
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 5 fresh records plus 14 retained evidence references.",
       "whatWasFound": "named-in-public-record, refined-from-organization",
       "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
       "investigativeLanes": [
@@ -898,21 +898,21 @@
       "confidence": "moderate-to-high",
       "sourceRoutes": [
         "entity-briefs/securities-and-exchange-commission.html",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26598-gotbit-consulting.pdf",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
         "data/daily-investigation-conclusions.json",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26597.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-        "https://www.sec.gov/files/judg26592-semisub.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+        "https://www.sec.gov/enforcement-litigation/litigation-releases",
+        "https://www.federalregister.gov/documents/2026/08/10/2026-16199/agency-information-collection-activities-proposed-collection-comment-request-extension-form-n-8b-2",
+        "https://www.federalregister.gov/documents/2026/08/10/2026-16202/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
+        "https://www.federalregister.gov/documents/2026/08/10/2026-16198/agency-information-collection-activities-proposed-collection-comment-request-extension-form-n-17f-2",
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",
         "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
-        "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf"
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+        "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14142.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26506-suzee-han.pdf"
       ],
       "nextQuestions": [
         "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",

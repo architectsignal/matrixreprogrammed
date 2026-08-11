@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-10T06:47:44.345Z",
+  "generatedAt": "2026-08-11T05:08:45.039Z",
   "overall": "ready",
   "summary": {
     "total": 52,
     "passed": 52,
     "failed": 0
   },
-  "homepageMode": "search-first-accountability",
+  "homepageMode": "legacy-cinematic",
   "watch": {
-    "date": "2026-08-10",
+    "date": "2026-08-11",
     "person": "Bill Gates",
     "institution": "Securities and Exchange Commission",
     "family": "Wallenberg family and foundations",
@@ -64,7 +64,7 @@
     {
       "id": "authoritative-entity-resolution",
       "ok": true,
-      "detail": "Resolved person=Bill Gates; institution=U.S. Department; family=Al Maktoum family.",
+      "detail": "Resolved person=Bill Gates; institution=Securities and Exchange Commission; family=Al Maktoum family.",
       "fix": "Run build-daily-watch.js and reject document, report, archive, case or finding titles."
     },
     {
@@ -136,7 +136,7 @@
     {
       "id": "watch-institution-rank",
       "ok": true,
-      "detail": "institution score 143; status incumbent-held-position.",
+      "detail": "institution score 143; status retained-current-leader.",
       "fix": "Run the stable ranking and dossier builder."
     },
     {
@@ -268,7 +268,7 @@
     {
       "id": "history-and-weekly-delta",
       "ok": true,
-      "detail": "13 history entries; weekly delta ready.",
+      "detail": "14 history entries; weekly delta ready.",
       "fix": "Retain ranking history and weekly changes."
     },
     {
@@ -280,13 +280,13 @@
     {
       "id": "homepage-first-hook",
       "ok": true,
-      "detail": "Search-first homepage: headerEnd=4160; search=136784; accountabilityHitList=138048.",
+      "detail": "Legacy homepage: headerEnd=5501; hitList=5510; nextLegacyPanel=-1.",
       "fix": "Keep the canonical search-first homepage search and accountability queue immediately accessible, or preserve the legacy cinematic hook before feature panels."
     },
     {
       "id": "accountability-card-ui",
       "ok": true,
-      "detail": "3 search-first accountability cards found.",
+      "detail": "3 cinematic dossier cards found.",
       "fix": "Render at least three bounded accountability cards on the search-first homepage, with the full dossier list on hit-list.html."
     },
     {

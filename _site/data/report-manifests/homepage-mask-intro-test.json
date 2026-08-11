@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:54:58.592Z",
-  "pageCount": 143,
+  "generatedAt": "2026-08-11T04:57:41.458Z",
+  "pageCount": 142,
   "output": "downloads/homepage-mask-intro-test.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Homepage Mask Intro Test",
-    "contentHash": "60d0e0b4a01192deddd0c2f70e8aaefd9ef53199eaa947af12cd93bd1a9cd2e6",
+    "contentHash": "1356d5f265a743ce16581c7532e8e41f883da4edb3bac6644edbafe5639639f7",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -25,6 +25,7 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "8057d390af5011731564579c",
       "b0cde383147509fbfd4f4472",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -145,13 +146,12 @@
       "ASC-REVIEW-1F47AD90DB4EDA48",
       "ASC-REVIEW-B6CA713526831DEB",
       "ASC-REVIEW-BF377F1B7D8B25FC",
-      "ASC-REVIEW-5DBB951AEA496B78",
-      "ASC-REVIEW-3D1684FCDB05C36C"
+      "ASC-REVIEW-5DBB951AEA496B78"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 139,
+      "primarySourceCount": 2,
+      "disputedClaimCount": 138,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 85,
@@ -159,10 +159,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Homepage Mask Intro Test.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Homepage Mask Intro Test.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-09T04:54:58.592Z"
+    "intelligenceFreshnessDate": "2026-08-11T04:57:41.458Z"
   }
 }

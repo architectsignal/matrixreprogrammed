@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:49:58.739Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-11T04:52:41.724Z",
+  "pageCount": 126,
   "output": "downloads/controlled-opposition-deck.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Controlled Opposition Deck",
-    "contentHash": "a8774d9b99f76b145938432c6465d2694efa0ec8b9707b0d758e3b8977bf7b30",
+    "contentHash": "0ca0c7eff97880cdaa6e83d14f97310aff00721f990cc807dc92b9004dcd1917",
     "sourceIds": [
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
@@ -15,9 +15,7 @@
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
-      "d0b647e325275daa6d824a49",
       "1769af26a7bda813406cd8f5",
-      "cee347fbc3752c6e0f890457",
       "65debd126cdfa5f7547a3eca",
       "71e0563ca7b139c37c302956",
       "3c9c23f7f9a1cec81ef90f59",
@@ -35,6 +33,9 @@
       "f17e0de0ef7b66aa842ac3a1",
       "f59da50ababa3ddae79a8f1c",
       "aa45c75a112060231ce901ba",
+      "crime-state-overlap-2026-08-10-48c93d8f",
+      "crime-state-overlap-2026-08-10-86a5887f",
+      "crime-state-overlap-2026-08-10-77c12eff",
       "ASC-REVIEW-6770124E37F1FE36",
       "ASC-REVIEW-E05B1E35C7C80738",
       "ASC-REVIEW-836A8E9D516E6FEC",
@@ -67,7 +68,7 @@
       "e116361cb7791d4be20113e1",
       "74fb2863cc9a8120f3c68b67",
       "275d6c3caca158f7a3e15780",
-      "pdf-controlled-opposition-deck-a2a55bdfc274",
+      "pdf-controlled-opposition-deck-83f9acf03bd5",
       "dd21e9746bde52a513cf5418",
       "76cf5cb1f42b219ea38128f4",
       "9fe6af9deed416f2287e5483",
@@ -81,9 +82,10 @@
       "ce6fbd2888a53d2713da6605",
       "360e80c162081c85d2c680ef",
       "15adccba38bd91644b561261",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
-      "crime-state-overlap-2026-08-06-561822ee",
-      "crime-state-overlap-2026-08-05-ca1d148a",
+      "64655043524cba9e6a679f8d",
+      "crime-state-overlap-2026-08-10-740ed0d1",
+      "crime-state-overlap-2026-08-10-d2755c34",
+      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -144,32 +146,30 @@
       "ASC-REVIEW-DC55A436F8F9A135",
       "ASC-REVIEW-2721CEDC4D6A57D9",
       "ASC-REVIEW-C3297FF92B950118",
-      "ASC-REVIEW-A8D2D2229B2E32AE",
-      "ASC-REVIEW-1E701E5D91BF4446",
-      "ASC-REVIEW-38D60C73AE003DE8"
+      "ASC-REVIEW-A8D2D2229B2E32AE"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 9,
-      "disputedClaimCount": 90,
+      "primarySourceCount": 13,
+      "disputedClaimCount": 86,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 62,
+      "relationshipCount": 65,
       "moneyRecordCount": 60
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Controlled Opposition Deck.",
-        "evidence": "SEC FILING FEED. (data/search-index.json); U.S. Department of Justice (data/search-index.json); Court Records (data/search-index.json); Declassified Archives (data/search-index.json); SITE INTELLIGENCE SYSTEM. (data/search-index.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 13 A/B-grade public-record items are materially relevant to Controlled Opposition Deck.",
+        "evidence": "SEC FILING FEED. (data/search-index.json); U.S. Department of Justice (data/search-index.json); Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon (data/live-intel.json); Veloxis Pharmaceuticals Agrees to Pay $46 Million to Resolve Criminal and Civil Liability for Kickback Scheme (data/live-intel.json); Veloxis Pharmaceuticals Agrees to Pay Over $46M to Resolve Criminal and Civil Liability for Kickback Schemes (data/live-intel.json); Court Records (data/search-index.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The defendant was unlawfully present in the U.S. after previously being deported. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "ROANOKE, Va. – A Mexican citizen, living illegally in Danville, Virginia, pled guilty to illegally reentering the United States after a prior removal and unlawfully possessing a firearm as a felon and alien illegally in the United States.Fernando Bahena Ruiz, 28, was charged based on an incident that occurred March 25, 2026. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 62 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 65 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Elite Power Theory; Media / Narrative Theory; Elite Power Theory; Media / Narrative Theory",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 62 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 65 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-07T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-09-26T00:00:00.000Z"
   }
 }

@@ -1,6 +1,6 @@
 # Speculative Conclusions
 
-Updated: 2026-08-09T05:05:20.645Z
+Updated: 2026-08-11T05:08:00.771Z
 
 Generated: 10
 
@@ -75,7 +75,7 @@ What The Evidence Does Not Prove: It does not prove a single hidden command stru
 Speculation Level: Level 4 — Strong public-record convergence
 Confidence Level: medium
 Evidence Level: Evidence 3 — Multiple public sources
-Missing Record: Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.; Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.; Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.; Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.
+Missing Record: Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.; Find primary record, dated official source, counter-evidence and exact affected page before increasing confidence.
 Next Action: Add primary sources, submit corrections, and promote only evidence-bounded conclusions to public pages.
 
 ## Jurisdictional Power Theory

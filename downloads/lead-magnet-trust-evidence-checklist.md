@@ -20,35 +20,35 @@ The reader can navigate controversial material without confusing source, theory,
 
 ## Last 7 Days Intelligence Window
 
-- 2026-08-08 — For Brazil’s Indigenous youth, visibility is resistance
-  - Source: https://news.un.org/feed/view/en/story/2026/08/1168097
+- 2026-08-10 — Virginia Giuffre Part 01 - vault.fbi.gov
+  - Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE8zWW1TOXF5Mml0R1lkSnViTUwxM1ZaMzZUbGlkamFueTV3UnRBcXZwWTdKZUxaeTFVYXV0RnVya2tiX3VEazdZUzRVQWEtY1BSbUNMN1R2d1o0LUc5YUpOUDM3NGhLTEJXdVgyNmoyOEh5UTRRNVh3?oc=5
+  - Evidence: Seven-day public-record lead
+  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-10 — An arts school where Epstein allegedly preyed on students reveals decades of abuse - Oregon Public Broadcasting - OPB
+  - Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNdjZWT2EyaE9pbGtaRVZwVkhlUzczaUVoYUphaW5KbU10REdiUkZKU3pWU3ZBSmJhYkpfa2gyczMxd3ZXWENoSzZpbjlpeWZKTVJoWGt1TWc1bV92VE5VM3k5ODhfZGRINXo5VUtfb21qMmpzdEZLT1pyUDZ3Vk5PWVFJNFZDMHlGSXpCU2hyRG9nV2FtVjA4QzVLN1haVzhadGprMUgwaEhVNGNBejktRUgyV0U4djg4UzB5c0dKRQ?oc=5
   - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-07 — Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)
-  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5
+- 2026-08-10 — Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony - U.S. Department of the Treasury (.gov)
+  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wamQ2NFA5d1Rld3lGM1UtMno3c0RGNjJNQm5HWWNuRy1DaEJHZ3Z6S0wwNmMtVUtMaG5WQV90QU83Nkh1R0w1WUNNNDQ5OTdhUEtBTnh1ZGFVXzBQd3RPVEFB?oc=5
   - Evidence: Seven-day public-record lead
   - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-07 — Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov)
-  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fV0ZsRWo2dlNxVzdTQXFDTzBEWklsNjVWZFNsWXRaX2dwZ2NVaXRWUVJicHFzQVZiTElpYlhCQWY3SmFMSEVGNWFRbEY0MGEwX0ppa2k1X01PTzh1LVoxN3VB?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- 2026-08-10 — After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced
+  - Source: https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief
+  - Evidence: Primary or official public-record lead
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-07 — Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)
-  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- 2026-08-10 — Ashland Man Sentenced for Receiving Child Sexual Abuse Material
+  - Source: https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material
+  - Evidence: Primary or official public-record lead
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-07 — Treasury Continues to Follow the Money in Minnesota to Eliminate Fraud - U.S. Department of the Treasury (.gov)
-  - Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5dmhZUzFZdDRYcmhTTlY2a3FwWDRwU25PRmNIc1pSVW5INWNtdXF6Rlk5dXA1Yjl6T1lOQlMtQjR0bVFRWXBUUV9PWTR6UUR5WC1HZ3o5SU9kWU1LcjZVMTBn?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
-  - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-08-07 — Untitled - FBI (.gov)
-  - Source: https://news.google.com/rss/articles/CBMivwJBVV95cUxOUnQ0ejhzSE1uUXZWZ0Z3MVZYYldpUjhxTHdzNWl3SmpvLVZ2SkxwbDh3WnpYOGJfLWptMU93Q2tiNG9aQ2xLdm5LQVFMWE9fZ3ZPR1ZPNDlTRFBTdTV6RHUwTFpwNGo0aHBBYlZkTlR3QTlyZldseFAxM1g4dnRNalhfXzVTU0Joa3RZUER0R1NycVRtZG5lSXhjQlVVdHJGWkRXbUtad2xkLUZxaEVKbGg5TjZqb1B2MmlIVm1oSmNlalo1dXhPSkZKLXBNWGtXdTRoUUZQV2l1dl9seG01OWNzLXNWNTBIVXMtcDRLcHp0TWZyUHlOWlVIaGtxbWRNYmNsbzJxc3RBTFl1VmIzdVJxNktaeDJTQ1lKanpvODhHY0x0dDlDOElBRjF0V0dSdEY5U2IyV2VWanNBWXM4?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.
+- 2026-08-10 — Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds
+  - Source: https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds
+  - Evidence: Primary or official public-record lead
+  - Boundary: A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.
   - Next action: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 
 ## What You Will Learn

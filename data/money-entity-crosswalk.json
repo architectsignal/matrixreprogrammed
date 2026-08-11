@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T05:26:31.258Z",
+  "generatedAt": "2026-08-11T05:11:26.708Z",
   "summary": {
-    "generatedAt": "2026-08-09T05:26:31.258Z",
+    "generatedAt": "2026-08-11T05:11:26.708Z",
     "totalRecords": 2000,
     "verifiedMeasures": 800,
-    "identityProfiles": 247,
-    "unresolvedResearchLeads": 1753,
-    "relationships": 2637,
-    "centralRegistryMatches": 247
+    "identityProfiles": 249,
+    "unresolvedResearchLeads": 1751,
+    "relationships": 2639,
+    "centralRegistryMatches": 249
   },
   "records": [
     {
@@ -175,11 +175,11 @@
       "moneyRecordId": "companies-wmt",
       "name": "Walmart",
       "category": "companies",
-      "centralEntityId": "entity-contractor-96ae922590baf932b02e",
+      "centralEntityId": "market-company-walmart-inc-f7a83245de3b426a",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 4
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-amd",
@@ -262,16 +262,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-intc",
-      "name": "Intel",
-      "category": "companies",
-      "centralEntityId": "market-company-intel-corp-135d9d06873b7e64",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
       "moneyRecordId": "companies-ma",
       "name": "Mastercard",
       "category": "companies",
@@ -280,6 +270,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 4
+    },
+    {
+      "moneyRecordId": "companies-intc",
+      "name": "Intel",
+      "category": "companies",
+      "centralEntityId": "market-company-intel-corp-135d9d06873b7e64",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-csco",
@@ -312,16 +312,6 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "companies-amat",
-      "name": "Applied Materials",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "companies-orcl",
       "name": "Oracle",
       "category": "companies",
@@ -352,6 +342,16 @@
       "sourceCount": 10
     },
     {
+      "moneyRecordId": "companies-amat",
+      "name": "Applied Materials",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "companies-601939-ss",
       "name": "China Construction Bank",
       "category": "companies",
@@ -360,6 +360,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-cat",
+      "name": "Caterpillar",
+      "category": "companies",
+      "centralEntityId": "market-company-caterpillar-inc-9d211e8a015ba840",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-lrcx",
@@ -372,14 +382,14 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "companies-cat",
-      "name": "Caterpillar",
+      "moneyRecordId": "companies-cvx",
+      "name": "Chevron",
       "category": "companies",
-      "centralEntityId": "market-company-caterpillar-inc-9d211e8a015ba840",
+      "centralEntityId": "market-company-chevron-corporation-852727ef433f8616",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 3
+      "sourceCount": 4
     },
     {
       "moneyRecordId": "companies-ge",
@@ -402,16 +412,6 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "companies-unh",
-      "name": "UnitedHealth",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "companies-ro-sw",
       "name": "Roche",
       "category": "companies",
@@ -422,14 +422,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-cvx",
-      "name": "Chevron",
+      "moneyRecordId": "companies-unh",
+      "name": "UnitedHealth",
       "category": "companies",
-      "centralEntityId": "market-company-chevron-corporation-852727ef433f8616",
-      "identityVerified": true,
+      "centralEntityId": null,
+      "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 4
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "companies-hsbc",
@@ -452,20 +452,20 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "companies-ms",
-      "name": "Morgan Stanley",
+      "moneyRecordId": "companies-pg",
+      "name": "Procter & Gamble",
       "category": "companies",
-      "centralEntityId": "market-company-morgan-stanley-92cc2ed45ac07080",
+      "centralEntityId": "market-company-procter-gamble-co-c9e13950aecf5846",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "companies-pg",
-      "name": "Procter & Gamble",
+      "moneyRecordId": "companies-ms",
+      "name": "Morgan Stanley",
       "category": "companies",
-      "centralEntityId": "market-company-procter-gamble-co-c9e13950aecf5846",
+      "centralEntityId": "market-company-morgan-stanley-92cc2ed45ac07080",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
@@ -522,20 +522,10 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-gs",
-      "name": "Goldman Sachs",
+      "moneyRecordId": "companies-panw",
+      "name": "Palo Alto Networks",
       "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "companies-arm",
-      "name": "Arm Holdings",
-      "category": "companies",
-      "centralEntityId": "market-company-arm-holdings-plc-da27dcf2f4f21f2f",
+      "centralEntityId": "market-company-palo-alto-networks-inc-d4d07f5bb6cf7dfa",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
@@ -552,6 +542,16 @@
       "sourceCount": 3
     },
     {
+      "moneyRecordId": "companies-gs",
+      "name": "Goldman Sachs",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "companies-nvs",
       "name": "Novartis",
       "category": "companies",
@@ -562,18 +562,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "companies-panw",
-      "name": "Palo Alto Networks",
-      "category": "companies",
-      "centralEntityId": "market-company-palo-alto-networks-inc-d4d07f5bb6cf7dfa",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "companies-pm",
-      "name": "Philip Morris International",
+      "moneyRecordId": "companies-dell",
+      "name": "Dell",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -592,14 +582,24 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-dell",
-      "name": "Dell",
+      "moneyRecordId": "companies-pm",
+      "name": "Philip Morris International",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-arm",
+      "name": "Arm Holdings",
+      "category": "companies",
+      "centralEntityId": "market-company-arm-holdings-plc-da27dcf2f4f21f2f",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-601988-ss",
@@ -662,16 +662,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-klac",
-      "name": "KLA",
-      "category": "companies",
-      "centralEntityId": "market-company-kla-corp-81479fbc04562191",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
       "moneyRecordId": "companies-nesn-sw",
       "name": "Nestlé",
       "category": "companies",
@@ -682,14 +672,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-mufg",
-      "name": "Mitsubishi UFJ Financial",
+      "moneyRecordId": "companies-klac",
+      "name": "KLA",
       "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-kla-corp-81479fbc04562191",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-azn",
@@ -702,8 +692,18 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "companies-sie-de",
-      "name": "Siemens",
+      "moneyRecordId": "companies-mufg",
+      "name": "Mitsubishi UFJ Financial",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-600519-ss",
+      "name": "Kweichow Moutai",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -722,8 +722,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "companies-600519-ss",
-      "name": "Kweichow Moutai",
+      "moneyRecordId": "companies-sie-de",
+      "name": "Siemens",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -762,16 +762,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-axp",
-      "name": "American Express",
-      "category": "companies",
-      "centralEntityId": "market-company-american-express-co-fee91de61cd46fad",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
       "moneyRecordId": "companies-bhp",
       "name": "BHP Group",
       "category": "companies",
@@ -782,8 +772,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-ihc-ae",
-      "name": "International Holding Company",
+      "moneyRecordId": "companies-crwd",
+      "name": "CrowdStrike",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -792,14 +782,24 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-c",
-      "name": "Citigroup",
+      "moneyRecordId": "companies-axp",
+      "name": "American Express",
       "category": "companies",
-      "centralEntityId": "market-company-citigroup-inc-39bad4ffa4abae23",
+      "centralEntityId": "market-company-american-express-co-fee91de61cd46fad",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
+    },
+    {
+      "moneyRecordId": "companies-0857-hk",
+      "name": "PetroChina",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "companies-lin",
@@ -812,6 +812,26 @@
       "sourceCount": 3
     },
     {
+      "moneyRecordId": "companies-c",
+      "name": "Citigroup",
+      "category": "companies",
+      "centralEntityId": "market-company-citigroup-inc-39bad4ffa4abae23",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
+    },
+    {
+      "moneyRecordId": "companies-ihc-ae",
+      "name": "International Holding Company",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "companies-0941-hk",
       "name": "China Mobile",
       "category": "companies",
@@ -820,6 +840,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-amgn",
+      "name": "Amgen",
+      "category": "companies",
+      "centralEntityId": "market-company-amgen-inc-a45685ebb4c51fde",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "companies-tm",
@@ -842,26 +872,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-amgn",
-      "name": "Amgen",
-      "category": "companies",
-      "centralEntityId": "market-company-amgen-inc-a45685ebb4c51fde",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "companies-0857-hk",
-      "name": "PetroChina",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "companies-tmo",
       "name": "Thermo Fisher Scientific",
       "category": "companies",
@@ -870,16 +880,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "companies-crwd",
-      "name": "CrowdStrike",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "companies-prx-as",
@@ -894,16 +894,6 @@
     {
       "moneyRecordId": "companies-itx-mc",
       "name": "Inditex",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "companies-cba-ax",
-      "name": "Commonwealth Bank",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -942,6 +932,56 @@
       "sourceCount": 1
     },
     {
+      "moneyRecordId": "companies-cba-ax",
+      "name": "Commonwealth Bank",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-td",
+      "name": "Toronto Dominion Bank",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-shop",
+      "name": "Shopify",
+      "category": "companies",
+      "centralEntityId": "market-company-shopify-inc-b4ecd1f87e6edc27",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
+    },
+    {
+      "moneyRecordId": "companies-2454-tw",
+      "name": "MediaTek",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "companies-rms-pa",
+      "name": "Hermès",
+      "category": "companies",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "companies-601138-ss",
       "name": "Foxconn Industrial Internet",
       "category": "companies",
@@ -962,48 +1002,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "companies-td",
-      "name": "Toronto Dominion Bank",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "companies-rms-pa",
-      "name": "Hermès",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "companies-su-pa",
       "name": "Schneider Electric",
-      "category": "companies",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "companies-mrvl",
-      "name": "Marvell Technology",
-      "category": "companies",
-      "centralEntityId": "market-company-marvell-technology-inc-f6923ca5f1858044",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "companies-vz",
-      "name": "Verizon",
       "category": "companies",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1132,6 +1132,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "investment-vehicles-gld",
+      "name": "SPDR Gold Shares",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "investment-vehicles-vxus",
       "name": "Vanguard Total International Stock Index Fund ETF Shares",
       "category": "investment-vehicles",
@@ -1144,16 +1154,6 @@
     {
       "moneyRecordId": "investment-vehicles-bnd",
       "name": "Vanguard Total Bond Market Index Fund",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "investment-vehicles-gld",
-      "name": "SPDR Gold Shares",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1212,8 +1212,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-xlk",
-      "name": "The Technology Select Sector SPDR Fund",
+      "moneyRecordId": "investment-vehicles-vwo",
+      "name": "Vanguard Emerging Markets Stock Index Fund",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1222,8 +1222,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-vwo",
-      "name": "Vanguard Emerging Markets Stock Index Fund",
+      "moneyRecordId": "investment-vehicles-xlk",
+      "name": "The Technology Select Sector SPDR Fund",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1322,16 +1322,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-vb",
-      "name": "Vanguard Small-Cap Index Fund ETF Shares",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "investment-vehicles-vym",
       "name": "Vanguard High Dividend Yield Index Fund ETF Shares",
       "category": "investment-vehicles",
@@ -1342,8 +1332,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-iwm",
-      "name": "iShares Russell 2000 ETF",
+      "moneyRecordId": "investment-vehicles-vb",
+      "name": "Vanguard Small-Cap Index Fund ETF Shares",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1354,6 +1344,16 @@
     {
       "moneyRecordId": "investment-vehicles-bndx",
       "name": "Vanguard Total International Bond Index Fund",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "investment-vehicles-iwm",
+      "name": "iShares Russell 2000 ETF",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1532,16 +1532,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-iwb",
-      "name": "iShares Russell 1000 ETF",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "investment-vehicles-ive",
       "name": "iShares S&P 500 Value ETF",
       "category": "investment-vehicles",
@@ -1550,6 +1540,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "investment-vehicles-iwb",
+      "name": "iShares Russell 1000 ETF",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "investment-vehicles-dfac",
@@ -1562,14 +1562,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-ibit",
-      "name": "iShares Bitcoin Trust ETF",
+      "moneyRecordId": "investment-vehicles-dia",
+      "name": "SPDR Dow Jones Industrial Average ETF Trust",
       "category": "investment-vehicles",
-      "centralEntityId": "market-company-ishares-bitcoin-trust-etf-d7415e6ea0350105",
-      "identityVerified": true,
+      "centralEntityId": null,
+      "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 2
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "investment-vehicles-qual",
@@ -1582,14 +1582,14 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "investment-vehicles-dia",
-      "name": "SPDR Dow Jones Industrial Average ETF Trust",
+      "moneyRecordId": "investment-vehicles-ibit",
+      "name": "iShares Bitcoin Trust ETF",
       "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-ishares-bitcoin-trust-etf-d7415e6ea0350105",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 2
     },
     {
       "moneyRecordId": "investment-vehicles-ief",
@@ -1604,16 +1604,6 @@
     {
       "moneyRecordId": "investment-vehicles-bil",
       "name": "SPDR Bloomberg 1-3 Month T-Bill ETF",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "investment-vehicles-soxx",
-      "name": "iShares Semiconductor ETF",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1682,8 +1672,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-govt",
-      "name": "iShares U.S. Treasury Bond ETF",
+      "moneyRecordId": "investment-vehicles-xlv",
+      "name": "The Health Care Select Sector SPDR Fund",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1702,8 +1692,28 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "investment-vehicles-govt",
+      "name": "iShares U.S. Treasury Bond ETF",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "investment-vehicles-p500-de",
       "name": "Invesco S&P 500 UCITS ETF",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "investment-vehicles-soxx",
+      "name": "iShares Semiconductor ETF",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1742,16 +1752,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-xlv",
-      "name": "The Health Care Select Sector SPDR Fund",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "investment-vehicles-spdw",
       "name": "SPDR Portfolio Developed World ex-US ETF",
       "category": "investment-vehicles",
@@ -1764,16 +1764,6 @@
     {
       "moneyRecordId": "investment-vehicles-jepq",
       "name": "JPMorgan Nasdaq Equity Premium Income ETF",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "investment-vehicles-tlt",
-      "name": "iShares 20+ Year Treasury Bond ETF",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1812,28 +1802,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-mbb",
-      "name": "iShares MBS ETF",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "investment-vehicles-vnq",
-      "name": "Vanguard Real Estate Index Fund ETF Shares",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "investment-vehicles-vbr",
-      "name": "Vanguard Small-Cap Value Index Fund ETF Shares",
+      "moneyRecordId": "investment-vehicles-tlt",
+      "name": "iShares 20+ Year Treasury Bond ETF",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1852,6 +1822,36 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "investment-vehicles-mbb",
+      "name": "iShares MBS ETF",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "investment-vehicles-vbr",
+      "name": "Vanguard Small-Cap Value Index Fund ETF Shares",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "investment-vehicles-vnq",
+      "name": "Vanguard Real Estate Index Fund ETF Shares",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "investment-vehicles-tqqq",
       "name": "ProShares UltraPro QQQ",
       "category": "investment-vehicles",
@@ -1862,8 +1862,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-spyv",
-      "name": "SPDR Portfolio S&P 500 Value ETF",
+      "moneyRecordId": "investment-vehicles-igln-l",
+      "name": "iShares Physical Gold ETC",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1872,8 +1872,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-igln-l",
-      "name": "iShares Physical Gold ETC",
+      "moneyRecordId": "investment-vehicles-spyv",
+      "name": "SPDR Portfolio S&P 500 Value ETF",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1932,16 +1932,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-acwi",
-      "name": "iShares MSCI ACWI ETF",
-      "category": "investment-vehicles",
-      "centralEntityId": "market-company-ishares-msci-acwi-etf-e9a3878c97b053a0",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "investment-vehicles-vuaa-de",
       "name": "Vanguard S&P 500 UCITS ETF USD Accumulation",
       "category": "investment-vehicles",
@@ -1950,6 +1940,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "investment-vehicles-acwi",
+      "name": "iShares MSCI ACWI ETF",
+      "category": "investment-vehicles",
+      "centralEntityId": "market-company-ishares-msci-acwi-etf-e9a3878c97b053a0",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "investment-vehicles-lqd",
@@ -1964,6 +1964,16 @@
     {
       "moneyRecordId": "investment-vehicles-idev",
       "name": "iShares Core MSCI International Developed Markets ETF",
+      "category": "investment-vehicles",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "investment-vehicles-slv",
+      "name": "iShares Silver Trust",
       "category": "investment-vehicles",
       "centralEntityId": null,
       "identityVerified": false,
@@ -1992,24 +2002,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "investment-vehicles-slv",
-      "name": "iShares Silver Trust",
+      "moneyRecordId": "investment-vehicles-efv",
+      "name": "iShares MSCI EAFE Value ETF",
       "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-ishares-msci-eafe-value-etf-9c9826ad73355867",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "investment-vehicles-eem",
-      "name": "iShares MSCI Emerging Markets ETF",
-      "category": "investment-vehicles",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "asset-managers-blackrock",
@@ -8142,8 +8142,8 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "banks-cba-ax",
-      "name": "Commonwealth Bank",
+      "moneyRecordId": "banks-san",
+      "name": "Santander",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8152,8 +8152,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-san",
-      "name": "Santander",
+      "moneyRecordId": "banks-cba-ax",
+      "name": "Commonwealth Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8212,8 +8212,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-3968-hk",
-      "name": "CM Bank",
+      "moneyRecordId": "banks-bbva",
+      "name": "Banco Bilbao Vizcaya Argentaria",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8222,8 +8222,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-bbva",
-      "name": "Banco Bilbao Vizcaya Argentaria",
+      "moneyRecordId": "banks-3968-hk",
+      "name": "CM Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8302,6 +8302,26 @@
       "sourceCount": 2
     },
     {
+      "moneyRecordId": "banks-o39-si",
+      "name": "OCBC Bank",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-cm",
+      "name": "CIBC (Canadian Imperial Bank of Commerce)",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "banks-bns",
       "name": "Scotiabank",
       "category": "banks",
@@ -8322,18 +8342,8 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "banks-cm",
-      "name": "CIBC (Canadian Imperial Bank of Commerce)",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "banks-o39-si",
-      "name": "OCBC Bank",
+      "moneyRecordId": "banks-cabk-mc",
+      "name": "CaixaBank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8354,16 +8364,6 @@
     {
       "moneyRecordId": "banks-1120-sr",
       "name": "Al Rajhi Bank",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "banks-cabk-mc",
-      "name": "CaixaBank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8402,16 +8402,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-bk",
-      "name": "BNY Mellon (Bank of New York Mellon)",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "banks-bcs",
       "name": "Barclays",
       "category": "banks",
@@ -8422,8 +8412,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-wbc-ax",
-      "name": "Westpac Banking",
+      "moneyRecordId": "banks-bk",
+      "name": "BNY Mellon (Bank of New York Mellon)",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-601328-ss",
+      "name": "Bank of Communications",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8452,16 +8452,6 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "banks-601328-ss",
-      "name": "Bank of Communications",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "banks-601658-ss",
       "name": "Postal Savings Bank of China",
       "category": "banks",
@@ -8474,6 +8464,16 @@
     {
       "moneyRecordId": "banks-itub",
       "name": "Itaú Unibanco",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-wbc-ax",
+      "name": "Westpac Banking",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8512,28 +8512,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-7182-t",
-      "name": "Japan Post Bank",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "banks-db",
       "name": "Deutsche Bank",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "banks-gle-pa",
-      "name": "Société Générale",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8552,8 +8532,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-nda-fi-he",
-      "name": "Nordea Bank",
+      "moneyRecordId": "banks-gle-pa",
+      "name": "Société Générale",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8564,6 +8544,26 @@
     {
       "moneyRecordId": "banks-aca-pa",
       "name": "Crédit Agricole",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-7182-t",
+      "name": "Japan Post Bank",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-nda-fi-he",
+      "name": "Nordea Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8602,8 +8602,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-600030-ss",
-      "name": "CITIC Securities",
+      "moneyRecordId": "banks-1180-sr",
+      "name": "The Saudi National Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8612,8 +8612,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-1180-sr",
-      "name": "The Saudi National Bank",
+      "moneyRecordId": "banks-600030-ss",
+      "name": "CITIC Securities",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8672,16 +8672,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-u11-si",
-      "name": "UOB",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "banks-emiratesnbd-ae",
       "name": "Emirates NBD Bank PJSC",
       "category": "banks",
@@ -8692,8 +8682,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-ebo-f",
-      "name": "Erste Group Bank",
+      "moneyRecordId": "banks-u11-si",
+      "name": "UOB",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8704,6 +8694,16 @@
     {
       "moneyRecordId": "banks-2881-tw",
       "name": "Fubon Financial",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-ebo-f",
+      "name": "Erste Group Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8752,8 +8752,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-kfh-kw",
-      "name": "Kuwait Finance House",
+      "moneyRecordId": "banks-601211-ss",
+      "name": "Guotai Junan Securities",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8762,8 +8762,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-601211-ss",
-      "name": "Guotai Junan Securities",
+      "moneyRecordId": "banks-kfh-kw",
+      "name": "Kuwait Finance House",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8792,16 +8792,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-swed-a-st",
-      "name": "Swedbank",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "banks-600000-ss",
       "name": "Shanghai Pudong Development Bank",
       "category": "banks",
@@ -8822,8 +8812,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-bbca-jk",
-      "name": "Bank Central Asia",
+      "moneyRecordId": "banks-swed-a-st",
+      "name": "Swedbank",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-qnbk-qa",
+      "name": "QNB (Qatar National Bank)",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8842,8 +8842,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-kb",
-      "name": "KB Financial Group",
+      "moneyRecordId": "banks-bbca-jk",
+      "name": "Bank Central Asia",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8852,8 +8852,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-qnbk-qa",
-      "name": "QNB (Qatar National Bank)",
+      "moneyRecordId": "banks-kb",
+      "name": "KB Financial Group",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8882,16 +8882,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-axisbank-bo",
-      "name": "Axis Bank",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "banks-2891-tw",
       "name": "CTBC Financial Holding",
       "category": "banks",
@@ -8902,8 +8892,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-otp-bd",
-      "name": "OTP Bank",
+      "moneyRecordId": "banks-axisbank-bo",
+      "name": "Axis Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8922,18 +8912,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-lumi-ta",
-      "name": "Bank Leumi",
-      "category": "banks",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "banks-bbd",
-      "name": "Banco Bradesco",
+      "moneyRecordId": "banks-otp-bd",
+      "name": "OTP Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8962,6 +8942,26 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "banks-bbd",
+      "name": "Banco Bradesco",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "banks-lumi-ta",
+      "name": "Bank Leumi",
+      "category": "banks",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "banks-hban",
       "name": "Huntington Bancshares",
       "category": "banks",
@@ -8972,8 +8972,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "banks-bpe-mi",
-      "name": "BPER Banca",
+      "moneyRecordId": "banks-mlyby",
+      "name": "Maybank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -8992,8 +8992,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-cpi-jo",
-      "name": "Capitec Bank",
+      "moneyRecordId": "banks-bpe-mi",
+      "name": "BPER Banca",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -9002,8 +9002,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "banks-adcb-ae",
-      "name": "Abu Dhabi Commercial Bank (ADCB)",
+      "moneyRecordId": "banks-cpi-jo",
+      "name": "Capitec Bank",
       "category": "banks",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12112,16 +12112,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-cbre",
-      "name": "CBRE Group",
-      "category": "property",
-      "centralEntityId": "market-company-cbre-group-inc-e5229a59c7476628",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "property-0016-hk",
       "name": "Sun Hung Kai Properties",
       "category": "property",
@@ -12130,6 +12120,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-cbre",
+      "name": "CBRE Group",
+      "category": "property",
+      "centralEntityId": "market-company-cbre-group-inc-e5229a59c7476628",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "property-rkt",
@@ -12212,16 +12212,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-8801-t",
-      "name": "Mitsui Fudosan",
-      "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "property-eqr",
       "name": "Equity Residential",
       "category": "property",
@@ -12230,6 +12220,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "property-8801-t",
+      "name": "Mitsui Fudosan",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "property-1113-hk",
@@ -12272,16 +12272,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-sbac",
-      "name": "SBA Communications",
-      "category": "property",
-      "centralEntityId": "market-company-sba-communications-corp-9fcf04b467fc55a5",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "property-beke",
       "name": "KE Holdings",
       "category": "property",
@@ -12290,6 +12280,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-sbac",
+      "name": "SBA Communications",
+      "category": "property",
+      "centralEntityId": "market-company-sba-communications-corp-9fcf04b467fc55a5",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "property-0688-hk",
@@ -12312,8 +12312,18 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "property-sgro-l",
-      "name": "SEGRO",
+      "moneyRecordId": "property-1972-hk",
+      "name": "Swire Properties",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-h78-si",
+      "name": "Hongkong Land",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12342,18 +12352,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-1972-hk",
-      "name": "Swire Properties",
-      "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "property-h78-si",
-      "name": "Hongkong Land",
+      "moneyRecordId": "property-sgro-l",
+      "name": "SEGRO",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12364,26 +12364,6 @@
     {
       "moneyRecordId": "property-dlf-ns",
       "name": "DLF",
-      "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "property-jll",
-      "name": "Jones Lang LaSalle",
-      "category": "property",
-      "centralEntityId": "market-company-jones-lang-lasalle-inc-d7cddbea0f505dc0",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
-      "moneyRecordId": "property-aldar-ae",
-      "name": "Al Dar Properties",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12412,6 +12392,26 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "property-aldar-ae",
+      "name": "Al Dar Properties",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-jll",
+      "name": "Jones Lang LaSalle",
+      "category": "property",
+      "centralEntityId": "market-company-jones-lang-lasalle-inc-d7cddbea0f505dc0",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
       "moneyRecordId": "property-kim",
       "name": "Kimco Realty",
       "category": "property",
@@ -12432,6 +12432,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "property-maa",
+      "name": "Mid-America Apartment Communities",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "property-hst",
       "name": "Host Hotels & Resorts",
       "category": "property",
@@ -12442,8 +12452,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "property-maa",
-      "name": "Mid-America Apartment Communities",
+      "moneyRecordId": "property-c38u-si",
+      "name": "CapitaLand Mall Trust",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12482,16 +12492,6 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "property-c38u-si",
-      "name": "CapitaLand Mall Trust",
-      "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "property-emaardev-ae",
       "name": "Emaar Development",
       "category": "property",
@@ -12512,16 +12512,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-udr",
-      "name": "UDR Apartments",
-      "category": "property",
-      "centralEntityId": "market-company-udr-inc-1038a06d531ae6fe",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "property-amh",
       "name": "AMH (American Homes 4 Rent)",
       "category": "property",
@@ -12532,14 +12522,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-glpi",
-      "name": "Gaming and Leisure Properties",
+      "moneyRecordId": "property-udr",
+      "name": "UDR Apartments",
       "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-udr-inc-1038a06d531ae6fe",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "property-li-pa",
@@ -12572,8 +12562,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-spsn-sw",
-      "name": "Swiss Prime Site",
+      "moneyRecordId": "property-lodha-ns",
+      "name": "Lodha Group",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-glpi",
+      "name": "Gaming and Leisure Properties",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12592,28 +12592,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-lodha-ns",
-      "name": "Lodha Group",
+      "moneyRecordId": "property-csgp",
+      "name": "CoStar Group",
       "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "property-bxp",
-      "name": "BXP, Inc.",
-      "category": "property",
-      "centralEntityId": "market-company-bxp-inc-c32525494852afc7",
+      "centralEntityId": "market-company-costar-group-inc-9ced5aa95a6a0389",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "property-0083-hk",
-      "name": "Sino Land",
+      "moneyRecordId": "property-spsn-sw",
+      "name": "Swiss Prime Site",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12632,10 +12622,20 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-csgp",
-      "name": "CoStar Group",
+      "moneyRecordId": "property-0083-hk",
+      "name": "Sino Land",
       "category": "property",
-      "centralEntityId": "market-company-costar-group-inc-9ced5aa95a6a0389",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-bxp",
+      "name": "BXP, Inc.",
+      "category": "property",
+      "centralEntityId": "market-company-bxp-inc-c32525494852afc7",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
@@ -12662,16 +12662,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-ahr",
-      "name": "American Healthcare REIT",
-      "category": "property",
-      "centralEntityId": "market-company-american-healthcare-reit-inc-8c459159897e314b",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "property-egp",
       "name": "EastGroup Properties",
       "category": "property",
@@ -12684,6 +12674,26 @@
     {
       "moneyRecordId": "property-bpypp",
       "name": "Brookfield Property Partners",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-ahr",
+      "name": "American Healthcare REIT",
+      "category": "property",
+      "centralEntityId": "market-company-american-healthcare-reit-inc-8c459159897e314b",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "property-9ci-si",
+      "name": "CapitaLand Investment Limited",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12710,16 +12720,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
-    },
-    {
-      "moneyRecordId": "property-9ci-si",
-      "name": "CapitaLand Investment Limited",
-      "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "property-frt",
@@ -12802,16 +12802,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-nnn",
-      "name": "NNN REIT",
-      "category": "property",
-      "centralEntityId": "market-company-nnn-reit-inc-770f7549d637521b",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "property-vcx-ax",
       "name": "Vicinity Centres",
       "category": "property",
@@ -12822,14 +12812,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-saga-b-st",
-      "name": "Sagax",
+      "moneyRecordId": "property-nnn",
+      "name": "NNN REIT",
       "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-nnn-reit-inc-770f7549d637521b",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "property-fr",
@@ -12842,8 +12832,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-are",
-      "name": "Alexandria Real Estate Equities",
+      "moneyRecordId": "property-saga-b-st",
+      "name": "Sagax",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12872,8 +12862,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-3003-t",
-      "name": "Hulic",
+      "moneyRecordId": "property-are",
+      "name": "Alexandria Real Estate Equities",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12882,8 +12872,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-ctpnv-as",
-      "name": "CTP N.V.",
+      "moneyRecordId": "property-3003-t",
+      "name": "Hulic",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12912,6 +12902,26 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "property-ctpnv-as",
+      "name": "CTP N.V.",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "property-emp-a-to",
+      "name": "Empire Company",
+      "category": "property",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "property-vno",
       "name": "Vornado Realty Trust",
       "category": "property",
@@ -12932,8 +12942,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-emp-a-to",
-      "name": "Empire Company",
+      "moneyRecordId": "property-sphxf",
+      "name": "SM Prime Holdings",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12942,8 +12952,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-sphxf",
-      "name": "SM Prime Holdings",
+      "moneyRecordId": "property-z",
+      "name": "Zillow",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12962,8 +12972,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "property-z",
-      "name": "Zillow",
+      "moneyRecordId": "property-600895-ss",
+      "name": "Shanghai Zhangjiang Hi-Tech Park Development",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -12984,16 +12994,6 @@
     {
       "moneyRecordId": "property-trno",
       "name": "Terreno Realty",
-      "category": "property",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "property-600895-ss",
-      "name": "Shanghai Zhangjiang Hi-Tech Park Development",
       "category": "property",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13112,16 +13112,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-psky",
-      "name": "Paramount Skydance",
-      "category": "media",
-      "centralEntityId": "market-company-paramount-skydance-corp-619f3b41771abdc9",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 2
-    },
-    {
       "moneyRecordId": "media-nyt",
       "name": "New York Times",
       "category": "media",
@@ -13130,6 +13120,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "media-psky",
+      "name": "Paramount Skydance",
+      "category": "media",
+      "centralEntityId": "market-company-paramount-skydance-corp-619f3b41771abdc9",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 2
     },
     {
       "moneyRecordId": "media-llyva",
@@ -13192,8 +13192,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-tnl",
-      "name": "Travel + Leisure",
+      "moneyRecordId": "media-spg-de",
+      "name": "Springer Nature AG",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13212,18 +13212,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-spg-de",
-      "name": "Springer Nature AG",
-      "category": "media",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "media-itv-l",
-      "name": "ITV plc",
+      "moneyRecordId": "media-tnl",
+      "name": "Travel + Leisure",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13234,6 +13224,16 @@
     {
       "moneyRecordId": "media-4676-t",
       "name": "Fuji Media Holdings",
+      "category": "media",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "media-itv-l",
+      "name": "ITV plc",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13292,8 +13292,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-djt",
-      "name": "Trump Media & Technology Group",
+      "moneyRecordId": "media-wly",
+      "name": "John Wiley & Sons",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13302,8 +13302,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-wly",
-      "name": "John Wiley & Sons",
+      "moneyRecordId": "media-djt",
+      "name": "Trump Media & Technology Group",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13442,8 +13442,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-4210-sr",
-      "name": "Saudi Research and Media Group",
+      "moneyRecordId": "media-a3m-mc",
+      "name": "Atresmedia Corporación de Medios de Comunicación, S.A.",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13452,8 +13452,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-a3m-mc",
-      "name": "Atresmedia Corporación de Medios de Comunicación, S.A.",
+      "moneyRecordId": "media-4210-sr",
+      "name": "Saudi Research and Media Group",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13822,6 +13822,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "media-edl-de",
+      "name": "Edel SE & Co. KGaA",
+      "category": "media",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "media-3678-t",
       "name": "MEDIA DO Co., Ltd.",
       "category": "media",
@@ -13842,26 +13852,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-tsq",
-      "name": "Townsquare Media",
-      "category": "media",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "media-edl-de",
-      "name": "Edel SE & Co. KGaA",
-      "category": "media",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "media-voc-mc",
       "name": "Vocento",
       "category": "media",
@@ -13872,8 +13862,28 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "media-tsq",
+      "name": "Townsquare Media",
+      "category": "media",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "media-scor",
       "name": "Comscore",
+      "category": "media",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "media-aren",
+      "name": "The Arena Group",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13902,16 +13912,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-aren",
-      "name": "The Arena Group",
-      "category": "media",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "media-mdia",
       "name": "MediaCo Holding",
       "category": "media",
@@ -13932,8 +13932,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-gtpl-ns",
-      "name": "GTPL Hathway",
+      "moneyRecordId": "media-pnc-a-to",
+      "name": "Postmedia Network Canada",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -13942,8 +13942,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-pnc-a-to",
-      "name": "Postmedia Network Canada",
+      "moneyRecordId": "media-gtpl-ns",
+      "name": "GTPL Hathway",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14002,8 +14002,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "media-gaia",
-      "name": "Gaia",
+      "moneyRecordId": "media-nxtdigital-ns",
+      "name": "Hinduja Ventures",
       "category": "media",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14202,16 +14202,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-amat",
-      "name": "Applied Materials",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "technology-control-orcl",
       "name": "Oracle",
       "category": "technology-control",
@@ -14230,6 +14220,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 10
+    },
+    {
+      "moneyRecordId": "technology-control-amat",
+      "name": "Applied Materials",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "technology-control-lrcx",
@@ -14262,16 +14262,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-arm",
-      "name": "Arm Holdings",
-      "category": "technology-control",
-      "centralEntityId": "market-company-arm-holdings-plc-da27dcf2f4f21f2f",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
       "moneyRecordId": "technology-control-panw",
       "name": "Palo Alto Networks",
       "category": "technology-control",
@@ -14290,6 +14280,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "technology-control-arm",
+      "name": "Arm Holdings",
+      "category": "technology-control",
+      "centralEntityId": "market-company-arm-holdings-plc-da27dcf2f4f21f2f",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "technology-control-txn",
@@ -14332,6 +14332,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "technology-control-crwd",
+      "name": "CrowdStrike",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "technology-control-ibm",
       "name": "IBM",
       "category": "technology-control",
@@ -14342,8 +14352,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-crwd",
-      "name": "CrowdStrike",
+      "moneyRecordId": "technology-control-shop",
+      "name": "Shopify",
+      "category": "technology-control",
+      "centralEntityId": "market-company-shopify-inc-b4ecd1f87e6edc27",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
+    },
+    {
+      "moneyRecordId": "technology-control-2454-tw",
+      "name": "MediaTek",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14370,26 +14390,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "technology-control-shop",
-      "name": "Shopify",
-      "category": "technology-control",
-      "centralEntityId": "market-company-shopify-inc-b4ecd1f87e6edc27",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "technology-control-2454-tw",
-      "name": "MediaTek",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "technology-control-adi",
@@ -14432,6 +14432,16 @@
       "sourceCount": 3
     },
     {
+      "moneyRecordId": "technology-control-285a-t",
+      "name": "KIOXIA Holdings Corporation",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "technology-control-bkng",
       "name": "Booking Holdings (Booking.com)",
       "category": "technology-control",
@@ -14442,8 +14452,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-285a-t",
-      "name": "KIOXIA Holdings Corporation",
+      "moneyRecordId": "technology-control-8035-t",
+      "name": "Tokyo Electron",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14460,16 +14470,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "technology-control-8035-t",
-      "name": "Tokyo Electron",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "technology-control-uber",
@@ -14492,16 +14492,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-sony",
-      "name": "Sony",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "technology-control-2308-tw",
       "name": "Delta Electronics",
       "category": "technology-control",
@@ -14512,8 +14502,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-6861-t",
-      "name": "Keyence",
+      "moneyRecordId": "technology-control-sony",
+      "name": "Sony",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14542,6 +14532,16 @@
       "sourceCount": 3
     },
     {
+      "moneyRecordId": "technology-control-6861-t",
+      "name": "Keyence",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "technology-control-ftnt",
       "name": "Fortinet",
       "category": "technology-control",
@@ -14552,24 +14552,14 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "technology-control-app",
-      "name": "AppLovin",
+      "moneyRecordId": "technology-control-snow",
+      "name": "Snowflake",
       "category": "technology-control",
-      "centralEntityId": "market-company-applovin-corp-9fac5a86ed9d2354",
+      "centralEntityId": "market-company-snowflake-inc-eb9caf6991360253",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "technology-control-snow",
-      "name": "Snowflake",
-      "category": "technology-control",
-      "centralEntityId": "entity-contractor-94b946591919f687426d",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 4
     },
     {
       "moneyRecordId": "technology-control-2317-tw",
@@ -14582,34 +14572,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-688256-ss",
-      "name": "Cambricon Technologies",
+      "moneyRecordId": "technology-control-app",
+      "name": "AppLovin",
       "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "technology-control-adp",
-      "name": "Automatic Data Processing",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "technology-control-net",
-      "name": "Cloudflare",
-      "category": "technology-control",
-      "centralEntityId": "market-company-cloudflare-inc-149dd3e15eb2a178",
+      "centralEntityId": "market-company-applovin-corp-9fac5a86ed9d2354",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 1
+      "sourceCount": 3
     },
     {
       "moneyRecordId": "technology-control-abnb",
@@ -14622,8 +14592,18 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "technology-control-6669-tw",
-      "name": "Wiwynn",
+      "moneyRecordId": "technology-control-net",
+      "name": "Cloudflare",
+      "category": "technology-control",
+      "centralEntityId": "market-company-cloudflare-inc-149dd3e15eb2a178",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "technology-control-adp",
+      "name": "Automatic Data Processing",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14642,6 +14622,26 @@
       "sourceCount": 3
     },
     {
+      "moneyRecordId": "technology-control-spot",
+      "name": "Spotify",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "technology-control-688256-ss",
+      "name": "Cambricon Technologies",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "technology-control-eqix",
       "name": "Equinix",
       "category": "technology-control",
@@ -14652,8 +14652,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "technology-control-spot",
-      "name": "Spotify",
+      "moneyRecordId": "technology-control-6669-tw",
+      "name": "Wiwynn",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14672,18 +14672,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-dash",
-      "name": "DoorDash",
-      "category": "technology-control",
-      "centralEntityId": "market-company-doordash-inc-0402f691c7922878",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "technology-control-cdns",
-      "name": "Cadence Design Systems",
+      "moneyRecordId": "technology-control-asx",
+      "name": "ASE Group",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14702,6 +14692,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "technology-control-ddog",
+      "name": "Datadog",
+      "category": "technology-control",
+      "centralEntityId": "market-company-datadog-inc-70ead7e4881939ba",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 2
+    },
+    {
       "moneyRecordId": "technology-control-meli",
       "name": "MercadoLibre",
       "category": "technology-control",
@@ -14710,6 +14710,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 2
+    },
+    {
+      "moneyRecordId": "technology-control-cdns",
+      "name": "Cadence Design Systems",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "technology-control-intu",
@@ -14732,28 +14742,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-ntes",
-      "name": "NetEase",
+      "moneyRecordId": "technology-control-dash",
+      "name": "DoorDash",
       "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "technology-control-ddog",
-      "name": "Datadog",
-      "category": "technology-control",
-      "centralEntityId": "market-company-datadog-inc-70ead7e4881939ba",
+      "centralEntityId": "market-company-doordash-inc-0402f691c7922878",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 2
+      "sourceCount": 3
     },
     {
-      "moneyRecordId": "technology-control-6981-t",
-      "name": "Murata Manufacturing (Murata Seisakusho)",
+      "moneyRecordId": "technology-control-ntes",
+      "name": "NetEase",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14772,8 +14772,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "technology-control-asx",
-      "name": "ASE Group",
+      "moneyRecordId": "technology-control-6981-t",
+      "name": "Murata Manufacturing (Murata Seisakusho)",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14802,38 +14802,18 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "technology-control-cohr",
-      "name": "Coherent Corp.",
+      "moneyRecordId": "technology-control-3690-hk",
+      "name": "Meituan",
       "category": "technology-control",
-      "centralEntityId": "market-company-coherent-corp-d36e2f35226f4544",
-      "identityVerified": true,
+      "centralEntityId": null,
+      "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 2
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "technology-control-2513-hk",
       "name": "Z.AI",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "technology-control-0981-hk",
-      "name": "SMIC",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "technology-control-3690-hk",
-      "name": "Meituan",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14852,6 +14832,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "technology-control-0981-hk",
+      "name": "SMIC",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "technology-control-se",
       "name": "Sea Limited",
       "category": "technology-control",
@@ -14860,16 +14850,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "technology-control-lite",
-      "name": "Lumentum",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "technology-control-mpwr",
@@ -14892,6 +14872,26 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "technology-control-cohr",
+      "name": "Coherent Corp.",
+      "category": "technology-control",
+      "centralEntityId": "market-company-coherent-corp-d36e2f35226f4544",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 2
+    },
+    {
+      "moneyRecordId": "technology-control-lite",
+      "name": "Lumentum",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "technology-control-tel",
       "name": "TE Connectivity",
       "category": "technology-control",
@@ -14902,8 +14902,8 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "technology-control-nxpi",
-      "name": "NXP Semiconductors",
+      "moneyRecordId": "technology-control-7974-t",
+      "name": "Nintendo",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14922,8 +14922,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "technology-control-7974-t",
-      "name": "Nintendo",
+      "moneyRecordId": "technology-control-nxpi",
+      "name": "NXP Semiconductors",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -14952,16 +14952,6 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "technology-control-ea",
-      "name": "Electronic Arts",
-      "category": "technology-control",
-      "centralEntityId": "market-company-electronic-arts-inc-47b60535da4774d1",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 3
-    },
-    {
       "moneyRecordId": "technology-control-adsk",
       "name": "Autodesk",
       "category": "technology-control",
@@ -14982,6 +14972,26 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "technology-control-ea",
+      "name": "Electronic Arts",
+      "category": "technology-control",
+      "centralEntityId": "market-company-electronic-arts-inc-47b60535da4774d1",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
+    },
+    {
+      "moneyRecordId": "technology-control-cbrs",
+      "name": "Cerebras Systems",
+      "category": "technology-control",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "technology-control-nok",
       "name": "Nokia",
       "category": "technology-control",
@@ -14994,16 +15004,6 @@
     {
       "moneyRecordId": "technology-control-pypl",
       "name": "PayPal",
-      "category": "technology-control",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "technology-control-cbrs",
-      "name": "Cerebras Systems",
       "category": "technology-control",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15112,16 +15112,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-601088-ss",
-      "name": "China Shenhua Energy",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "energy-resources-cop",
       "name": "ConocoPhillips",
       "category": "energy-resources",
@@ -15134,6 +15124,16 @@
     {
       "moneyRecordId": "energy-resources-0883-hk",
       "name": "CNOOC",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "energy-resources-601088-ss",
+      "name": "China Shenhua Energy",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15192,8 +15192,18 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "energy-resources-duk",
-      "name": "Duke Energy",
+      "moneyRecordId": "energy-resources-cnq",
+      "name": "Canadian Natural Resources",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "energy-resources-eqnr",
+      "name": "Equinor",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15212,8 +15222,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "energy-resources-cnq",
-      "name": "Canadian Natural Resources",
+      "moneyRecordId": "energy-resources-duk",
+      "name": "Duke Energy",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15222,8 +15232,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-eqnr",
-      "name": "Equinor",
+      "moneyRecordId": "energy-resources-mpc",
+      "name": "Marathon Petroleum",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15252,14 +15262,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-mpc",
-      "name": "Marathon Petroleum",
+      "moneyRecordId": "energy-resources-vlo",
+      "name": "Valero Energy",
       "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-valero-energy-corp-92f80bc60f7362ae",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 2
     },
     {
       "moneyRecordId": "energy-resources-wmb",
@@ -15272,14 +15282,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-vlo",
-      "name": "Valero Energy",
+      "moneyRecordId": "energy-resources-psx",
+      "name": "Phillips 66",
       "category": "energy-resources",
-      "centralEntityId": "market-company-valero-energy-corp-92f80bc60f7362ae",
+      "centralEntityId": "market-company-phillips-66-1d7626c0b2d17530",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 2
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "energy-resources-epd",
@@ -15302,16 +15312,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-psx",
-      "name": "Phillips 66",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-phillips-66-1d7626c0b2d17530",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "energy-resources-ngg",
       "name": "National Grid",
       "category": "energy-resources",
@@ -15320,16 +15320,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
-    },
-    {
-      "moneyRecordId": "energy-resources-engi-pa",
-      "name": "ENGIE",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "energy-resources-e",
@@ -15352,6 +15342,16 @@
       "sourceCount": 2
     },
     {
+      "moneyRecordId": "energy-resources-engi-pa",
+      "name": "ENGIE",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "energy-resources-eog",
       "name": "EOG Resources",
       "category": "energy-resources",
@@ -15362,8 +15362,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-adnocgas-ae",
-      "name": "ADNOC Gas",
+      "moneyRecordId": "energy-resources-su",
+      "name": "Suncor Energy",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15372,8 +15372,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-su",
-      "name": "Suncor Energy",
+      "moneyRecordId": "energy-resources-adnocgas-ae",
+      "name": "ADNOC Gas",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15422,16 +15422,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-be",
-      "name": "Bloom Energy",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-bloom-energy-corp-e985091dd41dcb52",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 2
-    },
-    {
       "moneyRecordId": "energy-resources-imo",
       "name": "Imperial Oil",
       "category": "energy-resources",
@@ -15452,14 +15442,14 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "energy-resources-373220-ks",
-      "name": "LG Energy Solution",
+      "moneyRecordId": "energy-resources-be",
+      "name": "Bloom Energy",
       "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-bloom-energy-corp-e985091dd41dcb52",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 2
     },
     {
       "moneyRecordId": "energy-resources-mplx",
@@ -15482,8 +15472,8 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "energy-resources-eoan-de",
-      "name": "E.ON",
+      "moneyRecordId": "energy-resources-373220-ks",
+      "name": "LG Energy Solution",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15512,16 +15502,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-sre",
-      "name": "Sempra",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-sempra-8547fba7ff17e88d",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "energy-resources-oke",
       "name": "Oneok",
       "category": "energy-resources",
@@ -15532,14 +15512,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-lng",
-      "name": "Cheniere Energy",
+      "moneyRecordId": "energy-resources-eoan-de",
+      "name": "E.ON",
       "category": "energy-resources",
-      "centralEntityId": "market-company-cheniere-energy-inc-bb594a1a01bf8b84",
-      "identityVerified": true,
+      "centralEntityId": null,
+      "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 3
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "energy-resources-fang",
@@ -15552,8 +15532,38 @@
       "sourceCount": 3
     },
     {
+      "moneyRecordId": "energy-resources-sre",
+      "name": "Sempra",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-sempra-8547fba7ff17e88d",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "energy-resources-lng",
+      "name": "Cheniere Energy",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-cheniere-energy-inc-bb594a1a01bf8b84",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 3
+    },
+    {
       "moneyRecordId": "energy-resources-cve",
       "name": "Cenovus Energy",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "energy-resources-dvn",
+      "name": "Devon Energy",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15582,16 +15592,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-xel",
-      "name": "Xcel Energy",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-xcel-energy-inc-0a20ff826a9e4a66",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 2
-    },
-    {
       "moneyRecordId": "energy-resources-rwe-de",
       "name": "RWE",
       "category": "energy-resources",
@@ -15602,6 +15602,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "energy-resources-xel",
+      "name": "Xcel Energy",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-xcel-energy-inc-0a20ff826a9e4a66",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 2
+    },
+    {
       "moneyRecordId": "energy-resources-vst",
       "name": "Vistra",
       "category": "energy-resources",
@@ -15610,16 +15620,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 3
-    },
-    {
-      "moneyRecordId": "energy-resources-dvn",
-      "name": "Devon Energy",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "energy-resources-pkn-wa",
@@ -15652,16 +15652,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-ccj",
-      "name": "Cameco",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-cameco-corp-438134b3f9adf1e7",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
       "moneyRecordId": "energy-resources-adanipower-ns",
       "name": "Adani Power",
       "category": "energy-resources",
@@ -15672,6 +15662,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "energy-resources-ccj",
+      "name": "Cameco",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-cameco-corp-438134b3f9adf1e7",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
       "moneyRecordId": "energy-resources-ed",
       "name": "Consolidated Edison",
       "category": "energy-resources",
@@ -15680,16 +15680,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 2
-    },
-    {
-      "moneyRecordId": "energy-resources-2082-sr",
-      "name": "ACWA POWER Company",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "energy-resources-lkoh-me",
@@ -15712,28 +15702,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-pcg",
-      "name": "PG&E Corporation",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-pg-e-corp-860c7883004b7e75",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
-      "moneyRecordId": "energy-resources-dewa-ae",
-      "name": "Dubai Electricity and Water Authority (DEWA)",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "energy-resources-peg",
-      "name": "PSEG",
+      "moneyRecordId": "energy-resources-2082-sr",
+      "name": "ACWA POWER Company",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15752,8 +15722,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-300274-sz",
-      "name": "Sungrow Power Supply",
+      "moneyRecordId": "energy-resources-dewa-ae",
+      "name": "Dubai Electricity and Water Authority (DEWA)",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15762,18 +15732,28 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-wec",
-      "name": "WEC Energy Group",
+      "moneyRecordId": "energy-resources-pcg",
+      "name": "PG&E Corporation",
       "category": "energy-resources",
-      "centralEntityId": "market-company-wec-energy-group-inc-1be31b652c9481d4",
+      "centralEntityId": "market-company-pg-e-corp-860c7883004b7e75",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "energy-resources-cez-pr",
-      "name": "ČEZ Group",
+      "moneyRecordId": "energy-resources-peg",
+      "name": "PSEG",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "energy-resources-300274-sz",
+      "name": "Sungrow Power Supply",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15792,8 +15772,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-ntpc-ns",
-      "name": "NTPC Limited",
+      "moneyRecordId": "energy-resources-vg",
+      "name": "Venture Global",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-venture-global-inc-41ecba5cb0c6bd28",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "energy-resources-cez-pr",
+      "name": "ČEZ Group",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15812,8 +15802,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-ptt-r-bk",
-      "name": "PTT PCL",
+      "moneyRecordId": "energy-resources-wec",
+      "name": "WEC Energy Group",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-wec-energy-group-inc-1be31b652c9481d4",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "energy-resources-ntpc-ns",
+      "name": "NTPC Limited",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15822,14 +15822,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-vg",
-      "name": "Venture Global",
+      "moneyRecordId": "energy-resources-ptt-r-bk",
+      "name": "PTT PCL",
       "category": "energy-resources",
-      "centralEntityId": "market-company-venture-global-inc-41ecba5cb0c6bd28",
-      "identityVerified": true,
+      "centralEntityId": null,
+      "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 1
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "energy-resources-eqt",
@@ -15842,16 +15842,6 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "energy-resources-rep-mc",
-      "name": "Repsol",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "energy-resources-600188-ss",
       "name": "Yankuang Energy (Yanzhou Coal Mining)",
       "category": "energy-resources",
@@ -15862,8 +15852,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-ongc-ns",
-      "name": "Oil & Natural Gas",
+      "moneyRecordId": "energy-resources-cqp",
+      "name": "Cheniere Energy Partners",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15872,8 +15862,18 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "energy-resources-cqp",
-      "name": "Cheniere Energy Partners",
+      "moneyRecordId": "energy-resources-rep-mc",
+      "name": "Repsol",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "energy-resources-ongc-ns",
+      "name": "Oil & Natural Gas",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15902,6 +15902,16 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "energy-resources-003816-sz",
+      "name": "China General Nuclear Power Group (CGN)",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "energy-resources-aee",
       "name": "Ameren",
       "category": "energy-resources",
@@ -15912,8 +15922,18 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "energy-resources-003816-sz",
-      "name": "China General Nuclear Power Group (CGN)",
+      "moneyRecordId": "energy-resources-fti",
+      "name": "TechnipFMC",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-technipfmc-plc-94de65c7df40446b",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "energy-resources-orsted-co",
+      "name": "Ørsted",
       "category": "energy-resources",
       "centralEntityId": null,
       "identityVerified": false,
@@ -15932,30 +15952,10 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "energy-resources-orsted-co",
-      "name": "Ørsted",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "energy-resources-fts",
       "name": "Fortis",
       "category": "energy-resources",
       "centralEntityId": "market-company-fortis-inc-8988d402661e3eb9",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
-      "moneyRecordId": "energy-resources-pba",
-      "name": "Pembina Pipeline",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-pembina-pipeline-corp-9fbf44e9207106fb",
       "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
@@ -15972,6 +15972,36 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "energy-resources-hal",
+      "name": "Halliburton",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-halliburton-co-c1373cb006273974",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 2
+    },
+    {
+      "moneyRecordId": "energy-resources-pba",
+      "name": "Pembina Pipeline",
+      "category": "energy-resources",
+      "centralEntityId": "market-company-pembina-pipeline-corp-9fbf44e9207106fb",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "energy-resources-601985-ss",
+      "name": "China National Nuclear Power",
+      "category": "energy-resources",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "energy-resources-fe",
       "name": "FirstEnergy",
       "category": "energy-resources",
@@ -15980,36 +16010,6 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 2
-    },
-    {
-      "moneyRecordId": "energy-resources-fti",
-      "name": "TechnipFMC",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-technipfmc-plc-94de65c7df40446b",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
-      "moneyRecordId": "energy-resources-es",
-      "name": "Eversource Energy",
-      "category": "energy-resources",
-      "centralEntityId": "market-company-eversource-energy-4ef95f0b91a94198",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
-    },
-    {
-      "moneyRecordId": "energy-resources-vws-co",
-      "name": "Vestas Wind Systems",
-      "category": "energy-resources",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
     },
     {
       "moneyRecordId": "defence-security-spcx",
@@ -16332,24 +16332,14 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "defence-security-047810-ks",
-      "name": "Korea Aerospace Industries",
+      "moneyRecordId": "defence-security-272210-ks",
+      "name": "Hanwha Systems",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "defence-security-saro",
-      "name": "StandardAero",
-      "category": "defence-security",
-      "centralEntityId": "market-company-standardaero-inc-1c040859a7c89352",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
     },
     {
       "moneyRecordId": "defence-security-avav",
@@ -16362,24 +16352,24 @@
       "sourceCount": 3
     },
     {
-      "moneyRecordId": "defence-security-272210-ks",
-      "name": "Hanwha Systems",
+      "moneyRecordId": "defence-security-saro",
+      "name": "StandardAero",
+      "category": "defence-security",
+      "centralEntityId": "market-company-standardaero-inc-1c040859a7c89352",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "defence-security-047810-ks",
+      "name": "Korea Aerospace Industries",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "defence-security-cae",
-      "name": "CAE Inc.",
-      "category": "defence-security",
-      "centralEntityId": "market-company-cae-inc-53a78f13538cb3fc",
-      "identityVerified": true,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 1
     },
     {
       "moneyRecordId": "defence-security-joby",
@@ -16392,8 +16382,18 @@
       "sourceCount": 2
     },
     {
-      "moneyRecordId": "defence-security-pl",
-      "name": "Planet Labs",
+      "moneyRecordId": "defence-security-cae",
+      "name": "CAE Inc.",
+      "category": "defence-security",
+      "centralEntityId": "market-company-cae-inc-53a78f13538cb3fc",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "defence-security-mro-l",
+      "name": "Melrose Industries",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16402,8 +16402,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-mro-l",
-      "name": "Melrose Industries",
+      "moneyRecordId": "defence-security-pl",
+      "name": "Planet Labs",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16462,8 +16462,8 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "defence-security-mda",
-      "name": "MDA Space",
+      "moneyRecordId": "defence-security-ohb-de",
+      "name": "OHB SE",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16472,8 +16472,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-ohb-de",
-      "name": "OHB SE",
+      "moneyRecordId": "defence-security-mda",
+      "name": "MDA Space",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16492,16 +16492,6 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "defence-security-fly",
-      "name": "Firefly Aerospace",
-      "category": "defence-security",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "defence-security-achr",
       "name": "Archer Aviation",
       "category": "defence-security",
@@ -16510,6 +16500,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 2
+    },
+    {
+      "moneyRecordId": "defence-security-fly",
+      "name": "Firefly Aerospace",
+      "category": "defence-security",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "defence-security-atro",
@@ -16542,8 +16542,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-tsat",
-      "name": "Telesat",
+      "moneyRecordId": "defence-security-dco",
+      "name": "Ducommun",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16552,8 +16552,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-dco",
-      "name": "Ducommun",
+      "moneyRecordId": "defence-security-tsat",
+      "name": "Telesat",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16572,14 +16572,14 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-bsen-ta",
-      "name": "Bet Shemesh Engines",
+      "moneyRecordId": "defence-security-voyg",
+      "name": "Voyager Technologies",
       "category": "defence-security",
-      "centralEntityId": null,
-      "identityVerified": false,
+      "centralEntityId": "market-company-voyager-technologies-inc-cb5a6513ea781806",
+      "identityVerified": true,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 0
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "defence-security-lunr",
@@ -16592,14 +16592,14 @@
       "sourceCount": 1
     },
     {
-      "moneyRecordId": "defence-security-voyg",
-      "name": "Voyager Technologies",
+      "moneyRecordId": "defence-security-bsen-ta",
+      "name": "Bet Shemesh Engines",
       "category": "defence-security",
-      "centralEntityId": "market-company-voyager-technologies-inc-cb5a6513ea781806",
-      "identityVerified": true,
+      "centralEntityId": null,
+      "identityVerified": false,
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
-      "sourceCount": 1
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "defence-security-hawk",
@@ -16642,8 +16642,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-yss",
-      "name": "York Space Systems",
+      "moneyRecordId": "defence-security-rcat",
+      "name": "Red Cat Holdings",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16662,16 +16662,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-rcat",
-      "name": "Red Cat Holdings",
-      "category": "defence-security",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "defence-security-vtol",
       "name": "Bristow Group",
       "category": "defence-security",
@@ -16680,6 +16670,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 1
+    },
+    {
+      "moneyRecordId": "defence-security-yss",
+      "name": "York Space Systems",
+      "category": "defence-security",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
     },
     {
       "moneyRecordId": "defence-security-umac",
@@ -16762,16 +16762,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-fga-pa",
-      "name": "Figeac Aero",
-      "category": "defence-security",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "defence-security-cri-wa",
       "name": "Creotech Instruments",
       "category": "defence-security",
@@ -16782,8 +16772,28 @@
       "sourceCount": 0
     },
     {
+      "moneyRecordId": "defence-security-fga-pa",
+      "name": "Figeac Aero",
+      "category": "defence-security",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
       "moneyRecordId": "defence-security-tatt",
       "name": "TAT Technologies",
+      "category": "defence-security",
+      "centralEntityId": null,
+      "identityVerified": false,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "defence-security-spce",
+      "name": "Virgin Galactic",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16814,16 +16824,6 @@
     {
       "moneyRecordId": "defence-security-mrln",
       "name": "Merlin, Inc.",
-      "category": "defence-security",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
-      "moneyRecordId": "defence-security-spce",
-      "name": "Virgin Galactic",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16872,16 +16872,6 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-lat-pa",
-      "name": "Latécoère S.A.",
-      "category": "defence-security",
-      "centralEntityId": null,
-      "identityVerified": false,
-      "financialMeasureVerified": true,
-      "verificationStatus": "verified-measurement",
-      "sourceCount": 0
-    },
-    {
       "moneyRecordId": "defence-security-sidu",
       "name": "Sidus Space",
       "category": "defence-security",
@@ -16892,8 +16882,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-alnse-pa",
-      "name": "NSE SA",
+      "moneyRecordId": "defence-security-lat-pa",
+      "name": "Latécoère S.A.",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16902,8 +16892,8 @@
       "sourceCount": 0
     },
     {
-      "moneyRecordId": "defence-security-evtl",
-      "name": "Vertical Aerospace",
+      "moneyRecordId": "defence-security-alnse-pa",
+      "name": "NSE SA",
       "category": "defence-security",
       "centralEntityId": null,
       "identityVerified": false,
@@ -16930,6 +16920,16 @@
       "financialMeasureVerified": true,
       "verificationStatus": "verified-measurement",
       "sourceCount": 0
+    },
+    {
+      "moneyRecordId": "defence-security-evtl",
+      "name": "Vertical Aerospace",
+      "category": "defence-security",
+      "centralEntityId": "entity-contractor-011c9ca8d249deb01097",
+      "identityVerified": true,
+      "financialMeasureVerified": true,
+      "verificationStatus": "verified-measurement",
+      "sourceCount": 1
     },
     {
       "moneyRecordId": "defence-security-srfm",

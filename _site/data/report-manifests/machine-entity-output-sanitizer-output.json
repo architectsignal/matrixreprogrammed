@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:56:16.018Z",
-  "pageCount": 139,
+  "generatedAt": "2026-08-11T04:58:56.055Z",
+  "pageCount": 136,
   "output": "downloads/machine-entity-output-sanitizer-output.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Machine Entity Output Sanitizer Output",
-    "contentHash": "8ef696d98d7d816eb135c3f4574e4c01a65b925fbd3730d98b246b13827eee84",
+    "contentHash": "3f186b63bc1e88caeddc7b98adeafb2403a40ca991cabe64f5f34d5b4fee2b9d",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -13,7 +13,6 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "33b99270b28ac9825f7ccfdd",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -23,11 +22,8 @@
       "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-11047BCC813B0EA8",
       "ASC-REVIEW-8D34DAEE930AC84F",
-      "ASC-REVIEW-E09138F879103681",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "daee19f2c0d92279cc9a7569",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-96665FE56FA75D90",
@@ -47,22 +43,27 @@
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-B6BEE1135257F502",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-B66A4F66565A8C1E",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-7E32B4EA7D93ED00",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
       "72ef7895f95288946ccb3cff",
+      "ec968f2ec6ba82128b4cd91b",
+      "fafa3982950de0fd589ad0d0",
+      "d2f7882f509480d63c31702f",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-481745ED8153AA11",
@@ -145,13 +146,12 @@
       "ASC-REVIEW-6DA85AF7CC833F29",
       "ASC-REVIEW-CA4FFDF74622515D",
       "ASC-REVIEW-29094A2EF0BEB10F",
-      "ASC-REVIEW-091889DE732A98B9",
-      "ASC-REVIEW-628CE018DB3F4505"
+      "ASC-REVIEW-091889DE732A98B9"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 136,
+      "primarySourceCount": 3,
+      "disputedClaimCount": 133,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 78,
@@ -159,19 +159,19 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Machine Entity Output Sanitizer Output beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Machine Entity Output Sanitizer Output.",
+        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service (data/weekly-investigation-conclusions.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 82,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Daily Intelligence Hit List",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “INDUSTRIAL BANK — District of Columbia Courts,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "CONTRACT NO. DCSC-25-SAS-116 (REPAIR & SUPPORT SERVICES FOR COURTWIDE PUBLIC USE AUTOMATED TELLER MACHINE). EXERCISE OF OPTION YEAR 1 BEGINNING SEPTEMBER 30, 2026, THROUGH SEPTEMBER 29, 2027. OPTION YEAR 1 CONTRACT PRICE IS $10,990.20. · Amount: 10990.2 · Sub-agency: District of Columbia Courts A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -187,7 +187,7 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
   }
 }

@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-09T05:00:42.548Z",
-  "pageCount": 131,
+  "generatedAt": "2026-08-11T05:03:22.124Z",
+  "pageCount": 132,
   "output": "downloads/security-privacy-hub-test.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Security Privacy Hub Test",
-    "contentHash": "d952d2eff3ad0a2aabdd55bc5b37f2d613aae78074cc7922a5b6e19d93d1e967",
+    "contentHash": "d531b5b18908b68c890a4b86b5ea494eacb4d84e835a6333523870d2f6717358",
     "sourceIds": [
-      "3a425f0d5d683952bc0ad7ac",
       "osint",
-      "33b99270b28ac9825f7ccfdd",
+      "3a425f0d5d683952bc0ad7ac",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "594100b62a47db521fe2a128",
       "34805734b1ad3b73f0ede0d8",
@@ -37,6 +37,8 @@
       "72ef7895f95288946ccb3cff",
       "88ef9baf356c096816236956",
       "ecd4a1111010f13b2d74bf8c",
+      "21ae89a0f8533e03e261f18c",
+      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-884743856D3E1385",
       "ASC-REVIEW-AFD96AE0BCA26187",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -119,57 +121,55 @@
       "9f3052b5d8cec138a2a37e8c",
       "ec1316fb1fb70c83dc347bb6",
       "7c05d9244c4620950350cf27",
-      "a6ebdb520cbf171e4f5b2247",
-      "0360e7de068c826685da26fc",
-      "8d20f4821e27b9c1e95134ef",
-      "cf8c3fc6a44dcf86c4a3476c",
-      "368449f3d92a1c631d16f4e7",
-      "74daeaa1e6c28fd17e87d787",
-      "7c8ba6474bdafbaba0a45ae7",
-      "11f00f60dd8c3a93e0e9f94a",
-      "a80aafd3afbb355a2fb384d3",
-      "ff91265f0c20337bfe6e9e32",
-      "162728b6637f15f33f0926a9",
-      "eaca580893e48ba4540be8c1",
-      "cbd43dc6e172416afa728307",
-      "27bb5692041861e72397b352",
-      "f46685c556b51609bbdf73a8",
-      "ab5bf141d4911be363c65418",
-      "6281392ee1b7ce5eead47eaf",
-      "d9380d09bfe5dce0c307e435",
-      "f84b08debecda16b0759c36e",
-      "8050d0ed90751ba90e17dfc9",
-      "f67c44230f0385a8f6c39a81",
-      "fe45e880cf99ef0cbe6a75b5",
-      "e7587d5ec2a19ecb8770f41d",
-      "603eb823a8d4b82f07e610bb",
-      "0515d0385c6c13fa0a29b3e8",
-      "25e2e86eb10fd55b5f67238e",
-      "29f69ac4e0857a1a71a86d7a",
-      "4c3cd7f6fb2b55b4faacff68"
+      "228770c420a004608c7b13f9",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-8708EF2A4E1C3023",
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-481745ED8153AA11",
+      "ASC-REVIEW-9719FEC8729E7FE2",
+      "ASC-REVIEW-96665FE56FA75D90",
+      "ASC-REVIEW-6476A61F00D66DFB",
+      "ASC-REVIEW-2733D1C88202921D",
+      "ASC-REVIEW-E5A88F482A22427D",
+      "ASC-REVIEW-612BDE5576885761",
+      "ASC-REVIEW-EC518EFBF56BB985",
+      "ASC-REVIEW-861EBE2805F13D36",
+      "ASC-REVIEW-5D13FDD470EDF012",
+      "ASC-REVIEW-94F3B4C96A469AB3",
+      "ASC-REVIEW-5F69F7CCEE3F7274",
+      "ASC-REVIEW-C369A84AD971DD75",
+      "ASC-REVIEW-A6F3D2598C5BA884",
+      "ASC-REVIEW-BE461670E34D316C",
+      "ASC-REVIEW-CDDCEFC70DF63561",
+      "ASC-REVIEW-6809880AE2446DD1",
+      "ASC-REVIEW-D23512B8758FE6BB",
+      "ASC-REVIEW-9F5E6DCB06093895",
+      "ASC-REVIEW-CAEF74273342914C",
+      "ASC-REVIEW-747FA1D74D7A92E3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 28,
-      "disputedClaimCount": 95,
+      "primarySourceCount": 3,
+      "disputedClaimCount": 119,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 73,
-      "moneyRecordCount": 72
+      "relationshipCount": 94,
+      "moneyRecordCount": 86
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 28 A/B-grade public-record items are materially relevant to Security Privacy Hub Test.",
-        "evidence": "Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json); Final Judgment - Sal N. Ortiz (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Security Privacy Hub Test.",
+        "evidence": "ATT MOBILITY LLC — Department of Defense (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); TRACE SYSTEMS INC. — Department of Defense (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 82,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Final Judgment - Gotbit Consulting LLC,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 94 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "12. Lawful OSINT & Source Verification; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; 10. Device, Network & Incident Defence; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; Larry Ellison → Health Data Systems: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 94 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "12. Lawful OSINT & Source Verification",
           "The strongest public pattern is convergence across access systems.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-20T00:00:00.000Z"
   }
 }

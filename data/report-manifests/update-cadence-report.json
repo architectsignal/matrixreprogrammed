@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T05:02:29.972Z",
-  "pageCount": 128,
+  "generatedAt": "2026-08-11T05:05:09.356Z",
+  "pageCount": 129,
   "output": "downloads/update-cadence-report.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Update Cadence Report",
-    "contentHash": "54b63adcdc006c633fa6597bd52b4fb8695d522c1d65aac3572af71e2b6d6a2b",
+    "contentHash": "81ac882f9e9ee2e18efd0eeaaaf60cbbbb80ebe513720b59272e27701649b4ac",
     "sourceIds": [
       "network-defence",
       "ASC-REVIEW-7291F43A6B9CBFA6",
@@ -85,7 +85,6 @@
       "ASC-REVIEW-ECFD914DA00A7C36",
       "ASC-REVIEW-44CBDE6F2AE4CA62",
       "EP-AI-001",
-      "3a425f0d5d683952bc0ad7ac",
       "008875ef7bf45eb14dccb254",
       "2931a84c2c7fe86982d5d6e5",
       "157cdab04b61ae6309c0c713",
@@ -94,6 +93,7 @@
       "a42c91c655cd066504ed6515",
       "7dcf4ef18ea1f86d01068773",
       "511ed227bb4be58b582ebb8d",
+      "source-change-d8732adccaaac4ea6376d2ba",
       "b4cb47ea50dc901364239e9f",
       "06baa45bea3e2e15eb80eff9",
       "8f9535190d08d76011b6d574",
@@ -150,7 +150,7 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 15,
+      "primarySourceCount": 16,
       "disputedClaimCount": 116,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Update Cadence Report.",
+        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Update Cadence Report.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
   }
 }

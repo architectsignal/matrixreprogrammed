@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:51:52.533Z",
-  "pageCount": 67,
+  "generatedAt": "2026-08-11T04:54:36.144Z",
+  "pageCount": 68,
   "output": "downloads/dossier-accountability-coverage.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Dossier Accountability Coverage",
-    "contentHash": "975a277f63fd343d6a92b5800737e213abeeac763bd482bf70b9fa57d5060374",
+    "contentHash": "5747aa430a8b0fd323f14561693431ca9ee9663542f46d60ac4435f8c5d4cee7",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "8d5a66ed403b63d79e68ae86",
@@ -33,7 +33,6 @@
       "b13904322af806dd07bb3bd0",
       "5051530495f655514ca029ef",
       "a4c15f7c3d808369b294115e",
-      "33b99270b28ac9825f7ccfdd",
       "706dc2e492a9d8701030f3a2",
       "0c5156ea21cfbabb9607a1e1",
       "69e3b67d51391f788dbead72",
@@ -66,7 +65,9 @@
       "096f41e24482eaa5b4f46a2d",
       "4b053b8f521a7367cab0206f",
       "c1e6a40084acc595a1141d89",
+      "2bdd6213739d1527c276eabc",
       "2c996775c84623d848dfc749",
+      "39e5164ba32f80a6c66a6d5e",
       "4fd38de8f806ead2f262033a",
       "5d75d016734c3c8e2abad9a7",
       "741e402987c33330421c20b3",
@@ -93,7 +94,7 @@
       "acf141a6f752ec1d4e4c1a6a",
       "93f63557a56879099707319c",
       "d8c9ec3ffb076fcad59a0c8c",
-      "3a425f0d5d683952bc0ad7ac",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-7B1A15ED77443F13",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
@@ -145,12 +146,11 @@
       "7c1cfae77a24eca22bd9d9be",
       "ad3fbc6883ced19e46ddc987",
       "0633c79463e5a18e3a198773",
-      "218f0880a4190d95acdc9cb7",
-      "2490124f2cf4c8b49500866b"
+      "218f0880a4190d95acdc9cb7"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 18,
+      "primarySourceCount": 20,
       "disputedClaimCount": 1,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Dossier Accountability Coverage.",
+        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Dossier Accountability Coverage.",
         "evidence": "NUCLEAR REGULATORY COMMISSION (data/dossier-accountability-coverage.json); Digital euro legislative package (data/dossier-accountability-coverage.json); APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK — ENTITY REPORT (data/dossier-accountability-coverage.json); CALIFORNIA SUPREME COURT — ENTITY REPORT (data/dossier-accountability-coverage.json); APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK (data/dossier-accountability-coverage.json); CALIFORNIA COURT OF APPEAL (data/dossier-accountability-coverage.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
   }
 }

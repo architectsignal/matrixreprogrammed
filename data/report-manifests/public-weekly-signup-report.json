@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:59:35.648Z",
+  "generatedAt": "2026-08-11T05:02:15.733Z",
   "pageCount": 104,
   "output": "downloads/public-weekly-signup-report.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Public Weekly Signup Report",
-    "contentHash": "3baf4a1da43ffb7e0e76cc7e26c7c13b243fe4c07abb2b89ecf9c03e1e48f878",
+    "contentHash": "255f4cf4b54d1cbfc2326acb29cf527298a87166884d4a117ec8b2ad100b946e",
     "sourceIds": [
       "2931a84c2c7fe86982d5d6e5",
       "ASC-REVIEW-7291F43A6B9CBFA6",
@@ -19,9 +19,11 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
+      "ec7f3126268880506fc4f0ed",
+      "8057d390af5011731564579c",
+      "3a425f0d5d683952bc0ad7ac",
       "f966f8c917641cd736660f92",
       "f23b46f2bc4add9b859f5a15",
-      "3a425f0d5d683952bc0ad7ac",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -48,13 +50,13 @@
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
       "b079bec5bc869b0463d0584c",
-      "33b99270b28ac9825f7ccfdd",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-001",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-BDEA3B6AE6BFEDA7",
-      "b1e5189be9fa36ea97b5f8c0",
       "1769af26a7bda813406cd8f5",
+      "b1e5189be9fa36ea97b5f8c0",
       "0bf350b54332a373d71a7c86",
       "b0403e3a18fe2637c0f94aa3",
       "62862e6ca90495adc0788a2d",
@@ -68,7 +70,6 @@
       "7dcf4ef18ea1f86d01068773",
       "7fc07964a27914afe516c45b",
       "b7e4a66335a706ef5097117f",
-      "crime-state-overlap-2026-08-06-98a7ce1f",
       "b4cb47ea50dc901364239e9f",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
@@ -113,7 +114,8 @@
       "ASC-REVIEW-B66A4F66565A8C1E",
       "ASC-REVIEW-FC2D1F9D4ECA8822",
       "ASC-REVIEW-1EB618A4D39314B4",
-      "f9b326734f170d730fc634f5",
+      "ea3afacb89f4f277c87d1a79",
+      "871096b65a90301ef4a126c3",
       "gates-epstein-meetings-2011-2014",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
@@ -144,9 +146,7 @@
       "family-offices-kirkbi",
       "family-offices-pontegadea",
       "family-offices-l-catterton-family-capital-routes",
-      "family-offices-premjiinvest",
-      "foundations-bill-melinda-gates-foundation",
-      "foundations-novo-nordisk-foundation"
+      "family-offices-premjiinvest"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 55,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 43,
-      "moneyRecordCount": 57
+      "relationshipCount": 42,
+      "moneyRecordCount": 54
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 77 A/B-grade public-record items are materially relevant to Public Weekly Signup Report.",
-        "evidence": "content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "evidence": "content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Former Goldman Sachs Investment Banker Convicted of Foreign Bribery and Money Laundering,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "BROOKLYN, NY – Asante Kwaku Berko, a dual citizen of the United States and Ghana, was convicted today by a federal jury in Brooklyn on all counts of an indictment charging conspiracy to violate the Foreign Corrupt Practices Act (FCPA), violating the FCPA, and money laundering conspiracy for paying bribes to Ghanaian government officials in connection with the development of a power plant in Ghana. The verdict followed a nine-day trial before United States District Judge Diane Gujarati. When sentenced, Berko faces up to 30 years in prison. Berko was ordered remanded pending sentencing. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 43 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 43 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
   }
 }

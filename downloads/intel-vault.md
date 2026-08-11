@@ -1,11 +1,61 @@
 # Intel Vault
 
-Updated: 2026-08-09T05:08:28.880Z
+Updated: 2026-08-11T05:11:11.702Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Economy Statement for the Treasury Borrowing Advisory Committee - treasury.gov
+- Published: 2026-08-03T19:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Vc1o0ak0zcWdwczNIVnVvbE4wMVgtekcxbnBQWXp3bGs4azl3LW9hdVcxVDhlb3ZHbGl4WTFZcHl3R1FQV0lRVUpmekYxUWZtTTJOWTI2QWJSb2VIRVRqVHB3?oc=5
+- Source class: discovery
+
+### Treasury Announces Marketable Borrowing Estimates - treasury.gov
+- Published: 2026-08-03T19:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5VVnIwemJfQVpXbXRJMVd0RmtQeWwwckFxYzk5LVhXdFlWVEs5c1VvcXpwaldjMzFiZVFYUmhhVDg3VFA0M2pYRU9KQTNheWpkd09oWGlwN2RrWDZBRl9YZm1n?oc=5
+- Source class: discovery
+
+### Donald West Part 03 - FBI (.gov)
+- Published: 2026-08-03T17:18:41.000Z
+- Source: https://news.google.com/rss/articles/CBMiakFVX3lxTFBneVloVEZxZi1XYURBM25VM0VrSzNGeVMwd2REV1RjelpfSW9fSXFWLW56WUp3bHdId3VaWG03bFZqWnN6WWFXbV9jdWFvRFE0bUJMLW9XalJ3YnJ3QkJ6ZEcxVXBfN1ROcEE?oc=5
+- Source class: discovery
+
+### Donald West Part 05 (Final) - FBI (.gov)
+- Published: 2026-08-03T17:18:41.000Z
+- Source: https://news.google.com/rss/articles/CBMickFVX3lxTFB1ZmFyd05XMEdrSGJkOFp3OC01SEhjcUdIcVJ0V1ZIN2hfLUlaRy00WjRXeVR2bnRlelpHMERiZkRyOEQwczUzeE05TGJjalhuZFh2NHNJRVE1V0ZtYlhabTc5SjRFVUYxUjVvNllXeTdZdw?oc=5
+- Source class: discovery
+
+### DR Congo: New centre opens at heart of record Ebola outbreak
+- Published: 2026-08-03T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168064
+- Source class: primary-or-official
+
+### Drone strikes threaten civilians and aid operations in Sudan
+- Published: 2026-08-03T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168068
+- Source class: primary-or-official
+
+### In Somalia, AI is helping deliver food to hungry families
+- Published: 2026-08-03T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168066
+- Source class: primary-or-official
+
+### Israel violates Lebanese airspace, kills over two dozen in Gaza in weekend strikes
+- Published: 2026-08-03T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168067
+- Source class: primary-or-official
+
+### Mothers still lack support to breastfeed, UN warns
+- Published: 2026-08-03T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168065
+- Source class: primary-or-official
+
+### Lawmakers push for a more robust Epstein Files Transparency Act – but would Trump sign it? - The Guardian
+- Published: 2026-08-03T12:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMihAFBVV95cUxPMkFubTVmcDc2VklUemstSUdUNGJaRnBiLVVSZlRvcENTTC1CSURkMmhiZFc3RkNQWmxZYTBENVhVZGpBOFRMUVVfZmJ3ZHEtanRQUHdLSTFuZnJFbHZYaXM2dWR6U3cwMWd3aF9HSjJ5cW9ZTV9HMGFfU001c0lIZzRKcUo?oc=5
+- Source class: primary-or-official
 
 ### Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities
 - Published: 2026-07-30T12:00:00.000Z

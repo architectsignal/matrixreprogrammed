@@ -1,6 +1,6 @@
 # Deep Intel Feed Matrix
 
-Generated: 2026-08-09T05:04:57.712Z
+Generated: 2026-08-11T05:07:37.728Z
 
 ## Priority lanes
 - 99 — Missing records — daily-missing-records.html
@@ -40,8 +40,8 @@ Generated: 2026-08-09T05:04:57.712Z
 - 85 — AMAZON COM INC — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amazon-com-inc.html
 - 85 — AMZN — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/amzn.html
 - 85 — Apple Inc. — Confirm the primary record page, PDF, docket, filing, award notice or registry record. — entity-briefs/apple-inc.html
-- 72 — For Brazil’s Indigenous youth, visibility is resistance — live-intel.html
-- 72 — Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov) — live-intel.html
-- 72 — Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov) — live-intel.html
-- 72 — Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov) — live-intel.html
-- 72 — Treasury Continues to Follow the Money in Minnesota to Eliminate Fraud - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — Virginia Giuffre Part 01 - vault.fbi.gov — live-intel.html
+- 72 — An arts school where Epstein allegedly preyed on students reveals decades of abuse - Oregon Public Broadcasting - OPB — live-intel.html
+- 72 — Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony - U.S. Department of the Treasury (.gov) — live-intel.html
+- 72 — After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced — live-intel.html
+- 72 — Ashland Man Sentenced for Receiving Child Sexual Abuse Material — live-intel.html

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-09T04:54:31.814Z",
+  "generatedAt": "2026-08-11T04:57:14.764Z",
   "pageCount": 134,
   "output": "downloads/forum-posts.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Forum Posts Export",
-    "contentHash": "9e7d4eb122a98459a1b9d298a157730f1548b2100a43923061dad75a14755959",
+    "contentHash": "9561086aaffa55cc9a0f8f06a4a22f97c41cfd56be7f30d31fa9782de54343c0",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "aa93ff989cf62abb814747c9",
       "360e80c162081c85d2c680ef",
-      "33b99270b28ac9825f7ccfdd",
+      "e4ca191d7d9f2eddeda78ad3",
       "71e0563ca7b139c37c302956",
       "6188547d91106e0f9d3bce50",
       "19ae23289f4be13ad5f7e317",
@@ -22,13 +22,10 @@
       "5ad827d001f90dc0134b3260",
       "d98fbb852c4ba20ad85be270",
       "f9a646e1d3bf2abf0b0b3767",
-      "d0b647e325275daa6d824a49",
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
       "1e4f15d09e1414670233d7f7",
       "1ee57e70dacfa67f04323529",
-      "cee347fbc3752c6e0f890457",
-      "crime-state-overlap-2026-08-07-7e664ee5",
       "ec8ef1adbaaebb9fde883cae",
       "904512c4cc9427a39650c32a",
       "ASC-REVIEW-9E85403F3389F334",
@@ -48,8 +45,8 @@
       "eb3448928554960651da56f6",
       "crime-state-overlap-2026-08-07-bad0acb5",
       "crime-state-overlap-2026-08-07-f2fd0a89",
+      "crime-state-overlap-2026-08-07-7e664ee5",
       "crime-state-overlap-2026-08-07-dad9e9ec",
-      "crime-state-overlap-2026-08-06-fb81c3ac",
       "7d7ccb5b896a02cf45094879",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-884743856D3E1385",
@@ -146,12 +143,15 @@
       "ASC-REVIEW-4D4B78BD74D54ED8",
       "ASC-REVIEW-D5DBFBBE76A72694",
       "ASC-REVIEW-5ACDFC3D561DAB0B",
-      "ASC-REVIEW-519E4E9ACC70E37D"
+      "ASC-REVIEW-519E4E9ACC70E37D",
+      "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-32EB49F960CA0D1D",
+      "ASC-REVIEW-89E0DBBB041A3168"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 9,
-      "disputedClaimCount": 105,
+      "primarySourceCount": 8,
+      "disputedClaimCount": 106,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
       "relationshipCount": 36,
@@ -159,17 +159,17 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Forum Posts Export.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah (data/live-intel.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); August Underway with 271 New Federal Immigration Cases in Western District of Texas (data/live-intel.json); Illegal Alien from Ecuador Caught with Hidden App Containing Child Pornography, Will Spend 10 Years in Federal Prison (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Forum Posts Export.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); August Underway with 271 New Federal Immigration Cases in Western District of Texas (data/latest-public-drops.json); Illegal Alien from Ecuador Caught with Hidden App Containing Child Pornography, Will Spend 10 Years in Federal Prison (data/latest-public-drops.json); Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah (data/latest-public-drops.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "SALT LAKE CITY , Utah – The final defendant, an illegal alien from Honduras who was involved in a drug trafficking crime, was sentenced to time served (16.5 months’ imprisonment) after approximately 13,000 fentanyl pills were seized by law enforcement during a controlled buy and the execution of a search warrant in 2025. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “August Underway with 271 New Federal Immigration Cases in Western District of Texas,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Federal prosecutors in the Western District of Texas filed 271 new immigration and immigration-related criminal cases from July 31 through August 6 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 36 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; General Assembly LIVE: Debating US sanctions against Cuba; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Intelligence Network Pack; Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; General Assembly LIVE: Debating US sanctions against Cuba; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Intelligence Network Pack; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -202,8 +202,8 @@
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
           "Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory",
           "Intelligence Network Pack",
-          "Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer"
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+          "Follow The Money Watch"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-07T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
   }
 }

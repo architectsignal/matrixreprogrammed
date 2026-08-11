@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-09T05:01:30.846Z",
-  "pageCount": 120,
+  "generatedAt": "2026-08-11T05:04:10.388Z",
+  "pageCount": 122,
   "output": "downloads/site-wide-function-audit.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Site-Wide Function Audit",
-    "contentHash": "1657032ae781fc9145a07f467a89c68647c961a989117fe531e1d26264d8a357",
+    "contentHash": "2d0caddee27737a0475e8787b1b9dd380db9dbfeb8ae63a01331071c1f653bba",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "3a425f0d5d683952bc0ad7ac",
       "1769af26a7bda813406cd8f5",
-      "33b99270b28ac9825f7ccfdd",
+      "3a425f0d5d683952bc0ad7ac",
+      "e4ca191d7d9f2eddeda78ad3",
       "9f3052b5d8cec138a2a37e8c",
       "008875ef7bf45eb14dccb254",
       "71e0563ca7b139c37c302956",
@@ -27,12 +27,10 @@
       "4961972398d896435d33f3f7",
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
-      "consequence-declassified-files-2026-08-05-1fa6b92d",
       "eb3448928554960651da56f6",
       "88ef9baf356c096816236956",
       "34805734b1ad3b73f0ede0d8",
       "ASC-REVIEW-9E85403F3389F334",
-      "consequence-epstein-files-2026-08-06-80b0f1a5",
       "network-defence",
       "6d665d935673091233751767",
       "1ee57e70dacfa67f04323529",
@@ -52,11 +50,9 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "d0b647e325275daa6d824a49",
       "5295a33003172878f9880122",
       "7ee9141a42ad539f58a57e50",
       "a5e5d4ec4df4352ea242ea3f",
-      "cee347fbc3752c6e0f890457",
       "5ad827d001f90dc0134b3260",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-C973762B151D5947",
@@ -95,6 +91,11 @@
       "7dcf4ef18ea1f86d01068773",
       "7c05d9244c4620950350cf27",
       "dcec2a45ef35362072af05e3",
+      "ca92a54bb69eb2504c76e56e",
+      "e3b055a4afb19163268d7257",
+      "ec968f2ec6ba82128b4cd91b",
+      "21ae89a0f8533e03e261f18c",
+      "911d6aa330f80279bdb3c4d5",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "ASC-REVIEW-481745ED8153AA11",
@@ -145,22 +146,21 @@
       "ASC-REVIEW-FE267E981A361906",
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-98888270E5A6D011",
-      "ASC-REVIEW-6E0BEE85BA956CBF",
-      "ASC-REVIEW-F9B27A08465F560B"
+      "ASC-REVIEW-6E0BEE85BA956CBF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 99,
+      "primarySourceCount": 16,
+      "disputedClaimCount": 96,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 103,
-      "moneyRecordCount": 100
+      "relationshipCount": 105,
+      "moneyRecordCount": 103
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Site-Wide Function Audit.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov) (data/reverse-accountability-index.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Site-Wide Function Audit.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 103 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov); Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; 10. Device, Network & Incident Defence; BlackRock → Private Markets Infrastructure Expansion: capital layer",
+        "inference": "The indexed set contains 105 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; 10. Device, Network & Incident Defence; BlackRock → Private Markets Infrastructure Expansion: capital layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 103 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 105 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Illuminati / Secret Society Theory",
-          "Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)",
           "Illuminati / Secret Society Theory",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "10. Device, Network & Incident Defence",
-          "BlackRock → Private Markets Infrastructure Expansion: capital layer"
+          "BlackRock → Private Markets Infrastructure Expansion: capital layer",
+          "Booz Allen Hamilton → Ai Data: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

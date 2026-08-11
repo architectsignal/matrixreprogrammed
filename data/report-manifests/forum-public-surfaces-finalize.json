@@ -1,20 +1,19 @@
 {
-  "generatedAt": "2026-08-09T04:54:32.839Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-11T04:57:15.799Z",
+  "pageCount": 136,
   "output": "downloads/forum-public-surfaces-finalize.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Forum Public Surfaces Finalize",
-    "contentHash": "3e9a063d2538ca7f9db92012bd3b8b2273795e86f53c2a3596463d043a9391dd",
+    "contentHash": "a4a2f5946bcf4814dd23b8e82cceafd5d03d348e59a244e1abe54cc76b29c59b",
     "sourceIds": [
-      "ASC-REVIEW-63DEE163CCA699D8",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-672E0A2FF16C31B8",
       "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-BC92D8AABD2393C5",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "26b90533dbf7d2ed42f02de6",
       "9e8903fd8dfa9b54a1d6db30",
       "9f77464e401ac59ad1adb812",
@@ -51,6 +50,7 @@
       "ASC-REVIEW-D5FA458F66004D27",
       "ASC-REVIEW-7181CCFC5771EBAD",
       "ASC-REVIEW-21E454816F050A34",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-67649B242FE10338",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-8D34DAEE930AC84F",
@@ -60,7 +60,6 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
-      "d0b647e325275daa6d824a49",
       "594100b62a47db521fe2a128",
       "1769af26a7bda813406cd8f5",
       "ec1316fb1fb70c83dc347bb6",
@@ -73,15 +72,13 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
-      "cee347fbc3752c6e0f890457",
+      "crime-state-overlap-2026-08-10-f6376771",
+      "crime-state-overlap-2026-08-10-86a5887f",
+      "crime-state-overlap-2026-08-10-77c12eff",
+      "source-change-d8732adccaaac4ea6376d2ba",
       "crime-state-overlap-2026-08-07-151b6c33",
       "crime-state-overlap-2026-08-07-b5c464b8",
       "crime-state-overlap-2026-08-07-ecf6905a",
-      "crime-state-overlap-2026-08-06-fd5a45e4",
-      "33b99270b28ac9825f7ccfdd",
-      "crime-state-overlap-2026-08-05-054b189c",
-      "crime-state-overlap-2026-08-05-d35ac19f",
-      "crime-state-overlap-2026-08-05-e7c03a19",
       "b4cb47ea50dc901364239e9f",
       "peter-ball-iicsa-support-2019",
       "ASC-REVIEW-4D93FE8E0666D181",
@@ -146,16 +143,19 @@
       "ASC-REVIEW-E05B1E35C7C80738",
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
-      "ASC-REVIEW-525DDFDACCB9146E"
+      "ASC-REVIEW-525DDFDACCB9146E",
+      "ASC-REVIEW-FF1A5D475493F22D",
+      "ASC-REVIEW-7531D73ADCFB5B91",
+      "ASC-REVIEW-E45C21A8CE98987F"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 16,
-      "disputedClaimCount": 109,
-      "newEntityCount": 2,
+      "disputedClaimCount": 110,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 83,
-      "moneyRecordCount": 62
+      "moneyRecordCount": 63
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Sex-trafficking Crips member sentenced to 30 years in prison,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A 25-year-old member of the Forum Park Crips has been ordered to federal prison for sex trafficking a 16-year-old minor. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Middle District of Florida Agencies Receive $3.5 Million to Improve Safety,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Tampa, FL ―The Bureau of Justice Assistance, a component under the Department of Justice’s Office of Justice Programs, awarded almost $290 million to support state, local, and tribal governments in criminal justice activities to keep American communities safe. More than $3.5 million of this amount has been awarded to law enforcement agencies throughout the Middle District of Florida. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-07T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
   }
 }

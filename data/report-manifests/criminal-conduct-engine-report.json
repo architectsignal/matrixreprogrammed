@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-08-09T04:50:10.275Z",
-  "pageCount": 117,
+  "generatedAt": "2026-08-11T04:52:53.251Z",
+  "pageCount": 113,
   "output": "downloads/criminal-conduct-engine-report.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Criminal Conduct Engine Report",
-    "contentHash": "551c900886983bd5d05fda9b2620185bb1491e67f3c599edac19b3a13ad53406",
+    "contentHash": "52f6ecae7d5ee999454a42bed4326194a4c967aecfb50f36053a03cc175b253a",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
-      "3a425f0d5d683952bc0ad7ac",
       "9b5810e2943ffdc912a78854",
       "1e4f15d09e1414670233d7f7",
-      "33b99270b28ac9825f7ccfdd",
+      "3a425f0d5d683952bc0ad7ac",
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
       "1769af26a7bda813406cd8f5",
+      "e4ca191d7d9f2eddeda78ad3",
       "a354895c18c7e12ab408462d",
       "d23398b8ca4c7124399c9504",
       "665a5072d96b9757a6ee9d2d",
@@ -39,7 +39,6 @@
       "26b90533dbf7d2ed42f02de6",
       "594100b62a47db521fe2a128",
       "34805734b1ad3b73f0ede0d8",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "d6936ce262c4c18cb75c6e44",
@@ -66,8 +65,8 @@
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-5DBB951AEA496B78",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-45ACC28AC220EA79",
-      "d0b647e325275daa6d824a49",
       "9cb9631a2f2749b86bc69e0a",
       "ed5dc6aaf59fb0598e45f01a",
       "74fb2863cc9a8120f3c68b67",
@@ -75,9 +74,8 @@
       "ec1316fb1fb70c83dc347bb6",
       "e8a674872be2bfd1089d28de",
       "7c05d9244c4620950350cf27",
-      "cee347fbc3752c6e0f890457",
+      "crime-state-overlap-2026-08-10-b6533383",
       "crime-state-overlap-2026-08-07-2b138d2d",
-      "crime-state-overlap-2026-08-06-fb81c3ac",
       "ASC-REVIEW-861EBE2805F13D36",
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-CAEF74273342914C",
@@ -103,7 +101,6 @@
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-8A2ACAFD47272636",
       "ASC-REVIEW-33FA083D170CBDB5",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-2A07C0AC5AFF6F12",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-D6340B09DE08EAC5",
@@ -120,13 +117,8 @@
       "72ef7895f95288946ccb3cff",
       "dc8b9d14c64a9a003f090a3b",
       "b7e4a66335a706ef5097117f",
-      "crime-state-overlap-2026-08-07-bad0acb5",
-      "crime-state-overlap-2026-08-06-561822ee",
-      "crime-state-overlap-2026-08-05-3fff1c4b",
-      "crime-state-overlap-2026-08-05-ca1d148a",
-      "crime-state-overlap-2026-08-05-d35ac19f",
-      "crime-state-overlap-2026-08-05-e7c03a19",
-      "crime-state-overlap-2026-08-05-22fb8f88",
+      "crime-state-overlap-2026-08-10-7d922c66",
+      "crime-state-overlap-2026-08-10-a0e61bfe",
       "ASC-REVIEW-884743856D3E1385",
       "ASC-REVIEW-E5A88F482A22427D",
       "ASC-REVIEW-612BDE5576885761",
@@ -146,30 +138,38 @@
       "ASC-REVIEW-E0C2B02D28255CC3",
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-640E991C59CBDA5A",
-      "ASC-REVIEW-0178D2F659DD4EB6"
+      "ASC-REVIEW-0178D2F659DD4EB6",
+      "ASC-REVIEW-E617D0A88088FBF7",
+      "ASC-REVIEW-E88A7B581690918F",
+      "ASC-REVIEW-111AEF27642D32DD",
+      "ASC-REVIEW-FE3653EEB8123DA6",
+      "ASC-REVIEW-72A2357084C62D28",
+      "ASC-REVIEW-2C44CF7E385BEC5A",
+      "ASC-REVIEW-DC55A436F8F9A135",
+      "ASC-REVIEW-2721CEDC4D6A57D9"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 12,
-      "disputedClaimCount": 72,
+      "primarySourceCount": 7,
+      "disputedClaimCount": 77,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 57,
-      "moneyRecordCount": 51
+      "relationshipCount": 54,
+      "moneyRecordCount": 53
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Criminal Conduct Engine Report.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force (data/live-intel.json); Consumer Bankruptcy Firm Waives $90K in Fees After USTP Inquiry Reveals Lapses in Diligence (data/live-intel.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); August Underway with 271 New Federal Immigration Cases in Western District of Texas (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Criminal Conduct Engine Report.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation (data/live-intel.json); Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force (data/live-intel.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); New Orleans Man Indicted for Methamphetamine Distribution (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 90,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "LAS VEGAS – A criminal complaint prepared by Homeland Security Investigations was filed in Las Vegas charging seven individuals for their alleged roles in a fentanyl drug trafficking organization. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 57 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 54 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Network Map; Intelligence Network Pack; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 57 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 54 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Map",
           "Intelligence Network Pack",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-07T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
   }
 }

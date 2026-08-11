@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-08-09T04:58:30.552Z",
+  "generatedAt": "2026-08-11T05:01:11.284Z",
   "pageCount": 133,
   "output": "downloads/predators-builder-hit-list-patch.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Predators Builder Hit List Patch",
-    "contentHash": "c228ccd56516c0d7e1a6a7b9b6e52f9d48d2fb468bd29102ac76ffa6bd291066",
+    "contentHash": "7aa6e17845bf4b028cf4be4c68aef7f8d732266a5f8b252d381c299575a912a0",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
+      "source-change-d8732adccaaac4ea6376d2ba",
       "26b90533dbf7d2ed42f02de6",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "source-change-c9bd018a6544006f1e1f3018",
+      "source-change-ec7f3126268880506fc4f0ed",
+      "source-change-ea3afacb89f4f277c87d1a79",
+      "source-change-8057d390af5011731564579c",
+      "source-change-871096b65a90301ef4a126c3",
       "source-change-a05ee5719c4986b9a2e665d1",
       "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
       "r-kelly-illinois-conviction-2022",
       "cyril-smith-iicsa-2018",
       "ASC-REVIEW-9E85403F3389F334",
@@ -31,10 +31,9 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-8D7E899D68D3AA41",
+      "8057d390af5011731564579c",
       "9086b5de8aac89f84189be72",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
@@ -44,7 +43,7 @@
       "5b6b5c0285c3c8742768ea5c",
       "eb3448928554960651da56f6",
       "360e80c162081c85d2c680ef",
-      "33b99270b28ac9825f7ccfdd",
+      "4c1d46d9bcb8caa374dec7d2",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "janner-iicsa-2022",
@@ -146,21 +145,22 @@
       "ASC-REVIEW-74487D6D467BA7AE",
       "ASC-REVIEW-6DA85AF7CC833F29",
       "ASC-REVIEW-CA4FFDF74622515D",
-      "ASC-REVIEW-29094A2EF0BEB10F"
+      "ASC-REVIEW-29094A2EF0BEB10F",
+      "ASC-REVIEW-091889DE732A98B9"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 32,
-      "disputedClaimCount": 106,
-      "newEntityCount": 2,
+      "primarySourceCount": 34,
+      "disputedClaimCount": 105,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 66,
-      "moneyRecordCount": 59
+      "moneyRecordCount": 58
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Predators Builder Hit List Patch.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Predators Builder Hit List Patch.",
+        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Appellate challenges concluded without reversal,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Second Circuit affirmed Maxwell's judgment and the U.S. Supreme Court denied certiorari in October 2025, leaving the conviction in place.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
   }
 }

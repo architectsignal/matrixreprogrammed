@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:58:55.016Z",
+  "generatedAt": "2026-08-11T05:01:35.499Z",
   "pageCount": 133,
   "output": "downloads/production-receipt-email-safety-patch.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Production Receipt Email Safety Patch",
-    "contentHash": "e9e321d90d00481aa804e0f13b702c07727699dbc3c3f33513304f040985eb19",
+    "contentHash": "e10867d8904b26b02d7eb6ed33e512e971b8d54e10016b61d62741e4bfe957db",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -26,7 +26,6 @@
       "ASC-REVIEW-20316213EFD183CC",
       "1769af26a7bda813406cd8f5",
       "9f77464e401ac59ad1adb812",
-      "crime-state-overlap-2026-08-05-32f4a389",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -67,23 +66,20 @@
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
       "ecd4a1111010f13b2d74bf8c",
-      "crime-state-overlap-2026-08-05-500955ff",
-      "crime-state-overlap-2026-08-05-054b189c",
-      "crime-state-overlap-2026-08-05-b1ba4a77",
-      "crime-state-overlap-2026-08-05-82b4cfe3",
-      "crime-state-overlap-2026-08-05-3c8e3ec1",
-      "crime-state-overlap-2026-08-05-100dcff9",
-      "crime-state-overlap-2026-08-05-a6e069b5",
-      "crime-state-overlap-2026-08-05-c324ec51",
-      "crime-state-overlap-2026-08-05-3fff1c4b",
-      "crime-state-overlap-2026-08-05-f56f7000",
-      "crime-state-overlap-2026-08-05-4b36d743",
-      "crime-state-overlap-2026-08-05-311290b5",
-      "crime-state-overlap-2026-08-05-48acd085",
-      "crime-state-overlap-2026-08-05-d5be4daa",
-      "crime-state-overlap-2026-08-05-02c58f32",
-      "crime-state-overlap-2026-08-05-d0414588",
-      "crime-state-overlap-2026-08-05-9774017d",
+      "source-change-d8732adccaaac4ea6376d2ba",
+      "crime-state-overlap-2026-08-07-bad0acb5",
+      "crime-state-overlap-2026-08-07-adb50e08",
+      "crime-state-overlap-2026-08-07-8418d23a",
+      "crime-state-overlap-2026-08-07-51c2b30a",
+      "crime-state-overlap-2026-08-07-dc3f30ce",
+      "crime-state-overlap-2026-08-07-a2296147",
+      "crime-state-overlap-2026-08-07-151b6c33",
+      "crime-state-overlap-2026-08-07-ab764161",
+      "crime-state-overlap-2026-08-07-f2fd0a89",
+      "crime-state-overlap-2026-08-07-7e664ee5",
+      "crime-state-overlap-2026-08-07-4f6b78a3",
+      "crime-state-overlap-2026-08-07-eea3ce1d",
+      "crime-state-overlap-2026-08-07-0aa1dddd",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -146,21 +142,25 @@
       "ASC-REVIEW-8F441C443ED90227",
       "ASC-REVIEW-DEA5865B50E63221",
       "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673"
+      "ASC-REVIEW-6B883D09C63ED673",
+      "ASC-REVIEW-1CDBDA84057D802E",
+      "ASC-REVIEW-5F2C7C064DEAB967",
+      "ASC-REVIEW-008D94FCB408C868",
+      "ASC-REVIEW-5F86F35C103C9621"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 24,
-      "disputedClaimCount": 112,
+      "primarySourceCount": 20,
+      "disputedClaimCount": 115,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 112,
-      "moneyRecordCount": 80
+      "relationshipCount": 111,
+      "moneyRecordCount": 83
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Production Receipt Email Safety Patch.",
-        "evidence": "Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford (data/latest-public-drops.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Production Receipt Email Safety Patch.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Bridgeport Man Charged with Dumping Used Oil at Abandoned Property in Hartford,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A federal grand jury in Bridgeport has returned an indictment charging HARRY BATCHELOR, JR., 29, of Bridgeport, with illegal transport and disposal of used oil. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “August Underway with 271 New Federal Immigration Cases in Western District of Texas,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Federal prosecutors in the Western District of Texas filed 271 new immigration and immigration-related criminal cases from July 31 through August 6 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 112 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: UK Serious Fraud Office — News And Communications; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Treasury OFAC — Recent Actions",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 112 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
   }
 }

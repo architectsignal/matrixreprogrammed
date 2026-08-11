@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T05:04:18.307Z",
+  "generatedAt": "2026-08-11T05:06:58.172Z",
   "checks": {
     "safeHtmlAliases": true,
     "safeApiRoutes": true,
@@ -18,7 +18,7 @@
     "apiRoot": "/api/public/structural-power/"
   },
   "linksChanged": {
-    "source": 4,
+    "source": 5,
     "deployable": 0
   },
   "boundary": "Neutral public aliases avoid path-specific Cloudflare interception. The Worker serves only named structural-power HTML and evidence data assets, strips query strings before ASSETS access, and adds a strict origin header."

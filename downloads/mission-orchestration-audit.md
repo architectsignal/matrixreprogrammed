@@ -1,8 +1,8 @@
 # Mission Orchestration Audit
 
-Generated: 2026-08-10T06:47:44.345Z
+Generated: 2026-08-11T05:08:45.039Z
 Overall: ready
-Homepage mode: search-first-accountability
+Homepage mode: legacy-cinematic
 Passed: 52/52
 
 Person: Bill Gates
@@ -18,7 +18,7 @@ Promotion margin: 14
 - **PASS · stable-hit-list-standard:** Promotion margin: 14.
 - **PASS · dossier-standard:** 11 required dossier sections.
 - **PASS · data-integrity-repair:** Repair status: ready; active findings: 2500.
-- **PASS · authoritative-entity-resolution:** Resolved person=Bill Gates; institution=U.S. Department; family=Al Maktoum family.
+- **PASS · authoritative-entity-resolution:** Resolved person=Bill Gates; institution=Securities and Exchange Commission; family=Al Maktoum family.
 - **PASS · source-attempt-state:** 12 attempted sources; 0 missing durable attempt state.
 - **PASS · active-ledger-bounded:** 2500 active findings; 0 duplicate IDs.
 - **PASS · active-ledger-mission-fields:** 0 active findings fail provenance, legal status, mechanism, boundary or conclusion fields.
@@ -30,7 +30,7 @@ Promotion margin: 14
 - **PASS · watch-person-boundary:** person limitation present.
 - **PASS · watch-person-resolved-class:** person resolution=authoritatively-resolved; name=Bill Gates.
 - **PASS · watch-institution-fields:** institution: Securities and Exchange Commission; missing none.
-- **PASS · watch-institution-rank:** institution score 143; status incumbent-held-position.
+- **PASS · watch-institution-rank:** institution score 143; status retained-current-leader.
 - **PASS · watch-institution-sources:** 16 source routes attached.
 - **PASS · watch-institution-boundary:** institution limitation present.
 - **PASS · watch-institution-resolved-class:** institution resolution=authoritatively-resolved; name=Securities and Exchange Commission.
@@ -52,10 +52,10 @@ Promotion margin: 14
 - **PASS · dossier-institution-assessment:** institution executive assessment checked.
 - **PASS · dossier-family-structure:** family dossier Wallenberg family and foundations; missing arrays none.
 - **PASS · dossier-family-assessment:** family executive assessment checked.
-- **PASS · history-and-weekly-delta:** 13 history entries; weekly delta ready.
+- **PASS · history-and-weekly-delta:** 14 history entries; weekly delta ready.
 - **PASS · publication-surfaces:** 4 public surfaces; first-post-intro true.
-- **PASS · homepage-first-hook:** Search-first homepage: headerEnd=4160; search=136784; accountabilityHitList=138048.
-- **PASS · accountability-card-ui:** 3 search-first accountability cards found.
+- **PASS · homepage-first-hook:** Legacy homepage: headerEnd=5501; hitList=5510; nextLegacyPanel=-1.
+- **PASS · accountability-card-ui:** 3 cinematic dossier cards found.
 - **PASS · daily-watch-deep-links:** Daily Watch contains no generated links to nonexistent Capstone anchors.
 - **PASS · dedicated-dossier-page:** Dedicated hit-list page checked.
 - **PASS · support-conversion:** Watchlist or membership, evidence submission, brief and full accountability list actions checked.

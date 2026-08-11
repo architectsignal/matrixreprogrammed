@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:59:30.702Z",
-  "pageCount": 145,
+  "generatedAt": "2026-08-11T05:02:11.106Z",
+  "pageCount": 146,
   "output": "downloads/public-utility-dedupe-output.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Public Utility Dedupe Output",
-    "contentHash": "b70d5392c7f12b6e85dbfa099ac8a26849d0d90b8f9d42c8fcb9e3c59bd19447",
+    "contentHash": "0b137cf4cf3865904f92aa5aa02c3386c629dbceebbc526d9c6a158dff7505e5",
     "sourceIds": [
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -22,18 +22,12 @@
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-4D4B78BD74D54ED8",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-E09138F879103681",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -146,7 +140,13 @@
       "ASC-REVIEW-33FA083D170CBDB5",
       "ASC-REVIEW-9B9644A27C9A796C",
       "ASC-REVIEW-5D6BEB26E7D5659F",
-      "ASC-REVIEW-B1D0DFCBB6CF0079"
+      "ASC-REVIEW-B1D0DFCBB6CF0079",
+      "ASC-REVIEW-943BD7CEC5392D63",
+      "ASC-REVIEW-8CDF8AA54EE2122C",
+      "ASC-REVIEW-E728A87FB5E518AA",
+      "ASC-REVIEW-3CA74023188D71DE",
+      "ASC-REVIEW-63DEE163CCA699D8",
+      "ASC-REVIEW-0D66560BACB91907"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 139,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 60,
-      "moneyRecordCount": 49
+      "relationshipCount": 61,
+      "moneyRecordCount": 47
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 60 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 61 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 60 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 61 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-09T04:59:30.702Z"
+    "intelligenceFreshnessDate": "2026-08-11T05:02:11.106Z"
   }
 }

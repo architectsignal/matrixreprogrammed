@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-08-09T04:57:43.567Z",
+  "generatedAt": "2026-08-11T05:00:24.511Z",
   "pageCount": 125,
   "output": "downloads/p1-public-quality-finalization.pdf",
   "report": {
-    "version": 1,
+    "version": 2,
     "title": "P1 Public Quality Finalization",
-    "contentHash": "defc3c4fca5eda8b51af94551088f5e6751d6d602b85e5d873b134dc028cdae5",
+    "contentHash": "e346cbb0069adb9e8e6400426c3f878b0b5e05f6f8d348292ed3508b5137f5ac",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "535d2f595c3ec1621e13dd0f",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
-      "33b99270b28ac9825f7ccfdd",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -19,13 +18,11 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "1769af26a7bda813406cd8f5",
       "9f3052b5d8cec138a2a37e8c",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-BF5A5D787C430742",
-      "ASC-REVIEW-63DEE163CCA699D8",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-40BE75698429CC21",
       "504cb0d739ef4a5a5798123f",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
@@ -35,11 +32,11 @@
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-2C44CF7E385BEC5A",
+      "ASC-REVIEW-63DEE163CCA699D8",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-B66A4F66565A8C1E",
-      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-7E32B4EA7D93ED00",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "e72d22f4f28eb53e3173d0a6",
@@ -76,10 +73,14 @@
       "ASC-REVIEW-03B26F1BFC110513",
       "ASC-REVIEW-CA09236EF68A2AE9",
       "ASC-REVIEW-1EB618A4D39314B4",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-CE615863A9722AC5",
+      "871096b65a90301ef4a126c3",
       "EP-AI-004",
       "jeffrey-epstein",
       "9e8903fd8dfa9b54a1d6db30",
@@ -145,24 +146,23 @@
       "ASC-REVIEW-DC55A436F8F9A135",
       "ASC-REVIEW-2721CEDC4D6A57D9",
       "ASC-REVIEW-C3297FF92B950118",
-      "ASC-REVIEW-A8D2D2229B2E32AE",
-      "ASC-REVIEW-2FAF91DDDD6143CD"
+      "ASC-REVIEW-A8D2D2229B2E32AE"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 8,
-      "disputedClaimCount": 95,
+      "primarySourceCount": 9,
+      "disputedClaimCount": 94,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 59,
+      "relationshipCount": 58,
       "moneyRecordCount": 51
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to P1 Public Quality Finalization.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to P1 Public Quality Finalization.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 92,
+        "confidence": 94,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 58 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; The strongest public pattern is convergence across access systems.; Matrix Reprogrammed Canonical Intelligence Record; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Top contractor lane",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 59 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 58 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
   }
 }

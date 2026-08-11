@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-09T04:53:53.197Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-11T04:56:36.091Z",
+  "pageCount": 129,
   "output": "downloads/exposure-predators-hit-list-link.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Exposure Predators Hit List Link",
-    "contentHash": "dca2ae2596d1ad5c3a140e8ba1192ca663132cad154ec5974e8a14118188d1ac",
+    "contentHash": "cc46faa39fdcc73c13ac423097c0a261ca7e86a82bd0278bb0f3d37bd624a790",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
-      "33b99270b28ac9825f7ccfdd",
       "9086b5de8aac89f84189be72",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -27,11 +27,7 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "a354895c18c7e12ab408462d",
       "d23398b8ca4c7124399c9504",
       "665a5072d96b9757a6ee9d2d",
@@ -51,14 +47,16 @@
       "ASC-REVIEW-861C2A74B4636B6F",
       "ASC-REVIEW-31DAFEB5863F6F4C",
       "ASC-REVIEW-33FA083D170CBDB5",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-0D66560BACB91907",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-2E9D74DCA057FDC2",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-67649B242FE10338",
       "ASC-REVIEW-B66A4F66565A8C1E",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-7E32B4EA7D93ED00",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
@@ -85,6 +83,7 @@
       "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
       "34805734b1ad3b73f0ede0d8",
+      "4c1d46d9bcb8caa374dec7d2",
       "janner-iicsa-2022",
       "cyril-smith-iicsa-2018",
       "ASC-REVIEW-6476A61F00D66DFB",
@@ -146,30 +145,31 @@
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D"
+      "ASC-REVIEW-FF1A5D475493F22D",
+      "ASC-REVIEW-7531D73ADCFB5B91"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 109,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 108,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 57,
-      "moneyRecordCount": 54
+      "moneyRecordCount": 53
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Exposure Predators Hit List Link.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Exposure Predators Hit List Link.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:05.856Z"
   }
 }

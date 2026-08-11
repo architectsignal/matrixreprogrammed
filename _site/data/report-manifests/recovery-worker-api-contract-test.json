@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-08-09T04:59:44.407Z",
-  "pageCount": 142,
+  "generatedAt": "2026-08-11T05:02:24.551Z",
+  "pageCount": 145,
   "output": "downloads/recovery-worker-api-contract-test.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Recovery Worker Api Contract Test",
-    "contentHash": "2de454ca4de7bebf2d22b11e836b2861759bfb35017210b864455aa08f9faac8",
+    "contentHash": "71e0a6066f55a1c8a985f773ed3b9e05de36a6af589b481518bf5c5245e5bece",
     "sourceIds": [
       "ASC-REVIEW-612BDE5576885761",
       "ASC-REVIEW-672E0A2FF16C31B8",
       "ASC-REVIEW-7181CCFC5771EBAD",
-      "ASC-REVIEW-63DEE163CCA699D8",
-      "ASC-REVIEW-BC92D8AABD2393C5",
+      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-6476A61F00D66DFB",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-884743856D3E1385",
@@ -91,6 +90,7 @@
       "ASC-REVIEW-8CDF8AA54EE2122C",
       "ASC-REVIEW-E728A87FB5E518AA",
       "ASC-REVIEW-3CA74023188D71DE",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-0D66560BACB91907",
       "ASC-REVIEW-1A69D4DFD447B89E",
       "ASC-REVIEW-1F97D9BCB4ED9CEB",
@@ -114,6 +114,7 @@
       "ASC-REVIEW-89E0DBBB041A3168",
       "ASC-REVIEW-2E9D74DCA057FDC2",
       "ASC-REVIEW-C6718A14E0A753DE",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-80D43B2F22AC5B77",
       "ASC-REVIEW-F2DB3AB7FA9D7B0C",
       "ASC-REVIEW-67649B242FE10338",
@@ -138,38 +139,37 @@
       "ASC-REVIEW-624DBE79BF661D70",
       "3a425f0d5d683952bc0ad7ac",
       "73799cb9af4829047998b026",
-      "33b99270b28ac9825f7ccfdd",
-      "a6ebdb520cbf171e4f5b2247",
-      "0360e7de068c826685da26fc",
-      "8d20f4821e27b9c1e95134ef",
-      "cf8c3fc6a44dcf86c4a3476c",
-      "368449f3d92a1c631d16f4e7",
-      "74daeaa1e6c28fd17e87d787",
-      "7c8ba6474bdafbaba0a45ae7",
-      "11f00f60dd8c3a93e0e9f94a"
+      "epstein-nda-settlement-protection-lane-2026-06-26",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-8708EF2A4E1C3023",
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-481745ED8153AA11",
+      "ASC-REVIEW-9719FEC8729E7FE2",
+      "ASC-REVIEW-96665FE56FA75D90"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 9,
-      "disputedClaimCount": 129,
-      "newEntityCount": 2,
+      "primarySourceCount": 3,
+      "disputedClaimCount": 136,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 17,
-      "moneyRecordCount": 22
+      "relationshipCount": 24,
+      "moneyRecordCount": 23
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Recovery Worker Api Contract Test.",
-        "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); Final Judgment - Gotbit Consulting LLC (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment (data/daily-investigation-conclusions.json); Final Judgment - Gauntlet Holdings, LLC and Darrell W. Rideaux (data/daily-investigation-conclusions.json); Final Judgment - Ali Derakhshanfar (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Recovery Worker Api Contract Test.",
+        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 94,
+        "confidence": 82,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Final Judgment - Gotbit Consulting LLC,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 17 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 17 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

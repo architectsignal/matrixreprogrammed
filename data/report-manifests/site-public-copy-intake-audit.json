@@ -1,34 +1,33 @@
 {
-  "generatedAt": "2026-08-09T05:01:23.703Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-11T05:04:03.154Z",
+  "pageCount": 134,
   "output": "downloads/site-public-copy-intake-audit.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Site Public Copy And Intake Audit",
-    "contentHash": "d0e8c2eca515ccc425cdddb9dfd1735795fb121e07a0b088a044b70d818df72b",
+    "contentHash": "5fa41c3750609f88cc321a34d622a8092ceb2e6a64b79eca929681248f370935",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
-      "3a425f0d5d683952bc0ad7ac",
       "26b90533dbf7d2ed42f02de6",
-      "ASC-REVIEW-BC92D8AABD2393C5",
+      "3a425f0d5d683952bc0ad7ac",
       "9e8903fd8dfa9b54a1d6db30",
       "9f77464e401ac59ad1adb812",
       "88ef9baf356c096816236956",
-      "33b99270b28ac9825f7ccfdd",
-      "ASC-REVIEW-63DEE163CCA699D8",
+      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "594100b62a47db521fe2a128",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "34805734b1ad3b73f0ede0d8",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
+      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-20316213EFD183CC",
       "ASC-REVIEW-B66A4F66565A8C1E",
       "ASC-REVIEW-1EB618A4D39314B4",
-      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-C53B123A4708B84E",
       "EP-AI-001",
       "76a719654ec3312153163154",
@@ -51,10 +50,8 @@
       "ASC-REVIEW-AB14F1086CAFC2E1",
       "ASC-REVIEW-03B26F1BFC110513",
       "ASC-REVIEW-CA09236EF68A2AE9",
-      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
+      "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "EP-AI-003",
       "1769af26a7bda813406cd8f5",
@@ -64,6 +61,10 @@
       "b5a32a76f19d554c484e917f",
       "7c05d9244c4620950350cf27",
       "41772e5c9af7970ddd7d5aac",
+      "source-change-d8732adccaaac4ea6376d2ba",
+      "source-change-c9bd018a6544006f1e1f3018",
+      "source-change-ea3afacb89f4f277c87d1a79",
+      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -113,15 +114,20 @@
       "ASC-REVIEW-44F136F26F8A52B2",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-CBB7EB7E52CE7014",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-7E32B4EA7D93ED00",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-CE615863A9722AC5",
-      "d0b647e325275daa6d824a49",
       "7f5b91c14c671bd24b8bbd81",
-      "cee347fbc3752c6e0f890457",
       "9b9816cd15ea0d816c77affa",
       "e4a0df7a70409789454722e7",
+      "source-change-ec7f3126268880506fc4f0ed",
+      "source-change-8057d390af5011731564579c",
+      "source-change-871096b65a90301ef4a126c3",
+      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -140,36 +146,30 @@
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-7729CF4536080393",
-      "ASC-REVIEW-EAB6011874016286",
-      "ASC-REVIEW-C973762B151D5947",
-      "ASC-REVIEW-E0C2B02D28255CC3",
-      "ASC-REVIEW-4E0C4B2A65FF8D42",
-      "ASC-REVIEW-995324D0659C1960",
-      "ASC-REVIEW-BD5CE46383C9383C",
-      "ASC-REVIEW-640E991C59CBDA5A"
+      "ASC-REVIEW-EAB6011874016286"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 114,
+      "primarySourceCount": 10,
+      "disputedClaimCount": 106,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 75,
-      "moneyRecordCount": 61
+      "relationshipCount": 69,
+      "moneyRecordCount": 55
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Site Public Copy And Intake Audit.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 10 A/B-grade public-record items are materially relevant to Site Public Copy And Intake Audit.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Department of Justice Office of Inspector General — Reports,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 75 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 69 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer; BlackRock → Ishares: capital layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 75 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 69 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
   }
 }

@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-08-09T04:54:43.594Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-11T04:57:26.534Z",
+  "pageCount": 127,
   "output": "downloads/geographic-power-atlas-runtime-test.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Geographic Power Atlas Runtime Test",
-    "contentHash": "10435e7867a832972a82078224a13860addd5a6bc7db32a8765058153fe450a6",
+    "contentHash": "8c15fcdff4f770d6001817a42769840fc8eaef0f8a036cf05d6bd457f6f1d7c2",
     "sourceIds": [
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-672E0A2FF16C31B8",
       "ASC-REVIEW-C99B22D8182BE5BA",
       "26b90533dbf7d2ed42f02de6",
+      "8057d390af5011731564579c",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -23,7 +24,6 @@
       "a5e5d4ec4df4352ea242ea3f",
       "7fc07964a27914afe516c45b",
       "511ed227bb4be58b582ebb8d",
-      "crime-state-overlap-2026-08-06-98a7ce1f",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -61,23 +61,17 @@
       "360e80c162081c85d2c680ef",
       "ecd4a1111010f13b2d74bf8c",
       "73799cb9af4829047998b026",
-      "crime-state-overlap-2026-08-07-bad0acb5",
-      "crime-state-overlap-2026-08-07-8418d23a",
+      "crime-state-overlap-2026-08-10-662a584f",
+      "crime-state-overlap-2026-08-10-f6376771",
+      "crime-state-overlap-2026-08-10-7d922c66",
+      "crime-state-overlap-2026-08-10-d2755c34",
+      "crime-state-overlap-2026-08-10-5de09a55",
+      "crime-state-overlap-2026-08-10-a0e61bfe",
+      "source-change-ea3afacb89f4f277c87d1a79",
       "crime-state-overlap-2026-08-07-eabe3a68",
       "crime-state-overlap-2026-08-07-dad9e9ec",
       "crime-state-overlap-2026-08-07-10060a7b",
       "crime-state-overlap-2026-08-07-ecf6905a",
-      "crime-state-overlap-2026-08-06-fb81c3ac",
-      "crime-state-overlap-2026-08-06-0c9d5dd9",
-      "crime-state-overlap-2026-08-06-4f89a8dc",
-      "crime-state-overlap-2026-08-06-32df9ad9",
-      "crime-state-overlap-2026-08-06-fff1a42d",
-      "crime-state-overlap-2026-08-06-171e1096",
-      "crime-state-overlap-2026-08-05-ca1d148a",
-      "crime-state-overlap-2026-08-05-0b392024",
-      "crime-state-overlap-2026-08-05-d35ac19f",
-      "crime-state-overlap-2026-08-05-3728506b",
-      "source-change-f9b326734f170d730fc634f5",
       "nassar-fbi-oig-2021",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -146,21 +140,27 @@
       "ASC-REVIEW-0A4211CAAFBA613D",
       "ASC-REVIEW-5034D32DC349AA2A",
       "ASC-REVIEW-5078341E3837218A",
-      "ASC-REVIEW-6719D25E7F18D57B"
+      "ASC-REVIEW-6719D25E7F18D57B",
+      "ASC-REVIEW-2D05ABEAD1B523C8",
+      "ASC-REVIEW-74CB8C62C3262D32",
+      "ASC-REVIEW-1BDD1EF149FCB6DC",
+      "ASC-REVIEW-3A542BB86002553E",
+      "ASC-REVIEW-A40EABAABAFFC9C3",
+      "ASC-REVIEW-32A64F4FD3617829"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 46,
-      "disputedClaimCount": 92,
+      "primarySourceCount": 40,
+      "disputedClaimCount": 98,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 45,
-      "moneyRecordCount": 21
+      "relationshipCount": 38,
+      "moneyRecordCount": 18
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 46 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 40 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “August Underway with 271 New Federal Immigration Cases in Western District of Texas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Federal prosecutors in the Western District of Texas filed 271 new immigration and immigration-related criminal cases from July 31 through August 6 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Illinois Man Accused of Sex Trafficking of Woman Who Later Fatally Overdosed,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Jared Anders was indicted on three felonies: sex trafficking, use of interstate commerce with intent to distribute prostitution and use of interstate facilities to promote prostitution. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 45 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in; Former Goldman Sachs Investment Banker Convicted of Foreign Bribery and Money Laundering; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture",
+        "inference": "The indexed set contains 38 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 45 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 38 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "MINDCUBED LLC — District of Columbia Courts",
           "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in",
-          "Former Goldman Sachs Investment Banker Convicted of Foreign Bribery and Money Laundering",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",
           "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
           "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
-          "ROGUE VALLEY H2O LLC — Department of Agriculture"
+          "ROGUE VALLEY H2O LLC — Department of Agriculture",
+          "SMITHS DETECTION INC. — Court Services and Offender Supervision Agency"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

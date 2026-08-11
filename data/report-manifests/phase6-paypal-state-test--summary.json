@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-09T04:58:05.555Z",
-  "pageCount": 136,
+  "generatedAt": "2026-08-11T05:00:46.541Z",
+  "pageCount": 139,
   "output": "downloads/phase6-paypal-state-test/summary.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Phase6 Paypal State Test/Summary",
-    "contentHash": "e0684fa69203f001b75e80c2da9c0e5774a0929086ccabe8af1abe8e7f52ae13",
+    "contentHash": "18463f2fd048f86152b3d6849bb0b148e61b8ad23412203b4548fcfa5f368cf5",
     "sourceIds": [
+      "fe51591d2f98b1e8140add7f",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -19,13 +20,24 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-A5C911DFEE587573",
+      "ca92a54bb69eb2504c76e56e",
+      "427a4b3a840619411d8d1c33",
+      "c673456bbe77dbb29e43ac7d",
+      "366686df53f6dfd25d3f0ea4",
+      "e3b055a4afb19163268d7257",
+      "a103f2650e31fc92fa3688e6",
+      "8f15d14f1b05a490af22799d",
+      "8c8118614f58e40c87e2c2f7",
+      "780e9bdf80820219684ec0cb",
+      "d77b99424431ead891074ef0",
+      "a33968b32fce32bd9d6523f6",
+      "21ae89a0f8533e03e261f18c",
+      "228770c420a004608c7b13f9",
+      "8737454dea4463f85583fbd4",
+      "crime-state-overlap-2026-08-10-a0e61bfe",
+      "4c1d46d9bcb8caa374dec7d2",
       "crime-state-overlap-2026-08-07-38ebb2ec",
       "crime-state-overlap-2026-08-07-b5c464b8",
-      "crime-state-overlap-2026-08-06-0f02f2bd",
-      "crime-state-overlap-2026-08-06-fb81c3ac",
-      "crime-state-overlap-2026-08-05-311290b5",
-      "crime-state-overlap-2026-08-05-9774017d",
-      "crime-state-overlap-2026-08-05-d35ac19f",
       "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -134,42 +146,30 @@
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8EBEC47E70E33B9F",
       "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25",
-      "ASC-REVIEW-B3BA7D663A9BE4B2",
-      "ASC-REVIEW-AD7847E11513D899",
-      "ASC-REVIEW-C2C7140B7B6F51FF",
-      "ASC-REVIEW-2750F333FF6B37B3",
-      "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-5F9BB287023DE81E",
-      "ASC-REVIEW-68286C2A2CB861AF",
-      "ASC-REVIEW-2527E3DEA85AE958",
-      "ASC-REVIEW-AF658BEE2D866332",
-      "ASC-REVIEW-1C806B2577C4D44C",
-      "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236"
+      "ASC-REVIEW-CD1B68F215696D25"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 133,
+      "primarySourceCount": 19,
+      "disputedClaimCount": 121,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 137,
-      "moneyRecordCount": 129
+      "relationshipCount": 136,
+      "moneyRecordCount": 131
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Phase6 Paypal State Test/Summary.",
-        "evidence": "Sex-trafficking Crips member sentenced to 30 years in prison (data/live-intel.json); Trinitarios Gang Member Pleads Guilty to Participating in 2023 Double Murder (data/live-intel.json); Bovine Artificial Insemination Manager Pleads Guilty to Multi-Year Bid-Rigging Conspiracy (data/live-intel.json); Consumer Bankruptcy Firm Waives $90K in Fees After USTP Inquiry Reveals Lapses in Diligence (data/live-intel.json); DENHAM SPRINGS ACCOUNTANT PLEADS GUILTY TO WIRE FRAUD (data/latest-public-drops.json); Falconer man pleads guilty to production of child pornography shortly after federal trial begins (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Phase6 Paypal State Test/Summary.",
+        "evidence": "ARGUS MEDIA INC — Department of Energy (data/weekly-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Sex-trafficking Crips member sentenced to 30 years in prison,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A 25-year-old member of the Forum Park Crips has been ordered to federal prison for sex trafficking a 16-year-old minor. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
+        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "ARGUS MEDIA INC — Department of Energy; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "ARGUS MEDIA INC — Department of Energy",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
           "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer",
-          "CACI International → Public Money: execution layer"
+          "CACI International → Intelligence: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-07T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-11-01T00:00:00.000Z"
   }
 }

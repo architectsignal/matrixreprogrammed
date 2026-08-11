@@ -48,14 +48,9 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-09T04:47:45.247Z
+Updated: 2026-08-11T04:50:26.705Z
 Items: 12
 
-- 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
-  - Source: https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-  - Evidence: Intelligence-alliance warning / cyber-risk lane
-  - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
-  - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
 - 2026-07-28 — Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168037
   - Evidence: Primary or official public-record lead
@@ -71,13 +66,38 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-05 — UN reports deadly month for Ukrainian civilians as Russian attacks intensify
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168082
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-04 — Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168077
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-07-24 — Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict
   - Source: https://news.un.org/feed/view/en/story/2026/07/1168024
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-10 — Fighting deepens needs and fuels further displacement in Sudan
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168109
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-10 — Humanitarian aid warehouses come under attack in Ukraine
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168102
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-06 — Security Council LIVE: Warnings of famine and collapse as South Sudan&#039;s peace deal frays
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168089
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-03 — Drone strikes threaten civilians and aid operations in Sudan
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168068
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -91,26 +111,6 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-28 — Mount Olympus and D-Day beaches among new World Heritage Sites
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168043
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-24 — ‘Judges should be superhuman’: The invisible burden behind the bench
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168023
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-06-26 — Major UK banks back reusable digital ID network for financial services - Biometric Update
-  - Source: https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
-  - Evidence: Seven-day public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-25 — Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News
-  - Source: https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 
 ## Source Pathways / Relevant Source Files
 
@@ -129,18 +129,18 @@ Items: 12
 - Book route: book intelligence dossiers — book-intelligence-dossiers.html
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
-- Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
 - UN News: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions — https://news.un.org/feed/view/en/story/2026/07/1168037
 - UN News: Attacks ‘getting worse’: Deadly Russian strikes hit Ukrainian cities — https://news.un.org/feed/view/en/story/2026/07/1168052
 - UN News: Gaza: 300 children killed in 300 days of Israeli-Hamas ‘ceasefire’ — https://news.un.org/feed/view/en/story/2026/08/1168088
+- UN News: UN reports deadly month for Ukrainian civilians as Russian attacks intensify — https://news.un.org/feed/view/en/story/2026/08/1168082
+- UN News: Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms — https://news.un.org/feed/view/en/story/2026/08/1168077
 - UN News: Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict — https://news.un.org/feed/view/en/story/2026/07/1168024
+- UN News: Fighting deepens needs and fuels further displacement in Sudan — https://news.un.org/feed/view/en/story/2026/08/1168109
+- UN News: Humanitarian aid warehouses come under attack in Ukraine — https://news.un.org/feed/view/en/story/2026/08/1168102
 - UN News: Security Council LIVE: Warnings of famine and collapse as South Sudan&#039;s peace deal frays — https://news.un.org/feed/view/en/story/2026/08/1168089
+- UN News: Drone strikes threaten civilians and aid operations in Sudan — https://news.un.org/feed/view/en/story/2026/08/1168068
 - UN News: Hunger hampers Ebola response as cases top 3,200 in DR Congo — https://news.un.org/feed/view/en/story/2026/07/1168047
 - UN News: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic — https://news.un.org/feed/view/en/story/2026/07/1168049
-- UN News: Mount Olympus and D-Day beaches among new World Heritage Sites — https://news.un.org/feed/view/en/story/2026/07/1168043
-- UN News: ‘Judges should be superhuman’: The invisible burden behind the bench — https://news.un.org/feed/view/en/story/2026/07/1168023
-- Google News / control structure: Major UK banks back reusable digital ID network for financial services - Biometric Update — https://news.google.com/rss/articles/CBMirgFBVV95cUxOd1haM0l0aC1GaTVMRFE5T3B6T1dobldaaTRXYXNxcllWOXU3UWJCSld1WVNzMndIYzc2MzFYellqVUl5d0dJSWNoN0RhVk9BaFZ3NDBMWVFBRkkwQVBHLWpNbWkyY2h0bTBMMjFOZVpyQlJCOUhIaS10b2dyRUs3YmJsZXJQQ296WlMzY0I3WjBCeU1WXzR3U09OdncwamlTNE1BcWMyeHdwaWZzQVE?oc=5
-- Google News / Epstein timeline and files: Judge orders DOJ to either unredact more Epstein files or explain why they must stay blacked out - CBS News — https://news.google.com/rss/articles/CBMingFBVV95cUxOdENaQldJUjh4Z3JkUnIzM1Y5Ynl1Q0dCdExRU2RvZXBvVS1HQURuVWFWQkFtVkUxMkxLMmVNV1RmYWxLT0ptS2pLcTk3QmIxN3R5Q3ZCV283aWFsRTluSTJEUVYzYWlQTmpJRG5QazFJNU1TOGpkNk10RXAyU1RlWDJxMlJXTGtnY2owaldnQjBDb1dqQkp6ZlFFNnViUQ?oc=5
 
 ## Book Routes
 

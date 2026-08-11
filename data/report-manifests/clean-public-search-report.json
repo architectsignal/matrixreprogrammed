@@ -1,24 +1,26 @@
 {
-  "generatedAt": "2026-08-09T04:49:33.093Z",
-  "pageCount": 120,
+  "generatedAt": "2026-08-11T04:52:15.589Z",
+  "pageCount": 123,
   "output": "downloads/clean-public-search-report.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Clean Public Search Report",
-    "contentHash": "e39f0c855d5fb77d46024293f7b12e5944b5fe41690e6fd9bdec2e45dbacae52",
+    "contentHash": "ef71f8472aab8b7438d5053d46bd001967a0f0ed20e9513b694b98d5c091f354",
     "sourceIds": [
-      "33b99270b28ac9825f7ccfdd",
       "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
+      "e4ca191d7d9f2eddeda78ad3",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
+      "source-change-d8732adccaaac4ea6376d2ba",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "8057d390af5011731564579c",
       "71e0563ca7b139c37c302956",
       "9f77464e401ac59ad1adb812",
       "b0cde383147509fbfd4f4472",
@@ -28,6 +30,13 @@
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
+      "source-change-c9bd018a6544006f1e1f3018",
+      "source-change-ec7f3126268880506fc4f0ed",
+      "source-change-ea3afacb89f4f277c87d1a79",
+      "source-change-8057d390af5011731564579c",
+      "source-change-871096b65a90301ef4a126c3",
+      "source-change-a05ee5719c4986b9a2e665d1",
+      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-9E85403F3389F334",
@@ -56,15 +65,11 @@
       "ASC-REVIEW-385C8E133B9E3CEA",
       "ASC-REVIEW-C341FD7E06960AED",
       "ASC-REVIEW-5D75F861BBF77D9D",
-      "ASC-REVIEW-E09138F879103681",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
-      "f23b46f2bc4add9b859f5a15",
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
       "008875ef7bf45eb14dccb254",
+      "f23b46f2bc4add9b859f5a15",
       "88269481cf5b04b7b0f83b58",
       "7ee9141a42ad539f58a57e50",
       "eb79eba926106673fc0305cc",
@@ -81,6 +86,8 @@
       "b079bec5bc869b0463d0584c",
       "88ef9baf356c096816236956",
       "34805734b1ad3b73f0ede0d8",
+      "e3b055a4afb19163268d7257",
+      "4c1d46d9bcb8caa374dec7d2",
       "f669b33c49b63e787cde3008",
       "ASC-REVIEW-612BDE5576885761",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -139,28 +146,21 @@
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
       "ASC-REVIEW-54C7773F8BEDE2F4",
-      "ASC-REVIEW-603C7E693C77AF6C",
-      "ASC-REVIEW-8F441C443ED90227",
-      "ASC-REVIEW-5078341E3837218A",
-      "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967"
+      "ASC-REVIEW-603C7E693C77AF6C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 26,
-      "disputedClaimCount": 104,
+      "primarySourceCount": 37,
+      "disputedClaimCount": 93,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 93,
-      "moneyRecordCount": 90
+      "relationshipCount": 88,
+      "moneyRecordCount": 84
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 26 A/B-grade public-record items are materially relevant to Clean Public Search Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 37 A/B-grade public-record items are materially relevant to Clean Public Search Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “EEA reports growing European climate-resilience pressure from drought, floods and extreme weather,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The EEA's June 2026 resilience update highlights severe drought, flooding, wildfires and record temperatures, with uneven adaptation and direct consequences for water, agriculture, infrastructure and public health.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 93 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 88 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Matrix Reprogrammed Canonical Intelligence Record; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Health And Development Philanthropy: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 93 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 88 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-10-01T00:00:00.000Z"
   }
 }

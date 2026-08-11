@@ -1,20 +1,21 @@
 {
-  "generatedAt": "2026-08-09T04:48:36.170Z",
-  "pageCount": 116,
+  "generatedAt": "2026-08-11T04:51:19.003Z",
+  "pageCount": 114,
   "output": "downloads/automatic-orchestrator-final-audit.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Automatic Orchestrator Final Audit",
-    "contentHash": "c9500391bb3939ed68e83282330f46845f5ebbba4772ed3d6192c0fb16454699",
+    "contentHash": "6ba6524980550419f3366893b4c259e6c907c6cf5d6c9542f3fae1ffcd54ba17",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
+      "8057d390af5011731564579c",
       "157cdab04b61ae6309c0c713",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "33b99270b28ac9825f7ccfdd",
+      "e4ca191d7d9f2eddeda78ad3",
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
       "b0cde383147509fbfd4f4472",
@@ -26,8 +27,9 @@
       "1ee57e70dacfa67f04323529",
       "ASC-REVIEW-C973762B151D5947",
       "ASC-REVIEW-9E85403F3389F334",
-      "f23b46f2bc4add9b859f5a15",
+      "871096b65a90301ef4a126c3",
       "1769af26a7bda813406cd8f5",
+      "f23b46f2bc4add9b859f5a15",
       "88269481cf5b04b7b0f83b58",
       "41af4eba97b7eb1c0afb301f",
       "f6d3c17beb9371b8f2b165aa",
@@ -91,6 +93,7 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
+      "ec7f3126268880506fc4f0ed",
       "72ef7895f95288946ccb3cff",
       "e72d22f4f28eb53e3173d0a6",
       "008875ef7bf45eb14dccb254",
@@ -108,6 +111,8 @@
       "b7e4a66335a706ef5097117f",
       "b079bec5bc869b0463d0584c",
       "bdd7e454126ebfa6319a594c",
+      "228770c420a004608c7b13f9",
+      "8737454dea4463f85583fbd4",
       "ASC-002",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -141,26 +146,21 @@
       "ASC-REVIEW-BD5CE46383C9383C",
       "ASC-REVIEW-111AEF27642D32DD",
       "ASC-REVIEW-927E79836853DFAE",
-      "ASC-REVIEW-17CC1B265DD7385B",
-      "ASC-REVIEW-F26BA2899C21B0EA",
-      "ASC-REVIEW-FE3653EEB8123DA6",
-      "ASC-REVIEW-72A2357084C62D28",
-      "ASC-REVIEW-0D4E0949E1727957",
-      "ASC-REVIEW-2C44CF7E385BEC5A"
+      "ASC-REVIEW-17CC1B265DD7385B"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 37,
-      "disputedClaimCount": 93,
+      "primarySourceCount": 42,
+      "disputedClaimCount": 88,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
+      "relationshipCount": 80,
       "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 37 A/B-grade public-record items are materially relevant to Automatic Orchestrator Final Audit.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 42 A/B-grade public-record items are materially relevant to Automatic Orchestrator Final Audit.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Bill Gates → Microsoft Legacy: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Follow The Money Watch; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bill Gates → Gates Foundation: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Bill Gates → Microsoft Legacy: ecosystem hint",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-17T00:00:00.000Z"
   }
 }

@@ -1,13 +1,15 @@
 # Page Quality Audit
 
-Updated: 2026-08-09T05:05:19.876Z
+Updated: 2026-08-11T05:07:59.983Z
 
 Files scanned: 760
 
-High issues: 0
+High issues: 1
 
-Review issues: 9
+Review issues: 10
 
+- high: black-file.html — missing title tag
+- review: black-file.html — missing meta description
 - review: black-file.html — missing H1
 - review: controlled-opposition-profile.html — missing meta description
 - review: daily-watch.html — missing meta description

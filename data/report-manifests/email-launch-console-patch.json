@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:52:29.731Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-11T04:55:12.400Z",
+  "pageCount": 135,
   "output": "downloads/email-launch-console-patch.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Email Launch Console Patch",
-    "contentHash": "46d0f91bbedc3329d91f175524d429e977c8f98d21ef8c838a8d78bef688b868",
+    "contentHash": "1ab1d7bbb3064529038caf70e8f41664e695be749a9269768095a80c5616c203",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "ASC-REVIEW-836A8E9D516E6FEC",
@@ -14,6 +14,8 @@
       "6f6462b75cdb929e0acbcde7",
       "157cdab04b61ae6309c0c713",
       "7f5b91c14c671bd24b8bbd81",
+      "4c1d46d9bcb8caa374dec7d2",
+      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -59,40 +61,10 @@
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
-      "33b99270b28ac9825f7ccfdd",
-      "a6ebdb520cbf171e4f5b2247",
-      "0360e7de068c826685da26fc",
-      "8d20f4821e27b9c1e95134ef",
-      "cf8c3fc6a44dcf86c4a3476c",
-      "368449f3d92a1c631d16f4e7",
-      "74daeaa1e6c28fd17e87d787",
-      "7c8ba6474bdafbaba0a45ae7",
-      "11f00f60dd8c3a93e0e9f94a",
-      "a80aafd3afbb355a2fb384d3",
-      "ff91265f0c20337bfe6e9e32",
-      "162728b6637f15f33f0926a9",
-      "eaca580893e48ba4540be8c1",
-      "cbd43dc6e172416afa728307",
-      "27bb5692041861e72397b352",
-      "f46685c556b51609bbdf73a8",
-      "ab5bf141d4911be363c65418",
-      "6281392ee1b7ce5eead47eaf",
-      "d9380d09bfe5dce0c307e435",
-      "f84b08debecda16b0759c36e",
-      "8050d0ed90751ba90e17dfc9",
-      "f67c44230f0385a8f6c39a81",
-      "fe45e880cf99ef0cbe6a75b5",
-      "e7587d5ec2a19ecb8770f41d",
-      "603eb823a8d4b82f07e610bb",
-      "0515d0385c6c13fa0a29b3e8",
-      "25e2e86eb10fd55b5f67238e",
-      "29f69ac4e0857a1a71a86d7a",
-      "4c3cd7f6fb2b55b4faacff68",
-      "c93784ac9f5550333db3ba0d",
-      "dc6056691dca1ea8786b3ad3",
-      "0f49174d32cf3a76ab0a5a0a",
-      "7e07eab5317d0ed07e5fcdfd",
-      "1e4b1a921fd40d90384197fa",
+      "ca92a54bb69eb2504c76e56e",
+      "e3b055a4afb19163268d7257",
+      "d77b99424431ead891074ef0",
+      "8737454dea4463f85583fbd4",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -146,21 +118,49 @@
       "ASC-REVIEW-C3297FF92B950118",
       "ASC-REVIEW-A8D2D2229B2E32AE",
       "ASC-REVIEW-6770124E37F1FE36",
-      "ASC-REVIEW-1E701E5D91BF4446"
+      "ASC-REVIEW-1E701E5D91BF4446",
+      "ASC-REVIEW-38D60C73AE003DE8",
+      "ASC-REVIEW-F62F7FFFBED4C0DC",
+      "ASC-REVIEW-47D99B95C8C88B19",
+      "ASC-REVIEW-7069086F3A015D62",
+      "ASC-REVIEW-713EBA586DECC926",
+      "ASC-REVIEW-40F8CB67FBBBA1E0",
+      "ASC-REVIEW-672E0A2FF16C31B8",
+      "ASC-REVIEW-D2068F12E3B02362",
+      "ASC-REVIEW-0A0F5EDC8CFFB406",
+      "ASC-REVIEW-E05B1E35C7C80738",
+      "ASC-REVIEW-F5CA53DC99863DAC",
+      "ASC-REVIEW-0914587401D9BDE0",
+      "ASC-REVIEW-525DDFDACCB9146E",
+      "ASC-REVIEW-FF1A5D475493F22D",
+      "ASC-REVIEW-7531D73ADCFB5B91",
+      "ASC-REVIEW-E45C21A8CE98987F",
+      "ASC-REVIEW-493ED117CF1C0E91",
+      "ASC-REVIEW-0C3383FAE797FF46",
+      "ASC-REVIEW-7FBB26E1B0ECA17A",
+      "ASC-REVIEW-ECBF89F9DB572E57",
+      "ASC-REVIEW-9CC26AD16796DAE5",
+      "ASC-REVIEW-2F50A2BA863FFF4F",
+      "ASC-REVIEW-52F3C5EC8401656D",
+      "ASC-REVIEW-D13048D78F8EA6E3",
+      "ASC-REVIEW-06F8715410848053",
+      "ASC-REVIEW-B1927A1DC608FBA7",
+      "ASC-REVIEW-8DD2093F6ECB25D1",
+      "ASC-REVIEW-26C98CAD8AA9CE0A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 40,
-      "disputedClaimCount": 96,
+      "primarySourceCount": 12,
+      "disputedClaimCount": 123,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 61,
-      "moneyRecordCount": 47
+      "relationshipCount": 79,
+      "moneyRecordCount": 64
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 40 A/B-grade public-record items are materially relevant to Email Launch Console Patch.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 12 A/B-grade public-record items are materially relevant to Email Launch Console Patch.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Final Judgment - Gotbit Consulting LLC,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 61 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 61 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-11-01T00:00:00.000Z"
   }
 }

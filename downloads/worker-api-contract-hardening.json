@@ -1,14 +1,16 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T05:08:36.716Z",
+  "generatedAt": "2026-08-11T05:11:19.678Z",
   "changed": [
-    "_site/membership.html"
+    "membership.html",
+    "_site/membership.html",
+    "_site/membership"
   ],
   "contracts": {
     "passwordlessAuth": "explicit production-owned route set with response-origin validation",
     "freeSignup": "supports verification.sent and queued delivery truthfully",
     "paypal": "checkout requires credentials, environment switch, D1 switch, confirmation and three ACTIVE plans",
-    "membershipSource": "the canonical membership page and server-created PayPal redirect client are validated structurally and synchronized without template replacement",
+    "membershipSource": "the protected Phase 6 membership template is authoritative when present; source, HTML, extensionless and server-created PayPal redirect output are synchronized without trusting a late-mutated root page",
     "externalActions": "no email delivery or PayPal request is performed by this hardening script"
   }
 }

@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-09T04:56:34.577Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-11T04:59:14.698Z",
+  "pageCount": 126,
   "output": "downloads/membership-access-copy-report.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Membership Access Copy Report",
-    "contentHash": "b5205ff2e6b645c2af976edb1db69fe2f1cdf8d3e2410ce6ebfba3de1a0a4b08",
+    "contentHash": "5e9b9e3e1675d66ef902bb26a826ce5f744ce95c7e373a82620e86ab8c21d6db",
     "sourceIds": [
+      "8057d390af5011731564579c",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -16,8 +17,16 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "source-change-d8732adccaaac4ea6376d2ba",
       "eb79eba926106673fc0305cc",
       "d10a3c874af4d2b467263ee1",
+      "source-change-c9bd018a6544006f1e1f3018",
+      "source-change-ec7f3126268880506fc4f0ed",
+      "source-change-ea3afacb89f4f277c87d1a79",
+      "source-change-8057d390af5011731564579c",
+      "source-change-871096b65a90301ef4a126c3",
+      "source-change-a05ee5719c4986b9a2e665d1",
+      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -43,15 +52,8 @@
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "88ef9baf356c096816236956",
-      "33b99270b28ac9825f7ccfdd",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
-      "source-change-f9b326734f170d730fc634f5",
-      "source-change-b1e5189be9fa36ea97b5f8c0",
-      "source-change-6e48acd2ac94f914a7fd7ae5",
-      "source-change-f23b46f2bc4add9b859f5a15",
-      "source-change-a09615abd1b1ed83f2b74ff4",
-      "source-change-b0cde383147509fbfd4f4472",
+      "crime-state-overlap-2026-08-10-d2755c34",
+      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -144,23 +146,21 @@
       "ASC-REVIEW-7640579815B0B893",
       "ASC-REVIEW-36CFBB8E5F6A4E74",
       "ASC-REVIEW-B4A3ADF8C6D010A1",
-      "ASC-REVIEW-D177A29CF338E56D",
-      "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD"
+      "ASC-REVIEW-D177A29CF338E56D"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 22,
-      "disputedClaimCount": 115,
-      "newEntityCount": 2,
+      "primarySourceCount": 25,
+      "disputedClaimCount": 113,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 117,
-      "moneyRecordCount": 115
+      "relationshipCount": 116,
+      "moneyRecordCount": 113
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Membership Access Copy Report.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+        "conclusion": "The most defensible current assessment is based on “One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Today, U.S. Attorney Jeanine Ferris Pirro marked the one-year anniversary of President Trump’s Federal Law Enforcement Surge in the District of Columbia. The surge implemented a significant increase in federal law enforcement resources, bolstering our teams with additional agents, advanced tools, and a no‑nonsense mandate that renewed the focus on cracking down on violent offenders, dismantling criminal networks, and restoring safety to District neighborhoods. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 117 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 116 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 117 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 116 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
   }
 }

@@ -1,18 +1,14 @@
 {
-  "generatedAt": "2026-08-09T04:52:31.532Z",
+  "generatedAt": "2026-08-11T04:55:14.217Z",
   "pageCount": 137,
   "output": "downloads/empty-public-controls-output.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Empty Public Controls Output",
-    "contentHash": "c06f696e93f4c3951ea8b55804b5f63d9bdec65361aed536541c7ce172f80869",
+    "contentHash": "883f2230601cbf218a57651e46c6c2d777da35555c3d30830db51a516dd9903a",
     "sourceIds": [
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
-      "ASC-REVIEW-E09138F879103681",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -36,9 +32,7 @@
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-39269A2C0471A66C",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-21E454816F050A34",
-      "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
@@ -47,8 +41,12 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
+      "ASC-REVIEW-E09138F879103681",
       "ASC-REVIEW-A9879DBB68A52307",
       "ASC-REVIEW-7E32B4EA7D93ED00",
+      "ASC-REVIEW-BE1984C8AB0488C9",
+      "ASC-REVIEW-BCB42A9276F26D83",
+      "ASC-REVIEW-40BE75698429CC21",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
@@ -57,9 +55,10 @@
       "f44c3c7309a5f0779a57e655",
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
-      "20114e0234b7a725cce22060",
       "360e80c162081c85d2c680ef",
-      "33b99270b28ac9825f7ccfdd",
+      "source-change-d8732adccaaac4ea6376d2ba",
+      "source-change-c9bd018a6544006f1e1f3018",
+      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -146,30 +145,31 @@
       "ASC-REVIEW-AFF7699289F993E4",
       "ASC-REVIEW-135079C8B6667E13",
       "ASC-REVIEW-1E865C671E08BD05",
-      "ASC-REVIEW-74487D6D467BA7AE"
+      "ASC-REVIEW-74487D6D467BA7AE",
+      "ASC-REVIEW-6DA85AF7CC833F29"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 132,
-      "newEntityCount": 2,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 131,
+      "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 80,
-      "moneyRecordCount": 66
+      "relationshipCount": 79,
+      "moneyRecordCount": 65
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Empty Public Controls Output.",
-        "evidence": "Site Population Audit (data/search-index.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Empty Public Controls Output.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Site Population Audit,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Site Population Audit Site Population Audit HTML files: 1741 Obsolete family routes repaired: 0 Weak: 2 · Dead-end: 0 · Placeholders: 50 · Bad links: 0 · Unresolved static templates: 0 Bad Links [] Unresolved Static Templates [] Weak Pages [ { \"file\": \"control",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Department of Justice Office of Inspector General — Reports,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
   }
 }

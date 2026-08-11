@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-09T04:57:33.388Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-11T05:00:14.297Z",
+  "pageCount": 123,
   "output": "downloads/open-source-research-wiring.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Open Source Research Wiring",
-    "contentHash": "88885b47b2fedb332129f036c4a6b73fac9795a3cf9b6a1f07151c2da2095530",
+    "contentHash": "29b43574c87b5f285de9217340c63d65314616b2da21455792376ab62f654ff9",
     "sourceIds": [
+      "8057d390af5011731564579c",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -36,10 +37,6 @@
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
-      "ASC-REVIEW-E09138F879103681",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
       "26b90533dbf7d2ed42f02de6",
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
@@ -50,6 +47,8 @@
       "7f5b91c14c671bd24b8bbd81",
       "88ef9baf356c096816236956",
       "34805734b1ad3b73f0ede0d8",
+      "source-change-d8732adccaaac4ea6376d2ba",
+      "4c1d46d9bcb8caa374dec7d2",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -146,21 +145,22 @@
       "ASC-REVIEW-FB46D93D6179DCC7",
       "ASC-REVIEW-376546BBB3F711C2",
       "ASC-REVIEW-21C56289EDA1B8BD",
-      "ASC-REVIEW-11446D58C9F4E2B6"
+      "ASC-REVIEW-11446D58C9F4E2B6",
+      "ASC-REVIEW-0F86A972B08C9E18"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 17,
-      "disputedClaimCount": 120,
+      "primarySourceCount": 20,
+      "disputedClaimCount": 117,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 110,
+      "relationshipCount": 111,
       "moneyRecordCount": 110
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 17 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
-        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Open Source Research Wiring.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Appellate challenges concluded without reversal,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Second Circuit affirmed Maxwell's judgment and the U.S. Supreme Court denied certiorari in October 2025, leaving the conviction in place.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2025-10-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
   }
 }

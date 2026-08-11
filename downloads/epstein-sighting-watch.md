@@ -1,6 +1,6 @@
 # Epstein Sighting Watch
 
-Generated: 2026-08-09T05:02:56.320Z
+Generated: 2026-08-11T05:05:35.231Z
 
 ## Official Boundary
 
@@ -49,12 +49,22 @@ Most viral sightings appear to be lookalike/photo claims without identity chain,
 
 Image/video sightings require extra caution because AI, edits, recycled photos, and caption swaps can create false recognition loops.
 
-### New Mexico sues US Justice Department for access to unredacted Jeffrey Epstein files - The Jerusalem Post
+### New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
 - Type: related-claim-traffic
-- Status: unverified-claim
-- Evidence level: 5
+- Status: public-record-relevance
+- Evidence level: 7
 - Location claim: Unverified / source dependent
 - Source: https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
 - Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
 
-New Mexico sues US Justice Department for access to unredacted Jeffrey Epstein files The Jerusalem Post
+New Mexico sues DOJ for unredacted Jeffrey Epstein files The Jerusalem Post
+
+### UK not ‘actively’ considering Epstein public inquiry - politico.eu
+- Type: related-claim-traffic
+- Status: unverified-claim
+- Evidence level: 5
+- Location claim: Unverified / source dependent
+- Source: https://news.google.com/rss/articles/CBMilAFBVV95cUxNcGhHN3F2ZWRBUVlwZTlyUUlDREUtclY2bTBZQmNYbkZxcXlHNmxZUHpVeEozYXVtODdqazE5M1lUNVozNm1uRTYwUTV4RzhqNk4yNWo3N2JBSkZIbkRMalFUUWhQUHBKYl94MldNRkhlZGdUcW04djh5VWt1S0hKR3lTVTU3WlY0QkFyVWI0Y1h6VlpB?oc=5
+- Likely explanation: Higher relevance only if linked to primary documents, named witnesses, or official/public records.
+
+UK not ‘actively’ considering Epstein public inquiry politico.eu

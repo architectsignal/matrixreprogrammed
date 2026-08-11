@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T05:05:48.700Z",
+  "generatedAt": "2026-08-11T05:08:29.553Z",
   "investigationData": {
     "ok": true,
-    "generatedAt": "2026-08-09T05:05:48.045Z",
+    "generatedAt": "2026-08-11T05:08:28.872Z",
     "sourceState": {
       "sources": 12,
       "created": 0,
@@ -27,7 +27,7 @@
   },
   "criminalAccountability": {
     "ok": true,
-    "generatedAt": "2026-08-09T05:05:48.395Z",
+    "generatedAt": "2026-08-11T05:08:29.239Z",
     "subjects": 20,
     "current": 15,
     "historical": 5,
@@ -60,7 +60,7 @@
   },
   "criminalDossierCoverage": {
     "ok": true,
-    "generatedAt": "2026-08-09T05:05:48.677Z",
+    "generatedAt": "2026-08-11T05:08:29.529Z",
     "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
     "minimumPredatorsInPowerTarget": 100,
     "approvedPredatorsInPowerDossiers": 20,
@@ -2020,7 +2020,7 @@
   },
   "criminalWaveBuild": {
     "ok": true,
-    "generatedAt": "2026-08-09T05:05:48.375Z",
+    "generatedAt": "2026-08-11T05:08:29.217Z",
     "mode": "single-authoritative-hydration-with-verification-only",
     "idempotent": true,
     "waveFiles": [
@@ -2114,7 +2114,7 @@
   },
   "criminalDossierTest": {
     "ok": true,
-    "generatedAt": "2026-08-09T05:05:48.700Z",
+    "generatedAt": "2026-08-11T05:08:29.553Z",
     "target": 100,
     "approvedDossiers": 20,
     "dossierPagesChecked": 216,

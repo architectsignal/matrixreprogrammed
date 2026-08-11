@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T04:57:19.797Z",
+  "generatedAt": "2026-08-11T05:00:00.608Z",
   "pageCount": 141,
   "output": "downloads/newsletter-preference-runtime-repair.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Newsletter Preference Runtime Repair",
-    "contentHash": "f3a2c489be18a89ccaae93410fafdfe09b5f26f72b74250933e510604c23adc5",
+    "contentHash": "cec5deba84705f3c08d03a63108f48408466b9e2cfdfb3b4d7765508c3d5a835",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -39,8 +39,7 @@
       "ASC-REVIEW-C53B123A4708B84E",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "ASC-REVIEW-CE615863A9722AC5",
-      "7e07eab5317d0ed07e5fcdfd",
-      "1e4b1a921fd40d90384197fa",
+      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -146,30 +145,31 @@
       "ASC-REVIEW-6D7642B46743C895",
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-0649A6CC727CB73D"
+      "ASC-REVIEW-0649A6CC727CB73D",
+      "ASC-REVIEW-F42C454D9E75A8A7"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 138,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 139,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 80,
-      "moneyRecordCount": 67
+      "relationshipCount": 81,
+      "moneyRecordCount": 68
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Newsletter Preference Runtime Repair.",
-        "evidence": "Consent of and Final Judgment as to Gautam Adani (data/weekly-investigation-conclusions.json); Consent of and Final Judgment as to Sagar Adani (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Newsletter Preference Runtime Repair.",
+        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Consent of and Final Judgment as to Gautam Adani,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Litigation Releases | U.S. Securities and Exchange Commission This source belongs in the government-enforcement lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 80 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 81 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 80 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 81 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T07:59:25.534Z"
+    "intelligenceFreshnessDate": "2026-08-10T06:47:05.856Z"
   }
 }

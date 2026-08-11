@@ -1,101 +1,12 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T04:48:02.957Z",
+  "generatedAt": "2026-08-11T04:50:45.707Z",
   "roots": [
     ".",
     "_site"
   ],
-  "filesChanged": 22,
-  "fixes": 160,
-  "changes": [
-    {
-      "file": "cinematic-hit-list",
-      "fixes": 10
-    },
-    {
-      "file": "cinematic-hit-list.html",
-      "fixes": 10
-    },
-    {
-      "file": "deep-intel-feed.html",
-      "fixes": 5
-    },
-    {
-      "file": "hit-list",
-      "fixes": 10
-    },
-    {
-      "file": "hit-list.html",
-      "fixes": 10
-    },
-    {
-      "file": "power-structure-map.html",
-      "fixes": 5
-    },
-    {
-      "file": "_site/brief-quality-report",
-      "fixes": 5
-    },
-    {
-      "file": "_site/brief-quality-report.html",
-      "fixes": 5
-    },
-    {
-      "file": "_site/cinematic-hit-list",
-      "fixes": 10
-    },
-    {
-      "file": "_site/cinematic-hit-list.html",
-      "fixes": 10
-    },
-    {
-      "file": "_site/daily-missing-records",
-      "fixes": 10
-    },
-    {
-      "file": "_site/daily-missing-records.html",
-      "fixes": 10
-    },
-    {
-      "file": "_site/deep-intel-feed",
-      "fixes": 5
-    },
-    {
-      "file": "_site/deep-intel-feed.html",
-      "fixes": 5
-    },
-    {
-      "file": "_site/entity-daily-briefs",
-      "fixes": 5
-    },
-    {
-      "file": "_site/entity-daily-briefs.html",
-      "fixes": 5
-    },
-    {
-      "file": "_site/entity-exposure-index",
-      "fixes": 5
-    },
-    {
-      "file": "_site/entity-exposure-index.html",
-      "fixes": 5
-    },
-    {
-      "file": "_site/hit-list",
-      "fixes": 10
-    },
-    {
-      "file": "_site/hit-list.html",
-      "fixes": 10
-    },
-    {
-      "file": "_site/power-structure-map",
-      "fixes": 5
-    },
-    {
-      "file": "_site/power-structure-map.html",
-      "fixes": 5
-    }
-  ],
+  "filesChanged": 0,
+  "fixes": 0,
+  "changes": [],
   "boundary": "Only links to generated entity briefs, exposure pages and elite reports are changed, and only when the current generated target does not exist. Missing entity routes fall back to the public search; missing report routes fall back to the reports hub. Both source pages and the exact Cloudflare output are repaired."
 }

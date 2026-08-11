@@ -1,6 +1,6 @@
 # Speculation / Needs Review
 
-Updated: 2026-08-09T05:05:22.062Z
+Updated: 2026-08-11T05:08:02.186Z
 
 These items were routed to review because evidence is weak, phrasing is risky, records are missing, or the theory needs falsification. They are published here only as hypotheses and research prompts. They are not claims of guilt, hidden command, criminal conduct, proven conspiracy, or established fact.
 

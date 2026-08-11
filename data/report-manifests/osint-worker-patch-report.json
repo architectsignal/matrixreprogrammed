@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-08-09T04:57:36.480Z",
-  "pageCount": 85,
+  "generatedAt": "2026-08-11T05:00:17.412Z",
+  "pageCount": 83,
   "output": "downloads/osint-worker-patch-report.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Osint Worker Patch Report",
-    "contentHash": "a4db675d9692ab8bf406dc508c125787c3ca35925ded214b708c099f41066e3b",
+    "contentHash": "88263935ff3bbe82279130020c26478517f8f7bcc1346f00063e70f9e03b2508",
     "sourceIds": [
       "savile-health-investigations-2014",
+      "8057d390af5011731564579c",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -17,7 +18,6 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "crime-state-overlap-2026-08-05-3fff1c4b",
       "b4cb47ea50dc901364239e9f",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
@@ -40,14 +40,9 @@
       "ASC-REVIEW-DA186233A3EDF0BE",
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
-      "ASC-REVIEW-63DEE163CCA699D8",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-2E9D74DCA057FDC2",
-      "ASC-REVIEW-BC92D8AABD2393C5",
-      "ASC-REVIEW-E09138F879103681",
-      "ASC-REVIEW-BE1984C8AB0488C9",
-      "ASC-REVIEW-BCB42A9276F26D83",
-      "ASC-REVIEW-40BE75698429CC21",
+      "495efbb6e1ee304347ae3bdf",
       "family-offices-cascade-investment",
       "family-offices-bezos-expeditions",
       "family-offices-emerson-collective",
@@ -145,21 +140,26 @@
       "private-equity-tpg",
       "private-equity-cvc-capital-partners",
       "private-equity-eqt",
-      "private-equity-thoma-bravo"
+      "private-equity-thoma-bravo",
+      "private-equity-advent-international",
+      "private-equity-bain-capital",
+      "private-equity-warburg-pincus",
+      "private-equity-general-atlantic",
+      "private-equity-silver-lake"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 122,
-      "disputedClaimCount": 18,
+      "primarySourceCount": 128,
+      "disputedClaimCount": 12,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 23,
-      "moneyRecordCount": 112
+      "relationshipCount": 22,
+      "moneyRecordCount": 115
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 122 A/B-grade public-record items are materially relevant to Osint Worker Patch Report.",
-        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 128 A/B-grade public-record items are materially relevant to Osint Worker Patch Report.",
+        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -167,8 +167,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026),” the strongest indexed record by source grade and evidence status.",
-        "evidence": "SAN JUAN, Puerto Rico – The United States Attorney’s Office for the District of Puerto Rico, Héctor Ramírez-Carbó, Acting United States Attorney, in conjunction with our partner agencies in the Homeland Security Task Force (“HSTF”) announce the following prosecutorial results for the week of July 27 through July 31, 2026. The HSTF is a permanent, interagency law enforcement task force created by executive order to combat transnational criminal organizations—including cartels, trafficking networks, and foreign terrorist organizations. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -178,8 +178,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 23 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Official health investigations documented abuse and enabling access; Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026); Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Official health investigations documented abuse and enabling access; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Broadmoor investigation examined Savile's access and abuse; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -193,16 +193,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 23 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Official health investigations documented abuse and enabling access",
-          "Convictions through Guilty Pleas and Sentencings in Homeland Security Task Force (HSTF) Prosecutions (July 27 through July 31, 2026)",
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",
           "Broadmoor investigation examined Savile's access and abuse",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
-          "Booz Allen Hamilton → Consulting: execution layer"
+          "Booz Allen Hamilton → Consulting: execution layer",
+          "Booz Allen Hamilton → Intelligence: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -217,6 +217,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-05T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-07-17T00:00:00.000Z"
   }
 }

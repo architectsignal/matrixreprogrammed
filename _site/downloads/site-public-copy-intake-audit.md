@@ -1,14 +1,14 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-08-09T05:05:35.897Z
+Updated: 2026-08-11T05:08:16.396Z
 
-Files scanned: 6919
+Files scanned: 6954
 
-High issues: 4152
+High issues: 4153
 
 Review issues: 15
 
-Intake areas: 2263
+Intake areas: 2269
 
 Weak intake areas: 0
 
@@ -143,7 +143,6 @@ Weak intake areas: 0
 - _site/black-file-expose.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-file-thank-you.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-file-theory.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/black-file.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-files.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-nobility/aldobrandini.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/black-nobility/arenberg.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -367,7 +366,6 @@ Weak intake areas: 0
 - _site/daily-brief-master.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-command-brief.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-drop.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/daily-epstein-update.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-investigation-conclusions.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-missing-records.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/daily-power-conclusions.html: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -461,8 +459,6 @@ Weak intake areas: 0
 - _site/data/daily-brain-brief.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-brief-master.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-command-brief.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/daily-epstein-update.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/daily-investigation-conclusions.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-power-conclusions.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-watch-dossiers.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-watch-history.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -505,11 +501,15 @@ Weak intake areas: 0
 - _site/data/epstein-relationship-sync-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-research-targets.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-watch.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/evidence-half-life.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-network-map.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-pull-list.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-reader-manifest.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-task-engine.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-timeline.json: /\[object Object\]/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/evidence-timeline.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/evidence-vault.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/evidence-weighted-relationship-graph.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 
 ## Intake Areas To Review
 None

@@ -48,19 +48,19 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-09T04:47:45.247Z
+Updated: 2026-08-11T04:50:26.705Z
 Items: 12
 
-- 2026-06-22 — Five Eyes warns frontier AI cyber-attack capability could arrive within months
-  - Source: https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
-  - Evidence: Intelligence-alliance warning / cyber-risk lane
-  - Boundary: A warning is not proof of a specific attack. Track agency statement, model capability claims, export restrictions, mitigations, and future incident evidence separately.
-  - Next: Move AI Breakout and Cyber Blackout clocks upward only through source-backed warnings, incidents, procurement, restrictions, or confirmed capability disclosures.
 - 2026-07-16 — Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post
   - Source: https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
   - Evidence: News/source-watch item
   - Boundary: A news item is a lead, not proof. Verify against source documents, court records, official releases, and archived material before making claims.
   - Next: Open the source, follow the evidence route, turn it into a video hook, then route readers to the free brief, offer, book, or Amazon store.
+- 2026-08-10 — Afghanistan: UN tells Taliban to open up on abuses committed by security forces
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168104
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-06 — Ebola virus reaches displacement camps in DR Congo
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168092
   - Evidence: Primary or official public-record lead
@@ -129,8 +129,8 @@ Items: 12
 - Book route: book intelligence dossiers — book-intelligence-dossiers.html
 - Book route: books — books.html
 - Book route: amazon store books — amazon-store-books.html
-- Guardian / Five Eyes warning report: Five Eyes warns frontier AI cyber-attack capability could arrive within months — https://www.theguardian.com/technology/2026/jun/22/anthropic-claude-fable-ai-model-artificial-intelligence-national-security
 - Google News / Epstein timeline and files: Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
+- UN News: Afghanistan: UN tells Taliban to open up on abuses committed by security forces — https://news.un.org/feed/view/en/story/2026/08/1168104
 - UN News: Ebola virus reaches displacement camps in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168092
 - UN News: Security Council LIVE: Warnings of famine and collapse as South Sudan&#039;s peace deal frays — https://news.un.org/feed/view/en/story/2026/08/1168089
 - UN News: Security Council LIVE: Updates on Gaza, West Bank amid regional tensions — https://news.un.org/feed/view/en/story/2026/07/1168037

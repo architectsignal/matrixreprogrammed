@@ -1,8 +1,8 @@
 {
   "ok": true,
   "schemaVersion": "2.0.0",
-  "updated": "2026-08-09T05:06:02.931Z",
-  "date": "2026-08-09",
+  "updated": "2026-08-11T05:08:44.218Z",
+  "date": "2026-08-11",
   "title": "Daily Intelligence Hit List",
   "purpose": "Maintain one resolved person, one resolved institution and one documented family research priority, changing a position only when materially stronger source-linked evidence clears the promotion threshold.",
   "leadingEvidenceConclusion": "The strongest current pattern is practical convergence: standards, law, procurement, private infrastructure and shared identity or data can combine into access systems that are difficult to avoid or exit. Children’s Digital Identity and Age-Gating Clock is the highest canonical pressure index at 93%. The key intelligence question is not whether every actor shares one plan, but whether their documented roles form an implementation chain with enforceable leverage.",
@@ -10,17 +10,17 @@
     {
       "title": "Procurement and public-private implementation",
       "meaning": "Public authority can become dependent on private operators of critical infrastructure.",
-      "signalCount": 24763
+      "signalCount": 25040
     },
     {
       "title": "Money, banking and payment access",
       "meaning": "Payment, custody and financial identity can make participation conditional.",
-      "signalCount": 17917
+      "signalCount": 18307
     },
     {
       "title": "Information, media and platform access",
       "meaning": "Visibility can be shaped through platforms, ownership, moderation and payment dependencies.",
-      "signalCount": 11626
+      "signalCount": 12054
     }
   ],
   "person": {
@@ -73,9 +73,9 @@
       "graphId": "securities-and-exchange-commission",
       "graphType": "missing record",
       "reviewStatus": "machine-extracted-unreviewed",
-      "directFreshRecords": 15
+      "directFreshRecords": 5
     },
-    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 15 fresh records plus 11 retained evidence references.",
+    "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 5 fresh records plus 14 retained evidence references.",
     "whatWasFound": "named-in-public-record, refined-from-organization",
     "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
     "investigativeLanes": [
@@ -90,21 +90,21 @@
     "confidence": "moderate-to-high",
     "sourceRoutes": [
       "entity-briefs/securities-and-exchange-commission.html",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26598-gotbit-consulting.pdf",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "data/daily-investigation-conclusions.json",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26597.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26595.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-gauntlet-rideaux.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-derakhshanfar.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26594-ortiz.pdf",
-      "https://www.sec.gov/files/judg26592-semisub.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26592-jackson.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26591.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26588.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26587.pdf",
+      "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "https://www.federalregister.gov/documents/2026/08/10/2026-16199/agency-information-collection-activities-proposed-collection-comment-request-extension-form-n-8b-2",
+      "https://www.federalregister.gov/documents/2026/08/10/2026-16202/agency-information-collection-activities-submission-for-omb-review-comment-request-extension-rule",
+      "https://www.federalregister.gov/documents/2026/08/10/2026-16198/agency-information-collection-activities-proposed-collection-comment-request-extension-form-n-17f-2",
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",
       "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
-      "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf"
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+      "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14142.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+      "https://www.sec.gov/files/litigation/litreleases/2026/judg26506-suzee-han.pdf"
     ],
     "nextQuestions": [
       "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
@@ -212,7 +212,7 @@
     "institution": {
       "route": "daily-watch.html#institution-dossier",
       "totals": {
-        "matchedFindings": 1280,
+        "matchedFindings": 1357,
         "legalRecords": 16,
         "safeguardingOverlaps": 0,
         "moneyRecords": 16,

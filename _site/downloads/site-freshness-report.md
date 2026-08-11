@@ -4,26 +4,26 @@ Figures, percentages, crisis numbers, deaths, payouts, claims, migration counts,
 
 Report version: site-freshness-v4
 Source rules: 9
-Scanned pages: 3420
-Flagged pages: 3252
-High priority pages: 1767
-Medium priority pages: 1432
-Pages with missing rules: 1378
+Scanned pages: 3426
+Flagged pages: 3264
+High priority pages: 1768
+Medium priority pages: 1443
+Pages with missing rules: 1382
 Auto-update eligible figures: 14
-Manual-review figures: 445
-Missing-rule figures: 2762
+Manual-review figures: 451
+Missing-rule figures: 2781
 
 ## Sensitive Figure Publication Labels
 No sensitive item is withheld solely because it lacks complete source metadata, confirmation, or human review. Every item remains publishable only with an explicit evidence-status label that states whether it is source-linked, unconfirmed, source-incomplete, a model output, or not human reviewed. A label is not proof or a verdict.
 
-Unique sensitive figures: 1215
-Published sensitive figures: 1215
-Published with an evidence-status label: 1215
+Unique sensitive figures: 1266
+Published sensitive figures: 1266
+Published with an evidence-status label: 1266
 Withheld figures: 0
-Prominent figures not human reviewed: 143
-Not eligible for automated promotion: 1215
+Prominent figures not human reviewed: 167
+Not eligible for automated promotion: 1266
 Eligible for controlled refresh: 0
-Machine-readable items published: 1215
+Machine-readable items published: 1266
 Truncated items: 0
 
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · cinematic-hit-list.html · $125,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
@@ -35,21 +35,23 @@ Truncated items: 0
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · hit-list.html · $125,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · hit-list.html · 04 Feed · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · hit-list.html · $125,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $3.5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $90 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $150,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $150,000 · Epstein, victim, minor or sexual-abuse figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $400,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $100,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $400,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $100,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $500,000 · Health, vaccine, medical injury or compensation figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $90 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $400,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $100,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $3.5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $400,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $90 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $100,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $400,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $3.5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $150,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $150,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $400,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $90 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $5 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $150,000 · Epstein, victim, minor or sexual-abuse figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $150,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · live-intel.html · $90 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · timers.html · 2026 source · Epstein, victim, minor or sexual-abuse figure · missing: sourceName, publisher, sourceDate
 - **SOURCE METADATA INCOMPLETE · NOT CONFIRMED · NOT HUMAN REVIEWED** · news.html · 37% · Death, casualty, missing-person or human-cost figure · missing: sourceDate
 - **SOURCE METADATA INCOMPLETE · NOT CONFIRMED · NOT HUMAN REVIEWED** · news.html · 38% · Epstein, victim, minor or sexual-abuse figure · missing: sourceDate
@@ -66,7 +68,9 @@ Truncated items: 0
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · card-dossier-standard.html · 04 Source · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · controlled-opposition-deck.html · 04 Feed · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · controlled-opposition-profile.html · 04 Feed · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · daily-drop.html · $150,000 · Epstein, victim, minor or sexual-abuse figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · daily-drop.html · $291,470 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · daily-drop.html · $150,000 · Criminal allegation, court or prosecution figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · daily-epstein-update.html · 03 Map · Epstein, victim, minor or sexual-abuse figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · dark-speculation-33-club.html · 3 Death · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-aaron-swartz.html · 2013 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
@@ -86,7 +90,6 @@ Truncated items: 0
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-alexander-litvinenko.html · 2006 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-alexander-litvinenko.html · 2006 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-alexei-navalny.html · 03 Map · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-alexei-navalny.html · $5 · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-alexei-navalny.html · 2024 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-alexei-navalny.html · 2024 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-alexei-navalny.html · 2024 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
@@ -113,19 +116,16 @@ Truncated items: 0
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-benazir-bhutto.html · 2007 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-benazir-bhutto.html · 2007 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-benazir-bhutto.html · 1 source · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-benazir-bhutto.html · 1 source · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-benazir-bhutto.html · 03 Map · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · 03 Map · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · $1 · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · 1 source · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · 2016 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · 1 source · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · $1 · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · 2016 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
+- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · 1 source · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 - **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-berta-caceres.html · 2016 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-beverly-eckert.html · 2009 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-beverly-eckert.html · 2009 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-beverly-eckert.html · 03 Map · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-beverly-eckert.html · 2009 DEATH · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
-- **UNCONFIRMED · NO ATTRIBUTABLE SOURCE RULE · NOT HUMAN REVIEWED** · death-file-boris-berezovsky.html · 2013 Case · Death, casualty, missing-person or human-cost figure · missing: sourceName, publisher, sourceDate
 
 ## High Priority Pages
 - _site/timers.html: 40 figure/stat markers; 40 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
@@ -151,13 +151,13 @@ Truncated items: 0
 - _site/daily-brain-brief.html: 10 figure/stat markers; 10 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - daily-brain-brief.html: 10 figure/stat markers; 10 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/dossier-george-nader.html: 8 figure/stat markers; 8 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
+- _site/public-consequence-contracts.html: 8 figure/stat markers; 8 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - dossier-george-nader.html: 8 figure/stat markers; 8 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
+- public-consequence-contracts.html: 8 figure/stat markers; 8 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/cinematic-hit-list.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - _site/hit-list.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 - cinematic-hit-list.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
-- dossier-pack-symbolic-power.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
-- hit-list.html: 7 figure/stat markers; 7 missing rules. Publish with a visible unconfirmed / not-human-reviewed label and add an attributable source rule.
 
 ## Missing Source Rules
 - _site/timers.html: 40 figure(s) need source rules.
@@ -183,23 +183,23 @@ Truncated items: 0
 - _site/daily-brain-brief.html: 10 figure(s) need source rules.
 - daily-brain-brief.html: 10 figure(s) need source rules.
 - _site/dossier-george-nader.html: 8 figure(s) need source rules.
+- _site/public-consequence-contracts.html: 8 figure(s) need source rules.
 - dossier-george-nader.html: 8 figure(s) need source rules.
+- public-consequence-contracts.html: 8 figure(s) need source rules.
 - _site/cinematic-hit-list.html: 7 figure(s) need source rules.
 - _site/dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - _site/hit-list.html: 7 figure(s) need source rules.
 - cinematic-hit-list.html: 7 figure(s) need source rules.
 - dossier-pack-symbolic-power.html: 7 figure(s) need source rules.
 - hit-list.html: 7 figure(s) need source rules.
-- _site/one-world-currency-theory.html: 6 figure(s) need source rules.
+- _site/death-file-seth-rich.html: 6 figure(s) need source rules.
 - custom-research.html: 6 figure(s) need source rules.
-- media-narrative-theory.html: 6 figure(s) need source rules.
-- one-world-currency-theory.html: 6 figure(s) need source rules.
 - _site/daily-brief-master.html: 5 figure(s) need source rules.
 - _site/daily-command-brief.html: 5 figure(s) need source rules.
-- _site/death-file-seth-rich.html: 5 figure(s) need source rules.
-- _site/intel-archive.html: 5 figure(s) need source rules.
-- _site/one-world-religion-theory.html: 5 figure(s) need source rules.
-- daily-brief-master.html: 5 figure(s) need source rules.
+- _site/death-file-berta-caceres.html: 5 figure(s) need source rules.
+- _site/death-file-gary-webb.html: 5 figure(s) need source rules.
+- _site/death-file-john-f-kennedy.html: 5 figure(s) need source rules.
+- _site/death-file-john-paisley.html: 5 figure(s) need source rules.
 
 ## Publication Boundary
 - Nothing in the sensitive queue is hidden or withheld from publication.

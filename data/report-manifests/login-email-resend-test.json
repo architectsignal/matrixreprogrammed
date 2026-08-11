@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-09T04:56:06.146Z",
+  "generatedAt": "2026-08-11T04:58:46.111Z",
   "pageCount": 127,
   "output": "downloads/login-email-resend-test.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Login Email Resend Test",
-    "contentHash": "acbe15cc7c11242c60ce0f56a70b301a47eb6aa1c58a5f61e86763aa4656f869",
+    "contentHash": "e907e9f55c374803d721f9fa7ae1ecc50b1ccb1f49b42400232ea216eed2aeef",
     "sourceIds": [
-      "33b99270b28ac9825f7ccfdd",
+      "e4ca191d7d9f2eddeda78ad3",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "9cb9631a2f2749b86bc69e0a",
@@ -18,6 +18,7 @@
       "ASC-REVIEW-45FC68BFE6057AEE",
       "7f0eb9ddb996aecbeeda522d",
       "deb382cdbfe57b57793d739e",
+      "8737454dea4463f85583fbd4",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -145,13 +146,12 @@
       "ASC-REVIEW-1C806B2577C4D44C",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-A04C87BD046475D3",
-      "ASC-REVIEW-3A6BF3064A28E236",
-      "ASC-REVIEW-3B7DCAEF5ABCE701"
+      "ASC-REVIEW-3A6BF3064A28E236"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 0,
-      "disputedClaimCount": 131,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 130,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 129,
@@ -159,19 +159,19 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Login Email Resend Test beyond the existence of reported claims and source routes.",
-        "evidence": "No matching A/B-grade record was loaded for this edition.",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 32,
-        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
-        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Login Email Resend Test.",
+        "evidence": "SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json)",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 78,
+        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
+        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Daily Intelligence Hit List",
-        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
-        "confidence": 48,
+        "conclusion": "The most defensible current assessment is based on “SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "SIEMENS ALTAIRSOFTWARE REQUESTS · Amount: 62835 · Sub-agency: National Aeronautics and Space Administration This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -180,14 +180,14 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 129 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "BlackRock → Public Company Ownership Concentration: capital layer; Vanguard → Ownership Concentration Across Public Companies: capital layer; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bilderberg Meeting → Banks And Finance: overlap hint; Bilderberg Meeting → Defense And Diplomacy: overlap hint; Bilderberg Meeting → Media: overlap hint",
+        "supportingEvidence": "BlackRock → Public Company Ownership Concentration: capital layer; Vanguard → Ownership Concentration Across Public Companies: capital layer; SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration; Bernard Arnault → Luxury Networks: ecosystem hint; Bernard Arnault → Lvmh: ecosystem hint; Bernard Arnault → Media And Culture Influence Routes: ecosystem hint; Bilderberg Meeting → Banks And Finance: overlap hint; Bilderberg Meeting → Defense And Diplomacy: overlap hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 46,
+        "confidence": 68,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
@@ -198,12 +198,12 @@
         "supportingIndicators": [
           "BlackRock → Public Company Ownership Concentration: capital layer",
           "Vanguard → Ownership Concentration Across Public Companies: capital layer",
+          "SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration",
           "Bernard Arnault → Luxury Networks: ecosystem hint",
           "Bernard Arnault → Lvmh: ecosystem hint",
           "Bernard Arnault → Media And Culture Influence Routes: ecosystem hint",
           "Bilderberg Meeting → Banks And Finance: overlap hint",
-          "Bilderberg Meeting → Defense And Diplomacy: overlap hint",
-          "Bilderberg Meeting → Media: overlap hint"
+          "Bilderberg Meeting → Defense And Diplomacy: overlap hint"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-06T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-17T00:00:00.000Z"
   }
 }

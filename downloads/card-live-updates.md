@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-09T05:04:48.828Z
-Live Intel source window: 2026-08-09T05:04:33.793Z
+Generated: 2026-08-11T05:07:28.955Z
+Live Intel source window: 2026-08-11T05:07:13.547Z
 Tracked cards: 973
-Cards with current matched records: 93
-Cards with no new verified record: 880
+Cards with current matched records: 99
+Cards with no new verified record: 874
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -727,9 +727,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Andrew Tate
 - Route: controlled-opposition/andrew-tate.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-05T12:00:00.000Z
+- 2026-08-05T12:00:00.000Z — Tate brothers’ US extradition case a ‘step towards accountability,’ says independent expert — https://news.un.org/feed/view/en/story/2026/08/1168085
 
 ## Anguilla
 - Route: jurisdictions-of-power/anguilla.html
@@ -1703,8 +1704,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: entity-timelines/control-structure.html
 - Status: current-records-matched
 - Current matched records: 1
-- Latest record: 2026-08-05T13:54:20.000Z
-- 2026-08-05T13:54:20.000Z — Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in — https://news.google.com/rss/articles/CBMidkFVX3lxTE9xZWJYa2FsQVo2Q0sxeHN1Um5JWFN2TnRDRXBwSlB6cXE3RV9WQmRvVjFTOWZqRndINWtMUHRwQ0tFaFA2TDRmXy1RbE11NnFpSVdjWFpJTU9yVW5fNUYwdWZ5anlpeHh3MGFIZkM2V3RBbzkxOVE?oc=5
+- Latest record: 2026-08-06T07:00:00.000Z
+- 2026-08-06T07:00:00.000Z — A 2026 Guide to Digital Security & Cybersecurity | Stay Safe Online - Security.org — https://news.google.com/rss/articles/CBMiUkFVX3lxTE9GeW1UbmhCeGtpMHZpeDBXa1ZOc2hZUE51cW9kOE94LTJzcXVidkxOalh0dUxOOU9qVUd3WFo2eFBtM1ZmX19LRktBZXlKV3NfX3c?oc=5
 
 ## CONTROL SYSTEM TRACKER.
 - Route: control-system-tracker.html
@@ -1992,10 +1993,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## District Court, District of Columbia
 - Route: entity-timelines/district-court-district-of-columbia.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-08-07T12:00:00.000Z
 - 2026-08-07T12:00:00.000Z — Convicted Felon Sentenced for Illegal Gun Possession — https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession
-- 2026-08-06T12:00:00.000Z — Repeat Felon Sentenced After Ghost Gun, Drugs Recovered at Southeast D.C. Apartment Complex — https://www.justice.gov/usao-dc/pr/repeat-felon-sentenced-after-ghost-gun-drugs-recovered-southeast-dc-apartment-complex
 
 ## Ditchley Foundation network
 - Route: secret-societies/ditchley-foundation-network.html
@@ -2713,10 +2713,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-08-07T22:12:41.000Z
-- 2026-08-07T22:12:41.000Z — Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5
-- 2026-08-07T17:30:00.000Z — Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fV0ZsRWo2dlNxVzdTQXFDTzBEWklsNjVWZFNsWXRaX2dwZ2NVaXRWUVJicHFzQVZiTElpYlhCQWY3SmFMSEVGNWFRbEY0MGEwX0ppa2k1X01PTzh1LVoxN3VB?oc=5
-- 2026-08-07T17:30:00.000Z — Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5
+- Latest record: 2026-08-10T19:52:03.000Z
+- 2026-08-10T19:52:03.000Z — Virginia Giuffre Part 01 - vault.fbi.gov — https://news.google.com/rss/articles/CBMid0FVX3lxTE8zWW1TOXF5Mml0R1lkSnViTUwxM1ZaMzZUbGlkamFueTV3UnRBcXZwWTdKZUxaeTFVYXV0RnVya2tiX3VEazdZUzRVQWEtY1BSbUNMN1R2d1o0LUc5YUpOUDM3NGhLTEJXdVgyNmoyOEh5UTRRNVh3?oc=5
+- 2026-08-10T17:40:36.000Z — An arts school where Epstein allegedly preyed on students reveals decades of abuse - Oregon Public Broadcasting - OPB — https://news.google.com/rss/articles/CBMivwFBVV95cUxNdjZWT2EyaE9pbGtaRVZwVkhlUzczaUVoYUphaW5KbU10REdiUkZKU3pWU3ZBSmJhYkpfa2gyczMxd3ZXWENoSzZpbjlpeWZKTVJoWGt1TWc1bV92VE5VM3k5ODhfZGRINXo5VUtfb21qMmpzdEZLT1pyUDZ3Vk5PWVFJNFZDMHlGSXpCU2hyRG9nV2FtVjA4QzVLN1haVzhadGprMUgwaEhVNGNBejktRUgyV0U4djg4UzB5c0dKRQ?oc=5
+- 2026-08-10T17:05:11.000Z — Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wamQ2NFA5d1Rld3lGM1UtMno3c0RGNjJNQm5HWWNuRy1DaEJHZ3Z6S0wwNmMtVUtMaG5WQV90QU83Nkh1R0w1WUNNNDQ5OTdhUEtBTnh1ZGFVXzBQd3RPVEFB?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -2850,25 +2850,22 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-timelines/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-08-05T12:00:00.000Z
-- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
+- Current matched records: 1
+- Latest record: none in current window
 - undated — Homeland Security Department — Entity Observation
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-briefs/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-08-05T12:00:00.000Z
-- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
+- Current matched records: 1
+- Latest record: none in current window
 - undated — Homeland Security Department — Entity Observation
 
 ## HOMELAND SECURITY DEPARTMENT
 - Route: entity-exposure/homeland-security-department.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-08-05T12:00:00.000Z
-- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
+- Current matched records: 1
+- Latest record: none in current window
 - undated — Homeland Security Department — Entity Observation
 
 ## Hong Kong
@@ -3060,7 +3057,7 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 2
 - Latest record: 2026-08-07T12:00:00.000Z
 - 2026-08-07T12:00:00.000Z — Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force — https://www.justice.gov/usao-nv/pr/seven-charged-roles-fentanyl-drug-trafficking-conspiracy-part-las-vegas-homeland
-- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
+- 2026-08-06T17:56:22.000Z — Reporters Committee reviews Todd Blanche’s record on government transparency, leak investigations - Reporters Committee for Freedom of the Press — https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YZkVJUlg3UFY3UWM5NTZzaU12UDRBNUtHdDlpTjhScVpHS2FlY0tRV3BQWGtFUnh6Ynh0bS1odUU5WlYwYkFNSVAzRm9XUEVNY2FlejRQTXhoUQ?oc=5
 
 ## Ireland
 - Route: jurisdictions-of-power/ireland.html
@@ -3186,10 +3183,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: dossier-jeffrey-epstein-criminal.html
 - Status: current-records-matched
 - Current matched records: 4
-- Latest record: 2026-08-07T16:56:11.000Z
-- 2026-08-07T16:56:11.000Z — Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 - FBI (.gov) — https://news.google.com/rss/articles/CBMirwJBVV95cUxPLWpWZlhXdE0xSDdhT2VhbFoxcEdTN0trZ3p5QTRrQU1fMWNxS3BIV2Ftc2pVbV9FNUJPWk1ILXRBN1RzcW9za054TGdmMldvRWZHQTB0R3QxVndEd0kxRE94T2FQZ0thUlc2VTA0dTVoZ2F4Zk1sT0JhOFBlQy1EdjFaSlhodkpjenBUdVNKbWp6QThZQjZWSy1rSnRwUVBTS3dYaGtfUGlsVjNNSTlEcW90WXctTVpDM3h3STlZMFoteDFUWHRPcXZFeW56ak0wRl8wLXFYTThuaXc4bHFVNHota3BBMFNtZ3NnVVF6bDBxanFtbm9GOF9aWEFrSTc3N1djNjhHZi1sQmcwV3E5X3BTS3ljN2JUYXZCRkxHUHlxRkNXZm1IaG1IenluaHc?oc=5
-- 2026-08-07T16:56:11.000Z — Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 - FBI (.gov) — https://news.google.com/rss/articles/CBMirwJBVV95cUxQdHA5R3FUZ2N1ajkzOXB1MU9KaUJlcmU2R2dfZlBmc1hHY1NPdjBXWThMbjgtV0Jxck9rNWlWbFhONnVVc3J4VXM1SV81bTE4cTFlTU5reE9DODBVaHVZQmhzOXJpaHd3RE1ZR1c1Y0FJazdfVkF3MUkzejROcjhZT19xUlVaZG5yemE4WlA5ZWFxVWwwOEdock01ZzU2N0RRaWhDNWZXTWV6LTAzNTlLd195eGFWVFNfSVFYZzhfZHhJWmMwcXpaYUtTeWx4bllqSjV1NzBQWXlmbEgxSmJXbnhSbTBBc2s3OTZSZFJRd1F3eExTUFlZZHJzV0hSWkJsVnhvc3BkOXNyN083aXFqZzZLRnpNZU1QYzF3enpxTEhaVWhKWDVDNnhzaVdheG8?oc=5
-- 2026-08-07T16:52:45.000Z — Jeffrey Epstein’s fortune: Who gets the money? - NewsNation — https://news.google.com/rss/articles/CBMieEFVX3lxTE8tcW1oNXlHcldMSjlaenFvaDdOaFFZbFl3X0stbXJjSlNFZ1Q2OWxVNnE1VWRlSDFXMjgxajc1UU5pSGVxVklKb3NlNmZaWVZlWV9qUkowM2tSZDZkSkhJYW5mQkhsZjg1Q1dWTHRvMXhlbU5aODJLYtIBfkFVX3lxTFBtckZWS1ZZNzRmYk1aTm14TkotOHI1c0xZOXJRWWJYMHhqTkxRTWdvM21PdDNRUHR0c2dsTzlRLWk4YW1qeWVhOVJseUczY0VTbDQyY0dCazljdGxxWjVMeEF0ODdJdXd3WUVFWVNrbXg0NkI3eWRuMmVUX05HQQ?oc=5
+- Latest record: 2026-08-07T16:59:05.000Z
+- 2026-08-07T16:59:05.000Z — Jeffrey Epstein’s fortune: Who gets the money? - NewsNation — https://news.google.com/rss/articles/CBMieEFVX3lxTE8tcW1oNXlHcldMSjlaenFvaDdOaFFZbFl3X0stbXJjSlNFZ1Q2OWxVNnE1VWRlSDFXMjgxajc1UU5pSGVxVklKb3NlNmZaWVZlWV9qUkowM2tSZDZkSkhJYW5mQkhsZjg1Q1dWTHRvMXhlbU5aODJLYtIBfkFVX3lxTFBtckZWS1ZZNzRmYk1aTm14TkotOHI1c0xZOXJRWWJYMHhqTkxRTWdvM21PdDNRUHR0c2dsTzlRLWk4YW1qeWVhOVJseUczY0VTbDQyY0dCazljdGxxWjVMeEF0ODdJdXd3WUVFWVNrbXg0NkI3eWRuMmVUX05HQQ?oc=5
+- 2026-08-07T16:56:11.000Z — Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 - vault.fbi.gov — https://news.google.com/rss/articles/CBMirwJBVV95cUxPLWpWZlhXdE0xSDdhT2VhbFoxcEdTN0trZ3p5QTRrQU1fMWNxS3BIV2Ftc2pVbV9FNUJPWk1ILXRBN1RzcW9za054TGdmMldvRWZHQTB0R3QxVndEd0kxRE94T2FQZ0thUlc2VTA0dTVoZ2F4Zk1sT0JhOFBlQy1EdjFaSlhodkpjenBUdVNKbWp6QThZQjZWSy1rSnRwUVBTS3dYaGtfUGlsVjNNSTlEcW90WXctTVpDM3h3STlZMFoteDFUWHRPcXZFeW56ak0wRl8wLXFYTThuaXc4bHFVNHota3BBMFNtZ3NnVVF6bDBxanFtbm9GOF9aWEFrSTc3N1djNjhHZi1sQmcwV3E5X3BTS3ljN2JUYXZCRkxHUHlxRkNXZm1IaG1IenluaHc?oc=5
+- 2026-08-07T16:56:11.000Z — Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 - vault.fbi.gov — https://news.google.com/rss/articles/CBMirwJBVV95cUxQdHA5R3FUZ2N1ajkzOXB1MU9KaUJlcmU2R2dfZlBmc1hHY1NPdjBXWThMbjgtV0Jxck9rNWlWbFhONnVVc3J4VXM1SV81bTE4cTFlTU5reE9DODBVaHVZQmhzOXJpaHd3RE1ZR1c1Y0FJazdfVkF3MUkzejROcjhZT19xUlVaZG5yemE4WlA5ZWFxVWwwOEdock01ZzU2N0RRaWhDNWZXTWV6LTAzNTlLd195eGFWVFNfSVFYZzhfZHhJWmMwcXpaYUtTeWx4bllqSjV1NzBQWXlmbEgxSmJXbnhSbTBBc2s3OTZSZFJRd1F3eExTUFlZZHJzV0hSWkJsVnhvc3BkOXNyN083aXFqZzZLRnpNZU1QYzF3enpxTEhaVWhKWDVDNnhzaVdheG8?oc=5
 
 ## Jens Stoltenberg
 - Route: top-52/jens-stoltenberg.html
@@ -4141,8 +4138,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: jurisdictions-of-power/new-york-city.html
 - Status: current-records-matched
 - Current matched records: 1
-- Latest record: 2026-08-05T12:00:00.000Z
-- 2026-08-05T12:00:00.000Z — Former General Superintendent Of The New York City Department Of Sanitation Charged With Possession Of Child Pornography — https://www.justice.gov/usao-sdny/pr/former-general-superintendent-new-york-city-department-sanitation-charged-possession
+- Latest record: 2026-08-10T12:00:00.000Z
+- 2026-08-10T12:00:00.000Z — Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing — https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old
 
 ## Newhouse family
 - Route: power-families/newhouse-family.html
@@ -5127,9 +5124,11 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## STATE DEPARTMENT
 - Route: entity-timelines/state-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 2
+- Latest record: 2026-08-10T12:00:00.000Z
+- 2026-08-10T12:00:00.000Z — Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges — https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud
+- 2026-08-10T12:00:00.000Z — Middle District of Florida Agencies Receive $3.5 Million to Improve Safety — https://www.justice.gov/usao-mdfl/pr/middle-district-florida-agencies-receive-35-million-improve-safety
 
 ## State Street
 - Route: institutions/state-street.html
@@ -5426,10 +5425,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: entity-timelines/treasury-department.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-08-07T22:12:41.000Z
+- Latest record: 2026-08-10T17:05:11.000Z
+- 2026-08-10T17:05:11.000Z — Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wamQ2NFA5d1Rld3lGM1UtMno3c0RGNjJNQm5HWWNuRy1DaEJHZ3Z6S0wwNmMtVUtMaG5WQV90QU83Nkh1R0w1WUNNNDQ5OTdhUEtBTnh1ZGFVXzBQd3RPVEFB?oc=5
+- 2026-08-08T12:50:26.000Z — Treasury Unveils Redesigned CFIUS Website - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1PZl92UHh2cVc0UWlsNWp6NWR6WlB5WFVaSmlDWWdnZE9NZl9JRkRHWDlHMWduaERZVDZGZ2VYNXpTTllxZ0k2MVBIWGFITGdEUGxSS0JlZXF6T3NyWjBsZ0Zn?oc=5
 - 2026-08-07T22:12:41.000Z — Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5
-- 2026-08-07T17:30:00.000Z — Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fV0ZsRWo2dlNxVzdTQXFDTzBEWklsNjVWZFNsWXRaX2dwZ2NVaXRWUVJicHFzQVZiTElpYlhCQWY3SmFMSEVGNWFRbEY0MGEwX0ppa2k1X01PTzh1LVoxN3VB?oc=5
-- 2026-08-07T17:30:00.000Z — Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5
 
 ## Trilateral Commission
 - Route: institutions/trilateral-commission.html
@@ -5607,9 +5606,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## VETERANS AFFAIRS DEPARTMENT
 - Route: entity-timelines/veterans-affairs-department.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-10T12:00:00.000Z
+- 2026-08-10T12:00:00.000Z — Jury convicts Army veteran of embellishing health issues to defraud the VA — https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va
 
 ## Vicky Safra family
 - Route: follow-the-money/people/vicky-safra-and-family.html
@@ -5722,10 +5722,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-08-07T12:00:00.000Z
 - 2026-08-07T12:00:00.000Z — South Carolina Man Sentenced to 18.5 Years for 2022 Shooting in Adams Morgan — https://www.justice.gov/usao-dc/pr/south-carolina-man-sentenced-185-years-2022-shooting-adams-morgan
-- 2026-08-06T12:00:00.000Z — D.C. Business Owner Pleads Guilty to Stealing More than $1 Million in COVID-19 Relief Funds — https://www.justice.gov/usao-dc/pr/dc-business-owner-pleads-guilty-stealing-more-1-million-covid-19-relief-funds
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html
@@ -5876,21 +5875,27 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 2
+- Latest record: 2026-08-10T12:00:00.000Z
+- 2026-08-10T12:00:00.000Z — DR Congo: Ebola is killing people before they ever reach a doctor — https://news.un.org/feed/view/en/story/2026/08/1168105
+- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 2
+- Latest record: 2026-08-10T12:00:00.000Z
+- 2026-08-10T12:00:00.000Z — DR Congo: Ebola is killing people before they ever reach a doctor — https://news.un.org/feed/view/en/story/2026/08/1168105
+- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 2
+- Latest record: 2026-08-10T12:00:00.000Z
+- 2026-08-10T12:00:00.000Z — DR Congo: Ebola is killing people before they ever reach a doctor — https://news.un.org/feed/view/en/story/2026/08/1168105
+- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 
 ## World Resources Institute
 - Route: think-tanks/world-resources-institute.html

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-09T05:09:43.626Z",
+  "generatedAt": "2026-08-11T05:12:28.982Z",
   "title": "Power Supply Chain",
   "proposition": "Trace who proposed, drafted, promoted, authorised, funded, implemented and benefited from an exercise of power without confusing association with authority.",
   "boundary": "Unknown stages remain visibly unresolved. The system must not infer authority, payment, responsibility, causation or benefit from access, proximity or network membership.",
@@ -8,455 +8,17 @@
   "chains": [
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-declassified-files-2026-08-07-fa753b69",
-      "sourceRecordId": "consequence-declassified-files-2026-08-07-fa753b69",
-      "title": "Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)",
-      "lane": "declassified-files",
-      "laneTitle": "Declassified Files And Public Archives",
-      "consequenceSummary": "Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices U.S. Department of the Treasury (.gov)",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-declassified-files-2026-08-07-fa753b69",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Secretary%20Bessent%20Issues%20Statement%20Welcoming%20S%26P%20Global%20Release%20of%20Critical%20Mineral%20Reference%20Prices%20-%20U.S.%20Department%20of%20the%20Treasury%20(.gov)",
-      "source": {
-        "label": "US Treasury Press Release Discovery",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5",
-        "classification": "public-source-lead",
-        "evidenceRoute": "evidence-vault-index.html"
-      },
-      "stages": [
-        {
-          "id": "consequence",
-          "label": "Observed consequence",
-          "role": "Public effect being investigated",
-          "value": "Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices U.S. Department of the Treasury (.gov)",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "proposal",
-          "label": "Proposal",
-          "role": "Who first proposed the action",
-          "value": "The proposer and originating record remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "drafting",
-          "label": "Drafting and design",
-          "role": "Who wrote or designed the mechanism",
-          "value": "The drafter, adviser or technical designer remains unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "promotion",
-          "label": "Promotion and influence",
-          "role": "Who promoted, lobbied for or shaped adoption",
-          "value": "Promotion, lobbying and influence records remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "authorization",
-          "label": "Authorization",
-          "role": "Who possessed legal, contractual or delegated authority",
-          "value": "Not yet resolved from a primary decision record · Not yet attached",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "funding",
-          "label": "Funding and contracts",
-          "role": "Who supplied money and through which instrument",
-          "value": "What public or private money funds the action?",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "implementation",
-          "label": "Implementation",
-          "role": "Who carried the decision into effect",
-          "value": "Unverified lead stage",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "benefit",
-          "label": "Benefit, cost and risk transfer",
-          "role": "Who gained, paid or absorbed risk",
-          "value": "Direct beneficiaries, affected groups and transferred risks remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "justification",
-          "label": "Stated justification",
-          "role": "What public benefit was promised",
-          "value": "Not yet extracted from a primary decision record · Not yet locked",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "outcome",
-          "label": "Measured outcome",
-          "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        }
-      ],
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
-      "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-declassified-files-2026-08-07-fa753b69",
-      "powerDiffRoute": "power-diff.html#diff-consequence-declassified-files-2026-08-07-fa753b69",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-declassified-files-2026-08-07-fa753b69",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-declassified-files-2026-08-07-fa753b69",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-declassified-files-2026-08-07-fa753b69-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-declassified-files-2026-08-07-fa753b69#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "power-chain-consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "sourceRecordId": "consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "title": "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)",
-      "lane": "declassified-files",
-      "laneTitle": "Declassified Files And Public Archives",
-      "consequenceSummary": "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance U.S. Department of the Treasury (.gov)",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Treasury%20Sanctions%20Crypto%20Exchanges%20Funding%20Iran%E2%80%99s%20IRGC%20and%20Enabling%20Illicit%20Finance%20-%20U.S.%20Department%20of%20the%20Treasury%20(.gov)",
-      "source": {
-        "label": "US Treasury Press Release Discovery",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5",
-        "classification": "public-source-lead",
-        "evidenceRoute": "evidence-vault-index.html"
-      },
-      "stages": [
-        {
-          "id": "consequence",
-          "label": "Observed consequence",
-          "role": "Public effect being investigated",
-          "value": "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance U.S. Department of the Treasury (.gov)",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "proposal",
-          "label": "Proposal",
-          "role": "Who first proposed the action",
-          "value": "The proposer and originating record remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "drafting",
-          "label": "Drafting and design",
-          "role": "Who wrote or designed the mechanism",
-          "value": "The drafter, adviser or technical designer remains unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "promotion",
-          "label": "Promotion and influence",
-          "role": "Who promoted, lobbied for or shaped adoption",
-          "value": "Promotion, lobbying and influence records remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "authorization",
-          "label": "Authorization",
-          "role": "Who possessed legal, contractual or delegated authority",
-          "value": "Not yet resolved from a primary decision record · Not yet attached",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "funding",
-          "label": "Funding and contracts",
-          "role": "Who supplied money and through which instrument",
-          "value": "What public or private money funds the action?",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "implementation",
-          "label": "Implementation",
-          "role": "Who carried the decision into effect",
-          "value": "Unverified lead stage",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "benefit",
-          "label": "Benefit, cost and risk transfer",
-          "role": "Who gained, paid or absorbed risk",
-          "value": "Direct beneficiaries, affected groups and transferred risks remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "justification",
-          "label": "Stated justification",
-          "role": "What public benefit was promised",
-          "value": "Not yet extracted from a primary decision record · Not yet locked",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "outcome",
-          "label": "Measured outcome",
-          "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
-          "state": "review-stage-record",
-          "evidenceClassification": "public-source-lead",
-          "sourceLabel": "US Treasury Press Release Discovery",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        }
-      ],
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
-      "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "powerDiffRoute": "power-diff.html#diff-consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-declassified-files-2026-08-07-a0d1b2f2-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-declassified-files-2026-08-07-a0d1b2f2#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "power-chain-consequence-epstein-files-2026-08-07-9c3b2188",
-      "sourceRecordId": "consequence-epstein-files-2026-08-07-9c3b2188",
-      "title": "Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post",
-      "lane": "epstein-files",
-      "laneTitle": "Epstein Files, Timeline And Court Records",
-      "consequenceSummary": "Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony New York Post",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-epstein-files-2026-08-07-9c3b2188",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Rep.%20Robert%20Garcia%20demands%20Goldman%20Sachs%20cut%20ties%20with%20Kathryn%20Ruemmler%20over%20Epstein%20testimony%20-%20New%20York%20Post",
-      "source": {
-        "label": "Google News / Epstein timeline and files",
-        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "epstein-files.html#epstein-evidence-ladder"
-      },
-      "stages": [
-        {
-          "id": "consequence",
-          "label": "Observed consequence",
-          "role": "Public effect being investigated",
-          "value": "Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony New York Post",
-          "state": "review-stage-record",
-          "evidenceClassification": "official-or-primary-lead",
-          "sourceLabel": "Google News / Epstein timeline and files",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "proposal",
-          "label": "Proposal",
-          "role": "Who first proposed the action",
-          "value": "The proposer and originating record remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "drafting",
-          "label": "Drafting and design",
-          "role": "Who wrote or designed the mechanism",
-          "value": "The drafter, adviser or technical designer remains unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "promotion",
-          "label": "Promotion and influence",
-          "role": "Who promoted, lobbied for or shaped adoption",
-          "value": "Promotion, lobbying and influence records remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "authorization",
-          "label": "Authorization",
-          "role": "Who possessed legal, contractual or delegated authority",
-          "value": "Not yet resolved from a primary decision record · Not yet attached",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "funding",
-          "label": "Funding and contracts",
-          "role": "Who supplied money and through which instrument",
-          "value": "What public or private money funds the action?",
-          "state": "review-stage-record",
-          "evidenceClassification": "official-or-primary-lead",
-          "sourceLabel": "Google News / Epstein timeline and files",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "implementation",
-          "label": "Implementation",
-          "role": "Who carried the decision into effect",
-          "value": "Unverified lead stage",
-          "state": "review-stage-record",
-          "evidenceClassification": "official-or-primary-lead",
-          "sourceLabel": "Google News / Epstein timeline and files",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "benefit",
-          "label": "Benefit, cost and risk transfer",
-          "role": "Who gained, paid or absorbed risk",
-          "value": "Direct beneficiaries, affected groups and transferred risks remain unresolved.",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "justification",
-          "label": "Stated justification",
-          "role": "What public benefit was promised",
-          "value": "Not yet extracted from a primary decision record · Not yet locked",
-          "state": "unresolved",
-          "evidenceClassification": "missing-record",
-          "sourceLabel": "",
-          "sourceUrl": "",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        },
-        {
-          "id": "outcome",
-          "label": "Measured outcome",
-          "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
-          "state": "review-stage-record",
-          "evidenceClassification": "official-or-primary-lead",
-          "sourceLabel": "Google News / Epstein timeline and files",
-          "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5",
-          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
-        }
-      ],
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "evidenceBoundary": "A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.",
-      "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-epstein-files-2026-08-07-9c3b2188",
-      "powerDiffRoute": "power-diff.html#diff-consequence-epstein-files-2026-08-07-9c3b2188",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-epstein-files-2026-08-07-9c3b2188",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-epstein-files-2026-08-07-9c3b2188",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-epstein-files-2026-08-07-9c3b2188-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-epstein-files-2026-08-07-9c3b2188#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "title": "Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "title": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Clarksville%2C%20Tennessee%2C%20Woman%20Sentenced%20to%202%20Years%20in%20Federal%20Prison%20and%20Ordered%20to%20Pay%20%24291%2C470%20in%20Restitution%20for%20Defrauding%20Employer",
+      "consequenceSummary": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=After%20Runaway%20Ship%20Incident%20in%202024%20in%20Charleston%2C%20South%20Carolina%2C%20Vessel%20Operator%20and%20Chief%20Engineer%20Sentenced",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470",
+        "url": "https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -465,11 +27,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer",
+          "value": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470",
+          "sourceUrl": "https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -524,7 +86,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470",
+          "sourceUrl": "https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -535,7 +97,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470",
+          "sourceUrl": "https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -564,16 +126,16 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470",
+          "sourceUrl": "https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -583,26 +145,26 @@
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-adb50e08-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-adb50e08#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-9cf6f0f4-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-9cf6f0f4#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "title": "Convicted Felon Sentenced for Illegal Gun Possession",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-015a2455",
+      "title": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "Michael Ralph Collins, 33, a previously convicted felon residing in the District of Columbia, was sentenced in U.S. District Court today to 71 months in prison in connection with his unlawful possession of a loaded Ruger .45-caliber semiautomatic pistol that he stashed inside an open washing machine as he was pursued by police, announced U.S. Attorney Jeanine Ferris Pirro.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Convicted%20Felon%20Sentenced%20for%20Illegal%20Gun%20Possession",
+      "consequenceSummary": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-015a2455",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Ashland%20Man%20Sentenced%20for%20Receiving%20Child%20Sexual%20Abuse%20Material",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession",
+        "url": "https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -611,11 +173,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "Michael Ralph Collins, 33, a previously convicted felon residing in the District of Columbia, was sentenced in U.S. District Court today to 71 months in prison in connection with his unlawful possession of a loaded Ruger .45-caliber semiautomatic pistol that he stashed inside an open washing machine as he was pursued by police, announced U.S. Attorney Jeanine Ferris Pirro.",
+          "value": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -670,7 +232,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -681,7 +243,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -710,16 +272,16 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Convicted Felon Sentenced for Illegal Gun Possession”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Ashland Man Sentenced for Receiving Child Sexual Abuse Material”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -729,26 +291,26 @@
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-8418d23a-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-8418d23a#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-015a2455-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-015a2455#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "title": "Former USDA Program Director Sentenced in $400,000 Fraud Scheme",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "title": "Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "Kirk Perry, 62, a former United States Department of Agriculture (USDA) program director, was sentenced today to 24 months in prison in connection with a kickback scheme in which he and his nephew, Jamarea Grant, 32, of Cleveland, Ohio, conspired to bill the government nearly $400,000 for work that Grant did not actually perform, announced U.S. Attorney Jeanine Ferris Pirro.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Former%20USDA%20Program%20Director%20Sentenced%20in%20%24400%2C000%20Fraud%20Scheme",
+      "consequenceSummary": "EDISON JOVANNY DUTA PINDO, 43, a citizen of Ecuador unlawfully residing in the United States, has been charged in a seven-count indictment with offenses related to the theft of U.S. Treasury funds.",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Ecuadoran%20National%20Charged%20with%20Offenses%20Related%20to%20Theft%20of%20U.S.%20Treasury%20Funds",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme",
+        "url": "https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -757,11 +319,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "Kirk Perry, 62, a former United States Department of Agriculture (USDA) program director, was sentenced today to 24 months in prison in connection with a kickback scheme in which he and his nephew, Jamarea Grant, 32, of Cleveland, Ohio, conspired to bill the government nearly $400,000 for work that Grant did not actually perform, announced U.S. Attorney Jeanine Ferris Pirro.",
+          "value": "EDISON JOVANNY DUTA PINDO, 43, a citizen of Ecuador unlawfully residing in the United States, has been charged in a seven-count indictment with offenses related to the theft of U.S. Treasury funds.",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme",
+          "sourceUrl": "https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -816,7 +378,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme",
+          "sourceUrl": "https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -827,7 +389,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme",
+          "sourceUrl": "https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -856,16 +418,16 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme",
+          "sourceUrl": "https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Former USDA Program Director Sentenced in $400,000 Fraud Scheme”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -875,26 +437,26 @@
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-dc3f30ce-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-dc3f30ce#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-740ed0d1-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-740ed0d1#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-a2296147",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-a2296147",
-      "title": "Honduran National Sentenced for Illegal Reentry of a Removed Alien",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "title": "Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "NEW ORLEANS, LOUISIANA –UBALDO YASIR AMAYA-COLINDRES (“AMAYA-COLINDRES”) , age 27, a citizen of Honduras, was sentenced on August 6, 2026, to 10 months imprisonment by U.S. District Judge Eldon E. Fallon, after previously pleading guilty to illegal re-entry of a removed alien, in violation of Title 8, United States Code, Section 1326(a), announced U.S. Attorney David I. Courcelle. The Court also sentenced AMAYA-COLINDRES to one (1) year of supervised release and ordered him to pay a mandatory $100 special assessment fee.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-a2296147",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Honduran%20National%20Sentenced%20for%20Illegal%20Reentry%20of%20a%20Removed%20Alien",
+      "consequenceSummary": "Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud.",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Former%20Employee%20of%20Maryland%20State%20Contractor%20Pleads%20Guilty%20to%20Unemployment%20Benefits%20Fraud%20Charges",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0",
+        "url": "https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -903,11 +465,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "NEW ORLEANS, LOUISIANA –UBALDO YASIR AMAYA-COLINDRES (“AMAYA-COLINDRES”) , age 27, a citizen of Honduras, was sentenced on August 6, 2026, to 10 months imprisonment by U.S. District Judge Eldon E. Fallon, after previously pleading guilty to illegal re-entry of a removed alien, in violation of Title 8, United States Code, Section 1326(a), announced U.S. Attorney David I. Courcelle. The Court also sentenced AMAYA-COLINDRES to one (1) year of supervised release and ordered him to pay a mandatory $100 special assessment fee.",
+          "value": "Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud.",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0",
+          "sourceUrl": "https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -962,7 +524,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0",
+          "sourceUrl": "https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -973,7 +535,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0",
+          "sourceUrl": "https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1002,16 +564,16 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0",
+          "sourceUrl": "https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Honduran National Sentenced for Illegal Reentry of a Removed Alien”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1021,26 +583,26 @@
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-a2296147",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-a2296147",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-a2296147",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-a2296147",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-a2296147-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-a2296147#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-bc7b5d3f-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-bc7b5d3f#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-ab764161",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-ab764161",
-      "title": "Illegal alien brothers sentenced for gun possession in the Eastern District of Texas",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "title": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "A pair of illegal alien brothers have been sentenced to federal prison for firearms possession in the Eastern District of Texas, announced U.S. Attorney Jay R. Combs.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-ab764161",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Illegal%20alien%20brothers%20sentenced%20for%20gun%20possession%20in%20the%20Eastern%20District%20of%20Texas",
+      "consequenceSummary": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Former%20Magoffin%20County%20High%20School%20Teacher%20Sentenced%20for%20Online%20Enticement%20of%20a%20Minor",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas",
+        "url": "https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -1049,11 +611,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "A pair of illegal alien brothers have been sentenced to federal prison for firearms possession in the Eastern District of Texas, announced U.S. Attorney Jay R. Combs.",
+          "value": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1108,7 +670,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1119,7 +681,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1148,16 +710,16 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas",
+          "sourceUrl": "https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Illegal alien brothers sentenced for gun possession in the Eastern District of Texas”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1167,26 +729,26 @@
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-ab764161",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-ab764161",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-ab764161",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-ab764161",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-ab764161-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-ab764161#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-6a612d71-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-6a612d71#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "title": "Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "title": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "SALT LAKE CITY , Utah – The final defendant, an illegal alien from Honduras who was involved in a drug trafficking crime, was sentenced to time served (16.5 months’ imprisonment) after approximately 13,000 fentanyl pills were seized by law enforcement during a controlled buy and the execution of a search warrant in 2025.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Illegal%20Alien%20from%20Honduras%20Sentenced%20for%20Drug%20Trafficking%20in%20Utah",
+      "consequenceSummary": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Huntington%20Man%20Sentenced%20to%20Prison%20for%20Role%20in%20Drug%20Trafficking%20Organization",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah",
+        "url": "https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -1195,11 +757,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "SALT LAKE CITY , Utah – The final defendant, an illegal alien from Honduras who was involved in a drug trafficking crime, was sentenced to time served (16.5 months’ imprisonment) after approximately 13,000 fentanyl pills were seized by law enforcement during a controlled buy and the execution of a search warrant in 2025.",
+          "value": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah",
+          "sourceUrl": "https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1254,7 +816,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah",
+          "sourceUrl": "https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1265,7 +827,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah",
+          "sourceUrl": "https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1294,16 +856,16 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ut/pr/illegal-alien-honduras-sentenced-drug-trafficking-utah",
+          "sourceUrl": "https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1313,26 +875,26 @@
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-7e664ee5-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-7e664ee5#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-e90b9744-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-e90b9744#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "title": "Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-b6533383",
+      "title": "Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "HECTOR GOMEZ pleaded guilty to a federal charge of illegal possession of a firearm.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Illegal%20Alien%20Sentenced%20to%20Two%20and%20a%20Half%20Years%20in%20Federal%20Prison%20for%20Firing%20Shots%20Near%20Border%20Patrol%20Agents%20During%20Operation%20Midway%20Blitz%20in%20Chicago",
+      "consequenceSummary": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-b6533383",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Illegal%20Alien%20Convicted%20in%20Homeland%20Security%20Task%20Force%20Case%20Involving%20Deadly%20Alien%20Smuggling%20Operation",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sentenced-two-and-half-years-federal-prison-firing-shots-near-border",
+        "url": "https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -1341,11 +903,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "HECTOR GOMEZ pleaded guilty to a federal charge of illegal possession of a firearm.",
+          "value": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sentenced-two-and-half-years-federal-prison-firing-shots-near-border",
+          "sourceUrl": "https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1400,7 +962,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sentenced-two-and-half-years-federal-prison-firing-shots-near-border",
+          "sourceUrl": "https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1411,7 +973,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sentenced-two-and-half-years-federal-prison-firing-shots-near-border",
+          "sourceUrl": "https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1440,45 +1002,46 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sentenced-two-and-half-years-federal-prison-firing-shots-near-border",
+          "sourceUrl": "https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
         "What public or private money funds the action?",
         "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
+        "Who receives the direct and indirect financial benefit?",
+        "Which primary records would materially confirm, challenge or resolve the accountability record for security?"
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-4f6b78a3-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-4f6b78a3#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-b6533383-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-b6533383#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "title": "Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "title": "Jury convicts Army veteran of embellishing health issues to defraud the VA",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "The defendant was unlawfully present in the U.S. after previously being deported.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Illegal%20Alien%20With%20Sexual%20Assault%20Conviction%20Sentenced%20to%20Federal%20Prison%20for%20Unlawfully%20Re-Entering%20United%20States%20After%20Deportation",
+      "consequenceSummary": "A federal jury convicted a U.S. Army veteran of defrauding the U.S. Department of Veterans Affairs (VA) of over $170,000 in caregiver benefit payments that he was not entitled to receive.",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Jury%20convicts%20Army%20veteran%20of%20embellishing%20health%20issues%20to%20defraud%20the%20VA",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sexual-assault-conviction-sentenced-federal-prison-unlawfully-re",
+        "url": "https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -1487,11 +1050,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "The defendant was unlawfully present in the U.S. after previously being deported.",
+          "value": "A federal jury convicted a U.S. Army veteran of defrauding the U.S. Department of Veterans Affairs (VA) of over $170,000 in caregiver benefit payments that he was not entitled to receive.",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sexual-assault-conviction-sentenced-federal-prison-unlawfully-re",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1546,7 +1109,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sexual-assault-conviction-sentenced-federal-prison-unlawfully-re",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1557,7 +1120,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sexual-assault-conviction-sentenced-federal-prison-unlawfully-re",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1586,45 +1149,46 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ndil/pr/illegal-alien-sexual-assault-conviction-sentenced-federal-prison-unlawfully-re",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Illegal Alien With Sexual Assault Conviction Sentenced to Federal Prison for Unlawfully Re-Entering United States After Deportation”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Jury convicts Army veteran of embellishing health issues to defraud the VA”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
         "What public or private money funds the action?",
         "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
+        "Who receives the direct and indirect financial benefit?",
+        "Which primary records would materially confirm, challenge or resolve the accountability record for health?"
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-eea3ce1d-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-eea3ce1d#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-e6990f32-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-e6990f32#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "power-chain-consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "title": "Illegal aliens sentenced for methamphetamine trafficking and firearms offenses",
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "title": "Rio Grande City man sentenced for soliciting sexually explicit images of minors",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "consequenceSummary": "An illegal alien from Mexico was sentenced to 151 months in prison for drug trafficking.",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "reverseSearchRoute": "reverse-accountability-search.html?q=Illegal%20aliens%20sentenced%20for%20methamphetamine%20trafficking%20and%20firearms%20offenses",
+      "consequenceSummary": "A 32-year-old man has been ordered to federal prison for sexual exploitation of minors",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Rio%20Grande%20City%20man%20sentenced%20for%20soliciting%20sexually%20explicit%20images%20of%20minors",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ks/pr/illegal-alien-sentenced-methamphetamine-trafficking",
+        "url": "https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
@@ -1633,11 +1197,11 @@
           "id": "consequence",
           "label": "Observed consequence",
           "role": "Public effect being investigated",
-          "value": "An illegal alien from Mexico was sentenced to 151 months in prison for drug trafficking.",
+          "value": "A 32-year-old man has been ordered to federal prison for sexual exploitation of minors",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ks/pr/illegal-alien-sentenced-methamphetamine-trafficking",
+          "sourceUrl": "https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1692,7 +1256,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ks/pr/illegal-alien-sentenced-methamphetamine-trafficking",
+          "sourceUrl": "https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1703,7 +1267,7 @@
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ks/pr/illegal-alien-sentenced-methamphetamine-trafficking",
+          "sourceUrl": "https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         },
         {
@@ -1732,16 +1296,16 @@
           "id": "outcome",
           "label": "Measured outcome",
           "role": "What happened after implementation",
-          "value": "30-day consequence check due 2026-09-06: Was the action actually implemented, and which authority or institution carried it out?",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
           "state": "review-stage-record",
           "evidenceClassification": "official-or-primary-lead",
           "sourceLabel": "DOJ News",
-          "sourceUrl": "https://www.justice.gov/usao-ks/pr/illegal-alien-sentenced-methamphetamine-trafficking",
+          "sourceUrl": "https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors",
           "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
         }
       ],
       "unansweredQuestions": [
-        "What measurable public consequence followed “Illegal aliens sentenced for methamphetamine trafficking and firearms offenses”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Rio Grande City man sentenced for soliciting sexually explicit images of minors”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1751,12 +1315,451 @@
       ],
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-07-0aa1dddd-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-07-0aa1dddd#submit"
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-13c7fc4b-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-13c7fc4b#submit"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "title": "Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton",
+      "lane": "crime-state-overlap",
+      "laneTitle": "Crime State Overlap",
+      "consequenceSummary": "A South Carolina woman and an inmate at federal Corrections Institution (FCI) Hazelton have been indicted on prison contraband charges involving methamphetamine, announced U.S. Attorney Matthew L. Harvey.",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Two%20Charged%20After%20Alleged%20Meth%20Delivery%20Attempt%20During%20Prison%20Visitation%20at%20FCI%20Hazelton",
+      "source": {
+        "label": "DOJ News",
+        "url": "https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton",
+        "classification": "official-or-primary-lead",
+        "evidenceRoute": "network-maps.html"
+      },
+      "stages": [
+        {
+          "id": "consequence",
+          "label": "Observed consequence",
+          "role": "Public effect being investigated",
+          "value": "A South Carolina woman and an inmate at federal Corrections Institution (FCI) Hazelton have been indicted on prison contraband charges involving methamphetamine, announced U.S. Attorney Matthew L. Harvey.",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "proposal",
+          "label": "Proposal",
+          "role": "Who first proposed the action",
+          "value": "The proposer and originating record remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "drafting",
+          "label": "Drafting and design",
+          "role": "Who wrote or designed the mechanism",
+          "value": "The drafter, adviser or technical designer remains unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "promotion",
+          "label": "Promotion and influence",
+          "role": "Who promoted, lobbied for or shaped adoption",
+          "value": "Promotion, lobbying and influence records remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "authorization",
+          "label": "Authorization",
+          "role": "Who possessed legal, contractual or delegated authority",
+          "value": "Not yet resolved from a primary decision record · Not yet attached",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "funding",
+          "label": "Funding and contracts",
+          "role": "Who supplied money and through which instrument",
+          "value": "What public or private money funds the action?",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "implementation",
+          "label": "Implementation",
+          "role": "Who carried the decision into effect",
+          "value": "Unverified lead stage",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "benefit",
+          "label": "Benefit, cost and risk transfer",
+          "role": "Who gained, paid or absorbed risk",
+          "value": "Direct beneficiaries, affected groups and transferred risks remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "justification",
+          "label": "Stated justification",
+          "role": "What public benefit was promised",
+          "value": "Not yet extracted from a primary decision record · Not yet locked",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "outcome",
+          "label": "Measured outcome",
+          "role": "What happened after implementation",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        }
+      ],
+      "unansweredQuestions": [
+        "What measurable public consequence followed “Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton”, and did the evidence support the stated or implied justification?",
+        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
+        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "What public or private money funds the action?",
+        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+        "Who receives the direct and indirect financial benefit?"
+      ],
+      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+      "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-9c1855a0-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-9c1855a0#submit"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "title": "Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing",
+      "lane": "crime-state-overlap",
+      "laneTitle": "Crime State Overlap",
+      "consequenceSummary": "United States Attorney for the Southern District of New York, Jamie McDonald, Assistant Director in Charge of the Coast Guard Investigative Service (“CGIS”), Josh Packer, and Commissioner of the New York City Police Department (“NYPD”), Jessica S. Tisch, announced today that MANUEL HERNANDEZ has been charged with negligently causing the death of a five-month-old infant and a 27-year-old woman, after the vessel HERNANDEZ was piloting capsized in New York Harbor.",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=Unlicensed%20Tour%20Operator%20Charged%20For%20Causing%20Deaths%20Of%20Five-Month-Old%20Infant%20And%2027-Year-Old%20Woman%20In%20New%20York%20Harbor%20Boat%20Capsizing",
+      "source": {
+        "label": "DOJ News",
+        "url": "https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old",
+        "classification": "official-or-primary-lead",
+        "evidenceRoute": "network-maps.html"
+      },
+      "stages": [
+        {
+          "id": "consequence",
+          "label": "Observed consequence",
+          "role": "Public effect being investigated",
+          "value": "United States Attorney for the Southern District of New York, Jamie McDonald, Assistant Director in Charge of the Coast Guard Investigative Service (“CGIS”), Josh Packer, and Commissioner of the New York City Police Department (“NYPD”), Jessica S. Tisch, announced today that MANUEL HERNANDEZ has been charged with negligently causing the death of a five-month-old infant and a 27-year-old woman, after the vessel HERNANDEZ was piloting capsized in New York Harbor.",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "proposal",
+          "label": "Proposal",
+          "role": "Who first proposed the action",
+          "value": "The proposer and originating record remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "drafting",
+          "label": "Drafting and design",
+          "role": "Who wrote or designed the mechanism",
+          "value": "The drafter, adviser or technical designer remains unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "promotion",
+          "label": "Promotion and influence",
+          "role": "Who promoted, lobbied for or shaped adoption",
+          "value": "Promotion, lobbying and influence records remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "authorization",
+          "label": "Authorization",
+          "role": "Who possessed legal, contractual or delegated authority",
+          "value": "Not yet resolved from a primary decision record · Not yet attached",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "funding",
+          "label": "Funding and contracts",
+          "role": "Who supplied money and through which instrument",
+          "value": "What public or private money funds the action?",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "implementation",
+          "label": "Implementation",
+          "role": "Who carried the decision into effect",
+          "value": "Unverified lead stage",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "benefit",
+          "label": "Benefit, cost and risk transfer",
+          "role": "Who gained, paid or absorbed risk",
+          "value": "Direct beneficiaries, affected groups and transferred risks remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "justification",
+          "label": "Stated justification",
+          "role": "What public benefit was promised",
+          "value": "Not yet extracted from a primary decision record · Not yet locked",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "outcome",
+          "label": "Measured outcome",
+          "role": "What happened after implementation",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        }
+      ],
+      "unansweredQuestions": [
+        "What measurable public consequence followed “Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing”, and did the evidence support the stated or implied justification?",
+        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
+        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "What public or private money funds the action?",
+        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+        "Who receives the direct and indirect financial benefit?"
+      ],
+      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+      "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-5de09a55-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-5de09a55#submit"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "power-chain-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "title": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen",
+      "lane": "crime-state-overlap",
+      "laneTitle": "Crime State Overlap",
+      "consequenceSummary": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity.",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "reverseSearchRoute": "reverse-accountability-search.html?q=USAO-KS%20files%20denaturalization%20case%20against%20man%20ordered%20deported%20then%20used%20a%20false%20identity%20to%20become%20a%20U.S.%20citizen",
+      "source": {
+        "label": "DOJ News",
+        "url": "https://www.justice.gov/usao-ks/pr/usao-ks-files-denaturalization-case-against-man-ordered-deported-then-used-false",
+        "classification": "official-or-primary-lead",
+        "evidenceRoute": "network-maps.html"
+      },
+      "stages": [
+        {
+          "id": "consequence",
+          "label": "Observed consequence",
+          "role": "Public effect being investigated",
+          "value": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity.",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/usao-ks-files-denaturalization-case-against-man-ordered-deported-then-used-false",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "proposal",
+          "label": "Proposal",
+          "role": "Who first proposed the action",
+          "value": "The proposer and originating record remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "drafting",
+          "label": "Drafting and design",
+          "role": "Who wrote or designed the mechanism",
+          "value": "The drafter, adviser or technical designer remains unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "promotion",
+          "label": "Promotion and influence",
+          "role": "Who promoted, lobbied for or shaped adoption",
+          "value": "Promotion, lobbying and influence records remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "authorization",
+          "label": "Authorization",
+          "role": "Who possessed legal, contractual or delegated authority",
+          "value": "Not yet resolved from a primary decision record · Not yet attached",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "funding",
+          "label": "Funding and contracts",
+          "role": "Who supplied money and through which instrument",
+          "value": "What public or private money funds the action?",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/usao-ks-files-denaturalization-case-against-man-ordered-deported-then-used-false",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "implementation",
+          "label": "Implementation",
+          "role": "Who carried the decision into effect",
+          "value": "Unverified lead stage",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/usao-ks-files-denaturalization-case-against-man-ordered-deported-then-used-false",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "benefit",
+          "label": "Benefit, cost and risk transfer",
+          "role": "Who gained, paid or absorbed risk",
+          "value": "Direct beneficiaries, affected groups and transferred risks remain unresolved.",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "justification",
+          "label": "Stated justification",
+          "role": "What public benefit was promised",
+          "value": "Not yet extracted from a primary decision record · Not yet locked",
+          "state": "unresolved",
+          "evidenceClassification": "missing-record",
+          "sourceLabel": "",
+          "sourceUrl": "",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        },
+        {
+          "id": "outcome",
+          "label": "Measured outcome",
+          "role": "What happened after implementation",
+          "value": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+          "state": "review-stage-record",
+          "evidenceClassification": "official-or-primary-lead",
+          "sourceLabel": "DOJ News",
+          "sourceUrl": "https://www.justice.gov/usao-ks/pr/usao-ks-files-denaturalization-case-against-man-ordered-deported-then-used-false",
+          "rule": "This stage identifies a documented role or an explicit evidence gap. It does not infer authority from access, association or proximity."
+        }
+      ],
+      "unansweredQuestions": [
+        "What measurable public consequence followed “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen”, and did the evidence support the stated or implied justification?",
+        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
+        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
+        "Which groups carry the cost, risk, restriction or unintended consequence?",
+        "What public or private money funds the action?",
+        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
+        "Who receives the direct and indirect financial benefit?",
+        "Which primary records would materially confirm, challenge or resolve the accountability record for identity?"
+      ],
+      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+      "operatingRule": "Authority, funding, implementation and benefit must be separately evidenced. A relationship or meeting cannot substitute for proof of decision authority.",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "redTeamMirrorRoute": "red-team-mirror.html#red-team-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-a0e61bfe-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-a0e61bfe#submit"
     }
   ]
 }

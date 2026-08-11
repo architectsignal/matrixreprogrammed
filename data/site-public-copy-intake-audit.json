@@ -3,11 +3,11 @@
   "summary": {
     "ok": false,
     "intakeOk": true,
-    "updated": "2026-08-09T05:05:35.897Z",
-    "filesScanned": 6919,
-    "highIssues": 4152,
+    "updated": "2026-08-11T05:08:16.396Z",
+    "filesScanned": 6954,
+    "highIssues": 4153,
     "reviewIssues": 15,
-    "intakeAreas": 2263,
+    "intakeAreas": 2269,
     "weakIntakeAreas": 0
   },
   "issues": [
@@ -806,12 +806,6 @@
     {
       "severity": "high",
       "file": "_site/black-file-theory.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/black-file.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     },
@@ -2155,12 +2149,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/daily-epstein-update.html",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/daily-investigation-conclusions.html",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2719,18 +2707,6 @@
     },
     {
       "severity": "high",
-      "file": "_site/data/daily-epstein-update.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
-      "file": "_site/data/daily-investigation-conclusions.json",
-      "pattern": "/NaN/i",
-      "note": "Potentially visible internal, broken, or author-facing text."
-    },
-    {
-      "severity": "high",
       "file": "_site/data/daily-power-conclusions.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -2983,6 +2959,12 @@
     },
     {
       "severity": "high",
+      "file": "_site/data/evidence-half-life.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
       "file": "_site/data/evidence-network-map.json",
       "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
@@ -3009,6 +2991,24 @@
       "severity": "high",
       "file": "_site/data/evidence-timeline.json",
       "pattern": "/\\[object Object\\]/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/evidence-timeline.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/evidence-vault.json",
+      "pattern": "/NaN/i",
+      "note": "Potentially visible internal, broken, or author-facing text."
+    },
+    {
+      "severity": "high",
+      "file": "_site/data/evidence-weighted-relationship-graph.json",
+      "pattern": "/NaN/i",
       "note": "Potentially visible internal, broken, or author-facing text."
     }
   ],
@@ -6612,6 +6612,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/23-55704.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/23-wap-2023.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6752,6 +6759,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/cc-2025-0631.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/centers-for-medicare-and-medicaid-services.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6871,6 +6885,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/entity-timelines/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/entity-timelines/gilead-tenofovir-cases.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -6893,6 +6914,13 @@
     },
     {
       "file": "_site/entity-timelines/homeland-security-department.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-timelines/in-re-koi-design-llc-v-marron-lawyers-apc.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -7054,6 +7082,13 @@
     },
     {
       "file": "_site/entity-timelines/supreme-court-of-pennsylvania.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "_site/entity-timelines/supreme-court-of-puerto-rico.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -9895,6 +9930,13 @@
       "status": "ok"
     },
     {
+      "file": "_site/probability-machine.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
       "file": "_site/probability-snapshot.html",
       "hasBoundary": true,
       "hasAction": true,
@@ -10414,13 +10456,6 @@
     },
     {
       "file": "_site/site-population-audit.html",
-      "hasBoundary": true,
-      "hasAction": true,
-      "hasFallback": true,
-      "status": "ok"
-    },
-    {
-      "file": "_site/source-cards.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,
@@ -17869,6 +17904,13 @@
     },
     {
       "file": "site-intelligence-system-audit.html",
+      "hasBoundary": true,
+      "hasAction": true,
+      "hasFallback": true,
+      "status": "ok"
+    },
+    {
+      "file": "source-cards.html",
       "hasBoundary": true,
       "hasAction": true,
       "hasFallback": true,

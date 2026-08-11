@@ -1,6 +1,6 @@
 # Matrix Reprogrammed Weekly Signal Drop
 
-Generated: 2026-08-09T05:02:58.227Z
+Generated: 2026-08-11T05:05:37.144Z
 
 ## Open Routes
 
@@ -11,103 +11,103 @@ Generated: 2026-08-09T05:02:58.227Z
 
 ## Latest Drops
 
-### For Brazil’s Indigenous youth, visibility is resistance
-- Lane: War Machine And Intelligence State
-- Date: 2026-08-08T12:00:00.000Z
-- Source: https://news.un.org/feed/view/en/story/2026/08/1168097
-As climate change reshapes Indigenous territories across Brazil, a new generation is turning to culture and digital platforms to defend their lands and their future.
-### Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov)
+### Virginia Giuffre Part 01 - vault.fbi.gov
 - Lane: Declassified Files And Public Archives
-- Date: 2026-08-07T22:12:41.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5
-Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices U.S. Department of the Treasury (.gov)
-### Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-07T17:30:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fV0ZsRWo2dlNxVzdTQXFDTzBEWklsNjVWZFNsWXRaX2dwZ2NVaXRWUVJicHFzQVZiTElpYlhCQWY3SmFMSEVGNWFRbEY0MGEwX0ppa2k1X01PTzh1LVoxN3VB?oc=5
-Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks U.S. Department of the Treasury (.gov)
-### Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-07T17:30:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5Jc05TYUYteDl6MENhdFctYUJaeVIwSU9ieEZrU2JQS21YcWN5TGJDLVlrbUFuYjdmMkNMV3hpRmZqYllGbmZtdTV0WnpDaTZCa3hHNWw1N0RjbFoyblFCejNn?oc=5
-Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance U.S. Department of the Treasury (.gov)
-### Treasury Continues to Follow the Money in Minnesota to Eliminate Fraud - U.S. Department of the Treasury (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-07T17:00:00.000Z
-- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5dmhZUzFZdDRYcmhTTlY2a3FwWDRwU25PRmNIc1pSVW5INWNtdXF6Rlk5dXA1Yjl6T1lOQlMtQjR0bVFRWXBUUV9PWTR6UUR5WC1HZ3o5SU9kWU1LcjZVMTBn?oc=5
-Treasury Continues to Follow the Money in Minnesota to Eliminate Fraud U.S. Department of the Treasury (.gov)
-### Untitled - FBI (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-07T16:58:14.000Z
-- Source: https://news.google.com/rss/articles/CBMivwJBVV95cUxOUnQ0ejhzSE1uUXZWZ0Z3MVZYYldpUjhxTHdzNWl3SmpvLVZ2SkxwbDh3WnpYOGJfLWptMU93Q2tiNG9aQ2xLdm5LQVFMWE9fZ3ZPR1ZPNDlTRFBTdTV6RHUwTFpwNGo0aHBBYlZkTlR3QTlyZldseFAxM1g4dnRNalhfXzVTU0Joa3RZUER0R1NycVRtZG5lSXhjQlVVdHJGWkRXbUtad2xkLUZxaEVKbGg5TjZqb1B2MmlIVm1oSmNlalo1dXhPSkZKLXBNWGtXdTRoUUZQV2l1dl9seG01OWNzLXNWNTBIVXMtcDRLcHp0TWZyUHlOWlVIaGtxbWRNYmNsbzJxc3RBTFl1VmIzdVJxNktaeDJTQ1lKanpvODhHY0x0dDlDOElBRjF0V0dSdEY5U2IyV2VWanNBWXM4?oc=5
-Untitled FBI (.gov)
-### Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 - FBI (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-07T16:56:11.000Z
-- Source: https://news.google.com/rss/articles/CBMirwJBVV95cUxPLWpWZlhXdE0xSDdhT2VhbFoxcEdTN0trZ3p5QTRrQU1fMWNxS3BIV2Ftc2pVbV9FNUJPWk1ILXRBN1RzcW9za054TGdmMldvRWZHQTB0R3QxVndEd0kxRE94T2FQZ0thUlc2VTA0dTVoZ2F4Zk1sT0JhOFBlQy1EdjFaSlhodkpjenBUdVNKbWp6QThZQjZWSy1rSnRwUVBTS3dYaGtfUGlsVjNNSTlEcW90WXctTVpDM3h3STlZMFoteDFUWHRPcXZFeW56ak0wRl8wLXFYTThuaXc4bHFVNHota3BBMFNtZ3NnVVF6bDBxanFtbm9GOF9aWEFrSTc3N1djNjhHZi1sQmcwV3E5X3BTS3ljN2JUYXZCRkxHUHlxRkNXZm1IaG1IenluaHc?oc=5
-Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 FBI (.gov)
-### Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 - FBI (.gov)
-- Lane: Declassified Files And Public Archives
-- Date: 2026-08-07T16:56:11.000Z
-- Source: https://news.google.com/rss/articles/CBMirwJBVV95cUxQdHA5R3FUZ2N1ajkzOXB1MU9KaUJlcmU2R2dfZlBmc1hHY1NPdjBXWThMbjgtV0Jxck9rNWlWbFhONnVVc3J4VXM1SV81bTE4cTFlTU5reE9DODBVaHVZQmhzOXJpaHd3RE1ZR1c1Y0FJazdfVkF3MUkzejROcjhZT19xUlVaZG5yemE4WlA5ZWFxVWwwOEdock01ZzU2N0RRaWhDNWZXTWV6LTAzNTlLd195eGFWVFNfSVFYZzhfZHhJWmMwcXpaYUtTeWx4bllqSjV1NzBQWXlmbEgxSmJXbnhSbTBBc2s3OTZSZFJRd1F3eExTUFlZZHJzV0hSWkJsVnhvc3BkOXNyN083aXFqZzZLRnpNZU1QYzF3enpxTEhaVWhKWDVDNnhzaVdheG8?oc=5
-Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 FBI (.gov)
-### Jeffrey Epstein’s fortune: Who gets the money? - NewsNation
+- Date: 2026-08-10T19:52:03.000Z
+- Source: https://news.google.com/rss/articles/CBMid0FVX3lxTE8zWW1TOXF5Mml0R1lkSnViTUwxM1ZaMzZUbGlkamFueTV3UnRBcXZwWTdKZUxaeTFVYXV0RnVya2tiX3VEazdZUzRVQWEtY1BSbUNMN1R2d1o0LUc5YUpOUDM3NGhLTEJXdVgyNmoyOEh5UTRRNVh3?oc=5
+Virginia Giuffre Part 01 vault.fbi.gov
+### An arts school where Epstein allegedly preyed on students reveals decades of abuse - Oregon Public Broadcasting - OPB
 - Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-08-07T16:52:45.000Z
-- Source: https://news.google.com/rss/articles/CBMieEFVX3lxTE8tcW1oNXlHcldMSjlaenFvaDdOaFFZbFl3X0stbXJjSlNFZ1Q2OWxVNnE1VWRlSDFXMjgxajc1UU5pSGVxVklKb3NlNmZaWVZlWV9qUkowM2tSZDZkSkhJYW5mQkhsZjg1Q1dWTHRvMXhlbU5aODJLYtIBfkFVX3lxTFBtckZWS1ZZNzRmYk1aTm14TkotOHI1c0xZOXJRWWJYMHhqTkxRTWdvM21PdDNRUHR0c2dsTzlRLWk4YW1qeWVhOVJseUczY0VTbDQyY0dCazljdGxxWjVMeEF0ODdJdXd3WUVFWVNrbXg0NkI3eWRuMmVUX05HQQ?oc=5
-Jeffrey Epstein’s fortune: Who gets the money? NewsNation
-### Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony - New York Post
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-08-07T14:15:00.000Z
-- Source: https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTTd6U0tMV3Q1bzNSTGw3d245ZjktQWNsaE1ueGY2dkV3Q3JreExOMG5tNEpaUUoxNnZxNnczLWdTOGVMdFdObVRBVnloR0dCUXEyZDVUWnBuSWJIMmFoWThzZm9ja0Z1TW5jcWZwNFl1M2lUUHduRVpMSGtpb1JENHZVT3hRZ3RFYlQtSzMxZ2hJZEdjajVJazg0VDQ1U1ZaakJtamZ2cjZ4amswQnVmSDVVRG5LN1JCS21kNnB3MEZOR0VwTElVaXRoQmlpNDV2ZVI4RGdDZXNQVDdZeThOdXVrMA?oc=5
-Rep. Robert Garcia demands Goldman Sachs cut ties with Kathryn Ruemmler over Epstein testimony New York Post
-### Exclusive: House Democrat urges Goldman Sachs to cut ties with former top lawyer over Epstein scrutiny - KVOA
-- Lane: Epstein Files, Timeline And Court Records
-- Date: 2026-08-07T14:07:28.000Z
-- Source: https://news.google.com/rss/articles/CBMiiAJBVV95cUxNRmVPZWVMcWJiZ040M2hZSDFkN3dzX3ItRVlKQXg1d1FLWkZ4b0JremxNNGJkRFplN3phcjFNT3RoVFVqOHBOdk05V2h6N2c3VDh5cXNQbHhwS29Zd2hnTUstNXFzRV9uTm9ITUNjVmx5bzhUZ1JqOW5JVUowcXRPRUxTR29PWFVxWGxibkoyOG9Bd2w1TjlZVkRqQ1oxQ2gybnktSDczSUthU0hHb1dqSmhVMkh0bFhGaGNhZndaMnZ4dnBBdngyekFTT2Mxdno5T2NOWVVPblVhQWs0NVU0b0RLRWRvX1ZsMEVoLWVseTROQ1NOLUx0cmlXaVhGRDYtUXBwX1BYeXU?oc=5
-Exclusive: House Democrat urges Goldman Sachs to cut ties with former top lawyer over Epstein scrutiny KVOA
-### August Underway with 271 New Federal Immigration Cases in Western District of Texas
+- Date: 2026-08-10T17:40:36.000Z
+- Source: https://news.google.com/rss/articles/CBMivwFBVV95cUxNdjZWT2EyaE9pbGtaRVZwVkhlUzczaUVoYUphaW5KbU10REdiUkZKU3pWU3ZBSmJhYkpfa2gyczMxd3ZXWENoSzZpbjlpeWZKTVJoWGt1TWc1bV92VE5VM3k5ODhfZGRINXo5VUtfb21qMmpzdEZLT1pyUDZ3Vk5PWVFJNFZDMHlGSXpCU2hyRG9nV2FtVjA4QzVLN1haVzhadGprMUgwaEhVNGNBejktRUgyV0U4djg4UzB5c0dKRQ?oc=5
+An arts school where Epstein allegedly preyed on students reveals decades of abuse Oregon Public Broadcasting - OPB
+### Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony - U.S. Department of the Treasury (.gov)
+- Lane: Declassified Files And Public Archives
+- Date: 2026-08-10T17:05:11.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wamQ2NFA5d1Rld3lGM1UtMno3c0RGNjJNQm5HWWNuRy1DaEJHZ3Z6S0wwNmMtVUtMaG5WQV90QU83Nkh1R0w1WUNNNDQ5OTdhUEtBTnh1ZGFVXzBQd3RPVEFB?oc=5
+Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony U.S. Department of the Treasury (.gov)
+### After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-wdtx/pr/august-underway-271-new-federal-immigration-cases-western-district-texas
-Federal prosecutors in the Western District of Texas filed 271 new immigration and immigration-related criminal cases from July 31 through August 6
-### Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief
+After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced
+### Ashland Man Sentenced for Receiving Child Sexual Abuse Material
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-wdky/pr/clarksville-tennessee-woman-sentenced-2-years-federal-prison-and-ordered-pay-291470
-Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer
-### Convicted Felon Sentenced for Illegal Gun Possession
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material
+Ashland Man Sentenced for Receiving Child Sexual Abuse Material
+### Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession
-Michael Ralph Collins, 33, a previously convicted felon residing in the District of Columbia, was sentenced in U.S. District Court today to 71 months in prison in connection with his unlawful possession of a loaded Ruger .45-caliber semiautomatic pistol that he stashed inside an open washing machine as he was pursued by police, announced U.S. Attorney Jeanine Ferris Pirro.
-### Federal Jury Finds Robert Ivers Guilty on All Counts in Threats Against United States Judge and Trial Witness
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds
+EDISON JOVANNY DUTA PINDO, 43, a citizen of Ecuador unlawfully residing in the United States, has been charged in a seven-count indictment with offenses related to the theft of U.S. Treasury funds.
+### Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-mn/pr/federal-jury-finds-robert-ivers-guilty-all-counts-threats-against-united-states-judge
-Federal Jury Finds Robert Ivers Guilty on All Counts in Threats Against United States Judge and Trial Witness
-### Former USDA Program Director Sentenced in $400,000 Fraud Scheme
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud
+Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud.
+### Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme
-Kirk Perry, 62, a former United States Department of Agriculture (USDA) program director, was sentenced today to 24 months in prison in connection with a kickback scheme in which he and his nephew, Jamarea Grant, 32, of Cleveland, Ohio, conspired to bill the government nearly $400,000 for work that Grant did not actually perform, announced U.S. Attorney Jeanine Ferris Pirro.
-### Honduran National Sentenced for Illegal Reentry of a Removed Alien
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor
+Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor
+### Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-edla/pr/honduran-national-sentenced-illegal-reentry-removed-alien-0
-NEW ORLEANS, LOUISIANA –UBALDO YASIR AMAYA-COLINDRES (“AMAYA-COLINDRES”) , age 27, a citizen of Honduras, was sentenced on August 6, 2026, to 10 months imprisonment by U.S. District Judge Eldon E. Fallon, after previously pleading guilty to illegal re-entry of a removed alien, in violation of Title 8, United States Code, Section 1326(a), announced U.S. Attorney David I. Courcelle. The Court also sentenced AMAYA-COLINDRES to one (1) year of supervised release and ordered him to pay a mandatory $100 special assessment fee.
-### Illegal alien breaks law, plays the victim, is found guilty, and sent to federal prison
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization
+Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization
+### Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-sdtx/pr/illegal-alien-breaks-law-plays-victim-found-guilty-and-sent-federal-prison
-A 37-year-old Mexican national has been sentenced for illegally reentering the country without authorization.
-### Illegal alien brothers sentenced for gun possession in the Eastern District of Texas
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien
+Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens
+### Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-edtx/pr/illegal-alien-brothers-sentenced-gun-possession-eastern-district-texas
-A pair of illegal alien brothers have been sentenced to federal prison for firearms possession in the Eastern District of Texas, announced U.S. Attorney Jay R. Combs.
-### Illegal Alien from Ecuador Caught with Hidden App Containing Child Pornography, Will Spend 10 Years in Federal Prison
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-wdva/pr/illegal-alien-mexico-pleads-guilty-illegally-reentering-united-states-and-possessing
+ROANOKE, Va. – A Mexican citizen, living illegally in Danville, Virginia, pled guilty to illegally reentering the United States after a prior removal and unlawfully possessing a firearm as a felon and alien illegally in the United States.Fernando Bahena Ruiz, 28, was charged based on an incident that occurred March 25, 2026.
+### Illinois Man Accused of Sex Trafficking of Woman Who Later Fatally Overdosed
 - Lane: Crime State Overlap
-- Date: 2026-08-07T12:00:00.000Z
-- Source: https://www.justice.gov/usao-wdtx/pr/illegal-alien-ecuador-caught-hidden-app-containing-child-pornography-will-spend-10
-Jefferson Chancay-Sanchez, an illegal alien from Ecuador, was sentenced in Del Rio to 10 years in federal prison for possessing child sexual abuse material
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-edmo/pr/illinois-man-accused-sex-trafficking-woman-who-later-fatally-overdosed
+Jared Anders was indicted on three felonies: sex trafficking, use of interstate commerce with intent to distribute prostitution and use of interstate facilities to promote prostitution.
+### Jury convicts Army veteran of embellishing health issues to defraud the VA
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va
+A federal jury convicted a U.S. Army veteran of defrauding the U.S. Department of Veterans Affairs (VA) of over $170,000 in caregiver benefit payments that he was not entitled to receive.
+### Justice Department Secures $150,000 Settlement in Sexual Harassment Lawsuit Against Kentucky Landlord
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/opa/pr/justice-department-secures-150000-settlement-sexual-harassment-lawsuit-against-kentucky
+The Justice Department announced today that Danny Bell, the owner and manager of residential rental properties in Somerset, Kentucky, agreed to pay $150,000 to resolve a lawsuit alleging that he sexually harassed female tenants in violation of the Fair Housing Act.
+### Middle District of Florida Agencies Receive $3.5 Million to Improve Safety
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-mdfl/pr/middle-district-florida-agencies-receive-35-million-improve-safety
+Tampa, FL ―The Bureau of Justice Assistance, a component under the Department of Justice’s Office of Justice Programs, awarded almost $290 million to support state, local, and tribal governments in criminal justice activities to keep American communities safe. More than $3.5 million of this amount has been awarded to law enforcement agencies throughout the Middle District of Florida.
+### New Orleans Man Indicted for Methamphetamine Distribution
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-edla/pr/new-orleans-man-indicted-methamphetamine-distribution
+NEW ORLEANS, LOUISIANA – On August 7, 2026, a federal grand jury returned a three-count indictment against DEXTER MONTGOMERY (“MONTGOMERY”) , age 51, a resident of New Orleans, charging him with violating the Federal Controlled Substances Act, announced United States Attorney David I. Courcelle.
+### One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-dc/pr/one-year-after-federal-law-enforcement-surge-dc-safer-crime-declines-sharply
+Today, U.S. Attorney Jeanine Ferris Pirro marked the one-year anniversary of President Trump’s Federal Law Enforcement Surge in the District of Columbia. The surge implemented a significant increase in federal law enforcement resources, bolstering our teams with additional agents, advanced tools, and a no‑nonsense mandate that renewed the focus on cracking down on violent offenders, dismantling criminal networks, and restoring safety to District neighborhoods.
+### Rio Grande City man sentenced for soliciting sexually explicit images of minors
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors
+A 32-year-old man has been ordered to federal prison for sexual exploitation of minors
+### Senate Confirms Timothy VerHey as United States Attorney for the Western District of Michigan
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-wdmi/pr/2026_0810_VerHey_Senate_Confirmation
+Senate Confirms Timothy VerHey as United States Attorney for the Western District of Michigan
+### Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton
+- Lane: Crime State Overlap
+- Date: 2026-08-10T12:00:00.000Z
+- Source: https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton
+A South Carolina woman and an inmate at federal Corrections Institution (FCI) Hazelton have been indicted on prison contraband charges involving methamphetamine, announced U.S. Attorney Matthew L. Harvey.

@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-08-09T05:04:52.137Z
+Generated: 2026-08-11T05:07:32.090Z
 
 ## Daily Revelation Report
 
-For Brazil’s Indigenous youth, visibility is resistance
+Virginia Giuffre Part 01 - vault.fbi.gov
 
 Source: daily-command-brief.html
 

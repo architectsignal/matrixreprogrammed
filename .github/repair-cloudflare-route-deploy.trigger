@@ -1,3 +1,4 @@
 RUN ONE-SHOT ROUTE-SAFE PRODUCTION REPAIR
-Requested: 2026-08-11
-Reason: controlled production deploy reached Worker upload but failed while trying to rewrite existing Cloudflare zone routes with an account-scoped token
+Requested: 2026-08-11T18:52:00Z
+Attempt: corrected-helper-v2
+Reason: preserve existing Cloudflare zone routes while deploying the latest Worker, assets, bindings and schedules through the normal controlled release lane

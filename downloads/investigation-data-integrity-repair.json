@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-11T05:08:28.872Z",
+  "generatedAt": "2026-08-11T06:10:16.754Z",
   "sourceState": {
     "sources": 12,
     "created": 0,
-    "lastAttemptRepaired": 0
+    "lastAttemptRepaired": 12
   },
   "ledger": {
-    "before": 2500,
+    "before": 2859,
     "active": 2500,
-    "archivedThisRun": 0,
+    "archivedThisRun": 359,
     "duplicateIdsRepaired": 0,
     "invalidUrlsArchived": 0,
     "activeLimit": 2500,
@@ -17,7 +17,7 @@
     "fullMissionConclusions": 2500
   },
   "conclusionProducts": {
-    "dailyFindingsEnriched": 24,
+    "dailyFindingsEnriched": 26,
     "weeklyFindingsEnriched": 48
   },
   "boundary": "This repair normalises provenance, active-ledger capacity and user-facing meaning. It does not change a legal allegation into an established fact or remove archived evidence from the historical record."

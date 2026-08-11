@@ -1,10 +1,10 @@
 {
   "ok": true,
   "kind": "daily",
-  "generatedAt": "2026-08-10T06:47:05.856Z",
+  "generatedAt": "2026-08-11T06:09:38.710Z",
   "period": {
-    "start": "2026-08-08T06:47:06.971Z",
-    "end": "2026-08-10T06:47:05.856Z",
+    "start": "2026-08-09T06:09:40.266Z",
+    "end": "2026-08-11T06:09:38.710Z",
     "days": 2
   },
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
@@ -21,63 +21,63 @@
     "sourcesScheduled": 12,
     "sourcesFetched": 11,
     "sourceFailures": 1,
-    "changedSources": 10,
-    "findingsInWindow": 340,
+    "changedSources": 9,
+    "findingsInWindow": 593,
     "establishedWrongdoingFindings": 0,
     "officialActionFindings": 0,
     "documentOrLeakLeads": 0,
-    "meaningfulSourceChanges": 6
+    "meaningfulSourceChanges": 10
   },
   "topConclusion": "The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.",
   "patterns": {
     "byLane": {
-      "money-contracts": 48,
-      "epstein-disclosure": 80,
-      "international-corruption": 44,
-      "government-enforcement": 73,
-      "oversight-audit": 95
+      "money-contracts": 88,
+      "international-corruption": 88,
+      "government-enforcement": 145,
+      "oversight-audit": 112,
+      "epstein-disclosure": 160
     },
     "byStatus": {
-      "record-update": 216,
-      "established-wrongdoing": 64,
-      "official-enforcement": 22,
-      "official-charge-or-allegation": 2,
-      "official-audit-finding": 12,
-      "wrongdoing-lead": 23,
-      "document-release": 1
+      "record-update": 352,
+      "established-wrongdoing": 126,
+      "official-enforcement": 42,
+      "official-charge-or-allegation": 3,
+      "official-audit-finding": 23,
+      "wrongdoing-lead": 45,
+      "document-release": 2
     },
     "topWrongdoingIndicators": [
       {
         "term": "fraud",
-        "count": 25
+        "count": 49
       },
       {
         "term": "sanction",
-        "count": 20
+        "count": 40
       },
       {
         "term": "corruption",
-        "count": 2
+        "count": 4
       },
       {
         "term": "procurement fraud",
-        "count": 2
+        "count": 4
       },
       {
         "term": "convicted",
-        "count": 1
+        "count": 2
       },
       {
         "term": "indicted",
-        "count": 1
+        "count": 2
       },
       {
         "term": "misconduct",
-        "count": 1
+        "count": 2
       },
       {
         "term": "bribery",
-        "count": 1
+        "count": 2
       }
     ]
   },
@@ -609,25 +609,8 @@
         "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
       ],
       "questions": [],
-      "integrity": {
-        "id": "daily-7",
-        "title": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-        "route": "https://www.usaspending.gov/award/80NSSC26FA638",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-11-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
-        "sources": [
-          "https://www.usaspending.gov/award/80NSSC26FA638",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
       "whatWasFound": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration — TECPLUS RENEWAL POP: 11/1/26 - 10/31/27 · Amount: 107178.28 · Sub-agency: National Aeronautics and Space Administration",
       "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
       "investigativeLanes": [
@@ -651,9 +634,26 @@
       ],
       "sensitiveReviewRequired": false,
       "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-7",
+        "title": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
+        "route": "https://www.usaspending.gov/award/80NSSC26FA638",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
+        "supportingCount": 1,
+        "freshness": "2026-11-01T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/80NSSC26FA638",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
     },
     {
       "id": "b49c319c09a07b245b24f74a",
@@ -894,6 +894,78 @@
       }
     },
     {
+      "id": "366686df53f6dfd25d3f0ea4",
+      "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
+      "summary": "AGILENT LCMS-20464 CROSSLAB SILVER EXTENDED SERVICE AGREEMENT 10/01/2026-09/30/2027 · Amount: 63119.33 · Sub-agency: Department of Energy",
+      "published": "2026-10-01T00:00:00.000Z",
+      "fetchedAt": "2026-08-10T06:47:05.856Z",
+      "lane": "money-contracts",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceAuthority": "primary-official",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/89243326PFE000994",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "score": 18,
+      "wrongdoingIndicators": [],
+      "keywordMatches": [],
+      "establishes": "A dated source update exists and should be compared with prior records.",
+      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "questions": [],
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "whatWasFound": "AGILENT TECHNOLOGIES INC — Department of Energy — AGILENT LCMS-20464 CROSSLAB SILVER EXTENDED SERVICE AGREEMENT 10/01/2026-09/30/2027 · Amount: 63119.33 · Sub-agency: Department of Energy",
+      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+      "investigativeLanes": [
+        "money-contracts"
+      ],
+      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/89243326PFE000994",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-11",
+        "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
+        "route": "https://www.usaspending.gov/award/89243326PFE000994",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
+        "supportingCount": 1,
+        "freshness": "2026-10-01T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/89243326PFE000994",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
       "id": "c673456bbe77dbb29e43ac7d",
       "title": "BETTER DIRECT, LLC — Department of Energy",
       "summary": "REDSKY AND VOIP LICENSING FOR POP 10/1/26-9/30/27 · Amount: 41006.65 · Sub-agency: Department of Energy",
@@ -946,7 +1018,7 @@
       "childSafeguardingStatus": "not-applicable",
       "integrityVersion": "2.1.0",
       "integrity": {
-        "id": "daily-11",
+        "id": "daily-12",
         "title": "BETTER DIRECT, LLC — Department of Energy",
         "route": "https://www.usaspending.gov/award/89243326FFE400792",
         "classification": "record update",
@@ -964,78 +1036,6 @@
           "data/investigation-ledger.json"
         ]
       }
-    },
-    {
-      "id": "366686df53f6dfd25d3f0ea4",
-      "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
-      "summary": "AGILENT LCMS-20464 CROSSLAB SILVER EXTENDED SERVICE AGREEMENT 10/01/2026-09/30/2027 · Amount: 63119.33 · Sub-agency: Department of Energy",
-      "published": "2026-10-01T00:00:00.000Z",
-      "fetchedAt": "2026-08-10T06:47:05.856Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/89243326PFE000994",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "integrity": {
-        "id": "daily-12",
-        "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
-        "route": "https://www.usaspending.gov/award/89243326PFE000994",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-10-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
-        "sources": [
-          "https://www.usaspending.gov/award/89243326PFE000994",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "AGILENT TECHNOLOGIES INC — Department of Energy — AGILENT LCMS-20464 CROSSLAB SILVER EXTENDED SERVICE AGREEMENT 10/01/2026-09/30/2027 · Amount: 63119.33 · Sub-agency: Department of Energy",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/89243326PFE000994",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
     },
     {
       "id": "e3b055a4afb19163268d7257",
@@ -1063,25 +1063,8 @@
         "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
       ],
       "questions": [],
-      "integrity": {
-        "id": "daily-13",
-        "title": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
-        "route": "https://www.usaspending.gov/award/80NSSC26P1252",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-10-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
-        "sources": [
-          "https://www.usaspending.gov/award/80NSSC26P1252",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
       "whatWasFound": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration — PROVIDE TELEPHONIC SUPPORT BY PROFESSIONAL MENTAL HEALTH COUNSELORS TO NASA EMPLOYEES DURING \"AFTER-HOURS\" FOR NON-ROUTINE AND POTENTIALLY URGENT SITUATIONS. · Amount: 7800 · Sub-agency: National Aeronautics and Space Administration",
       "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
       "investigativeLanes": [
@@ -1105,9 +1088,26 @@
       ],
       "sensitiveReviewRequired": false,
       "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-13",
+        "title": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
+        "route": "https://www.usaspending.gov/award/80NSSC26P1252",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
+        "supportingCount": 1,
+        "freshness": "2026-10-01T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/80NSSC26P1252",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
     },
     {
       "id": "a103f2650e31fc92fa3688e6",
@@ -1514,6 +1514,330 @@
       }
     },
     {
+      "id": "source-change-82b0886fe4735164beacb291",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "itemUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-11T06:09:41.962Z",
+      "firstSeen": "2026-08-11T06:09:41.962Z",
+      "lastSeen": "2026-08-11T06:09:41.962Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ],
+      "integrity": {
+        "id": "daily-19",
+        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-11T06:09:41.962Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
+    },
+    {
+      "id": "source-change-6d75003b4825f307f6df306e",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "itemUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "lane": "government-enforcement",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-11T06:09:41.962Z",
+      "firstSeen": "2026-08-11T06:09:41.962Z",
+      "lastSeen": "2026-08-11T06:09:41.962Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ],
+      "integrity": {
+        "id": "daily-20",
+        "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-11T06:09:41.962Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "government-enforcement"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
+    },
+    {
+      "id": "source-change-611d1a7edb4b0b2535b9708c",
+      "sourceId": "uk-sfo-news",
+      "sourceLabel": "UK Serious Fraud Office — News And Communications",
+      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "itemUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "lane": "international-corruption",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: UK Serious Fraud Office — News And Communications",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-11T06:09:41.962Z",
+      "firstSeen": "2026-08-11T06:09:41.962Z",
+      "lastSeen": "2026-08-11T06:09:41.962Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ],
+      "integrity": {
+        "id": "daily-21",
+        "title": "content changed: UK Serious Fraud Office — News And Communications",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.gov.uk/government/organisations/serious-fraud-office",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "UK Serious Fraud Office — News And Communications; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-11T06:09:41.962Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.gov.uk/government/organisations/serious-fraud-office",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "international-corruption"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.gov.uk/government/organisations/serious-fraud-office"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
+    },
+    {
+      "id": "source-change-529f3ec81072aa54c5515b3e",
+      "sourceId": "eppo-news",
+      "sourceLabel": "European Public Prosecutor's Office — News",
+      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
+      "itemUrl": "https://www.eppo.europa.eu/media/news_en",
+      "lane": "international-corruption",
+      "laneTitle": "Source Change And Evidence Preservation",
+      "authority": "primary-official",
+      "title": "content changed: European Public Prosecutor's Office — News",
+      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "published": "2026-08-11T06:09:41.962Z",
+      "firstSeen": "2026-08-11T06:09:41.962Z",
+      "lastSeen": "2026-08-11T06:09:41.962Z",
+      "status": "source-change",
+      "evidenceGrade": "B",
+      "severity": 2,
+      "wrongdoingIndicators": [],
+      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecords": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "keywordMatches": [
+        "source change",
+        "hash",
+        "content changed"
+      ],
+      "integrity": {
+        "id": "daily-22",
+        "title": "content changed: European Public Prosecutor's Office — News",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.eppo.europa.eu/media/news_en",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "European Public Prosecutor's Office — News; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-11T06:09:41.962Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.eppo.europa.eu/media/news_en",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "international-corruption"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.eppo.europa.eu/media/news_en"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
+    },
+    {
       "id": "source-change-d8732adccaaac4ea6376d2ba",
       "sourceId": "doj-oig-reports",
       "sourceLabel": "U.S. Department of Justice Office of Inspector General — Reports",
@@ -1549,7 +1873,50 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "integrity": {
+        "id": "daily-23",
+        "title": "content changed: U.S. Department of Justice Office of Inspector General — Reports",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://oig.justice.gov/reports",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "U.S. Department of Justice Office of Inspector General — Reports; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-10T06:47:07.468Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://oig.justice.gov/reports",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "oversight-audit"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://oig.justice.gov/reports"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-c9bd018a6544006f1e1f3018",
@@ -1587,7 +1954,50 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "integrity": {
+        "id": "daily-24",
+        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-10T06:47:07.468Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "money-contracts"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-ec7f3126268880506fc4f0ed",
@@ -1625,7 +2035,50 @@
         "source change",
         "hash",
         "content changed"
-      ]
+      ],
+      "integrity": {
+        "id": "daily-25",
+        "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-10T06:47:07.468Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.sec.gov/enforcement-litigation/litigation-releases",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "government-enforcement"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.sec.gov/enforcement-litigation/litigation-releases"
+      ],
+      "nextQuestions": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     },
     {
       "id": "source-change-ea3afacb89f4f277c87d1a79",
@@ -1663,118 +2116,65 @@
         "source change",
         "hash",
         "content changed"
-      ]
-    },
-    {
-      "id": "source-change-8057d390af5011731564579c",
-      "sourceId": "treasury-ofac-recent-actions",
-      "sourceLabel": "U.S. Treasury OFAC — Recent Actions",
-      "sourceUrl": "https://ofac.treasury.gov/recent-actions",
-      "itemUrl": "https://ofac.treasury.gov/recent-actions",
-      "lane": "international-corruption",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: U.S. Treasury OFAC — Recent Actions",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-08-10T06:47:07.468Z",
-      "firstSeen": "2026-08-10T06:47:07.468Z",
-      "lastSeen": "2026-08-10T06:47:07.468Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
+      ],
+      "integrity": {
+        "id": "daily-26",
+        "title": "content changed: Federal Register — Latest Documents",
+        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
+        "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+        "classification": "source change",
+        "confidence": "medium-high",
+        "evidenceBasis": "Federal Register — Latest Documents; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-08-10T06:47:07.468Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+        "sources": [
+          "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      },
+      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "investigativeLanes": [
+        "Source Change And Evidence Preservation",
+        "oversight-audit"
+      ],
+      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
+      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest"
+      ],
+      "nextQuestions": [
         "Open the current source and identify the exact added, removed or altered record.",
         "Compare the preserved hashes and versions before drawing a substantive conclusion.",
         "Check for a replacement URL, correction notice, archive copy or official explanation."
       ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
-    },
-    {
-      "id": "source-change-871096b65a90301ef4a126c3",
-      "sourceId": "eppo-news",
-      "sourceLabel": "European Public Prosecutor's Office — News",
-      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
-      "itemUrl": "https://www.eppo.europa.eu/media/news_en",
-      "lane": "international-corruption",
-      "laneTitle": "Source Change And Evidence Preservation",
-      "authority": "primary-official",
-      "title": "content changed: European Public Prosecutor's Office — News",
-      "summary": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "published": "2026-08-10T06:47:07.468Z",
-      "firstSeen": "2026-08-10T06:47:07.468Z",
-      "lastSeen": "2026-08-10T06:47:07.468Z",
-      "status": "source-change",
-      "evidenceGrade": "B",
-      "severity": 2,
-      "wrongdoingIndicators": [],
-      "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "evidenceBoundary": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
-      "nextRecords": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "correctionRoute": {
-        "url": "contact.html",
-        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
-      },
-      "keywordMatches": [
-        "source change",
-        "hash",
-        "content changed"
-      ]
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0"
     }
   ],
   "changedSources": [
-    {
-      "label": "U.S. Department of Justice — Epstein Disclosures",
-      "lane": "epstein-disclosure",
-      "authority": "primary-official",
-      "url": "https://www.justice.gov/epstein/doj-disclosures",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.justice.gov/epstein/doj-disclosures",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 90490,
-      "bodyHash": "356d660b7be1896274c2c367ae151e0eec10570f8c13ecb1749a606f659e86d9",
-      "changed": true,
-      "itemCount": 80,
-      "error": "",
-      "resourceId": "investigation-source-doj-epstein-disclosures",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
     {
       "label": "U.S. Department of Justice — Justice News",
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.justice.gov/news",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.justice.gov/news",
       "contentType": "text/html",
-      "bytes": 2193,
-      "bodyHash": "7d163dd187f5bb8435d0f6c1cbab8457628c7eb8fc8692a0d6f0a3493b6fec09",
+      "bytes": 2195,
+      "bodyHash": "3837bd4aa6393cc03dded7b2280c10186fbd2274cf07cd4530051416f0bdadd9",
       "changed": true,
       "itemCount": 1,
       "error": "",
@@ -1788,13 +2188,13 @@
       "lane": "oversight-audit",
       "authority": "primary-official",
       "url": "https://oig.justice.gov/reports",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://oig.justice.gov/reports",
       "contentType": "text/html; charset=UTF-8",
       "bytes": 62537,
-      "bodyHash": "e60004a109ae95cc0b07e1dc5e190b268955fd91e90d7b7877c35bd1392da14a",
+      "bodyHash": "e46bbcf3039124e7d50b7888d8f78e3830f4e90d066cddb0d944b16b4dce8974",
       "changed": true,
       "itemCount": 14,
       "error": "",
@@ -1808,13 +2208,13 @@
       "lane": "money-contracts",
       "authority": "primary-official",
       "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
       "contentType": "application/atom+xml",
-      "bytes": 22841,
-      "bodyHash": "c32e63db5c9c7fd9862968bfc4d8da1b971436043d920552b6ad10a8043532ae",
+      "bytes": 23443,
+      "bodyHash": "80f62f6dc8f37185ad15efcf410e25932c5bb2e5955adbbf8779b58eed77fe33",
       "changed": true,
       "itemCount": 40,
       "error": "",
@@ -1828,15 +2228,15 @@
       "lane": "government-enforcement",
       "authority": "primary-official",
       "url": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 230565,
-      "bodyHash": "d64e31f7bbaf60a57db1695e5141f6cafa946aa744de124a069418dda846f637",
+      "bytes": 230346,
+      "bodyHash": "7e6feca58e83615c09cdbdd4873dcbbd49a1267027d94b077385878bdc5d4335",
       "changed": true,
-      "itemCount": 72,
+      "itemCount": 71,
       "error": "",
       "resourceId": "investigation-source-sec-litigation-releases",
       "utilityScore": 89.05,
@@ -1848,13 +2248,13 @@
       "lane": "oversight-audit",
       "authority": "primary-official",
       "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
       "contentType": "application/json; charset=utf-8",
-      "bytes": 159835,
-      "bodyHash": "c944be7f103521ed1ff01aaac6613078409d74c567345f596cbd634c1bcbc1d0",
+      "bytes": 165010,
+      "bodyHash": "9a69b81650ca0bf91b6e35ce6f6dd9814fb20ab12afe8737baa183c6187802a5",
       "changed": true,
       "itemCount": 100,
       "error": "",
@@ -1868,13 +2268,13 @@
       "lane": "money-contracts",
       "authority": "primary-official",
       "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
       "contentType": "application/json",
-      "bytes": 56959,
-      "bodyHash": "89f9429fd7eb2308b969853ecd1e8b1d48ed130356a59949fa708919ee0b6e65",
+      "bytes": 56592,
+      "bodyHash": "cbdb473382c9925355eba5052d52166487c5c50c4c9a5d341f161f75cd46c955",
       "changed": true,
       "itemCount": 100,
       "error": "",
@@ -1888,13 +2288,13 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://ofac.treasury.gov/recent-actions",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://ofac.treasury.gov/recent-actions",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 44762,
-      "bodyHash": "d7f1bcf3733ab47679a972922c7b22ebb9635aa06a92e01481ce4deae2178a16",
+      "bytes": 44761,
+      "bodyHash": "caa2b861a930ec325cc41a8ca5c83a6bbabc71f08e92210ca593407f98430813",
       "changed": true,
       "itemCount": 19,
       "error": "",
@@ -1908,13 +2308,13 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
       "contentType": "text/html; charset=utf-8",
-      "bytes": 101955,
-      "bodyHash": "afc210ccdcdbd569f168a364b62911b8e9fc99819cf3324e1c46bb80943fe4cf",
+      "bytes": 101964,
+      "bodyHash": "0d397388f31e1494793092c126a44dc4179e4458070bbfab7c5fc8b591d6ba78",
       "changed": true,
       "itemCount": 15,
       "error": "",
@@ -1928,13 +2328,13 @@
       "lane": "international-corruption",
       "authority": "primary-official",
       "url": "https://www.eppo.europa.eu/media/news_en",
-      "checkedAt": "2026-08-10T06:47:05.856Z",
+      "checkedAt": "2026-08-11T06:09:38.710Z",
       "status": "fetched",
       "statusCode": 200,
       "finalUrl": "https://www.eppo.europa.eu/media/news_en",
       "contentType": "text/html; charset=UTF-8",
-      "bytes": 105698,
-      "bodyHash": "0aaa276dc7f25c68dcb6ba31a81b8ffe5a1bb5a01c36ddfed547c1e0f6395cf2",
+      "bytes": 105798,
+      "bodyHash": "bcd90b18589f102d7b9833d39a8bb7559c7ece3a9feee9d33a7f2bdb747418cc",
       "changed": true,
       "itemCount": 10,
       "error": "",
@@ -2023,7 +2423,11 @@
     {
       "findingId": "ca92a54bb69eb2504c76e56e",
       "title": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-      "nextRecords": [],
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
       "source": "https://www.usaspending.gov/award/80NSSC26FA638"
     },
     {
@@ -2059,6 +2463,16 @@
       "source": "https://www.usaspending.gov/award/80NSSC26P1028"
     },
     {
+      "findingId": "366686df53f6dfd25d3f0ea4",
+      "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
+      "source": "https://www.usaspending.gov/award/89243326PFE000994"
+    },
+    {
       "findingId": "c673456bbe77dbb29e43ac7d",
       "title": "BETTER DIRECT, LLC — Department of Energy",
       "nextRecords": [
@@ -2069,15 +2483,13 @@
       "source": "https://www.usaspending.gov/award/89243326FFE400792"
     },
     {
-      "findingId": "366686df53f6dfd25d3f0ea4",
-      "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
-      "nextRecords": [],
-      "source": "https://www.usaspending.gov/award/89243326PFE000994"
-    },
-    {
       "findingId": "e3b055a4afb19163268d7257",
       "title": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
-      "nextRecords": [],
+      "nextRecords": [
+        "Open and preserve the underlying primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
+        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
+      ],
       "source": "https://www.usaspending.gov/award/80NSSC26P1252"
     },
     {
@@ -2137,6 +2549,227 @@
   ],
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
   "sourceChanges": [
+    {
+      "id": "82b0886fe4735164beacb291",
+      "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceId": "sec-current-filings",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "sourceUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "lane": "money-contracts",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-11T06:09:41.962Z",
+      "detectedAt": "2026-08-11T06:09:41.962Z",
+      "changeType": "content-changed",
+      "previousHash": "f35a479574fab9f1fc11bf89e78c892cdccae38d0cac6aa82f41bed1773e3b89",
+      "currentHash": "b2c1368acecda59d11b1919e2aad7e106221e6e92d823b4602e3ae6b91500c77",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "additions": [
+        "Latest Filings - Tue, 11 Aug 2026 02:09:42 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-11T02:09:42-04:00 SCHEDULE 13D/A - Deng Conglin (0001873464) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001493152-26-036954 <b>Size:</b> 241 KB 2026-08-10T21:55:05-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-036954 SCHEDULE 13D/A - Abits Group Inc (0001864055) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001493152-26-036954 <b>Size:</b> 241 KB 2026-08-10T21:55:05-04:00 urn:tag:sec.gov,2008:accession-number=0001493152-26-036954 SCHEDULE 13G/A - Apollo Management Holdings GP, LLC (0001449433) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093624 <b>Size:</b> 81 KB 2026-08-10T21:53:19-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093624 SCHEDULE 13G/A - COMMUNITY HEALTH SYSTEMS INC (0001108109) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093624 <b>Size:</b> 81 KB 2026-08-10T21:53:19-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093624 SCHEDULE 13G/A - Brazil Potash Corp.",
+        "(0001472326) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000886982-26-000354 <b>Size:</b> 18 KB 2026-08-10T21:52:13-04:00 urn:tag:sec.gov,2008:accession-number=0000886982-26-000354 SCHEDULE 13G/A - GOLDMAN SACHS GROUP INC (0000886982) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000886982-26-000354 <b>Size:</b> 18 KB 2026-08-10T21:52:13-04:00 urn:tag:sec.gov,2008:accession-number=0000886982-26-000354 SCHEDULE 13G/A - Phoenix Education Partners, Inc.",
+        "(0001600222) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093623 <b>Size:</b> 16 KB 2026-08-10T21:51:59-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093623 SCHEDULE 13G/A - Apollo Principal Holdings A GP, Ltd.",
+        "(0001566491) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093623 <b>Size:</b> 16 KB 2026-08-10T21:51:59-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093623 SCHEDULE 13G/A - Rackspace Technology, Inc.",
+        "(0001810019) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093622 <b>Size:</b> 26 KB 2026-08-10T21:50:47-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093622 SCHEDULE 13G/A - Apollo Management Holdings GP, LLC (0001449433) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093622 <b>Size:</b> 26 KB 2026-08-10T21:50:47-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093622 4 - Kotarba Scott (0002148810) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001217160-26-000067 <b>Size:</b> 15 KB 2026-08-10T21:49:48-04:00 urn:tag:sec.gov,2008:accession-number=0001217160-26-000067 4 - JEWETT CAMERON TRADING CO LTD (0000885307) (Issuer) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001217160-26-000067 <b>Size:</b> 15 KB 2026-08-10T21:49:48-04:00 urn:tag:sec.gov,2008:accession-number=0001217160-26-000067 144 - Life Time Group Holdings, Inc.",
+        "(0001869198) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343090 <b>Size:</b> 5 KB 2026-08-10T21:49:07-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343090 144 - LGP Associates VI-B LLC (0001568923) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343090 <b>Size:</b> 5 KB 2026-08-10T21:49:07-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343090 SCHEDULE 13G/A - USA TODAY Co., Inc.",
+        "(0001579684) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093619 <b>Size:</b> 36 KB 2026-08-10T21:49:02-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093619 SCHEDULE 13G/A - Apollo Management Holdings GP, LLC (0001449433) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093619 <b>Size:</b> 36 KB 2026-08-10T21:49:02-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093619 SCHEDULE 13G/A - Grupo Aeromexico, S.A.B.",
+        "(0001561861) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093617 <b>Size:</b> 19 KB 2026-08-10T21:47:41-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093617 SCHEDULE 13G/A - Apollo Management Holdings GP, LLC (0001449433) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001104659-26-093617 <b>Size:</b> 19 KB 2026-08-10T21:47:41-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-093617 SCHEDULE 13G/A - Cal Redwood Acquisition Corp.",
+        "(0002058359) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000886982-26-000352 <b>Size:</b> 18 KB 2026-08-10T21:47:40-04:00 urn:tag:sec.gov,2008:accession-number=0000886982-26-000352 SCHEDULE 13G/A - GOLDMAN SACHS GROUP INC (0000886982) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000886982-26-000352 <b>Size:</b> 18 KB 2026-08-10T21:47:40-04:00 urn:tag:sec.gov,2008:accession-number=0000886982-26-000352 144 - Life Time Group Holdings, Inc.",
+        "(0001869198) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343087 <b>Size:</b> 5 KB 2026-08-10T21:47:13-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343087 144 - LGP Associates VI-A LLC (0001568921) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343087 <b>Size:</b> 5 KB 2026-08-10T21:47:13-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343087 144 - Green LTF Holdings II LP (0001886438) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343085 <b>Size:</b> 5 KB 2026-08-10T21:45:33-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343085 144 - Life Time Group Holdings, Inc.",
+        "(0001869198) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343085 <b>Size:</b> 5 KB 2026-08-10T21:45:33-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343085 4 - Red Rock Resorts, Inc.",
+        "(0001653653) (Issuer) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343081 <b>Size:</b> 13 KB 2026-08-10T21:41:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343081 4 - KREEGER SCOTT (0001639486) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343081 <b>Size:</b> 13 KB 2026-08-10T21:41:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343081 4 - Aptevo Therapeutics Inc.",
+        "(0001671584) (Issuer) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343080 <b>Size:</b> 6 KB 2026-08-10T21:39:05-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343080 4 - Harsanyi Zsolt (0001380184) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343080 <b>Size:</b> 6 KB 2026-08-10T21:39:05-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343080 SCHEDULE 13G/A - Delek US Holdings, Inc.",
+        "(0001694426) (Subject) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000886982-26-000347 <b>Size:</b> 18 KB 2026-08-10T21:38:30-04:00 urn:tag:sec.gov,2008:accession-number=0000886982-26-000347 SCHEDULE 13G/A - GOLDMAN SACHS GROUP INC (0000886982) (Filed by) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000886982-26-000347 <b>Size:</b> 18 KB 2026-08-10T21:38:30-04:00 urn:tag:sec.gov,2008:accession-number=0000886982-26-000347 4 - Lamothe Jeffrey G.",
+        "(0001679967) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343079 <b>Size:</b> 6 KB 2026-08-10T21:38:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343079 4 - Aptevo Therapeutics Inc.",
+        "(0001671584) (Issuer) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343079 <b>Size:</b> 6 KB 2026-08-10T21:38:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343079 4 - Aptevo Therapeutics Inc.",
+        "(0001671584) (Issuer) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343077 <b>Size:</b> 6 KB 2026-08-10T21:37:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343077 4 - Taylor Daphne (0001393549) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343077 <b>Size:</b> 6 KB 2026-08-10T21:37:03-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343077 4 - Kwon SoYoung (0001864406) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343076 <b>Size:</b> 6 KB 2026-08-10T21:36:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343076 4 - Aptevo Therapeutics Inc.",
+        "(0001671584) (Issuer) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0001193125-26-343076 <b>Size:</b> 6 KB 2026-08-10T21:36:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-343076 4 - Conversant Dallas Parkway (B) LP (0001892128) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000895345-26-000353 <b>Size:</b> 37 KB 2026-08-10T21:35:36-04:00 urn:tag:sec.gov,2008:accession-number=0000895345-26-000353 4 - Conversant Dallas Parkway (A) LP (0001892127) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000895345-26-000353 <b>Size:</b> 37 KB 2026-08-10T21:35:36-04:00 urn:tag:sec.gov,2008:accession-number=0000895345-26-000353 4 - Conversant GP Holdings LLC (0001850910) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000895345-26-000353 <b>Size:</b> 37 KB 2026-08-10T21:35:36-04:00 urn:tag:sec.gov,2008:accession-number=0000895345-26-000353 4 - Conversant Capital LLC (0001850901) (Reporting) <b>Filed:</b> 2026-08-10 <b>AccNo:</b> 0000895345-26-000353 <b>Size:</b> 37 KB 2026-08-10T21:35:36-04:00 urn:tag:sec.gov,2008:accession-number=0000895345-26-000353"
+      ],
+      "removals": [
+        "Latest Filings - Mon, 10 Aug 2026 02:47:07 EDT https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent Webmaster webmaster@sec.gov 2026-08-10T02:47:07-04:00 4 - FRIEDMAN BRIAN P (0001275002) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001214659-26-009794 <b>Size:</b> 8 KB 2026-08-07T21:53:40-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009794 4 - Jefferies Financial Group Inc.",
+        "(0000096223) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001214659-26-009794 <b>Size:</b> 8 KB 2026-08-07T21:53:40-04:00 urn:tag:sec.gov,2008:accession-number=0001214659-26-009794 SCHEDULE 13G/A - Keefe Thomas (0002138304) (Filed by) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001376474-26-000545 <b>Size:</b> 5 KB 2026-08-07T21:49:24-04:00 urn:tag:sec.gov,2008:accession-number=0001376474-26-000545 SCHEDULE 13G/A - Hub Cyber Security Ltd.",
+        "(0001905660) (Subject) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001376474-26-000545 <b>Size:</b> 5 KB 2026-08-07T21:49:24-04:00 urn:tag:sec.gov,2008:accession-number=0001376474-26-000545 4 - Attovia Therapeutics, Inc.",
+        "(0002058707) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092867 <b>Size:</b> 16 KB 2026-08-07T21:47:17-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092867 4 - Redmile Biopharma Investments III, L.P.",
+        "(0001838746) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092867 <b>Size:</b> 16 KB 2026-08-07T21:47:17-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092867 4 - Green Jeremy (0001650527) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092867 <b>Size:</b> 16 KB 2026-08-07T21:47:17-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092867 4 - Redmile Group, LLC (0001425738) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092867 <b>Size:</b> 16 KB 2026-08-07T21:47:17-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092867 4 - Goel Rajeev K.",
+        "(0001833511) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001833511-26-000034 <b>Size:</b> 24 KB 2026-08-07T21:41:27-04:00 urn:tag:sec.gov,2008:accession-number=0001833511-26-000034 4 - PubMatic, Inc.",
+        "(0001422930) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001833511-26-000034 <b>Size:</b> 24 KB 2026-08-07T21:41:27-04:00 urn:tag:sec.gov,2008:accession-number=0001833511-26-000034 SCHEDULE 13D/A - Vertical Aerospace Ltd.",
+        "(0001867102) (Subject) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092862 <b>Size:</b> 238 KB 2026-08-07T21:40:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092862 SCHEDULE 13D/A - Mudrick Capital Management, L.P.",
+        "(0001655183) (Filed by) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092862 <b>Size:</b> 238 KB 2026-08-07T21:40:15-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092862 4 - Medway Richard A.",
+        "(0001977271) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000065 <b>Size:</b> 23 KB 2026-08-07T21:36:41-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000065 4 - Savers Value Village, Inc.",
+        "(0001883313) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000065 <b>Size:</b> 23 KB 2026-08-07T21:36:41-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000065 4 - Geisser Melinda L.",
+        "(0001977269) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000064 <b>Size:</b> 16 KB 2026-08-07T21:36:19-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000064 4 - Savers Value Village, Inc.",
+        "(0001883313) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000064 <b>Size:</b> 16 KB 2026-08-07T21:36:19-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000064 4 - Savers Value Village, Inc.",
+        "(0001883313) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000063 <b>Size:</b> 11 KB 2026-08-07T21:35:59-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000063 4 - Maher Michael W (0001708434) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000063 <b>Size:</b> 11 KB 2026-08-07T21:35:59-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000063 4 - Walsh Mark T.",
+        "(0001977188) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000062 <b>Size:</b> 34 KB 2026-08-07T21:35:44-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000062 4 - Savers Value Village, Inc.",
+        "(0001883313) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001883313-26-000062 <b>Size:</b> 34 KB 2026-08-07T21:35:44-04:00 urn:tag:sec.gov,2008:accession-number=0001883313-26-000062 4 - Rabinowitz Matthew (0001646382) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001646382-26-000018 <b>Size:</b> 5 KB 2026-08-07T21:35:09-04:00 urn:tag:sec.gov,2008:accession-number=0001646382-26-000018 4 - Natera, Inc.",
+        "(0001604821) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001646382-26-000018 <b>Size:</b> 5 KB 2026-08-07T21:35:09-04:00 urn:tag:sec.gov,2008:accession-number=0001646382-26-000018 4 - Sheena Jonathan (0001646649) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001646649-26-000029 <b>Size:</b> 23 KB 2026-08-07T21:35:07-04:00 urn:tag:sec.gov,2008:accession-number=0001646649-26-000029 4 - Natera, Inc.",
+        "(0001604821) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001646649-26-000029 <b>Size:</b> 23 KB 2026-08-07T21:35:07-04:00 urn:tag:sec.gov,2008:accession-number=0001646649-26-000029 144 - Ritchie Robert C (0002063843) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0002063843-26-000002 <b>Size:</b> 7 KB 2026-08-07T21:27:10-04:00 urn:tag:sec.gov,2008:accession-number=0002063843-26-000002 144 - American Integrity Insurance Group, Inc.",
+        "(0002007587) (Subject) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0002063843-26-000002 <b>Size:</b> 7 KB 2026-08-07T21:27:10-04:00 urn:tag:sec.gov,2008:accession-number=0002063843-26-000002 4 - Jackson Blair Curtis (0001842348) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001520262-26-000113 <b>Size:</b> 8 KB 2026-08-07T21:17:06-04:00 urn:tag:sec.gov,2008:accession-number=0001520262-26-000113 4 - Alkermes plc.",
+        "(0001520262) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001520262-26-000113 <b>Size:</b> 8 KB 2026-08-07T21:17:06-04:00 urn:tag:sec.gov,2008:accession-number=0001520262-26-000113 4 - Navios Maritime Partners L.P.",
+        "(0001415921) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001193125-26-340786 <b>Size:</b> 12 KB 2026-08-07T21:15:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-340786 4 - Frangou Angeliki (0001310495) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001193125-26-340786 <b>Size:</b> 12 KB 2026-08-07T21:15:04-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-340786 144 - ONESPAWORLD HOLDINGS Ltd (0001758488) (Subject) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001193125-26-340783 <b>Size:</b> 6 KB 2026-08-07T21:12:32-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-340783 144 - HEYER ANDREW R (0001259062) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001193125-26-340783 <b>Size:</b> 6 KB 2026-08-07T21:12:32-04:00 urn:tag:sec.gov,2008:accession-number=0001193125-26-340783 4 - SASAKI GAIL M (0001422990) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092853 <b>Size:</b> 5 KB 2026-08-07T21:00:07-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092853 4 - NETLIST INC (0001282631) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001104659-26-092853 <b>Size:</b> 5 KB 2026-08-07T21:00:07-04:00 urn:tag:sec.gov,2008:accession-number=0001104659-26-092853 4 - WATKINS WILLIAM D (0001233433) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001233433-26-000006 <b>Size:</b> 10 KB 2026-08-07T20:53:36-04:00 urn:tag:sec.gov,2008:accession-number=0001233433-26-000006 4 - FLEX LTD.",
+        "(0000866374) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001233433-26-000006 <b>Size:</b> 10 KB 2026-08-07T20:53:36-04:00 urn:tag:sec.gov,2008:accession-number=0001233433-26-000006 4 - Ward Pat (0001436125) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001436125-26-000007 <b>Size:</b> 9 KB 2026-08-07T20:52:24-04:00 urn:tag:sec.gov,2008:accession-number=0001436125-26-000007 4 - FLEX LTD.",
+        "(0000866374) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0001436125-26-000007 <b>Size:</b> 9 KB 2026-08-07T20:52:24-04:00 urn:tag:sec.gov,2008:accession-number=0001436125-26-000007 4 - Wang Daniel Hua-chang (0002113550) (Reporting) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0002113550-26-000005 <b>Size:</b> 5 KB 2026-08-07T20:50:53-04:00 urn:tag:sec.gov,2008:accession-number=0002113550-26-000005 4 - MoneyHero Ltd (0001974044) (Issuer) <b>Filed:</b> 2026-08-07 <b>AccNo:</b> 0002113550-26-000005 <b>Size:</b> 5 KB 2026-08-07T20:50:53-04:00 urn:tag:sec.gov,2008:accession-number=0002113550-26-000005"
+      ],
+      "additionCount": 18,
+      "removalCount": 23,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "6d75003b4825f307f6df306e",
+      "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceId": "sec-litigation-releases",
+      "sourceLabel": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "sourceUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "lane": "government-enforcement",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-11T06:09:41.962Z",
+      "detectedAt": "2026-08-11T06:09:41.962Z",
+      "changeType": "content-changed",
+      "previousHash": "5f2d6095f78c6a2ee8a7a7a3d88cb108391bfdb662b6477fba32674a31512a8a",
+      "currentHash": "445d958cb33be4db06c3122b4a2c12074e70608243b86e09fd59ec589b6ad10c",
+      "httpStatus": 200,
+      "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "additions": [
+        "LR-26606 See Also: SEC Complaint Aug.",
+        "Munson; Adit Ventures Management, LLC, Adit Ventures, LLC, Adit Ventures II, LLC, and Adit Ventures III, LLC Release No.",
+        "LR-26605 See Also: SEC Complaint Aug.",
+        "10, 2026 James Brian Blaylock Release No.",
+        "LR-26604 See Also: Final Judgment , Default Judgment - Blaylock Aug.",
+        "LR-26507 See Also: SEC Complaint Pagination Current page 1 Page 2 Page 3 &hellip; 120 Next Last 1 to 100 of 11932 items Return to top SEC homepage About the SEC Budget & Performance Careers Commission Votes Contact Contracts Transparency Accessibility & Disability Artificial Intelligence FOIA Inspector General No FEAR Act Data Ombuds SEC Excess Personal Property Guidance Websites Investor.gov Related Sites USA.gov Site Information Plain Writing Privacy & Security Site Map Stay connected."
+      ],
+      "removals": [
+        "LR-26507 See Also: SEC Complaint March 24, 2026 Ozy Media, Inc.",
+        "LR-26506 See Also: SEC Complaint , Final Judgment - Samir Rao , Final Judgment - Suzee Han March 24, 2026 Stuart Frost Release No.",
+        "LR-26505 See Also: SEC Complaint March 23, 2026 Kevan Sadigh Release No.",
+        "LR-26504 See Also: Final Judgment Pagination Current page 1 Page 2 Page 3 &hellip; 120 Next Last 1 to 100 of 11929 items Return to top SEC homepage About the SEC Budget & Performance Careers Commission Votes Contact Contracts Transparency Accessibility & Disability Artificial Intelligence FOIA Inspector General No FEAR Act Data Ombuds SEC Excess Personal Property Guidance Websites Investor.gov Related Sites USA.gov Site Information Plain Writing Privacy & Security Site Map Stay connected."
+      ],
+      "additionCount": 6,
+      "removalCount": 4,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "611d1a7edb4b0b2535b9708c",
+      "title": "content changed: UK Serious Fraud Office — News And Communications",
+      "sourceId": "uk-sfo-news",
+      "sourceLabel": "UK Serious Fraud Office — News And Communications",
+      "sourceUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-11T06:09:41.962Z",
+      "detectedAt": "2026-08-11T06:09:41.962Z",
+      "changeType": "content-changed",
+      "previousHash": "c031233b56367326139c8c536f702b238453356597326f172e9b2fbdcf55cf2a",
+      "currentHash": "609edf15f2fb291d4ba83cfbf18418376ab1c370b5f66c3acfcf19f5d2315329",
+      "httpStatus": 200,
+      "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "additions": [
+        "Latest from the Serious Fraud Office Proceeds of Crime 10 August 2026 Statutory guidance Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.",
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 10 August 2026 Statutory guidance Is the message I’ve had from the SFO genuine?"
+      ],
+      "removals": [
+        "Latest from the Serious Fraud Office Government Procurement Card spend over £500 31 July 2026 Collection 2025-26 Government Procurement Card spend over £500 31 July 2026 Corporate report FOI Log - June 2026 28 July 2026 FOI release See all latest documents Subscriptions Get emails What we do The Serious Fraud Office (SFO) fights complex financial crime, delivers justice for victims and protects the UK’s reputation as a safe place to do business.",
+        "Read more about what we do Follow us The following links open in a new tab Follow on LinkedIn (opens in new tab) Follow on Instagram (opens in new tab) Follow on X (opens in new tab) Documents Guidance and regulation Proceeds of Crime 15 July 2026 Statutory guidance Is the message I’ve had from the SFO genuine?"
+      ],
+      "additionCount": 2,
+      "removalCount": 2,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
+    {
+      "id": "529f3ec81072aa54c5515b3e",
+      "title": "content changed: European Public Prosecutor's Office — News",
+      "sourceId": "eppo-news",
+      "sourceLabel": "European Public Prosecutor's Office — News",
+      "sourceUrl": "https://www.eppo.europa.eu/media/news_en",
+      "lane": "international-corruption",
+      "authority": "primary-official",
+      "publicationDate": null,
+      "retrievalDate": "2026-08-11T06:09:41.962Z",
+      "detectedAt": "2026-08-11T06:09:41.962Z",
+      "changeType": "content-changed",
+      "previousHash": "d701ed69ae967793568c179d2f23953c51140e9e83a388f330e7d103a053046b",
+      "currentHash": "43c52d7a60d058f6277e68fa754141875725f7944fc0986258b523a491936b02",
+      "httpStatus": 200,
+      "finalUrl": "https://www.eppo.europa.eu/media/news_en",
+      "additions": [
+        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська Search Search The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Procurement Finance See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Vacancies Working for the EPPO Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU European Public Prosecutor’s Office VAT public health agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (908) RSS Showing results 1 to 10 News article 10 August 2026 Italy: House arrests, seizures and searches in €33 million VAT fraud investigation involving the import of clothing from China into the EU At the request of the European Public Prosecutor’s Office (EPPO) in Venice (Italy), the judge for preliminary investigations at the Court of Milan issued a house arrest order against two individuals suspected of having managed and used several companies to commit a VAT carousel fraud.",
+        "2 min read News article 5 August 2026 Investigation ‘Gummy Bear’: Searches carried out in Brazil, Belgium and Germany in probe into customs fraud involving gelatine imports In an investigation into a suspected customs evasion scheme involving gelatine imports between affiliated companies, led by the European Public Prosecutor’s Office (EPPO) in Frankfurt (Germany), coordinated searches were carried out in Brazil, Belgium and Germany.",
+        "1 min read 1 Page 1 2 3 ..."
+      ],
+      "removals": [
+        "News - The independent public prosecution office of the EU - European Union Skip to main content English English Select your language Close EU official languages bg български es español cs čeština da dansk de Deutsch et eesti el ελληνικά en English fr français ga Gaeilge hr hrvatski it italiano lv latviešu lt lietuvių hu magyar mt Malti nl Nederlands pl polski pt português ro română sk slovenčina sl slovenščina fi suomi sv svenska Other languages uk yкраїнська Search Search The independent public prosecution office of the EU Report a crime Menu Close Menu Back Previous items Next items Home About Background Mission and tasks Structure Members Legal framework International cooperation Procurement Finance See all Media News Creative production Picture gallery See all Documents Overview Public access to documents Annual Report 2025 Annual Report 2024 Annual Report 2023 See all Contact Careers Vacancies Working for the EPPO Traineeships Living in Luxembourg How to apply Types of contracts See all FAQ Home Media News News Filter by Collapse Keywords Subject EU law legal system rule of law fraud against the EU European Public Prosecutor’s Office VAT public health agricultural policy appeal common agricultural policy COVID-19 customs regulations earthquake economic offence educational exchange education policy environmental policy environmental protection EU budget international sanctions labour market money laundering petroleum public procurement ruling smuggling tourism university Toggle dropdown Publication date Select After Before In between Toggle dropdown Date End Date Search Clear filters News (907) RSS Showing results 1 to 10 News article 5 August 2026 Investigation ‘Gummy Bear’: Searches carried out in Brazil, Belgium and Germany in probe into customs fraud involving gelatine imports In an investigation into a suspected customs evasion scheme involving gelatine imports between affiliated companies, led by the European Public Prosecutor’s Office (EPPO) in Frankfurt (Germany), coordinated searches were carried out in Brazil, Belgium and Germany.",
+        "1 min read News article 16 July 2026 Greece: EPPO indicts 22 in ongoing probe into large-scale agricultural subsidy fraud The EPPO in Athens (Greece) has indicted 22 defendants, including four current Members of the Hellenic Parliament, several former high-ranked public officials and political staff, as part of an investigation into an alleged organised fraud scheme involving agricultural funds.",
+        "3 min read 1 Page 1 2 3 ..."
+      ],
+      "additionCount": 3,
+      "removalCount": 3,
+      "established": "The normalized content returned by the registered source differs from the previously preserved version.",
+      "notEstablished": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
+      "mechanism": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
+      "implication": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
+      "alternativeExplanation": "Template changes, corrected wording, pagination, duplicate cleanup, archival reorganisation or a moved document may explain the difference.",
+      "nextRecordRequired": [
+        "Open the current source and identify the exact added, removed or altered record.",
+        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
+        "Check for a replacement URL, correction notice, archive copy or official explanation."
+      ],
+      "correctionRoute": {
+        "url": "contact.html",
+        "instructions": "Submit the source URL, observation date, replacement location and any counter-record."
+      },
+      "evidenceGrade": "B",
+      "factualStatus": "source-change-observation",
+      "status": "source-change"
+    },
     {
       "id": "d8732adccaaac4ea6376d2ba",
       "title": "content changed: U.S. Department of Justice Office of Inspector General — Reports",
@@ -2449,7 +3082,7 @@
       "status": "source-change"
     }
   ],
-  "sourceChangeConclusion": "6 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
+  "sourceChangeConclusion": "10 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
   "integrityVersion": 1,
   "conclusionContractVersion": "2.1.0"
 }

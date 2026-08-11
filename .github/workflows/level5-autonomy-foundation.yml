@@ -5,9 +5,12 @@ on:
     paths:
       - 'ai-management/autonomy/autonomous-learning-director.mjs'
       - 'ai-management/finance/self-financing-director.mjs'
+      - 'ai-management/finance/revenue-growth-director.mjs'
       - 'ai-management/config/level5-autonomy-policy.json'
+      - 'migrations/phase14_self_financing_growth.sql'
       - 'scripts/run-level5-autonomy-cycle.mjs'
       - 'scripts/level5-autonomy-foundation-test.mjs'
+      - 'scripts/self-financing-growth-test.mjs'
       - '.github/workflows/level5-autonomy-foundation.yml'
   workflow_dispatch:
 
@@ -36,11 +39,16 @@ jobs:
         run: |
           node --check ai-management/autonomy/autonomous-learning-director.mjs
           node --check ai-management/finance/self-financing-director.mjs
+          node --check ai-management/finance/revenue-growth-director.mjs
           node --check scripts/run-level5-autonomy-cycle.mjs
           node --check scripts/level5-autonomy-foundation-test.mjs
+          node --check scripts/self-financing-growth-test.mjs
 
       - name: Run Level 5 foundation tests
         run: node scripts/level5-autonomy-foundation-test.mjs
+
+      - name: Run self-financing growth tests
+        run: node scripts/self-financing-growth-test.mjs
 
       - name: Prove finance remains non-executing
         run: |
@@ -57,6 +65,18 @@ jobs:
           grep -F '"automatic_safety_gate_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
           grep -F '"automatic_evidence_threshold_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
           grep -F '"automatic_deployment_gate_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F 'policy_mutation_allowed INTEGER NOT NULL DEFAULT 0 CHECK (policy_mutation_allowed=0)' migrations/phase14_self_financing_growth.sql
+          grep -F 'evidence_threshold_mutation_allowed INTEGER NOT NULL DEFAULT 0 CHECK (evidence_threshold_mutation_allowed=0)' migrations/phase14_self_financing_growth.sql
+          grep -F 'financial_execution_allowed INTEGER NOT NULL DEFAULT 0 CHECK (financial_execution_allowed=0)' migrations/phase14_self_financing_growth.sql
+
+      - name: Prove growth cannot manipulate evidence or payments
+        run: |
+          grep -F 'automatic_price_changes_allowed: false' ai-management/finance/revenue-growth-director.mjs
+          grep -F 'automatic_payment_flow_changes_allowed: false' ai-management/finance/revenue-growth-director.mjs
+          grep -F 'commercial_ranking_may_change_evidence_strength: false' ai-management/finance/revenue-growth-director.mjs
+          grep -F 'commercial_ranking_may_hide_contrary_evidence: false' ai-management/finance/revenue-growth-director.mjs
+          grep -F 'dark_patterns_allowed: false' ai-management/finance/revenue-growth-director.mjs
+          grep -F 'execution_allowed INTEGER NOT NULL DEFAULT 0 CHECK (execution_allowed=0)' migrations/phase14_self_financing_growth.sql
 
       - name: Prove remote execution stays disabled in the Level 5 runner
         run: |

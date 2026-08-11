@@ -1,0 +1,66 @@
+name: Level 5 Autonomy Foundation
+
+on:
+  pull_request:
+    paths:
+      - 'ai-management/autonomy/autonomous-learning-director.mjs'
+      - 'ai-management/finance/self-financing-director.mjs'
+      - 'ai-management/config/level5-autonomy-policy.json'
+      - 'scripts/run-level5-autonomy-cycle.mjs'
+      - 'scripts/level5-autonomy-foundation-test.mjs'
+      - '.github/workflows/level5-autonomy-foundation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: level5-autonomy-foundation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  foundation:
+    name: Verify learning and self-financing boundaries
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout candidate commit
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check syntax
+        run: |
+          node --check ai-management/autonomy/autonomous-learning-director.mjs
+          node --check ai-management/finance/self-financing-director.mjs
+          node --check scripts/run-level5-autonomy-cycle.mjs
+          node --check scripts/level5-autonomy-foundation-test.mjs
+
+      - name: Run Level 5 foundation tests
+        run: node scripts/level5-autonomy-foundation-test.mjs
+
+      - name: Prove finance remains non-executing
+        run: |
+          grep -F '"automatic_spend_limit_eur": 0' ai-management/config/level5-autonomy-policy.json
+          grep -F '"payment_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"payout_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"borrowing_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"trading_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"owner_approval_required_for_any_spend": true' ai-management/config/level5-autonomy-policy.json
+
+      - name: Prove learning cannot weaken safety policy
+        run: |
+          grep -F '"automatic_policy_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"automatic_safety_gate_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"automatic_evidence_threshold_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"automatic_deployment_gate_mutation_allowed": false' ai-management/config/level5-autonomy-policy.json
+
+      - name: Prove remote execution stays disabled in the Level 5 runner
+        run: |
+          grep -F "AI_REMOTE_COMPUTE_EXECUTION_ENABLED: 'false'" scripts/run-level5-autonomy-cycle.mjs
+          grep -F "AI_REMOTE_COMPUTE_JOBS_PER_CYCLE: '0'" scripts/run-level5-autonomy-cycle.mjs
+          grep -F 'payment_mutation_allowed: false' scripts/run-level5-autonomy-cycle.mjs
+          grep -F 'deployment_performed: false' scripts/run-level5-autonomy-cycle.mjs

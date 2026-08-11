@@ -90,8 +90,8 @@ async function verifyOnce() {
     && liveHealth?.ok === true
     && liveHealth?.buildSha === expectedSha
     && liveHealth?.manifestSha === expectedSha
-    && liveHealth?.workerScript === 'src/worker-production.js';
-  if (!healthExact) failures.push({ route: '/deploy-health.json', status: byRoute['/deploy-health.json']?.status || 0, reason: 'health SHA or strict Worker mismatch' });
+    && liveHealth?.workerScript === 'src/worker-production-autonomy.js';
+  if (!healthExact) failures.push({ route: '/deploy-health.json', status: byRoute['/deploy-health.json']?.status || 0, reason: 'health SHA or production autonomy Worker mismatch' });
 
   if (!conductPressure?.ok || Number(conductPressure.sourceSurfaces || 0) < 1 || Number(conductPressure.builtSurfaces || 0) < 1) failures.push({ route: 'local-conduct-pressure-test', status: 0, reason: 'full predeploy conduct audit missing or failed' });
   if (!predatorsPressure?.ok) failures.push({ route: 'local-predators-pressure-test', status: 0, reason: 'full predeploy Predators audit missing or failed' });

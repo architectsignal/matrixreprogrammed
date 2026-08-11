@@ -3,6 +3,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { AutonomousLearningDirector } from '../ai-management/autonomy/autonomous-learning-director.mjs';
 import { SelfFinancingDirector } from '../ai-management/finance/self-financing-director.mjs';
+import { RevenueGrowthDirector } from '../ai-management/finance/revenue-growth-director.mjs';
 
 const root = process.cwd();
 const downloads = path.join(root, 'downloads');
@@ -49,6 +50,9 @@ const financeObservation = readJson(path.join(downloads, 'finance-observation.js
   verified_operating_cost_eur: 0,
   verified_cash_reserve_eur: 0
 });
+const revenueGrowthObservation = readJson(path.join(downloads, 'revenue-growth-observation.json'), {
+  channels: []
+});
 
 const learningDirector = new AutonomousLearningDirector({
   alpha: policy?.learning?.ema_alpha,
@@ -60,6 +64,13 @@ writeJson(path.join(downloads, 'autonomous-learning-state.json'), learning);
 const financeDirector = new SelfFinancingDirector();
 const finance = financeDirector.plan({ snapshot: financeObservation, policy: policy.finance || {} });
 writeJson(path.join(downloads, 'self-financing-plan.json'), finance);
+
+const growthDirector = new RevenueGrowthDirector({ maximumExperiments: 3 });
+const growth = growthDirector.plan({
+  channels: Array.isArray(revenueGrowthObservation.channels) ? revenueGrowthObservation.channels : [],
+  policy: policy.finance || {}
+});
+writeJson(path.join(downloads, 'revenue-growth-plan.json'), growth);
 
 const result = {
   ok: cycleSummary?.ok === true && learning.latest_signals.zero_spend_confirmed === true,
@@ -77,13 +88,25 @@ const result = {
     executable_budget_eur: finance.execution.executable_budget_eur,
     owner_approval_required_for_any_spend: finance.execution.owner_approval_required_for_any_spend
   },
+  growth: {
+    channels_evaluated: growth.summary.channels_evaluated,
+    verified_net_revenue_eur: growth.summary.verified_net_revenue_eur,
+    experiments_proposed: growth.summary.experiments_proposed,
+    automatic_price_changes_allowed: growth.controls.automatic_price_changes_allowed,
+    evidence_independence_preserved: growth.controls.commercial_ranking_may_change_evidence_strength === false
+  },
   controls: {
     zero_spend_lock: true,
     remote_compute_execution_enabled_by_this_runner: false,
     payment_mutation_allowed: false,
     deployment_performed: false
   },
-  next_persistence_target: 'matrix_learning_ledger D1 integration after this foundation passes review and CI'
+  persistence_targets: [
+    'matrix_learning_ledger',
+    'matrix_revenue_events',
+    'matrix_finance_snapshots',
+    'matrix_growth_experiments'
+  ]
 };
 writeJson(path.join(downloads, 'level5-autonomy-cycle.json'), result);
 console.log(JSON.stringify(result, null, 2));

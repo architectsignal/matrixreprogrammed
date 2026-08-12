@@ -30,6 +30,10 @@ jobs:
       - name: Commit live receipt safely
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; live speculation proof will not move main."
+            exit 0
+          fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           cp downloads/review-queue-speculation-live-test.json data/review-queue-speculation-live-proof.json

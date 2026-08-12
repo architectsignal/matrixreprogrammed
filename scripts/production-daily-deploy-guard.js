@@ -5,7 +5,7 @@ const path = require('path');
 
 const DEFAULT_TIMEZONE = 'Europe/Paris';
 const DEPLOY_STEP_NAME = 'Deploy exact reconciled assets and autonomous D1 Worker to Cloudflare';
-const WORKFLOW_PATH = '.github/workflows/deploy.yml';
+const WORKFLOW_ID = 'deploy.yml';
 const OUTPUT_PATH = path.join('downloads', 'production-daily-deploy-guard.json');
 
 function localDateKey(value, timeZone = DEFAULT_TIMEZONE) {
@@ -49,7 +49,7 @@ async function githubJson(url, token = '') {
 async function loadRecentRuns(repository, token) {
   const [owner, repo] = repository.split('/');
   if (!owner || !repo) throw new Error('GITHUB_REPOSITORY must be owner/repo');
-  const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${encodeURIComponent(WORKFLOW_PATH)}/runs?per_page=30`;
+  const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${encodeURIComponent(WORKFLOW_ID)}/runs?per_page=30`;
   const payload = await githubJson(url, token);
   return Array.isArray(payload.workflow_runs) ? payload.workflow_runs : [];
 }

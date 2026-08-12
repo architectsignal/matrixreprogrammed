@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:55:15.250Z",
-  "pageCount": 139,
+  "generatedAt": "2026-08-12T05:19:58.546Z",
+  "pageCount": 136,
   "output": "downloads/empty-public-controls.pdf",
   "report": {
-    "version": 20,
+    "version": 21,
     "title": "Empty Public Controls",
-    "contentHash": "0a975140b857fa60d05699c5547af4434ab5ff95f262f9797bb44445d5003502",
+    "contentHash": "25ac648fb9b6a929501712a2a524323dbe6a45f6ce9238c6b80653e80935130d",
     "sourceIds": [
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
@@ -69,23 +69,19 @@
       "6f6462b75cdb929e0acbcde7",
       "6d8df9af51b8078e703b2748",
       "3a425f0d5d683952bc0ad7ac",
-      "ca92a54bb69eb2504c76e56e",
-      "366686df53f6dfd25d3f0ea4",
-      "e3b055a4afb19163268d7257",
-      "d77b99424431ead891074ef0",
       "a33968b32fce32bd9d6523f6",
-      "8737454dea4463f85583fbd4",
+      "1c0cca9ff329dd06d5408693",
+      "crime-state-overlap-2026-08-11-661c5029",
+      "crime-state-overlap-2026-08-11-37d80761",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
+      "2609b70f5c1db84a869ac7ca",
       "crime-state-overlap-2026-08-10-13c7fc4b",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "4c1d46d9bcb8caa374dec7d2",
-      "e4ca191d7d9f2eddeda78ad3",
-      "crime-state-overlap-2026-08-07-38ebb2ec",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "f669b33c49b63e787cde3008",
       "janner-iicsa-2022",
@@ -146,21 +142,25 @@
       "ASC-REVIEW-6770124E37F1FE36",
       "ASC-REVIEW-1E701E5D91BF4446",
       "ASC-REVIEW-38D60C73AE003DE8",
-      "ASC-REVIEW-F62F7FFFBED4C0DC"
+      "ASC-REVIEW-F62F7FFFBED4C0DC",
+      "ASC-REVIEW-47D99B95C8C88B19",
+      "ASC-REVIEW-7069086F3A015D62",
+      "ASC-REVIEW-713EBA586DECC926",
+      "ASC-REVIEW-40F8CB67FBBBA1E0"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 22,
-      "disputedClaimCount": 105,
+      "primarySourceCount": 18,
+      "disputedClaimCount": 109,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 63
+      "relationshipCount": 75,
+      "moneyRecordCount": 59
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Empty Public Controls.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Empty Public Controls.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board (data/weekly-investigation-conclusions.json); MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); International Fugitive Pleads Guilty to Healthcare Fraud Conspiracy and Failure to Appear (data/live-intel.json); Jacksonville Beach Dentist Indicted for Evading Personal Income Taxes, Failing to Pay Employment Taxes, and Attempting to Obstruct IRS Investigation (data/live-intel.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Rio Grande City man sentenced for soliciting sexually explicit images of minors,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A 32-year-old man has been ordered to federal prison for sexual exploitation of minors This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “International Fugitive Pleads Guilty to Healthcare Fraud Conspiracy and Failure to Appear,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "COLUMBIA, S.C. — Herbert Leon Kimble, 60, has pleaded guilty to conspiracy to defraud the United States and failure to appear. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 75 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 75 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-11-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-25T00:00:00.000Z"
   }
 }

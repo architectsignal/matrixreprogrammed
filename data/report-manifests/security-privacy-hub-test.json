@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-11T05:03:22.124Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-12T05:28:09.583Z",
+  "pageCount": 129,
   "output": "downloads/security-privacy-hub-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Security Privacy Hub Test",
-    "contentHash": "d531b5b18908b68c890a4b86b5ea494eacb4d84e835a6333523870d2f6717358",
+    "contentHash": "037f339b6803d6bec79259362bdab7c0af0a6055c185dad1c98eee4633262f38",
     "sourceIds": [
       "osint",
       "3a425f0d5d683952bc0ad7ac",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "594100b62a47db521fe2a128",
       "34805734b1ad3b73f0ede0d8",
@@ -38,7 +38,6 @@
       "88ef9baf356c096816236956",
       "ecd4a1111010f13b2d74bf8c",
       "21ae89a0f8533e03e261f18c",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-884743856D3E1385",
       "ASC-REVIEW-AFD96AE0BCA26187",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -146,32 +145,33 @@
       "ASC-REVIEW-D23512B8758FE6BB",
       "ASC-REVIEW-9F5E6DCB06093895",
       "ASC-REVIEW-CAEF74273342914C",
-      "ASC-REVIEW-747FA1D74D7A92E3"
+      "ASC-REVIEW-747FA1D74D7A92E3",
+      "ASC-REVIEW-686B68808D58A838"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 119,
+      "primarySourceCount": 2,
+      "disputedClaimCount": 120,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 94,
-      "moneyRecordCount": 86
+      "relationshipCount": 95,
+      "moneyRecordCount": 87
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Security Privacy Hub Test.",
-        "evidence": "ATT MOBILITY LLC — Department of Defense (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); TRACE SYSTEMS INC. — Department of Defense (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Security Privacy Hub Test.",
+        "evidence": "ATT MOBILITY LLC — Department of Defense (data/weekly-investigation-conclusions.json); TRACE SYSTEMS INC. — Department of Defense (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ATT MOBILITY LLC — Department of Defense,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "DMOB002145EBM PROCURE DEPARTMENT OF DEFENSE MOBILITY CLASSIFIED CAPABILITY DEVICES AND SERVICES IN SUPPORT OF THE DEPARTMENT OF HOMELAND SECURITY (DHS) - UNITED STATES COAST USCG TELECOMMUNICATION AND INFORMATION SYSTEMS COMMAND. · Amount: 2241.89 · Sub-agency: Defense Information Systems Agency This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 94 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 95 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "12. Lawful OSINT & Source Verification; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; 10. Device, Network & Incident Defence; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Influence should be mapped through infrastructure, filings and contracts.; Influence should be mapped through infrastructure, filings and contracts.; Larry Ellison → Health Data Systems: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 94 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 95 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "12. Lawful OSINT & Source Verification",
           "The strongest public pattern is convergence across access systems.",

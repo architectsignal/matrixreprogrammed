@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-11T05:01:52.556Z",
-  "pageCount": 128,
+  "generatedAt": "2026-08-12T05:26:38.738Z",
+  "pageCount": 129,
   "output": "downloads/public-data-lab-test.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Public Data Lab Test",
-    "contentHash": "58a1dbcfccfb03402beff582e6f34f0ba26bd37e4a6ae80328c85d58d41037bb",
+    "contentHash": "85a93f35eb020de4ea95db52e45c20d5d9eb076056baa4d2b765ddfd5cba5580",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "osint",
       "72ef7895f95288946ccb3cff",
       "45f5269389def99607b5a517",
@@ -20,26 +20,22 @@
       "deb382cdbfe57b57793d739e",
       "9f77464e401ac59ad1adb812",
       "73799cb9af4829047998b026",
-      "d77b99424431ead891074ef0",
+      "1c0cca9ff329dd06d5408693",
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-B6BEE1135257F502",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "ecd4a1111010f13b2d74bf8c",
-      "ca92a54bb69eb2504c76e56e",
       "c673456bbe77dbb29e43ac7d",
-      "366686df53f6dfd25d3f0ea4",
-      "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
       "e86287f396e1ee800a7ee796",
       "4a8dd46bd8d4335f061e03ac",
       "8f15d14f1b05a490af22799d",
+      "d77b99424431ead891074ef0",
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
-      "8737454dea4463f85583fbd4",
       "d648ce395c11435d30796fee",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
@@ -63,6 +59,7 @@
       "ASC-REVIEW-8F2468497DC18A3E",
       "ASC-REVIEW-5F18C934E1FFBBB4",
       "ASC-REVIEW-5D75F861BBF77D9D",
+      "d0b647e325275daa6d824a49",
       "19ae23289f4be13ad5f7e317",
       "f8da9551192fb7f98b4efa86",
       "16cde9bd4c87e916ff1e4fb7",
@@ -75,14 +72,18 @@
       "9e8903fd8dfa9b54a1d6db30",
       "6510364e9b1a1504b9f99521",
       "88ef9baf356c096816236956",
+      "cee347fbc3752c6e0f890457",
       "a27dd3c9a4cf6bbd952989d3",
       "dcec2a45ef35362072af05e3",
       "aa125ed22fe885dd57f96c32",
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
+      "ca92a54bb69eb2504c76e56e",
       "b49c319c09a07b245b24f74a",
       "427a4b3a840619411d8d1c33",
       "1583ed9e90a5874047a33041",
+      "366686df53f6dfd25d3f0ea4",
+      "e3b055a4afb19163268d7257",
       "7c212daa6802e36f4fe4f000",
       "e28738303cb279558b7a88c0",
       "e4e58bed8a2ad4ff1aa59afe",
@@ -96,6 +97,7 @@
       "d3589cf045e6d530b37381a9",
       "fe51591d2f98b1e8140add7f",
       "228770c420a004608c7b13f9",
+      "8737454dea4463f85583fbd4",
       "3238162301d466634ccd3040",
       "0a48cc2ad619880b0b23d743",
       "911d6aa330f80279bdb3c4d5",
@@ -144,9 +146,7 @@
       "ASC-REVIEW-AFF7699289F993E4",
       "ASC-REVIEW-6FEEE1F638ADFCD6",
       "ASC-REVIEW-6D7642B46743C895",
-      "ASC-REVIEW-2638AEF62CDCC03A",
-      "ASC-REVIEW-E6C400911BD1A158",
-      "ASC-REVIEW-0649A6CC727CB73D"
+      "ASC-REVIEW-2638AEF62CDCC03A"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 74,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 97,
-      "moneyRecordCount": 86
+      "relationshipCount": 96,
+      "moneyRecordCount": 85
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 40 A/B-grade public-record items are materially relevant to Public Data Lab Test.",
-        "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
+        "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ROGUE VALLEY H2O LLC — Department of Agriculture,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "UMPQUA NATIONAL FOREST, TILLER RD JANITORIAL · Amount: 37531 · Sub-agency: Forest Service A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "12. Lawful OSINT & Source Verification; MINDCUBED LLC — District of Columbia Courts; ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration; BlackRock → Private Markets Infrastructure Expansion: capital layer; Rockefeller → Public Private Routes: layer hint; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; BETTER DIRECT, LLC — Department of Energy; AGILENT TECHNOLOGIES INC — Department of Energy",
+        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "12. Lawful OSINT & Source Verification; MINDCUBED LLC — District of Columbia Courts; MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency; BlackRock → Private Markets Infrastructure Expansion: capital layer; Rockefeller → Public Private Routes: layer hint; BETTER DIRECT, LLC — Department of Energy; DELL MARKETING L.P. — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "12. Lawful OSINT & Source Verification",
           "MINDCUBED LLC — District of Columbia Courts",
-          "ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration",
+          "MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency",
           "BlackRock → Private Markets Infrastructure Expansion: capital layer",
           "Rockefeller → Public Private Routes: layer hint",
-          "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
           "BETTER DIRECT, LLC — Department of Energy",
-          "AGILENT TECHNOLOGIES INC — Department of Energy"
+          "DELL MARKETING L.P. — District of Columbia Courts",
+          "INDUSTRIAL BANK — District of Columbia Courts"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

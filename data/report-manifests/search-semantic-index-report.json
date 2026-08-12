@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-09T05:00:20.092Z",
+  "generatedAt": "2026-08-12T05:27:46.595Z",
   "pageCount": 134,
   "output": "downloads/search-semantic-index-report.pdf",
   "report": {
-    "version": 6,
+    "version": 7,
     "title": "Search Semantic Index Report",
-    "contentHash": "d123df7f4d6753a3aefa8d97f48224d036cc8a4f56d31d47108b04c4f0c0ae34",
+    "contentHash": "f9854f0cd70dfe86317522c2fb62ee66a0901197183eaad9f6dbaef10dbdfc05",
     "sourceIds": [
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -19,6 +19,7 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-21E454816F050A34",
       "71e0563ca7b139c37c302956",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-612BDE5576885761",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-3C0E3174433D0A74",
       "ASC-REVIEW-954EF610F9B32B24",
       "ASC-REVIEW-CA2354BF2081EB62",
-      "ASC-REVIEW-8A44FB8AADF1FB38",
-      "ASC-REVIEW-7527D6692621D585"
+      "ASC-REVIEW-8A44FB8AADF1FB38"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 139,
-      "newEntityCount": 0,
+      "disputedClaimCount": 138,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 135,
-      "moneyRecordCount": 133
+      "relationshipCount": 134,
+      "moneyRecordCount": 132
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Speculatively, the graph hint in “Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer — blackwater-constellis-lineage.html” could become mission-relevant if independent primary records establish a repeatable authority, money, access, ownership or implementation route. Until then it remains association only.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 135 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 134 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 135 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 134 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-09T05:00:20.092Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

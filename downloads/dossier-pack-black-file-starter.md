@@ -45,7 +45,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-11T04:50:26.705Z
+Updated: 2026-08-12T05:15:06.945Z
 Items: 12
 
 - 2026-06-26 — Epstein's billionaire associate subpoenaed after refusing to answer oversight committee - The Center Square
@@ -73,21 +73,6 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-25 — Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek
-  - Source: https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-25 — Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction - Spectrum News
-  - Source: https://news.google.com/rss/articles/CBMiygFBVV95cUxOY0tBNmlUMXF2Um4xZHRweTkxbG53ZWpZWlR6UVk3Z2dZOVQ2QnF2ZVZCNFhmZ1E1UmM4Nm1hZHZGMVM1Z2JmN25SOGkzMzJIMHlET0VZNW1nRVJqSWNuLXRyLW9uNVljTEtJTWJ4UEMwZ3FpNDdOMFZRSTl1ODdfY1AwS3l5bW5aNElqTjhwS2xvYUctbTVkNXdlcWdFaVFJa05mR3VLUE5nUjlpblRjNHhGSUxOamluZ3VXeWNSbDREY0NTZW10dlFR?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
-- 2026-06-25 — Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media
-  - Source: https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTFxWUo4SDRJMDNIU2VhV0JPYWVZU2E3QVlmQUxTbDdqcFFjd2VMYnRUTHVLQ0RuNTJmRFJwb0Z3NktNd2lOd3J2amJ6NmxZMGNVcmhQcDZxRW9YNXFvM2licEx4ZHlBZU1NUmg0UkVBRWc1TGxQU2ZhVjZ5WjN1eWFfSjdkS21ibkRuVnJqVlk5VHppVGwxdXVZUEdFN1A0djQ1bk9Da0hxWmxFWV93?oc=5
-  - Evidence: Seven-day public-record/news lead
-  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
-  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
 - 2026-06-29 — Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
   - Source: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
   - Evidence: Seven-day public-record/news lead
@@ -108,6 +93,21 @@ Items: 12
   - Evidence: Seven-day public-record/news lead
   - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
   - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News
+  - Source: https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
+  - Evidence: Seven-day public-record/news lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the source first, then follow the evidence route and only share the claim at the strength the record supports.
+- 2026-06-26 — Epstein settlement and NDA lane moves into oversight focus
+  - Source: https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6
+  - Evidence: Reported oversight / settlement-document lane
+  - Boundary: A settlement is not a conviction and may not be an admission of wrongdoing. Track settlement existence, terms, NDA scope, subpoena power, testimony status, and court records separately.
+  - Next: Create a settlement/NDA source door: who can subpoena, what can be compelled, what remains sealed, and what source class supports each claim.
+- 2026-07-17 — Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS
+  - Source: https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
+  - Evidence: Primary or official public-record lead
+  - Boundary: A fresh news or archive item is a lead, not a verdict. Open the source, classify the record, and separate court findings from claims, contact records, settlements, and commentary.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 
 ## Source Pathways / Relevant Source Files
 
@@ -130,13 +130,13 @@ Items: 12
 - Google News / Epstein timeline and files: Jeffrey Epstein is ubiquitous on a busy day on Capitol Hill - The Washington Post — https://news.google.com/rss/articles/CBMipgFBVV95cUxQdkRQZUNEVndpaldGUS1yOXFlUmtyODZTZHM4Smw4M0lNczQ5SldUaVMxZEVLMU5Vb1hiczluTnpMbVNtY0t0UGtSbmhzeGRLVnBONzZNMWN0c1ZqdVJNNGpXdW1tZWtHT0RMazIya0loRXA3SHZaNjV3X2t3MksxOU4zYXlNUWVRUzFWV1ZTZXh1NlZIb0J2UzU2RWNweW4xNEtoc25n?oc=5
 - Google News / Epstein timeline and files: House committee subpoenas Leon Black in the middle of closed-door interview about Jeffrey Epstein - Business Insider — https://news.google.com/rss/articles/CBMimAFBVV95cUxOMjJ4UVRuOVNnbW83aHlUMXhRNlJxOWRpem93Rk1JVHJhQzVFOUpLZGxQUlBtT0VwbEZBUHhkNzBHdEJ3U2NLc1FXdS1pTjRtNDg1Zl82RTQ2NGlzRkZCVWFDVWVRYWtyRG1wSEpkVVUwX25KaVVHTjRnYmVxTUY5TFNIWDhOQU5vZGMxeUhSQ1l6dzlNUkw2bw?oc=5
 - Google News / Epstein timeline and files: 5 Questions Keeping the Epstein Files Alive - Newsweek — https://news.google.com/rss/articles/CBMifkFVX3lxTFBVMHBCWm40QXBXWFJWNjlOQmMxMFhnS2dFY3N2czZYMXZRZzBkNEZTLTFYVFQ1ejd2Qy1YTVFhMGRQeWtmbE94UGtXbm1zQjdIY3NZQ1pGUXZTWDUwbno3cm5jMm1IVEM1T1IzMTZWLVJVUWZRQm9haDFyNXl4Zw?oc=5
-- Google News / Epstein timeline and files: Release Unredacted Epstein Files or Explain Why You Can’t, Judge Tells DOJ - Newsweek — https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUEc3VGJ3YTlPS2IwSXpST1pWUWE3MEg2N0JidFo2bmJSNk54Q3UxUjJoUXNHX2d2eHlvUncxUHRkR0E3TUhEZk5TSzVOeWNncUNSdWpJdU5Tbk93LVVJWHlRRE5Zd1cycEdoUzduQm9SSmwyZEZMbFhYSUlwN2Jwd0lFYnR2a0MwdzNDR2dtZGNKVjdYd3VaUl8tNzNVSkIyUFY4OWpCcEZ6Zw?oc=5
-- Google News / Epstein timeline and files: Lawmakers to question Leon Black about Epstein ties as Maxwell pushes to overturn her con­viction - Spectrum News — https://news.google.com/rss/articles/CBMiygFBVV95cUxOY0tBNmlUMXF2Um4xZHRweTkxbG53ZWpZWlR6UVk3Z2dZOVQ2QnF2ZVZCNFhmZ1E1UmM4Nm1hZHZGMVM1Z2JmN25SOGkzMzJIMHlET0VZNW1nRVJqSWNuLXRyLW9uNVljTEtJTWJ4UEMwZ3FpNDdOMFZRSTl1ODdfY1AwS3l5bW5aNElqTjhwS2xvYUctbTVkNXdlcWdFaVFJa05mR3VLUE5nUjlpblRjNHhGSUxOamluZ3VXeWNSbDREY0NTZW10dlFR?oc=5
-- Google News / Epstein timeline and files: Rep. Tom Emmer highlights House Oversight work, unless it involves Epstein - Civic Media — https://news.google.com/rss/articles/CBMirwFBVV95cUxPaTFxWUo4SDRJMDNIU2VhV0JPYWVZU2E3QVlmQUxTbDdqcFFjd2VMYnRUTHVLQ0RuNTJmRFJwb0Z3NktNd2lOd3J2amJ6NmxZMGNVcmhQcDZxRW9YNXFvM2licEx4ZHlBZU1NUmg0UkVBRWc1TGxQU2ZhVjZ5WjN1eWFfSjdkS21ibkRuVnJqVlk5VHppVGwxdXVZUEdFN1A0djQ1bk9Da0hxWmxFWV93?oc=5
 - Google News / Epstein timeline and files: Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica — https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
 - Google News / Epstein timeline and files: Billionaire Leon Black walks out of Epstein investigation hearing - BBC — https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MVUdKQ0JKb1dZX1NESnJndExmVkUzd0xLUlZrbHg5SFAxblVESVZaRDVFR0Rncm4xdTF2RzdPWDM5SUlJbVlWaE9Ba3ppSVJ3LVdXN3pGNDlQMXIt?oc=5
 - Google News / Epstein timeline and files: Congressional Panel Investigating Epstein Subpoenas Leon Black in Unusual Escalation - The New York Times — https://news.google.com/rss/articles/CBMiiwFBVV95cUxNeV9QV0pzT0tyN2llZ01rMERKRWRGcEVNWU9XdVNCR3hGaHlUUzViRnpfMUZYdXJ6RnI4ZzZrWEVxRUdQOHg0U2tRVlFhN3RFdjg0LXBsUHktN2RXZXg0RGtZSW1ta2NlRjQybDBYLXU1ZllMSUJHd1BnS0FsWVJ6OF9hc2JqZE1ITTFv?oc=5
 - Google News / Epstein timeline and files: Leon Black accused of stonewalling Congress as Epstein hearing ends abruptly - The Guardian — https://news.google.com/rss/articles/CBMijwFBVV95cUxQcFJkMFZab3pPMzE0NXRwNnZQY3VMRnVXUDlINXdIbzFFUFhySlNzUjhPTi1lYjZCY2I1UEhOb1hacnFoQUg1WklxUDBYNU1XRjBNQTJEOFVQV2ZTN0FMX2czOHE3RU5pUnYxY25Hb2dtOFBCTDc4ZW1OU1VMZ3VOc0wwbXU5cHVVLVdSTmhqbw?oc=5
+- Google News / Epstein timeline and files: Leon Black tells House panel Epstein 'duped' him as judge orders DOJ to unredact, release more records - Spectrum News — https://news.google.com/rss/articles/CBMi6wFBVV95cUxQRXBTLWxlQUR6cmpLclE3UnZBZWlVempSZnAtM3F0WXJjeHlIc1JBY1dmZ3QtSVE2d25uWkZjYnNIWEJadk5CVnU5VzF6NVJUTTZPZzYycXpDS2gxMWYxLTE1a29fWGxoTDlFbFBERmUwM01oZGhSYkxLNENxdW5KQ28ycU0zQno2bG1zck1Da213YW11Qnc3M0oySnpFaDhrd0gtanBnWjZVRHhiR3ZqOFBZZEUwVklBRTNESkRiZjk5WGJ3c2tFVWRFT0tOM2VzTmZYb0Q2SXpTNmRLb2Fqa0xHMTF6U05mdlln?oc=5
+- Business Insider: Epstein settlement and NDA lane moves into oversight focus — https://www.businessinsider.com/jeffrey-epstein-friends-settlements-victims-congress-house-oversight-2026-6
+- Google News / Epstein timeline and files: Leon Black walked out of an Epstein House committee interview. Here's what we know - PBS — https://news.google.com/rss/articles/CBMiugFBVV95cUxOX0J2Q1p6RDB3ZXU5aElnZ0xLZnJDWmIzR2NNZUJLdXozYkZtYWZfd0k5cUdadTVkOUJrYUZWU1ZVTEZMRmF4UTRuNmgxRXFSQUhqak0wZm1mRFoyRVZ0b042UUJhY3NlSmJxMkp0TDNuWTlHSFNCemVVTXJiQS13NG1mQUQ1bzZiRXZteFVoNjBSVUcwbGtNTW1nS0I1Sm5SREh3NjBCdnBCMXpmbGtYLVpveEQ2VXZCbXfSAb8BQVVfeXFMTVRiWUI2alBSWXhZRnhpMExmOTRpNmNKcDhXR0tIbTJULThjZ0J6RklOeFd3NWVUMkxZa3hCYXVvRnBTWGowdFVXOUpjRFRsbDBrb1lNSXV1NU1uZ09LZUt0N2ZqWDNIZi1NZ2M2VG44eGtnWUtmY3ZZNU5ORDFmOU5UMG9VeGkza3R6dEs0RllxNlFVa0N2Nm9sRkJjTzdoTVFKZDJqZkFkancwNk5jX0NRdDE5WUhRc212VFM5MTA?oc=5
 
 ## Book Routes
 

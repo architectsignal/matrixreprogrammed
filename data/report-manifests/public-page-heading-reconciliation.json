@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-11T05:01:59.887Z",
+  "generatedAt": "2026-08-12T05:26:45.947Z",
   "pageCount": 134,
   "output": "downloads/public-page-heading-reconciliation.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Public Page Heading Reconciliation",
-    "contentHash": "b3c573a6bec29d231b7c4d6cb9bb356ce6e80a6b6a37e80073427a580e34de62",
+    "contentHash": "db9008b9c5f5d3478fd5e2f20aeeadee50937d5038a8739847bd4e3ac7066d7b",
     "sourceIds": [
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
       "71e0563ca7b139c37c302956",
@@ -15,22 +15,23 @@
       "88ef9baf356c096816236956",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-E6D70696A19B3CDA",
+      "594100b62a47db521fe2a128",
       "3a425f0d5d683952bc0ad7ac",
+      "34805734b1ad3b73f0ede0d8",
       "4c372edcf20b760ae3305f10",
       "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
-      "c673456bbe77dbb29e43ac7d",
       "366686df53f6dfd25d3f0ea4",
+      "c673456bbe77dbb29e43ac7d",
       "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-20316213EFD183CC",
-      "594100b62a47db521fe2a128",
+      "d0b647e325275daa6d824a49",
       "john-travolta",
       "a4c15f7c3d808369b294115e",
-      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
@@ -49,6 +50,7 @@
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
       "fe51591d2f98b1e8140add7f",
+      "1c0cca9ff329dd06d5408693",
       "228770c420a004608c7b13f9",
       "8737454dea4463f85583fbd4",
       "ASC-REVIEW-4D93FE8E0666D181",
@@ -113,7 +115,6 @@
       "d23398b8ca4c7124399c9504",
       "2529322b7b5345fd6f575174",
       "74fb2863cc9a8120f3c68b67",
-      "9d0cf694c0c2e7c8947c7596",
       "ecadede6696db6c7c3e6b7ec",
       "9f3052b5d8cec138a2a37e8c",
       "fe3f3107cffaf5599a7b09f9",
@@ -145,22 +146,21 @@
       "ASC-REVIEW-875607DBB9C95C91",
       "ASC-REVIEW-BE461670E34D316C",
       "ASC-REVIEW-CDDCEFC70DF63561",
-      "ASC-REVIEW-6809880AE2446DD1",
-      "ASC-REVIEW-D23512B8758FE6BB"
+      "ASC-REVIEW-6809880AE2446DD1"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 43,
-      "disputedClaimCount": 63,
+      "disputedClaimCount": 64,
       "newEntityCount": 4,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 73,
-      "moneyRecordCount": 63
+      "relationshipCount": 72,
+      "moneyRecordCount": 62
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 43 A/B-grade public-record items are materially relevant to Public Page Heading Reconciliation.",
-        "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
+        "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “EU launches a mechanism to aggregate critical-raw-material demand and connect buyers, suppliers, finance and storage,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The April 2026 Raw Materials Mechanism aims to reduce concentrated third-country dependencies by aggregating industry demand and connecting companies with alternative suppliers, financiers and storage providers.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 73 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; BETTER DIRECT, LLC — Department of Energy",
+        "inference": "The indexed set contains 72 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; AGILENT TECHNOLOGIES INC — Department of Energy",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 73 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 72 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Matrix Reprogrammed Canonical Intelligence Record",
@@ -203,7 +203,7 @@
           "Influence should be mapped through infrastructure, filings and contracts.",
           "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
-          "BETTER DIRECT, LLC — Department of Energy"
+          "AGILENT TECHNOLOGIES INC — Department of Energy"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

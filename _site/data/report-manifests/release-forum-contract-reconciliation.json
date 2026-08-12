@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-08-11T05:02:29.792Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-12T05:27:15.788Z",
+  "pageCount": 134,
   "output": "downloads/release-forum-contract-reconciliation.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Release Forum Contract Reconciliation",
-    "contentHash": "a67d1385d4ab0cbf548bc930a7d840787d8f19a1d1beaf88d4d47b197b965a1f",
+    "contentHash": "eb2f30feba12b2cce7d9c5558477c466dc2a4b3cdfed6164de33482bacdb48f5",
     "sourceIds": [
-      "crime-state-overlap-2026-08-07-10060a7b",
       "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-C3297FF92B950118",
       "f8da9551192fb7f98b4efa86",
@@ -17,11 +16,8 @@
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
       "7f5b91c14c671bd24b8bbd81",
-      "crime-state-overlap-2026-08-10-d2755c34",
-      "crime-state-overlap-2026-08-10-5de09a55",
-      "4c1d46d9bcb8caa374dec7d2",
-      "e4ca191d7d9f2eddeda78ad3",
-      "crime-state-overlap-2026-08-07-ecf6905a",
+      "crime-state-overlap-2026-08-11-854ed3e3",
+      "2609b70f5c1db84a869ac7ca",
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
@@ -55,14 +51,11 @@
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
-      "ca92a54bb69eb2504c76e56e",
-      "e3b055a4afb19163268d7257",
       "ec968f2ec6ba82128b4cd91b",
-      "crime-state-overlap-2026-08-10-bc7b5d3f",
-      "crime-state-overlap-2026-08-07-8418d23a",
-      "crime-state-overlap-2026-08-07-ef852232",
-      "crime-state-overlap-2026-08-07-eabe3a68",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-5c5c9eb9",
+      "crime-state-overlap-2026-08-10-d2755c34",
+      "crime-state-overlap-2026-08-10-5de09a55",
       "r-kelly-appellate-finality-2025",
       "janner-iicsa-2022",
       "r-kelly-illinois-acquittals-2022",
@@ -146,21 +139,28 @@
       "ASC-REVIEW-5078341E3837218A",
       "ASC-REVIEW-51CC02522F48F499",
       "ASC-REVIEW-6719D25E7F18D57B",
-      "ASC-REVIEW-2D05ABEAD1B523C8"
+      "ASC-REVIEW-2D05ABEAD1B523C8",
+      "ASC-REVIEW-74CB8C62C3262D32",
+      "ASC-REVIEW-285205442D5C5D56",
+      "ASC-REVIEW-9553A9554C0E8D6A",
+      "ASC-REVIEW-375A853A96E42D84",
+      "ASC-REVIEW-D5FA458F66004D27",
+      "ASC-REVIEW-FE267E981A361906",
+      "ASC-REVIEW-1BDD1EF149FCB6DC"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 30,
-      "disputedClaimCount": 102,
+      "primarySourceCount": 23,
+      "disputedClaimCount": 109,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 49,
-      "moneyRecordCount": 25
+      "relationshipCount": 48,
+      "moneyRecordCount": 26
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 30 A/B-grade public-record items are materially relevant to Release Forum Contract Reconciliation.",
-        "evidence": "Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car (data/live-intel.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply (data/live-intel.json); Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing (data/live-intel.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); U.S. Attorney’s Office Filed 107 Border-Related Cases This Week (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 23 A/B-grade public-record items are materially relevant to Release Forum Contract Reconciliation.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Previously Convicted Killer Pleads Guilty to Possessing Loaded Pistol (data/live-intel.json); Official health investigations documented abuse and enabling access (data/criminal-conduct-registry.json); Broadmoor investigation examined Savile's access and abuse (data/criminal-conduct-registry.json); content changed: U.S. Federal Election Commission — Updates (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Today, U.S. Attorney Jeanine Ferris Pirro marked the one-year anniversary of President Trump’s Federal Law Enforcement Surge in the District of Columbia. The surge implemented a significant increase in federal law enforcement resources, bolstering our teams with additional agents, advanced tools, and a no‑nonsense mandate that renewed the focus on cracking down on violent offenders, dismantling criminal networks, and restoring safety to District neighborhoods. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Previously Convicted Killer Pleads Guilty to Possessing Loaded Pistol,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Rocky Lee Brown, 53, a previously convicted felon residing in the District of Columbia, pleaded guilty today in U.S. District Court in connection with his unlawful possession of a SCCY CPX-1 9mm pistol, announced U.S. Attorney Jeanine Ferris Pirro. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 49 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car; Matrix Reprogrammed Canonical Intelligence Record; One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply; Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing; U.S. Attorney’s Office Filed 107 Border-Related Cases This Week; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; MINDCUBED LLC — District of Columbia Courts",
+        "inference": "The indexed set contains 48 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Previously Convicted Killer Pleads Guilty to Possessing Loaded Pistol; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; MINDCUBED LLC — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 49 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 48 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car",
           "Matrix Reprogrammed Canonical Intelligence Record",
-          "One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply",
-          "Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing",
-          "U.S. Attorney’s Office Filed 107 Border-Related Cases This Week",
+          "Previously Convicted Killer Pleads Guilty to Possessing Loaded Pistol",
           "Official health investigations documented abuse and enabling access",
           "Broadmoor investigation examined Savile's access and abuse",
-          "MINDCUBED LLC — District of Columbia Courts"
+          "MINDCUBED LLC — District of Columbia Courts",
+          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+          "Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-11-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
   }
 }

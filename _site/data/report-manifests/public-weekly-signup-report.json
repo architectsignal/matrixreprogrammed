@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:02:15.733Z",
+  "generatedAt": "2026-08-12T05:27:01.766Z",
   "pageCount": 104,
   "output": "downloads/public-weekly-signup-report.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Public Weekly Signup Report",
-    "contentHash": "255f4cf4b54d1cbfc2326acb29cf527298a87166884d4a117ec8b2ad100b946e",
+    "contentHash": "7e40cb709eb6cac91453caa94b627a9993419fc46644c0431882fe952295ef89",
     "sourceIds": [
       "2931a84c2c7fe86982d5d6e5",
       "ASC-REVIEW-7291F43A6B9CBFA6",
@@ -38,6 +38,7 @@
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-E8F3DDB7E3724A74",
+      "6d75003b4825f307f6df306e",
       "71e0563ca7b139c37c302956",
       "88269481cf5b04b7b0f83b58",
       "eb79eba926106673fc0305cc",
@@ -50,11 +51,12 @@
       "a5e5d4ec4df4352ea242ea3f",
       "7f5b91c14c671bd24b8bbd81",
       "b079bec5bc869b0463d0584c",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-001",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-BDEA3B6AE6BFEDA7",
+      "529f3ec81072aa54c5515b3e",
       "1769af26a7bda813406cd8f5",
       "b1e5189be9fa36ea97b5f8c0",
       "0bf350b54332a373d71a7c86",
@@ -114,6 +116,7 @@
       "ASC-REVIEW-B66A4F66565A8C1E",
       "ASC-REVIEW-FC2D1F9D4ECA8822",
       "ASC-REVIEW-1EB618A4D39314B4",
+      "611d1a7edb4b0b2535b9708c",
       "ea3afacb89f4f277c87d1a79",
       "871096b65a90301ef4a126c3",
       "gates-epstein-meetings-2011-2014",
@@ -143,10 +146,7 @@
       "family-offices-grosvenor-group",
       "family-offices-exor",
       "family-offices-jab-holding-company",
-      "family-offices-kirkbi",
-      "family-offices-pontegadea",
-      "family-offices-l-catterton-family-capital-routes",
-      "family-offices-premjiinvest"
+      "family-offices-kirkbi"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 55,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 42,
-      "moneyRecordCount": 54
+      "relationshipCount": 41,
+      "moneyRecordCount": 51
     },
     "evidenceBasedConclusions": [
       {
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 41 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 41 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

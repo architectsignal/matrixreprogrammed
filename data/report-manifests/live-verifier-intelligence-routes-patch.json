@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:58:42.039Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-12T05:23:26.897Z",
+  "pageCount": 132,
   "output": "downloads/live-verifier-intelligence-routes-patch.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Live Verifier Intelligence Routes Patch",
-    "contentHash": "0928b0dedd9f516cf73cad1d9d30b7db05fec0d844cda5417dae0ed5a0a06bed",
+    "contentHash": "6c18ad47ac443bcf4307f53313d90e7aa9f1bb44d595df7e1f2b2d65549beeb6",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -35,6 +35,7 @@
       "ASC-REVIEW-CE615863A9722AC5",
       "EP-AI-003",
       "72ef7895f95288946ccb3cff",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-2FAF91DDDD6143CD",
@@ -46,9 +47,9 @@
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "EP-AI-002",
+      "source-change-82b0886fe4735164beacb291",
       "source-change-d8732adccaaac4ea6376d2ba",
       "source-change-c9bd018a6544006f1e1f3018",
-      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
@@ -65,11 +66,11 @@
       "ASC-REVIEW-21E454816F050A34",
       "3a425f0d5d683952bc0ad7ac",
       "ec968f2ec6ba82128b4cd91b",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -145,24 +146,23 @@
       "ASC-REVIEW-FE267E981A361906",
       "ASC-REVIEW-E48690C00EA31793",
       "ASC-REVIEW-14DA4C1F787B63ED",
-      "ASC-REVIEW-98888270E5A6D011",
-      "ASC-REVIEW-0F0776894447C197"
+      "ASC-REVIEW-98888270E5A6D011"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 8,
-      "disputedClaimCount": 125,
+      "primarySourceCount": 9,
+      "disputedClaimCount": 124,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 108,
-      "moneyRecordCount": 92
+      "relationshipCount": 107,
+      "moneyRecordCount": 91
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Live Verifier Intelligence Routes Patch.",
-        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 9 A/B-grade public-record items are materially relevant to Live Verifier Intelligence Routes Patch.",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 92,
+        "confidence": 94,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 108 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 107 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 108 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 107 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

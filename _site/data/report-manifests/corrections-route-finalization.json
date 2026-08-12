@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-08-11T04:52:50.403Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-12T05:17:33.060Z",
+  "pageCount": 126,
   "output": "downloads/corrections-route-finalization.pdf",
   "report": {
-    "version": 2,
+    "version": 3,
     "title": "Corrections Route Finalization",
-    "contentHash": "4f45f5dd5f34d6209a6122cf2dbb928c328178ba736cfb451fb1a9542a9404ff",
+    "contentHash": "60ba78155a3347065572d5f442d8afed0a84bdab2cc3b6f12c5252d1bbcba09d",
     "sourceIds": [
+      "d0b647e325275daa6d824a49",
       "d23398b8ca4c7124399c9504",
       "2529322b7b5345fd6f575174",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -64,8 +66,8 @@
       "665a5072d96b9757a6ee9d2d",
       "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
+      "2609b70f5c1db84a869ac7ca",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "e4ca191d7d9f2eddeda78ad3",
       "b4cb47ea50dc901364239e9f",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "9b6a36dc8fbb0fb10a2c4c7b",
@@ -116,23 +118,19 @@
       "4e5cc6449bcc7ddf1c878ee0",
       "4961972398d896435d33f3f7",
       "275d6c3caca158f7a3e15780",
-      "310372a3fc518b6aabbc5d07",
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "f59da50ababa3ddae79a8f1c",
       "ecd4a1111010f13b2d74bf8c",
       "ec968f2ec6ba82128b4cd91b",
       "911d6aa330f80279bdb3c4d5",
-      "crime-state-overlap-2026-08-10-9c1855a0",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "4c1d46d9bcb8caa374dec7d2",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "a71a8be091652489b843ecf6",
       "epstein-opr-review-2020",
       "peter-ball-iicsa-support-2019",
@@ -146,20 +144,22 @@
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
-      "ASC-REVIEW-5D13FDD470EDF012"
+      "ASC-REVIEW-5D13FDD470EDF012",
+      "ASC-REVIEW-94F3B4C96A469AB3",
+      "ASC-REVIEW-5F69F7CCEE3F7274"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 24,
-      "disputedClaimCount": 85,
+      "primarySourceCount": 22,
+      "disputedClaimCount": 88,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 56,
+      "relationshipCount": 55,
       "moneyRecordCount": 42
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Corrections Route Finalization.",
+        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Corrections Route Finalization.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A South Carolina woman and an inmate at federal Corrections Institution (FCI) Hazelton have been indicted on prison contraband charges involving methamphetamine, announced U.S. Attorney Matthew L. Harvey. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 56 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 55 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 56 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 55 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",

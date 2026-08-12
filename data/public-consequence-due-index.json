@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T05:12:28.279Z",
+  "generatedAt": "2026-08-12T05:37:16.737Z",
   "title": "Public Consequence Due Index",
   "purpose": "A compact bounded manifest for the Cloudflare Free tracking runtime. Historical contracts persist in D1 after they leave this current manifest.",
   "freeTierBudget": {
@@ -10,367 +10,277 @@
     "perFollowerWrites": 0,
     "aiInferenceInsideWorker": false
   },
-  "count": 12,
+  "count": 9,
   "contracts": [
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "title": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief",
+      "id": "consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "title": "Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-wdnc/pr/charlotte-man-sentenced-prison-using-us-postal-service-arrow-keys-steal-963000",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "e901ab0d221e1bab6290a76e85801122415cb7d51d969f4491ddb305f6f07c4b"
+      "contentHash": "69967716222d5594c3a710e6cfcac54ae70f3b4113d7c28de8786ac80474839c"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-015a2455",
-      "title": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-015a2455",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material",
+      "id": "consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "title": "Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-sdal/pr/former-coast-guard-rescue-swimmer-sentenced-5-years-prison-possessing-child",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Ashland Man Sentenced for Receiving Child Sexual Abuse Material”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "f408bc6138f840e851f53bc508df6e8e0bad2ffb8fb1dac2265a04441dbf1220"
+      "contentHash": "de0b7b9bc7edb727f1f4e9ae1e46389dcb127d311eeb30f04a32b31b9c725019"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "title": "Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds",
+      "id": "consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "title": "Former Department of Labor Employee Sentenced for Fraudulently Obtaining Over $40,000 in Pandemic Unemployment Assistance Benefits",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-ma/pr/former-department-labor-employee-sentenced-fraudulently-obtaining-over-40000-pandemic",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Former Department of Labor Employee Sentenced for Fraudulently Obtaining Over $40,000 in Pandemic Unemployment Assistance Benefits”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "65b31655d99d69fbc0e2e8b171db7cbcefec344ffb806bcddb2736ff86bea807"
+      "contentHash": "ee4cc4c5f46539f122f5284e6a25c402952dfbabed2e115ae358b4e1158d97c9"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "title": "Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud",
+      "id": "consequence-crime-state-overlap-2026-08-11-d7186992",
+      "title": "Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-d7186992",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-wdtn/pr/gibson-county-man-sentenced-10-years-federal-prison-distribution-child-pornography",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "f03ba203c2bbbe75081f644e229387a3bdf920b86b3663932271cb3811a9915e"
+      "contentHash": "08dd8d57dc421c910519685786d860b53e72b9d034d121172741e9e64f147933"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "title": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor",
+      "id": "consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "title": "Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-mdfl/pr/homeland-security-task-force-announces-twenty-five-year-sentence-colombian-drug",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "781b76cdcf5f1188556edd25dab49cc6e5d11a9eb67d9dac351b6aa5af27dce1"
+      "contentHash": "d953497d013b31858becfad33a1612b2ee77f8442c9680efd5363dc11f645f5a"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "title": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization",
+      "id": "consequence-crime-state-overlap-2026-08-11-37d80761",
+      "title": "Jacksonville Beach Dentist Indicted for Evading Personal Income Taxes, Failing to Pay Employment Taxes, and Attempting to Obstruct IRS Investigation",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-37d80761",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-mdfl/pr/jacksonville-beach-dentist-indicted-evading-personal-income-taxes-failing-pay",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Jacksonville Beach Dentist Indicted for Evading Personal Income Taxes, Failing to Pay Employment Taxes, and Attempting to Obstruct IRS Investigation”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "9492f9069463c8ce95598f78807ad52db8a8ce39a64e74578484f6b5615d69ff"
+      "contentHash": "5a0cff62520610c5c2e9985ddff7e8af952ad0252d4ebaa1ac7b363b34050165"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-b6533383",
-      "title": "Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-b6533383",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien",
+      "id": "consequence-crime-state-overlap-2026-08-11-a4267456",
+      "title": "Kansas City Man Sentenced to Nearly 12 Years in Prison for Illegal Firearm Possession",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-a4267456",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-wdmo/pr/kansas-city-man-sentenced-nearly-12-years-prison-illegal-firearm-possession-0",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “Kansas City Man Sentenced to Nearly 12 Years in Prison for Illegal Firearm Possession”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "5d0b8d474f3a4296791ae2598336df6e72145030fb3b960a3f0e88703d9d4090"
+      "contentHash": "d0722279caa11d3ffda24001f578dc7d2aba5f8a03bb3d0a238b94ab1ef3a782"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "title": "Jury convicts Army veteran of embellishing health issues to defraud the VA",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va",
+      "id": "consequence-crime-state-overlap-2026-08-11-32020221",
+      "title": "New York Man Charged With Child Exploitation Offense",
+      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-32020221",
+      "actionDate": "2026-08-11T12:00:00.000Z",
+      "sourceUrl": "https://www.justice.gov/usao-ma/pr/new-york-man-charged-child-exploitation-offense",
       "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Jury convicts Army veteran of embellishing health issues to defraud the VA”, and did the evidence support the stated or implied justification?",
+      "accountabilityQuestion": "What measurable public consequence followed “New York Man Charged With Child Exploitation Offense”, and did the evidence support the stated or implied justification?",
       "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T12:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T12:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T12:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "46bde5539a5dd0f9f9a2ab7a7cba6a846206a2fe86ce74c1ee5cbfa310546564"
+      "contentHash": "fc8c4b5bb5bb841c25933618a5f089f212c3af76c6ede5240f6bf4b769d7fd4f"
     },
     {
-      "id": "consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "title": "Rio Grande City man sentenced for soliciting sexually explicit images of minors",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors",
-      "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Rio Grande City man sentenced for soliciting sexually explicit images of minors”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
+      "id": "consequence-declassified-files-2026-08-11-86447204",
+      "title": "Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support - treasury.gov",
+      "route": "public-consequence-contracts.html#consequence-declassified-files-2026-08-11-86447204",
+      "actionDate": "2026-08-11T13:00:00.000Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBsZ0ktbWRkSDhUMWZCWnZNWm5ab1BvbUtoNy1qd3VPWHJfMzFCNEtsS2trY3VxNENtUUpoc3VoQ1h1UXhTNmZzM0I1bE1udVgyOWlacVN1QXZyWFhjemo3djdB?oc=5",
+      "evidenceRoute": "evidence-vault-index.html",
+      "accountabilityQuestion": "What measurable public consequence followed “Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support - treasury.gov”, and did the evidence support the stated or implied justification?",
+      "evidenceBoundary": "A released file is a source fragment. It needs date, origin, context, and corroboration before it becomes a conclusion.",
       "termsLock": "unlocked-pending-primary-decision-record",
       "outcomeVerdict": "not-scored",
       "checkpoints": [
         {
           "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
+          "dueAt": "2026-09-10T13:00:00.000Z",
           "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
         },
         {
           "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
+          "dueAt": "2026-11-09T13:00:00.000Z",
           "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
         },
         {
           "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
+          "dueAt": "2027-08-11T13:00:00.000Z",
           "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
         }
       ],
-      "contentHash": "028c53412a6e3b1b29380e597f1354904b4136025f8aa2843b971afbd392fc91"
-    },
-    {
-      "id": "consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "title": "Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton",
-      "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "303b7c1298bd3a343f380b5dba62d94aa00e389ea3aac541bddd17c272b3a335"
-    },
-    {
-      "id": "consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "title": "Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old",
-      "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "4eb4a3cd989225e4b33445240d0751173a6a9d4788899fa36380091c5c85289f"
-    },
-    {
-      "id": "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "title": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen",
-      "route": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "actionDate": "2026-08-10T12:00:00.000Z",
-      "sourceUrl": "https://www.justice.gov/usao-ks/pr/usao-ks-files-denaturalization-case-against-man-ordered-deported-then-used-false",
-      "evidenceRoute": "network-maps.html",
-      "accountabilityQuestion": "What measurable public consequence followed “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen”, and did the evidence support the stated or implied justification?",
-      "evidenceBoundary": "A report, charge, sanction, or investigation is not the same as a conviction. Keep allegation, indictment, conviction, and association separate.",
-      "termsLock": "unlocked-pending-primary-decision-record",
-      "outcomeVerdict": "not-scored",
-      "checkpoints": [
-        {
-          "daysAfterAction": 30,
-          "dueAt": "2026-09-09T12:00:00.000Z",
-          "reviewQuestion": "Was the action actually implemented, and which authority or institution carried it out?"
-        },
-        {
-          "daysAfterAction": 90,
-          "dueAt": "2026-11-08T12:00:00.000Z",
-          "reviewQuestion": "What measurable early outcomes, costs, beneficiaries and affected groups are visible in the public record?"
-        },
-        {
-          "daysAfterAction": 365,
-          "dueAt": "2027-08-10T12:00:00.000Z",
-          "reviewQuestion": "Did the claimed public benefit occur, what unintended consequences emerged, and did the money or power flow differ from the stated rationale?"
-        }
-      ],
-      "contentHash": "46589867791404384fca2eebcfc958f75cbc41c31c470d3350d3bba2d6c399d9"
+      "contentHash": "2862718f0d21ad7c966654b6e55d598b8f5c61c50daf655d29b8f46525c07628"
     }
   ]
 }

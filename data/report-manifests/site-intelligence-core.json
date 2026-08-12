@@ -1,19 +1,21 @@
 {
-  "generatedAt": "2026-08-11T05:03:50.546Z",
-  "pageCount": 122,
+  "generatedAt": "2026-08-12T05:28:38.179Z",
+  "pageCount": 120,
   "output": "downloads/site-intelligence-core.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Matrix Intelligence Core",
-    "contentHash": "b2ac9d5a426f50ac9ee4d82d3fc2218567976cec21da1c4bc2959a1c080de97e",
+    "contentHash": "9cd05e3bea080052f12d8dc132180bb9bc75ecd072b364492b8a13ed61cf4b10",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "1769af26a7bda813406cd8f5",
       "26b90533dbf7d2ed42f02de6",
-      "72ef7895f95288946ccb3cff",
       "594100b62a47db521fe2a128",
+      "72ef7895f95288946ccb3cff",
       "34805734b1ad3b73f0ede0d8",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
+      "d0b647e325275daa6d824a49",
+      "cee347fbc3752c6e0f890457",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
@@ -31,8 +33,6 @@
       "71e0563ca7b139c37c302956",
       "9f3052b5d8cec138a2a37e8c",
       "ecd4a1111010f13b2d74bf8c",
-      "310372a3fc518b6aabbc5d07",
-      "f59da50ababa3ddae79a8f1c",
       "41772e5c9af7970ddd7d5aac",
       "d23398b8ca4c7124399c9504",
       "5295a33003172878f9880122",
@@ -68,6 +68,8 @@
       "19ae23289f4be13ad5f7e317",
       "9bc66da5c53d37d8c3d59e13",
       "9e8310c49b990aa62d2b0921",
+      "310372a3fc518b6aabbc5d07",
+      "f59da50ababa3ddae79a8f1c",
       "7d7ccb5b896a02cf45094879",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-EAB6011874016286",
@@ -117,7 +119,6 @@
       "360e80c162081c85d2c680ef",
       "4c372edcf20b760ae3305f10",
       "d3589cf045e6d530b37381a9",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-861EBE2805F13D36",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -145,33 +146,32 @@
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-5DBB951AEA496B78",
-      "ASC-REVIEW-8F441C443ED90227",
-      "ASC-REVIEW-DEA5865B50E63221"
+      "ASC-REVIEW-8F441C443ED90227"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 4,
-      "disputedClaimCount": 90,
+      "primarySourceCount": 3,
+      "disputedClaimCount": 91,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 77,
-      "moneyRecordCount": 70
+      "relationshipCount": 76,
+      "moneyRecordCount": 69
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Matrix Intelligence Core.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); AT&T CORP. — Department of Defense (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Matrix Intelligence Core.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); AT&T CORP. — Department of Defense (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 84,
+        "confidence": 82,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “COMCAST GOVERNMENT SERVICES LLC — Department of Defense,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "EIMI000401EBM - INTERNET PROVIDER VOICE SERVICE (IPVS) - ENTERPRISE INFRASTRUCTURE SOLUTIONS (EIS) · Amount: 31640.45 · Sub-agency: Defense Information Systems Agency A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 77 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Matrix Reprogrammed Canonical Intelligence Record; Media / Narrative Theory; Media / Narrative Theory",
+        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Matrix Reprogrammed Canonical Intelligence Record; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; FCN, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 77 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -202,8 +202,8 @@
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
           "Matrix Reprogrammed Canonical Intelligence Record",
-          "Media / Narrative Theory",
-          "Media / Narrative Theory"
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+          "FCN, INC. — Court Services and Offender Supervision Agency"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

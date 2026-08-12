@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:00:33.474Z",
-  "pageCount": 96,
+  "generatedAt": "2026-08-12T05:25:18.834Z",
+  "pageCount": 92,
   "output": "downloads/paypal-subscription-create-state-repair.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Paypal Subscription Create State Repair",
-    "contentHash": "f18e60132d5d067e5acd8aa68f15317ef2cdd1eddc973bf242021d51d4b93f91",
+    "contentHash": "7b4be5535e523922787eaa58d5fd3b0e8da09167590f264a838f557ef12b090d",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
@@ -23,7 +23,6 @@
       "5594665950812895f468c11d",
       "ad23fb22757e50c30b3d487c",
       "5b6b5c0285c3c8742768ea5c",
-      "4c1d46d9bcb8caa374dec7d2",
       "7f0eb9ddb996aecbeeda522d",
       "54197b23c792a122f53a863b",
       "d23398b8ca4c7124399c9504",
@@ -31,13 +30,14 @@
       "deb382cdbfe57b57793d739e",
       "f44c3c7309a5f0779a57e655",
       "26b90533dbf7d2ed42f02de6",
+      "611d1a7edb4b0b2535b9708c",
       "0c5f51804baf8e9e2c1fdd0b",
       "ef50253c90923f8fe305c4cf",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
       "7fc07964a27914afe516c45b",
-      "e3b055a4afb19163268d7257",
       "source-change-d8732adccaaac4ea6376d2ba",
+      "d0b647e325275daa6d824a49",
       "4ae6a940305d15da61333450",
       "19ae23289f4be13ad5f7e317",
       "45f5269389def99607b5a517",
@@ -53,17 +53,15 @@
       "eb3448928554960651da56f6",
       "270841af2bd81407a26bed0b",
       "88ef9baf356c096816236956",
-      "ca92a54bb69eb2504c76e56e",
-      "366686df53f6dfd25d3f0ea4",
-      "d77b99424431ead891074ef0",
-      "8737454dea4463f85583fbd4",
+      "cee347fbc3752c6e0f890457",
+      "1c0cca9ff329dd06d5408693",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -73,6 +71,7 @@
       "c414ea6b5bea3390d2a8ce5c",
       "9dad49e7d690ef5780b5a6bf",
       "74fb2863cc9a8120f3c68b67",
+      "529f3ec81072aa54c5515b3e",
       "594100b62a47db521fe2a128",
       "1769af26a7bda813406cd8f5",
       "71e0563ca7b139c37c302956",
@@ -88,6 +87,7 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
+      "e3b055a4afb19163268d7257",
       "fe51591d2f98b1e8140add7f",
       "228770c420a004608c7b13f9",
       "peter-ball-iicsa-support-2019",
@@ -118,6 +118,7 @@
       "8d2a26495075b1d71abf17c2",
       "9bc66da5c53d37d8c3d59e13",
       "6d8df9af51b8078e703b2748",
+      "6d75003b4825f307f6df306e",
       "ec7f3126268880506fc4f0ed",
       "ea3afacb89f4f277c87d1a79",
       "871096b65a90301ef4a126c3",
@@ -145,21 +146,20 @@
       "1abf4240a692c2dda1388443",
       "ff1a3a77816af400f09ab95e",
       "fbfb678d637444fe7b488644",
-      "3a612824bd2383e3b7554062",
-      "def94e0a086f2eac4c5ad91a"
+      "3a612824bd2383e3b7554062"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 74,
-      "disputedClaimCount": 22,
+      "primarySourceCount": 72,
+      "disputedClaimCount": 24,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 25,
-      "moneyRecordCount": 15
+      "relationshipCount": 22,
+      "moneyRecordCount": 12
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 74 A/B-grade public-record items are materially relevant to Paypal Subscription Create State Repair.",
+        "conclusion": "The indexed record establishes that 72 A/B-grade public-record items are materially relevant to Paypal Subscription Create State Repair.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “IICSA found serious Church failures and examined prominent support,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "IICSA concluded that Church safeguarding failed and that prominent individuals wrote to police, prosecutors and the Church in support of Ball without knowing all the facts.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 25 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; AGILENT TECHNOLOGIES INC — Department of Energy; ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration; SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration; Influence should be mapped through infrastructure, filings and contracts.",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; Matrix Reprogrammed Canonical Intelligence Record; Matrix Reprogrammed Structured Investigation Schema",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 25 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
-          "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-          "AGILENT TECHNOLOGIES INC — Department of Energy",
-          "ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration",
-          "SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration",
-          "Influence should be mapped through infrastructure, filings and contracts."
+          "MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency",
+          "Influence should be mapped through infrastructure, filings and contracts.",
+          "The strongest public pattern is convergence across access systems.",
+          "Follow The Money Watch",
+          "Matrix Reprogrammed Canonical Intelligence Record",
+          "Matrix Reprogrammed Structured Investigation Schema"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-11-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-10-01T00:00:00.000Z"
   }
 }

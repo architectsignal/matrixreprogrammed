@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:53:01.840Z",
-  "pageCount": 103,
+  "generatedAt": "2026-08-12T05:17:44.283Z",
+  "pageCount": 101,
   "output": "downloads/criminal-investigations-build-report.pdf",
   "report": {
-    "version": 15,
+    "version": 16,
     "title": "Criminal Investigations Build Report",
-    "contentHash": "855bad117b18016d8c01f6f0b47beb01267ada36cedf616087cb530de91eac51",
+    "contentHash": "f2d18b9a58a6f7d0ebb4f4d893741a16026d2b6dc9acb51b04a636da987c51ce",
     "sourceIds": [
       "19ae23289f4be13ad5f7e317",
       "9e8310c49b990aa62d2b0921",
@@ -81,7 +81,7 @@
       "e10c38338a42062da8899449",
       "7a0ce047ee750826a59e7474",
       "a01fc28e9fb6ce85637a3248",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "david-james-clarke-conviction-2026",
       "lawrence-ray-conviction-sentence-2023",
       "maxwell-conviction-2021",
@@ -95,9 +95,11 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
+      "d0b647e325275daa6d824a49",
       "869fb3fbc8c9ae63c5aca5f3",
       "7dcf4ef18ea1f86d01068773",
       "360e80c162081c85d2c680ef",
+      "cee347fbc3752c6e0f890457",
       "abdul-halim-khan-conviction-2026",
       "adam-taylor-nca-conviction-2024",
       "r-kelly-illinois-acquittals-2022",
@@ -130,31 +132,29 @@
       "ASC-REVIEW-B3BA7D663A9BE4B2",
       "ASC-REVIEW-21E454816F050A34",
       "72209393009884f476bb7c96",
+      "594100b62a47db521fe2a128",
       "EP-AI-003",
       "1ee57e70dacfa67f04323529",
-      "4c1d46d9bcb8caa374dec7d2",
+      "34805734b1ad3b73f0ede0d8",
       "conor-mcgrath-iico-conviction-2026",
       "huw-edwards-iico-conviction-2024",
       "greenberg-sentence-2022",
       "r-kelly-illinois-conviction-2022",
       "shortey-child-sex-trafficking-2018",
-      "weiner-federal-conviction-2017",
-      "epstein-florida-plea-2008",
-      "ASC-REVIEW-DA07BCFBB726AA49",
-      "ASC-REVIEW-CFB2B8804532DFFC"
+      "weiner-federal-conviction-2017"
     ],
     "metrics": {
       "evidenceCount": 135,
-      "primarySourceCount": 34,
+      "primarySourceCount": 32,
       "disputedClaimCount": 42,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 39,
+      "relationshipCount": 37,
       "moneyRecordCount": 26
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 34 A/B-grade public-record items are materially relevant to Criminal Investigations Build Report.",
+        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Criminal Investigations Build Report.",
         "evidence": "IICSA found serious Church failures and examined prominent support (data/exposure-evidence-ledger.json); IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); Official health investigations documented abuse and enabling access (data/criminal-conduct-registry.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); IICSA found serious institutional-response failures (data/exposure-evidence-ledger.json); Guilty pleas to indecent assaults and misconduct in public office (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -163,8 +163,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Forty-five child sexual abuse convictions and 26-year sentence,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Clarke was convicted of 45 offenses involving 14 children. The CPS stated that he used a photography club and darkroom to isolate boys and escalate abuse, while also using threats and bribes.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -174,7 +174,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 39 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 37 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; The strongest public pattern is convergence across access systems.; The strongest public pattern is convergence across access systems.; Westminster inquiry examined political and policing responses; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -189,7 +189,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 39 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 37 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Official health investigations documented abuse and enabling access",
@@ -213,6 +213,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:05.856Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

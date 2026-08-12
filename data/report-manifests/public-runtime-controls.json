@@ -1,16 +1,17 @@
 {
-  "generatedAt": "2026-08-11T05:02:08.161Z",
-  "pageCount": 142,
+  "generatedAt": "2026-08-12T05:26:54.378Z",
+  "pageCount": 140,
   "output": "downloads/public-runtime-controls.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Public Runtime Controls",
-    "contentHash": "1fabc20518569d54b2dbb99f892905481c35cc37c854e83883dfe10d1c749edd",
+    "contentHash": "07f3a3d03d9920d07ff05f601cba8e73025217cd510b9a3c4bf019b67bff77c5",
     "sourceIds": [
+      "source-change-82b0886fe4735164beacb291",
+      "2609b70f5c1db84a869ac7ca",
       "crime-state-overlap-2026-08-10-d2755c34",
       "source-change-d8732adccaaac4ea6376d2ba",
       "source-change-c9bd018a6544006f1e1f3018",
-      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -21,12 +22,11 @@
       "ASC-REVIEW-11047BCC813B0EA8",
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "e4ca191d7d9f2eddeda78ad3",
-      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -59,6 +59,11 @@
       "511ed227bb4be58b582ebb8d",
       "e3b055a4afb19163268d7257",
       "a33968b32fce32bd9d6523f6",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-5c5c9eb9",
+      "crime-state-overlap-2026-08-11-c098e67e",
+      "crime-state-overlap-2026-08-11-0708ab9e",
+      "crime-state-overlap-2026-08-11-9cad9b6a",
       "crime-state-overlap-2026-08-10-9cf6f0f4",
       "crime-state-overlap-2026-08-10-bc7b5d3f",
       "crime-state-overlap-2026-08-10-48c93d8f",
@@ -67,16 +72,6 @@
       "crime-state-overlap-2026-08-10-7d922c66",
       "crime-state-overlap-2026-08-10-9c1855a0",
       "crime-state-overlap-2026-08-10-5de09a55",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-8418d23a",
-      "crime-state-overlap-2026-08-07-a2296147",
-      "crime-state-overlap-2026-08-07-7e664ee5",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
-      "crime-state-overlap-2026-08-07-ef852232",
-      "crime-state-overlap-2026-08-07-40e429d2",
-      "crime-state-overlap-2026-08-07-10060a7b",
-      "crime-state-overlap-2026-08-07-6fc023b0",
-      "crime-state-overlap-2026-08-07-ecf6905a",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
@@ -146,21 +141,26 @@
       "ASC-REVIEW-F5CA53DC99863DAC",
       "ASC-REVIEW-0914587401D9BDE0",
       "ASC-REVIEW-525DDFDACCB9146E",
-      "ASC-REVIEW-FF1A5D475493F22D"
+      "ASC-REVIEW-FF1A5D475493F22D",
+      "ASC-REVIEW-7531D73ADCFB5B91",
+      "ASC-REVIEW-E45C21A8CE98987F",
+      "ASC-REVIEW-493ED117CF1C0E91",
+      "ASC-REVIEW-0C3383FAE797FF46",
+      "ASC-REVIEW-7FBB26E1B0ECA17A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 35,
-      "disputedClaimCount": 92,
+      "primarySourceCount": 30,
+      "disputedClaimCount": 97,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
-      "moneyRecordCount": 53
+      "relationshipCount": 77,
+      "moneyRecordCount": 54
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 35 A/B-grade public-record items are materially relevant to Public Runtime Controls.",
-        "evidence": "One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply (data/live-intel.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 30 A/B-grade public-record items are materially relevant to Public Runtime Controls.",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply (data/latest-public-drops.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Today, U.S. Attorney Jeanine Ferris Pirro marked the one-year anniversary of President Trump’s Federal Law Enforcement Surge in the District of Columbia. The surge implemented a significant increase in federal law enforcement resources, bolstering our teams with additional agents, advanced tools, and a no‑nonsense mandate that renewed the focus on cracking down on violent offenders, dismantling criminal networks, and restoring safety to District neighborhoods. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "MOBILE, AL – Bradford Simmons, 51, was sentenced to five years in prison after pleading guilty to one count of possession of child pornography. Simmons entered his guilty plea on April 27, 2026. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 77 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 77 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",

@@ -1,17 +1,15 @@
 {
-  "generatedAt": "2026-08-11T04:59:17.823Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-12T05:24:02.371Z",
+  "pageCount": 133,
   "output": "downloads/membership-auth-test.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Membership Authentication Test",
-    "contentHash": "4507f7022da48511d6802d560ea6759e40fca277805924b1e9f14aae38edaf31",
+    "contentHash": "50f0497b0bd7934660198fef10acf534da9ba095089190a9f36eeec692966c5d",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-20316213EFD183CC",
-      "e3b055a4afb19163268d7257",
-      "8737454dea4463f85583fbd4",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-E6D70696A19B3CDA",
@@ -19,10 +17,7 @@
       "72ef7895f95288946ccb3cff",
       "self-checks",
       "network-defence",
-      "ca92a54bb69eb2504c76e56e",
-      "366686df53f6dfd25d3f0ea4",
-      "d77b99424431ead891074ef0",
-      "4c1d46d9bcb8caa374dec7d2",
+      "1c0cca9ff329dd06d5408693",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-A5C911DFEE587573",
@@ -31,7 +26,10 @@
       "71e0563ca7b139c37c302956",
       "157cdab04b61ae6309c0c713",
       "7f5b91c14c671bd24b8bbd81",
+      "e3b055a4afb19163268d7257",
       "d3589cf045e6d530b37381a9",
+      "8737454dea4463f85583fbd4",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-EAB6011874016286",
       "ASC-REVIEW-F26BA2899C21B0EA",
       "ASC-REVIEW-52F3C5EC8401656D",
@@ -53,17 +51,19 @@
       "9e8310c49b990aa62d2b0921",
       "73799cb9af4829047998b026",
       "4c372edcf20b760ae3305f10",
+      "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
+      "366686df53f6dfd25d3f0ea4",
       "c673456bbe77dbb29e43ac7d",
       "a103f2650e31fc92fa3688e6",
       "8f15d14f1b05a490af22799d",
       "8c8118614f58e40c87e2c2f7",
       "780e9bdf80820219684ec0cb",
+      "d77b99424431ead891074ef0",
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
       "fe51591d2f98b1e8140add7f",
       "228770c420a004608c7b13f9",
-      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -154,13 +154,13 @@
       "disputedClaimCount": 104,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 106,
-      "moneyRecordCount": 96
+      "relationshipCount": 107,
+      "moneyRecordCount": 97
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Membership Authentication Test.",
-        "evidence": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "evidence": "MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); AT&T CORP. — Department of Defense (data/weekly-investigation-conclusions.json); SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “MINDCUBED LLC — District of Columbia Courts,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "CONTRACT NO. DSCS-26-RFP-66 WITH MINDCUBED LLC FOR QA & SOFTWARE TESTING SERVICES TO SUPPORT THE IMPLEMENTATION OF DCCA CMS. POP: 7/13/2026 THROUGH 7/12/2027. · Amount: 366873.6 · Sub-agency: District of Columbia Courts A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 106 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "The strongest public pattern is convergence across access systems.; ACENTRA HEALTH LLC — National Aeronautics and Space Administration; SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration; Influence should be mapped through infrastructure, filings and contracts.; 10. Device, Network & Incident Defence; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; AGILENT TECHNOLOGIES INC — Department of Energy; ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration",
+        "inference": "The indexed set contains 107 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "The strongest public pattern is convergence across access systems.; Influence should be mapped through infrastructure, filings and contracts.; 10. Device, Network & Incident Defence; MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency; Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Vanguard → Retirement Accounts: capital layer; Matrix Reprogrammed Canonical Intelligence Record; ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 106 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 107 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "The strongest public pattern is convergence across access systems.",
-          "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
-          "SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration",
           "Influence should be mapped through infrastructure, filings and contracts.",
           "10. Device, Network & Incident Defence",
-          "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-          "AGILENT TECHNOLOGIES INC — Department of Energy",
-          "ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration"
+          "MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency",
+          "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
+          "Vanguard → Retirement Accounts: capital layer",
+          "Matrix Reprogrammed Canonical Intelligence Record",
+          "ACENTRA HEALTH LLC — National Aeronautics and Space Administration"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

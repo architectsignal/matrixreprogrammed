@@ -1,22 +1,23 @@
 {
-  "generatedAt": "2026-08-11T04:55:08.698Z",
-  "pageCount": 118,
+  "generatedAt": "2026-08-12T05:19:51.947Z",
+  "pageCount": 117,
   "output": "downloads/email-automation-guard-patch.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Email Automation Guard Patch",
-    "contentHash": "9b98793dcd926c4aaa7729996cc656c99b5a96b8f187bdc0910391db559f303b",
+    "contentHash": "49ccec488ff843e013da4f681a6fa10a9e990116692a677ea983d844f847043b",
     "sourceIds": [
       "source-change-d8732adccaaac4ea6376d2ba",
       "26b90533dbf7d2ed42f02de6",
       "EFS-001-R006",
+      "crime-state-overlap-2026-08-11-6fc87119",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "cyril-smith-iicsa-2018",
       "savile-health-investigations-2014",
       "ASC-REVIEW-7291F43A6B9CBFA6",
@@ -37,6 +38,7 @@
       "18930d440aed009547436b81",
       "665a5072d96b9757a6ee9d2d",
       "4961972398d896435d33f3f7",
+      "611d1a7edb4b0b2535b9708c",
       "8057d390af5011731564579c",
       "EP-AI-004",
       "b1e5189be9fa36ea97b5f8c0",
@@ -57,11 +59,9 @@
       "ecd4a1111010f13b2d74bf8c",
       "ec968f2ec6ba82128b4cd91b",
       "911d6aa330f80279bdb3c4d5",
-      "crime-state-overlap-2026-08-10-f6376771",
-      "crime-state-overlap-2026-08-10-5de09a55",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-0708ab9e",
+      "crime-state-overlap-2026-08-11-38bd17df",
       "b4cb47ea50dc901364239e9f",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
@@ -154,12 +154,12 @@
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 48,
-      "moneyRecordCount": 26
+      "moneyRecordCount": 27
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 64 A/B-grade public-record items are materially relevant to Email Automation Guard Patch.",
-        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json)",
+        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan (data/live-intel.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,7 +179,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 48 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+        "supportingEvidence": "Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -195,13 +195,13 @@
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
         "whyItIsBeingConsidered": "The indexed set contains 48 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan",
           "IICSA documented predatory activities and institutional failures",
           "Official health investigations documented abuse and enabling access",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: Federal Register — Latest Documents",
-          "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases"
         ],
         "counterEvidence": [

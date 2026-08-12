@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:04:24.328Z",
-  "pageCount": 132,
+  "generatedAt": "2026-08-12T05:29:12.153Z",
+  "pageCount": 131,
   "output": "downloads/source-evidence-search-extension.pdf",
   "report": {
-    "version": 4,
+    "version": 5,
     "title": "Source Evidence Search Extension",
-    "contentHash": "c31775f815efea2e7c40d9fe15d92f19c8b71037c181aa114fbbe9e22fa425ee",
+    "contentHash": "7d6c3b7884926056c224b2cd45835e1efe8247b1617d140e8a479e0f1a30cf3b",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -25,8 +25,8 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "2609b70f5c1db84a869ac7ca",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-5D13FDD470EDF012",
@@ -150,28 +150,28 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
+      "primarySourceCount": 1,
       "disputedClaimCount": 137,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 133,
       "moneyRecordCount": 132
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Source Evidence Search Extension.",
-        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Source Evidence Search Extension.",
+        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Department of Justice Office of Inspector General — Reports,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

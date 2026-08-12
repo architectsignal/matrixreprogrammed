@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:55:14.217Z",
+  "generatedAt": "2026-08-12T05:19:57.500Z",
   "pageCount": 137,
   "output": "downloads/empty-public-controls-output.pdf",
   "report": {
-    "version": 20,
+    "version": 21,
     "title": "Empty Public Controls Output",
-    "contentHash": "883f2230601cbf218a57651e46c6c2d777da35555c3d30830db51a516dd9903a",
+    "contentHash": "ac1a861be61deac77db5c30b803e821ed8f315061f7bf8e9c6d82b5a6dc18e1e",
     "sourceIds": [
       "ASC-REVIEW-8D34DAEE930AC84F",
       "26b90533dbf7d2ed42f02de6",
@@ -56,9 +56,10 @@
       "71e0563ca7b139c37c302956",
       "72ef7895f95288946ccb3cff",
       "360e80c162081c85d2c680ef",
+      "source-change-82b0886fe4735164beacb291",
+      "2609b70f5c1db84a869ac7ca",
       "source-change-d8732adccaaac4ea6376d2ba",
       "source-change-c9bd018a6544006f1e1f3018",
-      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -145,14 +146,13 @@
       "ASC-REVIEW-AFF7699289F993E4",
       "ASC-REVIEW-135079C8B6667E13",
       "ASC-REVIEW-1E865C671E08BD05",
-      "ASC-REVIEW-74487D6D467BA7AE",
-      "ASC-REVIEW-6DA85AF7CC833F29"
+      "ASC-REVIEW-74487D6D467BA7AE"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 4,
-      "disputedClaimCount": 131,
-      "newEntityCount": 0,
+      "disputedClaimCount": 130,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 79,
       "moneyRecordCount": 65
@@ -160,7 +160,7 @@
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Empty Public Controls Output.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json)",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,7 +168,7 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Department of Justice Office of Inspector General — Reports,” the strongest indexed record by source grade and evidence status.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
         "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 84,
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
+    "intelligenceFreshnessDate": "2026-08-11T06:09:41.962Z"
   }
 }

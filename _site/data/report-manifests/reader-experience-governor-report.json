@@ -1,21 +1,18 @@
 {
-  "generatedAt": "2026-08-11T05:02:22.958Z",
-  "pageCount": 131,
+  "generatedAt": "2026-08-12T05:27:09.124Z",
+  "pageCount": 130,
   "output": "downloads/reader-experience-governor-report.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Reader Experience Governor",
-    "contentHash": "87cdaa198de3c06f8decd6c03636754b27112f260ad6501c7af9fb4bc0e897c5",
+    "contentHash": "f4370d0293c7713a28df7460ef7b1c7cd1f948d3ea7a1d4015086a44a89ac42e",
     "sourceIds": [
       "f3676fb7b03d3ee0516f2a19",
       "4fc2f377f4969f7074a7e989",
       "e72d22f4f28eb53e3173d0a6",
       "57c45b5418e8e6b512f06603",
-      "crime-state-overlap-2026-08-10-5de09a55",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
-      "e4ca191d7d9f2eddeda78ad3",
-      "crime-state-overlap-2026-08-07-ef852232",
-      "crime-state-overlap-2026-08-07-10060a7b",
+      "crime-state-overlap-2026-08-11-c098e67e",
+      "2609b70f5c1db84a869ac7ca",
       "b4cb47ea50dc901364239e9f",
       "a71a8be091652489b843ecf6",
       "8ddb3b7e4b5f3efe969f1614",
@@ -146,21 +143,24 @@
       "ASC-REVIEW-32A64F4FD3617829",
       "ASC-REVIEW-39269A2C0471A66C",
       "ASC-REVIEW-53BD0E17B018491C",
-      "ASC-REVIEW-0177F61D444ED739"
+      "ASC-REVIEW-0177F61D444ED739",
+      "ASC-REVIEW-FE9A5B02284E30E4",
+      "ASC-REVIEW-9B9644A27C9A796C",
+      "ASC-REVIEW-5D6BEB26E7D5659F"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 38,
-      "disputedClaimCount": 102,
+      "primarySourceCount": 35,
+      "disputedClaimCount": 105,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 106,
-      "moneyRecordCount": 95
+      "moneyRecordCount": 98
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Reader Experience Governor.",
-        "evidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json); U.S. Department of Justice (data/search-index.json); Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing (data/live-intel.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/live-intel.json); Laurel man pleads guilty to gun charges after shooting himself in the leg (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 35 A/B-grade public-record items are materially relevant to Reader Experience Governor.",
+        "evidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2 (data/clock-wall.json); U.S. Department of Justice (data/search-index.json); Manitowoc Resident Indicted on Child Obscenity and Commission of a Felony Sex Offense by a Registered Sex Offender (data/live-intel.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); 2026 Rule of Law Report says media-market concentration and editorial independence concerns persist (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "United States Attorney for the Southern District of New York, Jamie McDonald, Assistant Director in Charge of the Coast Guard Investigative Service (“CGIS”), Josh Packer, and Commissioner of the New York City Police Department (“NYPD”), Jessica S. Tisch, announced today that MANUEL HERNANDEZ has been charged with negligently causing the death of a five-month-old infant and a 27-year-old woman, after the vessel HERNANDEZ was piloting capsized in New York Harbor. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Manitowoc Resident Indicted on Child Obscenity and Commission of a Felony Sex Offense by a Registered Sex Offender,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Manitowoc Resident Indicted on Child Obscenity and Commission of a Felony Sex Offense by a Registered Sex Offender This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 106 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing; USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen; Laurel man pleads guilty to gun charges after shooting himself in the leg; Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures",
+        "supportingEvidence": "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Manitowoc Resident Indicted on Child Obscenity and Commission of a Felony Sex Offense by a Registered Sex Offender; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -197,13 +197,13 @@
         "whyItIsBeingConsidered": "The indexed set contains 106 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
-          "Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing",
-          "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen",
-          "Laurel man pleads guilty to gun charges after shooting himself in the leg",
-          "Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car",
+          "Manitowoc Resident Indicted on Child Obscenity and Commission of a Felony Sex Offense by a Registered Sex Offender",
           "ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash",
           "Westminster inquiry examined political and policing responses",
-          "IICSA documented predatory activities and institutional failures"
+          "IICSA documented predatory activities and institutional failures",
+          "Official health investigations documented abuse and enabling access",
+          "Broadmoor investigation examined Savile's access and abuse",
+          "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

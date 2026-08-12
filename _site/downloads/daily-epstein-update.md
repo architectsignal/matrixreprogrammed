@@ -1,7 +1,7 @@
 # Daily Epstein Update
 
-Generated: 2026-08-11T05:07:28.932Z
-Live Intel source window: 2026-08-11T05:07:13.547Z
+Generated: 2026-08-12T05:32:17.935Z
+Live Intel source window: 2026-08-12T05:32:02.446Z
 Latest source publication: 2026-08-10T17:40:36.000Z
 Status: current-seven-day-record-window
 
@@ -11,7 +11,7 @@ The machine tracks documents, court records, official actions, oversight, testim
 
 ## What Changed
 
-10 current Epstein-lane record leads remain inside the active source window.
+8 current Epstein-lane record leads remain inside the active source window.
 
 ## Current Record Leads
 
@@ -25,13 +25,13 @@ An arts school where Epstein allegedly preyed on students reveals decades of abu
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
-### ‘We’re the pawns’: Epstein survivors say DOJ has failed them as Todd Blanche takes over - The 19th News
+### ‘We’re the pawns’: Epstein survivors say DOJ has failed them as Todd Blanche takes over - 19thnews.org
 - Published: 2026-08-08T11:27:16.000Z
 - Source: Google News / Epstein timeline and files
 - Class: Discovery lead — open and grade the underlying publisher record
 - URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxPVlAxQjJIOGdQQkp3aFNWLUk4d0gyby1iN2hRaWtzQy0zT0lrdWM0QXZkeEpnR1o1MjhHc040QUNLd2FTNDZxTC1MV3BHNjNBSmdOODV4WHpmQmJUR0tVb1FCMWVPTmRGVXd6Y1pEa1c3aEhWQ2tDZ19pY1FSSkdxcDVMa3lScEN1VzgxeVhpN3FSSXlW?oc=5
 
-‘We’re the pawns’: Epstein survivors say DOJ has failed them as Todd Blanche takes over The 19th News
+‘We’re the pawns’: Epstein survivors say DOJ has failed them as Todd Blanche takes over 19thnews.org
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 
@@ -92,26 +92,6 @@ Boundary: This item is a public-record or reporting lead. Association, mention, 
 - URL: https://news.google.com/rss/articles/CBMilAFBVV95cUxNcGhHN3F2ZWRBUVlwZTlyUUlDREUtclY2bTBZQmNYbkZxcXlHNmxZUHpVeEozYXVtODdqazE5M1lUNVozNm1uRTYwUTV4RzhqNk4yNWo3N2JBSkZIbkRMalFUUWhQUHBKYl94MldNRkhlZGdUcW04djh5VWt1S0hKR3lTVTU3WlY0QkFyVWI0Y1h6VlpB?oc=5
 
 UK not ‘actively’ considering Epstein public inquiry politico.eu
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Epstein Files | History, Timeline, Vote, Trump, & Updates - Encyclopedia Britannica
-- Published: 2026-08-05T05:00:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMibkFVX3lxTE5hdGxpZ1ZienhDMFdzR2RBb2tmT3Z0SmFMZF9ISTRCeV9kNlpsS0pjMkdZNXhpSS0xemhRclpNRDgyRk9JWjlmU21KSlltTVBwVXBGTDc1cjVHdExLZTZ0SmdZNm8xQks5eldPT0t3?oc=5
-
-Epstein Files | History, Timeline, Vote, Trump, & Updates Encyclopedia Britannica
-
-Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
-
-### Senate report: Three big banks ignored red flags on Epstein - American Banker
-- Published: 2026-08-04T17:11:00.000Z
-- Source: Google News / Epstein timeline and files
-- Class: Discovery lead — open and grade the underlying publisher record
-- URL: https://news.google.com/rss/articles/CBMimgFBVV95cUxPd1F0UE90MjdBYnlEc2htMFEybm41LWk5cHFUZ0hBNlBrQjFsM09UOE84aGV5d2hCVS05NHREaFc2WkhPaTRVcnBJRHdUNGh2OExkdkZWWGluSDVTd29CYk9CVWpSTjIxMlFTZmkwXy1WYmFVWjBfdUE3WU02cTlNSTFWUEZRT2NaQ2lSQ0FUTzZtYk8yalVnTUhB?oc=5
-
-Senate report: Three big banks ignored red flags on Epstein American Banker
 
 Boundary: This item is a public-record or reporting lead. Association, mention, testimony, subpoena, allegation, charge, settlement and conviction are different evidence classes and must not be collapsed.
 

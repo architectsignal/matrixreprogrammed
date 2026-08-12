@@ -1,15 +1,14 @@
 {
-  "generatedAt": "2026-08-11T05:03:09.895Z",
-  "pageCount": 130,
+  "generatedAt": "2026-08-12T05:27:57.095Z",
+  "pageCount": 129,
   "output": "downloads/search-v3-runtime-report.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Search V3 Runtime Report",
-    "contentHash": "4438ff5288210a7b3a8621819ec8b5e86260543a05be6c25daeda5e76456c68e",
+    "contentHash": "7bbd00e8bba5cd5aacd942dc70a61e06d80638385eac29bd3c127a8d950a1c24",
     "sourceIds": [
       "source-change-d8732adccaaac4ea6376d2ba",
       "8057d390af5011731564579c",
-      "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
@@ -25,7 +24,6 @@
       "b7e4a66335a706ef5097117f",
       "511ed227bb4be58b582ebb8d",
       "88ef9baf356c096816236956",
-      "34805734b1ad3b73f0ede0d8",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
       "dcec2a45ef35362072af05e3",
@@ -34,7 +32,6 @@
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
-      "e3b055a4afb19163268d7257",
       "ec968f2ec6ba82128b4cd91b",
       "7c212daa6802e36f4fe4f000",
       "e28738303cb279558b7a88c0",
@@ -51,13 +48,13 @@
       "0a48cc2ad619880b0b23d743",
       "d648ce395c11435d30796fee",
       "911d6aa330f80279bdb3c4d5",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -74,7 +71,10 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "d0b647e325275daa6d824a49",
+      "529f3ec81072aa54c5515b3e",
       "871096b65a90301ef4a126c3",
+      "594100b62a47db521fe2a128",
       "9f3052b5d8cec138a2a37e8c",
       "ec1316fb1fb70c83dc347bb6",
       "76a719654ec3312153163154",
@@ -86,13 +86,12 @@
       "7f5b91c14c671bd24b8bbd81",
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
-      "ca92a54bb69eb2504c76e56e",
-      "366686df53f6dfd25d3f0ea4",
+      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
+      "e3b055a4afb19163268d7257",
       "8c8118614f58e40c87e2c2f7",
-      "d77b99424431ead891074ef0",
-      "8737454dea4463f85583fbd4",
-      "4c1d46d9bcb8caa374dec7d2",
-      "e4ca191d7d9f2eddeda78ad3",
+      "1c0cca9ff329dd06d5408693",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -146,20 +145,21 @@
       "ASC-REVIEW-B5FCD410F732DBED",
       "ASC-REVIEW-4A9786ACED74F01F",
       "ASC-REVIEW-836A8E9D516E6FEC",
-      "ASC-REVIEW-8274DB7F7415A742"
+      "ASC-REVIEW-8274DB7F7415A742",
+      "ASC-REVIEW-D74AE4AD0CA9732B"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 60,
-      "disputedClaimCount": 70,
+      "primarySourceCount": 57,
+      "disputedClaimCount": 73,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 79,
-      "moneyRecordCount": 79
+      "relationshipCount": 77,
+      "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 60 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
+        "conclusion": "The indexed record establishes that 57 A/B-grade public-record items are materially relevant to Search V3 Runtime Report.",
         "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ROGUE VALLEY H2O LLC — Department of Agriculture,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "UMPQUA NATIONAL FOREST, TILLER RD JANITORIAL · Amount: 37531 · Sub-agency: Forest Service A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; ACENTRA HEALTH LLC — National Aeronautics and Space Administration; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
+        "inference": "The indexed set contains 77 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 77 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "MINDCUBED LLC — District of Columbia Courts",
-          "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
           "INDUSTRIAL BANK — District of Columbia Courts",
           "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
           "COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency",
-          "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts"
+          "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

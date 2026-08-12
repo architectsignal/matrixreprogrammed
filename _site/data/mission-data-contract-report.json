@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-11T05:08:29.553Z",
+  "generatedAt": "2026-08-12T05:33:18.563Z",
   "investigationData": {
     "ok": true,
-    "generatedAt": "2026-08-11T05:08:28.872Z",
+    "generatedAt": "2026-08-12T05:33:17.913Z",
     "sourceState": {
       "sources": 12,
       "created": 0,
@@ -20,14 +20,14 @@
       "fullMissionConclusions": 2500
     },
     "conclusionProducts": {
-      "dailyFindingsEnriched": 24,
+      "dailyFindingsEnriched": 26,
       "weeklyFindingsEnriched": 48
     },
     "boundary": "This repair normalises provenance, active-ledger capacity and user-facing meaning. It does not change a legal allegation into an established fact or remove archived evidence from the historical record."
   },
   "criminalAccountability": {
     "ok": true,
-    "generatedAt": "2026-08-11T05:08:29.239Z",
+    "generatedAt": "2026-08-12T05:33:18.256Z",
     "subjects": 20,
     "current": 15,
     "historical": 5,
@@ -60,7 +60,7 @@
   },
   "criminalDossierCoverage": {
     "ok": true,
-    "generatedAt": "2026-08-11T05:08:29.529Z",
+    "generatedAt": "2026-08-12T05:33:18.538Z",
     "policy": "Every dossier receives a criminal and safeguarding status panel. No-match is not presented as clearance or exoneration.",
     "minimumPredatorsInPowerTarget": 100,
     "approvedPredatorsInPowerDossiers": 20,
@@ -2020,7 +2020,7 @@
   },
   "criminalWaveBuild": {
     "ok": true,
-    "generatedAt": "2026-08-11T05:08:29.217Z",
+    "generatedAt": "2026-08-12T05:33:18.235Z",
     "mode": "single-authoritative-hydration-with-verification-only",
     "idempotent": true,
     "waveFiles": [
@@ -2114,7 +2114,7 @@
   },
   "criminalDossierTest": {
     "ok": true,
-    "generatedAt": "2026-08-11T05:08:29.553Z",
+    "generatedAt": "2026-08-12T05:33:18.563Z",
     "target": 100,
     "approvedDossiers": 20,
     "dossierPagesChecked": 216,

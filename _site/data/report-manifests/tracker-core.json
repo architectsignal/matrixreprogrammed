@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-11T05:05:02.131Z",
-  "pageCount": 129,
+  "generatedAt": "2026-08-12T05:29:50.138Z",
+  "pageCount": 127,
   "output": "downloads/tracker-core.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Tracker Core — Single Source Of Truth",
-    "contentHash": "d5877fce7f78f0547fcf75af264f4582b27403b151d6be802f8e586fad93255b",
+    "contentHash": "16f126014aad66d67cd98abf01918b3d9d6d4f21a7bb90faa0d246ece512c90f",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ecd4a1111010f13b2d74bf8c",
@@ -49,27 +49,24 @@
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "d0b647e325275daa6d824a49",
+      "594100b62a47db521fe2a128",
       "9f77464e401ac59ad1adb812",
-      "4c1d46d9bcb8caa374dec7d2",
+      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-9719FEC8729E7FE2",
       "ASC-REVIEW-BF5A5D787C430742",
       "5295a33003172878f9880122",
-      "ca92a54bb69eb2504c76e56e",
-      "366686df53f6dfd25d3f0ea4",
-      "e3b055a4afb19163268d7257",
-      "d77b99424431ead891074ef0",
-      "8737454dea4463f85583fbd4",
+      "1c0cca9ff329dd06d5408693",
       "9cb9631a2f2749b86bc69e0a",
       "a354895c18c7e12ab408462d",
       "16cde9bd4c87e916ff1e4fb7",
       "665a5072d96b9757a6ee9d2d",
       "bbf59ae4094608bcd2c37305",
       "74fb2863cc9a8120f3c68b67",
-      "594100b62a47db521fe2a128",
       "71e0563ca7b139c37c302956",
-      "34805734b1ad3b73f0ede0d8",
       "780e9bdf80820219684ec0cb",
       "a33968b32fce32bd9d6523f6",
       "ASC-REVIEW-875607DBB9C95C91",
@@ -106,12 +103,17 @@
       "360e80c162081c85d2c680ef",
       "7c05d9244c4620950350cf27",
       "41772e5c9af7970ddd7d5aac",
+      "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
+      "366686df53f6dfd25d3f0ea4",
       "c673456bbe77dbb29e43ac7d",
+      "e3b055a4afb19163268d7257",
       "8f15d14f1b05a490af22799d",
       "8c8118614f58e40c87e2c2f7",
+      "d77b99424431ead891074ef0",
       "21ae89a0f8533e03e261f18c",
       "228770c420a004608c7b13f9",
+      "8737454dea4463f85583fbd4",
       "ASC-REVIEW-861EBE2805F13D36",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -144,9 +146,7 @@
       "ASC-REVIEW-0F0776894447C197",
       "ASC-REVIEW-6E0BEE85BA956CBF",
       "ASC-REVIEW-F9B27A08465F560B",
-      "ASC-REVIEW-8A2ACAFD47272636",
-      "ASC-REVIEW-32A64F4FD3617829",
-      "ASC-REVIEW-63DEE163CCA699D8"
+      "ASC-REVIEW-8A2ACAFD47272636"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 66,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 73
+      "relationshipCount": 79,
+      "moneyRecordCount": 74
     },
     "evidenceBasedConclusions": [
       {
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ROGUE VALLEY H2O LLC — Department of Agriculture,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "UMPQUA NATIONAL FOREST, TILLER RD JANITORIAL · Amount: 37531 · Sub-agency: Forest Service A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 79 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Influence should be mapped through infrastructure, filings and contracts.; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; FCN, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 79 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Influence should be mapped through infrastructure, filings and contracts.",

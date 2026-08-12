@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:59:15.744Z",
+  "generatedAt": "2026-08-12T05:24:00.296Z",
   "pageCount": 125,
   "output": "downloads/membership-auth-patch-report.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Membership Auth Patch Report",
-    "contentHash": "3b2f99c45b4379b35638bbb7c7babf9673e0a588320771df281c2bb464a573e6",
+    "contentHash": "b8159532cd32ef728a5834c649a90392847ab472832752f1fe89cc0f7f277d30",
     "sourceIds": [
       "360e80c162081c85d2c680ef",
       "157cdab04b61ae6309c0c713",
@@ -14,9 +14,10 @@
       "9848ec4b4c3f6c2693269839",
       "c1520a15d6e62871a66c558e",
       "a5e5d4ec4df4352ea242ea3f",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-8D34DAEE930AC84F",
+      "529f3ec81072aa54c5515b3e",
       "b1e5189be9fa36ea97b5f8c0",
       "c3bd2d306202dfc2e2374303",
       "7ed151a515391f967d229642",
@@ -28,7 +29,6 @@
       "e3b055a4afb19163268d7257",
       "8737454dea4463f85583fbd4",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "4c1d46d9bcb8caa374dec7d2",
       "cyril-smith-iicsa-2018",
       "savile-health-investigations-2014",
       "savile-broadmoor-2014",
@@ -86,6 +86,7 @@
       "d23398b8ca4c7124399c9504",
       "6f6462b75cdb929e0acbcde7",
       "2529322b7b5345fd6f575174",
+      "611d1a7edb4b0b2535b9708c",
       "8057d390af5011731564579c",
       "871096b65a90301ef4a126c3",
       "71e0563ca7b139c37c302956",
@@ -106,8 +107,8 @@
       "4c372edcf20b760ae3305f10",
       "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
-      "c673456bbe77dbb29e43ac7d",
       "366686df53f6dfd25d3f0ea4",
+      "c673456bbe77dbb29e43ac7d",
       "a103f2650e31fc92fa3688e6",
       "8f15d14f1b05a490af22799d",
       "8c8118614f58e40c87e2c2f7",
@@ -117,15 +118,18 @@
       "d3589cf045e6d530b37381a9",
       "21ae89a0f8533e03e261f18c",
       "fe51591d2f98b1e8140add7f",
+      "1c0cca9ff329dd06d5408693",
       "228770c420a004608c7b13f9",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
+      "crime-state-overlap-2026-08-10-e6990f32",
+      "crime-state-overlap-2026-08-10-89cb3112",
+      "crime-state-overlap-2026-08-10-a0e61bfe",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "crime-state-overlap-2026-08-07-151b6c33",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "f669b33c49b63e787cde3008",
       "abdul-halim-khan-conviction-2026",
       "janner-iicsa-2022",
@@ -141,24 +145,20 @@
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-481745ED8153AA11",
-      "ASC-REVIEW-9719FEC8729E7FE2",
-      "ASC-REVIEW-96665FE56FA75D90",
-      "ASC-REVIEW-6476A61F00D66DFB",
-      "ASC-REVIEW-2733D1C88202921D"
+      "ASC-REVIEW-481745ED8153AA11"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 72,
-      "disputedClaimCount": 62,
+      "primarySourceCount": 76,
+      "disputedClaimCount": 58,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 60,
-      "moneyRecordCount": 38
+      "relationshipCount": 61,
+      "moneyRecordCount": 41
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 72 A/B-grade public-record items are materially relevant to Membership Auth Patch Report.",
+        "conclusion": "The indexed record establishes that 76 A/B-grade public-record items are materially relevant to Membership Auth Patch Report.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -167,8 +167,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “Jury convicts Army veteran of embellishing health issues to defraud the VA,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "A federal jury convicted a U.S. Army veteran of defrauding the U.S. Department of Veterans Affairs (VA) of over $170,000 in caregiver benefit payments that he was not entitled to receive. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -178,7 +178,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 60 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 61 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; ACENTRA HEALTH LLC — National Aeronautics and Space Administration; SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -193,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 60 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 61 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",

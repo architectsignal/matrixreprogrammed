@@ -1,18 +1,20 @@
 {
-  "generatedAt": "2026-08-11T04:57:45.163Z",
-  "pageCount": 129,
+  "generatedAt": "2026-08-12T05:22:30.031Z",
+  "pageCount": 127,
   "output": "downloads/homepage-navigation-repair.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Homepage Navigation Repair",
-    "contentHash": "6a214e2794e63f4a683fe57bfe0de77e015aa32313ebf7d8dff18e278b371f5f",
+    "contentHash": "b632d976c58ab7defe5c287038f74b40232f82328d3cb3249154316c13853fdf",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "1769af26a7bda813406cd8f5",
       "26b90533dbf7d2ed42f02de6",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "71e0563ca7b139c37c302956",
+      "d0b647e325275daa6d824a49",
       "72ef7895f95288946ccb3cff",
+      "cee347fbc3752c6e0f890457",
       "e72d22f4f28eb53e3173d0a6",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -23,16 +25,16 @@
       "88ef9baf356c096816236956",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "594100b62a47db521fe2a128",
-      "310372a3fc518b6aabbc5d07",
       "34805734b1ad3b73f0ede0d8",
-      "f59da50ababa3ddae79a8f1c",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "cdffd8cd0165511bb5f825ef",
+      "310372a3fc518b6aabbc5d07",
       "76a719654ec3312153163154",
       "7f5b91c14c671bd24b8bbd81",
       "360e80c162081c85d2c680ef",
       "c5d9edd2562c4c00e3ddfdfb",
+      "f59da50ababa3ddae79a8f1c",
       "9ff008d874d83b0311c5e46c",
       "e5c11b5e57b9bc3815e1b01e",
       "digital-euro-parliament-hurdle-2026-06-23",
@@ -143,15 +145,13 @@
       "ASC-REVIEW-8EDA87E9301AAFAE",
       "ASC-REVIEW-2F809A60275611A5",
       "ASC-REVIEW-5F18C934E1FFBBB4",
-      "d0b647e325275daa6d824a49",
       "008875ef7bf45eb14dccb254",
-      "d2871cd2e1388905635edd22",
-      "ce5e1adeb64b743a59fc5d2d"
+      "d2871cd2e1388905635edd22"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 6,
-      "disputedClaimCount": 105,
+      "primarySourceCount": 5,
+      "disputedClaimCount": 106,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 94,
@@ -159,10 +159,10 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 6 A/B-grade public-record items are materially relevant to Homepage Navigation Repair.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Digital euro clears key European Parliament hurdle (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Declassified Archives (data/search-index.json)",
+        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Homepage Navigation Repair.",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Digital euro clears key European Parliament hurdle (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 88,
+        "confidence": 86,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

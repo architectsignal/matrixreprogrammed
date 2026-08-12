@@ -1,46 +1,22 @@
 {
-  "generatedAt": "2026-08-11T05:05:22.576Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-12T05:30:11.612Z",
+  "pageCount": 129,
   "output": "downloads/worker-api-contract-hardening.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Worker Api Contract Hardening",
-    "contentHash": "700a53fcc12cbc478eec3c5f744353e176ddd33cca37ccd084c7ad1a42bd8e73",
+    "contentHash": "67629f72be57b4cd4a4f3a6ec1b3606d3833ec9a7a9663d7756dd5abc3261ee2",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "c1520a15d6e62871a66c558e",
       "44505b4afb60938c8117ad31",
       "a5e5d4ec4df4352ea242ea3f",
-      "c3bd2d306202dfc2e2374303",
-      "71e0563ca7b139c37c302956",
-      "5ce17839086eddf839270b1a",
-      "b7e4a66335a706ef5097117f",
-      "360e80c162081c85d2c680ef",
-      "871096b65a90301ef4a126c3",
-      "f23b46f2bc4add9b859f5a15",
-      "88269481cf5b04b7b0f83b58",
-      "41af4eba97b7eb1c0afb301f",
-      "d7398c0c72a085a05c90422c",
-      "9848ec4b4c3f6c2693269839",
-      "b079bec5bc869b0463d0584c",
       "ASC-REVIEW-B1927A1DC608FBA7",
-      "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-BC92D8AABD2393C5",
       "ASC-REVIEW-B66A4F66565A8C1E",
-      "ec7f3126268880506fc4f0ed",
-      "f966f8c917641cd736660f92",
-      "2931a84c2c7fe86982d5d6e5",
-      "1c352ab364fbfca06ab12a57",
-      "157cdab04b61ae6309c0c713",
-      "ff1a3a77816af400f09ab95e",
-      "def94e0a086f2eac4c5ad91a",
-      "ASC-REVIEW-4D93FE8E0666D181",
-      "ASC-REVIEW-BF27AEC65E76AEC9",
-      "ASC-REVIEW-8708EF2A4E1C3023",
-      "ASC-REVIEW-CE46DBEB6BCAAE01",
-      "ASC-REVIEW-481745ED8153AA11",
-      "ASC-REVIEW-9719FEC8729E7FE2",
-      "ASC-REVIEW-96665FE56FA75D90",
+      "9cb9631a2f2749b86bc69e0a",
+      "74fb2863cc9a8120f3c68b67",
+      "c3bd2d306202dfc2e2374303",
       "ASC-REVIEW-6476A61F00D66DFB",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-884743856D3E1385",
@@ -95,6 +71,7 @@
       "ASC-REVIEW-861C2A74B4636B6F",
       "ASC-REVIEW-B1AC5558348E69FD",
       "ASC-REVIEW-0A4211CAAFBA613D",
+      "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-5034D32DC349AA2A",
       "ASC-REVIEW-5078341E3837218A",
       "ASC-REVIEW-51CC02522F48F499",
@@ -146,23 +123,46 @@
       "ASC-REVIEW-5A9849A1E3C35A91",
       "ASC-REVIEW-C3C1C5BE4E7D7B9E",
       "ASC-REVIEW-EA39F365B4F1228D",
-      "ASC-REVIEW-60951B1D539429E9"
+      "ASC-REVIEW-60951B1D539429E9",
+      "ASC-REVIEW-1576F2009DBA8B3D",
+      "ASC-REVIEW-03B26F1BFC110513",
+      "ASC-REVIEW-CA09236EF68A2AE9",
+      "ASC-REVIEW-8D7E899D68D3AA41",
+      "ASC-REVIEW-FC2D1F9D4ECA8822",
+      "ASC-REVIEW-BDEA3B6AE6BFEDA7",
+      "ASC-REVIEW-1EB618A4D39314B4",
+      "ASC-REVIEW-96661BA4B00856BB",
+      "ASC-REVIEW-B1FB815B4D08BDA2",
+      "ASC-REVIEW-624DBE79BF661D70",
+      "529f3ec81072aa54c5515b3e",
+      "3a425f0d5d683952bc0ad7ac",
+      "71e0563ca7b139c37c302956",
+      "72ef7895f95288946ccb3cff",
+      "5ce17839086eddf839270b1a",
+      "b7e4a66335a706ef5097117f",
+      "360e80c162081c85d2c680ef",
+      "2609b70f5c1db84a869ac7ca",
+      "ASC-REVIEW-4D93FE8E0666D181",
+      "ASC-REVIEW-BF27AEC65E76AEC9",
+      "ASC-REVIEW-8708EF2A4E1C3023",
+      "ASC-REVIEW-CE46DBEB6BCAAE01",
+      "ASC-REVIEW-481745ED8153AA11"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 21,
-      "disputedClaimCount": 117,
-      "newEntityCount": 0,
+      "primarySourceCount": 8,
+      "disputedClaimCount": 125,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 14,
-      "moneyRecordCount": 11
+      "relationshipCount": 13,
+      "moneyRecordCount": 12
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Worker Api Contract Hardening.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Worker Api Contract Hardening.",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/daily-investigation-conclusions.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 96,
+        "confidence": 92,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 14 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Influence should be mapped through infrastructure, filings and contracts.; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture",
+        "inference": "The indexed set contains 13 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in; Fort Myers Man Sentenced to 30 Years for Enticing Minors to Engage in Sexual Activity, and Receiving, Possessing and Accessing Child Sexual Abuse Images and Videos; Illinois Man Sentenced to 15 Months in Prison for Failing to Pay Employment Taxes; Influence should be mapped through infrastructure, filings and contracts.; Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov); Quarterly Refunding Statement of Deputy Assistant Secretary for Federal Finance Brian Smith - U.S. Department of the Treasury (.gov); Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov); Matrix Reprogrammed Canonical Intelligence Record",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 14 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 13 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Matrix Reprogrammed Canonical Intelligence Record",
+          "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in",
+          "Fort Myers Man Sentenced to 30 Years for Enticing Minors to Engage in Sexual Activity, and Receiving, Possessing and Accessing Child Sexual Abuse Images and Videos",
+          "Illinois Man Sentenced to 15 Months in Prison for Failing to Pay Employment Taxes",
           "Influence should be mapped through infrastructure, filings and contracts.",
-          "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
-          "FCN, INC. — Court Services and Offender Supervision Agency",
-          "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
-          "MINDCUBED LLC — District of Columbia Courts",
-          "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
-          "ROGUE VALLEY H2O LLC — Department of Agriculture"
+          "Minutes of the Meeting of the Treasury Borrowing Advisory Committee August 4, 2026 - U.S. Department of the Treasury (.gov)",
+          "Quarterly Refunding Statement of Deputy Assistant Secretary for Federal Finance Brian Smith - U.S. Department of the Treasury (.gov)",
+          "Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)",
+          "Matrix Reprogrammed Canonical Intelligence Record"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-11T05:05:22.576Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

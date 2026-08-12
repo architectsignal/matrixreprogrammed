@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:52:09.876Z",
+  "generatedAt": "2026-08-12T05:16:52.378Z",
   "pageCount": 138,
   "output": "downloads/cinematic-pathway-id-finalization.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Cinematic Pathway Id Finalization",
-    "contentHash": "28462f353640f6f83c43984e3a0f3e3500cc553b41a5b2209eee4c0325e531fa",
+    "contentHash": "dbb352f5409b89f9c637bf1567f8a69eb622452af2a7d15eda3aebbf1d705e5d",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
       "ASC-REVIEW-BC92D8AABD2393C5",
@@ -46,10 +46,11 @@
       "ASC-REVIEW-CA09236EF68A2AE9",
       "ASC-REVIEW-BE1984C8AB0488C9",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
+      "d0b647e325275daa6d824a49",
       "535d2f595c3ec1621e13dd0f",
       "EP-AI-003",
       "71e0563ca7b139c37c302956",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
+      "cee347fbc3752c6e0f890457",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
@@ -89,10 +90,9 @@
       "ASC-REVIEW-5AE5A3805582A7F2",
       "ASC-REVIEW-C8EBC7F8BBBAC4D3",
       "ASC-REVIEW-CE615863A9722AC5",
-      "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
+      "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
       "88ef9baf356c096816236956",
-      "34805734b1ad3b73f0ede0d8",
       "epstein-files-2026-05-29-watch-bondi-refused-to-answer-any-questions-about-trump-and-epstein-fi",
       "epstein-files-2026-02-09-watch-ghislaine-maxwell-refused-to-answer-questions-about-epstein-in-h",
       "ASC-REVIEW-4D93FE8E0666D181",
@@ -151,16 +151,16 @@
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 2,
-      "disputedClaimCount": 126,
+      "disputedClaimCount": 128,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 77,
-      "moneyRecordCount": 64
+      "relationshipCount": 76,
+      "moneyRecordCount": 62
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Cinematic Pathway Id Finalization.",
-        "evidence": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/live-intel.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
+        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/power-diff-current.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 77 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: UK Serious Fraud Office — News And Communications",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 77 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-06-26T12:00:00.000Z"
   }
 }

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-11T04:51:01.006Z",
+  "generatedAt": "2026-08-12T05:15:43.258Z",
   "pageCount": 136,
   "output": "downloads/ai-speculative-conclusions-integrity.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Ai Speculative Conclusions Integrity",
-    "contentHash": "256a2483632023ca147fe0292844f1dc89068f958114317bef0a24d65f10a784",
+    "contentHash": "491a852421035e0ceb1e24cc890731c8560f847ed664d570b980e830794167e3",
     "sourceIds": [
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-BF5A5D787C430742",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -58,18 +58,17 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-B66A4F66565A8C1E",
       "ASC-REVIEW-8D7E899D68D3AA41",
+      "d0b647e325275daa6d824a49",
       "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
       "ec1316fb1fb70c83dc347bb6",
-      "310372a3fc518b6aabbc5d07",
       "76a719654ec3312153163154",
       "e72d22f4f28eb53e3173d0a6",
       "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
-      "f59da50ababa3ddae79a8f1c",
-      "4c1d46d9bcb8caa374dec7d2",
+      "cee347fbc3752c6e0f890457",
       "ASC-003",
       "ASC-REVIEW-6476A61F00D66DFB",
       "ASC-REVIEW-2733D1C88202921D",
@@ -146,32 +145,33 @@
       "ASC-REVIEW-8DD2093F6ECB25D1",
       "ASC-REVIEW-26C98CAD8AA9CE0A",
       "ASC-REVIEW-D921C72A4BA2FDF3",
-      "ASC-REVIEW-AFF7699289F993E4"
+      "ASC-REVIEW-AFF7699289F993E4",
+      "ASC-REVIEW-135079C8B6667E13"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 125,
+      "primarySourceCount": 0,
+      "disputedClaimCount": 128,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 78,
-      "moneyRecordCount": 67
+      "relationshipCount": 76,
+      "moneyRecordCount": 65
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Ai Speculative Conclusions Integrity.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Ai Speculative Conclusions Integrity beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Top contractor lane; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:05.856Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

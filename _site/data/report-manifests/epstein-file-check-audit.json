@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-08-11T04:55:33.958Z",
-  "pageCount": 103,
+  "generatedAt": "2026-08-12T05:20:17.492Z",
+  "pageCount": 104,
   "output": "downloads/epstein-file-check-audit.pdf",
   "report": {
-    "version": 20,
+    "version": 21,
     "title": "Epstein File Check Audit",
-    "contentHash": "768e85d2bc19bbf6c262e16225afee08976aab9535229648ad5bd586fab7a3b1",
+    "contentHash": "151f284d694eee4c322cdf636712b50595a5769ce6fd6859b5f2a7400f6630f4",
     "sourceIds": [
       "f6e76b789e1d33c323321a99",
       "9f77464e401ac59ad1adb812",
       "a4c15f7c3d808369b294115e",
+      "d0b647e325275daa6d824a49",
       "26b90533dbf7d2ed42f02de6",
+      "cee347fbc3752c6e0f890457",
       "72ef7895f95288946ccb3cff",
       "008875ef7bf45eb14dccb254",
       "4977297d54e08738b4b6f161",
@@ -42,6 +44,7 @@
       "4c372edcf20b760ae3305f10",
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
+      "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
       "7c212daa6802e36f4fe4f000",
       "e28738303cb279558b7a88c0",
@@ -58,15 +61,13 @@
       "0a48cc2ad619880b0b23d743",
       "d648ce395c11435d30796fee",
       "911d6aa330f80279bdb3c4d5",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "4c1d46d9bcb8caa374dec7d2",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "238d655f58dcbab9c07971b0",
-      "8e9dc699312125b32bedde93",
       "7c258b3d713ac6bcb4c2462e",
       "8f8255661dd16bd88596d02d",
       "d923af28cee7760384d33404",
@@ -113,6 +114,8 @@
       "daily-22",
       "daily-23",
       "daily-24",
+      "daily-25",
+      "daily-26",
       "594100b62a47db521fe2a128",
       "epstein-federal-indictment-2019",
       "ec1316fb1fb70c83dc347bb6",
@@ -140,23 +143,20 @@
       "ba2af3268d41314563b48088",
       "5a7b7c7ef2338b86fe1c7826",
       "a785f059b8a83521f45142e5",
-      "5feed3b987abe0052802299e",
-      "99e3904e5a567992aee741a8",
-      "c46b361e9723e3eeaa35a58b",
-      "3ebc2ef89979554dfc72ab32"
+      "5feed3b987abe0052802299e"
     ],
     "metrics": {
       "evidenceCount": 137,
-      "primarySourceCount": 90,
-      "disputedClaimCount": 2,
+      "primarySourceCount": 91,
+      "disputedClaimCount": 4,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 42,
-      "moneyRecordCount": 7
+      "relationshipCount": 39,
+      "moneyRecordCount": 8
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 90 A/B-grade public-record items are materially relevant to Epstein File Check Audit.",
+        "conclusion": "The indexed record establishes that 91 A/B-grade public-record items are materially relevant to Epstein File Check Audit.",
         "evidence": "Site Population Audit (data/search-index.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json); EMA continues publishing active critical medicine shortage communications in 2026 (data/clock-wall.json); EMA continues publishing active critical medicine shortage communications in 2026 (data/global-risk-clocks.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -176,8 +176,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 42 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Site Population Audit; EMA continues publishing active critical medicine shortage communications in 2026; EMA continues publishing active critical medicine shortage communications in 2026; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
+        "inference": "The indexed set contains 39 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Site Population Audit; EMA continues publishing active critical medicine shortage communications in 2026; EMA continues publishing active critical medicine shortage communications in 2026; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; MINDCUBED LLC — District of Columbia Courts; DELL MARKETING L.P. — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -191,7 +191,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 42 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 39 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Site Population Audit",
           "EMA continues publishing active critical medicine shortage communications in 2026",
@@ -199,8 +199,8 @@
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "MINDCUBED LLC — District of Columbia Courts",
-          "INDUSTRIAL BANK — District of Columbia Courts",
-          "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency"
+          "DELL MARKETING L.P. — District of Columbia Courts",
+          "INDUSTRIAL BANK — District of Columbia Courts"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:51:40.001Z",
-  "pageCount": 137,
+  "generatedAt": "2026-08-12T05:16:23.020Z",
+  "pageCount": 135,
   "output": "downloads/brevo-transactional-readiness-patch.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Brevo Transactional Readiness Patch",
-    "contentHash": "27eabd8afeb4217af03f0d8718d785c5437d77abd77cb1ddde0362068eaa5de6",
+    "contentHash": "ca3c06c430da64a498956ccbde7cfbdc6f5d9e6d81414d3eb9ba3e482a7f8bb0",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-7B1A15ED77443F13",
@@ -62,8 +62,7 @@
       "EP-AI-004",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
-      "4c1d46d9bcb8caa374dec7d2",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-6476A61F00D66DFB",
       "ASC-REVIEW-2733D1C88202921D",
@@ -146,12 +145,13 @@
       "ASC-REVIEW-CA4FFDF74622515D",
       "ASC-REVIEW-29094A2EF0BEB10F",
       "ASC-REVIEW-091889DE732A98B9",
-      "ASC-REVIEW-628CE018DB3F4505"
+      "ASC-REVIEW-628CE018DB3F4505",
+      "ASC-REVIEW-D88DE6E8F4D250D3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 124,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 125,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 79,
@@ -159,19 +159,19 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Brevo Transactional Readiness Patch.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Brevo Transactional Readiness Patch.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:05.856Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

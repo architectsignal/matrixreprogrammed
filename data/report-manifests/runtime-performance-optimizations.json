@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:02:49.149Z",
+  "generatedAt": "2026-08-12T05:27:35.700Z",
   "pageCount": 131,
   "output": "downloads/runtime-performance-optimizations.pdf",
   "report": {
-    "version": 14,
+    "version": 15,
     "title": "Runtime Performance Optimizations",
-    "contentHash": "9dc529088a51718a6ee7dc8a28e214d1a28ad0eb910ea820f6fbdd93804cc673",
+    "contentHash": "678e0a0f08b4c78224ce43d4ca036b11743c78a1ef877ddee8265eba1498baea",
     "sourceIds": [
       "8057d390af5011731564579c",
       "b0cde383147509fbfd4f4472",
@@ -17,7 +17,6 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
-      "crime-state-overlap-2026-08-07-7e664ee5",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -41,6 +40,31 @@
       "7dcf4ef18ea1f86d01068773",
       "b079bec5bc869b0463d0584c",
       "360e80c162081c85d2c680ef",
+      "crime-state-overlap-2026-08-11-acb6cb5e",
+      "crime-state-overlap-2026-08-11-78c0d63f",
+      "crime-state-overlap-2026-08-11-6fc87119",
+      "crime-state-overlap-2026-08-11-bb49d78a",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-39d1342e",
+      "crime-state-overlap-2026-08-11-d7186992",
+      "crime-state-overlap-2026-08-11-5c5c9eb9",
+      "crime-state-overlap-2026-08-11-35be2c84",
+      "crime-state-overlap-2026-08-11-661c5029",
+      "crime-state-overlap-2026-08-11-37d80761",
+      "crime-state-overlap-2026-08-11-a4267456",
+      "crime-state-overlap-2026-08-11-734553c7",
+      "crime-state-overlap-2026-08-11-c098e67e",
+      "crime-state-overlap-2026-08-11-5845f54f",
+      "crime-state-overlap-2026-08-11-6958404b",
+      "crime-state-overlap-2026-08-11-32020221",
+      "crime-state-overlap-2026-08-11-f37c3e86",
+      "crime-state-overlap-2026-08-11-0708ab9e",
+      "crime-state-overlap-2026-08-11-bb118a83",
+      "crime-state-overlap-2026-08-11-854ed3e3",
+      "crime-state-overlap-2026-08-11-38bd17df",
+      "crime-state-overlap-2026-08-11-902ce8c8",
+      "crime-state-overlap-2026-08-11-9cad9b6a",
+      "2609b70f5c1db84a869ac7ca",
       "crime-state-overlap-2026-08-10-9cf6f0f4",
       "crime-state-overlap-2026-08-10-015a2455",
       "crime-state-overlap-2026-08-10-740ed0d1",
@@ -64,31 +88,6 @@
       "crime-state-overlap-2026-08-10-77c12eff",
       "crime-state-overlap-2026-08-10-d96f7296",
       "crime-state-overlap-2026-08-10-f8aa6edb",
-      "e4ca191d7d9f2eddeda78ad3",
-      "crime-state-overlap-2026-08-07-bad0acb5",
-      "crime-state-overlap-2026-08-07-adb50e08",
-      "crime-state-overlap-2026-08-07-8418d23a",
-      "crime-state-overlap-2026-08-07-51c2b30a",
-      "crime-state-overlap-2026-08-07-dc3f30ce",
-      "crime-state-overlap-2026-08-07-a2296147",
-      "crime-state-overlap-2026-08-07-151b6c33",
-      "crime-state-overlap-2026-08-07-ab764161",
-      "crime-state-overlap-2026-08-07-f2fd0a89",
-      "crime-state-overlap-2026-08-07-4f6b78a3",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
-      "crime-state-overlap-2026-08-07-0aa1dddd",
-      "crime-state-overlap-2026-08-07-ef852232",
-      "crime-state-overlap-2026-08-07-adab7342",
-      "crime-state-overlap-2026-08-07-eabe3a68",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
-      "crime-state-overlap-2026-08-07-3cedbac3",
-      "crime-state-overlap-2026-08-07-40e429d2",
-      "crime-state-overlap-2026-08-07-10060a7b",
-      "crime-state-overlap-2026-08-07-2b138d2d",
-      "crime-state-overlap-2026-08-07-38ebb2ec",
-      "crime-state-overlap-2026-08-07-6fc023b0",
-      "crime-state-overlap-2026-08-07-b5c464b8",
-      "crime-state-overlap-2026-08-07-ecf6905a",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
@@ -146,20 +145,21 @@
       "ASC-REVIEW-2638AEF62CDCC03A",
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-0649A6CC727CB73D",
-      "ASC-REVIEW-F42C454D9E75A8A7"
+      "ASC-REVIEW-F42C454D9E75A8A7",
+      "ASC-REVIEW-9445AB7A6FE43B5B"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 80,
-      "disputedClaimCount": 62,
+      "primarySourceCount": 79,
+      "disputedClaimCount": 63,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 109,
-      "moneyRecordCount": 64
+      "moneyRecordCount": 65
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 80 A/B-grade public-record items are materially relevant to Runtime Performance Optimizations.",
+        "conclusion": "The indexed record establishes that 79 A/B-grade public-record items are materially relevant to Runtime Performance Optimizations.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Best Practices Workshop on Requester Negotiations,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Best Practices Workshop on Requester Negotiations This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 109 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
+        "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -196,14 +196,14 @@
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
         "whyItIsBeingConsidered": "The indexed set contains 109 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
           "Booz Allen Hamilton → Intelligence: execution layer",
           "Booz Allen Hamilton → Public Money: execution layer",
           "CACI International → Defense Technology: execution layer",
-          "CACI International → Intelligence: execution layer"
+          "CACI International → Intelligence: execution layer",
+          "CACI International → Public Money: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

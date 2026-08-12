@@ -1,21 +1,20 @@
 {
-  "generatedAt": "2026-08-11T05:04:35.977Z",
-  "pageCount": 137,
+  "generatedAt": "2026-08-12T05:29:23.869Z",
+  "pageCount": 139,
   "output": "downloads/structured-investigation-data-build.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Structured Investigation Data Build",
-    "contentHash": "230a266905e0865c5b514bfec614f0546a8f8374047661d1982ea624a948f3c5",
+    "contentHash": "172c1d69e0c538fa1fd831d1def5fd75c1c7a0f73f4db3c35d166f047a97c327",
     "sourceIds": [
       "daee19f2c0d92279cc9a7569",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "1769af26a7bda813406cd8f5",
       "71e0563ca7b139c37c302956",
       "73799cb9af4829047998b026",
       "fafa3982950de0fd589ad0d0",
       "4a8dd46bd8d4335f061e03ac",
       "d648ce395c11435d30796fee",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-96665FE56FA75D90",
@@ -146,12 +145,13 @@
       "ASC-REVIEW-4B31270D299062F0",
       "ASC-REVIEW-D5DBFBBE76A72694",
       "ASC-REVIEW-5ACDFC3D561DAB0B",
-      "ASC-REVIEW-519E4E9ACC70E37D"
+      "ASC-REVIEW-519E4E9ACC70E37D",
+      "ASC-REVIEW-AB14F1086CAFC2E1"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 21,
-      "disputedClaimCount": 109,
+      "primarySourceCount": 20,
+      "disputedClaimCount": 110,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 32,
@@ -159,8 +159,8 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Structured Investigation Data Build.",
-        "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts (data/weekly-investigation-conclusions.json); PROCORE TECHNOLOGIES INC — District of Columbia Courts (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Structured Investigation Data Build.",
+        "evidence": "MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts (data/weekly-investigation-conclusions.json); PROCORE TECHNOLOGIES INC — District of Columbia Courts (data/weekly-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ROGUE VALLEY H2O LLC — Department of Agriculture,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "UMPQUA NATIONAL FOREST, TILLER RD JANITORIAL · Amount: 37531 · Sub-agency: Forest Service A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false

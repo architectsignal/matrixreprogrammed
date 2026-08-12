@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-08-11T05:02:43.946Z",
-  "pageCount": 140,
+  "generatedAt": "2026-08-12T05:27:30.338Z",
+  "pageCount": 138,
   "output": "downloads/review-dashboard-truth-repair.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Review Dashboard Truth Repair",
-    "contentHash": "13f01aa5e9f3be2044e11ac2f1c82e1accf21a66452be56f497df8379c03050b",
+    "contentHash": "7fd7f9da50a4f139bd125a750a35ef9dad581f134ed8ea82b8d40342128f79e9",
     "sourceIds": [
-      "4c1d46d9bcb8caa374dec7d2",
       "EFS-001-R006",
       "228770c420a004608c7b13f9",
       "janner-iicsa-2022",
@@ -18,13 +17,14 @@
       "EP-AI-004",
       "us-doj",
       "gao-hq",
-      "consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
+      "consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
       "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
-      "c673456bbe77dbb29e43ac7d",
       "366686df53f6dfd25d3f0ea4",
+      "c673456bbe77dbb29e43ac7d",
       "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
@@ -35,9 +35,10 @@
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
       "fe51591d2f98b1e8140add7f",
+      "1c0cca9ff329dd06d5408693",
       "8737454dea4463f85583fbd4",
+      "2609b70f5c1db84a869ac7ca",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "e4ca191d7d9f2eddeda78ad3",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
@@ -144,22 +145,21 @@
       "ASC-REVIEW-A40EABAABAFFC9C3",
       "ASC-REVIEW-32A64F4FD3617829",
       "ASC-REVIEW-31DAFEB5863F6F4C",
-      "ASC-REVIEW-33FA083D170CBDB5",
-      "ASC-REVIEW-943BD7CEC5392D63"
+      "ASC-REVIEW-33FA083D170CBDB5"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 41,
-      "disputedClaimCount": 99,
+      "primarySourceCount": 42,
+      "disputedClaimCount": 98,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 48,
-      "moneyRecordCount": 35
+      "relationshipCount": 50,
+      "moneyRecordCount": 37
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Review Dashboard Truth Repair.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); TRACE SYSTEMS INC. — Department of Defense (data/weekly-investigation-conclusions.json); IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); DOJ OIG documented FBI handling failures (data/criminal-conduct-registry.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/criminal-conduct-registry.json)",
+        "conclusion": "The indexed record establishes that 42 A/B-grade public-record items are materially relevant to Review Dashboard Truth Repair.",
+        "evidence": "DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json); TRACE SYSTEMS INC. — Department of Defense (data/weekly-investigation-conclusions.json); IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); DOJ OIG documented FBI handling failures (data/criminal-conduct-registry.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -167,8 +167,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “EEA reports growing European climate-resilience pressure from drought, floods and extreme weather,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The EEA's June 2026 resilience update highlights severe drought, flooding, wildfires and record temperatures, with uneven adaptation and direct consequences for water, agriculture, infrastructure and public health.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -178,8 +178,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 48 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "TRACE SYSTEMS INC. — Department of Defense; IICSA documented predatory activities and institutional failures; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; BETTER DIRECT, LLC — Department of Energy; AGILENT TECHNOLOGIES INC — Department of Energy; ACENTRA HEALTH LLC — National Aeronautics and Space Administration; DELL MARKETING L.P. — District of Columbia Courts",
+        "inference": "The indexed set contains 50 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "TRACE SYSTEMS INC. — Department of Defense; IICSA documented predatory activities and institutional failures; Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; AGILENT TECHNOLOGIES INC — Department of Energy; BETTER DIRECT, LLC — Department of Energy; ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -193,16 +193,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 48 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 50 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "TRACE SYSTEMS INC. — Department of Defense",
           "IICSA documented predatory activities and institutional failures",
+          "Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges",
           "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
-          "BETTER DIRECT, LLC — Department of Energy",
           "AGILENT TECHNOLOGIES INC — Department of Energy",
-          "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
-          "DELL MARKETING L.P. — District of Columbia Courts"
+          "BETTER DIRECT, LLC — Department of Energy",
+          "ACENTRA HEALTH LLC — National Aeronautics and Space Administration"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

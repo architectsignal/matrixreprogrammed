@@ -48,7 +48,7 @@ A dossier pack is an orientation bundle. It does not prove guilt, causation, int
 
 ## Latest Intelligence Window
 
-Updated: 2026-08-11T04:50:26.705Z
+Updated: 2026-08-12T05:15:06.945Z
 Items: 12
 
 - 2026-07-28 — Security Council LIVE: Updates on Gaza, West Bank amid regional tensions
@@ -81,6 +81,16 @@ Items: 12
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-11 — Myanmar: UN investigators document deliberate military attacks on civilians
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168110
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
+- 2026-08-11 — World marks second warmest July on record
+  - Source: https://news.un.org/feed/view/en/story/2026/08/1168115
+  - Evidence: Primary or official public-record lead
+  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
+  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-10 — Fighting deepens needs and fuels further displacement in Sudan
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168109
   - Evidence: Primary or official public-record lead
@@ -98,16 +108,6 @@ Items: 12
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
 - 2026-08-03 — Drone strikes threaten civilians and aid operations in Sudan
   - Source: https://news.un.org/feed/view/en/story/2026/08/1168068
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — Hunger hampers Ebola response as cases top 3,200 in DR Congo
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168047
-  - Evidence: Primary or official public-record lead
-  - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
-  - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
-- 2026-07-29 — World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic
-  - Source: https://news.un.org/feed/view/en/story/2026/07/1168049
   - Evidence: Primary or official public-record lead
   - Boundary: Treat this as a public-record lead. Open the source, preserve the evidence class, and do not share a claim stronger than the record supports.
   - Next: Open the underlying source, verify its date and source class, then follow the evidence route before drawing a conclusion.
@@ -135,12 +135,12 @@ Items: 12
 - UN News: UN reports deadly month for Ukrainian civilians as Russian attacks intensify — https://news.un.org/feed/view/en/story/2026/08/1168082
 - UN News: Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms — https://news.un.org/feed/view/en/story/2026/08/1168077
 - UN News: Security Council debrief: Race for critical minerals intensifies amidst warnings of conflict — https://news.un.org/feed/view/en/story/2026/07/1168024
+- UN News: Myanmar: UN investigators document deliberate military attacks on civilians — https://news.un.org/feed/view/en/story/2026/08/1168110
+- UN News: World marks second warmest July on record — https://news.un.org/feed/view/en/story/2026/08/1168115
 - UN News: Fighting deepens needs and fuels further displacement in Sudan — https://news.un.org/feed/view/en/story/2026/08/1168109
 - UN News: Humanitarian aid warehouses come under attack in Ukraine — https://news.un.org/feed/view/en/story/2026/08/1168102
 - UN News: Security Council LIVE: Warnings of famine and collapse as South Sudan&#039;s peace deal frays — https://news.un.org/feed/view/en/story/2026/08/1168089
 - UN News: Drone strikes threaten civilians and aid operations in Sudan — https://news.un.org/feed/view/en/story/2026/08/1168068
-- UN News: Hunger hampers Ebola response as cases top 3,200 in DR Congo — https://news.un.org/feed/view/en/story/2026/07/1168047
-- UN News: World News in Brief: Rohingya refugees, Bahá’ís in Iran, disarmament in the Central African Republic — https://news.un.org/feed/view/en/story/2026/07/1168049
 
 ## Book Routes
 

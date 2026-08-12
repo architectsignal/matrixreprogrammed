@@ -1,61 +1,61 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T05:12:29.013Z",
+  "generatedAt": "2026-08-12T05:37:17.472Z",
   "title": "Red-Team Mirror Ledger",
   "proposition": "Every significant accountability proposition should display the strongest attached support, the strongest genuine challenge, explicit falsifiers and what evidence would change the assessment.",
   "boundary": "The system must not invent counter-evidence or manufacture false balance. Absence of an attached challenge is not proof that no challenge exists. No automated public verdict is produced.",
-  "count": 12,
+  "count": 9,
   "mirrors": [
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "title": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
-      "lane": "crime-state-overlap",
-      "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
+      "id": "red-team-consequence-declassified-files-2026-08-11-86447204",
+      "sourceRecordId": "consequence-declassified-files-2026-08-11-86447204",
+      "title": "Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support - treasury.gov",
+      "lane": "declassified-files",
+      "laneTitle": "Declassified Files And Public Archives",
+      "propositionUnderTest": "Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support treasury.gov",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
           {
             "type": "source-record",
-            "statement": "A source record is attached: DOJ News.",
-            "classification": "official-or-primary-lead",
+            "statement": "A source record is attached: US Treasury Press Release Discovery.",
+            "classification": "public-source-lead",
             "establishes": "The cited source exists as a route for verification.",
             "doesNotEstablish": "The source link alone does not prove causation, responsibility, benefit or wrongdoing."
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
+            "statement": "Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support treasury.gov",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
-            "classification": "official-or-primary-lead",
+            "statement": "Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support treasury.gov",
+            "classification": "public-source-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
           },
           {
             "type": "chain-funding",
             "statement": "What public or private money funds the action?",
-            "classification": "official-or-primary-lead",
+            "classification": "public-source-lead",
             "establishes": "The current record contains a review-stage entry for Funding and contracts.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
           },
           {
             "type": "chain-implementation",
             "statement": "Unverified lead stage",
-            "classification": "official-or-primary-lead",
+            "classification": "public-source-lead",
             "establishes": "The current record contains a review-stage entry for Implementation.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
-            "classification": "official-or-primary-lead",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
+            "classification": "public-source-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
           }
@@ -110,7 +110,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support - treasury.gov”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -131,7 +131,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Treasury Announces Employer Contributions to Trump Accounts, Drawing Corporate Support - treasury.gov”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -141,29 +141,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-declassified-files-2026-08-11-86447204",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-declassified-files-2026-08-11-86447204",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-declassified-files-2026-08-11-86447204",
+      "powerDiffRoute": "power-diff.html#diff-consequence-declassified-files-2026-08-11-86447204",
       "source": {
-        "label": "DOJ News",
-        "url": "https://www.justice.gov/opa/pr/after-runaway-ship-incident-2024-charleston-south-carolina-vessel-operator-and-chief",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "network-maps.html"
+        "label": "US Treasury Press Release Discovery",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBsZ0ktbWRkSDhUMWZCWnZNWm5ab1BvbUtoNy1qd3VPWHJfMzFCNEtsS2trY3VxNENtUUpoc3VoQ1h1UXhTNmZzM0I1bE1udVgyOWlacVN1QXZyWFhjemo3djdB?oc=5",
+        "classification": "public-source-lead",
+        "evidenceRoute": "evidence-vault-index.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-9cf6f0f4-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-9cf6f0f4#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-declassified-files-2026-08-11-86447204",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-declassified-files-2026-08-11-86447204-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-declassified-files-2026-08-11-86447204#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-015a2455",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-015a2455",
-      "title": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "title": "Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
+      "propositionUnderTest": "Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -176,14 +176,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
+            "statement": "Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
+            "statement": "Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -204,7 +204,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -260,7 +260,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Ashland Man Sentenced for Receiving Child Sexual Abuse Material”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -281,7 +281,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Ashland Man Sentenced for Receiving Child Sexual Abuse Material”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -291,29 +291,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-015a2455",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-015a2455",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-015a2455",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-78c0d63f",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-edky/pr/ashland-man-sentenced-receiving-child-sexual-abuse-material",
+        "url": "https://www.justice.gov/usao-wdnc/pr/charlotte-man-sentenced-prison-using-us-postal-service-arrow-keys-steal-963000",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-015a2455",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-015a2455-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-015a2455#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-78c0d63f",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-78c0d63f-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-78c0d63f#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "title": "Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "title": "Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "EDISON JOVANNY DUTA PINDO, 43, a citizen of Ecuador unlawfully residing in the United States, has been charged in a seven-count indictment with offenses related to the theft of U.S. Treasury funds.",
+      "propositionUnderTest": "MOBILE, AL – Bradford Simmons, 51, was sentenced to five years in prison after pleading guilty to one count of possession of child pornography. Simmons entered his guilty plea on April 27, 2026.",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -326,14 +326,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "EDISON JOVANNY DUTA PINDO, 43, a citizen of Ecuador unlawfully residing in the United States, has been charged in a seven-count indictment with offenses related to the theft of U.S. Treasury funds.",
+            "statement": "MOBILE, AL – Bradford Simmons, 51, was sentenced to five years in prison after pleading guilty to one count of possession of child pornography. Simmons entered his guilty plea on April 27, 2026.",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "EDISON JOVANNY DUTA PINDO, 43, a citizen of Ecuador unlawfully residing in the United States, has been charged in a seven-count indictment with offenses related to the theft of U.S. Treasury funds.",
+            "statement": "MOBILE, AL – Bradford Simmons, 51, was sentenced to five years in prison after pleading guilty to one count of possession of child pornography. Simmons entered his guilty plea on April 27, 2026.",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -354,7 +354,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -410,7 +410,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -431,7 +431,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -441,29 +441,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-4f488a40",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ct/pr/ecuadoran-national-charged-offenses-related-theft-us-treasury-funds",
+        "url": "https://www.justice.gov/usao-sdal/pr/former-coast-guard-rescue-swimmer-sentenced-5-years-prison-possessing-child",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-740ed0d1",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-740ed0d1-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-740ed0d1#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-4f488a40",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-4f488a40-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-4f488a40#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "title": "Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "title": "Former Department of Labor Employee Sentenced for Fraudulently Obtaining Over $40,000 in Pandemic Unemployment Assistance Benefits",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud.",
+      "propositionUnderTest": "BOSTON – A former employee of the U.S. Department of Labor (DOL) was sentenced today in federal court in Boston for fraudulently obtaining over $40,000 in pandemic unemployment assistance (PUA) benefits.",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -476,14 +476,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud.",
+            "statement": "BOSTON – A former employee of the U.S. Department of Labor (DOL) was sentenced today in federal court in Boston for fraudulently obtaining over $40,000 in pandemic unemployment assistance (PUA) benefits.",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud.",
+            "statement": "BOSTON – A former employee of the U.S. Department of Labor (DOL) was sentenced today in federal court in Boston for fraudulently obtaining over $40,000 in pandemic unemployment assistance (PUA) benefits.",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -504,7 +504,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -560,7 +560,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Former Department of Labor Employee Sentenced for Fraudulently Obtaining Over $40,000 in Pandemic Unemployment Assistance Benefits”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -581,7 +581,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Former Department of Labor Employee Sentenced for Fraudulently Obtaining Over $40,000 in Pandemic Unemployment Assistance Benefits”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -591,29 +591,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-39d1342e",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud",
+        "url": "https://www.justice.gov/usao-ma/pr/former-department-labor-employee-sentenced-fraudulently-obtaining-over-40000-pandemic",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-bc7b5d3f-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-bc7b5d3f#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-39d1342e",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-39d1342e-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-39d1342e#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "title": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-d7186992",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-d7186992",
+      "title": "Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
+      "propositionUnderTest": "Jackson, TN – Travis Ray Baird, 40 , of Dyer, Tennessee, was sentenced to 120 months’ imprisonment for distributing child pornography in December 2024. United States Attorney D. Michael Dunavant, of the Western District of Tennessee, announced the sentence today.The investigation in this case revealed that Baird was distributing child sexual abuse material on the BitTorrent network using his...",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -626,14 +626,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
+            "statement": "Jackson, TN – Travis Ray Baird, 40 , of Dyer, Tennessee, was sentenced to 120 months’ imprisonment for distributing child pornography in December 2024. United States Attorney D. Michael Dunavant, of the Western District of Tennessee, announced the sentence today.The investigation in this case revealed that Baird was distributing child sexual abuse material on the BitTorrent network using his...",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
+            "statement": "Jackson, TN – Travis Ray Baird, 40 , of Dyer, Tennessee, was sentenced to 120 months’ imprisonment for distributing child pornography in December 2024. United States Attorney D. Michael Dunavant, of the Western District of Tennessee, announced the sentence today.The investigation in this case revealed that Baird was distributing child sexual abuse material on the BitTorrent network using his...",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -654,7 +654,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -710,7 +710,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -731,7 +731,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -741,29 +741,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-d7186992",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-d7186992",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-d7186992",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-d7186992",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-edky/pr/former-magoffin-county-high-school-teacher-sentenced-online-enticement-minor",
+        "url": "https://www.justice.gov/usao-wdtn/pr/gibson-county-man-sentenced-10-years-federal-prison-distribution-child-pornography",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-6a612d71",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-6a612d71-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-6a612d71#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-d7186992",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-d7186992-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-d7186992#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "title": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "title": "Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
+      "propositionUnderTest": "Tampa, FL – Jose Ramiro Cardenas-Iguaran, a/k/a “Titi,” “Senor,” “Jefe” (47, Colombia) has been sentenced by U.S. Senior District Judge Charlene Edwards Honeywell to 25 years in federal prison for conspiring to distribute cocaine on a vessel subject to the jurisdiction of the United States. He pleaded guilty on November 25, 2025. United States Attorney Gregory W. Kehoe made the announcement.",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -776,14 +776,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
+            "statement": "Tampa, FL – Jose Ramiro Cardenas-Iguaran, a/k/a “Titi,” “Senor,” “Jefe” (47, Colombia) has been sentenced by U.S. Senior District Judge Charlene Edwards Honeywell to 25 years in federal prison for conspiring to distribute cocaine on a vessel subject to the jurisdiction of the United States. He pleaded guilty on November 25, 2025. United States Attorney Gregory W. Kehoe made the announcement.",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
+            "statement": "Tampa, FL – Jose Ramiro Cardenas-Iguaran, a/k/a “Titi,” “Senor,” “Jefe” (47, Colombia) has been sentenced by U.S. Senior District Judge Charlene Edwards Honeywell to 25 years in federal prison for conspiring to distribute cocaine on a vessel subject to the jurisdiction of the United States. He pleaded guilty on November 25, 2025. United States Attorney Gregory W. Kehoe made the announcement.",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -804,7 +804,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -860,157 +860,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "falsifiers": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome."
-      ],
-      "whatWouldChangeTheAssessment": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "balanceStatus": "not-scored-pending-human-review",
-      "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "source": {
-        "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-sdwv/pr/huntington-man-sentenced-prison-role-drug-trafficking-organization",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "network-maps.html"
-      },
-      "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-e90b9744",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-e90b9744-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-e90b9744#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-b6533383",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-b6533383",
-      "title": "Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation",
-      "lane": "crime-state-overlap",
-      "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens",
-      "supportingCase": {
-        "status": "available-evidence-only",
-        "points": [
-          {
-            "type": "source-record",
-            "statement": "A source record is attached: DOJ News.",
-            "classification": "official-or-primary-lead",
-            "establishes": "The cited source exists as a route for verification.",
-            "doesNotEstablish": "The source link alone does not prove causation, responsibility, benefit or wrongdoing."
-          },
-          {
-            "type": "documented-or-lead-summary",
-            "statement": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens",
-            "classification": "record-summary-under-review",
-            "establishes": "This is the consequence or public issue currently being tested.",
-            "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
-          },
-          {
-            "type": "chain-consequence",
-            "statement": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Observed consequence.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-funding",
-            "statement": "What public or private money funds the action?",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Funding and contracts.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-implementation",
-            "statement": "Unverified lead stage",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Implementation.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Measured outcome.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          }
-        ]
-      },
-      "challengingCase": {
-        "status": "structured-challenges-present",
-        "points": [
-          {
-            "type": "missing-chain-stages",
-            "statement": "6 responsibility-chain stages remain unresolved: Proposal, Drafting and design, Promotion and influence, Authorization, Benefit, cost and risk transfer, Stated justification.",
-            "classification": "evidence-gap",
-            "significance": "The current record cannot support a complete responsibility or causation claim while these roles remain unresolved."
-          },
-          {
-            "type": "history-limit",
-            "statement": "Power Diff has established a baseline only; no historical change has yet been proven.",
-            "classification": "baseline-boundary",
-            "significance": "The current snapshot cannot support a claim about how the record changed over time."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The primary record does not support the headline or summary used to create this lead-stage contract.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The responsible authority did not implement the stated action.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "A credible alternative explanation better accounts for the observed outcome.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          }
-        ]
-      },
-      "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1032,7 +882,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1042,29 +892,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-b6533383",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-b6533383",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-b6533383",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-35be2c84",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-wdtx/pr/illegal-alien-convicted-homeland-security-task-force-case-involving-deadly-alien",
+        "url": "https://www.justice.gov/usao-mdfl/pr/homeland-security-task-force-announces-twenty-five-year-sentence-colombian-drug",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-b6533383",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-b6533383-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-b6533383#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-35be2c84",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-35be2c84-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-35be2c84#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "title": "Jury convicts Army veteran of embellishing health issues to defraud the VA",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-37d80761",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-37d80761",
+      "title": "Jacksonville Beach Dentist Indicted for Evading Personal Income Taxes, Failing to Pay Employment Taxes, and Attempting to Obstruct IRS Investigation",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "A federal jury convicted a U.S. Army veteran of defrauding the U.S. Department of Veterans Affairs (VA) of over $170,000 in caregiver benefit payments that he was not entitled to receive.",
+      "propositionUnderTest": "Jacksonville, Florida – A federal grand jury has returned an indictment charging Jon Christopher Williams with four counts of attempting to evade and defeat individual income taxes, eleven counts of failing to withhold and pay employment taxes, and one count of endeavoring to obstruct and impede the administration of the internal revenue laws. Each tax evasion and employment tax offense carries a maximum penalty of 5 years in federal prison. The obstruction offense carries a maximum penalty of 3 years in prison. United States Attorney Gregory W. Kehoe made the announcement.",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -1077,14 +927,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "A federal jury convicted a U.S. Army veteran of defrauding the U.S. Department of Veterans Affairs (VA) of over $170,000 in caregiver benefit payments that he was not entitled to receive.",
+            "statement": "Jacksonville, Florida – A federal grand jury has returned an indictment charging Jon Christopher Williams with four counts of attempting to evade and defeat individual income taxes, eleven counts of failing to withhold and pay employment taxes, and one count of endeavoring to obstruct and impede the administration of the internal revenue laws. Each tax evasion and employment tax offense carries a maximum penalty of 5 years in federal prison. The obstruction offense carries a maximum penalty of 3 years in prison. United States Attorney Gregory W. Kehoe made the announcement.",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "A federal jury convicted a U.S. Army veteran of defrauding the U.S. Department of Veterans Affairs (VA) of over $170,000 in caregiver benefit payments that he was not entitled to receive.",
+            "statement": "Jacksonville, Florida – A federal grand jury has returned an indictment charging Jon Christopher Williams with four counts of attempting to evade and defeat individual income taxes, eleven counts of failing to withhold and pay employment taxes, and one count of endeavoring to obstruct and impede the administration of the internal revenue laws. Each tax evasion and employment tax offense carries a maximum penalty of 5 years in federal prison. The obstruction offense carries a maximum penalty of 3 years in prison. United States Attorney Gregory W. Kehoe made the announcement.",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -1105,7 +955,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -1161,14 +1011,13 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Jury convicts Army veteran of embellishing health issues to defraud the VA”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Jacksonville Beach Dentist Indicted for Evading Personal Income Taxes, Failing to Pay Employment Taxes, and Attempting to Obstruct IRS Investigation”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
         "What public or private money funds the action?",
         "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?",
-        "Which primary records would materially confirm, challenge or resolve the accountability record for health?"
+        "Who receives the direct and indirect financial benefit?"
       ],
       "falsifiers": [
         "The primary record does not support the headline or summary used to create this lead-stage contract.",
@@ -1183,7 +1032,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Jury convicts Army veteran of embellishing health issues to defraud the VA”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Jacksonville Beach Dentist Indicted for Evading Personal Income Taxes, Failing to Pay Employment Taxes, and Attempting to Obstruct IRS Investigation”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1193,29 +1042,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-37d80761",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-37d80761",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-37d80761",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-37d80761",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ks/pr/jury-convicts-army-veteran-embellishing-health-issues-defraud-va",
+        "url": "https://www.justice.gov/usao-mdfl/pr/jacksonville-beach-dentist-indicted-evading-personal-income-taxes-failing-pay",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-e6990f32",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-e6990f32-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-e6990f32#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-37d80761",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-37d80761-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-37d80761#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "title": "Rio Grande City man sentenced for soliciting sexually explicit images of minors",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-a4267456",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-a4267456",
+      "title": "Kansas City Man Sentenced to Nearly 12 Years in Prison for Illegal Firearm Possession",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "A 32-year-old man has been ordered to federal prison for sexual exploitation of minors",
+      "propositionUnderTest": "Tracy Parker, 38, of Kansas City, was sentenced in federal court for illegally possessing a firearm.",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -1228,14 +1077,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "A 32-year-old man has been ordered to federal prison for sexual exploitation of minors",
+            "statement": "Tracy Parker, 38, of Kansas City, was sentenced in federal court for illegally possessing a firearm.",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "A 32-year-old man has been ordered to federal prison for sexual exploitation of minors",
+            "statement": "Tracy Parker, 38, of Kansas City, was sentenced in federal court for illegally possessing a firearm.",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -1256,7 +1105,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -1312,7 +1161,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Rio Grande City man sentenced for soliciting sexually explicit images of minors”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Kansas City Man Sentenced to Nearly 12 Years in Prison for Illegal Firearm Possession”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1333,7 +1182,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Rio Grande City man sentenced for soliciting sexually explicit images of minors”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “Kansas City Man Sentenced to Nearly 12 Years in Prison for Illegal Firearm Possession”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1343,29 +1192,29 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-a4267456",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-a4267456",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-a4267456",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-a4267456",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-sdtx/pr/rio-grande-city-man-sentenced-soliciting-sexually-explicit-images-minors",
+        "url": "https://www.justice.gov/usao-wdmo/pr/kansas-city-man-sentenced-nearly-12-years-prison-illegal-firearm-possession-0",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-13c7fc4b-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-13c7fc4b#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-a4267456",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-a4267456-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-a4267456#submit"
     },
     {
       "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "title": "Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton",
+      "id": "red-team-consequence-crime-state-overlap-2026-08-11-32020221",
+      "sourceRecordId": "consequence-crime-state-overlap-2026-08-11-32020221",
+      "title": "New York Man Charged With Child Exploitation Offense",
       "lane": "crime-state-overlap",
       "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "A South Carolina woman and an inmate at federal Corrections Institution (FCI) Hazelton have been indicted on prison contraband charges involving methamphetamine, announced U.S. Attorney Matthew L. Harvey.",
+      "propositionUnderTest": "BOSTON – A Queens, N.Y., man has been charged for allegedly travelling across state lines to engage in illicit sexually conduct with a 13-year-old minor in Massachusetts.",
       "supportingCase": {
         "status": "available-evidence-only",
         "points": [
@@ -1378,14 +1227,14 @@
           },
           {
             "type": "documented-or-lead-summary",
-            "statement": "A South Carolina woman and an inmate at federal Corrections Institution (FCI) Hazelton have been indicted on prison contraband charges involving methamphetamine, announced U.S. Attorney Matthew L. Harvey.",
+            "statement": "BOSTON – A Queens, N.Y., man has been charged for allegedly travelling across state lines to engage in illicit sexually conduct with a 13-year-old minor in Massachusetts.",
             "classification": "record-summary-under-review",
             "establishes": "This is the consequence or public issue currently being tested.",
             "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
           },
           {
             "type": "chain-consequence",
-            "statement": "A South Carolina woman and an inmate at federal Corrections Institution (FCI) Hazelton have been indicted on prison contraband charges involving methamphetamine, announced U.S. Attorney Matthew L. Harvey.",
+            "statement": "BOSTON – A Queens, N.Y., man has been charged for allegedly travelling across state lines to engage in illicit sexually conduct with a 13-year-old minor in Massachusetts.",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Observed consequence.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -1406,7 +1255,7 @@
           },
           {
             "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
+            "statement": "30-day consequence check due 2026-09-10: Was the action actually implemented, and which authority or institution carried it out?",
             "classification": "official-or-primary-lead",
             "establishes": "The current record contains a review-stage entry for Measured outcome.",
             "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
@@ -1462,7 +1311,7 @@
       },
       "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
       "unansweredQuestions": [
-        "What measurable public consequence followed “Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “New York Man Charged With Child Exploitation Offense”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1483,7 +1332,7 @@
         "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
         "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
         "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton”, and did the evidence support the stated or implied justification?",
+        "What measurable public consequence followed “New York Man Charged With Child Exploitation Offense”, and did the evidence support the stated or implied justification?",
         "Which law, vote, order, filing, contract or delegated authority made the action possible?",
         "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
         "Which groups carry the cost, risk, restriction or unintended consequence?",
@@ -1493,321 +1342,20 @@
       ],
       "balanceStatus": "not-scored-pending-human-review",
       "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-11-32020221",
+      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-11-32020221",
+      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-11-32020221",
+      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-11-32020221",
       "source": {
         "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ndwv/pr/two-charged-after-alleged-meth-delivery-attempt-during-prison-visitation-fci-hazelton",
+        "url": "https://www.justice.gov/usao-ma/pr/new-york-man-charged-child-exploitation-offense",
         "classification": "official-or-primary-lead",
         "evidenceRoute": "network-maps.html"
       },
       "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-9c1855a0",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-9c1855a0-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-9c1855a0#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "title": "Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing",
-      "lane": "crime-state-overlap",
-      "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "United States Attorney for the Southern District of New York, Jamie McDonald, Assistant Director in Charge of the Coast Guard Investigative Service (“CGIS”), Josh Packer, and Commissioner of the New York City Police Department (“NYPD”), Jessica S. Tisch, announced today that MANUEL HERNANDEZ has been charged with negligently causing the death of a five-month-old infant and a 27-year-old woman, after the vessel HERNANDEZ was piloting capsized in New York Harbor.",
-      "supportingCase": {
-        "status": "available-evidence-only",
-        "points": [
-          {
-            "type": "source-record",
-            "statement": "A source record is attached: DOJ News.",
-            "classification": "official-or-primary-lead",
-            "establishes": "The cited source exists as a route for verification.",
-            "doesNotEstablish": "The source link alone does not prove causation, responsibility, benefit or wrongdoing."
-          },
-          {
-            "type": "documented-or-lead-summary",
-            "statement": "United States Attorney for the Southern District of New York, Jamie McDonald, Assistant Director in Charge of the Coast Guard Investigative Service (“CGIS”), Josh Packer, and Commissioner of the New York City Police Department (“NYPD”), Jessica S. Tisch, announced today that MANUEL HERNANDEZ has been charged with negligently causing the death of a five-month-old infant and a 27-year-old woman, after the vessel HERNANDEZ was piloting capsized in New York Harbor.",
-            "classification": "record-summary-under-review",
-            "establishes": "This is the consequence or public issue currently being tested.",
-            "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
-          },
-          {
-            "type": "chain-consequence",
-            "statement": "United States Attorney for the Southern District of New York, Jamie McDonald, Assistant Director in Charge of the Coast Guard Investigative Service (“CGIS”), Josh Packer, and Commissioner of the New York City Police Department (“NYPD”), Jessica S. Tisch, announced today that MANUEL HERNANDEZ has been charged with negligently causing the death of a five-month-old infant and a 27-year-old woman, after the vessel HERNANDEZ was piloting capsized in New York Harbor.",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Observed consequence.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-funding",
-            "statement": "What public or private money funds the action?",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Funding and contracts.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-implementation",
-            "statement": "Unverified lead stage",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Implementation.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Measured outcome.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          }
-        ]
-      },
-      "challengingCase": {
-        "status": "structured-challenges-present",
-        "points": [
-          {
-            "type": "missing-chain-stages",
-            "statement": "6 responsibility-chain stages remain unresolved: Proposal, Drafting and design, Promotion and influence, Authorization, Benefit, cost and risk transfer, Stated justification.",
-            "classification": "evidence-gap",
-            "significance": "The current record cannot support a complete responsibility or causation claim while these roles remain unresolved."
-          },
-          {
-            "type": "history-limit",
-            "statement": "Power Diff has established a baseline only; no historical change has yet been proven.",
-            "classification": "baseline-boundary",
-            "significance": "The current snapshot cannot support a claim about how the record changed over time."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The primary record does not support the headline or summary used to create this lead-stage contract.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The responsible authority did not implement the stated action.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "A credible alternative explanation better accounts for the observed outcome.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          }
-        ]
-      },
-      "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
-      "unansweredQuestions": [
-        "What measurable public consequence followed “Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "falsifiers": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome."
-      ],
-      "whatWouldChangeTheAssessment": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "balanceStatus": "not-scored-pending-human-review",
-      "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "source": {
-        "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-sdny/pr/unlicensed-tour-operator-charged-causing-deaths-five-month-old-infant-and-27-year-old",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "network-maps.html"
-      },
-      "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-5de09a55",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-5de09a55-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-5de09a55#submit"
-    },
-    {
-      "schemaVersion": 1,
-      "id": "red-team-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "sourceRecordId": "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "title": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen",
-      "lane": "crime-state-overlap",
-      "laneTitle": "Crime State Overlap",
-      "propositionUnderTest": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity.",
-      "supportingCase": {
-        "status": "available-evidence-only",
-        "points": [
-          {
-            "type": "source-record",
-            "statement": "A source record is attached: DOJ News.",
-            "classification": "official-or-primary-lead",
-            "establishes": "The cited source exists as a route for verification.",
-            "doesNotEstablish": "The source link alone does not prove causation, responsibility, benefit or wrongdoing."
-          },
-          {
-            "type": "documented-or-lead-summary",
-            "statement": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity.",
-            "classification": "record-summary-under-review",
-            "establishes": "This is the consequence or public issue currently being tested.",
-            "doesNotEstablish": "It does not by itself identify the responsible authority or complete causal chain."
-          },
-          {
-            "type": "chain-consequence",
-            "statement": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity.",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Observed consequence.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-funding",
-            "statement": "What public or private money funds the action?",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Funding and contracts.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-implementation",
-            "statement": "Unverified lead stage",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Implementation.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          },
-          {
-            "type": "chain-outcome",
-            "statement": "30-day consequence check due 2026-09-09: Was the action actually implemented, and which authority or institution carried it out?",
-            "classification": "official-or-primary-lead",
-            "establishes": "The current record contains a review-stage entry for Measured outcome.",
-            "doesNotEstablish": "A review-stage chain entry is not a final finding and must remain tied to its source and role boundary."
-          }
-        ]
-      },
-      "challengingCase": {
-        "status": "structured-challenges-present",
-        "points": [
-          {
-            "type": "missing-chain-stages",
-            "statement": "6 responsibility-chain stages remain unresolved: Proposal, Drafting and design, Promotion and influence, Authorization, Benefit, cost and risk transfer, Stated justification.",
-            "classification": "evidence-gap",
-            "significance": "The current record cannot support a complete responsibility or causation claim while these roles remain unresolved."
-          },
-          {
-            "type": "history-limit",
-            "statement": "Power Diff has established a baseline only; no historical change has yet been proven.",
-            "classification": "baseline-boundary",
-            "significance": "The current snapshot cannot support a claim about how the record changed over time."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The primary record does not support the headline or summary used to create this lead-stage contract.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The responsible authority did not implement the stated action.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          },
-          {
-            "type": "falsifier",
-            "statement": "A credible alternative explanation better accounts for the observed outcome.",
-            "classification": "explicit-falsifier",
-            "significance": "If supported by accepted evidence, this would weaken, narrow or overturn the proposed interpretation."
-          }
-        ]
-      },
-      "strongestAlternativeExplanation": "The observed consequence may have multiple causes or may not be attributable to the action or actor suggested by the current route. No specific alternative is adopted without evidence.",
-      "unansweredQuestions": [
-        "What measurable public consequence followed “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?",
-        "Which primary records would materially confirm, challenge or resolve the accountability record for identity?"
-      ],
-      "falsifiers": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome."
-      ],
-      "whatWouldChangeTheAssessment": [
-        "The primary record does not support the headline or summary used to create this lead-stage contract.",
-        "The responsible authority did not implement the stated action.",
-        "The measurable public outcome moves in the opposite direction from the stated or implied benefit.",
-        "The alleged money route, beneficiary or power effect cannot be supported by primary or corroborated records.",
-        "A credible alternative explanation better accounts for the observed outcome.",
-        "What measurable public consequence followed “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen”, and did the evidence support the stated or implied justification?",
-        "Which law, vote, order, filing, contract or delegated authority made the action possible?",
-        "Who receives direct financial, institutional, political or operational benefit if this action is implemented?",
-        "Which groups carry the cost, risk, restriction or unintended consequence?",
-        "What public or private money funds the action?",
-        "Which contracts, grants, subsidies, asset positions or procurement routes are connected?",
-        "Who receives the direct and indirect financial benefit?"
-      ],
-      "balanceStatus": "not-scored-pending-human-review",
-      "publicJudgement": "none-generated",
-      "accountabilityRoute": "public-consequence-contracts.html#consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "powerSupplyChainRoute": "power-supply-chain.html#power-chain-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "evidenceHalfLifeRoute": "evidence-half-life.html#half-life-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "powerDiffRoute": "power-diff.html#diff-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "source": {
-        "label": "DOJ News",
-        "url": "https://www.justice.gov/usao-ks/pr/usao-ks-files-denaturalization-case-against-man-ordered-deported-then-used-false",
-        "classification": "official-or-primary-lead",
-        "evidenceRoute": "network-maps.html"
-      },
-      "evidenceBoundary": "Red-Team Mirror exposes the strongest support and challenge available in the attached record. It must not invent counter-evidence, force false balance or publish an automated verdict. Named human review remains required.",
-      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
-      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-10-a0e61bfe-proposal",
-      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-10-a0e61bfe#submit"
+      "publicAnswerClockRoute": "public-answer-clock.html#answer-clock-consequence-crime-state-overlap-2026-08-11-32020221",
+      "missingRecordMissionsRoute": "missing-record-missions.html#missing-consequence-crime-state-overlap-2026-08-11-32020221-proposal",
+      "livedConsequenceReceiptsRoute": "lived-consequence-receipts.html?record=consequence-crime-state-overlap-2026-08-11-32020221#submit"
     }
   ]
 }

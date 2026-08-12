@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-08-11T05:00:01.738Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-12T05:24:46.607Z",
+  "pageCount": 123,
   "output": "downloads/newsletter-worker-patch-report.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Newsletter Worker Patch Report",
-    "contentHash": "b9937a9d0876bce38c02a8dfe9f0471110c6684c232d14d3237e7e8f0274fc57",
+    "contentHash": "6a3030706d19a2eab0ce6dd3f3f64746e9d236d145dcb3a8aaa5eb86f04719d6",
     "sourceIds": [
+      "crime-state-overlap-2026-08-11-6fc87119",
+      "crime-state-overlap-2026-08-11-38bd17df",
       "crime-state-overlap-2026-08-10-a0e61bfe",
-      "4c1d46d9bcb8caa374dec7d2",
       "savile-health-investigations-2014",
       "8057d390af5011731564579c",
+      "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
       "b0cde383147509fbfd4f4472",
       "a21f3d8e98268d5e01e1eb7c",
       "04178dd78ae55a022df89f05",
@@ -20,6 +22,28 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "crime-state-overlap-2026-08-11-acb6cb5e",
+      "crime-state-overlap-2026-08-11-78c0d63f",
+      "crime-state-overlap-2026-08-11-bb49d78a",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-39d1342e",
+      "crime-state-overlap-2026-08-11-d7186992",
+      "crime-state-overlap-2026-08-11-5c5c9eb9",
+      "crime-state-overlap-2026-08-11-35be2c84",
+      "crime-state-overlap-2026-08-11-661c5029",
+      "crime-state-overlap-2026-08-11-37d80761",
+      "crime-state-overlap-2026-08-11-a4267456",
+      "crime-state-overlap-2026-08-11-734553c7",
+      "crime-state-overlap-2026-08-11-c098e67e",
+      "crime-state-overlap-2026-08-11-5845f54f",
+      "crime-state-overlap-2026-08-11-6958404b",
+      "crime-state-overlap-2026-08-11-32020221",
+      "crime-state-overlap-2026-08-11-f37c3e86",
+      "crime-state-overlap-2026-08-11-0708ab9e",
+      "crime-state-overlap-2026-08-11-bb118a83",
+      "crime-state-overlap-2026-08-11-854ed3e3",
+      "crime-state-overlap-2026-08-11-902ce8c8",
+      "crime-state-overlap-2026-08-11-9cad9b6a",
       "crime-state-overlap-2026-08-10-9cf6f0f4",
       "crime-state-overlap-2026-08-10-015a2455",
       "crime-state-overlap-2026-08-10-740ed0d1",
@@ -43,31 +67,6 @@
       "crime-state-overlap-2026-08-10-d96f7296",
       "crime-state-overlap-2026-08-10-f8aa6edb",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "crime-state-overlap-2026-08-07-bad0acb5",
-      "crime-state-overlap-2026-08-07-adb50e08",
-      "crime-state-overlap-2026-08-07-8418d23a",
-      "crime-state-overlap-2026-08-07-51c2b30a",
-      "crime-state-overlap-2026-08-07-dc3f30ce",
-      "crime-state-overlap-2026-08-07-a2296147",
-      "crime-state-overlap-2026-08-07-151b6c33",
-      "crime-state-overlap-2026-08-07-ab764161",
-      "crime-state-overlap-2026-08-07-f2fd0a89",
-      "crime-state-overlap-2026-08-07-7e664ee5",
-      "crime-state-overlap-2026-08-07-4f6b78a3",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
-      "crime-state-overlap-2026-08-07-0aa1dddd",
-      "crime-state-overlap-2026-08-07-ef852232",
-      "crime-state-overlap-2026-08-07-adab7342",
-      "crime-state-overlap-2026-08-07-eabe3a68",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
-      "crime-state-overlap-2026-08-07-3cedbac3",
-      "crime-state-overlap-2026-08-07-40e429d2",
-      "crime-state-overlap-2026-08-07-10060a7b",
-      "crime-state-overlap-2026-08-07-2b138d2d",
-      "crime-state-overlap-2026-08-07-38ebb2ec",
-      "crime-state-overlap-2026-08-07-6fc023b0",
-      "crime-state-overlap-2026-08-07-b5c464b8",
-      "crime-state-overlap-2026-08-07-ecf6905a",
       "b4cb47ea50dc901364239e9f",
       "b9006a5edc55cc88bfccd04a",
       "06baa45bea3e2e15eb80eff9",
@@ -109,7 +108,7 @@
       "gates-epstein-meetings-2011-2014",
       "deutsche-bank-epstein-dfs-2020",
       "EP-AI-004",
-      "pdf-newsletter-worker-patch-report-f8cd88c71033",
+      "pdf-newsletter-worker-patch-report-a69c29db8dae",
       "us-doj",
       "gao-hq",
       "3a425f0d5d683952bc0ad7ac",
@@ -136,7 +135,8 @@
       "family-offices-blue-pool-capital",
       "family-offices-rit-capital-partners",
       "family-offices-wittington-investments",
-      "family-offices-grosvenor-group"
+      "family-offices-grosvenor-group",
+      "family-offices-exor"
     ],
     "metrics": {
       "evidenceCount": 130,
@@ -144,13 +144,13 @@
       "disputedClaimCount": 19,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 65,
-      "moneyRecordCount": 46
+      "relationshipCount": 64,
+      "moneyRecordCount": 47
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 116 A/B-grade public-record items are materially relevant to Newsletter Worker Patch Report.",
-        "evidence": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/live-intel.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "evidence": "Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan (data/live-intel.json); Shelbyville Man Sentenced to 5 Years for Firearms Conspiracy, Dealing, Smuggling and False Statements (data/live-intel.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/latest-public-drops.json); Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/power-diff-current.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -158,8 +158,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "MOBILE, AL — Continental Aerospace Technologies Inc. has agreed to pay $11,772,680.14 to resolve allegations that it violated the False Claims Act by submitting false claims to obtain a Paycheck Protection Program (PPP) loan for which it was not eligible. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -169,8 +169,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 65 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen; Official health investigations documented abuse and enabling access; After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced; Ashland Man Sentenced for Receiving Child Sexual Abuse Material; Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds; Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges; Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor; Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization",
+        "inference": "The indexed set contains 64 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan; Shelbyville Man Sentenced to 5 Years for Firearms Conspiracy, Dealing, Smuggling and False Statements; USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen; Official health investigations documented abuse and enabling access; Best Practices Workshop on Requester Negotiations; Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000; Former Cherokee County employee guilty of embezzling over $400k from Tax Assessor-Collector’s Office; Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -184,16 +184,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 65 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 64 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan",
+          "Shelbyville Man Sentenced to 5 Years for Firearms Conspiracy, Dealing, Smuggling and False Statements",
           "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen",
           "Official health investigations documented abuse and enabling access",
-          "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced",
-          "Ashland Man Sentenced for Receiving Child Sexual Abuse Material",
-          "Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds",
-          "Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges",
-          "Former Magoffin County High School Teacher Sentenced for Online Enticement of a Minor",
-          "Huntington Man Sentenced to Prison for Role in Drug Trafficking Organization"
+          "Best Practices Workshop on Requester Negotiations",
+          "Charlotte Man Sentenced to Prison for Using U.S. Postal Service Arrow Keys to Steal $963,000",
+          "Former Cherokee County employee guilty of embezzling over $400k from Tax Assessor-Collector’s Office",
+          "Former Coast Guard Rescue Swimmer Sentenced to 5 Years in Prison for Possessing Child Pornography"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -208,6 +208,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

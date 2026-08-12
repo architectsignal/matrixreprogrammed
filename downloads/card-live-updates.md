@@ -1,10 +1,10 @@
 # Card Live Intelligence Updates
 
-Generated: 2026-08-11T05:07:28.955Z
-Live Intel source window: 2026-08-11T05:07:13.547Z
+Generated: 2026-08-12T05:32:17.958Z
+Live Intel source window: 2026-08-12T05:32:02.446Z
 Tracked cards: 973
-Cards with current matched records: 99
-Cards with no new verified record: 874
+Cards with current matched records: 97
+Cards with no new verified record: 876
 Andrew Tate routes: controlled-opposition/andrew-tate.html
 
 Every tracked card is checked against current Live Intel, record events, entity observations and entity briefs. Cards with no new verified record say so explicitly instead of displaying a synthetic update.
@@ -533,10 +533,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## AGRICULTURE DEPARTMENT
 - Route: entity-timelines/agriculture-department.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-07T12:00:00.000Z
-- 2026-08-07T12:00:00.000Z — Former USDA Program Director Sentenced in $400,000 Fraud Scheme — https://www.justice.gov/usao-dc/pr/former-usda-program-director-sentenced-400000-fraud-scheme
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Ajay Banga
 - Route: top-52/ajay-banga.html
@@ -1811,10 +1810,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## CRIMINAL INVESTIGATIONS.
 - Route: criminal-investigations.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-07T12:00:00.000Z
-- 2026-08-07T12:00:00.000Z — Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force — https://www.justice.gov/usao-nv/pr/seven-charged-roles-fentanyl-drug-trafficking-conspiracy-part-las-vegas-homeland
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## Critical Entities Resilience directive
 - Route: policy/critical-entities-resilience-directive.html
@@ -1994,8 +1992,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: entity-timelines/district-court-district-of-columbia.html
 - Status: current-records-matched
 - Current matched records: 1
-- Latest record: 2026-08-07T12:00:00.000Z
-- 2026-08-07T12:00:00.000Z — Convicted Felon Sentenced for Illegal Gun Possession — https://www.justice.gov/usao-dc/pr/convicted-felon-sentenced-illegal-gun-possession
+- Latest record: 2026-08-11T12:00:00.000Z
+- 2026-08-11T12:00:00.000Z — Previously Convicted Killer Pleads Guilty to Possessing Loaded Pistol — https://www.justice.gov/usao-dc/pr/previously-convicted-killer-pleads-guilty-possessing-loaded-pistol
 
 ## Ditchley Foundation network
 - Route: secret-societies/ditchley-foundation-network.html
@@ -2353,9 +2351,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Federal Bureau of Investigation
 - Route: institutions/federal-bureau-of-investigation.html
-- Status: no-new-verified-record-in-current-window
-- Current matched records: 0
-- Latest record: none in current window
+- Status: current-records-matched
+- Current matched records: 1
+- Latest record: 2026-08-11T12:00:00.000Z
+- 2026-08-11T12:00:00.000Z — Onondaga County Man Charged with Possessing Child Pornography — https://www.justice.gov/usao-ndny/pr/onondaga-county-man-charged-possessing-child-pornography
 
 ## FEDERAL PROCUREMENT POLICY OFFICE
 - Route: entity-timelines/federal-procurement-policy-office.html
@@ -2713,10 +2712,10 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Route: institutions/google.html
 - Status: current-records-matched
 - Current matched records: 8
-- Latest record: 2026-08-10T19:52:03.000Z
-- 2026-08-10T19:52:03.000Z — Virginia Giuffre Part 01 - vault.fbi.gov — https://news.google.com/rss/articles/CBMid0FVX3lxTE8zWW1TOXF5Mml0R1lkSnViTUwxM1ZaMzZUbGlkamFueTV3UnRBcXZwWTdKZUxaeTFVYXV0RnVya2tiX3VEazdZUzRVQWEtY1BSbUNMN1R2d1o0LUc5YUpOUDM3NGhLTEJXdVgyNmoyOEh5UTRRNVh3?oc=5
-- 2026-08-10T17:40:36.000Z — An arts school where Epstein allegedly preyed on students reveals decades of abuse - Oregon Public Broadcasting - OPB — https://news.google.com/rss/articles/CBMivwFBVV95cUxNdjZWT2EyaE9pbGtaRVZwVkhlUzczaUVoYUphaW5KbU10REdiUkZKU3pWU3ZBSmJhYkpfa2gyczMxd3ZXWENoSzZpbjlpeWZKTVJoWGt1TWc1bV92VE5VM3k5ODhfZGRINXo5VUtfb21qMmpzdEZLT1pyUDZ3Vk5PWVFJNFZDMHlGSXpCU2hyRG9nV2FtVjA4QzVLN1haVzhadGprMUgwaEhVNGNBejktRUgyV0U4djg4UzB5c0dKRQ?oc=5
-- 2026-08-10T17:05:11.000Z — Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wamQ2NFA5d1Rld3lGM1UtMno3c0RGNjJNQm5HWWNuRy1DaEJHZ3Z6S0wwNmMtVUtMaG5WQV90QU83Nkh1R0w1WUNNNDQ5OTdhUEtBTnh1ZGFVXzBQd3RPVEFB?oc=5
+- Latest record: 2026-08-11T19:00:00.000Z
+- 2026-08-11T19:00:00.000Z — FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners - treasury.gov — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5QQmFoSEwtSDJVeEt5eHRIN2JfYVBxU3RfTWYzTWkyMU5aZlRiMnIwTm9scEdLSk1iVzRWaElFRzlvSnE4UjZ0TzNOVzhiZ09YTlRieG4wRUEyR1VYRFB4ZVpn?oc=5
+- 2026-08-11T18:20:37.000Z — Thomas Crooks Part 07 - FBI (.gov) — https://news.google.com/rss/articles/CBMib0FVX3lxTE5zYXJrbGdHbEhldk9WUjBNYjlISVlyU2M0M0tJdENRNU15NE9Dd2lLNzRCWmRpWE5ZVEt6bHVtcEpBY1Y4SUpxbzN4RU1WT3RXc0FpYnJfNnN6LUszT1YxNU1kWVVsNGRNa0hxZ0JXRQ?oc=5
+- 2026-08-11T18:20:37.000Z — TurningPoint USA - FBI (.gov) — https://news.google.com/rss/articles/CBMiT0FVX3lxTE11X1djYjhnQi1Rb1cyeURMOW5ER2d1QXBaSVJzTHNUUFJwaHBjekFqeV9iaWN0ckF5NU9yb0lPcTBxM2RORlhxX3dONE9yTlk?oc=5
 
 ## GovTech digital service mandates
 - Route: policy/govtech-digital-service-mandates.html
@@ -3054,9 +3053,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## INVESTIGATIONS
 - Route: investigations.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-08-07T12:00:00.000Z
-- 2026-08-07T12:00:00.000Z — Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force — https://www.justice.gov/usao-nv/pr/seven-charged-roles-fentanyl-drug-trafficking-conspiracy-part-las-vegas-homeland
+- Current matched records: 1
+- Latest record: 2026-08-06T17:56:22.000Z
 - 2026-08-06T17:56:22.000Z — Reporters Committee reviews Todd Blanche’s record on government transparency, leak investigations - Reporters Committee for Freedom of the Press — https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YZkVJUlg3UFY3UWM5NTZzaU12UDRBNUtHdDlpTjhScVpHS2FlY0tRV3BQWGtFUnh6Ynh0bS1odUU5WlYwYkFNSVAzRm9XUEVNY2FlejRQTXhoUQ?oc=5
 
 ## Ireland
@@ -5125,10 +5123,11 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## STATE DEPARTMENT
 - Route: entity-timelines/state-department.html
 - Status: current-records-matched
-- Current matched records: 2
-- Latest record: 2026-08-10T12:00:00.000Z
+- Current matched records: 4
+- Latest record: 2026-08-11T12:00:00.000Z
+- 2026-08-11T12:00:00.000Z — Northern District of Ohio Agencies Receive More Than $4M in Grant Awards to Support Criminal Justice Activities — https://www.justice.gov/usao-ndoh/pr/northern-district-ohio-agencies-receive-more-4m-grant-awards-support-criminal-justice
+- 2026-08-11T12:00:00.000Z — U.S. Department of Justice Awards Over $3 Million to Oregon Communities to Improve Public Safety — https://www.justice.gov/usao-or/pr/us-department-justice-awards-over-3-million-oregon-communities-improve-public-safety
 - 2026-08-10T12:00:00.000Z — Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges — https://www.justice.gov/usao-md/pr/former-employee-maryland-state-contractor-pleads-guilty-unemployment-benefits-fraud
-- 2026-08-10T12:00:00.000Z — Middle District of Florida Agencies Receive $3.5 Million to Improve Safety — https://www.justice.gov/usao-mdfl/pr/middle-district-florida-agencies-receive-35-million-improve-safety
 
 ## State Street
 - Route: institutions/state-street.html
@@ -5427,8 +5426,8 @@ Every tracked card is checked against current Live Intel, record events, entity 
 - Current matched records: 8
 - Latest record: 2026-08-10T17:05:11.000Z
 - 2026-08-10T17:05:11.000Z — Remarks from Secretary of the Treasury Scott Bessent at Joint Base Lindsey Graham Renaming Ceremony - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE4wamQ2NFA5d1Rld3lGM1UtMno3c0RGNjJNQm5HWWNuRy1DaEJHZ3Z6S0wwNmMtVUtMaG5WQV90QU83Nkh1R0w1WUNNNDQ5OTdhUEtBTnh1ZGFVXzBQd3RPVEFB?oc=5
-- 2026-08-08T12:50:26.000Z — Treasury Unveils Redesigned CFIUS Website - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE1PZl92UHh2cVc0UWlsNWp6NWR6WlB5WFVaSmlDWWdnZE9NZl9JRkRHWDlHMWduaERZVDZGZ2VYNXpTTllxZ0k2MVBIWGFITGdEUGxSS0JlZXF6T3NyWjBsZ0Zn?oc=5
 - 2026-08-07T22:12:41.000Z — Secretary Bessent Issues Statement Welcoming S&P Global Release of Critical Mineral Reference Prices - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTFBNcFhhTzJvcGg1NDViNjJvWGRXOWFFNF9VMkxuaHlRNE5nb2d4UXV5RC1aeEdycXdZaF9BdnROZm52dkJWdGxscmJvdGU3dVBrci05OXFTVHNfRXFyOXRrY1RR?oc=5
+- 2026-08-07T20:39:09.000Z — Treasury Releases CFIUS Annual Report for 2025 - U.S. Department of the Treasury (.gov) — https://news.google.com/rss/articles/CBMiYkFVX3lxTE5qaG9zbGdGMXVIdEY3bGNSWGt3aFJiUDZCdFFTallNWFVJZVhUTlRDWFNvSHY3cDY4NU1hdGxKMWtVMVVxWTNqTFRWOXU5ZVBodk5oeTBFLWk1T3dhQkljZmJn?oc=5
 
 ## Trilateral Commission
 - Route: institutions/trilateral-commission.html
@@ -5721,10 +5720,9 @@ Every tracked card is checked against current Live Intel, record events, entity 
 
 ## Washington, D.C.
 - Route: jurisdictions-of-power/washington-d-c.html
-- Status: current-records-matched
-- Current matched records: 1
-- Latest record: 2026-08-07T12:00:00.000Z
-- 2026-08-07T12:00:00.000Z — South Carolina Man Sentenced to 18.5 Years for 2022 Shooting in Adams Morgan — https://www.justice.gov/usao-dc/pr/south-carolina-man-sentenced-185-years-2022-shooting-adams-morgan
+- Status: no-new-verified-record-in-current-window
+- Current matched records: 0
+- Latest record: none in current window
 
 ## WEEKLY INVESTIGATION REPORT.
 - Route: weekly-investigation-report.html
@@ -5876,26 +5874,23 @@ Every tracked card is checked against current Live Intel, record events, entity 
 ## World Health Organization
 - Route: institutions/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-08-10T12:00:00.000Z
 - 2026-08-10T12:00:00.000Z — DR Congo: Ebola is killing people before they ever reach a doctor — https://news.un.org/feed/view/en/story/2026/08/1168105
-- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 
 ## World Health Organization
 - Route: top-52/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-08-10T12:00:00.000Z
 - 2026-08-10T12:00:00.000Z — DR Congo: Ebola is killing people before they ever reach a doctor — https://news.un.org/feed/view/en/story/2026/08/1168105
-- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 
 ## WORLD HEALTH ORGANIZATION
 - Route: institution-briefs/world-health-organization.html
 - Status: current-records-matched
-- Current matched records: 2
+- Current matched records: 1
 - Latest record: 2026-08-10T12:00:00.000Z
 - 2026-08-10T12:00:00.000Z — DR Congo: Ebola is killing people before they ever reach a doctor — https://news.un.org/feed/view/en/story/2026/08/1168105
-- 2026-08-04T12:00:00.000Z — New Ebola vaccine trial launches as outbreak spreads in DR Congo — https://news.un.org/feed/view/en/story/2026/08/1168072
 
 ## World Resources Institute
 - Route: think-tanks/world-resources-institute.html

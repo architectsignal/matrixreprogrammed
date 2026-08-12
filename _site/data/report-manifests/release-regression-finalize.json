@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-11T05:02:37.856Z",
-  "pageCount": 140,
+  "generatedAt": "2026-08-12T05:27:24.130Z",
+  "pageCount": 141,
   "output": "downloads/release-regression-finalize.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Release Regression Finalize",
-    "contentHash": "7292c962e4ff0aff7951b73baab9ae3fed4f7855ed65f90a1bdfc9fd4174dd4b",
+    "contentHash": "639dfee7da37a8f71990fb57bb8daf8384b8e49743d9060bc122647748c47ec3",
     "sourceIds": [
       "ASC-REVIEW-9395B56F60B42FEA",
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
+      "crime-state-overlap-2026-08-11-6fc87119",
+      "crime-state-overlap-2026-08-11-38bd17df",
       "crime-state-overlap-2026-08-10-a0e61bfe",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-10060a7b",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -41,6 +41,30 @@
       "ASC-REVIEW-1EB618A4D39314B4",
       "360e80c162081c85d2c680ef",
       "EFS-001-R006",
+      "crime-state-overlap-2026-08-11-acb6cb5e",
+      "crime-state-overlap-2026-08-11-78c0d63f",
+      "crime-state-overlap-2026-08-11-bb49d78a",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-39d1342e",
+      "crime-state-overlap-2026-08-11-d7186992",
+      "crime-state-overlap-2026-08-11-5c5c9eb9",
+      "crime-state-overlap-2026-08-11-35be2c84",
+      "crime-state-overlap-2026-08-11-661c5029",
+      "crime-state-overlap-2026-08-11-37d80761",
+      "crime-state-overlap-2026-08-11-a4267456",
+      "crime-state-overlap-2026-08-11-734553c7",
+      "crime-state-overlap-2026-08-11-c098e67e",
+      "crime-state-overlap-2026-08-11-5845f54f",
+      "crime-state-overlap-2026-08-11-6958404b",
+      "crime-state-overlap-2026-08-11-32020221",
+      "crime-state-overlap-2026-08-11-f37c3e86",
+      "crime-state-overlap-2026-08-11-0708ab9e",
+      "crime-state-overlap-2026-08-11-bb118a83",
+      "crime-state-overlap-2026-08-11-854ed3e3",
+      "crime-state-overlap-2026-08-11-902ce8c8",
+      "crime-state-overlap-2026-08-11-9cad9b6a",
+      "source-change-6d75003b4825f307f6df306e",
+      "2609b70f5c1db84a869ac7ca",
       "crime-state-overlap-2026-08-10-9cf6f0f4",
       "crime-state-overlap-2026-08-10-015a2455",
       "crime-state-overlap-2026-08-10-740ed0d1",
@@ -65,32 +89,6 @@
       "crime-state-overlap-2026-08-10-f8aa6edb",
       "source-change-d8732adccaaac4ea6376d2ba",
       "source-change-ec7f3126268880506fc4f0ed",
-      "e4ca191d7d9f2eddeda78ad3",
-      "crime-state-overlap-2026-08-07-bad0acb5",
-      "crime-state-overlap-2026-08-07-adb50e08",
-      "crime-state-overlap-2026-08-07-8418d23a",
-      "crime-state-overlap-2026-08-07-51c2b30a",
-      "crime-state-overlap-2026-08-07-dc3f30ce",
-      "crime-state-overlap-2026-08-07-a2296147",
-      "crime-state-overlap-2026-08-07-151b6c33",
-      "crime-state-overlap-2026-08-07-ab764161",
-      "crime-state-overlap-2026-08-07-f2fd0a89",
-      "crime-state-overlap-2026-08-07-7e664ee5",
-      "crime-state-overlap-2026-08-07-4f6b78a3",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
-      "crime-state-overlap-2026-08-07-0aa1dddd",
-      "crime-state-overlap-2026-08-07-ef852232",
-      "crime-state-overlap-2026-08-07-adab7342",
-      "crime-state-overlap-2026-08-07-eabe3a68",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
-      "crime-state-overlap-2026-08-07-3cedbac3",
-      "crime-state-overlap-2026-08-07-40e429d2",
-      "crime-state-overlap-2026-08-07-2b138d2d",
-      "crime-state-overlap-2026-08-07-38ebb2ec",
-      "crime-state-overlap-2026-08-07-6fc023b0",
-      "crime-state-overlap-2026-08-07-b5c464b8",
-      "crime-state-overlap-2026-08-07-ecf6905a",
-      "source-change-f966f8c917641cd736660f92",
       "f8282c39e73330693c2bbcc9",
       "9d5ab7f5717c4527d5b04e38",
       "7fcb597dc71df06f1e522aaf",
@@ -146,21 +144,23 @@
       "ASC-REVIEW-A6F3D2598C5BA884",
       "ASC-REVIEW-7729CF4536080393",
       "ASC-REVIEW-EAB6011874016286",
-      "ASC-REVIEW-C973762B151D5947"
+      "ASC-REVIEW-C973762B151D5947",
+      "ASC-REVIEW-875607DBB9C95C91",
+      "ASC-REVIEW-BE461670E34D316C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 81,
-      "disputedClaimCount": 55,
+      "primarySourceCount": 79,
+      "disputedClaimCount": 57,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 91,
-      "moneyRecordCount": 31
+      "relationshipCount": 92,
+      "moneyRecordCount": 33
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 81 A/B-grade public-record items are materially relevant to Release Regression Finalize.",
-        "evidence": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/live-intel.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car (data/live-intel.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json)",
+        "conclusion": "The indexed record establishes that 79 A/B-grade public-record items are materially relevant to Release Regression Finalize.",
+        "evidence": "Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan (data/live-intel.json); Shelbyville Man Sentenced to 5 Years for Firearms Conspiracy, Dealing, Smuggling and False Statements (data/live-intel.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/latest-public-drops.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); DOJ January 30 production statement — 3 million additional pages and production limits (data/tracker-core-investigations.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "MOBILE, AL — Continental Aerospace Technologies Inc. has agreed to pay $11,772,680.14 to resolve allegations that it violated the False Claims Act by submitting false claims to obtain a Paycheck Protection Program (PPP) loan for which it was not eligible. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 91 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen; Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+        "inference": "The indexed set contains 92 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan; Shelbyville Man Sentenced to 5 Years for Firearms Conspiracy, Dealing, Smuggling and False Statements; USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 91 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 92 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
+          "Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan",
+          "Shelbyville Man Sentenced to 5 Years for Firearms Conspiracy, Dealing, Smuggling and False Statements",
           "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen",
-          "Repeat Felon Sentenced to 36 Months After Loaded Glock Found in D.C. Car",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer"
+          "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

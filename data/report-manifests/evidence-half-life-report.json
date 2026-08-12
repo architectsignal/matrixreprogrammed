@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-11T04:56:17.233Z",
-  "pageCount": 118,
+  "generatedAt": "2026-08-12T05:21:01.318Z",
+  "pageCount": 120,
   "output": "downloads/evidence-half-life-report.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Evidence Half Life Report",
-    "contentHash": "1994d2a786b9dc288daaf500e83c808206be4aaacb92d9d362baa08f67375156",
+    "contentHash": "c3033eb8b34279ba652bafdcd7854ba1c900b169a673eaa453cf46fe64c5597a",
     "sourceIds": [
+      "crime-state-overlap-2026-08-11-5c5c9eb9",
+      "crime-state-overlap-2026-08-11-35be2c84",
+      "crime-state-overlap-2026-08-11-661c5029",
+      "crime-state-overlap-2026-08-11-f37c3e86",
       "crime-state-overlap-2026-08-10-48c93d8f",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-51c2b30a",
-      "crime-state-overlap-2026-08-07-a2296147",
-      "crime-state-overlap-2026-08-07-4f6b78a3",
       "f669b33c49b63e787cde3008",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
@@ -49,9 +49,14 @@
       "ASC-REVIEW-CE615863A9722AC5",
       "d23398b8ca4c7124399c9504",
       "2529322b7b5345fd6f575174",
-      "consequence-crime-state-overlap-2026-08-07-a2296147",
-      "consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "diff-consequence-crime-state-overlap-2026-08-07-eea3ce1d",
+      "crime-state-overlap-2026-08-11-bb49d78a",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-d7186992",
+      "crime-state-overlap-2026-08-11-37d80761",
+      "crime-state-overlap-2026-08-11-734553c7",
+      "crime-state-overlap-2026-08-11-6958404b",
+      "crime-state-overlap-2026-08-11-bb118a83",
+      "crime-state-overlap-2026-08-11-854ed3e3",
       "crime-state-overlap-2026-08-10-740ed0d1",
       "crime-state-overlap-2026-08-10-bc7b5d3f",
       "crime-state-overlap-2026-08-10-7d922c66",
@@ -61,11 +66,6 @@
       "crime-state-overlap-2026-08-10-d96f7296",
       "crime-state-overlap-2026-08-10-f8aa6edb",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "crime-state-overlap-2026-08-07-dc3f30ce",
-      "crime-state-overlap-2026-08-07-151b6c33",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
-      "crime-state-overlap-2026-08-07-ef852232",
-      "crime-state-overlap-2026-08-07-b5c464b8",
       "b4cb47ea50dc901364239e9f",
       "a71a8be091652489b843ecf6",
       "e457b31e704efd10ec987a59",
@@ -130,23 +130,23 @@
       "us-doj",
       "gao-hq",
       "71e0563ca7b139c37c302956",
-      "consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "diff-consequence-declassified-files-2026-08-07-fa753b69",
-      "diff-consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "diff-consequence-epstein-files-2026-08-07-9c3b2188",
-      "diff-consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "diff-consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "diff-consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "diff-consequence-crime-state-overlap-2026-08-07-a2296147",
-      "diff-consequence-crime-state-overlap-2026-08-07-ab764161",
-      "diff-consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "diff-consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "diff-consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "7f5b91c14c671bd24b8bbd81",
-      "360e80c162081c85d2c680ef",
-      "7edc586ce4769f4f64e92057",
-      "3d0d1e80633ac06c41189fd1"
+      "consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "diff-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "diff-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "diff-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "diff-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "diff-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "diff-consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "diff-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "diff-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "diff-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "diff-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "diff-consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "diff-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "7f5b91c14c671bd24b8bbd81"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 50,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 53,
-      "moneyRecordCount": 19
+      "relationshipCount": 58,
+      "moneyRecordCount": 21
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 63 A/B-grade public-record items are materially relevant to Evidence Half Life Report.",
-        "evidence": "Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon (data/live-intel.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Federal Jury Finds Robert Ivers Guilty on All Counts in Threats Against United States Judge and Trial Witness (data/latest-public-drops.json); Honduran National Sentenced for Illegal Reentry of a Removed Alien (data/latest-public-drops.json); Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago (data/latest-public-drops.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json)",
+        "evidence": "Guatemalan National Pleads Guilty for Illegal Reentry Into the United States After a Prior Deportation (data/live-intel.json); Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin (data/live-intel.json); International Fugitive Pleads Guilty to Healthcare Fraud Conspiracy and Failure to Appear (data/live-intel.json); New York Woman Pleads Guilty to Smuggling Illegal Aliens from Canada (data/live-intel.json); Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon (data/latest-public-drops.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Denmark, France, Greece, Italy and Spain are adopting customised versions of the EU age-verification solution,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The Commission identifies five Member States taking up the common technical solution with a view to publishing customised national age-verification applications.",
+        "conclusion": "The most defensible current assessment is based on “Guatemalan National Pleads Guilty for Illegal Reentry Into the United States After a Prior Deportation,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Jelber Gomez-Lopez, 33, A Guatemalan National, pleaded guilty to an information charging him with illegal reentry into the United States after being previously deported. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 53 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon; Federal Jury Finds Robert Ivers Guilty on All Counts in Threats Against United States Judge and Trial Witness; Honduran National Sentenced for Illegal Reentry of a Removed Alien; Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; MINDCUBED LLC — District of Columbia Courts",
+        "inference": "The indexed set contains 58 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Guatemalan National Pleads Guilty for Illegal Reentry Into the United States After a Prior Deportation; Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin; International Fugitive Pleads Guilty to Healthcare Fraud Conspiracy and Failure to Appear; New York Woman Pleads Guilty to Smuggling Illegal Aliens from Canada; Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 53 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 58 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "Guatemalan National Pleads Guilty for Illegal Reentry Into the United States After a Prior Deportation",
+          "Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin",
+          "International Fugitive Pleads Guilty to Healthcare Fraud Conspiracy and Failure to Appear",
+          "New York Woman Pleads Guilty to Smuggling Illegal Aliens from Canada",
           "Illegal Alien from Mexico Pleads Guilty to Illegally Reentering the United States and Possessing Firearm as a Felon",
-          "Federal Jury Finds Robert Ivers Guilty on All Counts in Threats Against United States Judge and Trial Witness",
-          "Honduran National Sentenced for Illegal Reentry of a Removed Alien",
-          "Illegal Alien Sentenced to Two and a Half Years in Federal Prison for Firing Shots Near Border Patrol Agents During Operation Midway Blitz in Chicago",
           "COMCAST GOVERNMENT SERVICES LLC — Department of Defense",
           "FCN, INC. — Court Services and Offender Supervision Agency",
-          "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
-          "MINDCUBED LLC — District of Columbia Courts"
+          "FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-12-31T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

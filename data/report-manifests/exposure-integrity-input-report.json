@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:56:31.597Z",
+  "generatedAt": "2026-08-12T05:21:15.519Z",
   "pageCount": 142,
   "output": "downloads/exposure-integrity-input-report.pdf",
   "report": {
-    "version": 11,
+    "version": 12,
     "title": "Exposure Integrity Input Report",
-    "contentHash": "6f360e9587e7997de35e7423452862b48a19b955827718cab8c2ae1c39a66c2d",
+    "contentHash": "5c5303b3af10de0beaae5de481d94911537c95607401df86ca60990f8271a280",
     "sourceIds": [
       "ASC-REVIEW-612BDE5576885761",
       "ASC-REVIEW-9E85403F3389F334",
@@ -23,6 +23,7 @@
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-8D7E899D68D3AA41",
       "9086b5de8aac89f84189be72",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-884743856D3E1385",
       "ASC-REVIEW-E5A88F482A22427D",
       "ASC-REVIEW-EC518EFBF56BB985",
@@ -145,17 +146,16 @@
       "ASC-REVIEW-74CB8C62C3262D32",
       "ASC-REVIEW-285205442D5C5D56",
       "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27"
+      "ASC-REVIEW-375A853A96E42D84"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 139,
-      "newEntityCount": 0,
+      "disputedClaimCount": 138,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 85,
-      "moneyRecordCount": 89
+      "relationshipCount": 84,
+      "moneyRecordCount": 88
     },
     "evidenceBasedConclusions": [
       {
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Arrests, Seizures, And Federal Firearms Charges Surge In Oakland Through Coordinated Federal-Local Law Enforcement Efforts,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "A wider mission interpretation of “Arrests, Seizures, And Federal Firearms Charges Surge In Oakland Through Coordinated Federal-Local Law Enforcement Efforts — arrests-seizures-and-federal-firearms-charges-surge-oakland-through-coordinated” would become plausible only if the underlying primary record confirms the reported development and documents a concrete power mechanism. At present that interpretation is unproven.",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 85 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 84 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 85 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 84 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-11T04:56:31.597Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

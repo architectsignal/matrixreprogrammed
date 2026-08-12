@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:57:53.823Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-12T05:22:39.100Z",
+  "pageCount": 134,
   "output": "downloads/investigation-data-integrity-repair.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Investigation Data Integrity Repair",
-    "contentHash": "ebaa4d942c5bf5601ac910f789447b74e570c3779a3ead3fc39e4d1c64d1e8fc",
+    "contentHash": "c9565c4608380d7996c288541e5784ab66591211e94d9a6991ac21521b51dca6",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ec968f2ec6ba82128b4cd91b",
@@ -38,7 +38,6 @@
       "d648ce395c11435d30796fee",
       "911d6aa330f80279bdb3c4d5",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -48,13 +47,13 @@
       "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-11047BCC813B0EA8",
       "228770c420a004608c7b13f9",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -69,8 +68,8 @@
       "360e80c162081c85d2c680ef",
       "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
-      "c673456bbe77dbb29e43ac7d",
       "366686df53f6dfd25d3f0ea4",
+      "c673456bbe77dbb29e43ac7d",
       "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
       "8f15d14f1b05a490af22799d",
@@ -80,6 +79,7 @@
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
       "fe51591d2f98b1e8140add7f",
+      "1c0cca9ff329dd06d5408693",
       "8737454dea4463f85583fbd4",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -115,7 +115,6 @@
       "f44c3c7309a5f0779a57e655",
       "9e8310c49b990aa62d2b0921",
       "275d6c3caca158f7a3e15780",
-      "594100b62a47db521fe2a128",
       "EP-AI-004",
       "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
@@ -124,8 +123,8 @@
       "7ee9141a42ad539f58a57e50",
       "eb3448928554960651da56f6",
       "7f5b91c14c671bd24b8bbd81",
-      "34805734b1ad3b73f0ede0d8",
-      "e4ca191d7d9f2eddeda78ad3",
+      "crime-state-overlap-2026-08-11-f37c3e86",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -146,20 +145,21 @@
       "ASC-REVIEW-CAEF74273342914C",
       "ASC-REVIEW-747FA1D74D7A92E3",
       "ASC-REVIEW-2EAAC7D7DF8B957D",
-      "ASC-REVIEW-686B68808D58A838"
+      "ASC-REVIEW-686B68808D58A838",
+      "ASC-REVIEW-E0C2B02D28255CC3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 56,
-      "disputedClaimCount": 68,
+      "primarySourceCount": 57,
+      "disputedClaimCount": 69,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 72,
+      "relationshipCount": 75,
       "moneyRecordCount": 56
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 56 A/B-grade public-record items are materially relevant to Investigation Data Integrity Repair.",
+        "conclusion": "The indexed record establishes that 57 A/B-grade public-record items are materially relevant to Investigation Data Integrity Repair.",
         "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); ROGUE VALLEY H2O LLC — Department of Agriculture (data/daily-investigation-conclusions.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SMITHS DETECTION INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “New York Woman Pleads Guilty to Smuggling Illegal Aliens from Canada,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "A New York woman pleaded guilty today for her role in an international alien smuggling conspiracy that brought aliens primarily from India into the United States across the northern border. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 72 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 75 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "INDUSTRIAL BANK — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; MINDCUBED LLC — District of Columbia Courts; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 72 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 75 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "INDUSTRIAL BANK — District of Columbia Courts",
           "Influence should be mapped through infrastructure, filings and contracts.",

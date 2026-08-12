@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:56:40.847Z",
-  "pageCount": 121,
+  "generatedAt": "2026-08-12T05:21:24.871Z",
+  "pageCount": 122,
   "output": "downloads/final-evidence-badge-dedupe.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Final Evidence Badge Dedupe",
-    "contentHash": "acb25d74a6b123cced12ad8d56d385925c96a756b67b2111c4e197229054af1e",
+    "contentHash": "ebcd2399e2a37a37cfc8b9fcf29ea9cf8c698e5843e40d36e1fd99be974ef60b",
     "sourceIds": [
       "1769af26a7bda813406cd8f5",
       "e72d22f4f28eb53e3173d0a6",
@@ -17,6 +17,8 @@
       "ASC-REVIEW-BC92D8AABD2393C5",
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
+      "declassified-files-2026-08-11-7965035e",
+      "2609b70f5c1db84a869ac7ca",
       "declassified-files-2026-08-07-8ec9a419",
       "declassified-files-2026-08-07-ab950876",
       "declassified-files-2026-08-07-1059741b",
@@ -34,9 +36,13 @@
       "ASC-REVIEW-7181CCFC5771EBAD",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "360e80c162081c85d2c680ef",
+      "declassified-files-2026-08-11-c775dcdb",
+      "declassified-files-2026-08-11-20857f50",
+      "declassified-files-2026-08-11-430c9b38",
+      "declassified-files-2026-08-11-161090dd",
+      "declassified-files-2026-08-11-86447204",
       "declassified-files-2026-08-10-c3e508d3",
       "declassified-files-2026-08-10-10003946",
-      "e4ca191d7d9f2eddeda78ad3",
       "declassified-files-2026-08-08-430c9b38",
       "declassified-files-2026-08-07-fa753b69",
       "declassified-files-2026-08-07-a0d1b2f2",
@@ -140,19 +146,16 @@
       "epstein-files-2026-03-10-new-justice-department-files-show-guards-discussed-how-to-cover-up-jef",
       "epstein-files-2026-03-10-jeffrey-epstein-had-two-key-aides-why-do-they-still-control-his-money-",
       "epstein-files-2026-03-09-the-missing-voice-in-the-debate-over-jeffrey-epstein-s-death-is-found-",
-      "epstein-files-2026-03-08-jeffrey-epstein-s-prison-guard-googled-him-an-hour-before-sex-offender",
-      "epstein-files-2026-03-07-prison-guards-discussed-cover-up-of-epstein-s-death-inmate-tells-fbi-m",
-      "epstein-files-2026-03-05-12-rumors-about-epstein-s-death-we-ve-examined-snopes",
-      "epstein-files-2026-03-02-watch-hillary-clinton-s-full-deposition-on-jeffrey-epstein-ties-before"
+      "epstein-files-2026-03-08-jeffrey-epstein-s-prison-guard-googled-him-an-hour-before-sex-offender"
     ],
     "metrics": {
-      "evidenceCount": 137,
+      "evidenceCount": 140,
       "primarySourceCount": 2,
       "disputedClaimCount": 8,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 30,
-      "moneyRecordCount": 11
+      "relationshipCount": 36,
+      "moneyRecordCount": 12
     },
     "evidenceBasedConclusions": [
       {
@@ -176,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 30 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 - vault.fbi.gov; Matrix Reprogrammed Canonical Intelligence Record; Treasury Releases CFIUS Annual Report for 2025 - U.S. Department of the Treasury (.gov); Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 - vault.fbi.gov; Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov); Donald West Part 05 (Final) - FBI (.gov)",
+        "inference": "The indexed set contains 36 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 - vault.fbi.gov; Matrix Reprogrammed Canonical Intelligence Record; FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners - treasury.gov; Treasury Releases CFIUS Annual Report for 2025 - U.S. Department of the Treasury (.gov); Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov); Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 - vault.fbi.gov; Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -191,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 30 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 36 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 08 - vault.fbi.gov",
           "Matrix Reprogrammed Canonical Intelligence Record",
+          "FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners - treasury.gov",
           "Treasury Releases CFIUS Annual Report for 2025 - U.S. Department of the Treasury (.gov)",
           "Treasury Dismantles Iranian Regime’s Global Clandestine Currency Networks - U.S. Department of the Treasury (.gov)",
           "Records regarding the review of the Investigative Holdings related to Jeffrey Epstein Part 07 - vault.fbi.gov",
-          "Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)",
-          "Donald West Part 05 (Final) - FBI (.gov)"
+          "Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee - U.S. Department of the Treasury (.gov)"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -215,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T19:52:03.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T19:00:00.000Z"
   }
 }

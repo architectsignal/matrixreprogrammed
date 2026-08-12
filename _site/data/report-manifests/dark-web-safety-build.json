@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-11T04:54:06.815Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-12T05:18:49.626Z",
+  "pageCount": 134,
   "output": "downloads/dark-web-safety-build.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Dark Web Safety Build",
-    "contentHash": "398db10409b5263fb1d56622dd6ac4a7b345bb22177b456ebd51da9da540f12c",
+    "contentHash": "d08f2e6b759e4d3ba9e8bd1978ed4f85f257233133cf75668d0f0905aa8f2819",
     "sourceIds": [
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "6d665d935673091233751767",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "16cde9bd4c87e916ff1e4fb7",
       "bbf59ae4094608bcd2c37305",
       "a33968b32fce32bd9d6523f6",
@@ -24,7 +24,6 @@
       "d3589cf045e6d530b37381a9",
       "21ae89a0f8533e03e261f18c",
       "228770c420a004608c7b13f9",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-001",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -90,6 +89,8 @@
       "4a8dd46bd8d4335f061e03ac",
       "8f15d14f1b05a490af22799d",
       "8c8118614f58e40c87e2c2f7",
+      "1c0cca9ff329dd06d5408693",
+      "crime-state-overlap-2026-08-10-d2755c34",
       "143d1f205ed08fad10852858",
       "bb35a6ac531aad0871daf04e",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -145,21 +146,20 @@
       "ASC-REVIEW-47D99B95C8C88B19",
       "ASC-REVIEW-7069086F3A015D62",
       "ASC-REVIEW-713EBA586DECC926",
-      "ASC-REVIEW-40F8CB67FBBBA1E0",
-      "ASC-REVIEW-D2068F12E3B02362"
+      "ASC-REVIEW-40F8CB67FBBBA1E0"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 25,
-      "disputedClaimCount": 105,
+      "primarySourceCount": 26,
+      "disputedClaimCount": 104,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 64,
-      "moneyRecordCount": 56
+      "relationshipCount": 66,
+      "moneyRecordCount": 57
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 25 A/B-grade public-record items are materially relevant to Dark Web Safety Build.",
+        "conclusion": "The indexed record establishes that 26 A/B-grade public-record items are materially relevant to Dark Web Safety Build.",
         "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board (data/weekly-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); AT&T CORP. — Department of Defense (data/weekly-investigation-conclusions.json); ATT MOBILITY LLC — Department of Defense (data/weekly-investigation-conclusions.json); TRACE SYSTEMS INC. — Department of Defense (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Today, U.S. Attorney Jeanine Ferris Pirro marked the one-year anniversary of President Trump’s Federal Law Enforcement Surge in the District of Columbia. The surge implemented a significant increase in federal law enforcement resources, bolstering our teams with additional agents, advanced tools, and a no‑nonsense mandate that renewed the focus on cracking down on violent offenders, dismantling criminal networks, and restoring safety to District neighborhoods. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 64 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 66 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "The strongest public pattern is convergence across access systems.; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board; The strongest public pattern is convergence across access systems.; Follow The Money Watch; ATT MOBILITY LLC — Department of Defense; TRACE SYSTEMS INC. — Department of Defense; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 64 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 66 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "The strongest public pattern is convergence across access systems.",
           "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",

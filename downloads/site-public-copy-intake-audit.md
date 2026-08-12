@@ -1,14 +1,14 @@
 # Site Public Copy And Intake Audit
 
-Updated: 2026-08-11T05:08:16.396Z
+Updated: 2026-08-12T05:33:05.220Z
 
-Files scanned: 6954
+Files scanned: 6962
 
-High issues: 4153
+High issues: 4113
 
 Review issues: 15
 
-Intake areas: 2269
+Intake areas: 2270
 
 Weak intake areas: 0
 
@@ -459,6 +459,7 @@ Weak intake areas: 0
 - _site/data/daily-brain-brief.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-brief-master.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-command-brief.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
+- _site/data/daily-investigation-conclusions.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-power-conclusions.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-watch-dossiers.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/daily-watch-history.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
@@ -501,7 +502,6 @@ Weak intake areas: 0
 - _site/data/epstein-relationship-sync-report.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-research-targets.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/epstein-watch.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
-- _site/data/evidence-half-life.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-network-map.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-pull-list.json: /NaN/i — Potentially visible internal, broken, or author-facing text.
 - _site/data/evidence-reader-manifest.json: /NaN/i — Potentially visible internal, broken, or author-facing text.

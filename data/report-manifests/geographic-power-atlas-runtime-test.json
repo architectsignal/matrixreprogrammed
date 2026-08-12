@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:57:26.534Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-12T05:22:11.117Z",
+  "pageCount": 125,
   "output": "downloads/geographic-power-atlas-runtime-test.pdf",
   "report": {
-    "version": 20,
+    "version": 21,
     "title": "Geographic Power Atlas Runtime Test",
-    "contentHash": "8c15fcdff4f770d6001817a42769840fc8eaef0f8a036cf05d6bd457f6f1d7c2",
+    "contentHash": "415d79b938b41402fccc1e785fc3dca2a831c5d42f642a4dc1873a240f8936a8",
     "sourceIds": [
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-672E0A2FF16C31B8",
@@ -61,17 +61,9 @@
       "360e80c162081c85d2c680ef",
       "ecd4a1111010f13b2d74bf8c",
       "73799cb9af4829047998b026",
-      "crime-state-overlap-2026-08-10-662a584f",
-      "crime-state-overlap-2026-08-10-f6376771",
-      "crime-state-overlap-2026-08-10-7d922c66",
-      "crime-state-overlap-2026-08-10-d2755c34",
-      "crime-state-overlap-2026-08-10-5de09a55",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
+      "crime-state-overlap-2026-08-11-0708ab9e",
+      "crime-state-overlap-2026-08-11-854ed3e3",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "crime-state-overlap-2026-08-07-eabe3a68",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
-      "crime-state-overlap-2026-08-07-10060a7b",
-      "crime-state-overlap-2026-08-07-ecf6905a",
       "nassar-fbi-oig-2021",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -146,20 +138,28 @@
       "ASC-REVIEW-1BDD1EF149FCB6DC",
       "ASC-REVIEW-3A542BB86002553E",
       "ASC-REVIEW-A40EABAABAFFC9C3",
-      "ASC-REVIEW-32A64F4FD3617829"
+      "ASC-REVIEW-32A64F4FD3617829",
+      "ASC-REVIEW-31DAFEB5863F6F4C",
+      "ASC-REVIEW-33FA083D170CBDB5",
+      "ASC-REVIEW-943BD7CEC5392D63",
+      "ASC-REVIEW-8CDF8AA54EE2122C",
+      "ASC-REVIEW-E728A87FB5E518AA",
+      "ASC-REVIEW-3CA74023188D71DE",
+      "ASC-REVIEW-63DEE163CCA699D8",
+      "ASC-REVIEW-0D66560BACB91907"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 40,
-      "disputedClaimCount": 98,
+      "primarySourceCount": 32,
+      "disputedClaimCount": 106,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 38,
-      "moneyRecordCount": 18
+      "relationshipCount": 31,
+      "moneyRecordCount": 17
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 40 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
+        "conclusion": "The indexed record establishes that 32 A/B-grade public-record items are materially relevant to Geographic Power Atlas Runtime Test.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Illinois Man Accused of Sex Trafficking of Woman Who Later Fatally Overdosed,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Jared Anders was indicted on three felonies: sex trafficking, use of interstate commerce with intent to distribute prostitution and use of interstate facilities to promote prostitution. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Northern District of Ohio Agencies Receive More Than $4M in Grant Awards to Support Criminal Justice Activities,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Bureau of Justice Assistance, a component under the Department of Justice’s Office of Justice Programs, awarded almost $290 million to support state, local, and tribal governments in criminal justice activities to keep American communities safe. Of this amount, more than $4 million has been awarded to agencies in the Northern District of Ohio including in Akron, Cleveland, Canton, Lima, Lorain, Toledo, Warren, Youngstown, Lake County, and Mahoning County. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 38 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; ROGUE VALLEY H2O LLC — Department of Agriculture; SMITHS DETECTION INC. — Court Services and Offender Supervision Agency",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 38 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "MINDCUBED LLC — District of Columbia Courts",
           "Dark Web Drug Network Targeting Elite Kanpur Localities Under Police Probe - the420.in",

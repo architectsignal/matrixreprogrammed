@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:57:17.992Z",
-  "pageCount": 127,
+  "generatedAt": "2026-08-12T05:22:02.419Z",
+  "pageCount": 126,
   "output": "downloads/full-site-audit-target-detection-patch.pdf",
   "report": {
-    "version": 20,
+    "version": 21,
     "title": "Full Site Audit Target Detection Patch",
-    "contentHash": "1106493b30a5ee4203bc556d046e63ca5eac94d5b29e98ed8b61e4ce2b8a3340",
+    "contentHash": "e429e77542137c61651bdd1a9ab396357c2f4f9d2d13614d40efff2eb7634e52",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
@@ -20,6 +20,7 @@
       "b0cde383147509fbfd4f4472",
       "7c05d9244c4620950350cf27",
       "ASC-REVIEW-836A8E9D516E6FEC",
+      "d0b647e325275daa6d824a49",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
       "594100b62a47db521fe2a128",
@@ -37,6 +38,7 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "88ef9baf356c096816236956",
       "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "aa125ed22fe885dd57f96c32",
       "4c372edcf20b760ae3305f10",
       "d3589cf045e6d530b37381a9",
@@ -98,11 +100,9 @@
       "0a48cc2ad619880b0b23d743",
       "d648ce395c11435d30796fee",
       "911d6aa330f80279bdb3c4d5",
+      "source-change-82b0886fe4735164beacb291",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "4c1d46d9bcb8caa374dec7d2",
-      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-96665FE56FA75D90",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -150,8 +150,8 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 47,
-      "disputedClaimCount": 78,
+      "primarySourceCount": 45,
+      "disputedClaimCount": 80,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 72,
@@ -159,7 +159,7 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 47 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
+        "conclusion": "The indexed record establishes that 45 A/B-grade public-record items are materially relevant to Full Site Audit Target Detection Patch.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ROGUE VALLEY H2O LLC — Department of Agriculture,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "UMPQUA NATIONAL FOREST, TILLER RD JANITORIAL · Amount: 37531 · Sub-agency: Forest Service A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false

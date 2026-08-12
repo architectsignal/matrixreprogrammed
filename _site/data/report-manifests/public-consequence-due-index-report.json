@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-11T05:01:41.132Z",
-  "pageCount": 134,
+  "generatedAt": "2026-08-12T05:26:26.932Z",
+  "pageCount": 133,
   "output": "downloads/public-consequence-due-index-report.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Public Consequence Due Index Report",
-    "contentHash": "2c79b377163edc5fb0dae2c64aec2c5839ec88c8fa00eaf3e27f95f7dca39769",
+    "contentHash": "cd1d5ef2ede4fd4459b48b90a286b91a57164d4cb61e062376f465889be513cc",
     "sourceIds": [
-      "4c1d46d9bcb8caa374dec7d2",
+      "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
       "f669b33c49b63e787cde3008",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -19,15 +19,19 @@
       "ASC-REVIEW-7EDB22F37F0003A5",
       "ASC-REVIEW-78EAB66242E0B95B",
       "ASC-REVIEW-21E454816F050A34",
-      "consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "consequence-crime-state-overlap-2026-08-07-a2296147",
-      "consequence-crime-state-overlap-2026-08-07-ab764161",
-      "consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "consequence-crime-state-overlap-2026-08-07-0aa1dddd",
+      "consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "consequence-crime-state-overlap-2026-08-10-015a2455",
+      "consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "consequence-crime-state-overlap-2026-08-10-b6533383",
+      "consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "crime-state-overlap-2026-08-11-6fc87119",
+      "crime-state-overlap-2026-08-11-38bd17df",
       "crime-state-overlap-2026-08-10-a0e61bfe",
       "b4cb47ea50dc901364239e9f",
       "e457b31e704efd10ec987a59",
@@ -142,25 +146,21 @@
       "ASC-REVIEW-AFF7699289F993E4",
       "ASC-REVIEW-135079C8B6667E13",
       "ASC-REVIEW-1E865C671E08BD05",
-      "ASC-REVIEW-74487D6D467BA7AE",
-      "ASC-REVIEW-6DA85AF7CC833F29",
-      "ASC-REVIEW-CA4FFDF74622515D",
-      "ASC-REVIEW-29094A2EF0BEB10F",
-      "ASC-REVIEW-091889DE732A98B9"
+      "ASC-REVIEW-74487D6D467BA7AE"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 31,
-      "disputedClaimCount": 109,
+      "primarySourceCount": 35,
+      "disputedClaimCount": 105,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 74,
-      "moneyRecordCount": 61
+      "relationshipCount": 77,
+      "moneyRecordCount": 62
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 31 A/B-grade public-record items are materially relevant to Public Consequence Due Index Report.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer (data/power-diff-current.json); Convicted Felon Sentenced for Illegal Gun Possession (data/power-diff-current.json); Former USDA Program Director Sentenced in $400,000 Fraud Scheme (data/power-diff-current.json); Honduran National Sentenced for Illegal Reentry of a Removed Alien (data/power-diff-current.json)",
+        "conclusion": "The indexed record establishes that 35 A/B-grade public-record items are materially relevant to Public Consequence Due Index Report.",
+        "evidence": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/power-diff-current.json); EEA reports growing European climate-resilience pressure from drought, floods and extreme weather (data/clock-wall.json); After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced (data/power-diff-current.json); Ashland Man Sentenced for Receiving Child Sexual Abuse Material (data/power-diff-current.json); Ecuadoran National Charged with Offenses Related to Theft of U.S. Treasury Funds (data/power-diff-current.json); Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges (data/power-diff-current.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "MOBILE, AL — Continental Aerospace Technologies Inc. has agreed to pay $11,772,680.14 to resolve allegations that it violated the False Claims Act by submitting false claims to obtain a Paycheck Protection Program (PPP) loan for which it was not eligible. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 74 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 77 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer; CACI International → Public Money: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 74 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 77 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

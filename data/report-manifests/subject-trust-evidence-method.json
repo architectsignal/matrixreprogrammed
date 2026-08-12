@@ -1,22 +1,26 @@
 {
-  "generatedAt": "2026-08-11T05:05:29.253Z",
-  "pageCount": 118,
+  "generatedAt": "2026-08-12T05:30:18.301Z",
+  "pageCount": 115,
   "output": "downloads/subject-trust-evidence-method.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Trust & Evidence Method",
-    "contentHash": "9cc49b0dcf50f5c567586b34ff75401530a678abaf59826e8ad48f54a6ad492c",
+    "contentHash": "35cdae85cd7af745188af85badd909b32ab6d2af7b0233b768e41272a8f5ef55",
     "sourceIds": [
       "88523724ee8578e0b21bb0f4",
       "535d2f595c3ec1621e13dd0f",
+      "d0b647e325275daa6d824a49",
       "504cb0d739ef4a5a5798123f",
       "232955cb3e08720ec29ae560",
+      "cee347fbc3752c6e0f890457",
       "356f10eff5c6f147fc33ebeb",
       "aa45c75a112060231ce901ba",
       "9eef1e9157e568d5641addcb",
       "epstein-files-2026-05-19-former-n-y-corrections-officer-says-epstein-received-special-treatment",
+      "594100b62a47db521fe2a128",
       "76a719654ec3312153163154",
       "c5d9edd2562c4c00e3ddfdfb",
+      "34805734b1ad3b73f0ede0d8",
       "epstein-files-2026-05-29-bondi-defends-trump-administration-s-release-of-epstein-case-files-as-",
       "declassified-files-2026-05-14-britain-s-secret-black-propaganda-operations-declassified-uk",
       "epstein-files-2026-03-25-who-is-tova-noel-the-corrections-officer-who-worked-night-of-epstein-s",
@@ -26,13 +30,11 @@
       "declassified-files-2025-11-17-trump-administration-releases-thousands-of-amelia-earhart-files-the-ne",
       "declassified-files-2025-11-15-formerly-classified-documents-released-about-amelia-earhart-straight-a",
       "declassified-files-2025-11-14-dni-gabbard-national-archives-launch-trump-administration-s-release-of",
-      "594100b62a47db521fe2a128",
       "9e8903fd8dfa9b54a1d6db30",
       "ec1316fb1fb70c83dc347bb6",
       "310372a3fc518b6aabbc5d07",
       "88ef9baf356c096816236956",
       "7c05d9244c4620950350cf27",
-      "34805734b1ad3b73f0ede0d8",
       "f59da50ababa3ddae79a8f1c",
       "1c81df609d5b5f045f354573",
       "epstein-files-smvmznjlesbfchn0zw",
@@ -111,8 +113,6 @@
       "9c2ed866829ec14701b4f6aa",
       "360e80c162081c85d2c680ef",
       "beb907a8490963e80b4d0a90",
-      "crime-state-overlap-2026-08-10-bc7b5d3f",
-      "crime-state-overlap-2026-08-10-9c1855a0",
       "declassified-files-2026-08-07-d9d9fe89",
       "declassified-files-2026-08-05-757faca1",
       "epstein-files-2026-06-29-epstein-files-history-timeline-vote-trump-updates-encyclopedia-britann",
@@ -150,28 +150,28 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 3,
-      "disputedClaimCount": 7,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 8,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 15,
-      "moneyRecordCount": 16
+      "relationshipCount": 13,
+      "moneyRecordCount": 15
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 3 A/B-grade public-record items are materially relevant to Trust & Evidence Method.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges (data/live-intel.json); Two Charged After Alleged Meth Delivery Attempt During Prison Visitation at FCI Hazelton (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Trust & Evidence Method.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 82,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. House Committee on Oversight and Government Reform — Releases,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 15 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 13 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Illuminati / Secret Society Theory; Media / Narrative Theory; Illuminati / Secret Society Theory; Media / Narrative Theory; Gates sought donations from Epstein despite knowledge of crimes - The Center Square; Bill Gates to testify on Epstein relationship Wednesday - The Center Square; Operation Condor: A Network of Transnational Repression 50 Years Later - National Security Archive; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 15 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 13 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Illuminati / Secret Society Theory",
           "Media / Narrative Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-07T16:56:11.000Z"
   }
 }

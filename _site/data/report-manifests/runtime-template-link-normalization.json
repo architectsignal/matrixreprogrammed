@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:02:50.098Z",
+  "generatedAt": "2026-08-12T05:27:36.636Z",
   "pageCount": 122,
   "output": "downloads/runtime-template-link-normalization.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Runtime Template Link Normalization",
-    "contentHash": "ae49459a26b0f0aa6e221dd2291a732d34fe1c38cf5a37c00777630fc3c3818c",
+    "contentHash": "80f75017937698aaaf9fbecab63ebf5d5c1053a2a23f83e075fc2bccb04b9b8c",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-8D34DAEE930AC84F",
@@ -46,9 +46,9 @@
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "ASC-REVIEW-20316213EFD183CC",
+      "611d1a7edb4b0b2535b9708c",
       "1769af26a7bda813406cd8f5",
       "9e8903fd8dfa9b54a1d6db30",
-      "310372a3fc518b6aabbc5d07",
       "c74062f25d42345a4023fffc",
       "24a844c3ddb5aecaad25e9bc",
       "57c45b5418e8e6b512f06603",
@@ -63,14 +63,13 @@
       "9848ec4b4c3f6c2693269839",
       "360e80c162081c85d2c680ef",
       "88ef9baf356c096816236956",
-      "f59da50ababa3ddae79a8f1c",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "maxwell-appeal-2025",
       "r-kelly-appellate-finality-2025",
       "janner-iicsa-2022",
@@ -146,20 +145,21 @@
       "ASC-REVIEW-5F86F35C103C9621",
       "ASC-REVIEW-285205442D5C5D56",
       "ASC-REVIEW-9553A9554C0E8D6A",
-      "ASC-REVIEW-375A853A96E42D84"
+      "ASC-REVIEW-375A853A96E42D84",
+      "ASC-REVIEW-D5FA458F66004D27"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 40,
-      "disputedClaimCount": 92,
+      "primarySourceCount": 41,
+      "disputedClaimCount": 93,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 91,
-      "moneyRecordCount": 85
+      "relationshipCount": 90,
+      "moneyRecordCount": 84
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 40 A/B-grade public-record items are materially relevant to Runtime Template Link Normalization.",
+        "conclusion": "The indexed record establishes that 41 A/B-grade public-record items are materially relevant to Runtime Template Link Normalization.",
         "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); SEC FILING FEED. (data/search-index.json); Site Population Audit (data/search-index.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 91 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 90 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Site Population Audit; IICSA documented predatory activities and institutional failures; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 91 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 90 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Site Population Audit",
           "IICSA documented predatory activities and institutional failures",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
+    "intelligenceFreshnessDate": "2026-08-11T06:09:41.962Z"
   }
 }

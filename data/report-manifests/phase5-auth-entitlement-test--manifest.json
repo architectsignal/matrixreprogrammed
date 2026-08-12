@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:00:40.728Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-12T05:25:25.861Z",
+  "pageCount": 134,
   "output": "downloads/phase5-auth-entitlement-test/manifest.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Phase5 Auth Entitlement Test/Manifest",
-    "contentHash": "12d7de251c3e42ce10d0e1ee858e68131ef84b2ceb5caa4a5ce412806c8ddda4",
+    "contentHash": "3ab3651ab56642abef2f1cfc1a52f509f7d7c2374b925accdd4215373dbaeae1",
     "sourceIds": [
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-9E85403F3389F334",
@@ -21,8 +21,7 @@
       "ASC-REVIEW-21E454816F050A34",
       "3a8c1f1e8620cb3f09a2c7ab",
       "8d2a26495075b1d71abf17c2",
-      "4c1d46d9bcb8caa374dec7d2",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-DA07BCFBB726AA49",
@@ -146,32 +145,33 @@
       "ASC-REVIEW-C2C7140B7B6F51FF",
       "ASC-REVIEW-2750F333FF6B37B3",
       "ASC-REVIEW-B6BEE1135257F502",
-      "ASC-REVIEW-5F9BB287023DE81E"
+      "ASC-REVIEW-5F9BB287023DE81E",
+      "ASC-REVIEW-68286C2A2CB861AF"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 1,
-      "disputedClaimCount": 136,
+      "primarySourceCount": 0,
+      "disputedClaimCount": 137,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 125,
-      "moneyRecordCount": 122
+      "relationshipCount": 126,
+      "moneyRecordCount": 123
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Phase5 Auth Entitlement Test/Manifest.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 78,
-        "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
-        "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
+        "conclusion": "The current indexed record is insufficient to establish a high-confidence substantive conclusion about Phase5 Auth Entitlement Test/Manifest beyond the existence of reported claims and source routes.",
+        "evidence": "No matching A/B-grade record was loaded for this edition.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 32,
+        "limitations": "The source corpus may be incomplete or the tracking criteria may require refinement.",
+        "alternativeInterpretation": "Relevant primary records may exist outside the indexed archive.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 125 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 126 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 125 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 126 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:05.856Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

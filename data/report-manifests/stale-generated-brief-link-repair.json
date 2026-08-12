@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:04:34.114Z",
-  "pageCount": 128,
+  "generatedAt": "2026-08-12T05:29:21.996Z",
+  "pageCount": 124,
   "output": "downloads/stale-generated-brief-link-repair.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Stale Generated Brief Link Repair",
-    "contentHash": "79566c47e0b516486f9683663a19ca6bc36f5655d9741483dbfa958917628f47",
+    "contentHash": "c14ebbde06fef56e89a4f47da23b742287dcf55952cecb60ab7d05a784659843",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "ASC-REVIEW-9B01C094346A78B0",
@@ -13,10 +13,10 @@
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "ASC-REVIEW-20316213EFD183CC",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E09138F879103681",
-      "e4ca191d7d9f2eddeda78ad3",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-E8F3DDB7E3724A74",
@@ -43,11 +43,14 @@
       "ASC-REVIEW-B6FFC8BFA47BBF5F",
       "ASC-REVIEW-44C67F19172A6285",
       "ASC-REVIEW-11047BCC813B0EA8",
+      "d0b647e325275daa6d824a49",
       "594100b62a47db521fe2a128",
       "ec1316fb1fb70c83dc347bb6",
+      "a42c91c655cd066504ed6515",
+      "a5e5d4ec4df4352ea242ea3f",
       "7c05d9244c4620950350cf27",
       "34805734b1ad3b73f0ede0d8",
-      "4c1d46d9bcb8caa374dec7d2",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-E0C2B02D28255CC3",
@@ -79,17 +82,11 @@
       "5b6b5c0285c3c8742768ea5c",
       "58a212e4e1a93007ec5b3d6d",
       "c1520a15d6e62871a66c558e",
-      "a42c91c655cd066504ed6515",
-      "a5e5d4ec4df4352ea242ea3f",
       "511ed227bb4be58b582ebb8d",
       "c5d9edd2562c4c00e3ddfdfb",
-      "ca92a54bb69eb2504c76e56e",
-      "366686df53f6dfd25d3f0ea4",
-      "e3b055a4afb19163268d7257",
       "ec968f2ec6ba82128b4cd91b",
-      "d77b99424431ead891074ef0",
+      "1c0cca9ff329dd06d5408693",
       "228770c420a004608c7b13f9",
-      "8737454dea4463f85583fbd4",
       "4fc2f377f4969f7074a7e989",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -146,21 +143,24 @@
       "ASC-REVIEW-F42C454D9E75A8A7",
       "ASC-REVIEW-9445AB7A6FE43B5B",
       "ASC-REVIEW-B5FCD410F732DBED",
-      "ASC-REVIEW-4A9786ACED74F01F"
+      "ASC-REVIEW-4A9786ACED74F01F",
+      "ASC-REVIEW-8274DB7F7415A742",
+      "ASC-REVIEW-D74AE4AD0CA9732B",
+      "ASC-REVIEW-B5A7582A4286A663"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 22,
-      "disputedClaimCount": 102,
+      "primarySourceCount": 17,
+      "disputedClaimCount": 107,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 97,
-      "moneyRecordCount": 81
+      "relationshipCount": 96,
+      "moneyRecordCount": 80
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Stale Generated Brief Link Repair.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 17 A/B-grade public-record items are materially relevant to Stale Generated Brief Link Repair.",
+        "evidence": "content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/daily-investigation-conclusions.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json); content changed: U.S. Treasury OFAC — Recent Actions (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ENISA reports improving cybersecurity maturity across EU critical sectors under NIS2,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The May 2026 NIS360 assessment found improved cybersecurity maturity while sector criticality remained high, reflecting active NIS2 implementation and continuing infrastructure exposure.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 97 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 96 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Top contractor lane; Follow The Money Watch; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 97 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 96 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-11-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-09-30T00:00:00.000Z"
   }
 }

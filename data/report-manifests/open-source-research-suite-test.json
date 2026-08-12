@@ -1,27 +1,25 @@
 {
-  "generatedAt": "2026-08-11T05:00:13.402Z",
-  "pageCount": 135,
+  "generatedAt": "2026-08-12T05:24:58.453Z",
+  "pageCount": 133,
   "output": "downloads/open-source-research-suite-test.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Open Source Research Suite Test",
-    "contentHash": "41861babd258623367bc0ebe277b8e239384028ead51c671f6b5882c0686161e",
+    "contentHash": "ea75260dfa6bd4269b6d685fa4218afbcf90f9301707d3847356700832ea6ea4",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "72ef7895f95288946ccb3cff",
+      "d0b647e325275daa6d824a49",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "26b90533dbf7d2ed42f02de6",
       "a5e5d4ec4df4352ea242ea3f",
       "dcec2a45ef35362072af05e3",
-      "ca92a54bb69eb2504c76e56e",
-      "366686df53f6dfd25d3f0ea4",
-      "e3b055a4afb19163268d7257",
       "780e9bdf80820219684ec0cb",
-      "d77b99424431ead891074ef0",
       "fe51591d2f98b1e8140add7f",
+      "1c0cca9ff329dd06d5408693",
       "228770c420a004608c7b13f9",
-      "8737454dea4463f85583fbd4",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-481745ED8153AA11",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -53,16 +51,20 @@
       "34805734b1ad3b73f0ede0d8",
       "e4a0df7a70409789454722e7",
       "73799cb9af4829047998b026",
+      "ca92a54bb69eb2504c76e56e",
       "b49c319c09a07b245b24f74a",
       "427a4b3a840619411d8d1c33",
+      "366686df53f6dfd25d3f0ea4",
       "c673456bbe77dbb29e43ac7d",
+      "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
       "8f15d14f1b05a490af22799d",
       "8c8118614f58e40c87e2c2f7",
+      "d77b99424431ead891074ef0",
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
+      "8737454dea4463f85583fbd4",
       "911d6aa330f80279bdb3c4d5",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -144,9 +146,7 @@
       "ASC-REVIEW-285205442D5C5D56",
       "ASC-REVIEW-9553A9554C0E8D6A",
       "ASC-REVIEW-375A853A96E42D84",
-      "ASC-REVIEW-D5FA458F66004D27",
-      "ASC-REVIEW-FE267E981A361906",
-      "ASC-REVIEW-E48690C00EA31793"
+      "ASC-REVIEW-D5FA458F66004D27"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,13 +154,13 @@
       "disputedClaimCount": 107,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 114,
-      "moneyRecordCount": 105
+      "relationshipCount": 113,
+      "moneyRecordCount": 104
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 22 A/B-grade public-record items are materially relevant to Open Source Research Suite Test.",
-        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ALLIANCE TECHNOLOGY GROUP, LLC — Department of Energy (data/weekly-investigation-conclusions.json)",
+        "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ALLIANCE TECHNOLOGY GROUP, LLC — Department of Energy (data/weekly-investigation-conclusions.json); ARGUS MEDIA INC — Department of Energy (data/weekly-investigation-conclusions.json); MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); TRACE SYSTEMS INC. — Department of Defense (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “MINDCUBED LLC — District of Columbia Courts,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "CONTRACT NO. DSCS-26-RFP-66 WITH MINDCUBED LLC FOR QA & SOFTWARE TESTING SERVICES TO SUPPORT THE IMPLEMENTATION OF DCCA CMS. POP: 7/13/2026 THROUGH 7/12/2027. · Amount: 366873.6 · Sub-agency: District of Columbia Courts A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 114 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; AGILENT TECHNOLOGIES INC — Department of Energy; ACENTRA HEALTH LLC — National Aeronautics and Space Administration; ALLIANCE TECHNOLOGY GROUP, LLC — Department of Energy; ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration; ARGUS MEDIA INC — Department of Energy; TRACE SYSTEMS INC. — Department of Defense; SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration",
+        "inference": "The indexed set contains 113 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "ALLIANCE TECHNOLOGY GROUP, LLC — Department of Energy; ARGUS MEDIA INC — Department of Energy; MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency; TRACE SYSTEMS INC. — Department of Defense; OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 114 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 113 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-          "AGILENT TECHNOLOGIES INC — Department of Energy",
-          "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
           "ALLIANCE TECHNOLOGY GROUP, LLC — Department of Energy",
-          "ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration",
           "ARGUS MEDIA INC — Department of Energy",
+          "MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency",
           "TRACE SYSTEMS INC. — Department of Defense",
-          "SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration"
+          "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
+          "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
+          "Booz Allen Hamilton → Ai Data: execution layer",
+          "Booz Allen Hamilton → Consulting: execution layer"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

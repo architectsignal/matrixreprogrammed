@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-11T05:07:12.697Z",
+  "generatedAt": "2026-08-12T05:32:01.599Z",
   "policy": "Every Mission Timer is evaluated against a dated current-evidence window. Current status, official-source count, implementation stage, jurisdiction coverage and evidence gaps are published separately from speculation.",
   "recalibrations": [
     {
@@ -18,7 +18,7 @@
       "todayStatus": "current-primary-evidence",
       "scoreConfidence": "medium",
       "currentEvidenceCount": 9,
-      "officialCount": 4,
+      "officialCount": 5,
       "implementationCount": 0,
       "lawCount": 0,
       "jurisdictions": []
@@ -300,16 +300,15 @@
       "score": 76,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
-      "currentEvidenceCount": 6,
-      "officialCount": 5,
-      "implementationCount": 3,
+      "currentEvidenceCount": 5,
+      "officialCount": 4,
+      "implementationCount": 2,
       "lawCount": 0,
       "jurisdictions": [
         "European Union",
         "Norway",
         "Iceland",
         "Ukraine",
-        "global suppliers",
         "Euro area",
         "Council of Europe member states"
       ]
@@ -392,16 +391,15 @@
       "score": 64,
       "todayStatus": "current-multi-jurisdiction-implementation",
       "scoreConfidence": "high",
-      "currentEvidenceCount": 7,
-      "officialCount": 4,
-      "implementationCount": 3,
+      "currentEvidenceCount": 6,
+      "officialCount": 3,
+      "implementationCount": 2,
       "lawCount": 0,
       "jurisdictions": [
         "Global",
         "Euro area",
         "global financial markets",
         "European Union",
-        "global suppliers",
         "eleven Member States"
       ]
     },

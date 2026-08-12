@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:56:39.943Z",
-  "pageCount": 105,
+  "generatedAt": "2026-08-12T05:21:23.968Z",
+  "pageCount": 103,
   "output": "downloads/final-contact-worker.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Final Contact Worker",
-    "contentHash": "8756d862be8b8f086cbf9c3f222e41add3ccadcbe39b725533bc09e07a477d86",
+    "contentHash": "ef297cc89cfaf6664d00c6d437ff748ebfacab5919f8718aa4919ff8909828bb",
     "sourceIds": [
       "b4cb47ea50dc901364239e9f",
       "conor-mcgrath-iico-conviction-2026",
@@ -32,8 +32,6 @@
       "511ed227bb4be58b582ebb8d",
       "360e80c162081c85d2c680ef",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-7e664ee5",
       "b9006a5edc55cc88bfccd04a",
       "06baa45bea3e2e15eb80eff9",
       "a8d2d3bf834ea59c6a49b8ea",
@@ -72,12 +70,14 @@
       "9bc66da5c53d37d8c3d59e13",
       "6d8df9af51b8078e703b2748",
       "4961972398d896435d33f3f7",
+      "6d75003b4825f307f6df306e",
+      "611d1a7edb4b0b2535b9708c",
+      "529f3ec81072aa54c5515b3e",
       "ec7f3126268880506fc4f0ed",
       "871096b65a90301ef4a126c3",
       "deutsche-bank-epstein-dfs-2020",
       "us-doj",
       "gao-hq",
-      "consequence-crime-state-overlap-2026-08-07-7e664ee5",
       "14d04c0943d24cbe6a1926db",
       "24a844c3ddb5aecaad25e9bc",
       "57c45b5418e8e6b512f06603",
@@ -119,38 +119,38 @@
       "7fc07964a27914afe516c45b",
       "b7e4a66335a706ef5097117f",
       "b079bec5bc869b0463d0584c",
-      "crime-state-overlap-2026-08-10-9cf6f0f4",
-      "crime-state-overlap-2026-08-10-015a2455",
-      "crime-state-overlap-2026-08-10-740ed0d1",
-      "crime-state-overlap-2026-08-10-bc7b5d3f",
-      "crime-state-overlap-2026-08-10-6a612d71",
-      "crime-state-overlap-2026-08-10-e90b9744",
-      "crime-state-overlap-2026-08-10-b6533383",
-      "crime-state-overlap-2026-08-10-48c93d8f",
-      "crime-state-overlap-2026-08-10-662a584f",
-      "crime-state-overlap-2026-08-10-e6990f32",
-      "crime-state-overlap-2026-08-10-89cb3112",
-      "crime-state-overlap-2026-08-10-f6376771",
-      "crime-state-overlap-2026-08-10-7d922c66",
-      "crime-state-overlap-2026-08-10-d2755c34",
-      "crime-state-overlap-2026-08-10-13c7fc4b",
-      "crime-state-overlap-2026-08-10-c0afc99e",
-      "crime-state-overlap-2026-08-10-9c1855a0",
-      "crime-state-overlap-2026-08-10-5de09a55",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
-      "crime-state-overlap-2026-08-10-86a5887f",
-      "crime-state-overlap-2026-08-10-77c12eff",
-      "crime-state-overlap-2026-08-10-d96f7296",
-      "crime-state-overlap-2026-08-10-f8aa6edb"
+      "crime-state-overlap-2026-08-11-acb6cb5e",
+      "crime-state-overlap-2026-08-11-78c0d63f",
+      "crime-state-overlap-2026-08-11-6fc87119",
+      "crime-state-overlap-2026-08-11-bb49d78a",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-39d1342e",
+      "crime-state-overlap-2026-08-11-d7186992",
+      "crime-state-overlap-2026-08-11-5c5c9eb9",
+      "crime-state-overlap-2026-08-11-35be2c84",
+      "crime-state-overlap-2026-08-11-661c5029",
+      "crime-state-overlap-2026-08-11-37d80761",
+      "crime-state-overlap-2026-08-11-a4267456",
+      "crime-state-overlap-2026-08-11-734553c7",
+      "crime-state-overlap-2026-08-11-c098e67e",
+      "crime-state-overlap-2026-08-11-5845f54f",
+      "crime-state-overlap-2026-08-11-6958404b",
+      "crime-state-overlap-2026-08-11-32020221",
+      "crime-state-overlap-2026-08-11-f37c3e86",
+      "crime-state-overlap-2026-08-11-0708ab9e",
+      "crime-state-overlap-2026-08-11-bb118a83",
+      "crime-state-overlap-2026-08-11-854ed3e3",
+      "crime-state-overlap-2026-08-11-38bd17df",
+      "crime-state-overlap-2026-08-11-902ce8c8"
     ],
     "metrics": {
       "evidenceCount": 135,
       "primarySourceCount": 125,
-      "disputedClaimCount": 6,
+      "disputedClaimCount": 5,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 31,
-      "moneyRecordCount": 8
+      "relationshipCount": 30,
+      "moneyRecordCount": 6
     },
     "evidenceBasedConclusions": [
       {
@@ -163,8 +163,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Best Practices Workshop on Requester Negotiations,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Best Practices Workshop on Requester Negotiations This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -174,8 +174,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah; Conviction for indecent images and misconduct in public office; Westminster inquiry examined political and policing responses; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship",
+        "inference": "The indexed set contains 30 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Conviction for indecent images and misconduct in public office; Westminster inquiry examined political and policing responses; Broadmoor investigation examined Savile's access and abuse; New York DFS enforcement action concerning the bank's Epstein relationship; Best Practices Workshop on Requester Negotiations",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -189,16 +189,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 30 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
           "IICSA documented predatory activities and institutional failures",
           "Official health investigations documented abuse and enabling access",
-          "Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah",
           "Conviction for indecent images and misconduct in public office",
           "Westminster inquiry examined political and policing responses",
           "Broadmoor investigation examined Savile's access and abuse",
-          "New York DFS enforcement action concerning the bank's Epstein relationship"
+          "New York DFS enforcement action concerning the bank's Epstein relationship",
+          "Best Practices Workshop on Requester Negotiations"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -213,6 +213,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

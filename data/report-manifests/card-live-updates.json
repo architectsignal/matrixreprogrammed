@@ -1,20 +1,19 @@
 {
-  "generatedAt": "2026-08-11T04:52:05.014Z",
+  "generatedAt": "2026-08-12T05:16:47.755Z",
   "pageCount": 66,
   "output": "downloads/card-live-updates.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Card Live Intelligence Updates",
-    "contentHash": "fd809edd91a85983a3f4323fab2844f9307f02f1ac7ea1485abfcd53cd4afff0",
+    "contentHash": "9b5c25324a61d139bcaf93b82624fe398789a54f485621785ca614cd4d37b153",
     "sourceIds": [
+      "d5fb1d2c8f61ac52cb78dd4e",
       "26b90533dbf7d2ed42f02de6",
       "f78aa074b866b31ae35d2518",
-      "a758f813d74a9d40786f7f33",
+      "aa735a50f8d0828bebc0a4f4",
       "090187b3731e4b50aacb465f",
       "ed8ce4dc06093001d617c090",
-      "63233fb3a2abe452a8537220",
-      "7ecc4ba534c9d7ae0d844691",
-      "8d4da8ca697fee8f2df18e79",
+      "43c6e7c0196575d488510932",
       "58288ee84830b52410e2ee0c",
       "f23b46f2bc4add9b859f5a15",
       "88269481cf5b04b7b0f83b58",
@@ -50,7 +49,6 @@
       "b9c2d2e5212ba7f409b4b905",
       "4335976975fe823b89dec6c7",
       "4cc1c2bda278cc278cf51936",
-      "d5fb1d2c8f61ac52cb78dd4e",
       "73d02b1122803cfdee4cb57b",
       "5e34018f86d11350eab26a23",
       "1a007f59d1038b011aaa1de9",
@@ -58,10 +56,10 @@
       "355ee8ad2f1173ae18cf09d5",
       "6e3f585340a5d398f73585b2",
       "be6ae8bb29c9fcc52ef7e823",
-      "aa735a50f8d0828bebc0a4f4",
       "495efbb6e1ee304347ae3bdf",
       "35cce44360086dbc32d0bb99",
       "d69cbcd46971bbc4faf43604",
+      "66a4f4aef4c59e76a7a3d2f6",
       "1fb4aa93a66244c2d739da57",
       "98b9e213bb51ccaba4a70f99",
       "3e6d8074bed8d415dea904bf",
@@ -101,12 +99,16 @@
       "4776757cd727f39561d7d3e0",
       "6075870f98693f5dae6a13e6",
       "b3bed242ea61081250614b08",
+      "8d4da8ca697fee8f2df18e79",
       "dfe58772fd084e84eca8b070",
       "b17a9a2f243f976785d8679b",
       "370ce1be580ecbfebe36a0fd",
       "8ea9f9a83f15f36eb1d6cef8",
       "495570b6f814e50df8e47837",
+      "117e2a43a40006b4b81b75c2",
       "eae57aa5d0d3d9cc9265999a",
+      "71a3045cf08c6dd9f4d1961e",
+      "dc8f0752e537f36336389287",
       "8057d390af5011731564579c",
       "1769af26a7bda813406cd8f5",
       "b0cde383147509fbfd4f4472",
@@ -118,6 +120,7 @@
       "58a212e4e1a93007ec5b3d6d",
       "a42c91c655cd066504ed6515",
       "511ed227bb4be58b582ebb8d",
+      "2609b70f5c1db84a869ac7ca",
       "b2419bba9adfc74b479fbe72",
       "d1d1d63dd3825f08e12a9ad7",
       "aa6123766a944c4a7990fa35",
@@ -143,23 +146,20 @@
       "10eefb9385d4911e63e3c2f6",
       "8381b3fab76bfe95c86b6189",
       "0b14b53a4fd1a26d0cb6b809",
-      "d8f7455e3eb2561c24233edc",
-      "746063191d770adf3090559d",
-      "584a55ba327e231c75ab7285",
-      "677c0ffcfb38e9a7d34f2690"
+      "d8f7455e3eb2561c24233edc"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 44,
+      "primarySourceCount": 43,
       "disputedClaimCount": 0,
-      "newEntityCount": 0,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 2,
       "moneyRecordCount": 1
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 44 A/B-grade public-record items are materially relevant to Card Live Intelligence Updates.",
+        "conclusion": "The indexed record establishes that 43 A/B-grade public-record items are materially relevant to Card Live Intelligence Updates.",
         "evidence": "District Court, District of Columbia (data/card-live-updates.json); APPELLATE DIVISION OF THE SUPREME COURT OF THE STATE OF NEW YORK (data/card-live-updates.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -212,6 +212,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-11T04:52:05.014Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

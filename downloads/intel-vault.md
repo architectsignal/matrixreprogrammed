@@ -1,11 +1,36 @@
 # Intel Vault
 
-Updated: 2026-08-11T05:11:11.702Z
+Updated: 2026-08-12T05:36:00.272Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Senate report: Three big banks ignored red flags on Epstein - American Banker
+- Published: 2026-08-04T17:11:00.000Z
+- Source: https://news.google.com/rss/articles/CBMimgFBVV95cUxPd1F0UE90MjdBYnlEc2htMFEybm41LWk5cHFUZ0hBNlBrQjFsM09UOE84aGV5d2hCVS05NHREaFc2WkhPaTRVcnBJRHdUNGh2OExkdkZWWGluSDVTd29CYk9CVWpSTjIxMlFTZmkwXy1WYmFVWjBfdUE3WU02cTlNSTFWUEZRT2NaQ2lSQ0FUTzZtYk8yalVnTUhB?oc=5
+- Source class: primary-or-official
+
+### U.S.-UK Financial Regulatory Working Group Summer 2026: Joint Statement - U.S. Department of the Treasury (.gov)
+- Published: 2026-08-04T15:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE1McXNySDRFd18ta3dJWHFZWFRpRE0tN0VzNlR1TWRnekR1WnZKVkFCWERXdFFfdGFWSGhMNVdtTlZ0QmNLX3Z2RGhpN2lyLVhSU09xS1NKNDM2ZWFDMzdLYjV3?oc=5
+- Source class: discovery
+
+### ‘A playground, a beach, a home’: UNICEF demands end to child deaths in Russia-Ukraine war
+- Published: 2026-08-04T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168076
+- Source class: primary-or-official
+
+### Africans bear the brunt of biodiversity loss
+- Published: 2026-08-04T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168078
+- Source class: primary-or-official
+
+### Gaza ‘unsafe for civilians’ as Israeli attacks hit homes and classrooms
+- Published: 2026-08-04T12:00:00.000Z
+- Source: https://news.un.org/feed/view/en/story/2026/08/1168077
+- Source class: primary-or-official
 
 ### Economy Statement for the Treasury Borrowing Advisory Committee - treasury.gov
 - Published: 2026-08-03T19:00:00.000Z

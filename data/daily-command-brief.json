@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T02:44:01.980Z",
+  "updated": "2026-08-12T05:35:45.141Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
   "topMovements": [],
@@ -1760,5 +1760,182 @@
       "route": "timers.html#surveillance-state"
     }
   ],
-  "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity."
+  "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity.",
+  "dailyWatch": {
+    "updated": "2026-08-12T05:33:33.006Z",
+    "date": "2026-08-12",
+    "route": "daily-watch.html",
+    "person": {
+      "type": "person",
+      "name": "Bill Gates",
+      "entityResolution": {
+        "status": "authoritatively-resolved",
+        "registryId": "",
+        "registryType": "",
+        "graphId": "bill-gates",
+        "graphType": "profile route",
+        "reviewStatus": "",
+        "directFreshRecords": 0
+      },
+      "selectionBasis": "Highest registry-resolved structural relevance to the leading evidence lanes. No fresh accusation is inferred, and this position changes only when stronger source-linked evidence clears the promotion threshold.",
+      "whatWasFound": "profile route",
+      "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+      "investigativeLanes": [
+        "Procurement and public-private implementation",
+        "Money, banking and payment access"
+      ],
+      "howItFits": "This person fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how procurement and public-private implementation, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+      "evidenceStrength": "E2–E4 — resolved structural public records requiring direct review",
+      "confidence": "moderate",
+      "sourceRoutes": [
+        "billionaire-briefs/bill-gates.html"
+      ],
+      "nextQuestions": [
+        "What exact legal, financial, ownership, appointment or operational authority does Bill Gates possess?",
+        "Which dated primary record establishes the current action?",
+        "What oversight, competing authority, opt-out or appeal limits the power?",
+        "What new evidence would strengthen, narrow, replace or falsify this position?"
+      ],
+      "rankingScore": 91,
+      "rankingStatus": "retained-current-leader",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    },
+    "institution": {
+      "type": "institution",
+      "name": "Securities and Exchange Commission",
+      "entityResolution": {
+        "status": "authoritatively-resolved",
+        "registryId": "entity-governmentagency-23b03f6532d999f0229b",
+        "registryType": "GovernmentAgency",
+        "graphId": "securities-and-exchange-commission",
+        "graphType": "missing record",
+        "reviewStatus": "machine-extracted-unreviewed",
+        "directFreshRecords": 5
+      },
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 5 fresh records plus 12 retained evidence references.",
+      "whatWasFound": "named-in-public-record, refined-from-organization",
+      "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+      "investigativeLanes": [
+        "Procurement and public-private implementation"
+      ],
+      "howItFits": "This institution fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+      "effectOnLane": "moderately-strengthens",
+      "whatItPointsToward": "Closer examination of how procurement and public-private implementation operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+      "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "entity-briefs/securities-and-exchange-commission.html",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "data/daily-investigation-conclusions.json",
+        "https://www.sec.gov/enforcement-litigation/litigation-releases",
+        "https://www.federalregister.gov/documents/2026/08/10/2026-16199/agency-information-collection-activities-proposed-collection-comment-request-extension-form-n-8b-2",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+        "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14142.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26506-suzee-han.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf"
+      ],
+      "nextQuestions": [
+        "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
+        "Which dated primary record establishes the current action?",
+        "What oversight, competing authority, opt-out or appeal limits the power?",
+        "What new evidence would strengthen, narrow, replace or falsify this position?"
+      ],
+      "rankingScore": 143,
+      "rankingStatus": "retained-current-leader",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    },
+    "family": {
+      "type": "family",
+      "name": "Wallenberg family and foundations",
+      "entityResolution": {
+        "status": "resolved-family-access-record",
+        "familyId": "wallenberg",
+        "directFreshRecords": 0
+      },
+      "selectionBasis": "Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation.",
+      "whatWasFound": "No new wrongdoing finding is asserted. The family is elevated because the leading lanes overlap with documented access across Industrial ownership, Banking, Defence industry, Telecommunications, Pharmaceuticals, Research funding, Board networks.",
+      "whyItMatters": "The Wallenberg Foundations hold decisive voting influence in Investor AB, with the largest foundation alone holding more than 42 percent of votes as of June 2026. The ecosystem states that the three largest foundations collectively hold 50 percent of Investor's votes. Family members hold senior board positions while Investor uses board participation across a portfolio spanning finance, defence, industrials, pharmaceuticals and technology.",
+      "investigativeLanes": [
+        "Information, media and platform access",
+        "Money, banking and payment access",
+        "Procurement and public-private implementation",
+        "Power-family succession and institutional access"
+      ],
+      "howItFits": "The family lane tests whether legal succession, voting pools, foundations, holding companies, trustee powers, appointments or repeated gatekeeping preserve institutional access across generations. The mechanism—not the surname—is the evidence.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "A focused review of industrial ownership, banking, defence industry, telecommunications and whether documented control rights or appointments connect the family to current policy, capital or infrastructure developments.",
+      "alternativeExplanation": "The ecosystem demonstrates exceptional corporate continuity and board access, but it is not equivalent to control of the Swedish state or every company in which Investor owns shares.",
+      "whatItDoesNotProve": "The evidence does not support claims that the Wallenbergs secretly direct Sweden, NATO or European institutions as a unified private government.",
+      "evidenceStrength": "E4–E5 — structural public records; no direct new allegation",
+      "confidence": "high",
+      "sourceRoutes": [
+        "behind-the-curtain-capstone.html",
+        "behind-the-curtain-access.html",
+        "https://www.wallenberg.com/en/ecosystem",
+        "https://www.investorab.com/investors-media/the-investor-share/ownership-structure/",
+        "https://www.investorab.com/about-investor/board-management/board-of-directors"
+      ],
+      "nextQuestions": [
+        "Which current decision, transaction or appointment directly involves Wallenberg family and foundations?",
+        "Who holds final voting, trustee or appointment authority?",
+        "Which structures are independently managed or legally constrained?",
+        "What evidence would lower or replace the family-access assessment?"
+      ],
+      "rankingScore": 122,
+      "rankingStatus": "incumbent-held-position",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+      "challengerHeld": "Al Maktoum family",
+      "challengerScore": 122,
+      "retentionReason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent."
+    },
+    "boundary": "Selection means the entity deserves focused source review. It is not a guilt ranking, accusation, declaration of hidden control, call for action against the entity, or proof of participation in another person's wrongdoing.",
+    "rankingPolicy": {
+      "mode": "stable-incumbent-evidence-promotion",
+      "promotionMargin": 14,
+      "rule": "A card changes only when a different entity has direct new source-linked evidence and its ranking score reaches or exceeds the incumbent score plus the promotion margin. Ties, novelty and minor fluctuations never replace a card.",
+      "decisions": {
+        "person": {
+          "changed": false,
+          "reason": "The same entity remains the current evidence leader.",
+          "incumbentScore": 91,
+          "challengerScore": 91,
+          "marginRequired": 14
+        },
+        "institution": {
+          "changed": false,
+          "reason": "The same entity remains the current evidence leader.",
+          "incumbentScore": 143,
+          "challengerScore": 143,
+          "marginRequired": 14
+        },
+        "family": {
+          "changed": false,
+          "reason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent.",
+          "incumbent": "Wallenberg family and foundations",
+          "incumbentScore": 122,
+          "challenger": "Al Maktoum family",
+          "challengerScore": 122,
+          "required": 136,
+          "marginRequired": 14
+        }
+      }
+    },
+    "dossierRoute": "data/daily-watch-dossiers.json"
+  }
 }

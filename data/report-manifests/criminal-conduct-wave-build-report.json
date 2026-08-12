@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:52:59.871Z",
+  "generatedAt": "2026-08-12T05:17:42.319Z",
   "pageCount": 133,
   "output": "downloads/criminal-conduct-wave-build-report.pdf",
   "report": {
-    "version": 13,
+    "version": 14,
     "title": "Criminal Conduct Wave Build Report",
-    "contentHash": "228818bbc925c03e7f88330d78220ca2992e893bcc16056545591282203b862c",
+    "contentHash": "92a3c07e4c5623541c922dea1016075ddaa7eaf12269cc3ad7d092b8e0dc4323",
     "sourceIds": [
       "3a8c1f1e8620cb3f09a2c7ab",
       "a354895c18c7e12ab408462d",
@@ -28,6 +28,7 @@
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
       "6d8df9af51b8078e703b2748",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -145,14 +146,13 @@
       "ASC-REVIEW-89E0DBBB041A3168",
       "ASC-REVIEW-2E9D74DCA057FDC2",
       "ASC-REVIEW-C6718A14E0A753DE",
-      "ASC-REVIEW-BC92D8AABD2393C5",
-      "ASC-REVIEW-80D43B2F22AC5B77"
+      "ASC-REVIEW-BC92D8AABD2393C5"
     ],
     "metrics": {
       "evidenceCount": 140,
       "primarySourceCount": 0,
-      "disputedClaimCount": 126,
-      "newEntityCount": 0,
+      "disputedClaimCount": 125,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
       "relationshipCount": 33,
       "moneyRecordCount": 23
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Abdul Halim Khan,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "[object Object]",
+        "conclusion": "The most defensible current assessment is based on “Daily Intelligence Hit List,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Daily Intelligence Hit List",
         "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
         "confidence": 48,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-11T04:52:59.871Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

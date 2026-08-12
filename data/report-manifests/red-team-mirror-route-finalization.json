@@ -1,26 +1,28 @@
 {
-  "generatedAt": "2026-08-11T05:02:26.750Z",
-  "pageCount": 125,
+  "generatedAt": "2026-08-12T05:27:12.699Z",
+  "pageCount": 124,
   "output": "downloads/red-team-mirror-route-finalization.pdf",
   "report": {
-    "version": 10,
+    "version": 11,
     "title": "Red Team Mirror Route Finalization",
-    "contentHash": "145991209b6470d5159822f65ea211a21524ebb327d73a55d85d4a796582d2a3",
+    "contentHash": "6c1064aa30ef565b7d85b08eddde90a4e406f60e6d41e2cdc115d1399b2a1a80",
     "sourceIds": [
-      "e4ca191d7d9f2eddeda78ad3",
-      "diff-consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "26b90533dbf7d2ed42f02de6",
-      "diff-consequence-declassified-files-2026-08-07-fa753b69",
-      "diff-consequence-declassified-files-2026-08-07-a0d1b2f2",
-      "diff-consequence-epstein-files-2026-08-07-9c3b2188",
-      "diff-consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "diff-consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "diff-consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "diff-consequence-crime-state-overlap-2026-08-07-a2296147",
-      "diff-consequence-crime-state-overlap-2026-08-07-ab764161",
-      "diff-consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "diff-consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "diff-consequence-crime-state-overlap-2026-08-07-0aa1dddd",
+      "2609b70f5c1db84a869ac7ca",
+      "consequence-crime-state-overlap-2026-08-10-b6533383",
+      "consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
+      "diff-consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "diff-consequence-crime-state-overlap-2026-08-10-015a2455",
+      "diff-consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "diff-consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "diff-consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "diff-consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "diff-consequence-crime-state-overlap-2026-08-10-b6533383",
+      "diff-consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "diff-consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "diff-consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "diff-consequence-crime-state-overlap-2026-08-10-5de09a55",
+      "diff-consequence-crime-state-overlap-2026-08-10-a0e61bfe",
       "b4cb47ea50dc901364239e9f",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
@@ -50,19 +52,17 @@
       "ASC-REVIEW-CE615863A9722AC5",
       "a354895c18c7e12ab408462d",
       "665a5072d96b9757a6ee9d2d",
-      "594100b62a47db521fe2a128",
-      "consequence-crime-state-overlap-2026-08-07-adb50e08",
-      "consequence-crime-state-overlap-2026-08-07-8418d23a",
-      "consequence-crime-state-overlap-2026-08-07-dc3f30ce",
-      "consequence-crime-state-overlap-2026-08-07-a2296147",
-      "consequence-crime-state-overlap-2026-08-07-ab764161",
-      "consequence-crime-state-overlap-2026-08-07-7e664ee5",
-      "consequence-crime-state-overlap-2026-08-07-4f6b78a3",
-      "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
-      "consequence-crime-state-overlap-2026-08-07-0aa1dddd",
-      "34805734b1ad3b73f0ede0d8",
+      "26b90533dbf7d2ed42f02de6",
+      "consequence-crime-state-overlap-2026-08-10-9cf6f0f4",
+      "consequence-crime-state-overlap-2026-08-10-015a2455",
+      "consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "consequence-crime-state-overlap-2026-08-10-bc7b5d3f",
+      "consequence-crime-state-overlap-2026-08-10-6a612d71",
+      "consequence-crime-state-overlap-2026-08-10-e90b9744",
+      "consequence-crime-state-overlap-2026-08-10-13c7fc4b",
+      "consequence-crime-state-overlap-2026-08-10-9c1855a0",
+      "consequence-crime-state-overlap-2026-08-10-5de09a55",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
       "b9006a5edc55cc88bfccd04a",
       "06baa45bea3e2e15eb80eff9",
       "f669b33c49b63e787cde3008",
@@ -150,7 +150,7 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 17,
+      "primarySourceCount": 19,
       "disputedClaimCount": 105,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
@@ -159,8 +159,8 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 17 A/B-grade public-record items are materially relevant to Red Team Mirror Route Finalization.",
-        "evidence": "2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); Clarksville, Tennessee, Woman Sentenced to 2 Years in Federal Prison and Ordered to Pay $291,470 in Restitution for Defrauding Employer (data/power-diff-current.json); Convicted Felon Sentenced for Illegal Gun Possession (data/power-diff-current.json); Former USDA Program Director Sentenced in $400,000 Fraud Scheme (data/power-diff-current.json); Honduran National Sentenced for Illegal Reentry of a Removed Alien (data/power-diff-current.json); Illegal alien brothers sentenced for gun possession in the Eastern District of Texas (data/power-diff-current.json)",
+        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Red Team Mirror Route Finalization.",
+        "evidence": "Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation (data/power-diff-current.json); Jury convicts Army veteran of embellishing health issues to defraud the VA (data/power-diff-current.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/power-diff-current.json); 2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries (data/clock-wall.json); After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced (data/power-diff-current.json); Ashland Man Sentenced for Receiving Child Sexual Abuse Material (data/power-diff-current.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Master of Shadow Fleet Tanker Sentenced in D.C. for Evading U.S. Coast Guard During Weeks-Long Pursuit,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Avtandil Kalandadze, 47, the former ship master of a shadow fleet tanker Bella 1 that historically transported Iran- and Venezuela-origin oil for the ultimate benefit of U.S. adversaries, was sentenced today in U.S. District Court to 10 months imprisonment in connection with refusing to obey orders from the U.S. Coast Guard during a multi-week pursuit from the Caribbean Sea through to the North Atlantic Ocean, announced U.S. Attorney Jeanine Ferris Pirro. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “2026 EU Rule of Law Report assesses justice, corruption, media pluralism and checks and balances across 31 countries,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Commission's seventh annual report, published 17 July 2026, records reforms and continuing challenges across justice systems, anti-corruption frameworks, media freedom and institutional checks and balances.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -180,7 +180,7 @@
     "analyticalInferences": [
       {
         "inference": "The indexed set contains 92 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov); Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
+        "supportingEvidence": "Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -196,7 +196,7 @@
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
         "whyItIsBeingConsidered": "The indexed set contains 92 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
-          "Treasury Sanctions Crypto Exchanges Funding Iran’s IRGC and Enabling Illicit Finance - U.S. Department of the Treasury (.gov)",
+          "Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",
           "Booz Allen Hamilton → Ai Data: execution layer",
           "Booz Allen Hamilton → Consulting: execution layer",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

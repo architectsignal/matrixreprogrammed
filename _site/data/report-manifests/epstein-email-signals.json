@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-08-11T04:55:25.807Z",
-  "pageCount": 102,
+  "generatedAt": "2026-08-12T05:20:09.256Z",
+  "pageCount": 96,
   "output": "downloads/epstein-email-signals.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Epstein Email Signal Map",
-    "contentHash": "bb54f2274b37c61e89c50822dde2280dbb8d9b4a5f0ec24786b6dd84f3259a1f",
+    "contentHash": "0a409ce95f3941a6604ff50ba0f42d84a29fd3f2258fea83464824d8806521a0",
     "sourceIds": [
       "716b58f494f928cbaa722a02",
       "0da413de8dec32f06a089db8",
       "72ef7895f95288946ccb3cff",
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "9cb9631a2f2749b86bc69e0a",
       "d23398b8ca4c7124399c9504",
       "5295a33003172878f9880122",
@@ -21,6 +21,8 @@
       "ecd4a1111010f13b2d74bf8c",
       "26b90533dbf7d2ed42f02de6",
       "1769af26a7bda813406cd8f5",
+      "d0b647e325275daa6d824a49",
+      "cee347fbc3752c6e0f890457",
       "19ae23289f4be13ad5f7e317",
       "9e8310c49b990aa62d2b0921",
       "3a425f0d5d683952bc0ad7ac",
@@ -32,14 +34,14 @@
       "7ee9141a42ad539f58a57e50",
       "c34be8ddf95e2bdaf7b3b6fa",
       "8d0375496d59f1d012deaead",
+      "594100b62a47db521fe2a128",
       "157cdab04b61ae6309c0c713",
       "eb3448928554960651da56f6",
+      "34805734b1ad3b73f0ede0d8",
       "cf94b367bfb0237448d49649",
       "69f071adbd84f39904a53107",
       "9bc66da5c53d37d8c3d59e13",
-      "594100b62a47db521fe2a128",
       "7f5b91c14c671bd24b8bbd81",
-      "34805734b1ad3b73f0ede0d8",
       "f8da9551192fb7f98b4efa86",
       "96d8ea15e49544e3f1cafd06",
       "75fcb0966ee4802cca054261",
@@ -63,7 +65,6 @@
       "ASC-REVIEW-20316213EFD183CC",
       "EP-AI-001",
       "7dcf4ef18ea1f86d01068773",
-      "4c1d46d9bcb8caa374dec7d2",
       "a76edf5945d2f4910bd413ef",
       "8165fb4ec7543f1da0762496",
       "7f0eb9ddb996aecbeeda522d",
@@ -72,7 +73,6 @@
       "e116361cb7791d4be20113e1",
       "deb382cdbfe57b57793d739e",
       "bdd7e454126ebfa6319a594c",
-      "366686df53f6dfd25d3f0ea4",
       "ASC-REVIEW-63DEE163CCA699D8",
       "c8eeb5656d86646c1e6dc75c",
       "3a8c1f1e8620cb3f09a2c7ab",
@@ -81,10 +81,7 @@
       "7419d29b3a469a40362a11f4",
       "1ee57e70dacfa67f04323529",
       "a5e5d4ec4df4352ea242ea3f",
-      "ca92a54bb69eb2504c76e56e",
-      "e3b055a4afb19163268d7257",
-      "d77b99424431ead891074ef0",
-      "8737454dea4463f85583fbd4",
+      "1c0cca9ff329dd06d5408693",
       "782980faf5c4a687532aa2a7",
       "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-8D34DAEE930AC84F",
@@ -146,20 +143,23 @@
       "ASC-REVIEW-67649B242FE10338",
       "ASC-REVIEW-748C61B26DB96ACF",
       "ASC-REVIEW-B66A4F66565A8C1E",
-      "ASC-REVIEW-CA09236EF68A2AE9"
+      "ASC-REVIEW-CA09236EF68A2AE9",
+      "ASC-REVIEW-FC2D1F9D4ECA8822",
+      "ASC-REVIEW-624DBE79BF661D70",
+      "4ae6a940305d15da61333450"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 21,
-      "disputedClaimCount": 46,
+      "primarySourceCount": 16,
+      "disputedClaimCount": 50,
       "newEntityCount": 11,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 26,
-      "moneyRecordCount": 20
+      "relationshipCount": 22,
+      "moneyRecordCount": 16
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Epstein Email Signal Map.",
+        "conclusion": "The indexed record establishes that 16 A/B-grade public-record items are materially relevant to Epstein Email Signal Map.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ATT MOBILITY LLC — Department of Defense,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "DMOB002145EBM PROCURE DEPARTMENT OF DEFENSE MOBILITY CLASSIFIED CAPABILITY DEVICES AND SERVICES IN SUPPORT OF THE DEPARTMENT OF HOMELAND SECURITY (DHS) - UNITED STATES COAST USCG TELECOMMUNICATION AND INFORMATION SYSTEMS COMMAND. · Amount: 2241.89 · Sub-agency: Defense Information Systems Agency This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 26 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; Michael Wolff media-strategy thread; Influence should be mapped through infrastructure, filings and contracts.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; The strongest public pattern is convergence across access systems.; AGILENT TECHNOLOGIES INC — Department of Energy; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
+        "inference": "The indexed set contains 22 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; Michael Wolff media-strategy thread; Influence should be mapped through infrastructure, filings and contracts.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; The strongest public pattern is convergence across access systems.; MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency; Private settlements / NDA suppression lane",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 26 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 22 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Michael Wolff media-strategy thread",
@@ -202,8 +202,8 @@
           "Illuminati / Secret Society Theory",
           "Illuminati / Secret Society Theory",
           "The strongest public pattern is convergence across access systems.",
-          "AGILENT TECHNOLOGIES INC — Department of Energy",
-          "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration"
+          "MAGADIA CONSULTING INC — Court Services and Offender Supervision Agency",
+          "Private settlements / NDA suppression lane"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-11-01T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-20T00:00:00.000Z"
   }
 }

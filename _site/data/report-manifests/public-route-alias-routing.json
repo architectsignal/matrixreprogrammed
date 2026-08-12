@@ -1,18 +1,19 @@
 {
-  "generatedAt": "2026-08-11T05:02:06.582Z",
-  "pageCount": 124,
+  "generatedAt": "2026-08-12T05:26:52.774Z",
+  "pageCount": 121,
   "output": "downloads/public-route-alias-routing.pdf",
   "report": {
-    "version": 3,
+    "version": 4,
     "title": "Public Route Alias Routing",
-    "contentHash": "eb8bf178723e77a5d593ae44db124407c1a2f725353e0f25d2815899992615a2",
+    "contentHash": "2d9cd8a727319eac334a2d686f277e3163250a09462b59e6b58e98190ead5c2e",
     "sourceIds": [
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "a354895c18c7e12ab408462d",
       "665a5072d96b9757a6ee9d2d",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-9B01C094346A78B0",
+      "d0b647e325275daa6d824a49",
       "8165fb4ec7543f1da0762496",
       "eda53ad65d382819ea249e14",
       "4ae6a940305d15da61333450",
@@ -24,6 +25,7 @@
       "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
       "7f5b91c14c671bd24b8bbd81",
+      "cee347fbc3752c6e0f890457",
       "73799cb9af4829047998b026",
       "ec968f2ec6ba82128b4cd91b",
       "4a8dd46bd8d4335f061e03ac",
@@ -79,13 +81,13 @@
       "d3589cf045e6d530b37381a9",
       "3238162301d466634ccd3040",
       "0a48cc2ad619880b0b23d743",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-CE46DBEB6BCAAE01",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -119,10 +121,8 @@
       "9e8310c49b990aa62d2b0921",
       "275d6c3caca158f7a3e15780",
       "594100b62a47db521fe2a128",
+      "consequence-crime-state-overlap-2026-08-10-a0e61bfe",
       "34805734b1ad3b73f0ede0d8",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -150,16 +150,16 @@
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 38,
-      "disputedClaimCount": 53,
+      "primarySourceCount": 36,
+      "disputedClaimCount": 55,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 59,
+      "relationshipCount": 57,
       "moneyRecordCount": 41
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 38 A/B-grade public-record items are materially relevant to Public Route Alias Routing.",
+        "conclusion": "The indexed record establishes that 36 A/B-grade public-record items are materially relevant to Public Route Alias Routing.",
         "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); MINDCUBED LLC — District of Columbia Courts (data/daily-investigation-conclusions.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts (data/weekly-investigation-conclusions.json); PROCORE TECHNOLOGIES INC — District of Columbia Courts (data/weekly-investigation-conclusions.json); AUGUST SCHELL ENTERPRISES, INC. — Commodity Futures Trading Commission (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -169,7 +169,7 @@
       },
       {
         "conclusion": "The most defensible current assessment is based on “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "evidence": "USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 59 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 57 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "MINDCUBED LLC — District of Columbia Courts; INDUSTRIAL BANK — District of Columbia Courts; SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; Illuminati / Secret Society Theory; Matrix Reprogrammed Canonical Intelligence Record",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 59 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 57 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "MINDCUBED LLC — District of Columbia Courts",
           "INDUSTRIAL BANK — District of Columbia Courts",

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:00:46.541Z",
-  "pageCount": 139,
+  "generatedAt": "2026-08-12T05:25:31.712Z",
+  "pageCount": 140,
   "output": "downloads/phase6-paypal-state-test/summary.pdf",
   "report": {
-    "version": 5,
+    "version": 6,
     "title": "Phase6 Paypal State Test/Summary",
-    "contentHash": "18463f2fd048f86152b3d6849bb0b148e61b8ad23412203b4548fcfa5f368cf5",
+    "contentHash": "90ade002126a8f0000ec3853dbc0029e735910e4141d6821cdad3a96c38759ca",
     "sourceIds": [
       "fe51591d2f98b1e8140add7f",
       "ASC-REVIEW-9E85403F3389F334",
@@ -22,8 +22,8 @@
       "ASC-REVIEW-A5C911DFEE587573",
       "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
-      "c673456bbe77dbb29e43ac7d",
       "366686df53f6dfd25d3f0ea4",
+      "c673456bbe77dbb29e43ac7d",
       "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
       "8f15d14f1b05a490af22799d",
@@ -32,12 +32,13 @@
       "d77b99424431ead891074ef0",
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
+      "1c0cca9ff329dd06d5408693",
       "228770c420a004608c7b13f9",
       "8737454dea4463f85583fbd4",
+      "crime-state-overlap-2026-08-11-6fc87119",
+      "crime-state-overlap-2026-08-11-38bd17df",
+      "crime-state-overlap-2026-08-11-902ce8c8",
       "crime-state-overlap-2026-08-10-a0e61bfe",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-38ebb2ec",
-      "crime-state-overlap-2026-08-07-b5c464b8",
       "ASC-REVIEW-EEA884898BA116BF",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
@@ -145,22 +146,21 @@
       "ASC-REVIEW-B4A3ADF8C6D010A1",
       "ASC-REVIEW-D177A29CF338E56D",
       "ASC-REVIEW-8EBEC47E70E33B9F",
-      "ASC-REVIEW-4FDBCEA6F4D74FFD",
-      "ASC-REVIEW-CD1B68F215696D25"
+      "ASC-REVIEW-4FDBCEA6F4D74FFD"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 19,
-      "disputedClaimCount": 121,
+      "primarySourceCount": 20,
+      "disputedClaimCount": 120,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 136,
-      "moneyRecordCount": 131
+      "relationshipCount": 137,
+      "moneyRecordCount": 132
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 19 A/B-grade public-record items are materially relevant to Phase6 Paypal State Test/Summary.",
-        "evidence": "ARGUS MEDIA INC — Department of Energy (data/weekly-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Phase6 Paypal State Test/Summary.",
+        "evidence": "ARGUS MEDIA INC — Department of Energy (data/weekly-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "The U.S. Attorney’s Office for the District of Kansas announced filing a denaturalization action against a man born in India who allegedly became a United States citizen under a false identity. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "MOBILE, AL — Continental Aerospace Technologies Inc. has agreed to pay $11,772,680.14 to resolve allegations that it violated the False Claims Act by submitting false claims to obtain a Paycheck Protection Program (PPP) loan for which it was not eligible. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 136 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 137 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "ARGUS MEDIA INC — Department of Energy; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Booz Allen Hamilton → Ai Data: execution layer; Booz Allen Hamilton → Consulting: execution layer; Booz Allen Hamilton → Intelligence: execution layer; Booz Allen Hamilton → Public Money: execution layer; CACI International → Defense Technology: execution layer; CACI International → Intelligence: execution layer",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 136 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 137 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "ARGUS MEDIA INC — Department of Energy",
           "Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer",

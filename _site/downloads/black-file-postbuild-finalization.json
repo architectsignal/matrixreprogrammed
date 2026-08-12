@@ -1,7 +1,19 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T05:10:07.410Z",
+  "generatedAt": "2026-08-11T05:12:53.231Z",
   "source": "black-file.html",
+  "sourceRecovery": {
+    "recovered": false,
+    "recoveredFrom": "black-file.html",
+    "diagnostics": [
+      {
+        "relative": "black-file.html",
+        "exists": true,
+        "validHtml": true,
+        "sha256": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966"
+      }
+    ]
+  },
   "sourceSha256": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966",
   "genericTitleId": "matrix-pathways-title",
   "canonicalTitleId": "matrix-pathways-title-black-file",
@@ -78,5 +90,5 @@
       }
     }
   ],
-  "boundary": "This local deterministic finalizer runs after the last ordinary page mutator, removes every exact generic matrix-pathways-title reference, creates exactly one matrix-pathways-title-black-file target and synchronizes source, extensionless and _site aliases byte-for-byte. It performs no network, D1 or Cloudflare mutation."
+  "boundary": "This local deterministic finalizer runs after the last ordinary page mutator, recovers the canonical Black File source from a surviving HTML sibling when one alias is corrupted, removes every exact generic matrix-pathways-title reference, creates exactly one matrix-pathways-title-black-file target and synchronizes source, extensionless and _site aliases byte-for-byte. It performs no network, D1 or Cloudflare mutation."
 }

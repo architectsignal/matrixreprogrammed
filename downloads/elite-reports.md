@@ -1,10 +1,10 @@
 # Elite Reports
 
-Generated: 2026-08-11T05:07:32.090Z
+Generated: 2026-08-12T05:32:21.181Z
 
 ## Daily Revelation Report
 
-Virginia Giuffre Part 01 - vault.fbi.gov
+FinCEN Permanently Ends Beneficial Ownership Reporting Requirements for Millions of Small Business Owners - treasury.gov
 
 Source: daily-command-brief.html
 

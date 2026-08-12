@@ -1,13 +1,12 @@
 {
-  "generatedAt": "2026-08-11T04:52:57.474Z",
-  "pageCount": 136,
+  "generatedAt": "2026-08-12T05:17:40.157Z",
+  "pageCount": 137,
   "output": "downloads/criminal-conduct-registry-build-report.pdf",
   "report": {
-    "version": 12,
+    "version": 13,
     "title": "Criminal Conduct Registry Build Report",
-    "contentHash": "bbfc0c64b4a2d9dd1f8fee02d4d2c6616ed45b85ab58e8ab50818caebc20f35c",
+    "contentHash": "69c658aa7307488c024410af6c3bf5897a2d88a9d86671fcfb70737817200f4c",
     "sourceIds": [
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -145,12 +144,13 @@
       "ASC-REVIEW-8274DB7F7415A742",
       "ASC-REVIEW-D74AE4AD0CA9732B",
       "ASC-REVIEW-B5A7582A4286A663",
-      "ASC-REVIEW-16C81ABB8280B33F"
+      "ASC-REVIEW-16C81ABB8280B33F",
+      "ASC-REVIEW-1F47AD90DB4EDA48"
     ],
     "metrics": {
       "evidenceCount": 139,
-      "primarySourceCount": 2,
-      "disputedClaimCount": 132,
+      "primarySourceCount": 1,
+      "disputedClaimCount": 133,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
       "relationshipCount": 84,
@@ -158,19 +158,19 @@
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Criminal Conduct Registry Build Report.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json)",
+        "conclusion": "The indexed record establishes that 1 A/B-grade public-record item is materially relevant to Criminal Conduct Registry Build Report.",
+        "evidence": "Official health investigations documented abuse and enabling access (data/exposure-evidence-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 80,
+        "confidence": 78,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-        "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "conclusion": "The most defensible current assessment is based on “Official health investigations documented abuse and enabling access,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Government and NHS investigations reported that Savile sexually abused adults and children in health settings and that inadequate procedures enabled him to occupy positions of authority and access vulnerable people.",
+        "evidenceClassification": "CREDIBLY REPORTED / NOT FULLY PROVEN",
+        "confidence": 54,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -217,6 +217,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:05.856Z"
+    "intelligenceFreshnessDate": "2014-06-26T00:00:00.000Z"
   }
 }

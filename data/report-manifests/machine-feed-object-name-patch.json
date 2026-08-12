@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:58:58.358Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-12T05:23:43.238Z",
+  "pageCount": 132,
   "output": "downloads/machine-feed-object-name-patch.pdf",
   "report": {
-    "version": 18,
+    "version": 19,
     "title": "Machine Feed Object Name Patch",
-    "contentHash": "97b146457040e24884fb75f32e2f49a986b9bf09c58d318c6638e594302e8558",
+    "contentHash": "d191fd24983d834efe15360d87c44c9c87161fb2367c249b3288dde1d8a01559",
     "sourceIds": [
       "ASC-REVIEW-9B01C094346A78B0",
       "ASC-REVIEW-BF5A5D787C430742",
@@ -15,7 +15,7 @@
       "26b90533dbf7d2ed42f02de6",
       "3a425f0d5d683952bc0ad7ac",
       "ASC-REVIEW-45ACC28AC220EA79",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-836A8E9D516E6FEC",
       "ASC-REVIEW-BF28E8B2A2FFBD53",
       "ASC-REVIEW-8D34DAEE930AC84F",
@@ -78,7 +78,6 @@
       "72ef7895f95288946ccb3cff",
       "b5a32a76f19d554c484e917f",
       "ec968f2ec6ba82128b4cd91b",
-      "4c1d46d9bcb8caa374dec7d2",
       "f3676fb7b03d3ee0516f2a19",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
@@ -146,30 +145,31 @@
       "ASC-REVIEW-7531D73ADCFB5B91",
       "ASC-REVIEW-E45C21A8CE98987F",
       "ASC-REVIEW-493ED117CF1C0E91",
-      "ASC-REVIEW-0C3383FAE797FF46"
+      "ASC-REVIEW-0C3383FAE797FF46",
+      "ASC-REVIEW-7FBB26E1B0ECA17A"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 118,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 119,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 70,
-      "moneyRecordCount": 56
+      "relationshipCount": 71,
+      "moneyRecordCount": 57
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Machine Feed Object Name Patch.",
-        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Machine Feed Object Name Patch.",
+        "evidence": "INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/clock-wall.json); European Ombudsman publishes 2025 annual accountability and transparency report (data/global-risk-clocks.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The ECB reported declining company acceptance of cash and supports EU legislation strengthening cash access and legal-tender acceptance, including concern about no-cash policies.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 70 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 71 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 70 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 71 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Influence should be mapped through infrastructure, filings and contracts.",
           "The strongest public pattern is convergence across access systems.",

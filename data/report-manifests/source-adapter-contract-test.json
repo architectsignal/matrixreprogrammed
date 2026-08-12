@@ -1,19 +1,18 @@
 {
-  "generatedAt": "2026-08-11T05:04:11.263Z",
-  "pageCount": 145,
+  "generatedAt": "2026-08-12T05:28:59.399Z",
+  "pageCount": 143,
   "output": "downloads/source-adapter-contract-test.pdf",
   "report": {
-    "version": 8,
+    "version": 9,
     "title": "Source Adapter Contract Test",
-    "contentHash": "68e103f9b67e79652a1e489e453039411a5939a69ca850d04fae6b763329571c",
+    "contentHash": "1689ce01f31690c941a4c34500e426cb39af2b744014155cd8ea16c50eeb2d31",
     "sourceIds": [
-      "4c1d46d9bcb8caa374dec7d2",
       "EP-AI-004",
       "1769af26a7bda813406cd8f5",
       "ca92a54bb69eb2504c76e56e",
       "427a4b3a840619411d8d1c33",
-      "c673456bbe77dbb29e43ac7d",
       "366686df53f6dfd25d3f0ea4",
+      "c673456bbe77dbb29e43ac7d",
       "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
       "8f15d14f1b05a490af22799d",
@@ -23,8 +22,10 @@
       "a33968b32fce32bd9d6523f6",
       "21ae89a0f8533e03e261f18c",
       "fe51591d2f98b1e8140add7f",
+      "1c0cca9ff329dd06d5408693",
       "228770c420a004608c7b13f9",
       "8737454dea4463f85583fbd4",
+      "crime-state-overlap-2026-08-11-6fc87119",
       "b4cb47ea50dc901364239e9f",
       "cyril-smith-iicsa-2018",
       "ASC-REVIEW-4D93FE8E0666D181",
@@ -49,11 +50,13 @@
       "ASC-REVIEW-60951B1D539429E9",
       "3a8c1f1e8620cb3f09a2c7ab",
       "8d2a26495075b1d71abf17c2",
+      "594100b62a47db521fe2a128",
       "3a425f0d5d683952bc0ad7ac",
       "71e0563ca7b139c37c302956",
+      "34805734b1ad3b73f0ede0d8",
       "73799cb9af4829047998b026",
+      "2609b70f5c1db84a869ac7ca",
       "crime-state-overlap-2026-08-10-bc7b5d3f",
-      "e4ca191d7d9f2eddeda78ad3",
       "06baa45bea3e2e15eb80eff9",
       "f3676fb7b03d3ee0516f2a19",
       "abdul-halim-khan-conviction-2026",
@@ -143,24 +146,21 @@
       "ASC-REVIEW-5963EAC18AECC81B",
       "ASC-REVIEW-3A542BB86002553E",
       "ASC-REVIEW-7181CCFC5771EBAD",
-      "ASC-REVIEW-A40EABAABAFFC9C3",
-      "ASC-REVIEW-32A64F4FD3617829",
-      "ASC-REVIEW-31DAFEB5863F6F4C",
-      "ASC-REVIEW-33FA083D170CBDB5"
+      "ASC-REVIEW-A40EABAABAFFC9C3"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 29,
-      "disputedClaimCount": 105,
+      "primarySourceCount": 30,
+      "disputedClaimCount": 102,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 52,
-      "moneyRecordCount": 47
+      "relationshipCount": 54,
+      "moneyRecordCount": 51
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 29 A/B-grade public-record items are materially relevant to Source Adapter Contract Test.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 30 A/B-grade public-record items are materially relevant to Source Adapter Contract Test.",
+        "evidence": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); AGILENT TECHNOLOGIES INC — Department of Energy (data/daily-investigation-conclusions.json); BETTER DIRECT, LLC — Department of Energy (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); DELL MARKETING L.P. — District of Columbia Courts (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Former Employee of Maryland State Contractor Pleads Guilty to Unemployment Benefits Fraud Charges,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Baltimore, Maryland – A former Maryland Department of Labor (MD-DOL) insider pled guilty in federal court to wire fraud and aggravated identity theft charges. Katrina McCant, 41, of Baltimore, pled guilty to charges in connection with a scheme to fraudulently obtain unemployment insurance (UI) claim benefits during the COVID-19 Pandemic. This prosecution is part of the Trump Administration’s Task Force to Eliminate Fraud. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Chinese-Owned Company to Pay More Than $11M to Resolve False Claims Act Allegations Relating to Paycheck Protection Program Loan,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "MOBILE, AL — Continental Aerospace Technologies Inc. has agreed to pay $11,772,680.14 to resolve allegations that it violated the False Claims Act by submitting false claims to obtain a Paycheck Protection Program (PPP) loan for which it was not eligible. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 52 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "Follow The Money Watch; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; BETTER DIRECT, LLC — Department of Energy; AGILENT TECHNOLOGIES INC — Department of Energy; ACENTRA HEALTH LLC — National Aeronautics and Space Administration; DELL MARKETING L.P. — District of Columbia Courts; NEW TECH SOLUTIONS, INC. — United States Chemical Safety Board",
+        "inference": "The indexed set contains 54 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "Follow The Money Watch; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; AGILENT TECHNOLOGIES INC — Department of Energy; BETTER DIRECT, LLC — Department of Energy; ACENTRA HEALTH LLC — National Aeronautics and Space Administration; DELL MARKETING L.P. — District of Columbia Courts; NEW TECH SOLUTIONS, INC. — United States Chemical Safety Board",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,13 +194,13 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 52 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 54 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
           "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
-          "BETTER DIRECT, LLC — Department of Energy",
           "AGILENT TECHNOLOGIES INC — Department of Energy",
+          "BETTER DIRECT, LLC — Department of Energy",
           "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
           "DELL MARKETING L.P. — District of Columbia Courts",
           "NEW TECH SOLUTIONS, INC. — United States Chemical Safety Board"

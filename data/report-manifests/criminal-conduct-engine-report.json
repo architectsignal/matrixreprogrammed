@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:52:53.251Z",
+  "generatedAt": "2026-08-12T05:17:35.940Z",
   "pageCount": 113,
   "output": "downloads/criminal-conduct-engine-report.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Criminal Conduct Engine Report",
-    "contentHash": "52f6ecae7d5ee999454a42bed4326194a4c967aecfb50f36053a03cc175b253a",
+    "contentHash": "c8b6d961d828aac16a6a1f850cd0be137309b8d859818d861116cbaddd4037ec",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
       "9b5810e2943ffdc912a78854",
@@ -14,7 +14,7 @@
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
       "1769af26a7bda813406cd8f5",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "a354895c18c7e12ab408462d",
       "d23398b8ca4c7124399c9504",
       "665a5072d96b9757a6ee9d2d",
@@ -74,8 +74,7 @@
       "ec1316fb1fb70c83dc347bb6",
       "e8a674872be2bfd1089d28de",
       "7c05d9244c4620950350cf27",
-      "crime-state-overlap-2026-08-10-b6533383",
-      "crime-state-overlap-2026-08-07-2b138d2d",
+      "crime-state-overlap-2026-08-11-35be2c84",
       "ASC-REVIEW-861EBE2805F13D36",
       "ASC-REVIEW-6809880AE2446DD1",
       "ASC-REVIEW-CAEF74273342914C",
@@ -109,16 +108,18 @@
       "ASC-REVIEW-FC2D1F9D4ECA8822",
       "ASC-REVIEW-BDEA3B6AE6BFEDA7",
       "ASC-REVIEW-B1FB815B4D08BDA2",
+      "d0b647e325275daa6d824a49",
       "c8eeb5656d86646c1e6dc75c",
       "32fdb7636e52846298c14671",
       "8d0375496d59f1d012deaead",
       "33e7eb67145c9e096d47341a",
       "7419d29b3a469a40362a11f4",
+      "65debd126cdfa5f7547a3eca",
       "72ef7895f95288946ccb3cff",
       "dc8b9d14c64a9a003f090a3b",
       "b7e4a66335a706ef5097117f",
-      "crime-state-overlap-2026-08-10-7d922c66",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
+      "3c9c23f7f9a1cec81ef90f59",
+      "cee347fbc3752c6e0f890457",
       "ASC-REVIEW-884743856D3E1385",
       "ASC-REVIEW-E5A88F482A22427D",
       "ASC-REVIEW-612BDE5576885761",
@@ -145,31 +146,30 @@
       "ASC-REVIEW-FE3653EEB8123DA6",
       "ASC-REVIEW-72A2357084C62D28",
       "ASC-REVIEW-2C44CF7E385BEC5A",
-      "ASC-REVIEW-DC55A436F8F9A135",
-      "ASC-REVIEW-2721CEDC4D6A57D9"
+      "ASC-REVIEW-DC55A436F8F9A135"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 7,
-      "disputedClaimCount": 77,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 78,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 54,
-      "moneyRecordCount": 53
+      "relationshipCount": 51,
+      "moneyRecordCount": 54
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 7 A/B-grade public-record items are materially relevant to Criminal Conduct Engine Report.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation (data/live-intel.json); Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force (data/live-intel.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); New Orleans Man Indicted for Methamphetamine Distribution (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Criminal Conduct Engine Report.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin (data/live-intel.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 90,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Homeland Security Task Force Announces Twenty-Five-Year Sentence for Colombian Drug Kingpin,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Tampa, FL – Jose Ramiro Cardenas-Iguaran, a/k/a “Titi,” “Senor,” “Jefe” (47, Colombia) has been sentenced by U.S. Senior District Judge Charlene Edwards Honeywell to 25 years in federal prison for conspiring to distribute cocaine on a vessel subject to the jurisdiction of the United States. He pleaded guilty on November 25, 2025. United States Attorney Gregory W. Kehoe made the announcement. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 54 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 51 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Network Map; Intelligence Network Pack; Follow The Money Watch; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 54 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 51 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Map",
           "Intelligence Network Pack",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

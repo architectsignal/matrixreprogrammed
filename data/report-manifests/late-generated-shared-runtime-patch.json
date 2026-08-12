@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:58:04.100Z",
+  "generatedAt": "2026-08-12T05:22:49.357Z",
   "pageCount": 115,
   "output": "downloads/late-generated-shared-runtime-patch.pdf",
   "report": {
-    "version": 20,
+    "version": 21,
     "title": "Late Generated Shared Runtime Patch",
-    "contentHash": "fc11459a7c063c467174ebe7bf44aa01c5a218f1ca844925e8d0ac344f55b0c6",
+    "contentHash": "fccff39a92b391883154879e1bae99669025843a0be0ca942bc5f03450b1f5af",
     "sourceIds": [
       "c1520a15d6e62871a66c558e",
       "26b90533dbf7d2ed42f02de6",
@@ -27,6 +27,7 @@
       "source-change-ea3afacb89f4f277c87d1a79",
       "ASC-REVIEW-8D34DAEE930AC84F",
       "ASC-REVIEW-E6D70696A19B3CDA",
+      "d0b647e325275daa6d824a49",
       "871096b65a90301ef4a126c3",
       "594100b62a47db521fe2a128",
       "1769af26a7bda813406cd8f5",
@@ -40,7 +41,8 @@
       "360e80c162081c85d2c680ef",
       "88ef9baf356c096816236956",
       "34805734b1ad3b73f0ede0d8",
-      "4c1d46d9bcb8caa374dec7d2",
+      "cee347fbc3752c6e0f890457",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -88,6 +90,7 @@
       "32fdb7636e52846298c14671",
       "6f6462b75cdb929e0acbcde7",
       "33e7eb67145c9e096d47341a",
+      "6d75003b4825f307f6df306e",
       "ec7f3126268880506fc4f0ed",
       "9f3052b5d8cec138a2a37e8c",
       "71e0563ca7b139c37c302956",
@@ -108,13 +111,12 @@
       "c5d9edd2562c4c00e3ddfdfb",
       "7c05d9244c4620950350cf27",
       "41772e5c9af7970ddd7d5aac",
+      "source-change-82b0886fe4735164beacb291",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ec7f3126268880506fc4f0ed",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "e4ca191d7d9f2eddeda78ad3",
-      "source-change-a05ee5719c4986b9a2e665d1",
-      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -144,9 +146,7 @@
       "ASC-REVIEW-2EAAC7D7DF8B957D",
       "ASC-REVIEW-686B68808D58A838",
       "ASC-REVIEW-E0C2B02D28255CC3",
-      "ASC-REVIEW-4E0C4B2A65FF8D42",
-      "ASC-REVIEW-995324D0659C1960",
-      "ASC-REVIEW-BD5CE46383C9383C"
+      "ASC-REVIEW-4E0C4B2A65FF8D42"
     ],
     "metrics": {
       "evidenceCount": 140,
@@ -154,8 +154,8 @@
       "disputedClaimCount": 78,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 66,
-      "moneyRecordCount": 51
+      "relationshipCount": 64,
+      "moneyRecordCount": 49
     },
     "evidenceBasedConclusions": [
       {
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The normalized content returned by the registered source differs from the previously preserved version. The normalized content returned by the registered source differs from the previously preserved version. A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 66 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 64 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Follow The Money Watch; Illuminati / Secret Society Theory; Site Population Audit; Illuminati / Secret Society Theory; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; Bill Gates → Health And Development Philanthropy: ecosystem hint",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 66 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 64 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Follow The Money Watch",
           "Illuminati / Secret Society Theory",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
+    "intelligenceFreshnessDate": "2026-08-11T06:09:41.962Z"
   }
 }

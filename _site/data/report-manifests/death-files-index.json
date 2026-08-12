@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:54:11.831Z",
-  "pageCount": 111,
+  "generatedAt": "2026-08-12T05:18:54.688Z",
+  "pageCount": 109,
   "output": "downloads/death-files-index.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "The Death Files",
-    "contentHash": "acd5253a28347fc8c9c70fdc93a76148afe627795b541d0e7ee0483d5484f2c1",
+    "contentHash": "e6d1117cf549f2ca62142d32e93d90c3798d1fd859a3bca71ac7127ae1353f65",
     "sourceIds": [
       "45f5269389def99607b5a517",
       "4961972398d896435d33f3f7",
@@ -13,6 +13,7 @@
       "7f0eb9ddb996aecbeeda522d",
       "deb382cdbfe57b57793d739e",
       "cyril-smith-iicsa-2018",
+      "d0b647e325275daa6d824a49",
       "9cb9631a2f2749b86bc69e0a",
       "8165fb4ec7543f1da0762496",
       "19ae23289f4be13ad5f7e317",
@@ -25,11 +26,12 @@
       "f44c3c7309a5f0779a57e655",
       "9e8310c49b990aa62d2b0921",
       "26b90533dbf7d2ed42f02de6",
-      "72ef7895f95288946ccb3cff",
       "594100b62a47db521fe2a128",
+      "72ef7895f95288946ccb3cff",
+      "34805734b1ad3b73f0ede0d8",
+      "cee347fbc3752c6e0f890457",
       "9e8903fd8dfa9b54a1d6db30",
       "88ef9baf356c096816236956",
-      "34805734b1ad3b73f0ede0d8",
       "ecd4a1111010f13b2d74bf8c",
       "ASC-REVIEW-E6D70696A19B3CDA",
       "d6936ce262c4c18cb75c6e44",
@@ -77,7 +79,7 @@
       "baa43ec6d7327777ba931c2c",
       "fafa3982950de0fd589ad0d0",
       "d2f7882f509480d63c31702f",
-      "crime-state-overlap-2026-08-07-2b138d2d",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-111AEF27642D32DD",
       "ASC-REVIEW-72A2357084C62D28",
@@ -109,9 +111,11 @@
       "138e9d694e41f192556d34a2",
       "18930d440aed009547436b81",
       "33e7eb67145c9e096d47341a",
+      "65debd126cdfa5f7547a3eca",
       "6d665d935673091233751767",
       "9d13cbe9989a1430580de2ff",
       "7f5b91c14c671bd24b8bbd81",
+      "3c9c23f7f9a1cec81ef90f59",
       "EFS-001-R006",
       "a27dd3c9a4cf6bbd952989d3",
       "73799cb9af4829047998b026",
@@ -133,7 +137,7 @@
       "0a48cc2ad619880b0b23d743",
       "d648ce395c11435d30796fee",
       "911d6aa330f80279bdb3c4d5",
-      "e4ca191d7d9f2eddeda78ad3",
+      "crime-state-overlap-2026-08-11-902ce8c8",
       "janner-charges-2015",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
@@ -141,25 +145,21 @@
       "ASC-REVIEW-884743856D3E1385",
       "ASC-REVIEW-E5A88F482A22427D",
       "ASC-REVIEW-861EBE2805F13D36",
-      "ASC-REVIEW-DC55A436F8F9A135",
-      "ASC-REVIEW-2FAF91DDDD6143CD",
-      "ASC-REVIEW-9395B56F60B42FEA",
-      "ASC-REVIEW-B6FFC8BFA47BBF5F",
-      "ASC-REVIEW-44C67F19172A6285"
+      "ASC-REVIEW-DC55A436F8F9A135"
     ],
     "metrics": {
       "evidenceCount": 139,
       "primarySourceCount": 31,
-      "disputedClaimCount": 55,
+      "disputedClaimCount": 53,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 31,
-      "moneyRecordCount": 13
+      "relationshipCount": 27,
+      "moneyRecordCount": 15
     },
     "evidenceBasedConclusions": [
       {
         "conclusion": "The indexed record establishes that 31 A/B-grade public-record items are materially relevant to The Death Files.",
-        "evidence": "IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); PANAMERICA COMPUTERS, INC. — Department of Energy (data/weekly-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service (data/weekly-investigation-conclusions.json); Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force (data/live-intel.json)",
+        "evidence": "IICSA documented predatory activities and institutional failures (data/exposure-evidence-ledger.json); INDUSTRIAL BANK — District of Columbia Courts (data/daily-investigation-conclusions.json); PANAMERICA COMPUTERS, INC. — Department of Energy (data/weekly-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service (data/weekly-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -167,8 +167,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Seven Charged for Roles in Fentanyl Drug Trafficking Conspiracy as Part of the Las Vegas Homeland Security Task Force,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "LAS VEGAS – A criminal complaint prepared by Homeland Security Investigations was filed in Las Vegas charging seven individuals for their alleged roles in a fentanyl drug trafficking organization. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Three Members of Florida Keys Cocaine Trafficking Organization Sentenced to Federal Prison,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Three members of a large-scale cocaine trafficking organization operating in the Florida Keys have been sentenced to federal prison for their roles in a years-long conspiracy to distribute cocaine throughout Monroe County. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -178,7 +178,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 31 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 27 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; IICSA documented predatory activities and institutional failures; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Follow The Money Watch; COMCAST GOVERNMENT SERVICES LLC — Department of Defense; FCN, INC. — Court Services and Offender Supervision Agency; FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -193,7 +193,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 31 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 27 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "IICSA documented predatory activities and institutional failures",

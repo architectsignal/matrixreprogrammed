@@ -1,6 +1,6 @@
 # Subject Hub Index
 
-Updated: 2026-08-11T05:05:34.978Z
+Updated: 2026-08-12T05:30:23.963Z
 
 - Epstein / Black File Source Map: subject-epstein-black-file.html / downloads/subject-epstein-black-file.pdf
 - Intelligence Network Starter File: subject-intelligence-network.html / downloads/subject-intelligence-network.pdf

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:01:35.499Z",
+  "generatedAt": "2026-08-12T05:26:21.156Z",
   "pageCount": 133,
   "output": "downloads/production-receipt-email-safety-patch.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Production Receipt Email Safety Patch",
-    "contentHash": "e10867d8904b26b02d7eb6ed33e512e971b8d54e10016b61d62741e4bfe957db",
+    "contentHash": "24ee3a01518af7666bb163b3e23f64e5acf5bc4a3a51532bd128674bfb407ac1",
     "sourceIds": [
       "72ef7895f95288946ccb3cff",
       "26b90533dbf7d2ed42f02de6",
@@ -26,6 +26,12 @@
       "ASC-REVIEW-20316213EFD183CC",
       "1769af26a7bda813406cd8f5",
       "9f77464e401ac59ad1adb812",
+      "crime-state-overlap-2026-08-10-f6376771",
+      "crime-state-overlap-2026-08-10-d2755c34",
+      "crime-state-overlap-2026-08-10-13c7fc4b",
+      "crime-state-overlap-2026-08-10-a0e61bfe",
+      "crime-state-overlap-2026-08-10-86a5887f",
+      "crime-state-overlap-2026-08-10-77c12eff",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
@@ -66,20 +72,23 @@
       "a5e5d4ec4df4352ea242ea3f",
       "360e80c162081c85d2c680ef",
       "ecd4a1111010f13b2d74bf8c",
+      "2609b70f5c1db84a869ac7ca",
+      "crime-state-overlap-2026-08-10-9cf6f0f4",
+      "crime-state-overlap-2026-08-10-015a2455",
+      "crime-state-overlap-2026-08-10-740ed0d1",
+      "crime-state-overlap-2026-08-10-bc7b5d3f",
+      "crime-state-overlap-2026-08-10-6a612d71",
+      "crime-state-overlap-2026-08-10-e90b9744",
+      "crime-state-overlap-2026-08-10-b6533383",
+      "crime-state-overlap-2026-08-10-48c93d8f",
+      "crime-state-overlap-2026-08-10-662a584f",
+      "crime-state-overlap-2026-08-10-e6990f32",
+      "crime-state-overlap-2026-08-10-89cb3112",
+      "crime-state-overlap-2026-08-10-7d922c66",
+      "crime-state-overlap-2026-08-10-c0afc99e",
+      "crime-state-overlap-2026-08-10-9c1855a0",
+      "crime-state-overlap-2026-08-10-5de09a55",
       "source-change-d8732adccaaac4ea6376d2ba",
-      "crime-state-overlap-2026-08-07-bad0acb5",
-      "crime-state-overlap-2026-08-07-adb50e08",
-      "crime-state-overlap-2026-08-07-8418d23a",
-      "crime-state-overlap-2026-08-07-51c2b30a",
-      "crime-state-overlap-2026-08-07-dc3f30ce",
-      "crime-state-overlap-2026-08-07-a2296147",
-      "crime-state-overlap-2026-08-07-151b6c33",
-      "crime-state-overlap-2026-08-07-ab764161",
-      "crime-state-overlap-2026-08-07-f2fd0a89",
-      "crime-state-overlap-2026-08-07-7e664ee5",
-      "crime-state-overlap-2026-08-07-4f6b78a3",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
-      "crime-state-overlap-2026-08-07-0aa1dddd",
       "ASC-REVIEW-DA07BCFBB726AA49",
       "ASC-REVIEW-CFB2B8804532DFFC",
       "ASC-REVIEW-45635942D9BD8BFF",
@@ -137,30 +146,21 @@
       "ASC-REVIEW-B5A7582A4286A663",
       "ASC-REVIEW-16C81ABB8280B33F",
       "ASC-REVIEW-B6CA713526831DEB",
-      "ASC-REVIEW-54C7773F8BEDE2F4",
-      "ASC-REVIEW-603C7E693C77AF6C",
-      "ASC-REVIEW-8F441C443ED90227",
-      "ASC-REVIEW-DEA5865B50E63221",
-      "ASC-REVIEW-EEC0192F2AF2FCFB",
-      "ASC-REVIEW-6B883D09C63ED673",
-      "ASC-REVIEW-1CDBDA84057D802E",
-      "ASC-REVIEW-5F2C7C064DEAB967",
-      "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621"
+      "ASC-REVIEW-54C7773F8BEDE2F4"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 20,
-      "disputedClaimCount": 115,
-      "newEntityCount": 0,
+      "primarySourceCount": 28,
+      "disputedClaimCount": 107,
+      "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 111,
-      "moneyRecordCount": 83
+      "relationshipCount": 110,
+      "moneyRecordCount": 77
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 20 A/B-grade public-record items are materially relevant to Production Receipt Email Safety Patch.",
-        "evidence": "Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json)",
+        "conclusion": "The indexed record establishes that 28 A/B-grade public-record items are materially relevant to Production Receipt Email Safety Patch.",
+        "evidence": "Middle District of Florida Agencies Receive $3.5 Million to Improve Safety (data/latest-public-drops.json); One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply (data/latest-public-drops.json); Rio Grande City man sentenced for soliciting sexually explicit images of minors (data/latest-public-drops.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/latest-public-drops.json); Veloxis Pharmaceuticals Agrees to Pay $46 Million to Resolve Criminal and Civil Liability for Kickback Scheme (data/latest-public-drops.json); Veloxis Pharmaceuticals Agrees to Pay Over $46M to Resolve Criminal and Civil Liability for Kickback Schemes (data/latest-public-drops.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,8 +168,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “August Underway with 271 New Federal Immigration Cases in Western District of Texas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Federal prosecutors in the Western District of Texas filed 271 new immigration and immigration-related criminal cases from July 31 through August 6 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Middle District of Florida Agencies Receive $3.5 Million to Improve Safety,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Tampa, FL ―The Bureau of Justice Assistance, a component under the Department of Justice’s Office of Justice Programs, awarded almost $290 million to support state, local, and tribal governments in criminal justice activities to keep American communities safe. More than $3.5 million of this amount has been awarded to law enforcement agencies throughout the Middle District of Florida. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 111 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 110 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: UK Serious Fraud Office — News And Communications; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Treasury OFAC — Recent Actions",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 111 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 110 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T06:47:07.468Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

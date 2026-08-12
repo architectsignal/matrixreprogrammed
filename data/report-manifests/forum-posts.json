@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-11T04:57:14.764Z",
+  "generatedAt": "2026-08-12T05:21:59.183Z",
   "pageCount": 134,
   "output": "downloads/forum-posts.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Forum Posts Export",
-    "contentHash": "9561086aaffa55cc9a0f8f06a4a22f97c41cfd56be7f30d31fa9782de54343c0",
+    "contentHash": "a601a23428ef68d441e38ee26e2d1e21fdca31c55eb02a5e3cd1eab2e0af618d",
     "sourceIds": [
       "3a425f0d5d683952bc0ad7ac",
       "aa93ff989cf62abb814747c9",
       "360e80c162081c85d2c680ef",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "71e0563ca7b139c37c302956",
       "6188547d91106e0f9d3bce50",
       "19ae23289f4be13ad5f7e317",
@@ -35,6 +35,7 @@
       "ASC-REVIEW-33FA083D170CBDB5",
       "ASC-REVIEW-45ACC28AC220EA79",
       "ASC-REVIEW-8D34DAEE930AC84F",
+      "d0b647e325275daa6d824a49",
       "8165fb4ec7543f1da0762496",
       "16cde9bd4c87e916ff1e4fb7",
       "bbf59ae4094608bcd2c37305",
@@ -43,10 +44,7 @@
       "1769af26a7bda813406cd8f5",
       "jeffrey-epstein",
       "eb3448928554960651da56f6",
-      "crime-state-overlap-2026-08-07-bad0acb5",
-      "crime-state-overlap-2026-08-07-f2fd0a89",
-      "crime-state-overlap-2026-08-07-7e664ee5",
-      "crime-state-overlap-2026-08-07-dad9e9ec",
+      "cee347fbc3752c6e0f890457",
       "7d7ccb5b896a02cf45094879",
       "epstein-nda-settlement-protection-lane-2026-06-26",
       "ASC-REVIEW-884743856D3E1385",
@@ -146,30 +144,32 @@
       "ASC-REVIEW-519E4E9ACC70E37D",
       "ASC-REVIEW-21E454816F050A34",
       "ASC-REVIEW-32EB49F960CA0D1D",
-      "ASC-REVIEW-89E0DBBB041A3168"
+      "ASC-REVIEW-89E0DBBB041A3168",
+      "ASC-REVIEW-BC92D8AABD2393C5",
+      "ASC-REVIEW-F2DB3AB7FA9D7B0C"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 8,
-      "disputedClaimCount": 106,
+      "primarySourceCount": 4,
+      "disputedClaimCount": 110,
       "newEntityCount": 3,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 36,
-      "moneyRecordCount": 36
+      "relationshipCount": 32,
+      "moneyRecordCount": 37
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 8 A/B-grade public-record items are materially relevant to Forum Posts Export.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); August Underway with 271 New Federal Immigration Cases in Western District of Texas (data/latest-public-drops.json); Illegal Alien from Ecuador Caught with Hidden App Containing Child Pornography, Will Spend 10 Years in Federal Prison (data/latest-public-drops.json); Illegal Alien from Honduras Sentenced for Drug Trafficking in Utah (data/latest-public-drops.json)",
+        "conclusion": "The indexed record establishes that 4 A/B-grade public-record items are materially relevant to Forum Posts Export.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 92,
+        "confidence": 84,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “August Underway with 271 New Federal Immigration Cases in Western District of Texas,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Federal prosecutors in the Western District of Texas filed 271 new immigration and immigration-related criminal cases from July 31 through August 6 This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 36 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 32 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; General Assembly LIVE: Debating US sanctions against Cuba; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Security Council LIVE: Spotlight on Israeli settlements in occupied Palestinian territory; Intelligence Network Pack; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Follow The Money Watch",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 36 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 32 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "General Assembly LIVE: Debating US sanctions against Cuba",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

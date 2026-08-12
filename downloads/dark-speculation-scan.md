@@ -1,6 +1,6 @@
 # Dark Speculation Weekly Scan
 
-Updated: 2026-08-11T05:05:35.073Z
+Updated: 2026-08-12T05:30:24.060Z
 
 Boundary: This page tracks dark claims, myths, occult motifs, public-record-adjacent allegations, control-system theories, and internet speculation. It does not present these claims as fact. Names, symbols, rumours, search results, photos, coincidences, and associations are not proof. Use the claim classifier and the Control System Tracker before belief.
 
@@ -305,7 +305,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Mind Control
 - Label: internet mythology
-- Matches: 8
+- Matches: 6
 - Boundary: Requires careful sourcing; do not present internet lore as confirmed.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -316,7 +316,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Media / Psyops
 - Label: symbolic/occult speculation
-- Matches: 2
+- Matches: 4
 - Boundary: Fiction resembling events does not prove foreknowledge.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -327,7 +327,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Media / Psyops
 - Label: symbolic/occult speculation
-- Matches: 5
+- Matches: 3
 - Boundary: Aesthetic symbolism is not proof of ritual control.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need records showing mechanism, actor, date, funding, enforcement and a direct line from claim to action.
@@ -349,7 +349,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Tech / Psyops
 - Label: internet mythology
-- Matches: 7
+- Matches: 8
 - Boundary: Patents or concepts do not prove mass deployment.
 - Research brief: Separate known public programs, patents, platform incentives, academic research, marketing psychology and claims of deployed covert systems.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.
@@ -514,7 +514,7 @@ Boundary: This page tracks dark claims, myths, occult motifs, public-record-adja
 
 - Category: Hidden History
 - Label: internet mythology
-- Matches: 4
+- Matches: 2
 - Boundary: Requires verifiable archaeology, not screenshots or recycled images.
 - Research brief: Use primary documents, archaeology, archive references, provenance, dating methods and expert disagreement; screenshots are not enough.
 - Support standard: Would need original documents, verified images/video metadata, official records, named witnesses, or physical evidence that survives debunking.

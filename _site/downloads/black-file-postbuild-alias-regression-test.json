@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-09T05:10:07.414Z",
+  "generatedAt": "2026-08-11T05:12:53.235Z",
   "fixtureFirstPass": {
     "label": "fixture-first-pass",
     "sourceHash": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
@@ -125,6 +125,68 @@
       }
     ]
   },
+  "fixtureRootSourceRecovery": {
+    "label": "fixture-root-source-recovery",
+    "sourceHash": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+    "surfaces": [
+      {
+        "relative": "black-file.html",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "black-file",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file.html",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      },
+      {
+        "relative": "_site/black-file",
+        "sha256": "51d48d332f30eb4ffd3cc414e97350f2e27da7b45f343f7f664e4124fd6c15f1",
+        "checks": {
+          "byteIdentical": true,
+          "oneH1": true,
+          "oneHero": true,
+          "oneRequest": true,
+          "genericIdCount": 0,
+          "genericAriaCount": 0,
+          "canonicalIdCount": 1,
+          "canonicalAriaCount": 1
+        }
+      }
+    ]
+  },
   "repository": {
     "label": "repository-postbuild-surfaces",
     "sourceHash": "37dd1d71401d657fe89961730ca9c835dbfa3d6168f43f689579ff0e9a9b9966",
@@ -187,5 +249,5 @@
       }
     ]
   },
-  "boundary": "The regression deliberately seeds duplicate generic and page-specific pathway IDs, then proves one deterministic page-specific ID across source, root extensionless, _site HTML and _site extensionless aliases. Repeated finalization is byte-stable."
+  "boundary": "The regression deliberately seeds duplicate generic and page-specific pathway IDs, proves repeat-safe synchronization, corrupts only root black-file.html with non-HTML, proves recovery from a valid sibling, then verifies one deterministic page-specific ID across source, root extensionless, _site HTML and _site extensionless aliases."
 }

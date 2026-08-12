@@ -1,15 +1,14 @@
 {
-  "generatedAt": "2026-08-11T05:00:34.564Z",
-  "pageCount": 137,
+  "generatedAt": "2026-08-12T05:25:19.928Z",
+  "pageCount": 136,
   "output": "downloads/paypal-voluntary-support-patch.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Paypal Voluntary Support Patch",
-    "contentHash": "3c5d1fb7e3ba84b1bed90d59307c42c23d8a2d88d2df0c6646ded84a798701d6",
+    "contentHash": "2cc002feaa7326ec4fafec582b64ecf52a5c9978402948d32413dae954fd923d",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
       "71e0563ca7b139c37c302956",
-      "4c1d46d9bcb8caa374dec7d2",
       "1769af26a7bda813406cd8f5",
       "4c372edcf20b760ae3305f10",
       "ca92a54bb69eb2504c76e56e",
@@ -21,7 +20,7 @@
       "d77b99424431ead891074ef0",
       "a33968b32fce32bd9d6523f6",
       "fe51591d2f98b1e8140add7f",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-45635942D9BD8BFF",
       "ASC-REVIEW-7B1A15ED77443F13",
       "a27dd3c9a4cf6bbd952989d3",
@@ -31,8 +30,8 @@
       "f73c11ef3163b1800592aabe",
       "b49c319c09a07b245b24f74a",
       "1583ed9e90a5874047a33041",
-      "c673456bbe77dbb29e43ac7d",
       "366686df53f6dfd25d3f0ea4",
+      "c673456bbe77dbb29e43ac7d",
       "e3b055a4afb19163268d7257",
       "a103f2650e31fc92fa3688e6",
       "ec968f2ec6ba82128b4cd91b",
@@ -47,6 +46,7 @@
       "7421c8730d950627b0da1b3d",
       "d3589cf045e6d530b37381a9",
       "21ae89a0f8533e03e261f18c",
+      "1c0cca9ff329dd06d5408693",
       "228770c420a004608c7b13f9",
       "8737454dea4463f85583fbd4",
       "3238162301d466634ccd3040",
@@ -84,11 +84,14 @@
       "f8da9551192fb7f98b4efa86",
       "275d6c3caca158f7a3e15780",
       "9e8903fd8dfa9b54a1d6db30",
-      "consequence-crime-state-overlap-2026-08-07-eea3ce1d",
+      "consequence-crime-state-overlap-2026-08-10-740ed0d1",
+      "consequence-crime-state-overlap-2026-08-10-e6990f32",
+      "consequence-crime-state-overlap-2026-08-10-9c1855a0",
       "6d665d935673091233751767",
       "360e80c162081c85d2c680ef",
       "bdd7e454126ebfa6319a594c",
       "88ef9baf356c096816236956",
+      "crime-state-overlap-2026-08-11-0708ab9e",
       "crime-state-overlap-2026-08-10-f6376771",
       "source-change-d8732adccaaac4ea6376d2ba",
       "source-change-ea3afacb89f4f277c87d1a79",
@@ -141,24 +144,21 @@
       "ASC-REVIEW-FE3653EEB8123DA6",
       "ASC-REVIEW-72A2357084C62D28",
       "ASC-REVIEW-0D4E0949E1727957",
-      "ASC-REVIEW-DC55A436F8F9A135",
-      "ASC-REVIEW-2721CEDC4D6A57D9",
-      "ASC-REVIEW-C3297FF92B950118",
-      "ASC-REVIEW-A8D2D2229B2E32AE"
+      "ASC-REVIEW-DC55A436F8F9A135"
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 50,
-      "disputedClaimCount": 81,
+      "primarySourceCount": 53,
+      "disputedClaimCount": 78,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 84,
-      "moneyRecordCount": 72
+      "relationshipCount": 86,
+      "moneyRecordCount": 71
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 50 A/B-grade public-record items are materially relevant to Paypal Voluntary Support Patch.",
-        "evidence": "Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); ANSYS INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 53 A/B-grade public-record items are materially relevant to Paypal Voluntary Support Patch.",
+        "evidence": "COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); ANSYS INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json); COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency (data/weekly-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -166,8 +166,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Middle District of Florida Agencies Receive $3.5 Million to Improve Safety,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Tampa, FL ―The Bureau of Justice Assistance, a component under the Department of Justice’s Office of Justice Programs, awarded almost $290 million to support state, local, and tribal governments in criminal justice activities to keep American communities safe. More than $3.5 million of this amount has been awarded to law enforcement agencies throughout the Middle District of Florida. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Northern District of Ohio Agencies Receive More Than $4M in Grant Awards to Support Criminal Justice Activities,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "The Bureau of Justice Assistance, a component under the Department of Justice’s Office of Justice Programs, awarded almost $290 million to support state, local, and tribal governments in criminal justice activities to keep American communities safe. Of this amount, more than $4 million has been awarded to agencies in the Northern District of Ohio including in Akron, Cleveland, Canton, Lima, Lorain, Toledo, Warren, Youngstown, Lake County, and Mahoning County. This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -177,7 +177,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 84 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 86 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; Follow The Money Watch; ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration; SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency; CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency; COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency; ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration; GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC. — National Transportation Safety Board",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -192,7 +192,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 84 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 86 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "Follow The Money Watch",

@@ -1,15 +1,17 @@
 {
-  "generatedAt": "2026-08-11T05:02:07.352Z",
+  "generatedAt": "2026-08-12T05:26:53.545Z",
   "pageCount": 138,
   "output": "downloads/public-runtime-controls-output.pdf",
   "report": {
-    "version": 19,
+    "version": 20,
     "title": "Public Runtime Controls Output",
-    "contentHash": "e74128b50d71c9d3210716a637620c9b418e92344f6be48be90eabb86d30577a",
+    "contentHash": "c92052d531d1fc050c143dd92b295ea7470cd9d9040f31a1d4320ba50c7ee9dd",
     "sourceIds": [
+      "source-change-82b0886fe4735164beacb291",
+      "2609b70f5c1db84a869ac7ca",
+      "crime-state-overlap-2026-08-10-d2755c34",
       "source-change-d8732adccaaac4ea6376d2ba",
       "source-change-c9bd018a6544006f1e1f3018",
-      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-7291F43A6B9CBFA6",
       "ASC-REVIEW-D0716C592606533B",
       "ASC-REVIEW-EEA884898BA116BF",
@@ -20,13 +22,11 @@
       "ASC-REVIEW-11047BCC813B0EA8",
       "4ae6a940305d15da61333450",
       "6f6462b75cdb929e0acbcde7",
-      "crime-state-overlap-2026-08-10-d2755c34",
+      "source-change-6d75003b4825f307f6df306e",
+      "source-change-611d1a7edb4b0b2535b9708c",
+      "source-change-529f3ec81072aa54c5515b3e",
       "source-change-ec7f3126268880506fc4f0ed",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-8057d390af5011731564579c",
-      "source-change-871096b65a90301ef4a126c3",
-      "e4ca191d7d9f2eddeda78ad3",
-      "source-change-f966f8c917641cd736660f92",
       "ASC-REVIEW-9E85403F3389F334",
       "ASC-REVIEW-640E991C59CBDA5A",
       "ASC-REVIEW-0178D2F659DD4EB6",
@@ -59,11 +59,14 @@
       "511ed227bb4be58b582ebb8d",
       "e3b055a4afb19163268d7257",
       "a33968b32fce32bd9d6523f6",
-      "4c1d46d9bcb8caa374dec7d2",
-      "crime-state-overlap-2026-08-07-8418d23a",
-      "crime-state-overlap-2026-08-07-a2296147",
-      "crime-state-overlap-2026-08-07-7e664ee5",
-      "crime-state-overlap-2026-08-07-eea3ce1d",
+      "crime-state-overlap-2026-08-10-9cf6f0f4",
+      "crime-state-overlap-2026-08-10-bc7b5d3f",
+      "crime-state-overlap-2026-08-10-48c93d8f",
+      "crime-state-overlap-2026-08-10-89cb3112",
+      "crime-state-overlap-2026-08-10-f6376771",
+      "crime-state-overlap-2026-08-10-7d922c66",
+      "crime-state-overlap-2026-08-10-9c1855a0",
+      "crime-state-overlap-2026-08-10-5de09a55",
       "9b6a36dc8fbb0fb10a2c4c7b",
       "d91969cf88008135217d911c",
       "peter-ball-iicsa-support-2019",
@@ -143,24 +146,21 @@
       "ASC-REVIEW-2F50A2BA863FFF4F",
       "ASC-REVIEW-52F3C5EC8401656D",
       "ASC-REVIEW-D13048D78F8EA6E3",
-      "ASC-REVIEW-06F8715410848053",
-      "ASC-REVIEW-8DD2093F6ECB25D1",
-      "ASC-REVIEW-26C98CAD8AA9CE0A",
-      "ASC-REVIEW-D921C72A4BA2FDF3"
+      "ASC-REVIEW-06F8715410848053"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 21,
-      "disputedClaimCount": 105,
+      "primarySourceCount": 24,
+      "disputedClaimCount": 103,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 76,
+      "relationshipCount": 78,
       "moneyRecordCount": 59
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 21 A/B-grade public-record items are materially relevant to Public Runtime Controls Output.",
-        "evidence": "content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/weekly-investigation-conclusions.json); One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply (data/live-intel.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: Federal Register — Latest Documents (data/daily-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 24 A/B-grade public-record items are materially relevant to Public Runtime Controls Output.",
+        "evidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply (data/latest-public-drops.json); content changed: U.S. Department of Justice Office of Inspector General — Reports (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings (data/daily-investigation-conclusions.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/daily-investigation-conclusions.json); content changed: UK Serious Fraud Office — News And Communications (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -179,8 +179,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 76 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions; content changed: UK Serious Fraud Office — News And Communications",
+        "inference": "The indexed set contains 78 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings; content changed: Federal Register — Latest Documents; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Securities and Exchange Commission — Litigation Releases; content changed: U.S. Treasury OFAC — Recent Actions",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -194,16 +194,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 76 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 78 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
+          "One Year After Federal Law Enforcement Surge, D.C. Is Safer as Crime Declines Sharply",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
           "content changed: Federal Register — Latest Documents",
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
           "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-          "content changed: U.S. Treasury OFAC — Recent Actions",
-          "content changed: UK Serious Fraud Office — News And Communications"
+          "content changed: U.S. Treasury OFAC — Recent Actions"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",

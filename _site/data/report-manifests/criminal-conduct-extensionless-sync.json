@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:52:56.807Z",
-  "pageCount": 133,
+  "generatedAt": "2026-08-12T05:17:39.484Z",
+  "pageCount": 131,
   "output": "downloads/criminal-conduct-extensionless-sync.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Criminal Conduct Extensionless Sync",
-    "contentHash": "61c6f59315d12a6cc3f8273bcead32615b5b695a928c83626a7c00b92160aab5",
+    "contentHash": "65fb0b3e3e670b15f2e2f1ae33d25d099c5fa33626192f763bebcd765e624a1f",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
       "ASC-REVIEW-E6D70696A19B3CDA",
@@ -30,7 +30,7 @@
       "ASC-REVIEW-E8F3DDB7E3724A74",
       "535d2f595c3ec1621e13dd0f",
       "e72d22f4f28eb53e3173d0a6",
-      "e4ca191d7d9f2eddeda78ad3",
+      "2609b70f5c1db84a869ac7ca",
       "ASC-REVIEW-2C44CF7E385BEC5A",
       "ASC-REVIEW-40F8CB67FBBBA1E0",
       "ASC-REVIEW-7181CCFC5771EBAD",
@@ -47,9 +47,6 @@
       "EP-AI-004",
       "72ef7895f95288946ccb3cff",
       "b2892adcc3f96c248535748e",
-      "crime-state-overlap-2026-08-10-b6533383",
-      "crime-state-overlap-2026-08-10-5de09a55",
-      "crime-state-overlap-2026-08-10-a0e61bfe",
       "aa93ff989cf62abb814747c9",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-884743856D3E1385",
@@ -146,30 +143,33 @@
       "ASC-REVIEW-F2DB3AB7FA9D7B0C",
       "ASC-REVIEW-67649B242FE10338",
       "ASC-REVIEW-2FCF46D10397E3D7",
-      "ASC-REVIEW-5B847FFDD366016D"
+      "ASC-REVIEW-5B847FFDD366016D",
+      "ASC-REVIEW-748C61B26DB96ACF",
+      "ASC-REVIEW-74A52CA327CA4263",
+      "ASC-REVIEW-5A9849A1E3C35A91"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 5,
-      "disputedClaimCount": 117,
+      "primarySourceCount": 2,
+      "disputedClaimCount": 120,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 27,
+      "relationshipCount": 24,
       "moneyRecordCount": 26
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 5 A/B-grade public-record items are materially relevant to Criminal Conduct Extensionless Sync.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json); Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation (data/live-intel.json); Unlicensed Tour Operator Charged For Causing Deaths Of Five-Month-Old Infant And 27-Year-Old Woman In New York Harbor Boat Capsizing (data/live-intel.json); USAO-KS files denaturalization case against man ordered deported then used a false identity to become a U.S. citizen (data/live-intel.json)",
+        "conclusion": "The indexed record establishes that 2 A/B-grade public-record items are materially relevant to Criminal Conduct Extensionless Sync.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); Epstein settlement and NDA lane moves into oversight focus (data/intel-vault.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 86,
+        "confidence": 80,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
         "alternativeInterpretation": "The records may document separate events rather than a coordinated system.",
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Illegal Alien Convicted in Homeland Security Task Force Case Involving Deadly Alien Smuggling Operation,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "Juan Carlos Lara-Quezada, an illegal alien from Mexico, was convicted of five counts for his role in a deadly conspiracy to smuggle and harbor illegal aliens This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Epstein settlement and NDA lane moves into oversight focus,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Reporting says private settlements and NDAs involving Epstein accusers and associates are now part of the public-record oversight question. Settlements are not admissions of guilt. The deeper institutional record may sit behind private agreements, confidentiality clauses, settlement memos, legal correspondence, and subpoena fights.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 27 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 24 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Intelligence Network Pack; Intelligence Network Map; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Follow The Money Watch; Blackwater / Xe / Academi / Constellis lineage → Intelligence Adjacent Systems: execution layer; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -187,14 +187,14 @@
           "Independent events grouped under a broad tracking subject",
           "Reporting density without common control"
         ],
-        "confidence": 68,
+        "confidence": 46,
         "evidenceThatWouldConfirmOrWeaken": "Compare primary communications, payments, contracts, ownership, dates and sworn testimony for evidence of common direction or purpose."
       }
     ],
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 27 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 24 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Intelligence Network Pack",
           "Intelligence Network Map",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

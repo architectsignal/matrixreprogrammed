@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:54:13.036Z",
-  "pageCount": 89,
+  "generatedAt": "2026-08-12T05:18:55.892Z",
+  "pageCount": 90,
   "output": "downloads/death-files-pressure-test.pdf",
   "report": {
-    "version": 16,
+    "version": 17,
     "title": "Death Files Pressure Test",
-    "contentHash": "781c2c79dda309e409e97f7114491fa4b5ef88176f2c16792c0db8904fc99a48",
+    "contentHash": "0b49dd2b1fe36d3199918fcb2d729552220756752539612fade2f864fecca213",
     "sourceIds": [
       "f23b46f2bc4add9b859f5a15",
       "88269481cf5b04b7b0f83b58",
@@ -58,7 +58,8 @@
       "96b50a0ea1ae9a6b5767f2c2",
       "cb7ce67fe443d7c98b486d34",
       "18d7736864f2c8ac625f018d",
-      "crime-state-overlap-2026-08-07-6fc023b0",
+      "crime-state-overlap-2026-08-11-d7186992",
+      "crime-state-overlap-2026-08-11-32020221",
       "david-james-clarke-conviction-2026",
       "abdul-halim-khan-conviction-2026",
       "huw-edwards-iico-conviction-2024",
@@ -93,20 +94,22 @@
       "epstein-federal-indictment-2019",
       "deutsche-bank-epstein-dfs-2020",
       "0a84f04558f5013c0790203c",
+      "crime-state-overlap-2026-08-11-4f488a40",
+      "crime-state-overlap-2026-08-11-35be2c84",
+      "crime-state-overlap-2026-08-11-37d80761",
+      "crime-state-overlap-2026-08-11-a4267456",
+      "crime-state-overlap-2026-08-11-38bd17df",
+      "crime-state-overlap-2026-08-11-902ce8c8",
+      "2609b70f5c1db84a869ac7ca",
       "crime-state-overlap-2026-08-10-9cf6f0f4",
       "crime-state-overlap-2026-08-10-5de09a55",
       "crime-state-overlap-2026-08-10-a0e61bfe",
-      "e4ca191d7d9f2eddeda78ad3",
-      "crime-state-overlap-2026-08-07-adb50e08",
-      "crime-state-overlap-2026-08-07-f2fd0a89",
-      "crime-state-overlap-2026-08-07-4f6b78a3",
-      "crime-state-overlap-2026-08-07-38ebb2ec",
-      "crime-state-overlap-2026-08-07-b5c464b8",
       "conor-mcgrath-iico-conviction-2026",
       "maxwell-appeal-2025",
       "adam-taylor-nca-conviction-2024",
       "r-kelly-illinois-acquittals-2022",
       "ASC-REVIEW-40F8CB67FBBBA1E0",
+      "d0b647e325275daa6d824a49",
       "c8eeb5656d86646c1e6dc75c",
       "eda53ad65d382819ea249e14",
       "4ae6a940305d15da61333450",
@@ -117,6 +120,7 @@
       "665a5072d96b9757a6ee9d2d",
       "4e5cc6449bcc7ddf1c878ee0",
       "7419d29b3a469a40362a11f4",
+      "529f3ec81072aa54c5515b3e",
       "c9bd018a6544006f1e1f3018",
       "871096b65a90301ef4a126c3",
       "71e0563ca7b139c37c302956",
@@ -125,24 +129,20 @@
       "701229696b57f88191742d4f",
       "1c352ab364fbfca06ab12a57",
       "d7398c0c72a085a05c90422c",
-      "5ce17839086eddf839270b1a",
-      "9848ec4b4c3f6c2693269839",
-      "c1520a15d6e62871a66c558e",
-      "a5e5d4ec4df4352ea242ea3f",
-      "5a6e7289054e52bb115d24a8"
+      "5ce17839086eddf839270b1a"
     ],
     "metrics": {
       "evidenceCount": 123,
-      "primarySourceCount": 75,
-      "disputedClaimCount": 11,
+      "primarySourceCount": 74,
+      "disputedClaimCount": 12,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 18,
+      "relationshipCount": 20,
       "moneyRecordCount": 3
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 75 A/B-grade public-record items are materially relevant to Death Files Pressure Test.",
+        "conclusion": "The indexed record establishes that 74 A/B-grade public-record items are materially relevant to Death Files Pressure Test.",
         "evidence": "content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json); content changed: U.S. Securities and Exchange Commission — Litigation Releases (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -151,8 +151,8 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "After Runaway Ship Incident in 2024 in Charleston, South Carolina, Vessel Operator and Chief Engineer Sentenced This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
+        "conclusion": "The most defensible current assessment is based on “Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "Jackson, TN – Travis Ray Baird, 40 , of Dyer, Tennessee, was sentenced to 120 months’ imprisonment for distributing child pornography in December 2024. United States Attorney D. Michael Dunavant, of the Western District of Tennessee, announced the sentence today.The investigation in this case revealed that Baird was distributing child sexual abuse material on the BitTorrent network using his... This current source item can be tested against the underlying record and connected to the relevant evidence lane.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 93,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
@@ -162,8 +162,8 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 18 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
-        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; South Carolina Man Sentenced to 18.5 Years for 2022 Shooting in Adams Morgan; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Meetings and philanthropic-fundraising discussions, 2011–2014; New York DFS enforcement action concerning the bank's Epstein relationship",
+        "inference": "The indexed set contains 20 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "supportingEvidence": "IICSA documented predatory activities and institutional failures; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM; Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography; New York Man Charged With Child Exploitation Offense; Westminster inquiry examined political and policing responses; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Meetings and philanthropic-fundraising discussions, 2011–2014",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
           "Ordinary professional or institutional overlap",
@@ -177,16 +177,16 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 18 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 20 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "IICSA documented predatory activities and institutional failures",
           "Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
-          "South Carolina Man Sentenced to 18.5 Years for 2022 Shooting in Adams Morgan",
+          "Gibson County Man Sentenced to 10 Years in Federal Prison for Distribution of Child Pornography",
+          "New York Man Charged With Child Exploitation Offense",
           "Westminster inquiry examined political and policing responses",
           "Official health investigations documented abuse and enabling access",
           "Broadmoor investigation examined Savile's access and abuse",
-          "Meetings and philanthropic-fundraising discussions, 2011–2014",
-          "New York DFS enforcement action concerning the bank's Epstein relationship"
+          "Meetings and philanthropic-fundraising discussions, 2011–2014"
         ],
         "counterEvidence": [
           "No indexed record currently proves a coordinated hidden command structure.",
@@ -201,6 +201,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T12:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T12:00:00.000Z"
   }
 }

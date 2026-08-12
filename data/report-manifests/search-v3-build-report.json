@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T05:03:03.095Z",
+  "generatedAt": "2026-08-12T05:27:50.134Z",
   "pageCount": 91,
   "output": "downloads/search-v3-build-report.pdf",
   "report": {
-    "version": 20,
+    "version": 21,
     "title": "Search V3 Build Report",
-    "contentHash": "02181579eaae168083da54ec5f658aa14e50561b10243e3418a661a75abe09ca",
+    "contentHash": "95e981761ad0f003b1e9081a43bc380044f71ef877564919903bdf27a6b3139d",
     "sourceIds": [
       "janner-iicsa-2022",
       "nassar-fbi-oig-2021",
@@ -37,6 +37,7 @@
       "f44c3c7309a5f0779a57e655",
       "275d6c3caca158f7a3e15780",
       "1769af26a7bda813406cd8f5",
+      "companies-aapl",
       "360e80c162081c85d2c680ef",
       "a71a8be091652489b843ecf6",
       "06baa45bea3e2e15eb80eff9",
@@ -82,6 +83,7 @@
       "deb382cdbfe57b57793d739e",
       "4961972398d896435d33f3f7",
       "9e8310c49b990aa62d2b0921",
+      "529f3ec81072aa54c5515b3e",
       "8057d390af5011731564579c",
       "871096b65a90301ef4a126c3",
       "deutsche-bank-epstein-dfs-2020",
@@ -142,22 +144,20 @@
       "foundations-fondation-de-france",
       "foundations-azim-premji-foundation",
       "foundations-tata-trusts",
-      "foundations-templeton-world-charity-foundation",
-      "foundations-john-templeton-foundation",
-      "foundations-walton-family-foundation"
+      "foundations-templeton-world-charity-foundation"
     ],
     "metrics": {
       "evidenceCount": 138,
-      "primarySourceCount": 112,
+      "primarySourceCount": 111,
       "disputedClaimCount": 3,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 12,
-      "moneyRecordCount": 69
+      "relationshipCount": 11,
+      "moneyRecordCount": 68
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 112 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
+        "conclusion": "The indexed record establishes that 111 A/B-grade public-record items are materially relevant to Search V3 Build Report.",
         "evidence": "IICSA found serious institutional-response failures (data/criminal-conduct-registry.json); DOJ OIG documented FBI handling failures (data/criminal-conduct-registry.json); DOJ review found poor judgment in the 2006–08 federal resolution (data/criminal-conduct-registry.json); Westminster inquiry examined political and policing responses (data/criminal-conduct-registry.json); IICSA found serious Church failures and examined prominent support (data/criminal-conduct-registry.json); IICSA documented predatory activities and institutional failures (data/criminal-conduct-registry.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -177,7 +177,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 12 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 11 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Westminster inquiry examined political and policing responses; IICSA documented predatory activities and institutional failures; Official health investigations documented abuse and enabling access; Broadmoor investigation examined Savile's access and abuse; Conviction for indecent images and misconduct in public office; Follow The Money Watch; ECB says cash acceptance declined from 96% to 88% between 2021 and 2024 while supporting legal protection for cash; Ten-year federal sentence for transporting a minor for illegal sexual conduct and possessing CSAM",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -192,7 +192,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 12 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 11 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Westminster inquiry examined political and policing responses",
           "IICSA documented predatory activities and institutional failures",

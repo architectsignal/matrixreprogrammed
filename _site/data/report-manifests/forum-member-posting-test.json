@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-11T04:57:11.082Z",
+  "generatedAt": "2026-08-12T05:21:55.465Z",
   "pageCount": 125,
   "output": "downloads/forum-member-posting-test.pdf",
   "report": {
-    "version": 17,
+    "version": 18,
     "title": "Forum Member Posting Test",
-    "contentHash": "1e86a9bb28f76c6e0dc121b3e67aea7fe9350713ce7317ca0ccce886310d5fc7",
+    "contentHash": "bd48fafd72ece053dc8ff24475c5c64bbf4287ef70739a301359f33b48ef5524",
     "sourceIds": [
       "26b90533dbf7d2ed42f02de6",
+      "2609b70f5c1db84a869ac7ca",
       "c1520a15d6e62871a66c558e",
-      "e4ca191d7d9f2eddeda78ad3",
       "9cb9631a2f2749b86bc69e0a",
       "74fb2863cc9a8120f3c68b67",
       "44505b4afb60938c8117ad31",
@@ -23,6 +23,7 @@
       "ASC-REVIEW-E6C400911BD1A158",
       "ASC-REVIEW-7B1A15ED77443F13",
       "ASC-REVIEW-20316213EFD183CC",
+      "529f3ec81072aa54c5515b3e",
       "9e8903fd8dfa9b54a1d6db30",
       "d7398c0c72a085a05c90422c",
       "9848ec4b4c3f6c2693269839",
@@ -145,21 +146,20 @@
       "ASC-REVIEW-1CDBDA84057D802E",
       "ASC-REVIEW-5F2C7C064DEAB967",
       "ASC-REVIEW-008D94FCB408C868",
-      "ASC-REVIEW-5F86F35C103C9621",
-      "ASC-REVIEW-E48690C00EA31793"
+      "ASC-REVIEW-5F86F35C103C9621"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 14,
-      "disputedClaimCount": 112,
+      "primarySourceCount": 15,
+      "disputedClaimCount": 111,
       "newEntityCount": 2,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 107,
-      "moneyRecordCount": 88
+      "relationshipCount": 106,
+      "moneyRecordCount": 87
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 14 A/B-grade public-record items are materially relevant to Forum Member Posting Test.",
+        "conclusion": "The indexed record establishes that 15 A/B-grade public-record items are materially relevant to Forum Member Posting Test.",
         "evidence": "content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json); content changed: European Public Prosecutor's Office — News (data/source-change-ledger.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 107 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 106 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint; Influence should be mapped through infrastructure, filings and contracts.; The strongest public pattern is convergence across access systems.; Illuminati / Secret Society Theory; Illuminati / Secret Society Theory; Knights Templar Legacy Claims → Freemasonry Ritual Echoes: overlap hint; The strongest public pattern is convergence across access systems.; content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 107 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 106 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Freemasonry → Politics Where Membership Is Publicly Documented: overlap hint",
           "Influence should be mapped through infrastructure, filings and contracts.",
@@ -218,6 +218,6 @@
         "publicationWarning": "This is an investigative hypothesis derived from the available public record. It is not an established fact and must not be presented as proof of criminal conduct or personal guilt."
       }
     ],
-    "intelligenceFreshnessDate": "2026-08-10T00:00:00.000Z"
+    "intelligenceFreshnessDate": "2026-08-11T00:00:00.000Z"
   }
 }

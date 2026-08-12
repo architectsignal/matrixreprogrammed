@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-11T04:56:30.711Z",
+  "generatedAt": "2026-08-12T05:21:14.630Z",
   "pageCount": 140,
   "output": "downloads/exhaustive-public-site-audit.pdf",
   "report": {
-    "version": 9,
+    "version": 10,
     "title": "Exhaustive Public Site Audit",
-    "contentHash": "8fcc17525f7b0622f4d32a6a9c6940be6771033a21db7440fe52b5db5cca20f2",
+    "contentHash": "c65b6db102e8efbf868cb481211969c0282ee917366c0350fce1a61b439ce524",
     "sourceIds": [
       "a4c15f7c3d808369b294115e",
       "26b90533dbf7d2ed42f02de6",
@@ -24,11 +24,6 @@
       "ASC-REVIEW-1EB618A4D39314B4",
       "ASC-REVIEW-848BDB9B5C3EEC1B",
       "360e80c162081c85d2c680ef",
-      "ca92a54bb69eb2504c76e56e",
-      "e3b055a4afb19163268d7257",
-      "d77b99424431ead891074ef0",
-      "8737454dea4463f85583fbd4",
-      "4c1d46d9bcb8caa374dec7d2",
       "ASC-REVIEW-2733D1C88202921D",
       "ASC-REVIEW-5D13FDD470EDF012",
       "ASC-REVIEW-94F3B4C96A469AB3",
@@ -76,15 +71,19 @@
       "dcec2a45ef35362072af05e3",
       "f73c11ef3163b1800592aabe",
       "4c372edcf20b760ae3305f10",
+      "ca92a54bb69eb2504c76e56e",
       "1583ed9e90a5874047a33041",
-      "366686df53f6dfd25d3f0ea4",
+      "e3b055a4afb19163268d7257",
       "7c212daa6802e36f4fe4f000",
       "780e9bdf80820219684ec0cb",
+      "d77b99424431ead891074ef0",
+      "1c0cca9ff329dd06d5408693",
+      "8737454dea4463f85583fbd4",
       "3238162301d466634ccd3040",
+      "source-change-82b0886fe4735164beacb291",
       "source-change-d8732adccaaac4ea6376d2ba",
       "source-change-c9bd018a6544006f1e1f3018",
       "source-change-ea3afacb89f4f277c87d1a79",
-      "source-change-a05ee5719c4986b9a2e665d1",
       "ASC-REVIEW-4D93FE8E0666D181",
       "ASC-REVIEW-BF27AEC65E76AEC9",
       "ASC-REVIEW-8708EF2A4E1C3023",
@@ -146,21 +145,22 @@
       "ASC-REVIEW-FF1A5D475493F22D",
       "ASC-REVIEW-7531D73ADCFB5B91",
       "ASC-REVIEW-E45C21A8CE98987F",
-      "ASC-REVIEW-493ED117CF1C0E91"
+      "ASC-REVIEW-493ED117CF1C0E91",
+      "ASC-REVIEW-0C3383FAE797FF46"
     ],
     "metrics": {
       "evidenceCount": 140,
-      "primarySourceCount": 18,
-      "disputedClaimCount": 117,
+      "primarySourceCount": 17,
+      "disputedClaimCount": 118,
       "newEntityCount": 0,
       "updatedAssessmentCount": 1,
-      "relationshipCount": 68,
-      "moneyRecordCount": 61
+      "relationshipCount": 69,
+      "moneyRecordCount": 62
     },
     "evidenceBasedConclusions": [
       {
-        "conclusion": "The indexed record establishes that 18 A/B-grade public-record items are materially relevant to Exhaustive Public Site Audit.",
-        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ACENTRA HEALTH LLC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); ELECTRICAL EQUIPMENT COMPANY — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json); SIEMENS INDUSTRY SOFTWARE INC. — National Aeronautics and Space Administration (data/weekly-investigation-conclusions.json); Italy: Ten convicted in €100 million VAT fraud case involving plastics trade (data/weekly-investigation-conclusions.json)",
+        "conclusion": "The indexed record establishes that 17 A/B-grade public-record items are materially relevant to Exhaustive Public Site Audit.",
+        "evidence": "content changed: U.S. House Committee on Oversight and Government Reform — Releases (data/source-change-ledger.json); FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); FCN, INC. — Court Services and Offender Supervision Agency (data/daily-investigation-conclusions.json); COMCAST GOVERNMENT SERVICES LLC — Department of Defense (data/daily-investigation-conclusions.json); ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json); HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration (data/daily-investigation-conclusions.json)",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
         "confidence": 96,
         "limitations": "This establishes the existence and content of the cited records, not every allegation, motive, wider network claim or criminal inference attached to the subject.",
@@ -168,10 +168,10 @@
         "changedInThisUpdate": "First recorded assessment"
       },
       {
-        "conclusion": "The most defensible current assessment is based on “Italy: Ten convicted in €100 million VAT fraud case involving plastics trade,” the strongest indexed record by source grade and evidence status.",
-        "evidence": "News - The independent public prosecution office of the EU - European Union This source belongs in the international-corruption lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
+        "conclusion": "The most defensible current assessment is based on “FIBA TECHNOLOGIES INC — National Aeronautics and Space Administration,” the strongest indexed record by source grade and evidence status.",
+        "evidence": "ASME PRESSURE VESSEL · Amount: 3008000 · Sub-agency: National Aeronautics and Space Administration A dated source update exists and should be compared with prior records. This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
         "evidenceClassification": "ESTABLISHED PUBLIC RECORD",
-        "confidence": 93,
+        "confidence": 84,
         "limitations": "One strong record cannot by itself prove a wider pattern, motive, conspiracy or command structure.",
         "alternativeInterpretation": "The record may have a narrower legal or factual meaning than the surrounding public narrative suggests.",
         "changedInThisUpdate": false
@@ -179,7 +179,7 @@
     ],
     "analyticalInferences": [
       {
-        "inference": "The indexed set contains 68 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
+        "inference": "The indexed set contains 69 relationship, ownership, access, meeting, funding or contract indicators that justify a structured network map.",
         "supportingEvidence": "Matrix Reprogrammed Canonical Intelligence Record; BlackRock → Aladdin Risk And Portfolio Platform: capital layer; BlackRock → Index Funds And Etfs: capital layer; BlackRock → Ishares: capital layer; BlackRock → Private Markets Infrastructure Expansion: capital layer; BlackRock → Proxy Voting Stewardship: capital layer; BlackRock → Public Company Ownership Concentration: capital layer; The strongest public pattern is convergence across access systems.",
         "logicalSteps": "Repeated dated connections can establish a network of contact or institutional overlap. They do not establish coordinated wrongdoing unless direction, purpose and conduct are also evidenced.",
         "alternativeExplanations": [
@@ -194,7 +194,7 @@
     "speculativeConclusions": [
       {
         "hypothesis": "Some documented relationships may form a more structured access, facilitation or protection network than the released public record presently explains.",
-        "whyItIsBeingConsidered": "The indexed set contains 68 repeated relationship or institutional-overlap indicators.",
+        "whyItIsBeingConsidered": "The indexed set contains 69 repeated relationship or institutional-overlap indicators.",
         "supportingIndicators": [
           "Matrix Reprogrammed Canonical Intelligence Record",
           "BlackRock → Aladdin Risk And Portfolio Platform: capital layer",

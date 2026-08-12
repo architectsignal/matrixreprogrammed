@@ -95,6 +95,12 @@ jobs:
         if: github.event_name != 'pull_request'
         id: commit
         run: |
+          set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "Controlled production release freeze active; Search V3 validated locally but will not move main."
+            exit 0
+          fi
           git config user.name "matrix-search-bot"
           git config user.email "actions@github.com"
           git add \

@@ -24,7 +24,7 @@ const SPECIALISTS = Object.freeze({
     label: 'Publisher',
     purpose: 'Turn verified evidence into useful reports, dossiers, alerts and explanations.',
     can_execute_external_actions: false,
-    required_inputs: ['verified_evidence'],
+    required_inputs: ['verified_evidence','auditor_clearance'],
     outputs: ['report_draft','dossier_update','briefing','what_changed']
   },
   growth: {
@@ -54,7 +54,7 @@ const FORBIDDEN = Object.freeze({
   mission_director: ['weaken_policy','move_money','deploy_production','accept_terms','override_auditor'],
   investigator: ['presuppose_guilt','fabricate_evidence','credential_harvesting','access_control_evasion','publish_sensitive_claim'],
   auditor: ['hide_contrary_evidence','lower_evidence_threshold_for_commercial_reason','approve_unsupported_claim'],
-  publisher: ['invent_evidence','publish_unverified_sensitive_claim','change_evidence_strength_for_engagement'],
+  publisher: ['invent_evidence','publish_unverified_sensitive_claim','change_evidence_strength_for_engagement','bypass_auditor_clearance'],
   growth: ['change_evidence_strength','hide_contrary_evidence','fake_scarcity','false_urgency','change_price','move_money','accept_contract'],
   resource_hunter: ['abuse_free_tier','evade_access_controls','accept_terms','create_paid_account','attach_payment_method','transfer_private_prompt'],
   architect: ['deploy_production','weaken_safety_gate','weaken_evidence_gate','change_payment_credentials','disable_rollback']
@@ -103,6 +103,7 @@ export class SpecialistAIDirector {
     const backlog = Math.max(0, Number(signals.investigation_backlog || 0));
     const unverified = Math.max(0, Number(signals.unverified_evidence_count || 0));
     const staleReports = Math.max(0, Number(signals.stale_report_count || 0));
+    const auditorClearedReports = Math.max(0, Number(signals.auditor_cleared_report_count || 0));
     const revenueHealth = clamp(signals.revenue_health ?? 0.5);
     const retentionHealth = clamp(signals.retention_health ?? 0.5);
     const resourcePressure = clamp(signals.resource_pressure ?? 0);
@@ -124,12 +125,17 @@ export class SpecialistAIDirector {
       { unverified_evidence_count: unverified }
     ));
 
-    if (staleReports > 0 && unverified === 0) missions.push(mission(
+    if (staleReports > 0 && auditorClearedReports > 0) missions.push(mission(
       `publish-${now}`,
       'publisher',
-      `Refresh the highest-value stale evidence-backed report from a queue of ${staleReports}.`,
+      `Refresh an auditor-cleared evidence-backed report from a stale queue of ${staleReports}.`,
       'P2',
-      { stale_report_count: staleReports, auditor_gate_required: true }
+      {
+        stale_report_count: staleReports,
+        auditor_cleared_report_count: auditorClearedReports,
+        auditor_gate_required: true,
+        auditor_gate_explicitly_satisfied: true
+      }
     ));
 
     if (revenueHealth < 0.7 || retentionHealth < 0.7) missions.push(mission(
@@ -179,6 +185,7 @@ export class SpecialistAIDirector {
         shared_memory_required: true,
         shared_evidence_graph_required: true,
         auditor_gate_before_publication_required: true,
+        explicit_auditor_clearance_required_for_publisher: true,
         commercial_system_may_change_evidence_strength: false,
         automatic_spending_allowed: false,
         automatic_contract_acceptance_allowed: false,

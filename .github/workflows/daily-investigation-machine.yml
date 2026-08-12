@@ -118,6 +118,10 @@ jobs:
 
       - name: Commit daily investigation outputs
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; daily investigation validated but will not move main."
+            exit 0
+          fi
           git config user.name "matrix-investigation-bot"
           git config user.email "actions@github.com"
           git add \

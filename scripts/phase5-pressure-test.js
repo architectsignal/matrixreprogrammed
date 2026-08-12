@@ -13,6 +13,8 @@ function requireIncludes(file, text, label = text) { if (!exists(file)) return; 
 requireFile('data/ai-answer-engine.json');
 requireFile('scripts/build-phase5-ai-answer-engine.js');
 requireFile('answer-engine.html');
+requireFile('ask-matrix.css');
+requireFile('ask-matrix.js');
 requireFile('search-index.json');
 requireFile('sitemap.xml');
 requireFile('llms.txt');
@@ -26,12 +28,19 @@ const search = exists('search-index.json') ? json('search-index.json') : [];
 if (!Array.isArray(data.rules) || data.rules.length < 7) fail('data/ai-answer-engine.json expected at least 7 answer rules');
 if (answers.length < 12) fail(`data/ai-answer-engine.json expected at least 12 answers, found ${answers.length}`);
 
-requireIncludes('answer-engine.html', 'ANSWER ENGINE', 'AI Answer Engine hero');
-requireIncludes('answer-engine.html', 'AI ANSWER ENGINE STATUS', 'AI Answer Engine status terminal');
-requireIncludes('answer-engine.html', 'Structured Answers', 'Structured Answers section');
+requireIncludes('answer-engine.html', 'ASK MATRIX.', 'Ask Matrix public investigator hero');
+requireIncludes('answer-engine.html', 'ASK MATRIX STATUS', 'Ask Matrix status terminal');
+requireIncludes('answer-engine.html', 'id="ask-matrix-form"', 'Ask Matrix question form');
+requireIncludes('answer-engine.html', 'id="ask-matrix-state"', 'Ask Matrix investigation state');
+requireIncludes('answer-engine.html', 'id="ask-matrix-output"', 'Ask Matrix evidence output');
+requireIncludes('answer-engine.html', 'Existing structured answers', 'legacy structured-answer routes');
 requireIncludes('answer-engine.html', 'Signal Board', 'restored Signal Board nav');
 requireIncludes('answer-engine.html', 'Power Atlas', 'Power Atlas route');
-requireIncludes('answer-engine.html', 'Evidence Vault', 'Evidence Vault route');
+requireIncludes('answer-engine.html', 'evidence-vault.html', 'Evidence Vault route');
+requireIncludes('ask-matrix.js', "fetch('/api/investigate'", 'Ask Matrix investigation submission');
+requireIncludes('ask-matrix.js', 'fetch(`/api/investigate/${encodeURIComponent(investigationId)}`', 'Ask Matrix persisted-result polling');
+requireIncludes('ask-matrix.js', 'Evidence used', 'Ask Matrix evidence rendering');
+requireIncludes('ask-matrix.js', 'Unknowns / open questions', 'Ask Matrix uncertainty rendering');
 
 for (const answer of answers) {
   const file = `answer-${answer.slug}.html`;

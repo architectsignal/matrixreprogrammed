@@ -22,7 +22,7 @@ on:
 
 permissions:
   actions: read
-  contents: write
+  contents: read
 
 concurrency:
   group: controlled-release-status-snapshot
@@ -35,14 +35,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
       - name: Read current workflow states
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          mkdir -p data /tmp/matrix-release-status
+          mkdir -p downloads /tmp/matrix-release-status
           read_runs() {
             local workflow="$1"
             local output="$2"
@@ -81,30 +80,14 @@ jobs:
             cardArtwork:latest(artwork),
             releaseMetadataRepair:latest(releaseMetadata),
             recent:{production:deploy,moneyIntelligence:money,detailedWealthGuides:wealthGuides,wealthPdfVisualProof,epsteinAiDetective:epstein,cardArtwork:artwork,releaseMetadataRepair:releaseMetadata},
-            boundary:'A dispatched, queued or in-progress run is not a successful deployment. Production is live only after the controlled deployment and exact no-cache verification complete successfully.'
+            boundary:'Read-only snapshot. It never commits observer timestamps to main. A dispatched, queued or in-progress run is not a successful deployment.'
           };
-          fs.writeFileSync('data/release-run-status.json',JSON.stringify(payload,null,2)+'\n');
+          fs.writeFileSync('downloads/release-run-status.json',JSON.stringify(payload,null,2)+'\n');
           NODE
-      - name: Commit status only when changed
-        run: |
-          set -euo pipefail
-          if node scripts/release-freeze-guard.js --is-frozen; then
-            echo "Controlled production release freeze active; skipping automated commit, push and deploy handoff."
-            exit 0
-          fi
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/release-run-status.json
-          if git diff --cached --quiet; then
-            echo "Release status unchanged"
-            exit 0
-          fi
-          git commit -m "Record current release workflow status"
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              exit 0
-            fi
-            git rebase --abort 2>/dev/null || true
-          done
-          exit 1
+      - name: Upload read-only release status
+        uses: actions/upload-artifact@v4
+        with:
+          name: controlled-release-status-${{ github.run_id }}
+          path: downloads/release-run-status.json
+          if-no-files-found: error
+          retention-days: 14

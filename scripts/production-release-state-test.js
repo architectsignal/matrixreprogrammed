@@ -10,6 +10,8 @@ const workflow = fs.readFileSync(path.join(root, '.github', 'workflows', 'deploy
 const authorizationPath = path.join(root, 'scripts', 'verify-one-shot-production-authorization.js');
 const authorization = fs.readFileSync(authorizationPath, 'utf8');
 const policyTestPath = path.join(root, 'scripts', 'live-production-verification-policy-test.js');
+const dailyDeployGuardPath = path.join(root, 'scripts', 'production-daily-deploy-guard.js');
+const autonomousWriterAuditPath = path.join(root, 'scripts', 'autonomous-main-write-freeze-audit.js');
 const failures = [];
 const check = (ok, message) => { if (!ok) failures.push(message); };
 
@@ -47,9 +49,6 @@ for (const marker of [
   check(workflow.includes(marker), `controlled production workflow missing guarded authority input: ${marker}`);
 }
 
-// Explicit human dispatches and the repository-owned one-shot bot dispatcher are
-// separate authority paths. The bot path is allowed only when a fresh marker,
-// first-parent trigger commit, current main and authorized target all agree.
 for (const marker of [
   "if (actor !== 'github-actions[bot]')",
   'resolveFirstParentMarkerCommit',
@@ -63,27 +62,19 @@ for (const marker of [
   check(authorization.includes(marker), `one-shot production verifier missing security boundary: ${marker}`);
 }
 
-const authorizationSelfTest = spawnSync(process.execPath, [authorizationPath, '--self-test'], {
-  cwd: root,
-  encoding: 'utf8'
-});
-check(
-  authorizationSelfTest.status === 0,
-  `one-shot production authorization self-test failed: ${(authorizationSelfTest.stderr || authorizationSelfTest.stdout || '').trim()}`
-);
+function runNodeCheck(scriptPath, args, label) {
+  const result = spawnSync(process.execPath, [scriptPath, ...(args || [])], { cwd: root, encoding: 'utf8' });
+  check(result.status === 0, `${label} failed: ${(result.stderr || result.stdout || '').trim()}`);
+}
 
-const policyTest = spawnSync(process.execPath, [policyTestPath], {
-  cwd: root,
-  encoding: 'utf8'
-});
-check(
-  policyTest.status === 0,
-  `live production verification WAF policy test failed: ${(policyTest.stderr || policyTest.stdout || '').trim()}`
-);
+runNodeCheck(authorizationPath, ['--self-test'], 'one-shot production authorization self-test');
+runNodeCheck(policyTestPath, [], 'live production verification WAF policy test');
+runNodeCheck(dailyDeployGuardPath, ['--self-test'], 'Europe/Paris one-production-deploy-per-day self-test');
+runNodeCheck(autonomousWriterAuditPath, [], 'autonomous main-write freeze audit');
 
 if (failures.length) {
   console.error(`PRODUCTION RELEASE STATE TEST FAILED: ${failures.length}`);
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('Production release state test passed: guarded human/one-shot authority, deployment, live verification, WAF-only supplemental policy and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');
+console.log('Production release state test passed: guarded human/one-shot authority, maximum one successful Europe/Paris production deploy per day, freeze-safe autonomous main writers, live verification, WAF-only supplemental policy and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');

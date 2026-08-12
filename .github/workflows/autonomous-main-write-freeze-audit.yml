@@ -1,0 +1,40 @@
+name: Autonomous Main Write Freeze Audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+      - 'scripts/autonomous-main-write-freeze-audit.js'
+      - 'scripts/release-freeze-guard.js'
+  push:
+    branches:
+      - 'fix/one-production-deploy-per-day-20260812'
+    paths:
+      - '.github/workflows/**'
+      - 'scripts/autonomous-main-write-freeze-audit.js'
+      - 'scripts/release-freeze-guard.js'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Require every autonomous main writer to honor the production freeze
+        run: node scripts/autonomous-main-write-freeze-audit.js
+      - name: Upload audit proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: autonomous-main-write-freeze-audit-${{ github.run_id }}
+          path: downloads/autonomous-main-write-freeze-audit.json
+          if-no-files-found: error
+          retention-days: 30

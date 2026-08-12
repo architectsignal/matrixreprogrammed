@@ -2,6 +2,34 @@
 
 The local agent turns an owner-controlled computer into a zero-cost execution node for Matrix Reprogrammed. It reports hardware and local-model metadata to the Cloudflare control plane while keeping prompts and inference on the local machine.
 
+## Operator commands
+
+The persistent outbound Host Node is managed through one command surface:
+
+```powershell
+npm run matrix-local -- start
+npm run matrix-local -- status
+npm run matrix-local -- doctor
+npm run matrix-local -- benchmark
+npm run matrix-local -- logs 100
+npm run matrix-local -- stop
+```
+
+`start` launches a detached watchdog and Host process. The watchdog restarts an unexpected Host exit with bounded exponential backoff. Runtime state, health heartbeats, restart state, logs, and benchmark history are kept outside the repository under `%LOCALAPPDATA%\MatrixReprogrammed\host` on Windows. Set `MATRIX_LOCAL_STATE_DIR` only when a different owner-controlled location is required.
+
+The Host remains useful in local-only mode when the owner token is absent: hardware discovery, loopback model discovery, health state, and deterministic benchmarking still work. It begins outbound registration and job leasing only after `MATRIX_AI_MANAGEMENT_ADMIN_TOKEN` is configured.
+
+Daily idle-time benchmarks execute representative classification, bounded reasoning, structured extraction, and synthesis probes against every detected loopback model. Only scores, latency, success state, and output hashes are persisted. Those measured outcomes update the resource scores sent on the next registration and therefore change the next routing decision.
+
+Auto-start is opt-in. On Windows, enable it only after the owner token has been stored in the owner account environment:
+
+```powershell
+npm run matrix-local -- autostart enable
+npm run matrix-local -- autostart status
+```
+
+Remove it with `npm run matrix-local -- autostart disable`. The scheduled task runs with limited user privileges and starts only at owner login.
+
 ## Security boundary
 
 - Binds to `127.0.0.1` by default.
@@ -97,6 +125,6 @@ Run the capacity proof with:
 node scripts/compute-capacity-manager-test.mjs
 ```
 
-## Current construction state
+## Operational state
 
-The control-plane queue and signed job-dispatch bridge now exist on the autonomy branch. They select registered nodes, issue short-lived leases, receive bounded completion receipts, and recover safely when a machine disappears. The next release stage is an owner-approved deterministic live job through enqueue, lease, local execution, completion, and immutable receipt verification.
+The control-plane queue and outbound job-dispatch bridge select registered nodes, issue short-lived leases, receive bounded completion receipts, and recover safely when a machine disappears. The Host process now provides persistent discovery, registration, polling, measured model benchmarking, durable health, watchdog recovery, and explicit Windows login start. A real connected local inference job still requires the owner's existing control-plane token and an installed loopback model runtime; neither is fabricated by the software.

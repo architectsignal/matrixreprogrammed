@@ -124,6 +124,10 @@ jobs:
           python3 scripts/phase13-migration-rehearsal.py
           node local-agent/matrix-local-agent.test.mjs
           node local-agent/control-plane-client.test.mjs
+          node local-agent/local-benchmark.test.mjs
+          node local-agent/matrix-local-host.test.mjs
+          node local-agent/matrix-local-supervisor.test.mjs
+          node local-agent/matrix-local-cli.test.mjs
           node ai-management/local-runtime/job-queue.test.mjs
           node --check src/worker-production.js
           node --check src/worker-production-autonomy.js

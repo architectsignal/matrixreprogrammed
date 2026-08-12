@@ -63,6 +63,16 @@ assert.equal(modelResources[0].metadata.model_id, 'qwen3:14b-q4_K_M');
 assert.equal(modelResources[0].billing_enabled, false);
 assert.equal(modelResources[0].monetary_cost_per_unit_eur, 0);
 
+const embeddingServers = await discoverLocalModelServers({
+  fetchImpl: async () => new Response(JSON.stringify({ data: [{ id: 'text-embedding-matrix-0.6b' }] }), { status: 200, headers: { 'content-type': 'application/json' } }),
+  clock,
+  endpoints: [{ protocol: 'openai', url: 'http://127.0.0.1:1234/v1/models' }]
+});
+const embeddingResources = buildLocalModelResources({ hardware, servers: embeddingServers, clock });
+assert.deepEqual(embeddingResources[0].capability_types, ['embeddings']);
+assert.deepEqual(embeddingResources[0].supported_job_types, ['embeddings.generate']);
+assert.match(embeddingResources[0].resource_id, /^local-embedding-/);
+
 const smallModel = {
   ...modelResources[0],
   resource_id: 'local-llm-test-small',

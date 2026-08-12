@@ -14,6 +14,7 @@ on:
       - 'migrations/phase15_specialist_ai_orchestration.sql'
       - 'migrations/phase16_specialist_execution_specs.sql'
       - 'scripts/run-level5-autonomy-cycle.mjs'
+      - 'scripts/run-specialist-local-worker.mjs'
       - 'scripts/level5-autonomy-foundation-test.mjs'
       - 'scripts/self-financing-growth-test.mjs'
       - 'scripts/specialist-ai-director-test.mjs'
@@ -56,6 +57,7 @@ jobs:
           node --check ai-management/finance/self-financing-director.mjs
           node --check ai-management/finance/revenue-growth-director.mjs
           node --check scripts/run-level5-autonomy-cycle.mjs
+          node --check scripts/run-specialist-local-worker.mjs
           node --check scripts/level5-autonomy-foundation-test.mjs
           node --check scripts/self-financing-growth-test.mjs
           node --check scripts/specialist-ai-director-test.mjs
@@ -79,6 +81,15 @@ jobs:
 
       - name: Run loopback specialist inference tests
         run: node scripts/specialist-local-executor-test.mjs
+
+      - name: Prove local specialist worker is disabled by default
+        run: |
+          unset MATRIX_SPECIALIST_LOCAL_INFERENCE_EXECUTION_ENABLED
+          node scripts/run-specialist-local-worker.mjs
+          grep -F '"skipped": true' downloads/specialist-local-worker-result.json
+          grep -F '"external_consequences_performed": 0' downloads/specialist-local-worker-result.json
+          grep -F '"money_moved": 0' downloads/specialist-local-worker-result.json
+          grep -F '"deployments_performed": 0' downloads/specialist-local-worker-result.json
 
       - name: Prove finance remains non-executing
         run: |
@@ -128,6 +139,7 @@ jobs:
         run: |
           grep -F '"cloud_prompt_material_allowed": false' ai-management/config/level5-autonomy-policy.json
           grep -F '"full_prompt_compilation_location": "owner-controlled-local-machine"' ai-management/config/level5-autonomy-policy.json
+          grep -F '"automatic_local_execution_enabled": false' ai-management/config/level5-autonomy-policy.json
           grep -F 'prompt_material_in_cloud_payload INTEGER NOT NULL DEFAULT 0 CHECK (prompt_material_in_cloud_payload=0)' migrations/phase16_specialist_execution_specs.sql
           grep -F 'local_prompt_resolution_required INTEGER NOT NULL DEFAULT 1 CHECK (local_prompt_resolution_required=1)' migrations/phase16_specialist_execution_specs.sql
           grep -F 'cost_ceiling_eur REAL NOT NULL DEFAULT 0 CHECK (cost_ceiling_eur=0)' migrations/phase16_specialist_execution_specs.sql
@@ -136,6 +148,7 @@ jobs:
           grep -F 'evidence_gate_bypass_allowed INTEGER NOT NULL DEFAULT 0 CHECK (evidence_gate_bypass_allowed=0)' migrations/phase16_specialist_execution_specs.sql
           grep -F 'production_deployment_allowed INTEGER NOT NULL DEFAULT 0 CHECK (production_deployment_allowed=0)' migrations/phase16_specialist_execution_specs.sql
           grep -F 'MATRIX_SPECIALIST_LOCAL_EXECUTION_PLANNING_ENABLED = "false"' wrangler.toml
+          grep -F 'MATRIX_SPECIALIST_LOCAL_INFERENCE_EXECUTION_ENABLED' scripts/run-specialist-local-worker.mjs
           grep -F 'prompt_compilation_location: '\''owner-controlled-local-machine'\''' ai-management/autonomy/specialist-execution-planner.mjs
           grep -F "endpoint_scope: 'loopback-only'" ai-management/provider-adapters/local/openai-compatible-local.mjs
           grep -F 'routing_prompt_material_included:' ai-management/autonomy/specialist-local-executor.mjs

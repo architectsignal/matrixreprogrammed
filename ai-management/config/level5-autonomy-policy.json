@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "mode": "level5-foundation",
+  "objective": "Evolve Matrix Reprogrammed into a self-improving autonomous public-record intelligence system while preserving evidence, legal, privacy, zero-spend, deployment and owner-approval boundaries.",
+  "specialist_agents": {
+    "architecture": "seven-specialist-shared-spine",
+    "shared_memory_required": true,
+    "shared_evidence_graph_required": true,
+    "independent_memory_silos_allowed": false,
+    "mission_director": "Coordinates priorities, queues and specialist handoffs; cannot override hard safety, evidence, finance or deployment gates.",
+    "investigator": "Discovers and structures lawful public-record evidence without presupposing guilt.",
+    "auditor": "Challenges provenance, contradictions and claim readiness and is mandatory before publication.",
+    "publisher": "Turns auditor-cleared evidence into reports, dossiers, briefings and updates without inventing evidence.",
+    "growth": "Optimizes retention and lawful verified revenue through reversible evidence-independent experiments.",
+    "resource_hunter": "Discovers and benchmarks lawful zero-cost or owner-approved data, tools, models and compute under existing resource gates.",
+    "architect": "Prepares reversible tested software improvements through the guarded development pipeline.",
+    "execution_profiles": {
+      "mission_director": "reasoning",
+      "investigator": "long-context",
+      "auditor": "reasoning",
+      "publisher": "long-context",
+      "growth": "reasoning",
+      "resource_hunter": "reasoning",
+      "architect": "coding"
+    },
+    "local_controller_required": true,
+    "full_prompt_compilation_location": "owner-controlled-local-machine",
+    "cloud_prompt_material_allowed": false,
+    "raw_local_model_output_cloud_persistence_allowed": false,
+    "hashed_result_receipts_only": true,
+    "automatic_receipt_sync_enabled": false,
+    "auditor_gate_before_publication_required": true,
+    "explicit_auditor_clearance_required_for_publisher": true,
+    "target_specific_auditor_clearance_required": true,
+    "auditor_evidence_subset_validation_required": true,
+    "auditor_gate_allows_publisher_draft_only": true,
+    "caller_supplied_auditor_clearance_trusted": false,
+    "commercial_system_may_change_evidence_strength": false,
+    "automatic_external_consequence_allowed": false,
+    "automatic_local_execution_enabled": false,
+    "owner_approval_required_for_external_consequence": true
+  },
+  "learning": {
+    "ema_alpha": 0.25,
+    "maximum_lessons": 100,
+    "automatic_policy_mutation_allowed": false,
+    "automatic_safety_gate_mutation_allowed": false,
+    "automatic_evidence_threshold_mutation_allowed": false,
+    "automatic_deployment_gate_mutation_allowed": false
+  },
+  "resource_acquisition": {
+    "automatic_discovery_allowed": true,
+    "automatic_use_requires_existing_policy_gates": true,
+    "automatic_terms_acceptance_allowed": false,
+    "automatic_account_creation_allowed": false,
+    "automatic_identity_verification_allowed": false,
+    "automatic_payment_method_attachment_allowed": false,
+    "credential_harvesting_allowed": false,
+    "access_control_evasion_allowed": false,
+    "free_tier_abuse_allowed": false
+  },
+  "compute": {
+    "local_controller_required": true,
+    "remote_execution_default_enabled": false,
+    "public_workloads_only": true,
+    "private_prompt_transfer_allowed": false,
+    "credentials_transfer_allowed": false,
+    "verified_zero_spend_required": true,
+    "hard_quota_stop_required": true,
+    "provenance_required": true
+  },
+  "finance": {
+    "observation_and_planning_only": true,
+    "automatic_spend_limit_eur": 0,
+    "minimum_reserve_months": 3,
+    "baseline_monthly_operating_cost_eur": 0,
+    "allowed_revenue_categories": [
+      "membership",
+      "donation",
+      "books_and_reports",
+      "sponsorship",
+      "approved_affiliate",
+      "approved_services"
+    ],
+    "allocation_weights": {
+      "operating_reserve": 0.5,
+      "infrastructure": 0.25,
+      "audience_growth": 0.15,
+      "experiments": 0.1
+    },
+    "payment_mutation_allowed": false,
+    "payout_mutation_allowed": false,
+    "borrowing_allowed": false,
+    "trading_allowed": false,
+    "contract_commitment_allowed": false,
+    "owner_approval_required_for_any_spend": true
+  },
+  "publication": {
+    "fact_allegation_inference_speculation_separation_required": true,
+    "provenance_required": true,
+    "correction_path_required": true,
+    "sensitive_claim_release_gates_may_be_weakened": false
+  }
+}

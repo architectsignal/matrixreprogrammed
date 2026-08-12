@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { AutonomousLearningDirector } from '../ai-management/autonomy/autonomous-learning-director.mjs';
+import { SpecialistAIDirector } from '../ai-management/autonomy/specialist-ai-director.mjs';
 import { SelfFinancingDirector } from '../ai-management/finance/self-financing-director.mjs';
 import { RevenueGrowthDirector } from '../ai-management/finance/revenue-growth-director.mjs';
 
@@ -53,6 +54,15 @@ const financeObservation = readJson(path.join(downloads, 'finance-observation.js
 const revenueGrowthObservation = readJson(path.join(downloads, 'revenue-growth-observation.json'), {
   channels: []
 });
+const specialistObservation = readJson(path.join(downloads, 'specialist-agent-observation.json'), {
+  investigation_backlog: 0,
+  unverified_evidence_count: 0,
+  stale_report_count: 0,
+  revenue_health: 1,
+  retention_health: 1,
+  resource_pressure: 0,
+  site_health: 1
+});
 
 const learningDirector = new AutonomousLearningDirector({
   alpha: policy?.learning?.ema_alpha,
@@ -71,6 +81,13 @@ const growth = growthDirector.plan({
   policy: policy.finance || {}
 });
 writeJson(path.join(downloads, 'revenue-growth-plan.json'), growth);
+
+const specialistDirector = new SpecialistAIDirector({ maximumMissions: 12 });
+const specialistPlan = specialistDirector.plan({
+  signals: specialistObservation,
+  policy: policy.specialist_agents || {}
+});
+writeJson(path.join(downloads, 'specialist-ai-plan.json'), specialistPlan);
 
 const result = {
   ok: cycleSummary?.ok === true && learning.latest_signals.zero_spend_confirmed === true,
@@ -95,17 +112,29 @@ const result = {
     automatic_price_changes_allowed: growth.controls.automatic_price_changes_allowed,
     evidence_independence_preserved: growth.controls.commercial_ranking_may_change_evidence_strength === false
   },
+  specialists: {
+    architecture: 'seven-specialist-shared-spine',
+    missions_proposed: specialistPlan.missions.length,
+    handoffs_defined: specialistPlan.handoffs.length,
+    auditor_gate_before_publication_required: specialistPlan.controls.auditor_gate_before_publication_required,
+    shared_memory_required: specialistPlan.controls.shared_memory_required,
+    automatic_production_deployment_allowed: specialistPlan.controls.automatic_production_deployment_allowed
+  },
   controls: {
     zero_spend_lock: true,
     remote_compute_execution_enabled_by_this_runner: false,
     payment_mutation_allowed: false,
-    deployment_performed: false
+    deployment_performed: false,
+    external_consequence_execution_allowed: false
   },
   persistence_targets: [
     'matrix_learning_ledger',
     'matrix_revenue_events',
     'matrix_finance_snapshots',
-    'matrix_growth_experiments'
+    'matrix_growth_experiments',
+    'matrix_agent_missions',
+    'matrix_agent_runs',
+    'matrix_agent_handoffs'
   ]
 };
 writeJson(path.join(downloads, 'level5-autonomy-cycle.json'), result);

@@ -23,6 +23,7 @@ jobs:
   deploy-bind-and-verify:
     name: Deploy repaired AI authentication, bind secrets and verify live control plane
     runs-on: ubuntu-latest
+    environment: production
     timeout-minutes: 30
     steps:
       - name: Confirm authorization and credentials
@@ -85,6 +86,7 @@ jobs:
             'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"': 'AI_LOCAL_MODEL_ROUTING_ENABLED = "true"',
             'AI_SITE_DIRECTOR_ENABLED = "false"': 'AI_SITE_DIRECTOR_ENABLED = "true"',
             'AI_OPPORTUNITY_HUNTER_ENABLED = "false"': 'AI_OPPORTUNITY_HUNTER_ENABLED = "true"',
+            'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "false"': 'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "true"',
           }
           for old, new in replacements.items():
             if old not in text:
@@ -92,6 +94,7 @@ jobs:
             text = text.replace(old, new, 1)
           p.write_text(text, encoding='utf-8')
           PY
+          grep -F 'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "true"' .wrangler-ai-auth-repair.toml
 
       - name: Deploy latest repaired Worker
         env:

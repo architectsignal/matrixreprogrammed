@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { SpecialistExecutionPlanner } from '../ai-management/autonomy/specialist-execution-planner.mjs';
-import { SpecialistLocalExecutor, compileSpecialistPrompt } from '../ai-management/autonomy/specialist-local-executor.mjs';
+import { SpecialistLocalExecutor, compileSpecialistPrompt, parseAuditorDecision } from '../ai-management/autonomy/specialist-local-executor.mjs';
 
 const now = new Date('2026-08-12T00:30:00.000Z');
 const mission = {
@@ -90,6 +90,67 @@ const prompt = compileSpecialistPrompt({ mission, context: localContext, evidenc
 assert.ok(prompt.includes('Evidence reference IDs: ["ev-1"]'));
 assert.ok(prompt.includes('fact, allegation, inference and speculation'));
 
+const auditorMission = {
+  ...mission,
+  mission_id: 'audit-target-1',
+  specialist: 'auditor',
+  evidence: { publication_target_id: 'dossier/example' }
+};
+const auditorPrompt = compileSpecialistPrompt({
+  mission: auditorMission,
+  context: localContext,
+  evidenceReferenceIds: ['ev-1','ev-2']
+});
+assert.ok(auditorPrompt.includes('AUDITOR OUTPUT CONTRACT'));
+assert.ok(auditorPrompt.includes('dossier/example'));
+assert.ok(auditorPrompt.includes('Publisher DRAFT only'));
+
+const validAudit = parseAuditorDecision({
+  mission: auditorMission,
+  allowedEvidenceIds: ['ev-1','ev-2'],
+  text: JSON.stringify({
+    publication_target_id: 'dossier/example',
+    publication_gate_passed: true,
+    provenance_checked: true,
+    contrary_evidence_considered: true,
+    evidence_ids: ['ev-1','ev-2'],
+    uncertainties: ['Ownership filing is dated.'],
+    reason: 'Both records corroborate the narrow ownership claim.'
+  })
+});
+assert.equal(validAudit.valid, true);
+assert.equal(validAudit.publication_gate_passed, true);
+assert.deepEqual(validAudit.evidence_ids, ['ev-1','ev-2']);
+assert.equal(validAudit.draft_only_gate, true);
+
+const wrongTarget = parseAuditorDecision({
+  mission: auditorMission,
+  allowedEvidenceIds: ['ev-1','ev-2'],
+  text: JSON.stringify({
+    publication_target_id: 'dossier/unrelated',
+    publication_gate_passed: true,
+    provenance_checked: true,
+    contrary_evidence_considered: true,
+    evidence_ids: ['ev-1']
+  })
+});
+assert.equal(wrongTarget.valid, false);
+assert.equal(wrongTarget.publication_gate_passed, false);
+
+const inventedEvidence = parseAuditorDecision({
+  mission: auditorMission,
+  allowedEvidenceIds: ['ev-1','ev-2'],
+  text: JSON.stringify({
+    publication_target_id: 'dossier/example',
+    publication_gate_passed: true,
+    provenance_checked: true,
+    contrary_evidence_considered: true,
+    evidence_ids: ['ev-1','invented-source']
+  })
+});
+assert.equal(inventedEvidence.valid, false);
+assert.equal(inventedEvidence.publication_gate_passed, false);
+
 const blockedPublisherMission = {
   ...mission,
   mission_id: 'publisher-blocked',
@@ -105,4 +166,4 @@ await assert.rejects(
   /Execution spec is not runnable/
 );
 
-console.log('Specialist local executor tests passed: routing contains metadata only, full context is compiled locally, inference stays loopback-only and external consequences remain disabled.');
+console.log('Specialist local executor tests passed: routing contains metadata only, full context stays local, Auditor clearance is target/evidence bound, inference is loopback-only and external consequences remain disabled.');

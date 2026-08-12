@@ -44,3 +44,5 @@ The controlled release candidate was rebuilt and verified locally. Production wa
 ## Deployment status
 
 No Cloudflare production deployment was performed. The software, manifest, freshness and live-dependency checks passed, but the owner usage snapshot reports billable Cloudflare usage. Under the explicit zero-spend rule, that is a release blocker and cannot be overridden by a successful build.
+
+Draft PR #240 was opened. Its GitHub audit entered the full build stage; the legacy Netlify deploy-preview integration failed immediately and remains an external red check even though the canonical deployment target is Cloudflare.

@@ -6,6 +6,7 @@ import { StructuredAuditLogger } from '../observability/structured-logger.mjs';
 import { ResourceBroker } from '../resource-broker/resource-broker.mjs';
 import { DeterministicLocalAdapter } from '../provider-adapters/local/deterministic-local.mjs';
 import { ApprovedPublicSourceHttpAdapter } from '../provider-adapters/datasets/approved-public-source-http.mjs';
+import { ZeroSpendOpportunityHttpAdapter } from '../provider-adapters/opportunities/zero-spend-public-http.mjs';
 
 const MAX_HEALTH_EVIDENCE_AGE_MS = 14 * 86400000;
 
@@ -236,7 +237,8 @@ export function createInvestigationBroker({
     registry,
     adapters: [
       new DeterministicLocalAdapter(),
-      new ApprovedPublicSourceHttpAdapter({ fetchImpl, userAgent, maximumBytes, clock: brokerClock })
+      new ApprovedPublicSourceHttpAdapter({ fetchImpl, userAgent, maximumBytes, clock: brokerClock }),
+      new ZeroSpendOpportunityHttpAdapter({ fetchImpl, userAgent, maximumBytes, clock: brokerClock })
     ],
     quotaManager: new InMemoryQuotaManager(),
     logger,

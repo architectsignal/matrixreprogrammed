@@ -1,8 +1,8 @@
 const ALLOWED_KINDS = new Set(['compute', 'inference_api', 'dataset', 'search_api', 'model', 'grant', 'credit_program']);
 const AUTO_ACTIVATABLE_KINDS = new Set(['dataset', 'search_api', 'model', 'inference_api']);
 const OWNER_ACTION_KINDS = new Set(['compute', 'grant', 'credit_program']);
-const AUTOMATION_ALLOWED = /\b(automation allowed|automated access permitted|api access permitted|programmatic access permitted)\b/i;
-const ZERO_COST = /\b(free of charge|no charge|at no cost|free tier|zero cost|no payment method required)\b/i;
+const AUTOMATION_ALLOWED = /\b(automation allowed|automated access permitted|api access permitted|programmatic access permitted|automated access must comply|endpoints do not currently require any authorization|no sign-up is required to use the rest api)\b/i;
+const ZERO_COST = /\b(free of charge|no charge|at no cost|free tier|zero cost|no payment method required|do not require any authentication or api keys|endpoints do not currently require any authorization|no sign-up is required to use the rest api)\b/i;
 const BILLING_RISK = /\b(credit card required|payment method required|auto[- ]?upgrade|overage|metered billing|usage charges|paid after trial|paid fallback)\b/i;
 
 function safeId(value) {
@@ -112,13 +112,16 @@ export async function evaluateOpportunity(input, { fetchImpl = globalThis.fetch,
 
   let docs = { ok: true, text: '' };
   let terms = { ok: true, text: '' };
+  let service = { ok: true, status: 200, text: '' };
   if (liveProbe && typeof fetchImpl === 'function') {
-    [docs, terms] = await Promise.all([
+    [docs, terms, service] = await Promise.all([
       fetchText(fetchImpl, opportunity.documentation_url),
-      fetchText(fetchImpl, opportunity.terms_url)
+      fetchText(fetchImpl, opportunity.terms_url),
+      fetchText(fetchImpl, opportunity.official_url, 1024 * 1024)
     ]);
     if (!docs.ok) blockers.push('documentation-fetch-failed');
     if (!terms.ok) blockers.push('terms-fetch-failed');
+    if (!service.ok) blockers.push('service-health-probe-failed');
   }
 
   const combined = `${docs.text || ''}\n${terms.text || ''}`.slice(0, 1000000);
@@ -151,6 +154,7 @@ export async function evaluateOpportunity(input, { fetchImpl = globalThis.fetch,
     blockers: uniqueBlockers,
     owner_actions: uniqueOwnerActions,
     evidence,
+    service_probe: { ok: service.ok, status: service.status, error: service.error || null },
     evaluated_at: now.toISOString()
   };
 }

@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { opportunityHunterWorkerInternals } from '../src/worker-opportunity-hunter.js';
+import { createInvestigationBroker } from '../ai-management/node/investigation-broker.mjs';
 
 const fixedNow = new Date('2026-07-31T16:00:00.000Z');
 
@@ -41,8 +42,49 @@ assert.equal(resource.billing_enabled, false);
 assert.equal(resource.payment_method_present, false);
 assert.equal(resource.monetary_cost_per_unit_eur, 0);
 assert.equal(resource.enabled, false);
-assert.equal(resource.implementation_status, 'candidate-adapter-required');
+assert.equal(resource.implementation_status, 'disabled');
 assert.equal(resource.metadata.activation_blocked_until_adapter_ready, true);
+
+const approvedPublic = {
+  ...approved,
+  opportunity: {
+    ...approved.opportunity,
+    opportunity_id: 'opportunity-public-api',
+    kind: 'dataset',
+    official_url: 'https://api.example.org/',
+    supported_capabilities: ['public_data'],
+    metadata: {
+      adapter_id: 'zero-spend-opportunity-public-http', adapter_version: '1.0.0',
+      supported_job_types: ['public-data.fetch'], maximum_payload: 1048576, concurrency_limit: 1
+    }
+  }
+};
+const publicResource = opportunityHunterWorkerInternals.resourceFromEvaluation(approvedPublic, fixedNow);
+assert.equal(publicResource.enabled, true);
+assert.equal(publicResource.implementation_status, 'production');
+assert.equal(publicResource.adapter_id, 'zero-spend-opportunity-public-http');
+assert.equal(publicResource.zero_cost_verified, true);
+assert.equal(publicResource.external_charge_possible, false);
+assert.equal(publicResource.metadata.activation_blocked_until_adapter_ready, false);
+
+const runtime = createInvestigationBroker({
+  additionalResources: [publicResource], now: fixedNow,
+  fetchImpl: async url => new Response(JSON.stringify({ ok: true, source: String(url) }), {
+    status: 200, headers: { 'content-type': 'application/json' }
+  }),
+  sleep: async () => {}, random: () => 0
+});
+const routed = await runtime.broker.execute({
+  job_type: 'public-data.fetch', capability_type: 'public_data', priority: 'P2', data_class: 'public',
+  payload: { url: 'https://api.example.org/records', method: 'GET', maximum_bytes: 1048576 },
+  requirements: {
+    cost_ceiling_eur: 0, minimum_quality_score: 60, minimum_provenance_score: 80,
+    maximum_latency_ms: 1000, maximum_attempts: 1, requires_provenance: true, cacheable: false
+  }
+});
+assert.equal(routed.selected_resource, publicResource.resource_id);
+assert.equal(routed.cost_confirmed_zero, true);
+assert.equal(routed.provenance.adapter_id, 'zero-spend-opportunity-public-http');
 
 for (const mutation of [
   { account_required: true },
@@ -61,8 +103,15 @@ assert.deepEqual(opportunityHunterWorkerInternals.configuredOpportunities({ AI_O
 assert.deepEqual(opportunityHunterWorkerInternals.configuredOpportunities({ AI_OPPORTUNITY_SEEDS_JSON: 'not-json' }), []);
 assert.equal(opportunityHunterWorkerInternals.configuredOpportunities({ AI_OPPORTUNITY_SEEDS_JSON: JSON.stringify([approved.opportunity]) }).length, 1);
 const defaults = opportunityHunterWorkerInternals.configuredOpportunities({});
-assert.deepEqual(defaults.map(item => item.opportunity_id), ['official-kaggle-notebooks-free-gpu', 'official-hugging-face-zerogpu']);
-assert.ok(defaults.every(item => item.automation_permission === 'unknown' && item.payment_method_required === false));
-assert.ok(defaults.every(item => item.metadata.owner_onboarding_required === true));
+assert.deepEqual(defaults.map(item => item.opportunity_id), [
+  'official-sec-edgar-data-apis', 'official-usaspending-public-api',
+  'official-kaggle-notebooks-free-gpu', 'official-hugging-face-zerogpu'
+]);
+const publicDefaults = defaults.filter(item => item.kind === 'dataset');
+const computeDefaults = defaults.filter(item => item.kind === 'compute');
+assert.ok(publicDefaults.every(item => item.authentication_type === 'none' && item.metadata.adapter_id === 'zero-spend-opportunity-public-http'));
+assert.ok(computeDefaults.every(item => item.automation_permission === 'unknown' && item.metadata.owner_onboarding_required === true));
+assert.equal(opportunityHunterWorkerInternals.requestedOpportunities({ use_defaults: true }, {}).length, 4);
+assert.deepEqual(opportunityHunterWorkerInternals.requestedOpportunities({}, {}), []);
 
-console.log('Opportunity Hunter Worker tests passed: zero-spend persistence, adapter-ready activation gate, and owner-action rejection.');
+console.log('Opportunity Hunter Worker tests passed: live public API routing, zero-spend persistence, adapter-ready activation, and owner-action rejection.');

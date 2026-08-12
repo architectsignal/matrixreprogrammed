@@ -168,10 +168,17 @@ assert.equal(database.raw.prepare('SELECT COUNT(*) AS count FROM matrix_public_i
     CONTACT_RATE_LIMIT_SALT: 'test-only-salt'
   };
   const headers = { 'cf-connecting-ip': '203.0.113.44' };
-  assert.equal((await post(limitedEnv, 'What does the first official Tesla record establish?', {}, headers)).response.status, 200);
-  assert.equal((await post(limitedEnv, 'What does the second official Tesla record establish?', {}, headers)).response.status, 200);
-  const limited = await post(limitedEnv, 'What does the third official Tesla record establish?', {}, headers);
-  assert.equal(limited.response.status, 429);
+  const originalDateNow = Date.now;
+  Date.now = () => Date.parse('2026-08-12T12:00:10.000Z');
+  let limited;
+  try {
+    assert.equal((await post(limitedEnv, 'What does the first official Tesla record establish?', {}, headers)).response.status, 200);
+    assert.equal((await post(limitedEnv, 'What does the second official Tesla record establish?', {}, headers)).response.status, 200);
+    limited = await post(limitedEnv, 'What does the third official Tesla record establish?', {}, headers);
+  } finally {
+    Date.now = originalDateNow;
+  }
+  assert.equal(limited.response.status, 429, 'all three requests must remain in one deterministic fixed-minute window');
   assert.ok(Number(limited.response.headers.get('retry-after')) > 0);
   const bucket = limitedDatabase.raw.prepare('SELECT bucket_key FROM matrix_public_investigation_rate_limits LIMIT 1').get().bucket_key;
   assert.equal(bucket.length, 64);

@@ -80,12 +80,35 @@ async function invokeModel(resource, profile, fetchImpl) {
 }
 
 export function applyBenchmarkScores(resources = [], report = null) {
-  const measured = new Map((report?.models || []).filter(model => model.status === 'measured').map(model => [model.resource_id, model]));
+  const benchmarked = new Map((report?.models || []).map(model => [model.resource_id, model]));
   return resources.map(resource => {
-    const result = measured.get(resource.resource_id);
+    const result = benchmarked.get(resource.resource_id);
     if (!result) return resource;
+    if (result.status !== 'measured') {
+      return {
+        ...resource,
+        enabled: false,
+        health_status: 'unhealthy',
+        reliability_score: 0,
+        success_rate: 0,
+        error_rate: 1,
+        last_failure: report.completed_at,
+        metadata: {
+          ...resource.metadata,
+          matrix_benchmark: {
+            completed_at: report.completed_at,
+            passed_profiles: Number(result.passed_profiles || 0),
+            total_profiles: Number(result.total_profiles || 0),
+            score: Number(result.composite_score || 0),
+            status: result.status
+          }
+        }
+      };
+    }
     return {
       ...resource,
+      enabled: true,
+      health_status: 'healthy',
       quality_score: result.quality_score,
       reliability_score: result.reliability_score,
       latency_score: result.latency_score,
@@ -94,7 +117,7 @@ export function applyBenchmarkScores(resources = [], report = null) {
       average_latency: result.p50_latency_ms,
       last_success: result.passed_profiles > 0 ? report.completed_at : resource.last_success,
       last_failure: result.failed_profiles > 0 ? report.completed_at : null,
-      metadata: { ...resource.metadata, matrix_benchmark: { completed_at: report.completed_at, passed_profiles: result.passed_profiles, total_profiles: result.total_profiles, score: result.composite_score } }
+      metadata: { ...resource.metadata, matrix_benchmark: { completed_at: report.completed_at, passed_profiles: result.passed_profiles, total_profiles: result.total_profiles, score: result.composite_score, status: result.status } }
     };
   });
 }

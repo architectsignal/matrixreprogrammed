@@ -81,7 +81,8 @@ jobs:
           grep -F "credential-onboarding-required" ai-management/opportunity-hunter/opportunity-hunter.mjs
           grep -F "OPPORTUNITY_RESOURCE_NOT_ADMISSIBLE" ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
           grep -F "billing_possible: false" ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs
-          grep -F "activation_blocked_until_adapter_ready: true" src/worker-opportunity-hunter.js
-          grep -F "enabled: false" src/worker-opportunity-hunter.js
+          grep -F "activation_blocked_until_adapter_ready: !adapterReady" src/worker-opportunity-hunter.js
+          grep -F "enabled: adapterReady" src/worker-opportunity-hunter.js
+          grep -F "zero-spend-opportunity-public-http" src/worker-opportunity-hunter.js
           grep -F "runScheduledOpportunityHunter" src/worker-production-autonomy.js
           ! grep -E "bypass|evade|unauthori[sz]ed|steal compute" ai-management/opportunity-hunter/opportunity-hunter.mjs src/worker-opportunity-hunter.js ai-management/provider-adapters/opportunities/zero-cost-official-http.mjs

@@ -15,7 +15,8 @@ assert.match(migration, /AI_OPPORTUNITY_HUNTER_ENABLED/);
 
 assert.match(worker, /AI_OPPORTUNITY_HUNTER_ENABLED/);
 assert.match(worker, /AI_RESOURCE_ZERO_SPEND_LOCK/);
-assert.match(worker, /activation_blocked_until_adapter_ready: true/);
+assert.match(worker, /activation_blocked_until_adapter_ready: !adapterReady/);
+assert.match(worker, /zero-spend-opportunity-public-http/);
 assert.match(wrapper, /runScheduledOpportunityHunter/);
 
 assert.match(adapter, /monetary_cost_per_unit_eur/);

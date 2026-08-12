@@ -5,6 +5,38 @@ const ROUTE = '/api/ai-management/admin/opportunities';
 
 const DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS = Object.freeze([
   {
+    opportunity_id: 'official-sec-edgar-data-apis',
+    kind: 'dataset', provider_name: 'U.S. Securities and Exchange Commission', service_name: 'EDGAR submissions and XBRL data APIs',
+    official_url: 'https://data.sec.gov/', documentation_url: 'https://www.sec.gov/search-filings/edgar-application-programming-interfaces',
+    terms_url: 'https://www.sec.gov/about/privacy-information', privacy_url: 'https://www.sec.gov/about/privacy-information',
+    authentication_type: 'none', account_required: false, identity_verification_required: false, payment_method_required: false,
+    automation_permission: 'allowed', commercial_use: 'allowed', zero_cost_verified: true, quota_verified: true,
+    free_quota: 500, free_quota_unit: 'operator-capped requests/day below the official 10 requests/second ceiling',
+    supported_capabilities: ['public_data', 'company_filings', 'financial_statements'],
+    metadata: {
+      discovery_scope: 'official-source-daily-revalidation', quota_evidence_terms: ['10 requests per second'],
+      supported_job_types: ['public-data.fetch'], adapter_id: 'zero-spend-opportunity-public-http', adapter_version: '1.0.0',
+      maximum_payload: 8388608, concurrency_limit: 1,
+      licence: 'Public regulatory records; preserve issuer filing provenance and the SEC source URL.'
+    }
+  },
+  {
+    opportunity_id: 'official-usaspending-public-api',
+    kind: 'dataset', provider_name: 'U.S. Department of the Treasury', service_name: 'USAspending public API',
+    official_url: 'https://api.usaspending.gov/', documentation_url: 'https://api.usaspending.gov/docs/endpoints',
+    terms_url: 'https://www.usaspending.gov/about', privacy_url: 'https://www.usaspending.gov/about/privacy',
+    authentication_type: 'none', account_required: false, identity_verification_required: false, payment_method_required: false,
+    automation_permission: 'allowed', commercial_use: 'allowed', zero_cost_verified: true, quota_verified: true,
+    free_quota: 100, free_quota_unit: 'operator-capped requests/day',
+    supported_capabilities: ['public_data', 'government_spending', 'contracts', 'grants'],
+    metadata: {
+      discovery_scope: 'official-source-daily-revalidation',
+      supported_job_types: ['public-data.fetch'], adapter_id: 'zero-spend-opportunity-public-http', adapter_version: '1.0.0',
+      maximum_payload: 8388608, concurrency_limit: 1,
+      licence: 'Open U.S. federal spending data; observe the USAspending data-use limitations documented on its About page.'
+    }
+  },
+  {
     opportunity_id: 'official-kaggle-notebooks-free-gpu',
     kind: 'compute', provider_name: 'Kaggle', service_name: 'Kaggle Notebooks free GPU',
     official_url: 'https://www.kaggle.com/', documentation_url: 'https://www.kaggle.com/docs/efficient-gpu-usage',
@@ -46,6 +78,15 @@ function safeId(value) {
   return String(value || 'opportunity').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 100) || 'opportunity';
 }
 
+function productionPublicAdapterReady(item) {
+  const jobs = Array.isArray(item?.metadata?.supported_job_types) ? item.metadata.supported_job_types : [];
+  return ['dataset', 'search_api'].includes(item?.kind) &&
+    item?.metadata?.adapter_id === 'zero-spend-opportunity-public-http' &&
+    item?.metadata?.adapter_version === '1.0.0' &&
+    jobs.length === 1 && jobs[0] === 'public-data.fetch' &&
+    item?.supported_capabilities?.includes('public_data');
+}
+
 async function hash(value) {
   const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(String(value || '')));
   return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
@@ -66,6 +107,7 @@ function resourceFromEvaluation(evaluation, now) {
   const item = evaluation.opportunity;
   if (!evaluation.auto_activatable || evaluation.approval_state !== 'approved-auto') return null;
   if (item.account_required || item.identity_verification_required || item.payment_method_required || item.authentication_type !== 'none') return null;
+  const adapterReady = productionPublicAdapterReady(item);
   return {
     resource_id: `opportunity-${safeId(item.provider_name)}-${safeId(item.service_name)}`,
     provider_name: item.provider_name,
@@ -95,7 +137,15 @@ function resourceFromEvaluation(evaluation, now) {
     billing_enabled: false,
     billing_risk: 'none',
     payment_method_present: false,
+    payment_method_required: false,
     monetary_cost_per_unit_eur: 0,
+    zero_cost_verified: true,
+    zero_cost_evidence_at: evaluation.evaluated_at,
+    last_pricing_check: evaluation.evaluated_at,
+    paid_fallback: false,
+    overage_possible: false,
+    auto_upgrade_enabled: false,
+    external_charge_possible: false,
     quality_score: Math.max(60, evaluation.confidence),
     reliability_score: 70,
     latency_score: 60,
@@ -119,10 +169,10 @@ function resourceFromEvaluation(evaluation, now) {
     rate_limit: `${item.free_quota} ${item.free_quota_unit}`,
     concurrency_limit: Math.max(1, Number(item.metadata?.concurrency_limit || 1)),
     fallback_resource_ids: [],
-    implementation_status: 'candidate-adapter-required',
+    implementation_status: adapterReady ? 'production' : 'disabled',
     adapter_id: item.metadata?.adapter_id || null,
     adapter_version: item.metadata?.adapter_version || null,
-    enabled: false,
+    enabled: adapterReady,
     manual_approval_required: false,
     allowed_hosts: [new URL(item.official_url).hostname],
     metadata: {
@@ -130,9 +180,11 @@ function resourceFromEvaluation(evaluation, now) {
       approval_state: evaluation.approval_state,
       confidence: evaluation.confidence,
       auto_discovered: true,
-      activation_blocked_until_adapter_ready: true
+      activation_blocked_until_adapter_ready: !adapterReady
     },
-    notes: 'Discovered and approved as zero-spend, but remains disabled until a tested provider adapter exists.',
+    notes: adapterReady
+      ? 'Discovered, live-verified and enabled through the tested public-only zero-spend HTTP adapter.'
+      : 'Discovered and approved as zero-spend, but remains disabled until a tested provider adapter exists.',
     created_at: now.toISOString(),
     updated_at: now.toISOString()
   };
@@ -190,6 +242,12 @@ function configuredOpportunities(env) {
   }
 }
 
+function requestedOpportunities(body, env) {
+  const submitted = Array.isArray(body?.opportunities) ? body.opportunities.slice(0, 100) : [];
+  if (submitted.length) return submitted;
+  return body?.use_defaults === true ? configuredOpportunities(env) : [];
+}
+
 export function isOpportunityHunterRoute(path) {
   return path === ROUTE;
 }
@@ -205,7 +263,7 @@ export async function handleOpportunityHunterRoute(request, env) {
     return json({ ok: false, error: 'Opportunity Hunter is disabled or zero-spend lock is not active' }, 409);
   }
   const body = await request.json();
-  const opportunities = Array.isArray(body?.opportunities) ? body.opportunities.slice(0, 100) : [];
+  const opportunities = requestedOpportunities(body, env);
   const hunter = new OpportunityHunter();
   const report = await hunter.run({ opportunities });
   const persisted = await persistReport(env, report, 'owner-submitted-official-sources');
@@ -226,4 +284,7 @@ export async function runScheduledOpportunityHunter(env) {
   return { skipped: false, report, persisted };
 }
 
-export const opportunityHunterWorkerInternals = { DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS, resourceFromEvaluation, persistReport, configuredOpportunities, schemaReady };
+export const opportunityHunterWorkerInternals = {
+  DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS, productionPublicAdapterReady, resourceFromEvaluation, persistReport,
+  configuredOpportunities, requestedOpportunities, schemaReady
+};

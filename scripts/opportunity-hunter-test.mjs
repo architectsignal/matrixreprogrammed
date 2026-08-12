@@ -43,9 +43,27 @@ const approved = await evaluateOpportunity(base, { fetchImpl, now: fixedNow });
 assert.equal(approved.approval_state, 'approved-auto');
 assert.equal(approved.auto_activatable, true);
 assert.equal(approved.blockers.length, 0);
+assert.equal(approved.service_probe.ok, true);
 assert.ok(approved.evidence.includes('official-material-confirms-zero-cost-access'));
 assert.ok(approved.evidence.includes('official-material-confirms-automation-permission'));
 assert.ok(approved.evidence.includes('official-material-confirms-declared-quota'));
+
+const officialNoAuthFetch = async url => new Response(
+  String(url).endsWith('/docs')
+    ? 'These APIs do not require any authentication or API keys to access. Automated access must comply with the published fair-access policy. The limit is 10 requests per second.'
+    : 'Public API access remains subject to a limit of 10 requests per second.',
+  { status: 200, headers: { 'content-type': 'text/plain' } }
+);
+const officialNoAuth = await evaluateOpportunity({
+  ...base,
+  opportunity_id: 'opportunity-official-no-auth',
+  kind: 'dataset',
+  documentation_url: 'https://compute.example.org/docs',
+  metadata: { quota_evidence_terms: ['10 requests per second'] }
+}, { fetchImpl: officialNoAuthFetch, now: fixedNow });
+assert.equal(officialNoAuth.approval_state, 'approved-auto');
+assert.ok(officialNoAuth.evidence.includes('official-material-confirms-zero-cost-access'));
+assert.ok(officialNoAuth.evidence.includes('official-material-confirms-automation-permission'));
 
 const staleQuota = await evaluateOpportunity({ ...base, free_quota: 200, metadata: { quota_evidence_terms: ['200 requests/day'] } }, { fetchImpl, now: fixedNow });
 assert.equal(staleQuota.approval_state, 'quarantined');
@@ -76,6 +94,15 @@ assert.equal(unsafe.auto_activatable, false);
 assert.ok(unsafe.blockers.includes('payment-method-required'));
 assert.ok(unsafe.blockers.includes('zero-cost-not-verified'));
 assert.ok(unsafe.blockers.includes('automation-permission-not-explicit'));
+
+const unavailableService = await evaluateOpportunity(base, {
+  now: fixedNow,
+  fetchImpl: async url => String(url) === base.official_url
+    ? new Response('unavailable', { status: 503 })
+    : fetchImpl(url)
+});
+assert.equal(unavailableService.approval_state, 'quarantined');
+assert.ok(unavailableService.blockers.includes('service-health-probe-failed'));
 
 const hunter = new OpportunityHunter({ fetchImpl, clock, concurrency: 2 });
 const report = await hunter.run({ opportunities: [base, { ...base, opportunity_id: 'opportunity-owner-compute', kind: 'compute', authentication_type: 'api_key', account_required: true }, { ...base, opportunity_id: 'opportunity-unsafe', payment_method_required: true, zero_cost_verified: false, automation_permission: 'unknown' }] });

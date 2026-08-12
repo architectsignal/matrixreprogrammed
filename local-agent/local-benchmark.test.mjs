@@ -59,5 +59,14 @@ assert.equal(learned.find(item => item.resource_id === 'model-measured').quality
 const route = routeLocalModel(learned, { payload: { prompt: 'short classification', max_tokens: 32 } });
 assert.equal(route.selected.resource.resource_id, 'model-measured', 'measured outcomes must change the next routing decision');
 
+const unavailable = applyBenchmarkScores([resource('model-unavailable')], {
+  completed_at: report.completed_at,
+  models: [{ resource_id: 'model-unavailable', status: 'unavailable', total_profiles: 4, passed_profiles: 0, composite_score: 0 }]
+})[0];
+assert.equal(unavailable.enabled, false);
+assert.equal(unavailable.health_status, 'unhealthy');
+assert.equal(unavailable.reliability_score, 0);
+assert.equal(unavailable.metadata.matrix_benchmark.status, 'unavailable');
+
 await fs.rm(stateDir, { recursive: true, force: true });
 console.log('Matrix local model benchmark and learned-routing tests passed.');

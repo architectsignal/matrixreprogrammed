@@ -122,5 +122,8 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Lease completion updates registry reliability and latency, and the Resource Broker demonstrably prefers the learned resource on the next route.
 - [x] Daily compute reports and benchmark outcomes are written to `matrix_learning_ledger` without prompts, hidden reasoning, credentials or raw model output.
 - [x] SQLite/D1 integration proves admission, assignment, lease, EUR 0 completion, immutable receipts, learning and next-cycle reporting.
+- [x] Daily Opportunity Hunter seeds now include SEC EDGAR and USAspending public APIs; both require live official evidence for no-auth access, lawful automation and bounded zero-spend use before admission.
+- [x] Approved public-data opportunities now activate through the tested public-only HTTP adapter and execute through the Resource Broker with provenance, host allowlisting, quota reserves and private-data rejection.
+- [x] Local benchmark learning now disables installed models that fail real work; the live Qwen generator is unhealthy/disabled while both measured embedding models remain enabled.
 - [ ] Complete the pinned public production release before any later release of this capacity change.
 - [ ] After deployment, verify the live owner-only capacity route and capture a real online-owner-node report; external GPU candidates remain blocked until owner onboarding and current terms proof are complete.

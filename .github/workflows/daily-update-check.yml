@@ -65,6 +65,10 @@ jobs:
 
       - name: Commit daily public-content updates if changed
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; daily content validated but will not move main."
+            exit 0
+          fi
           git config user.name "matrix-daily-update-bot"
           git config user.email "actions@users.noreply.github.com"
           git status --short

@@ -48,6 +48,10 @@ jobs:
 
       - name: Commit weekly refreshed public outputs if changed
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; weekly refresh validated but will not move main."
+            exit 0
+          fi
           git config user.name "matrix-weekly-refresh-bot"
           git config user.email "actions@users.noreply.github.com"
           git status --short

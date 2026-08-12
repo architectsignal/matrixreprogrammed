@@ -33,6 +33,10 @@ jobs:
 
       - name: Commit scan changes
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; evidence scan validated but will not move main."
+            exit 0
+          fi
           if git diff --quiet; then
             echo "No evidence pipeline changes to commit."
             exit 0

@@ -86,6 +86,11 @@ jobs:
         if: github.event_name != 'pull_request'
         id: commit
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "Controlled production release freeze active; open-source research suite validated but will not move main."
+            exit 0
+          fi
           rm -rf pagefind
           cp -R _site/pagefind pagefind
           git config user.name "matrix-open-source-bot"

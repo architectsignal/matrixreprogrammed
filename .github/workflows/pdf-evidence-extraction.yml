@@ -114,6 +114,11 @@ jobs:
         if: github.event_name != 'pull_request'
         id: commit
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            echo "Controlled production release freeze active; PDF evidence extraction validated but will not move main."
+            exit 0
+          fi
           git config user.name "matrix-document-bot"
           git config user.email "actions@github.com"
           git add \

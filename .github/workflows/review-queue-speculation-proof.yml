@@ -43,6 +43,10 @@ jobs:
       - name: Commit receipt safely
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; speculation proof will not move main."
+            exit 0
+          fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           for attempt in 1 2 3; do

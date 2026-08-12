@@ -77,6 +77,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; money intelligence validated but will not move main."
+            exit 0
+          fi
           files=(
             data/money-intelligence-registry.json
             data/money-overlap-graph.json

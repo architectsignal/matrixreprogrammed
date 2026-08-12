@@ -30,11 +30,19 @@ jobs:
     environment: production
     timeout-minutes: 120
     steps:
-      - name: Checkout latest main
+      - name: Checkout exact dispatched commit
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
           fetch-depth: 501
+
+      - name: Prove checkout is pinned to dispatch SHA
+        env:
+          MATRIX_DISPATCH_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$MATRIX_DISPATCH_SHA"
 
       - name: Confirm explicit production release authority
         env:
@@ -60,7 +68,7 @@ jobs:
             node scripts/cloudflare-usage-budget-guard.js release
           fi
 
-      - name: Record exact main commit to deploy
+      - name: Record exact dispatched commit to deploy
         run: echo "DEPLOY_COMMIT_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Setup Node.js

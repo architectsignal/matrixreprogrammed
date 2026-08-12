@@ -46,6 +46,24 @@ database.prepare(`INSERT INTO ai_local_runtime_nodes(
 database.prepare(`INSERT INTO ai_local_runtime_nodes(
   node_id,node_name,platform,architecture,hardware_json,server_inventory_json,model_count,gpu_count,total_gpu_memory_mb,
   status,cost_confirmed_zero,external_network_used,registered_at,last_seen,expires_at
+) VALUES(?,?,?,?,?,?,0,0,0,'offline',1,0,?,?,?)`).run(
+  'node-offline-assignment',
+  'Offline assignment node',
+  'test',
+  'x64',
+  JSON.stringify({ hostname: 'offline-assignment', cpu_threads: 4, total_memory_mb: 8192, total_gpu_memory_mb: 0 }),
+  '[]',
+  new Date().toISOString(),
+  new Date().toISOString(),
+  '2099-01-01T00:00:00.000Z'
+);
+database.prepare(`INSERT INTO ai_local_jobs(
+  job_id,job_type,payload_json,requirements_json,data_class,priority,status,assigned_node_id,attempt_count,maximum_attempts,created_at,updated_at
+) VALUES('job-stale-node-assignment','deterministic.hash','{"value":"recover-assignment"}','{"cost_ceiling_eur":0,"external_network_allowed":false}',
+  'internal','P4','queued','node-offline-assignment',0,1,'2099-01-01T00:00:00.000Z','2099-01-01T00:00:00.000Z')`).run();
+database.prepare(`INSERT INTO ai_local_runtime_nodes(
+  node_id,node_name,platform,architecture,hardware_json,server_inventory_json,model_count,gpu_count,total_gpu_memory_mb,
+  status,cost_confirmed_zero,external_network_used,registered_at,last_seen,expires_at
 ) VALUES(?,?,?,?,?,?,0,0,0,'online',1,1,?,?,?)`).run(
   'node-networked-quarantine',
   'Networked quarantine node',
@@ -67,7 +85,7 @@ const env = {
 const first = await runScheduledCapacityGrowth(env);
 assert.equal(first.skipped, false);
 assert.equal(first.resources_admitted, 1);
-assert.equal(first.assignments, 1);
+assert.equal(first.assignments, 2);
 assert.equal(first.report.confirmed_compute_cost_eur, 0);
 assert.equal(first.report.paid_fallback_possible, false);
 assert.equal(first.report.online_local_nodes, 1);
@@ -76,6 +94,8 @@ assert.equal(first.report.total_available_cpu_threads, 8, 'quarantined hardware 
 assert.ok(first.report.resources_quarantined.some(item => item.candidate_id === 'node-networked-quarantine'));
 assert.equal(first.report.daily_benchmark.created, true);
 assert.equal(first.report.jobs_assigned[0].node_id, 'node-worker-integration');
+assert.equal(database.prepare("SELECT assigned_node_id FROM ai_local_jobs WHERE job_id='job-stale-node-assignment'").get().assigned_node_id,
+  'node-worker-integration', 'stale queued assignment must recover to an eligible online node');
 
 const queued = database.prepare("SELECT * FROM ai_local_jobs WHERE job_id LIKE 'capacity-benchmark-%'").get();
 assert.equal(queued.status, 'queued');

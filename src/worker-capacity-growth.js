@@ -107,7 +107,10 @@ async function persistLocalAssignments(env, assignments, localRuntimes, now = ne
   for (const assignment of assignments) {
     if (!assignment.job_id || !nodeIds.has(assignment.resource_id)) continue;
     const update = await env.MEMBERS_DB.prepare(`UPDATE ai_local_jobs SET assigned_node_id=?,updated_at=?
-      WHERE job_id=? AND status='queued' AND assigned_node_id IS NULL`)
+      WHERE job_id=? AND status='queued' AND (assigned_node_id IS NULL OR assigned_node_id NOT IN (
+        SELECT node_id FROM ai_local_runtime_nodes WHERE status='online' AND expires_at>CURRENT_TIMESTAMP
+          AND cost_confirmed_zero=1 AND external_network_used=0
+      ))`)
       .bind(assignment.resource_id, now.toISOString(), assignment.job_id).run();
     if (Number(update?.meta?.changes || 0) > 0) persisted.push({ job_id: assignment.job_id, node_id: assignment.resource_id });
   }

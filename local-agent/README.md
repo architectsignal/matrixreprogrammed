@@ -28,7 +28,9 @@ npm run matrix-local -- autostart enable
 npm run matrix-local -- autostart status
 ```
 
-Remove it with `npm run matrix-local -- autostart disable`. The scheduled task runs with limited user privileges and starts only at owner login.
+The CLI prefers a limited scheduled task. If Windows denies task creation, it falls back to the current user's `HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run` entry. The startup command contains only the Node executable and Host script path; it reads the owner token from the user environment and never stores the token in the task or registry value.
+
+Remove either provider with `npm run matrix-local -- autostart disable`. Both run only for the current user at owner login; the scheduled-task provider explicitly uses limited privileges.
 
 ## Security boundary
 

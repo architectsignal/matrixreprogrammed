@@ -14,6 +14,7 @@ const directory = path.dirname(fileURLToPath(import.meta.url));
 const cliFile = path.join(directory, 'matrix-local.mjs');
 const hostFile = path.join(directory, 'matrix-local-host.mjs');
 const taskName = 'Matrix Reprogrammed Host';
+const registryRunKey = 'HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run';
 
 function processAlive(pid) {
   if (!Number.isInteger(Number(pid)) || Number(pid) <= 0) return false;
@@ -192,16 +193,55 @@ export function windowsAutostartArguments(action) {
   return ['/Query', '/TN', taskName, '/FO', 'LIST', '/V'];
 }
 
+export function windowsRegistryAutostartArguments(action) {
+  if (action === 'enable') return ['ADD', registryRunKey, '/V', taskName, '/T', 'REG_SZ', '/D', taskRunCommand(), '/F'];
+  if (action === 'disable') return ['DELETE', registryRunKey, '/V', taskName, '/F'];
+  return ['QUERY', registryRunKey, '/V', taskName];
+}
+
+export async function configureWindowsAutostart(action, execFileImpl = execFileAsync) {
+  if (!['enable', 'disable', 'status'].includes(action)) throw new Error('Use: matrix-local autostart enable|disable|status');
+
+  if (action === 'enable') {
+    try {
+      const result = await execFileImpl('schtasks.exe', windowsAutostartArguments(action), { windowsHide: true });
+      return { ok: true, action, configured: true, provider: 'scheduled-task', task_name: taskName, output: String(result.stdout || '').trim() };
+    } catch (taskError) {
+      try {
+        const result = await execFileImpl('reg.exe', windowsRegistryAutostartArguments(action), { windowsHide: true });
+        return {
+          ok: true, action, configured: true, provider: 'current-user-run', task_name: taskName,
+          fallback_reason: String(taskError?.stderr || taskError?.message || 'scheduled-task-unavailable').trim().slice(0, 300),
+          output: String(result.stdout || '').trim()
+        };
+      } catch (registryError) {
+        throw new Error(`Scheduled task and current-user Run fallback both failed: ${String(registryError?.stderr || registryError?.message || registryError)}`);
+      }
+    }
+  }
+
+  if (action === 'status') {
+    try {
+      await execFileImpl('schtasks.exe', windowsAutostartArguments(action), { windowsHide: true });
+      return { ok: true, action, configured: true, provider: 'scheduled-task', task_name: taskName };
+    } catch {}
+    try {
+      await execFileImpl('reg.exe', windowsRegistryAutostartArguments(action), { windowsHide: true });
+      return { ok: true, action, configured: true, provider: 'current-user-run', task_name: taskName };
+    } catch {
+      return { ok: false, action, configured: false, task_name: taskName };
+    }
+  }
+
+  const removed = [];
+  try { await execFileImpl('schtasks.exe', windowsAutostartArguments(action), { windowsHide: true }); removed.push('scheduled-task'); } catch {}
+  try { await execFileImpl('reg.exe', windowsRegistryAutostartArguments(action), { windowsHide: true }); removed.push('current-user-run'); } catch {}
+  return { ok: true, action, configured: false, removed, task_name: taskName };
+}
+
 async function autostart(action) {
   if (process.platform !== 'win32') return { ok: false, error: 'Automatic login start is currently implemented for Windows; use the foreground run command with your service manager.' };
-  if (!['enable', 'disable', 'status'].includes(action)) throw new Error('Use: matrix-local autostart enable|disable|status');
-  try {
-    const result = await execFileAsync('schtasks.exe', windowsAutostartArguments(action), { windowsHide: true });
-    return { ok: true, action, task_name: taskName, output: String(result.stdout || '').trim() };
-  } catch (error) {
-    if (action === 'status' || action === 'disable') return { ok: action === 'disable', action, configured: false, task_name: taskName };
-    throw error;
-  }
+  return configureWindowsAutostart(action);
 }
 
 async function logs(lines = 80) {

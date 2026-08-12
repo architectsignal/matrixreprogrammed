@@ -6,7 +6,13 @@ const stateDir = await fs.mkdtemp(path.join(os.tmpdir(), 'matrix-local-cli-'));
 process.env.MATRIX_LOCAL_STATE_DIR = stateDir;
 process.env.MATRIX_LOCAL_BENCHMARK_ENABLED = 'false';
 process.env.MATRIX_LOCAL_DISCOVERY_SECONDS = '30';
-const { processAlive, statusSnapshot, windowsAutostartArguments } = await import('./matrix-local.mjs');
+const {
+  configureWindowsAutostart,
+  processAlive,
+  statusSnapshot,
+  windowsAutostartArguments,
+  windowsRegistryAutostartArguments
+} = await import('./matrix-local.mjs');
 const { benchmarkLocalRuntime } = await import('./local-benchmark.mjs');
 
 try {
@@ -30,6 +36,23 @@ try {
   assert.equal(autostart.includes('ONLOGON'), true);
   assert.equal(autostart.includes('LIMITED'), true);
   assert.equal(autostart.some(value => /matrix-local\.mjs/.test(value)), true);
+
+  const registryAutostart = windowsRegistryAutostartArguments('enable');
+  assert.equal(registryAutostart.includes('HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run'), true);
+  assert.equal(registryAutostart.includes('REG_SZ'), true);
+  assert.equal(registryAutostart.some(value => /matrix-local\.mjs/.test(value)), true);
+
+  const calls = [];
+  const fallback = await configureWindowsAutostart('enable', async (command, args) => {
+    calls.push({ command, args });
+    if (command === 'schtasks.exe') throw Object.assign(new Error('Access is denied.'), { stderr: 'ERROR: Access is denied.' });
+    return { stdout: 'The operation completed successfully.' };
+  });
+  assert.equal(fallback.ok, true);
+  assert.equal(fallback.configured, true);
+  assert.equal(fallback.provider, 'current-user-run');
+  assert.match(fallback.fallback_reason, /Access is denied/i);
+  assert.deepEqual(calls.map(call => call.command), ['schtasks.exe', 'reg.exe']);
 } finally {
   await fs.rm(stateDir, { recursive: true, force: true });
 }

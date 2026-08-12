@@ -1,6 +1,6 @@
 # AI management task ledger
 
-Updated: 2026-07-30
+Updated: 2026-08-12
 
 ## Priority lock
 
@@ -98,3 +98,16 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Added repeat-safe phase 13 schema and controlled-release workflow wiring.
 - [ ] Complete the fresh full build, strict public audit, Worker/config/security matrix and draft PR.
 - [ ] Production deployment remains blocked until the Cloudflare zero-overage policy permits a release.
+
+## 2026-08-12 Ask Matrix checkpoint
+
+- [x] Reconciled PR #239 at the contract level without applying its incompatible `matrix_learning_ledger` schema over the existing phase 13 table.
+- [x] Reconciled the substantive release fixes from PR #240: production-domain smoke targets, search-first homepage pressure-test compatibility and the Video/Rumble exploration route.
+- [x] Compiled a public investigation corpus from existing Search V3, Intel Vault, evidence-card, entity, relationship, record-event and missing-record assets.
+- [x] Added the persisted `POST /api/investigate` and `GET /api/investigate/:id` vertical slice with explicit state history and a deterministic evidence-only fallback.
+- [x] Added optional owner-local synthesis through the existing Resource Registry, local-model router and local job queue without storing prompt material or raw model output in Cloudflare.
+- [x] Added strict public-result, evidence-ID, source-route and no-private-reasoning validation.
+- [x] Added representative retrieval, citation-integrity, persistence, idempotency, malformed-output, invented-citation, learning-effect and local-completion tests.
+- [ ] Complete the canonical Cloudflare build and full applicable release matrix.
+- [ ] Apply `migrations/public_investigation_api.sql` in the controlled release workflow.
+- [ ] Deploy only if the zero-spend budget gate is current, unlocked and non-billable; then verify the public UI and API live.

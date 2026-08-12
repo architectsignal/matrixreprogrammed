@@ -137,7 +137,11 @@ const profiles = [
   // Last-resort profile for unusually large generated indexes. It preserves
   // every unique route and the fields the Search V3 runtime consumes while
   // reducing repeated labels and exact-term payloads rather than dropping URLs.
-  { name:'route-preserving-floor', title:64, description:0, terms:2, termChars:14, scalar:24, sourceUrl:0 }
+  { name:'route-preserving-floor', title:64, description:0, terms:2, termChars:14, scalar:24, sourceUrl:0 },
+  // Searchable-route growth can make the floor exceed the deploy target even
+  // after duplicates and descriptions are gone. Keep one bounded exact term
+  // plus the title and typed runtime fields for every route; never drop URLs.
+  { name:'route-preserving-minimum', title:60, description:0, terms:1, termChars:12, scalar:22, sourceUrl:0 }
 ];
 let selected = null;
 for (const profile of profiles) {

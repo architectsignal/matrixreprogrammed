@@ -1,3 +1,8 @@
+import {
+  completePublicInvestigationLocalResult,
+  recordPublicInvestigationLocalFailure
+} from './worker-public-investigation.js';
+
 const PRIORITY_SQL = "CASE priority WHEN 'P0' THEN 0 WHEN 'P1' THEN 1 WHEN 'P2' THEN 2 WHEN 'P3' THEN 3 ELSE 4 END";
 
 function json(value, status = 200) {
@@ -21,6 +26,17 @@ function randomToken() {
   const bytes = new Uint8Array(32);
   crypto.getRandomValues(bytes);
   return [...bytes].map(byte => byte.toString(16).padStart(2, '0')).join('');
+}
+
+function parseJson(value, fallback = {}) {
+  try { return JSON.parse(String(value || '')); } catch { return fallback; }
+}
+
+function containsPrivatePublicResultMaterial(value, depth = 0) {
+  if (depth > 8 || value == null || typeof value !== 'object') return false;
+  if (Array.isArray(value)) return value.some(item => containsPrivatePublicResultMaterial(item, depth + 1));
+  return Object.entries(value).some(([key, item]) => /^(?:response|raw_output|prompt|messages|reasoning|analysis|chain_of_thought|scratchpad)$/i.test(key)
+    || containsPrivatePublicResultMaterial(item, depth + 1));
 }
 
 function normalizeJob(body = {}) {
@@ -93,23 +109,64 @@ export async function completeLocalJob(env, body) {
   const jobId = String(body?.job_id || '');
   const nodeId = String(body?.node_id || '');
   const token = String(body?.lease_token || '');
-  const completion = body?.completion || {};
+  let completion = body?.completion || {};
   if (!jobId || !nodeId || !token) return json({ ok: false, error: 'job_id, node_id and lease_token are required' }, 400);
   const row = await env.MEMBERS_DB.prepare('SELECT * FROM ai_local_jobs WHERE job_id=? LIMIT 1').bind(jobId).first();
   if (!row || row.status !== 'leased') return json({ ok: false, error: 'Job is not leased' }, 409);
   if (row.assigned_node_id !== nodeId || await digest(token) !== row.lease_token_hash) return json({ ok: false, error: 'Lease identity is invalid' }, 403);
   if (Date.parse(row.lease_expires_at || '') <= Date.now()) return json({ ok: false, error: 'Lease has expired' }, 409);
   if (completion.cost_confirmed_zero !== true || completion.external_network_used !== false) return json({ ok: false, error: 'Completion violated zero-spend or network boundary' }, 400);
+  const jobPayload = parseJson(row.payload_json, {});
+  const publicInvestigationJob = Boolean(jobPayload?.public_investigation?.investigation_id);
+  let publicCompletion = null;
+  let publicFailureType = null;
+  if (publicInvestigationJob && containsPrivatePublicResultMaterial(completion?.result)) {
+    completion = { ...completion, ok: false, error: 'Public investigation completion contained private prompt, reasoning or raw model material', result: undefined };
+    publicFailureType = 'private-material-rejected';
+  }
+  if (publicInvestigationJob && completion.ok === true) {
+    try {
+      publicCompletion = await completePublicInvestigationLocalResult(env, row, completion);
+    } catch (error) {
+      completion = { ...completion, ok: false, error: String(error?.message || error).slice(0, 1200), result: undefined };
+      publicFailureType = /evidence ID|source route|citation/i.test(String(error?.message || error))
+        ? 'invented-citation-rejected'
+        : /JSON|object|field/i.test(String(error?.message || error))
+          ? 'malformed-model-json'
+          : 'public-result-validation-failed';
+    }
+  }
   const successful = completion.ok === true;
   const now = new Date().toISOString();
   const nextStatus = successful ? 'completed' : Number(row.attempt_count || 0) >= Number(row.maximum_attempts || 3) ? 'failed' : 'queued';
-  const resultJson = JSON.stringify(completion);
+  const resultJson = publicInvestigationJob
+    ? JSON.stringify({
+        ok: successful,
+        public_result_persisted: Boolean(publicCompletion?.handled),
+        public_investigation_id: publicCompletion?.investigation_id || jobPayload.public_investigation.investigation_id,
+        result_sha256: String(body?.completion?.result_sha256 || ''),
+        error: successful ? null : String(completion.error || 'Local public-result validation failed').slice(0, 1200),
+        raw_output_persisted: false,
+        prompt_persisted: false
+      })
+    : JSON.stringify(completion);
   await env.MEMBERS_DB.prepare(`UPDATE ai_local_jobs SET status=?,result_json=?,error_text=?,assigned_node_id=NULL,lease_token_hash=NULL,lease_expires_at=NULL,updated_at=?,completed_at=? WHERE job_id=?`)
     .bind(nextStatus, resultJson, successful ? null : String(completion.error || 'Local execution failed').slice(0, 2000), now, successful || nextStatus === 'failed' ? now : null, jobId).run();
   const receiptId = `receipt-${crypto.randomUUID()}`;
   await env.MEMBERS_DB.prepare(`INSERT INTO ai_local_job_receipts(receipt_id,job_id,node_id,receipt_type,payload_hash,result_hash,cost_confirmed_zero,external_network_used,created_at)
     VALUES(?,?,?,?,?,?,1,0,?)`).bind(receiptId, jobId, nodeId, successful ? 'completed' : nextStatus === 'failed' ? 'failed' : 'requeued', await digest(row.payload_json), await digest(resultJson), now).run();
-  return json({ ok: true, job_id: jobId, status: nextStatus, receipt_id: receiptId });
+  if (publicInvestigationJob && !successful) {
+    await recordPublicInvestigationLocalFailure(env, row, publicFailureType || 'local-model-failed', completion.error, nextStatus === 'failed').catch(() => null);
+  }
+  return json({
+    ok: true,
+    job_id: jobId,
+    status: nextStatus,
+    receipt_id: receiptId,
+    public_investigation_id: publicCompletion?.investigation_id || (publicInvestigationJob ? jobPayload.public_investigation.investigation_id : null),
+    public_result_persisted: Boolean(publicCompletion?.handled),
+    raw_output_persisted: publicInvestigationJob ? false : undefined
+  });
 }
 
 export async function listLocalJobs(env) {

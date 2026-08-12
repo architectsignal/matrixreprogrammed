@@ -106,6 +106,21 @@ function repairDailyPowerMissingRecordRoute() {
 
   const missingRecord = conclusions.find(conclusion => String(conclusion.title || '').trim().toLowerCase() === 'most important missing record');
   if (!missingRecord) throw new Error('Daily Power data has no Most important missing record conclusion');
+
+  const requestedRoute = cleanLocalHtmlRoute(missingRecord.route || missingRecord.integrity?.route);
+  if (requestedRoute && !fs.existsSync(path.join(root, requestedRoute)) && requestedRoute.startsWith('entity-briefs/')) {
+    const slug = path.basename(requestedRoute, '.html');
+    const fallbackRoute = [
+      `entity-timelines/${slug}.html`,
+      `reports/entity-${slug}.html`
+    ].find(candidate => fs.existsSync(path.join(root, candidate)) && fs.statSync(path.join(root, candidate)).isFile());
+    if (fallbackRoute) {
+      afterHtml = afterHtml.split(requestedRoute).join(fallbackRoute);
+      if (missingRecord.route === requestedRoute) missingRecord.route = fallbackRoute;
+      if (missingRecord.integrity?.route === requestedRoute) missingRecord.integrity.route = fallbackRoute;
+      dataChanged = true;
+    }
+  }
   const activeRoute = requireLocalRouteTarget(
     missingRecord.route || missingRecord.integrity?.route,
     'Current Daily Power missing-record route'

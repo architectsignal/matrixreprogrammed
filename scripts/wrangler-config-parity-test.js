@@ -37,16 +37,27 @@ const requiredLockedVars = [
   'AI_RESOURCE_AUTO_APPROVAL_ENABLED',
   'AI_LOCAL_MODEL_ROUTING_ENABLED',
   'AI_SITE_DIRECTOR_ENABLED',
-  'AI_OPPORTUNITY_HUNTER_ENABLED'
+  'AI_OPPORTUNITY_HUNTER_ENABLED',
+  'MATRIX_PUBLIC_INVESTIGATION_ENABLED',
+  'MATRIX_PUBLIC_INVESTIGATION_LOCAL_ENRICHMENT_ENABLED',
+  'MATRIX_PUBLIC_INVESTIGATION_MAX_PENDING_LOCAL_JOBS',
+  'MATRIX_PUBLIC_INVESTIGATION_RATE_LIMIT_PER_MINUTE'
 ];
 for (const key of requiredLockedVars) {
   assert.strictEqual(jsonc.vars[key], tomlString(key), `${key} drift`);
 }
 
-assert.deepStrictEqual(
-  jsonc.routes.map(route => `${route.pattern}|${route.zone_name}`),
-  [...toml.matchAll(/\{\s*pattern\s*=\s*"([^"]+)",\s*zone_name\s*=\s*"([^"]+)"\s*\}/g)].map(match => `${match[1]}|${match[2]}`),
-  'Production route drift'
-);
+const recoveryRoutes = jsonc.routes.map(route => `${route.pattern}|${route.zone_name}`);
+const canonicalRoutes = [...toml.matchAll(/\{\s*pattern\s*=\s*"([^"]+)",\s*zone_name\s*=\s*"([^"]+)"\s*\}/g)].map(match => `${match[1]}|${match[2]}`);
+if (canonicalRoutes.length) {
+  assert.deepStrictEqual(recoveryRoutes, canonicalRoutes, 'Production route drift');
+} else {
+  assert.strictEqual(tomlBoolean('workers_dev'), 'true', 'Route-less canonical deploy must keep workers_dev available');
+  assert.match(toml, /custom-domain routes are already live and are managed in Cloudflare/i, 'Route-less canonical deploy must document dashboard-managed domains');
+  assert.deepStrictEqual(recoveryRoutes, [
+    'matrixreprogrammed.com/*|matrixreprogrammed.com',
+    'www.matrixreprogrammed.com/*|matrixreprogrammed.com'
+  ], 'Recovery mirror must retain the two verified custom-domain routes');
+}
 
-console.log('Wrangler config parity PASS: canonical TOML and JSONC recovery mirror agree on runtime-affecting settings.');
+console.log('Wrangler config parity PASS: runtime settings agree and the recovery mirror preserves dashboard-managed production routes without asking routine deploys to mutate them.');

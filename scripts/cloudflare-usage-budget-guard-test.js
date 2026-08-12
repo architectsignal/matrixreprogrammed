@@ -32,82 +32,26 @@ function run(policy, mode = 'release', overrides = {}) {
   });
 }
 
-const locked = run(sourcePolicy);
-assert.notStrictEqual(locked.status, 0, 'The owner-reported overage period must be locked.');
-assert.match(locked.stderr, /5,470 billable build minutes/);
+const lockedZeroBuildLane = run(sourcePolicy);
+assert.strictEqual(lockedZeroBuildLane.status, 0, lockedZeroBuildLane.stderr);
+assert.match(lockedZeroBuildLane.stdout, /locked-period zero-build PASS/);
 
-const exceptionDenied = run(sourcePolicy, 'owner-exception', {
-  GITHUB_EVENT_NAME: 'workflow_dispatch',
-  GITHUB_RUN_ATTEMPT: '1'
+const lockedCloudflareBuild = run(sourcePolicy, 'release', {
+  EXPECTED_CLOUDFLARE_BUILD_MINUTES: '1'
 });
-assert.notStrictEqual(exceptionDenied.status, 0, 'The one-day exception must fail without the exact owner phrase.');
+assert.notStrictEqual(lockedCloudflareBuild.status, 0,
+  'The owner-reported overage period must reject any Cloudflare Workers Build minute.');
+assert.match(lockedCloudflareBuild.stderr, /5,470 billable build minutes/);
 
-const exceptionAllowed = run(sourcePolicy, 'owner-exception', {
+// The historical one-day exception is deliberately dead after 2026-08-07.
+// Keep testing that even the old exact phrase cannot revive it.
+const expiredException = run(sourcePolicy, 'owner-exception', {
   CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
   GITHUB_EVENT_NAME: 'workflow_dispatch',
   GITHUB_RUN_ATTEMPT: '1'
 });
-assert.strictEqual(exceptionAllowed.status, 0, exceptionAllowed.stderr);
-assert.match(exceptionAllowed.stdout, /one-time owner exception PASS/);
-assert.match(exceptionAllowed.stdout, /workflow_dispatch/);
-
-const triggerSha = 'a'.repeat(40);
-const parentSha = 'b'.repeat(40);
-fs.rmSync(authorizationReportPath, { force: true });
-const repositoryPushDenied = run(sourcePolicy, 'owner-exception', {
-  CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
-  GITHUB_EVENT_NAME: 'push',
-  GITHUB_RUN_ATTEMPT: '1',
-  GITHUB_SHA: triggerSha
-});
-assert.notStrictEqual(repositoryPushDenied.status, 0,
-  'An ordinary push without a verified repository-credential receipt must fail closed.');
-assert.match(repositoryPushDenied.stderr, /verified repository-credential push/i);
-
-fs.writeFileSync(authorizationReportPath, `${JSON.stringify({
-  ok: true,
-  mode: 'repository-credential-one-shot-push',
-  actor: 'architectsignal',
-  event: 'push',
-  ref: 'refs/heads/main',
-  workflowSha: triggerSha,
-  headSha: triggerSha,
-  parentSha,
-  targetSha: parentSha,
-  changedFiles: ['.github/repository-credential-production.trigger'],
-  billingExceptionAuthorized: true,
-  credentialSource: 'repository-secrets-without-production-environment',
-  error: ''
-}, null, 2)}\n`);
-
-const repositoryPushAllowed = run(sourcePolicy, 'owner-exception', {
-  CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
-  GITHUB_EVENT_NAME: 'push',
-  GITHUB_RUN_ATTEMPT: '1',
-  GITHUB_SHA: triggerSha
-});
-assert.strictEqual(repositoryPushAllowed.status, 0, repositoryPushAllowed.stderr);
-assert.match(repositoryPushAllowed.stdout, /verified one-file repository-credential push/);
-
-const mismatchedRepositoryPush = run(sourcePolicy, 'owner-exception', {
-  CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
-  GITHUB_EVENT_NAME: 'push',
-  GITHUB_RUN_ATTEMPT: '1',
-  GITHUB_SHA: 'c'.repeat(40)
-});
-assert.notStrictEqual(mismatchedRepositoryPush.status, 0,
-  'A repository-credential receipt for another SHA must fail closed.');
-assert.match(mismatchedRepositoryPush.stderr, /exactHead/);
-
-const rerunDenied = run(sourcePolicy, 'owner-exception', {
-  CLOUDFLARE_ONE_TIME_BILLABLE_BUILD_AUTHORIZATION: 'OWNER AUTHORIZED ONE BILLABLE BUILD 2026-08-02',
-  GITHUB_EVENT_NAME: 'push',
-  GITHUB_RUN_ATTEMPT: '2',
-  GITHUB_SHA: triggerSha
-});
-assert.notStrictEqual(rerunDenied.status, 0,
-  'The billable-build exception must not be reusable by a workflow rerun.');
-assert.match(rerunDenied.stderr, /cannot be used for a workflow re-run attempt/);
+assert.notStrictEqual(expiredException.status, 0, 'The expired billable-build exception must stay closed.');
+assert.match(expiredException.stderr, /valid only on 2026-08-07/);
 
 const nextPeriod = structuredClone(sourcePolicy);
 nextPeriod.status = 'enforced';
@@ -128,7 +72,13 @@ const stale = run(nextPeriod, 'release', {
 });
 assert.notStrictEqual(stale.status, 0, 'A stale billing snapshot must fail closed.');
 
-const connected = run(nextPeriod, 'release', { CLOUDFLARE_GIT_BUILDS_DISCONNECTED: 'false' });
+const recordedDisconnect = run(nextPeriod, 'release', { CLOUDFLARE_GIT_BUILDS_DISCONNECTED: 'false' });
+assert.strictEqual(recordedDisconnect.status, 0, recordedDisconnect.stderr);
+assert.match(recordedDisconnect.stdout, /disconnection proof PASS from owner-verified/);
+
+const connectedPolicy = structuredClone(nextPeriod);
+connectedPolicy.verifiedCloudflareConnectionState.workersGitBuilds = 'connected';
+const connected = run(connectedPolicy, 'release', { CLOUDFLARE_GIT_BUILDS_DISCONNECTED: 'false' });
 assert.notStrictEqual(connected.status, 0, 'Connected Cloudflare Git builds must fail closed.');
 
 const pagesRuleMissing = structuredClone(nextPeriod);
@@ -137,4 +87,4 @@ const pagesConnected = run(pagesRuleMissing, 'check');
 assert.notStrictEqual(pagesConnected.status, 0, 'Missing Cloudflare Pages disconnect policy must fail closed.');
 
 fs.rmSync(tempDir, { recursive: true, force: true });
-console.log('Cloudflare zero-overage budget guard PASS: dispatch, exact repository push, rerun, locked, allowed, ceiling, stale-snapshot, Workers Git and Pages Git states verified.');
+console.log('Cloudflare zero-overage budget guard PASS: locked zero-build Wrangler lane, locked Workers Build refusal, expired exception, next-period allowance, ceiling, stale-snapshot, Workers Git and Pages Git states verified.');

@@ -86,7 +86,7 @@ const explore = [
   ['evidence-vault.html','Evidence Vault'],['independent-links.html','Independent Links'],['network-maps.html','Network Maps'],
   ['power-atlas.html','Control System'],['timers.html','Risk Timers'],['security-privacy.html','Security Tools'],
   ['dark-web-safety.html','Dark Web Safety'],['dark-speculation-lab.html','Dark Speculation Lab'],
-  ['books.html','Books and Reports'],['forum.html','Signal Board'],['contact-the-machine.html','Contact the Machine']
+  ['videos.html','Video and Rumble'],['books.html','Books and Reports'],['forum.html','Signal Board'],['contact-the-machine.html','Contact the Machine']
 ];
 
 const fallbackCards = [

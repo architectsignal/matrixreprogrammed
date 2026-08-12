@@ -165,6 +165,7 @@ runRequired('Phase 5 public network map test', 'scripts/public-network-map-test.
 runRequired('Structured investigation search extension', 'scripts/extend-search-with-structured-data.js');
 runRequired('Search V3 evidence index build', 'scripts/build-search-v3-index.js');
 runRequired('Search V3 runtime build', 'scripts/build-search-v3-runtime.js');
+runRequired('Public investigation corpus build', 'scripts/build-public-investigation-corpus.js');
 runRequired('Pagefind fallback route wiring', 'scripts/patch-pagefind-fallback.js');
 runRequired('Structured investigation data test', 'scripts/structured-investigation-data-test.js');
 runRequired('Search V3 quality test', 'scripts/search-v3-quality-test.js');
@@ -194,7 +195,7 @@ const requiredFiles = [
   'evidence-reader.html','evidence-reader','evidence-reader.js','data/evidence-reader-manifest.json','evidence-timeline.html','evidence-timeline','evidence-timeline.js','data/evidence-timeline.json',
   'evidence-archive.html','evidence-archive','evidence-archive.js','evidence-citation.js','source-change-diff.js','replay/sw.js','data/evidence-archive-policy.json','data/evidence-archive-manifest.json','data/evidence-integrity-manifest.json','data/evidence-integrity-manifest.sigstore.json','data/evidence-citations.json',
   'data-lab.html','data-lab','data-lab.js','data/public-data-lab.json',
-  'pagefind-fallback.js','search.html','search','search.js','search-index.json','data/search-facets.json',
+  'pagefind-fallback.js','search.html','search','search.js','search-index.json','data/search-facets.json','answer-engine.html','answer-engine','ask-matrix.js','ask-matrix.css','data/public-investigation-corpus.json',
   'investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','source-changes.html','source-changes',
   'entity-registry.html','entity-registry','relationship-registry.html','relationship-registry','investigation-pulse.js','interactive-network-map.js','evidence-network-map.html','evidence-network-map','evidence-network-map.js','data/evidence-network-map.json','downloads/evidence-network-map.csv',
   'data/membership-feature-matrix.json','data/investigation-status.json','data/investigation-source-registry.json','data/source-change-public.json','data/investigation-entity-schema.json','data/investigation-knowledge-graph.json','data/entity-registry.json','data/relationship-registry.json','downloads/investigation-entities.csv','downloads/investigation-relationships.csv',

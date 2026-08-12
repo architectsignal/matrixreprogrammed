@@ -57,3 +57,20 @@
 | Compute | Candidate discovery retained; remote routing and execution are explicitly disabled in both Wrangler configurations |
 
 Architecture decision: `docs/adr/0002-matrix-synergy-accountability-event-bus.md`.
+
+## Ask Matrix public investigation vertical slice (2026-08-12)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Public entry point | `answer-engine.html` posts a question to `POST /api/investigate`; `GET /api/investigate/:id` returns the persisted public state and result |
+| Retrieval corpus | `scripts/build-public-investigation-corpus.js` compiles existing Search V3 routes, verified evidence cards, the Intel Vault, record events, entity/relationship registries and missing-record ledgers into `data/public-investigation-corpus.json` |
+| Evidence discipline | Every factual, disputed and inferential claim must cite an evidence ID selected from the compiled corpus; unknowns remain explicit and association is never converted into wrongdoing |
+| Orchestration | D1 records the real `queued -> retrieving -> analysing -> verifying -> complete` history, evidence snapshots, latency, validation status and any owner-local synthesis job |
+| Immediate fallback | A deterministic evidence-only answer is returned even when no owner-local model is online; unavailable D1 or corpus state fails with a recoverable error instead of inventing an answer |
+| Private reasoning | Cloudflare may enqueue only the public question plus selected public evidence and routes; the prompt is compiled on the owner machine and raw prompt, hidden reasoning and raw model output are rejected from the public completion contract |
+| Zero-spend routing | Optional synthesis uses the existing Resource Registry, local-model router and `ai_local_jobs`; there is no paid or external-provider fallback |
+| Learning | Validated evidence selections are written to the existing phase 13 `matrix_learning_ledger` and may boost equivalent later retrievals without relaxing evidence or citation policy |
+| Security | Request-size limits, privacy-preserving per-client D1 rate limits, idempotent question hashes, pending-job caps, strict result-field validation, evidence-subset checks and source-route-subset checks fail closed |
+| Release integration | The public investigation migration is rehearsed and applied by both controlled production workflows; Worker/config tests require its route, flags, tables and assets |
+
+Architecture decision: `docs/adr/0004-public-investigation-vertical-slice.md`.

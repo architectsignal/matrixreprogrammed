@@ -11,6 +11,7 @@ MIGRATIONS = [
     "migrations/phase11_local_job_queue.sql",
     "migrations/phase12_opportunity_hunter.sql",
     "migrations/phase13_matrix_synergy.sql",
+    "migrations/public_investigation_api.sql",
 ]
 REQUIRED = {
     "matrix_events",

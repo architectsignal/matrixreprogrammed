@@ -5,6 +5,7 @@ const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const downloads = path.join(root, 'downloads');
+const finalHashOnly = process.env.MATRIX_RELEASE_FINAL_HASH_ONLY === '1';
 fs.mkdirSync(downloads, { recursive: true });
 
 const full = rel => path.join(root, rel);
@@ -18,14 +19,16 @@ const esc = value => String(value ?? '').replace(/&/g, '&amp;').replace(/</g, '&
 // assets. Reapply the canonical search-first homepage owner here, immediately
 // before production health hashes are calculated and before the final deploy copy.
 const homepageReconcile = full('scripts/reconcile-release-homepage-order.js');
-if (!fs.existsSync(homepageReconcile)) {
+if (!finalHashOnly && !fs.existsSync(homepageReconcile)) {
   throw new Error('Missing canonical homepage reconciliation script before production health.');
 }
-execFileSync(process.execPath, [homepageReconcile], {
-  cwd: root,
-  stdio: 'inherit',
-  env: process.env
-});
+if (!finalHashOnly) {
+  execFileSync(process.execPath, [homepageReconcile], {
+    cwd: root,
+    stdio: 'inherit',
+    env: process.env
+  });
+}
 
 function commitSha() {
   const supplied = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || process.env.CF_PAGES_COMMIT_SHA || process.env.CF_COMMIT_SHA || '';
@@ -138,7 +141,7 @@ const html = `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta
 fs.writeFileSync(full('deploy-health.html'), html);
 
 const finalRepair = full('scripts/repair-public-site-errors.js');
-if (fs.existsSync(finalRepair)) execFileSync(process.execPath, [finalRepair], { cwd: root, stdio: 'inherit' });
+if (!finalHashOnly && fs.existsSync(finalRepair)) execFileSync(process.execPath, [finalRepair], { cwd: root, stdio: 'inherit' });
 
 if (!health.ok) {
   console.error(JSON.stringify(health, null, 2));

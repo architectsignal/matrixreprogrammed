@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const liveBase = process.env.LIVE_BASE || 'https://matrixreprogrammed.netlify.app';
+const liveBase = process.env.LIVE_BASE || 'https://matrixreprogrammed.com';
 const strict = process.env.DEEP_TEST_STRICT === '1';
 const reportPath = path.join(root, 'deep-site-test-report.md');
 

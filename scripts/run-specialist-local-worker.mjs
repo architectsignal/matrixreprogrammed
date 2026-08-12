@@ -1,3 +1,4 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { detectLocalRuntime } from '../ai-management/local-runtime/hardware-detector.mjs';
@@ -25,6 +26,17 @@ function boundedJobs(value) {
   return Math.max(1, Math.min(5, Math.floor(parsed)));
 }
 
+function digestResult(result) {
+  const material = JSON.stringify({
+    mission_id: result?.mission_id || null,
+    specialist: result?.specialist || null,
+    model_id: result?.model_id || null,
+    text: result?.output?.text || null,
+    status: result?.status || null
+  });
+  return crypto.createHash('sha256').update(material).digest('hex');
+}
+
 if (!enabled(process.env.MATRIX_SPECIALIST_LOCAL_INFERENCE_EXECUTION_ENABLED)) {
   const skipped = {
     ok: true,
@@ -37,6 +49,7 @@ if (!enabled(process.env.MATRIX_SPECIALIST_LOCAL_INFERENCE_EXECUTION_ENABLED)) {
     generated_at: new Date().toISOString()
   };
   writeJson(path.join(downloads, 'specialist-local-worker-result.json'), skipped);
+  writeJson(path.join(downloads, 'specialist-local-result-receipts.json'), { schema_version: 1, generated_at: skipped.generated_at, receipts: [] });
   console.log(JSON.stringify(skipped, null, 2));
   process.exit(0);
 }
@@ -59,6 +72,7 @@ if (runtime.cost_confirmed_zero !== true || runtime.external_network_used !== fa
 const maximumJobs = boundedJobs(process.env.MATRIX_SPECIALIST_LOCAL_MAX_JOBS);
 const executor = new SpecialistLocalExecutor();
 const missionById = new Map(missions.map(item => [item.mission_id, item]));
+const specByMissionId = new Map(specs.map(item => [item.mission_id, item]));
 const candidates = specs.filter(item => item.status === 'planned' && item.execution_allowed === true).slice(0, maximumJobs);
 const results = [];
 
@@ -94,10 +108,41 @@ for (const spec of candidates) {
   }
 }
 
+const generatedAt = new Date().toISOString();
+const receipts = results.filter(result => result?.mission_id && result?.specialist).map(result => {
+  const mission = missionById.get(result.mission_id) || {};
+  const spec = specByMissionId.get(result.mission_id) || {};
+  const contract = spec.local_execution_contract || {};
+  return {
+    schema_version: 1,
+    mission_id: result.mission_id,
+    specialist: result.specialist,
+    status: ['completed','failed','blocked'].includes(result.status) ? result.status : 'failed',
+    result_digest: digestResult(result),
+    model_id: result.model_id || null,
+    resource_id: result.model_resource_id || null,
+    model_route_score: result.model_route_score || 0,
+    usage: result.output?.usage || {},
+    input_evidence_ids: contract.evidence_reference_ids || [],
+    output_evidence_ids: contract.evidence_reference_ids || [],
+    publication_target_id: mission?.evidence?.publication_target_id || null,
+    publication_gate_passed: false,
+    provenance_checked: false,
+    contrary_evidence_considered: false,
+    cost_confirmed_zero: true,
+    inference_external_network_used: false,
+    external_consequence_performed: false,
+    production_deployment_performed: false,
+    money_moved: false,
+    raw_output_in_receipt: false,
+    generated_at: generatedAt
+  };
+});
+
 const output = {
   ok: results.every(item => item.ok === true || item.status === 'blocked'),
   skipped: false,
-  generated_at: new Date().toISOString(),
+  generated_at: generatedAt,
   local_runtime: {
     hostname: runtime.hardware?.hostname || null,
     detected_models: runtime.resources.length,
@@ -110,7 +155,13 @@ const output = {
     production_deployment_allowed: false,
     money_movement_allowed: false
   },
+  receipts: {
+    generated: receipts.length,
+    raw_output_in_receipts: false,
+    automatic_upload_enabled: false
+  },
   results
 };
 writeJson(path.join(downloads, 'specialist-local-worker-result.json'), output);
+writeJson(path.join(downloads, 'specialist-local-result-receipts.json'), { schema_version: 1, generated_at: generatedAt, receipts });
 console.log(JSON.stringify(output, null, 2));

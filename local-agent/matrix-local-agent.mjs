@@ -5,9 +5,10 @@ import os from 'node:os';
 import { execFile } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { promisify } from 'node:util';
+import { validatePublicInvestigationResult } from '../src/public-investigation-contract.js';
 
 const execFileAsync = promisify(execFile);
-const VERSION = '0.1.0';
+const VERSION = '0.2.0';
 const startedAt = new Date().toISOString();
 
 function env(name, fallback = '') {
@@ -208,10 +209,69 @@ async function executeDeterministic(job) {
   return { algorithm: 'sha256', digest: sha256(String(value)), bytes: Buffer.byteLength(String(value)) };
 }
 
+function publicInvestigationPrompt(context) {
+  return [
+    'You are the Matrix Investigator analysing a bounded set of public-record evidence.',
+    'Return one JSON object only. Do not include markdown, hidden reasoning, chain-of-thought, prompts, credentials or raw private material.',
+    'Lead with the bounded answer. Separate documented facts, allegations/disputed material, inferences and unknowns.',
+    'Every fact, allegation or inference must cite one or more evidence_ids from the supplied list. Never invent an evidence ID or source route.',
+    'Association, co-occurrence, contact, employment, payment, meeting or a name in a file does not by itself establish guilt, knowledge, coordination or motive.',
+    'If the evidence is insufficient, say so directly and put the gap in unknowns.',
+    `PUBLIC INVESTIGATION CONTEXT:\n${JSON.stringify(context)}`
+  ].join('\n\n');
+}
+
+function parseModelJson(value) {
+  const text = String(value || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
+  if (!text) throw new Error('Malformed model JSON: empty response');
+  try { return JSON.parse(text); } catch (error) { throw new Error(`Malformed model JSON: ${error.message}`); }
+}
+
+async function executePublicInvestigation(job) {
+  const context = job?.payload?.public_investigation;
+  if (!context?.investigation_id || !Array.isArray(context.evidence)) throw new Error('Public investigation context is incomplete');
+  if (String(job?.payload?.model_id || '') !== config.modelId) throw new Error('Queued public investigation targets a different local model');
+  const prompt = publicInvestigationPrompt(context);
+  if (prompt.length > 100000) throw new Error('Locally compiled investigation prompt exceeds the local limit');
+  const response = await fetch(`${config.modelEndpoint.replace(/\/$/, '')}/api/generate`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      model: config.modelId,
+      prompt,
+      format: 'json',
+      stream: false,
+      options: { num_predict: Math.min(4096, Number(job?.payload?.max_tokens || 1800)), temperature: 0.1 }
+    }),
+    signal: AbortSignal.timeout(10 * 60 * 1000)
+  });
+  const data = await response.json();
+  if (!response.ok) throw new Error(`Local model returned HTTP ${response.status}`);
+  const parsed = parseModelJson(data.response);
+  const publicResult = validatePublicInvestigationResult(parsed, {
+    investigation_id: context.investigation_id,
+    question: context.question,
+    evidence: context.evidence,
+    related_routes: context.related_routes,
+    evidence_boundary: context.evidence_boundary
+  });
+  return {
+    public_result: publicResult,
+    model_id: config.modelId,
+    resource_id: String(job?.payload?.selected_resource_id || ''),
+    prompt_version: 'ask-matrix-public-v1',
+    prompt_compiled_locally: true,
+    prompt_persisted: false,
+    raw_model_output_persisted: false,
+    public_safe: true
+  };
+}
+
 async function executeLocalLlm(job) {
   if (!config.allowLlmJobs) throw new Error('Local LLM jobs are disabled');
   if (!config.modelId) throw new Error('No local model is configured');
-  if (config.modelProtocol !== 'ollama') throw new Error('Version 0.1 supports Ollama execution only');
+  if (config.modelProtocol !== 'ollama') throw new Error('This local agent build supports Ollama execution only');
+  if (job?.payload?.public_investigation) return executePublicInvestigation(job);
   const prompt = String(job?.payload?.prompt || '');
   if (!prompt || prompt.length > 100000) throw new Error('Prompt is missing or exceeds the local limit');
   const response = await fetch(`${config.modelEndpoint.replace(/\/$/, '')}/api/generate`, {
@@ -316,4 +376,4 @@ if (isDirectRun) {
   });
 }
 
-export { executeJob, sha256, timingSafeEqual, verifySignature };
+export { executeJob, parseModelJson, sha256, timingSafeEqual, verifySignature };

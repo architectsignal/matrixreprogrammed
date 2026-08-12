@@ -15,7 +15,7 @@ jobs:
       - name: Check deployed pages
         run: |
           set -e
-          BASE="https://matrixreprogrammed.netlify.app"
+          BASE="https://matrixreprogrammed.com"
           mkdir -p smoke
 
           check_page() {

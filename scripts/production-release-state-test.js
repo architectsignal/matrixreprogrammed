@@ -7,6 +7,9 @@ const { classify } = require('./classify-production-release-state.js');
 
 const root = process.cwd();
 const workflow = fs.readFileSync(path.join(root, '.github', 'workflows', 'deploy.yml'), 'utf8');
+const dispatchWorkflow = fs.readFileSync(path.join(root, '.github', 'workflows', 'one-shot-dispatch-controlled-production.yml'), 'utf8');
+const observerWorkflow = fs.readFileSync(path.join(root, '.github', 'workflows', 'production-run-observer.yml'), 'utf8');
+const trackedProductionRecord = JSON.parse(fs.readFileSync(path.join(root, 'data', 'current-production-run.json'), 'utf8'));
 const authorizationPath = path.join(root, 'scripts', 'verify-one-shot-production-authorization.js');
 const authorization = fs.readFileSync(authorizationPath, 'utf8');
 const policyTestPath = path.join(root, 'scripts', 'live-production-verification-policy-test.js');
@@ -62,6 +65,16 @@ for (const marker of [
   check(authorization.includes(marker), `one-shot production verifier missing security boundary: ${marker}`);
 }
 
+for (const marker of ['contents: read', 'production-dispatch-receipt.json', 'actions/upload-artifact@v4', 'immutable dispatch receipt']) {
+  check(dispatchWorkflow.includes(marker), `one-shot dispatcher missing immutable receipt boundary: ${marker}`);
+}
+check(!dispatchWorkflow.includes('contents: write'), 'one-shot dispatcher can still mutate tracked production status');
+check(!dispatchWorkflow.includes('createOrUpdateFileContents'), 'one-shot dispatcher can still commit a pending status snapshot');
+check(observerWorkflow.includes('contents: read') && !observerWorkflow.includes('contents: write'), 'production observer must remain read-only');
+check(trackedProductionRecord.canonical === false, 'tracked production record is not marked historical');
+check(trackedProductionRecord.status === 'completed' && trackedProductionRecord.conclusion === 'cancelled', 'tracked production record does not match cancelled run 31617822854');
+check(/current and final production state/i.test(trackedProductionRecord.boundary || ''), 'tracked production record lacks its canonical-state boundary');
+
 function runNodeCheck(scriptPath, args, label) {
   const result = spawnSync(process.execPath, [scriptPath, ...(args || [])], { cwd: root, encoding: 'utf8' });
   check(result.status === 0, `${label} failed: ${(result.stderr || result.stdout || '').trim()}`);
@@ -77,4 +90,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('Production release state test passed: guarded human/one-shot authority, maximum one successful Europe/Paris production deploy per day, freeze-safe autonomous main writers, live verification, WAF-only supplemental policy and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');
+console.log('Production release state test passed: guarded human/one-shot authority, immutable dispatch receipts, read-only current-state observation, maximum one successful Europe/Paris production deploy per day, freeze-safe autonomous main writers, live verification, WAF-only supplemental policy and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');

@@ -13,6 +13,8 @@ on:
       - 'scripts/run-investigation-machine.js'
       - 'src/worker-ai-management.js'
       - 'src/worker-local-job-api.js'
+      - 'src/worker-public-investigation.js'
+      - 'src/public-investigation-contract.js'
       - 'src/worker-production-autonomy.js'
       - 'src/worker-production.js'
       - 'src/worker-member-experience.js'
@@ -23,6 +25,8 @@ on:
       - 'migrations/phase11_local_job_queue.sql'
       - 'migrations/phase12_opportunity_hunter.sql'
       - 'migrations/phase13_matrix_synergy.sql'
+      - 'migrations/public_investigation_api.sql'
+      - 'scripts/public-investigation-test.mjs'
       - 'scripts/matrix-synergy-test.mjs'
       - 'scripts/phase13-migration-rehearsal.py'
       - 'member-dashboard.html'
@@ -78,6 +82,8 @@ jobs:
           node --check scripts/zero-spend-invariant-test.mjs
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
+          node --check src/worker-public-investigation.js
+          node --check src/public-investigation-contract.js
           node --check src/worker-production-autonomy.js
           node --check src/worker-member-experience.js
           node --check src/worker-matrix-synergy.js
@@ -95,6 +101,7 @@ jobs:
           node scripts/opportunity-hunter-test.mjs
           node scripts/phase12-production-readiness-test.mjs
           node scripts/matrix-synergy-test.mjs
+          node scripts/public-investigation-test.mjs
           python3 scripts/phase13-migration-rehearsal.py
 
       - name: Run owner-local execution tests
@@ -116,6 +123,7 @@ jobs:
               'migrations/phase11_local_job_queue.sql',
               'migrations/phase12_opportunity_hunter.sql',
               'migrations/phase13_matrix_synergy.sql',
+              'migrations/public_investigation_api.sql',
           ]
           for pass_number in (1, 2):
               for migration in migrations:
@@ -134,6 +142,9 @@ jobs:
               'ai_site_improvement_actions',
               'ai_local_jobs',
               'ai_local_job_receipts',
+              'matrix_public_investigations',
+              'matrix_public_investigation_evidence',
+              'matrix_public_investigation_rate_limits',
               'ai_opportunities',
               'ai_opportunity_hunter_runs',
               'ai_compute_provider_candidates',

@@ -28,22 +28,33 @@ runHomepageOwner();
 const core = ['index.html','live-intel.html','epstein-files.html','news.html','evidence-vault.html','videos.html','books.html','amazon-store-books.html','optin-center.html','offer-center.html','search.html','netlify.toml','package.json'];
 core.forEach(requireFile);
 
-const homepageMustHave = [
-  'MAP THE STRUCTURE. READ THE SIGNALS.',
-  'Open Live Intel',
-  'Buy The Books',
-  'Daily Brief',
-  'Power Map',
-  'Evidence',
-  'Search',
-  'What the evidence is pointing toward now',
-  'Evidence boundary'
+const homepage = read('index.html');
+const searchFirstHomepage = homepage.includes('class="accountability-home"')
+  && homepage.includes('id="accountability-search"')
+  && homepage.includes('id="accountability-hit-list"');
+const homepageMustHave = searchFirstHomepage ? [
+  'POWER SHOULD HAVE', 'A PUBLIC MEMORY.', 'Live Intel', 'Books and Reports',
+  'Control System', 'Evidence Vault', 'Search', 'THE OPEN QUESTION LEDGER.',
+  'Proximity is never converted into guilt.'
+] : [
+  'MAP THE STRUCTURE. READ THE SIGNALS.', 'Open Live Intel', 'Buy The Books',
+  'Daily Brief', 'Power Map', 'Evidence', 'Search',
+  'What the evidence is pointing toward now', 'Evidence boundary'
 ];
 for (const marker of homepageMustHave) requireIncludes('index.html', marker, `homepage current mission marker: ${marker}`);
-requireAnyIncludes('index.html', ['Enter The System', 'Start Here', 'Main Doors'], 'homepage reader navigation marker');
+if (searchFirstHomepage) {
+  for (const marker of ['id="accountability-search-form"', 'name="q"', 'type="search"', 'action="search.html"']) {
+    requireIncludes('index.html', marker, `homepage search-first contract: ${marker}`);
+  }
+}
+requireAnyIncludes('index.html', searchFirstHomepage
+  ? ['Explore the full intelligence system', '>Explore<', 'Start Here']
+  : ['Enter The System', 'Start Here', 'Main Doors'], 'homepage reader navigation marker');
 
 const pageRoutes = {
-  'index.html': ['live-intel.html','epstein-files.html','evidence-vault.html','videos.html','amazon-store-books.html','optin-center.html','books.html','search.html'],
+  'index.html': searchFirstHomepage
+    ? ['live-intel.html','epstein-files.html','evidence-vault.html','videos.html','optin-center.html','books.html','search.html']
+    : ['live-intel.html','epstein-files.html','evidence-vault.html','videos.html','amazon-store-books.html','optin-center.html','books.html','search.html'],
   'live-intel.html': ['downloads/live-intel-latest.json','downloads/live-intel-latest.md','epstein-files.html','evidence-vault.html','videos.html','amazon-store-books.html'],
   'epstein-files.html': ['downloads/epstein-source-watch.json','downloads/epstein-evidence-watch.md','videos.html','amazon-store-books.html','evidence-vault.html'],
   'news.html': ['live-intel.html','videos.html','amazon-store-books.html'],

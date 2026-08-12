@@ -1,11 +1,35 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 
 // Reassert the final release-metadata owner and deployable aliases at the last
 // mutation boundary before Wrangler uploads the Worker and _site assets.
 require('./patch-release-metadata-routing.js');
+
+function runFinalSeal(script, finalHashOnly = false) {
+  execFileSync(process.execPath, [path.join(root, 'scripts', script)], {
+    cwd: root,
+    stdio: 'inherit',
+    env: finalHashOnly ? { ...process.env, MATRIX_RELEASE_FINAL_HASH_ONLY: '1' } : process.env
+  });
+}
+
+// patch-release-metadata-routing deliberately reasserts the current homepage,
+// which can rebuild Search V3. Seal the exact post-reconciliation bytes before
+// the guard reads manifests or allows Wrangler to run.
+runFinalSeal('compact-cloudflare-search-index.js');
+runFinalSeal('build-public-investigation-corpus.js');
+runFinalSeal('build-deploy-manifest.js', true);
+runFinalSeal('build-production-health.js', true);
+for (const relative of ['deploy-health.html', 'deploy-health.json']) {
+  const sourceFile = path.join(root, relative);
+  const builtFile = path.join(root, '_site', relative);
+  fs.copyFileSync(sourceFile, builtFile);
+  if (relative.endsWith('.html')) fs.copyFileSync(sourceFile, builtFile.replace(/\.html$/i, ''));
+}
+fs.copyFileSync(path.join(root, 'downloads', 'deploy-health.json'), path.join(root, '_site', 'downloads', 'deploy-health.json'));
 require('./publish-release-metadata-assets.js');
 
 const site = path.join(root, '_site');
@@ -45,9 +69,11 @@ const requiredSource = [
   'daily-power-conclusions.html','daily-investigation-conclusions.html','daily-brain-brief.html','outcome-briefings.html',
   'security-privacy.html','dark-web-safety.html','geographic-power-atlas.html','data-lab.html','evidence-archive.html','search.html',
   'deploy-manifest.json','deploy-health.html','deploy-health.json','data/production-freshness-policy.json',
+  'answer-engine.html','ask-matrix.js','ask-matrix.css','data/public-investigation-corpus.json',
   'runtime/deploy-manifest-current.json','runtime/deploy-health-current.json',
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-release-metadata.js',
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-release-metadata.js','src/worker-public-investigation.js','src/public-investigation-contract.js',
   'migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql',
+  'migrations/public_investigation_api.sql',
   'scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/repair-generated-site-artifacts.js','scripts/cloudflare-focused-pressure-wrapper.js',
   'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js','scripts/verify-live-ai-management.mjs','scripts/ai-management-autonomy-test.mjs','scripts/verify-one-shot-production-authorization.js',
   '.github/workflows/deploy.yml','.github/workflows/deploy-production.yml','.github/workflows/one-shot-dispatch-controlled-production.yml','wrangler.toml','wrangler.jsonc'
@@ -61,6 +87,7 @@ const requiredBuilt = [
   'security-privacy.html','security-privacy','dark-web-safety.html','dark-web-safety',
   'geographic-power-atlas.html','geographic-power-atlas','data-lab.html','data-lab','evidence-archive.html','evidence-archive','search.html','search',
   'deploy-manifest.json','deploy-manifest','deploy-health.html','deploy-health','deploy-health.json','downloads/deploy-health.json',
+  'answer-engine.html','answer-engine','ask-matrix.js','ask-matrix.css','data/public-investigation-corpus.json',
   'runtime/deploy-manifest-current.json','runtime/deploy-health-current.json'
 ];
 requiredSource.forEach(need);

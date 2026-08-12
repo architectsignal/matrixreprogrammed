@@ -123,6 +123,7 @@ const critical = [
   'daily-investigation-conclusions.html','weekly-investigation-report.html','daily-brain-brief.html','outcome-briefings.html','security-privacy.html',
   'dark-web-safety.html','geographic-power-atlas.html','data-lab.html','evidence-archive.html','timers.html','ai-speculative-conclusions.html',
   'search.html','search.js','search-index.json','data/search-facets.json','_headers','data/membership-tiers.json',
+  'answer-engine.html','ask-matrix.js','ask-matrix.css','data/public-investigation-corpus.json',
   'data/accountability-question-ledger.json','data/reverse-accountability-index.json',
   'data/live-intel.json','data/daily-power-conclusions.json','data/daily-investigation-conclusions.json','data/weekly-investigation-conclusions.json',
   'data/daily-brain-brief.json','data/outcome-briefings.json','data/global-risk-clocks.json','data/clock-wall.json',
@@ -156,9 +157,24 @@ authoritativeUpdateMirrors.forEach(copy);
 report.authoritativeUpdateMirrors = authoritativeUpdateMirrors;
 
 // Final Black File ownership must run after every broad generator, sanitizer,
-// audit and authoritative mirror copy. No later statement in this release
-// reconciler mutates a page; the remaining work is validation and reporting.
+// audit and authoritative mirror copy. The final seal below creates only
+// release metadata after this public-page owner has completed.
 run('scripts/finalize-black-file-postbuild.js');
+
+// Final release seal: every broad generator and sanitizer has finished. From
+// this point forward only deterministic compaction, corpus compilation,
+// byte-for-byte copies, hashing and validation are permitted.
+run('scripts/compact-cloudflare-search-index.js');
+run('scripts/build-public-investigation-corpus.js');
+for (const relative of ['search-index.json', 'data/search-facets.json', 'data/public-investigation-corpus.json']) copy(relative);
+const priorFinalHashOnly = process.env.MATRIX_RELEASE_FINAL_HASH_ONLY;
+process.env.MATRIX_RELEASE_FINAL_HASH_ONLY = '1';
+run('scripts/build-deploy-manifest.js');
+run('scripts/build-production-health.js');
+if (priorFinalHashOnly === undefined) delete process.env.MATRIX_RELEASE_FINAL_HASH_ONLY;
+else process.env.MATRIX_RELEASE_FINAL_HASH_ONLY = priorFinalHashOnly;
+for (const relative of ['deploy-manifest.json', 'deploy-health.html', 'deploy-health.json', 'downloads/deploy-health.json']) copy(relative);
+run('scripts/publish-release-metadata-assets.js');
 
 // The exact regression that paused the release is now proved after the last
 // mutator, against both canonical source and the Cloudflare output.

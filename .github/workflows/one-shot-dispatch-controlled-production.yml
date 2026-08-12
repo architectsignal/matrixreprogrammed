@@ -9,7 +9,7 @@ on:
 
 permissions:
   actions: write
-  contents: write
+  contents: read
 
 concurrency:
   group: one-shot-controlled-production-dispatch
@@ -23,10 +23,10 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const markerPath = '.github/one-shot-controlled-production.trigger';
-            const statusPath = 'data/current-production-run.json';
             const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
             const markerResponse = await github.rest.repos.getContent({
@@ -153,31 +153,19 @@ jobs:
               url: selected.html_url,
               forwardedBillingException: Boolean(billingException),
               ownerAuthorizedBillableBuild: Boolean(billingException),
-              triggerCommit: context.sha
+              triggerCommit: context.sha,
+              boundary: 'This is an immutable dispatch receipt. Read the controlled workflow run or the read-only production observer artifact for its current/final state.'
             };
 
-            let existingSha;
-            try {
-              const existing = await github.rest.repos.getContent({
-                owner,
-                repo,
-                path: statusPath,
-                ref: 'main'
-              });
-              if (!Array.isArray(existing.data)) existingSha = existing.data.sha;
-            } catch (error) {
-              if (error.status !== 404) throw error;
-            }
-
-            await github.rest.repos.createOrUpdateFileContents({
-              owner,
-              repo,
-              path: statusPath,
-              branch: 'main',
-              message: `Record current controlled production run ${selected.id}`,
-              content: Buffer.from(`${JSON.stringify(payload, null, 2)}\n`).toString('base64'),
-              ...(existingSha ? { sha: existingSha } : {})
-            });
+            fs.mkdirSync('downloads', { recursive: true });
+            fs.writeFileSync('downloads/production-dispatch-receipt.json', `${JSON.stringify(payload, null, 2)}\n`);
 
             core.notice(`Production run ${selected.id}: ${selected.status}${selected.conclusion ? ` / ${selected.conclusion}` : ''}`);
             core.notice(selected.html_url);
+      - name: Upload immutable production dispatch receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-dispatch-receipt-${{ github.run_id }}
+          path: downloads/production-dispatch-receipt.json
+          if-no-files-found: error
+          retention-days: 14

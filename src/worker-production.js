@@ -18,6 +18,10 @@ import {
 } from './worker-report-delivery.js';
 import { isReleaseMetadataRoute, serveReleaseMetadata } from './worker-release-metadata.js';
 import {
+  handlePublicInvestigationRoute,
+  isPublicInvestigationRoute
+} from './worker-public-investigation.js';
+import {
   enforceProtectedAssetAccess,
   protectedAssetTier
 } from './worker-access-gate.js';
@@ -325,6 +329,10 @@ export default {
     const path = requestUrl.pathname.replace(/\/+$/, '') || '/';
 
     if (isReleaseMetadataRoute(path)) return serveReleaseMetadata(request, env, path);
+
+    if (isPublicInvestigationRoute(path)) {
+      return handlePublicInvestigationRoute(request, env);
+    }
 
     if ((request.method === 'GET' || request.method === 'HEAD') && publicStaticAssetRoutes.has(path)) {
       try {

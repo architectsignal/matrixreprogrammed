@@ -107,6 +107,7 @@ jobs:
           node scripts/opportunity-provider-adapter-test.mjs
           node scripts/phase12-production-readiness-test.mjs
           node scripts/matrix-synergy-test.mjs
+          node scripts/public-investigation-test.mjs
           python3 scripts/phase13-migration-rehearsal.py
           node local-agent/matrix-local-agent.test.mjs
           node local-agent/control-plane-client.test.mjs
@@ -212,6 +213,7 @@ jobs:
             migrations/phase11_local_job_queue.sql
             migrations/phase12_opportunity_hunter.sql
             migrations/phase13_matrix_synergy.sql
+            migrations/public_investigation_api.sql
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
@@ -227,7 +229,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT sql FROM sqlite_master WHERE type='table' AND name IN ('ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_leases','matrix_contributions','matrix_human_actions') ORDER BY name;" --json > downloads/d1-autonomy-schema.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT resource_id,billing_enabled,payment_method_present,monetary_cost_per_unit_eur,billing_risk FROM ai_resources ORDER BY resource_id;" --json > downloads/d1-ai-zero-spend-resources.json
@@ -238,7 +240,7 @@ jobs:
           const autonomy = JSON.parse(fs.readFileSync('downloads/d1-autonomy-schema.json','utf8'));
           const payment = JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
           const resources = JSON.parse(fs.readFileSync('downloads/d1-ai-zero-spend-resources.json','utf8'));
-          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger'];
+          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits'];
           const names = new Set(rows(schema).map(row => row.name));
           const missing = required.filter(name => !names.has(name));
           if (missing.length) throw new Error(`Missing D1 objects: ${missing.join(', ')}`);

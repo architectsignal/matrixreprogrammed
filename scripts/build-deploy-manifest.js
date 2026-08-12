@@ -5,6 +5,7 @@ const { execFileSync } = require('child_process');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
+const finalHashOnly = process.env.MATRIX_RELEASE_FINAL_HASH_ONLY === '1';
 
 function runFinalizer(script, args = []) {
   const file = path.join(root, 'scripts', script);
@@ -13,19 +14,21 @@ function runFinalizer(script, args = []) {
 }
 
 const moneyFinalizer = path.join(root, 'scripts', 'finalize-money-intelligence-release.js');
-if (fs.existsSync(site) && fs.existsSync(moneyFinalizer)) {
+if (!finalHashOnly && fs.existsSync(site) && fs.existsSync(moneyFinalizer)) {
   execFileSync(process.execPath, [moneyFinalizer], { cwd: root, stdio: 'inherit', env: process.env });
 }
 
 // These scripts are the final owners of critical public surfaces. They run
 // immediately before manifest hashes so the proof describes the exact bundle
 // sent to Cloudflare, after all broad generators have finished.
-if (fs.existsSync(site)) {
+if (!finalHashOnly && fs.existsSync(site)) {
   runFinalizer('reconcile-power-family-capstone.js');
   runFinalizer('patch-newsletter-public-page.js');
   runFinalizer('patch-power-family-public-gateways.js');
   runFinalizer('hide-visible-compatibility-markers.js', ['--output']);
   runFinalizer('finalize-core-public-surfaces.js');
+  runFinalizer('compact-cloudflare-search-index.js');
+  runFinalizer('build-public-investigation-corpus.js');
 }
 
 function read(rel) { return fs.readFileSync(path.join(root, rel), 'utf8'); }
@@ -108,7 +111,9 @@ const criticalFiles = [
   'data/follow-the-money-top-100.json', 'data/making-money-core.json',
   'data/live-intel.json', 'data/daily-power-conclusions.json',
   'data/daily-investigation-conclusions.json', 'data/daily-brain-brief.json',
-  'data/outcome-briefings.json'
+  'data/outcome-briefings.json',
+  'answer-engine.html', 'ask-matrix.js', 'ask-matrix.css',
+  'search-index.json', 'data/search-facets.json', 'data/public-investigation-corpus.json'
 ];
 
 const commitSha = gitSha();
@@ -154,7 +159,8 @@ const manifest = {
     '/behind-the-curtain', '/behind-the-curtain-access', '/behind-the-curtain-capstone', '/behind-the-curtain-symbolic-capstone',
     '/data/power-family-curated-people.json', '/data/power-family-intelligence-layer.json',
     '/follow-the-money', '/making-money', '/follow-the-money/people/elon-musk',
-    '/downloads/wealth-guides/start-from-zero.pdf'
+    '/downloads/wealth-guides/start-from-zero.pdf', '/answer-engine',
+    '/data/public-investigation-corpus.json'
   ]
 };
 

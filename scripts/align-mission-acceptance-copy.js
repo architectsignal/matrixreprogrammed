@@ -137,6 +137,12 @@ runRequired('scripts/install-reverse-accountability-platform.js');
 runRequired('scripts/reverse-accountability-platform-pressure-test.js');
 runRequired('scripts/sync-cloudflare-homepage-routes.js');
 runRequired('scripts/search-first-accountability-home-pressure-test.js');
+// The search-first accountability builders append their current routes after
+// the early compaction pass. Recompact here so the artifact that actually
+// leaves this final acceptance stage, not an intermediate file, satisfies the
+// Cloudflare size budget while preserving every searchable URL.
+if (fs.existsSync(path.join(root, '_site', 'search-index.json'))) runRequired('scripts/compact-cloudflare-search-index.js');
+runRequired('scripts/build-public-investigation-corpus.js');
 runRequired('scripts/normalize-runtime-template-links.js');
 runRequired('scripts/public-output-secret-audit.js');
 runRequired('scripts/generated-machine-pages-test.js');

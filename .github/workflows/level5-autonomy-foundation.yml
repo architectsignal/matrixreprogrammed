@@ -22,6 +22,7 @@ on:
       - 'scripts/specialist-execution-planner-test.mjs'
       - 'scripts/specialist-local-executor-test.mjs'
       - 'scripts/specialist-control-plane-test.mjs'
+      - 'scripts/specialist-sqlite-schema-test.py'
       - 'src/worker-level5-self-financing.js'
       - 'src/worker-specialist-ai.js'
       - 'src/worker-production-autonomy.js'
@@ -67,6 +68,7 @@ jobs:
           node --check scripts/specialist-execution-planner-test.mjs
           node --check scripts/specialist-local-executor-test.mjs
           node --check scripts/specialist-control-plane-test.mjs
+          python3 -m py_compile scripts/specialist-sqlite-schema-test.py
           node --check src/worker-level5-self-financing.js
           node --check src/worker-specialist-ai.js
           node --check src/worker-production-autonomy.js
@@ -88,6 +90,9 @@ jobs:
 
       - name: Run specialist result control-plane tests
         run: node scripts/specialist-control-plane-test.mjs
+
+      - name: Run specialist SQLite schema and learning trigger tests
+        run: python3 scripts/specialist-sqlite-schema-test.py
 
       - name: Prove local specialist worker is disabled by default
         run: |
@@ -124,6 +129,9 @@ jobs:
           grep -F 'policy_mutation_allowed INTEGER NOT NULL DEFAULT 0 CHECK (policy_mutation_allowed=0)' migrations/phase14_self_financing_growth.sql
           grep -F 'evidence_threshold_mutation_allowed INTEGER NOT NULL DEFAULT 0 CHECK (evidence_threshold_mutation_allowed=0)' migrations/phase14_self_financing_growth.sql
           grep -F 'financial_execution_allowed INTEGER NOT NULL DEFAULT 0 CHECK (financial_execution_allowed=0)' migrations/phase14_self_financing_growth.sql
+          grep -F 'CREATE TRIGGER IF NOT EXISTS trg_matrix_agent_run_learning_candidate' migrations/phase15_specialist_ai_orchestration.sql
+          grep -F 'accepted,' migrations/phase15_specialist_ai_orchestration.sql
+          grep -F 'affects_ranking_only' migrations/phase15_specialist_ai_orchestration.sql
 
       - name: Prove growth cannot manipulate evidence or payments
         run: |

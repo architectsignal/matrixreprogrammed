@@ -7,6 +7,7 @@ import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpp
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
 import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';
 import { handleLevel5SelfFinancingRoute, isLevel5SelfFinancingRoute } from './worker-level5-self-financing.js';
+import { handleSpecialistAIRoute, isSpecialistAIRoute } from './worker-specialist-ai.js';
 
 function cleanToken(value) {
   return String(value || '').trim();
@@ -101,6 +102,11 @@ export default {
     if (isLevel5SelfFinancingRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();
       return handleLevel5SelfFinancingRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
+    if (isSpecialistAIRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleSpecialistAIRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
     if (isCapacityGrowthRoute(path)) {

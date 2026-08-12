@@ -1,15 +1,17 @@
 {
   "ok": false,
-  "observedAt": "2026-08-12T16:29:37.128Z",
-  "conclusion": "",
+  "observedAt": "2026-08-12T16:52:30.199Z",
+  "conclusion": "cancelled",
   "createdAt": "2026-08-12T16:29:32Z",
   "databaseId": 31617822854,
   "event": "workflow_dispatch",
   "headSha": "9edcb8af09c11532510b6372b03b6d3200d8d8f3",
-  "status": "pending",
-  "updatedAt": "2026-08-12T16:29:34Z",
+  "status": "completed",
+  "updatedAt": "2026-08-12T16:35:26Z",
   "url": "https://github.com/architectsignal/matrixreprogrammed/actions/runs/31617822854",
   "forwardedBillingException": false,
   "ownerAuthorizedBillableBuild": false,
-  "triggerCommit": "d655fa3f4e86ceb8c206fd753e5e1be412c63ff3"
+  "triggerCommit": "d655fa3f4e86ceb8c206fd753e5e1be412c63ff3",
+  "canonical": false,
+  "boundary": "Historical record for cancelled run 31617822854. Current and final production state comes from the controlled workflow run and the read-only observer artifact; dispatch no longer writes mutable status to main."
 }

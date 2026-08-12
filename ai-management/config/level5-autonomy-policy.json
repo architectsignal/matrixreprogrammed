@@ -14,9 +14,24 @@
     "growth": "Optimizes retention and lawful verified revenue through reversible evidence-independent experiments.",
     "resource_hunter": "Discovers and benchmarks lawful zero-cost or owner-approved data, tools, models and compute under existing resource gates.",
     "architect": "Prepares reversible tested software improvements through the guarded development pipeline.",
+    "execution_profiles": {
+      "mission_director": "reasoning",
+      "investigator": "long-context",
+      "auditor": "reasoning",
+      "publisher": "long-context",
+      "growth": "reasoning",
+      "resource_hunter": "reasoning",
+      "architect": "coding"
+    },
+    "local_controller_required": true,
+    "full_prompt_compilation_location": "owner-controlled-local-machine",
+    "cloud_prompt_material_allowed": false,
     "auditor_gate_before_publication_required": true,
+    "explicit_auditor_clearance_required_for_publisher": true,
+    "caller_supplied_auditor_clearance_trusted": false,
     "commercial_system_may_change_evidence_strength": false,
     "automatic_external_consequence_allowed": false,
+    "automatic_local_execution_enabled": false,
     "owner_approval_required_for_external_consequence": true
   },
   "learning": {

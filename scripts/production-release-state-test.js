@@ -35,12 +35,22 @@ for (const marker of ['workers_dev = true','Resolve canonical workers.dev endpoi
   check(workflow.includes(marker), `controlled production workflow missing release-state marker: ${marker}`);
 }
 
-const checkoutIndex = workflow.indexOf('- name: Checkout latest main');
+const checkoutIndex = workflow.indexOf('- name: Checkout exact dispatched commit');
+const pinIndex = workflow.indexOf('- name: Prove checkout is pinned to dispatch SHA');
 const authorityIndex = workflow.indexOf('- name: Confirm explicit production release authority');
 check(
-  checkoutIndex >= 0 && authorityIndex >= 0 && checkoutIndex < authorityIndex,
-  'repository must be checked out before the guarded production authority verifier runs'
+  checkoutIndex >= 0 && pinIndex > checkoutIndex && authorityIndex > pinIndex,
+  'the exact dispatch SHA must be checked out and proven before the guarded production authority verifier runs'
 );
+for (const marker of [
+  'ref: ${{ github.sha }}',
+  'MATRIX_DISPATCH_SHA: ${{ github.sha }}',
+  'test "$(git rev-parse HEAD)" = "$MATRIX_DISPATCH_SHA"',
+  '- name: Record exact dispatched commit to deploy'
+]) {
+  check(workflow.includes(marker), `controlled production workflow missing immutable dispatch-SHA marker: ${marker}`);
+}
+check(!workflow.includes('ref: main'), 'controlled production checkout still follows mutable main after dispatch');
 
 for (const marker of [
   'MATRIX_PRODUCTION_CONFIRMATION: ${{ inputs.confirmation }}',
@@ -90,4 +100,4 @@ if (failures.length) {
   failures.forEach(failure => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log('Production release state test passed: guarded human/one-shot authority, immutable dispatch receipts, read-only current-state observation, maximum one successful Europe/Paris production deploy per day, freeze-safe autonomous main writers, live verification, WAF-only supplemental policy and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');
+console.log('Production release state test passed: immutable dispatch-SHA checkout, guarded human/one-shot authority, immutable dispatch receipts, read-only current-state observation, maximum one successful Europe/Paris production deploy per day, freeze-safe autonomous main writers, live verification, WAF-only supplemental policy and receipt reporting remain distinct; receipt-only failure cannot request a redeploy.');

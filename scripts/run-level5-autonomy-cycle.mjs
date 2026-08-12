@@ -3,6 +3,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { AutonomousLearningDirector } from '../ai-management/autonomy/autonomous-learning-director.mjs';
 import { SpecialistAIDirector } from '../ai-management/autonomy/specialist-ai-director.mjs';
+import { SpecialistExecutionPlanner } from '../ai-management/autonomy/specialist-execution-planner.mjs';
 import { SelfFinancingDirector } from '../ai-management/finance/self-financing-director.mjs';
 import { RevenueGrowthDirector } from '../ai-management/finance/revenue-growth-director.mjs';
 
@@ -64,6 +65,9 @@ const specialistObservation = readJson(path.join(downloads, 'specialist-agent-ob
   resource_pressure: 0,
   site_health: 1
 });
+const specialistExecutionContext = readJson(path.join(downloads, 'specialist-execution-context.json'), {
+  by_specialist: {}
+});
 
 const learningDirector = new AutonomousLearningDirector({
   alpha: policy?.learning?.ema_alpha,
@@ -89,6 +93,29 @@ const specialistPlan = specialistDirector.plan({
   policy: policy.specialist_agents || {}
 });
 writeJson(path.join(downloads, 'specialist-ai-plan.json'), specialistPlan);
+
+const executionPlanner = new SpecialistExecutionPlanner();
+const executionContexts = {};
+for (const mission of specialistPlan.missions) {
+  const specialistContext = specialistExecutionContext?.by_specialist?.[mission.specialist] || {};
+  executionContexts[mission.mission_id] = {
+    evidence_reference_ids: specialistContext.evidence_reference_ids,
+    artifact_reference_ids: specialistContext.artifact_reference_ids,
+    auditor_clearance_ids: specialistContext.auditor_clearance_ids,
+    prompt_tokens_estimate: specialistContext.prompt_tokens_estimate,
+    max_tokens: specialistContext.max_tokens
+  };
+}
+const specialistExecutionSpecs = executionPlanner.planMany({
+  missions: specialistPlan.missions,
+  contexts: executionContexts
+});
+writeJson(path.join(downloads, 'specialist-execution-specs.json'), {
+  schema_version: 1,
+  generated_at: new Date().toISOString(),
+  specs: specialistExecutionSpecs,
+  controls: executionPlanner.controls()
+});
 
 const result = {
   ok: cycleSummary?.ok === true && learning.latest_signals.zero_spend_confirmed === true,
@@ -117,9 +144,13 @@ const result = {
     architecture: 'seven-specialist-shared-spine',
     missions_proposed: specialistPlan.missions.length,
     handoffs_defined: specialistPlan.handoffs.length,
+    execution_specs_planned: specialistExecutionSpecs.filter(item => item.status === 'planned').length,
+    execution_specs_blocked: specialistExecutionSpecs.filter(item => item.status === 'blocked').length,
     auditor_gate_before_publication_required: specialistPlan.controls.auditor_gate_before_publication_required,
     explicit_auditor_clearance_required_for_publisher: specialistPlan.controls.explicit_auditor_clearance_required_for_publisher,
     shared_memory_required: specialistPlan.controls.shared_memory_required,
+    cloud_prompt_material_allowed: executionPlanner.controls().cloud_prompt_material_allowed,
+    prompt_compilation_location: executionPlanner.describe().prompt_compilation_location,
     automatic_production_deployment_allowed: specialistPlan.controls.automatic_production_deployment_allowed
   },
   controls: {
@@ -127,7 +158,8 @@ const result = {
     remote_compute_execution_enabled_by_this_runner: false,
     payment_mutation_allowed: false,
     deployment_performed: false,
-    external_consequence_execution_allowed: false
+    external_consequence_execution_allowed: false,
+    specialist_prompts_sent_to_cloud_by_this_runner: false
   },
   persistence_targets: [
     'matrix_learning_ledger',
@@ -136,7 +168,8 @@ const result = {
     'matrix_growth_experiments',
     'matrix_agent_missions',
     'matrix_agent_runs',
-    'matrix_agent_handoffs'
+    'matrix_agent_handoffs',
+    'matrix_agent_execution_specs'
   ]
 };
 writeJson(path.join(downloads, 'level5-autonomy-cycle.json'), result);

@@ -151,6 +151,12 @@ function normalizeOllamaModels(payload, endpoint, clock) {
 function normalizeOpenAiModels(payload, endpoint, protocol, clock) {
   return (payload?.data || payload?.models || []).map(item => {
     const modelId = item.id || item.name || item.model;
+    const declaredCapabilities = Array.isArray(item.capabilities) ? item.capabilities : [];
+    const capabilities = declaredCapabilities.length
+      ? declaredCapabilities
+      : /(?:^|[-_.])(embed|embedding)(?:$|[-_.])/i.test(String(modelId || ''))
+        ? ['embeddings']
+        : ['llm.generate'];
     return {
       model_id: modelId, display_name: item.name || modelId, protocol, endpoint,
       modified_at: item.created ? new Date(Number(item.created) * 1000).toISOString() : null,
@@ -158,7 +164,7 @@ function normalizeOpenAiModels(payload, endpoint, protocol, clock) {
       parameters_billion: inferParametersBillion(modelId, item),
       quantization: item.quantization || null,
       context_length: number(item.context_length ?? item.max_context_length, 32768),
-      capabilities: item.capabilities || ['llm.generate'],
+      capabilities,
       last_seen: clock().toISOString()
     };
   }).filter(model => model.model_id);
@@ -209,13 +215,16 @@ export function buildLocalModelResources({ hardware, servers, clock = () => new 
   for (const server of servers || []) {
     if (!server.healthy) continue;
     for (const model of server.models || []) {
+      const isEmbedding = model.capabilities?.includes('embeddings') && !model.capabilities?.includes('llm.generate');
+      const capabilityTypes = isEmbedding ? ['embeddings'] : ['llm'];
+      const supportedJobTypes = isEmbedding ? ['embeddings.generate'] : ['llm.generate'];
       const quality = qualityForModel(model);
       const estimatedNeed = model.parameters_billion ? Math.max(2, model.parameters_billion * 0.65) : 4;
       const gpuFit = gpuMemoryGb <= 0 ? 45 : gpuMemoryGb >= estimatedNeed ? 96 : Math.max(35, Math.round(70 * gpuMemoryGb / estimatedNeed));
       resources.push({
-        resource_id: `local-llm-${safeId(server.protocol)}-${safeId(model.model_id)}`,
+        resource_id: `local-${isEmbedding ? 'embedding' : 'llm'}-${safeId(server.protocol)}-${safeId(model.model_id)}`,
         provider_name: 'Owner-controlled local runtime', service_name: model.display_name || model.model_id,
-        capability_types: ['llm'], resource_tier: 1,
+        capability_types: capabilityTypes, resource_tier: 1,
         official_documentation_url: null, terms_url: null, privacy_url: null, status_url: null,
         licence: 'Local model licence must be verified before publication use',
         account_owner: hardware?.hostname || 'owner-controlled local machine', authentication_type: 'none', credential_reference: null,
@@ -225,11 +234,11 @@ export function buildLocalModelResources({ hardware, servers, clock = () => new 
         quality_score: quality, reliability_score: 88, latency_score: gpuFit, privacy_score: 100, provenance_score: 75, quota_efficiency_score: 100,
         last_health_check: model.last_seen || now, health_status: 'healthy', last_terms_check: now, terms_revalidation_due: null, last_quota_check: now,
         last_success: null, last_failure: null, consecutive_failures: 0, cooldown_until: null, average_latency: 0, success_rate: 1, error_rate: 0,
-        supported_job_types: ['llm.generate'], maximum_payload: 2 * 1024 * 1024, rate_limit: 'bounded by local hardware pressure',
+        supported_job_types: supportedJobTypes, maximum_payload: 2 * 1024 * 1024, rate_limit: 'bounded by local hardware pressure',
         concurrency_limit: gpuMemoryGb >= estimatedNeed * 2 ? 2 : 1, fallback_resource_ids: [], implementation_status: 'production',
         adapter_id: 'local-openai-compatible', adapter_version: '1.0.0', enabled: true, manual_approval_required: false,
         allowed_hosts: [new URL(server.endpoint).hostname],
-        metadata: { local: true, protocol: server.protocol, endpoint: server.endpoint, model_id: model.model_id, parameters_billion: model.parameters_billion || 0, quantization: model.quantization || null, context_length: model.context_length || 32768, estimated_vram_gb: Number(estimatedNeed.toFixed(2)), available_gpu_memory_gb: Number(gpuMemoryGb.toFixed(2)), hardware_hostname: hardware?.hostname || null },
+        metadata: { local: true, protocol: server.protocol, endpoint: server.endpoint, model_id: model.model_id, capabilities: model.capabilities || supportedJobTypes, parameters_billion: model.parameters_billion || 0, quantization: model.quantization || null, context_length: model.context_length || 32768, estimated_vram_gb: Number(estimatedNeed.toFixed(2)), available_gpu_memory_gb: Number(gpuMemoryGb.toFixed(2)), hardware_hostname: hardware?.hostname || null },
         notes: `Automatically detected local model ${model.model_id} through ${server.protocol} on a loopback-only endpoint.`, created_at: now, updated_at: now
       });
     }

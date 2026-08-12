@@ -3,6 +3,29 @@ import { D1ResourceRegistry } from '../ai-management/resource-registry/resource-
 
 const ROUTE = '/api/ai-management/admin/opportunities';
 
+const DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS = Object.freeze([
+  {
+    opportunity_id: 'official-kaggle-notebooks-free-gpu',
+    kind: 'compute', provider_name: 'Kaggle', service_name: 'Kaggle Notebooks free GPU',
+    official_url: 'https://www.kaggle.com/', documentation_url: 'https://www.kaggle.com/docs/efficient-gpu-usage',
+    terms_url: 'https://www.kaggle.com/terms', privacy_url: 'https://www.kaggle.com/privacy',
+    authentication_type: 'token', account_required: true, identity_verification_required: true, payment_method_required: false,
+    automation_permission: 'unknown', commercial_use: 'unknown', zero_cost_verified: true, quota_verified: true,
+    free_quota: 30, free_quota_unit: 'GPU hours/week documented safe ceiling', supported_capabilities: ['gpu inference', 'gpu training'],
+    metadata: { discovery_scope: 'official-source-daily-revalidation', owner_onboarding_required: true, quota_evidence_terms: ['30 hours', 'week'] }
+  },
+  {
+    opportunity_id: 'official-hugging-face-zerogpu',
+    kind: 'compute', provider_name: 'Hugging Face', service_name: 'Spaces ZeroGPU free account quota',
+    official_url: 'https://huggingface.co/', documentation_url: 'https://huggingface.co/docs/hub/main/spaces-zerogpu',
+    terms_url: 'https://huggingface.co/terms-of-service', privacy_url: 'https://huggingface.co/privacy', status_url: 'https://status.huggingface.co/',
+    authentication_type: 'token', account_required: true, identity_verification_required: false, payment_method_required: false,
+    automation_permission: 'unknown', commercial_use: 'unknown', zero_cost_verified: true, quota_verified: true,
+    free_quota: 5, free_quota_unit: 'GPU minutes/day for a free account', supported_capabilities: ['gpu inference', 'llm'],
+    metadata: { discovery_scope: 'official-source-daily-revalidation', owner_onboarding_required: true, quota_evidence_terms: ['5 minutes', 'daily'] }
+  }
+]);
+
 function json(value, status = 200) {
   return new Response(JSON.stringify(value, null, 2), {
     status,
@@ -158,7 +181,7 @@ async function persistReport(env, report, discoverySource = 'scheduled-official-
 
 function configuredOpportunities(env) {
   const raw = env?.AI_OPPORTUNITY_SEEDS_JSON;
-  if (!raw) return [];
+  if (raw == null || raw === '') return DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS.map(item => ({ ...item, metadata: { ...item.metadata } }));
   try {
     const parsed = JSON.parse(raw);
     return Array.isArray(parsed) ? parsed.slice(0, 100) : [];
@@ -193,10 +216,14 @@ export async function runScheduledOpportunityHunter(env) {
   if (!enabled(env?.AI_OPPORTUNITY_HUNTER_ENABLED, false) || !enabled(env?.AI_RESOURCE_ZERO_SPEND_LOCK, true)) return { skipped: true, reason: 'disabled' };
   const opportunities = configuredOpportunities(env);
   if (!opportunities.length) return { skipped: true, reason: 'no-configured-official-sources' };
+  if (!await schemaReady(env)) return { skipped: true, reason: 'opportunity-schema-not-ready' };
+  const last = await env.MEMBERS_DB.prepare("SELECT completed_at FROM ai_opportunity_hunter_runs WHERE discovery_source='scheduled-configured-official-sources' ORDER BY completed_at DESC LIMIT 1").first().catch(() => null);
+  const today = new Date().toISOString().slice(0, 10);
+  if (String(last?.completed_at || '').slice(0, 10) === today) return { skipped: true, reason: 'official-sources-already-checked-today', last_checked_at: last.completed_at };
   const hunter = new OpportunityHunter();
   const report = await hunter.run({ opportunities });
   const persisted = await persistReport(env, report, 'scheduled-configured-official-sources');
   return { skipped: false, report, persisted };
 }
 
-export const opportunityHunterWorkerInternals = { resourceFromEvaluation, persistReport, configuredOpportunities, schemaReady };
+export const opportunityHunterWorkerInternals = { DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS, resourceFromEvaluation, persistReport, configuredOpportunities, schemaReady };

@@ -13,6 +13,20 @@ function safeArray(value, maximum = 100) {
   return Array.isArray(value) ? value.slice(0, maximum) : [];
 }
 
+function isUsableComputeResource(resource = {}, now = new Date()) {
+  const workloads = safeArray(resource.supported_workloads || resource.capability_types || resource.metadata?.supported_workloads, 20);
+  const supportsCompute = workloads.some(item => ALLOWED_WORKLOADS.has(String(item)));
+  const cooldownActive = resource.cooldown_until && Date.parse(resource.cooldown_until) > now.getTime();
+  return supportsCompute
+    && resource.enabled !== false
+    && resource.approved_for_automation !== false
+    && resource.billing_enabled !== true
+    && resource.payment_method_present !== true
+    && Number(resource.monetary_cost_per_unit_eur || 0) === 0
+    && !['unhealthy', 'cooldown'].includes(String(resource.health_status || 'healthy'))
+    && !cooldownActive;
+}
+
 function normalizedCapacity(candidate = {}) {
   const gpuMemoryMb = Math.max(0, Number(candidate.gpu_memory_mb || 0));
   const cpuThreads = Math.max(0, Number(candidate.cpu_threads || 0));
@@ -63,6 +77,7 @@ export function assessComputeCandidate(candidate = {}, { now = new Date() } = {}
   if (candidate.account_rotation === true) blockers.push('account-rotation-forbidden');
   if (candidate.quota_evasion === true) blockers.push('quota-evasion-forbidden');
   if (candidate.credential_harvesting === true) blockers.push('credential-harvesting-forbidden');
+  if (candidate.external_network_used === true) blockers.push('external-network-use-forbidden');
   if (candidate.terms_verified !== true) blockers.push('terms-not-verified');
   if (candidate.privacy_verified !== true) blockers.push('privacy-not-verified');
   if (candidate.automation_permission !== 'allowed') blockers.push('automation-permission-not-explicit');
@@ -116,7 +131,9 @@ export function buildCapacityPortfolio({ candidates = [], activeResources = [], 
     .sort((a, b) => b.capacity_score - a.capacity_score)
     .slice(0, Math.max(0, Number(maximumExternalResources || 0)));
 
-  const currentPotential = activeResources.reduce((sum, resource) => sum + normalizedCapacity(resource), 0);
+  const currentPotential = activeResources
+    .filter(resource => isUsableComputeResource(resource, now))
+    .reduce((sum, resource) => sum + normalizedCapacity(resource), 0);
   const autoPotential = approvedLocal.reduce((sum, item) => sum + item.capacity_score, 0);
   const ownerApprovedPotential = externalApproved.reduce((sum, item) => sum + item.capacity_score, 0);
 
@@ -182,5 +199,6 @@ export const computeCapacityInternals = {
   AUTO_ADMIT_SOURCES,
   ALLOWED_WORKLOADS,
   normalizedCapacity,
-  zeroSpendSubject
+  zeroSpendSubject,
+  isUsableComputeResource
 };

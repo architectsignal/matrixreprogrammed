@@ -82,10 +82,12 @@
     "pressure-test": "node scripts/repair-generated-site-artifacts.js && node scripts/repair-search-system.js && node scripts/ensure-shared-assets.js && node scripts/pressure-test-site.js && node scripts/site-function-harmony-test.js",
     "mission-readiness": "node scripts/patch-osint-tool-tiers.js && node scripts/build-public-usefulness-clock-system.js && node scripts/global-risk-clocks-test.js && node scripts/public-usefulness-clocks-test.js && npm run finalize-mission-surfaces && node scripts/cloudflare-worker-routes-test.js && node scripts/site-wide-function-audit.js --postbuild",
     "public-usefulness-clocks": "node scripts/build-public-usefulness-clock-system.js && node scripts/public-usefulness-clocks-test.js",
-    "test:ai-management": "node scripts/ai-management-foundation-test.mjs && node scripts/live-ai-verification-classifier.test.mjs",
+    "test:ai-management": "node scripts/ai-management-foundation-test.mjs && node scripts/live-ai-verification-classifier.test.mjs && node scripts/compute-capacity-manager-test.mjs && node scripts/capacity-growth-controller-test.mjs && node scripts/capacity-growth-worker-contract-test.mjs && node scripts/capacity-growth-worker-integration-test.mjs && node scripts/zero-cost-compute-golden-test.mjs",
     "test:matrix-synergy": "node scripts/matrix-synergy-test.mjs",
     "test:matrix-synergy:migration": "python3 scripts/phase13-migration-rehearsal.py",
-    "test:public-investigation": "node scripts/build-public-investigation-corpus.js && node scripts/public-investigation-test.mjs"
+    "test:public-investigation": "node scripts/build-public-investigation-corpus.js && node scripts/public-investigation-test.mjs",
+    "matrix-local": "node local-agent/matrix-local.mjs",
+    "test:local-host": "node local-agent/matrix-local-agent.test.mjs && node local-agent/control-plane-client.test.mjs && node local-agent/local-benchmark.test.mjs && node local-agent/matrix-local-host.test.mjs && node local-agent/matrix-local-supervisor.test.mjs && node local-agent/matrix-local-cli.test.mjs"
   },
   "dependencies": {
     "@netlify/blobs": "^8.1.0"

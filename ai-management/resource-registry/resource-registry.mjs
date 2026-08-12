@@ -72,6 +72,7 @@ export class ResourceRegistry {
     const previousLatency = Number(current.average_latency || 0);
     return this.update(resourceId, {
       last_success: at, last_health_check: at, health_status: 'healthy', consecutive_failures: 0,
+      reliability_score: Number((Number(current.reliability_score || 0) * 0.9 + 10).toFixed(4)),
       success_rate: Number((previousRate * 0.9 + 0.1).toFixed(6)), error_rate: Number(((1 - previousRate) * 0.9).toFixed(6)),
       average_latency: Number((previousLatency ? previousLatency * 0.8 + latencyMs * 0.2 : latencyMs).toFixed(2))
     });
@@ -85,6 +86,7 @@ export class ResourceRegistry {
     return this.update(resourceId, {
       last_failure: at, last_health_check: at, last_error: String(error || '').slice(0, 500),
       health_status: failures >= 3 ? 'cooldown' : 'degraded', consecutive_failures: failures,
+      reliability_score: Number((Number(current.reliability_score || 0) * 0.9).toFixed(4)),
       success_rate: Number((previousRate * 0.9).toFixed(6)), error_rate: Number((1 - previousRate * 0.9).toFixed(6)),
       cooldown_until: cooldownMs > 0 ? new Date(Date.parse(at) + cooldownMs).toISOString() : current.cooldown_until || null
     });
@@ -152,6 +154,7 @@ export class D1ResourceRegistry {
 
   async recordSuccess(resourceId, latencyMs, at = new Date().toISOString()) {
     await this.database.prepare(`UPDATE ai_resources SET last_success=?, last_health_check=?, health_status='healthy', consecutive_failures=0,
+      reliability_score=MIN(100, reliability_score*0.9+10),
       success_rate=MIN(1, success_rate*0.9+0.1), error_rate=MAX(0, error_rate*0.9),
       average_latency=CASE WHEN average_latency=0 THEN ? ELSE average_latency*0.8+?*0.2 END,
       cooldown_until=NULL, updated_at=? WHERE resource_id=?`).bind(at, at, latencyMs, latencyMs, at, resourceId).run();
@@ -162,6 +165,7 @@ export class D1ResourceRegistry {
     const cooldown = cooldownMs > 0 ? new Date(Date.parse(at) + cooldownMs).toISOString() : null;
     await this.database.prepare(`UPDATE ai_resources SET last_failure=?, last_health_check=?,
       health_status=CASE WHEN consecutive_failures+1>=3 THEN 'cooldown' ELSE 'degraded' END,
+      reliability_score=MAX(0, reliability_score*0.9),
       consecutive_failures=consecutive_failures+1,success_rate=MAX(0, success_rate*0.9),error_rate=MIN(1, 1-success_rate*0.9),
       cooldown_until=CASE WHEN consecutive_failures+1>=3 THEN ? ELSE cooldown_until END,
       notes=SUBSTR(COALESCE(notes,'') || ' | last error: ' || ?, 1, 2000), updated_at=? WHERE resource_id=?`)

@@ -7,9 +7,12 @@ on:
       - 'ai-management/opportunity-hunter/**'
       - 'ai-management/resource-registry/**'
       - 'src/worker-capacity-growth.js'
+      - 'src/worker-local-job-api.js'
       - 'src/worker-production-autonomy.js'
       - 'scripts/capacity-growth-controller-test.mjs'
       - 'scripts/capacity-growth-worker-contract-test.mjs'
+      - 'scripts/capacity-growth-worker-integration-test.mjs'
+      - 'scripts/zero-cost-compute-golden-test.mjs'
       - '.github/workflows/capacity-growth-integration.yml'
   workflow_dispatch:
 
@@ -30,6 +33,9 @@ jobs:
           node --check ai-management/compute-capacity/capacity-growth-controller.mjs
           node --check src/worker-capacity-growth.js
           node --check src/worker-production-autonomy.js
+          node --check src/worker-local-job-api.js
           node scripts/compute-capacity-manager-test.mjs
           node scripts/capacity-growth-controller-test.mjs
           node scripts/capacity-growth-worker-contract-test.mjs
+          node scripts/capacity-growth-worker-integration-test.mjs
+          node scripts/zero-cost-compute-golden-test.mjs

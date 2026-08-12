@@ -183,6 +183,15 @@ assert(localRuntime.status === 200 && localRuntime.data?.ok === true, 'Live loca
 assert(Array.isArray(localRuntime.data?.nodes) && Array.isArray(localRuntime.data?.models), 'Local runtime inventory has an invalid shape');
 assert(String(localRuntime.data?.inferenceBoundary || '').toLowerCase().includes('prompts'), 'Local runtime response does not state the prompt-local boundary');
 
+const capacityHealth = await request('/api/ai-management/admin/capacity-growth');
+assert(capacityHealth.status === 200 && capacityHealth.data?.ok === true, 'Live zero-cost capacity health endpoint failed');
+assert(capacityHealth.data?.zero_spend_lock === true && capacityHealth.data?.paid_fallback_possible === false, 'Capacity health weakened the zero-spend boundary');
+const capacityCycle = await request('/api/ai-management/admin/capacity-growth', { method: 'POST', body: {} });
+assert(capacityCycle.status === 200 && capacityCycle.data?.ok === true, 'Live zero-cost capacity cycle failed');
+assert(capacityCycle.data?.zero_spend_lock === true && capacityCycle.data?.paid_fallback_possible === false, 'Capacity cycle weakened the zero-spend boundary');
+assert(capacityCycle.data?.compute_report?.title === 'MATRIX COMPUTE REPORT', 'Capacity cycle did not produce the daily compute report');
+assert(Number(capacityCycle.data?.compute_report?.confirmed_compute_cost_eur) === 0, 'Capacity report did not confirm EUR 0 execution');
+
 const siteDirector = await request('/api/ai-management/admin/site-director');
 assert(siteDirector.status === 200 && siteDirector.data?.ok === true && Array.isArray(siteDirector.data?.runs), 'Live Site Improvement Director endpoint failed');
 
@@ -244,6 +253,13 @@ const proof = {
   resources: { count: resources.data.resources.length, allZeroSpend: true },
   scout: { count: scout.data.candidates.length },
   localRuntime: { nodes: localRuntime.data.nodes.length, models: localRuntime.data.models.length },
+  capacity: {
+    onlineLocalNodes: capacityCycle.data.compute_report.online_local_nodes,
+    usableBrokerResources: capacityCycle.data.compute_report.usable_broker_resources,
+    effectiveCapacityScore: capacityCycle.data.compute_report.effective_capacity_score,
+    jobsAssigned: capacityCycle.data.compute_report.jobs_assigned.length,
+    zeroSpendLock: true
+  },
   siteDirector: { runs: siteDirector.data.runs.length },
   promptBoundary: { rejectionStatus: promptRejection.status, promptAccepted: false },
   route: {

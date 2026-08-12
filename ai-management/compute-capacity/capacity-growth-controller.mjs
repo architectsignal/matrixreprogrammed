@@ -52,6 +52,7 @@ export function localRuntimeToComputeCandidate(runtime = {}, now = new Date()) {
     billing_risk: 'none',
     zero_cost_verified: true,
     cost_confirmed_zero: runtime.cost_confirmed_zero === true,
+    external_network_used: runtime.external_network_used === true,
     quota_verified: true,
     quota_unlimited: true,
     quota_remaining: null,

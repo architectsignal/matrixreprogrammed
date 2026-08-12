@@ -60,5 +60,9 @@ for (const mutation of [
 assert.deepEqual(opportunityHunterWorkerInternals.configuredOpportunities({ AI_OPPORTUNITY_SEEDS_JSON: '[]' }), []);
 assert.deepEqual(opportunityHunterWorkerInternals.configuredOpportunities({ AI_OPPORTUNITY_SEEDS_JSON: 'not-json' }), []);
 assert.equal(opportunityHunterWorkerInternals.configuredOpportunities({ AI_OPPORTUNITY_SEEDS_JSON: JSON.stringify([approved.opportunity]) }).length, 1);
+const defaults = opportunityHunterWorkerInternals.configuredOpportunities({});
+assert.deepEqual(defaults.map(item => item.opportunity_id), ['official-kaggle-notebooks-free-gpu', 'official-hugging-face-zerogpu']);
+assert.ok(defaults.every(item => item.automation_permission === 'unknown' && item.payment_method_required === false));
+assert.ok(defaults.every(item => item.metadata.owner_onboarding_required === true));
 
 console.log('Opportunity Hunter Worker tests passed: zero-spend persistence, adapter-ready activation gate, and owner-action rejection.');

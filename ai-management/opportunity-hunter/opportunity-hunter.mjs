@@ -122,11 +122,17 @@ export async function evaluateOpportunity(input, { fetchImpl = globalThis.fetch,
   }
 
   const combined = `${docs.text || ''}\n${terms.text || ''}`.slice(0, 1000000);
+  const normalizedMaterial = combined.toLowerCase().replace(/\s+/g, ' ');
+  const quotaEvidenceTerms = Array.isArray(opportunity.metadata?.quota_evidence_terms)
+    ? opportunity.metadata.quota_evidence_terms.map(term => String(term).toLowerCase().trim()).filter(Boolean).slice(0, 8)
+    : [];
   if (hasBillingRisk(combined)) blockers.push('billing-risk-language-detected');
   if (ZERO_COST.test(combined)) evidence.push('official-material-confirms-zero-cost-access');
   if (AUTOMATION_ALLOWED.test(combined)) evidence.push('official-material-confirms-automation-permission');
+  if (liveProbe && quotaEvidenceTerms.length && quotaEvidenceTerms.every(term => normalizedMaterial.includes(term))) evidence.push('official-material-confirms-declared-quota');
   if (liveProbe && !evidence.includes('official-material-confirms-zero-cost-access')) blockers.push('zero-cost-language-not-found');
   if (liveProbe && !evidence.includes('official-material-confirms-automation-permission')) blockers.push('automation-language-not-found');
+  if (liveProbe && quotaEvidenceTerms.length && !evidence.includes('official-material-confirms-declared-quota')) blockers.push('declared-quota-language-not-found');
 
   const uniqueBlockers = [...new Set(blockers)];
   const uniqueOwnerActions = [...new Set(ownerActions)];

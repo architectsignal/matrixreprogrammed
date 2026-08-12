@@ -58,6 +58,7 @@ const specialistObservation = readJson(path.join(downloads, 'specialist-agent-ob
   investigation_backlog: 0,
   unverified_evidence_count: 0,
   stale_report_count: 0,
+  auditor_cleared_report_count: 0,
   revenue_health: 1,
   retention_health: 1,
   resource_pressure: 0,
@@ -117,6 +118,7 @@ const result = {
     missions_proposed: specialistPlan.missions.length,
     handoffs_defined: specialistPlan.handoffs.length,
     auditor_gate_before_publication_required: specialistPlan.controls.auditor_gate_before_publication_required,
+    explicit_auditor_clearance_required_for_publisher: specialistPlan.controls.explicit_auditor_clearance_required_for_publisher,
     shared_memory_required: specialistPlan.controls.shared_memory_required,
     automatic_production_deployment_allowed: specialistPlan.controls.automatic_production_deployment_allowed
   },

@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-12T05:36:29.930Z",
+  "generatedAt": "2026-08-12T06:49:23.908Z",
   "checks": [
     {
       "name": "local search.html",
@@ -75,12 +75,12 @@
     {
       "name": "local index size",
       "ok": true,
-      "detail": "1968 entries"
+      "detail": "1970 entries"
     },
     {
       "name": "local unique URLs",
       "ok": true,
-      "detail": "1968 unique routes"
+      "detail": "1970 unique routes"
     },
     {
       "name": "local route investigation-machine.html",
@@ -115,12 +115,12 @@
     {
       "name": "local query corruption bribery fraud official enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=uk-sfo-news, investigation-source-ledger.html?source=doj-justice-news, investigation-machine.html"
+      "detail": "investigation-source-ledger.html?source=uk-sfo-news, investigation-source-ledger.html?source=doj-justice-news, daily-investigation-conclusions.html?finding=9a33506c65de7d64a792acff"
     },
     {
       "name": "local query WikiLeaks documents cables archive",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=wikileaks-publications, source-changes.html?change=ea3afacb89f4f277c87d1a79, source-changes.html?change=f9b326734f170d730fc634f5"
+      "detail": "investigation-source-ledger.html?source=wikileaks-publications, source-changes.html?change=6292baa1cae35d0d115824f2, source-changes.html?change=ea3afacb89f4f277c87d1a79"
     },
     {
       "name": "local query government contracts USAspending procurement",
@@ -135,7 +135,7 @@
     {
       "name": "local query SEC filings ownership enforcement",
       "ok": true,
-      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=82b0886fe4735164beacb291, source-changes.html?change=c9bd018a6544006f1e1f3018"
+      "detail": "investigation-source-ledger.html?source=sec-current-filings, source-changes.html?change=35b31585164190bc821189b8, source-changes.html?change=82b0886fe4735164beacb291"
     }
   ],
   "failures": []

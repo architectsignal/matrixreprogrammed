@@ -1,0 +1,241 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-12T13:34:44.290Z",
+  "degraded": true,
+  "commands": [
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/repair-investigation-source-registry.js",
+      "script": "scripts/repair-investigation-source-registry.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:34:44.309Z",
+      "completedAt": "2026-08-12T13:34:44.381Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Investigation source registry repaired: 0 field change(s); outage preservation patch: 0 change(s).\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/source-adapter-contract-test.js",
+      "script": "scripts/source-adapter-contract-test.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:34:44.382Z",
+      "completedAt": "2026-08-12T13:34:44.566Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Source adapter contract test passed: 5 records, 61 schema and provenance checks.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/run-investigation-machine.js daily",
+      "script": "scripts/run-investigation-machine.js",
+      "args": [
+        "daily"
+      ],
+      "startedAt": "2026-08-12T13:34:44.566Z",
+      "completedAt": "2026-08-12T13:34:44.955Z",
+      "status": 1,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Investigation pages built: 20 sources, 2500 findings, daily and weekly conclusions, global pulse status.\nInvestigation machine daily run complete: 0/12 sources fetched, 0 items parsed, 2500 ledger findings.\n",
+      "stderrTail": "No scheduled source was fetched successfully. not a production deployment. The previous ledger was preserved, but the run is not healthy.\n"
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/run-source-adapters.js daily",
+      "script": "scripts/run-source-adapters.js",
+      "args": [
+        "daily"
+      ],
+      "startedAt": "2026-08-12T13:34:44.956Z",
+      "completedAt": "2026-08-12T13:34:46.351Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Source adapters complete: 7/7 sources fetched, 230 evidence records retained.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/update-live-intel.js",
+      "script": "scripts/update-live-intel.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:34:46.351Z",
+      "completedAt": "2026-08-12T13:34:49.486Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Live Intel update complete: 9 fresh items, 40 archived previous items, 6 feeds checked. HTML stripped.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/record-live-intel-check.js",
+      "script": "scripts/record-live-intel-check.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:34:49.486Z",
+      "completedAt": "2026-08-12T13:34:49.539Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Live Intel successful check recorded at 2026-08-12T13:34:49.527Z; content timestamp remains 2026-08-12T13:34:46.413Z.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/update-seven-day-intel.js",
+      "script": "scripts/update-seven-day-intel.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:34:49.539Z",
+      "completedAt": "2026-08-12T13:34:50.408Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Seven-day intel updater complete: 80 current items, 73 new item(s), 345 fetched records, 13/13 feeds successful, 0 feed error(s).\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-outcome-briefings.js",
+      "script": "scripts/build-outcome-briefings.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:34:50.408Z",
+      "completedAt": "2026-08-12T13:34:50.470Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Outcome briefings generated: 5 detailed briefs.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-daily-brain-brief.js",
+      "script": "scripts/build-daily-brain-brief.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:34:50.470Z",
+      "completedAt": "2026-08-12T13:35:14.335Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Machine feed object-name normalization already current; 1 source/output file(s) sanitized.\nMachine Feed Runner complete: 7 lanes, 4 reached, 18 events, 33 observations.\nDaily Brain record-event patch complete: 12 events, 12 observations.\nChange Detection Engine complete: 0 new, 0 changed, 25 relationship candidates.\nGenerated page cleanup entity-briefs: 99 stale or previous file(s) removed.\nEntity Daily Briefs built: 33 briefs.\nGenerated page cleanup entity-exposure: 99 stale or previous file(s) removed.\nEntity Exposure Index built safely: 33 profiles.\nPrivate Contractor Intelligence built: 7 profiles.\nMission intelligence layer applied to 72 brief pages with 50 documented actors and 7 bounded scenarios.\nMaster Brief Engine built with rich reader-ready pages, evidence boundaries, records, missing files and watch triggers.\nNested brief link repair complete: 7 file(s), 7 link(s) checked/fixed.\nStale generated brief link repair complete: 0 link(s) in 0 source/output file(s).\nMACHINE FEED RUNNER TEST PASSED\nCHANGE DETECTION ENGINE TEST PASSED\nENTITY DAILY BRIEFS TEST PASSED\nPRIVATE CONTRACTOR INTELLIGENCE TEST PASSED\nMASTER BRIEF ENGINE TEST PASSED\nLiving control interface built: control map linked, brain pulse injected, contractor intelligence and Master Brief Engine integrated.\nDaily brain brief generated: 5 conclusions, 5 signals, 12 missing-record prompts.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-investigation-pages.js",
+      "script": "scripts/build-investigation-pages.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:14.335Z",
+      "completedAt": "2026-08-12T13:35:14.448Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Investigation pages built: 20 sources, 2500 findings, daily and weekly conclusions, global pulse status.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-mission-intelligence-10.js",
+      "script": "scripts/build-mission-intelligence-10.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:14.448Z",
+      "completedAt": "2026-08-12T13:35:14.543Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Mission Intelligence 10 built: 130 nodes, 172 edges.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-live-intel-machine.js",
+      "script": "scripts/build-live-intel-machine.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:14.543Z",
+      "completedAt": "2026-08-12T13:35:15.496Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Live Intel machine built: 80 current items, 73 new this collection, latest source 2026-08-11T19:00:00.000Z.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-daily-epstein-update.js",
+      "script": "scripts/build-daily-epstein-update.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:15.496Z",
+      "completedAt": "2026-08-12T13:35:15.686Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Daily Epstein update generated from 5 current record lead(s); Live Intel source window 2026-08-12T13:34:50.280Z.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-card-live-updates.js",
+      "script": "scripts/build-card-live-updates.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:15.686Z",
+      "completedAt": "2026-08-12T13:35:16.682Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Card intelligence feed generated for 306 card(s); 82 have current matched records; Andrew Tate routes: 1.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/patch-conclusion-integrity-cards.js",
+      "script": "scripts/patch-conclusion-integrity-cards.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:16.683Z",
+      "completedAt": "2026-08-12T13:35:16.759Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Conclusion integrity cards built: 75 cards.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-behind-the-curtain-tier-registry.js",
+      "script": "scripts/build-behind-the-curtain-tier-registry.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:16.760Z",
+      "completedAt": "2026-08-12T13:35:16.820Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Tier registry generated: 80 named people, 12 levels and 7 bounded hidden-hand hypotheses.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/patch-behind-the-curtain-tier-ui.js",
+      "script": "scripts/patch-behind-the-curtain-tier-ui.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:16.820Z",
+      "completedAt": "2026-08-12T13:35:16.964Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Behind the Curtain tier interface and Power-Family gateway patched: 1 capstone route(s), 2 Pyramid return route(s), one canonical gateway.\n",
+      "stderrTail": ""
+    },
+    {
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/build-behind-the-curtain.js",
+      "script": "scripts/build-behind-the-curtain.js",
+      "args": [],
+      "startedAt": "2026-08-12T13:35:16.965Z",
+      "completedAt": "2026-08-12T13:35:20.368Z",
+      "status": 0,
+      "signal": null,
+      "error": null,
+      "stdoutTail": "Behind the Curtain Access Layer linked with 3 route references; canonical independent-tier client feeds reasserted.\nBehind the Curtain Pyramid PASS: 12 levels, 80 named people, 80 unique tier members, 10 choke points, 9 dynasties and 7 bounded hidden-hand hypotheses; transport=public-api.\nBehind the Curtain Living Access PASS: 10/10 legacy comparison people, 80 independent tier people, 13 bounded sources, 2 historical snapshots, 10 continuity mechanisms; guarded one-run production authorization verified.\nBehind the Curtain route links updated: index.html, control-structure.html, power-atlas.html, follow-the-money.html.\nBehind the Curtain rebuilt: 10 power centers, 10 relationships, 20 sources; 10 living access-holders, 2 snapshots, 0 approved living changes.\n",
+      "stderrTail": ""
+    }
+  ],
+  "freshnessGuard": {
+    "command": "C:\\Program Files\\nodejs\\node.exe scripts/production-freshness-guard.js",
+    "script": "scripts/production-freshness-guard.js",
+    "args": [],
+    "startedAt": "2026-08-12T13:35:20.368Z",
+    "completedAt": "2026-08-12T13:35:20.439Z",
+    "status": 0,
+    "signal": null,
+    "error": null,
+    "stdoutTail": "Production freshness guard passed: 9 source checks.\n",
+    "stderrTail": ""
+  },
+  "freshnessScope": "prebuild-source-only",
+  "completedAt": "2026-08-12T13:35:20.439Z"
+}

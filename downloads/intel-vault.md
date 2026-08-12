@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-08-12T05:36:00.272Z
+Updated: 2026-08-12T14:13:53.388Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### Treasury, IRS Issue Guidance on the Permanent Expansion of Paid Family and Medical Leave under the Working Families Tax Cuts - U.S. Department of the Treasury (.gov)
+- Published: 2026-08-05T14:00:00.000Z
+- Source: https://news.google.com/rss/articles/CBMiYkFVX3lxTE5sVFRyOVcxN0RZV3pQaktwUXZLRHJnTGd6YWdYcUJEaFdJSTIyQVdpV09NRDdDbEtEbVVnV1A3VFpER05FTlFnTlY1OF9wanJmQ1RGMmxkenlUR0VfTlV1UXp3?oc=5
+- Source class: discovery
 
 ### Senate report: Three big banks ignored red flags on Epstein - American Banker
 - Published: 2026-08-04T17:11:00.000Z

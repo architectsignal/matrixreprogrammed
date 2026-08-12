@@ -1,6 +1,6 @@
 # Speculative Intelligence Synthesis
 
-Updated: 2026-08-12T07:51:52.962Z
+Updated: 2026-08-12T14:19:10.326Z
 
 ## Evidence-led conclusion
 
@@ -15,11 +15,11 @@ Analytic confidence: **76/100 — substantial analytic support**
 - **SEC Complaint** — Documented in the linked public record; law, filing or instrument: Benjamin Taylor, Darina Windsor, Joseph Abdul Noor El-Khouri, and George Nikas. Why it matters: This record places SEC Complaint inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consolidated Sanctions List (Non-SDN Lists)** — Contract. Why it matters: This record places Consolidated Sanctions List (Non-SDN Lists) inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Exercise or conversion of derivative security** — reportedTransaction. Why it matters: This record places Exercise or conversion of derivative security inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
-- **Corporate-state convergence** — Documented in the linked public record. Why it matters: This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Default Judgment** — Contract. Why it matters: This record places Default Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Bongiorno** — Contract. Why it matters: This record places Final Judgment - Bongiorno inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Final Judgment - Titanium Capital LLC** — Contract. Why it matters: This record places Final Judgment - Titanium Capital LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Judgment - Gerard Ryan** — Contract. Why it matters: This record places Judgment - Gerard Ryan inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
+- **Corporate-state convergence** — Documented in the linked public record. Why it matters: This record places Corporate-state convergence inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Amended Judgment - Spartan Trading Company, LLC** — Contract. Why it matters: This record places Amended Judgment - Spartan Trading Company, LLC inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners** — Contract. Why it matters: This record places Audit of the Drug Enforcement Administration’s Registration Process for Medical Practitioners inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.
 - **Consent Motion for Entry of Final Judgment** — Contract. Why it matters: This record places Consent Motion for Entry of Final Judgment inside a documented decision, ownership, transaction, regulatory or implementation chain that can be tested against primary records.

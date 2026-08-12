@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T07:51:51.502Z",
+  "updated": "2026-08-12T14:14:54.356Z",
   "title": "Billionaire Control Tracker",
   "boundary": "Watchlist profiles track control-layer exposure and public records, not private intent.",
   "profiles": [
@@ -30,23 +30,7 @@
       },
       "control_score": 100,
       "level": "elite priority",
-      "latest_records": [
-        {
-          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
-          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
-          "grade": "documented association"
-        },
-        {
-          "title": "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
-          "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
-          "grade": "documented association"
-        },
-        {
-          "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
-          "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
-          "grade": "documented association"
-        }
-      ],
+      "latest_records": [],
       "entity_briefs": [],
       "record_reviews": [],
       "relationship_candidates": [],
@@ -85,54 +69,14 @@
         "ai-data": 20,
         "media-narrative": 20,
         "security": 20,
-        "public-private-contracts": 20,
-        "money": 16
+        "public-private-contracts": 20
       },
-      "control_score": 100,
-      "level": "elite priority",
-      "latest_records": [
-        {
-          "title": "Electronic Delivery of Information Under the Federal Securities Laws",
-          "url": "https://www.federalregister.gov/documents/2026/07/21/2026-14679/electronic-delivery-of-information-under-the-federal-securities-laws",
-          "grade": "documented association"
-        },
-        {
-          "title": "AMAZON COM INC (AMZN)",
-          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-          "grade": "documented association"
-        }
-      ],
+      "control_score": 80,
+      "level": "high priority",
+      "latest_records": [],
       "entity_briefs": [],
       "record_reviews": [],
-      "relationship_candidates": [
-        {
-          "id": "amazon-com-inc__amzn",
-          "from": "AMAZON COM INC",
-          "to": "AMZN",
-          "count": 1,
-          "lanes": [
-            "sec-edgar-filings"
-          ],
-          "record_types": [
-            "company_registry_snapshot"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "sec-edgar-filings-cik0001018724-5"
-          ],
-          "control_layers": [
-            "money",
-            "companies",
-            "ownership"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "relationship_candidates": [],
       "missing_records": [
         "Current beneficial ownership and voting-control record where relevant",
         "Public contracts touching the ecosystem",
@@ -447,49 +391,14 @@
       "control_layer_scores": {
         "ai-data": 20,
         "energy": 20,
-        "public-private-contracts": 20,
-        "money": 16
+        "public-private-contracts": 20
       },
-      "control_score": 83,
-      "level": "high priority",
-      "latest_records": [
-        {
-          "title": "NVIDIA CORP (NVDA)",
-          "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-          "grade": "documented association"
-        }
-      ],
+      "control_score": 60,
+      "level": "active watch",
+      "latest_records": [],
       "entity_briefs": [],
       "record_reviews": [],
-      "relationship_candidates": [
-        {
-          "id": "nvda__nvidia-corp",
-          "from": "NVIDIA CORP",
-          "to": "NVDA",
-          "count": 1,
-          "lanes": [
-            "sec-edgar-filings"
-          ],
-          "record_types": [
-            "company_registry_snapshot"
-          ],
-          "evidence_grades": [
-            "documented association"
-          ],
-          "source_events": [
-            "sec-edgar-filings-cik0001045810-1"
-          ],
-          "control_layers": [
-            "money",
-            "companies",
-            "ownership"
-          ],
-          "score": 9,
-          "grade": "candidate",
-          "relationship_type": "weak co-occurrence signal",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
+      "relationship_candidates": [],
       "missing_records": [
         "Current beneficial ownership and voting-control record where relevant",
         "Public contracts touching the ecosystem",

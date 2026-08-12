@@ -1,94 +1,15 @@
 {
-  "updated": "2026-08-12T07:51:51.335Z",
+  "updated": "2026-08-12T14:14:54.173Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-08-12T05:15:25.463Z",
-  "currentRecordCount": 18,
-  "previousRecordCount": 18,
+  "previousUpdated": "2026-08-12T13:46:09.155Z",
+  "currentRecordCount": 0,
+  "previousRecordCount": 0,
   "newRecords": [],
   "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
   "clockTriggers": [],
-  "repeatedEntities": [
-    {
-      "id": "health-and-human-services-department",
-      "name": "Health and Human Services Department",
-      "count": 3,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-15833-1",
-        "federal-register-policy-2026-13656-4",
-        "federal-register-policy-2026-13602-5"
-      ],
-      "last_seen": "2026-07-06"
-    },
-    {
-      "id": "centers-for-medicare-and-medicaid-services",
-      "name": "Centers for Medicare & Medicaid Services",
-      "count": 3,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-15833-1",
-        "federal-register-policy-2026-13656-4",
-        "federal-register-policy-2026-13602-5"
-      ],
-      "last_seen": "2026-07-06"
-    },
-    {
-      "id": "homeland-security-department",
-      "name": "Homeland Security Department",
-      "count": 2,
-      "lanes": [
-        "federal-register-policy"
-      ],
-      "record_types": [
-        "rule_or_notice"
-      ],
-      "evidence_grades": [
-        "documented association"
-      ],
-      "source_events": [
-        "federal-register-policy-2026-14439-3",
-        "federal-register-policy-2026-13057-6"
-      ],
-      "last_seen": "2026-06-29"
-    },
-    {
-      "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
-      "name": "Appellate Division of the Supreme Court of the State of New York",
-      "count": 2,
-      "lanes": [
-        "courtlistener-court-records"
-      ],
-      "record_types": [
-        "court_record_signal"
-      ],
-      "evidence_grades": [
-        "charged / sued"
-      ],
-      "source_events": [
-        "courtlistener-court-records-10936935-4",
-        "courtlistener-court-records-10936889-5"
-      ],
-      "last_seen": "2026-07-29"
-    }
-  ]
+  "repeatedEntities": []
 }

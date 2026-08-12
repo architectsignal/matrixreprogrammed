@@ -1,19 +1,19 @@
 # Private Contractor Intelligence
 
-Updated: 2026-08-12T07:51:51.467Z
+Updated: 2026-08-12T14:14:54.310Z
 
 ## Boundary
 This system separates contracts, legal records, documented associations, allegations, signals and unsupported claims. Association is not guilt.
 
 ## Blackwater / Xe / Academi / Constellis lineage
 
-Score: 50
+Score: 42
 
 Level: active contractor watch
 
 Main players: Erik Prince, Constellis, Triple Canopy
 
-Missing records: USAspending awards; Court records; Congressional hearing material; SEC or corporate records where available; Sanctions / debarment checks; News signals verified against primary records; Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+Missing records: USAspending awards; Court records; Congressional hearing material; SEC or corporate records where available; Sanctions / debarment checks; News signals verified against primary records
 
 ## DynCorp / Amentum lineage
 

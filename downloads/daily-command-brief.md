@@ -1,10 +1,10 @@
 # Daily Command Brief
 
-Updated: 2026-08-12T07:51:51.502Z
+Updated: 2026-08-12T14:14:54.356Z
 
 ## Top Contractor Signals
 
-- Blackwater / Xe / Academi / Constellis lineage: 50
+- Blackwater / Xe / Academi / Constellis lineage: 42
 - DynCorp / Amentum lineage: 32
 - CACI International: 28
 - Booz Allen Hamilton: 28
@@ -14,43 +14,36 @@ Updated: 2026-08-12T07:51:51.502Z
 
 ## Missing Records
 
-- Centers for Medicare & Medicaid Services: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Health and Human Services Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 2021-08825: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 2024-13374: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 23-55704: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- 24-2251: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- California Supreme Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- CC-2025-0631: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Civil Rights Corps v. LaSalle: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- D & A Grandview, LLC v. 60 Davidson, LLC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Gerena Betancourt v. Negociado De La Policía De Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Gilead Tenofovir Cases: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Homeland Security Department: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- In Re: Koi Design LLC v. Marron Lawyers, Apc: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- S283862: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Supreme Court of Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Williams v. Biggs: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AAPL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Alphabet Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AMAZON COM INC: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AMZN: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Apple Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- AVGO: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Broadcom Inc.: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- GOOGL: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- MICROSOFT CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- MSFT: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- NVDA: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- NVIDIA CORP: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Securities and Exchange Commission: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Appellate Division of the Supreme Court of the State of New York: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- California Supreme Court: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- CC-2025-0631: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Court of Appeals for the Ninth Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Court of Appeals for the Second Circuit: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Gerena Betancourt v. Negociado De La Policía De Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
-- Supreme Court of Puerto Rico: Confirm the primary record page, PDF, docket, filing, award notice or registry record.
+- Control Structure: Feed runner has not produced entity observations yet.
+- Control Structure: Feed runner has not produced entity observations yet.
+- Blackwater / Xe / Academi / Constellis lineage: USAspending awards
+- Blackwater / Xe / Academi / Constellis lineage: Court records
+- Blackwater / Xe / Academi / Constellis lineage: Congressional hearing material
+- Blackwater / Xe / Academi / Constellis lineage: SEC or corporate records where available
+- Blackwater / Xe / Academi / Constellis lineage: Sanctions / debarment checks
+- Blackwater / Xe / Academi / Constellis lineage: News signals verified against primary records
+- DynCorp / Amentum lineage: USAspending awards
+- DynCorp / Amentum lineage: Court records
+- DynCorp / Amentum lineage: Inspector General reports
+- DynCorp / Amentum lineage: Corporate transaction records
+- CACI International: SEC filings
+- CACI International: USAspending awards
+- CACI International: Court records
+- CACI International: Contract notices
+- Booz Allen Hamilton: SEC filings
+- Booz Allen Hamilton: USAspending awards
+- Booz Allen Hamilton: Lobbying records
+- Booz Allen Hamilton: Court records
+- Palantir government platforms: SEC filings
+- Palantir government platforms: USAspending awards
+- Palantir government platforms: Procurement notices
+- Palantir government platforms: Court records
+- Palantir government platforms: Policy documents
+- G4S / Allied Universal security lineage: Procurement records
+- G4S / Allied Universal security lineage: Court records
+- G4S / Allied Universal security lineage: Regulatory records
+- G4S / Allied Universal security lineage: Public contract routes
+- SAIC / Leidos lineage: SEC filings
+- SAIC / Leidos lineage: USAspending awards
+- SAIC / Leidos lineage: Contract notices
+- SAIC / Leidos lineage: Court records

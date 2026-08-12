@@ -48,7 +48,7 @@ jobs:
       - name: Run deep site pressure test
         run: node scripts/deep-site-test.js
         env:
-          LIVE_BASE: https://matrixreprogrammed.netlify.app
+          LIVE_BASE: https://matrixreprogrammed.com
 
       - name: Upload deep test report
         uses: actions/upload-artifact@v4

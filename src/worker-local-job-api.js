@@ -2,6 +2,7 @@ import {
   completePublicInvestigationLocalResult,
   recordPublicInvestigationLocalFailure
 } from './worker-public-investigation.js';
+import { D1ResourceRegistry } from '../ai-management/resource-registry/resource-registry.mjs';
 
 const PRIORITY_SQL = "CASE priority WHEN 'P0' THEN 0 WHEN 'P1' THEN 1 WHEN 'P2' THEN 2 WHEN 'P3' THEN 3 ELSE 4 END";
 
@@ -71,11 +72,12 @@ export async function enqueueLocalJob(env, body) {
 export async function leaseLocalJob(env, body) {
   const nodeId = String(body?.node_id || '');
   if (!nodeId) return json({ ok: false, error: 'node_id is required' }, 400);
-  const node = await env.MEMBERS_DB.prepare("SELECT node_id,status,expires_at FROM ai_local_runtime_nodes WHERE node_id=? LIMIT 1").bind(nodeId).first();
+  const node = await env.MEMBERS_DB.prepare("SELECT node_id,status,expires_at,cost_confirmed_zero,external_network_used FROM ai_local_runtime_nodes WHERE node_id=? LIMIT 1").bind(nodeId).first();
   if (!node || node.status !== 'online' || Date.parse(node.expires_at || '') <= Date.now()) return json({ ok: false, error: 'Node is not online' }, 409);
+  if (!Boolean(node.cost_confirmed_zero) || Boolean(node.external_network_used)) return json({ ok: false, error: 'Node is not eligible for zero-spend offline execution' }, 409);
   const row = await env.MEMBERS_DB.prepare(`SELECT * FROM ai_local_jobs
-    WHERE status='queued' AND attempt_count<maximum_attempts
-    ORDER BY ${PRIORITY_SQL},created_at ASC LIMIT 1`).first();
+    WHERE status='queued' AND attempt_count<maximum_attempts AND (assigned_node_id IS NULL OR assigned_node_id=?)
+    ORDER BY ${PRIORITY_SQL},created_at ASC LIMIT 1`).bind(nodeId).first();
   if (!row) return new Response(null, { status: 204, headers: { 'cache-control': 'no-store' } });
   const token = randomToken();
   const tokenHash = await digest(token);
@@ -155,6 +157,25 @@ export async function completeLocalJob(env, body) {
   const receiptId = `receipt-${crypto.randomUUID()}`;
   await env.MEMBERS_DB.prepare(`INSERT INTO ai_local_job_receipts(receipt_id,job_id,node_id,receipt_type,payload_hash,result_hash,cost_confirmed_zero,external_network_used,created_at)
     VALUES(?,?,?,?,?,?,1,0,?)`).bind(receiptId, jobId, nodeId, successful ? 'completed' : nextStatus === 'failed' ? 'failed' : 'requeued', await digest(row.payload_json), await digest(resultJson), now).run();
+  const executionLatencyMs = Math.max(0, Date.now() - (Date.parse(row.updated_at || '') || Date.now()));
+  const registry = new D1ResourceRegistry(env.MEMBERS_DB);
+  if (successful) await registry.recordSuccess(nodeId, executionLatencyMs, now).catch(() => null);
+  else await registry.recordFailure(nodeId, completion.error || 'Local execution failed', now, nextStatus === 'failed' ? 300000 : 0).catch(() => null);
+  if (jobId.startsWith('capacity-benchmark-')) {
+    const learningId = `learning-${jobId}`.slice(0, 180);
+    const auditIdentifier = `capacity-benchmark:${jobId}`.slice(0, 220);
+    await env.MEMBERS_DB.prepare(`INSERT OR IGNORE INTO matrix_learning_ledger(
+      learning_id,source_event_id,domain,observation,proposed_change,change_class,decision,evidence_json,audit_identifier,created_at
+    ) VALUES(?,NULL,'zero-cost-compute',?,?,'A','recorded',?,?,?)`)
+      .bind(
+        learningId,
+        `Owner-local benchmark ${successful ? 'passed' : 'failed'} on ${nodeId} in ${executionLatencyMs}ms at EUR 0.`,
+        'Use the recorded reliability and latency outcome in subsequent capacity ranking.',
+        JSON.stringify({ job_id: jobId, node_id: nodeId, successful, latency_ms: executionLatencyMs, cost_eur: 0, external_network_used: false }),
+        auditIdentifier,
+        now
+      ).run().catch(() => null);
+  }
   if (publicInvestigationJob && !successful) {
     await recordPublicInvestigationLocalFailure(env, row, publicFailureType || 'local-model-failed', completion.error, nextStatus === 'failed').catch(() => null);
   }

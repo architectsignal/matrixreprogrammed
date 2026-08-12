@@ -97,6 +97,24 @@ assert.ok(portfolio.projected_capacity_score > portfolio.current_capacity_score)
 assert.equal(portfolio.policy.payment_methods_forbidden, true);
 assert.equal(portfolio.policy.access_control_bypass_forbidden, true);
 
+const filteredPortfolio = buildCapacityPortfolio({
+  candidates: [],
+  now,
+  activeResources: [
+    { ...local, enabled: true, approved_for_automation: true, capability_types: ['llm'], health_status: 'healthy' },
+    { ...local, resource_id: 'disabled-compute', enabled: false, approved_for_automation: true, capability_types: ['llm'], health_status: 'healthy' },
+    { ...local, resource_id: 'public-api-not-compute', enabled: true, approved_for_automation: true, capability_types: ['public_data'], supported_workloads: [], health_status: 'healthy' }
+  ]
+});
+assert.ok(filteredPortfolio.current_capacity_score > 0, 'usable compute contributes to current capacity');
+assert.equal(filteredPortfolio.current_capacity_score, buildCapacityPortfolio({
+  candidates: [], now, activeResources: [{ ...local, enabled: true, approved_for_automation: true, capability_types: ['llm'], health_status: 'healthy' }]
+}).current_capacity_score, 'disabled and non-compute resources must not inflate current capacity');
+
+const networkedLocalAssessment = assessComputeCandidate({ ...local, candidate_id: 'networked-local', external_network_used: true }, { now });
+assert.equal(networkedLocalAssessment.state, 'quarantined');
+assert.ok(networkedLocalAssessment.blockers.includes('external-network-use-forbidden'));
+
 const resources = [{ ...local, enabled: true }];
 const allocation = allocateCapacity({
   portfolio,

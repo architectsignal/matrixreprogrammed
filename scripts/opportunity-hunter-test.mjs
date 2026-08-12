@@ -6,7 +6,7 @@ const clock = () => fixedNow;
 const fetchImpl = async url => {
   const value = String(url);
   if (value.endsWith('/docs')) {
-    return new Response('Free tier. No payment method required. Programmatic access permitted. Automation allowed.', { status: 200, headers: { 'content-type': 'text/plain' } });
+    return new Response('Free tier. No payment method required. Programmatic access permitted. Automation allowed. Includes 100 requests/day.', { status: 200, headers: { 'content-type': 'text/plain' } });
   }
   if (value.endsWith('/terms')) {
     return new Response('This service is free of charge. API access permitted. Requests stop when the free quota is exhausted.', { status: 200, headers: { 'content-type': 'text/plain' } });
@@ -35,7 +35,8 @@ const base = {
   quota_verified: true,
   free_quota: 100,
   free_quota_unit: 'requests/day',
-  supported_capabilities: ['llm']
+  supported_capabilities: ['llm'],
+  metadata: { quota_evidence_terms: ['100 requests/day'] }
 };
 
 const approved = await evaluateOpportunity(base, { fetchImpl, now: fixedNow });
@@ -44,6 +45,11 @@ assert.equal(approved.auto_activatable, true);
 assert.equal(approved.blockers.length, 0);
 assert.ok(approved.evidence.includes('official-material-confirms-zero-cost-access'));
 assert.ok(approved.evidence.includes('official-material-confirms-automation-permission'));
+assert.ok(approved.evidence.includes('official-material-confirms-declared-quota'));
+
+const staleQuota = await evaluateOpportunity({ ...base, free_quota: 200, metadata: { quota_evidence_terms: ['200 requests/day'] } }, { fetchImpl, now: fixedNow });
+assert.equal(staleQuota.approval_state, 'quarantined');
+assert.ok(staleQuota.blockers.includes('declared-quota-language-not-found'));
 
 const ownerRequired = await evaluateOpportunity({
   ...base,

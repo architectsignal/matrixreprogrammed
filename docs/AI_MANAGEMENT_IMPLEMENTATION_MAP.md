@@ -74,3 +74,18 @@ Architecture decision: `docs/adr/0002-matrix-synergy-accountability-event-bus.md
 | Release integration | The public investigation migration is rehearsed and applied by both controlled production workflows; Worker/config tests require its route, flags, tables and assets |
 
 Architecture decision: `docs/adr/0004-public-investigation-vertical-slice.md`.
+
+## Daily lawful zero-cost compute fabric (2026-08-12)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Daily discovery | Opportunity Hunter uses conservative official Kaggle and Hugging Face seeds when no explicit binding exists, fetches their current documentation/terms, and runs at most once per UTC day |
+| External onboarding | Account, identity, credential, automation, commercial-use and terms uncertainty stays quarantined or owner-gated; external GPU capacity is not claimed as connected |
+| Owner hardware | Online owner-local nodes with explicit EUR 0 and no-network proof are auto-admitted as broker resources; nodes reporting network use are quarantined |
+| Real workload | One idempotent daily SHA-256 benchmark is persisted, assigned, leased and completed through the production D1 local-job queue |
+| Closed-loop learning | Local completion receipts update registry reliability, success rate, latency and cooldown state, which the Resource Broker uses on later routes |
+| Reporting | `MATRIX COMPUTE REPORT` records eligible compute only, hardware, assignments, outcomes, owner actions and quarantine reasons; confirmed cost is EUR 0 and avoided cost remains unknown without evidence |
+| Production schedule | Existing scheduled events run Opportunity Hunter first and then the capacity cycle; no additional Cloudflare cron slot is consumed |
+| Release proof | The controlled deployment runs policy, controller, Worker contract, SQLite/D1 integration and real broker golden tests and live-checks the owner-only capacity endpoint |
+
+Architecture decision: `docs/adr/0005-daily-zero-cost-compute-fabric.md`.

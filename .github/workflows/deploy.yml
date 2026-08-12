@@ -113,6 +113,11 @@ jobs:
           node scripts/opportunity-hunter-test.mjs
           node scripts/opportunity-hunter-worker-test.mjs
           node scripts/opportunity-provider-adapter-test.mjs
+          node scripts/compute-capacity-manager-test.mjs
+          node scripts/capacity-growth-controller-test.mjs
+          node scripts/capacity-growth-worker-contract-test.mjs
+          node scripts/capacity-growth-worker-integration-test.mjs
+          node scripts/zero-cost-compute-golden-test.mjs
           node scripts/phase12-production-readiness-test.mjs
           node scripts/matrix-synergy-test.mjs
           node scripts/public-investigation-test.mjs
@@ -282,14 +287,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="UPDATE ai_feature_flags SET enabled=CASE WHEN flag_name='AI_RESOURCE_LOCAL_ONLY' THEN 0 ELSE 1 END, reason='Owner-authorized controlled production activation with zero-spend and prompt-local boundaries', updated_by='controlled-production-deploy', updated_at=CURRENT_TIMESTAMP WHERE flag_name IN ('AI_RESOURCE_BROKER_ENABLED','AI_RESOURCE_EXTERNAL_ENABLED','AI_RESOURCE_LOCAL_ONLY','AI_RESOURCE_ZERO_SPEND_LOCK','AI_RESOURCE_BACKGROUND_ENABLED','AI_RESOURCE_SCOUT_ENABLED','AI_RESOURCE_AUTO_APPROVAL_ENABLED','AI_LOCAL_MODEL_ROUTING_ENABLED','AI_SITE_DIRECTOR_ENABLED','AI_OPPORTUNITY_HUNTER_ENABLED');" --yes
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="UPDATE ai_feature_flags SET enabled=CASE WHEN flag_name='AI_RESOURCE_LOCAL_ONLY' THEN 0 ELSE 1 END, reason='Owner-authorized controlled production activation with zero-spend and prompt-local boundaries', updated_by='controlled-production-deploy', updated_at=CURRENT_TIMESTAMP WHERE flag_name IN ('AI_RESOURCE_BROKER_ENABLED','AI_RESOURCE_EXTERNAL_ENABLED','AI_RESOURCE_LOCAL_ONLY','AI_RESOURCE_ZERO_SPEND_LOCK','AI_RESOURCE_BACKGROUND_ENABLED','AI_RESOURCE_SCOUT_ENABLED','AI_RESOURCE_AUTO_APPROVAL_ENABLED','AI_LOCAL_MODEL_ROUTING_ENABLED','AI_SITE_DIRECTOR_ENABLED','AI_OPPORTUNITY_HUNTER_ENABLED','AI_COMPUTE_RESOURCE_SCOUT_ENABLED');" --yes
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT flag_name,enabled,value_json,reason,updated_by,updated_at FROM ai_feature_flags WHERE flag_name LIKE 'AI_%' ORDER BY flag_name;" --json > downloads/d1-ai-feature-flags.json
           node - <<'NODE'
           const fs = require('fs');
           const payload = JSON.parse(fs.readFileSync('downloads/d1-ai-feature-flags.json','utf8'));
           const rows = payload.flatMap(item => item.results || item.result?.results || []);
           const flags = new Map(rows.map(row => [row.flag_name, Number(row.enabled)]));
-          const active = ['AI_RESOURCE_BROKER_ENABLED','AI_RESOURCE_EXTERNAL_ENABLED','AI_RESOURCE_ZERO_SPEND_LOCK','AI_RESOURCE_BACKGROUND_ENABLED','AI_RESOURCE_SCOUT_ENABLED','AI_RESOURCE_AUTO_APPROVAL_ENABLED','AI_LOCAL_MODEL_ROUTING_ENABLED','AI_SITE_DIRECTOR_ENABLED','AI_OPPORTUNITY_HUNTER_ENABLED'];
+          const active = ['AI_RESOURCE_BROKER_ENABLED','AI_RESOURCE_EXTERNAL_ENABLED','AI_RESOURCE_ZERO_SPEND_LOCK','AI_RESOURCE_BACKGROUND_ENABLED','AI_RESOURCE_SCOUT_ENABLED','AI_RESOURCE_AUTO_APPROVAL_ENABLED','AI_LOCAL_MODEL_ROUTING_ENABLED','AI_SITE_DIRECTOR_ENABLED','AI_OPPORTUNITY_HUNTER_ENABLED','AI_COMPUTE_RESOURCE_SCOUT_ENABLED'];
           for (const flag of active) if (flags.get(flag) !== 1) throw new Error(`${flag} was not activated`);
           if (flags.get('AI_RESOURCE_LOCAL_ONLY') !== 0) throw new Error('AI_RESOURCE_LOCAL_ONLY must be disabled for approved public retrieval');
           NODE
@@ -313,6 +318,7 @@ jobs:
               'AI_LOCAL_MODEL_ROUTING_ENABLED = "false"': 'AI_LOCAL_MODEL_ROUTING_ENABLED = "true"',
               'AI_SITE_DIRECTOR_ENABLED = "false"': 'AI_SITE_DIRECTOR_ENABLED = "true"',
               'AI_OPPORTUNITY_HUNTER_ENABLED = "false"': 'AI_OPPORTUNITY_HUNTER_ENABLED = "true"',
+              'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "false"': 'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "true"',
           }
           for old, new in replacements.items():
               if text.count(old) != 1:
@@ -326,6 +332,7 @@ jobs:
           PY
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .wrangler-production.toml
           grep -F 'AI_OPPORTUNITY_HUNTER_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "true"' .wrangler-production.toml
           npx --yes wrangler@latest deploy --config .wrangler-production.toml --dry-run
 
       - name: Deploy exact reconciled assets and autonomous D1 Worker to Cloudflare

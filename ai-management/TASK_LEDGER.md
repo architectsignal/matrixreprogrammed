@@ -111,3 +111,16 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [ ] Complete the canonical Cloudflare build and full applicable release matrix.
 - [ ] Apply `migrations/public_investigation_api.sql` in the controlled release workflow.
 - [ ] Deploy only if the zero-spend budget gate is current, unlocked and non-billable; then verify the public UI and API live.
+
+## 2026-08-12 zero-cost compute checkpoint
+
+- [x] Scheduled Opportunity Hunter now has conservative official Kaggle and Hugging Face bootstrap sources and live-revalidates their documentation and terms at most daily.
+- [x] The default external candidates retain `unknown` automation/commercial status and explicit account/identity/credential owner actions; no external GPU is falsely marked connected.
+- [x] Scheduled capacity growth runs after Opportunity Hunter under `AI_RESOURCE_ZERO_SPEND_LOCK=true`.
+- [x] Online owner-local nodes are policy-assessed, registered, and selected without paid or external fallback; nodes reporting external-network use are quarantined.
+- [x] One daily zero-cost deterministic benchmark is persisted and assigned through the production D1 local-job queue.
+- [x] Lease completion updates registry reliability and latency, and the Resource Broker demonstrably prefers the learned resource on the next route.
+- [x] Daily compute reports and benchmark outcomes are written to `matrix_learning_ledger` without prompts, hidden reasoning, credentials or raw model output.
+- [x] SQLite/D1 integration proves admission, assignment, lease, EUR 0 completion, immutable receipts, learning and next-cycle reporting.
+- [ ] Complete the pinned public production release before any later release of this capacity change.
+- [ ] After deployment, verify the live owner-only capacity route and capture a real online-owner-node report; external GPU candidates remain blocked until owner onboarding and current terms proof are complete.

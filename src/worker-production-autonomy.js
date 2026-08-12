@@ -4,7 +4,7 @@ import { isAiManagementRoute } from './worker-ai-management.js';
 import scenarioProbabilityWorker, { isScenarioProbabilityRoute } from './worker-scenario-probability.js';
 import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from './worker-local-job-api.js';
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
-import { handleCapacityGrowthRoute, isCapacityGrowthRoute } from './worker-capacity-growth.js';
+import { handleCapacityGrowthRoute, isCapacityGrowthRoute, runScheduledCapacityGrowth } from './worker-capacity-growth.js';
 import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';
 
 function cleanToken(value) {
@@ -135,7 +135,10 @@ export default {
     const opportunityTask = runtimeEnv?.MEMBERS_DB?.prepare
       ? runScheduledOpportunityHunter(runtimeEnv).catch(() => ({ skipped: true, reason: 'scheduled-run-failed' }))
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const capacityTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? opportunityTask.then(() => runScheduledCapacityGrowth(runtimeEnv)).catch(() => ({ skipped: true, reason: 'scheduled-capacity-run-failed' }))
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     // Legacy membership contract marker: await Promise.all([productionTask, autonomyTask]);
-    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask]);
+    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask]);
   }
 };

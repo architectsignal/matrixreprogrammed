@@ -15,7 +15,7 @@ check('production wrapper imports local job router', wrapper.includes("import { 
 check('local job routes are checked before generic AI-management routing', wrapper.indexOf('if (isLocalJobRoute(path))') > -1 && wrapper.indexOf('if (isLocalJobRoute(path))') < wrapper.indexOf('if (isAiManagementRoute(path))'));
 check('local job routes require owner admin authorization', wrapper.includes('if (!authorized(request, runtimeEnv)) return forbidden();') && wrapper.includes('return handleLocalJobRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);'));
 check('scheduled handler recovers expired leases', wrapper.includes('recoverExpiredLocalJobs(runtimeEnv)') && wrapper.includes('recoveryTask'));
-check('scheduled recovery participates in awaited task group', wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask])'));
+check('scheduled recovery and capacity growth participate in awaited task group', wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask])'));
 
 for (const route of [
   '/api/ai-management/admin/local-jobs',
@@ -35,6 +35,7 @@ check('lease tokens are stored as hashes', api.includes('lease_token_hash') && a
 check('lease update is concurrency guarded', api.includes("WHERE job_id=? AND status='queued'") && api.includes('Job was leased concurrently; retry'));
 check('completion validates lease identity', api.includes('Lease identity is invalid'));
 check('completion validates lease expiry', api.includes('Lease has expired'));
+check('lease rejects nodes without zero-cost offline proof', api.includes('Node is not eligible for zero-spend offline execution'));
 check('receipts cover lease and completion states', api.includes("'leased'") && api.includes("'completed'") && api.includes("'requeued'"));
 
 check('Phase 11 creates local jobs', migration.includes('CREATE TABLE IF NOT EXISTS ai_local_jobs'));

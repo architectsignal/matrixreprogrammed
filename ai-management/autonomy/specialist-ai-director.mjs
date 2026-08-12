@@ -66,6 +66,10 @@ function clamp(value, min = 0, max = 1) {
   return Math.max(min, Math.min(max, number));
 }
 
+function safeTarget(value) {
+  return String(value || '').trim().replace(/[^a-zA-Z0-9:_./-]+/g, '-').slice(0, 300);
+}
+
 function mission(id, specialist, objective, priority, evidence = {}) {
   return {
     mission_id: id,
@@ -104,6 +108,7 @@ export class SpecialistAIDirector {
     const unverified = Math.max(0, Number(signals.unverified_evidence_count || 0));
     const staleReports = Math.max(0, Number(signals.stale_report_count || 0));
     const auditorClearedReports = Math.max(0, Number(signals.auditor_cleared_report_count || 0));
+    const publicationTargetId = safeTarget(signals.publication_target_id);
     const revenueHealth = clamp(signals.revenue_health ?? 0.5);
     const retentionHealth = clamp(signals.retention_health ?? 0.5);
     const resourcePressure = clamp(signals.resource_pressure ?? 0);
@@ -122,19 +127,21 @@ export class SpecialistAIDirector {
       'auditor',
       `Challenge and verify ${unverified} evidence candidates before any publication handoff.`,
       'P0',
-      { unverified_evidence_count: unverified }
+      { unverified_evidence_count: unverified, publication_target_id: publicationTargetId || null }
     ));
 
-    if (staleReports > 0 && auditorClearedReports > 0) missions.push(mission(
-      `publish-${now}`,
+    if (staleReports > 0 && auditorClearedReports > 0 && publicationTargetId) missions.push(mission(
+      `publish-${publicationTargetId}-${now}`,
       'publisher',
-      `Refresh an auditor-cleared evidence-backed report from a stale queue of ${staleReports}.`,
+      `Refresh auditor-cleared evidence-backed publication target ${publicationTargetId}.`,
       'P2',
       {
+        publication_target_id: publicationTargetId,
         stale_report_count: staleReports,
         auditor_cleared_report_count: auditorClearedReports,
         auditor_gate_required: true,
-        auditor_gate_explicitly_satisfied: true
+        auditor_gate_explicitly_satisfied: true,
+        target_specific_auditor_clearance_required: true
       }
     ));
 
@@ -186,6 +193,7 @@ export class SpecialistAIDirector {
         shared_evidence_graph_required: true,
         auditor_gate_before_publication_required: true,
         explicit_auditor_clearance_required_for_publisher: true,
+        target_specific_auditor_clearance_required: true,
         commercial_system_may_change_evidence_strength: false,
         automatic_spending_allowed: false,
         automatic_contract_acceptance_allowed: false,

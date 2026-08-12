@@ -26,6 +26,7 @@ on:
       - 'migrations/phase12_opportunity_hunter.sql'
       - 'migrations/phase13_matrix_synergy.sql'
       - 'migrations/public_investigation_api.sql'
+      - 'scripts/build-public-investigation-corpus.js'
       - 'scripts/public-investigation-test.mjs'
       - 'scripts/matrix-synergy-test.mjs'
       - 'scripts/phase13-migration-rehearsal.py'
@@ -101,6 +102,7 @@ jobs:
           node scripts/opportunity-hunter-test.mjs
           node scripts/phase12-production-readiness-test.mjs
           node scripts/matrix-synergy-test.mjs
+          node scripts/build-public-investigation-corpus.js
           node scripts/public-investigation-test.mjs
           python3 scripts/phase13-migration-rehearsal.py
 

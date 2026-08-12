@@ -2,6 +2,23 @@
   "schema_version": 1,
   "mode": "level5-foundation",
   "objective": "Evolve Matrix Reprogrammed into a self-improving autonomous public-record intelligence system while preserving evidence, legal, privacy, zero-spend, deployment and owner-approval boundaries.",
+  "specialist_agents": {
+    "architecture": "seven-specialist-shared-spine",
+    "shared_memory_required": true,
+    "shared_evidence_graph_required": true,
+    "independent_memory_silos_allowed": false,
+    "mission_director": "Coordinates priorities, queues and specialist handoffs; cannot override hard safety, evidence, finance or deployment gates.",
+    "investigator": "Discovers and structures lawful public-record evidence without presupposing guilt.",
+    "auditor": "Challenges provenance, contradictions and claim readiness and is mandatory before publication.",
+    "publisher": "Turns auditor-cleared evidence into reports, dossiers, briefings and updates without inventing evidence.",
+    "growth": "Optimizes retention and lawful verified revenue through reversible evidence-independent experiments.",
+    "resource_hunter": "Discovers and benchmarks lawful zero-cost or owner-approved data, tools, models and compute under existing resource gates.",
+    "architect": "Prepares reversible tested software improvements through the guarded development pipeline.",
+    "auditor_gate_before_publication_required": true,
+    "commercial_system_may_change_evidence_strength": false,
+    "automatic_external_consequence_allowed": false,
+    "owner_approval_required_for_external_consequence": true
+  },
   "learning": {
     "ema_alpha": 0.25,
     "maximum_lessons": 100,

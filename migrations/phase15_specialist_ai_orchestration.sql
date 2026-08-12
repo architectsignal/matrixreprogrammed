@@ -60,5 +60,54 @@ CREATE TABLE IF NOT EXISTS matrix_agent_handoffs (
 CREATE INDEX IF NOT EXISTS idx_matrix_agent_handoffs_pending
   ON matrix_agent_handoffs(to_specialist, gate_passed, created_at ASC);
 
+-- Every specialist run contributes a privacy-safe learning candidate to the same
+-- shared Matrix ledger. The run table contains only receipt metrics/reference IDs,
+-- never raw prompts or raw local-model output. Learning remains unaccepted by
+-- default and may affect ranking only; policy/evidence/finance mutation remains 0.
+CREATE TRIGGER IF NOT EXISTS trg_matrix_agent_run_learning_candidate
+AFTER INSERT ON matrix_agent_runs
+BEGIN
+  INSERT OR IGNORE INTO matrix_learning_ledger(
+    lesson_id,cycle_index,domain,subject_id,observation_json,outcome_json,confidence,accepted,
+    affects_ranking_only,policy_mutation_allowed,evidence_threshold_mutation_allowed,financial_execution_allowed,created_at
+  ) VALUES(
+    'specialist-run:' || NEW.run_id,
+    MAX(0, CAST(strftime('%s', COALESCE(NEW.completed_at, NEW.started_at)) AS INTEGER)),
+    CASE NEW.specialist
+      WHEN 'mission_director' THEN 'governance'
+      WHEN 'investigator' THEN 'research'
+      WHEN 'auditor' THEN 'governance'
+      WHEN 'publisher' THEN 'research'
+      WHEN 'growth' THEN 'revenue'
+      WHEN 'resource_hunter' THEN 'resource'
+      WHEN 'architect' THEN 'site'
+      ELSE 'governance'
+    END,
+    NEW.mission_id,
+    json_object(
+      'run_id', NEW.run_id,
+      'specialist', NEW.specialist,
+      'model_id', NEW.model_id,
+      'resource_id', NEW.resource_id,
+      'metrics', json(NEW.metrics_json),
+      'input_evidence_ids', json(NEW.input_evidence_ids_json)
+    ),
+    json_object(
+      'status', NEW.status,
+      'output_evidence_ids', json(NEW.output_evidence_ids_json),
+      'cost_eur', NEW.cost_eur,
+      'external_consequence', NEW.external_consequence,
+      'policy_bypass_used', NEW.policy_bypass_used
+    ),
+    CASE WHEN NEW.status='completed' THEN 0.50 ELSE 0.75 END,
+    0,
+    1,
+    0,
+    0,
+    0,
+    COALESCE(NEW.completed_at, NEW.started_at)
+  );
+END;
+
 INSERT OR IGNORE INTO ai_feature_flags(flag_name, enabled, value_json, reason, updated_by, updated_at) VALUES
   ('MATRIX_SPECIALIST_AI_ORCHESTRATION_ENABLED', 0, '{"shared_memory":true,"shared_evidence_graph":true,"auditor_before_publisher":true,"external_execution":false,"owner_approval_required":true}', 'Seven specialist AIs may plan and hand off bounded work through a shared spine. External consequences, spending, contract acceptance and production deployment remain disabled.', 'migration', CURRENT_TIMESTAMP);

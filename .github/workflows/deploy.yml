@@ -115,6 +115,7 @@ jobs:
           node scripts/opportunity-provider-adapter-test.mjs
           node scripts/phase12-production-readiness-test.mjs
           node scripts/matrix-synergy-test.mjs
+          node scripts/build-public-investigation-corpus.js
           node scripts/public-investigation-test.mjs
           python3 scripts/phase13-migration-rehearsal.py
           node local-agent/matrix-local-agent.test.mjs

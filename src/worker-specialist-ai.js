@@ -61,6 +61,7 @@ function normalizeSignals(input = {}) {
     investigation_backlog: Math.max(0, Math.min(100000, finite(input.investigation_backlog, 0))),
     unverified_evidence_count: Math.max(0, Math.min(1000000, finite(input.unverified_evidence_count, 0))),
     stale_report_count: Math.max(0, Math.min(100000, finite(input.stale_report_count, 0))),
+    auditor_cleared_report_count: Math.max(0, Math.min(100000, finite(input.auditor_cleared_report_count, 0))),
     revenue_health: clamp(input.revenue_health ?? 1),
     retention_health: clamp(input.retention_health ?? 1),
     resource_pressure: clamp(input.resource_pressure ?? 0),
@@ -128,7 +129,8 @@ async function status(env) {
       external_consequence_execution_allowed: false,
       automatic_spending_allowed: false,
       automatic_production_deployment_allowed: false,
-      auditor_gate_before_publication_required: true
+      auditor_gate_before_publication_required: true,
+      explicit_auditor_clearance_required_for_publisher: true
     },
     generated_at: new Date().toISOString()
   });

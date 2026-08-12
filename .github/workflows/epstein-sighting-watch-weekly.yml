@@ -28,6 +28,10 @@ jobs:
 
       - name: Commit updated Epstein Sighting Watch outputs
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; Epstein Sighting Watch validated but will not move main."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/live-intel.json data/epstein-sighting-scan.json downloads/seven-day-intel.json downloads/epstein-sighting-watch.json downloads/epstein-sighting-watch.md epstein-sighting-watch.html epstein-sighting-submit.html epstein-files.html search-index.json sitemap.xml llms.txt || true

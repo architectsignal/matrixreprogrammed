@@ -89,6 +89,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo 'Controlled production release freeze active; Death Files proof will not move main.'
+            exit 0
+          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/death-files-production-proof.json

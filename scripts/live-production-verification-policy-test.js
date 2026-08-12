@@ -8,6 +8,15 @@ const {
 } = require('./live-production-verification-policy.js');
 
 const sha = '801a0f39518baa7764c12647818ce70f2dccc1df';
+const verifierSource = require('fs').readFileSync(require('path').join(__dirname, 'verify-live-production.js'), 'utf8');
+assert.ok(
+  verifierSource.includes('manifestIsCommitBound && manifestSha === mainSha'),
+  'current-main equality must be recorded whether or not main advanced during the run'
+);
+assert.ok(
+  !verifierSource.includes('manifestIsCommitBound && mainAdvancedDuringRun && manifestSha === mainSha'),
+  'current-main equality must not contradict a stable exact-SHA release'
+);
 function full(overrides = {}) {
   return {
     ok: true,

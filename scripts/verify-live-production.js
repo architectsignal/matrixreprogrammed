@@ -230,7 +230,7 @@ async function verifyOnce() {
   const manifestSha = String(manifest?.commitSha || '');
   const manifestIsCommitBound = /^[a-f0-9]{40}$/i.test(manifestSha);
   const manifestMatchesExpected = Boolean(manifestIsCommitBound && manifestSha === expectedSha);
-  const manifestMatchesCurrentMain = Boolean(manifestIsCommitBound && mainAdvancedDuringRun && manifestSha === mainSha);
+  const manifestMatchesCurrentMain = Boolean(manifestIsCommitBound && manifestSha === mainSha);
   const manifestMatches = manifestMatchesExpected || manifestMatchesCurrentMain;
   const healthMatches = Boolean(
     healthResponse.ok

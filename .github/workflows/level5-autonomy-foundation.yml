@@ -21,6 +21,7 @@ on:
       - 'scripts/specialist-ai-director-test.mjs'
       - 'scripts/specialist-execution-planner-test.mjs'
       - 'scripts/specialist-local-executor-test.mjs'
+      - 'scripts/specialist-control-plane-test.mjs'
       - 'src/worker-level5-self-financing.js'
       - 'src/worker-specialist-ai.js'
       - 'src/worker-production-autonomy.js'
@@ -65,6 +66,7 @@ jobs:
           node --check scripts/specialist-ai-director-test.mjs
           node --check scripts/specialist-execution-planner-test.mjs
           node --check scripts/specialist-local-executor-test.mjs
+          node --check scripts/specialist-control-plane-test.mjs
           node --check src/worker-level5-self-financing.js
           node --check src/worker-specialist-ai.js
           node --check src/worker-production-autonomy.js
@@ -83,6 +85,9 @@ jobs:
 
       - name: Run loopback specialist inference tests
         run: node scripts/specialist-local-executor-test.mjs
+
+      - name: Run specialist result control-plane tests
+        run: node scripts/specialist-control-plane-test.mjs
 
       - name: Prove local specialist worker is disabled by default
         run: |

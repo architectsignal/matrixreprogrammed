@@ -38,9 +38,78 @@ function safeContext(context) {
   return { value: String(context) };
 }
 
+function safeTarget(value) {
+  return String(value || '').trim().replace(/[^a-zA-Z0-9:_./-]+/g, '-').slice(0, 300);
+}
+
+function cleanRefs(values, maximum = 500) {
+  const source = Array.isArray(values) ? values : [];
+  const seen = new Set();
+  const output = [];
+  for (const value of source) {
+    const text = String(value || '').trim().slice(0, 300);
+    if (!text || seen.has(text)) continue;
+    seen.add(text);
+    output.push(text);
+    if (output.length >= maximum) break;
+  }
+  return output;
+}
+
+function auditorOutputContract(mission, evidenceReferenceIds) {
+  if (mission.specialist !== 'auditor') return '';
+  const target = safeTarget(mission?.evidence?.publication_target_id);
+  return [
+    '',
+    'AUDITOR OUTPUT CONTRACT — RETURN JSON ONLY:',
+    JSON.stringify({
+      publication_target_id: target || null,
+      publication_gate_passed: false,
+      provenance_checked: false,
+      contrary_evidence_considered: false,
+      evidence_ids: evidenceReferenceIds,
+      uncertainties: [],
+      reason: 'Explain why the target is or is not safe to hand to Publisher for drafting.'
+    }),
+    'Rules: publication_gate_passed may be true only when provenance_checked and contrary_evidence_considered are true and evidence_ids contains only supplied evidence reference IDs. This gate permits a Publisher DRAFT only; it is not public-release approval.'
+  ].join('\n');
+}
+
+export function parseAuditorDecision({ text, mission, allowedEvidenceIds = [] } = {}) {
+  if (mission?.specialist !== 'auditor') return { valid: false, publication_gate_passed: false, reason: 'not-an-auditor-mission' };
+  const raw = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
+  const first = raw.indexOf('{');
+  const last = raw.lastIndexOf('}');
+  if (first < 0 || last <= first) return { valid: false, publication_gate_passed: false, reason: 'auditor-output-not-json' };
+  let parsed;
+  try { parsed = JSON.parse(raw.slice(first, last + 1)); } catch { return { valid: false, publication_gate_passed: false, reason: 'auditor-output-invalid-json' }; }
+  const expectedTarget = safeTarget(mission?.evidence?.publication_target_id);
+  const target = safeTarget(parsed?.publication_target_id);
+  const allowed = new Set(cleanRefs(allowedEvidenceIds));
+  const evidenceIds = cleanRefs(parsed?.evidence_ids).filter(id => allowed.has(id));
+  const requestedIds = cleanRefs(parsed?.evidence_ids);
+  const evidenceSubsetValid = requestedIds.length > 0 && requestedIds.length === evidenceIds.length;
+  const provenanceChecked = parsed?.provenance_checked === true;
+  const contraryEvidenceConsidered = parsed?.contrary_evidence_considered === true;
+  const targetValid = Boolean(expectedTarget && target === expectedTarget);
+  const contractValid = targetValid && evidenceSubsetValid && provenanceChecked && contraryEvidenceConsidered;
+  return {
+    valid: contractValid,
+    publication_target_id: target || null,
+    publication_gate_passed: contractValid && parsed?.publication_gate_passed === true,
+    provenance_checked: provenanceChecked,
+    contrary_evidence_considered: contraryEvidenceConsidered,
+    evidence_ids: evidenceIds,
+    uncertainties: Array.isArray(parsed?.uncertainties) ? parsed.uncertainties.slice(0, 50).map(value => String(value).slice(0, 1000)) : [],
+    reason: String(parsed?.reason || '').slice(0, 4000),
+    draft_only_gate: true
+  };
+}
+
 export function compileSpecialistPrompt({ mission, context = {}, evidenceReferenceIds = [], artifactReferenceIds = [] } = {}) {
   ensureMission(mission);
   const localContext = safeContext(context);
+  const evidenceRefs = cleanRefs(evidenceReferenceIds);
   return [
     'MATRIX REPROGRAMMED — LOCAL SPECIALIST EXECUTION',
     `Mission ID: ${mission.mission_id}`,
@@ -57,13 +126,15 @@ export function compileSpecialistPrompt({ mission, context = {}, evidenceReferen
     '- Treat contrary evidence as first-class evidence.',
     '- Do not claim a source says something unless the supplied local context supports it.',
     '',
-    `Evidence reference IDs: ${JSON.stringify(evidenceReferenceIds)}`,
-    `Artifact reference IDs: ${JSON.stringify(artifactReferenceIds)}`,
+    `Evidence reference IDs: ${JSON.stringify(evidenceRefs)}`,
+    `Artifact reference IDs: ${JSON.stringify(cleanRefs(artifactReferenceIds))}`,
     '',
     'Local context (never intentionally sent to a non-loopback inference endpoint):',
     JSON.stringify(localContext),
     '',
-    'Return a concise specialist result with: findings/output, evidence references used, uncertainties, blocked actions if any, and recommended next handoff.'
+    mission.specialist === 'auditor'
+      ? auditorOutputContract(mission, evidenceRefs)
+      : 'Return a concise specialist result with: findings/output, evidence references used, uncertainties, blocked actions if any, and recommended next handoff.'
   ].join('\n');
 }
 

@@ -63,6 +63,10 @@ jobs:
 
       - name: Commit repair when needed
         run: |
+          if node scripts/release-freeze-guard.js --is-frozen; then
+            echo "Controlled production release freeze active; speculation link repair validated but will not move main."
+            exit 0
+          fi
           if git diff --quiet -- answer-engine.html; then
             echo "Answer Engine link already present."
             exit 0

@@ -15,6 +15,7 @@ on:
       - 'migrations/phase16_specialist_execution_specs.sql'
       - 'scripts/run-level5-autonomy-cycle.mjs'
       - 'scripts/run-specialist-local-worker.mjs'
+      - 'scripts/sync-specialist-result-receipts.mjs'
       - 'scripts/level5-autonomy-foundation-test.mjs'
       - 'scripts/self-financing-growth-test.mjs'
       - 'scripts/specialist-ai-director-test.mjs'
@@ -58,6 +59,7 @@ jobs:
           node --check ai-management/finance/revenue-growth-director.mjs
           node --check scripts/run-level5-autonomy-cycle.mjs
           node --check scripts/run-specialist-local-worker.mjs
+          node --check scripts/sync-specialist-result-receipts.mjs
           node --check scripts/level5-autonomy-foundation-test.mjs
           node --check scripts/self-financing-growth-test.mjs
           node --check scripts/specialist-ai-director-test.mjs
@@ -90,6 +92,14 @@ jobs:
           grep -F '"external_consequences_performed": 0' downloads/specialist-local-worker-result.json
           grep -F '"money_moved": 0' downloads/specialist-local-worker-result.json
           grep -F '"deployments_performed": 0' downloads/specialist-local-worker-result.json
+
+      - name: Prove specialist receipt sync is disabled by default
+        run: |
+          unset MATRIX_SPECIALIST_RECEIPT_SYNC_ENABLED
+          node scripts/sync-specialist-result-receipts.mjs
+          grep -F '"skipped": true' downloads/specialist-receipt-sync-result.json
+          grep -F '"receipts_sent": 0' downloads/specialist-receipt-sync-result.json
+          grep -F '"raw_output_sent": false' downloads/specialist-receipt-sync-result.json
 
       - name: Prove finance remains non-executing
         run: |
@@ -125,8 +135,12 @@ jobs:
           grep -F '"shared_evidence_graph_required": true' ai-management/config/level5-autonomy-policy.json
           grep -F '"auditor_gate_before_publication_required": true' ai-management/config/level5-autonomy-policy.json
           grep -F '"explicit_auditor_clearance_required_for_publisher": true' ai-management/config/level5-autonomy-policy.json
+          grep -F '"target_specific_auditor_clearance_required": true' ai-management/config/level5-autonomy-policy.json
+          grep -F '"auditor_evidence_subset_validation_required": true' ai-management/config/level5-autonomy-policy.json
+          grep -F '"auditor_gate_allows_publisher_draft_only": true' ai-management/config/level5-autonomy-policy.json
           grep -F '"caller_supplied_auditor_clearance_trusted": false' ai-management/config/level5-autonomy-policy.json
           grep -F '"commercial_system_may_change_evidence_strength": false' ai-management/config/level5-autonomy-policy.json
+          grep -F "status TEXT NOT NULL CHECK (status IN ('proposed','queued','running','blocked','completed','failed','rejected','cancelled'))" migrations/phase15_specialist_ai_orchestration.sql
           grep -F "execution_mode TEXT NOT NULL DEFAULT 'plan_or_draft_only' CHECK (execution_mode='plan_or_draft_only')" migrations/phase15_specialist_ai_orchestration.sql
           grep -F 'external_consequence INTEGER NOT NULL DEFAULT 0 CHECK (external_consequence=0)' migrations/phase15_specialist_ai_orchestration.sql
           grep -F 'policy_bypass_used INTEGER NOT NULL DEFAULT 0 CHECK (policy_bypass_used=0)' migrations/phase15_specialist_ai_orchestration.sql
@@ -139,6 +153,9 @@ jobs:
         run: |
           grep -F '"cloud_prompt_material_allowed": false' ai-management/config/level5-autonomy-policy.json
           grep -F '"full_prompt_compilation_location": "owner-controlled-local-machine"' ai-management/config/level5-autonomy-policy.json
+          grep -F '"raw_local_model_output_cloud_persistence_allowed": false' ai-management/config/level5-autonomy-policy.json
+          grep -F '"hashed_result_receipts_only": true' ai-management/config/level5-autonomy-policy.json
+          grep -F '"automatic_receipt_sync_enabled": false' ai-management/config/level5-autonomy-policy.json
           grep -F '"automatic_local_execution_enabled": false' ai-management/config/level5-autonomy-policy.json
           grep -F 'prompt_material_in_cloud_payload INTEGER NOT NULL DEFAULT 0 CHECK (prompt_material_in_cloud_payload=0)' migrations/phase16_specialist_execution_specs.sql
           grep -F 'local_prompt_resolution_required INTEGER NOT NULL DEFAULT 1 CHECK (local_prompt_resolution_required=1)' migrations/phase16_specialist_execution_specs.sql
@@ -149,12 +166,17 @@ jobs:
           grep -F 'production_deployment_allowed INTEGER NOT NULL DEFAULT 0 CHECK (production_deployment_allowed=0)' migrations/phase16_specialist_execution_specs.sql
           grep -F 'MATRIX_SPECIALIST_LOCAL_EXECUTION_PLANNING_ENABLED = "false"' wrangler.toml
           grep -F 'MATRIX_SPECIALIST_LOCAL_INFERENCE_EXECUTION_ENABLED' scripts/run-specialist-local-worker.mjs
+          grep -F 'MATRIX_SPECIALIST_RECEIPT_SYNC_ENABLED' scripts/sync-specialist-result-receipts.mjs
           grep -F 'prompt_compilation_location: '\''owner-controlled-local-machine'\''' ai-management/autonomy/specialist-execution-planner.mjs
           grep -F "endpoint_scope: 'loopback-only'" ai-management/provider-adapters/local/openai-compatible-local.mjs
           grep -F 'routing_prompt_material_included:' ai-management/autonomy/specialist-local-executor.mjs
           grep -F 'external_consequence_performed: false' ai-management/autonomy/specialist-local-executor.mjs
           grep -F 'production_deployment_performed: false' ai-management/autonomy/specialist-local-executor.mjs
           grep -F 'money_moved: false' ai-management/autonomy/specialist-local-executor.mjs
+          grep -F 'Raw prompt/model output is forbidden on the specialist result endpoint' src/worker-specialist-ai.js
+          grep -F 'A SHA-256 result_digest is required; raw model output must not be uploaded' src/worker-specialist-ai.js
+          grep -F 'raw_output_sent: false' scripts/sync-specialist-result-receipts.mjs
+          grep -F 'prompts_sent: false' scripts/sync-specialist-result-receipts.mjs
 
       - name: Prove remote execution stays disabled in the Level 5 runner
         run: |

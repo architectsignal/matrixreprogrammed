@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
-import { OpportunityHunter, evaluateOpportunity } from '../ai-management/opportunity-hunter/opportunity-hunter.mjs';
+import { OpportunityHunter, evaluateOpportunity, opportunityHunterInternals } from '../ai-management/opportunity-hunter/opportunity-hunter.mjs';
 
 const fixedNow = new Date('2026-07-31T18:00:00.000Z');
+assert.match(opportunityHunterInternals.OPPORTUNITY_HUNTER_USER_AGENT, /contact@matrixreprogrammed\.com$/);
 const clock = () => fixedNow;
-const fetchImpl = async url => {
+const seenUserAgents = [];
+const fetchImpl = async (url, options = {}) => {
+  seenUserAgents.push(options.headers?.['user-agent']);
   const value = String(url);
   if (value.endsWith('/docs')) {
     return new Response('Free tier. No payment method required. Programmatic access permitted. Automation allowed. Includes 100 requests/day.', { status: 200, headers: { 'content-type': 'text/plain' } });
@@ -47,6 +50,7 @@ assert.equal(approved.service_probe.ok, true);
 assert.ok(approved.evidence.includes('official-material-confirms-zero-cost-access'));
 assert.ok(approved.evidence.includes('official-material-confirms-automation-permission'));
 assert.ok(approved.evidence.includes('official-material-confirms-declared-quota'));
+assert.deepEqual(seenUserAgents.slice(0, 3), Array(3).fill(opportunityHunterInternals.OPPORTUNITY_HUNTER_USER_AGENT));
 
 const officialNoAuthFetch = async url => new Response(
   String(url).endsWith('/docs')

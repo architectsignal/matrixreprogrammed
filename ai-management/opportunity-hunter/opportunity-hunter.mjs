@@ -4,6 +4,7 @@ const OWNER_ACTION_KINDS = new Set(['compute', 'grant', 'credit_program']);
 const AUTOMATION_ALLOWED = /\b(automation allowed|automated access permitted|api access permitted|programmatic access permitted|automated access must comply|endpoints do not currently require any authorization|no sign-up is required to use the rest api)\b/i;
 const ZERO_COST = /\b(free of charge|no charge|at no cost|free tier|zero cost|no payment method required|do not require any authentication or api keys|endpoints do not currently require any authorization|no sign-up is required to use the rest api)\b/i;
 const BILLING_RISK = /\b(credit card required|payment method required|auto[- ]?upgrade|overage|metered billing|usage charges|paid after trial|paid fallback)\b/i;
+const OPPORTUNITY_HUNTER_USER_AGENT = 'MatrixReprogrammedOpportunityHunter/1.1 contact@matrixreprogrammed.com';
 
 function safeId(value) {
   return String(value || 'opportunity').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 120) || 'opportunity';
@@ -70,7 +71,7 @@ async function fetchText(fetchImpl, url, maximumBytes = 512 * 1024) {
     const response = await fetchImpl(url, {
       method: 'GET',
       redirect: 'follow',
-      headers: { accept: 'text/html,text/plain,application/json;q=0.9,*/*;q=0.1', 'user-agent': 'MatrixReprogrammedOpportunityHunter/1.0' },
+      headers: { accept: 'text/html,text/plain,application/json;q=0.9,*/*;q=0.1', 'user-agent': OPPORTUNITY_HUNTER_USER_AGENT },
       signal: controller.signal
     });
     const declared = Number(response.headers.get('content-length') || 0);
@@ -187,4 +188,4 @@ export class OpportunityHunter {
   }
 }
 
-export const opportunityHunterInternals = { ALLOWED_KINDS, AUTO_ACTIVATABLE_KINDS, OWNER_ACTION_KINDS, AUTOMATION_ALLOWED, ZERO_COST, BILLING_RISK, hasBillingRisk, safeId, isHttps, hostname, sameHostFamily, fetchText };
+export const opportunityHunterInternals = { ALLOWED_KINDS, AUTO_ACTIVATABLE_KINDS, OWNER_ACTION_KINDS, AUTOMATION_ALLOWED, ZERO_COST, BILLING_RISK, OPPORTUNITY_HUNTER_USER_AGENT, hasBillingRisk, safeId, isHttps, hostname, sameHostFamily, fetchText };

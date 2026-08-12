@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS matrix_agent_missions (
   specialist TEXT NOT NULL CHECK (specialist IN ('mission_director','investigator','auditor','publisher','growth','resource_hunter','architect')),
   objective TEXT NOT NULL,
   priority TEXT NOT NULL CHECK (priority IN ('P0','P1','P2','P3','P4')),
-  status TEXT NOT NULL CHECK (status IN ('proposed','queued','running','blocked','completed','rejected','cancelled')),
+  status TEXT NOT NULL CHECK (status IN ('proposed','queued','running','blocked','completed','failed','rejected','cancelled')),
   execution_mode TEXT NOT NULL DEFAULT 'plan_or_draft_only' CHECK (execution_mode='plan_or_draft_only'),
   owner_approval_required INTEGER NOT NULL DEFAULT 1 CHECK (owner_approval_required=1),
   evidence_json TEXT NOT NULL DEFAULT '{}',

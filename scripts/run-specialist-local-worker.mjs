@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { detectLocalRuntime } from '../ai-management/local-runtime/hardware-detector.mjs';
-import { SpecialistLocalExecutor } from '../ai-management/autonomy/specialist-local-executor.mjs';
+import { SpecialistLocalExecutor, parseAuditorDecision } from '../ai-management/autonomy/specialist-local-executor.mjs';
 
 const root = process.cwd();
 const downloads = path.join(root, 'downloads');
@@ -113,6 +113,14 @@ const receipts = results.filter(result => result?.mission_id && result?.speciali
   const mission = missionById.get(result.mission_id) || {};
   const spec = specByMissionId.get(result.mission_id) || {};
   const contract = spec.local_execution_contract || {};
+  const auditorDecision = result.specialist === 'auditor'
+    ? parseAuditorDecision({
+        text: result.output?.text,
+        mission,
+        allowedEvidenceIds: contract.evidence_reference_ids || []
+      })
+    : null;
+  const auditValid = auditorDecision?.valid === true;
   return {
     schema_version: 1,
     mission_id: result.mission_id,
@@ -124,11 +132,12 @@ const receipts = results.filter(result => result?.mission_id && result?.speciali
     model_route_score: result.model_route_score || 0,
     usage: result.output?.usage || {},
     input_evidence_ids: contract.evidence_reference_ids || [],
-    output_evidence_ids: contract.evidence_reference_ids || [],
-    publication_target_id: mission?.evidence?.publication_target_id || null,
-    publication_gate_passed: false,
-    provenance_checked: false,
-    contrary_evidence_considered: false,
+    output_evidence_ids: auditValid ? auditorDecision.evidence_ids : (contract.evidence_reference_ids || []),
+    publication_target_id: auditValid ? auditorDecision.publication_target_id : (mission?.evidence?.publication_target_id || null),
+    publication_gate_passed: auditValid && auditorDecision.publication_gate_passed === true,
+    provenance_checked: auditValid && auditorDecision.provenance_checked === true,
+    contrary_evidence_considered: auditValid && auditorDecision.contrary_evidence_considered === true,
+    auditor_contract_valid: result.specialist === 'auditor' ? auditValid : null,
     cost_confirmed_zero: true,
     inference_external_network_used: false,
     external_consequence_performed: false,
@@ -158,7 +167,8 @@ const output = {
   receipts: {
     generated: receipts.length,
     raw_output_in_receipts: false,
-    automatic_upload_enabled: false
+    automatic_upload_enabled: false,
+    auditor_clearances_for_publisher_draft: receipts.filter(item => item.specialist === 'auditor' && item.publication_gate_passed === true).length
   },
   results
 };

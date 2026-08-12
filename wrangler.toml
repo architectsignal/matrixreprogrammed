@@ -31,7 +31,7 @@ MEMBERS_REPLY_TO_EMAIL = "njmgroupfrance@gmail.com"
 MEMBERS_REPLY_TO_NAME = "Matrix Reprogrammed Support"
 ENABLE_KV_COMPATIBILITY_MIRROR = "false"
 
-# AI management remains fail closed until phases 9-13 migrations and the complete
+# AI management remains fail closed until phases 9-15 migrations and the complete
 # release matrix pass. Activation is a separate reviewed production step.
 AI_RESOURCE_BROKER_ENABLED = "false"
 AI_RESOURCE_EXTERNAL_ENABLED = "false"
@@ -47,6 +47,7 @@ AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "false"
 AI_REMOTE_COMPUTE_ROUTING_ENABLED = "false"
 AI_REMOTE_COMPUTE_EXECUTION_ENABLED = "false"
 AI_REMOTE_COMPUTE_JOBS_PER_CYCLE = "0"
+MATRIX_SPECIALIST_AI_ORCHESTRATION_ENABLED = "false"
 
 # Non-active compatibility markers retained for the Phase 7 sandbox audit only.
 # PAYPAL_ENVIRONMENT = "sandbox"

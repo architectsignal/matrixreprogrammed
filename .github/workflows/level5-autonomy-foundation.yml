@@ -4,13 +4,20 @@ on:
   pull_request:
     paths:
       - 'ai-management/autonomy/autonomous-learning-director.mjs'
+      - 'ai-management/autonomy/specialist-ai-director.mjs'
       - 'ai-management/finance/self-financing-director.mjs'
       - 'ai-management/finance/revenue-growth-director.mjs'
       - 'ai-management/config/level5-autonomy-policy.json'
       - 'migrations/phase14_self_financing_growth.sql'
+      - 'migrations/phase15_specialist_ai_orchestration.sql'
       - 'scripts/run-level5-autonomy-cycle.mjs'
       - 'scripts/level5-autonomy-foundation-test.mjs'
       - 'scripts/self-financing-growth-test.mjs'
+      - 'scripts/specialist-ai-director-test.mjs'
+      - 'src/worker-level5-self-financing.js'
+      - 'src/worker-specialist-ai.js'
+      - 'src/worker-production-autonomy.js'
+      - 'wrangler.toml'
       - '.github/workflows/level5-autonomy-foundation.yml'
   workflow_dispatch:
 
@@ -23,7 +30,7 @@ concurrency:
 
 jobs:
   foundation:
-    name: Verify learning and self-financing boundaries
+    name: Verify learning self-financing and specialist boundaries
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -38,17 +45,25 @@ jobs:
       - name: Check syntax
         run: |
           node --check ai-management/autonomy/autonomous-learning-director.mjs
+          node --check ai-management/autonomy/specialist-ai-director.mjs
           node --check ai-management/finance/self-financing-director.mjs
           node --check ai-management/finance/revenue-growth-director.mjs
           node --check scripts/run-level5-autonomy-cycle.mjs
           node --check scripts/level5-autonomy-foundation-test.mjs
           node --check scripts/self-financing-growth-test.mjs
+          node --check scripts/specialist-ai-director-test.mjs
+          node --check src/worker-level5-self-financing.js
+          node --check src/worker-specialist-ai.js
+          node --check src/worker-production-autonomy.js
 
       - name: Run Level 5 foundation tests
         run: node scripts/level5-autonomy-foundation-test.mjs
 
       - name: Run self-financing growth tests
         run: node scripts/self-financing-growth-test.mjs
+
+      - name: Run seven-agent orchestration tests
+        run: node scripts/specialist-ai-director-test.mjs
 
       - name: Prove finance remains non-executing
         run: |
@@ -78,9 +93,23 @@ jobs:
           grep -F 'dark_patterns_allowed: false' ai-management/finance/revenue-growth-director.mjs
           grep -F 'execution_allowed INTEGER NOT NULL DEFAULT 0 CHECK (execution_allowed=0)' migrations/phase14_self_financing_growth.sql
 
+      - name: Prove specialist agents share one spine and cannot bypass hard gates
+        run: |
+          grep -F '"shared_memory_required": true' ai-management/config/level5-autonomy-policy.json
+          grep -F '"shared_evidence_graph_required": true' ai-management/config/level5-autonomy-policy.json
+          grep -F '"auditor_gate_before_publication_required": true' ai-management/config/level5-autonomy-policy.json
+          grep -F '"commercial_system_may_change_evidence_strength": false' ai-management/config/level5-autonomy-policy.json
+          grep -F "execution_mode TEXT NOT NULL DEFAULT 'plan_or_draft_only' CHECK (execution_mode='plan_or_draft_only')" migrations/phase15_specialist_ai_orchestration.sql
+          grep -F 'external_consequence INTEGER NOT NULL DEFAULT 0 CHECK (external_consequence=0)' migrations/phase15_specialist_ai_orchestration.sql
+          grep -F 'policy_bypass_used INTEGER NOT NULL DEFAULT 0 CHECK (policy_bypass_used=0)' migrations/phase15_specialist_ai_orchestration.sql
+          grep -F 'MATRIX_SPECIALIST_AI_ORCHESTRATION_ENABLED = "false"' wrangler.toml
+          grep -F 'external_consequence_execution_allowed: false' src/worker-specialist-ai.js
+          grep -F 'automatic_production_deployment_allowed: false' src/worker-specialist-ai.js
+
       - name: Prove remote execution stays disabled in the Level 5 runner
         run: |
           grep -F "AI_REMOTE_COMPUTE_EXECUTION_ENABLED: 'false'" scripts/run-level5-autonomy-cycle.mjs
           grep -F "AI_REMOTE_COMPUTE_JOBS_PER_CYCLE: '0'" scripts/run-level5-autonomy-cycle.mjs
           grep -F 'payment_mutation_allowed: false' scripts/run-level5-autonomy-cycle.mjs
           grep -F 'deployment_performed: false' scripts/run-level5-autonomy-cycle.mjs
+          grep -F 'external_consequence_execution_allowed: false' scripts/run-level5-autonomy-cycle.mjs

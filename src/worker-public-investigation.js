@@ -5,6 +5,7 @@ import {
   validatePublicInvestigationResult
 } from './public-investigation-contract.js';
 import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
+import { OfficialFreshSourceDirector } from '../ai-management/public-investigation/official-fresh-source-director.mjs';
 
 const ROUTE_ROOT = '/api/investigate';
 const CORPUS_PATH = '/data/public-investigation-corpus.json';
@@ -267,7 +268,7 @@ function deterministicAnswer({ investigationId, question, classification, retrie
   for (const text of missing) unknowns.push({ text, evidence_ids: [] });
   if (!selected.length) {
     unknowns.push({
-      text: 'The current public Matrix corpus did not return sufficiently relevant evidence. A narrower entity name, jurisdiction, date, document identifier or source route may be required.',
+      text: 'The retrieved Matrix evidence set did not return sufficiently relevant evidence. A narrower entity name, jurisdiction, date, document identifier or source route may be required.',
       evidence_ids: []
     });
   }
@@ -278,11 +279,11 @@ function deterministicAnswer({ investigationId, question, classification, retrie
 
   let answer;
   if (!selected.length) {
-    answer = 'Matrix does not currently have enough relevant evidence in its public corpus to answer this question responsibly. The result is an evidence boundary, not a negative proof: the requested fact or relationship may require a more specific name, date, jurisdiction, filing, docket or source record.';
+    answer = 'Matrix does not currently have enough relevant evidence in its retrieved evidence set to answer this question responsibly. The result is an evidence boundary, not a negative proof: the requested fact or relationship may require a more specific name, date, jurisdiction, filing, docket or source record.';
   } else {
     const top = selected[0];
     const boundary = clean(top.does_not_establish || top.evidence_boundary, 900);
-    answer = `The strongest bounded answer in the current Matrix corpus is: ${claimFromEvidence(top)}${boundary ? ` The record does not establish: ${boundary}` : ''}`;
+    answer = `The strongest bounded answer in the current retrieved evidence set is: ${claimFromEvidence(top)}${boundary ? ` The record does not establish: ${boundary}` : ''}`;
     if (classification.disputed_material_possible || top.claim_class === 'allegation_or_disputed') {
       answer += ' Disputed material and source leads are shown separately from documented facts.';
     }
@@ -346,6 +347,182 @@ async function mergeLivingEvidence(corpus, env) {
   }
 }
 
+function mergeFreshEvidence(corpus, fresh) {
+  const merged = new Map((corpus.evidence || []).map(item => [item.evidence_id, item]));
+  for (const item of fresh?.evidence || []) {
+    if (item?.evidence_id && item?.source_route) merged.set(item.evidence_id, item);
+  }
+  return {
+    ...corpus,
+    evidence: [...merged.values()],
+    counts: {
+      ...(corpus.counts || {}),
+      evidence: merged.size,
+      fresh_official_evidence: Number(fresh?.evidence?.length || 0)
+    }
+  };
+}
+
+async function persistFreshRetrievals(db, investigationId, normalizedQuestion, fresh) {
+  for (const report of fresh?.adapter_reports || []) {
+    const adapterId = clean(report.adapter_id, 160);
+    const searchPurpose = report.search_purpose === 'qualifying' ? 'qualifying' : 'supporting';
+    if (!adapterId) continue;
+    const retrievalId = `fresh-retrieval:${investigationId}:${adapterId}:${searchPurpose}`.slice(0, 300);
+    const queryHash = await sha256(`${normalizedQuestion}|${searchPurpose}|${report.endpoint || ''}`);
+    const status = report.ok === true ? (Number(report.result_count || 0) > 0 ? 'SUCCEEDED' : 'EMPTY') : 'FAILED';
+    await db.prepare(`INSERT OR REPLACE INTO matrix_public_source_retrievals(
+      retrieval_id,investigation_id,adapter_id,search_purpose,endpoint,query_sha256,response_sha256,status,
+      result_count,response_bytes,cost_confirmed_zero,failure,retrieved_at
+    ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)`).bind(
+      retrievalId,
+      investigationId,
+      adapterId,
+      searchPurpose,
+      clean(report.endpoint, 1800) || null,
+      queryHash,
+      clean(report.response_sha256, 64) || null,
+      status,
+      Math.max(0, Math.min(12, Number(report.result_count || 0))),
+      Math.max(0, Math.min(2_000_000, Number(report.response_bytes || 0))),
+      report.cost_confirmed_zero === false ? 0 : 1,
+      clean(report.failure, 1200) || null,
+      clean(report.retrieved_at, 80) || nowIso()
+    ).run();
+  }
+}
+
+function proofPayload({ investigationId, question, normalizedQuestion, classification, retrieval, result, fresh, createdAt }) {
+  const selected = retrieval?.selected || [];
+  const freshSelected = selected.filter(item => item.fresh_source === true);
+  const publishers = [...new Set(freshSelected.map(item => clean(item.source_publisher, 240)).filter(Boolean))];
+  const provenance = freshSelected.map(item => ({
+    evidence_id: item.evidence_id,
+    publisher: item.source_publisher,
+    source_url: item.source_route,
+    adapter_id: item.retrieval_provenance?.adapter_id,
+    endpoint: item.retrieval_provenance?.endpoint,
+    retrieved_at: item.retrieval_provenance?.retrieved_at,
+    response_content_sha256: item.retrieval_provenance?.response_content_sha256,
+    evidence_boundary: item.evidence_boundary
+  }));
+  const entities = cleanRefs(freshSelected.flatMap(item => item.related_entities || []), 50);
+  const relationships = freshSelected.flatMap(item => {
+    const recordLink = [{ from: item.evidence_id, relationship_type: 'published_by', to: item.source_publisher, evidence_ids: [item.evidence_id] }];
+    return recordLink.concat((item.related_entities || []).slice(0, 8).map(entity => ({
+      from: entity,
+      relationship_type: 'named_in_official_record_metadata',
+      to: item.evidence_id,
+      evidence_ids: [item.evidence_id]
+    })));
+  }).slice(0, 80);
+  const timeline = freshSelected.map(item => ({
+    date: item.publication_date || item.updated_at || item.retrieval_provenance?.retrieved_at,
+    event: item.title,
+    publisher: item.source_publisher,
+    evidence_ids: [item.evidence_id]
+  })).filter(item => item.date).sort((left, right) => String(left.date).localeCompare(String(right.date)));
+  const qualifyingReports = (fresh?.adapter_reports || []).filter(report => report.search_purpose === 'qualifying');
+  const qualifyingEvidence = (fresh?.qualifying_evidence || []).map(item => ({
+    evidence_id: item.evidence_id,
+    title: item.title,
+    source_url: item.source_route,
+    publisher: item.source_publisher,
+    evidence_boundary: item.evidence_boundary
+  }));
+  const selectedIds = new Set(selected.map(item => item.evidence_id));
+  const citationsResolve = (result?.evidence_ids || []).every(id => selectedIds.has(id));
+  const provenanceComplete = provenance.every(item => item.source_url && item.adapter_id && item.retrieved_at && /^[a-f0-9]{64}$/.test(String(item.response_content_sha256 || '')));
+  const httpsOnly = provenance.every(item => {
+    try { return new URL(item.source_url).protocol === 'https:'; } catch { return false; }
+  });
+  const checks = {
+    fresh_retrieval_occurred: fresh?.fresh_retrieval_occurred === true,
+    fresh_evidence_selected: freshSelected.length > 0,
+    independent_publishers_at_least_two: publishers.length >= 2,
+    supporting_search_performed: (fresh?.adapter_reports || []).some(report => report.search_purpose === 'supporting'),
+    qualifying_search_performed: qualifyingReports.length > 0,
+    provenance_complete: provenanceComplete,
+    source_routes_https: httpsOnly,
+    citations_resolve_to_selected_evidence: citationsResolve,
+    zero_monetary_cost: fresh?.cost_confirmed_zero === true
+  };
+  const auditorPassed = Object.values(checks).every(Boolean);
+  return {
+    mission_id: `fresh-investigation-proof:${investigationId}`,
+    plan: {
+      objective: 'Answer the question from newly retrieved official public records while preserving evidence boundaries.',
+      question,
+      normalized_question: normalizedQuestion,
+      classification,
+      stages: ['classify', 'retrieve-supporting-official-records', 'search-corrections-withdrawals-and-contrary-evidence', 'extract-entities-relationships-and-timeline', 'synthesize-bounded-answer', 'audit-citations-and-provenance', 'persist-learning-and-monitoring-hook']
+    },
+    provenance,
+    entities,
+    relationships,
+    timeline,
+    qualifying_evidence_search: {
+      performed: qualifyingReports.length > 0,
+      search_terms_added: ['correction', 'withdrawal', 'review', 'contrary evidence'],
+      adapter_reports: qualifyingReports,
+      possible_qualifying_records: qualifyingEvidence,
+      conclusion: qualifyingEvidence.length ? 'Potential qualifying records were returned and are preserved as leads; relevance must be established before use as answer evidence.' : 'No qualifying record was returned by the bounded official searches. This is not proof that none exists.'
+    },
+    alternative_explanations: [
+      'Search ranking can surface records that share terms without resolving the question.',
+      'Publication metadata proves that a record was published, not that its policy was implemented or effective.',
+      'UK and US records reflect different jurisdictions and may use similar language for different legal regimes.',
+      'A later correction, withdrawal, court decision or implementation report may change the evidential picture.'
+    ],
+    auditor: {
+      auditor_id: 'matrix-public-evidence-auditor-v1',
+      checks,
+      passed: auditorPassed,
+      evaluated_at: createdAt,
+      failure_reasons: Object.entries(checks).filter(([, passed]) => !passed).map(([name]) => name)
+    },
+    monitoring_hook: {
+      hook_type: 'repeat-official-source-retrieval',
+      cadence: 'daily',
+      query_sha256_input: normalizedQuestion,
+      adapter_ids: [...new Set((fresh?.adapter_reports || []).map(report => report.adapter_id).filter(Boolean))],
+      compare_fields: ['response_sha256', 'evidence_id', 'publication_date', 'updated_at'],
+      alert_on: ['new-evidence-id', 'changed-response-hash', 'correction-or-withdrawal-result'],
+      next_due_at: new Date(Date.parse(createdAt) + 86400000).toISOString(),
+      consequential_action: false
+    },
+    fresh_source_count: freshSelected.length,
+    independent_publisher_count: publishers.length,
+    auditor_passed: auditorPassed,
+    created_at: createdAt
+  };
+}
+
+async function persistInvestigationProof(db, investigationId, proof) {
+  await db.prepare(`INSERT OR REPLACE INTO matrix_public_investigation_proofs(
+    investigation_id,mission_id,plan_json,provenance_json,entities_json,relationships_json,timeline_json,
+    qualifying_evidence_search_json,alternative_explanations_json,auditor_json,monitoring_hook_json,
+    fresh_source_count,independent_publisher_count,auditor_passed,created_at,updated_at
+  ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`).bind(
+    investigationId,
+    proof.mission_id,
+    JSON.stringify(proof.plan),
+    JSON.stringify(proof.provenance),
+    JSON.stringify(proof.entities),
+    JSON.stringify(proof.relationships),
+    JSON.stringify(proof.timeline),
+    JSON.stringify(proof.qualifying_evidence_search),
+    JSON.stringify(proof.alternative_explanations),
+    JSON.stringify(proof.auditor),
+    JSON.stringify(proof.monitoring_hook),
+    proof.fresh_source_count,
+    proof.independent_publisher_count,
+    proof.auditor_passed ? 1 : 0,
+    proof.created_at,
+    proof.created_at
+  ).run();
+}
+
 async function schemaReady(env) {
   if (!env?.MEMBERS_DB?.prepare) return false;
   try {
@@ -399,6 +576,7 @@ async function recordLearning(env, {
   fallbackUsed,
   validationPassed,
   latency,
+  proof = null,
   failureType = null
 }) {
   const db = env.MEMBERS_DB;
@@ -418,7 +596,19 @@ async function recordLearning(env, {
     validation_passed: validationPassed === true,
     fallback_used: fallbackUsed === true,
     failure_type: failureType,
-    latency
+    latency,
+    learning_effect: {
+      behavior_changed: validationPassed === true && (result?.evidence_ids || []).length > 0,
+      before: 'Equivalent-query evidence receives its base deterministic retrieval score.',
+      observation: 'This answer passed evidence-subset validation and its selected evidence identifiers were persisted.',
+      after: 'On an equivalent later query, validated selected evidence receives a bounded +5 ranking hint; policy thresholds and evidence boundaries do not change.'
+    },
+    fresh_investigation_proof: proof ? {
+      mission_id: proof.mission_id,
+      fresh_source_count: proof.fresh_source_count,
+      independent_publisher_count: proof.independent_publisher_count,
+      auditor_passed: proof.auditor_passed
+    } : null
   };
   await db.prepare(`INSERT OR IGNORE INTO matrix_learning_ledger(
     learning_id,source_event_id,domain,observation,proposed_change,change_class,decision,evidence_json,audit_identifier,created_at
@@ -457,7 +647,28 @@ async function existingRecentInvestigation(db, questionHash) {
   }
 }
 
-function publicRow(row, evidenceRows = []) {
+function proofFromRow(row) {
+  if (!row) return null;
+  return {
+    mission_id: row.mission_id,
+    plan: parseJson(row.plan_json, {}),
+    provenance: parseJson(row.provenance_json, []),
+    entities: parseJson(row.entities_json, []),
+    relationships: parseJson(row.relationships_json, []),
+    timeline: parseJson(row.timeline_json, []),
+    qualifying_evidence_search: parseJson(row.qualifying_evidence_search_json, {}),
+    alternative_explanations: parseJson(row.alternative_explanations_json, []),
+    auditor: parseJson(row.auditor_json, {}),
+    monitoring_hook: parseJson(row.monitoring_hook_json, {}),
+    fresh_source_count: Number(row.fresh_source_count || 0),
+    independent_publisher_count: Number(row.independent_publisher_count || 0),
+    auditor_passed: Number(row.auditor_passed || 0) === 1,
+    created_at: row.created_at,
+    updated_at: row.updated_at
+  };
+}
+
+function publicRow(row, evidenceRows = [], proofRow = null) {
   const answer = parseJson(row.answer_json, null);
   return {
     ok: true,
@@ -482,6 +693,7 @@ function publicRow(row, evidenceRows = []) {
       total: Number(row.total_latency_ms || 0)
     },
     error: row.error_type ? { type: row.error_type, message: row.error_text } : null,
+    proof: proofFromRow(proofRow),
     created_at: row.created_at,
     updated_at: row.updated_at,
     completed_at: row.completed_at
@@ -494,11 +706,19 @@ async function evidenceRows(db, investigationId) {
   return rows?.results || [];
 }
 
+async function investigationProofRow(db, investigationId) {
+  try {
+    return await db.prepare('SELECT * FROM matrix_public_investigation_proofs WHERE investigation_id=? LIMIT 1').bind(investigationId).first();
+  } catch {
+    return null;
+  }
+}
+
 async function getInvestigation(env, investigationId) {
   if (!await schemaReady(env)) return json({ ok: false, recoverable: true, error: 'Public investigation storage is unavailable', reason: 'migration-or-d1-unavailable' }, 503);
   const row = await env.MEMBERS_DB.prepare('SELECT * FROM matrix_public_investigations WHERE investigation_id=? LIMIT 1').bind(investigationId).first();
   if (!row) return json({ ok: false, error: 'Investigation not found' }, 404);
-  return json(publicRow(row, await evidenceRows(env.MEMBERS_DB, investigationId)));
+  return json(publicRow(row, await evidenceRows(env.MEMBERS_DB, investigationId), await investigationProofRow(env.MEMBERS_DB, investigationId)));
 }
 
 async function selectLocalModel(env, question, evidenceCount) {
@@ -572,13 +792,20 @@ async function createInvestigation(request, env) {
   const mode = ['fast','standard','deep'].includes(String(body.mode || '')) ? String(body.mode) : 'standard';
   const normalizedQuestion = normalizeQuestion(question);
   const questionHash = await sha256(normalizedQuestion);
-  const recent = await existingRecentInvestigation(env.MEMBERS_DB, questionHash);
-  if (recent) return json({ ...publicRow(recent, await evidenceRows(env.MEMBERS_DB, recent.investigation_id)), reused: true }, recent.status === 'queued' ? 202 : 200);
+  const recent = body.refresh === true ? null : await existingRecentInvestigation(env.MEMBERS_DB, questionHash);
+  if (recent) return json({
+    ...publicRow(
+      recent,
+      await evidenceRows(env.MEMBERS_DB, recent.investigation_id),
+      await investigationProofRow(env.MEMBERS_DB, recent.investigation_id)
+    ),
+    reused: true
+  }, recent.status === 'queued' ? 202 : 200);
 
   const investigationId = `investigation-${crypto.randomUUID()}`;
   const createdAt = nowIso();
   const history = [{ state: 'queued', at: createdAt }, { state: 'retrieving', at: createdAt }];
-  const classification = classificationFor(question, body.filter || body.mode);
+  const classification = classificationFor(question, body.filter);
   await env.MEMBERS_DB.prepare(`INSERT INTO matrix_public_investigations(
     investigation_id,question_hash,question,normalized_question,mode,status,query_classification_json,
     answer_json,evidence_ids_json,source_routes_json,related_entities_json,local_job_id,model_id,resource_id,
@@ -600,10 +827,24 @@ async function createInvestigation(request, env) {
   const totalStarted = Date.now();
   let retrieval;
   let corpus;
+  let fresh = {
+    evidence: [],
+    qualifying_evidence: [],
+    adapter_reports: [],
+    fresh_retrieval_occurred: false,
+    independent_publishers: 0,
+    qualifying_search_performed: false,
+    cost_confirmed_zero: true
+  };
   let retrievalLatency = 0;
   try {
     const retrievalStarted = Date.now();
     corpus = await mergeLivingEvidence(await loadCorpus(request, env), env);
+    if (enabled(env?.MATRIX_PUBLIC_INVESTIGATION_FRESH_SOURCES_ENABLED, false)) {
+      fresh = await new OfficialFreshSourceDirector().discover(question, { now: nowIso(), maximumEvidence: mode === 'deep' ? 8 : 6 });
+      await persistFreshRetrievals(env.MEMBERS_DB, investigationId, normalizedQuestion, fresh);
+      corpus = mergeFreshEvidence(corpus, fresh);
+    }
     const learnedEvidenceIds = await learningHints(env.MEMBERS_DB, `public-investigation:${questionHash}`);
     retrieval = retrieveEvidence(corpus, question, { classification, learnedEvidenceIds });
     retrievalLatency = Date.now() - retrievalStarted;
@@ -644,6 +885,21 @@ async function createInvestigation(request, env) {
       JSON.stringify(item),
       nowIso()
     ).run();
+  }
+
+  let proof = null;
+  if (enabled(env?.MATRIX_PUBLIC_INVESTIGATION_FRESH_SOURCES_ENABLED, false)) {
+    proof = proofPayload({
+      investigationId,
+      question,
+      normalizedQuestion,
+      classification,
+      retrieval,
+      result: fallbackResult,
+      fresh,
+      createdAt: nowIso()
+    });
+    await persistInvestigationProof(env.MEMBERS_DB, investigationId, proof);
   }
 
   const route = retrieval.selected.length ? await selectLocalModel(env, question, retrieval.selected.length) : null;
@@ -699,11 +955,12 @@ async function createInvestigation(request, env) {
     fallbackUsed: true,
     validationPassed: true,
     latency: { retrieval_ms: retrievalLatency, verification_ms: verificationLatency, total_ms: totalLatency },
+    proof,
     failureType: local ? null : 'no-eligible-model-evidence-fallback'
   }).catch(() => null);
 
   const row = await env.MEMBERS_DB.prepare('SELECT * FROM matrix_public_investigations WHERE investigation_id=?').bind(investigationId).first();
-  return json(publicRow(row, await evidenceRows(env.MEMBERS_DB, investigationId)), local ? 202 : 200, { location: `${ROUTE_ROOT}/${investigationId}` });
+  return json(publicRow(row, await evidenceRows(env.MEMBERS_DB, investigationId), await investigationProofRow(env.MEMBERS_DB, investigationId)), local ? 202 : 200, { location: `${ROUTE_ROOT}/${investigationId}` });
 }
 
 export async function completePublicInvestigationLocalResult(env, jobRow, completion) {
@@ -807,8 +1064,10 @@ export const publicInvestigationInternals = {
   classificationFor,
   deterministicAnswer,
   learningHints,
+  mergeFreshEvidence,
   mergeLivingEvidence,
   normalizeQuestion,
+  proofPayload,
   scoreEvidence,
   scoreRoute,
   tokens

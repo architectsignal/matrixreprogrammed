@@ -17,7 +17,7 @@ check('local job routes require owner admin authorization', wrapper.includes('if
 check('scheduled handler recovers expired leases', wrapper.includes('recoverExpiredLocalJobs(runtimeEnv)') && wrapper.includes('recoveryTask'));
 check(
   'scheduled recovery, opportunity, capacity, claim value, permissionless value, Living Matrix and constitutional operating cycles participate in awaited task group',
-  wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask])')
+  wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, bountyTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask])')
 );
 
 for (const route of [

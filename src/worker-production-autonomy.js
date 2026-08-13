@@ -10,6 +10,7 @@ import { handleLivingMatrixRoute, isLivingMatrixAdminRoute, isLivingMatrixPublic
 import { handleValueHunterRoute, isValueHunterRoute, runScheduledValueHunter } from './worker-value-hunter.js';
 import { handlePermissionlessHarvesterRoute, isPermissionlessHarvesterRoute, runScheduledPermissionlessHarvester } from './worker-permissionless-value.js';
 import { handleMatrixOperationsRoute, isMatrixOperationsRoute, runScheduledMatrixOperations } from './worker-matrix-operations.js';
+import { handleBountyEngineRoute, isBountyEngineRoute, runScheduledBountyEngine } from './worker-bounty-engine.js';
 import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 function cleanToken(value) {
@@ -100,6 +101,11 @@ export default {
       return handleValueHunterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
+    if (isBountyEngineRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleBountyEngineRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
     if (isPermissionlessHarvesterRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();
       return handlePermissionlessHarvesterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
@@ -181,8 +187,18 @@ export default {
         return { skipped: true, reason: 'scheduled-capacity-run-failed' };
       })
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const bountyTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? capacityTask.then(() => runScheduledBountyEngine(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'value.failed', auditIdentifier: `bounty-engine-failure:${new Date().toISOString()}`,
+          origin: 'matrix-bounty-engine', actor: 'BountyCompletionDirector',
+          payload: { change_summary: 'Bounty discovery failed safely; no claim, pull request or submission was attempted.', error: String(error?.message || error).slice(0, 500), security_execution: false }
+        });
+        return { skipped: true, reason: 'scheduled-bounty-cycle-failed' };
+      })
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     const valueTask = runtimeEnv?.MEMBERS_DB?.prepare
-      ? capacityTask.then(() => runScheduledValueHunter(runtimeEnv)).catch(async error => {
+      ? bountyTask.then(() => runScheduledValueHunter(runtimeEnv)).catch(async error => {
         await emitMatrixSystemEvent(runtimeEnv, {
           eventType: 'value.failed', auditIdentifier: `value-hunter-failure:${new Date().toISOString()}`,
           origin: 'matrix-value-hunter', actor: 'lawful-value-cycle',
@@ -215,6 +231,6 @@ export default {
       })
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     // Legacy membership contract marker: await Promise.all([productionTask, autonomyTask]);
-    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask]);
+    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, bountyTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask]);
   }
 };

@@ -7,11 +7,16 @@ import {
   buildValueCollectionAdapterCandidate, certifyValueCollectionAdapterCandidate
 } from '../ai-management/value-hunter/value-code-improvement.mjs';
 import { OfficialHtmlValueLeadAdapter, allowedOfficialHost, extractOfficialValueLeads } from '../ai-management/provider-adapters/value/official-html-links.mjs';
+import {
+  CapitalChallengeWatchdog, MatrixCapitalChallenge, MatrixOpportunityGraph, NovelOpportunityDirector,
+  RevenueCreationDirector, acquisitionVelocity, capitalForecast
+} from '../ai-management/value-hunter/matrix-capital-challenge.mjs';
 import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 const ROOT_ROUTE = '/api/ai-management/admin/value-hunter';
 const ROUTES = new Set([
-  ROOT_ROUTE, `${ROOT_ROUTE}/claimants`, `${ROOT_ROUTE}/destinations`, `${ROOT_ROUTE}/opportunities`, `${ROOT_ROUTE}/improvements`
+  ROOT_ROUTE, `${ROOT_ROUTE}/claimants`, `${ROOT_ROUTE}/destinations`, `${ROOT_ROUTE}/opportunities`, `${ROOT_ROUTE}/improvements`,
+  `${ROOT_ROUTE}/capital`, `${ROOT_ROUTE}/capital/opportunities`, `${ROOT_ROUTE}/capital/graph`, `${ROOT_ROUTE}/capital/experiments`
 ]);
 // Financial providers are installed in reviewed source code, never from D1, prompts or arbitrary URLs.
 const BUILT_IN_COLLECTION_PROVIDERS = Object.freeze([]);
@@ -72,7 +77,10 @@ async function schemaReady(env) {
     'matrix_value_sources', 'matrix_value_claimants', 'matrix_value_destinations', 'matrix_value_mandates',
     'matrix_value_objectives', 'matrix_value_opportunities', 'matrix_value_entitlement_evidence',
     'matrix_value_claim_queue', 'matrix_value_operations', 'matrix_value_receipts', 'matrix_value_audit', 'matrix_value_improvement_proposals',
-    'matrix_value_cycles', 'matrix_value_learning'
+    'matrix_value_cycles', 'matrix_value_learning', 'matrix_capital_challenges', 'matrix_capital_destination_registry',
+    'matrix_capital_receipts', 'matrix_capital_milestone_receipts', 'matrix_capital_channels', 'matrix_capital_opportunities',
+    'matrix_opportunity_graph_nodes', 'matrix_opportunity_graph_edges', 'matrix_acquisition_experiments',
+    'matrix_future_opportunity_radar', 'matrix_capital_cycles'
   ];
   return (await Promise.all(required.map(table => tableExists(env.MEMBERS_DB, table).catch(() => false)))).every(Boolean);
 }
@@ -485,6 +493,251 @@ async function summary(db, installedCollectionAdapters = INSTALLED_COLLECTION_AD
   };
 }
 
+async function capitalReceiptInputs(db) {
+  return (await rows(db.prepare(`SELECT cr.capital_receipt_id,cr.source_class,cr.source_receipt_id,cr.external_reference,
+      cr.asset,cr.net_amount_minor,cr.destination_id,cr.received_at,cr.reconciled_at,d.approved,d.active
+    FROM matrix_capital_receipts cr JOIN matrix_value_destinations d ON d.destination_id=cr.destination_id
+    WHERE cr.reconciled=1 ORDER BY cr.reconciled_at,cr.capital_receipt_id`))).map(item => ({
+    sourceClass: item.source_class,
+    sourceReceiptId: item.source_receipt_id,
+    externalReference: item.external_reference,
+    asset: item.asset,
+    netAmountMinor: integer(item.net_amount_minor),
+    destinationApproved: item.approved === 1 && item.active === 1,
+    reconciled: true,
+    receivedAt: item.received_at,
+    reconciledAt: item.reconciled_at,
+    capitalReceiptId: item.capital_receipt_id,
+    destinationId: item.destination_id
+  }));
+}
+
+async function capitalAdjustmentInputs(db) {
+  return (await rows(db.prepare(`SELECT adjustment_id,source_class,source_record_id,external_reference,asset,amount_minor,
+      capital_receipt_id,occurred_at,reconciled
+    FROM matrix_capital_adjustments WHERE reconciled=1 ORDER BY occurred_at,adjustment_id`))).map(item => ({
+    adjustmentId: item.adjustment_id,
+    sourceClass: item.source_class,
+    sourceRecordId: item.source_record_id,
+    externalReference: item.external_reference,
+    asset: item.asset,
+    amountMinor: integer(item.amount_minor),
+    capitalReceiptId: item.capital_receipt_id,
+    occurredAt: item.occurred_at,
+    reconciled: item.reconciled === 1
+  }));
+}
+
+async function syncCapitalDestinations(db, now) {
+  const result = await db.prepare(`INSERT OR IGNORE INTO matrix_capital_destination_registry(
+      registry_id,destination_id,role,allowed_assets_json,exposure_limit_minor,approved,active,raw_credentials_stored,created_at,updated_at
+    ) SELECT 'capital-destination-' || destination_id,destination_id,'COLLECTION',allowed_assets_json,0,approved,active,0,?,?
+      FROM matrix_value_destinations WHERE approved=1 AND active=1`).bind(now, now).run();
+  await db.prepare(`UPDATE matrix_capital_destination_registry SET approved=(SELECT approved FROM matrix_value_destinations d WHERE d.destination_id=matrix_capital_destination_registry.destination_id),
+    active=(SELECT active FROM matrix_value_destinations d WHERE d.destination_id=matrix_capital_destination_registry.destination_id),updated_at=?`).bind(now).run();
+  return Number(result?.meta?.changes || 0);
+}
+
+async function syncCapitalReceipts(db, now) {
+  const claimResult = await db.prepare(`INSERT OR IGNORE INTO matrix_capital_receipts(
+      capital_receipt_id,source_class,source_receipt_id,external_reference,asset,gross_amount_minor,cost_minor,net_amount_minor,
+      eur_net_minor,conversion_evidence_json,destination_id,reconciled,received_at,reconciled_at,evidence_json,created_at
+    ) SELECT 'capital-claim-' || r.receipt_id,'CLAIM_VALUE',r.receipt_id,r.provider_receipt_reference,r.asset,
+      r.gross_amount_minor,r.fee_minor,r.net_amount_minor,r.net_amount_minor,'{"basis":"native-EUR-no-conversion"}',r.destination_id,1,
+      r.received_at,COALESCE(r.reconciled_at,r.received_at),json_object('operation_id',r.operation_id,'receipt_only',1),?
+    FROM matrix_value_receipts r JOIN matrix_value_destinations d ON d.destination_id=r.destination_id
+    WHERE r.reconciled=1 AND r.asset='EUR' AND r.net_amount_minor>0 AND d.approved=1 AND d.active=1`).bind(now).run();
+  const feeExpression = `COALESCE(
+    json_extract(p.raw_resource_json,'$.seller_receivable_breakdown.paypal_fee.value'),
+    json_extract(p.raw_resource_json,'$.purchase_units[0].payments.captures[0].seller_receivable_breakdown.paypal_fee.value')
+  )`;
+  const paypalResult = await db.prepare(`INSERT OR IGNORE INTO matrix_capital_receipts(
+      capital_receipt_id,source_class,source_receipt_id,external_reference,asset,gross_amount_minor,cost_minor,net_amount_minor,
+      eur_net_minor,conversion_evidence_json,destination_id,reconciled,received_at,reconciled_at,evidence_json,created_at
+    ) SELECT 'capital-paypal-' || p.id,CASE WHEN p.payment_type='donation' THEN 'DONATION' ELSE 'DIRECT_REVENUE' END,p.id,
+      p.provider_payment_id,'EUR',ROUND(CAST(p.gross_amount AS REAL)*100),ROUND(CAST(${feeExpression} AS REAL)*100),
+      ROUND(CAST(p.gross_amount AS REAL)*100)-ROUND(CAST(${feeExpression} AS REAL)*100),
+      ROUND(CAST(p.gross_amount AS REAL)*100)-ROUND(CAST(${feeExpression} AS REAL)*100),
+      '{"basis":"native-EUR-PayPal-live-capture","fee_basis":"seller-receivable-breakdown"}',d.destination_id,1,p.paid_at,p.paid_at,
+      json_object('provider','paypal','provider_event_id',p.provider_event_id,'environment',p.environment,'receipt_only',1,'fee_evidence_present',1),?
+    FROM paypal_payment_records p
+    JOIN matrix_value_destinations d ON d.destination_id=(
+      SELECT destination_id FROM matrix_value_destinations
+      WHERE approved=1 AND active=1 AND LOWER(COALESCE(provider_adapter_id,''))='paypal' AND allowed_assets_json LIKE '%"EUR"%'
+      ORDER BY destination_id LIMIT 1
+    )
+    WHERE p.environment='live' AND p.payment_type IN ('sale','capture','donation') AND UPPER(p.status) IN ('COMPLETED','CAPTURED')
+      AND UPPER(p.currency_code)='EUR' AND p.paid_at IS NOT NULL AND CAST(p.gross_amount AS REAL)>0
+      AND ${feeExpression} IS NOT NULL
+      AND ROUND(CAST(p.gross_amount AS REAL)*100)>ROUND(CAST(${feeExpression} AS REAL)*100)`).bind(now).run();
+  const adjustmentResult = await db.prepare(`INSERT OR IGNORE INTO matrix_capital_adjustments(
+      adjustment_id,source_class,source_record_id,external_reference,asset,amount_minor,eur_amount_minor,capital_receipt_id,
+      reconciled,occurred_at,evidence_json,created_at
+    ) SELECT 'capital-paypal-adjustment-' || p.id,CASE WHEN p.payment_type='refund' THEN 'REFUND' ELSE 'REVERSAL' END,p.id,
+      p.provider_event_id,'EUR',ROUND(CAST(COALESCE(p.refund_amount,p.gross_amount) AS REAL)*100),
+      ROUND(CAST(COALESCE(p.refund_amount,p.gross_amount) AS REAL)*100),NULL,1,
+      COALESCE(p.refunded_at,p.reversed_at,p.updated_at),
+      json_object('provider','paypal','environment',p.environment,'provider_payment_id',p.provider_payment_id,'reconciled_adjustment',1),?
+    FROM paypal_payment_records p
+    WHERE p.environment='live' AND p.payment_type IN ('refund','reversal') AND UPPER(p.currency_code)='EUR'
+      AND CAST(COALESCE(p.refund_amount,p.gross_amount) AS REAL)>0
+      AND EXISTS(SELECT 1 FROM matrix_capital_receipts WHERE source_class IN ('DONATION','DIRECT_REVENUE'))`).bind(now).run();
+  const bountyTable = await db.prepare("SELECT COUNT(*) count FROM sqlite_master WHERE type='table' AND name='matrix_bounty_receipts'").first();
+  let bountyChanges = 0;
+  if (integer(bountyTable?.count) === 1) {
+    const bountyResult = await db.prepare(`INSERT OR IGNORE INTO matrix_capital_receipts(
+        capital_receipt_id,source_class,source_receipt_id,external_reference,asset,gross_amount_minor,cost_minor,net_amount_minor,
+        eur_net_minor,conversion_evidence_json,destination_id,reconciled,received_at,reconciled_at,evidence_json,created_at
+      ) SELECT 'capital-bounty-' || r.bounty_receipt_id,'BOUNTY',r.bounty_receipt_id,r.provider_receipt_reference,r.asset,
+        r.gross_amount_minor,r.fee_minor,r.net_amount_minor,r.eur_net_minor,r.conversion_evidence_json,r.destination_id,1,
+        r.received_at,r.reconciled_at,json_object('bounty_id',r.bounty_id,'submission_id',r.submission_id,'receipt_only',1),?
+      FROM matrix_bounty_receipts r JOIN matrix_value_destinations d ON d.destination_id=r.destination_id
+      WHERE r.reconciled=1 AND r.eur_net_minor>0 AND d.approved=1 AND d.active=1`).bind(now).run();
+    bountyChanges = Number(bountyResult?.meta?.changes || 0);
+  }
+  const waitingForFee = await db.prepare(`SELECT COUNT(*) count FROM paypal_payment_records p
+    WHERE p.environment='live' AND p.payment_type IN ('sale','capture','donation') AND UPPER(p.status) IN ('COMPLETED','CAPTURED')
+      AND UPPER(p.currency_code)='EUR' AND p.paid_at IS NOT NULL AND CAST(p.gross_amount AS REAL)>0 AND ${feeExpression} IS NULL`).first();
+  return {
+    claim_receipts: Number(claimResult?.meta?.changes || 0),
+    paypal_live_receipts: Number(paypalResult?.meta?.changes || 0),
+    paypal_adjustments: Number(adjustmentResult?.meta?.changes || 0),
+    bounty_receipts: bountyChanges,
+    paypal_live_completed_waiting_for_fee_evidence: integer(waitingForFee?.count)
+  };
+}
+
+async function persistCapitalMilestones(db, status, receipts, now) {
+  let cumulative = integer(status.baseline_net_minor);
+  let previous = cumulative;
+  let inserted = 0;
+  for (const receipt of receipts) {
+    previous = cumulative;
+    cumulative += integer(receipt.netAmountMinor);
+    for (const milestone of [100, 1000, 10000, 100000, 1000000, 10000000, 100000000]) {
+      if (previous >= milestone || cumulative < milestone) continue;
+      const result = await db.prepare(`INSERT OR IGNORE INTO matrix_capital_milestone_receipts(
+        milestone_receipt_id,challenge_id,milestone_minor,crossed_by_capital_receipt_id,cumulative_net_minor,crossed_at,evidence_json
+      ) VALUES(?,'matrix-capital-challenge-eur-v1',?,?,?,?,?)`).bind(
+        `milestone-eur-${milestone}`, milestone, receipt.capitalReceiptId, cumulative, receipt.reconciledAt || now,
+        JSON.stringify({ source_class: receipt.sourceClass, source_receipt_id: receipt.sourceReceiptId, external_reference: receipt.externalReference, receipt_only: true })
+      ).run();
+      inserted += Number(result?.meta?.changes || 0);
+    }
+  }
+  return inserted;
+}
+
+async function persistCapitalHypotheses(db, now) {
+  const revenue = new RevenueCreationDirector().invent({
+    assets: ['Matrix evidence briefs', 'Matrix public investigations', 'Matrix downloadable research packs'],
+    capabilities: ['evidence synthesis', 'citation verification', 'public-interest research'],
+    audiences: ['researchers and readers'],
+    problems: ['slow source verification', 'fragmented public evidence']
+  }, now);
+  const novel = new NovelOpportunityDirector().discover({
+    assets: ['public evidence corpus', 'investigation templates', 'daily intelligence updates'],
+    capabilities: ['source synthesis', 'structured timelines', 'citation checking'],
+    audiences: ['journalists', 'researchers', 'supporters'],
+    problems: ['verification cost', 'fragmented records', 'research update burden']
+  }, now);
+  const opportunities = [...revenue, ...novel];
+  for (const opportunity of opportunities) {
+    await db.prepare(`INSERT OR IGNORE INTO matrix_capital_opportunities(
+      opportunity_id,challenge_id,opportunity_type,taxonomy_version,priority_lane,title,state,next_action,policy_class,
+      method_authorized,destination_ready,evidence_ready,estimated_gross_minor,estimated_cost_minor,expected_net_minor,
+      success_probability_ppm,source_json,blockers_json,created_at,updated_at
+    ) VALUES(?,'matrix-capital-challenge-eur-v1',?,1,'P2_DIRECT_REVENUE',?,'HYPOTHESIS',?,'METHOD_PERMISSION_REQUIRED',0,0,0,0,0,0,0,?,'["real-demand-evidence-required","approved-revenue-adapter-required"]',?,?)`).bind(
+      opportunity.opportunity_id, opportunity.opportunity_type,
+      clean(opportunity.title || Object.values(opportunity.combination || {}).join(' + '), 500) || opportunity.opportunity_id,
+      opportunity.next_action, JSON.stringify(opportunity), now, now
+    ).run();
+  }
+  const graph = new MatrixOpportunityGraph().build(novel);
+  for (const node of graph.nodes) {
+    await db.prepare(`INSERT INTO matrix_opportunity_graph_nodes(node_id,node_type,label,evidence_state,metadata_json,updated_at)
+      VALUES(?,?,?,?,?,?) ON CONFLICT(node_id) DO UPDATE SET node_type=excluded.node_type,label=excluded.label,
+      evidence_state=excluded.evidence_state,metadata_json=excluded.metadata_json,updated_at=excluded.updated_at`).bind(
+      node.node_id, node.node_type, node.node_id, node.state, JSON.stringify(node), now
+    ).run();
+  }
+  for (const edge of graph.edges) {
+    await db.prepare(`INSERT INTO matrix_opportunity_graph_edges(edge_id,from_node_id,to_node_id,relationship,evidence_state,metadata_json,updated_at)
+      VALUES(?,?,?,?,?,?,?) ON CONFLICT(edge_id) DO UPDATE SET relationship=excluded.relationship,evidence_state=excluded.evidence_state,
+      metadata_json=excluded.metadata_json,updated_at=excluded.updated_at`).bind(
+      edge.edge_id, edge.from_node_id, edge.to_node_id, edge.relationship, edge.evidence_state, JSON.stringify(edge), now
+    ).run();
+  }
+  return { opportunities: opportunities.length, graph_nodes: graph.nodes.length, graph_edges: graph.edges.length, hypotheses_are_not_value: true };
+}
+
+async function capitalStatus(db) {
+  const challenge = await db.prepare("SELECT * FROM matrix_capital_challenges WHERE challenge_id='matrix-capital-challenge-eur-v1'").first();
+  const milestones = await rows(db.prepare('SELECT milestone_minor,cumulative_net_minor,crossed_at,crossed_by_capital_receipt_id FROM matrix_capital_milestone_receipts ORDER BY milestone_minor'));
+  const receipts = await rows(db.prepare('SELECT capital_receipt_id,source_class,source_receipt_id,external_reference,asset,gross_amount_minor,cost_minor,net_amount_minor,eur_net_minor,destination_id,reconciled,received_at,reconciled_at FROM matrix_capital_receipts ORDER BY reconciled_at DESC LIMIT 100'));
+  const adjustments = await rows(db.prepare('SELECT adjustment_id,source_class,source_record_id,external_reference,asset,amount_minor,eur_amount_minor,capital_receipt_id,reconciled,occurred_at FROM matrix_capital_adjustments ORDER BY occurred_at DESC LIMIT 100'));
+  const opportunityCounts = await rows(db.prepare('SELECT state,COUNT(*) count FROM matrix_capital_opportunities GROUP BY state ORDER BY state'));
+  return {
+    challenge,
+    milestones,
+    receipts,
+    adjustments,
+    opportunities: opportunityCounts.map(item => ({ state: item.state, count: integer(item.count) })),
+    truthful_status: challenge?.operational_claim_allowed === 1 ? 'first-real-euro-receipt-proven' : 'awaiting-first-real-euro-receipt'
+  };
+}
+
+async function runCapitalChallengeCycle(env, { valueCycleId, trigger = 'value-cycle', now = new Date().toISOString() } = {}) {
+  const db = env.MEMBERS_DB;
+  if (!enabled(env.MATRIX_CAPITAL_CHALLENGE_ENABLED, true)) return { enabled: false, skipped: true, reason: 'capital-challenge-disabled' };
+  await syncCapitalDestinations(db, now);
+  const importedReceipts = await syncCapitalReceipts(db, now);
+  const receiptInputs = await capitalReceiptInputs(db);
+  const adjustmentInputs = await capitalAdjustmentInputs(db);
+  const current = await db.prepare("SELECT baseline_net_minor FROM matrix_capital_challenges WHERE challenge_id='matrix-capital-challenge-eur-v1'").first();
+  const status = new MatrixCapitalChallenge().summarize(receiptInputs, { baselineEurMinor: integer(current?.baseline_net_minor), adjustments: adjustmentInputs, now });
+  const first = receiptInputs[0] || null;
+  await db.prepare(`UPDATE matrix_capital_challenges SET received_net_minor=?,next_milestone_minor=?,state=?,first_real_receipt_id=?,
+    operational_claim_allowed=?,updated_at=? WHERE challenge_id='matrix-capital-challenge-eur-v1'`).bind(
+    status.received_net_minor, status.next_milestone_minor, status.state, status.first_real_euro_received ? first?.capitalReceiptId : null,
+    status.operational_claim_allowed ? 1 : 0, now
+  ).run();
+  const milestonesRecorded = await persistCapitalMilestones(db, status, receiptInputs, now);
+  const discovery = await persistCapitalHypotheses(db, now);
+  const open = await db.prepare("SELECT COUNT(*) count FROM matrix_capital_opportunities WHERE state IN ('HYPOTHESIS','VERIFYING','READY_FOR_BOUNDED_TEST','ACTIVE','WAIT','OWNER_ACTION_REQUIRED')").first();
+  const activeExperiments = await db.prepare("SELECT COUNT(*) count FROM matrix_acquisition_experiments WHERE state IN ('READY_FOR_BOUNDED_TEST','RUNNING')").first();
+  const velocity = acquisitionVelocity(receiptInputs, { windowDays: 30, adjustments: adjustmentInputs });
+  const forecast = capitalForecast(status, velocity);
+  const watchdog = new CapitalChallengeWatchdog().assess({ status, openOpportunities: integer(open?.count), activeExperiments: integer(activeExperiments?.count), lastReceiptAt: receiptInputs.at(-1)?.reconciledAt || null });
+  const report = {
+    status, imported_receipts: importedReceipts, milestones_recorded: milestonesRecorded, discovery, velocity, forecast, watchdog,
+    financial_execution_enabled: enabled(env.MATRIX_CAPITAL_FINANCIAL_EXECUTION_ENABLED, false),
+    automatic_spending: false,
+    receipt_only_accounting: true,
+    policy: 'Explore every lawful authorized zero-spend-first route; execute financial methods only through method-specific gates and count only reconciled receipts at approved destinations.'
+  };
+  const capitalCycleId = `capital-${valueCycleId || `${now.slice(0, 10)}-${id(trigger, 'cycle')}`}`;
+  await db.prepare(`INSERT INTO matrix_capital_cycles(capital_cycle_id,value_cycle_id,trigger_name,status,received_net_minor,next_milestone_minor,velocity_json,forecast_json,watchdog_json,report_json,started_at,completed_at)
+    VALUES(?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(capital_cycle_id) DO UPDATE SET status=excluded.status,received_net_minor=excluded.received_net_minor,
+    next_milestone_minor=excluded.next_milestone_minor,velocity_json=excluded.velocity_json,forecast_json=excluded.forecast_json,
+    watchdog_json=excluded.watchdog_json,report_json=excluded.report_json,completed_at=excluded.completed_at`).bind(
+    capitalCycleId, valueCycleId || null, clean(trigger, 100), watchdog.stalled ? 'completed_with_findings' : 'completed',
+    status.received_net_minor, status.next_milestone_minor, JSON.stringify(velocity), JSON.stringify(forecast), JSON.stringify(watchdog), JSON.stringify(report), now, now
+  ).run();
+  if (status.first_real_euro_received && first) {
+    await db.prepare(`UPDATE matrix_acceptance_receipts SET state='LIVE_VERIFIED',first_real_receipt=1,external_receipt_reference=?,
+      result_json=?,after_json=?,net_value_minor=?,evidence_json=?,verified_at=? WHERE receipt_id='acceptance-value'`).bind(
+      first.externalReference, JSON.stringify({ capital_challenge: status.state }), JSON.stringify(status), status.received_net_minor,
+      JSON.stringify({ source_receipt_id: first.sourceReceiptId, destination_id: first.destinationId, reconciled: true }), now
+    ).run();
+    await db.prepare(`UPDATE matrix_system_components SET state='LIVE_WORKING',reliability=1,blocker=NULL,last_verified_at=?,updated_at=?,
+      health_evidence_json=? WHERE component_id='matrix-capital-challenge'`).bind(
+      now, now, JSON.stringify([capitalCycleId, first.capitalReceiptId])
+    ).run();
+  }
+  return report;
+}
+
 export async function runValueHunterCycle(env, { trigger = 'manual', clock, providers, signer, approvedContracts = [] } = {}) {
   if (!(await schemaReady(env))) return { ok: false, skipped: true, reason: 'value-hunter-schema-unavailable' };
   if (!enabled(env.MATRIX_VALUE_HUNTER_ENABLED, true)) return { ok: true, skipped: true, reason: 'value-hunter-disabled' };
@@ -524,13 +777,14 @@ export async function runValueHunterCycle(env, { trigger = 'manual', clock, prov
   const learnedStrategies = await refreshMeasuredLearning(db, startedAt);
   const status = await summary(db, installedCollectionAdapters);
   const completedAt = (clock?.() || new Date()).toISOString();
+  const capital = await runCapitalChallengeCycle(env, { valueCycleId: cycleId, trigger, now: completedAt });
   const report = {
     cycle_id: cycleId, trigger, started_at: startedAt, completed_at: completedAt,
     objective: status.target, discovery, evaluated: decisions.length, learned_strategies: learnedStrategies,
     ready_to_claim: decisions.filter(item => item.state === 'READY_TO_CLAIM').length,
     blocked_or_manual: decisions.filter(item => ['AUTOMATION_NOT_PERMITTED', 'OWNER_APPROVAL_REQUIRED', 'FRAUD_BLOCKED'].includes(item.state)).length,
     submitted_this_cycle: collection.submitted, received_this_cycle: collection.received,
-    code_improvements: codeImprovements, collection, failures, status,
+    code_improvements: codeImprovements, collection, failures, status, capital,
     auto_collection_enabled: autoCollectionEnabled,
     policy: 'Automatically collect any registered claimant legal entitlement only after deterministic proof, current official rules, approved destination and constrained adapter checks pass. LLM confidence is never entitlement proof.'
   };
@@ -665,12 +919,16 @@ export async function handleValueHunterRoute(request, env) {
   if (request.method === 'GET') {
     if (path === ROOT_ROUTE) {
       const cycles = await rows(db.prepare('SELECT cycle_id,trigger_name,status,target_net_minor,received_net_minor,evaluated_count,ready_count,submitted_count,received_count,blocked_count,report_json,started_at,completed_at FROM matrix_value_cycles ORDER BY started_at DESC LIMIT 30'));
-      return json({ ok: true, ...(await summary(db)), cycles: cycles.map(item => ({ ...item, report: parseJson(item.report_json, {}) })) });
+      return json({ ok: true, ...(await summary(db)), capital: await capitalStatus(db), cycles: cycles.map(item => ({ ...item, report: parseJson(item.report_json, {}) })) });
     }
     if (path.endsWith('/claimants')) return json({ ok: true, claimants: await rows(db.prepare('SELECT claimant_id,display_label,authority_status,identity_status,jurisdictions_json,enabled,created_at,updated_at FROM matrix_value_claimants ORDER BY updated_at DESC LIMIT 100')) });
     if (path.endsWith('/destinations')) return json({ ok: true, destinations: await rows(db.prepare('SELECT destination_id,claimant_id,destination_type,public_identifier_hash,allowed_assets_json,allowed_intents_json,provider_adapter_id,approved,active,approved_by_owner_at,created_at,updated_at FROM matrix_value_destinations ORDER BY updated_at DESC LIMIT 100')) });
-    if (path.endsWith('/opportunities')) return json({ ok: true, opportunities: await rows(db.prepare('SELECT opportunity_id,objective_id,source_id,jurisdiction_id,claimant_id,destination_id,category,title,legal_basis,state,asset,amount_minor,fee_minor,entitlement_proven,provider_adapter_id,expires_at,priority_score,decision_json,discovered_at,updated_at FROM matrix_value_opportunities ORDER BY priority_score DESC,updated_at DESC LIMIT 250')) });
+    if (path === `${ROOT_ROUTE}/opportunities`) return json({ ok: true, opportunities: await rows(db.prepare('SELECT opportunity_id,objective_id,source_id,jurisdiction_id,claimant_id,destination_id,category,title,legal_basis,state,asset,amount_minor,fee_minor,entitlement_proven,provider_adapter_id,expires_at,priority_score,decision_json,discovered_at,updated_at FROM matrix_value_opportunities ORDER BY priority_score DESC,updated_at DESC LIMIT 250')) });
     if (path.endsWith('/improvements')) return json({ ok: true, executable_in_worker: false, proposals: await rows(db.prepare('SELECT proposal_id,source_id,opportunity_id,provider_adapter_id,target_path,official_host,source_sha256,state,blockers_json,test_report_json,immutable_boundaries_json,activation_allowed,generated_at,updated_at FROM matrix_value_improvement_proposals ORDER BY updated_at DESC LIMIT 100')) });
+    if (path === `${ROOT_ROUTE}/capital`) return json({ ok: true, ...(await capitalStatus(db)), financial_execution_enabled: enabled(env.MATRIX_CAPITAL_FINANCIAL_EXECUTION_ENABLED, false), automatic_spending: false });
+    if (path === `${ROOT_ROUTE}/capital/opportunities`) return json({ ok: true, opportunities: await rows(db.prepare('SELECT opportunity_id,opportunity_type,taxonomy_version,priority_lane,title,state,next_action,policy_class,method_authorized,destination_ready,evidence_ready,estimated_gross_minor,estimated_cost_minor,expected_net_minor,success_probability_ppm,source_json,blockers_json,created_at,updated_at FROM matrix_capital_opportunities ORDER BY expected_net_minor DESC,updated_at DESC LIMIT 250')) });
+    if (path === `${ROOT_ROUTE}/capital/graph`) return json({ ok: true, nodes: await rows(db.prepare('SELECT * FROM matrix_opportunity_graph_nodes ORDER BY updated_at DESC LIMIT 500')), edges: await rows(db.prepare('SELECT * FROM matrix_opportunity_graph_edges ORDER BY updated_at DESC LIMIT 1000')), graph_does_not_prove_value: true });
+    if (path === `${ROOT_ROUTE}/capital/experiments`) return json({ ok: true, automatic_financial_execution: false, experiments: await rows(db.prepare('SELECT * FROM matrix_acquisition_experiments ORDER BY updated_at DESC LIMIT 250')) });
   }
   if (request.method === 'POST') {
     try {
@@ -694,4 +952,6 @@ export const valueHunterWorkerInternals = {
   activeMandate, allowedOfficialHost, extractOfficialLeads: extractOfficialValueLeads, discoverOfficialPublicValueLeads,
   evaluationInput, recordDecision, collectionProviderRegistry, collectionLedger, processClaimQueue,
   generateValueCodeImprovements, refreshMeasuredLearning, summary
+  , capitalReceiptInputs, capitalAdjustmentInputs, syncCapitalDestinations, syncCapitalReceipts, persistCapitalMilestones,
+  persistCapitalHypotheses, capitalStatus, runCapitalChallengeCycle
 };

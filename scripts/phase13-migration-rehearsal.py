@@ -6,6 +6,8 @@ MIGRATIONS = [
     "migrations/0001_membership_foundation.sql",
     "migrations/phase5_member_experience.sql",
     "migrations/phase13_member_entitlement_datetime_fix.sql",
+    "migrations/phase6_paypal_subscriptions.sql",
+    "migrations/phase6_paypal_failure_counter_fix.sql",
     "migrations/phase9_ai_resource_orchestration.sql",
     "migrations/phase10_ai_autonomy.sql",
     "migrations/phase11_local_job_queue.sql",
@@ -16,6 +18,10 @@ MIGRATIONS = [
     "migrations/phase15_matrix_value_hunter.sql",
     "migrations/phase16_permissionless_value_harvester.sql",
     "migrations/phase17_matrix_operating_system.sql",
+    "migrations/phase18_matrix_continuous_evolution.sql",
+    "migrations/phase19_matrix_capital_challenge.sql",
+    "migrations/phase20_bounty_completion_engine.sql",
+    "migrations/phase21_fresh_investigation_proof.sql",
 ]
 REQUIRED = {
     "matrix_events",
@@ -66,6 +72,36 @@ REQUIRED = {
     "matrix_watchdog_events",
     "matrix_delegations",
     "matrix_action_receipts",
+    "matrix_capability_graph",
+    "matrix_human_dependencies",
+    "matrix_site_health_checks",
+    "matrix_evolution_cycles",
+    "matrix_acceptance_receipts",
+    "matrix_permanent_objectives",
+    "matrix_capital_challenges",
+    "matrix_capital_destination_registry",
+    "matrix_capital_receipts",
+    "matrix_capital_adjustments",
+    "matrix_capital_milestone_receipts",
+    "matrix_capital_channels",
+    "matrix_capital_opportunities",
+    "matrix_opportunity_graph_nodes",
+    "matrix_opportunity_graph_edges",
+    "matrix_acquisition_experiments",
+    "matrix_future_opportunity_radar",
+    "matrix_capital_cycles",
+    "matrix_bounty_sources",
+    "matrix_bounties",
+    "matrix_bounty_rules_checks",
+    "matrix_bounty_workspaces",
+    "matrix_bounty_reviews",
+    "matrix_bounty_submissions",
+    "matrix_bounty_receipts",
+    "matrix_bounty_repository_profiles",
+    "matrix_bounty_platform_profiles",
+    "matrix_bounty_learning",
+    "matrix_bounty_cycles",
+    "matrix_bounty_owner_actions",
 }
 
 database = sqlite3.connect(":memory:")
@@ -90,6 +126,19 @@ if capability_count != 10:
 constitution = database.execute("SELECT law_text,law_sha256,immutable,authority_expansion_by_learning FROM matrix_constitution WHERE constitution_id='matrix-law-v1'").fetchone()
 if constitution != ("CAUSE NO HARM OR LOSS.", "2f440056e992d3edbe9dcfd60a5c9d24397bb28d68e29d1d3ed476e84021b189", 1, 0):
     raise SystemExit("Matrix constitutional law is missing or altered")
+
+capital = database.execute("SELECT received_net_minor,next_milestone_minor,state,operational_claim_allowed FROM matrix_capital_challenges WHERE challenge_id='matrix-capital-challenge-eur-v1'").fetchone()
+if capital != (0, 100, "AWAITING_FIRST_REAL_RECEIPT", 0):
+    raise SystemExit("Matrix Capital Challenge must begin at the truthful EUR 1 receipt gate")
+flags = dict(database.execute("SELECT flag_name,enabled FROM ai_feature_flags"))
+for flag in ("MATRIX_EVOLUTION_DIRECTOR_ENABLED", "MATRIX_SITE_OPERATOR_ENABLED", "MATRIX_CAPITAL_CHALLENGE_ENABLED", "MATRIX_NOVEL_OPPORTUNITY_DIRECTOR_ENABLED", "MATRIX_BOUNTY_ENGINE_ENABLED"):
+    if flags.get(flag) != 1:
+        raise SystemExit(f"{flag} must start enabled")
+if flags.get("MATRIX_CAPITAL_FINANCIAL_EXECUTION_ENABLED") != 0:
+    raise SystemExit("Capital financial execution must start fail closed")
+for flag in ("MATRIX_BOUNTY_AUTO_CLAIM_ENABLED", "MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED", "MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED"):
+    if flags.get(flag) != 0:
+        raise SystemExit(f"{flag} must start fail closed")
 for statement in (
     "UPDATE matrix_constitution SET law_text='ALTERED' WHERE constitution_id='matrix-law-v1'",
     "DELETE FROM matrix_constitution WHERE constitution_id='matrix-law-v1'",

@@ -18,9 +18,19 @@ for (const migration of [
   'migrations/phase9_ai_resource_orchestration.sql', 'migrations/phase10_ai_autonomy.sql', 'migrations/phase11_local_job_queue.sql',
   'migrations/phase12_opportunity_hunter.sql', 'migrations/phase13_matrix_synergy.sql', 'migrations/public_investigation_api.sql',
   'migrations/phase14_living_matrix.sql', 'migrations/phase15_matrix_value_hunter.sql', 'migrations/phase16_permissionless_value_harvester.sql',
-  'migrations/phase17_matrix_operating_system.sql'
+  'migrations/phase17_matrix_operating_system.sql', 'migrations/phase18_matrix_continuous_evolution.sql'
 ]) raw.exec(fs.readFileSync(migration, 'utf8'));
-const env = { MEMBERS_DB: new D1Database(raw), MATRIX_OPERATING_SYSTEM_ENABLED: 'true' };
+const assetRequests = [];
+const env = {
+  MEMBERS_DB: new D1Database(raw),
+  MATRIX_OPERATING_SYSTEM_ENABLED: 'true',
+  ASSETS: {
+    async fetch(request) {
+      assetRequests.push(new URL(request.url).pathname);
+      return new Response(`<html><head><title>Matrix surface</title></head><body>${'verified '.repeat(30)}</body></html>`, { status: 200, headers: { 'content-type': 'text/html; charset=utf-8' } });
+    }
+  }
+};
 
 try {
   assert.throws(() => raw.prepare("UPDATE matrix_constitution SET law_text='DO ANYTHING' WHERE constitution_id='matrix-law-v1'").run(), /MATRIX_CONSTITUTION_IMMUTABLE/);
@@ -33,6 +43,10 @@ try {
   assert.equal(first.ok, true);
   assert.equal(first.report.constitution_verified, true);
   assert.equal(first.report.consequential_actions_executed, 0);
+  assert.equal(first.report.site_health.working, 11);
+  assert.equal(first.report.site_health.failures.length, 0);
+  assert.equal(first.report.automation_readiness.complete_automation_claim_allowed, false);
+  assert.ok(first.report.evolution_improvements_ranked >= 1);
   assert.ok(first.report.operating_missions_created >= 1);
   assert.ok(first.report.mission_types.RECOVERY_MISSION >= 1);
   assert.ok(first.report.mission_outcomes.length >= 1);
@@ -46,6 +60,10 @@ try {
   assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_capability_snapshots').get().count, 1);
   assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_daily_baselines').get().count, 1);
   assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_learning_effects').get().count, 1);
+  assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_evolution_cycles').get().count, 1);
+  assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_site_health_checks').get().count, 11);
+  assert.ok(raw.prepare('SELECT COUNT(*) count FROM matrix_capability_graph').get().count >= 20);
+  assert.equal(assetRequests.length, 11);
   assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_watchdog_events').get().count >= 1, true);
   assert.equal(raw.prepare("SELECT state FROM matrix_capabilities WHERE capability_id='matrix-operating-system'").get().state, 'live_verified');
   assert.equal(raw.prepare("SELECT COUNT(*) count FROM matrix_events WHERE event_type='cycle.completed'").get().count, 1);
@@ -56,6 +74,9 @@ try {
   assert.equal(doctorBody.ok, true);
   assert.ok(doctorBody.latest_boot);
   assert.equal(doctorBody.constitution.valid, true);
+  assert.ok(doctorBody.evolution);
+  assert.ok(doctorBody.human_dependencies.open >= 1);
+  assert.equal(doctorBody.acceptance.length, 5);
 
   const missions = await handleMatrixOperationsRoute(new Request('https://matrixreprogrammed.com/api/ai-management/admin/matrix-operations/missions'), env);
   assert.equal(missions.status, 200);
@@ -81,6 +102,7 @@ try {
   assert.equal(second.ok, true);
   assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_capability_snapshots').get().count, 2);
   assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_daily_baselines').get().count, 1);
+  assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_evolution_cycles').get().count, 2);
   assert.ok(raw.prepare("SELECT COUNT(*) count FROM matrix_operating_missions WHERE mission_type='CAPABILITY_STAGNATION_MISSION'").get().count >= 1);
   assert.ok(second.report.mission_outcomes.some(item => item.status === 'running'));
 

@@ -40,10 +40,15 @@ class FixtureCollectionProvider {
 
 const raw = new DatabaseSync(':memory:');
 for (const migration of [
+  'migrations/0001_membership_foundation.sql', 'migrations/phase5_member_experience.sql',
+  'migrations/phase13_member_entitlement_datetime_fix.sql', 'migrations/phase6_paypal_subscriptions.sql',
+  'migrations/phase6_paypal_failure_counter_fix.sql',
   'migrations/phase9_ai_resource_orchestration.sql', 'migrations/phase10_ai_autonomy.sql',
   'migrations/phase11_local_job_queue.sql', 'migrations/phase12_opportunity_hunter.sql',
   'migrations/phase13_matrix_synergy.sql', 'migrations/public_investigation_api.sql',
-  'migrations/phase14_living_matrix.sql', 'migrations/phase15_matrix_value_hunter.sql'
+  'migrations/phase14_living_matrix.sql', 'migrations/phase15_matrix_value_hunter.sql',
+  'migrations/phase16_permissionless_value_harvester.sql', 'migrations/phase17_matrix_operating_system.sql',
+  'migrations/phase18_matrix_continuous_evolution.sql', 'migrations/phase19_matrix_capital_challenge.sql'
 ]) raw.exec(fs.readFileSync(migration, 'utf8'));
 
 const originalFetch = globalThis.fetch;
@@ -81,7 +86,8 @@ try {
   const destinationResponse = await handleValueHunterRoute(new Request('https://matrixreprogrammed.com/api/ai-management/admin/value-hunter/destinations', {
     method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({
       destination_id: 'matrix-eur-account', claimant_id: 'matrix-operating-entity', destination_type: 'payment-account',
-      destination_vault_reference: 'vault://destinations/matrix-eur-account', public_identifier_hash: 'a'.repeat(64), allowed_assets: ['EUR']
+      destination_vault_reference: 'vault://destinations/matrix-eur-account', public_identifier_hash: 'a'.repeat(64), allowed_assets: ['EUR'],
+      provider_adapter_id: 'paypal'
     })
   }), env);
   assert.equal(destinationResponse.status, 201);
@@ -133,12 +139,55 @@ try {
   assert.equal(raw.prepare("SELECT status FROM matrix_value_operations WHERE opportunity_id='matrix-proven-refund'").get().status, 'confirmed');
   assert.equal(raw.prepare("SELECT reconciled FROM matrix_value_receipts").get().reconciled, 1);
   assert.equal(raw.prepare("SELECT activation_allowed FROM matrix_value_improvement_proposals").get().activation_allowed, 0);
+  assert.equal(third.report.capital.status.received_net_minor, 125000);
+  assert.equal(third.report.capital.status.first_real_euro_received, true);
+  assert.equal(third.report.capital.status.next_milestone_minor, 1000000);
+  assert.equal(third.report.capital.financial_execution_enabled, false);
+  assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_capital_receipts').get().count, 1);
+  assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_capital_milestone_receipts').get().count, 4);
+  assert.ok(raw.prepare('SELECT COUNT(*) count FROM matrix_capital_opportunities').get().count >= 6);
+  assert.equal(raw.prepare("SELECT state FROM matrix_acceptance_receipts WHERE receipt_id='acceptance-value'").get().state, 'LIVE_VERIFIED');
 
   const fourth = await runValueHunterCycle(env, {
     trigger: 'integration-four', clock: () => new Date('2026-08-16T12:00:00.000Z'), providers
   });
   assert.equal(fourth.ok, true);
   assert.equal(provider.calls, 1, 'completed collection must never be submitted twice');
+
+  const insertPayPal = raw.prepare(`INSERT INTO paypal_payment_records(
+    id,subscription_id,provider_subscription_id,provider_payment_id,provider_event_id,payment_type,environment,status,
+    gross_amount,refund_amount,currency_code,paid_at,refunded_at,reversed_at,raw_resource_json,created_at,updated_at
+  ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
+  insertPayPal.run('payment-live-donation', null, null, 'PAYPAL-CAPTURE-1', 'PAYPAL-EVENT-1', 'donation', 'live', 'COMPLETED',
+    '3.00', null, 'EUR', '2026-08-16T13:00:00.000Z', null, null,
+    JSON.stringify({ matrix_environment: 'live', purchase_units: [{ payments: { captures: [{ seller_receivable_breakdown: { paypal_fee: { value: '0.20' } } }] } }] }),
+    '2026-08-16T13:00:00.000Z', '2026-08-16T13:00:00.000Z');
+  insertPayPal.run('payment-sandbox-donation', null, null, 'PAYPAL-SANDBOX-1', 'PAYPAL-SANDBOX-EVENT-1', 'donation', 'sandbox', 'COMPLETED',
+    '9999.00', null, 'EUR', '2026-08-16T13:00:00.000Z', null, null,
+    JSON.stringify({ matrix_environment: 'sandbox', purchase_units: [{ payments: { captures: [{ seller_receivable_breakdown: { paypal_fee: { value: '0.00' } } }] } }] }),
+    '2026-08-16T13:00:00.000Z', '2026-08-16T13:00:00.000Z');
+  insertPayPal.run('payment-live-missing-fee', null, null, 'PAYPAL-CAPTURE-NO-FEE', 'PAYPAL-EVENT-NO-FEE', 'capture', 'live', 'COMPLETED',
+    '10.00', null, 'EUR', '2026-08-16T13:00:00.000Z', null, null, '{}',
+    '2026-08-16T13:00:00.000Z', '2026-08-16T13:00:00.000Z');
+  const fifth = await runValueHunterCycle(env, {
+    trigger: 'integration-five', clock: () => new Date('2026-08-17T12:00:00.000Z'), providers
+  });
+  assert.equal(fifth.report.capital.status.received_net_minor, 125280);
+  assert.equal(fifth.report.capital.imported_receipts.paypal_live_receipts, 1);
+  assert.equal(fifth.report.capital.imported_receipts.paypal_live_completed_waiting_for_fee_evidence, 1);
+  assert.equal(raw.prepare("SELECT COUNT(*) count FROM matrix_capital_receipts WHERE source_class='DONATION'").get().count, 1);
+  assert.equal(raw.prepare("SELECT COUNT(*) count FROM matrix_capital_receipts WHERE external_reference='PAYPAL-SANDBOX-1'").get().count, 0);
+  assert.equal(raw.prepare("SELECT COUNT(*) count FROM matrix_capital_receipts WHERE external_reference='PAYPAL-CAPTURE-NO-FEE'").get().count, 0);
+
+  insertPayPal.run('payment-live-refund', null, null, 'PAYPAL-REFUND-1', 'PAYPAL-REFUND-EVENT-1', 'refund', 'live', 'COMPLETED',
+    null, '1.00', 'EUR', null, '2026-08-17T13:00:00.000Z', null, JSON.stringify({ matrix_environment: 'live' }),
+    '2026-08-17T13:00:00.000Z', '2026-08-17T13:00:00.000Z');
+  const sixth = await runValueHunterCycle(env, {
+    trigger: 'integration-six', clock: () => new Date('2026-08-18T12:00:00.000Z'), providers
+  });
+  assert.equal(sixth.report.capital.status.adjustments_minor, 100);
+  assert.equal(sixth.report.capital.status.received_net_minor, 125180);
+  assert.equal(raw.prepare('SELECT COUNT(*) count FROM matrix_capital_adjustments').get().count, 1);
 
   const secretResponse = await handleValueHunterRoute(new Request('https://matrixreprogrammed.com/api/ai-management/admin/value-hunter/claimants', {
     method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ claimant_id: 'unsafe', private_key: 'never-store-this' })
@@ -153,7 +202,13 @@ try {
   assert.equal(status.target.remaining_net_minor, 875000);
   assert.equal(status.truthful_status, 'discovery-and-proof-operational-collection-adapter-required');
   assert.deepEqual(status.installed_collection_adapters, []);
-  console.log('Value Hunter Worker integration passed: official discovery, same-host boundary, D1 persistence, Matrix claimant/destination, fail-closed readiness, durable collection, reconciliation, duplicate suppression, learning and truthful EUR 10,000 status.');
+  assert.equal(status.capital.truthful_status, 'first-real-euro-receipt-proven');
+  const capitalResponse = await handleValueHunterRoute(new Request('https://matrixreprogrammed.com/api/ai-management/admin/value-hunter/capital'), env);
+  const capital = await capitalResponse.json();
+  assert.equal(capital.challenge.received_net_minor, 125180);
+  assert.equal(capital.adjustments.length, 1);
+  assert.equal(capital.automatic_spending, false);
+  console.log('Value Hunter Worker integration passed: official discovery, same-host boundary, D1 persistence, Matrix claimant/destination, fail-closed readiness, durable collection, reconciliation, duplicate suppression, learning, capital milestones and truthful EUR status.');
 } finally {
   globalThis.fetch = originalFetch;
   raw.close();

@@ -25,9 +25,14 @@ for (const forbiddenColumn of ['private_key', 'seed_phrase', 'mnemonic', 'recove
 const production = read('src/worker-production-autonomy.js');
 for (const marker of [
   "from './worker-permissionless-value.js'", 'isPermissionlessHarvesterRoute', 'runScheduledPermissionlessHarvester',
-  'valueTask.then(() => runScheduledPermissionlessHarvester', 'permissionlessTask.then(() => runScheduledLivingMatrix',
-  'Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask])'
+  'valueTask.then(() => runScheduledPermissionlessHarvester', 'permissionlessTask.then(() => runScheduledLivingMatrix'
 ]) assert.ok(production.includes(marker), `missing production orchestration marker: ${marker}`);
+const scheduledJoin = [...production.matchAll(/await Promise\.all\(\[([\s\S]*?)\]\);/g)]
+  .map(match => match[1])
+  .find(value => value.includes('matrixOperationsTask')) || '';
+for (const task of ['productionTask', 'autonomyTask', 'recoveryTask', 'opportunityTask', 'capacityTask', 'valueTask', 'permissionlessTask', 'livingTask', 'matrixOperationsTask']) {
+  assert.match(scheduledJoin, new RegExp(`\\b${task}\\b`), `scheduled production join is missing ${task}`);
+}
 
 const eventCore = read('src/matrix-synergy-core.js');
 for (const eventType of ['value.permissionless.reconciled', 'value.permissionless.failed', 'value.permissionless.cycle.completed']) {

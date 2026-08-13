@@ -1,5 +1,6 @@
 import { MATRIX_LAW, MATRIX_LAW_SHA256 } from '../ai-management/matrix-core/matrix-constitution.mjs';
 import { brokerMatrixAction, classifyLearningEffect, computeCapabilityMetrics, planOperatingCycle } from '../ai-management/matrix-core/matrix-operating-system.mjs';
+import { CapabilityGapDetector, HumanDependencyLedger, MatrixEvolutionDirector, MatrixSiteOperator, buildCapabilitySelfModel, calculateAutomationReadiness } from '../ai-management/matrix-core/matrix-evolution-director.mjs';
 import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 const ROOT = '/api/ai-management/admin/matrix-operations';
@@ -8,7 +9,15 @@ const REQUIRED_TABLES = Object.freeze([
   'ai_feature_flags', 'ai_local_jobs', 'matrix_events', 'matrix_human_actions', 'matrix_capabilities',
   'matrix_constitution', 'matrix_system_components', 'matrix_operating_missions', 'matrix_capability_snapshots',
   'matrix_daily_baselines', 'matrix_learning_effects', 'matrix_boot_runs', 'matrix_watchdog_events',
-  'matrix_delegations', 'matrix_action_receipts'
+  'matrix_delegations', 'matrix_action_receipts', 'matrix_capability_graph', 'matrix_human_dependencies',
+  'matrix_site_health_checks', 'matrix_evolution_cycles', 'matrix_acceptance_receipts', 'matrix_permanent_objectives'
+]);
+
+const SITE_SURFACES = Object.freeze([
+  ['homepage', '/'], ['navigation-search', '/search.html'], ['ask-matrix', '/search.html?q=matrix'],
+  ['login', '/member-login.html'], ['mission-control', '/investigation-machine.html'], ['forum', '/forum.html'],
+  ['newsletter', '/newsletter.html'], ['payments', '/membership.html'], ['donations', '/atlas-lanes/donations.html'],
+  ['downloads', '/download-center.html'], ['evidence', '/evidence-vault.html']
 ]);
 
 function clean(value, maximum = 500) { return String(value ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, maximum); }
@@ -50,6 +59,86 @@ async function currentComponents(db) {
 async function snapshotHistory(db) {
   return (await rows(db.prepare(`SELECT matrix_effective_power AS effective_power,recorded_at FROM matrix_capability_snapshots
     ORDER BY recorded_at DESC LIMIT 400`))).map(item => ({ effectivePower: Number(item.effective_power || 0), recordedAt: item.recorded_at }));
+}
+
+async function existingCapabilityGraph(db) {
+  return (await rows(db.prepare(`SELECT capability_id,purpose,status,quality,throughput,dependencies_json,models_json,tools_json,
+    resources_json,tests_json,last_success,last_failure,known_limitations_json,human_dependencies_json,upgrade_candidates_json,
+    replacement_candidates_json FROM matrix_capability_graph ORDER BY capability_id`))).map(item => ({
+    ...item,
+    dependencies: parseJson(item.dependencies_json, []), models: parseJson(item.models_json, []), tools: parseJson(item.tools_json, []),
+    resources: parseJson(item.resources_json, []), tests: parseJson(item.tests_json, []), known_limitations: parseJson(item.known_limitations_json, []),
+    human_dependencies: parseJson(item.human_dependencies_json, []), upgrade_candidates: parseJson(item.upgrade_candidates_json, []),
+    replacement_candidates: parseJson(item.replacement_candidates_json, [])
+  }));
+}
+
+async function syncCapabilityGraph(db, graph, now) {
+  for (const capability of graph) {
+    await db.prepare(`INSERT INTO matrix_capability_graph(
+      capability_id,purpose,status,quality,throughput,dependencies_json,models_json,tools_json,resources_json,tests_json,
+      last_success,last_failure,known_limitations_json,human_dependencies_json,upgrade_candidates_json,replacement_candidates_json,
+      capability_expansion_grants_authority,updated_at
+    ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,0,?)
+    ON CONFLICT(capability_id) DO UPDATE SET purpose=excluded.purpose,status=excluded.status,quality=excluded.quality,
+      throughput=excluded.throughput,dependencies_json=excluded.dependencies_json,models_json=excluded.models_json,
+      tools_json=excluded.tools_json,resources_json=excluded.resources_json,tests_json=excluded.tests_json,
+      last_success=excluded.last_success,last_failure=excluded.last_failure,known_limitations_json=excluded.known_limitations_json,
+      human_dependencies_json=excluded.human_dependencies_json,upgrade_candidates_json=excluded.upgrade_candidates_json,
+      replacement_candidates_json=excluded.replacement_candidates_json,capability_expansion_grants_authority=0,updated_at=excluded.updated_at`).bind(
+      capability.capability_id, capability.purpose, capability.status, capability.quality, capability.throughput,
+      JSON.stringify(capability.dependencies), JSON.stringify(capability.models), JSON.stringify(capability.tools),
+      JSON.stringify(capability.resources), JSON.stringify(capability.tests), capability.last_success, capability.last_failure,
+      JSON.stringify(capability.known_limitations), JSON.stringify(capability.human_dependencies),
+      JSON.stringify(capability.upgrade_candidates), JSON.stringify(capability.replacement_candidates), now
+    ).run();
+  }
+}
+
+async function humanDependencies(db) {
+  return rows(db.prepare(`SELECT dependency_id,capability_id,action_required,reason,recurrence,technically_automatable,
+    upgrade_needed,status,automation_mission_id,updated_at FROM matrix_human_dependencies WHERE status!='resolved' ORDER BY updated_at DESC`));
+}
+
+async function acceptanceRequirements(db) {
+  return (await rows(db.prepare('SELECT receipt_id,loop_type,state,first_real_receipt,external_receipt_reference,verified_at FROM matrix_acceptance_receipts ORDER BY loop_type'))).map(item => ({
+    id: item.receipt_id,
+    label: `${item.loop_type} acceptance`,
+    status: item.state === 'LIVE_VERIFIED' ? 'LIVE_WORKING' : item.state,
+    first_real_receipt: Number(item.first_real_receipt) === 1,
+    external_receipt_reference: item.external_receipt_reference,
+    verified_at: item.verified_at
+  }));
+}
+
+async function probeSiteSurfaces(env, now) {
+  const probes = [];
+  for (const [surfaceId, route] of SITE_SURFACES) {
+    if (!env?.ASSETS?.fetch) {
+      probes.push({ surfaceId, route, configured: false, statusCode: 0, bytes: 0, latencyMs: 0, expectedContentType: 'text/html', minimumBytes: 100 });
+      continue;
+    }
+    const started = Date.now();
+    try {
+      const response = await env.ASSETS.fetch(new Request(new URL(route, 'https://matrixreprogrammed.com')));
+      const body = await response.clone().arrayBuffer();
+      probes.push({ surfaceId, route, configured: true, statusCode: response.status, bytes: body.byteLength, latencyMs: Date.now() - started, contentType: response.headers.get('content-type') || '', expectedContentType: 'text/html', minimumBytes: 100 });
+    } catch (error) {
+      probes.push({ surfaceId, route, configured: true, statusCode: 0, bytes: 0, latencyMs: Date.now() - started, contentType: '', expectedContentType: 'text/html', minimumBytes: 100, error: clean(error?.message || error, 300) });
+    }
+  }
+  return new MatrixSiteOperator().evaluate(probes, now);
+}
+
+async function persistSiteChecks(db, cycleId, report) {
+  for (const check of report.checks) {
+    await db.prepare(`INSERT OR REPLACE INTO matrix_site_health_checks(
+      check_id,cycle_id,surface_id,route,state,status_code,response_bytes,latency_ms,blockers_json,checked_at
+    ) VALUES(?,?,?,?,?,?,?,?,?,?)`).bind(
+      `site-${cycleId}-${check.surface_id}`, cycleId, check.surface_id, check.route, check.state, check.status_code,
+      check.response_bytes, check.latency_ms, JSON.stringify(check.blockers), check.checked_at
+    ).run();
+  }
 }
 
 async function refreshObservedComponents(db, now) {
@@ -214,6 +303,17 @@ async function persistBaseline(db, date, metrics, missionPlan, effect, now) {
   ).run();
 }
 
+async function persistEvolutionCycle(db, { cycleId, evolution, capabilityGaps, humanSummary, siteHealth, readiness, now }) {
+  await db.prepare(`INSERT OR REPLACE INTO matrix_evolution_cycles(
+    evolution_cycle_id,operating_cycle_id,signals_json,improvement_missions_json,capability_gaps_json,
+    human_dependency_summary_json,site_health_summary_json,automation_readiness_json,production_self_deploy,status,created_at
+  ) VALUES(?,?,?,?,?,?,?,?,0,?,?)`).bind(
+    `evolution-${cycleId}`, cycleId, JSON.stringify(evolution.signals_inspected), JSON.stringify(evolution.improvements),
+    JSON.stringify(capabilityGaps), JSON.stringify(humanSummary), JSON.stringify({ working: siteHealth.working, total: siteHealth.total, failures: siteHealth.failures }),
+    JSON.stringify(readiness), siteHealth.failures.length ? 'completed_with_findings' : 'completed', now
+  ).run();
+}
+
 export async function runMatrixOperatingCycle(env, { trigger = 'scheduled-watchdog', clock = () => new Date() } = {}) {
   if (!enabled(env?.MATRIX_OPERATING_SYSTEM_ENABLED, true)) return { ok: false, skipped: true, reason: 'matrix-operating-system-disabled' };
   if (!(await matrixOperationsSchemaReady(env))) return { ok: false, skipped: true, reason: 'matrix-operating-system-schema-unavailable' };
@@ -235,17 +335,40 @@ export async function runMatrixOperatingCycle(env, { trigger = 'scheduled-watchd
   }
 
   await refreshObservedComponents(db, now);
-  const [components, history, signals, activeDelegations] = await Promise.all([currentComponents(db), snapshotHistory(db), healthSignals(db), delegations(db)]);
+  const [components, history, signals, activeDelegations, previousGraph, rawHumanDependencies, acceptance] = await Promise.all([
+    currentComponents(db), snapshotHistory(db), healthSignals(db), delegations(db), existingCapabilityGraph(db), humanDependencies(db), acceptanceRequirements(db)
+  ]);
+  const graph = buildCapabilitySelfModel(components, previousGraph);
+  await syncCapabilityGraph(db, graph, now);
+  const siteHealth = await probeSiteSurfaces(env, now);
+  await persistSiteChecks(db, cycleId, siteHealth);
+  const humanSummary = new HumanDependencyLedger().analyze(rawHumanDependencies.map(item => ({
+    ...item,
+    technically_automatable: Number(item.technically_automatable) === 1
+  })));
+  const existingGaps = componentGaps(components);
+  const evolution = new MatrixEvolutionDirector().inspect({
+    failed_jobs: signals.failedCycles,
+    broken_pages: siteHealth.failures.map(item => ({ id: item.surface_id, reason: `${item.route}: ${item.blockers.join(', ')}`, severity: item.state === 'BROKEN' ? 95 : 75, required_capability: `site-${item.surface_id}` })),
+    manual_dependencies: humanSummary.automation_missions.map(item => ({ id: item.id, reason: item.reason, objective: item.label, severity: item.priority, required_capability: item.id })),
+    architecture_debt: existingGaps.map(item => ({ id: item.id, reason: item.reason, severity: item.priority, required_capability: item.id }))
+  }, now);
+  const evolutionGaps = evolution.improvements.map(item => ({ id: item.required_capability, label: item.objective, reason: item.reason, priority: item.priority }));
+  const combinedGaps = [...new Map([...existingGaps, ...evolutionGaps].sort((a, b) => b.priority - a.priority).map(item => [item.id, item])).values()].slice(0, 20);
+  const capabilityGaps = new CapabilityGapDetector().detect({ requirements: combinedGaps.map(item => item.id), capabilities: graph });
+  const readiness = calculateAutomationReadiness([
+    ...graph.map(item => ({ id: item.capability_id, status: item.status })),
+    ...acceptance
+  ]);
   const metrics = computeCapabilityMetrics(components, history);
   const stagnationDays = metrics.daily_evolution_score <= 0 && history.length > 0 ? 1 : 0;
-  const gaps = componentGaps(components);
   const plan = planOperatingCycle({
     now,
     failedCycles: signals.failedCycles,
     stalledQueueCount: signals.stalledQueueCount + signals.pendingHumanActions,
     stagnationDays,
-    missingCapabilities: gaps,
-    blockedDependencies: gaps.filter(item => components.find(component => component.componentId === item.id)?.state === 'BLOCKED'),
+    missingCapabilities: combinedGaps,
+    blockedDependencies: existingGaps.filter(item => components.find(component => component.componentId === item.id)?.state === 'BLOCKED'),
     missionUnits: 100
   });
   const missionAuthorizationFailures = [];
@@ -259,6 +382,7 @@ export async function runMatrixOperatingCycle(env, { trigger = 'scheduled-watchd
   await persistSnapshot(db, cycleId, metrics, now);
   const effect = await persistLearning(db, cycleId, metrics, history, now);
   await persistBaseline(db, date, metrics, plan, effect, now);
+  await persistEvolutionCycle(db, { cycleId, evolution, capabilityGaps, humanSummary, siteHealth, readiness, now });
 
   const report = {
     report_type: 'Matrix Operating Report', cycle_id: cycleId, trigger, generated_at: now,
@@ -268,6 +392,11 @@ export async function runMatrixOperatingCycle(env, { trigger = 'scheduled-watchd
     daily_evolution_score: metrics.daily_evolution_score,
     windows: metrics.windows,
     component_states: metrics.components,
+    automation_readiness: readiness,
+    capability_gaps: capabilityGaps,
+    evolution_improvements_ranked: evolution.improvements.length,
+    site_health: { working: siteHealth.working, total: siteHealth.total, failures: siteHealth.failures },
+    human_dependencies: { open: humanSummary.open_count, automatable: humanSummary.automatable_open_count, owner_only: humanSummary.owner_only_count },
     operating_missions_created: plan.missions.length - missionAuthorizationFailures.length,
     mission_types: plan.missions.reduce((result, item) => ({ ...result, [item.mission_type]: (result[item.mission_type] || 0) + 1 }), {}),
     mission_outcomes: missionOutcomes,
@@ -285,7 +414,12 @@ export async function runMatrixOperatingCycle(env, { trigger = 'scheduled-watchd
     watchdog_verified=1,report_json=?,completed_at=? WHERE boot_id=?`).bind(plan.missions.some(item => item.priority >= 95) ? 'degraded' : 'healthy', JSON.stringify(report), now, bootId).run();
   await db.prepare(`UPDATE matrix_system_components SET state='LIVE_WORKING',reliability=1,blocker=NULL,last_verified_at=?,updated_at=?
     WHERE component_id IN ('matrix-constitution','matrix-mission-director','matrix-capability-graph','matrix-learning-director',
-      'matrix-health-director','matrix-boot-director','owner-delegation-vault','matrix-action-broker')`).bind(now, now).run();
+      'matrix-health-director','matrix-boot-director','owner-delegation-vault','matrix-action-broker','matrix-evolution-director',
+      'capability-gap-detector','human-dependency-ledger','autonomy-watchdog')`).bind(now, now).run();
+  if (siteHealth.all_working) {
+    await db.prepare(`UPDATE matrix_system_components SET state='LIVE_WORKING',reliability=1,blocker=NULL,last_verified_at=?,updated_at=?,health_evidence_json=?
+      WHERE component_id='matrix-site-operator'`).bind(now, now, JSON.stringify([`${siteHealth.working}/${siteHealth.total} bounded site surfaces passed`])).run();
+  }
   await db.prepare(`UPDATE matrix_capabilities SET dependencies_reachable=1,data_connected=1,evidence_ready=1,live_verification_passed=1,
     state='live_verified',blocker=NULL,checked_at=?,evidence_json=? WHERE capability_id='matrix-operating-system'`).bind(
     now, JSON.stringify({ cycle_id: cycleId, law_sha256: MATRIX_LAW_SHA256, missions: plan.missions.length, cost_confirmed_zero: true })
@@ -303,14 +437,19 @@ export async function runMatrixOperatingCycle(env, { trigger = 'scheduled-watchd
 }
 
 async function doctor(env) {
-  if (!(await matrixOperationsSchemaReady(env))) return { ok: false, state: 'WORKING_NOT_LIVE', blocker: 'matrix-operating-system-schema-unavailable', exact_action: 'Run the controlled Cloudflare release so migrations/phase17_matrix_operating_system.sql is applied before Worker deployment.' };
+  if (!(await matrixOperationsSchemaReady(env))) return { ok: false, state: 'WORKING_NOT_LIVE', blocker: 'matrix-operating-system-schema-unavailable', exact_action: 'Run the controlled Cloudflare release so Phase 17 and Phase 18 migrations are applied before Worker deployment.' };
   const db = env.MEMBERS_DB;
-  const [constitution, components, latestBoot, missionCounts, latestSnapshot, runtimeFlag] = await Promise.all([
+  const [constitution, components, latestBoot, missionCounts, latestSnapshot, runtimeFlag, latestEvolution, dependencyCounts, acceptance] = await Promise.all([
     constitutionStatus(db), currentComponents(db),
     db.prepare('SELECT boot_id,status,report_json,started_at,completed_at FROM matrix_boot_runs ORDER BY started_at DESC LIMIT 1').first(),
     db.prepare(`SELECT COUNT(*) AS total,SUM(CASE WHEN status='queued' THEN 1 ELSE 0 END) AS queued,SUM(CASE WHEN status='blocked' THEN 1 ELSE 0 END) AS blocked,SUM(CASE WHEN status='completed' THEN 1 ELSE 0 END) AS completed FROM matrix_operating_missions`).first(),
     db.prepare('SELECT matrix_capability_index,matrix_effective_power,daily_evolution_score,windows_json,recorded_at FROM matrix_capability_snapshots ORDER BY recorded_at DESC LIMIT 1').first(),
-    db.prepare("SELECT flag_name,enabled,value_json,reason,updated_at FROM ai_feature_flags WHERE flag_name='MATRIX_OPERATING_SYSTEM_ENABLED' LIMIT 1").first()
+    db.prepare("SELECT flag_name,enabled,value_json,reason,updated_at FROM ai_feature_flags WHERE flag_name='MATRIX_OPERATING_SYSTEM_ENABLED' LIMIT 1").first(),
+    db.prepare('SELECT evolution_cycle_id,status,automation_readiness_json,site_health_summary_json,human_dependency_summary_json,created_at FROM matrix_evolution_cycles ORDER BY created_at DESC LIMIT 1').first(),
+    db.prepare(`SELECT COUNT(*) AS total,SUM(CASE WHEN status!='resolved' THEN 1 ELSE 0 END) AS open,
+      SUM(CASE WHEN status!='resolved' AND technically_automatable=1 THEN 1 ELSE 0 END) AS automatable,
+      SUM(CASE WHEN status='owner-only' THEN 1 ELSE 0 END) AS owner_only FROM matrix_human_dependencies`).first(),
+    acceptanceRequirements(db)
   ]);
   return {
     ok: constitution.valid,
@@ -321,6 +460,9 @@ async function doctor(env) {
     metrics: latestSnapshot ? { ...latestSnapshot, windows: parseJson(latestSnapshot.windows_json, {}) } : null,
     missions: missionCounts,
     components,
+    evolution: latestEvolution ? { ...latestEvolution, automation_readiness: parseJson(latestEvolution.automation_readiness_json, {}), site_health: parseJson(latestEvolution.site_health_summary_json, {}), human_dependencies: parseJson(latestEvolution.human_dependency_summary_json, {}) } : null,
+    human_dependencies: dependencyCounts,
+    acceptance,
     runtime_flag: runtimeFlag,
     exact_actions: Number(runtimeFlag?.enabled) !== 1
       ? ["Set D1 ai_feature_flags.MATRIX_OPERATING_SYSTEM_ENABLED to 1 through the controlled owner workflow, then POST the start route."]
@@ -391,4 +533,8 @@ export async function handleMatrixOperationsRoute(request, env) {
 
 export async function runScheduledMatrixOperations(env) { return runMatrixOperatingCycle(env, { trigger: 'scheduled-watchdog' }); }
 
-export const matrixOperationsWorkerInternals = { ROOT, ROUTES, REQUIRED_TABLES, constitutionStatus, currentComponents, refreshObservedComponents, healthSignals, componentGaps, advanceOperatingMissions };
+export const matrixOperationsWorkerInternals = {
+  ROOT, ROUTES, REQUIRED_TABLES, SITE_SURFACES, constitutionStatus, currentComponents, existingCapabilityGraph,
+  syncCapabilityGraph, humanDependencies, acceptanceRequirements, probeSiteSurfaces, persistSiteChecks,
+  refreshObservedComponents, healthSignals, componentGaps, advanceOperatingMissions, persistEvolutionCycle
+};

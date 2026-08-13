@@ -198,10 +198,50 @@ const valueStatus = await request('/api/ai-management/admin/value-hunter');
 assert(valueStatus.status === 200 && valueStatus.data?.ok === true, 'Live Value Hunter status endpoint failed');
 assert(valueStatus.data?.target?.currency === 'EUR' && Number(valueStatus.data?.target?.target_net_minor) === 1000000, 'Value Hunter EUR 10,000 net objective is not live');
 assert(Array.isArray(valueStatus.data?.installed_collection_adapters), 'Value Hunter did not truthfully report installed collection adapters');
+assert(valueStatus.data?.capital?.challenge?.challenge_id === 'matrix-capital-challenge-eur-v1', 'Matrix Capital Challenge status is not live');
+assert(['awaiting-first-real-euro-receipt','first-real-euro-receipt-proven'].includes(valueStatus.data?.capital?.truthful_status), 'Matrix Capital Challenge returned a false or unknown receipt state');
 const valueCycle = await request('/api/ai-management/admin/value-hunter', { method: 'POST', body: {} });
 assert(valueCycle.status === 200 && valueCycle.data?.ok === true, 'Live Value Hunter daily cycle failed');
 assert(Number(valueCycle.data?.report?.objective?.target_net_minor) === 1000000, 'Value Hunter cycle did not preserve the EUR 10,000 objective');
 assert(/deterministic proof/i.test(String(valueCycle.data?.report?.policy || '')), 'Value Hunter cycle did not prove the entitlement boundary');
+assert(valueCycle.data?.report?.capital?.receipt_only_accounting === true, 'Capital cycle did not enforce receipt-only accounting');
+assert(valueCycle.data?.report?.capital?.automatic_spending === false, 'Capital cycle unexpectedly allows automatic spending');
+assert(valueCycle.data?.report?.capital?.financial_execution_enabled === false, 'Capital financial execution must remain disabled until a method-specific live gate is configured');
+const capitalStatus = await request('/api/ai-management/admin/value-hunter/capital');
+assert(capitalStatus.status === 200 && capitalStatus.data?.ok === true, 'Live Matrix Capital Challenge endpoint failed');
+const capitalReceiptTotal = Number(capitalStatus.data?.receipts?.reduce((total, receipt) => total + Number(receipt.eur_net_minor || 0), 0) || 0);
+const capitalAdjustmentTotal = Number(capitalStatus.data?.adjustments?.reduce((total, adjustment) => total + Number(adjustment.eur_amount_minor || 0), 0) || 0);
+assert(Number(capitalStatus.data?.challenge?.received_net_minor || 0) === Math.max(0, capitalReceiptTotal - capitalAdjustmentTotal), 'Capital total does not reconcile to returned receipts minus verified adjustments');
+assert(Number(capitalStatus.data?.challenge?.operational_claim_allowed || 0) === 0 || (Number(capitalStatus.data?.challenge?.baseline_net_minor || 0) + Number(capitalStatus.data?.challenge?.received_net_minor || 0) >= 100 && capitalStatus.data?.challenge?.first_real_receipt_id), 'Capital Challenge claimed operational status before its first real EUR receipt');
+
+const bountyUnauthorized = await request('/api/ai-management/admin/bounty-engine/doctor', { authorized: false });
+assert(bountyUnauthorized.status === 403, `Owner-only bounty endpoint did not reject an unauthenticated request; got ${bountyUnauthorized.status}`);
+const bountyCycle = await request('/api/ai-management/admin/bounty-engine', { method: 'POST', body: {} });
+assert(bountyCycle.status === 200 && bountyCycle.data?.ok === true, 'Live Bounty Completion Engine cycle failed');
+const bountyCycleReport = bountyCycle.data?.report || bountyCycle.data;
+assert(['ENGINE OPERATIONAL / FIRST RECEIPT PENDING','REAL_OPPORTUNITY_IN_PROGRESS','REAL_RECEIPT_VERIFIED'].includes(bountyCycleReport?.truth), 'Bounty engine returned an unknown truth state');
+assert(bountyCycleReport?.automatic_claims === false && bountyCycleReport?.automatic_submissions === false, 'Bounty engine unexpectedly performed or enabled an external write');
+assert(bountyCycleReport?.security_execution === false, 'Security bounty execution must remain disabled');
+const bountyDoctor = await request('/api/ai-management/admin/bounty-engine/doctor');
+assert(bountyDoctor.status === 200 && bountyDoctor.data?.ok === true && bountyDoctor.data?.schema_ready === true, 'Live Bounty Completion Engine doctor failed');
+assert(bountyDoctor.data?.consequential_actions_executed_by_worker === 0, 'Bounty engine executed an unapproved consequential action');
+
+const publicInvestigation = await request('/api/investigate', {
+  method: 'POST',
+  authorized: false,
+  body: {
+    question: 'What current official records describe artificial intelligence safety policy?',
+    mode: 'deep',
+    refresh: true
+  }
+});
+assert([200, 202].includes(publicInvestigation.status) && publicInvestigation.data?.ok === true, 'Live Ask Matrix fresh-source investigation failed');
+assert(publicInvestigation.data?.proof?.auditor_passed === true, 'Live Ask Matrix fresh-source auditor did not pass');
+assert(Number(publicInvestigation.data?.proof?.fresh_source_count || 0) >= 2, 'Live Ask Matrix did not select fresh official evidence');
+assert(Number(publicInvestigation.data?.proof?.independent_publisher_count || 0) >= 2, 'Live Ask Matrix did not use two independent official publishers');
+assert(publicInvestigation.data?.proof?.qualifying_evidence_search?.performed === true, 'Live Ask Matrix did not search for corrections, withdrawals and contrary evidence');
+assert(Array.isArray(publicInvestigation.data?.proof?.provenance) && publicInvestigation.data.proof.provenance.every(item => item.source_url && item.retrieved_at && /^[a-f0-9]{64}$/.test(String(item.response_content_sha256 || ''))), 'Live Ask Matrix fresh provenance is incomplete');
+assert((publicInvestigation.data?.result?.evidence_ids || []).every(id => (publicInvestigation.data?.evidence_used || []).some(item => item.evidence_id === id)), 'Live Ask Matrix returned a citation outside the persisted evidence set');
 
 const livingUnauthorized = await request('/api/matrix/admin/living-cycle', { authorized: false });
 assert(livingUnauthorized.status === 403, `Owner-only Living Matrix endpoint did not reject an unauthenticated request; got ${livingUnauthorized.status}`);
@@ -224,10 +264,15 @@ assert(matrixOperationsCycle.data?.report?.law_sha256 === '2f440056e992d3edbe9dc
 assert(matrixOperationsCycle.data?.report?.constitution_verified === true, 'Live Matrix operating cycle did not verify the immutable D1 constitution');
 assert(Number(matrixOperationsCycle.data?.report?.consequential_actions_executed) === 0, 'Matrix operating cycle unexpectedly executed a consequential action');
 assert(matrixOperationsCycle.data?.report?.cost_confirmed_zero === true, 'Matrix operating cycle did not confirm zero monetary cost');
+assert(Number(matrixOperationsCycle.data?.report?.site_health?.total) >= 10, 'Matrix Site Operator did not probe the bounded production surfaces');
+assert(matrixOperationsCycle.data?.report?.automation_readiness?.complete_automation_claim_allowed === false, 'Matrix falsely claimed complete automation before every live receipt exists');
+assert(Array.isArray(matrixOperationsCycle.data?.report?.capability_gaps), 'Matrix evolution cycle did not expose capability gaps');
 const matrixOperationsDoctor = await request('/api/ai-management/admin/matrix-operations/doctor');
 assert(matrixOperationsDoctor.status === 200 && matrixOperationsDoctor.data?.ok === true, 'Live Matrix operations doctor failed');
 assert(matrixOperationsDoctor.data?.constitution?.valid === true, 'Live Matrix operations doctor did not verify the constitution');
 assert(matrixOperationsDoctor.data?.state === 'LIVE_WORKING', `Matrix operations is not live-working after boot; got ${matrixOperationsDoctor.data?.state || 'missing'}`);
+assert(matrixOperationsDoctor.data?.evolution, 'Matrix evolution receipt is missing from doctor');
+assert(Array.isArray(matrixOperationsDoctor.data?.acceptance) && matrixOperationsDoctor.data.acceptance.length === 5, 'Matrix acceptance receipt classes are incomplete');
 const blockedDestructiveAction = await request('/api/ai-management/admin/matrix-operations/action/check', {
   method: 'POST',
   body: { actionType: 'DELETE_DATABASE', consequenceClass: 'DESTRUCTIVE', scope: 'matrix-internal', amountMinor: 0, boundedScope: true, simulationPassed: true, rollbackReady: true }
@@ -311,6 +356,29 @@ const proof = {
     readyToClaim: valueCycle.data.report.ready_to_claim,
     truthfulStatus: valueCycle.data.report.status.truthful_status,
     installedCollectionAdapters: valueCycle.data.report.status.installed_collection_adapters
+  },
+  bountyEngine: {
+    state: bountyCycleReport.truth,
+    discovered: bountyCycleReport.discovered_count,
+    feasible: bountyCycleReport.feasible_count,
+    selected: bountyCycleReport.selected_count,
+    active: bountyDoctor.data.active_count,
+    reconciledReceipts: bountyDoctor.data.reconciled_receipts,
+    reconciledNetEurMinor: bountyDoctor.data.reconciled_net_eur_minor,
+    externalWrites: false,
+    securityExecution: false,
+    unauthorizedStatus: bountyUnauthorized.status
+  },
+  publicInvestigation: {
+    state: publicInvestigation.data.status,
+    investigationId: publicInvestigation.data.investigation_id,
+    freshSourceCount: publicInvestigation.data.proof.fresh_source_count,
+    independentPublisherCount: publicInvestigation.data.proof.independent_publisher_count,
+    auditorPassed: publicInvestigation.data.proof.auditor_passed,
+    qualifyingSearchPerformed: publicInvestigation.data.proof.qualifying_evidence_search.performed,
+    evidenceIds: publicInvestigation.data.result.evidence_ids,
+    sourceRoutes: publicInvestigation.data.result.source_routes,
+    monitoringHook: publicInvestigation.data.proof.monitoring_hook
   },
   livingMatrix: {
     status: livingCycle.data.status,

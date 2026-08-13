@@ -3,10 +3,10 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const PROFILES = [
-  { id: 'classification', prompt: 'Classify this public-record statement as FACT, ALLEGATION, INFERENCE, or UNKNOWN. Reply with exactly FACT: A filed court judgment is a public record.', expect: /FACT/i, maxTokens: 16 },
-  { id: 'reasoning', prompt: 'Evidence A says 17 records. Evidence B says 25 different records. Reply with only the total number.', expect: /42/, maxTokens: 16 },
-  { id: 'structured-extraction', prompt: 'Return JSON only with keys status and evidence_count. status must be verified and evidence_count must be 2.', expect: /"status"\s*:\s*"verified"[\s\S]*"evidence_count"\s*:\s*2|"evidence_count"\s*:\s*2[\s\S]*"status"\s*:\s*"verified"/i, maxTokens: 64 },
-  { id: 'bounded-synthesis', prompt: `${'Public evidence sentence. '.repeat(80)}\nReply with exactly: BOUNDED`, expect: /BOUNDED/i, maxTokens: 16 }
+  { id: 'classification', prompt: 'Classify this public-record statement as FACT, ALLEGATION, INFERENCE, or UNKNOWN. Reply with exactly FACT: A filed court judgment is a public record.\n/no_think', expect: /FACT/i, maxTokens: 32 },
+  { id: 'reasoning', prompt: 'Evidence A says 17 records. Evidence B says 25 different records. Reply with only the total number.\n/no_think', expect: /42/, maxTokens: 32 },
+  { id: 'structured-extraction', prompt: 'Return JSON only with keys status and evidence_count. status must be verified and evidence_count must be 2.\n/no_think', expect: /"status"\s*:\s*"verified"[\s\S]*"evidence_count"\s*:\s*2|"evidence_count"\s*:\s*2[\s\S]*"status"\s*:\s*"verified"/i, maxTokens: 96 },
+  { id: 'bounded-synthesis', prompt: `${'Public evidence sentence. '.repeat(80)}\nReply with exactly: BOUNDED\n/no_think`, expect: /BOUNDED/i, maxTokens: 32 }
 ];
 
 const EMBEDDING_PROFILES = [
@@ -84,7 +84,7 @@ export function applyBenchmarkScores(resources = [], report = null) {
   return resources.map(resource => {
     const result = benchmarked.get(resource.resource_id);
     if (!result) return resource;
-    if (result.status !== 'measured') {
+    if (result.status !== 'measured' || Number(result.passed_profiles || 0) < Math.max(1, Math.ceil(Number(result.total_profiles || 0) / 2))) {
       return {
         ...resource,
         enabled: false,
@@ -131,6 +131,26 @@ export async function benchmarkLocalRuntime(runtime = {}, { fetchImpl = globalTh
   const cpuDurationMs = Math.max(1, Date.now() - cpuStarted);
   const models = [];
   for (const resource of runtime.resources || []) {
+    if (resource.enabled !== true) {
+      models.push({
+        resource_id: resource.resource_id,
+        model_id: resource.metadata?.model_id || resource.service_name,
+        protocol: resource.metadata?.protocol || null,
+        status: 'skipped-ineligible',
+        reason: resource.metadata?.memory_admission_passed === false ? 'memory-admission-gate' : 'resource-disabled',
+        total_profiles: 0,
+        passed_profiles: 0,
+        failed_profiles: 0,
+        success_rate: 0,
+        p50_latency_ms: null,
+        quality_score: 0,
+        reliability_score: 0,
+        latency_score: 0,
+        composite_score: 0,
+        results: []
+      });
+      continue;
+    }
     const results = [];
     const profiles = resource.capability_types?.includes('embeddings') && !resource.capability_types?.includes('llm') ? EMBEDDING_PROFILES : PROFILES;
     for (const profile of profiles) {

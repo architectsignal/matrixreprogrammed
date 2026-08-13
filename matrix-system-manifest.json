@@ -63,9 +63,19 @@
       "implementation": "src/worker-public-investigation.js",
       "state": "PARTIAL",
       "capacity_units": 1,
-      "dependencies": ["public-evidence-corpus", "D1"],
-      "health_evidence": ["public-investigation-test"],
+      "dependencies": ["public-evidence-corpus", "official-public-source-adapters", "D1"],
+      "health_evidence": ["public-investigation-test", "official-fresh-source-director-test", "fresh-public-investigation-worker-integration-test", "phase21-migration-rehearsal"],
       "blocker": "A current production investigation receipt is required before this can be labelled LIVE_WORKING."
+    },
+    {
+      "component_id": "fresh-public-investigation",
+      "director": "OfficialFreshSourceDirector",
+      "implementation": "ai-management/public-investigation/official-fresh-source-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 2,
+      "dependencies": ["GOV.UK public API", "U.S. Federal Register public API", "D1 proof ledger"],
+      "health_evidence": ["official-fresh-source-director-test", "fresh-public-investigation-worker-integration-test", "phase21-migration-rehearsal", "live-official-public-api-proof"],
+      "blocker": "A production investigation receipt from the deployed Phase 21 Worker is required before this can be labelled LIVE_WORKING."
     },
     {
       "component_id": "resource-hunter",
@@ -198,6 +208,76 @@
       "blocker": "Code improvements are staged and cannot self-deploy to production."
     },
     {
+      "component_id": "matrix-evolution-director",
+      "director": "MatrixEvolutionDirector",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-capability-graph", "matrix-learning-director", "protected-self-improvement"],
+      "health_evidence": ["matrix-continuous-evolution-contract-test", "matrix-operating-system-worker-integration-test"],
+      "blocker": "A production evolution-cycle receipt is required."
+    },
+    {
+      "component_id": "capability-gap-detector",
+      "director": "CapabilityGapDetector",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-capability-graph", "matrix-operating-missions"],
+      "health_evidence": ["matrix-continuous-evolution-contract-test"],
+      "blocker": "A production gap-to-mission receipt is required."
+    },
+    {
+      "component_id": "human-dependency-ledger",
+      "director": "HumanDependencyLedger",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-human-dependencies"],
+      "health_evidence": ["phase18-migration-rehearsal"],
+      "blocker": "Production dependency classification has not run."
+    },
+    {
+      "component_id": "matrix-site-operator",
+      "director": "MatrixSiteOperator",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["cloudflare-assets", "matrix-site-health-checks"],
+      "health_evidence": ["matrix-operating-system-worker-integration-test"],
+      "blocker": "Bounded production surface probes have not run."
+    },
+    {
+      "component_id": "matrix-capital-challenge",
+      "director": "CapitalAcquisitionDirector",
+      "implementation": "ai-management/value-hunter/matrix-capital-challenge.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-value-receipts", "matrix-capital-destination-registry", "matrix-constitution"],
+      "health_evidence": ["matrix-capital-challenge-contract-test", "phase19-migration-rehearsal"],
+      "blocker": "No real external EUR receipt has been reconciled to an approved Matrix destination."
+    },
+    {
+      "component_id": "novel-opportunity-director",
+      "director": "NovelOpportunityDirector",
+      "implementation": "ai-management/value-hunter/matrix-capital-challenge.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-opportunity-graph", "matrix-capability-graph"],
+      "health_evidence": ["matrix-capital-challenge-contract-test"],
+      "blocker": "Generated hypotheses require real bounded experiment receipts before promotion."
+    },
+    {
+      "component_id": "revenue-creation-director",
+      "director": "RevenueCreationDirector",
+      "implementation": "ai-management/value-hunter/matrix-capital-challenge.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-site-assets", "approved-payment-destinations"],
+      "health_evidence": ["matrix-capital-challenge-contract-test"],
+      "blocker": "No production conversion receipt has been reconciled."
+    },
+    {
       "component_id": "cloudflare-production-release",
       "director": "MatrixActionBroker",
       "implementation": ".github/workflows/deploy.yml",
@@ -206,6 +286,16 @@
       "dependencies": ["healthy-zero-overage-budget-snapshot", "owner-workflow-dispatch", "cloudflare-credentials"],
       "health_evidence": ["production-deploy-guard"],
       "blocker": "The repository zero-overage policy blocks a production release while Cloudflare build usage is billable, stale, or unknown."
+    },
+    {
+      "component_id": "bounty-completion-engine",
+      "director": "BountyCompletionDirector",
+      "implementation": "src/worker-bounty-engine.js",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-capital-challenge", "official-bounty-source-adapters", "isolated-workspace", "delegated-github", "approved-payout-destination"],
+      "health_evidence": ["bounty-completion-engine-contract-test", "bounty-source-adapters-test", "bounty-worker-integration-test", "phase20-migration-rehearsal"],
+      "blocker": "First real bounty receipt is pending; platform identity, current rules permission, isolated workspace and payout onboarding are not yet production-configured."
     }
   ],
   "required_boot_order": [
@@ -218,11 +308,20 @@
     "matrix-action-broker",
     "matrix-health-director",
     "matrix-boot-director",
+    "matrix-evolution-director",
+    "capability-gap-detector",
+    "human-dependency-ledger",
+    "matrix-site-operator",
     "living-matrix",
     "ask-matrix",
+    "fresh-public-investigation",
     "resource-hunter",
     "owner-local-compute",
     "claim-value-hunter",
+    "matrix-capital-challenge",
+    "novel-opportunity-director",
+    "revenue-creation-director",
+    "bounty-completion-engine",
     "permissionless-value-harvester",
     "protected-self-improvement"
   ]

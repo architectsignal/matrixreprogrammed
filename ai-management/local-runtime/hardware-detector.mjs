@@ -152,11 +152,13 @@ function normalizeOpenAiModels(payload, endpoint, protocol, clock) {
   return (payload?.data || payload?.models || []).map(item => {
     const modelId = item.id || item.name || item.model;
     const declaredCapabilities = Array.isArray(item.capabilities) ? item.capabilities : [];
-    const capabilities = declaredCapabilities.length
-      ? declaredCapabilities
-      : /(?:^|[-_.])(embed|embedding)(?:$|[-_.])/i.test(String(modelId || ''))
-        ? ['embeddings']
-        : ['llm.generate'];
+    const capabilities = item.type === 'embeddings' || /(?:^|[-_.])(embed|embedding)(?:$|[-_.])/i.test(String(modelId || ''))
+      ? ['embeddings']
+      : item.type === 'llm'
+        ? ['llm.generate']
+        : declaredCapabilities.some(value => /embed/i.test(String(value)))
+          ? ['embeddings']
+          : ['llm.generate'];
     return {
       model_id: modelId, display_name: item.name || modelId, protocol, endpoint,
       modified_at: item.created ? new Date(Number(item.created) * 1000).toISOString() : null,
@@ -164,10 +166,21 @@ function normalizeOpenAiModels(payload, endpoint, protocol, clock) {
       parameters_billion: inferParametersBillion(modelId, item),
       quantization: item.quantization || null,
       context_length: number(item.context_length ?? item.max_context_length, 32768),
+      runtime_state: item.state || null,
+      publisher: item.publisher || null,
       capabilities,
       last_seen: clock().toISOString()
     };
   }).filter(model => model.model_id);
+}
+
+function mergeOpenAiModelDetails(models = [], payload = null) {
+  const details = new Map((payload?.data || payload?.models || []).map(item => [String(item.id || item.name || item.model || ''), item]));
+  return models.map(model => {
+    const detail = details.get(String(model.model_id));
+    if (!detail) return model;
+    return normalizeOpenAiModels({ data: [{ ...detail, id: model.model_id }] }, model.endpoint, model.protocol, () => new Date(model.last_seen))[0] || model;
+  });
 }
 
 export async function discoverLocalModelServers({
@@ -188,7 +201,15 @@ export async function discoverLocalModelServers({
       const payload = await fetchJson(fetchImpl, candidate.url);
       const base = new URL(candidate.url);
       const endpoint = `${base.protocol}//${base.host}`;
-      const models = candidate.protocol === 'ollama' ? normalizeOllamaModels(payload, endpoint, clock) : normalizeOpenAiModels(payload, endpoint, candidate.protocol, clock);
+      let models = candidate.protocol === 'ollama' ? normalizeOllamaModels(payload, endpoint, clock) : normalizeOpenAiModels(payload, endpoint, candidate.protocol, clock);
+      if (candidate.protocol === 'openai') {
+        try {
+          const details = await fetchJson(fetchImpl, `${endpoint}/api/v0/models`);
+          models = mergeOpenAiModelDetails(models, details);
+        } catch {
+          // The OpenAI-compatible API is sufficient; LM Studio metadata enrichment is optional.
+        }
+      }
       if (models.length) servers.push({ protocol: candidate.protocol, endpoint, healthy: true, models });
     } catch (error) {
       servers.push({ protocol: candidate.protocol, endpoint: candidate.url, healthy: false, error: String(error?.message || error).slice(0, 300), models: [] });
@@ -208,9 +229,25 @@ function qualityForModel(model) {
   return 68;
 }
 
-export function buildLocalModelResources({ hardware, servers, clock = () => new Date() } = {}) {
+function verifiedModelMetadata(model = {}) {
+  const qwenMatch = String(model.model_id || '').match(/^qwen\/(qwen3-\d+(?:\.\d+)?b)(?:$|[-_])/i);
+  if (qwenMatch) {
+    const repositoryName = qwenMatch[1].replace(/^qwen3/i, 'Qwen3').replace(/b$/i, 'B');
+    return {
+      licence: 'Apache-2.0',
+      official_model_url: `https://huggingface.co/Qwen/${repositoryName}-GGUF`,
+      licence_verified: true
+    };
+  }
+  return { licence: 'Local model licence must be verified before publication use', official_model_url: null, licence_verified: false };
+}
+
+export function buildLocalModelResources({ hardware, servers, clock = () => new Date(), maxModelMemoryFraction = 0.5 } = {}) {
   const now = clock().toISOString();
   const gpuMemoryGb = Number(hardware?.free_gpu_memory_mb || hardware?.total_gpu_memory_mb || 0) / 1024;
+  const totalMemoryGb = Number(hardware?.memory?.total_gb || 0);
+  const safeMemoryFraction = Math.max(0.1, Math.min(0.9, Number(maxModelMemoryFraction || 0.5)));
+  const safeModelMemoryGb = totalMemoryGb > 0 ? totalMemoryGb * safeMemoryFraction : 0;
   const resources = [];
   for (const server of servers || []) {
     if (!server.healthy) continue;
@@ -221,25 +258,30 @@ export function buildLocalModelResources({ hardware, servers, clock = () => new 
       const quality = qualityForModel(model);
       const estimatedNeed = model.parameters_billion ? Math.max(2, model.parameters_billion * 0.65) : 4;
       const gpuFit = gpuMemoryGb <= 0 ? 45 : gpuMemoryGb >= estimatedNeed ? 96 : Math.max(35, Math.round(70 * gpuMemoryGb / estimatedNeed));
+      const memoryEligible = isEmbedding || safeModelMemoryGb <= 0 || estimatedNeed <= safeModelMemoryGb;
+      const verification = verifiedModelMetadata(model);
       resources.push({
         resource_id: `local-${isEmbedding ? 'embedding' : 'llm'}-${safeId(server.protocol)}-${safeId(model.model_id)}`,
         provider_name: 'Owner-controlled local runtime', service_name: model.display_name || model.model_id,
         capability_types: capabilityTypes, resource_tier: 1,
         official_documentation_url: null, terms_url: null, privacy_url: null, status_url: null,
-        licence: 'Local model licence must be verified before publication use',
+        licence: verification.licence,
         account_owner: hardware?.hostname || 'owner-controlled local machine', authentication_type: 'none', credential_reference: null,
         approved_for_automation: true, approved_data_classes: ['public', 'internal', 'confidential', 'restricted'], prohibited_data_classes: [],
         free_quota_amount: null, free_quota_unit: 'local inference', quota_reset_period: null, quota_reset_time: null, quota_remaining: null, quota_reserved: 0, hard_stop_threshold: 0,
         quota_verified: true, quota_unlimited: true, billing_enabled: false, billing_risk: 'none', payment_method_present: false, monetary_cost_per_unit_eur: 0,
         quality_score: quality, reliability_score: 88, latency_score: gpuFit, privacy_score: 100, provenance_score: 75, quota_efficiency_score: 100,
-        last_health_check: model.last_seen || now, health_status: 'healthy', last_terms_check: now, terms_revalidation_due: null, last_quota_check: now,
+        last_health_check: model.last_seen || now, health_status: memoryEligible ? 'healthy' : 'capacity-constrained', last_terms_check: now, terms_revalidation_due: null, last_quota_check: now,
         last_success: null, last_failure: null, consecutive_failures: 0, cooldown_until: null, average_latency: 0, success_rate: 1, error_rate: 0,
         supported_job_types: supportedJobTypes, maximum_payload: 2 * 1024 * 1024, rate_limit: 'bounded by local hardware pressure',
         concurrency_limit: gpuMemoryGb >= estimatedNeed * 2 ? 2 : 1, fallback_resource_ids: [], implementation_status: 'production',
-        adapter_id: 'local-openai-compatible', adapter_version: '1.0.0', enabled: true, manual_approval_required: false,
+        adapter_id: 'local-openai-compatible', adapter_version: '1.0.0', enabled: memoryEligible, manual_approval_required: false,
         allowed_hosts: [new URL(server.endpoint).hostname],
-        metadata: { local: true, protocol: server.protocol, endpoint: server.endpoint, model_id: model.model_id, capabilities: model.capabilities || supportedJobTypes, parameters_billion: model.parameters_billion || 0, quantization: model.quantization || null, context_length: model.context_length || 32768, estimated_vram_gb: Number(estimatedNeed.toFixed(2)), available_gpu_memory_gb: Number(gpuMemoryGb.toFixed(2)), hardware_hostname: hardware?.hostname || null },
-        notes: `Automatically detected local model ${model.model_id} through ${server.protocol} on a loopback-only endpoint.`, created_at: now, updated_at: now
+        metadata: { local: true, protocol: server.protocol, endpoint: server.endpoint, model_id: model.model_id, capabilities: model.capabilities || supportedJobTypes, parameters_billion: model.parameters_billion || 0, quantization: model.quantization || null, context_length: model.context_length || 32768, runtime_state: model.runtime_state || null, publisher: model.publisher || null, estimated_vram_gb: Number(estimatedNeed.toFixed(2)), available_gpu_memory_gb: Number(gpuMemoryGb.toFixed(2)), total_system_memory_gb: totalMemoryGb, maximum_model_memory_fraction: safeMemoryFraction, maximum_admitted_model_memory_gb: Number(safeModelMemoryGb.toFixed(2)), memory_admission_passed: memoryEligible, hardware_hostname: hardware?.hostname || null, official_model_url: verification.official_model_url, licence_verified: verification.licence_verified },
+        notes: memoryEligible
+          ? `Automatically detected local model ${model.model_id} through ${server.protocol} on a loopback-only endpoint.`
+          : `Detected ${model.model_id}, but excluded it from automatic execution because its estimated ${estimatedNeed.toFixed(2)} GB requirement exceeds the ${safeModelMemoryGb.toFixed(2)} GB safety budget.`,
+        created_at: now, updated_at: now
       });
     }
   }
@@ -249,8 +291,8 @@ export function buildLocalModelResources({ hardware, servers, clock = () => new 
 export async function detectLocalRuntime(options = {}) {
   const hardware = detectHardware(options);
   const servers = await discoverLocalModelServers(options);
-  const resources = buildLocalModelResources({ hardware, servers, clock: options.clock || (() => new Date()) });
+  const resources = buildLocalModelResources({ hardware, servers, clock: options.clock || (() => new Date()), maxModelMemoryFraction: options.maxModelMemoryFraction ?? Number(process.env.MATRIX_LOCAL_MAX_MODEL_MEMORY_FRACTION || 0.5) });
   return { schema_version: 1, detected_at: (options.clock || (() => new Date()))().toISOString(), hardware, servers, resources, cost_confirmed_zero: true, external_network_used: false };
 }
 
-export const hardwareDetectorInternals = { runCommand, parseNvidiaCsv, parseRocmJson, parseWindowsControllers, inferParametersBillion, fetchJson };
+export const hardwareDetectorInternals = { runCommand, parseNvidiaCsv, parseRocmJson, parseWindowsControllers, inferParametersBillion, fetchJson, mergeOpenAiModelDetails, verifiedModelMetadata };

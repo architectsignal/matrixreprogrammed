@@ -8,6 +8,7 @@ import { handleCapacityGrowthRoute, isCapacityGrowthRoute, runScheduledCapacityG
 import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';
 import { handleLivingMatrixRoute, isLivingMatrixAdminRoute, isLivingMatrixPublicRoute, runScheduledLivingMatrix } from './worker-living-matrix.js';
 import { handleValueHunterRoute, isValueHunterRoute, runScheduledValueHunter } from './worker-value-hunter.js';
+import { handlePermissionlessHarvesterRoute, isPermissionlessHarvesterRoute, runScheduledPermissionlessHarvester } from './worker-permissionless-value.js';
 import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 function cleanToken(value) {
@@ -98,6 +99,11 @@ export default {
       return handleValueHunterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
+    if (isPermissionlessHarvesterRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handlePermissionlessHarvesterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
     if (isScenarioProbabilityRoute(path)) {
       try {
         const response = await scenarioProbabilityWorker.fetch(request, runtimeEnv, ctx);
@@ -179,10 +185,20 @@ export default {
         return { skipped: true, reason: 'scheduled-value-cycle-failed' };
       })
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const permissionlessTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? valueTask.then(() => runScheduledPermissionlessHarvester(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'value.permissionless.failed', auditIdentifier: `permissionless-harvester-failure:${new Date().toISOString()}`,
+          origin: 'permissionless-harvester', actor: 'p0-permissionless-director',
+          payload: { change_summary: 'Permissionless Harvester failed safely; no transaction was signed or broadcast.', error: String(error?.message || error).slice(0, 500) }
+        });
+        return { skipped: true, reason: 'scheduled-permissionless-cycle-failed' };
+      })
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     const livingTask = runtimeEnv?.MEMBERS_DB?.prepare
-      ? valueTask.then(() => runScheduledLivingMatrix(runtimeEnv)).catch(() => ({ skipped: true, reason: 'scheduled-living-cycle-failed' }))
+      ? permissionlessTask.then(() => runScheduledLivingMatrix(runtimeEnv)).catch(() => ({ skipped: true, reason: 'scheduled-living-cycle-failed' }))
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     // Legacy membership contract marker: await Promise.all([productionTask, autonomyTask]);
-    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, livingTask]);
+    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask]);
   }
 };

@@ -21,6 +21,7 @@ on:
       - 'src/worker-matrix-synergy.js'
       - 'src/worker-living-matrix.js'
       - 'src/worker-value-hunter.js'
+      - 'src/worker-permissionless-value.js'
       - 'ai-management/value-hunter/**'
       - 'src/matrix-event-emitter.js'
       - 'src/matrix-synergy-core.js'
@@ -32,6 +33,7 @@ on:
       - 'migrations/public_investigation_api.sql'
       - 'migrations/phase14_living_matrix.sql'
       - 'migrations/phase15_matrix_value_hunter.sql'
+      - 'migrations/phase16_permissionless_value_harvester.sql'
       - 'scripts/build-public-investigation-corpus.js'
       - 'scripts/public-investigation-test.mjs'
       - 'scripts/matrix-synergy-test.mjs'
@@ -40,6 +42,9 @@ on:
       - 'scripts/value-code-improvement-test.mjs'
       - 'scripts/value-hunter-worker-integration-test.mjs'
       - 'scripts/phase15-value-hunter-contract-test.mjs'
+      - 'scripts/permissionless-harvester-golden-test.mjs'
+      - 'scripts/phase16-permissionless-harvester-contract-test.mjs'
+      - 'scripts/permissionless-harvester-worker-integration-test.mjs'
       - 'scripts/publish-investigation-matrix-events.mjs'
       - 'scripts/publish-investigation-matrix-events.test.mjs'
       - 'scripts/phase13-migration-rehearsal.py'
@@ -103,6 +108,7 @@ jobs:
           node --check src/worker-matrix-synergy.js
           node --check src/worker-living-matrix.js
           node --check src/worker-value-hunter.js
+          node --check src/worker-permissionless-value.js
           node --check src/matrix-event-emitter.js
           node --check src/matrix-synergy-core.js
           node --check ai-management/living-matrix/living-matrix-cycle.mjs
@@ -111,6 +117,8 @@ jobs:
           node --check ai-management/value-hunter/value-collector.mjs
           node --check ai-management/value-hunter/value-code-improvement.mjs
           node --check ai-management/provider-adapters/value/official-html-links.mjs
+          find ai-management/value-hunter/permissionless -type f -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node --check local-agent/permissionless-harvester-cli.mjs
           node --check scripts/publish-investigation-matrix-events.mjs
           node --check member-dashboard-app.js
 
@@ -130,6 +138,9 @@ jobs:
           node scripts/value-code-improvement-test.mjs
           node scripts/phase15-value-hunter-contract-test.mjs
           node scripts/value-hunter-worker-integration-test.mjs
+          node scripts/permissionless-harvester-golden-test.mjs
+          node scripts/phase16-permissionless-harvester-contract-test.mjs
+          node scripts/permissionless-harvester-worker-integration-test.mjs
           node scripts/publish-investigation-matrix-events.test.mjs
           node scripts/build-public-investigation-corpus.js
           node scripts/public-investigation-test.mjs
@@ -157,6 +168,7 @@ jobs:
               'migrations/public_investigation_api.sql',
               'migrations/phase14_living_matrix.sql',
               'migrations/phase15_matrix_value_hunter.sql',
+              'migrations/phase16_permissionless_value_harvester.sql',
           ]
           for pass_number in (1, 2):
               for migration in migrations:
@@ -213,6 +225,15 @@ jobs:
               'matrix_value_improvement_proposals',
               'matrix_value_cycles',
               'matrix_value_learning',
+              'matrix_permissionless_protocols',
+              'matrix_permissionless_markets',
+              'matrix_permissionless_opportunities',
+              'matrix_permissionless_simulations',
+              'matrix_permissionless_execution_intents',
+              'matrix_permissionless_receipts',
+              'matrix_permissionless_workers',
+              'matrix_permissionless_strategy_statistics',
+              'matrix_permissionless_cycles',
           }
           present = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
           missing = required - present
@@ -281,7 +302,17 @@ jobs:
           if "intent_type IN ('CLAIM_REWARD','SWEEP_RECEIVED_ASSET','WITHDRAW_OWNED_BALANCE')" not in value_intents:
               raise SystemExit('Value Hunter constrained intent allowlist is missing')
 
-          print('D1 phases 9 through 15 passed two complete executions with durable living/value projections, prompt-local processing, public-only remote compute, claimant-safe acquisition and zero-spend constraints.')
+          permissionless_schema = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='matrix_permissionless_opportunities'").fetchone()[0]
+          permissionless_receipts = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='matrix_permissionless_receipts'").fetchone()[0]
+          if "value_class='P0_PERMISSIONLESS_EARN'" not in permissionless_schema:
+              raise SystemExit('Permissionless value class is not structurally isolated')
+          if 'realized_net_profit_usd_micros = gross_reward_usd_micros - realized_total_cost_usd_micros' not in permissionless_receipts:
+              raise SystemExit('Permissionless receipt net-profit accounting is not structural')
+          for flag in ['MATRIX_PERMISSIONLESS_VALUE_ENABLED','MATRIX_PERMISSIONLESS_AUTO_EXECUTION_ENABLED','MATRIX_DISTRIBUTED_DISCOVERY_ENABLED','MATRIX_PERMISSIONLESS_MORPHO_ENABLED','MATRIX_PERMISSIONLESS_EULER_ENABLED','MATRIX_PERMISSIONLESS_AAVE_ENABLED']:
+              if flags.get(flag) != 0:
+                  raise SystemExit(f'{flag} must start disabled pending production certification')
+
+          print('D1 phases 9 through 16 passed twice with durable living/value projections, isolated permissionless earning, prompt-local processing, scoped public compute and zero-spend constraints.')
 
       - name: Verify fail-closed production configuration
         run: |
@@ -299,6 +330,9 @@ jobs:
           grep -F 'MATRIX_VALUE_AUTO_COLLECTION_ENABLED = "true"' wrangler.toml
           grep -F 'MATRIX_VALUE_MAX_FEE_PER_CLAIM_MINOR = "0"' wrangler.toml
           grep -F 'MATRIX_VALUE_MAX_DAILY_FEES_MINOR = "0"' wrangler.toml
+          grep -F 'MATRIX_PERMISSIONLESS_VALUE_ENABLED = "false"' wrangler.toml
+          grep -F 'MATRIX_PERMISSIONLESS_AUTO_EXECUTION_ENABLED = "false"' wrangler.toml
+          grep -F 'MATRIX_DISTRIBUTED_DISCOVERY_ENABLED = "false"' wrangler.toml
           grep -F 'ZERO_SPEND_INVARIANT_VIOLATION' ai-management/policy-engine/zero-spend-invariant.mjs
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
@@ -316,6 +350,7 @@ jobs:
           grep -F 'migrations/phase13_matrix_synergy.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase14_living_matrix.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase15_matrix_value_hunter.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/phase16_permissionless_value_harvester.sql' .github/workflows/deploy.yml
           grep -F "'ai_local_jobs','ai_local_job_receipts'" .github/workflows/deploy.yml
           grep -F "'ai_opportunities','ai_opportunity_hunter_runs'" .github/workflows/deploy.yml
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .github/workflows/deploy.yml

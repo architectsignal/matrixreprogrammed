@@ -126,6 +126,9 @@ jobs:
           node scripts/value-code-improvement-test.mjs
           node scripts/phase15-value-hunter-contract-test.mjs
           node scripts/value-hunter-worker-integration-test.mjs
+          node scripts/permissionless-harvester-golden-test.mjs
+          node scripts/phase16-permissionless-harvester-contract-test.mjs
+          node scripts/permissionless-harvester-worker-integration-test.mjs
           node scripts/build-public-investigation-corpus.js
           node scripts/public-investigation-test.mjs
           python3 scripts/phase13-migration-rehearsal.py
@@ -142,6 +145,7 @@ jobs:
           node --check src/worker-matrix-synergy.js
           node --check src/worker-living-matrix.js
           node --check src/worker-value-hunter.js
+          node --check src/worker-permissionless-value.js
           node --check src/matrix-event-emitter.js
           node --check src/matrix-synergy-core.js
           node --check ai-management/living-matrix/living-matrix-cycle.mjs
@@ -149,6 +153,8 @@ jobs:
           node --check ai-management/value-hunter/financial-firewall.mjs
           node --check ai-management/value-hunter/value-collector.mjs
           node --check ai-management/provider-adapters/value/official-html-links.mjs
+          find ai-management/value-hunter/permissionless -type f -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node --check local-agent/permissionless-harvester-cli.mjs
           node --check scripts/publish-investigation-matrix-events.mjs
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
@@ -249,6 +255,7 @@ jobs:
             migrations/public_investigation_api.sql
             migrations/phase14_living_matrix.sql
             migrations/phase15_matrix_value_hunter.sql
+            migrations/phase16_permissionless_value_harvester.sql
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
@@ -264,11 +271,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits','matrix_living_cycles','matrix_event_dispatches','matrix_living_projections','matrix_page_dependencies','matrix_value_jurisdictions','matrix_value_sources','matrix_value_claimants','matrix_value_destinations','matrix_value_mandates','matrix_value_objectives','matrix_value_opportunities','matrix_value_entitlement_evidence','matrix_value_claim_queue','matrix_value_operations','matrix_value_receipts','matrix_value_audit','matrix_value_cycles','matrix_value_learning') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits','matrix_living_cycles','matrix_event_dispatches','matrix_living_projections','matrix_page_dependencies','matrix_value_jurisdictions','matrix_value_sources','matrix_value_claimants','matrix_value_destinations','matrix_value_mandates','matrix_value_objectives','matrix_value_opportunities','matrix_value_entitlement_evidence','matrix_value_claim_queue','matrix_value_operations','matrix_value_receipts','matrix_value_audit','matrix_value_cycles','matrix_value_learning','matrix_permissionless_protocols','matrix_permissionless_markets','matrix_permissionless_opportunities','matrix_permissionless_simulations','matrix_permissionless_execution_intents','matrix_permissionless_receipts','matrix_permissionless_workers','matrix_permissionless_strategy_statistics','matrix_permissionless_cycles') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT sql FROM sqlite_master WHERE type='table' AND name IN ('ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_leases','matrix_contributions','matrix_human_actions') ORDER BY name;" --json > downloads/d1-autonomy-schema.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT resource_id,billing_enabled,payment_method_present,monetary_cost_per_unit_eur,billing_risk FROM ai_resources ORDER BY resource_id;" --json > downloads/d1-ai-zero-spend-resources.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT 'objective' AS record_type,objective_id AS record_id,target_net_minor AS value_minor,status AS state FROM matrix_value_objectives UNION ALL SELECT 'mandate',mandate_id,maximum_fee_minor,CASE WHEN active=1 AND auto_collect_proven_entitlements=1 THEN 'active-auto' ELSE 'inactive' END FROM matrix_value_mandates UNION ALL SELECT 'source-count','official-sources',COUNT(*),MIN(source_status) FROM matrix_value_sources;" --json > downloads/d1-value-hunter.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT 'protocol' AS record_type,protocol_key AS record_id,execution_status AS state FROM matrix_permissionless_protocols UNION ALL SELECT 'flag',flag_name,CASE WHEN enabled=1 THEN 'enabled' ELSE 'disabled' END FROM ai_feature_flags WHERE flag_name LIKE 'MATRIX_PERMISSIONLESS_%' OR flag_name='MATRIX_DISTRIBUTED_DISCOVERY_ENABLED';" --json > downloads/d1-permissionless-harvester.json
           node - <<'NODE'
           const fs = require('fs');
           const rows = payload => payload.flatMap(item => item.results || item.result?.results || []);
@@ -277,7 +285,8 @@ jobs:
           const payment = JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
           const resources = JSON.parse(fs.readFileSync('downloads/d1-ai-zero-spend-resources.json','utf8'));
           const valueHunter = JSON.parse(fs.readFileSync('downloads/d1-value-hunter.json','utf8'));
-          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits','matrix_living_cycles','matrix_event_dispatches','matrix_living_projections','matrix_page_dependencies','matrix_value_jurisdictions','matrix_value_sources','matrix_value_claimants','matrix_value_destinations','matrix_value_mandates','matrix_value_objectives','matrix_value_opportunities','matrix_value_entitlement_evidence','matrix_value_claim_queue','matrix_value_operations','matrix_value_receipts','matrix_value_audit','matrix_value_cycles','matrix_value_learning'];
+          const permissionless = JSON.parse(fs.readFileSync('downloads/d1-permissionless-harvester.json','utf8'));
+          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits','matrix_living_cycles','matrix_event_dispatches','matrix_living_projections','matrix_page_dependencies','matrix_value_jurisdictions','matrix_value_sources','matrix_value_claimants','matrix_value_destinations','matrix_value_mandates','matrix_value_objectives','matrix_value_opportunities','matrix_value_entitlement_evidence','matrix_value_claim_queue','matrix_value_operations','matrix_value_receipts','matrix_value_audit','matrix_value_cycles','matrix_value_learning','matrix_permissionless_protocols','matrix_permissionless_markets','matrix_permissionless_opportunities','matrix_permissionless_simulations','matrix_permissionless_execution_intents','matrix_permissionless_receipts','matrix_permissionless_workers','matrix_permissionless_strategy_statistics','matrix_permissionless_cycles'];
           const names = new Set(rows(schema).map(row => row.name));
           const missing = required.filter(name => !names.has(name));
           if (missing.length) throw new Error(`Missing D1 objects: ${missing.join(', ')}`);
@@ -297,6 +306,12 @@ jobs:
           if (!objective || Number(objective.value_minor) !== 1000000 || objective.state !== 'active') throw new Error('Value Hunter EUR 10,000 objective is not active');
           if (!mandate || Number(mandate.value_minor) !== 0 || mandate.state !== 'active-auto') throw new Error('Value Hunter zero-fee standing mandate is not active');
           if (!sourceCount || Number(sourceCount.value_minor) < 10) throw new Error('Value Hunter official source registry is incomplete');
+          const permissionlessRows = rows(permissionless);
+          const morpho = permissionlessRows.find(row => row.record_type === 'protocol' && row.record_id === 'morpho:8453');
+          if (!morpho || morpho.state !== 'simulation') throw new Error('Morpho must remain simulation-only until production certification');
+          for (const row of permissionlessRows.filter(row => row.record_type === 'flag')) {
+            if (row.state !== 'disabled') throw new Error(`${row.record_id} must remain disabled before production certification`);
+          }
           const settings = rows(payment);
           const sandbox = settings.find(row => row.environment === 'sandbox');
           const live = settings.find(row => row.environment === 'live');
@@ -476,6 +491,7 @@ jobs:
             downloads/d1-autonomy-schema.json
             downloads/d1-ai-zero-spend-resources.json
             downloads/d1-value-hunter.json
+            downloads/d1-permissionless-harvester.json
             downloads/d1-ai-feature-flags.json
             downloads/paypal-runtime-settings.json
             downloads/wrangler-deploy.log

@@ -160,3 +160,20 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [ ] Register the real Matrix claimant authority and approved EUR account/wallet by vault reference; never enter identity, banking or signing secrets into D1 or prompts.
 - [ ] Implement and review the first real provider-specific constrained collection adapter after its official API/terms, receipt format and signing boundary are known.
 - [ ] Run the controlled production release only when the Cloudflare zero-overage deployment gate permits it, then capture the first live Value Hunter cycle receipt.
+
+## 2026-08-13 Permissionless Harvester checkpoint
+
+- [x] Added the separate `P0_PERMISSIONLESS_EARN` class without weakening claim-based claimant and entitlement gates.
+- [x] Added specialized liquidation/keeper/settlement/auction/maintenance intents and blocked arbitrary calls, secret material, access bypass, blind signing and unlimited approvals.
+- [x] Added exact micro-USD profit accounting, minimum profit/probability, cost-ratio, absolute-cost, daily-budget, single-loss and stale-block controls.
+- [x] Added official protocol registry, static/dynamic contract verification, read-only zero-spend RPC failover and consensus primitives.
+- [x] Added dedicated wallet policy, fresh transaction simulation, exact proposal validation, constrained signer interface and finalized receipt reconciliation.
+- [x] Added public-only distributed discovery/simulation jobs with scoped hosts/networks, no secrets/signing, hashed receipts, deduplication and central re-verification.
+- [x] Added a generic liquidation opportunity engine and Morpho Base discovery, position health, repay, collateral and profit calculations from the official contract/source references.
+- [x] Added historical replay, competition-adjusted capture reporting, measured strategy learning and quarantined adapter-code candidate certification.
+- [x] Added Phase 16 D1 schema, disabled-by-default flags, owner-only Worker doctor/start/activity, scheduled chaining and local `harvester doctor|start|status` commands.
+- [x] Added controlled full-lifecycle, adversarial, RPC failover, public-worker, Morpho, receipt, idempotency and migration/contract tests.
+- [ ] Production-certify Morpho codec, fork/RPC simulator and receipt decoder through protected review; current adapter remains `simulation-only`.
+- [ ] Provision the separate capped execution wallet and managed constrained signer without placing keys/seeds in GitHub, D1, source, prompts or logs.
+- [ ] Register at least two approved zero-spend Base RPCs and pass live chain/bytecode consensus plus fork, race and reorg tests.
+- [ ] Release Phase 16 only when the Cloudflare zero-overage gate permits it; then run a bounded canary and reconcile the first finalized receipt before reporting live funds.

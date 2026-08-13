@@ -14,6 +14,7 @@ MIGRATIONS = [
     "migrations/public_investigation_api.sql",
     "migrations/phase14_living_matrix.sql",
     "migrations/phase15_matrix_value_hunter.sql",
+    "migrations/phase16_permissionless_value_harvester.sql",
 ]
 REQUIRED = {
     "matrix_events",
@@ -45,6 +46,15 @@ REQUIRED = {
     "matrix_value_improvement_proposals",
     "matrix_value_cycles",
     "matrix_value_learning",
+    "matrix_permissionless_protocols",
+    "matrix_permissionless_markets",
+    "matrix_permissionless_opportunities",
+    "matrix_permissionless_simulations",
+    "matrix_permissionless_execution_intents",
+    "matrix_permissionless_receipts",
+    "matrix_permissionless_workers",
+    "matrix_permissionless_strategy_statistics",
+    "matrix_permissionless_cycles",
 }
 
 database = sqlite3.connect(":memory:")
@@ -63,8 +73,8 @@ mission_count = database.execute("SELECT COUNT(*) FROM matrix_missions").fetchon
 if mission_count != 3:
     raise SystemExit(f"Expected three idempotent seed missions, found {mission_count}")
 capability_count = database.execute("SELECT COUNT(*) FROM matrix_capabilities").fetchone()[0]
-if capability_count != 8:
-    raise SystemExit(f"Expected eight truthful capability seeds, found {capability_count}")
+if capability_count != 9:
+    raise SystemExit(f"Expected nine truthful capability seeds, found {capability_count}")
 
 entitlement_view = database.execute(
     "SELECT sql FROM sqlite_master WHERE type='view' AND name='member_effective_entitlements'"
@@ -95,4 +105,4 @@ private_columns = {
 if private_columns & {"private_key", "seed_phrase", "mnemonic", "recovery_phrase"}:
     raise SystemExit("Value Hunter schema must not persist signing secrets")
 
-print("Living Matrix and Value Hunter migration rehearsal passed twice with the EUR 10,000 objective, strict value states, safe intents and eight truthful capability seeds.")
+print("Living Matrix, Value Hunter and Permissionless Harvester migrations passed twice with strict value classes, safe intents and nine truthful capability seeds.")

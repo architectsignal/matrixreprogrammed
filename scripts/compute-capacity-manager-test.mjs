@@ -113,7 +113,35 @@ assert.equal(filteredPortfolio.current_capacity_score, buildCapacityPortfolio({
 
 const networkedLocalAssessment = assessComputeCandidate({ ...local, candidate_id: 'networked-local', external_network_used: true }, { now });
 assert.equal(networkedLocalAssessment.state, 'quarantined');
-assert.ok(networkedLocalAssessment.blockers.includes('external-network-use-forbidden'));
+assert.ok(networkedLocalAssessment.blockers.includes('external-network-use-outside-public-scope'));
+
+const publicRpcWorker = {
+  ...local,
+  candidate_id: 'public-rpc-worker',
+  resource_id: 'public-rpc-worker',
+  external_network_used: true,
+  public_retrieval_only: true,
+  secrets_available: false,
+  signing_allowed: false,
+  approved_data_classes: ['public'],
+  network_scopes: ['PUBLIC_RPC_READ'],
+  allowed_hosts: ['base.example'],
+  supported_workloads: ['permissionless.scan']
+};
+assert.equal(assessComputeCandidate(publicRpcWorker, { now }).state, 'approved-auto', 'owner-local public retrieval may use an exact approved scope');
+const publicAllocation = allocateCapacity({
+  portfolio,
+  resources: [{ ...publicRpcWorker, enabled: true }],
+  jobs: [{ job_id: 'permissionless-scan', workload: 'permissionless.scan', external_network_allowed: true, network_scopes: ['PUBLIC_RPC_READ'] }]
+});
+assert.equal(publicAllocation.assignments[0].external_network_allowed, true);
+assert.deepEqual(publicAllocation.assignments[0].network_scopes, ['PUBLIC_RPC_READ']);
+const missingScopeAllocation = allocateCapacity({
+  portfolio,
+  resources: [{ ...publicRpcWorker, enabled: true }],
+  jobs: [{ job_id: 'permissionless-scan-no-scope', workload: 'permissionless.scan', external_network_allowed: true }]
+});
+assert.equal(missingScopeAllocation.assignments[0].external_network_allowed, false, 'external networking fails closed without an exact requested scope');
 
 const resources = [{ ...local, enabled: true }];
 const allocation = allocateCapacity({

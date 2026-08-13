@@ -128,3 +128,21 @@ Architecture decision: `docs/adr/0006-living-matrix-event-projection-cycle.md`.
 | Proof | Golden and SQLite/D1 integration cover automatic fiat/crypto collection, jurisdiction, ownership, lawful appropriation, fees, fraud, terms, operation reservation, reconciliation, duplicate suppression, official-host discovery, persistence, learning, code-candidate quarantine and adapter fail-closed behavior |
 
 Architecture decision: `docs/adr/0007-matrix-value-hunter-lawful-acquisition.md`.
+
+## Permissionless protocol value harvester (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Value class | `P0_PERMISSIONLESS_EARN` is independent of claimant-based value; claimant identity is not required, while public-call and executor-reward proof are mandatory |
+| Qualification | Official source hashes, contract/bytecode proof, released adapter compatibility, current-block deterministic simulation, block expiry and explicit allowlists fail closed |
+| Economics | Integer micro-USD gross, full costs, net and probability calculations enforce minimum profit, cost ratio, daily budget and single-loss policy |
+| Execution | Dedicated capped wallet, exact proposal, constrained signer interface, no arbitrary calls/approvals/secrets and finalized receipt reconciliation |
+| Distribution | Public-only discovery/simulation jobs use exact RPC/docs/API/index scopes and host allowlists; external workers receive no secrets and cannot sign |
+| Protocol engine | Generic liquidation adapter interface plus Morpho Base discovery/health/profit implementation; Morpho execution dependencies remain simulation-only |
+| Self-improvement | Generated adapters require official hashes, static/unit/fork/replay/security proof and protected release; runtime self-deployment is forbidden |
+| Durability | Phase 16 stores protocols, markets, opportunities, simulations, intents, receipts, workers, strategy statistics and cycles with exact accounting and idempotency |
+| Runtime | Owner-only doctor/start/activity routes and local CLI are wired into the existing schedule between claim Value Hunter and Living Matrix |
+| Live truth | No production-certified adapter or finalized receipt exists; flags default false and the truthful state is `LIVE_COLLECTION_NOT_CONFIGURED` / simulation-only |
+| Proof | Golden tests cover adversarial qualification, RPC failover, worker isolation/deduplication, Morpho discovery, replay, exact signing lifecycle and exactly-once reconciliation |
+
+Architecture decision: `docs/adr/0008-permissionless-protocol-value-harvester.md`. Operator contract: `docs/PERMISSIONLESS_HARVESTER_OPERATIONS.md`.

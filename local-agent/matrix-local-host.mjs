@@ -8,6 +8,7 @@ import { detectLocalRuntime } from '../ai-management/local-runtime/hardware-dete
 import { runOneControlPlaneJob } from './control-plane-client.mjs';
 import { executeJob } from './matrix-local-agent.mjs';
 import { applyBenchmarkScores, benchmarkLocalRuntime } from './local-benchmark.mjs';
+import { callHarvesterControlPlane } from './permissionless-harvester-cli.mjs';
 
 const VERSION = '1.0.0';
 
@@ -43,7 +44,8 @@ export function hostConfig() {
     idlePollMs: integer('MATRIX_LOCAL_JOB_IDLE_SECONDS', 15, 2, 600) * 1000,
     discoveryMs: integer('MATRIX_LOCAL_DISCOVERY_SECONDS', 300, 30, 3600) * 1000,
     benchmarkMs: integer('MATRIX_LOCAL_BENCHMARK_HOURS', 24, 1, 168) * 60 * 60 * 1000,
-    benchmarkEnabled: env('MATRIX_LOCAL_BENCHMARK_ENABLED', 'true').toLowerCase() === 'true'
+    benchmarkEnabled: env('MATRIX_LOCAL_BENCHMARK_ENABLED', 'true').toLowerCase() === 'true',
+    harvesterEnabled: env('MATRIX_PERMISSIONLESS_VALUE_ENABLED', 'false').toLowerCase() === 'true'
   };
 }
 
@@ -106,7 +108,8 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
     zero_spend_lock: true, outbound_only: true, state: 'starting', restart_safe: true,
     runtime: { discovered_models: 0, healthy_servers: 0 }, jobs: { completed: 0, failed: 0, idle_polls: 0 },
     registration: { configured: Boolean(config.adminToken), last_ok_at: null, last_error: null },
-    benchmark: { enabled: config.benchmarkEnabled, last_completed_at: null, measured_models: 0 }
+    benchmark: { enabled: config.benchmarkEnabled, last_completed_at: null, measured_models: 0 },
+    harvester: { enabled: config.harvesterEnabled, startup_attempted: false, last_result: null }
   };
   let runtime = null;
   let nextDiscovery = 0;
@@ -130,6 +133,17 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
   // distinguish a healthy starting service from a dead process.
   status.state = 'online';
   await publishStatus();
+
+  if (config.harvesterEnabled && config.adminToken) {
+    status.harvester.startup_attempted = true;
+    try {
+      const result = await callHarvesterControlPlane('start', { fetchImpl });
+      status.harvester.last_result = { ok: result.ok, at: clock().toISOString(), live_collection_state: result.remote?.report?.live_collection_state || null };
+    } catch (error) {
+      status.harvester.last_result = { ok: false, at: clock().toISOString(), error: String(error?.message || error).slice(0, 300) };
+    }
+    await publishStatus();
+  }
 
   while (!controller.signal.aborted) {
     const now = Date.now();

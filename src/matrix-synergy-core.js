@@ -10,6 +10,8 @@ export const MATRIX_EVENT_TYPES=Object.freeze([
   'relationship.created','claim.created','claim.changed','claim.contradicted','dossier.changed','forecast.changed',
   'resource.discovered','resource.benchmarked','resource.failed','model.discovered','model.benchmarked',
   'value.discovered','value.entitlement.proven','value.claim.submitted','value.received','value.swept','value.failed','value.fraud.blocked','value.cycle.completed',
+  'value.permissionless.opportunity.verified','value.permissionless.simulated','value.permissionless.submitted',
+  'value.permissionless.confirmed','value.permissionless.reconciled','value.permissionless.failed','value.permissionless.cycle.completed',
   'page.stale','site.change.proposed','build.failed','deploy.succeeded','user.correction.accepted',
   'learning.signal.created','cycle.completed'
 ]);

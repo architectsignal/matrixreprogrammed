@@ -1,16 +1,150 @@
 {
-  "updated": "2026-08-12T13:46:05.211Z",
+  "updated": "2026-08-13T05:07:39.815Z",
   "title": "Change Detection Engine",
   "purpose": "Compare current public-record events with the previous machine snapshot. Detect new records, removed records, changed records, evidence movement and clock triggers.",
   "boundary": "Change detection flags movement. It does not interpret intent.",
-  "previousUpdated": "2026-08-12T07:51:51.335Z",
+  "previousUpdated": "2026-08-13T05:04:34.597Z",
   "currentRecordCount": 18,
-  "previousRecordCount": 18,
-  "newRecords": [],
+  "previousRecordCount": 12,
+  "newRecords": [
+    {
+      "key": "courtlistener-court-records-10946277-1",
+      "hash": "87e14d0f82bdd170",
+      "summary": "K Alain v. CIR",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
+      "date": "2026-08-12",
+      "names": [
+        "K Alain v. CIR",
+        "Court of Appeals for the Fifth Circuit",
+        "24-60240"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946166-2",
+      "hash": "5e25ed80db3bfb13",
+      "summary": "Bergam v. Dinerman",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
+      "date": "2026-08-12",
+      "names": [
+        "Bergam v. Dinerman",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-03048"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946162-3",
+      "hash": "9bd41ed3c7e1dcbf",
+      "summary": "Cross v. Lee",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
+      "date": "2026-08-12",
+      "names": [
+        "Cross v. Lee",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-12389"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946076-4",
+      "hash": "3affc7ba1249eee3",
+      "summary": "United States v. Kyle Wagner",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
+      "date": "2026-08-12",
+      "names": [
+        "United States v. Kyle Wagner",
+        "Court of Appeals for the Sixth Circuit",
+        "26-1294"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10942382-5",
+      "hash": "e1d13517d858e579",
+      "summary": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10942382/gerena-betancourt-v-negociado-de-la-policia-de-puerto-rico/",
+      "date": "2026-08-07",
+      "names": [
+        "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+        "Supreme Court of Puerto Rico",
+        "CC-2025-0631"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10940847-6",
+      "hash": "53dbd24d613df2c5",
+      "summary": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/",
+      "date": "2026-08-06",
+      "names": [
+        "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+        "Court of Appeals for the Ninth Circuit",
+        "23-55704"
+      ]
+    }
+  ],
   "removedRecords": [],
   "changedRecords": [],
   "evidenceUpgrades": [],
-  "clockTriggers": [],
+  "clockTriggers": [
+    {
+      "id": "courtlistener-court-records-10946277-1",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "K Alain v. CIR",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/"
+    },
+    {
+      "id": "courtlistener-court-records-10946166-2",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Bergam v. Dinerman",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/"
+    },
+    {
+      "id": "courtlistener-court-records-10946162-3",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Cross v. Lee",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/"
+    },
+    {
+      "id": "courtlistener-court-records-10946076-4",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "United States v. Kyle Wagner",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/"
+    },
+    {
+      "id": "courtlistener-court-records-10942382-5",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10942382/gerena-betancourt-v-negociado-de-la-policia-de-puerto-rico/"
+    },
+    {
+      "id": "courtlistener-court-records-10940847-6",
+      "lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "summary": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+      "trigger": "Review courtlistener-court-records for clock movement.",
+      "source_url": "https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/"
+    }
+  ],
   "repeatedEntities": [
     {
       "id": "health-and-human-services-department",
@@ -85,10 +219,10 @@
         "charged / sued"
       ],
       "source_events": [
-        "courtlistener-court-records-10936935-4",
-        "courtlistener-court-records-10936889-5"
+        "courtlistener-court-records-10946166-2",
+        "courtlistener-court-records-10946162-3"
       ],
-      "last_seen": "2026-07-29"
+      "last_seen": "2026-08-12"
     }
   ]
 }

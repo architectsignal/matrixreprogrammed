@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T13:46:05.252Z",
+  "updated": "2026-08-13T05:07:39.864Z",
   "title": "Entity Daily Briefs",
   "purpose": "User-friendly daily briefs for tracked people, institutions, companies, agencies and control-structure contributors.",
   "boundary": "Briefs summarize public-record signals with evidence grades. They do not replace source review.",
@@ -8,7 +8,7 @@
       "id": "centers-for-medicare-and-medicaid-services",
       "name": "Centers for Medicare & Medicaid Services",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Centers for Medicare & Medicaid Services is currently tracked as observed entity with 3 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
@@ -56,7 +56,7 @@
       "id": "health-and-human-services-department",
       "name": "Health and Human Services Department",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Health and Human Services Department is currently tracked as observed entity with 3 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Medicare Program; Hospital Inpatient Prospective Payment Systems for Acute Care Hospitals (IPPS) and the Long-Term Care Hospital Prospective Payment System and Policy Changes and Fiscal Year (FY) 2027 Rates; Requirements for Quality Programs; Other Policy Changes; and Adoption of Updated Versions of Certain Health Information Technology Standards",
@@ -104,48 +104,48 @@
       "id": "appellate-division-of-the-supreme-court-of-the-state-of-new-york",
       "name": "Appellate Division of the Supreme Court of the State of New York",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Appellate Division of the Supreme Court of the State of New York is currently tracked as observed entity with 2 recent record route(s), 4 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "D & A Grandview, LLC v. 60 Davidson, LLC",
-        "Williams v. Biggs"
+        "Bergam v. Dinerman",
+        "Cross v. Lee"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued"
         },
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "with": "Bergam v. Dinerman",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2024-13374",
+          "with": "2024-03048",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "Williams v. Biggs",
+          "with": "Cross v. Lee",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2021-08825",
+          "with": "2024-12389",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -161,27 +161,27 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "2021-08825",
-      "name": "2021-08825",
+      "id": "2024-03048",
+      "name": "2024-03048",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "2021-08825 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "2024-03048 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Williams v. Biggs"
+        "Bergam v. Dinerman"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Williams v. Biggs",
+          "with": "Bergam v. Dinerman",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -197,33 +197,33 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 2021-08825 across courtlistener-court-records.",
+        "Watch 2024-03048 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "2024-13374",
-      "name": "2024-13374",
+      "id": "2024-12389",
+      "name": "2024-12389",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "2024-13374 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "2024-12389 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "D & A Grandview, LLC v. 60 Davidson, LLC"
+        "Cross v. Lee"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "with": "Cross v. Lee",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -239,7 +239,7 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 2024-13374 across courtlistener-court-records.",
+        "Watch 2024-12389 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
@@ -248,7 +248,7 @@
       "id": "23-55704",
       "name": "23-55704",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "23-55704 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "In Re: Koi Design LLC v. Marron Lawyers, Apc"
@@ -287,33 +287,33 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "24-2251",
-      "name": "24-2251",
+      "id": "24-60240",
+      "name": "24-60240",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "24-2251 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "24-60240 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Civil Rights Corps v. LaSalle"
+        "K Alain v. CIR"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Civil Rights Corps v. LaSalle",
+          "with": "K Alain v. CIR",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "Court of Appeals for the Second Circuit",
+          "with": "Court of Appeals for the Fifth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -323,39 +323,39 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 24-2251 across courtlistener-court-records.",
+        "Watch 24-60240 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "california-supreme-court",
-      "name": "California Supreme Court",
+      "id": "26-1294",
+      "name": "26-1294",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "California Supreme Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "26-1294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Gilead Tenofovir Cases"
+        "United States v. Kyle Wagner"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Gilead Tenofovir Cases",
+          "with": "United States v. Kyle Wagner",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "S283862",
+          "with": "Court of Appeals for the Sixth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -365,7 +365,49 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch California Supreme Court across courtlistener-court-records.",
+        "Watch 26-1294 across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name."
+      ],
+      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
+    },
+    {
+      "id": "bergam-v-dinerman",
+      "name": "Bergam v. Dinerman",
+      "type": "observed entity",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "Bergam v. Dinerman is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "what_changed": [
+        "Bergam v. Dinerman"
+      ],
+      "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
+      "evidence_grade": "legal record present",
+      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
+      "source_routes": [
+        {
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
+          "grade": "charged / sued"
+        }
+      ],
+      "connections": [
+        {
+          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "2024-03048",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Bergam v. Dinerman across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
@@ -374,7 +416,7 @@
       "id": "cc-2025-0631",
       "name": "CC-2025-0631",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "CC-2025-0631 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Gerena Betancourt v. Negociado De La Policía De Puerto Rico"
@@ -413,33 +455,33 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "civil-rights-corps-v-lasalle",
-      "name": "Civil Rights Corps v. LaSalle",
+      "id": "court-of-appeals-for-the-fifth-circuit",
+      "name": "Court of Appeals for the Fifth Circuit",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "Civil Rights Corps v. LaSalle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "Court of Appeals for the Fifth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Civil Rights Corps v. LaSalle"
+        "K Alain v. CIR"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Court of Appeals for the Second Circuit",
+          "with": "K Alain v. CIR",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "24-2251",
+          "with": "24-60240",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -449,7 +491,7 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Civil Rights Corps v. LaSalle across courtlistener-court-records.",
+        "Watch Court of Appeals for the Fifth Circuit across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
@@ -458,7 +500,7 @@
       "id": "court-of-appeals-for-the-ninth-circuit",
       "name": "Court of Appeals for the Ninth Circuit",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Court of Appeals for the Ninth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "In Re: Koi Design LLC v. Marron Lawyers, Apc"
@@ -497,33 +539,33 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "court-of-appeals-for-the-second-circuit",
-      "name": "Court of Appeals for the Second Circuit",
+      "id": "court-of-appeals-for-the-sixth-circuit",
+      "name": "Court of Appeals for the Sixth Circuit",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "Court of Appeals for the Sixth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Civil Rights Corps v. LaSalle"
+        "United States v. Kyle Wagner"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Civil Rights Corps v. LaSalle",
+          "with": "United States v. Kyle Wagner",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "24-2251",
+          "with": "26-1294",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -533,27 +575,27 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Court of Appeals for the Second Circuit across courtlistener-court-records.",
+        "Watch Court of Appeals for the Sixth Circuit across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "d-and-a-grandview-llc-v-60-davidson-llc",
-      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "id": "cross-v-lee",
+      "name": "Cross v. Lee",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "D & A Grandview, LLC v. 60 Davidson, LLC is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "Cross v. Lee is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "D & A Grandview, LLC v. 60 Davidson, LLC"
+        "Cross v. Lee"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued"
         }
       ],
@@ -565,7 +607,7 @@
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2024-13374",
+          "with": "2024-12389",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -575,7 +617,7 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.",
+        "Watch Cross v. Lee across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
@@ -584,7 +626,7 @@
       "id": "gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico",
       "name": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Gerena Betancourt v. Negociado De La Policía De Puerto Rico"
@@ -623,52 +665,10 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "gilead-tenofovir-cases",
-      "name": "Gilead Tenofovir Cases",
-      "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "Gilead Tenofovir Cases is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
-      "what_changed": [
-        "Gilead Tenofovir Cases"
-      ],
-      "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
-      "evidence_grade": "legal record present",
-      "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
-      "source_routes": [
-        {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
-          "grade": "charged / sued"
-        }
-      ],
-      "connections": [
-        {
-          "with": "California Supreme Court",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "S283862",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch Gilead Tenofovir Cases across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name."
-      ],
-      "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
-    },
-    {
       "id": "homeland-security-department",
       "name": "Homeland Security Department",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Homeland Security Department is currently tracked as observed entity with 2 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media",
@@ -703,7 +703,7 @@
       "id": "in-re-koi-design-llc-v-marron-lawyers-apc",
       "name": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "In Re: Koi Design LLC v. Marron Lawyers, Apc is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "In Re: Koi Design LLC v. Marron Lawyers, Apc"
@@ -742,33 +742,33 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "s283862",
-      "name": "S283862",
+      "id": "k-alain-v-cir",
+      "name": "K Alain v. CIR",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "S283862 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "K Alain v. CIR is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Gilead Tenofovir Cases"
+        "K Alain v. CIR"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Gilead Tenofovir Cases",
+          "with": "Court of Appeals for the Fifth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "California Supreme Court",
+          "with": "24-60240",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -778,7 +778,7 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch S283862 across courtlistener-court-records.",
+        "Watch K Alain v. CIR across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
@@ -787,7 +787,7 @@
       "id": "supreme-court-of-puerto-rico",
       "name": "Supreme Court of Puerto Rico",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Supreme Court of Puerto Rico is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Gerena Betancourt v. Negociado De La Policía De Puerto Rico"
@@ -826,33 +826,33 @@
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
     },
     {
-      "id": "williams-v-biggs",
-      "name": "Williams v. Biggs",
+      "id": "united-states-v-kyle-wagner",
+      "name": "United States v. Kyle Wagner",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
-      "at_a_glance": "Williams v. Biggs is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
+      "updated": "2026-08-13T05:07:39.864Z",
+      "at_a_glance": "United States v. Kyle Wagner is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
-        "Williams v. Biggs"
+        "United States v. Kyle Wagner"
       ],
       "why_it_matters": "This entity touches: courtlistener-court-records, courts, litigation, disclosure.",
       "evidence_grade": "legal record present",
       "plain_english_judgement": "Worth watching because records and relationship signals both exist.",
       "source_routes": [
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued"
         }
       ],
       "connections": [
         {
-          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "with": "Court of Appeals for the Sixth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2021-08825",
+          "with": "26-1294",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -862,7 +862,7 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Williams v. Biggs across courtlistener-court-records.",
+        "Watch United States v. Kyle Wagner across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name."
       ],
       "boundary": "This is a user-friendly tracking brief. It summarizes public-record signals and evidence grades; it is not a claim of private intent or wrongdoing."
@@ -871,7 +871,7 @@
       "id": "aapl",
       "name": "AAPL",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "AAPL is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Apple Inc. (AAPL)"
@@ -907,7 +907,7 @@
       "id": "alphabet-inc",
       "name": "Alphabet Inc.",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Alphabet Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Alphabet Inc. (GOOGL)"
@@ -943,7 +943,7 @@
       "id": "amazon-com-inc",
       "name": "AMAZON COM INC",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "AMAZON COM INC is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "AMAZON COM INC (AMZN)"
@@ -979,7 +979,7 @@
       "id": "amzn",
       "name": "AMZN",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "AMZN is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "AMAZON COM INC (AMZN)"
@@ -1015,7 +1015,7 @@
       "id": "apple-inc",
       "name": "Apple Inc.",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Apple Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Apple Inc. (AAPL)"
@@ -1051,7 +1051,7 @@
       "id": "avgo",
       "name": "AVGO",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "AVGO is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Broadcom Inc. (AVGO)"
@@ -1087,7 +1087,7 @@
       "id": "broadcom-inc",
       "name": "Broadcom Inc.",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Broadcom Inc. is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Broadcom Inc. (AVGO)"
@@ -1123,7 +1123,7 @@
       "id": "googl",
       "name": "GOOGL",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "GOOGL is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Alphabet Inc. (GOOGL)"
@@ -1159,7 +1159,7 @@
       "id": "microsoft-corp",
       "name": "MICROSOFT CORP",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "MICROSOFT CORP is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "MICROSOFT CORP (MSFT)"
@@ -1195,7 +1195,7 @@
       "id": "msft",
       "name": "MSFT",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "MSFT is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "MICROSOFT CORP (MSFT)"
@@ -1231,7 +1231,7 @@
       "id": "nvda",
       "name": "NVDA",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "NVDA is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "NVIDIA CORP (NVDA)"
@@ -1267,7 +1267,7 @@
       "id": "nvidia-corp",
       "name": "NVIDIA CORP",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "NVIDIA CORP is currently tracked as observed entity with 1 recent record route(s), 1 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "NVIDIA CORP (NVDA)"
@@ -1303,7 +1303,7 @@
       "id": "securities-and-exchange-commission",
       "name": "Securities and Exchange Commission",
       "type": "observed entity",
-      "updated": "2026-08-12T13:46:05.252Z",
+      "updated": "2026-08-13T05:07:39.864Z",
       "at_a_glance": "Securities and Exchange Commission is currently tracked as observed entity with 1 recent record route(s), 0 relationship candidate(s), and 4 control layer tag(s).",
       "what_changed": [
         "Electronic Delivery of Information Under the Federal Securities Laws"

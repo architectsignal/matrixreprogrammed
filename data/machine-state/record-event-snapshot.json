@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T13:46:05.211Z",
+  "updated": "2026-08-13T05:07:39.815Z",
   "records": [
     {
       "key": "federal-register-policy-2026-15833-1",
@@ -78,12 +78,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001045810-1",
-      "hash": "4223740b52387b4d",
+      "hash": "3c90ac5644c2416c",
       "summary": "NVIDIA CORP (NVDA)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "names": [
         "NVIDIA CORP",
         "NVDA"
@@ -91,12 +91,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000320193-2",
-      "hash": "a87df807287175a9",
+      "hash": "290d9191ccfd22ca",
       "summary": "Apple Inc. (AAPL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "names": [
         "Apple Inc.",
         "AAPL"
@@ -104,12 +104,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001652044-3",
-      "hash": "75cae4f051313958",
+      "hash": "84e47ad4de3c78e7",
       "summary": "Alphabet Inc. (GOOGL)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "names": [
         "Alphabet Inc.",
         "GOOGL"
@@ -117,12 +117,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0000789019-4",
-      "hash": "fe8ac769b6d28cac",
+      "hash": "eca70368c6df3e18",
       "summary": "MICROSOFT CORP (MSFT)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "names": [
         "MICROSOFT CORP",
         "MSFT"
@@ -130,12 +130,12 @@
     },
     {
       "key": "sec-edgar-filings-cik0001018724-5",
-      "hash": "b5f5ddfd371a1aca",
+      "hash": "e2f13fd9eab4120b",
       "summary": "AMAZON COM INC (AMZN)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "names": [
         "AMAZON COM INC",
         "AMZN"
@@ -143,19 +143,75 @@
     },
     {
       "key": "sec-edgar-filings-cik0001730168-6",
-      "hash": "8c8b5bee42fc35b2",
+      "hash": "2151f342cf8df20a",
       "summary": "Broadcom Inc. (AVGO)",
       "source_lane": "sec-edgar-filings",
       "evidence_grade": "documented association",
       "source_url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "names": [
         "Broadcom Inc.",
         "AVGO"
       ]
     },
     {
-      "key": "courtlistener-court-records-10942382-1",
+      "key": "courtlistener-court-records-10946277-1",
+      "hash": "87e14d0f82bdd170",
+      "summary": "K Alain v. CIR",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
+      "date": "2026-08-12",
+      "names": [
+        "K Alain v. CIR",
+        "Court of Appeals for the Fifth Circuit",
+        "24-60240"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946166-2",
+      "hash": "5e25ed80db3bfb13",
+      "summary": "Bergam v. Dinerman",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
+      "date": "2026-08-12",
+      "names": [
+        "Bergam v. Dinerman",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-03048"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946162-3",
+      "hash": "9bd41ed3c7e1dcbf",
+      "summary": "Cross v. Lee",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
+      "date": "2026-08-12",
+      "names": [
+        "Cross v. Lee",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-12389"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946076-4",
+      "hash": "3affc7ba1249eee3",
+      "summary": "United States v. Kyle Wagner",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
+      "date": "2026-08-12",
+      "names": [
+        "United States v. Kyle Wagner",
+        "Court of Appeals for the Sixth Circuit",
+        "26-1294"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10942382-5",
       "hash": "e1d13517d858e579",
       "summary": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
       "source_lane": "courtlistener-court-records",
@@ -169,7 +225,7 @@
       ]
     },
     {
-      "key": "courtlistener-court-records-10940847-2",
+      "key": "courtlistener-court-records-10940847-6",
       "hash": "53dbd24d613df2c5",
       "summary": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
       "source_lane": "courtlistener-court-records",
@@ -180,62 +236,6 @@
         "In Re: Koi Design LLC v. Marron Lawyers, Apc",
         "Court of Appeals for the Ninth Circuit",
         "23-55704"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10938615-3",
-      "hash": "aa3122aba427467b",
-      "summary": "Gilead Tenofovir Cases",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
-      "date": "2026-08-03",
-      "names": [
-        "Gilead Tenofovir Cases",
-        "California Supreme Court",
-        "S283862"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10936935-4",
-      "hash": "b742dac477765570",
-      "summary": "D & A Grandview, LLC v. 60 Davidson, LLC",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
-      "date": "2026-07-29",
-      "names": [
-        "D & A Grandview, LLC v. 60 Davidson, LLC",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2024-13374"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10936889-5",
-      "hash": "ac792fbc60ee4406",
-      "summary": "Williams v. Biggs",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
-      "date": "2026-07-29",
-      "names": [
-        "Williams v. Biggs",
-        "Appellate Division of the Supreme Court of the State of New York",
-        "2021-08825"
-      ]
-    },
-    {
-      "key": "courtlistener-court-records-10936118-6",
-      "hash": "444a161f0f618fcb",
-      "summary": "Civil Rights Corps v. LaSalle",
-      "source_lane": "courtlistener-court-records",
-      "evidence_grade": "charged / sued",
-      "source_url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
-      "date": "2026-07-29",
-      "names": [
-        "Civil Rights Corps v. LaSalle",
-        "Court of Appeals for the Second Circuit",
-        "24-2251"
       ]
     }
   ]

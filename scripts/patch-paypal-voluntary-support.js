@@ -24,7 +24,7 @@ for (const route of [
 }
 
 for (const [from, to] of [
-  ['parsed>500', 'parsed>5000'],
+  ['parsed>500.00', 'parsed>5000'],
   ["maxAmount:'500.00'", "maxAmount:'5000.00'"],
   ['€500.00', '€5,000.00']
 ]) {
@@ -32,6 +32,16 @@ for (const [from, to] of [
     source = source.replaceAll(from, to);
     changed = true;
   }
+}
+
+// Canonicalize the numeric guard instead of prefix-replacing `500`. The old
+// rewrite also matched `5000` and appended another zero on every build.
+const amountGuardPattern = /parsed>\d+(?=\)return null;return parsed\.toFixed\(2\)\})/g;
+const amountGuards = source.match(amountGuardPattern) || [];
+if (amountGuards.length !== 1) throw new Error(`Expected one voluntary support amount guard; found ${amountGuards.length}`);
+if (amountGuards[0] !== 'parsed>5000') {
+  source = source.replace(amountGuardPattern, 'parsed>5000');
+  changed = true;
 }
 
 // Donation functions are part of the canonical Worker. Refuse to silently invent
@@ -62,10 +72,12 @@ for (const marker of [
   "maxAmount:'5000.00'",
   'PAYPAL_DONATIONS_ENABLED',
   'not a charitable or tax-deductible donation',
-  'payment_type,status,gross_amount',
   'paypal.donation.captured'
 ]) {
   if (!source.includes(marker)) throw new Error(`Voluntary support worker marker missing: ${marker}`);
+}
+if (!/paypal_payment_records \([^)]*\bpayment_type\b[^)]*\benvironment\b[^)]*\bstatus\b[^)]*\bgross_amount\b/.test(source)) {
+  throw new Error('Voluntary support receipt insert must persist payment type, environment, status and gross amount');
 }
 
 if (changed) fs.writeFileSync(workerPath, source);

@@ -23,6 +23,8 @@ on:
       - 'admin-payment-dashboard.js'
       - 'scripts/phase6-paypal-state-test.mjs'
       - 'scripts/phase6-paypal-state-runner.mjs'
+      - 'scripts/patch-paypal-voluntary-support.js'
+      - 'scripts/paypal-voluntary-support-patch-test.mjs'
       - '.github/workflows/phase6-paypal-state-test.yml'
 
 permissions:
@@ -60,6 +62,8 @@ jobs:
           node --check admin-payment-dashboard.js
           node --check scripts/phase6-paypal-state-test.mjs
           node --check scripts/phase6-paypal-state-runner.mjs
+          node --check scripts/patch-paypal-voluntary-support.js
+          node --check scripts/paypal-voluntary-support-patch-test.mjs
           grep -q "paypal_subscription_transitions" migrations/phase6_paypal_subscriptions.sql
           grep -q "paypal_runtime_settings" migrations/phase6_paypal_subscriptions.sql
           grep -q "paypal_preserve_failure_count_on_failed_snapshot" migrations/phase6_paypal_failure_counter_fix.sql
@@ -74,7 +78,9 @@ jobs:
           NODE
 
       - name: Run complete PayPal sandbox state machine
-        run: node scripts/phase6-paypal-state-runner.mjs
+        run: |
+          node scripts/paypal-voluntary-support-patch-test.mjs
+          node scripts/phase6-paypal-state-runner.mjs
 
       - name: Validate Phase 6 exit evidence
         run: |

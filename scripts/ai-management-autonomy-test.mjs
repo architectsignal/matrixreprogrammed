@@ -28,7 +28,13 @@ const fakeExec = command => {
   if (command === 'nvidia-smi') return 'NVIDIA RTX Test, 24576, 20000, 11, 999.1';
   throw new Error('not installed');
 };
-const hardware = detectHardware({ platform: 'linux', execFile: fakeExec, clock });
+const detectedHardware = detectHardware({ platform: 'linux', execFile: fakeExec, clock });
+// Model an explicit 24 GB GPU / 64 GB owner node instead of inheriting the CI
+// runner's RAM. Separate admission tests prove that 14B is rejected on 16 GB.
+const hardware = {
+  ...detectedHardware,
+  memory: { ...detectedHardware.memory, total_gb: 64, total_bytes: 64 * 1024 ** 3 }
+};
 assert.equal(hardware.gpus.length, 1);
 assert.equal(hardware.gpus[0].vendor, 'nvidia');
 assert.equal(hardware.total_gpu_memory_mb, 24576);

@@ -140,16 +140,44 @@ async function hardwareInventory() {
   };
 }
 
+export function configuredModelAdmission({
+  modelId = config.modelId,
+  parametersBillion = config.modelParametersBillion,
+  estimatedVramGb = config.modelEstimatedVramGb,
+  totalMemoryMb = Math.round(os.totalmem() / 1024 / 1024),
+  maxModelMemoryFraction = Number(env('MATRIX_LOCAL_MAX_MODEL_MEMORY_FRACTION', '0.5'))
+} = {}) {
+  const inferredParameters = Number(String(modelId || '').match(/(?:^|[-_/\s])(\d+(?:\.\d+)?)\s*b(?:$|[-_/\s:])/i)?.[1] || 0);
+  const parameters = Number(parametersBillion || inferredParameters || 0);
+  const estimatedNeedGb = Number(estimatedVramGb) > 0
+    ? Number(estimatedVramGb)
+    : parameters > 0
+      ? Math.max(2, parameters * 0.65)
+      : 4;
+  const memoryFraction = Math.max(0.1, Math.min(0.9, Number(maxModelMemoryFraction || 0.5)));
+  const totalMemoryGb = Number(totalMemoryMb || 0) / 1024;
+  const maximumAdmittedGb = totalMemoryGb > 0 ? totalMemoryGb * memoryFraction : 0;
+  const admitted = maximumAdmittedGb <= 0 || estimatedNeedGb <= maximumAdmittedGb;
+  return {
+    admitted,
+    estimated_need_gb: Number(estimatedNeedGb.toFixed(2)),
+    total_memory_gb: Number(totalMemoryGb.toFixed(2)),
+    maximum_model_memory_fraction: memoryFraction,
+    maximum_admitted_model_memory_gb: Number(maximumAdmittedGb.toFixed(2))
+  };
+}
+
 function localResource(hardware) {
   if (!config.modelId) return [];
   const availableGpuMemoryGb = hardware.gpus.reduce((sum, gpu) => sum + Number(gpu.memory_free_mb || 0), 0) / 1024;
+  const admission = configuredModelAdmission({ totalMemoryMb: hardware.total_memory_mb });
   return [{
     resource_id: `local-${sha256(`${os.hostname()}|${config.modelProtocol}|${config.modelId}`).slice(0, 24)}`,
     provider_name: 'owner-local',
     service_name: config.modelId,
     resource_tier: 1,
     capability_types: ['llm'],
-    enabled: true,
+    enabled: admission.admitted,
     monetary_cost_per_unit_eur: 0,
     billing_enabled: false,
     payment_method_present: false,
@@ -170,6 +198,11 @@ function localResource(hardware) {
       context_length: config.modelContextLength,
       parameters_billion: config.modelParametersBillion,
       estimated_vram_gb: config.modelEstimatedVramGb,
+      memory_admission_passed: admission.admitted,
+      estimated_model_memory_gb: admission.estimated_need_gb,
+      total_system_memory_gb: admission.total_memory_gb,
+      maximum_model_memory_fraction: admission.maximum_model_memory_fraction,
+      maximum_admitted_model_memory_gb: admission.maximum_admitted_model_memory_gb,
       available_gpu_memory_gb: Number(availableGpuMemoryGb.toFixed(2)),
       agent_version: VERSION,
       last_seen: new Date().toISOString()
@@ -216,16 +249,26 @@ function loopbackEndpoint(value) {
   return url.toString().replace(/\/$/, '');
 }
 
-async function resolveLocalModel(job, { fetchImpl = globalThis.fetch, runtime = null } = {}) {
+async function resolveLocalModel(job, { fetchImpl = globalThis.fetch, runtime = null, configuredModel = config, hardware = null } = {}) {
   const requestedModel = String(job?.payload?.model_id || '').trim();
   if (!requestedModel) throw new Error('No local model is configured for this job');
-  if (config.modelId && requestedModel === config.modelId) {
+  if (configuredModel.modelId && requestedModel === configuredModel.modelId) {
+    const inventory = hardware || await hardwareInventory();
+    const admission = configuredModelAdmission({
+      modelId: configuredModel.modelId,
+      parametersBillion: configuredModel.modelParametersBillion,
+      estimatedVramGb: configuredModel.modelEstimatedVramGb,
+      totalMemoryMb: inventory.total_memory_mb
+    });
+    if (!admission.admitted) {
+      throw new Error(`Requested configured owner-local model is excluded by the memory-admission gate: ${requestedModel} requires an estimated ${admission.estimated_need_gb} GB, above the ${admission.maximum_admitted_model_memory_gb} GB limit`);
+    }
     return {
-      model_id: config.modelId,
-      protocol: config.modelProtocol,
-      endpoint: loopbackEndpoint(config.modelEndpoint),
+      model_id: configuredModel.modelId,
+      protocol: configuredModel.modelProtocol,
+      endpoint: loopbackEndpoint(configuredModel.modelEndpoint),
       resource_id: String(job?.payload?.selected_resource_id || ''),
-      parameters_billion: config.modelParametersBillion
+      parameters_billion: configuredModel.modelParametersBillion
     };
   }
   const discovered = runtime || await detectLocalRuntime({ fetchImpl });

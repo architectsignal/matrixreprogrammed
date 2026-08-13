@@ -5,12 +5,27 @@ process.env.MATRIX_LOCAL_AGENT_SHARED_SECRET = 'test-secret-that-is-at-least-thi
 process.env.MATRIX_LOCAL_AGENT_HOST = '127.0.0.1';
 process.env.MATRIX_LOCAL_MODEL_ENDPOINT = 'http://127.0.0.1:11434';
 
-const { executeJob, readOpenAiText, sha256, timingSafeEqual, validatedEvidenceSelection, verifySignature } = await import('./matrix-local-agent.mjs');
+const { configuredModelAdmission, executeJob, readOpenAiText, resolveLocalModel, sha256, timingSafeEqual, validatedEvidenceSelection, verifySignature } = await import('./matrix-local-agent.mjs');
 
 assert.equal(sha256('matrix'), crypto.createHash('sha256').update('matrix').digest('hex'));
 assert.equal(timingSafeEqual('abc', 'abc'), true);
 assert.equal(timingSafeEqual('abc', 'abd'), false);
 assert.equal(timingSafeEqual('abc', 'abcd'), false);
+
+const sixteenGbHardware = { total_memory_mb: 16 * 1024, gpus: [] };
+assert.equal(configuredModelAdmission({ modelId: 'qwen3-14b', totalMemoryMb: sixteenGbHardware.total_memory_mb }).admitted, false);
+assert.equal(configuredModelAdmission({ modelId: 'qwen/qwen3-4b', totalMemoryMb: sixteenGbHardware.total_memory_mb }).admitted, true);
+await assert.rejects(
+  resolveLocalModel({ payload: { model_id: 'qwen3-14b' } }, {
+    configuredModel: { modelId: 'qwen3-14b', modelProtocol: 'openai', modelEndpoint: 'http://127.0.0.1:1234', modelParametersBillion: 14, modelEstimatedVramGb: 9 },
+    hardware: sixteenGbHardware
+  }),
+  /memory-admission gate/
+);
+assert.equal((await resolveLocalModel({ payload: { model_id: 'qwen\/qwen3-4b' } }, {
+  configuredModel: { modelId: 'qwen/qwen3-4b', modelProtocol: 'openai', modelEndpoint: 'http://127.0.0.1:1234', modelParametersBillion: 4, modelEstimatedVramGb: 2.5 },
+  hardware: sixteenGbHardware
+})).model_id, 'qwen/qwen3-4b');
 
 const result = await executeJob({ job_type: 'deterministic.hash', payload: { value: 'matrix' } });
 assert.equal(result.algorithm, 'sha256');

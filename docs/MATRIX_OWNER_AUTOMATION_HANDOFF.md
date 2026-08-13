@@ -11,20 +11,14 @@ Verified on 13 August 2026. The immutable operating law is `CAUSE NO HARM OR LOS
 - Value, bounty and capital-challenge code is receipt-only. No money has been received or reconciled. Current capital is EUR 0.
 - Automatic bounty claims, bounty submissions, security bounty execution, capital financial execution and permissionless crypto execution remain off.
 - Production release is blocked by the Cloudflare build-budget guard until the billing-period usage is verified at zero. Do not bypass the guard.
-- The completed local branch is three commits ahead of PR #255. Publishing those 55 files to `architectsignal/matrixreprogrammed` requires destination-specific owner approval before CI can evaluate them.
+- The completed implementation and its scoped CI repairs are published on PR #255 at `architectsignal/matrixreprogrammed`, branch `agent/living-matrix-core`. The pull request remains a draft; publication does not authorize merging or deployment.
 - The local supervisor and host are healthy, registered and heartbeat-fresh. `matrix-local matrix doctor` currently receives HTTP 404 because the Phase 17/18 Matrix-operations route is part of the unpublished Worker; it remains `WORKING_NOT_LIVE` until the guarded deployment completes.
 
 ## Owner actions in order
 
-### 0. Authorize publication to the existing pull request
+### 0. Review the published pull request
 
-If `architectsignal/matrixreprogrammed` is the intended destination, provide this exact approval to Codex:
-
-```text
-I approve pushing the current local HEAD and its two unpublished ancestors to architectsignal/matrixreprogrammed on branch agent/living-matrix-core for PR #255.
-```
-
-This authorizes source publication only. It does not authorize merging, Cloudflare deployment, financial execution or bypassing any cost guard.
+Review PR #255 and its required checks. The source is already published; Codex has not merged the pull request or deployed it. Merging, Cloudflare deployment, financial execution and bypassing any cost guard remain outside the publication approval.
 
 ### 1. Keep the local host running after Windows sign-in
 

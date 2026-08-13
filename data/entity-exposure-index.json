@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T13:46:05.305Z",
+  "updated": "2026-08-13T05:07:39.926Z",
   "title": "Entity Exposure Index",
   "purpose": "Evidence-graded exposure profiles for tracked entities: wrongdoing records, legal actions, sanctions, conflicts, contract concentration, disclosure gaps and source-route watch triggers.",
   "boundary": "This system separates proven wrongdoing, legal allegations, documented conflicts, source signals and unsupported claims. It does not accuse an entity without a record grade.",
@@ -15,8 +15,8 @@
       ],
       "records": [
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -26,8 +26,8 @@
           ]
         },
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -37,8 +37,8 @@
           ]
         },
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -50,8 +50,8 @@
           ]
         },
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -65,25 +65,25 @@
       ],
       "relationships": [
         {
-          "with": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "with": "Bergam v. Dinerman",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2024-13374",
+          "with": "2024-03048",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "Williams v. Biggs",
+          "with": "Cross v. Lee",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2021-08825",
+          "with": "2024-12389",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -99,67 +99,6 @@
       ],
       "exposure_level": "critical public-record exposure",
       "public_reading": "Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
-      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
-    },
-    {
-      "id": "california-supreme-court",
-      "name": "California Supreme Court",
-      "exposure_score": 184,
-      "highest_evidence_grade": "charged / sued",
-      "exposure_categories": [
-        "Charged, sued or named in legal action",
-        "Relationship candidate for review"
-      ],
-      "records": [
-        {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        },
-        {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
-          "grade": "charged / sued",
-          "category": "Charged, sued or named in legal action",
-          "source_lane": "courtlistener-court-records",
-          "record_type": "court_record_signal",
-          "matched_terms": [
-            "charged",
-            "sued",
-            "court"
-          ]
-        }
-      ],
-      "relationships": [
-        {
-          "with": "Gilead Tenofovir Cases",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        },
-        {
-          "with": "S283862",
-          "score": 10,
-          "type": "public-record co-occurrence",
-          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
-        }
-      ],
-      "missing_records": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "watch_next": [
-        "Watch California Supreme Court across courtlistener-court-records.",
-        "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving California Supreme Court."
-      ],
-      "exposure_level": "critical public-record exposure",
-      "public_reading": "California Supreme Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -224,6 +163,67 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
+      "id": "court-of-appeals-for-the-fifth-circuit",
+      "name": "Court of Appeals for the Fifth Circuit",
+      "exposure_score": 184,
+      "highest_evidence_grade": "charged / sued",
+      "exposure_categories": [
+        "Charged, sued or named in legal action",
+        "Relationship candidate for review"
+      ],
+      "records": [
+        {
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        },
+        {
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
+          "grade": "charged / sued",
+          "category": "Charged, sued or named in legal action",
+          "source_lane": "courtlistener-court-records",
+          "record_type": "court_record_signal",
+          "matched_terms": [
+            "charged",
+            "sued",
+            "court"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "with": "K Alain v. CIR",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "with": "24-60240",
+          "score": 10,
+          "type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
+      "missing_records": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "watch_next": [
+        "Watch Court of Appeals for the Fifth Circuit across courtlistener-court-records.",
+        "Check whether new courtlistener-court-records records repeat this name.",
+        "Watch courtlistener-court-records for follow-up records involving Court of Appeals for the Fifth Circuit."
+      ],
+      "exposure_level": "critical public-record exposure",
+      "public_reading": "Court of Appeals for the Fifth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
+    },
+    {
       "id": "court-of-appeals-for-the-ninth-circuit",
       "name": "Court of Appeals for the Ninth Circuit",
       "exposure_score": 184,
@@ -285,8 +285,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "court-of-appeals-for-the-second-circuit",
-      "name": "Court of Appeals for the Second Circuit",
+      "id": "court-of-appeals-for-the-sixth-circuit",
+      "name": "Court of Appeals for the Sixth Circuit",
       "exposure_score": 184,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -295,8 +295,8 @@
       ],
       "records": [
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -306,8 +306,8 @@
           ]
         },
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -321,13 +321,13 @@
       ],
       "relationships": [
         {
-          "with": "Civil Rights Corps v. LaSalle",
+          "with": "United States v. Kyle Wagner",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "24-2251",
+          "with": "26-1294",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -337,12 +337,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Court of Appeals for the Second Circuit across courtlistener-court-records.",
+        "Watch Court of Appeals for the Sixth Circuit across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Court of Appeals for the Second Circuit."
+        "Watch courtlistener-court-records for follow-up records involving Court of Appeals for the Sixth Circuit."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "Court of Appeals for the Sixth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -468,8 +468,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "2021-08825",
-      "name": "2021-08825",
+      "id": "2024-03048",
+      "name": "2024-03048",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -478,8 +478,8 @@
       ],
       "records": [
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -488,8 +488,8 @@
           ]
         },
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -503,7 +503,7 @@
       ],
       "relationships": [
         {
-          "with": "Williams v. Biggs",
+          "with": "Bergam v. Dinerman",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -519,17 +519,17 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 2021-08825 across courtlistener-court-records.",
+        "Watch 2024-03048 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 2021-08825."
+        "Watch courtlistener-court-records for follow-up records involving 2024-03048."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "2021-08825 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "2024-03048 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "2024-13374",
-      "name": "2024-13374",
+      "id": "2024-12389",
+      "name": "2024-12389",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -538,8 +538,8 @@
       ],
       "records": [
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -548,8 +548,8 @@
           ]
         },
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -563,7 +563,7 @@
       ],
       "relationships": [
         {
-          "with": "D & A Grandview, LLC v. 60 Davidson, LLC",
+          "with": "Cross v. Lee",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -579,12 +579,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 2024-13374 across courtlistener-court-records.",
+        "Watch 2024-12389 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 2024-13374."
+        "Watch courtlistener-court-records for follow-up records involving 2024-12389."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "2024-13374 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "2024-12389 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -648,8 +648,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "24-2251",
-      "name": "24-2251",
+      "id": "24-60240",
+      "name": "24-60240",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -658,8 +658,8 @@
       ],
       "records": [
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -668,8 +668,8 @@
           ]
         },
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -683,13 +683,13 @@
       ],
       "relationships": [
         {
-          "with": "Civil Rights Corps v. LaSalle",
+          "with": "K Alain v. CIR",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "Court of Appeals for the Second Circuit",
+          "with": "Court of Appeals for the Fifth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -699,17 +699,17 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch 24-2251 across courtlistener-court-records.",
+        "Watch 24-60240 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving 24-2251."
+        "Watch courtlistener-court-records for follow-up records involving 24-60240."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "24-2251 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "24-60240 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "civil-rights-corps-v-lasalle",
-      "name": "Civil Rights Corps v. LaSalle",
+      "id": "26-1294",
+      "name": "26-1294",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -718,8 +718,8 @@
       ],
       "records": [
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -728,8 +728,8 @@
           ]
         },
         {
-          "title": "Civil Rights Corps v. LaSalle",
-          "url": "https://www.courtlistener.com/opinion/10936118/civil-rights-corps-v-lasalle/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -743,13 +743,13 @@
       ],
       "relationships": [
         {
-          "with": "Court of Appeals for the Second Circuit",
+          "with": "United States v. Kyle Wagner",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "24-2251",
+          "with": "Court of Appeals for the Sixth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -759,17 +759,17 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Civil Rights Corps v. LaSalle across courtlistener-court-records.",
+        "Watch 26-1294 across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Civil Rights Corps v. LaSalle."
+        "Watch courtlistener-court-records for follow-up records involving 26-1294."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "Civil Rights Corps v. LaSalle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "26-1294 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "d-and-a-grandview-llc-v-60-davidson-llc",
-      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "id": "bergam-v-dinerman",
+      "name": "Bergam v. Dinerman",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -778,8 +778,8 @@
       ],
       "records": [
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -788,8 +788,8 @@
           ]
         },
         {
-          "title": "D & A Grandview, LLC v. 60 Davidson, LLC",
-          "url": "https://www.courtlistener.com/opinion/10936935/d-a-grandview-llc-v-60-davidson-llc/",
+          "title": "Bergam v. Dinerman",
+          "url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -809,7 +809,7 @@
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2024-13374",
+          "with": "2024-03048",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -819,17 +819,17 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.",
+        "Watch Bergam v. Dinerman across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving D & A Grandview, LLC v. 60 Davidson, LLC."
+        "Watch courtlistener-court-records for follow-up records involving Bergam v. Dinerman."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "D & A Grandview, LLC v. 60 Davidson, LLC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "Bergam v. Dinerman deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "gilead-tenofovir-cases",
-      "name": "Gilead Tenofovir Cases",
+      "id": "cross-v-lee",
+      "name": "Cross v. Lee",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -838,8 +838,8 @@
       ],
       "records": [
         {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -848,8 +848,8 @@
           ]
         },
         {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "title": "Cross v. Lee",
+          "url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -863,13 +863,13 @@
       ],
       "relationships": [
         {
-          "with": "California Supreme Court",
+          "with": "Appellate Division of the Supreme Court of the State of New York",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "S283862",
+          "with": "2024-12389",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -879,12 +879,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Gilead Tenofovir Cases across courtlistener-court-records.",
+        "Watch Cross v. Lee across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Gilead Tenofovir Cases."
+        "Watch courtlistener-court-records for follow-up records involving Cross v. Lee."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "Gilead Tenofovir Cases deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "Cross v. Lee deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
@@ -948,8 +948,8 @@
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "s283862",
-      "name": "S283862",
+      "id": "k-alain-v-cir",
+      "name": "K Alain v. CIR",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -958,8 +958,8 @@
       ],
       "records": [
         {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -968,8 +968,8 @@
           ]
         },
         {
-          "title": "Gilead Tenofovir Cases",
-          "url": "https://www.courtlistener.com/opinion/10938615/gilead-tenofovir-cases/",
+          "title": "K Alain v. CIR",
+          "url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -983,13 +983,13 @@
       ],
       "relationships": [
         {
-          "with": "Gilead Tenofovir Cases",
+          "with": "Court of Appeals for the Fifth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "California Supreme Court",
+          "with": "24-60240",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -999,17 +999,17 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch S283862 across courtlistener-court-records.",
+        "Watch K Alain v. CIR across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving S283862."
+        "Watch courtlistener-court-records for follow-up records involving K Alain v. CIR."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "S283862 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "K Alain v. CIR deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {
-      "id": "williams-v-biggs",
-      "name": "Williams v. Biggs",
+      "id": "united-states-v-kyle-wagner",
+      "name": "United States v. Kyle Wagner",
       "exposure_score": 179,
       "highest_evidence_grade": "charged / sued",
       "exposure_categories": [
@@ -1018,8 +1018,8 @@
       ],
       "records": [
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "matched_terms": [
@@ -1028,8 +1028,8 @@
           ]
         },
         {
-          "title": "Williams v. Biggs",
-          "url": "https://www.courtlistener.com/opinion/10936889/williams-v-biggs/",
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
           "grade": "charged / sued",
           "category": "Charged, sued or named in legal action",
           "source_lane": "courtlistener-court-records",
@@ -1043,13 +1043,13 @@
       ],
       "relationships": [
         {
-          "with": "Appellate Division of the Supreme Court of the State of New York",
+          "with": "Court of Appeals for the Sixth Circuit",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
         },
         {
-          "with": "2021-08825",
+          "with": "26-1294",
           "score": 10,
           "type": "public-record co-occurrence",
           "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
@@ -1059,12 +1059,12 @@
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "watch_next": [
-        "Watch Williams v. Biggs across courtlistener-court-records.",
+        "Watch United States v. Kyle Wagner across courtlistener-court-records.",
         "Check whether new courtlistener-court-records records repeat this name.",
-        "Watch courtlistener-court-records for follow-up records involving Williams v. Biggs."
+        "Watch courtlistener-court-records for follow-up records involving United States v. Kyle Wagner."
       ],
       "exposure_level": "critical public-record exposure",
-      "public_reading": "Williams v. Biggs deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
+      "public_reading": "United States v. Kyle Wagner deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.",
       "boundary": "Exposure score is a public-record triage score. It is not a verdict, accusation or finding of private intent."
     },
     {

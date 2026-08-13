@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "updated": "2026-08-12T06:49:13.989Z",
+  "updated": "2026-08-13T05:19:58.293Z",
   "title": "Evidence Weighted Relationship Graph",
   "boundary": "This graph ranks public route strength. It does not convert association into a claim.",
   "nodeCount": 130,
@@ -345,21 +345,6 @@
       "score": 100
     },
     {
-      "id": "jensen-huang",
-      "layer": "capital-and-ownership",
-      "name": "Jensen Huang",
-      "type": "profile route",
-      "route": "billionaire-briefs/jensen-huang.html",
-      "notes": [
-        "high priority",
-        "NVIDIA",
-        "AI chips",
-        "data-center infrastructure",
-        "ai-data"
-      ],
-      "score": 99
-    },
-    {
       "id": "larry-ellison",
       "layer": "capital-and-ownership",
       "name": "Larry Ellison",
@@ -416,6 +401,21 @@
         "media data terminals",
         "philanthropy",
         "media-narrative"
+      ],
+      "score": 70
+    },
+    {
+      "id": "jensen-huang",
+      "layer": "capital-and-ownership",
+      "name": "Jensen Huang",
+      "type": "profile route",
+      "route": "billionaire-briefs/jensen-huang.html",
+      "notes": [
+        "high priority",
+        "NVIDIA",
+        "AI chips",
+        "data-center infrastructure",
+        "ai-data"
       ],
       "score": 70
     },
@@ -663,22 +663,22 @@
       "score": 54
     },
     {
-      "id": "2021-08825",
+      "id": "2024-03048",
       "layer": "evidence-and-records",
-      "name": "2021-08825",
+      "name": "2024-03048",
       "type": "missing record",
-      "route": "entity-briefs/2021-08825.html",
+      "route": "entity-briefs/2024-03048.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "score": 54
     },
     {
-      "id": "2024-13374",
+      "id": "2024-12389",
       "layer": "evidence-and-records",
-      "name": "2024-13374",
+      "name": "2024-12389",
       "type": "missing record",
-      "route": "entity-briefs/2024-13374.html",
+      "route": "entity-briefs/2024-12389.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -696,22 +696,33 @@
       "score": 54
     },
     {
-      "id": "24-2251",
+      "id": "24-60240",
       "layer": "evidence-and-records",
-      "name": "24-2251",
+      "name": "24-60240",
       "type": "missing record",
-      "route": "entity-briefs/24-2251.html",
+      "route": "entity-briefs/24-60240.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "score": 54
     },
     {
-      "id": "california-supreme-court",
+      "id": "26-1294",
       "layer": "evidence-and-records",
-      "name": "California Supreme Court",
+      "name": "26-1294",
       "type": "missing record",
-      "route": "entity-briefs/california-supreme-court.html",
+      "route": "entity-briefs/26-1294.html",
+      "notes": [
+        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
+      ],
+      "score": 54
+    },
+    {
+      "id": "bergam-v-dinerman",
+      "layer": "evidence-and-records",
+      "name": "Bergam v. Dinerman",
+      "type": "missing record",
+      "route": "entity-briefs/bergam-v-dinerman.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -729,11 +740,11 @@
       "score": 54
     },
     {
-      "id": "civil-rights-corps-v-lasalle",
+      "id": "court-of-appeals-for-the-fifth-circuit",
       "layer": "evidence-and-records",
-      "name": "Civil Rights Corps v. LaSalle",
+      "name": "Court of Appeals for the Fifth Circuit",
       "type": "missing record",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "route": "entity-briefs/court-of-appeals-for-the-fifth-circuit.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -751,22 +762,22 @@
       "score": 54
     },
     {
-      "id": "court-of-appeals-for-the-second-circuit",
+      "id": "court-of-appeals-for-the-sixth-circuit",
       "layer": "evidence-and-records",
-      "name": "Court of Appeals for the Second Circuit",
+      "name": "Court of Appeals for the Sixth Circuit",
       "type": "missing record",
-      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "route": "entity-briefs/court-of-appeals-for-the-sixth-circuit.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
       "score": 54
     },
     {
-      "id": "d-a-grandview-llc-v-60-davidson-llc",
+      "id": "cross-v-lee",
       "layer": "evidence-and-records",
-      "name": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "name": "Cross v. Lee",
       "type": "missing record",
-      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "route": "entity-briefs/cross-v-lee.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -778,17 +789,6 @@
       "name": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
       "type": "missing record",
       "route": "entity-briefs/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
-      "notes": [
-        "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
-      ],
-      "score": 54
-    },
-    {
-      "id": "gilead-tenofovir-cases",
-      "layer": "evidence-and-records",
-      "name": "Gilead Tenofovir Cases",
-      "type": "missing record",
-      "route": "entity-briefs/gilead-tenofovir-cases.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -817,11 +817,11 @@
       "score": 54
     },
     {
-      "id": "s283862",
+      "id": "k-alain-v-cir",
       "layer": "evidence-and-records",
-      "name": "S283862",
+      "name": "K Alain v. CIR",
       "type": "missing record",
-      "route": "entity-briefs/s283862.html",
+      "route": "entity-briefs/k-alain-v-cir.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -839,11 +839,11 @@
       "score": 54
     },
     {
-      "id": "williams-v-biggs",
+      "id": "united-states-v-kyle-wagner",
       "layer": "evidence-and-records",
-      "name": "Williams v. Biggs",
+      "name": "United States v. Kyle Wagner",
       "type": "missing record",
-      "route": "entity-briefs/williams-v-biggs.html",
+      "route": "entity-briefs/united-states-v-kyle-wagner.html",
       "notes": [
         "Confirm the primary record page, PDF, docket, filing, award notice or registry record."
       ],
@@ -1163,11 +1163,11 @@
       "score": 43
     },
     {
-      "id": "feed-2021-08825-confirm-the-primary-record-page-pdf-docket-filing",
+      "id": "feed-2024-03048-confirm-the-primary-record-page-pdf-docket-filing",
       "layer": "evidence-and-records",
-      "name": "2021-08825 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "2024-03048 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/2021-08825.html",
+      "route": "entity-briefs/2024-03048.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1175,11 +1175,11 @@
       "score": 43
     },
     {
-      "id": "feed-2024-13374-confirm-the-primary-record-page-pdf-docket-filing",
+      "id": "feed-2024-12389-confirm-the-primary-record-page-pdf-docket-filing",
       "layer": "evidence-and-records",
-      "name": "2024-13374 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "2024-12389 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/2024-13374.html",
+      "route": "entity-briefs/2024-12389.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1199,11 +1199,11 @@
       "score": 43
     },
     {
-      "id": "feed-24-2251-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "id": "feed-24-60240-confirm-the-primary-record-page-pdf-docket-filing-a",
       "layer": "evidence-and-records",
-      "name": "24-2251 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "24-60240 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/24-2251.html",
+      "route": "entity-briefs/24-60240.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1211,11 +1211,23 @@
       "score": 43
     },
     {
-      "id": "feed-california-supreme-court-confirm-the-primary-record-page-pdf",
+      "id": "feed-26-1294-confirm-the-primary-record-page-pdf-docket-filing-aw",
       "layer": "evidence-and-records",
-      "name": "California Supreme Court — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "26-1294 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/california-supreme-court.html",
+      "route": "entity-briefs/26-1294.html",
+      "notes": [
+        "missing record",
+        "Score 85"
+      ],
+      "score": 43
+    },
+    {
+      "id": "feed-bergam-v-dinerman-confirm-the-primary-record-page-pdf-docket",
+      "layer": "evidence-and-records",
+      "name": "Bergam v. Dinerman — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "type": "deep intel item",
+      "route": "entity-briefs/bergam-v-dinerman.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1235,11 +1247,11 @@
       "score": 43
     },
     {
-      "id": "feed-civil-rights-corps-v-lasalle-confirm-the-primary-record-page",
+      "id": "feed-court-of-appeals-for-the-fifth-circuit-confirm-the-primary-r",
       "layer": "evidence-and-records",
-      "name": "Civil Rights Corps v. LaSalle — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Court of Appeals for the Fifth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "route": "entity-briefs/court-of-appeals-for-the-fifth-circuit.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1259,11 +1271,11 @@
       "score": 43
     },
     {
-      "id": "feed-court-of-appeals-for-the-second-circuit-confirm-the-primary-",
+      "id": "feed-court-of-appeals-for-the-sixth-circuit-confirm-the-primary-r",
       "layer": "evidence-and-records",
-      "name": "Court of Appeals for the Second Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Court of Appeals for the Sixth Circuit — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "route": "entity-briefs/court-of-appeals-for-the-sixth-circuit.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1271,11 +1283,11 @@
       "score": 43
     },
     {
-      "id": "feed-d-a-grandview-llc-v-60-davidson-llc-confirm-the-primary-reco",
+      "id": "feed-cross-v-lee-confirm-the-primary-record-page-pdf-docket-filin",
       "layer": "evidence-and-records",
-      "name": "D & A Grandview, LLC v. 60 Davidson, LLC — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "Cross v. Lee — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "route": "entity-briefs/cross-v-lee.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1288,18 +1300,6 @@
       "name": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
       "route": "entity-briefs/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
-      "notes": [
-        "missing record",
-        "Score 85"
-      ],
-      "score": 43
-    },
-    {
-      "id": "feed-gilead-tenofovir-cases-confirm-the-primary-record-page-pdf-d",
-      "layer": "evidence-and-records",
-      "name": "Gilead Tenofovir Cases — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "type": "deep intel item",
-      "route": "entity-briefs/gilead-tenofovir-cases.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1331,11 +1331,11 @@
       "score": 43
     },
     {
-      "id": "feed-s283862-confirm-the-primary-record-page-pdf-docket-filing-aw",
+      "id": "feed-k-alain-v-cir-confirm-the-primary-record-page-pdf-docket-fil",
       "layer": "evidence-and-records",
-      "name": "S283862 — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "K Alain v. CIR — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/s283862.html",
+      "route": "entity-briefs/k-alain-v-cir.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -1355,11 +1355,11 @@
       "score": 43
     },
     {
-      "id": "feed-williams-v-biggs-confirm-the-primary-record-page-pdf-docket-",
+      "id": "feed-united-states-v-kyle-wagner-confirm-the-primary-record-page-",
       "layer": "evidence-and-records",
-      "name": "Williams v. Biggs — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "name": "United States v. Kyle Wagner — Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "type": "deep intel item",
-      "route": "entity-briefs/williams-v-biggs.html",
+      "route": "entity-briefs/united-states-v-kyle-wagner.html",
       "notes": [
         "missing record",
         "Score 85"
@@ -3244,6 +3244,6 @@
     }
   ],
   "contractVersion": "2.0.0",
-  "contractUpdated": "2026-08-12T06:49:14.705Z",
+  "contractUpdated": "2026-08-13T05:26:42.576Z",
   "relationshipBoundary": "This edge records only the cited relationship, role, transaction, appointment, mention or association. It does not establish guilt, knowledge of another person’s conduct, shared motive, secret coordination or control beyond the documented mechanism."
 }

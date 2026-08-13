@@ -35,18 +35,13 @@ jobs:
 
           speculation = 'ai-speculative-conclusions.html'
 
-          old_cta = '<div class="cta-row"><a class="btn" href="answer-index.html">Legacy Answer Index</a><a class="btn alt" href="black-file-index.html">Black File Index</a><a class="btn alt" href="search.html">Search Archive</a></div>'
-          new_cta = '<div class="cta-row"><a class="btn" href="ai-speculative-conclusions.html">AI Speculative Conclusions</a><a class="btn alt" href="answer-index.html">Legacy Answer Index</a><a class="btn alt" href="black-file-index.html">Black File Index</a><a class="btn alt" href="search.html">Search Archive</a></div>'
+          nav_anchor = '<a href="answer-engine.html">AI Answers</a>'
+          nav_with_speculation = nav_anchor + '<a href="ai-speculative-conclusions.html">AI Hypotheses</a>'
 
           if speculation not in text:
-              if old_cta not in text:
-                  raise SystemExit('Answer Engine CTA marker not found; refusing unsafe rewrite.')
-              text = text.replace(old_cta, new_cta, 1)
-
-          old_nav = '<a href="investigations.html">Investigations</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav>'
-          new_nav = '<a href="investigations.html">Investigations</a><a href="ai-speculative-conclusions.html">AI Hypotheses</a><a href="evidence-vault.html">Evidence</a><a href="search.html">Search</a></nav>'
-          if 'AI Hypotheses</a>' not in text and old_nav in text:
-              text = text.replace(old_nav, new_nav, 1)
+              if nav_anchor not in text:
+                  raise SystemExit('Current Answer Engine navigation marker not found; refusing unsafe rewrite.')
+              text = text.replace(nav_anchor, nav_with_speculation, 1)
 
           text = text.replace(
               '<script src="investigation-pulse.js"></script>',
@@ -58,7 +53,6 @@ jobs:
 
       - name: Verify visible link
         run: |
-          grep -q 'href="ai-speculative-conclusions.html">AI Speculative Conclusions</a>' answer-engine.html
           grep -q 'href="ai-speculative-conclusions.html">AI Hypotheses</a>' answer-engine.html
 
       - name: Commit repair when needed

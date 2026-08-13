@@ -1,8 +1,93 @@
 {
-  "updated": "2026-08-12T13:46:06.905Z",
+  "updated": "2026-08-13T05:28:33.280Z",
   "title": "Daily Command Brief",
   "boundary": "Command brief summarizes machine outputs with source routes and evidence boundaries.",
-  "topMovements": [],
+  "topMovements": [
+    {
+      "key": "courtlistener-court-records-10946277-1",
+      "hash": "87e14d0f82bdd170",
+      "summary": "K Alain v. CIR",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946277/k-alain-v-cir/",
+      "date": "2026-08-12",
+      "names": [
+        "K Alain v. CIR",
+        "Court of Appeals for the Fifth Circuit",
+        "24-60240"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946166-2",
+      "hash": "5e25ed80db3bfb13",
+      "summary": "Bergam v. Dinerman",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946166/bergam-v-dinerman/",
+      "date": "2026-08-12",
+      "names": [
+        "Bergam v. Dinerman",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-03048"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946162-3",
+      "hash": "9bd41ed3c7e1dcbf",
+      "summary": "Cross v. Lee",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946162/cross-v-lee/",
+      "date": "2026-08-12",
+      "names": [
+        "Cross v. Lee",
+        "Appellate Division of the Supreme Court of the State of New York",
+        "2024-12389"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10946076-4",
+      "hash": "3affc7ba1249eee3",
+      "summary": "United States v. Kyle Wagner",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
+      "date": "2026-08-12",
+      "names": [
+        "United States v. Kyle Wagner",
+        "Court of Appeals for the Sixth Circuit",
+        "26-1294"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10942382-5",
+      "hash": "e1d13517d858e579",
+      "summary": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10942382/gerena-betancourt-v-negociado-de-la-policia-de-puerto-rico/",
+      "date": "2026-08-07",
+      "names": [
+        "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
+        "Supreme Court of Puerto Rico",
+        "CC-2025-0631"
+      ]
+    },
+    {
+      "key": "courtlistener-court-records-10940847-6",
+      "hash": "53dbd24d613df2c5",
+      "summary": "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+      "source_lane": "courtlistener-court-records",
+      "evidence_grade": "charged / sued",
+      "source_url": "https://www.courtlistener.com/opinion/10940847/in-re-koi-design-llc-v-marron-lawyers-apc/",
+      "date": "2026-08-06",
+      "names": [
+        "In Re: Koi Design LLC v. Marron Lawyers, Apc",
+        "Court of Appeals for the Ninth Circuit",
+        "23-55704"
+      ]
+    }
+  ],
   "topEntityChanges": [
     {
       "name": "Centers for Medicare & Medicaid Services",
@@ -20,14 +105,14 @@
       "route": "entity-briefs/appellate-division-of-the-supreme-court-of-the-state-of-new-york.html"
     },
     {
-      "name": "2021-08825",
+      "name": "2024-03048",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/2021-08825.html"
+      "route": "entity-briefs/2024-03048.html"
     },
     {
-      "name": "2024-13374",
+      "name": "2024-12389",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/2024-13374.html"
+      "route": "entity-briefs/2024-12389.html"
     },
     {
       "name": "23-55704",
@@ -35,24 +120,24 @@
       "route": "entity-briefs/23-55704.html"
     },
     {
-      "name": "24-2251",
+      "name": "24-60240",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/24-2251.html"
+      "route": "entity-briefs/24-60240.html"
     },
     {
-      "name": "California Supreme Court",
+      "name": "26-1294",
       "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/california-supreme-court.html"
+      "route": "entity-briefs/26-1294.html"
+    },
+    {
+      "name": "Bergam v. Dinerman",
+      "judgement": "Worth watching because records and relationship signals both exist.",
+      "route": "entity-briefs/bergam-v-dinerman.html"
     },
     {
       "name": "CC-2025-0631",
       "judgement": "Worth watching because records and relationship signals both exist.",
       "route": "entity-briefs/cc-2025-0631.html"
-    },
-    {
-      "name": "Civil Rights Corps v. LaSalle",
-      "judgement": "Worth watching because records and relationship signals both exist.",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html"
     }
   ],
   "topContractors": [
@@ -135,11 +220,71 @@
           "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
           "url": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
           "grade": "documented association"
+        },
+        {
+          "title": "United States v. Kyle Wagner",
+          "url": "https://www.courtlistener.com/opinion/10946076/united-states-v-kyle-wagner/",
+          "grade": "charged / sued"
         }
       ],
       "entity_briefs": [],
       "record_reviews": [],
-      "relationship_candidates": [],
+      "relationship_candidates": [
+        {
+          "id": "court-of-appeals-for-the-sixth-circuit__united-states-v-kyle-wagner",
+          "from": "United States v. Kyle Wagner",
+          "to": "Court of Appeals for the Sixth Circuit",
+          "count": 1,
+          "lanes": [
+            "courtlistener-court-records"
+          ],
+          "record_types": [
+            "court_record_signal"
+          ],
+          "evidence_grades": [
+            "charged / sued"
+          ],
+          "source_events": [
+            "courtlistener-court-records-10946076-4"
+          ],
+          "control_layers": [
+            "courts",
+            "litigation",
+            "disclosure"
+          ],
+          "score": 10,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        },
+        {
+          "id": "26-1294__court-of-appeals-for-the-sixth-circuit",
+          "from": "Court of Appeals for the Sixth Circuit",
+          "to": "26-1294",
+          "count": 1,
+          "lanes": [
+            "courtlistener-court-records"
+          ],
+          "record_types": [
+            "court_record_signal"
+          ],
+          "evidence_grades": [
+            "charged / sued"
+          ],
+          "source_events": [
+            "courtlistener-court-records-10946076-4"
+          ],
+          "control_layers": [
+            "courts",
+            "litigation",
+            "disclosure"
+          ],
+          "score": 10,
+          "grade": "candidate",
+          "relationship_type": "public-record co-occurrence",
+          "boundary": "Relationship scoring means repeated co-appearance in records. It is not a claim of private coordination."
+        }
+      ],
       "missing_records": [
         "Current beneficial ownership and voting-control record where relevant",
         "Public contracts touching the ecosystem",
@@ -942,15 +1087,15 @@
       "type": "entity brief"
     },
     {
-      "entity": "2021-08825",
+      "entity": "2024-03048",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2021-08825.html",
+      "route": "entity-briefs/2024-03048.html",
       "type": "entity brief"
     },
     {
-      "entity": "2024-13374",
+      "entity": "2024-12389",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/2024-13374.html",
+      "route": "entity-briefs/2024-12389.html",
       "type": "entity brief"
     },
     {
@@ -960,15 +1105,21 @@
       "type": "entity brief"
     },
     {
-      "entity": "24-2251",
+      "entity": "24-60240",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/24-2251.html",
+      "route": "entity-briefs/24-60240.html",
       "type": "entity brief"
     },
     {
-      "entity": "California Supreme Court",
+      "entity": "26-1294",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/california-supreme-court.html",
+      "route": "entity-briefs/26-1294.html",
+      "type": "entity brief"
+    },
+    {
+      "entity": "Bergam v. Dinerman",
+      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
+      "route": "entity-briefs/bergam-v-dinerman.html",
       "type": "entity brief"
     },
     {
@@ -978,9 +1129,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "Civil Rights Corps v. LaSalle",
+      "entity": "Court of Appeals for the Fifth Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/civil-rights-corps-v-lasalle.html",
+      "route": "entity-briefs/court-of-appeals-for-the-fifth-circuit.html",
       "type": "entity brief"
     },
     {
@@ -990,27 +1141,21 @@
       "type": "entity brief"
     },
     {
-      "entity": "Court of Appeals for the Second Circuit",
+      "entity": "Court of Appeals for the Sixth Circuit",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/court-of-appeals-for-the-second-circuit.html",
+      "route": "entity-briefs/court-of-appeals-for-the-sixth-circuit.html",
       "type": "entity brief"
     },
     {
-      "entity": "D & A Grandview, LLC v. 60 Davidson, LLC",
+      "entity": "Cross v. Lee",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/d-and-a-grandview-llc-v-60-davidson-llc.html",
+      "route": "entity-briefs/cross-v-lee.html",
       "type": "entity brief"
     },
     {
       "entity": "Gerena Betancourt v. Negociado De La Policía De Puerto Rico",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
       "route": "entity-briefs/gerena-betancourt-v-negociado-de-la-polic-a-de-puerto-rico.html",
-      "type": "entity brief"
-    },
-    {
-      "entity": "Gilead Tenofovir Cases",
-      "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/gilead-tenofovir-cases.html",
       "type": "entity brief"
     },
     {
@@ -1026,9 +1171,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "S283862",
+      "entity": "K Alain v. CIR",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/s283862.html",
+      "route": "entity-briefs/k-alain-v-cir.html",
       "type": "entity brief"
     },
     {
@@ -1038,9 +1183,9 @@
       "type": "entity brief"
     },
     {
-      "entity": "Williams v. Biggs",
+      "entity": "United States v. Kyle Wagner",
       "record": "Confirm the primary record page, PDF, docket, filing, award notice or registry record.",
-      "route": "entity-briefs/williams-v-biggs.html",
+      "route": "entity-briefs/united-states-v-kyle-wagner.html",
       "type": "entity brief"
     }
   ],
@@ -1760,5 +1905,188 @@
       "route": "timers.html#surveillance-state"
     }
   ],
-  "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity."
+  "conclusionBoundary": "Association, shared standards, policy similarity, ownership or technical compatibility do not establish guilt, common command, secret intent or control by a single entity.",
+  "dailyWatch": {
+    "updated": "2026-08-13T05:26:51.359Z",
+    "date": "2026-08-13",
+    "route": "daily-watch.html",
+    "person": {
+      "type": "person",
+      "name": "Bill Gates",
+      "entityResolution": {
+        "status": "authoritatively-resolved",
+        "registryId": "",
+        "registryType": "",
+        "graphId": "bill-gates",
+        "graphType": "profile route",
+        "reviewStatus": "",
+        "directFreshRecords": 0
+      },
+      "selectionBasis": "Highest registry-resolved structural relevance to the leading evidence lanes. No fresh accusation is inferred, and this position changes only when stronger source-linked evidence clears the promotion threshold.",
+      "whatWasFound": "profile route",
+      "whyItMatters": "The evidence places Bill Gates inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+      "investigativeLanes": [
+        "Procurement and public-private implementation",
+        "Money, banking and payment access"
+      ],
+      "howItFits": "This person fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how procurement and public-private implementation, money, banking and payment access operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+      "evidenceStrength": "E2–E4 — resolved structural public records requiring direct review",
+      "confidence": "moderate",
+      "sourceRoutes": [
+        "billionaire-briefs/bill-gates.html"
+      ],
+      "nextQuestions": [
+        "What exact legal, financial, ownership, appointment or operational authority does Bill Gates possess?",
+        "Which dated primary record establishes the current action?",
+        "What oversight, competing authority, opt-out or appeal limits the power?",
+        "What new evidence would strengthen, narrow, replace or falsify this position?"
+      ],
+      "rankingScore": 91,
+      "rankingStatus": "retained-current-leader",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z"
+    },
+    "institution": {
+      "type": "institution",
+      "name": "Securities and Exchange Commission",
+      "entityResolution": {
+        "status": "authoritatively-resolved",
+        "registryId": "entity-governmentagency-23b03f6532d999f0229b",
+        "registryType": "GovernmentAgency",
+        "graphId": "securities-and-exchange-commission",
+        "graphType": "missing record",
+        "reviewStatus": "machine-extracted-unreviewed",
+        "directFreshRecords": 5
+      },
+      "selectionBasis": "Directly elevated by current source-linked evidence resolving to this institution: 5 fresh records plus 12 retained evidence references.",
+      "whatWasFound": "named-in-public-record, refined-from-organization",
+      "whyItMatters": "The evidence places Securities and Exchange Commission inside a documented authority, ownership, finance, policy, infrastructure or access chain that can be tested against primary records.",
+      "investigativeLanes": [
+        "Procurement and public-private implementation"
+      ],
+      "howItFits": "This institution fits the mission because the resolved records can show who possesses authority, manages capital or infrastructure, sets standards, controls access, receives contracts or acts as a gatekeeper. The mechanism must be demonstrated by the cited records, not inferred from prominence.",
+      "effectOnLane": "moderately-strengthens",
+      "whatItPointsToward": "Closer examination of how procurement and public-private implementation operates through identifiable people, institutions, laws, contracts, ownership rights, appointments and access decisions.",
+      "alternativeExplanation": "The documented activity may be ordinary, lawful and limited to the stated role, with effective oversight, competition and no wider coordination.",
+      "whatItDoesNotProve": "Selection does not prove wrongdoing, secret intent, shared motive, participation in another person’s crimes or control of an entire system.",
+      "evidenceStrength": "E3–E4 — resolved current reporting and/or primary public records",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "entity-briefs/securities-and-exchange-commission.html",
+        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+        "data/daily-investigation-conclusions.json",
+        "https://www.sec.gov/enforcement-litigation/litigation-releases",
+        "https://www.federalregister.gov/documents/2026/08/10/2026-16199/agency-information-collection-activities-proposed-collection-comment-request-extension-form-n-8b-2",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26493.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26565.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26535.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26586.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26577.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26512-titanium-capital-llc.pdf",
+        "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14142.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26497.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26506-suzee-han.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/26526-final-judgment-bongiorno.pdf",
+        "https://www.sec.gov/files/litigation/litreleases/2026/judg26502.pdf"
+      ],
+      "nextQuestions": [
+        "What exact legal, financial, ownership, appointment or operational authority does Securities and Exchange Commission possess?",
+        "Which dated primary record establishes the current action?",
+        "What oversight, competing authority, opt-out or appeal limits the power?",
+        "What new evidence would strengthen, narrow, replace or falsify this position?"
+      ],
+      "rankingScore": 143,
+      "rankingStatus": "incumbent-held-position",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+      "challengerHeld": "Court Services and Offender Supervision Agency",
+      "challengerScore": 143,
+      "retentionReason": "Court Services and Offender Supervision Agency reached 143, below the 157 points required to replace the incumbent."
+    },
+    "family": {
+      "type": "family",
+      "name": "Wallenberg family and foundations",
+      "entityResolution": {
+        "status": "resolved-family-access-record",
+        "familyId": "wallenberg",
+        "directFreshRecords": 0
+      },
+      "selectionBasis": "Structural watch: leading evidence lanes overlap with documented authority, voting control, capital access or institutional reach. This is not a new allegation.",
+      "whatWasFound": "No new wrongdoing finding is asserted. The family is elevated because the leading lanes overlap with documented access across Industrial ownership, Banking, Defence industry, Telecommunications, Pharmaceuticals, Research funding, Board networks.",
+      "whyItMatters": "The Wallenberg Foundations hold decisive voting influence in Investor AB, with the largest foundation alone holding more than 42 percent of votes as of June 2026. The ecosystem states that the three largest foundations collectively hold 50 percent of Investor's votes. Family members hold senior board positions while Investor uses board participation across a portfolio spanning finance, defence, industrials, pharmaceuticals and technology.",
+      "investigativeLanes": [
+        "Information, media and platform access",
+        "Money, banking and payment access",
+        "Procurement and public-private implementation",
+        "Power-family succession and institutional access"
+      ],
+      "howItFits": "The family lane tests whether legal succession, voting pools, foundations, holding companies, trustee powers, appointments or repeated gatekeeping preserve institutional access across generations. The mechanism—not the surname—is the evidence.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "A focused review of industrial ownership, banking, defence industry, telecommunications and whether documented control rights or appointments connect the family to current policy, capital or infrastructure developments.",
+      "alternativeExplanation": "The ecosystem demonstrates exceptional corporate continuity and board access, but it is not equivalent to control of the Swedish state or every company in which Investor owns shares.",
+      "whatItDoesNotProve": "The evidence does not support claims that the Wallenbergs secretly direct Sweden, NATO or European institutions as a unified private government.",
+      "evidenceStrength": "E4–E5 — structural public records; no direct new allegation",
+      "confidence": "high",
+      "sourceRoutes": [
+        "behind-the-curtain-capstone.html",
+        "behind-the-curtain-access.html",
+        "https://www.wallenberg.com/en/ecosystem",
+        "https://www.investorab.com/investors-media/the-investor-share/ownership-structure/",
+        "https://www.investorab.com/about-investor/board-management/board-of-directors"
+      ],
+      "nextQuestions": [
+        "Which current decision, transaction or appointment directly involves Wallenberg family and foundations?",
+        "Who holds final voting, trustee or appointment authority?",
+        "Which structures are independently managed or legally constrained?",
+        "What evidence would lower or replace the family-access assessment?"
+      ],
+      "rankingScore": 122,
+      "rankingStatus": "incumbent-held-position",
+      "incumbentSince": "2026-07-27T17:29:36.861Z",
+      "lastPromotedAt": "2026-07-27T17:29:36.861Z",
+      "challengerHeld": "Al Maktoum family",
+      "challengerScore": 122,
+      "retentionReason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent."
+    },
+    "boundary": "Selection means the entity deserves focused source review. It is not a guilt ranking, accusation, declaration of hidden control, call for action against the entity, or proof of participation in another person's wrongdoing.",
+    "rankingPolicy": {
+      "mode": "stable-incumbent-evidence-promotion",
+      "promotionMargin": 14,
+      "rule": "A card changes only when a different entity has direct new source-linked evidence and its ranking score reaches or exceeds the incumbent score plus the promotion margin. Ties, novelty and minor fluctuations never replace a card.",
+      "decisions": {
+        "person": {
+          "changed": false,
+          "reason": "The same entity remains the current evidence leader.",
+          "incumbentScore": 91,
+          "challengerScore": 91,
+          "marginRequired": 14
+        },
+        "institution": {
+          "changed": false,
+          "reason": "Court Services and Offender Supervision Agency reached 143, below the 157 points required to replace the incumbent.",
+          "incumbent": "Securities and Exchange Commission",
+          "incumbentScore": 143,
+          "challenger": "Court Services and Offender Supervision Agency",
+          "challengerScore": 143,
+          "required": 157,
+          "marginRequired": 14
+        },
+        "family": {
+          "changed": false,
+          "reason": "Al Maktoum family did not carry enough direct fresh evidence to replace the incumbent.",
+          "incumbent": "Wallenberg family and foundations",
+          "incumbentScore": 122,
+          "challenger": "Al Maktoum family",
+          "challengerScore": 122,
+          "required": 136,
+          "marginRequired": 14
+        }
+      }
+    },
+    "dossierRoute": "data/daily-watch-dossiers.json"
+  }
 }

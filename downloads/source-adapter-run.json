@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "generatedAt": "2026-08-13T05:04:08.526Z",
+  "mode": "daily",
+  "selectedSources": 7,
+  "fetchedSources": 7,
+  "failedSources": 0,
+  "newRecords": 312,
+  "retainedRecords": 311,
+  "results": [
+    {
+      "sourceId": "eurlex-official-journal",
+      "label": "EUR-Lex — Official Journal of the European Union",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://eur-lex.europa.eu/oj/direct-access.html?locale=en",
+      "bytes": 99724,
+      "bodyHash": "6c8e522705e47f7d7c048e1543bda916f3e9f73ae30e688093026d15166d4943",
+      "recordCount": 80
+    },
+    {
+      "sourceId": "cre-energy-regulator",
+      "label": "Commission de régulation de l'énergie — Actualités",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://www.cre.fr/actualites/toute-lactualite.html",
+      "bytes": 136779,
+      "bodyHash": "dd22f3bfebb097f31615d2ca63da9a084e104f5b459327ee26350fd52b9e0443",
+      "recordCount": 80
+    },
+    {
+      "sourceId": "assemblee-parliamentary-documents",
+      "label": "Assemblée nationale — Documents parlementaires",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires",
+      "bytes": 7297,
+      "bodyHash": "e1fb3f60a5f777f885e9c4f017e3abce402f355a4698c3e6794dd0461d1d8b3f",
+      "recordCount": 10
+    },
+    {
+      "sourceId": "sec-current-company-filings",
+      "label": "U.S. SEC — Current EDGAR filings",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "bytes": 22959,
+      "bodyHash": "81dc008373d0956b675760f85c007f920273586f26baf860ba2c4916a55465bc",
+      "recordCount": 40
+    },
+    {
+      "sourceId": "boamp-public-procurement",
+      "label": "BOAMP — Recent French public procurement notices",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://www.boamp.fr/api/explore/v2.1/catalog/datasets/boamp/records?limit=50&order_by=dateparution%20desc",
+      "bytes": 1440371,
+      "bodyHash": "076575e7a659c3e3578667643103156bd67a95c763c87b5c23ea4d155be1230f",
+      "recordCount": 50
+    },
+    {
+      "sourceId": "cour-cassation-publications",
+      "label": "Cour de cassation — Actualités and publications",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://www.courdecassation.fr/toutes-les-actualites",
+      "bytes": 243,
+      "bodyHash": "e688fcf81960082f0ad8aa7365c2174f8cccbda67ce715d648fe3328aca017b7",
+      "recordCount": 0
+    },
+    {
+      "sourceId": "bbc-business-signal",
+      "label": "BBC News — Business RSS",
+      "status": "fetched",
+      "statusCode": 200,
+      "finalUrl": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "bytes": 38096,
+      "bodyHash": "bfb6bd27912ba8d7ee22eeaf03f0a5650ecf15a0b6c9512cbba2197ed094d2cb",
+      "recordCount": 52
+    }
+  ]
+}

@@ -1,11 +1,16 @@
 # Intel Vault
 
-Updated: 2026-08-12T05:36:00.272Z
+Updated: 2026-08-13T05:28:43.476Z
 
 ## Boundary
 Vault items are historical public-source leads. Re-check the source before treating them as current or before upgrading any claim.
 
 ## Archived Items
+
+### New Mexico sues DOJ for unredacted Jeffrey Epstein files - The Jerusalem Post
+- Published: 2026-08-06T05:07:20.000Z
+- Source: https://news.google.com/rss/articles/CBMiX0FVX3lxTE55cHJTSUVIRVNuNUdhSnp3dVVPZFBRNmFkTDhoTFNQVTF6M01jWDZnOUtoRk9TRHVOSlRjVkZ5U0x1WnRZUXF0NVA4b2hrMWpmejFWdWtQSlRBbnNJOExN?oc=5
+- Source class: discovery
 
 ### Senate report: Three big banks ignored red flags on Epstein - American Banker
 - Published: 2026-08-04T17:11:00.000Z

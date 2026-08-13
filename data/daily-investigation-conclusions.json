@@ -1,10 +1,10 @@
 {
   "ok": true,
   "kind": "daily",
-  "generatedAt": "2026-08-12T06:48:37.681Z",
+  "generatedAt": "2026-08-13T05:04:08.374Z",
   "period": {
-    "start": "2026-08-10T06:48:40.840Z",
-    "end": "2026-08-12T06:48:37.681Z",
+    "start": "2026-08-11T05:04:08.400Z",
+    "end": "2026-08-13T05:04:08.374Z",
     "days": 2
   },
   "mission": "Continuously collect public records, official enforcement material, court and oversight evidence, document releases and credible investigative archives; connect people, institutions, money, contracts and decisions; then publish evidence-bounded daily and weekly conclusions about proven wrongdoing, alleged misconduct, unresolved conflicts and missing records.",
@@ -19,10 +19,10 @@
   ],
   "summary": {
     "sourcesScheduled": 12,
-    "sourcesFetched": 11,
-    "sourceFailures": 1,
-    "changedSources": 9,
-    "findingsInWindow": 656,
+    "sourcesFetched": 0,
+    "sourceFailures": 12,
+    "changedSources": 0,
+    "findingsInWindow": 412,
     "establishedWrongdoingFindings": 0,
     "officialActionFindings": 0,
     "documentOrLeakLeads": 0,
@@ -31,16 +31,16 @@
   "topConclusion": "The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.",
   "patterns": {
     "byLane": {
-      "money-contracts": 131,
+      "money-contracts": 70,
       "international-corruption": 88,
-      "government-enforcement": 143,
-      "oversight-audit": 134,
-      "epstein-disclosure": 160
+      "government-enforcement": 142,
+      "oversight-audit": 32,
+      "epstein-disclosure": 80
     },
     "byStatus": {
-      "record-update": 421,
+      "record-update": 178,
       "established-wrongdoing": 123,
-      "official-enforcement": 42,
+      "official-enforcement": 41,
       "official-charge-or-allegation": 2,
       "official-audit-finding": 22,
       "wrongdoing-lead": 44,
@@ -53,7 +53,7 @@
       },
       {
         "term": "sanction",
-        "count": 42
+        "count": 41
       },
       {
         "term": "corruption",
@@ -584,78 +584,6 @@
       }
     },
     {
-      "id": "ca92a54bb69eb2504c76e56e",
-      "title": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-      "summary": "TECPLUS RENEWAL POP: 11/1/26 - 10/31/27 · Amount: 107178.28 · Sub-agency: National Aeronautics and Space Administration",
-      "published": "2026-11-01T00:00:00.000Z",
-      "fetchedAt": "2026-08-10T06:47:05.856Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/80NSSC26FA638",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration — TECPLUS RENEWAL POP: 11/1/26 - 10/31/27 · Amount: 107178.28 · Sub-agency: National Aeronautics and Space Administration",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/80NSSC26FA638",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-7",
-        "title": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-        "route": "https://www.usaspending.gov/award/80NSSC26FA638",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-11-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
-        "sources": [
-          "https://www.usaspending.gov/award/80NSSC26FA638",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
       "id": "b49c319c09a07b245b24f74a",
       "sourceId": "usaspending-recent-contracts",
       "sourceLabel": "USAspending.gov — Recent Contract Awards",
@@ -718,7 +646,7 @@
       "childSafeguardingStatus": "not-applicable",
       "integrityVersion": "2.1.0",
       "integrity": {
-        "id": "daily-8",
+        "id": "daily-7",
         "title": "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
         "conclusion": "A dated source update exists and should be compared with prior records.",
         "route": "https://www.usaspending.gov/award/9523ZY26P0022",
@@ -732,78 +660,6 @@
         "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
         "sources": [
           "https://www.usaspending.gov/award/9523ZY26P0022",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "427a4b3a840619411d8d1c33",
-      "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
-      "summary": "ORDER FOR SOFT BODY ARMOR & CARRIERS. · Amount: 64575 · Sub-agency: Court Services and Offender Supervision Agency",
-      "published": "2026-10-02T00:00:00.000Z",
-      "fetchedAt": "2026-07-30T17:52:41.636Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/9594CS26F0051",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency — ORDER FOR SOFT BODY ARMOR & CARRIERS. · Amount: 64575 · Sub-agency: Court Services and Offender Supervision Agency",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/9594CS26F0051",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-9",
-        "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
-        "route": "https://www.usaspending.gov/award/9594CS26F0051",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-10-02T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
-        "sources": [
-          "https://www.usaspending.gov/award/9594CS26F0051",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
@@ -873,7 +729,7 @@
       "childSafeguardingStatus": "not-applicable",
       "integrityVersion": "2.1.0",
       "integrity": {
-        "id": "daily-10",
+        "id": "daily-8",
         "title": "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
         "conclusion": "A dated source update exists and should be compared with prior records.",
         "route": "https://www.usaspending.gov/award/80NSSC26P1028",
@@ -887,366 +743,6 @@
         "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
         "sources": [
           "https://www.usaspending.gov/award/80NSSC26P1028",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "366686df53f6dfd25d3f0ea4",
-      "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
-      "summary": "AGILENT LCMS-20464 CROSSLAB SILVER EXTENDED SERVICE AGREEMENT 10/01/2026-09/30/2027 · Amount: 63119.33 · Sub-agency: Department of Energy",
-      "published": "2026-10-01T00:00:00.000Z",
-      "fetchedAt": "2026-08-10T06:47:05.856Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/89243326PFE000994",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "AGILENT TECHNOLOGIES INC — Department of Energy — AGILENT LCMS-20464 CROSSLAB SILVER EXTENDED SERVICE AGREEMENT 10/01/2026-09/30/2027 · Amount: 63119.33 · Sub-agency: Department of Energy",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/89243326PFE000994",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-11",
-        "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
-        "route": "https://www.usaspending.gov/award/89243326PFE000994",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-10-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
-        "sources": [
-          "https://www.usaspending.gov/award/89243326PFE000994",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "c673456bbe77dbb29e43ac7d",
-      "title": "BETTER DIRECT, LLC — Department of Energy",
-      "summary": "REDSKY AND VOIP LICENSING FOR POP 10/1/26-9/30/27 · Amount: 41006.65 · Sub-agency: Department of Energy",
-      "published": "2026-10-01T00:00:00.000Z",
-      "fetchedAt": "2026-08-03T15:52:10.468Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/89243326FFE400792",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "BETTER DIRECT, LLC — Department of Energy — REDSKY AND VOIP LICENSING FOR POP 10/1/26-9/30/27 · Amount: 41006.65 · Sub-agency: Department of Energy",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/89243326FFE400792",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-12",
-        "title": "BETTER DIRECT, LLC — Department of Energy",
-        "route": "https://www.usaspending.gov/award/89243326FFE400792",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-10-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
-        "sources": [
-          "https://www.usaspending.gov/award/89243326FFE400792",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "e3b055a4afb19163268d7257",
-      "title": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
-      "summary": "PROVIDE TELEPHONIC SUPPORT BY PROFESSIONAL MENTAL HEALTH COUNSELORS TO NASA EMPLOYEES DURING \"AFTER-HOURS\" FOR NON-ROUTINE AND POTENTIALLY URGENT SITUATIONS. · Amount: 7800 · Sub-agency: National Aeronautics and Space Administration",
-      "published": "2026-10-01T00:00:00.000Z",
-      "fetchedAt": "2026-08-10T06:47:05.856Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/80NSSC26P1252",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration — PROVIDE TELEPHONIC SUPPORT BY PROFESSIONAL MENTAL HEALTH COUNSELORS TO NASA EMPLOYEES DURING \"AFTER-HOURS\" FOR NON-ROUTINE AND POTENTIALLY URGENT SITUATIONS. · Amount: 7800 · Sub-agency: National Aeronautics and Space Administration",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/80NSSC26P1252",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-13",
-        "title": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
-        "route": "https://www.usaspending.gov/award/80NSSC26P1252",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-10-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
-        "sources": [
-          "https://www.usaspending.gov/award/80NSSC26P1252",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      }
-    },
-    {
-      "id": "605c4f2b615dd85e87bba734",
-      "title": "FISCALNOTE, INC — Department of Energy",
-      "summary": "TASK ORDER FOR 2 YEARS FOR AN ONLINE SUBSCRIPTION TO CQ DOT COM - CQ ROLL CALLS PREMIER ADVANCED LEGISLATIVE AND CONGRESSIONAL NEWS AND ANALYSIS SERVICE. · Amount: 34765 · Sub-agency: Department of Energy",
-      "published": "2026-10-01T00:00:00.000Z",
-      "fetchedAt": "2026-08-12T06:48:37.681Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/89233126FNA400816",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "integrity": {
-        "id": "daily-14",
-        "title": "FISCALNOTE, INC — Department of Energy",
-        "route": "https://www.usaspending.gov/award/89233126FNA400816",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-10-01T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
-        "sources": [
-          "https://www.usaspending.gov/award/89233126FNA400816",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "FISCALNOTE, INC — Department of Energy — TASK ORDER FOR 2 YEARS FOR AN ONLINE SUBSCRIPTION TO CQ DOT COM - CQ ROLL CALLS PREMIER ADVANCED LEGISLATIVE AND CONGRESSIONAL NEWS AND ANALYSIS SERVICE. · Amount: 34765 · Sub-agency: Department of Energy",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/89233126FNA400816",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "integrityVersion": "2.1.0"
-    },
-    {
-      "id": "a103f2650e31fc92fa3688e6",
-      "title": "DELL MARKETING L.P. — District of Columbia Courts",
-      "summary": "ANNUAL QUEST SHAREPLEX SOFTWARE LICENSING RENEWAL. · Amount: 147939.96 · Sub-agency: District of Columbia Courts",
-      "published": "2026-09-30T00:00:00.000Z",
-      "fetchedAt": "2026-08-02T08:22:21.766Z",
-      "lane": "money-contracts",
-      "sourceId": "usaspending-recent-contracts",
-      "sourceLabel": "USAspending.gov — Recent Contract Awards",
-      "sourceAuthority": "primary-official",
-      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "itemUrl": "https://www.usaspending.gov/award/95C67826P0299",
-      "status": "record-update",
-      "evidenceGrade": "B",
-      "severity": 1,
-      "score": 18,
-      "wrongdoingIndicators": [],
-      "keywordMatches": [],
-      "establishes": "A dated source update exists and should be compared with prior records.",
-      "boundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "questions": [],
-      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "mechanism": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "whatWasFound": "DELL MARKETING L.P. — District of Columbia Courts — ANNUAL QUEST SHAREPLEX SOFTWARE LICENSING RENEWAL. · Amount: 147939.96 · Sub-agency: District of Columbia Courts",
-      "whyItMatters": "This source belongs in the money-contracts lane because it may identify a documented authority, transaction, legal outcome, institutional decision, safeguarding issue or control mechanism that changes the wider evidence picture.",
-      "investigativeLanes": [
-        "money-contracts"
-      ],
-      "howItFits": "Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the money-contracts lane.",
-      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
-      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.usaspending.gov/award/95C67826P0299",
-        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
-      ],
-      "nextQuestions": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0",
-      "integrity": {
-        "id": "daily-15",
-        "title": "DELL MARKETING L.P. — District of Columbia Courts",
-        "route": "https://www.usaspending.gov/award/95C67826P0299",
-        "classification": "record update",
-        "confidence": "medium-high",
-        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority not stated.",
-        "supportingCount": 1,
-        "freshness": "2026-09-30T00:00:00.000Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
-        "sources": [
-          "https://www.usaspending.gov/award/95C67826P0299",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
@@ -1316,7 +812,7 @@
       "childSafeguardingStatus": "not-applicable",
       "integrityVersion": "2.1.0",
       "integrity": {
-        "id": "daily-16",
+        "id": "daily-9",
         "title": "INDUSTRIAL BANK — District of Columbia Courts",
         "conclusion": "A dated source update exists and should be compared with prior records.",
         "route": "https://www.usaspending.gov/award/95C67826P0279",
@@ -1399,7 +895,7 @@
       "childSafeguardingStatus": "not-applicable",
       "integrityVersion": "2.1.0",
       "integrity": {
-        "id": "daily-17",
+        "id": "daily-10",
         "title": "ANSYS INC — National Aeronautics and Space Administration",
         "conclusion": "A dated source update exists and should be compared with prior records.",
         "route": "https://www.usaspending.gov/award/80TECH26FA179",
@@ -1482,7 +978,7 @@
       "childSafeguardingStatus": "not-applicable",
       "integrityVersion": "2.1.0",
       "integrity": {
-        "id": "daily-18",
+        "id": "daily-11",
         "title": "REGAN TECHNOLOGIES CORP — Federal Mediation and Conciliation Service",
         "conclusion": "A dated source update exists and should be compared with prior records.",
         "route": "https://www.usaspending.gov/award/93310026P0007",
@@ -1496,6 +992,589 @@
         "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
         "sources": [
           "https://www.usaspending.gov/award/93310026P0007",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "e4e58bed8a2ad4ff1aa59afe",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/91990026F0071",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "MVATION WORLDWIDE, INC. — Department of Education",
+      "summary": "RUBRIK SUPPORT RENEWAL · Amount: 48496.86 · Sub-agency: Department of Education",
+      "published": "2026-09-30T00:00:00.000Z",
+      "firstSeen": "2026-07-24T07:43:18.032Z",
+      "lastSeen": "2026-07-24T07:43:18.032Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "91990026F0071",
+        "amount": 48496.86,
+        "agency": "Department of Education",
+        "subAgency": "Department of Education"
+      },
+      "occurrences": 1,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/91990026F0071",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-12",
+        "title": "MVATION WORLDWIDE, INC. — Department of Education",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/91990026F0071",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-09-30T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/91990026F0071",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "e86287f396e1ee800a7ee796",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/959P0026P0005",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
+      "summary": "NETWORK EQUIPMENT MAINTENANCE FOR CISCO NEXUS SWITCHES · Amount: 51260 · Sub-agency: Pretrial Services Agency",
+      "published": "2026-09-29T00:00:00.000Z",
+      "firstSeen": "2026-07-16T11:30:34.603Z",
+      "lastSeen": "2026-07-19T08:57:13.971Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "959P0026P0005",
+        "amount": 51260,
+        "agency": "Court Services and Offender Supervision Agency",
+        "subAgency": "Pretrial Services Agency"
+      },
+      "occurrences": 4,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/959P0026P0005",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-13",
+        "title": "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/959P0026P0005",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-09-29T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/959P0026P0005",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "baa43ec6d7327777ba931c2c",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/89243326FFE400787",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "PANAMERICA COMPUTERS, INC. — Department of Energy",
+      "summary": "MAGNET AXIOM FORENSICS RENEWAL POP 09/28/2026-09/27/2027 · Amount: 32012 · Sub-agency: Department of Energy",
+      "published": "2026-09-28T00:00:00.000Z",
+      "firstSeen": "2026-07-26T07:48:27.287Z",
+      "lastSeen": "2026-07-26T07:48:27.287Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "89243326FFE400787",
+        "amount": 32012,
+        "agency": "Department of Energy",
+        "subAgency": "Department of Energy"
+      },
+      "occurrences": 1,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/89243326FFE400787",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-14",
+        "title": "PANAMERICA COMPUTERS, INC. — Department of Energy",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/89243326FFE400787",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-09-28T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/89243326FFE400787",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "64655043524cba9e6a679f8d",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/9594CS26F0050",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency",
+      "summary": "PALO ALTO SUBSCRIPTION · Amount: 154895.06 · Sub-agency: Court Services and Offender Supervision Agency",
+      "published": "2026-09-26T00:00:00.000Z",
+      "firstSeen": "2026-07-26T07:48:27.287Z",
+      "lastSeen": "2026-07-26T07:48:27.287Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "9594CS26F0050",
+        "amount": 154895.06,
+        "agency": "Court Services and Offender Supervision Agency",
+        "subAgency": "Court Services and Offender Supervision Agency"
+      },
+      "occurrences": 1,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9594CS26F0050",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-15",
+        "title": "COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/9594CS26F0050",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-09-26T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/9594CS26F0050",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "fafa3982950de0fd589ad0d0",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/9594CS26F0044",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+      "summary": "ORDER FOR SOFT BODY ARMOR & CARRIERS · Amount: 36225 · Sub-agency: Court Services and Offender Supervision Agency",
+      "published": "2026-09-25T00:00:00.000Z",
+      "firstSeen": "2026-07-23T07:46:01.819Z",
+      "lastSeen": "2026-07-24T07:43:18.032Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "9594CS26F0044",
+        "amount": 36225,
+        "agency": "Court Services and Offender Supervision Agency",
+        "subAgency": "Court Services and Offender Supervision Agency"
+      },
+      "occurrences": 2,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/9594CS26F0044",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-16",
+        "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/9594CS26F0044",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-09-25T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/9594CS26F0044",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "4a8dd46bd8d4335f061e03ac",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/95C67826P0296",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
+      "summary": "CONTRACTOR SHALL PROVIDE BOX SOFTWARE LICENSING RENEWAL IN ACCORDANCE TO CONTRACT NO. DCSC-26-FSS-92, GSA FSS# 47QSWA18D008F AND THE CONTRACTORS PRICE QUOTE# D26-J6144 DATED 6/26/2026. · Amount: 303397.8 · Sub-agency: District of Columbia Courts",
+      "published": "2026-09-23T00:00:00.000Z",
+      "firstSeen": "2026-07-24T07:43:18.032Z",
+      "lastSeen": "2026-07-24T07:43:18.032Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "keywordMatches": [],
+      "rawMeta": {
+        "awardId": "95C67826P0296",
+        "amount": 303397.8,
+        "agency": "District of Columbia Courts",
+        "subAgency": "District of Columbia Courts"
+      },
+      "occurrences": 1,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/95C67826P0296",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-17",
+        "title": "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/95C67826P0296",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-09-23T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/95C67826P0296",
+          "data/daily-investigation-conclusions.json",
+          "data/investigation-source-registry.json",
+          "data/investigation-ledger.json"
+        ]
+      }
+    },
+    {
+      "id": "d2f7882f509480d63c31702f",
+      "sourceId": "usaspending-recent-contracts",
+      "sourceLabel": "USAspending.gov — Recent Contract Awards",
+      "sourceUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "itemUrl": "https://www.usaspending.gov/award/95332A26P00013",
+      "lane": "money-contracts",
+      "laneTitle": "Money, Contracts And Corporate Power",
+      "authority": "primary-official",
+      "title": "HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service",
+      "summary": "LITMOS BASE+ 4 OPTION YEARS · Amount: 56430 · Sub-agency: Corporation for National and Community Service",
+      "published": "2026-09-15T00:00:00.000Z",
+      "firstSeen": "2026-07-23T07:46:01.819Z",
+      "lastSeen": "2026-07-23T07:46:01.819Z",
+      "status": "record-update",
+      "evidenceGrade": "B",
+      "severity": 1,
+      "wrongdoingIndicators": [],
+      "conclusion": "A dated source update exists and should be compared with prior records.",
+      "evidenceBoundary": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "mechanism": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "implication": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "keywordMatches": [
+        "consulting"
+      ],
+      "rawMeta": {
+        "awardId": "95332A26P00013",
+        "amount": 56430,
+        "agency": "Corporation for National and Community Service",
+        "subAgency": "Corporation for National and Community Service"
+      },
+      "occurrences": 1,
+      "whatWasFound": "A dated source update exists and should be compared with prior records.",
+      "whyItMatters": "This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.",
+      "investigativeLanes": [
+        "Money, Contracts And Corporate Power",
+        "money-contracts"
+      ],
+      "howItFits": "Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.",
+      "effectOnLane": "adds-context",
+      "whatItPointsToward": "Closer examination of how the documented record update affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Money, Contracts And Corporate Power lane.",
+      "alternativeExplanation": "The event may be ordinary, lawful, limited to the exact role or transaction described, and constrained by independent boards, courts, regulators, markets, contractual limits or effective appeal.",
+      "whatItDoesNotProve": "This update alone does not establish wrongdoing, intent or coordinated action.",
+      "evidenceStrength": "E4 — primary-source or official public record",
+      "confidence": "moderate-to-high",
+      "sourceRoutes": [
+        "https://www.usaspending.gov/award/95332A26P00013",
+        "https://api.usaspending.gov/api/v2/search/spending_by_award/"
+      ],
+      "nextQuestions": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "sensitiveReviewRequired": false,
+      "childSafeguardingStatus": "not-applicable",
+      "integrityVersion": "2.1.0",
+      "integrity": {
+        "id": "daily-18",
+        "title": "HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service",
+        "conclusion": "A dated source update exists and should be compared with prior records.",
+        "route": "https://www.usaspending.gov/award/95332A26P00013",
+        "classification": "record update",
+        "confidence": "medium-high",
+        "evidenceBasis": "USAspending.gov — Recent Contract Awards; evidence grade B; authority primary-official.",
+        "supportingCount": 1,
+        "freshness": "2026-09-15T00:00:00.000Z",
+        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
+        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
+        "limitation": "This update alone does not establish wrongdoing, intent or coordinated action.",
+        "sources": [
+          "https://www.usaspending.gov/award/95332A26P00013",
           "data/daily-investigation-conclusions.json",
           "data/investigation-source-registry.json",
           "data/investigation-ledger.json"
@@ -1538,50 +1617,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-19",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-12T06:48:41.807Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "money-contracts"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-db7fa0dcae1647154cb253d2",
@@ -1619,50 +1655,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-20",
-        "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-12T06:48:41.807Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/enforcement-litigation/litigation-releases",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "government-enforcement"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/enforcement-litigation/litigation-releases"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-6292baa1cae35d0d115824f2",
@@ -1700,50 +1693,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-21",
-        "title": "content changed: Federal Register — Latest Documents",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "Federal Register — Latest Documents; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-12T06:48:41.807Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "oversight-audit"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-82b0886fe4735164beacb291",
@@ -1781,50 +1731,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-22",
-        "title": "content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Current EDGAR Filings; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-11T06:09:41.962Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "money-contracts"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-6d75003b4825f307f6df306e",
@@ -1862,50 +1769,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-23",
-        "title": "content changed: U.S. Securities and Exchange Commission — Litigation Releases",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "U.S. Securities and Exchange Commission — Litigation Releases; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-11T06:09:41.962Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.sec.gov/enforcement-litigation/litigation-releases",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "government-enforcement"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.sec.gov/enforcement-litigation/litigation-releases"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-611d1a7edb4b0b2535b9708c",
@@ -1943,50 +1807,7 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-24",
-        "title": "content changed: UK Serious Fraud Office — News And Communications",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.gov.uk/government/organisations/serious-fraud-office",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "UK Serious Fraud Office — News And Communications; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-11T06:09:41.962Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.gov.uk/government/organisations/serious-fraud-office",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "international-corruption"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.gov.uk/government/organisations/serious-fraud-office"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     },
     {
       "id": "source-change-529f3ec81072aa54c5515b3e",
@@ -2024,239 +1845,92 @@
         "source change",
         "hash",
         "content changed"
-      ],
-      "integrity": {
-        "id": "daily-25",
-        "title": "content changed: European Public Prosecutor's Office — News",
-        "conclusion": "The normalized content returned by the registered source differs from the previously preserved version.",
-        "route": "https://www.eppo.europa.eu/media/news_en",
-        "classification": "source change",
-        "confidence": "medium-high",
-        "evidenceBasis": "European Public Prosecutor's Office — News; evidence grade B; authority primary-official.",
-        "supportingCount": 1,
-        "freshness": "2026-08-11T06:09:41.962Z",
-        "formula": "Official authority + adjudication/status boundary + severity + recency + corroborating indicators. Charges and allegations never become established wrongdoing without a final record.",
-        "counterEvidence": "Counter-records, appeals, dismissals, corrected filings and alternative explanations remain required where applicable.",
-        "limitation": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-        "sources": [
-          "https://www.eppo.europa.eu/media/news_en",
-          "data/daily-investigation-conclusions.json",
-          "data/investigation-source-registry.json",
-          "data/investigation-ledger.json"
-        ]
-      },
-      "whatWasFound": "The normalized content returned by the registered source differs from the previously preserved version.",
-      "whyItMatters": "A disappearance from canonical source text may affect discoverability or disclosure completeness and should be checked against the underlying record, replacement route and archive history.",
-      "investigativeLanes": [
-        "Source Change And Evidence Preservation",
-        "international-corruption"
-      ],
-      "howItFits": "The registered source was retrieved, canonicalised, hashed and compared with the prior preserved version. Additions and removals are separated from raw byte changes.",
-      "effectOnLane": "adds-context",
-      "whatItPointsToward": "Closer examination of how the documented source change affects authority, ownership, money, access, enforcement, institutional accountability or safeguarding inside the Source Change And Evidence Preservation lane.",
-      "whatItDoesNotProve": "The change alone does not establish wrongdoing, deliberate concealment, authenticity of every statement, or the reason for the change.",
-      "evidenceStrength": "E4 — primary-source or official public record",
-      "confidence": "moderate-to-high",
-      "sourceRoutes": [
-        "https://www.eppo.europa.eu/media/news_en"
-      ],
-      "nextQuestions": [
-        "Open the current source and identify the exact added, removed or altered record.",
-        "Compare the preserved hashes and versions before drawing a substantive conclusion.",
-        "Check for a replacement URL, correction notice, archive copy or official explanation."
-      ],
-      "sensitiveReviewRequired": false,
-      "childSafeguardingStatus": "not-applicable",
-      "integrityVersion": "2.1.0"
+      ]
     }
   ],
-  "changedSources": [
-    {
-      "label": "U.S. Department of Justice — Justice News",
-      "lane": "government-enforcement",
-      "authority": "primary-official",
-      "url": "https://www.justice.gov/news",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.justice.gov/news",
-      "contentType": "text/html",
-      "bytes": 2201,
-      "bodyHash": "fb4595ab2f7cfd4d54b9f1db79672011366cc482a8075c6a26e7a39ef9246817",
-      "changed": true,
-      "itemCount": 1,
-      "error": "",
-      "resourceId": "investigation-source-doj-justice-news",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "U.S. Department of Justice Office of Inspector General — Reports",
-      "lane": "oversight-audit",
-      "authority": "primary-official",
-      "url": "https://oig.justice.gov/reports",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://oig.justice.gov/reports",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 62537,
-      "bodyHash": "33e82ac6db7ee66b4a0f16cd75dc1296ae5958cf919b8544a1802a720f9283c3",
-      "changed": true,
-      "itemCount": 14,
-      "error": "",
-      "resourceId": "investigation-source-doj-oig-reports",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
-      "lane": "money-contracts",
-      "authority": "primary-official",
-      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
-      "contentType": "application/atom+xml",
-      "bytes": 23018,
-      "bodyHash": "82d9529b71da8fc858179aaaba464832c4f7daf72d63d3dee7457dd698f675f8",
-      "changed": true,
-      "itemCount": 40,
-      "error": "",
-      "resourceId": "investigation-source-sec-current-filings",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "U.S. Securities and Exchange Commission — Litigation Releases",
-      "lane": "government-enforcement",
-      "authority": "primary-official",
-      "url": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.sec.gov/enforcement-litigation/litigation-releases",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 230368,
-      "bodyHash": "38401886b1984628db0832302ea147c1871142bd5763e4f9278f51b8237a8e1a",
-      "changed": true,
-      "itemCount": 70,
-      "error": "",
-      "resourceId": "investigation-source-sec-litigation-releases",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "Federal Register — Latest Documents",
-      "lane": "oversight-audit",
-      "authority": "primary-official",
-      "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
-      "contentType": "application/json; charset=utf-8",
-      "bytes": 159185,
-      "bodyHash": "9da858d901951590c47a856e9599a2c6e9ac38e09df80da472e9c55df9637a5e",
-      "changed": true,
-      "itemCount": 100,
-      "error": "",
-      "resourceId": "investigation-source-federal-register-latest",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "USAspending.gov — Recent Contract Awards",
-      "lane": "money-contracts",
-      "authority": "primary-official",
-      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
-      "contentType": "application/json",
-      "bytes": 57773,
-      "bodyHash": "a82f18632303b823faa779da1340562b0e23c0626b20ae9f1100b428940e498d",
-      "changed": true,
-      "itemCount": 100,
-      "error": "",
-      "resourceId": "investigation-source-usaspending-recent-contracts",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "U.S. Treasury OFAC — Recent Actions",
-      "lane": "international-corruption",
-      "authority": "primary-official",
-      "url": "https://ofac.treasury.gov/recent-actions",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://ofac.treasury.gov/recent-actions",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 44983,
-      "bodyHash": "11748dc70e882572892ed6e329c96a77da8ca4a48c038bd8d26f5a966f42ba83",
-      "changed": true,
-      "itemCount": 19,
-      "error": "",
-      "resourceId": "investigation-source-treasury-ofac-recent-actions",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "UK Serious Fraud Office — News And Communications",
-      "lane": "international-corruption",
-      "authority": "primary-official",
-      "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.gov.uk/government/organisations/serious-fraud-office",
-      "contentType": "text/html; charset=utf-8",
-      "bytes": 101964,
-      "bodyHash": "670b164ecbb730bd9756fc6bef961708e501e7eff60b99ca671ce95de0647625",
-      "changed": true,
-      "itemCount": 15,
-      "error": "",
-      "resourceId": "investigation-source-uk-sfo-news",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    },
-    {
-      "label": "European Public Prosecutor's Office — News",
-      "lane": "international-corruption",
-      "authority": "primary-official",
-      "url": "https://www.eppo.europa.eu/media/news_en",
-      "checkedAt": "2026-08-12T06:48:37.681Z",
-      "status": "fetched",
-      "statusCode": 200,
-      "finalUrl": "https://www.eppo.europa.eu/media/news_en",
-      "contentType": "text/html; charset=UTF-8",
-      "bytes": 105797,
-      "bodyHash": "0f54d5052964cdf5e49e88dffc6dc3c8e3f6381fdebb270668afee8ef104386d",
-      "changed": true,
-      "itemCount": 10,
-      "error": "",
-      "resourceId": "investigation-source-eppo-news",
-      "utilityScore": 89.05,
-      "costConfirmedZero": true,
-      "brokerAttempts": 1
-    }
-  ],
+  "changedSources": [],
   "sourceFailures": [
+    {
+      "sourceId": "doj-epstein-disclosures",
+      "label": "U.S. Department of Justice — Epstein Disclosures",
+      "url": "https://www.justice.gov/epstein/doj-disclosures",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "doj-justice-news",
+      "label": "U.S. Department of Justice — Justice News",
+      "url": "https://www.justice.gov/news",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "doj-oig-reports",
+      "label": "U.S. Department of Justice Office of Inspector General — Reports",
+      "url": "https://oig.justice.gov/reports",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "sec-current-filings",
+      "label": "U.S. Securities and Exchange Commission — Current EDGAR Filings",
+      "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "sec-litigation-releases",
+      "label": "U.S. Securities and Exchange Commission — Litigation Releases",
+      "url": "https://www.sec.gov/enforcement-litigation/litigation-releases",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "federal-register-latest",
+      "label": "Federal Register — Latest Documents",
+      "url": "https://www.federalregister.gov/api/v1/documents.json?per_page=100&order=newest",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "usaspending-recent-contracts",
+      "label": "USAspending.gov — Recent Contract Awards",
+      "url": "https://api.usaspending.gov/api/v2/search/spending_by_award/",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "treasury-ofac-recent-actions",
+      "label": "U.S. Treasury OFAC — Recent Actions",
+      "url": "https://ofac.treasury.gov/recent-actions",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "house-oversight-releases",
+      "label": "U.S. House Committee on Oversight and Government Reform — Releases",
+      "url": "https://oversight.house.gov/release/",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
     {
       "sourceId": "wikileaks-publications",
       "label": "WikiLeaks — Publications",
       "url": "https://wikileaks.org/-Leaks-.html",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "uk-sfo-news",
+      "label": "UK Serious Fraud Office — News And Communications",
+      "url": "https://www.gov.uk/government/organisations/serious-fraud-office",
+      "status": "failed-policy",
+      "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
+    },
+    {
+      "sourceId": "eppo-news",
+      "label": "European Public Prosecutor's Office — News",
+      "url": "https://www.eppo.europa.eu/media/news_en",
       "status": "failed-policy",
       "error": "NO_ELIGIBLE_ZERO_COST_RESOURCE: No eligible zero-cost resource is available"
     }
@@ -2329,16 +2003,6 @@
       "source": "https://www.usaspending.gov/award/HC101326FB686"
     },
     {
-      "findingId": "ca92a54bb69eb2504c76e56e",
-      "title": "ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.usaspending.gov/award/80NSSC26FA638"
-    },
-    {
       "findingId": "b49c319c09a07b245b24f74a",
       "title": "OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission",
       "nextRecords": [
@@ -2350,16 +2014,6 @@
       "source": "https://www.usaspending.gov/award/9523ZY26P0022"
     },
     {
-      "findingId": "427a4b3a840619411d8d1c33",
-      "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.usaspending.gov/award/9594CS26F0051"
-    },
-    {
       "findingId": "1583ed9e90a5874047a33041",
       "title": "HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration",
       "nextRecords": [
@@ -2369,52 +2023,6 @@
         "Add a counter-record or alternative explanation before making a broad conclusion."
       ],
       "source": "https://www.usaspending.gov/award/80NSSC26P1028"
-    },
-    {
-      "findingId": "366686df53f6dfd25d3f0ea4",
-      "title": "AGILENT TECHNOLOGIES INC — Department of Energy",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.usaspending.gov/award/89243326PFE000994"
-    },
-    {
-      "findingId": "c673456bbe77dbb29e43ac7d",
-      "title": "BETTER DIRECT, LLC — Department of Energy",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.usaspending.gov/award/89243326FFE400792"
-    },
-    {
-      "findingId": "e3b055a4afb19163268d7257",
-      "title": "ACENTRA HEALTH LLC — National Aeronautics and Space Administration",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.usaspending.gov/award/80NSSC26P1252"
-    },
-    {
-      "findingId": "605c4f2b615dd85e87bba734",
-      "title": "FISCALNOTE, INC — Department of Energy",
-      "nextRecords": [],
-      "source": "https://www.usaspending.gov/award/89233126FNA400816"
-    },
-    {
-      "findingId": "a103f2650e31fc92fa3688e6",
-      "title": "DELL MARKETING L.P. — District of Columbia Courts",
-      "nextRecords": [
-        "Open and preserve the underlying primary document or official case page.",
-        "Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.",
-        "Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure."
-      ],
-      "source": "https://www.usaspending.gov/award/95C67826P0299"
     },
     {
       "findingId": "ec968f2ec6ba82128b4cd91b",
@@ -2448,9 +2056,88 @@
         "Add a counter-record or alternative explanation before making a broad conclusion."
       ],
       "source": "https://www.usaspending.gov/award/93310026P0007"
+    },
+    {
+      "findingId": "e4e58bed8a2ad4ff1aa59afe",
+      "title": "MVATION WORLDWIDE, INC. — Department of Education",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/91990026F0071"
+    },
+    {
+      "findingId": "e86287f396e1ee800a7ee796",
+      "title": "CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/959P0026P0005"
+    },
+    {
+      "findingId": "baa43ec6d7327777ba931c2c",
+      "title": "PANAMERICA COMPUTERS, INC. — Department of Energy",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/89243326FFE400787"
+    },
+    {
+      "findingId": "64655043524cba9e6a679f8d",
+      "title": "COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/9594CS26F0050"
+    },
+    {
+      "findingId": "fafa3982950de0fd589ad0d0",
+      "title": "SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/9594CS26F0044"
+    },
+    {
+      "findingId": "4a8dd46bd8d4335f061e03ac",
+      "title": "SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/95C67826P0296"
+    },
+    {
+      "findingId": "d2f7882f509480d63c31702f",
+      "title": "HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service",
+      "nextRecords": [
+        "Open and preserve the primary document or official case page.",
+        "Identify the named parties, dates, amounts, legal authority and decision-maker.",
+        "Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.",
+        "Add a counter-record or alternative explanation before making a broad conclusion."
+      ],
+      "source": "https://www.usaspending.gov/award/95332A26P00013"
     }
   ],
   "boundary": "Established wrongdoing is used only for the scope of an official conviction, guilty plea, sentence, judgment or equivalent final record. Charges and allegations are not guilt. Leaks are leads until authenticated and corroborated.",
+  "integrityVersion": 1,
+  "conclusionContractVersion": "2.1.0",
   "sourceChanges": [
     {
       "id": "35b31585164190bc821189b8",
@@ -2842,7 +2529,5 @@
       "status": "source-change"
     }
   ],
-  "sourceChangeConclusion": "7 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing.",
-  "integrityVersion": 1,
-  "conclusionContractVersion": "2.1.0"
+  "sourceChangeConclusion": "7 meaningful source-change observations were preserved in this reporting window. These are transparency findings, not automatic findings of wrongdoing."
 }

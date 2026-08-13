@@ -1,6 +1,6 @@
 # Entity Exposure Index
 
-Updated: 2026-08-12T13:46:05.305Z
+Updated: 2026-08-13T05:07:39.926Z
 
 ## Appellate Division of the Supreme Court of the State of New York
 
@@ -12,16 +12,6 @@ Highest evidence: charged / sued
 
 Reading: Appellate Division of the Supreme Court of the State of New York deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## California Supreme Court
-
-Score: 184
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: California Supreme Court deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
 ## CC-2025-0631
 
 Score: 184
@@ -31,6 +21,16 @@ Level: critical public-record exposure
 Highest evidence: charged / sued
 
 Reading: CC-2025-0631 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Court of Appeals for the Fifth Circuit
+
+Score: 184
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Court of Appeals for the Fifth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Court of Appeals for the Ninth Circuit
 
@@ -42,7 +42,7 @@ Highest evidence: charged / sued
 
 Reading: Court of Appeals for the Ninth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Court of Appeals for the Second Circuit
+## Court of Appeals for the Sixth Circuit
 
 Score: 184
 
@@ -50,7 +50,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Court of Appeals for the Second Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: Court of Appeals for the Sixth Circuit deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Gerena Betancourt v. Negociado De La Policía De Puerto Rico
 
@@ -72,7 +72,7 @@ Highest evidence: charged / sued
 
 Reading: Supreme Court of Puerto Rico deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## 2021-08825
+## 2024-03048
 
 Score: 179
 
@@ -80,9 +80,9 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: 2021-08825 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: 2024-03048 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## 2024-13374
+## 2024-12389
 
 Score: 179
 
@@ -90,7 +90,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: 2024-13374 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: 2024-12389 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## 23-55704
 
@@ -102,7 +102,7 @@ Highest evidence: charged / sued
 
 Reading: 23-55704 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## 24-2251
+## 24-60240
 
 Score: 179
 
@@ -110,19 +110,9 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: 24-2251 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: 24-60240 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Civil Rights Corps v. LaSalle
-
-Score: 179
-
-Level: critical public-record exposure
-
-Highest evidence: charged / sued
-
-Reading: Civil Rights Corps v. LaSalle deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
-
-## D & A Grandview, LLC v. 60 Davidson, LLC
+## 26-1294
 
 Score: 179
 
@@ -130,9 +120,9 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: D & A Grandview, LLC v. 60 Davidson, LLC deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: 26-1294 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Gilead Tenofovir Cases
+## Bergam v. Dinerman
 
 Score: 179
 
@@ -140,7 +130,17 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Gilead Tenofovir Cases deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: Bergam v. Dinerman deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+
+## Cross v. Lee
+
+Score: 179
+
+Level: critical public-record exposure
+
+Highest evidence: charged / sued
+
+Reading: Cross v. Lee deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## In Re: Koi Design LLC v. Marron Lawyers, Apc
 
@@ -152,7 +152,7 @@ Highest evidence: charged / sued
 
 Reading: In Re: Koi Design LLC v. Marron Lawyers, Apc deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## S283862
+## K Alain v. CIR
 
 Score: 179
 
@@ -160,9 +160,9 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: S283862 deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: K Alain v. CIR deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
-## Williams v. Biggs
+## United States v. Kyle Wagner
 
 Score: 179
 
@@ -170,7 +170,7 @@ Level: critical public-record exposure
 
 Highest evidence: charged / sued
 
-Reading: Williams v. Biggs deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
+Reading: United States v. Kyle Wagner deserves active public-record review. The score reflects records, categories, relationships or missing-document triggers, not a conclusion of wrongdoing.
 
 ## Centers for Medicare & Medicaid Services
 

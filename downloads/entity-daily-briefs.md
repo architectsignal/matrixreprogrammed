@@ -1,6 +1,6 @@
 # Entity Daily Briefs
 
-Updated: 2026-08-12T13:46:05.252Z
+Updated: 2026-08-13T05:07:39.864Z
 
 Briefs generated: 33
 
@@ -34,25 +34,25 @@ Evidence: legal record present
 
 Watch next: Watch Appellate Division of the Supreme Court of the State of New York across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 2021-08825
+## 2024-03048
 
-At a glance: 2021-08825 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch 2021-08825 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## 2024-13374
-
-At a glance: 2024-13374 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: 2024-03048 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch 2024-13374 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch 2024-03048 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 2024-12389
+
+At a glance: 2024-12389 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 2024-12389 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## 23-55704
 
@@ -64,25 +64,35 @@ Evidence: legal record present
 
 Watch next: Watch 23-55704 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## 24-2251
+## 24-60240
 
-At a glance: 24-2251 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch 24-2251 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## California Supreme Court
-
-At a glance: California Supreme Court is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: 24-60240 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch California Supreme Court across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch 24-60240 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## 26-1294
+
+At a glance: 26-1294 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch 26-1294 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Bergam v. Dinerman
+
+At a glance: Bergam v. Dinerman is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Bergam v. Dinerman across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## CC-2025-0631
 
@@ -94,15 +104,15 @@ Evidence: legal record present
 
 Watch next: Watch CC-2025-0631 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Civil Rights Corps v. LaSalle
+## Court of Appeals for the Fifth Circuit
 
-At a glance: Civil Rights Corps v. LaSalle is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: Court of Appeals for the Fifth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch Civil Rights Corps v. LaSalle across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch Court of Appeals for the Fifth Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Court of Appeals for the Ninth Circuit
 
@@ -114,25 +124,25 @@ Evidence: legal record present
 
 Watch next: Watch Court of Appeals for the Ninth Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Court of Appeals for the Second Circuit
+## Court of Appeals for the Sixth Circuit
 
-At a glance: Court of Appeals for the Second Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Court of Appeals for the Second Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## D & A Grandview, LLC v. 60 Davidson, LLC
-
-At a glance: D & A Grandview, LLC v. 60 Davidson, LLC is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: Court of Appeals for the Sixth Circuit is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch D & A Grandview, LLC v. 60 Davidson, LLC across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch Court of Appeals for the Sixth Circuit across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+
+## Cross v. Lee
+
+At a glance: Cross v. Lee is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+
+Judgement: Worth watching because records and relationship signals both exist.
+
+Evidence: legal record present
+
+Watch next: Watch Cross v. Lee across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Gerena Betancourt v. Negociado De La Policía De Puerto Rico
 
@@ -143,16 +153,6 @@ Judgement: Worth watching because records and relationship signals both exist.
 Evidence: legal record present
 
 Watch next: Watch Gerena Betancourt v. Negociado De La Policía De Puerto Rico across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
-
-## Gilead Tenofovir Cases
-
-At a glance: Gilead Tenofovir Cases is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
-
-Judgement: Worth watching because records and relationship signals both exist.
-
-Evidence: legal record present
-
-Watch next: Watch Gilead Tenofovir Cases across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Homeland Security Department
 
@@ -174,15 +174,15 @@ Evidence: legal record present
 
 Watch next: Watch In Re: Koi Design LLC v. Marron Lawyers, Apc across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## S283862
+## K Alain v. CIR
 
-At a glance: S283862 is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: K Alain v. CIR is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch S283862 across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch K Alain v. CIR across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## Supreme Court of Puerto Rico
 
@@ -194,15 +194,15 @@ Evidence: legal record present
 
 Watch next: Watch Supreme Court of Puerto Rico across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
-## Williams v. Biggs
+## United States v. Kyle Wagner
 
-At a glance: Williams v. Biggs is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
+At a glance: United States v. Kyle Wagner is currently tracked as observed entity with 1 recent record route(s), 2 relationship candidate(s), and 4 control layer tag(s).
 
 Judgement: Worth watching because records and relationship signals both exist.
 
 Evidence: legal record present
 
-Watch next: Watch Williams v. Biggs across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
+Watch next: Watch United States v. Kyle Wagner across courtlistener-court-records.; Check whether new courtlistener-court-records records repeat this name.
 
 ## AAPL
 

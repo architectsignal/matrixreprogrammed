@@ -1,6 +1,6 @@
 # Daily Investigation Conclusions
 
-Generated: 2026-08-12T06:48:37.681Z
+Generated: 2026-08-13T05:04:08.374Z
 
 The machine found evidence routes requiring attention. The strongest findings are ranked by official authority, adjudicated status, enforcement significance, severity and recency; every accusation boundary remains attached.
 
@@ -9,10 +9,10 @@ Boundary: Established wrongdoing is used only for the scope of an official convi
 ## Summary
 
 - sourcesScheduled: 12
-- sourcesFetched: 11
-- sourceFailures: 1
-- changedSources: 9
-- findingsInWindow: 656
+- sourcesFetched: 0
+- sourceFailures: 12
+- changedSources: 0
+- findingsInWindow: 412
 - establishedWrongdoingFindings: 0
 - officialActionFindings: 0
 - documentOrLeakLeads: 0
@@ -132,24 +132,6 @@ Next records: Open and preserve the primary document or official case page.; Ide
 
 Source URL: https://www.usaspending.gov/award/HC101326FB686
 
-### ADVANCED COMPUTER CONCEPTS, INC. — National Aeronautics and Space Administration
-
-Grade: B · Status: record-update · Severity: 1
-
-Source: USAspending.gov — Recent Contract Awards
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.usaspending.gov/award/80NSSC26FA638
-
 ### OP HOTEL I INVESTORS, LLC — Commodity Futures Trading Commission
 
 Grade: B · Status: record-update · Severity: 1
@@ -168,24 +150,6 @@ Next records: Open and preserve the primary document or official case page.; Ide
 
 Source URL: https://www.usaspending.gov/award/9523ZY26P0022
 
-### SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency
-
-Grade: B · Status: record-update · Severity: 1
-
-Source: USAspending.gov — Recent Contract Awards
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.usaspending.gov/award/9594CS26F0051
-
 ### HOTTINGER BRUEL & KJAER INC. — National Aeronautics and Space Administration
 
 Grade: B · Status: record-update · Severity: 1
@@ -203,96 +167,6 @@ Boundary: This update alone does not establish wrongdoing, intent or coordinated
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
 Source URL: https://www.usaspending.gov/award/80NSSC26P1028
-
-### AGILENT TECHNOLOGIES INC — Department of Energy
-
-Grade: B · Status: record-update · Severity: 1
-
-Source: USAspending.gov — Recent Contract Awards
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.usaspending.gov/award/89243326PFE000994
-
-### BETTER DIRECT, LLC — Department of Energy
-
-Grade: B · Status: record-update · Severity: 1
-
-Source: USAspending.gov — Recent Contract Awards
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.usaspending.gov/award/89243326FFE400792
-
-### ACENTRA HEALTH LLC — National Aeronautics and Space Administration
-
-Grade: B · Status: record-update · Severity: 1
-
-Source: USAspending.gov — Recent Contract Awards
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.usaspending.gov/award/80NSSC26P1252
-
-### FISCALNOTE, INC — Department of Energy
-
-Grade: B · Status: record-update · Severity: 1
-
-Source: USAspending.gov — Recent Contract Awards
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.usaspending.gov/award/89233126FNA400816
-
-### DELL MARKETING L.P. — District of Columbia Courts
-
-Grade: B · Status: record-update · Severity: 1
-
-Source: USAspending.gov — Recent Contract Awards
-
-Conclusion: undefined
-
-Mechanism: Trace the source-linked chain through the named entity, legal authority, ownership or appointment right, payment or contract, operational decision, affected institution, oversight route and practical consequence.
-
-Implication: undefined
-
-Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
-
-Next records: Open and preserve the underlying primary document or official case page.; Identify the named parties, dates, amounts, legal authority, decision-maker and any appeal, correction or counter-record.; Test whether the claimed mechanism produces a documented decision, transfer of control, payment, access condition or safeguarding failure.
-
-Source URL: https://www.usaspending.gov/award/95C67826P0299
 
 ### INDUSTRIAL BANK — District of Columbia Courts
 
@@ -347,6 +221,132 @@ Boundary: This update alone does not establish wrongdoing, intent or coordinated
 Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
 
 Source URL: https://www.usaspending.gov/award/93310026P0007
+
+### MVATION WORLDWIDE, INC. — Department of Education
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/91990026F0071
+
+### CDW GOVERNMENT LLC — Court Services and Offender Supervision Agency
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/959P0026P0005
+
+### PANAMERICA COMPUTERS, INC. — Department of Energy
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/89243326FFE400787
+
+### COLOSSAL CONTRACTING LLC — Court Services and Offender Supervision Agency
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/9594CS26F0050
+
+### SOUTHERN POLICE EQUIPMENT COMPANY, INC. — Court Services and Offender Supervision Agency
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/9594CS26F0044
+
+### SOFTWARE INFORMATION RESOURCE CORP. — District of Columbia Courts
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/95C67826P0296
+
+### HR STRATEGIES CONSULTING USA INC. — Corporation for National and Community Service
+
+Grade: B · Status: record-update · Severity: 1
+
+Source: USAspending.gov — Recent Contract Awards
+
+Conclusion: A dated source update exists and should be compared with prior records.
+
+Mechanism: Track the chain from entity and ownership to award, payment, mandate, lobbying, voting power, deliverable and public dependency.
+
+Implication: This record should be preserved, cross-referenced and upgraded only if stronger evidence changes the finding.
+
+Boundary: This update alone does not establish wrongdoing, intent or coordinated action.
+
+Next records: Open and preserve the primary document or official case page.; Identify the named parties, dates, amounts, legal authority and decision-maker.; Check for later judgments, dismissals, appeals, corrections, settlements or implementation records.; Add a counter-record or alternative explanation before making a broad conclusion.
+
+Source URL: https://www.usaspending.gov/award/95332A26P00013
 
 ### content changed: U.S. Securities and Exchange Commission — Current EDGAR Filings
 

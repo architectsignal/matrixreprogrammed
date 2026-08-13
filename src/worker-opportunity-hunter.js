@@ -1,5 +1,6 @@
 import { OpportunityHunter } from '../ai-management/opportunity-hunter/opportunity-hunter.mjs';
 import { D1ResourceRegistry } from '../ai-management/resource-registry/resource-registry.mjs';
+import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 const ROUTE = '/api/ai-management/admin/opportunities';
 
@@ -227,6 +228,25 @@ async function persistReport(env, report, discoverySource = 'scheduled-official-
     runId, discoverySource, report.discovered, report.approved_auto.length, report.awaiting_owner.length, report.quarantined.length,
     JSON.stringify(report), report.generated_at, now.toISOString(), status
   ).run();
+
+  await emitMatrixSystemEvent(env, {
+    eventType: 'resource.discovered',
+    auditIdentifier: `resource-discovery:${runId}`,
+    timestamp: now.toISOString(),
+    origin: 'opportunity-hunter',
+    actor: 'zero-spend-resource-hunter',
+    affectedPages: ['answer-engine.html'],
+    payload: {
+      change_summary: `Resource Hunter evaluated ${report.discovered} candidate(s): ${report.approved_auto.length} approved, ${report.awaiting_owner.length} awaiting owner action and ${report.quarantined.length} quarantined.`,
+      run_id: runId,
+      discovered: report.discovered,
+      admitted,
+      approved_zero_spend: report.approved_auto.length,
+      awaiting_owner: report.awaiting_owner.length,
+      quarantined: report.quarantined.length,
+      cost_confirmed_zero: true
+    }
+  });
 
   return { runId, admitted, status };
 }

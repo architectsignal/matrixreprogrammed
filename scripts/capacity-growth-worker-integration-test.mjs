@@ -141,6 +141,7 @@ assert.equal(second.report.outcomes_last_24h.leased, 1);
 assert.equal(database.prepare("SELECT COUNT(*) count FROM matrix_learning_ledger WHERE domain='zero-cost-compute'").get().count, 2);
 assert.equal(database.prepare("SELECT COUNT(*) count FROM ai_local_jobs WHERE status='completed'").get().count, 1);
 assert.equal(database.prepare("SELECT COUNT(*) count FROM ai_local_job_receipts WHERE cost_confirmed_zero<>1 OR external_network_used<>0").get().count, 0);
+assert.equal(database.prepare("SELECT COUNT(*) count FROM matrix_events WHERE event_type='resource.benchmarked'").get().count, 1);
 
 console.log('CAPACITY GROWTH WORKER INTEGRATION TEST PASSED');
 console.log('A scheduled cycle admitted an online owner node, persisted and leased its daily benchmark, recorded a EUR 0 outcome, learned reliability, and reported the immutable receipts on the next cycle.');

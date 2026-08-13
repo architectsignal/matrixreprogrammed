@@ -1,5 +1,6 @@
 import { D1ResourceRegistry } from '../ai-management/resource-registry/resource-registry.mjs';
 import { runCapacityGrowthCycle } from '../ai-management/compute-capacity/capacity-growth-controller.mjs';
+import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 const ROUTE = '/api/ai-management/admin/capacity-growth';
 
@@ -205,6 +206,22 @@ async function executeCycle(env, { createBenchmark = true, now = new Date() } = 
   const resources = await registry.list();
   const report = await buildComputeReport(env, state, result, resources, benchmark, persistedAssignments, now);
   await persistComputeLearning(env, report);
+  await emitMatrixSystemEvent(env, {
+    eventType: 'resource.benchmarked',
+    auditIdentifier: `resource-benchmark:${report.generated_at.slice(0, 10)}`,
+    timestamp: report.generated_at,
+    origin: 'capacity-growth',
+    actor: 'zero-spend-capacity-controller',
+    affectedPages: ['answer-engine.html'],
+    payload: {
+      change_summary: `Capacity cycle measured ${report.online_local_nodes} online owner node(s), ${report.usable_broker_resources} usable broker resource(s) and ${report.jobs_assigned.length} new assignment(s).`,
+      online_local_nodes: report.online_local_nodes,
+      usable_broker_resources: report.usable_broker_resources,
+      jobs_assigned: report.jobs_assigned.length,
+      outcomes_last_24h: report.outcomes_last_24h,
+      cost_confirmed_zero: true
+    }
+  });
   return { result, report, persistedAssignments };
 }
 
@@ -262,6 +279,11 @@ export async function handleCapacityGrowthRoute(request, env) {
     if (request.method === 'POST') return execute(env);
     return json({ ok: false, error: 'Method not allowed' }, 405);
   } catch (error) {
+    await emitMatrixSystemEvent(env, {
+      eventType: 'resource.failed', auditIdentifier: `resource-failure:${new Date().toISOString()}`,
+      origin: 'capacity-growth', actor: 'zero-spend-capacity-controller',
+      payload: { change_summary: 'Capacity growth failed safely and retained its existing resources.', error: String(error?.message || error).slice(0, 500), cost_confirmed_zero: true }
+    });
     return json({ ok: false, error: 'Capacity growth failed safely', message: String(error?.message || error).slice(0, 500), zero_spend_lock: true }, 500);
   }
 }

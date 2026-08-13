@@ -4,6 +4,7 @@ import {
   publicInvestigationPromptPayload,
   validatePublicInvestigationResult
 } from './public-investigation-contract.js';
+import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 const ROUTE_ROOT = '/api/investigate';
 const CORPUS_PATH = '/data/public-investigation-corpus.json';
@@ -329,6 +330,22 @@ async function loadCorpus(request, env) {
   return parsed;
 }
 
+async function mergeLivingEvidence(corpus, env) {
+  if (!env?.MEMBERS_DB?.prepare) return corpus;
+  try {
+    const result = await env.MEMBERS_DB.prepare(`SELECT content_json FROM matrix_living_projections
+      WHERE projection_type='evidence' AND public_visible=1 AND state='active' AND evidence_class='VERIFIED'
+      ORDER BY updated_at DESC LIMIT 500`).all();
+    const dynamic = (result?.results || []).map(row => parseJson(row.content_json, null)).filter(item => item?.evidence_id && item?.source_route);
+    if (!dynamic.length) return corpus;
+    const merged = new Map((corpus.evidence || []).map(item => [item.evidence_id, item]));
+    for (const item of dynamic) merged.set(item.evidence_id, item);
+    return { ...corpus, evidence: [...merged.values()], counts: { ...(corpus.counts || {}), evidence: merged.size, living_evidence: dynamic.length } };
+  } catch {
+    return corpus;
+  }
+}
+
 async function schemaReady(env) {
   if (!env?.MEMBERS_DB?.prepare) return false;
   try {
@@ -370,7 +387,7 @@ async function learningHints(db, observation) {
   return evidenceIds;
 }
 
-async function recordLearning(db, {
+async function recordLearning(env, {
   investigationId,
   questionHash,
   normalizedQuestion,
@@ -384,6 +401,7 @@ async function recordLearning(db, {
   latency,
   failureType = null
 }) {
+  const db = env.MEMBERS_DB;
   const createdAt = nowIso();
   const learningId = `public-investigation:${investigationId}:${createdAt}`.slice(0, 240);
   const observation = `public-investigation:${questionHash}`;
@@ -411,6 +429,22 @@ async function recordLearning(db, {
     `audit:${learningId}`,
     createdAt
   ).run();
+  await emitMatrixSystemEvent(env, {
+    eventType: 'learning.signal.created',
+    auditIdentifier: `learning-signal:${learningId}`,
+    timestamp: createdAt,
+    origin: 'ask-matrix',
+    actor: 'public-investigation-learning',
+    affectedPages: ['answer-engine.html'],
+    payload: {
+      change_summary: `Ask Matrix recorded a validated retrieval outcome for investigation ${investigationId}.`,
+      investigation_id: investigationId,
+      evidence_ids: evidence.evidence_ids,
+      validation_passed: validationPassed === true,
+      fallback_used: fallbackUsed === true,
+      cost_confirmed_zero: true
+    }
+  });
 }
 
 async function existingRecentInvestigation(db, questionHash) {
@@ -569,7 +603,7 @@ async function createInvestigation(request, env) {
   let retrievalLatency = 0;
   try {
     const retrievalStarted = Date.now();
-    corpus = await loadCorpus(request, env);
+    corpus = await mergeLivingEvidence(await loadCorpus(request, env), env);
     const learnedEvidenceIds = await learningHints(env.MEMBERS_DB, `public-investigation:${questionHash}`);
     retrieval = retrieveEvidence(corpus, question, { classification, learnedEvidenceIds });
     retrievalLatency = Date.now() - retrievalStarted;
@@ -653,7 +687,7 @@ async function createInvestigation(request, env) {
     investigationId
   ).run();
 
-  await recordLearning(env.MEMBERS_DB, {
+  await recordLearning(env, {
     investigationId,
     questionHash,
     normalizedQuestion,
@@ -710,7 +744,7 @@ export async function completePublicInvestigationLocalResult(env, jobRow, comple
     completedAt,
     context.investigation_id
   ).run();
-  await recordLearning(env.MEMBERS_DB, {
+  await recordLearning(env, {
     investigationId: context.investigation_id,
     questionHash: row.question_hash,
     normalizedQuestion: row.normalized_question,
@@ -773,6 +807,7 @@ export const publicInvestigationInternals = {
   classificationFor,
   deterministicAnswer,
   learningHints,
+  mergeLivingEvidence,
   normalizeQuestion,
   scoreEvidence,
   scoreRoute,

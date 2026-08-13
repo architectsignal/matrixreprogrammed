@@ -89,3 +89,40 @@ Architecture decision: `docs/adr/0004-public-investigation-vertical-slice.md`.
 | Release proof | The controlled deployment runs policy, controller, Worker contract, SQLite/D1 integration and real broker golden tests and live-checks the owner-only capacity endpoint |
 
 Architecture decision: `docs/adr/0005-daily-zero-cost-compute-fabric.md`.
+
+## Living Matrix event-projection cycle (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Shared spine | The existing `matrix_events` ledger feeds one `living-matrix-v1` consumer; durable dispatch receipts provide retry and idempotency instead of a parallel event system |
+| Structured intelligence | Stable, versioned D1 projections cover evidence, claims, dossiers, forecasts, pages and `what_changed`; prior content hashes remain auditable |
+| Publication | Only `VERIFIED` evidence with explicit `publication_approved=true` may be public; speculation is internal and unsafe material remains quarantined |
+| Dynamic Ask Matrix | Active public verified evidence projections merge into the compiled corpus at retrieval time and remain subject to evidence-ID, citation and source-route validation |
+| Corrections | Corrections update stable projection keys, increment versions, preserve previous hashes and change later retrieval; withdrawals remove public eligibility |
+| Page graph | Declared page-to-event/evidence/claim/dossier/forecast dependencies mark only affected page projections stale |
+| Daily cycle | Scheduled production runs the living cycle after Opportunity Hunter and capacity growth, using the existing cron event |
+| Source monitoring | Daily and weekly investigation workflows publish changed or failed monitored sources through the owner-authenticated event API, then trigger the living cycle; duplicate audit identifiers are reused safely |
+| Evolution report | One measured report joins intelligence, page, investigation, resource, node, job, opportunity, learning and failure state with structural EUR 0 cost confirmation |
+| Owner control | Public access is read-only and public-safe; manual cycle runs and run history remain behind the existing constant-time admin-token wrapper |
+| Proof | SQLite acceptance covers event propagation, dynamic Ask Matrix retrieval, correction versioning, failed-receipt recovery, replay idempotency, two-node growth and guarded model replacement; broker tests cover zero-cost fallback and learned routing |
+
+Architecture decision: `docs/adr/0006-living-matrix-event-projection-cycle.md`.
+
+## Matrix Value Hunter lawful acquisition cycle (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Objective | First milestone is exactly EUR 10,000 net reconciled receipts; listings, pending claims and unmatched currencies do not count |
+| Claimants | Any registered person/entity/beneficiary, including the Matrix operating entity, may be a claimant when authority and identity are proven; D1 stores vault references rather than raw identity |
+| Ownership | Unknown property is `NOT_OURS`; unclaimed is not ownerless; lawful appropriation requires an official ownerless determination and finder awards require an official award rule |
+| Discovery | Bounded same-host extraction scans official UK, EU and France grants/funding pages and official unclaimed-property registries; leads remain internal and duplicate-safe |
+| Entitlement | Legal basis, official source, claimant authority, identity match and deterministic evidence are mandatory; LLM confidence is explicitly not proof |
+| Standing mandate | Proven ordinary collections proceed without a second owner pause when current jurisdiction/provider rules permit automation and every firewall gate passes |
+| Human boundary | KYC, signatures, declarations, CAPTCHA, new accounts/contracts/terms, unknown destinations and policy-exceeding fees surface exact required actions |
+| Financial firewall | Only claim, owned-balance withdrawal and received-asset sweep intents; approved destinations/adapters/contracts, fee ceilings and idempotency; no keys, seeds, blind signing, arbitrary calls or unlimited approvals |
+| Learning | Category/asset priority changes only from measured reconciled receipts, success and evidence; it cannot weaken legal or security gates |
+| Live truth | Discovery and proof are operational; collection remains `evidence_ready` until a provider-specific constrained financial adapter and claimant destinations are registered |
+| Integration | Value events use the shared Matrix event spine; scheduled Value Hunter runs after capacity growth and before the Living Matrix cycle |
+| Proof | Golden and SQLite/D1 integration cover automatic fiat/crypto collection, jurisdiction, ownership, lawful appropriation, fees, fraud, terms, idempotency, official-host discovery, persistence, learning and adapter fail-closed behavior |
+
+Architecture decision: `docs/adr/0007-matrix-value-hunter-lawful-acquisition.md`.

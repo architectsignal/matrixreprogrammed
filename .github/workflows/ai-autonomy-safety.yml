@@ -19,6 +19,10 @@ on:
       - 'src/worker-production.js'
       - 'src/worker-member-experience.js'
       - 'src/worker-matrix-synergy.js'
+      - 'src/worker-living-matrix.js'
+      - 'src/worker-value-hunter.js'
+      - 'ai-management/value-hunter/**'
+      - 'src/matrix-event-emitter.js'
       - 'src/matrix-synergy-core.js'
       - 'migrations/phase9_ai_resource_orchestration.sql'
       - 'migrations/phase10_ai_autonomy.sql'
@@ -26,9 +30,17 @@ on:
       - 'migrations/phase12_opportunity_hunter.sql'
       - 'migrations/phase13_matrix_synergy.sql'
       - 'migrations/public_investigation_api.sql'
+      - 'migrations/phase14_living_matrix.sql'
+      - 'migrations/phase15_matrix_value_hunter.sql'
       - 'scripts/build-public-investigation-corpus.js'
       - 'scripts/public-investigation-test.mjs'
       - 'scripts/matrix-synergy-test.mjs'
+      - 'scripts/living-matrix-acceptance-test.mjs'
+      - 'scripts/value-hunter-golden-test.mjs'
+      - 'scripts/value-hunter-worker-integration-test.mjs'
+      - 'scripts/phase15-value-hunter-contract-test.mjs'
+      - 'scripts/publish-investigation-matrix-events.mjs'
+      - 'scripts/publish-investigation-matrix-events.test.mjs'
       - 'scripts/phase13-migration-rehearsal.py'
       - 'member-dashboard.html'
       - 'member-dashboard-app.js'
@@ -88,7 +100,16 @@ jobs:
           node --check src/worker-production-autonomy.js
           node --check src/worker-member-experience.js
           node --check src/worker-matrix-synergy.js
+          node --check src/worker-living-matrix.js
+          node --check src/worker-value-hunter.js
+          node --check src/matrix-event-emitter.js
           node --check src/matrix-synergy-core.js
+          node --check ai-management/living-matrix/living-matrix-cycle.mjs
+          node --check ai-management/value-hunter/value-hunter-core.mjs
+          node --check ai-management/value-hunter/financial-firewall.mjs
+          node --check ai-management/value-hunter/value-collector.mjs
+          node --check ai-management/provider-adapters/value/official-html-links.mjs
+          node --check scripts/publish-investigation-matrix-events.mjs
           node --check member-dashboard-app.js
 
       - name: Run zero-spend broker foundation tests
@@ -102,6 +123,11 @@ jobs:
           node scripts/opportunity-hunter-test.mjs
           node scripts/phase12-production-readiness-test.mjs
           node scripts/matrix-synergy-test.mjs
+          node scripts/living-matrix-acceptance-test.mjs
+          node scripts/value-hunter-golden-test.mjs
+          node scripts/phase15-value-hunter-contract-test.mjs
+          node scripts/value-hunter-worker-integration-test.mjs
+          node scripts/publish-investigation-matrix-events.test.mjs
           node scripts/build-public-investigation-corpus.js
           node scripts/public-investigation-test.mjs
           python3 scripts/phase13-migration-rehearsal.py
@@ -126,6 +152,8 @@ jobs:
               'migrations/phase12_opportunity_hunter.sql',
               'migrations/phase13_matrix_synergy.sql',
               'migrations/public_investigation_api.sql',
+              'migrations/phase14_living_matrix.sql',
+              'migrations/phase15_matrix_value_hunter.sql',
           ]
           for pass_number in (1, 2):
               for migration in migrations:
@@ -163,6 +191,24 @@ jobs:
               'matrix_model_benchmarks',
               'matrix_capabilities',
               'matrix_learning_ledger',
+              'matrix_living_cycles',
+              'matrix_event_dispatches',
+              'matrix_living_projections',
+              'matrix_page_dependencies',
+              'matrix_value_jurisdictions',
+              'matrix_value_sources',
+              'matrix_value_claimants',
+              'matrix_value_destinations',
+              'matrix_value_mandates',
+              'matrix_value_objectives',
+              'matrix_value_opportunities',
+              'matrix_value_entitlement_evidence',
+              'matrix_value_claim_queue',
+              'matrix_value_operations',
+              'matrix_value_receipts',
+              'matrix_value_audit',
+              'matrix_value_cycles',
+              'matrix_value_learning',
           }
           present = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
           missing = required - present
@@ -223,7 +269,15 @@ jobs:
           if duplicate_resources:
               raise SystemExit(f'Duplicate resources after rerun: {duplicate_resources}')
 
-          print('D1 phases 9 through 13 passed two complete executions with prompt-local, public-only remote compute, automatic evidence classification, provider-only human actions, and zero-spend constraints.')
+          value_target = database.execute("SELECT target_net_minor FROM matrix_value_objectives WHERE objective_id='value-milestone-eur-10000'").fetchone()
+          if not value_target or value_target[0] != 1000000:
+              raise SystemExit('Value Hunter EUR 10,000 objective is missing')
+
+          value_intents = database.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name='matrix_value_operations'").fetchone()[0]
+          if "intent_type IN ('CLAIM_REWARD','SWEEP_RECEIVED_ASSET','WITHDRAW_OWNED_BALANCE')" not in value_intents:
+              raise SystemExit('Value Hunter constrained intent allowlist is missing')
+
+          print('D1 phases 9 through 15 passed two complete executions with durable living/value projections, prompt-local processing, public-only remote compute, claimant-safe acquisition and zero-spend constraints.')
 
       - name: Verify fail-closed production configuration
         run: |
@@ -237,6 +291,10 @@ jobs:
           grep -F 'AI_REMOTE_COMPUTE_ROUTING_ENABLED = "false"' wrangler.toml
           grep -F 'AI_REMOTE_COMPUTE_EXECUTION_ENABLED = "false"' wrangler.toml
           grep -F 'AI_REMOTE_COMPUTE_JOBS_PER_CYCLE = "0"' wrangler.toml
+          grep -F 'MATRIX_VALUE_HUNTER_ENABLED = "true"' wrangler.toml
+          grep -F 'MATRIX_VALUE_AUTO_COLLECTION_ENABLED = "true"' wrangler.toml
+          grep -F 'MATRIX_VALUE_MAX_FEE_PER_CLAIM_MINOR = "0"' wrangler.toml
+          grep -F 'MATRIX_VALUE_MAX_DAILY_FEES_MINOR = "0"' wrangler.toml
           grep -F 'ZERO_SPEND_INVARIANT_VIOLATION' ai-management/policy-engine/zero-spend-invariant.mjs
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
@@ -252,6 +310,8 @@ jobs:
           grep -F 'migrations/phase11_local_job_queue.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase12_opportunity_hunter.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase13_matrix_synergy.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/phase14_living_matrix.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/phase15_matrix_value_hunter.sql' .github/workflows/deploy.yml
           grep -F "'ai_local_jobs','ai_local_job_receipts'" .github/workflows/deploy.yml
           grep -F "'ai_opportunities','ai_opportunity_hunter_runs'" .github/workflows/deploy.yml
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .github/workflows/deploy.yml

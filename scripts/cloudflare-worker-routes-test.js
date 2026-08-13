@@ -55,14 +55,14 @@ if (exists('_site')) {
 }
 
 [
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-matrix-synergy.js','src/matrix-synergy-core.js','src/worker-public-investigation.js','src/public-investigation-contract.js',
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-matrix-synergy.js','src/matrix-synergy-core.js','src/worker-public-investigation.js','src/public-investigation-contract.js','src/worker-living-matrix.js','src/worker-value-hunter.js','src/matrix-event-emitter.js','ai-management/living-matrix/living-matrix-cycle.mjs','ai-management/value-hunter/value-hunter-core.mjs','ai-management/value-hunter/financial-firewall.mjs','ai-management/value-hunter/value-collector.mjs','ai-management/provider-adapters/value/official-html-links.mjs',
   'wrangler.toml','wrangler.jsonc','_headers','membership.html','paypal-membership.js','billing-dashboard.html','billing-dashboard.js',
   'admin-payment-dashboard.html','admin-payment-dashboard.js','forum.js','forum.html','dark-speculation-forum.html','epstein-alive-board.html',
   'templates/phase6-membership.template','data/membership-tiers.json',
   'migrations/0001_membership_foundation.sql','migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql',
-  'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','migrations/phase13_matrix_synergy.sql','migrations/public_investigation_api.sql',
+  'migrations/phase6_paypal_subscriptions.sql','migrations/phase6_paypal_failure_counter_fix.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','migrations/phase13_matrix_synergy.sql','migrations/public_investigation_api.sql','migrations/phase14_living_matrix.sql','migrations/phase15_matrix_value_hunter.sql',
   'scripts/build-cloudflare-output.js','scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/forum-persistence-d1-test.js',
-  'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js','scripts/repair-forum-page-consistency.js','scripts/verify-live-ai-management.mjs',
+  'scripts/patch-membership-tiers.js','scripts/repair-generated-site-artifacts.js','scripts/repair-forum-page-consistency.js','scripts/verify-live-ai-management.mjs','scripts/publish-investigation-matrix-events.mjs',
   '_site/index.html','_site/index','_site/search.html','_site/search','_site/membership.html','_site/membership','_site/paypal-membership.js','_site/forum.html','_site/forum',
   '_site/forum.js','_site/dark-speculation-forum.html','_site/epstein-alive-board.html'
 ].forEach(need);
@@ -82,11 +82,17 @@ for (const marker of [
   "import productionWorker from './worker-production.js';",
   "import aiManagementWorker from './worker-ai-management.js';",
   "import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';",
+  "import { handleLivingMatrixRoute, isLivingMatrixAdminRoute, isLivingMatrixPublicRoute, runScheduledLivingMatrix } from './worker-living-matrix.js';",
+  "import { handleValueHunterRoute, isValueHunterRoute, runScheduledValueHunter } from './worker-value-hunter.js';",
   'return productionWorker.fetch(request, env, ctx);',
   'productionWorker.scheduled',
   'aiManagementWorker.scheduled',
   'await Promise.all([productionTask, autonomyTask]);'
 ]) needText('src/worker-production-autonomy.js', marker, `verified autonomy wrapper marker ${marker}`);
+for (const marker of ['/api/matrix/evolution','/api/matrix/admin/living-cycle','runLivingMatrixCycle','matrix_event_dispatches']) needText('src/worker-living-matrix.js', marker, `Living Matrix boundary ${marker}`);
+for (const marker of ['/api/ai-management/admin/value-hunter','runValueHunterCycle','INSTALLED_COLLECTION_ADAPTERS','deterministic proof','approved destination','constrained adapter']) needText('src/worker-value-hunter.js', marker, `Value Hunter boundary ${marker}`);
+for (const marker of ['value-lead.discover','approved_data_classes','monetary_cost_per_unit_eur: 0','external_charge_possible: false','maximum_response_bytes','redirect-left-official-host','cost_confirmed_zero: true','provenance']) needText('ai-management/provider-adapters/value/official-html-links.mjs', marker, `Value discovery adapter boundary ${marker}`);
+for (const marker of ['publication_approved','internal-only','what_changed']) needText('ai-management/living-matrix/living-matrix-cycle.mjs', marker, `Living Matrix publication boundary ${marker}`);
 for (const marker of ['Prompt material is forbidden','promptReceived: false','promptStored: false','promptTransferred: false','paidFallbackPossible: false']) needText('src/worker-ai-management.js', marker, `AI privacy marker ${marker}`);
 
 for (const marker of [
@@ -144,6 +150,8 @@ for (const marker of ['CREATE TABLE IF NOT EXISTS ai_resources','AI_RESOURCE_ZER
 for (const marker of ['CREATE TABLE IF NOT EXISTS ai_model_routing_decisions','prompt_received INTEGER NOT NULL DEFAULT 0 CHECK (prompt_received = 0)','CREATE TABLE IF NOT EXISTS ai_site_improvement_runs']) needText('migrations/phase10_ai_autonomy.sql', marker, `Phase 10 AI migration marker ${marker}`);
 for (const marker of ['CREATE TABLE IF NOT EXISTS matrix_events','CREATE TABLE IF NOT EXISTS matrix_contributions','CREATE TABLE IF NOT EXISTS matrix_human_actions',"evidence_class IN ('VERIFIED','SPECULATION','SECURITY_QUARANTINE')"]) needText('migrations/phase13_matrix_synergy.sql', marker, `Phase 13 Matrix synergy marker ${marker}`);
 for (const marker of ['CREATE TABLE IF NOT EXISTS matrix_public_investigations','CREATE TABLE IF NOT EXISTS matrix_public_investigation_evidence','CREATE TABLE IF NOT EXISTS matrix_public_investigation_rate_limits',"status IN ('queued','retrieving','analysing','verifying','complete','blocked','failed')"]) needText('migrations/public_investigation_api.sql', marker, `public investigation migration marker ${marker}`);
+for (const marker of ['CREATE TABLE IF NOT EXISTS matrix_living_cycles','CREATE TABLE IF NOT EXISTS matrix_event_dispatches','CREATE TABLE IF NOT EXISTS matrix_living_projections','CREATE TABLE IF NOT EXISTS matrix_page_dependencies','cost_confirmed_zero INTEGER NOT NULL DEFAULT 1 CHECK (cost_confirmed_zero = 1)']) needText('migrations/phase14_living_matrix.sql', marker, `Living Matrix migration marker ${marker}`);
+for (const marker of ['CREATE TABLE IF NOT EXISTS matrix_value_jurisdictions','CREATE TABLE IF NOT EXISTS matrix_value_claimants','CREATE TABLE IF NOT EXISTS matrix_value_destinations','CREATE TABLE IF NOT EXISTS matrix_value_opportunities','CREATE TABLE IF NOT EXISTS matrix_value_receipts','CREATE TABLE IF NOT EXISTS matrix_value_learning','measured-reconciled-receipts-only','value-milestone-eur-10000',"intent_type IN ('CLAIM_REWARD','SWEEP_RECEIVED_ASSET','WITHDRAW_OWNED_BALANCE')"]) needText('migrations/phase15_matrix_value_hunter.sql', marker, `Value Hunter migration marker ${marker}`);
 
 const wranglerToml = read('wrangler.toml');
 const wranglerJsonc = read('wrangler.jsonc');
@@ -151,7 +159,7 @@ const approvedTomlEntry = wranglerToml.includes('main = "src/worker-production-a
 if (!approvedTomlEntry) fail('wrangler.toml: missing approved production Worker entry');
 const approvedJsonEntry = wranglerJsonc.includes('"main": "src/worker-production-autonomy.js"') || wranglerJsonc.includes('"main": "src/worker-production.js"');
 if (!approvedJsonEntry) fail('wrangler.jsonc: missing approved production Worker entry');
-for (const marker of ['directory = "./_site"','binding = "ASSETS"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true','AI_RESOURCE_ZERO_SPEND_LOCK = "true"','MATRIX_PUBLIC_INVESTIGATION_ENABLED = "true"']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
+for (const marker of ['directory = "./_site"','binding = "ASSETS"','binding = "FORUM_POSTS"','binding = "MEMBERS_DB"','database_name = "matrix-members"','c6e465d3-4e36-4a00-b8f8-309447240c52','keep_vars = true','AI_RESOURCE_ZERO_SPEND_LOCK = "true"','MATRIX_PUBLIC_INVESTIGATION_ENABLED = "true"','MATRIX_VALUE_HUNTER_ENABLED = "true"','MATRIX_VALUE_AUTO_COLLECTION_ENABLED = "true"']) needText('wrangler.toml', marker, `wrangler.toml marker ${marker}`);
 const workerFirstConfig = wranglerToml.match(/run_worker_first\s*=\s*(true|\[[\s\S]*?\])/m)?.[1] || '';
 const workerFirstForAll = workerFirstConfig === 'true';
 const workerFirstForProtectedRoutes = [

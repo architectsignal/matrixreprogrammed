@@ -12,6 +12,8 @@ MIGRATIONS = [
     "migrations/phase12_opportunity_hunter.sql",
     "migrations/phase13_matrix_synergy.sql",
     "migrations/public_investigation_api.sql",
+    "migrations/phase14_living_matrix.sql",
+    "migrations/phase15_matrix_value_hunter.sql",
 ]
 REQUIRED = {
     "matrix_events",
@@ -24,6 +26,24 @@ REQUIRED = {
     "matrix_model_benchmarks",
     "matrix_capabilities",
     "matrix_learning_ledger",
+    "matrix_living_cycles",
+    "matrix_event_dispatches",
+    "matrix_living_projections",
+    "matrix_page_dependencies",
+    "matrix_value_jurisdictions",
+    "matrix_value_sources",
+    "matrix_value_claimants",
+    "matrix_value_destinations",
+    "matrix_value_mandates",
+    "matrix_value_objectives",
+    "matrix_value_opportunities",
+    "matrix_value_entitlement_evidence",
+    "matrix_value_claim_queue",
+    "matrix_value_operations",
+    "matrix_value_receipts",
+    "matrix_value_audit",
+    "matrix_value_cycles",
+    "matrix_value_learning",
 }
 
 database = sqlite3.connect(":memory:")
@@ -42,8 +62,8 @@ mission_count = database.execute("SELECT COUNT(*) FROM matrix_missions").fetchon
 if mission_count != 3:
     raise SystemExit(f"Expected three idempotent seed missions, found {mission_count}")
 capability_count = database.execute("SELECT COUNT(*) FROM matrix_capabilities").fetchone()[0]
-if capability_count != 6:
-    raise SystemExit(f"Expected six truthful capability seeds, found {capability_count}")
+if capability_count != 8:
+    raise SystemExit(f"Expected eight truthful capability seeds, found {capability_count}")
 
 entitlement_view = database.execute(
     "SELECT sql FROM sqlite_master WHERE type='view' AND name='member_effective_entitlements'"
@@ -62,4 +82,16 @@ if "'VERIFIED','SPECULATION','SECURITY_QUARANTINE'" not in contribution_schema:
 if "editorial" in human_action_schema.lower():
     raise SystemExit("Human action queue must not become an editorial fallback")
 
-print("Phase 13 migration rehearsal passed: 10 tables, two executions, three missions and six truthful capability seeds.")
+target = database.execute("SELECT target_net_minor FROM matrix_value_objectives WHERE objective_id='value-milestone-eur-10000'").fetchone()
+if not target or target[0] != 1000000:
+    raise SystemExit("Value Hunter EUR 10,000 net objective is missing")
+
+private_columns = {
+    row[1].lower()
+    for table in ("matrix_value_claimants", "matrix_value_destinations", "matrix_value_operations")
+    for row in database.execute(f"PRAGMA table_info({table})")
+}
+if private_columns & {"private_key", "seed_phrase", "mnemonic", "recovery_phrase"}:
+    raise SystemExit("Value Hunter schema must not persist signing secrets")
+
+print("Living Matrix and Value Hunter migration rehearsal passed twice with the EUR 10,000 objective, strict value states, safe intents and eight truthful capability seeds.")

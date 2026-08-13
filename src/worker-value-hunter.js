@@ -1,0 +1,480 @@
+import {
+  DEFAULT_STANDING_MANDATE, LEGAL_BASES, VALUE_INTENT_TYPES, canTransitionValueState,
+  evaluateValueOpportunity, priorityScore
+} from '../ai-management/value-hunter/value-hunter-core.mjs';
+import { OfficialHtmlValueLeadAdapter, allowedOfficialHost, extractOfficialValueLeads } from '../ai-management/provider-adapters/value/official-html-links.mjs';
+import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
+
+const ROOT_ROUTE = '/api/ai-management/admin/value-hunter';
+const ROUTES = new Set([ROOT_ROUTE, `${ROOT_ROUTE}/claimants`, `${ROOT_ROUTE}/destinations`, `${ROOT_ROUTE}/opportunities`]);
+const INSTALLED_COLLECTION_ADAPTERS = Object.freeze([]);
+const SECRET_OR_PII_FIELD = /(private.?key|seed.?phrase|mnemonic|password|secret|raw.?signature|recovery.?phrase|social.?security|national.?insurance|passport|date.?of.?birth|bank.?account|routing.?number)/i;
+
+function clean(value, maximum = 500) {
+  return String(value ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, maximum);
+}
+
+function id(value, fallback = '') {
+  return clean(value, 160).toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^-+|-+$/g, '') || fallback;
+}
+
+function integer(value, fallback = 0) {
+  const parsed = Number(value);
+  return Number.isSafeInteger(parsed) ? parsed : fallback;
+}
+
+function parseJson(value, fallback) {
+  try { return JSON.parse(value); } catch { return fallback; }
+}
+
+function json(value, status = 200) {
+  return new Response(JSON.stringify(value, null, 2), {
+    status,
+    headers: {
+      'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store',
+      'x-content-type-options': 'nosniff', 'x-matrix-origin': 'cloudflare-worker-value-hunter'
+    }
+  });
+}
+
+function enabled(value, fallback = false) {
+  if (value == null || value === '') return fallback;
+  return String(value).toLowerCase() === 'true';
+}
+
+function containsSensitiveMaterial(value, path = '') {
+  if (!value || typeof value !== 'object') return false;
+  return Object.entries(value).some(([key, nested]) => SECRET_OR_PII_FIELD.test(`${path}.${key}`) ||
+    (nested && typeof nested === 'object' && containsSensitiveMaterial(nested, `${path}.${key}`)));
+}
+
+async function sha256(value) {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(String(value || '')));
+  return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+}
+
+async function tableExists(db, table) {
+  const row = await db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name=? LIMIT 1").bind(table).first();
+  return row?.name === table;
+}
+
+async function schemaReady(env) {
+  if (!env?.MEMBERS_DB?.prepare) return false;
+  const required = [
+    'matrix_value_sources', 'matrix_value_claimants', 'matrix_value_destinations', 'matrix_value_mandates',
+    'matrix_value_objectives', 'matrix_value_opportunities', 'matrix_value_entitlement_evidence',
+    'matrix_value_claim_queue', 'matrix_value_audit', 'matrix_value_cycles', 'matrix_value_learning'
+  ];
+  return (await Promise.all(required.map(table => tableExists(env.MEMBERS_DB, table).catch(() => false)))).every(Boolean);
+}
+
+async function discoverOfficialPublicValueLeads(db, { fetchImpl = globalThis.fetch, now = new Date().toISOString() } = {}) {
+  if (typeof fetchImpl !== 'function') return { scanned: 0, discovered: 0, failures: [{ reason: 'fetch-unavailable' }] };
+  const sources = await rows(db.prepare(`SELECT source_id,jurisdiction_id,category,provider_name,official_url,metadata_json
+    FROM matrix_value_sources WHERE official_verified=1 AND source_status IN ('discovery-only','active')
+      AND json_extract(metadata_json,'$.discovery_adapter')='official-html-links-v1'
+    ORDER BY source_id LIMIT 12`));
+  let discovered = 0;
+  const failures = [];
+  const adapter = new OfficialHtmlValueLeadAdapter({ fetchImpl });
+  for (const source of sources) {
+    const response = await adapter.execute({ job_type: 'value-lead.discover', data_class: 'public', monetary_ceiling_eur: 0, source });
+    await db.prepare('UPDATE matrix_value_sources SET last_checked_at=?,updated_at=? WHERE source_id=?').bind(now, now, source.source_id).run();
+    if (!response.ok) { failures.push({ source_id: source.source_id, reason: response.reason || `http-${response.status}` }); continue; }
+    for (const lead of response.leads || []) {
+      const leadHash = await sha256(`${source.source_id}:${lead.url}`);
+      const result = await db.prepare(`INSERT OR IGNORE INTO matrix_value_opportunities(
+        opportunity_id,objective_id,source_id,jurisdiction_id,claimant_id,destination_id,category,title,legal_basis,state,
+        asset,amount_minor,fee_minor,entitlement_proven,provider_adapter_id,contract_id,expires_at,priority_score,idempotency_key,decision_json,discovered_at,updated_at
+      ) VALUES(?,'value-milestone-eur-10000',?,?,NULL,NULL,?,?,?,'DISCOVERED',?,0,0,0,NULL,NULL,NULL,0,?,?,?,?)`).bind(
+        `value-lead-${leadHash.slice(0, 32)}`, source.source_id, source.jurisdiction_id, source.category,
+        lead.title, source.category === 'grant' ? 'grant' : 'contract', source.jurisdiction_id.startsWith('jurisdiction-gb') ? 'GBP' : 'EUR',
+        `official-lead:${leadHash}`, JSON.stringify({ provenance: lead.url, discovery_only: true, requires_eligibility_and_entitlement_proof: true }), now, now
+      ).run();
+      discovered += Number(result?.meta?.changes || 0);
+    }
+  }
+  return { scanned: sources.length, discovered, failures };
+}
+
+async function rows(statement) {
+  const result = await statement.all();
+  return result?.results || [];
+}
+
+async function activeMandate(db) {
+  const row = await db.prepare('SELECT * FROM matrix_value_mandates WHERE active=1 LIMIT 1').first();
+  if (!row) return DEFAULT_STANDING_MANDATE;
+  return {
+    mandate_id: row.mandate_id,
+    active: row.active === 1,
+    auto_collect_proven_entitlements: row.auto_collect_proven_entitlements === 1,
+    covered_categories: parseJson(row.covered_categories_json, []),
+    allowed_intents: parseJson(row.allowed_intents_json, []),
+    maximum_fee_minor: integer(row.maximum_fee_minor),
+    maximum_fee_ratio: Number(row.maximum_fee_ratio || 0),
+    maximum_daily_fee_minor: integer(row.maximum_daily_fee_minor),
+    minimum_net_value_minor: integer(row.minimum_net_value_minor, 1),
+    large_value_confirmation_threshold_minor: row.large_value_confirmation_threshold_minor == null ? null : integer(row.large_value_confirmation_threshold_minor)
+  };
+}
+
+function evaluationInput(row, { autoCollectionEnabled = true } = {}) {
+  return {
+    opportunity_id: row.opportunity_id,
+    state: row.state,
+    amount_minor: integer(row.amount_minor),
+    fee_minor: integer(row.fee_minor),
+    currency: row.asset,
+    legal_basis: row.legal_basis,
+    expires_at: row.expires_at,
+    idempotency_key: row.idempotency_key,
+    claimant: {
+      claimant_id: row.claimant_id,
+      authorized: row.claimant_id ? row.claimant_enabled === 1 : undefined,
+      authority_status: row.authority_status,
+      identity_status: row.identity_status
+    },
+    entitlement: {
+      legal_basis: row.legal_basis,
+      ownership_status: row.entitlement_proven === 1 ? 'proven' : 'unconfirmed',
+      deterministic_proof: row.entitlement_proven === 1 && integer(row.evidence_count) > 0 && integer(row.ownership_evidence_count) > 0,
+      evidence_count: integer(row.evidence_count),
+      official_ownerless_determination: integer(row.ownerless_evidence_count) > 0,
+      official_award_rule_verified: integer(row.finder_award_evidence_count) > 0
+    },
+    source: {
+      official: row.official_verified === 1,
+      verified: row.official_verified === 1,
+      active: row.source_status === 'active',
+      terms_current: row.terms_current === 1,
+      terms_changed: row.source_status === 'terms-changed',
+      terms_hash: row.terms_hash,
+      validated_terms_hash: row.validated_terms_hash
+    },
+    jurisdiction: {
+      checked: row.jurisdiction_status === 'current',
+      claim_permitted: row.claim_permitted === 1,
+      automation_permitted: row.automation_permitted === 1,
+      automation_level: integer(row.automation_level),
+      valid_until: row.jurisdiction_valid_until
+    },
+    destination: {
+      destination_id: row.destination_id,
+      approved: row.destination_approved === 1,
+      active: row.destination_active === 1,
+      allowed_assets: parseJson(row.allowed_assets_json, [])
+    },
+    provider: {
+      adapter_id: row.provider_adapter_id,
+      automation_supported: autoCollectionEnabled && INSTALLED_COLLECTION_ADAPTERS.includes(row.provider_adapter_id)
+    },
+    human_requirements: parseJson(row.human_requirements_json || '[]', []),
+    security: parseJson(row.security_json || '{}', {})
+  };
+}
+
+async function recordDecision(db, row, evaluation, now) {
+  const next = evaluation.state;
+  let state = row.state;
+  let reasons = evaluation.reasons;
+  if (state !== next) {
+    if (canTransitionValueState(state, next)) state = next;
+    else reasons = [...evaluation.reasons, `illegal-transition-blocked:${state}->${next}`];
+  }
+  const decision = { ...evaluation, state, reasons, evaluated_at: now, installed_collection_adapters: INSTALLED_COLLECTION_ADAPTERS };
+  await db.prepare(`UPDATE matrix_value_opportunities SET state=?,priority_score=?,decision_json=?,updated_at=? WHERE opportunity_id=?`).bind(
+    state,
+    priorityScore({
+      amount_minor: row.amount_minor, fee_minor: row.fee_minor,
+      historical_success_rate: row.learning_evaluated_count > 0 ? Number(row.learning_success_rate || 0) : 0.5,
+      evidence_strength: row.entitlement_proven === 1 ? 1 : 0,
+      fraud_risk: state === 'FRAUD_BLOCKED' ? 1 : 0,
+      expected_days: 30 / Math.max(0.5, Number(row.learning_priority_multiplier || 1))
+    }),
+    JSON.stringify(decision), now, row.opportunity_id
+  ).run();
+  const auditKey = `${row.idempotency_key}:decision:${state}:${row.terms_hash || 'no-terms-hash'}`;
+  await db.prepare(`INSERT OR IGNORE INTO matrix_value_audit(
+    audit_id,opportunity_id,event_type,from_state,to_state,actor,reason_json,evidence_json,idempotency_key,created_at
+  ) VALUES(?,?,?,?,?,'matrix-value-hunter',?,?,?,?)`).bind(
+    `value-audit-${(await sha256(auditKey)).slice(0, 32)}`, row.opportunity_id, 'value.evaluated', row.state, state,
+    JSON.stringify(reasons), JSON.stringify({ evidence_count: integer(row.evidence_count), legal_basis: row.legal_basis }), auditKey, now
+  ).run();
+  if (state === 'READY_TO_CLAIM') {
+    const intentType = row.category === 'credit_balance' ? 'WITHDRAW_OWNED_BALANCE' : 'CLAIM_REWARD';
+    const queueKey = `${row.idempotency_key}:claim`;
+    await db.prepare(`INSERT OR IGNORE INTO matrix_value_claim_queue(
+      queue_id,opportunity_id,intent_type,status,idempotency_key,attempts,next_attempt_at,last_error,created_at,updated_at
+    ) VALUES(?,?,?,'queued',?,0,?,NULL,?,?)`).bind(
+      `value-queue-${(await sha256(queueKey)).slice(0, 32)}`, row.opportunity_id, intentType, queueKey, now, now, now
+    ).run();
+  }
+  return { opportunity_id: row.opportunity_id, from_state: row.state, state, reasons, auto_collect: state === 'READY_TO_CLAIM' };
+}
+
+async function opportunityRows(db) {
+  return rows(db.prepare(`SELECT o.*,s.source_status,s.official_verified,s.terms_current,s.terms_hash,s.validated_terms_hash,
+      j.claim_permitted,j.automation_permitted,j.automation_level,j.status AS jurisdiction_status,j.valid_until AS jurisdiction_valid_until,
+      c.authority_status,c.identity_status,c.enabled AS claimant_enabled,
+      d.approved AS destination_approved,d.active AS destination_active,d.allowed_assets_json,
+      l.evaluated_count AS learning_evaluated_count,l.success_rate AS learning_success_rate,l.priority_multiplier AS learning_priority_multiplier,
+      COUNT(e.evidence_id) AS evidence_count,
+      SUM(CASE WHEN e.authority_verified=1 AND e.identity_match_verified=1 AND e.ownership_verified=1 THEN 1 ELSE 0 END) AS ownership_evidence_count,
+      SUM(CASE WHEN e.evidence_type='official-ownerless-determination' AND e.authority_verified=1 AND e.ownership_verified=1 THEN 1 ELSE 0 END) AS ownerless_evidence_count,
+      SUM(CASE WHEN e.evidence_type='official-finder-award-rule' AND e.authority_verified=1 THEN 1 ELSE 0 END) AS finder_award_evidence_count,
+      json_extract(o.decision_json,'$.human_requirements') AS human_requirements_json,
+      json_extract(o.decision_json,'$.security') AS security_json
+    FROM matrix_value_opportunities o
+    JOIN matrix_value_sources s ON s.source_id=o.source_id
+    JOIN matrix_value_jurisdictions j ON j.jurisdiction_id=o.jurisdiction_id
+    LEFT JOIN matrix_value_claimants c ON c.claimant_id=o.claimant_id
+    LEFT JOIN matrix_value_destinations d ON d.destination_id=o.destination_id AND d.claimant_id=o.claimant_id
+    LEFT JOIN matrix_value_entitlement_evidence e ON e.opportunity_id=o.opportunity_id
+    LEFT JOIN matrix_value_learning l ON l.strategy_key=(o.category || ':' || o.asset)
+    WHERE o.state NOT IN ('SWEPT_TO_APPROVED_DESTINATION','REJECTED','EXPIRED','NOT_OURS','FRAUD_BLOCKED')
+    GROUP BY o.opportunity_id
+    ORDER BY o.priority_score DESC,o.discovered_at ASC LIMIT 250`));
+}
+
+async function refreshMeasuredLearning(db, now) {
+  const measurements = await rows(db.prepare(`SELECT o.category,o.asset,
+      COUNT(DISTINCT o.opportunity_id) AS evaluated_count,
+      COUNT(DISTINCT CASE WHEN o.entitlement_proven=1 THEN o.opportunity_id END) AS entitlement_proven_count,
+      COUNT(DISTINCT CASE WHEN o.state IN ('RECEIVED','SWEPT_TO_APPROVED_DESTINATION') THEN o.opportunity_id END) AS received_count,
+      COALESCE((SELECT SUM(r.net_amount_minor) FROM matrix_value_receipts r
+        JOIN matrix_value_operations op ON op.operation_id=r.operation_id
+        JOIN matrix_value_opportunities ro ON ro.opportunity_id=op.opportunity_id
+        WHERE r.reconciled=1 AND ro.category=o.category AND ro.asset=o.asset),0) AS received_net_minor
+    FROM matrix_value_opportunities o GROUP BY o.category,o.asset`));
+  for (const item of measurements) {
+    const evaluated = integer(item.evaluated_count);
+    const received = integer(item.received_count);
+    const net = integer(item.received_net_minor);
+    const successRate = evaluated ? received / evaluated : 0;
+    const netPerEvaluation = evaluated ? net / evaluated : 0;
+    const multiplier = Math.max(0.5, Math.min(3, 0.5 + successRate * 1.5 + Math.min(1, netPerEvaluation / 100000)));
+    await db.prepare(`INSERT INTO matrix_value_learning(strategy_key,category,asset,evaluated_count,entitlement_proven_count,received_count,received_net_minor,success_rate,net_per_evaluation_minor,priority_multiplier,basis,updated_at)
+      VALUES(?,?,?,?,?,?,?,?,?,?,'measured-reconciled-receipts-only',?)
+      ON CONFLICT(strategy_key) DO UPDATE SET evaluated_count=excluded.evaluated_count,entitlement_proven_count=excluded.entitlement_proven_count,
+      received_count=excluded.received_count,received_net_minor=excluded.received_net_minor,success_rate=excluded.success_rate,
+      net_per_evaluation_minor=excluded.net_per_evaluation_minor,priority_multiplier=excluded.priority_multiplier,updated_at=excluded.updated_at`).bind(
+      `${item.category}:${item.asset}`, item.category, item.asset, evaluated, integer(item.entitlement_proven_count), received, net,
+      successRate, netPerEvaluation, multiplier, now
+    ).run();
+  }
+  return measurements.length;
+}
+
+async function summary(db) {
+  const objective = await db.prepare("SELECT * FROM matrix_value_objectives WHERE status='active' ORDER BY created_at LIMIT 1").first();
+  const sourceCounts = await db.prepare("SELECT COUNT(*) AS total,SUM(CASE WHEN source_status='active' THEN 1 ELSE 0 END) AS active FROM matrix_value_sources").first();
+  const opportunityCounts = await rows(db.prepare('SELECT state,COUNT(*) AS count,COALESCE(SUM(amount_minor-fee_minor),0) AS net_minor FROM matrix_value_opportunities GROUP BY state ORDER BY state'));
+  const received = await db.prepare("SELECT COALESCE(SUM(net_amount_minor),0) AS net_minor,COUNT(*) AS count FROM matrix_value_receipts WHERE reconciled=1 AND asset='EUR'").first();
+  const claimantCounts = await db.prepare("SELECT COUNT(*) AS total,SUM(CASE WHEN enabled=1 AND authority_status='proven' AND identity_status='matched' THEN 1 ELSE 0 END) AS ready FROM matrix_value_claimants").first();
+  const destinationCounts = await db.prepare('SELECT COUNT(*) AS total,SUM(CASE WHEN approved=1 AND active=1 THEN 1 ELSE 0 END) AS ready FROM matrix_value_destinations').first();
+  const learning = await rows(db.prepare('SELECT strategy_key,evaluated_count,entitlement_proven_count,received_count,received_net_minor,success_rate,net_per_evaluation_minor,priority_multiplier,basis,updated_at FROM matrix_value_learning ORDER BY priority_multiplier DESC,received_net_minor DESC LIMIT 50'));
+  return {
+    target: objective ? { objective_id: objective.objective_id, currency: objective.target_currency, target_net_minor: objective.target_net_minor, received_net_minor: integer(received?.net_minor), remaining_net_minor: Math.max(0, integer(objective.target_net_minor) - integer(received?.net_minor)) } : null,
+    sources: { total: integer(sourceCounts?.total), active_for_claims: integer(sourceCounts?.active) },
+    claimants: { total: integer(claimantCounts?.total), authority_and_identity_ready: integer(claimantCounts?.ready) },
+    destinations: { total: integer(destinationCounts?.total), approved_and_active: integer(destinationCounts?.ready) },
+    installed_collection_adapters: INSTALLED_COLLECTION_ADAPTERS,
+    opportunities: opportunityCounts.map(item => ({ state: item.state, count: integer(item.count), net_minor: integer(item.net_minor) })),
+    reconciled_receipts: { count: integer(received?.count), net_minor: integer(received?.net_minor) },
+    learning: { strategy_count: learning.length, strategies: learning },
+    truthful_status: INSTALLED_COLLECTION_ADAPTERS.length ? 'collection-adapter-ready' : 'discovery-and-proof-operational-collection-adapter-required'
+  };
+}
+
+export async function runValueHunterCycle(env, { trigger = 'manual', clock } = {}) {
+  if (!(await schemaReady(env))) return { ok: false, skipped: true, reason: 'value-hunter-schema-unavailable' };
+  if (!enabled(env.MATRIX_VALUE_HUNTER_ENABLED, true)) return { ok: true, skipped: true, reason: 'value-hunter-disabled' };
+  if (!enabled(env.AI_RESOURCE_ZERO_SPEND_LOCK, true)) return { ok: false, skipped: true, reason: 'zero-spend-lock-required' };
+  const db = env.MEMBERS_DB;
+  const startedAt = (clock?.() || new Date()).toISOString();
+  const cycleId = `value-cycle-${startedAt.slice(0, 10)}-${id(trigger, 'manual')}`;
+  const existing = await db.prepare("SELECT report_json FROM matrix_value_cycles WHERE cycle_id=? AND status IN ('completed','completed-with-findings') LIMIT 1").bind(cycleId).first();
+  if (existing) return { ok: true, reused: true, report: parseJson(existing.report_json, {}) };
+  await db.prepare(`INSERT INTO matrix_value_cycles(cycle_id,trigger_name,status,started_at)
+    VALUES(?,?,'running',?) ON CONFLICT(cycle_id) DO UPDATE SET status='running',started_at=excluded.started_at,completed_at=NULL`).bind(cycleId, clean(trigger, 100), startedAt).run();
+  const mandate = await activeMandate(db);
+  const autoCollectionEnabled = enabled(env.MATRIX_VALUE_AUTO_COLLECTION_ENABLED, true);
+  const discovery = await discoverOfficialPublicValueLeads(db, { now: startedAt });
+  const candidates = await opportunityRows(db);
+  const decisions = [];
+  const failures = [];
+  for (const candidate of candidates) {
+    try { decisions.push(await recordDecision(db, candidate, evaluateValueOpportunity(evaluationInput(candidate, { autoCollectionEnabled }), { mandate, now: startedAt }), startedAt)); }
+    catch (error) { failures.push({ opportunity_id: candidate.opportunity_id, error: clean(error?.message || error, 500) }); }
+  }
+  const learnedStrategies = await refreshMeasuredLearning(db, startedAt);
+  const status = await summary(db);
+  const completedAt = (clock?.() || new Date()).toISOString();
+  const report = {
+    cycle_id: cycleId, trigger, started_at: startedAt, completed_at: completedAt,
+    objective: status.target, discovery, evaluated: decisions.length, learned_strategies: learnedStrategies,
+    ready_to_claim: decisions.filter(item => item.state === 'READY_TO_CLAIM').length,
+    blocked_or_manual: decisions.filter(item => ['AUTOMATION_NOT_PERMITTED', 'OWNER_APPROVAL_REQUIRED', 'FRAUD_BLOCKED'].includes(item.state)).length,
+    received_this_cycle: 0, failures, status,
+    auto_collection_enabled: autoCollectionEnabled,
+    policy: 'Automatically collect any registered claimant legal entitlement only after deterministic proof, current official rules, approved destination and constrained adapter checks pass. LLM confidence is never entitlement proof.'
+  };
+  await db.prepare(`UPDATE matrix_value_cycles SET status=?,evaluated_count=?,ready_count=?,blocked_count=?,report_json=?,completed_at=? WHERE cycle_id=?`).bind(
+    failures.length || discovery.failures.length ? 'completed-with-findings' : 'completed', decisions.length,
+    report.ready_to_claim, report.blocked_or_manual, JSON.stringify(report), completedAt, cycleId
+  ).run();
+  await db.prepare(`UPDATE matrix_capabilities SET structural_checks_passed=1,dependencies_reachable=1,data_connected=1,evidence_ready=1,
+    live_verification_passed=?,state=?,blocker=?,checked_at=?,evidence_json=? WHERE capability_id='matrix-value-hunter'`).bind(
+    INSTALLED_COLLECTION_ADAPTERS.length ? 1 : 0,
+    INSTALLED_COLLECTION_ADAPTERS.length ? 'live_verified' : 'evidence_ready',
+    INSTALLED_COLLECTION_ADAPTERS.length ? null : 'No constrained live financial provider adapter is installed; discovery and entitlement evaluation continue.',
+    completedAt, JSON.stringify({ cycle_id: cycleId, target_net_eur: 10000, decisions: decisions.length, failures: failures.length, collection_adapters: INSTALLED_COLLECTION_ADAPTERS })
+  ).run();
+  await emitMatrixSystemEvent(env, {
+    eventType: 'value.cycle.completed', auditIdentifier: cycleId, origin: 'matrix-value-hunter', actor: 'lawful-value-cycle',
+    payload: { change_summary: `Value Hunter discovered ${discovery.discovered} new official lead(s), evaluated ${decisions.length} candidate(s), and found ${report.ready_to_claim} that passed every automatic-collection gate.`, target_net_eur: 10000, received_net_minor: status.reconciled_receipts.net_minor, failure_count: failures.length + discovery.failures.length }
+  });
+  return { ok: true, reused: false, report, decisions };
+}
+
+async function readBody(request) {
+  let body;
+  try { body = await request.json(); } catch { throw new Error('Request body must be valid JSON'); }
+  if (!body || typeof body !== 'object' || Array.isArray(body)) throw new Error('Request body must be an object');
+  if (containsSensitiveMaterial(body)) throw new Error('Secrets and raw identity/banking data are forbidden; submit only vault references and hashes');
+  return body;
+}
+
+async function registerClaimant(db, body, now) {
+  const claimantId = id(body.claimant_id || body.claimantId);
+  const vaultReference = clean(body.identity_vault_reference || body.identityVaultReference, 300);
+  if (!claimantId || !clean(body.display_label || body.displayLabel, 200) || !vaultReference.startsWith('vault://')) throw new Error('claimant_id, display_label and a vault:// identity reference are required');
+  const authority = clean(body.authority_status || body.authorityStatus, 40);
+  const identity = clean(body.identity_status || body.identityStatus, 40);
+  if (!['unverified', 'proven', 'revoked'].includes(authority) || !['unmatched', 'matched', 'expired'].includes(identity)) throw new Error('Invalid claimant authority or identity status');
+  await db.prepare(`INSERT INTO matrix_value_claimants(claimant_id,display_label,authority_status,identity_status,identity_vault_reference,jurisdictions_json,enabled,created_at,updated_at)
+    VALUES(?,?,?,?,?,?,1,?,?) ON CONFLICT(claimant_id) DO UPDATE SET display_label=excluded.display_label,authority_status=excluded.authority_status,
+    identity_status=excluded.identity_status,identity_vault_reference=excluded.identity_vault_reference,jurisdictions_json=excluded.jurisdictions_json,enabled=1,updated_at=excluded.updated_at`).bind(
+    claimantId, clean(body.display_label || body.displayLabel, 200), authority, identity, vaultReference,
+    JSON.stringify(Array.isArray(body.jurisdictions) ? body.jurisdictions.map(item => id(item)).filter(Boolean).slice(0, 50) : []), now, now
+  ).run();
+  return { claimant_id: claimantId, registered: true, stores_raw_identity: false };
+}
+
+async function registerDestination(db, body, now) {
+  const destinationId = id(body.destination_id || body.destinationId);
+  const claimantId = id(body.claimant_id || body.claimantId);
+  const vaultReference = clean(body.destination_vault_reference || body.destinationVaultReference, 300);
+  const type = clean(body.destination_type || body.destinationType, 50);
+  if (!destinationId || !claimantId || !vaultReference.startsWith('vault://') || !['bank-account', 'payment-account', 'custodial-wallet', 'self-custody-wallet'].includes(type)) throw new Error('A valid destination, claimant, type and vault:// destination reference are required');
+  const fingerprint = clean(body.public_identifier_hash || body.publicIdentifierHash, 128);
+  if (!/^[a-f0-9]{64}$/i.test(fingerprint)) throw new Error('A SHA-256 public identifier hash is required');
+  const assets = Array.isArray(body.allowed_assets || body.allowedAssets) ? (body.allowed_assets || body.allowedAssets).map(item => clean(item, 30)).filter(Boolean).slice(0, 50) : [];
+  const intents = Array.isArray(body.allowed_intents || body.allowedIntents) ? (body.allowed_intents || body.allowedIntents).filter(item => VALUE_INTENT_TYPES.includes(item)) : VALUE_INTENT_TYPES;
+  await db.prepare(`INSERT INTO matrix_value_destinations(destination_id,claimant_id,destination_type,destination_vault_reference,public_identifier_hash,allowed_assets_json,allowed_intents_json,provider_adapter_id,approved,active,approved_by_owner_at,created_at,updated_at)
+    VALUES(?,?,?,?,?,?,?,?,1,1,?,?,?) ON CONFLICT(destination_id) DO UPDATE SET claimant_id=excluded.claimant_id,destination_type=excluded.destination_type,
+    destination_vault_reference=excluded.destination_vault_reference,public_identifier_hash=excluded.public_identifier_hash,allowed_assets_json=excluded.allowed_assets_json,
+    allowed_intents_json=excluded.allowed_intents_json,provider_adapter_id=excluded.provider_adapter_id,approved=1,active=1,approved_by_owner_at=excluded.approved_by_owner_at,updated_at=excluded.updated_at`).bind(
+    destinationId, claimantId, type, vaultReference, fingerprint, JSON.stringify(assets), JSON.stringify(intents), clean(body.provider_adapter_id || body.providerAdapterId, 160) || null, now, now, now
+  ).run();
+  return { destination_id: destinationId, approved: true, stores_raw_destination: false };
+}
+
+async function registerOpportunity(db, body, now) {
+  const opportunityId = id(body.opportunity_id || body.opportunityId);
+  const category = clean(body.category, 80);
+  const legalBasis = clean(body.legal_basis || body.legalBasis, 80);
+  const sourceId = id(body.source_id || body.sourceId);
+  const jurisdictionId = id(body.jurisdiction_id || body.jurisdictionId);
+  const idempotencyKey = clean(body.idempotency_key || body.idempotencyKey, 200);
+  const amount = integer(body.amount_minor ?? body.amountMinor, -1);
+  const fee = integer(body.fee_minor ?? body.feeMinor, 0);
+  if (!opportunityId || !sourceId || !jurisdictionId || !LEGAL_BASES.includes(legalBasis) || !idempotencyKey || amount < 0 || fee < 0 || fee > amount) throw new Error('Opportunity identifiers, legal basis, idempotency key and valid minor-unit amounts are required');
+  const source = await db.prepare('SELECT jurisdiction_id,official_url,metadata_json FROM matrix_value_sources WHERE source_id=? LIMIT 1').bind(sourceId).first();
+  if (!source || source.jurisdiction_id !== jurisdictionId) throw new Error('Opportunity source and jurisdiction are not registered together');
+  const sourceMetadata = parseJson(source.metadata_json, {});
+  let evidenceHost = clean(sourceMetadata.allowed_host, 300).toLowerCase();
+  if (!evidenceHost) {
+    try { evidenceHost = new URL(source.official_url).hostname.toLowerCase(); } catch { throw new Error('Registered source URL is invalid'); }
+  }
+  const evidence = [];
+  for (const item of Array.isArray(body.evidence) ? body.evidence.slice(0, 50) : []) {
+    const evidenceId = id(item.evidence_id || item.evidenceId);
+    const digest = clean(item.content_sha256 || item.contentSha256, 64);
+    const url = clean(item.source_url || item.sourceUrl, 1500);
+    let evidenceUrl;
+    try { evidenceUrl = new URL(url); } catch { continue; }
+    if (!evidenceId || evidenceUrl.protocol !== 'https:' || !allowedOfficialHost(evidenceUrl.hostname, evidenceHost) || !/^[a-f0-9]{64}$/i.test(digest)) continue;
+    evidence.push({
+      evidenceId, evidenceType: clean(item.evidence_type || item.evidenceType, 80) || 'official-record', url, digest,
+      establishes: clean(item.establishes, 1200), authorityVerified: item.authority_verified === true,
+      identityMatchVerified: item.identity_match_verified === true, ownershipVerified: item.ownership_verified === true,
+      retrievedAt: clean(item.retrieved_at || item.retrievedAt, 50) || now
+    });
+  }
+  const entitlementProven = (body.entitlement_proven === true || body.entitlementProven === true) &&
+    evidence.some(item => item.establishes && item.authorityVerified && item.identityMatchVerified && item.ownershipVerified);
+  const decisionSeed = {
+    human_requirements: Array.isArray(body.human_requirements || body.humanRequirements) ? (body.human_requirements || body.humanRequirements).map(item => clean(item, 100)).slice(0, 30) : [],
+    security: body.security && typeof body.security === 'object' ? body.security : {},
+    provenance: clean(body.provenance, 1000)
+  };
+  await db.prepare(`INSERT OR IGNORE INTO matrix_value_opportunities(opportunity_id,objective_id,source_id,jurisdiction_id,claimant_id,destination_id,category,title,legal_basis,state,asset,amount_minor,fee_minor,entitlement_proven,provider_adapter_id,contract_id,expires_at,priority_score,idempotency_key,decision_json,discovered_at,updated_at)
+    VALUES(?,'value-milestone-eur-10000',?,?,?,?,?,?,?,'DISCOVERED',?,?,?,?,?,?,?,?,?,?,?,?)`).bind(
+    opportunityId, sourceId, jurisdictionId, id(body.claimant_id || body.claimantId) || null, id(body.destination_id || body.destinationId) || null,
+    category || legalBasis, clean(body.title, 300) || opportunityId, legalBasis, clean(body.asset || 'EUR', 30), amount, fee,
+    entitlementProven ? 1 : 0, clean(body.provider_adapter_id || body.providerAdapterId, 160) || null,
+    clean(body.contract_id || body.contractId, 240) || null, clean(body.expires_at || body.expiresAt, 50) || null,
+    priorityScore({ amount_minor: amount, fee_minor: fee }), idempotencyKey, JSON.stringify(decisionSeed), now, now
+  ).run();
+  for (const item of evidence) {
+    await db.prepare(`INSERT OR IGNORE INTO matrix_value_entitlement_evidence(evidence_id,opportunity_id,evidence_type,source_url,content_sha256,establishes,authority_verified,identity_match_verified,ownership_verified,retrieved_at,created_at)
+      VALUES(?,?,?,?,?,?,?,?,?,?,?)`).bind(
+      item.evidenceId, opportunityId, item.evidenceType, item.url, item.digest, item.establishes,
+      item.authorityVerified ? 1 : 0, item.identityMatchVerified ? 1 : 0, item.ownershipVerified ? 1 : 0,
+      item.retrievedAt, now
+    ).run();
+  }
+  return { opportunity_id: opportunityId, registered: true, entitlement_proven: entitlementProven, accepted_evidence: evidence.length, duplicate_safe: true };
+}
+
+export function isValueHunterRoute(pathname = '') {
+  return ROUTES.has(String(pathname || '').replace(/\/+$/, '') || '/');
+}
+
+export async function handleValueHunterRoute(request, env) {
+  if (!(await schemaReady(env))) return json({ ok: false, error: 'Value Hunter schema unavailable' }, 503);
+  const db = env.MEMBERS_DB;
+  const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
+  if (request.method === 'GET') {
+    if (path === ROOT_ROUTE) {
+      const cycles = await rows(db.prepare('SELECT cycle_id,trigger_name,status,target_net_minor,received_net_minor,evaluated_count,ready_count,submitted_count,received_count,blocked_count,report_json,started_at,completed_at FROM matrix_value_cycles ORDER BY started_at DESC LIMIT 30'));
+      return json({ ok: true, ...(await summary(db)), cycles: cycles.map(item => ({ ...item, report: parseJson(item.report_json, {}) })) });
+    }
+    if (path.endsWith('/claimants')) return json({ ok: true, claimants: await rows(db.prepare('SELECT claimant_id,display_label,authority_status,identity_status,jurisdictions_json,enabled,created_at,updated_at FROM matrix_value_claimants ORDER BY updated_at DESC LIMIT 100')) });
+    if (path.endsWith('/destinations')) return json({ ok: true, destinations: await rows(db.prepare('SELECT destination_id,claimant_id,destination_type,public_identifier_hash,allowed_assets_json,allowed_intents_json,provider_adapter_id,approved,active,approved_by_owner_at,created_at,updated_at FROM matrix_value_destinations ORDER BY updated_at DESC LIMIT 100')) });
+    if (path.endsWith('/opportunities')) return json({ ok: true, opportunities: await rows(db.prepare('SELECT opportunity_id,objective_id,source_id,jurisdiction_id,claimant_id,destination_id,category,title,legal_basis,state,asset,amount_minor,fee_minor,entitlement_proven,provider_adapter_id,expires_at,priority_score,decision_json,discovered_at,updated_at FROM matrix_value_opportunities ORDER BY priority_score DESC,updated_at DESC LIMIT 250')) });
+  }
+  if (request.method === 'POST') {
+    try {
+      const body = await readBody(request);
+      const now = new Date().toISOString();
+      if (path === ROOT_ROUTE) return json(await runValueHunterCycle(env, { trigger: 'owner-api' }));
+      if (path.endsWith('/claimants')) return json({ ok: true, ...(await registerClaimant(db, body, now)) }, 201);
+      if (path.endsWith('/destinations')) return json({ ok: true, ...(await registerDestination(db, body, now)) }, 201);
+      if (path.endsWith('/opportunities')) return json({ ok: true, ...(await registerOpportunity(db, body, now)) }, 201);
+    } catch (error) { return json({ ok: false, error: clean(error?.message || error, 500) }, 400); }
+  }
+  return json({ ok: false, error: 'Method not allowed' }, 405);
+}
+
+export async function runScheduledValueHunter(env) {
+  return runValueHunterCycle(env, { trigger: 'scheduled-daily-cycle' });
+}
+
+export const valueHunterWorkerInternals = {
+  INSTALLED_COLLECTION_ADAPTERS, SECRET_OR_PII_FIELD, containsSensitiveMaterial, schemaReady,
+  activeMandate, allowedOfficialHost, extractOfficialLeads: extractOfficialValueLeads, discoverOfficialPublicValueLeads,
+  evaluationInput, recordDecision, refreshMeasuredLearning, summary
+};

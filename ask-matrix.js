@@ -6,7 +6,16 @@
   const submit = document.getElementById('ask-matrix-submit');
   const state = document.getElementById('ask-matrix-state');
   const output = document.getElementById('ask-matrix-output');
+  const evolution = document.getElementById('ask-matrix-evolution');
   if (!form || !question || !submit || !state || !output) return;
+
+  if (evolution) fetch('/api/matrix/evolution', { headers: { Accept: 'application/json' }, cache: 'no-store' })
+    .then(response => response.ok ? response.json() : null)
+    .then(payload => {
+      if (!payload?.live) evolution.textContent = '> Living intelligence cycle: awaiting first verified run';
+      else evolution.textContent = `> Living intelligence cycle: ${payload.status} · ${payload.completed_at || 'timestamp unavailable'}`;
+    })
+    .catch(() => { evolution.textContent = '> Living intelligence cycle: safely unavailable'; });
 
   const safeRoute = value => {
     try {

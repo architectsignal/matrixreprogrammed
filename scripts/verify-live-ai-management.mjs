@@ -192,6 +192,28 @@ assert(capacityCycle.data?.zero_spend_lock === true && capacityCycle.data?.paid_
 assert(capacityCycle.data?.compute_report?.title === 'MATRIX COMPUTE REPORT', 'Capacity cycle did not produce the daily compute report');
 assert(Number(capacityCycle.data?.compute_report?.confirmed_compute_cost_eur) === 0, 'Capacity report did not confirm EUR 0 execution');
 
+const valueUnauthorized = await request('/api/ai-management/admin/value-hunter', { authorized: false });
+assert(valueUnauthorized.status === 403, `Owner-only Value Hunter endpoint did not reject an unauthenticated request; got ${valueUnauthorized.status}`);
+const valueStatus = await request('/api/ai-management/admin/value-hunter');
+assert(valueStatus.status === 200 && valueStatus.data?.ok === true, 'Live Value Hunter status endpoint failed');
+assert(valueStatus.data?.target?.currency === 'EUR' && Number(valueStatus.data?.target?.target_net_minor) === 1000000, 'Value Hunter EUR 10,000 net objective is not live');
+assert(Array.isArray(valueStatus.data?.installed_collection_adapters), 'Value Hunter did not truthfully report installed collection adapters');
+const valueCycle = await request('/api/ai-management/admin/value-hunter', { method: 'POST', body: {} });
+assert(valueCycle.status === 200 && valueCycle.data?.ok === true, 'Live Value Hunter daily cycle failed');
+assert(Number(valueCycle.data?.report?.objective?.target_net_minor) === 1000000, 'Value Hunter cycle did not preserve the EUR 10,000 objective');
+assert(/deterministic proof/i.test(String(valueCycle.data?.report?.policy || '')), 'Value Hunter cycle did not prove the entitlement boundary');
+
+const livingUnauthorized = await request('/api/matrix/admin/living-cycle', { authorized: false });
+assert(livingUnauthorized.status === 403, `Owner-only Living Matrix endpoint did not reject an unauthenticated request; got ${livingUnauthorized.status}`);
+const livingCycle = await request('/api/matrix/admin/living-cycle', { method: 'POST', body: {} });
+assert(livingCycle.status === 200 && livingCycle.data?.ok === true, 'Live Matrix evolution cycle failed');
+assert(livingCycle.data?.report?.report_type === 'Matrix Evolution Report', 'Living Matrix did not produce the daily evolution report');
+assert(livingCycle.data?.report?.cost_confirmed_zero === true, 'Living Matrix report did not confirm zero monetary cost');
+assert(livingCycle.data?.report?.ask_matrix?.dynamic_verified_evidence_enabled === true, 'Living Matrix did not enable dynamic verified Ask Matrix evidence');
+const publicEvolution = await request('/api/matrix/evolution', { authorized: false });
+assert(publicEvolution.status === 200 && publicEvolution.data?.ok === true && publicEvolution.data?.live === true, 'Public Matrix evolution state is unavailable after a completed cycle');
+assert(publicEvolution.origin === 'living-matrix-cycle', `Unexpected Living Matrix origin: ${publicEvolution.origin || 'missing'}`);
+
 const siteDirector = await request('/api/ai-management/admin/site-director');
 assert(siteDirector.status === 200 && siteDirector.data?.ok === true && Array.isArray(siteDirector.data?.runs), 'Live Site Improvement Director endpoint failed');
 
@@ -260,6 +282,25 @@ const proof = {
     jobsAssigned: capacityCycle.data.compute_report.jobs_assigned.length,
     zeroSpendLock: true
   },
+  valueHunter: {
+    targetNetMinor: valueCycle.data.report.objective.target_net_minor,
+    receivedNetMinor: valueCycle.data.report.objective.received_net_minor,
+    remainingNetMinor: valueCycle.data.report.objective.remaining_net_minor,
+    evaluated: valueCycle.data.report.evaluated,
+    readyToClaim: valueCycle.data.report.ready_to_claim,
+    truthfulStatus: valueCycle.data.report.status.truthful_status,
+    installedCollectionAdapters: valueCycle.data.report.status.installed_collection_adapters
+  },
+  livingMatrix: {
+    status: livingCycle.data.status,
+    cycleId: livingCycle.data.report.cycle_id,
+    processedEvents: livingCycle.data.report.intelligence.processed_this_cycle,
+    publicChanges: livingCycle.data.report.site.public_what_changed,
+    dynamicAskMatrixEvidence: livingCycle.data.report.ask_matrix.dynamic_verified_evidence_enabled,
+    costConfirmedZero: livingCycle.data.report.cost_confirmed_zero,
+    unauthorizedStatus: livingUnauthorized.status,
+    publicStatus: publicEvolution.status
+  },
   siteDirector: { runs: siteDirector.data.runs.length },
   promptBoundary: { rejectionStatus: promptRejection.status, promptAccepted: false },
   route: {
@@ -278,4 +319,4 @@ const proof = {
 };
 
 fs.writeFileSync(outputPath, `${JSON.stringify(proof, null, 2)}\n`);
-console.log(`Live AI management verified: ${proof.resources.count} resource(s), ${proof.localRuntime.models} registered local model(s), prompt transfer blocked, paid fallback impossible.`);
+console.log(`Live AI management, Value Hunter and Living Matrix verified: ${proof.resources.count} resource(s), ${proof.localRuntime.models} registered local model(s), EUR ${proof.valueHunter.targetNetMinor / 100} target, cycle ${proof.livingMatrix.cycleId}, prompt transfer blocked, paid fallback impossible.`);

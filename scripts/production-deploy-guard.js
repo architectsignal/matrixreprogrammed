@@ -71,11 +71,11 @@ const requiredSource = [
   'deploy-manifest.json','deploy-health.html','deploy-health.json','data/production-freshness-policy.json',
   'answer-engine.html','ask-matrix.js','ask-matrix.css','data/public-investigation-corpus.json',
   'runtime/deploy-manifest-current.json','runtime/deploy-health-current.json',
-  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-release-metadata.js','src/worker-public-investigation.js','src/public-investigation-contract.js',
+  'src/worker.js','src/worker-forum-persistence.js','src/worker-member-experience.js','src/worker-paypal-subscriptions.js','src/worker-production.js','src/worker-production-autonomy.js','src/worker-ai-management.js','src/worker-release-metadata.js','src/worker-public-investigation.js','src/public-investigation-contract.js','src/worker-living-matrix.js','src/worker-value-hunter.js','src/matrix-event-emitter.js','ai-management/living-matrix/living-matrix-cycle.mjs','ai-management/value-hunter/value-hunter-core.mjs','ai-management/value-hunter/financial-firewall.mjs','ai-management/value-hunter/value-collector.mjs','ai-management/provider-adapters/value/official-html-links.mjs',
   'migrations/0004_forum_persistence.sql','migrations/phase5_member_experience.sql','migrations/phase6_paypal_subscriptions.sql','migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql',
-  'migrations/public_investigation_api.sql',
+  'migrations/public_investigation_api.sql','migrations/phase14_living_matrix.sql','migrations/phase15_matrix_value_hunter.sql',
   'scripts/build-production-health.js','scripts/final-production-reconcile.js','scripts/repair-generated-site-artifacts.js','scripts/cloudflare-focused-pressure-wrapper.js',
-  'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js','scripts/verify-live-ai-management.mjs','scripts/ai-management-autonomy-test.mjs','scripts/verify-one-shot-production-authorization.js',
+  'scripts/patch-release-metadata-routing.js','scripts/publish-release-metadata-assets.js','scripts/verify-live-ai-management.mjs','scripts/living-matrix-acceptance-test.mjs','scripts/publish-investigation-matrix-events.mjs','scripts/value-hunter-golden-test.mjs','scripts/value-hunter-worker-integration-test.mjs','scripts/phase15-value-hunter-contract-test.mjs','scripts/ai-management-autonomy-test.mjs','scripts/verify-one-shot-production-authorization.js',
   '.github/workflows/deploy.yml','.github/workflows/deploy-production.yml','.github/workflows/one-shot-dispatch-controlled-production.yml','wrangler.toml','wrangler.jsonc'
 ];
 const requiredBuilt = [
@@ -160,7 +160,7 @@ else if (!freshnessReport.ok) hard.push(`production freshness guard reports ${fr
 for (const text of ["import forumWorker from './worker-forum-persistence.js'","import paypalWorker, { isPayPalRoute } from './worker-paypal-subscriptions.js'","import { isReleaseMetadataRoute, serveReleaseMetadata } from './worker-release-metadata.js';",'members-db-binding-unavailable','non-authoritative-forum-response-blocked','non-authoritative-paypal-response-blocked',"origin !== 'cloudflare-worker-forum-d1'","origin !== 'cloudflare-worker-paypal-subscriptions'",'isPayPalRoute(path)','if (isReleaseMetadataRoute(path)) return serveReleaseMetadata(request, env, path);']) {
   if (!read('src/worker-production.js').includes(text)) hard.push(`strict production Worker missing ${text}`);
 }
-for (const text of ["import productionWorker from './worker-production.js';","import aiManagementWorker from './worker-ai-management.js';",'return productionWorker.fetch(request, env, ctx);','productionWorker.scheduled','aiManagementWorker.scheduled','await Promise.all([productionTask, autonomyTask]);']) {
+for (const text of ["import productionWorker from './worker-production.js';","import aiManagementWorker from './worker-ai-management.js';","import { handleLivingMatrixRoute, isLivingMatrixAdminRoute, isLivingMatrixPublicRoute, runScheduledLivingMatrix } from './worker-living-matrix.js';","import { handleValueHunterRoute, isValueHunterRoute, runScheduledValueHunter } from './worker-value-hunter.js';",'return productionWorker.fetch(request, env, ctx);','productionWorker.scheduled','aiManagementWorker.scheduled','runScheduledLivingMatrix','runScheduledValueHunter','await Promise.all([productionTask, autonomyTask]);']) {
   if (!read('src/worker-production-autonomy.js').includes(text)) hard.push(`production autonomy wrapper missing ${text}`);
 }
 for (const text of ["['/deploy-manifest.json', '/runtime/deploy-manifest-current.json']","['/deploy-health.json', '/runtime/deploy-health-current.json']",'cloudflare-worker-release-metadata','no-store, max-age=0']) {
@@ -238,7 +238,7 @@ if (hardFreeze) {
   const preservesSandbox = canonicalDeploy.includes('Sandbox checkout must remain closed outside an explicit rehearsal');
   const preservesLive = canonicalDeploy.includes('live checkout state preserved') || canonicalDeploy.includes('live PayPal checkout state preserved');
   if (!preservesSandbox || !preservesLive) hard.push('canonical deploy does not preserve live PayPal state while closing sandbox');
-  for (const text of ['migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','AI_RESOURCE_ZERO_SPEND_LOCK = "true"','node scripts/verify-live-ai-management.mjs']) {
+  for (const text of ['migrations/phase9_ai_resource_orchestration.sql','migrations/phase10_ai_autonomy.sql','migrations/phase14_living_matrix.sql','migrations/phase15_matrix_value_hunter.sql','AI_RESOURCE_ZERO_SPEND_LOCK = "true"','MATRIX_VALUE_HUNTER_ENABLED = "true"','MATRIX_VALUE_AUTO_COLLECTION_ENABLED = "true"','node scripts/verify-live-ai-management.mjs']) {
     if (!canonicalDeploy.includes(text)) hard.push(`canonical deploy missing AI release gate ${text}`);
   }
   if (!promptRejectionProof) hard.push('canonical deploy live verifier does not prove prompt-shaped payload rejection with HTTP 400');

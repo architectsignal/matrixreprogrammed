@@ -1,6 +1,6 @@
 # AI management task ledger
 
-Updated: 2026-08-12
+Updated: 2026-08-13
 
 ## Priority lock
 
@@ -127,3 +127,36 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Local benchmark learning now disables installed models that fail real work; the live Qwen generator is unhealthy/disabled while both measured embedding models remain enabled.
 - [ ] Complete the pinned public production release before any later release of this capacity change.
 - [ ] After deployment, verify the live owner-only capacity route and capture a real online-owner-node report; external GPU candidates remain blocked until owner onboarding and current terms proof are complete.
+
+## 2026-08-13 Living Matrix checkpoint
+
+- [x] Added one durable, idempotent event consumer over the existing `matrix_events` spine; no second event bus was created.
+- [x] Added versioned evidence, claim, dossier, forecast, stale-page and `what_changed` projections with previous-content hashes.
+- [x] Enforced the public gate: only cryptographically `VERIFIED` events with explicit `publication_approved=true` can reach public projections or Ask Matrix.
+- [x] Added durable page dependencies for incremental rebuild targeting.
+- [x] Merged active public verified D1 evidence into Ask Matrix retrieval while retaining citation, source-route and uncertainty validation.
+- [x] Added retryable dispatch receipts and proved recovery from an interrupted event; replay does not advance projection versions.
+- [x] Added one Matrix Evolution Report sourced from real D1 intelligence, site, investigation, compute, node, job, opportunity, learning and failure counts.
+- [x] Chained the living cycle after Opportunity Hunter and capacity growth without consuming another Cloudflare cron slot.
+- [x] Connected daily and weekly investigation source changes/failures to the owner-authenticated event API and immediate living-cycle trigger; unchanged sources stay quiet and absent credentials fail closed.
+- [x] Added the public read-only evolution endpoint and owner-only cycle run/history endpoint.
+- [x] Added Phase 14 to repeat-safe migration rehearsal, CI safety, deploy schema checks and the production guard.
+- [x] Proved dynamic event-to-Ask-Matrix propagation, correction versioning, recovery, idempotency, two-node expansion, zero-cost fallback, learned routing and guarded model replacement locally.
+- [ ] Merge the guarded change and let the controlled production workflow apply Phase 14 when the daily zero-overage deployment gate permits it.
+- [ ] After deployment, run the owner cycle endpoint once and verify `/api/matrix/evolution` plus a live Ask Matrix query against newly approved evidence.
+
+## 2026-08-13 Matrix Value Hunter checkpoint
+
+- [x] Recorded the EUR 10,000 first objective as 1,000,000 EUR minor units and count only reconciled EUR receipts toward it.
+- [x] Added claimant, protected identity-reference, approved destination, mandate, jurisdiction, official source, opportunity, evidence, queue, operation, receipt, audit, cycle and measured-learning records.
+- [x] Generalized entitlement to any registered authorized claimant, including the Matrix operating entity; the system does not assume the owner personally holds every claim.
+- [x] Enforced that unclaimed or apparently abandoned value is not automatically ownerless; unknown ownership is `NOT_OURS`, and lawful appropriation requires an official ownerless determination.
+- [x] Enabled the standing mandate for automatic collection of proven lawful entitlements without an extra owner pause when official automation, destination, adapter, contract and fee gates pass.
+- [x] Limited financial execution to `CLAIM_REWARD`, `SWEEP_RECEIVED_ASSET` and `WITHDRAW_OWNED_BALANCE`; private keys, seeds, arbitrary calls, blind signing, unlimited approvals and unknown destinations fail closed.
+- [x] Added bounded official-host discovery for UK government grants/innovation, EU Funding & Tenders, France business aid/Bpifrance and official unclaimed-property routes.
+- [x] Added controlled learning that reorders strategies only from reconciled net receipts, success and evidence strength.
+- [x] Added owner-only status, claimant, destination, opportunity and manual-cycle APIs and chained the daily cycle before Living Matrix.
+- [x] Added Phase 15 migration/deploy/safety/live-verification gates plus automatic collection, crypto signer, fee, fraud, terms, duplicate, source-boundary and D1 integration tests.
+- [ ] Register the real Matrix claimant authority and approved EUR account/wallet by vault reference; never enter identity, banking or signing secrets into D1 or prompts.
+- [ ] Implement and review the first real provider-specific constrained collection adapter after its official API/terms, receipt format and signing boundary are known.
+- [ ] Run the controlled production release only when the Cloudflare zero-overage deployment gate permits it, then capture the first live Value Hunter cycle receipt.

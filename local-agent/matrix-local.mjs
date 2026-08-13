@@ -9,6 +9,7 @@ import { detectLocalRuntime } from '../ai-management/local-runtime/hardware-dete
 import { benchmarkLocalRuntime } from './local-benchmark.mjs';
 import { defaultStateDir, hostConfig, readJson, runHost, writeJson } from './matrix-local-host.mjs';
 import { callHarvesterControlPlane } from './permissionless-harvester-cli.mjs';
+import { callMatrixControlPlane } from './matrix-operations-cli.mjs';
 
 const execFileAsync = promisify(execFile);
 const directory = path.dirname(fileURLToPath(import.meta.url));
@@ -268,7 +269,8 @@ async function main(argv = process.argv.slice(2)) {
   else if (command === 'supervise') result = await supervise();
   else if (command === 'autostart') result = await autostart(argument || 'status');
   else if (command === 'harvester') result = await callHarvesterControlPlane(argument || 'doctor');
-  else throw new Error('Use: matrix-local start|stop|status|doctor|benchmark|logs|run|autostart|harvester doctor|start|status');
+  else if (command === 'matrix' || command === 'operations') result = await callMatrixControlPlane(argument || 'doctor');
+  else throw new Error('Use: matrix-local start|stop|status|doctor|benchmark|logs|run|autostart|harvester doctor|start|status|matrix doctor|start|status');
   if (result !== undefined) console.log(JSON.stringify(result, null, 2));
   if (result?.ok === false && !['status', 'logs'].includes(command)) process.exitCode = 1;
 }

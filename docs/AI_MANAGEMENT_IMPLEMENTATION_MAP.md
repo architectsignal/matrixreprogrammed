@@ -146,3 +146,20 @@ Architecture decision: `docs/adr/0007-matrix-value-hunter-lawful-acquisition.md`
 | Proof | Golden tests cover adversarial qualification, RPC failover, worker isolation/deduplication, Morpho discovery, replay, exact signing lifecycle and exactly-once reconciliation |
 
 Architecture decision: `docs/adr/0008-permissionless-protocol-value-harvester.md`. Operator contract: `docs/PERMISSIONLESS_HARVESTER_OPERATIONS.md`.
+
+## Constitutional Matrix operating system (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Constitutional law | Exact `CAUSE NO HARM OR LOSS.` constant and SHA-256 in code plus a D1 row protected by immutable update/delete triggers |
+| Policy | Deterministic harm domains; unauthorized, destructive, credential/data/evidence/owner-control and unbounded-third-party risks fail closed with redesign steps |
+| Mission spine | Durable operating missions for recovery, systemic failure, autonomy stall, capability gap, resource expansion, technology evaluation and stagnation |
+| Capability graph | Matrix Capability Index, Effective Power, daily evolution and current/24h/7d/30d/90d/lifetime windows from truthful component state |
+| Learning | Before/observation/after/expected/actual contract; unchanged state is telemetry, never falsely counted as learning |
+| Delegation | Zero-amount standing internal/public delegations, `vault://` references only, consequence/scope/time/amount enforcement and evaluation receipts |
+| Resource/value truth | Resources require real eligible workload receipts; value requires finalized/reconciled external receipts |
+| Protected evolution | Technology and code proposals require zero spend, licence, tests, security, benchmark and rollback; production self-deploy and authority expansion are false |
+| Automation | Existing scheduled chain runs Matrix operations after Living Matrix; connected local host requests an immediate boot cycle |
+| Live proof | Owner-only doctor/start/missions/history/action-check routes; canonical deployment verifies boot, law/hash, metrics, zero cost and destructive-action blocking |
+
+Architecture decision: `docs/adr/0009-constitutional-matrix-operating-system.md`. Constitution: `docs/MATRIX_CONSTITUTION.md`. Operator runbook: `docs/MATRIX_OPERATING_SYSTEM_OPERATIONS.md`.

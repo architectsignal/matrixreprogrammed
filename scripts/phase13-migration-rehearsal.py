@@ -15,6 +15,7 @@ MIGRATIONS = [
     "migrations/phase14_living_matrix.sql",
     "migrations/phase15_matrix_value_hunter.sql",
     "migrations/phase16_permissionless_value_harvester.sql",
+    "migrations/phase17_matrix_operating_system.sql",
 ]
 REQUIRED = {
     "matrix_events",
@@ -55,6 +56,16 @@ REQUIRED = {
     "matrix_permissionless_workers",
     "matrix_permissionless_strategy_statistics",
     "matrix_permissionless_cycles",
+    "matrix_constitution",
+    "matrix_system_components",
+    "matrix_operating_missions",
+    "matrix_capability_snapshots",
+    "matrix_daily_baselines",
+    "matrix_learning_effects",
+    "matrix_boot_runs",
+    "matrix_watchdog_events",
+    "matrix_delegations",
+    "matrix_action_receipts",
 }
 
 database = sqlite3.connect(":memory:")
@@ -73,8 +84,22 @@ mission_count = database.execute("SELECT COUNT(*) FROM matrix_missions").fetchon
 if mission_count != 3:
     raise SystemExit(f"Expected three idempotent seed missions, found {mission_count}")
 capability_count = database.execute("SELECT COUNT(*) FROM matrix_capabilities").fetchone()[0]
-if capability_count != 9:
-    raise SystemExit(f"Expected nine truthful capability seeds, found {capability_count}")
+if capability_count != 10:
+    raise SystemExit(f"Expected ten truthful capability seeds, found {capability_count}")
+
+constitution = database.execute("SELECT law_text,law_sha256,immutable,authority_expansion_by_learning FROM matrix_constitution WHERE constitution_id='matrix-law-v1'").fetchone()
+if constitution != ("CAUSE NO HARM OR LOSS.", "2f440056e992d3edbe9dcfd60a5c9d24397bb28d68e29d1d3ed476e84021b189", 1, 0):
+    raise SystemExit("Matrix constitutional law is missing or altered")
+for statement in (
+    "UPDATE matrix_constitution SET law_text='ALTERED' WHERE constitution_id='matrix-law-v1'",
+    "DELETE FROM matrix_constitution WHERE constitution_id='matrix-law-v1'",
+):
+    try:
+        database.execute(statement)
+        raise SystemExit("Matrix constitutional law was mutable")
+    except sqlite3.IntegrityError as error:
+        if "MATRIX_CONSTITUTION_IMMUTABLE" not in str(error):
+            raise
 
 entitlement_view = database.execute(
     "SELECT sql FROM sqlite_master WHERE type='view' AND name='member_effective_entitlements'"
@@ -105,4 +130,4 @@ private_columns = {
 if private_columns & {"private_key", "seed_phrase", "mnemonic", "recovery_phrase"}:
     raise SystemExit("Value Hunter schema must not persist signing secrets")
 
-print("Living Matrix, Value Hunter and Permissionless Harvester migrations passed twice with strict value classes, safe intents and nine truthful capability seeds.")
+print("Living Matrix, Value Hunter, Permissionless Harvester and constitutional Matrix operating-system migrations passed twice with strict value classes, safe intents and ten truthful capability seeds.")

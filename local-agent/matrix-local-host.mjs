@@ -9,6 +9,7 @@ import { runOneControlPlaneJob } from './control-plane-client.mjs';
 import { executeJob } from './matrix-local-agent.mjs';
 import { applyBenchmarkScores, benchmarkLocalRuntime } from './local-benchmark.mjs';
 import { callHarvesterControlPlane } from './permissionless-harvester-cli.mjs';
+import { callMatrixControlPlane } from './matrix-operations-cli.mjs';
 
 const VERSION = '1.0.0';
 
@@ -45,7 +46,8 @@ export function hostConfig() {
     discoveryMs: integer('MATRIX_LOCAL_DISCOVERY_SECONDS', 300, 30, 3600) * 1000,
     benchmarkMs: integer('MATRIX_LOCAL_BENCHMARK_HOURS', 24, 1, 168) * 60 * 60 * 1000,
     benchmarkEnabled: env('MATRIX_LOCAL_BENCHMARK_ENABLED', 'true').toLowerCase() === 'true',
-    harvesterEnabled: env('MATRIX_PERMISSIONLESS_VALUE_ENABLED', 'false').toLowerCase() === 'true'
+    harvesterEnabled: env('MATRIX_PERMISSIONLESS_VALUE_ENABLED', 'false').toLowerCase() === 'true',
+    matrixOperationsEnabled: env('MATRIX_OPERATING_SYSTEM_ENABLED', 'true').toLowerCase() === 'true'
   };
 }
 
@@ -109,7 +111,8 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
     runtime: { discovered_models: 0, healthy_servers: 0 }, jobs: { completed: 0, failed: 0, idle_polls: 0 },
     registration: { configured: Boolean(config.adminToken), last_ok_at: null, last_error: null },
     benchmark: { enabled: config.benchmarkEnabled, last_completed_at: null, measured_models: 0 },
-    harvester: { enabled: config.harvesterEnabled, startup_attempted: false, last_result: null }
+    harvester: { enabled: config.harvesterEnabled, startup_attempted: false, last_result: null },
+    matrix_operations: { enabled: config.matrixOperationsEnabled, startup_attempted: false, last_result: null }
   };
   let runtime = null;
   let nextDiscovery = 0;
@@ -141,6 +144,22 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
       status.harvester.last_result = { ok: result.ok, at: clock().toISOString(), live_collection_state: result.remote?.report?.live_collection_state || null };
     } catch (error) {
       status.harvester.last_result = { ok: false, at: clock().toISOString(), error: String(error?.message || error).slice(0, 300) };
+    }
+    await publishStatus();
+  }
+
+  if (config.matrixOperationsEnabled && config.adminToken) {
+    status.matrix_operations.startup_attempted = true;
+    try {
+      const result = await callMatrixControlPlane('start', { fetchImpl });
+      status.matrix_operations.last_result = {
+        ok: result.ok,
+        at: clock().toISOString(),
+        state: result.remote?.report ? 'cycle-completed' : result.remote?.state || null,
+        cycle_id: result.remote?.report?.cycle_id || null
+      };
+    } catch (error) {
+      status.matrix_operations.last_result = { ok: false, at: clock().toISOString(), error: String(error?.message || error).slice(0, 300) };
     }
     await publishStatus();
   }

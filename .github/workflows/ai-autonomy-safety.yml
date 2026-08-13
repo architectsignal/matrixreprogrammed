@@ -22,6 +22,7 @@ on:
       - 'src/worker-living-matrix.js'
       - 'src/worker-value-hunter.js'
       - 'src/worker-permissionless-value.js'
+      - 'src/worker-matrix-operations.js'
       - 'ai-management/value-hunter/**'
       - 'src/matrix-event-emitter.js'
       - 'src/matrix-synergy-core.js'
@@ -34,6 +35,8 @@ on:
       - 'migrations/phase14_living_matrix.sql'
       - 'migrations/phase15_matrix_value_hunter.sql'
       - 'migrations/phase16_permissionless_value_harvester.sql'
+      - 'migrations/phase17_matrix_operating_system.sql'
+      - 'matrix-system-manifest.json'
       - 'scripts/build-public-investigation-corpus.js'
       - 'scripts/public-investigation-test.mjs'
       - 'scripts/matrix-synergy-test.mjs'
@@ -45,6 +48,8 @@ on:
       - 'scripts/permissionless-harvester-golden-test.mjs'
       - 'scripts/phase16-permissionless-harvester-contract-test.mjs'
       - 'scripts/permissionless-harvester-worker-integration-test.mjs'
+      - 'scripts/matrix-operating-system-contract-test.mjs'
+      - 'scripts/matrix-operating-system-worker-integration-test.mjs'
       - 'scripts/publish-investigation-matrix-events.mjs'
       - 'scripts/publish-investigation-matrix-events.test.mjs'
       - 'scripts/phase13-migration-rehearsal.py'
@@ -109,6 +114,7 @@ jobs:
           node --check src/worker-living-matrix.js
           node --check src/worker-value-hunter.js
           node --check src/worker-permissionless-value.js
+          node --check src/worker-matrix-operations.js
           node --check src/matrix-event-emitter.js
           node --check src/matrix-synergy-core.js
           node --check ai-management/living-matrix/living-matrix-cycle.mjs
@@ -119,6 +125,9 @@ jobs:
           node --check ai-management/provider-adapters/value/official-html-links.mjs
           find ai-management/value-hunter/permissionless -type f -name '*.mjs' -print0 | xargs -0 -n1 node --check
           node --check local-agent/permissionless-harvester-cli.mjs
+          node --check local-agent/matrix-operations-cli.mjs
+          node --check ai-management/matrix-core/matrix-constitution.mjs
+          node --check ai-management/matrix-core/matrix-operating-system.mjs
           node --check scripts/publish-investigation-matrix-events.mjs
           node --check member-dashboard-app.js
 
@@ -141,6 +150,9 @@ jobs:
           node scripts/permissionless-harvester-golden-test.mjs
           node scripts/phase16-permissionless-harvester-contract-test.mjs
           node scripts/permissionless-harvester-worker-integration-test.mjs
+          node scripts/matrix-operating-system-contract-test.mjs
+          node scripts/matrix-operating-system-worker-integration-test.mjs
+          node scripts/phase17-migration-rehearsal.mjs
           node scripts/publish-investigation-matrix-events.test.mjs
           node scripts/build-public-investigation-corpus.js
           node scripts/public-investigation-test.mjs
@@ -169,6 +181,7 @@ jobs:
               'migrations/phase14_living_matrix.sql',
               'migrations/phase15_matrix_value_hunter.sql',
               'migrations/phase16_permissionless_value_harvester.sql',
+              'migrations/phase17_matrix_operating_system.sql',
           ]
           for pass_number in (1, 2):
               for migration in migrations:
@@ -234,6 +247,16 @@ jobs:
               'matrix_permissionless_workers',
               'matrix_permissionless_strategy_statistics',
               'matrix_permissionless_cycles',
+              'matrix_constitution',
+              'matrix_system_components',
+              'matrix_operating_missions',
+              'matrix_capability_snapshots',
+              'matrix_daily_baselines',
+              'matrix_learning_effects',
+              'matrix_boot_runs',
+              'matrix_watchdog_events',
+              'matrix_delegations',
+              'matrix_action_receipts',
           }
           present = {row[0] for row in database.execute("SELECT name FROM sqlite_master WHERE type='table'")}
           missing = required - present
@@ -312,7 +335,13 @@ jobs:
               if flags.get(flag) != 0:
                   raise SystemExit(f'{flag} must start disabled pending production certification')
 
-          print('D1 phases 9 through 16 passed twice with durable living/value projections, isolated permissionless earning, prompt-local processing, scoped public compute and zero-spend constraints.')
+          constitution = database.execute("SELECT law_text,law_sha256,immutable,authority_expansion_by_learning FROM matrix_constitution WHERE constitution_id='matrix-law-v1'").fetchone()
+          if constitution != ('CAUSE NO HARM OR LOSS.','2f440056e992d3edbe9dcfd60a5c9d24397bb28d68e29d1d3ed476e84021b189',1,0):
+              raise SystemExit('Matrix constitutional law is missing or altered')
+          if flags.get('MATRIX_OPERATING_SYSTEM_ENABLED') != 1:
+              raise SystemExit('The internal constitutional Matrix cycle must start enabled')
+
+          print('D1 phases 9 through 17 passed twice with an immutable constitutional law, durable missions/learning, isolated value classes, prompt-local processing, scoped public compute and zero-spend constraints.')
 
       - name: Verify fail-closed production configuration
         run: |
@@ -333,6 +362,8 @@ jobs:
           grep -F 'MATRIX_PERMISSIONLESS_VALUE_ENABLED = "false"' wrangler.toml
           grep -F 'MATRIX_PERMISSIONLESS_AUTO_EXECUTION_ENABLED = "false"' wrangler.toml
           grep -F 'MATRIX_DISTRIBUTED_DISCOVERY_ENABLED = "false"' wrangler.toml
+          grep -F 'MATRIX_OPERATING_SYSTEM_ENABLED = "true"' wrangler.toml
+          grep -F 'MATRIX_TECHNOLOGY_EVOLUTION_ENABLED = "true"' wrangler.toml
           grep -F 'ZERO_SPEND_INVARIANT_VIOLATION' ai-management/policy-engine/zero-spend-invariant.mjs
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
@@ -351,6 +382,7 @@ jobs:
           grep -F 'migrations/phase14_living_matrix.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase15_matrix_value_hunter.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase16_permissionless_value_harvester.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/phase17_matrix_operating_system.sql' .github/workflows/deploy.yml
           grep -F "'ai_local_jobs','ai_local_job_receipts'" .github/workflows/deploy.yml
           grep -F "'ai_opportunities','ai_opportunity_hunter_runs'" .github/workflows/deploy.yml
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .github/workflows/deploy.yml

@@ -9,6 +9,7 @@ import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-
 import { handleLivingMatrixRoute, isLivingMatrixAdminRoute, isLivingMatrixPublicRoute, runScheduledLivingMatrix } from './worker-living-matrix.js';
 import { handleValueHunterRoute, isValueHunterRoute, runScheduledValueHunter } from './worker-value-hunter.js';
 import { handlePermissionlessHarvesterRoute, isPermissionlessHarvesterRoute, runScheduledPermissionlessHarvester } from './worker-permissionless-value.js';
+import { handleMatrixOperationsRoute, isMatrixOperationsRoute, runScheduledMatrixOperations } from './worker-matrix-operations.js';
 import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 function cleanToken(value) {
@@ -102,6 +103,11 @@ export default {
     if (isPermissionlessHarvesterRoute(path)) {
       if (!authorized(request, runtimeEnv)) return forbidden();
       return handlePermissionlessHarvesterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
+    if (isMatrixOperationsRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleMatrixOperationsRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
     }
 
     if (isScenarioProbabilityRoute(path)) {
@@ -198,7 +204,17 @@ export default {
     const livingTask = runtimeEnv?.MEMBERS_DB?.prepare
       ? permissionlessTask.then(() => runScheduledLivingMatrix(runtimeEnv)).catch(() => ({ skipped: true, reason: 'scheduled-living-cycle-failed' }))
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const matrixOperationsTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? livingTask.then(() => runScheduledMatrixOperations(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'system.degraded', auditIdentifier: `matrix-operating-system-failure:${new Date().toISOString()}`,
+          origin: 'matrix-operating-system', actor: 'MatrixMissionDirector',
+          payload: { change_summary: 'The constitutional operating cycle failed safely; existing state was preserved for recovery.', error: String(error?.message || error).slice(0, 500), law: 'CAUSE NO HARM OR LOSS.' }
+        });
+        return { skipped: true, reason: 'scheduled-matrix-operating-cycle-failed' };
+      })
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     // Legacy membership contract marker: await Promise.all([productionTask, autonomyTask]);
-    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask]);
+    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask]);
   }
 };

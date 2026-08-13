@@ -214,6 +214,27 @@ const publicEvolution = await request('/api/matrix/evolution', { authorized: fal
 assert(publicEvolution.status === 200 && publicEvolution.data?.ok === true && publicEvolution.data?.live === true, 'Public Matrix evolution state is unavailable after a completed cycle');
 assert(publicEvolution.origin === 'living-matrix-cycle', `Unexpected Living Matrix origin: ${publicEvolution.origin || 'missing'}`);
 
+const matrixOperationsUnauthorized = await request('/api/ai-management/admin/matrix-operations/doctor', { authorized: false });
+assert(matrixOperationsUnauthorized.status === 403, `Owner-only Matrix operations endpoint did not reject an unauthenticated request; got ${matrixOperationsUnauthorized.status}`);
+const matrixOperationsCycle = await request('/api/ai-management/admin/matrix-operations/start', { method: 'POST', body: {} });
+assert(matrixOperationsCycle.status === 200 && matrixOperationsCycle.data?.ok === true, 'Live constitutional Matrix operating cycle failed');
+assert(matrixOperationsCycle.origin === 'cloudflare-worker-matrix-operations', `Unexpected Matrix operations origin: ${matrixOperationsCycle.origin || 'missing'}`);
+assert(matrixOperationsCycle.data?.report?.law === 'CAUSE NO HARM OR LOSS.', 'Live Matrix operating cycle did not preserve the exact law');
+assert(matrixOperationsCycle.data?.report?.law_sha256 === '2f440056e992d3edbe9dcfd60a5c9d24397bb28d68e29d1d3ed476e84021b189', 'Live Matrix operating cycle law hash is invalid');
+assert(matrixOperationsCycle.data?.report?.constitution_verified === true, 'Live Matrix operating cycle did not verify the immutable D1 constitution');
+assert(Number(matrixOperationsCycle.data?.report?.consequential_actions_executed) === 0, 'Matrix operating cycle unexpectedly executed a consequential action');
+assert(matrixOperationsCycle.data?.report?.cost_confirmed_zero === true, 'Matrix operating cycle did not confirm zero monetary cost');
+const matrixOperationsDoctor = await request('/api/ai-management/admin/matrix-operations/doctor');
+assert(matrixOperationsDoctor.status === 200 && matrixOperationsDoctor.data?.ok === true, 'Live Matrix operations doctor failed');
+assert(matrixOperationsDoctor.data?.constitution?.valid === true, 'Live Matrix operations doctor did not verify the constitution');
+assert(matrixOperationsDoctor.data?.state === 'LIVE_WORKING', `Matrix operations is not live-working after boot; got ${matrixOperationsDoctor.data?.state || 'missing'}`);
+const blockedDestructiveAction = await request('/api/ai-management/admin/matrix-operations/action/check', {
+  method: 'POST',
+  body: { actionType: 'DELETE_DATABASE', consequenceClass: 'DESTRUCTIVE', scope: 'matrix-internal', amountMinor: 0, boundedScope: true, simulationPassed: true, rollbackReady: true }
+});
+assert(blockedDestructiveAction.status === 200 && blockedDestructiveAction.data?.execution_performed === false, 'Destructive action check did not remain evaluation-only');
+assert(blockedDestructiveAction.data?.decision?.allowed === false && blockedDestructiveAction.data?.decision?.decision === 'BLOCKED', 'Constitutional gate did not block a destructive action');
+
 const siteDirector = await request('/api/ai-management/admin/site-director');
 assert(siteDirector.status === 200 && siteDirector.data?.ok === true && Array.isArray(siteDirector.data?.runs), 'Live Site Improvement Director endpoint failed');
 
@@ -301,6 +322,19 @@ const proof = {
     unauthorizedStatus: livingUnauthorized.status,
     publicStatus: publicEvolution.status
   },
+  matrixOperations: {
+    state: matrixOperationsDoctor.data.state,
+    cycleId: matrixOperationsCycle.data.report.cycle_id,
+    law: matrixOperationsCycle.data.report.law,
+    lawSha256: matrixOperationsCycle.data.report.law_sha256,
+    capabilityIndex: matrixOperationsCycle.data.report.matrix_capability_index,
+    effectivePower: matrixOperationsCycle.data.report.matrix_effective_power,
+    dailyEvolutionScore: matrixOperationsCycle.data.report.daily_evolution_score,
+    missionsCreated: matrixOperationsCycle.data.report.operating_missions_created,
+    consequentialActionsExecuted: matrixOperationsCycle.data.report.consequential_actions_executed,
+    destructiveActionBlocked: true,
+    unauthorizedStatus: matrixOperationsUnauthorized.status
+  },
   siteDirector: { runs: siteDirector.data.runs.length },
   promptBoundary: { rejectionStatus: promptRejection.status, promptAccepted: false },
   route: {
@@ -319,4 +353,4 @@ const proof = {
 };
 
 fs.writeFileSync(outputPath, `${JSON.stringify(proof, null, 2)}\n`);
-console.log(`Live AI management, Value Hunter and Living Matrix verified: ${proof.resources.count} resource(s), ${proof.localRuntime.models} registered local model(s), EUR ${proof.valueHunter.targetNetMinor / 100} target, cycle ${proof.livingMatrix.cycleId}, prompt transfer blocked, paid fallback impossible.`);
+console.log(`Live AI management, Value Hunter, Living Matrix and constitutional Matrix operations verified: ${proof.resources.count} resource(s), ${proof.localRuntime.models} registered local model(s), EUR ${proof.valueHunter.targetNetMinor / 100} target, Matrix cycle ${proof.matrixOperations.cycleId}, prompt transfer blocked, destructive action blocked, paid fallback impossible.`);

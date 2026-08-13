@@ -87,6 +87,7 @@
     "test:living-matrix": "node scripts/living-matrix-acceptance-test.mjs && node scripts/publish-investigation-matrix-events.test.mjs && node scripts/ai-management-foundation-test.mjs && node local-agent/local-benchmark.test.mjs",
     "test:value-hunter": "node scripts/value-hunter-golden-test.mjs && node scripts/value-code-improvement-test.mjs && node scripts/phase15-value-hunter-contract-test.mjs && node scripts/value-hunter-worker-integration-test.mjs && npm run test:permissionless-harvester",
     "test:permissionless-harvester": "node scripts/permissionless-harvester-golden-test.mjs && node scripts/phase16-permissionless-harvester-contract-test.mjs && node scripts/permissionless-harvester-worker-integration-test.mjs",
+    "test:matrix-operating-system": "node scripts/matrix-operating-system-contract-test.mjs && node scripts/matrix-operating-system-worker-integration-test.mjs && node scripts/phase17-migration-rehearsal.mjs",
     "test:matrix-synergy:migration": "python3 scripts/phase13-migration-rehearsal.py",
     "test:public-investigation": "node scripts/build-public-investigation-corpus.js && node scripts/public-investigation-test.mjs",
     "matrix-local": "node local-agent/matrix-local.mjs",

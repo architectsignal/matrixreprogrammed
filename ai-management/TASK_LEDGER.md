@@ -177,3 +177,17 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [ ] Provision the separate capped execution wallet and managed constrained signer without placing keys/seeds in GitHub, D1, source, prompts or logs.
 - [ ] Register at least two approved zero-spend Base RPCs and pass live chain/bytecode consensus plus fork, race and reorg tests.
 - [ ] Release Phase 16 only when the Cloudflare zero-overage gate permits it; then run a bounded canary and reconcile the first finalized receipt before reporting live funds.
+
+## 2026-08-13 constitutional Matrix operating-system checkpoint
+
+- [x] Locked the exact `CAUSE NO HARM OR LOSS.` law and SHA-256 into code and an immutable-triggered D1 constitution.
+- [x] Added deterministic harm, authorization, consequence, scope, simulation, rollback, approved-destination and destructive-action gates.
+- [x] Added zero-amount Owner Delegation Vault records and a Matrix Delegated Action Broker; capability growth cannot grant authority.
+- [x] Added durable recovery, systemic-failure, autonomy-stall, capability-gap, resource-expansion, technology-evaluation and stagnation missions with retry ladders.
+- [x] Added truthful component manifest/state, Matrix Capability Index, Effective Power, current/24h/7d/30d/90d/lifetime windows and daily evolution baseline.
+- [x] Added strict learning effects where unchanged observations are telemetry, plus measured resource/value/code-evolution directors.
+- [x] Added immediate boot, watchdog, daily scheduled chain, local-host startup and owner-only doctor/start/missions/history/action-check controls.
+- [x] Added contract, adversarial, D1 integration, twice-applied migration, auth, destructive-action and live-verification gates.
+- [ ] Merge the protected PR after checks pass.
+- [ ] Update the Cloudflare usage snapshot/variables only after a new period shows zero billable usage, then run the controlled deploy with exact confirmation.
+- [ ] Capture a live `LIVE_WORKING` doctor receipt; until then Phase 17 remains truthfully `WORKING_NOT_LIVE` despite passing local tests.

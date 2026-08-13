@@ -26,7 +26,7 @@ const production = read('src/worker-production-autonomy.js');
 for (const marker of [
   "from './worker-permissionless-value.js'", 'isPermissionlessHarvesterRoute', 'runScheduledPermissionlessHarvester',
   'valueTask.then(() => runScheduledPermissionlessHarvester', 'permissionlessTask.then(() => runScheduledLivingMatrix',
-  'Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask])'
+  'Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask])'
 ]) assert.ok(production.includes(marker), `missing production orchestration marker: ${marker}`);
 
 const eventCore = read('src/matrix-synergy-core.js');

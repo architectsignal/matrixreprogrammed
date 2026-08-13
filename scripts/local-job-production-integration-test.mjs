@@ -16,8 +16,8 @@ check('local job routes are checked before generic AI-management routing', wrapp
 check('local job routes require owner admin authorization', wrapper.includes('if (!authorized(request, runtimeEnv)) return forbidden();') && wrapper.includes('return handleLocalJobRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);'));
 check('scheduled handler recovers expired leases', wrapper.includes('recoverExpiredLocalJobs(runtimeEnv)') && wrapper.includes('recoveryTask'));
 check(
-  'scheduled recovery, opportunity, capacity, claim value, permissionless value and Living Matrix cycles participate in awaited task group',
-  wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask])')
+  'scheduled recovery, opportunity, capacity, claim value, permissionless value, Living Matrix and constitutional operating cycles participate in awaited task group',
+  wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask])')
 );
 
 for (const route of [

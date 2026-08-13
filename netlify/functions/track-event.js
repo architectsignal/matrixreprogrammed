@@ -8,6 +8,12 @@ function safeString(value, max = 200) {
   return String(value || '').replace(/[\r\n\t]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
 }
 
+function safeNumber(value, min = 0, max = 100000) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return 0;
+  return Math.max(min, Math.min(max, number));
+}
+
 exports.handler = async function(event) {
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 204, headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' }, body: '' };
@@ -29,6 +35,15 @@ exports.handler = async function(event) {
       host: safeString(payload.host || '', 160),
       text: safeString(payload.text || '', 160),
       form: safeString(payload.form || '', 120),
+      offer_id: safeString(payload.offer_id || '', 80),
+      offer_lane: safeString(payload.offer_lane || payload.lane || '', 40),
+      variant: safeString(payload.variant ?? '', 20),
+      destination: safeString(payload.destination || '', 260),
+      source: safeString(payload.source || '', 80),
+      top_lane: safeString(payload.top_lane || '', 40),
+      touches: safeNumber(payload.touches, 0, 1000),
+      session_bucket: safeNumber(payload.session_bucket, 0, 999),
+      revenue_engine_version: safeString(payload.revenue_engine_version || '', 32),
       at: now.toISOString(),
       ua: safeString(event.headers['user-agent'] || '', 220),
       ref: safeString(event.headers.referer || event.headers.referrer || '', 420)

@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-08-09",
+  "principles": [
+    "Recommend the shortest useful next action rather than maximizing clicks.",
+    "Use only session-local behavioral signals for personalization.",
+    "Never use false scarcity, fabricated social proof, or evidence inflation.",
+    "Keep free evidence and correction routes available regardless of commercial intent."
+  ],
+  "lanes": {
+    "investigate": { "label": "Investigate", "description": "Evidence, dossiers, sources and unresolved questions." },
+    "read": { "label": "Read", "description": "Books, reports and deeper reading routes." },
+    "support": { "label": "Support", "description": "Membership and recurring support for the research machine." },
+    "build": { "label": "Build", "description": "Practical money, business and operating guides." },
+    "watch": { "label": "Watch", "description": "Daily intelligence, watchlists and return loops." },
+    "mystery": { "label": "Decode", "description": "D.O.G, symbolism and hidden-system reading routes." }
+  },
+  "offers": [
+    {
+      "id": "membership",
+      "lane": "support",
+      "priority": 7,
+      "href": "membership.html",
+      "title": "Power the machine",
+      "kicker": "Recurring support",
+      "description": "Turn occasional reading into ongoing access and support the intelligence system.",
+      "variants": [
+        { "cta": "Open membership", "headline": "Go deeper than the public layer." },
+        { "cta": "See member access", "headline": "Keep the machine running and unlock the next layer." }
+      ]
+    },
+    {
+      "id": "book-archive",
+      "lane": "read",
+      "priority": 6,
+      "href": "amazon-store-books.html",
+      "title": "Enter the book universe",
+      "kicker": "One-off purchase",
+      "description": "Move from the public record into the full Matrix Reprogrammed reading universe.",
+      "variants": [
+        { "cta": "Open the book store", "headline": "Your next file is probably a book." },
+        { "cta": "Browse the archive", "headline": "Take the investigation off-screen." }
+      ]
+    },
+    {
+      "id": "black-file",
+      "lane": "investigate",
+      "priority": 5,
+      "href": "black-file.html",
+      "title": "Open The Black File",
+      "kicker": "Free entry route",
+      "description": "Use the free Black File as the shortest route into the wider archive and evidence system.",
+      "variants": [
+        { "cta": "Open The Black File", "headline": "Start with the free deep file." },
+        { "cta": "Get the free brief", "headline": "Take the evidence trail with you." }
+      ]
+    },
+    {
+      "id": "daily-watch",
+      "lane": "watch",
+      "priority": 5,
+      "href": "daily-watch.html",
+      "title": "Follow what changes",
+      "kicker": "Return loop",
+      "description": "Use the daily intelligence hit list to return only when something meaningful changes.",
+      "variants": [
+        { "cta": "Open daily intelligence", "headline": "Do not reread the archive. Watch the delta." },
+        { "cta": "See today’s priorities", "headline": "Track the records that are moving now." }
+      ]
+    },
+    {
+      "id": "making-money",
+      "lane": "build",
+      "priority": 4,
+      "href": "making-money.html",
+      "title": "Build something useful",
+      "kicker": "Practical route",
+      "description": "Move from analysis into practical business, income and operating guides.",
+      "variants": [
+        { "cta": "Open making money", "headline": "Turn attention into an operating plan." },
+        { "cta": "Browse practical guides", "headline": "Use the machine to build, not only observe." }
+      ]
+    },
+    {
+      "id": "dog-architect",
+      "lane": "mystery",
+      "priority": 4,
+      "href": "dog-the-architect.html",
+      "title": "Enter D.O.G",
+      "kicker": "Collector route",
+      "description": "Follow the symbolic and mystery-tradition lane into the flagship D.O.G universe.",
+      "variants": [
+        { "cta": "Enter D.O.G", "headline": "Follow the hidden-system lane." },
+        { "cta": "Open the Architect route", "headline": "Go where the symbolic trail becomes a book." }
+      ]
+    }
+  ]
+}

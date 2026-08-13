@@ -11,8 +11,20 @@ Verified on 13 August 2026. The immutable operating law is `CAUSE NO HARM OR LOS
 - Value, bounty and capital-challenge code is receipt-only. No money has been received or reconciled. Current capital is EUR 0.
 - Automatic bounty claims, bounty submissions, security bounty execution, capital financial execution and permissionless crypto execution remain off.
 - Production release is blocked by the Cloudflare build-budget guard until the billing-period usage is verified at zero. Do not bypass the guard.
+- The completed local branch is three commits ahead of PR #255. Publishing those 55 files to `architectsignal/matrixreprogrammed` requires destination-specific owner approval before CI can evaluate them.
+- The local supervisor and host are healthy, registered and heartbeat-fresh. `matrix-local matrix doctor` currently receives HTTP 404 because the Phase 17/18 Matrix-operations route is part of the unpublished Worker; it remains `WORKING_NOT_LIVE` until the guarded deployment completes.
 
 ## Owner actions in order
+
+### 0. Authorize publication to the existing pull request
+
+If `architectsignal/matrixreprogrammed` is the intended destination, provide this exact approval to Codex:
+
+```text
+I approve pushing the current local HEAD and its two unpublished ancestors to architectsignal/matrixreprogrammed on branch agent/living-matrix-core for PR #255.
+```
+
+This authorizes source publication only. It does not authorize merging, Cloudflare deployment, financial execution or bypassing any cost guard.
 
 ### 1. Keep the local host running after Windows sign-in
 
@@ -51,6 +63,8 @@ npm.cmd run matrix-local -- stop
 npm.cmd run matrix-local -- start
 npm.cmd run matrix-local -- matrix doctor
 ```
+
+Before the new Worker is deployed, the final `matrix doctor` command will truthfully return HTTP 404. The ordinary `matrix-local -- status` and `matrix-local -- doctor` commands remain the authoritative local-host checks during that interval.
 
 ### 3. Release the completed branch when Cloudflare usage resets
 

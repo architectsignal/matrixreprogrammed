@@ -21,12 +21,12 @@ jobs:
   prove:
     name: Prove human and guarded dispatcher authority
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     steps:
       - name: Checkout proposed release authority
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 501
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

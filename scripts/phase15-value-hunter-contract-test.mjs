@@ -11,7 +11,7 @@ const migration = read('migrations/phase15_matrix_value_hunter.sql');
 for (const marker of [
   'matrix_value_jurisdictions', 'matrix_value_sources', 'matrix_value_claimants', 'matrix_value_destinations',
   'matrix_value_mandates', 'matrix_value_objectives', 'matrix_value_opportunities', 'matrix_value_entitlement_evidence',
-  'matrix_value_claim_queue', 'matrix_value_operations', 'matrix_value_receipts', 'matrix_value_audit', 'matrix_value_cycles',
+  'matrix_value_claim_queue', 'matrix_value_operations', 'matrix_value_receipts', 'matrix_value_audit', 'matrix_value_improvement_proposals', 'matrix_value_cycles',
   'matrix_value_learning', 'measured-reconciled-receipts-only',
   'value-milestone-eur-10000', 'target_net_minor', '1000000', 'unclaimed_is_not_ownerless',
   "intent_type IN ('CLAIM_REWARD','SWEEP_RECEIVED_ASSET','WITHDRAW_OWNED_BALANCE')"
@@ -29,9 +29,21 @@ assert.ok(production.indexOf('runScheduledValueHunter') < production.lastIndexOf
 const worker = read('src/worker-value-hunter.js');
 for (const marker of [
   '/api/ai-management/admin/value-hunter', 'INSTALLED_COLLECTION_ADAPTERS', 'containsSensitiveMaterial',
+  'processClaimQueue', 'collectProvenValue', 'matrix_value_operations', 'matrix_value_receipts',
+  'generateValueCodeImprovements', '/improvements',
   'deterministic proof, current official rules, approved destination and constrained adapter',
   'discovery-and-proof-operational-collection-adapter-required'
 ]) assert.ok(worker.includes(marker), `missing worker boundary: ${marker}`);
+
+const collector = read('ai-management/value-hunter/value-collector.mjs');
+for (const marker of ['idempotencyEnforced', "receiptSchemaVersion !== 'value-receipt-v1'", 'ledger?.reserve', 'provider_receipt_reference', 'reconciled: claimReceipt.reconciled === true']) {
+  assert.ok(collector.includes(marker), `missing durable collector boundary: ${marker}`);
+}
+
+const codeImprovement = read('ai-management/value-hunter/value-code-improvement.mjs');
+for (const marker of ['same-host-official-claim-endpoint-required', 'provider-idempotency-required', 'provider-reconciliation-required', "activationState = 'sandbox-candidate'", 'activation_allowed: false', 'VALUE_ADAPTER_NOT_LIVE_CERTIFIED']) {
+  assert.ok(codeImprovement.includes(marker), `missing code-improvement boundary: ${marker}`);
+}
 
 const core = read('ai-management/value-hunter/value-hunter-core.mjs');
 assert.ok(core.includes("entitlement.ownership_status === 'unknown'"));

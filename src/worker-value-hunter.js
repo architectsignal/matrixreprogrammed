@@ -2,12 +2,20 @@ import {
   DEFAULT_STANDING_MANDATE, LEGAL_BASES, VALUE_INTENT_TYPES, canTransitionValueState,
   evaluateValueOpportunity, priorityScore
 } from '../ai-management/value-hunter/value-hunter-core.mjs';
+import { collectProvenValue, ValueProviderRegistry } from '../ai-management/value-hunter/value-collector.mjs';
+import {
+  buildValueCollectionAdapterCandidate, certifyValueCollectionAdapterCandidate
+} from '../ai-management/value-hunter/value-code-improvement.mjs';
 import { OfficialHtmlValueLeadAdapter, allowedOfficialHost, extractOfficialValueLeads } from '../ai-management/provider-adapters/value/official-html-links.mjs';
 import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 const ROOT_ROUTE = '/api/ai-management/admin/value-hunter';
-const ROUTES = new Set([ROOT_ROUTE, `${ROOT_ROUTE}/claimants`, `${ROOT_ROUTE}/destinations`, `${ROOT_ROUTE}/opportunities`]);
-const INSTALLED_COLLECTION_ADAPTERS = Object.freeze([]);
+const ROUTES = new Set([
+  ROOT_ROUTE, `${ROOT_ROUTE}/claimants`, `${ROOT_ROUTE}/destinations`, `${ROOT_ROUTE}/opportunities`, `${ROOT_ROUTE}/improvements`
+]);
+// Financial providers are installed in reviewed source code, never from D1, prompts or arbitrary URLs.
+const BUILT_IN_COLLECTION_PROVIDERS = Object.freeze([]);
+const INSTALLED_COLLECTION_ADAPTERS = Object.freeze(BUILT_IN_COLLECTION_PROVIDERS.map(provider => provider.adapterId));
 const SECRET_OR_PII_FIELD = /(private.?key|seed.?phrase|mnemonic|password|secret|raw.?signature|recovery.?phrase|social.?security|national.?insurance|passport|date.?of.?birth|bank.?account|routing.?number)/i;
 
 function clean(value, maximum = 500) {
@@ -63,7 +71,8 @@ async function schemaReady(env) {
   const required = [
     'matrix_value_sources', 'matrix_value_claimants', 'matrix_value_destinations', 'matrix_value_mandates',
     'matrix_value_objectives', 'matrix_value_opportunities', 'matrix_value_entitlement_evidence',
-    'matrix_value_claim_queue', 'matrix_value_audit', 'matrix_value_cycles', 'matrix_value_learning'
+    'matrix_value_claim_queue', 'matrix_value_operations', 'matrix_value_receipts', 'matrix_value_audit', 'matrix_value_improvement_proposals',
+    'matrix_value_cycles', 'matrix_value_learning'
   ];
   return (await Promise.all(required.map(table => tableExists(env.MEMBERS_DB, table).catch(() => false)))).every(Boolean);
 }
@@ -119,7 +128,7 @@ async function activeMandate(db) {
   };
 }
 
-function evaluationInput(row, { autoCollectionEnabled = true } = {}) {
+function evaluationInput(row, { autoCollectionEnabled = true, installedCollectionAdapters = INSTALLED_COLLECTION_ADAPTERS } = {}) {
   return {
     opportunity_id: row.opportunity_id,
     state: row.state,
@@ -129,6 +138,7 @@ function evaluationInput(row, { autoCollectionEnabled = true } = {}) {
     legal_basis: row.legal_basis,
     expires_at: row.expires_at,
     idempotency_key: row.idempotency_key,
+    contract_id: row.contract_id,
     claimant: {
       claimant_id: row.claimant_id,
       authorized: row.claimant_id ? row.claimant_enabled === 1 : undefined,
@@ -167,14 +177,14 @@ function evaluationInput(row, { autoCollectionEnabled = true } = {}) {
     },
     provider: {
       adapter_id: row.provider_adapter_id,
-      automation_supported: autoCollectionEnabled && INSTALLED_COLLECTION_ADAPTERS.includes(row.provider_adapter_id)
+      automation_supported: autoCollectionEnabled && installedCollectionAdapters.includes(row.provider_adapter_id)
     },
     human_requirements: parseJson(row.human_requirements_json || '[]', []),
     security: parseJson(row.security_json || '{}', {})
   };
 }
 
-async function recordDecision(db, row, evaluation, now) {
+async function recordDecision(db, row, evaluation, now, installedCollectionAdapters = INSTALLED_COLLECTION_ADAPTERS) {
   const next = evaluation.state;
   let state = row.state;
   let reasons = evaluation.reasons;
@@ -182,7 +192,7 @@ async function recordDecision(db, row, evaluation, now) {
     if (canTransitionValueState(state, next)) state = next;
     else reasons = [...evaluation.reasons, `illegal-transition-blocked:${state}->${next}`];
   }
-  const decision = { ...evaluation, state, reasons, evaluated_at: now, installed_collection_adapters: INSTALLED_COLLECTION_ADAPTERS };
+  const decision = { ...evaluation, state, reasons, evaluated_at: now, installed_collection_adapters: installedCollectionAdapters };
   await db.prepare(`UPDATE matrix_value_opportunities SET state=?,priority_score=?,decision_json=?,updated_at=? WHERE opportunity_id=?`).bind(
     state,
     priorityScore({
@@ -214,7 +224,7 @@ async function recordDecision(db, row, evaluation, now) {
 }
 
 async function opportunityRows(db) {
-  return rows(db.prepare(`SELECT o.*,s.source_status,s.official_verified,s.terms_current,s.terms_hash,s.validated_terms_hash,
+  return rows(db.prepare(`SELECT o.*,s.source_status,s.official_verified,s.official_url,s.metadata_json,s.terms_current,s.terms_hash,s.validated_terms_hash,
       j.claim_permitted,j.automation_permitted,j.automation_level,j.status AS jurisdiction_status,j.valid_until AS jurisdiction_valid_until,
       c.authority_status,c.identity_status,c.enabled AS claimant_enabled,
       d.approved AS destination_approved,d.active AS destination_active,d.allowed_assets_json,
@@ -235,6 +245,192 @@ async function opportunityRows(db) {
     WHERE o.state NOT IN ('SWEPT_TO_APPROVED_DESTINATION','REJECTED','EXPIRED','NOT_OURS','FRAUD_BLOCKED')
     GROUP BY o.opportunity_id
     ORDER BY o.priority_score DESC,o.discovered_at ASC LIMIT 250`));
+}
+
+function collectionProviderRegistry(providers) {
+  if (providers && typeof providers.get === 'function' && typeof providers.approvedAdapterIds === 'function') return providers;
+  return new ValueProviderRegistry(BUILT_IN_COLLECTION_PROVIDERS);
+}
+
+function operationStatusForValueState(state) {
+  if (state === 'CLAIM_SUBMITTED') return 'submitted';
+  if (state === 'CLAIM_ACCEPTED') return 'accepted';
+  if (state === 'PAYMENT_PENDING') return 'pending';
+  if (state === 'SWEPT_TO_APPROVED_DESTINATION' || state === 'RECEIVED') return 'confirmed';
+  if (state === 'REJECTED') return 'rejected';
+  if (['AUTOMATION_NOT_PERMITTED', 'OWNER_APPROVAL_REQUIRED', 'FRAUD_BLOCKED'].includes(state)) return 'blocked';
+  return 'created';
+}
+
+function nextAttemptAt(now, attempts) {
+  const delayMinutes = Math.min(24 * 60, Math.max(5, 5 * (2 ** Math.max(0, attempts - 1))));
+  return new Date(Date.parse(now) + delayMinutes * 60000).toISOString();
+}
+
+function collectionLedger(db, now) {
+  return {
+    async get(idempotencyKey) {
+      const row = await db.prepare(`SELECT o.status,o.opportunity_id,r.receipt_id,r.gross_amount_minor,r.fee_minor,r.destination_id,r.reconciled
+        FROM matrix_value_operations o LEFT JOIN matrix_value_receipts r ON r.operation_id=o.operation_id
+        WHERE o.idempotency_key=? AND o.status='confirmed' LIMIT 1`).bind(idempotencyKey).first();
+      if (!row?.receipt_id) return null;
+      return {
+        state: 'SWEPT_TO_APPROVED_DESTINATION', opportunity_id: row.opportunity_id,
+        amount_minor: integer(row.gross_amount_minor), fee_minor: integer(row.fee_minor),
+        destination_id: row.destination_id, receipt_id: row.receipt_id, reconciled: row.reconciled === 1
+      };
+    },
+
+    async reserve(idempotencyKey, { intent } = {}) {
+      const operationId = `value-operation-${(await sha256(idempotencyKey)).slice(0, 32)}`;
+      const result = await db.prepare(`INSERT OR IGNORE INTO matrix_value_operations(
+        operation_id,opportunity_id,intent_type,provider_adapter_id,destination_id,asset,amount_minor,maximum_fee_minor,
+        actual_fee_minor,status,idempotency_key,terms_hash,contract_id,receipt_id,created_at,updated_at
+      ) VALUES(?,?,?,?,?,?,?,?,NULL,'created',?,?,?,NULL,?,?)`).bind(
+        operationId, intent.opportunity_id, intent.intent_type, intent.provider_adapter_id, intent.destination_id,
+        intent.asset, integer(intent.amount_minor), integer(intent.maximum_fee_minor), idempotencyKey,
+        clean(intent.terms_hash, 128), intent.contract_id || null, now, now
+      ).run();
+      if (Number(result?.meta?.changes || 0) > 0) return { existing: false, terminal: false, operation_id: operationId };
+      const existing = await db.prepare('SELECT operation_id,status,receipt_id FROM matrix_value_operations WHERE idempotency_key=? LIMIT 1').bind(idempotencyKey).first();
+      return { existing: true, terminal: existing?.status === 'confirmed' && Boolean(existing?.receipt_id), operation_id: existing?.operation_id, state: existing?.status === 'confirmed' ? 'SWEPT_TO_APPROVED_DESTINATION' : undefined };
+    },
+
+    async put(idempotencyKey, receipt) {
+      const operation = await db.prepare('SELECT operation_id,asset,amount_minor,maximum_fee_minor,destination_id FROM matrix_value_operations WHERE idempotency_key=? LIMIT 1').bind(idempotencyKey).first();
+      if (!operation) throw new Error('Reserved value operation is missing');
+      const gross = Math.max(0, integer(receipt.amount_minor));
+      const fee = Math.max(0, integer(receipt.fee_minor));
+      if (fee > gross || fee > integer(operation.maximum_fee_minor)) throw new Error('Provider receipt exceeds the approved fee boundary');
+      const receiptId = `value-receipt-${(await sha256(`${idempotencyKey}:${receipt.provider_receipt_reference}`)).slice(0, 32)}`;
+      const safeReceipt = {
+        provider_receipt_reference: clean(receipt.provider_receipt_reference, 240),
+        claim_receipt_id: clean(receipt.claim_receipt_id, 160), sweep_receipt_id: clean(receipt.sweep_receipt_id, 160) || null,
+        confirmation_count: Math.max(0, integer(receipt.confirmation_count)), reconciled: receipt.reconciled === true
+      };
+      await db.prepare(`INSERT OR IGNORE INTO matrix_value_receipts(
+        receipt_id,operation_id,provider_receipt_reference,asset,gross_amount_minor,fee_minor,net_amount_minor,destination_id,
+        confirmation_count,reconciled,received_at,reconciled_at,receipt_json
+      ) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)`).bind(
+        receiptId, operation.operation_id, safeReceipt.provider_receipt_reference, operation.asset, gross, fee, gross - fee,
+        operation.destination_id, safeReceipt.confirmation_count, safeReceipt.reconciled ? 1 : 0,
+        clean(receipt.received_at, 50) || now, safeReceipt.reconciled ? now : null, JSON.stringify(safeReceipt)
+      ).run();
+      await db.prepare(`UPDATE matrix_value_operations SET actual_fee_minor=?,status='confirmed',receipt_id=?,updated_at=? WHERE operation_id=?`).bind(
+        fee, receiptId, now, operation.operation_id
+      ).run();
+      return { receipt_id: receiptId };
+    }
+  };
+}
+
+async function auditCollectionTransitions(db, queue, result, now) {
+  for (const [index, transition] of (result.transitions || []).entries()) {
+    const auditKey = `${queue.idempotency_key}:transition:${index}:${transition.from}:${transition.to}`;
+    await db.prepare(`INSERT OR IGNORE INTO matrix_value_audit(
+      audit_id,opportunity_id,event_type,from_state,to_state,actor,reason_json,evidence_json,idempotency_key,created_at
+    ) VALUES(?,?,?,?,?,'matrix-value-collector',?,?,?,?)`).bind(
+      `value-audit-${(await sha256(auditKey)).slice(0, 32)}`, queue.opportunity_id, 'value.collection.transition',
+      transition.from, transition.to, JSON.stringify([]), JSON.stringify({ receipt_id: clean(transition.receipt?.receipt_id, 160) || null }), auditKey, now
+    ).run();
+  }
+}
+
+async function processClaimQueue(db, {
+  mandate, providers, signer, approvedContracts = [], autoCollectionEnabled = true, now, limit = 25
+} = {}) {
+  const registry = collectionProviderRegistry(providers);
+  const installedCollectionAdapters = registry.approvedAdapterIds();
+  const queueRows = await rows(db.prepare(`SELECT queue_id,opportunity_id,intent_type,status,idempotency_key,attempts,next_attempt_at
+    FROM matrix_value_claim_queue WHERE status IN ('queued','failed') AND (next_attempt_at IS NULL OR next_attempt_at<=?)
+    ORDER BY created_at LIMIT ?`).bind(now, Math.max(1, Math.min(100, integer(limit, 25)))));
+  const candidates = new Map((await opportunityRows(db)).map(candidate => [candidate.opportunity_id, candidate]));
+  const processed = [];
+  const failures = [];
+  for (const queue of queueRows) {
+    const leased = await db.prepare(`UPDATE matrix_value_claim_queue SET status='leased',attempts=attempts+1,updated_at=?
+      WHERE queue_id=? AND status IN ('queued','failed')`).bind(now, queue.queue_id).run();
+    if (Number(leased?.meta?.changes || 0) < 1) continue;
+    const attempts = integer(queue.attempts) + 1;
+    const candidate = candidates.get(queue.opportunity_id);
+    if (!candidate) {
+      await db.prepare("UPDATE matrix_value_claim_queue SET status='blocked',last_error='opportunity-not-collectible',updated_at=? WHERE queue_id=?").bind(now, queue.queue_id).run();
+      failures.push({ opportunity_id: queue.opportunity_id, reason: 'opportunity-not-collectible' });
+      continue;
+    }
+    try {
+      const input = evaluationInput(candidate, { autoCollectionEnabled, installedCollectionAdapters });
+      input.idempotency_key = queue.idempotency_key;
+      input.claim_intent_type = queue.intent_type;
+      const result = await collectProvenValue(input, {
+        mandate, providers: registry, ledger: collectionLedger(db, now), signer, approvedContracts, now
+      });
+      await auditCollectionTransitions(db, queue, result, now);
+      const nextState = result.state || candidate.state;
+      const operationStatus = operationStatusForValueState(nextState);
+      await db.prepare('UPDATE matrix_value_operations SET status=?,updated_at=? WHERE idempotency_key=?').bind(operationStatus, now, queue.idempotency_key).run();
+      if (candidate.state !== nextState) await db.prepare('UPDATE matrix_value_opportunities SET state=?,updated_at=? WHERE opportunity_id=?').bind(nextState, now, queue.opportunity_id).run();
+      let queueStatus = 'completed';
+      let retryAt = null;
+      if (['CLAIM_SUBMITTED', 'CLAIM_ACCEPTED', 'PAYMENT_PENDING'].includes(nextState)) { queueStatus = attempts >= 8 ? 'blocked' : 'failed'; retryAt = queueStatus === 'failed' ? nextAttemptAt(now, attempts) : null; }
+      if (['AUTOMATION_NOT_PERMITTED', 'OWNER_APPROVAL_REQUIRED', 'FRAUD_BLOCKED'].includes(nextState)) queueStatus = 'blocked';
+      await db.prepare('UPDATE matrix_value_claim_queue SET status=?,next_attempt_at=?,last_error=?,updated_at=? WHERE queue_id=?').bind(
+        queueStatus, retryAt, queueStatus === 'failed' ? `provider-state:${nextState}` : null, now, queue.queue_id
+      ).run();
+      processed.push({ opportunity_id: queue.opportunity_id, state: nextState, queue_status: queueStatus, duplicate: result.duplicate === true, collected: result.collected === true });
+    } catch (error) {
+      const reason = clean(error?.message || error, 500);
+      const queueStatus = attempts >= 8 ? 'blocked' : 'failed';
+      await db.prepare('UPDATE matrix_value_claim_queue SET status=?,next_attempt_at=?,last_error=?,updated_at=? WHERE queue_id=?').bind(
+        queueStatus, queueStatus === 'failed' ? nextAttemptAt(now, attempts) : null, reason, now, queue.queue_id
+      ).run();
+      failures.push({ opportunity_id: queue.opportunity_id, reason });
+    }
+  }
+  return {
+    installed_collection_adapters: installedCollectionAdapters,
+    leased: queueRows.length, processed, failures,
+    submitted: processed.filter(item => ['CLAIM_SUBMITTED', 'CLAIM_ACCEPTED', 'PAYMENT_PENDING', 'RECEIVED', 'SWEPT_TO_APPROVED_DESTINATION'].includes(item.state)).length,
+    received: processed.filter(item => ['RECEIVED', 'SWEPT_TO_APPROVED_DESTINATION'].includes(item.state) && item.collected).length
+  };
+}
+
+async function generateValueCodeImprovements(db, now) {
+  const candidates = await rows(db.prepare(`SELECT o.opportunity_id,o.source_id,o.provider_adapter_id,s.official_url,s.validated_terms_hash,s.metadata_json
+    FROM matrix_value_opportunities o JOIN matrix_value_sources s ON s.source_id=o.source_id
+    WHERE o.state='AUTOMATION_NOT_PERMITTED' AND o.provider_adapter_id IS NOT NULL
+      AND json_extract(s.metadata_json,'$.collection_adapter_spec') IS NOT NULL
+    ORDER BY o.priority_score DESC LIMIT 10`));
+  const generated = [];
+  const quarantined = [];
+  for (const row of candidates) {
+    const metadata = parseJson(row.metadata_json, {});
+    const specification = {
+      ...(metadata.collection_adapter_spec || {}), adapter_id: row.provider_adapter_id,
+      official_url: row.official_url, validated_terms_hash: row.validated_terms_hash
+    };
+    const proposal = await buildValueCollectionAdapterCandidate(specification, { now: new Date(now) });
+    const certification = certifyValueCollectionAdapterCandidate(proposal);
+    if (!certification.certified) {
+      quarantined.push({ opportunity_id: row.opportunity_id, adapter_id: row.provider_adapter_id, blockers: certification.blockers });
+      continue;
+    }
+    await db.prepare(`INSERT OR IGNORE INTO matrix_value_improvement_proposals(
+      proposal_id,source_id,opportunity_id,provider_adapter_id,target_path,official_host,source_code,source_sha256,state,
+      blockers_json,test_report_json,immutable_boundaries_json,activation_allowed,generated_at,updated_at
+    ) VALUES(?,?,?,?,?,?,?,?,'sandbox-candidate','[]',?,?,0,?,?)`).bind(
+      proposal.proposal_id, row.source_id, row.opportunity_id, proposal.adapter_id, proposal.target_path, proposal.official_host,
+      proposal.source_code, proposal.source_sha256, JSON.stringify(certification), JSON.stringify(proposal.immutable_boundaries), now, now
+    ).run();
+    generated.push({
+      proposal_id: proposal.proposal_id, opportunity_id: row.opportunity_id, adapter_id: proposal.adapter_id,
+      source_sha256: proposal.source_sha256, state: certification.state, activation_allowed: false
+    });
+  }
+  return {
+    evaluated: candidates.length, generated, quarantined,
+    policy: 'Generated financial code is stored as a non-executable sandbox candidate. Live activation requires provider sandbox, reconciliation, repository CI and protected deployment gates.'
+  };
 }
 
 async function refreshMeasuredLearning(db, now) {
@@ -266,28 +462,30 @@ async function refreshMeasuredLearning(db, now) {
   return measurements.length;
 }
 
-async function summary(db) {
+async function summary(db, installedCollectionAdapters = INSTALLED_COLLECTION_ADAPTERS) {
   const objective = await db.prepare("SELECT * FROM matrix_value_objectives WHERE status='active' ORDER BY created_at LIMIT 1").first();
   const sourceCounts = await db.prepare("SELECT COUNT(*) AS total,SUM(CASE WHEN source_status='active' THEN 1 ELSE 0 END) AS active FROM matrix_value_sources").first();
   const opportunityCounts = await rows(db.prepare('SELECT state,COUNT(*) AS count,COALESCE(SUM(amount_minor-fee_minor),0) AS net_minor FROM matrix_value_opportunities GROUP BY state ORDER BY state'));
   const received = await db.prepare("SELECT COALESCE(SUM(net_amount_minor),0) AS net_minor,COUNT(*) AS count FROM matrix_value_receipts WHERE reconciled=1 AND asset='EUR'").first();
   const claimantCounts = await db.prepare("SELECT COUNT(*) AS total,SUM(CASE WHEN enabled=1 AND authority_status='proven' AND identity_status='matched' THEN 1 ELSE 0 END) AS ready FROM matrix_value_claimants").first();
   const destinationCounts = await db.prepare('SELECT COUNT(*) AS total,SUM(CASE WHEN approved=1 AND active=1 THEN 1 ELSE 0 END) AS ready FROM matrix_value_destinations').first();
+  const improvementCounts = await db.prepare("SELECT COUNT(*) AS total,SUM(CASE WHEN state='sandbox-candidate' THEN 1 ELSE 0 END) AS sandbox_candidates FROM matrix_value_improvement_proposals").first();
   const learning = await rows(db.prepare('SELECT strategy_key,evaluated_count,entitlement_proven_count,received_count,received_net_minor,success_rate,net_per_evaluation_minor,priority_multiplier,basis,updated_at FROM matrix_value_learning ORDER BY priority_multiplier DESC,received_net_minor DESC LIMIT 50'));
   return {
     target: objective ? { objective_id: objective.objective_id, currency: objective.target_currency, target_net_minor: objective.target_net_minor, received_net_minor: integer(received?.net_minor), remaining_net_minor: Math.max(0, integer(objective.target_net_minor) - integer(received?.net_minor)) } : null,
     sources: { total: integer(sourceCounts?.total), active_for_claims: integer(sourceCounts?.active) },
     claimants: { total: integer(claimantCounts?.total), authority_and_identity_ready: integer(claimantCounts?.ready) },
     destinations: { total: integer(destinationCounts?.total), approved_and_active: integer(destinationCounts?.ready) },
-    installed_collection_adapters: INSTALLED_COLLECTION_ADAPTERS,
+    code_improvements: { total: integer(improvementCounts?.total), sandbox_candidates: integer(improvementCounts?.sandbox_candidates), automatic_live_activation: false },
+    installed_collection_adapters: installedCollectionAdapters,
     opportunities: opportunityCounts.map(item => ({ state: item.state, count: integer(item.count), net_minor: integer(item.net_minor) })),
     reconciled_receipts: { count: integer(received?.count), net_minor: integer(received?.net_minor) },
     learning: { strategy_count: learning.length, strategies: learning },
-    truthful_status: INSTALLED_COLLECTION_ADAPTERS.length ? 'collection-adapter-ready' : 'discovery-and-proof-operational-collection-adapter-required'
+    truthful_status: installedCollectionAdapters.length ? 'collection-adapter-ready' : 'discovery-and-proof-operational-collection-adapter-required'
   };
 }
 
-export async function runValueHunterCycle(env, { trigger = 'manual', clock } = {}) {
+export async function runValueHunterCycle(env, { trigger = 'manual', clock, providers, signer, approvedContracts = [] } = {}) {
   if (!(await schemaReady(env))) return { ok: false, skipped: true, reason: 'value-hunter-schema-unavailable' };
   if (!enabled(env.MATRIX_VALUE_HUNTER_ENABLED, true)) return { ok: true, skipped: true, reason: 'value-hunter-disabled' };
   if (!enabled(env.AI_RESOURCE_ZERO_SPEND_LOCK, true)) return { ok: false, skipped: true, reason: 'zero-spend-lock-required' };
@@ -300,36 +498,53 @@ export async function runValueHunterCycle(env, { trigger = 'manual', clock } = {
     VALUES(?,?,'running',?) ON CONFLICT(cycle_id) DO UPDATE SET status='running',started_at=excluded.started_at,completed_at=NULL`).bind(cycleId, clean(trigger, 100), startedAt).run();
   const mandate = await activeMandate(db);
   const autoCollectionEnabled = enabled(env.MATRIX_VALUE_AUTO_COLLECTION_ENABLED, true);
+  const providerRegistry = collectionProviderRegistry(providers);
+  const installedCollectionAdapters = providerRegistry.approvedAdapterIds();
   const discovery = await discoverOfficialPublicValueLeads(db, { now: startedAt });
   const candidates = await opportunityRows(db);
   const decisions = [];
   const failures = [];
+  const codeImprovements = enabled(env.MATRIX_VALUE_CODE_IMPROVEMENT_ENABLED, true)
+    ? await generateValueCodeImprovements(db, startedAt)
+    : { evaluated: 0, generated: [], quarantined: [], disabled: true };
   for (const candidate of candidates) {
-    try { decisions.push(await recordDecision(db, candidate, evaluateValueOpportunity(evaluationInput(candidate, { autoCollectionEnabled }), { mandate, now: startedAt }), startedAt)); }
+    try {
+      decisions.push(await recordDecision(
+        db, candidate,
+        evaluateValueOpportunity(evaluationInput(candidate, { autoCollectionEnabled, installedCollectionAdapters }), { mandate, now: startedAt }),
+        startedAt, installedCollectionAdapters
+      ));
+    }
     catch (error) { failures.push({ opportunity_id: candidate.opportunity_id, error: clean(error?.message || error, 500) }); }
   }
+  const collection = await processClaimQueue(db, {
+    mandate, providers: providerRegistry, signer, approvedContracts, autoCollectionEnabled, now: startedAt
+  });
+  failures.push(...collection.failures.map(item => ({ opportunity_id: item.opportunity_id, error: item.reason })));
   const learnedStrategies = await refreshMeasuredLearning(db, startedAt);
-  const status = await summary(db);
+  const status = await summary(db, installedCollectionAdapters);
   const completedAt = (clock?.() || new Date()).toISOString();
   const report = {
     cycle_id: cycleId, trigger, started_at: startedAt, completed_at: completedAt,
     objective: status.target, discovery, evaluated: decisions.length, learned_strategies: learnedStrategies,
     ready_to_claim: decisions.filter(item => item.state === 'READY_TO_CLAIM').length,
     blocked_or_manual: decisions.filter(item => ['AUTOMATION_NOT_PERMITTED', 'OWNER_APPROVAL_REQUIRED', 'FRAUD_BLOCKED'].includes(item.state)).length,
-    received_this_cycle: 0, failures, status,
+    submitted_this_cycle: collection.submitted, received_this_cycle: collection.received,
+    code_improvements: codeImprovements, collection, failures, status,
     auto_collection_enabled: autoCollectionEnabled,
     policy: 'Automatically collect any registered claimant legal entitlement only after deterministic proof, current official rules, approved destination and constrained adapter checks pass. LLM confidence is never entitlement proof.'
   };
-  await db.prepare(`UPDATE matrix_value_cycles SET status=?,evaluated_count=?,ready_count=?,blocked_count=?,report_json=?,completed_at=? WHERE cycle_id=?`).bind(
-    failures.length || discovery.failures.length ? 'completed-with-findings' : 'completed', decisions.length,
-    report.ready_to_claim, report.blocked_or_manual, JSON.stringify(report), completedAt, cycleId
+  await db.prepare(`UPDATE matrix_value_cycles SET status=?,received_net_minor=?,discovered_count=?,evaluated_count=?,ready_count=?,submitted_count=?,received_count=?,blocked_count=?,report_json=?,completed_at=? WHERE cycle_id=?`).bind(
+    failures.length || discovery.failures.length ? 'completed-with-findings' : 'completed',
+    status.reconciled_receipts.net_minor, discovery.discovered, decisions.length, report.ready_to_claim,
+    collection.submitted, collection.received, report.blocked_or_manual, JSON.stringify(report), completedAt, cycleId
   ).run();
   await db.prepare(`UPDATE matrix_capabilities SET structural_checks_passed=1,dependencies_reachable=1,data_connected=1,evidence_ready=1,
     live_verification_passed=?,state=?,blocker=?,checked_at=?,evidence_json=? WHERE capability_id='matrix-value-hunter'`).bind(
-    INSTALLED_COLLECTION_ADAPTERS.length ? 1 : 0,
-    INSTALLED_COLLECTION_ADAPTERS.length ? 'live_verified' : 'evidence_ready',
-    INSTALLED_COLLECTION_ADAPTERS.length ? null : 'No constrained live financial provider adapter is installed; discovery and entitlement evaluation continue.',
-    completedAt, JSON.stringify({ cycle_id: cycleId, target_net_eur: 10000, decisions: decisions.length, failures: failures.length, collection_adapters: INSTALLED_COLLECTION_ADAPTERS })
+    installedCollectionAdapters.length ? 1 : 0,
+    installedCollectionAdapters.length ? 'live_verified' : 'evidence_ready',
+    installedCollectionAdapters.length ? null : 'No constrained live financial provider adapter is installed; discovery and entitlement evaluation continue.',
+    completedAt, JSON.stringify({ cycle_id: cycleId, target_net_eur: 10000, decisions: decisions.length, failures: failures.length, collection_adapters: installedCollectionAdapters })
   ).run();
   await emitMatrixSystemEvent(env, {
     eventType: 'value.cycle.completed', auditIdentifier: cycleId, origin: 'matrix-value-hunter', actor: 'lawful-value-cycle',
@@ -455,6 +670,7 @@ export async function handleValueHunterRoute(request, env) {
     if (path.endsWith('/claimants')) return json({ ok: true, claimants: await rows(db.prepare('SELECT claimant_id,display_label,authority_status,identity_status,jurisdictions_json,enabled,created_at,updated_at FROM matrix_value_claimants ORDER BY updated_at DESC LIMIT 100')) });
     if (path.endsWith('/destinations')) return json({ ok: true, destinations: await rows(db.prepare('SELECT destination_id,claimant_id,destination_type,public_identifier_hash,allowed_assets_json,allowed_intents_json,provider_adapter_id,approved,active,approved_by_owner_at,created_at,updated_at FROM matrix_value_destinations ORDER BY updated_at DESC LIMIT 100')) });
     if (path.endsWith('/opportunities')) return json({ ok: true, opportunities: await rows(db.prepare('SELECT opportunity_id,objective_id,source_id,jurisdiction_id,claimant_id,destination_id,category,title,legal_basis,state,asset,amount_minor,fee_minor,entitlement_proven,provider_adapter_id,expires_at,priority_score,decision_json,discovered_at,updated_at FROM matrix_value_opportunities ORDER BY priority_score DESC,updated_at DESC LIMIT 250')) });
+    if (path.endsWith('/improvements')) return json({ ok: true, executable_in_worker: false, proposals: await rows(db.prepare('SELECT proposal_id,source_id,opportunity_id,provider_adapter_id,target_path,official_host,source_sha256,state,blockers_json,test_report_json,immutable_boundaries_json,activation_allowed,generated_at,updated_at FROM matrix_value_improvement_proposals ORDER BY updated_at DESC LIMIT 100')) });
   }
   if (request.method === 'POST') {
     try {
@@ -474,7 +690,8 @@ export async function runScheduledValueHunter(env) {
 }
 
 export const valueHunterWorkerInternals = {
-  INSTALLED_COLLECTION_ADAPTERS, SECRET_OR_PII_FIELD, containsSensitiveMaterial, schemaReady,
+  BUILT_IN_COLLECTION_PROVIDERS, INSTALLED_COLLECTION_ADAPTERS, SECRET_OR_PII_FIELD, containsSensitiveMaterial, schemaReady,
   activeMandate, allowedOfficialHost, extractOfficialLeads: extractOfficialValueLeads, discoverOfficialPublicValueLeads,
-  evaluationInput, recordDecision, refreshMeasuredLearning, summary
+  evaluationInput, recordDecision, collectionProviderRegistry, collectionLedger, processClaimQueue,
+  generateValueCodeImprovements, refreshMeasuredLearning, summary
 };

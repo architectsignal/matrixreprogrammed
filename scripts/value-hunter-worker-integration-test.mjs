@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
+import { ValueProviderRegistry } from '../ai-management/value-hunter/value-collector.mjs';
 import { handleValueHunterRoute, runValueHunterCycle } from '../src/worker-value-hunter.js';
 
 class D1Statement {
@@ -17,6 +18,24 @@ class D1Statement {
 class D1Database {
   constructor(database) { this.database = database; }
   prepare(sql) { return new D1Statement(this.database, sql); }
+}
+
+class FixtureCollectionProvider {
+  constructor() {
+    this.adapterId = 'fixture-lawful-collector';
+    this.idempotencyEnforced = true;
+    this.receiptSchemaVersion = 'value-receipt-v1';
+    this.calls = 0;
+  }
+  async claim(intent) {
+    this.calls += 1;
+    return {
+      receipt_id: `fixture-provider-receipt-${this.calls}`,
+      provider_receipt_reference: `fixture-reference-${this.calls}`,
+      status: 'received', amount_minor: intent.amount_minor, fee_minor: 0,
+      confirmation_count: 1, reconciled: true, received_at: '2026-08-15T12:00:00.000Z'
+    };
+  }
 }
 
 const raw = new DatabaseSync(':memory:');
@@ -68,8 +87,15 @@ try {
   assert.equal(destinationResponse.status, 201);
   assert.equal(raw.prepare("SELECT destination_vault_reference FROM matrix_value_destinations WHERE destination_id='matrix-eur-account'").get().destination_vault_reference, 'vault://destinations/matrix-eur-account');
 
-  raw.prepare(`UPDATE matrix_value_sources SET source_status='active',terms_current=1,terms_hash='terms-v1',validated_terms_hash='terms-v1'
-    WHERE source_id='official-fr-business-aid'`).run();
+  const termsHash = 'c'.repeat(64);
+  const sourceMetadata = JSON.parse(raw.prepare("SELECT metadata_json FROM matrix_value_sources WHERE source_id='official-fr-business-aid'").get().metadata_json);
+  sourceMetadata.collection_adapter_spec = {
+    claim_endpoint: 'https://www.entreprises.gouv.fr/api/refunds/claim',
+    credential_vault_reference: 'vault://providers/fixture-lawful-collector',
+    automation_permitted: true, idempotency_supported: true, receipt_reconciliation_supported: true
+  };
+  raw.prepare(`UPDATE matrix_value_sources SET source_status='active',terms_current=1,terms_hash=?,validated_terms_hash=?,metadata_json=?
+    WHERE source_id='official-fr-business-aid'`).run(termsHash, termsHash, JSON.stringify(sourceMetadata));
   raw.prepare(`UPDATE matrix_value_jurisdictions SET status='current',automation_permitted=1,automation_level=4,validated_at='2026-08-13T12:00:00.000Z',valid_until='2027-08-13T12:00:00.000Z'
     WHERE jurisdiction_id='jurisdiction-fr-business-aid'`).run();
 
@@ -78,7 +104,7 @@ try {
       opportunity_id: 'matrix-proven-refund', source_id: 'official-fr-business-aid', jurisdiction_id: 'jurisdiction-fr-business-aid',
       claimant_id: 'matrix-operating-entity', destination_id: 'matrix-eur-account', category: 'refund', legal_basis: 'refund',
       title: 'Proven Matrix entity refund', asset: 'EUR', amount_minor: 125000, fee_minor: 0,
-      entitlement_proven: true, provider_adapter_id: 'not-installed-financial-adapter', idempotency_key: 'matrix-proven-refund:v1',
+      entitlement_proven: true, provider_adapter_id: 'fixture-lawful-collector', idempotency_key: 'matrix-proven-refund:v1',
       evidence: [{ evidence_id: 'refund-proof-1', evidence_type: 'official-refund-entitlement', source_url: 'https://www.entreprises.gouv.fr/refund-proof', content_sha256: 'b'.repeat(64), establishes: 'The registered Matrix entity is the named refund claimant.', authority_verified: true, identity_match_verified: true, ownership_verified: true, retrieved_at: '2026-08-13T12:05:00.000Z' }]
     })
   }), env);
@@ -91,6 +117,29 @@ try {
   assert.ok(proven.reasons.includes('constrained-provider-adapter-unavailable'));
   assert.equal(raw.prepare("SELECT COUNT(*) AS count FROM matrix_value_claim_queue WHERE opportunity_id='matrix-proven-refund'").get().count, 0);
 
+  const provider = new FixtureCollectionProvider();
+  const providers = new ValueProviderRegistry([provider]);
+  const third = await runValueHunterCycle(env, {
+    trigger: 'integration-three', clock: () => new Date('2026-08-15T12:00:00.000Z'), providers
+  });
+  assert.equal(third.ok, true);
+  assert.equal(provider.calls, 1);
+  assert.equal(third.report.collection.submitted, 1);
+  assert.equal(third.report.collection.received, 1);
+  assert.equal(third.report.code_improvements.generated.length, 1);
+  assert.equal(third.report.status.reconciled_receipts.net_minor, 125000);
+  assert.equal(raw.prepare("SELECT state FROM matrix_value_opportunities WHERE opportunity_id='matrix-proven-refund'").get().state, 'SWEPT_TO_APPROVED_DESTINATION');
+  assert.equal(raw.prepare("SELECT status FROM matrix_value_claim_queue WHERE opportunity_id='matrix-proven-refund'").get().status, 'completed');
+  assert.equal(raw.prepare("SELECT status FROM matrix_value_operations WHERE opportunity_id='matrix-proven-refund'").get().status, 'confirmed');
+  assert.equal(raw.prepare("SELECT reconciled FROM matrix_value_receipts").get().reconciled, 1);
+  assert.equal(raw.prepare("SELECT activation_allowed FROM matrix_value_improvement_proposals").get().activation_allowed, 0);
+
+  const fourth = await runValueHunterCycle(env, {
+    trigger: 'integration-four', clock: () => new Date('2026-08-16T12:00:00.000Z'), providers
+  });
+  assert.equal(fourth.ok, true);
+  assert.equal(provider.calls, 1, 'completed collection must never be submitted twice');
+
   const secretResponse = await handleValueHunterRoute(new Request('https://matrixreprogrammed.com/api/ai-management/admin/value-hunter/claimants', {
     method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ claimant_id: 'unsafe', private_key: 'never-store-this' })
   }), env);
@@ -100,9 +149,11 @@ try {
   const statusResponse = await handleValueHunterRoute(new Request('https://matrixreprogrammed.com/api/ai-management/admin/value-hunter'), env);
   const status = await statusResponse.json();
   assert.equal(status.target.target_net_minor, 1000000);
+  assert.equal(status.target.received_net_minor, 125000);
+  assert.equal(status.target.remaining_net_minor, 875000);
   assert.equal(status.truthful_status, 'discovery-and-proof-operational-collection-adapter-required');
   assert.deepEqual(status.installed_collection_adapters, []);
-  console.log('Value Hunter Worker integration passed: official discovery, same-host boundary, D1 persistence, Matrix claimant/destination, adapter fail-closed, learning and truthful EUR 10,000 status.');
+  console.log('Value Hunter Worker integration passed: official discovery, same-host boundary, D1 persistence, Matrix claimant/destination, fail-closed readiness, durable collection, reconciliation, duplicate suppression, learning and truthful EUR 10,000 status.');
 } finally {
   globalThis.fetch = originalFetch;
   raw.close();

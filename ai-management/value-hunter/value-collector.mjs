@@ -7,7 +7,15 @@ function clean(value, maximum = 300) {
 
 export class ValueProviderRegistry {
   constructor(providers = []) {
-    this.providers = new Map(providers.map(provider => [provider.adapterId, provider]));
+    this.providers = new Map();
+    for (const provider of providers) {
+      const adapterId = clean(provider?.adapterId, 160);
+      if (!adapterId || typeof provider?.claim !== 'function') throw new Error('Value provider adapter is incomplete');
+      if (provider.idempotencyEnforced !== true) throw new Error(`Value provider adapter must enforce idempotency: ${adapterId}`);
+      if (provider.receiptSchemaVersion !== 'value-receipt-v1') throw new Error(`Value provider adapter receipt contract is unsupported: ${adapterId}`);
+      if (this.providers.has(adapterId)) throw new Error(`Duplicate value provider adapter: ${adapterId}`);
+      this.providers.set(adapterId, provider);
+    }
   }
   get(adapterId) { return this.providers.get(adapterId); }
   approvedAdapterIds() { return [...this.providers.keys()]; }
@@ -28,7 +36,8 @@ export async function collectProvenValue(input = {}, dependencies = {}) {
     return { ok: true, collected: false, state: evaluation.state, evaluation, transitions };
   }
   let state = initialState;
-  if (state !== 'READY_TO_CLAIM') state = addTransition(transitions, state, 'READY_TO_CLAIM', { evaluation: evaluation.reasons });
+  const resumableStates = new Set(['READY_TO_CLAIM', 'CLAIM_SUBMITTED', 'CLAIM_ACCEPTED', 'PAYMENT_PENDING', 'RECEIVED']);
+  if (!resumableStates.has(state)) state = addTransition(transitions, state, 'READY_TO_CLAIM', { evaluation: evaluation.reasons });
   const idempotencyKey = clean(input.idempotency_key, 200);
   if (!idempotencyKey) throw new Error('Collection requires an idempotency key');
   const existing = await dependencies.ledger?.get?.(idempotencyKey);
@@ -59,16 +68,21 @@ export async function collectProvenValue(input = {}, dependencies = {}) {
     return { ok: true, collected: false, state, evaluation, firewall, transitions };
   }
 
+  const reservation = await dependencies.ledger?.reserve?.(idempotencyKey, { state, intent: claimIntent });
+  if (reservation?.terminal === true) {
+    return { ok: true, collected: false, duplicate: true, state: reservation.state, receipt: reservation.receipt, evaluation, firewall, transitions };
+  }
+
   const claimReceipt = await provider.claim(claimIntent);
-  state = addTransition(transitions, state, 'CLAIM_SUBMITTED', { receipt_id: clean(claimReceipt?.receipt_id, 160) });
+  if (state === 'READY_TO_CLAIM') state = addTransition(transitions, state, 'CLAIM_SUBMITTED', { receipt_id: clean(claimReceipt?.receipt_id, 160) });
   if (!claimReceipt || !['accepted', 'pending', 'received'].includes(claimReceipt.status)) {
     state = addTransition(transitions, state, 'REJECTED', { provider_status: clean(claimReceipt?.status || 'invalid-receipt', 80) });
     return { ok: true, collected: false, state, evaluation, firewall, transitions };
   }
-  if (claimReceipt.status === 'accepted') state = addTransition(transitions, state, 'CLAIM_ACCEPTED', { receipt_id: claimReceipt.receipt_id });
-  if (claimReceipt.status === 'pending') state = addTransition(transitions, state, 'PAYMENT_PENDING', { receipt_id: claimReceipt.receipt_id });
+  if (claimReceipt.status === 'accepted' && state === 'CLAIM_SUBMITTED') state = addTransition(transitions, state, 'CLAIM_ACCEPTED', { receipt_id: claimReceipt.receipt_id });
+  if (claimReceipt.status === 'pending' && ['CLAIM_SUBMITTED', 'CLAIM_ACCEPTED'].includes(state)) state = addTransition(transitions, state, 'PAYMENT_PENDING', { receipt_id: claimReceipt.receipt_id });
   if (claimReceipt.status !== 'received') return { ok: true, collected: false, state, evaluation, firewall, claim_receipt: claimReceipt, transitions };
-  state = addTransition(transitions, state, 'RECEIVED', { receipt_id: claimReceipt.receipt_id, amount_minor: claimReceipt.amount_minor });
+  if (state !== 'RECEIVED') state = addTransition(transitions, state, 'RECEIVED', { receipt_id: claimReceipt.receipt_id, amount_minor: claimReceipt.amount_minor });
 
   let sweepReceipt = null;
   if (input.sweep_required === true) {
@@ -100,7 +114,11 @@ export async function collectProvenValue(input = {}, dependencies = {}) {
     idempotency_key: idempotencyKey, state, opportunity_id: input.opportunity_id,
     amount_minor: Number(claimReceipt.amount_minor || input.amount_minor || 0), fee_minor: Number(claimReceipt.fee_minor || input.fee_minor || 0),
     destination_id: input.destination?.destination_id, claim_receipt_id: claimReceipt.receipt_id,
-    sweep_receipt_id: sweepReceipt?.receipt_id || null
+    sweep_receipt_id: sweepReceipt?.receipt_id || null,
+    provider_receipt_reference: clean(claimReceipt.provider_receipt_reference || claimReceipt.receipt_id, 240),
+    confirmation_count: Math.max(0, Number(claimReceipt.confirmation_count || 0)),
+    reconciled: claimReceipt.reconciled === true,
+    received_at: clean(claimReceipt.received_at, 50) || new Date().toISOString()
   };
   await dependencies.ledger?.put?.(idempotencyKey, finalReceipt);
   return { ok: true, collected: true, state, evaluation, firewall, receipt: finalReceipt, transitions };

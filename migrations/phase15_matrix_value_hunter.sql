@@ -231,6 +231,29 @@ CREATE TABLE IF NOT EXISTS matrix_value_audit (
 CREATE INDEX IF NOT EXISTS idx_matrix_value_audit_opportunity
   ON matrix_value_audit(opportunity_id, created_at DESC);
 
+CREATE TABLE IF NOT EXISTS matrix_value_improvement_proposals (
+  proposal_id TEXT PRIMARY KEY,
+  source_id TEXT NOT NULL,
+  opportunity_id TEXT,
+  provider_adapter_id TEXT NOT NULL,
+  target_path TEXT NOT NULL,
+  official_host TEXT NOT NULL,
+  source_code TEXT NOT NULL,
+  source_sha256 TEXT NOT NULL UNIQUE,
+  state TEXT NOT NULL CHECK (state IN ('static-tested','sandbox-candidate','quarantined','exported-for-review')),
+  blockers_json TEXT NOT NULL DEFAULT '[]',
+  test_report_json TEXT NOT NULL DEFAULT '{}',
+  immutable_boundaries_json TEXT NOT NULL,
+  activation_allowed INTEGER NOT NULL DEFAULT 0 CHECK (activation_allowed = 0),
+  generated_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL,
+  FOREIGN KEY(source_id) REFERENCES matrix_value_sources(source_id),
+  FOREIGN KEY(opportunity_id) REFERENCES matrix_value_opportunities(opportunity_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_matrix_value_improvement_state
+  ON matrix_value_improvement_proposals(state, updated_at DESC);
+
 CREATE TABLE IF NOT EXISTS matrix_value_cycles (
   cycle_id TEXT PRIMARY KEY,
   trigger_name TEXT NOT NULL,

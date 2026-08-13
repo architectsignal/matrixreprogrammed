@@ -123,6 +123,7 @@ jobs:
           node scripts/living-matrix-acceptance-test.mjs
           node scripts/publish-investigation-matrix-events.test.mjs
           node scripts/value-hunter-golden-test.mjs
+          node scripts/value-code-improvement-test.mjs
           node scripts/phase15-value-hunter-contract-test.mjs
           node scripts/value-hunter-worker-integration-test.mjs
           node scripts/build-public-investigation-corpus.js

@@ -29,7 +29,12 @@ function opportunity(overrides = {}) {
 }
 
 class FixtureProvider {
-  constructor() { this.adapterId = 'fixture-lawful-collector'; this.calls = 0; }
+  constructor() {
+    this.adapterId = 'fixture-lawful-collector';
+    this.idempotencyEnforced = true;
+    this.receiptSchemaVersion = 'value-receipt-v1';
+    this.calls = 0;
+  }
   async claim(intent) {
     this.calls += 1;
     assert.equal(financialFirewallInternals.hasSecretMaterial(intent), false, 'provider intent must never contain private keys, seeds or secrets');
@@ -102,6 +107,39 @@ const duplicate = await collectProvenValue(opportunity(), dependencies);
 assert.equal(duplicate.duplicate, true);
 assert.equal(provider.calls, 2, 'the crypto claim is the only additional provider call; duplicate fiat collection must not call again');
 
+class PendingThenReceivedProvider {
+  constructor() {
+    this.adapterId = 'fixture-pending-collector';
+    this.idempotencyEnforced = true;
+    this.receiptSchemaVersion = 'value-receipt-v1';
+    this.calls = 0;
+  }
+  async claim(intent) {
+    this.calls += 1;
+    if (this.calls === 1) return { receipt_id: 'pending-receipt', status: 'pending', amount_minor: intent.amount_minor, fee_minor: 0 };
+    return { receipt_id: 'received-receipt', status: 'received', amount_minor: intent.amount_minor, fee_minor: 0, reconciled: true };
+  }
+}
+const pendingProvider = new PendingThenReceivedProvider();
+const pendingDependencies = {
+  mandate: DEFAULT_STANDING_MANDATE,
+  providers: new ValueProviderRegistry([pendingProvider]),
+  ledger: new MemoryLedger(),
+  approvedContracts: []
+};
+const pendingInput = opportunity({
+  opportunity_id: 'value-pending-1', idempotency_key: 'value-pending-1:claim',
+  provider: { adapter_id: 'fixture-pending-collector', automation_supported: true }
+});
+const pending = await collectProvenValue(pendingInput, pendingDependencies);
+assert.equal(pending.state, 'PAYMENT_PENDING');
+assert.deepEqual(pending.transitions.map(item => item.to), ['READY_TO_CLAIM', 'CLAIM_SUBMITTED', 'PAYMENT_PENDING']);
+const resumed = await collectProvenValue({ ...pendingInput, state: 'PAYMENT_PENDING' }, pendingDependencies);
+assert.equal(resumed.state, 'SWEPT_TO_APPROVED_DESTINATION');
+assert.deepEqual(resumed.transitions.map(item => item.to), ['RECEIVED', 'SWEPT_TO_APPROVED_DESTINATION']);
+assert.equal(resumed.receipt.reconciled, true);
+assert.equal(pendingProvider.calls, 2, 'pending claims must resume with the same provider-enforced idempotency key');
+
 const unsafeIntent = validateFinancialIntent({
   intent_type: 'SWEEP_RECEIVED_ASSET', provider_adapter_id: 'fixture-lawful-collector', destination_id: 'approved-eur-account',
   asset: 'EUR', amount_minor: 100, maximum_fee_minor: 0, idempotency_key: 'unsafe', private_key: 'forbidden'
@@ -113,4 +151,4 @@ assert.ok(priorityScore({ amount_minor: 100000, fee_minor: 0, historical_success
   priorityScore({ amount_minor: 100000, fee_minor: 0, historical_success_rate: 0.1, expected_days: 90, evidence_strength: 0.2 }),
 'learning score must prioritize demonstrated net-value yield, evidence and speed');
 
-console.log('Value Hunter golden tests passed: automatic collection, jurisdiction, ownership, lawful appropriation, constrained crypto signing, fees, fraud, terms, idempotency and learned priority.');
+console.log('Value Hunter golden tests passed: automatic collection, pending-state resumption, jurisdiction, ownership, lawful appropriation, constrained crypto signing, fees, fraud, terms, idempotency and learned priority.');

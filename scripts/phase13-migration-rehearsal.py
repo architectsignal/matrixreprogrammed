@@ -42,6 +42,7 @@ REQUIRED = {
     "matrix_value_operations",
     "matrix_value_receipts",
     "matrix_value_audit",
+    "matrix_value_improvement_proposals",
     "matrix_value_cycles",
     "matrix_value_learning",
 }

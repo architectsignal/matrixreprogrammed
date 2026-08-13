@@ -37,6 +37,7 @@ on:
       - 'scripts/matrix-synergy-test.mjs'
       - 'scripts/living-matrix-acceptance-test.mjs'
       - 'scripts/value-hunter-golden-test.mjs'
+      - 'scripts/value-code-improvement-test.mjs'
       - 'scripts/value-hunter-worker-integration-test.mjs'
       - 'scripts/phase15-value-hunter-contract-test.mjs'
       - 'scripts/publish-investigation-matrix-events.mjs'
@@ -108,6 +109,7 @@ jobs:
           node --check ai-management/value-hunter/value-hunter-core.mjs
           node --check ai-management/value-hunter/financial-firewall.mjs
           node --check ai-management/value-hunter/value-collector.mjs
+          node --check ai-management/value-hunter/value-code-improvement.mjs
           node --check ai-management/provider-adapters/value/official-html-links.mjs
           node --check scripts/publish-investigation-matrix-events.mjs
           node --check member-dashboard-app.js
@@ -125,6 +127,7 @@ jobs:
           node scripts/matrix-synergy-test.mjs
           node scripts/living-matrix-acceptance-test.mjs
           node scripts/value-hunter-golden-test.mjs
+          node scripts/value-code-improvement-test.mjs
           node scripts/phase15-value-hunter-contract-test.mjs
           node scripts/value-hunter-worker-integration-test.mjs
           node scripts/publish-investigation-matrix-events.test.mjs
@@ -207,6 +210,7 @@ jobs:
               'matrix_value_operations',
               'matrix_value_receipts',
               'matrix_value_audit',
+              'matrix_value_improvement_proposals',
               'matrix_value_cycles',
               'matrix_value_learning',
           }

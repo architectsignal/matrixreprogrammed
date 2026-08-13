@@ -120,9 +120,11 @@ Architecture decision: `docs/adr/0006-living-matrix-event-projection-cycle.md`.
 | Standing mandate | Proven ordinary collections proceed without a second owner pause when current jurisdiction/provider rules permit automation and every firewall gate passes |
 | Human boundary | KYC, signatures, declarations, CAPTCHA, new accounts/contracts/terms, unknown destinations and policy-exceeding fees surface exact required actions |
 | Financial firewall | Only claim, owned-balance withdrawal and received-asset sweep intents; approved destinations/adapters/contracts, fee ceilings and idempotency; no keys, seeds, blind signing, arbitrary calls or unlimited approvals |
+| Durable collection | `READY_TO_CLAIM` work is leased from D1, reserved as an operation before submission, processed through a code-installed provider registry, transitioned with audit receipts, retried with bounded backoff and reconciled before it counts |
 | Learning | Category/asset priority changes only from measured reconciled receipts, success and evidence; it cannot weaken legal or security gates |
+| Code improvement | Official same-host adapter specifications can generate hashed, self-tested source candidates automatically; generated code is stored but never executed in the Worker, and financial guardrails plus deployment remain immutable |
 | Live truth | Discovery and proof are operational; collection remains `evidence_ready` until a provider-specific constrained financial adapter and claimant destinations are registered |
 | Integration | Value events use the shared Matrix event spine; scheduled Value Hunter runs after capacity growth and before the Living Matrix cycle |
-| Proof | Golden and SQLite/D1 integration cover automatic fiat/crypto collection, jurisdiction, ownership, lawful appropriation, fees, fraud, terms, idempotency, official-host discovery, persistence, learning and adapter fail-closed behavior |
+| Proof | Golden and SQLite/D1 integration cover automatic fiat/crypto collection, jurisdiction, ownership, lawful appropriation, fees, fraud, terms, operation reservation, reconciliation, duplicate suppression, official-host discovery, persistence, learning, code-candidate quarantine and adapter fail-closed behavior |
 
 Architecture decision: `docs/adr/0007-matrix-value-hunter-lawful-acquisition.md`.

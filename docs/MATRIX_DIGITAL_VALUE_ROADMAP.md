@@ -6,6 +6,12 @@ This is a future architecture record, not a token offer, investment recommendati
 
 `agent_commons_reputation_ledger` records non-transferable, non-redeemable reputation. It is not money, property, equity, debt, a stablecoin, an investment instrument or a claim on Matrix assets. Agent Commons has no wallet, private key, withdrawal, trading or payment capability.
 
+## Long-horizon resource economy research
+
+Matrix can be designed to measure and coordinate useful resources over time: public knowledge, verified work, compute capacity, energy and infrastructure availability, contributor time, funding, and real-world outcomes. That is a research and governance direction, not a present claim that Matrix runs an economy.
+
+Any future allocation system must publish its objectives and scarcity assumptions, preserve human rights and lawful ownership, expose conflicts and uncertainty, support appeal and correction, prevent capture by reputation or wealth, and remain reversible under independent oversight. Resource coordination does not authorize seizure, coercion, secret rationing, or unbounded agent control.
+
 ## Why the boundary exists
 
 A social-agent token is exposed to untrusted posts and model instructions. Giving it financial authority would turn prompt injection or credential theft into a loss-of-funds event. Financial capability therefore belongs in an isolated control plane with a smaller credential set and stronger governance.

@@ -1,8 +1,8 @@
 const ALLOWED_KINDS = new Set(['compute', 'inference_api', 'dataset', 'search_api', 'model', 'grant', 'credit_program']);
 const AUTO_ACTIVATABLE_KINDS = new Set(['dataset', 'search_api', 'model', 'inference_api']);
 const OWNER_ACTION_KINDS = new Set(['compute', 'grant', 'credit_program']);
-const AUTOMATION_ALLOWED = /\b(automation allowed|automated access permitted|api access permitted|programmatic access permitted|automated access must comply|endpoints do not currently require any authorization|no sign-up is required to use the rest api)\b/i;
-const ZERO_COST = /\b(free of charge|no charge|at no cost|free tier|zero cost|no payment method required|do not require any authentication or api keys|endpoints do not currently require any authorization|no sign-up is required to use the rest api)\b/i;
+const AUTOMATION_ALLOWED = /\b(automation allowed|automated access permitted|api access permitted|programmatic access permitted|automated access must comply|endpoints do not currently require any authorization|authentication and authorization are not required|no login or authentication key required|no sign-up is required to use the rest api)\b/i;
+const ZERO_COST = /\b(free of charge|no charge|at no cost|free tier|zero cost|no payment method required|do not require any authentication or api keys|endpoints do not currently require any authorization|authentication and authorization are not required|no login or authentication key required|no sign-up is required to use the rest api)\b/i;
 const BILLING_RISK = /\b(credit card required|payment method required|auto[- ]?upgrade|overage|metered billing|usage charges|paid after trial|paid fallback)\b/i;
 const OPPORTUNITY_HUNTER_USER_AGENT = 'MatrixReprogrammedOpportunityHunter/1.1 contact@matrixreprogrammed.com';
 
@@ -98,6 +98,9 @@ export async function evaluateOpportunity(input, { fetchImpl = globalThis.fetch,
   }
   if (opportunity.documentation_url && !sameHostFamily(opportunity.official_url, opportunity.documentation_url)) blockers.push('documentation-domain-mismatch');
   if (opportunity.terms_url && !sameHostFamily(opportunity.official_url, opportunity.terms_url)) blockers.push('terms-domain-mismatch');
+  const executionUrl = String(opportunity.metadata?.execution_url || '');
+  if (executionUrl && !isHttps(executionUrl)) blockers.push('execution-url-missing-or-not-https');
+  if (executionUrl && !sameHostFamily(opportunity.official_url, executionUrl)) blockers.push('execution-domain-mismatch');
   if (opportunity.payment_method_required) blockers.push('payment-method-required');
   if (!opportunity.zero_cost_verified) blockers.push('zero-cost-not-verified');
   if (!opportunity.quota_verified) blockers.push('quota-not-verified');

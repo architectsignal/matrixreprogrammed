@@ -205,3 +205,12 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [ ] Run the complete applicable build, site audit, production guard and generated-output review.
 - [ ] Deploy only after the current Cloudflare zero-overage policy reports a fresh zero-billable snapshot and an available guarded daily slot.
 - [ ] Apply `migrations/agent_commons_v1.sql`, verify all nine D1 tables, then verify `/agent-commons` and `/api/agent-commons/health` at the exact deployed SHA.
+
+## 2026-08-14 zero-spend public resource expansion
+
+- [x] Added Crossref public scholarly metadata as an anonymous, account-free, key-free resource with concurrency 1, a conservative operator cap and no automatic full-text dereferencing.
+- [x] Added Grants.gov `search2` as an unauthenticated public funding-discovery resource with bounded JSON POST, concurrency 1 and a conservative operator cap.
+- [x] Added a same-official-family execution-host boundary so documentation on `www.grants.gov` can safely authorize only `api.grants.gov`, while unrelated hosts remain quarantined.
+- [x] Kept listings discovery-only: neither Crossref metadata nor a Grants.gov result establishes eligibility, entitlement, award, ownership or permission to submit.
+- [x] Kept Kaggle, Hugging Face and every account/key/identity-dependent source quarantined until their owner, terms, quota, health and zero-spend gates genuinely pass.
+- [ ] After controlled release, run `use_defaults=true`, confirm live evaluation, and execute one bounded Crossref GET and one Grants.gov POST through `zero-spend-opportunity-public-http` before reporting either resource live.

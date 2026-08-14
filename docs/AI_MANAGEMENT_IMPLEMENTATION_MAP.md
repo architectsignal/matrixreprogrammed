@@ -179,3 +179,15 @@ Architecture decision: `docs/adr/0009-constitutional-matrix-operating-system.md`
 | Future finance | Separate capital-mandate and digital-value roadmap; forum tokens permanently excluded from financial authority |
 
 Architecture decision: `docs/adr/0010-matrix-agent-commons.md`. Future financial boundary: `docs/MATRIX_DIGITAL_VALUE_ROADMAP.md`.
+
+## Crossref and Grants.gov zero-spend resources (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Crossref | Anonymous public metadata only; concurrency 1, conservative daily operator cap, provenance retained, no automatic full-text dereferencing |
+| Grants.gov | Public `search2` JSON POST only; no login/key, concurrency 1, conservative daily operator cap, discovery is not eligibility or an award |
+| Host validation | Optional execution URL must be HTTPS, credential-free and in the same official host family; only its exact hostname is allowlisted |
+| Runtime | Both use the tested `zero-spend-opportunity-public-http` adapter with public-only data, bounded payloads, no credentials, no paid fallback and provider backoff |
+| Release | Defaults are candidates until live documentation, terms and service probes pass; production admission and execution must be verified after the guarded deploy |
+
+Architecture decision: `docs/adr/0011-crossref-grants-gov-zero-spend-resources.md`.

@@ -38,6 +38,38 @@ const DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS = Object.freeze([
     }
   },
   {
+    opportunity_id: 'official-crossref-public-rest-api',
+    kind: 'dataset', provider_name: 'Crossref', service_name: 'Crossref public scholarly metadata REST API',
+    official_url: 'https://api.crossref.org/', documentation_url: 'https://www.crossref.org/documentation/retrieve-metadata/rest-api/access-and-authentication/',
+    terms_url: 'https://www.crossref.org/documentation/retrieve-metadata/rest-api/', privacy_url: 'https://www.crossref.org/operations-and-sustainability/privacy/',
+    authentication_type: 'none', account_required: false, identity_verification_required: false, payment_method_required: false,
+    automation_permission: 'allowed', commercial_use: 'allowed', zero_cost_verified: true, quota_verified: true,
+    free_quota: 100, free_quota_unit: 'operator-capped requests/day below the official public-pool rate',
+    supported_capabilities: ['public_data', 'scholarly_metadata', 'funding_metadata', 'retraction_metadata'],
+    metadata: {
+      discovery_scope: 'official-source-daily-revalidation', quota_evidence_terms: ['public', 'rate limit', 'concurrency limit'],
+      supported_job_types: ['public-data.fetch'], adapter_id: 'zero-spend-opportunity-public-http', adapter_version: '1.0.0',
+      maximum_payload: 4194304, concurrency_limit: 1,
+      licence: 'Open Crossref metadata only. Do not dereference full-text links automatically; publisher content can have separate access and copyright terms.'
+    }
+  },
+  {
+    opportunity_id: 'official-grants-gov-search2-api',
+    kind: 'search_api', provider_name: 'Grants.gov', service_name: 'Grants.gov public funding opportunity search API',
+    official_url: 'https://www.grants.gov/api/api-guide', documentation_url: 'https://www.grants.gov/api/common/search2',
+    terms_url: 'https://www.grants.gov/api/api-guide', privacy_url: 'https://www.grants.gov/privacy-policy',
+    authentication_type: 'none', account_required: false, identity_verification_required: false, payment_method_required: false,
+    automation_permission: 'allowed', commercial_use: 'allowed', zero_cost_verified: true, quota_verified: true,
+    free_quota: 50, free_quota_unit: 'operator-capped requests/day; provider numeric quota not published',
+    supported_capabilities: ['public_data', 'funding_opportunities', 'grants'],
+    metadata: {
+      discovery_scope: 'official-source-daily-revalidation', execution_url: 'https://api.grants.gov/v1/api/search2', allowed_methods: ['POST'],
+      supported_job_types: ['public-data.fetch'], adapter_id: 'zero-spend-opportunity-public-http', adapter_version: '1.0.0',
+      maximum_payload: 4194304, concurrency_limit: 1,
+      licence: 'Official U.S. federal opportunity discovery only. A listing is not eligibility, entitlement, an award, or permission to submit automatically.'
+    }
+  },
+  {
     opportunity_id: 'official-kaggle-notebooks-free-gpu',
     kind: 'compute', provider_name: 'Kaggle', service_name: 'Kaggle Notebooks free GPU',
     official_url: 'https://www.kaggle.com/', documentation_url: 'https://www.kaggle.com/docs/efficient-gpu-usage',
@@ -79,12 +111,24 @@ function safeId(value) {
   return String(value || 'opportunity').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 100) || 'opportunity';
 }
 
+function executionHost(item) {
+  try {
+    const official = new URL(String(item?.official_url || ''));
+    const execution = new URL(String(item?.metadata?.execution_url || item?.official_url || ''));
+    const officialFamily = official.hostname.toLowerCase().split('.').slice(-2).join('.');
+    const executionFamily = execution.hostname.toLowerCase().split('.').slice(-2).join('.');
+    if (official.protocol !== 'https:' || execution.protocol !== 'https:' || !officialFamily || officialFamily !== executionFamily) return '';
+    if (execution.username || execution.password) return '';
+    return execution.hostname.toLowerCase();
+  } catch { return ''; }
+}
+
 function productionPublicAdapterReady(item) {
   const jobs = Array.isArray(item?.metadata?.supported_job_types) ? item.metadata.supported_job_types : [];
   return ['dataset', 'search_api'].includes(item?.kind) &&
     item?.metadata?.adapter_id === 'zero-spend-opportunity-public-http' &&
     item?.metadata?.adapter_version === '1.0.0' &&
-    jobs.length === 1 && jobs[0] === 'public-data.fetch' &&
+    jobs.length === 1 && jobs[0] === 'public-data.fetch' && Boolean(executionHost(item)) &&
     item?.supported_capabilities?.includes('public_data');
 }
 
@@ -175,12 +219,13 @@ function resourceFromEvaluation(evaluation, now) {
     adapter_version: item.metadata?.adapter_version || null,
     enabled: adapterReady,
     manual_approval_required: false,
-    allowed_hosts: [new URL(item.official_url).hostname],
+    allowed_hosts: [executionHost(item)],
     metadata: {
       opportunity_id: item.opportunity_id,
       approval_state: evaluation.approval_state,
       confidence: evaluation.confidence,
       auto_discovered: true,
+      execution_url: item.metadata?.execution_url || item.official_url,
       activation_blocked_until_adapter_ready: !adapterReady
     },
     notes: adapterReady
@@ -305,6 +350,6 @@ export async function runScheduledOpportunityHunter(env) {
 }
 
 export const opportunityHunterWorkerInternals = {
-  DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS, productionPublicAdapterReady, resourceFromEvaluation, persistReport,
+  DEFAULT_OFFICIAL_OPPORTUNITY_SEEDS, executionHost, productionPublicAdapterReady, resourceFromEvaluation, persistReport,
   configuredOpportunities, requestedOpportunities, schemaReady
 };

@@ -1,4 +1,5 @@
 import crypto from 'node:crypto';
+import { leasePressureEnvelope } from './local-resource-pressure.mjs';
 
 function assertConfig(config = {}) {
   if (!config.siteUrl) throw new Error('siteUrl is required');
@@ -15,8 +16,10 @@ async function requestJson(url, options = {}, fetchImpl = fetch) {
   return data;
 }
 
-export async function leaseNextJob(config, { fetchImpl = fetch } = {}) {
+export async function leaseNextJob(config, { fetchImpl = fetch, resourcePressure = null } = {}) {
   assertConfig(config);
+  const body = { node_id: config.nodeId };
+  if (resourcePressure) body.resource_pressure = leasePressureEnvelope(resourcePressure);
   const response = await fetchImpl(`${config.siteUrl.replace(/\/+$/, '')}/api/ai-management/admin/local-jobs/lease`, {
     method: 'POST',
     headers: {
@@ -24,7 +27,7 @@ export async function leaseNextJob(config, { fetchImpl = fetch } = {}) {
       'x-admin-token': config.adminToken,
       'user-agent': 'matrix-local-agent/0.2.0'
     },
-    body: JSON.stringify({ node_id: config.nodeId }),
+    body: JSON.stringify(body),
     signal: AbortSignal.timeout(15000)
   });
   const text = await response.text();

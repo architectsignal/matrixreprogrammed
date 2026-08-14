@@ -21,6 +21,8 @@ The Host remains useful in local-only mode when the owner token is absent: hardw
 
 Daily idle-time benchmarks execute representative classification, bounded reasoning, structured extraction, and synthesis probes against every detected loopback model. Only scores, latency, success state, and output hashes are persisted. Those measured outcomes update the resource scores sent on the next registration and therefore change the next routing decision.
 
+The Host protects the owner's computer by pausing new local leases when free memory falls below 4,096 MB or 25% (whichever reserves more memory). Benchmarks require a further 1,024 MB reserve. Configure these conservative defaults with `MATRIX_LOCAL_MIN_FREE_MEMORY_MB`, `MATRIX_LOCAL_MIN_FREE_MEMORY_PERCENT`, `MATRIX_LOCAL_BENCHMARK_RESERVE_MB`, and `MATRIX_LOCAL_BUSY_BACKOFF_SECONDS`. While constrained, the Host remains online and registered, reports only allowlisted pressure telemetry, and asks the control plane to prefer already-approved public-only zero-spend compute; it never enables a provider or paid fallback by itself.
+
 Auto-start is opt-in. On Windows, enable it only after the owner token has been stored in the owner account environment:
 
 ```powershell

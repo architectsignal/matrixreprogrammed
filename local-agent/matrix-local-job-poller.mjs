@@ -3,6 +3,7 @@ import crypto from 'node:crypto';
 import os from 'node:os';
 import { pathToFileURL } from 'node:url';
 import { executeJob } from './matrix-local-agent.mjs';
+import { evaluateLocalResourcePressure, leasePressureEnvelope } from './local-resource-pressure.mjs';
 
 function env(name, fallback = '') {
   return String(process.env[name] ?? fallback).trim();
@@ -18,6 +19,9 @@ const config = {
   adminToken: env('MATRIX_AI_MANAGEMENT_ADMIN_TOKEN'),
   pollIntervalMs: integer('MATRIX_LOCAL_JOB_POLL_SECONDS', 5, 2, 300) * 1000,
   idleBackoffMs: integer('MATRIX_LOCAL_JOB_IDLE_SECONDS', 10, 2, 600) * 1000,
+  busyBackoffMs: integer('MATRIX_LOCAL_BUSY_BACKOFF_SECONDS', 60, 5, 1800) * 1000,
+  minimumFreeMemoryMb: integer('MATRIX_LOCAL_MIN_FREE_MEMORY_MB', 4096, 256, 1024 * 1024),
+  minimumFreeMemoryPercent: integer('MATRIX_LOCAL_MIN_FREE_MEMORY_PERCENT', 25, 5, 90),
   requestTimeoutMs: integer('MATRIX_LOCAL_JOB_REQUEST_TIMEOUT_SECONDS', 30, 5, 300) * 1000
 };
 
@@ -42,7 +46,7 @@ function headers() {
     'content-type': 'application/json',
     'x-admin-token': config.adminToken,
     authorization: `Bearer ${config.adminToken}`,
-    'user-agent': 'matrix-local-job-poller/0.1.0'
+    'user-agent': 'matrix-local-job-poller/0.2.0'
   };
 }
 
@@ -61,8 +65,11 @@ async function post(path, body) {
   return { status: response.status, data };
 }
 
-async function lease() {
-  return post('/api/ai-management/admin/local-jobs/lease', { node_id: nodeId() });
+async function lease(resourcePressure) {
+  return post('/api/ai-management/admin/local-jobs/lease', {
+    node_id: nodeId(),
+    resource_pressure: leasePressureEnvelope(resourcePressure)
+  });
 }
 
 async function complete(leaseToken, job, completion) {
@@ -114,7 +121,7 @@ function wait(ms) {
 async function main() {
   assertConfiguration();
   const id = nodeId();
-  console.log(`Matrix outbound local-job poller 0.1.0 online as ${id}`);
+  console.log(`Matrix outbound local-job poller 0.2.0 online as ${id}`);
   console.log(`Polling ${config.siteUrl}; zero-spend and no-external-network completion boundaries enforced.`);
 
   let stopping = false;
@@ -127,7 +134,16 @@ async function main() {
 
   while (!stopping) {
     try {
-      const response = await lease();
+      const resourcePressure = evaluateLocalResourcePressure({
+        minimumFreeMemoryMb: config.minimumFreeMemoryMb,
+        minimumFreeMemoryPercent: config.minimumFreeMemoryPercent
+      });
+      if (!resourcePressure.can_accept_local_jobs) {
+        console.log(`[${new Date().toISOString()}] local work deferred: ${resourcePressure.reasons.join(',') || 'resource pressure'}; external zero-spend compute preferred.`);
+        await wait(config.busyBackoffMs);
+        continue;
+      }
+      const response = await lease(resourcePressure);
       if (response.status === 204 || !response.data?.job) {
         await wait(config.idleBackoffMs);
         continue;

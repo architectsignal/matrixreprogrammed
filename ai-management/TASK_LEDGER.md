@@ -231,3 +231,16 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [ ] Refresh the Cloudflare policy and GitHub usage variables only after the new billing period exposes a current zero-billable snapshot; do not bypass the production, billing or daily-slot guards.
 - [ ] Publish the reviewed source commits, merge through the protected PR chain and deploy the exact merged SHA only after every controlled-release gate passes.
 - [ ] After release, apply the pending schemas and verify Agent Commons, Ask Matrix, SEC/Crossref/Grants.gov public-only execution, evolution and owner-only health endpoints before enabling any additional resource.
+
+## 2026-08-14 owner-computer load protection and external-compute routing
+
+- [x] Diagnosed the local slowdown as memory pressure and paging from CPU-only LM Studio model servers that Matrix had not discovered or used; closed the model servers and their respawning LM Studio auto-loader while preserving the Matrix Host and supervisor.
+- [x] Added a live free-memory pressure probe with conservative 4,096 MB / 25% floors, a separate benchmark reserve and bounded busy backoff.
+- [x] Made the persistent Host and standalone poller defer new leases under pressure while remaining online, connected, outbound-only and zero-spend locked.
+- [x] Added allowlisted pressure telemetry to registration and lease requests without exposing prompts, credentials, process arguments or arbitrary host state.
+- [x] Made the Worker refuse a pressure-deferred lease and exclude memory-constrained nodes from benchmark creation, capacity totals and new assignments.
+- [x] Extended the Capability Director so verified system-memory pressure can prefer bounded public-only remote jobs, while no job is offloaded unless a current approved zero-spend compute resource passes every existing billing, quota, expiry and terms gate.
+- [x] Fixed the operating-system evolution-window test to use the cycle's injected clock instead of the wall clock, eliminating a time-of-day-dependent safety-gate failure.
+- [x] Passed local Host, pressure, control-plane, capability routing, Worker/D1 capacity, Matrix operating-system and production queue regression suites.
+- [ ] Merge and install this Host revision before claiming the pressure guard itself is active in the currently running original worktree.
+- [ ] Register and real-workload benchmark at least one lawful zero-spend remote compute resource before reporting external execution capacity as usable; paid fallback remains impossible.

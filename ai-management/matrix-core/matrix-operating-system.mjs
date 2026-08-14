@@ -25,7 +25,7 @@ function stable(value) {
 }
 function slug(value, maximum = 80) { return text(value, maximum).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'mission'; }
 
-export function computeCapabilityMetrics(components = [], history = []) {
+export function computeCapabilityMetrics(components = [], history = [], { now = Date.now() } = {}) {
   const normalized = (Array.isArray(components) ? components : []).map(item => {
     const state = TRUTHFUL_COMPONENT_STATES.includes(item.state) ? item.state : 'BROKEN';
     const raw = Math.max(0, finite(item.capacityUnits, 1));
@@ -38,7 +38,8 @@ export function computeCapabilityMetrics(components = [], history = []) {
   const capabilityIndex = rawPower > 0 ? round(100 * effectivePower / rawPower, 2) : 0;
   const sorted = [...(Array.isArray(history) ? history : [])].sort((a, b) => Date.parse(b.recordedAt || b.recorded_at || 0) - Date.parse(a.recordedAt || a.recorded_at || 0));
   const windowValue = hours => {
-    const limit = Date.now() - hours * 60 * 60 * 1000;
+    const referenceTime = typeof now === 'string' ? Date.parse(now) : now instanceof Date ? now.getTime() : Number(now);
+    const limit = (Number.isFinite(referenceTime) ? referenceTime : Date.now()) - hours * 60 * 60 * 1000;
     const record = sorted.find(item => Date.parse(item.recordedAt || item.recorded_at || 0) <= limit);
     return record ? finite(record.effectivePower ?? record.effective_power) : effectivePower;
   };

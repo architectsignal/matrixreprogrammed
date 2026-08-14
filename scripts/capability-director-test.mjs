@@ -78,6 +78,25 @@ assert.equal(lowPressure.local_pressure.level, 'low');
 assert.equal(lowPressure.remote_preferred, false);
 assert.equal(lowPressure.queued_jobs.length, 0);
 
+const constrainedSystemMemory = director.plan({
+  siteReport: { scanned_pages: 120, total_issues: 100, issue_counts: {} },
+  localRuntime: {
+    hardware: {
+      total_gpu_memory_mb: 24576,
+      free_gpu_memory_mb: 20000,
+      total_memory_mb: 16384,
+      free_memory_mb: 1800,
+      resource_pressure: { can_accept_local_jobs: false }
+    },
+    resources: []
+  },
+  computeResources: [computeResource]
+});
+assert.equal(constrainedSystemMemory.local_pressure.level, 'high');
+assert.ok(constrainedSystemMemory.local_pressure.reasons.includes('local-host-deferred-for-memory-pressure'));
+assert.equal(constrainedSystemMemory.remote_preferred, true);
+assert.equal(constrainedSystemMemory.queued_jobs.length, 1);
+
 const providerCandidate = candidateFromComputeProvider({
   provider_id: 'owner-donated-gpu',
   provider_name: 'Owner Donated GPU',

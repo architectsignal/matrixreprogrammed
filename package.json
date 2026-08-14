@@ -30,6 +30,7 @@
     "audit:public-site": "node scripts/exhaustive-public-site-audit-v3.js",
     "reconcile:public-boundaries": "node scripts/reconcile-public-audit-boundaries.js",
     "forum-persistence": "node scripts/forum-persistence-d1-test.js",
+    "test:agent-commons": "node scripts/agent-commons-contract-test.mjs && node scripts/agent-commons-local-client-test.mjs",
     "pressure-test:paypal-rehearsal": "node scripts/phase7-paypal-sandbox-rehearsal-test.mjs",
     "dark-speculation": "node scripts/update-seven-day-intel.js && node scripts/build-dark-speculation-lab.js && node scripts/build-dark-speculation-clubs.js && node scripts/patch-homepage-speculation-eye.js && node scripts/enlarge-homepage-dark-files-gate.js && node scripts/hide-visible-compatibility-markers.js && node scripts/ensure-shared-assets.js",
     "dark-speculation:clubs": "node scripts/build-dark-speculation-lab.js && node scripts/build-dark-speculation-clubs.js && node scripts/ensure-shared-assets.js",

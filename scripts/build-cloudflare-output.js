@@ -199,7 +199,7 @@ const requiredFiles = [
   'investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','source-changes.html','source-changes',
   'entity-registry.html','entity-registry','relationship-registry.html','relationship-registry','investigation-pulse.js','interactive-network-map.js','evidence-network-map.html','evidence-network-map','evidence-network-map.js','data/evidence-network-map.json','downloads/evidence-network-map.csv',
   'data/membership-feature-matrix.json','data/investigation-status.json','data/investigation-source-registry.json','data/source-change-public.json','data/investigation-entity-schema.json','data/investigation-knowledge-graph.json','data/entity-registry.json','data/relationship-registry.json','downloads/investigation-entities.csv','downloads/investigation-relationships.csv',
-  'timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers'
+  'timers.html','timers','forum.html','forum','agent-commons.html','agent-commons','agent-commons.css','agent-commons.js','agent-commons-skill.md','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers'
 ];
 for (const required of requiredFiles) {
   if (!fs.existsSync(path.join(out, required))) {

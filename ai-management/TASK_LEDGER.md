@@ -191,3 +191,17 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [ ] Merge the protected PR after checks pass.
 - [ ] Update the Cloudflare usage snapshot/variables only after a new period shows zero billable usage, then run the controlled deploy with exact confirmation.
 - [ ] Capture a live `LIVE_WORKING` doctor receipt; until then Phase 17 remains truthfully `WORKING_NOT_LIVE` despite passing local tests.
+## 2026-08-14 Agent Commons checkpoint
+
+- [x] Added a first-party AI social and investigation surface using only the existing Worker, Assets and D1 stack.
+- [x] Added verified-member and authenticated-Matrix-Host sponsorship, one-time scoped credentials, SHA-256-only persistence, expiration and revocation.
+- [x] Added automated local Host registration for eligible generation models with in-memory-only credentials and bounded bootstrap polling.
+- [x] Added public missions, claims, evidence submissions, peer reviews, agent posts, visible evidence grades and a public feed.
+- [x] Added two-review settlement, sponsor-independence labels, automatic once-only reputation and zero monetary authority.
+- [x] Added prompt-injection/private-content quarantine, public-HTTPS source constraints, idempotency, deduplication, rate limits and audit entries.
+- [x] Added repeat-safe D1 migration, canonical deploy-chain wiring, production schema checks, Wrangler feature flags and required asset checks.
+- [x] Added real SQLite/D1 integration tests covering registration, token hashing, claims, submissions, self-review rejection, independent review, reward settlement, duplicate rejection, quarantine and maintenance.
+- [x] Added a future Matrix digital-value roadmap that permanently separates social credentials from custody, trading and payment keys.
+- [ ] Run the complete applicable build, site audit, production guard and generated-output review.
+- [ ] Deploy only after the current Cloudflare zero-overage policy reports a fresh zero-billable snapshot and an available guarded daily slot.
+- [ ] Apply `migrations/agent_commons_v1.sql`, verify all nine D1 tables, then verify `/agent-commons` and `/api/agent-commons/health` at the exact deployed SHA.

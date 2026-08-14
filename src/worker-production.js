@@ -21,6 +21,10 @@ import {
   handlePublicInvestigationRoute,
   isPublicInvestigationRoute
 } from './worker-public-investigation.js';
+import agentCommonsWorker, {
+  isAgentCommonsRoute,
+  runAgentCommonsMaintenance
+} from './worker-agent-commons.js';
 import {
   enforceProtectedAssetAccess,
   protectedAssetTier
@@ -59,11 +63,6 @@ const authRoutes = new Set([
 ]);
 
 const publicStaticAssetRoutes = new Map([
-  ['/follow-the-money', '/follow-the-money.html'],
-  ['/making-money', '/making-money.html'],
-  ['/card-artwork-batches', '/card-artwork-batches.html'],
-  ['/subject-briefs', '/subject-briefs.html'],
-  ['/entity-timelines', '/entity-timelines.html'],
   ['/behind-the-curtain-access', '/behind-the-curtain-access.html'],
   ['/behind-the-curtain-access.html', '/behind-the-curtain-access.html'],
   ['/behind-the-curtain-capstone', '/behind-the-curtain-capstone.html'],
@@ -105,6 +104,8 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
               ? 'Cloudflare D1 MEMBERS_DB effective entitlements'
               : subsystem === 'ai-management'
                 ? 'Cloudflare D1 MEMBERS_DB AI resource registry and audit tables'
+                : subsystem === 'agent-commons'
+                  ? 'Cloudflare D1 MEMBERS_DB Agent Commons identity, investigation and audit tables'
               : 'Cloudflare D1 MEMBERS_DB.forum_posts';
   const error = subsystem === 'email'
     ? 'Email lifecycle storage is unavailable. No legacy success response was accepted.'
@@ -112,6 +113,8 @@ function unavailable(reason, detail = '', subsystem = 'forum') {
       ? 'Member authentication or entitlement storage is unavailable. No legacy success response was accepted.'
       : subsystem === 'ai-management'
         ? 'AI resource management is unavailable. No external provider fallback was attempted.'
+      : subsystem === 'agent-commons'
+        ? 'Agent Commons is unavailable. No legacy, in-memory or external social-network fallback was attempted.'
       : subsystem === 'paypal'
         ? 'PayPal billing storage is unavailable. No legacy or unverified payment response was accepted.'
         : subsystem === 'paypal-bootstrap'
@@ -279,6 +282,14 @@ async function validateAiManagementResponse(response) {
   return response;
 }
 
+async function validateAgentCommonsResponse(response) {
+  const origin = response.headers.get('x-matrix-origin');
+  if (origin !== 'cloudflare-worker-agent-commons') {
+    return unavailable('non-authoritative-agent-commons-response-blocked', `Origin was ${origin || 'missing'}`, 'agent-commons');
+  }
+  return response;
+}
+
 async function validateConsequenceTrackerResponse(response) {
   const origin = response.headers.get('x-matrix-origin');
   if (origin !== 'cloudflare-worker-consequence-tracker') {
@@ -332,6 +343,15 @@ export default {
 
     if (isPublicInvestigationRoute(path)) {
       return handlePublicInvestigationRoute(request, env);
+    }
+
+    if (isAgentCommonsRoute(path)) {
+      if (!hasD1(env)) return unavailable('members-db-binding-unavailable', '', 'agent-commons');
+      try {
+        return validateAgentCommonsResponse(await agentCommonsWorker.fetch(request, env, ctx));
+      } catch (error) {
+        return unavailable('agent-commons-worker-exception', error?.message || error, 'agent-commons');
+      }
     }
 
     if ((request.method === 'GET' || request.method === 'HEAD') && publicStaticAssetRoutes.has(path)) {
@@ -484,7 +504,8 @@ export default {
     await Promise.all([
       emailWorker.scheduled(event, env, ctx),
       bootstrapWorker.scheduled(event, env, ctx),
-      rehearsalWorker.scheduled(event, env, ctx)
+      rehearsalWorker.scheduled(event, env, ctx),
+      runAgentCommonsMaintenance(env)
     ]);
   }
 };

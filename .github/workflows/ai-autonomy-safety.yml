@@ -14,6 +14,7 @@ on:
       - 'src/worker-ai-management.js'
       - 'src/worker-local-job-api.js'
       - 'src/worker-public-investigation.js'
+      - 'src/worker-agent-commons.js'
       - 'src/public-investigation-contract.js'
       - 'src/worker-production-autonomy.js'
       - 'src/worker-production.js'
@@ -46,6 +47,11 @@ on:
       - 'scripts/public-investigation-test.mjs'
       - 'scripts/official-fresh-source-director-test.mjs'
       - 'scripts/fresh-public-investigation-worker-integration-test.mjs'
+      - 'migrations/agent_commons_v1.sql'
+      - 'scripts/build-public-investigation-corpus.js'
+      - 'scripts/public-investigation-test.mjs'
+      - 'scripts/agent-commons-contract-test.mjs'
+      - 'scripts/agent-commons-local-client-test.mjs'
       - 'scripts/matrix-synergy-test.mjs'
       - 'scripts/living-matrix-acceptance-test.mjs'
       - 'scripts/value-hunter-golden-test.mjs'
@@ -123,6 +129,7 @@ jobs:
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
           node --check src/worker-public-investigation.js
+          node --check src/worker-agent-commons.js
           node --check src/public-investigation-contract.js
           node --check ai-management/public-investigation/official-fresh-source-director.mjs
           node --check src/worker-production-autonomy.js
@@ -189,6 +196,8 @@ jobs:
           node scripts/public-investigation-test.mjs
           node scripts/official-fresh-source-director-test.mjs
           node scripts/fresh-public-investigation-worker-integration-test.mjs
+          node scripts/agent-commons-contract-test.mjs
+          node scripts/agent-commons-local-client-test.mjs
           python3 scripts/phase13-migration-rehearsal.py
 
       - name: Run owner-local execution tests
@@ -224,6 +233,7 @@ jobs:
               'migrations/phase19_matrix_capital_challenge.sql',
               'migrations/phase20_bounty_completion_engine.sql',
               'migrations/phase21_fresh_investigation_proof.sql',
+              'migrations/agent_commons_v1.sql',
           ]
           for pass_number in (1, 2):
               for migration in migrations:
@@ -248,6 +258,15 @@ jobs:
               'matrix_public_source_adapters',
               'matrix_public_source_retrievals',
               'matrix_public_investigation_proofs',
+              'agent_commons_agents',
+              'agent_commons_credentials',
+              'agent_commons_investigations',
+              'agent_commons_claims',
+              'agent_commons_submissions',
+              'agent_commons_reviews',
+              'agent_commons_posts',
+              'agent_commons_reputation_ledger',
+              'agent_commons_audit',
               'ai_opportunities',
               'ai_opportunity_hunter_runs',
               'ai_compute_provider_candidates',
@@ -456,6 +475,9 @@ jobs:
           grep -F 'MATRIX_BOUNTY_AUTO_CLAIM_ENABLED = "false"' wrangler.toml
           grep -F 'MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED = "false"' wrangler.toml
           grep -F 'MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED = "false"' wrangler.toml
+          grep -F 'MATRIX_AGENT_COMMONS_ENABLED = "true"' wrangler.toml
+          grep -F 'MATRIX_AGENT_COMMONS_AUTOMATION_ENABLED = "true"' wrangler.toml
+          grep -F 'MATRIX_AGENT_COMMONS_MONETARY_REWARDS_ENABLED = "false"' wrangler.toml
           grep -F 'ZERO_SPEND_INVARIANT_VIOLATION' ai-management/policy-engine/zero-spend-invariant.mjs
           ! grep -E 'prompt:[[:space:]]*body\.prompt|messages:[[:space:]]*body\.messages' src/worker-ai-management.js
           ! grep -E 'shell\.exec|child_process|exec\(' src/worker-local-job-api.js
@@ -479,6 +501,7 @@ jobs:
           grep -F 'migrations/phase19_matrix_capital_challenge.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase20_bounty_completion_engine.sql' .github/workflows/deploy.yml
           grep -F 'migrations/phase21_fresh_investigation_proof.sql' .github/workflows/deploy.yml
+          grep -F 'migrations/agent_commons_v1.sql' .github/workflows/deploy.yml
           grep -F "'ai_local_jobs','ai_local_job_receipts'" .github/workflows/deploy.yml
           grep -F "'ai_opportunities','ai_opportunity_hunter_runs'" .github/workflows/deploy.yml
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .github/workflows/deploy.yml

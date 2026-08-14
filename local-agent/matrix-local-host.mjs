@@ -10,6 +10,7 @@ import { executeJob } from './matrix-local-agent.mjs';
 import { applyBenchmarkScores, benchmarkLocalRuntime } from './local-benchmark.mjs';
 import { callHarvesterControlPlane } from './permissionless-harvester-cli.mjs';
 import { callMatrixControlPlane } from './matrix-operations-cli.mjs';
+import { pollAgentCommons, synchronizeAgentCommons } from './agent-commons-client.mjs';
 
 const VERSION = '1.0.0';
 
@@ -47,7 +48,9 @@ export function hostConfig() {
     benchmarkMs: integer('MATRIX_LOCAL_BENCHMARK_HOURS', 24, 1, 168) * 60 * 60 * 1000,
     benchmarkEnabled: env('MATRIX_LOCAL_BENCHMARK_ENABLED', 'true').toLowerCase() === 'true',
     harvesterEnabled: env('MATRIX_PERMISSIONLESS_VALUE_ENABLED', 'false').toLowerCase() === 'true',
-    matrixOperationsEnabled: env('MATRIX_OPERATING_SYSTEM_ENABLED', 'true').toLowerCase() === 'true'
+    matrixOperationsEnabled: env('MATRIX_OPERATING_SYSTEM_ENABLED', 'true').toLowerCase() === 'true',
+    agentCommonsEnabled: env('MATRIX_AGENT_COMMONS_HOST_ENABLED', 'true').toLowerCase() === 'true',
+    agentCommonsPollMs: integer('MATRIX_AGENT_COMMONS_POLL_SECONDS', 60, 30, 900) * 1000
   };
 }
 
@@ -112,12 +115,15 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
     registration: { configured: Boolean(config.adminToken), last_ok_at: null, last_error: null },
     benchmark: { enabled: config.benchmarkEnabled, last_completed_at: null, measured_models: 0 },
     harvester: { enabled: config.harvesterEnabled, startup_attempted: false, last_result: null },
-    matrix_operations: { enabled: config.matrixOperationsEnabled, startup_attempted: false, last_result: null }
+    matrix_operations: { enabled: config.matrixOperationsEnabled, startup_attempted: false, last_result: null },
+    agent_commons: { enabled: config.agentCommonsEnabled, connected_agents: 0, investigations_available: 0, reviews_available: 0, last_ok_at: null, last_error: null }
   };
   let runtime = null;
   let nextDiscovery = 0;
   let nextPoll = 0;
   let nextBenchmark = 0;
+  let nextAgentCommonsPoll = 0;
+  const agentCommonsCredentials = new Map();
   const latestBenchmarkFile = path.join(config.stateDir, 'benchmarks', 'latest.json');
   const previousBenchmark = await readJson(latestBenchmarkFile);
   if (previousBenchmark?.completed_at) {
@@ -181,10 +187,27 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
         const registered = await registerRuntime(config, runtime, { fetchImpl });
         if (!registered.skipped) status.registration.last_ok_at = clock().toISOString();
         status.registration.last_error = registered.skipped ? registered.reason : null;
+        const commons = await synchronizeAgentCommons(config, runtime, agentCommonsCredentials, { fetchImpl, clock });
+        status.agent_commons.connected_agents = commons.connected || 0;
+        status.agent_commons.last_error = commons.errors?.join('; ') || (commons.skipped ? commons.reason : null);
       } catch (error) {
         status.registration.last_error = String(error?.message || error).slice(0, 500);
       }
       nextDiscovery = now + config.discoveryMs;
+    }
+
+    if (config.agentCommonsEnabled && agentCommonsCredentials.size && now >= nextAgentCommonsPoll) {
+      try {
+        const commons = await pollAgentCommons(config, agentCommonsCredentials, { fetchImpl });
+        status.agent_commons.connected_agents = commons.agents;
+        status.agent_commons.investigations_available = commons.investigationsAvailable;
+        status.agent_commons.reviews_available = commons.reviewsAvailable;
+        status.agent_commons.last_ok_at = commons.ok ? clock().toISOString() : status.agent_commons.last_ok_at;
+        status.agent_commons.last_error = commons.ok ? null : commons.snapshots.filter(item => !item.ok).map(item => item.error).join('; ').slice(0, 500);
+      } catch (error) {
+        status.agent_commons.last_error = String(error?.message || error).slice(0, 500);
+      }
+      nextAgentCommonsPoll = now + config.agentCommonsPollMs;
     }
 
     if (config.adminToken && now >= nextPoll) {

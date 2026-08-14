@@ -6,8 +6,8 @@ const root = process.cwd();
 const out = path.join(root, '_site');
 const allowedExt = new Set(['.html','.css','.js','.json','.xml','.txt','.md','.pdf','.png','.jpg','.jpeg','.webp','.svg','.ico','.gif','.mp4','.webm','.woff','.woff2','.csv','.wasm','.pf_fragment','.pf_index','.pf_meta','.pf_filter','.wacz']);
 const allowedRootFiles = new Set(['_headers','robots.txt','llms.txt','sitemap.xml','site-graph.json','claim-taxonomy.json','crawler-map.json','search-index.json','sigil.png','matrix.js','styles.css','fixes.css']);
-const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site','evidence-archive','source-snapshots','browsertrix-output','tools','templates']);
-const blockedFiles = new Set(['_redirects','package.json','package-lock.json','bun.lock','netlify.toml','wrangler.jsonc','CLOUDFLARE_PAGES_SETUP.md','source-snapshot-index.json','source-change-ledger.json','source-change-monitor-report.json','source-change-preservation-hardening-report.json','source-change-preservation-test.json','source-change-preservation-hardening-test.json','search-v3-build-report.json','search-v3-runtime-report.json','search-v3-quality-test.json','evidence-network-map-build.json','evidence-network-map-wiring.json','public-network-map-test.json','osint-worker-patch-report.json','osint-tools-test.json','research-tools-ui-patch.json','market-activity-test.json','phase6-data-integration.json','phase6-worker-patch.json','phase6-integration-report.json','sec-market-activity-collection-report.json','open-source-research-suite-test.json','open-source-research-wiring.json','pagefind-output-test.json','phase8-evidence-archive-build.json','phase8-evidence-archive-test.json','phase8-wiring.json','browsertrix-crawl-plan.json','public-data-lab-build.json','public-data-lab-test.json','public-data-lab-output-test.json']);
+const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site','evidence-archive','source-snapshots','browsertrix-output','tools','templates','.cloudflare','.generated','ai-management','automation','card-art-inbox','card-artwork-batches','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','recovery','report-manifests','runtime','src','tests','tmp']);
+const blockedFiles = new Set(['_redirects','package.json','package-lock.json','bun.lock','netlify.toml','wrangler.jsonc','AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','CLOUDFLARE_PAGES_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md','source-snapshot-index.json','source-change-ledger.json','source-change-monitor-report.json','source-change-preservation-hardening-report.json','source-change-preservation-test.json','source-change-preservation-hardening-test.json','search-v3-build-report.json','search-v3-runtime-report.json','search-v3-quality-test.json','evidence-network-map-build.json','evidence-network-map-wiring.json','public-network-map-test.json','osint-worker-patch-report.json','osint-tools-test.json','research-tools-ui-patch.json','market-activity-test.json','phase6-data-integration.json','phase6-worker-patch.json','phase6-integration-report.json','sec-market-activity-collection-report.json','open-source-research-suite-test.json','open-source-research-wiring.json','pagefind-output-test.json','phase8-evidence-archive-build.json','phase8-evidence-archive-test.json','phase8-wiring.json','browsertrix-crawl-plan.json','public-data-lab-build.json','public-data-lab-test.json','public-data-lab-output-test.json']);
 const maxAssetBytes = 25 * 1024 * 1024;
 
 function normalizeWorkerAuditMarkers() {
@@ -181,6 +181,13 @@ runRequired('Cytoscape network map test', 'scripts/cytoscape-network-map-test.js
 require('./patch-osint-tool-tiers.js');
 require('./patch-newsletter-consent.js');
 require('./patch-homepage-construction-banner.js');
+// Several legacy builders above can recreate author-facing strategy copy after
+// the early scrub. Re-run the public owners in fresh processes at the true
+// packaging boundary so source and deployable output share the same clean copy.
+runRequired('Final commercial strategy visibility scrub', 'scripts/hide-commercial-strategy-blocks.js');
+runRequired('Final public editorial hardening', 'scripts/final-public-editorial-hardening.js');
+runRequired('Final public route cleanup', 'scripts/final-public-route-cleanup.js');
+runRequired('Final public editorial audit repair', 'scripts/fix-public-editorial-audit-errors.js');
 
 rm(out);
 ensure(out);
@@ -217,6 +224,8 @@ if (fs.existsSync(privateArchivePath) && fs.statSync(privateArchivePath).isDirec
   process.exit(1);
 }
 const privatePaths = [
+  '.cloudflare','.generated','ai-management','automation','card-art-inbox','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','recovery','runtime','src','tests','tmp',
+  'AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md',
   'data/source-snapshots','data/source-snapshot-index.json','data/source-change-ledger.json',
   'downloads/source-change-monitor-report.json','downloads/source-change-preservation-hardening-report.json',
   'downloads/search-v3-build-report.json','downloads/search-v3-runtime-report.json','downloads/search-v3-quality-test.json',

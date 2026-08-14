@@ -68,6 +68,12 @@ if (exists('_site')) {
 ].forEach(need);
 
 if (exists('_site/_redirects')) fail('_site/_redirects must not be deployed with Worker assets');
+for (const relative of [
+  '.cloudflare','.generated','ai-management','automation','card-art-inbox','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','recovery','runtime','src','tests','tmp',
+  'AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md'
+]) {
+  if (exists(`_site/${relative}`)) fail(`_site/${relative} is an internal build artifact and must not be deployed`);
+}
 
 for (const marker of [
   "import forumWorker from './worker-forum-persistence.js'",

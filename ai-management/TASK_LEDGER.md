@@ -214,3 +214,20 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Kept listings discovery-only: neither Crossref metadata nor a Grants.gov result establishes eligibility, entitlement, award, ownership or permission to submit.
 - [x] Kept Kaggle, Hugging Face and every account/key/identity-dependent source quarantined until their owner, terms, quota, health and zero-spend gates genuinely pass.
 - [ ] After controlled release, run `use_defaults=true`, confirm live evaluation, and execute one bounded Crossref GET and one Grants.gov POST through `zero-spend-opportunity-public-http` before reporting either resource live.
+
+## 2026-08-14 release-repeatability and resource-economy checkpoint
+
+- [x] Made membership, investigation search and optional Pagefind fallback reconciliation idempotent after legacy generators run.
+- [x] Removed raw structured-value placeholders from the 8,000-event evidence timeline, all 81 mission clocks and their public synthesis/download surfaces, with regression coverage.
+- [x] Excluded private source, migration, runtime, diagnostic and internal build directories from the Cloudflare static bundle and added route-level privacy assertions.
+- [x] Moved public editorial repair to the true packaging boundary and the public-copy audit boundary so neither a release build nor an audit can restore author-facing monetisation strategy text.
+- [x] Rebuilt the Cloudflare bundle: 116 required assets verified and protected private artifacts excluded.
+- [x] Passed Worker routes, site pressure, function harmony and two consecutive exhaustive public-audit cycles across 1,610 public pages with zero hard failures.
+- [x] Passed public copy/intake review across 3,008 files and 1,161 intake areas with zero high issues and zero weak intake areas; two low-priority review strings remain queued.
+- [x] Confirmed the local Host supervisor and Host are online, connected, registered, outbound-only and zero-spend locked with one completed benchmark job and no failed jobs.
+- [x] Preserved the long-horizon resource-economy constraints in `docs/MATRIX_DIGITAL_VALUE_ROADMAP.md`: verified needs/resources/contribution, human rights, lawful ownership, transparent scarcity assumptions, appeal, reversibility, anti-capture and no seizure, coercion, secret rationing or unbounded agent control.
+- [ ] Start an owner-controlled loopback model runtime before claiming local inference; current Host discovery reports zero healthy model servers and zero models.
+- [ ] Diagnose the Host `matrix_operations` startup receipt and public-site fetch failure before claiming the complete control loop is live.
+- [ ] Refresh the Cloudflare policy and GitHub usage variables only after the new billing period exposes a current zero-billable snapshot; do not bypass the production, billing or daily-slot guards.
+- [ ] Publish the reviewed source commits, merge through the protected PR chain and deploy the exact merged SHA only after every controlled-release gate passes.
+- [ ] After release, apply the pending schemas and verify Agent Commons, Ask Matrix, SEC/Crossref/Grants.gov public-only execution, evolution and owner-only health endpoints before enabling any additional resource.

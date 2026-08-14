@@ -50,6 +50,7 @@ check('Timeline has URL query filters', timelineJs.includes('URLSearchParams') &
 check('Timeline is mobile responsive', /@media\(max-width:850px\)/.test(timelinePage));
 check('Timeline events are an array', Array.isArray(timeline.events));
 check('Timeline contains dated events', (timeline.events || []).length > 0, String((timeline.events || []).length));
+check('Timeline contains no object-coercion placeholders', !read('data/evidence-timeline.json').includes('[object Object]'));
 for (const event of (timeline.events || []).slice(0, 500)) {
   check(`Timeline event ${event.id} has valid date`, /^\d{4}-\d{2}-\d{2}$/.test(event.date || ''));
   check(`Timeline event ${event.id} has evidence fields`, Boolean(event.evidenceGrade && event.factualStatus && event.established && event.notEstablished));

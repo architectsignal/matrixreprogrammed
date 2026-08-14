@@ -6,7 +6,24 @@ const root = process.cwd();
 const readJson = (file, fallback) => { try { return JSON.parse(fs.readFileSync(path.join(root, file), 'utf8')); } catch { return fallback; } };
 const writeJson = (file, value) => { const full = path.join(root, file); fs.mkdirSync(path.dirname(full), { recursive: true }); fs.writeFileSync(full, JSON.stringify(value, null, 2) + '\n'); };
 const hash = value => crypto.createHash('sha256').update(String(value)).digest('hex').slice(0, 18);
-const clean = value => String(value || '').replace(/\s+/g, ' ').trim();
+function scalarText(value, depth = 0) {
+  if (value == null || depth > 3) return '';
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value);
+  if (Array.isArray(value)) return value.map(item => scalarText(item, depth + 1)).filter(Boolean).join('; ');
+  if (typeof value !== 'object') return '';
+  const preferred = ['text', 'summary', 'description', 'label', 'title', 'name', 'value', 'url', 'route', 'href', 'instructions', 'status', 'confidence'];
+  const parts = preferred.map(key => scalarText(value[key], depth + 1)).filter(Boolean);
+  if (parts.length) return [...new Set(parts)].join(' — ');
+  return Object.values(value)
+    .filter(item => item == null || ['string', 'number', 'boolean'].includes(typeof item))
+    .map(item => scalarText(item, depth + 1))
+    .filter(Boolean)
+    .join(' — ');
+}
+const clean = value => scalarText(value)
+  .replace(/\[object Object\](?:\s*[,;]\s*)?/gi, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
 const dateOnly = value => { const match = String(value || '').match(/\d{4}-\d{2}-\d{2}/); return match ? match[0] : ''; };
 const arrayFrom = (payload, keys) => Array.isArray(payload) ? payload : (keys.map(key => payload?.[key]).find(Array.isArray) || []);
 

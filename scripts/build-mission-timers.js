@@ -16,8 +16,23 @@ fs.mkdirSync(downloadsDir, { recursive: true });
 function readJson(file, fallback = {}) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); } catch { return fallback; }
 }
+function scalarText(value, depth = 0) {
+  if (value == null || depth > 3) return '';
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return String(value);
+  if (Array.isArray(value)) return value.map(item => scalarText(item, depth + 1)).filter(Boolean).join('; ');
+  if (typeof value !== 'object') return '';
+  const preferred = ['text', 'summary', 'description', 'label', 'title', 'name', 'value', 'status', 'confidence', 'risk', 'url', 'route', 'href'];
+  const parts = preferred.map(key => scalarText(value[key], depth + 1)).filter(Boolean);
+  if (parts.length) return [...new Set(parts)].join(' — ');
+  return Object.values(value)
+    .filter(item => item == null || ['string', 'number', 'boolean'].includes(typeof item))
+    .map(item => scalarText(item, depth + 1))
+    .filter(Boolean)
+    .join(' — ');
+}
 function clean(value, max = 2000) {
-  return String(value ?? '')
+  return scalarText(value)
+    .replace(/\[object Object\](?:\s*[,;]\s*)?/gi, ' ')
     .replace(/<[^>]*>/g, ' ')
     .replace(/[\u0000-\u001f\u007f]/g, ' ')
     .replace(/\s+/g, ' ')
@@ -33,7 +48,10 @@ function unique(values) {
   return [...new Set((values || []).map(value => clean(value, 500)).filter(Boolean))];
 }
 function route(value) {
-  const result = clean(value, 500);
+  const candidate = value && typeof value === 'object' && !Array.isArray(value)
+    ? value.url || value.route || value.href || ''
+    : value;
+  const result = clean(candidate, 500);
   return result && !/^javascript:/i.test(result) ? result : '';
 }
 function scoreBand(score, standard) {

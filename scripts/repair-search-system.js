@@ -155,6 +155,10 @@ if (handoffSyntax.status !== 0) {
 }
 runRequired('verified-investigation-search', 'scripts/search-investigation-smoke-test.js');
 runRequired('prepared-search-v3-deploy-size', 'scripts/repair-search-v3-deploy-size.js');
+// Search repair is the final owner in several build/audit paths. Reapply the
+// optional local Pagefind fallback and open-source reader/timeline discovery
+// after every search generator so a later repair cannot silently remove them.
+runRequired('wired-open-source-search-fallback', 'scripts/patch-pagefind-fallback.js');
 fs.mkdirSync(fp('downloads'), { recursive: true });
 write('downloads/search-system-repair-report.json', JSON.stringify({ ok: true, generatedAt: new Date().toISOString(), repairs, mode: 'Search V2 plus investigation evidence runtime repair', version: MINIMAL_REPAIR_VERSION }, null, 2));
 console.log('Search system repair complete: ' + repairs.length + ' repair(s). Search V2 investigation runtime guard passed.');

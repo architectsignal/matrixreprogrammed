@@ -244,3 +244,15 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Passed local Host, pressure, control-plane, capability routing, Worker/D1 capacity, Matrix operating-system and production queue regression suites.
 - [ ] Merge and install this Host revision before claiming the pressure guard itself is active in the currently running original worktree.
 - [ ] Register and real-workload benchmark at least one lawful zero-spend remote compute resource before reporting external execution capacity as usable; paid fallback remains impossible.
+
+## 2026-08-14 global navigation, login and subscription access
+
+- [x] Audited the public HTML estate and confirmed that many legacy builders publish inconsistent local navigation.
+- [x] Confirmed the canonical passwordless Login route is backed by the existing Cloudflare Worker, D1 membership schema and transactional-email boundary.
+- [x] Confirmed the Subscribe target is the existing explicit-consent newsletter form and persistence runtime.
+- [x] Added a small same-origin Explore, Login and Subscribe dock without replacing or mass-editing existing page navigation.
+- [x] Made the final Cloudflare packager inject the dock into every copied HTML page and extensionless route variant idempotently.
+- [x] Added fail-closed output checks, keyboard/mobile/reduced-motion behavior and a zero-external-dependency contract test.
+- [x] Caught 10 member/forum output variants rewritten by late legacy repair scripts and added a final lifecycle reconciler that restores and re-audits all deployable documents.
+- [ ] Complete the guarded full build, responsive browser checks and site-wide route audit at the exact source SHA.
+- [ ] Merge and deploy only through the protected release chain after every existing production and zero-spend guard passes.

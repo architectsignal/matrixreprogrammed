@@ -1,0 +1,97 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+
+const require = createRequire(import.meta.url);
+const {
+  SCRIPT_MARKER,
+  STYLE_MARKER,
+  auditGlobalAccessDock,
+  injectGlobalAccessDock
+} = require('./global-access-dock-contract.cjs');
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const sample = '<!doctype html><html><head><title>Test</title></head><body><main>Page</main></body></html>';
+const injected = injectGlobalAccessDock(sample);
+const reinjected = injectGlobalAccessDock(injected);
+
+assert.equal(auditGlobalAccessDock(injected).ok, true, 'sample document must receive both assets');
+assert.equal(reinjected, injected, 'injection must be idempotent');
+assert.ok(injected.indexOf(STYLE_MARKER) < injected.indexOf('</head>'), 'stylesheet must be inside the head');
+assert.ok(injected.indexOf(SCRIPT_MARKER) < injected.indexOf('</body>'), 'script must be inside the body');
+
+const fragment = injectGlobalAccessDock('<main>Fragment</main>');
+assert.equal(auditGlobalAccessDock(fragment).ok, true, 'documents without closing tags must still receive the dock');
+
+const client = fs.readFileSync(path.join(root, 'matrix-access-dock.js'), 'utf8');
+const stylesheet = fs.readFileSync(path.join(root, 'matrix-access-dock.css'), 'utf8');
+const build = fs.readFileSync(path.join(root, 'scripts', 'build-cloudflare-output.js'), 'utf8');
+
+for (const route of [
+  '/start-here.html',
+  '/search.html',
+  '/daily-command-brief.html',
+  '/evidence-vault.html',
+  '/investigation-machine.html',
+  '/forum.html',
+  '/member-login.html',
+  '/newsletter.html#newsletter-form'
+]) {
+  assert.ok(client.includes(route), `quick access route missing: ${route}`);
+}
+
+assert.ok(!/https?:\/\//i.test(client), 'dock must not add an external navigation dependency');
+assert.ok(client.includes("event.key === 'Escape'"), 'drawer must support Escape');
+assert.ok(client.includes("aria-current"), 'current navigation state must be exposed accessibly');
+assert.ok(stylesheet.includes('@media (max-width: 480px)'), 'dock must include a narrow-screen layout');
+assert.ok(stylesheet.includes('@media (prefers-reduced-motion: reduce)'), 'dock must respect reduced motion');
+assert.ok(build.includes("require('./global-access-dock-contract.cjs')"), 'Cloudflare packaging must own the injection');
+assert.ok(build.includes("'matrix-access-dock.css'"), 'Cloudflare output must require the stylesheet');
+assert.ok(build.includes("'matrix-access-dock.js'"), 'Cloudflare output must require the client');
+const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
+assert.ok(packageJson.scripts.postbuild.includes('reconcile-global-access-dock.cjs'), 'postbuild must restore the dock after late generators');
+assert.ok(packageJson.scripts['postcloudflare-output'].includes('reconcile-global-access-dock.cjs'), 'Cloudflare lifecycle must restore the dock after late generators');
+assert.ok(packageJson.scripts['link-audit'].includes('reconcile-global-access-dock.cjs'), 'link audit must reconcile before scanning final output');
+
+let outputAudit = null;
+if (process.argv.includes('--site')) {
+  const site = path.join(root, '_site');
+  assert.ok(fs.existsSync(site), 'deployable _site output must exist for --site audit');
+  const documents = [];
+  const failures = [];
+
+  function walk(directory) {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const file = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        walk(file);
+        continue;
+      }
+      const extension = path.extname(entry.name).toLowerCase();
+      if (extension !== '.html' && extension !== '') continue;
+      const html = fs.readFileSync(file, 'utf8');
+      if (extension === '' && !/<(?:!doctype\s+html|html\b)/i.test(html.slice(0, 500))) continue;
+      documents.push(file);
+      const audit = auditGlobalAccessDock(html);
+      if (!audit.ok) failures.push({ file: path.relative(site, file), ...audit });
+    }
+  }
+
+  walk(site);
+  assert.ok(documents.length >= 3000, `expected both HTML and extensionless output routes; found ${documents.length}`);
+  assert.deepEqual(failures, [], `global access dock output failures: ${JSON.stringify(failures.slice(0, 10))}`);
+  outputAudit = { documents: documents.length, failures: failures.length };
+}
+
+console.log(JSON.stringify({
+  ok: true,
+  assets: 2,
+  primaryActions: ['explore', 'login', 'subscribe'],
+  navigationRoutes: 6,
+  zeroExternalDependencies: true,
+  packagingOwned: true,
+  lifecycleReconciled: true,
+  outputAudit
+}, null, 2));

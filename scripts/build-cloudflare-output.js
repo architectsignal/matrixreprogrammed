@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const { auditGlobalAccessDock, injectGlobalAccessDock } = require('./global-access-dock-contract.cjs');
 
 const root = process.cwd();
 const out = path.join(root, '_site');
@@ -9,6 +10,7 @@ const allowedRootFiles = new Set(['_headers','robots.txt','llms.txt','sitemap.xm
 const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site','evidence-archive','source-snapshots','browsertrix-output','tools','templates','.cloudflare','.generated','ai-management','automation','card-art-inbox','card-artwork-batches','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','recovery','report-manifests','runtime','src','tests','tmp']);
 const blockedFiles = new Set(['_redirects','package.json','package-lock.json','bun.lock','netlify.toml','wrangler.jsonc','AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','CLOUDFLARE_PAGES_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md','source-snapshot-index.json','source-change-ledger.json','source-change-monitor-report.json','source-change-preservation-hardening-report.json','source-change-preservation-test.json','source-change-preservation-hardening-test.json','search-v3-build-report.json','search-v3-runtime-report.json','search-v3-quality-test.json','evidence-network-map-build.json','evidence-network-map-wiring.json','public-network-map-test.json','osint-worker-patch-report.json','osint-tools-test.json','research-tools-ui-patch.json','market-activity-test.json','phase6-data-integration.json','phase6-worker-patch.json','phase6-integration-report.json','sec-market-activity-collection-report.json','open-source-research-suite-test.json','open-source-research-wiring.json','pagefind-output-test.json','phase8-evidence-archive-build.json','phase8-evidence-archive-test.json','phase8-wiring.json','browsertrix-crawl-plan.json','public-data-lab-build.json','public-data-lab-test.json','public-data-lab-output-test.json']);
 const maxAssetBytes = 25 * 1024 * 1024;
+const dockedOutputFiles = new Set();
 
 function normalizeWorkerAuditMarkers() {
   const file = path.join(root, 'src', 'worker.js');
@@ -101,7 +103,12 @@ function copyFile(src, dest, rel) {
     return false;
   }
   ensure(path.dirname(dest));
-  fs.copyFileSync(src, dest);
+  if (path.extname(src).toLowerCase() === '.html') {
+    fs.writeFileSync(dest, injectGlobalAccessDock(fs.readFileSync(src, 'utf8')));
+    dockedOutputFiles.add(path.resolve(dest));
+  } else {
+    fs.copyFileSync(src, dest);
+  }
   return true;
 }
 function copyHtmlRouteVariant(src, rel) {
@@ -197,6 +204,7 @@ ensureArchiveSearchMarker(path.join(out, 'search'));
 
 const requiredFiles = [
   'index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel',
+  'matrix-access-dock.css','matrix-access-dock.js','member-login.html','member-login','newsletter.html','newsletter',
   'research-tools.html','research-tools','research-tools.js','contact-the-machine.html','contact-the-machine','contact-the-machine.css','contact-the-machine.js','security-privacy.html','security-privacy','security-privacy.js','dark-web-safety.html','dark-web-safety','dark-web-safety.js','data/security-privacy-tools.json','data/dark-web-safety.json',
   'market-activity.html','market-activity','market-activity.js','market-watchlist.html','market-watchlist','market-watchlist.js','data/market-activity.json','downloads/market-activity.csv',
   'evidence-reader.html','evidence-reader','evidence-reader.js','data/evidence-reader-manifest.json','evidence-timeline.html','evidence-timeline','evidence-timeline.js','data/evidence-timeline.json',
@@ -222,6 +230,17 @@ const privateArchivePath = path.join(out, 'evidence-archive');
 if (fs.existsSync(privateArchivePath) && fs.statSync(privateArchivePath).isDirectory()) {
   console.error('Cloudflare output failed: private evidence-archive directory exposed.');
   process.exit(1);
+}
+if (dockedOutputFiles.size === 0) {
+  console.error('Cloudflare output failed: no HTML documents received the global access dock.');
+  process.exit(1);
+}
+for (const file of dockedOutputFiles) {
+  const audit = auditGlobalAccessDock(fs.readFileSync(file, 'utf8'));
+  if (!audit.ok) {
+    console.error(`Cloudflare output failed: global access dock invalid in ${path.relative(out, file)} (${audit.styleCount} styles, ${audit.scriptCount} scripts).`);
+    process.exit(1);
+  }
 }
 const artworkBatchRoute = path.join(out, 'card-artwork-batches');
 if (fs.existsSync(artworkBatchRoute) && fs.statSync(artworkBatchRoute).isDirectory()) {

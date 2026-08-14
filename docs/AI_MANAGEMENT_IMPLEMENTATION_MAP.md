@@ -35,6 +35,18 @@
 - Existing HTML sources are not automatically approved. JSON APIs and RSS/Atom feeds are eligible only when the source registry and adapter policy approve them.
 - Local model discovery, Resource Scout automation, worker-node enrolment, admin UI, and full migration of every direct provider call remain later phases.
 
+## Global public access navigation (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Build ownership | `scripts/build-cloudflare-output.js` injects the shared assets into every copied HTML document and its extensionless route variant; `scripts/reconcile-global-access-dock.cjs` reasserts them after legacy post-build repairs; canonical page sources and legacy page navigation are not mass-rewritten |
+| Public actions | Explore links only to existing public routes, Login uses the existing passwordless member entry point, and Subscribe targets the existing consent-backed newsletter form |
+| Runtime cost | Two cacheable same-origin static assets, no third-party dependency and no per-page authentication or analytics request |
+| Accessibility | Semantic quick-access navigation, keyboard focus, Escape dismissal, current-page state, narrow-screen layout, reduced-motion support and print exclusion |
+| Release guard | The packager and final npm lifecycle require both assets and fail if any deployable HTML document does not contain exactly one stylesheet and one script marker |
+
+Architecture decision: `docs/adr/0012-global-access-navigation-layer.md`.
+
 ## Known current risks
 
 - The repository has unrelated pending changes, including production-worker and cron edits.

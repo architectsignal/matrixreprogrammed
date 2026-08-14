@@ -254,5 +254,6 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Made the final Cloudflare packager inject the dock into every copied HTML page and extensionless route variant idempotently.
 - [x] Added fail-closed output checks, keyboard/mobile/reduced-motion behavior and a zero-external-dependency contract test.
 - [x] Caught 10 member/forum output variants rewritten by late legacy repair scripts and added a final lifecycle reconciler that restores and re-audits all deployable documents.
+- [x] Removed the stale route-alias expectation that required the deliberately excluded private artwork-batch namespace, while retaining its noindex canonical page and extensionless file alias.
 - [ ] Complete the guarded full build, responsive browser checks and site-wide route audit at the exact source SHA.
 - [ ] Merge and deploy only through the protected release chain after every existing production and zero-spend guard passes.

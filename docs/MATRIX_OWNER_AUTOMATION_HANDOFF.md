@@ -1,24 +1,30 @@
 # Matrix Owner Automation Handoff
 
-Verified on 13 August 2026. The immutable operating law is `CAUSE NO HARM OR LOSS.`
+Verified on 14 August 2026. The immutable operating law is `CAUSE NO HARM OR LOSS.`
 
 ## Current truth
 
-- The public site, search, evidence pages, passwordless login surface, investigation machine, public forum, newsletter, membership page, downloads and protected dashboard redirect are live and render correctly.
-- Ask Matrix is live with an evidence-only fallback. The fresh two-authority retrieval and new local-compute adapter are tested but are not in production until this branch is deployed.
-- Matrix Host is running locally, outbound-only and zero-spend. The real compute proof used `qwen/qwen3-4b` on CPU through LM Studio.
-- The Qwen 4B model passed 3 of 4 representative benchmark profiles and completed a real public-evidence rerank. The 14B model is automatically excluded on this 16 GB machine by the 50% memory-admission guard.
+- The current public site, search, evidence pages, passwordless login surface, investigation machine, public forum, newsletter, membership page, downloads and protected dashboard redirect are live. The new global Explore, Login and Subscribe dock is source-complete and tested but is not live until the guarded PR chain is merged and deployed.
+- Ask Matrix is live with an evidence-only fallback. Fresh two-authority retrieval, the governed Agent Commons, new resource adapters and the updated local-compute controls remain staged until this branch is deployed.
+- Matrix Host is online, connected, registered, heartbeat-fresh, outbound-only and zero-spend locked. It currently reports zero loaded models and zero healthy model servers, one completed job and zero failed jobs.
+- The Qwen 4B model previously passed 3 of 4 representative benchmark profiles and completed a real public-evidence rerank. Do not auto-load Qwen 14B on this 16 GB machine: it consumed about 6.9 GB itself and reduced free RAM to about 1 GB. The staged Host revision adds a 4,096 MB / 25% free-memory floor and defers work under pressure.
 - Value, bounty and capital-challenge code is receipt-only. No money has been received or reconciled. Current capital is EUR 0.
 - Automatic bounty claims, bounty submissions, security bounty execution, capital financial execution and permissionless crypto execution remain off.
-- Production release is blocked by the Cloudflare build-budget guard until the billing-period usage is verified at zero. Do not bypass the guard.
-- The completed implementation and its scoped CI repairs are published on PR #255 at `architectsignal/matrixreprogrammed`, branch `agent/living-matrix-core`. The pull request remains a draft; publication does not authorize merging or deployment.
+- The previous Cloudflare snapshot still records 5,470 billable Workers Build minutes and $27.34 for the completed period. A new-period dashboard reading must be copied into the GitHub release variables before release; do not reuse the old timestamp or bypass the guard.
+- PR #257 (`agent/matrix-integrated` into `agent/living-matrix-core`) contains the integrated navigation, Host-pressure, Agent Commons, resource and release-repeatability work. PR #255 (`agent/living-matrix-core` into `main`) is the parent production PR. Both remain drafts until review is complete.
 - The local supervisor and host are healthy, registered and heartbeat-fresh. `matrix-local matrix doctor` currently receives HTTP 404 because the Phase 17/18 Matrix-operations route is part of the unpublished Worker; it remains `WORKING_NOT_LIVE` until the guarded deployment completes.
 
 ## Owner actions in order
 
-### 0. Review the published pull request
+### 0. Review and merge the PR chain in order
 
-Review PR #255 and its required checks. The source is already published; Codex has not merged the pull request or deployed it. Merging, Cloudflare deployment, financial execution and bypassing any cost guard remain outside the publication approval.
+1. Review PR #257 and wait for every exact-head check to pass.
+2. Mark PR #257 ready and merge it into `agent/living-matrix-core`.
+3. Confirm PR #255 updates to contain the merged PR #257 commit.
+4. Review PR #255, mark it ready and merge it into `main` only when its checks pass.
+5. Do not deploy a branch SHA; the production workflow must target the exact reviewed `main` SHA.
+
+Codex has not merged either pull request or deployed this branch. Financial execution and bypassing any cost or safety guard remain prohibited.
 
 ### 1. Keep the local host running after Windows sign-in
 
@@ -60,24 +66,35 @@ npm.cmd run matrix-local -- matrix doctor
 
 Before the new Worker is deployed, the final `matrix doctor` command will truthfully return HTTP 404. The ordinary `matrix-local -- status` and `matrix-local -- doctor` commands remain the authoritative local-host checks during that interval.
 
-### 3. Release the completed branch when Cloudflare usage resets
+### 2A. Keep the 16 GB owner computer responsive
 
-In GitHub repository variables, verify and update all four values from the Cloudflare dashboard at the time of release:
+Keep LM Studio and Qwen unloaded during ordinary Host supervision. If a model was loaded for a bounded proof, stop it afterward:
+
+```powershell
+lms unload --all
+lms server stop
+```
+
+Do not configure Qwen 14B to auto-load or run as a login service on this computer. For a deliberate local proof, load only Qwen 4B with one parallel worker and a one-hour TTL, then unload it when the receipt is complete. After PR #257 is merged into the local Host checkout, restart the supervisor/Host so the staged memory-pressure guard becomes active.
+
+### 3. Record the new Cloudflare period and release only the reviewed `main` SHA
+
+The 15 July–14 August period is complete, but the repository still contains its old-period snapshot. Open the new Cloudflare billing period and update the GitHub repository variables from the visible dashboard at release time:
 
 ```text
 CLOUDFLARE_GIT_BUILDS_DISCONNECTED=true
 CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED=true
-CLOUDFLARE_BUILD_MINUTES_USED=0
+CLOUDFLARE_BUILD_MINUTES_USED=<new-period Workers Build minutes, expected 0>
 CLOUDFLARE_USAGE_CHECKED_AT_UTC=<current UTC timestamp>
 ```
 
-Then merge the reviewed pull request or run the controlled production workflow using the exact authorization phrase:
+Set `CLOUDFLARE_ZERO_BILLABLE_USAGE_CONFIRMED=true` only if the new period visibly shows zero billable usage. Then run the controlled production workflow from `main` using the exact authorization phrase:
 
 ```text
 DEPLOY MATRIX REPROGRAMMED
 ```
 
-Leave the billing-exception field blank. A non-zero build-minute reading is a stop condition.
+Leave the billing-exception field blank. Any current billable amount, stale timestamp, unreviewed SHA or unavailable daily release slot is a stop condition. Netlify is not part of this release path.
 
 ### 4. Configure a lawful first-receipt rail
 
@@ -114,6 +131,30 @@ A discovered bounty is not income. Only a provider-confirmed and reconciled payo
 
 The current permissionless harvester is simulation-only. There is no production-certified protocol adapter. Do not add wallet keys to source or browser storage. A future activation requires an owner-controlled execution wallet, managed signer reference, gas limits, chain/protocol allowlists, current simulation, idempotency and receipt reconciliation.
 
+### 7. Prove the public access paths after deployment
+
+1. Open the homepage and one nested dossier page on `matrixreprogrammed.com`.
+2. Confirm the small Explore, Login and Subscribe dock appears once on both pages.
+3. Open Explore and verify Start Here, Search, Today, Evidence, Investigations and Signal Board.
+4. Open Login, enter an owner-controlled test address and consume one real one-time link. Never paste the link or token into chat or logs.
+5. Open Subscribe, tick explicit consent, submit the test address and confirm the saved/verification response.
+6. Confirm the member record, consent event and delivery state through the protected administrator health surfaces.
+7. Record the exact deployed SHA and rollback target before calling this live.
+
+### 8. Activate external compute one resource at a time
+
+GitHub Actions is already the preferred zero-spend build/test lane. No external inference provider is currently admitted as live compute. For each candidate provider:
+
+1. Use only the official provider site and create an owner-controlled account.
+2. Reject any plan requiring a payment method, possible overage, automatic provider selection or paid fallback.
+3. Read and accept current automation, commercial-use, privacy and quota terms personally.
+4. Create the narrowest credential and store it only as a provider/Worker secret reference—not in GitHub source, D1, prompts or logs.
+5. Keep the provider quarantined until live health, terms, quota, expiry, data-policy and EUR 0 checks all pass.
+6. Run one harmless bounded probe, then one real public-only job.
+7. Admit it to the broker only after a zero-cost completion receipt is persisted and centrally verified.
+
+Kaggle, Hugging Face/PublicAI, Qwen generators and every account-dependent source remain disabled until this complete gate passes. Crossref and Grants.gov are public data resources, not external model compute.
+
 ## First receipt checklist
 
 Matrix may mark `FIRST_REAL_MATRIX_RECEIPT` only after all items exist:
@@ -143,12 +184,14 @@ npm.cmd run test:public-investigation
 npm.cmd run test:value-hunter
 ```
 
-For a fresh local compute receipt, load the admitted model in LM Studio and run:
+For a fresh local compute receipt only, load the admitted 4B model in LM Studio and run:
 
 ```powershell
 lms runtime select llama.cpp-win-x86_64-avx2 --latest
 lms load qwen/qwen3-4b --gpu off -c 4096 --parallel 1 --no-speculative-draft-mtp --ttl 3600 --yes
 npm.cmd run proof:local-compute
+lms unload --all
+lms server stop
 ```
 
 The proof is valid only when it reports real selected evidence, benchmark results, a validated workload, zero inference spend and receipt hashes.

@@ -10,7 +10,6 @@ const reportPath = path.join(root, 'downloads', 'public-route-alias-proof.json')
 const directoryConflicts = new Map([
   ['follow-the-money.html', 'follow-the-money'],
   ['making-money.html', 'making-money'],
-  ['card-artwork-batches.html', 'card-artwork-batches'],
   ['subject-briefs.html', 'subject-briefs'],
   ['entity-timelines.html', 'entity-timelines']
 ]);

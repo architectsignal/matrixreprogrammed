@@ -223,6 +223,11 @@ if (fs.existsSync(privateArchivePath) && fs.statSync(privateArchivePath).isDirec
   console.error('Cloudflare output failed: private evidence-archive directory exposed.');
   process.exit(1);
 }
+const artworkBatchRoute = path.join(out, 'card-artwork-batches');
+if (fs.existsSync(artworkBatchRoute) && fs.statSync(artworkBatchRoute).isDirectory()) {
+  console.error('Cloudflare output failed: private card-artwork-batches directory exposed.');
+  process.exit(1);
+}
 const privatePaths = [
   '.cloudflare','.generated','ai-management','automation','card-art-inbox','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','recovery','runtime','src','tests','tmp',
   'AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md',

@@ -203,3 +203,18 @@ Architecture decision: `docs/adr/0010-matrix-agent-commons.md`. Future financial
 | Release | Defaults are candidates until live documentation, terms and service probes pass; production admission and execution must be verified after the guarded deploy |
 
 Architecture decision: `docs/adr/0011-crossref-grants-gov-zero-spend-resources.md`.
+
+## Global access and live-route release hardening (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Navigation | A small same-origin Explore, Login and Subscribe dock is injected at the final packaging boundary without replacing legacy page navigation |
+| Authentication | Login links to the existing passwordless Worker/D1 flow; the dock never reads session state or credentials on page load |
+| Subscription | Subscribe links to the existing explicit-consent newsletter form; no subscription is claimed before server persistence confirms it |
+| Output integrity | Every deployable HTML and extensionless document must contain exactly one dock stylesheet and script; late generators are reconciled and re-audited |
+| Private namespace | Stale `_site/card-artwork-batches` directories are removed before the public noindex page receives its extensionless file alias |
+| Live verifier | Current homepage, search, download, map and opt-in contracts are asserted; the administrator deploy dashboard is healthy only as a gated HTTP 401 response |
+| Epstein alias | `/epstein` is served by the strict Worker public-static bridge and forced through `run_worker_first`; the excluded legacy redirect file is not trusted |
+| Release truth | Current production remains 43/44 until the guarded exact-SHA deploy makes `/epstein` live and the verifier passes all routes |
+
+Architecture decision: `docs/adr/0012-global-access-navigation-layer.md`.

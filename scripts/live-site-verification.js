@@ -8,17 +8,17 @@ const expectedSha = process.env.EXPECTED_BUILD_SHA || process.env.CF_PAGES_COMMI
 const allowChallenge = String(process.env.ALLOW_CLOUDFLARE_CHALLENGE_IN_CI || 'true').toLowerCase() !== 'false';
 const commonForbidden = ['preservedaftervisible-de-duplication', 'new-intelligence-toolspreserved', '€19/month', '€49/month'];
 const required = [
-  { path: '/', markers: ['FOLLOW THE FILES.', 'READ THE SIGNALS.'], forbidden: [...commonForbidden, 'rogue broadcast node inside the simulation'], maxCounts: [{ text: 'Open Source Trail', max: 1 }] },
+  { path: '/', markers: ['A PUBLIC MEMORY.'], mustInclude: ['POWER SHOULD HAVE'], forbidden: [...commonForbidden, 'rogue broadcast node inside the simulation'], maxCounts: [{ text: 'Open Source Trail', max: 1 }] },
   { path: '/start-here.html', markers: ['START HERE.', 'CHOOSE YOUR DOOR.'], forbidden: commonForbidden },
-  { path: '/deploy-status', markers: ['DEPLOY STATUS.'], requireOrigin: true },
+  { path: '/deploy-status', allowedStatuses: [401], markers: [], requireOrigin: true },
   { path: '/deploy-status.json', json: true, markers: ['aliases'], requireOrigin: true },
-  { path: '/search', markers: ['SEARCH THE SIGNAL.'] },
+  { path: '/search', markers: ['START WITH WHAT HAPPENED.'] },
   { path: '/search-index.json', json: true, markers: ['url'], forbidden: ['object-object'] },
   { path: '/live-intel.html', markers: ['LIVE INTEL'] },
   { path: '/books.html', markers: ['BOOK'] },
-  { path: '/download-center.html', markers: ['DOWNLOAD CENTER.'], mustInclude: ['downloads/forum-posts.json'], forbidden: [...commonForbidden, 'href=""', "href=''"] },
+  { path: '/download-center.html', markers: ['DOWNLOAD CENTER.'], mustInclude: ['downloads/dossier-pack-black-file-starter.pdf'], forbidden: [...commonForbidden, 'href=""', "href=''"] },
   { path: '/geographic-power-atlas.html', markers: ['GEOGRAPHIC POWER ATLAS.'], mustInclude: ['geographic-power-atlas.js'], forbidden: ['maplibre-gl@6.0.0-20', ...commonForbidden] },
-  { path: '/geographic-power-atlas.js', markers: ['mapModule.default || mapModule'], mustInclude: ['fetchAtlasData', 'loadMapLibraries', 'Interactive map unavailable'], forbidden: ['import * as maplibregl', 'maplibre-gl@6.0.0-20'] },
+  { path: '/geographic-power-atlas.js', markers: ['loadMapLibraries'], mustInclude: ['fetchAtlasData', 'Interactive map unavailable'], forbidden: ['import * as maplibregl', 'maplibre-gl@6.0.0-20'] },
   { path: '/data/geographic-power-atlas.json', json: true, markers: ['locations'] },
   { path: '/data/geographic-power-atlas-data.json', json: true, markers: ['FeatureCollection'] },
   { path: '/evidence-network-map.html', markers: ['PUBLIC EVIDENCE NETWORK.', 'EVIDENCE NETWORK MAP'], mustInclude: ['evidence-network-map.js'] },
@@ -49,7 +49,7 @@ const required = [
   { path: '/power-dossier-runtime.js', markers: ['DOSSIER TEMPORARILY UNAVAILABLE'], mustInclude: ["fetch('data/power-dossiers.json'"] },
   { path: '/data/power-dossiers.json', json: true, markers: ['elon-musk'] },
   { path: '/epstein', markers: ['THE EPSTEIN FILES COMMAND CENTER'] },
-  { path: '/optin-center', markers: ['Last 7 Days Intelligence Window'] },
+  { path: '/optin-center', markers: ['OPT-IN CENTER.'] },
   { path: '/source-cards.html', markers: ['SOURCE CARDS.'] },
   { path: '/trust-corrections.html', markers: ['Corrections'] }
 ];
@@ -63,7 +63,7 @@ async function check(item) {
   const timeout = setTimeout(() => controller.abort(), Number(process.env.LIVE_VERIFY_TIMEOUT_MS || 20000));
   let res;
   try {
-    res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/4.3', accept: item.json ? 'application/json,text/plain;q=0.8,*/*;q=0.5' : 'text/html,text/plain;q=0.8,*/*;q=0.5' }, redirect: 'follow', cache: 'no-store', signal: controller.signal });
+    res = await fetch(url, { headers: { 'User-Agent': 'MatrixReprogrammedLiveVerifier/4.4', accept: item.json ? 'application/json,text/plain;q=0.8,*/*;q=0.5' : 'text/html,text/plain;q=0.8,*/*;q=0.5' }, redirect: 'follow', cache: 'no-store', signal: controller.signal });
   } finally { clearTimeout(timeout); }
   const text = await res.text();
   const finalUrl = res.url || url;

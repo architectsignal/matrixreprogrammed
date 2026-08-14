@@ -5,6 +5,7 @@ Verified on 14 August 2026. The immutable operating law is `CAUSE NO HARM OR LOS
 ## Current truth
 
 - The current public site, search, evidence pages, passwordless login surface, investigation machine, public forum, newsletter, membership page, downloads and protected dashboard redirect are live. The new global Explore, Login and Subscribe dock is source-complete and tested but is not live until the guarded PR chain is merged and deployed.
+- The corrected live verifier currently passes 43 of 44 production routes at deployed SHA `246c4f6e0dbd52e87267b2bbf28fbb4626954def`. The sole failure is `/epstein` returning HTTP 404. PR #257 now moves that alias from the excluded legacy redirect file into the strict Worker route bridge; it cannot be called fixed live until the exact reviewed SHA is deployed and reverified.
 - Ask Matrix is live with an evidence-only fallback. Fresh two-authority retrieval, the governed Agent Commons, new resource adapters and the updated local-compute controls remain staged until this branch is deployed.
 - Matrix Host is online, connected, registered, heartbeat-fresh, outbound-only and zero-spend locked. It currently reports zero loaded models and zero healthy model servers, one completed job and zero failed jobs.
 - The Qwen 4B model previously passed 3 of 4 representative benchmark profiles and completed a real public-evidence rerank. Do not auto-load Qwen 14B on this 16 GB machine: it consumed about 6.9 GB itself and reduced free RAM to about 1 GB. The staged Host revision adds a 4,096 MB / 25% free-memory floor and defers work under pressure.
@@ -85,7 +86,7 @@ lms unload --all
 lms server stop
 ```
 
-Do not configure Qwen 14B to auto-load or run as a login service on this computer. For a deliberate local proof, load only Qwen 4B with one parallel worker and a one-hour TTL, then unload it when the receipt is complete. After PR #257 is merged into the local Host checkout, restart the supervisor/Host so the staged memory-pressure guard becomes active.
+Do not configure Qwen 14B to auto-load or run as a login service on this computer. On 14 August the LM Studio background service restarted Qwen3-14B with four parallel contexts after an earlier unload; it was stopped again and free memory recovered from 39.2% to 56.2%. In LM Studio, disable model auto-load/background service launch for Qwen3-14B, and disable LM Studio under Windows **Task Manager > Startup apps** if it keeps returning. For a deliberate local proof, load only Qwen 4B with one parallel worker and a one-hour TTL, then unload it when the receipt is complete. After PR #257 is merged into the local Host checkout, restart the supervisor/Host so the staged memory-pressure guard becomes active.
 
 ### 3. Record the new Cloudflare period and release only the reviewed `main` SHA
 
@@ -146,10 +147,12 @@ The current permissionless harvester is simulation-only. There is no production-
 1. Open the homepage and one nested dossier page on `matrixreprogrammed.com`.
 2. Confirm the small Explore, Login and Subscribe dock appears once on both pages.
 3. Open Explore and verify Start Here, Search, Today, Evidence, Investigations and Signal Board.
-4. Open Login, enter an owner-controlled test address and consume one real one-time link. Never paste the link or token into chat or logs.
-5. Open Subscribe, tick explicit consent, submit the test address and confirm the saved/verification response.
-6. Confirm the member record, consent event and delivery state through the protected administrator health surfaces.
-7. Record the exact deployed SHA and rollback target before calling this live.
+4. Open `/epstein` and confirm it returns the Epstein Files Command Center with HTTP 200 and the `cloudflare-worker-public-static-assets` origin header.
+5. Open Login, enter an owner-controlled test address and consume one real one-time link. Never paste the link or token into chat or logs.
+6. Open Subscribe, tick explicit consent, submit the test address and confirm the saved/verification response.
+7. Confirm the member record, consent event and delivery state through the protected administrator health surfaces.
+8. Run `npm.cmd run verify-live` and require all 44 routes plus the exact deployed SHA to pass.
+9. Record the exact deployed SHA and rollback target before calling this live.
 
 ### 8. Activate external compute one resource at a time
 

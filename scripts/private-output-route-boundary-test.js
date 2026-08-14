@@ -12,6 +12,8 @@ const aliasSource = fs.readFileSync(path.join(root, 'scripts', 'finalize-public-
 assert.ok(buildSource.includes("'card-artwork-batches'"), 'private artwork batch namespace must remain blocked from static output');
 assert.ok(buildSource.includes('private card-artwork-batches directory exposed'), 'packager must fail if the private namespace is copied');
 assert.ok(!aliasSource.includes("['card-artwork-batches.html', 'card-artwork-batches']"), 'alias finalizer must not require an excluded private namespace');
+assert.ok(aliasSource.includes("'card-artwork-batches.html'"), 'alias finalizer must identify the private output namespace collision');
+assert.ok(aliasSource.includes("repair: 'removed-private-output-directory'"), 'alias finalizer must remove stale private output before synchronizing the public route file');
 
 if (fs.existsSync(site)) {
   const canonical = path.join(site, 'card-artwork-batches.html');

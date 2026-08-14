@@ -255,5 +255,8 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Added fail-closed output checks, keyboard/mobile/reduced-motion behavior and a zero-external-dependency contract test.
 - [x] Caught 10 member/forum output variants rewritten by late legacy repair scripts and added a final lifecycle reconciler that restores and re-audits all deployable documents.
 - [x] Removed the stale route-alias expectation that required the deliberately excluded private artwork-batch namespace, while retaining its noindex canonical page and extensionless file alias.
-- [ ] Complete the guarded full build, responsive browser checks and site-wide route audit at the exact source SHA.
+- [x] Made the alias finalizer remove a stale private artwork-batch output directory before synchronizing the public extensionless route file, fixing the release-metadata clean-checkout failure without exposing private batch pages.
+- [x] Moved `/epstein` into the strict Worker static-asset bridge and `run_worker_first` configuration because the legacy redirect file is intentionally excluded from Worker assets.
+- [x] Reconciled the live verifier with the current homepage, protected deploy dashboard, search, download, map and opt-in contracts; current production now proves 43/44 routes with only the undeployed `/epstein` alias outstanding.
+- [x] Completed the guarded full build, responsive browser checks, 3,295-document dock audit, strict Worker route test, private-output test, site-function harmony test and production deploy guard.
 - [ ] Merge and deploy only through the protected release chain after every existing production and zero-spend guard passes.

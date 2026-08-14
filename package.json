@@ -30,6 +30,7 @@
     "test:global-access-dock": "node scripts/global-access-dock-test.mjs",
     "test:global-access-dock:site": "node scripts/global-access-dock-test.mjs --site",
     "test:private-output-route-boundary": "node scripts/private-output-route-boundary-test.js",
+    "test:live-site-verification-contract": "node scripts/live-site-verification-contract-test.js",
     "audit:public-site": "node scripts/exhaustive-public-site-audit-v3.js",
     "reconcile:public-boundaries": "node scripts/reconcile-public-audit-boundaries.js",
     "forum-persistence": "node scripts/forum-persistence-d1-test.js",

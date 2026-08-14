@@ -63,6 +63,12 @@ const authRoutes = new Set([
 ]);
 
 const publicStaticAssetRoutes = new Map([
+  ['/epstein', '/epstein-files.html'],
+  ['/follow-the-money', '/follow-the-money.html'],
+  ['/making-money', '/making-money.html'],
+  ['/card-artwork-batches', '/card-artwork-batches.html'],
+  ['/subject-briefs', '/subject-briefs.html'],
+  ['/entity-timelines', '/entity-timelines.html'],
   ['/behind-the-curtain-access', '/behind-the-curtain-access.html'],
   ['/behind-the-curtain-access.html', '/behind-the-curtain-access.html'],
   ['/behind-the-curtain-capstone', '/behind-the-curtain-capstone.html'],

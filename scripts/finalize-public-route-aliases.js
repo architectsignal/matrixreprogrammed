@@ -13,6 +13,9 @@ const directoryConflicts = new Map([
   ['subject-briefs.html', 'subject-briefs'],
   ['entity-timelines.html', 'entity-timelines']
 ]);
+const privateOutputDirectoryConflicts = new Set([
+  'card-artwork-batches.html'
+]);
 
 function slash(value) {
   return String(value || '').split(path.sep).join('/');
@@ -52,6 +55,7 @@ const report = {
   synchronizedAliases: 0,
   identicalAliases: 0,
   directoryConflicts: [],
+  privateOutputDirectoryRepairs: [],
   unexpectedDirectoryConflicts: [],
   mismatches: [],
   boundary: 'Every feature route remains public with an honest maturity label. Every deployable .html route then has a byte-identical extensionless file unless its extensionless name is a real namespace directory; approved namespace collisions are served by exact Worker aliases.'
@@ -86,15 +90,24 @@ if (!report.sitePresent) {
     const relativeAlias = slash(path.relative(site, aliasFile));
 
     if (fs.existsSync(aliasFile) && fs.statSync(aliasFile).isDirectory()) {
-      const expectedDirectory = directoryConflicts.get(relativeHtml);
-      const item = {
-        html: relativeHtml,
-        directory: relativeAlias,
-        approved: expectedDirectory === relativeAlias
-      };
-      report.directoryConflicts.push(item);
-      if (!item.approved) report.unexpectedDirectoryConflicts.push(item);
-      continue;
+      if (privateOutputDirectoryConflicts.has(relativeHtml)) {
+        fs.rmSync(aliasFile, { recursive: true, force: true });
+        report.privateOutputDirectoryRepairs.push({
+          html: relativeHtml,
+          directory: relativeAlias,
+          repair: 'removed-private-output-directory'
+        });
+      } else {
+        const expectedDirectory = directoryConflicts.get(relativeHtml);
+        const item = {
+          html: relativeHtml,
+          directory: relativeAlias,
+          approved: expectedDirectory === relativeAlias
+        };
+        report.directoryConflicts.push(item);
+        if (!item.approved) report.unexpectedDirectoryConflicts.push(item);
+        continue;
+      }
     }
 
     fs.mkdirSync(path.dirname(aliasFile), { recursive: true });

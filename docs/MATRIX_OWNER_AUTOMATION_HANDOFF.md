@@ -13,7 +13,7 @@ Verified on 14 August 2026. The immutable operating law is `CAUSE NO HARM OR LOS
 - The previous Cloudflare snapshot still records 5,470 billable Workers Build minutes and $27.34 for the completed period. A new-period dashboard reading must be copied into the GitHub release variables before release; do not reuse the old timestamp or bypass the guard.
 - PR #257 (`agent/matrix-integrated` into `agent/living-matrix-core`) contains the integrated navigation, Host-pressure, Agent Commons, resource and release-repeatability work. PR #255 (`agent/living-matrix-core` into `main`) is the parent production PR. Both remain drafts until review is complete.
 - GitHub contains the required `ADMIN_API_TOKEN` and `AI_MANAGEMENT_ADMIN_TOKEN` secret names. The running Host inherited a valid 64-character token, but the Windows current-user environment is empty; a future login/autostart cannot be trusted until step 2 is completed.
-- The local supervisor and host are healthy, registered and heartbeat-fresh. `matrix-local matrix doctor` currently receives HTTP 404 because the Phase 17/18 Matrix-operations route is part of the unpublished Worker; it remains `WORKING_NOT_LIVE` until the guarded deployment completes.
+- The local supervisor and Host are healthy, registered and heartbeat-fresh. Windows Task Scheduler autostart is not configured, the stored Matrix-operations startup receipt is false, and the latest `matrix-local matrix doctor` probe returned `fetch failed` because the new control route is not yet live; this remains `WORKING_NOT_LIVE` until guarded deployment and a fresh live receipt complete.
 
 ## Owner actions in order
 
@@ -65,7 +65,7 @@ npm.cmd run matrix-local -- start
 npm.cmd run matrix-local -- matrix doctor
 ```
 
-Before the new Worker is deployed, the final `matrix doctor` command will truthfully return HTTP 404. The ordinary `matrix-local -- status` and `matrix-local -- doctor` commands remain the authoritative local-host checks during that interval.
+Before the new Worker is deployed, the final `matrix doctor` command cannot provide live proof and may return HTTP 404 or a fetch failure. The ordinary `matrix-local -- status` and `matrix-local -- doctor` commands remain the authoritative local-host checks during that interval.
 
 To verify Windows persistence without exposing the value, open a new PowerShell window and run:
 

@@ -11,6 +11,8 @@ const site = path.join(root, '_site');
 const buildSource = fs.readFileSync(path.join(root, 'scripts', 'build-cloudflare-output.js'), 'utf8');
 const aliasSource = fs.readFileSync(path.join(root, 'scripts', 'finalize-public-route-aliases.js'), 'utf8');
 const repairSource = fs.readFileSync(path.join(root, 'scripts', 'private-output-directory-repair.js'), 'utf8');
+const routeMapSource = fs.readFileSync(path.join(root, 'scripts', 'build-cinematic-link-structure.js'), 'utf8');
+const artworkBatchSource = fs.readFileSync(path.join(root, 'scripts', 'build-card-artwork-batches.js'), 'utf8');
 
 assert.ok(buildSource.includes("'card-artwork-batches'"), 'private artwork batch namespace must remain blocked from static output');
 assert.ok(buildSource.includes('private card-artwork-batches directory exposed'), 'packager must fail if the private namespace is copied');
@@ -18,6 +20,10 @@ assert.ok(!aliasSource.includes("['card-artwork-batches.html', 'card-artwork-bat
 assert.ok(aliasSource.includes("'card-artwork-batches.html'"), 'alias finalizer must identify the private output namespace collision');
 assert.ok(aliasSource.includes('removePrivateOutputDirectories'), 'alias finalizer must remove stale private output before inventorying public routes');
 assert.ok(repairSource.includes("repair: 'removed-private-output-directory'"), 'private output repair must produce an auditable receipt');
+assert.ok(routeMapSource.includes("'card-artwork-batches'"), 'public route map must ignore the private artwork batch namespace');
+assert.ok(routeMapSource.includes("'src'"), 'public route map must ignore private source templates');
+assert.ok(artworkBatchSource.includes('publicIndex=index.replace'), 'public artwork index must strip links to private batch children');
+assert.ok(artworkBatchSource.includes('aria-disabled="true"'), 'private artwork batches must render an honest non-action state');
 
 const fixture = fs.mkdtempSync(path.join(os.tmpdir(), 'matrix-private-output-'));
 try {

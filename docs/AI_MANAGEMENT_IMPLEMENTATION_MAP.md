@@ -212,7 +212,7 @@ Architecture decision: `docs/adr/0011-crossref-grants-gov-zero-spend-resources.m
 | Authentication | Login links to the existing passwordless Worker/D1 flow; the dock never reads session state or credentials on page load |
 | Subscription | Subscribe links to the existing explicit-consent newsletter form; no subscription is claimed before server persistence confirms it |
 | Output integrity | Every deployable HTML and extensionless document must contain exactly one dock stylesheet and script; late generators are reconciled and re-audited |
-| Private namespace | Stale `_site/card-artwork-batches` directories are removed before the public noindex page receives its extensionless file alias |
+| Private namespace | Stale `_site/card-artwork-batches` directories are removed before the public noindex page receives its extensionless file alias; public route-map discovery ignores all private build roots, and the public batch index exposes private children as honest disabled states rather than dead links |
 | Live verifier | Current homepage, search, download, map and opt-in contracts are asserted; the administrator deploy dashboard is healthy only as a gated HTTP 401 response |
 | Epstein alias | `/epstein` is served by the strict Worker public-static bridge and forced through `run_worker_first`; the excluded legacy redirect file is not trusted |
 | Release truth | Current production remains 43/44 until the guarded exact-SHA deploy makes `/epstein` live and the verifier passes all routes |

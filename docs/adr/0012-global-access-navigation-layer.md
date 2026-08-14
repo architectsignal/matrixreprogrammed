@@ -25,7 +25,8 @@ Existing page headers and navigation remain untouched. The dock does not call an
 - The Explore drawer is keyboard-operable, Escape-dismissible, responsive, reduced-motion aware and excluded from print.
 - A rollback removes the packager hook and the two assets; existing navigation continues to work throughout.
 - Real login, newsletter persistence and member entitlement behavior remain owned by their existing Worker/D1 boundaries and tests.
+- Public navigation inventories exclude private build roots such as `card-artwork-batches` and `src`; an internal index may describe a private batch, but it must not emit a clickable route that deployment intentionally excludes.
 
 ## Verification
 
-`scripts/global-access-dock-test.mjs` proves idempotent injection, canonical routes, same-origin operation, keyboard/mobile markers, packager ownership and final-output coverage. `scripts/build-cloudflare-output.js` audits every copied HTML document during packaging, and `scripts/reconcile-global-access-dock.cjs` audits the complete deployable output after late generators.
+`scripts/global-access-dock-test.mjs` proves idempotent injection, canonical routes, same-origin operation, keyboard/mobile markers, packager ownership and final-output coverage. `scripts/build-cloudflare-output.js` audits every copied HTML document during packaging, and `scripts/reconcile-global-access-dock.cjs` audits the complete deployable output after late generators. `scripts/private-output-route-boundary-test.js` also locks the public route-map and artwork-index behavior so excluded private children cannot return as dead navigation.

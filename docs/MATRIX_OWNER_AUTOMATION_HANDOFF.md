@@ -12,6 +12,7 @@ Verified on 14 August 2026. The immutable operating law is `CAUSE NO HARM OR LOS
 - Automatic bounty claims, bounty submissions, security bounty execution, capital financial execution and permissionless crypto execution remain off.
 - The previous Cloudflare snapshot still records 5,470 billable Workers Build minutes and $27.34 for the completed period. A new-period dashboard reading must be copied into the GitHub release variables before release; do not reuse the old timestamp or bypass the guard.
 - PR #257 (`agent/matrix-integrated` into `agent/living-matrix-core`) contains the integrated navigation, Host-pressure, Agent Commons, resource and release-repeatability work. PR #255 (`agent/living-matrix-core` into `main`) is the parent production PR. Both remain drafts until review is complete.
+- GitHub contains the required `ADMIN_API_TOKEN` and `AI_MANAGEMENT_ADMIN_TOKEN` secret names. The running Host inherited a valid 64-character token, but the Windows current-user environment is empty; a future login/autostart cannot be trusted until step 2 is completed.
 - The local supervisor and host are healthy, registered and heartbeat-fresh. `matrix-local matrix doctor` currently receives HTTP 404 because the Phase 17/18 Matrix-operations route is part of the unpublished Worker; it remains `WORKING_NOT_LIVE` until the guarded deployment completes.
 
 ## Owner actions in order
@@ -46,7 +47,7 @@ npm.cmd run matrix-local -- status
 
 ### 2. Preserve the control-plane secret
 
-Use the same 64-character value already saved at user scope. Never paste it into chat, source control or a log.
+Use the same 64-character value already loaded into the current running Host. Never paste it into chat, source control or a log. GitHub and Worker secret values cannot be read back after storage.
 
 Required secret locations:
 
@@ -65,6 +66,15 @@ npm.cmd run matrix-local -- matrix doctor
 ```
 
 Before the new Worker is deployed, the final `matrix doctor` command will truthfully return HTTP 404. The ordinary `matrix-local -- status` and `matrix-local -- doctor` commands remain the authoritative local-host checks during that interval.
+
+To verify Windows persistence without exposing the value, open a new PowerShell window and run:
+
+```powershell
+$saved = [Environment]::GetEnvironmentVariable('MATRIX_AI_MANAGEMENT_ADMIN_TOKEN','User')
+"Present=$([bool]$saved) Length=$(if($saved){$saved.Length}else{0})"
+```
+
+The required result is `Present=True Length=64`. If the original value is no longer available, rotate it: generate one new 64-character URL-safe random token, place that same new value in the Windows user variable, both GitHub repository secrets and both Cloudflare Worker secrets, then restart the Host. Do not create different values for the five locations.
 
 ### 2A. Keep the 16 GB owner computer responsive
 

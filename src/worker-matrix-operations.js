@@ -360,7 +360,7 @@ export async function runMatrixOperatingCycle(env, { trigger = 'scheduled-watchd
     ...graph.map(item => ({ id: item.capability_id, status: item.status })),
     ...acceptance
   ]);
-  const metrics = computeCapabilityMetrics(components, history);
+  const metrics = computeCapabilityMetrics(components, history, { now });
   const stagnationDays = metrics.daily_evolution_score <= 0 && history.length > 0 ? 1 : 0;
   const plan = planOperatingCycle({
     now,

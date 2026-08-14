@@ -69,6 +69,30 @@ assert.equal(officialNoAuth.approval_state, 'approved-auto');
 assert.ok(officialNoAuth.evidence.includes('official-material-confirms-zero-cost-access'));
 assert.ok(officialNoAuth.evidence.includes('official-material-confirms-automation-permission'));
 
+const grantsNoAuthFetch = async () => new Response(
+  'Authentication and authorization are not required. The endpoint requires no login or authentication key.',
+  { status: 200, headers: { 'content-type': 'text/plain' } }
+);
+const grantsNoAuth = await evaluateOpportunity({
+  ...base,
+  opportunity_id: 'opportunity-grants-search',
+  kind: 'search_api',
+  official_url: 'https://www.grants.gov/api/api-guide',
+  documentation_url: 'https://www.grants.gov/api/common/search2',
+  terms_url: 'https://www.grants.gov/api/api-guide',
+  privacy_url: 'https://www.grants.gov/privacy-policy',
+  metadata: { execution_url: 'https://api.grants.gov/v1/api/search2' }
+}, { fetchImpl: grantsNoAuthFetch, now: fixedNow });
+assert.equal(grantsNoAuth.approval_state, 'approved-auto');
+assert.equal(grantsNoAuth.blockers.length, 0);
+
+const wrongExecutionHost = await evaluateOpportunity({
+  ...base,
+  metadata: { execution_url: 'https://unrelated.example.net/search' }
+}, { fetchImpl, now: fixedNow, liveProbe: false });
+assert.equal(wrongExecutionHost.approval_state, 'quarantined');
+assert.ok(wrongExecutionHost.blockers.includes('execution-domain-mismatch'));
+
 const staleQuota = await evaluateOpportunity({ ...base, free_quota: 200, metadata: { quota_evidence_terms: ['200 requests/day'] } }, { fetchImpl, now: fixedNow });
 assert.equal(staleQuota.approval_state, 'quarantined');
 assert.ok(staleQuota.blockers.includes('declared-quota-language-not-found'));

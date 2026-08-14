@@ -49,9 +49,10 @@ const metrics = computeCapabilityMetrics([
   { componentId: 'live', state: 'LIVE_WORKING', capacityUnits: 10, reliability: 1 },
   { componentId: 'partial', state: 'PARTIAL', capacityUnits: 10, reliability: 0.5 },
   { componentId: 'broken', state: 'BROKEN', capacityUnits: 10, reliability: 1 }
-], [{ effectivePower: 10, recordedAt: '2026-08-11T00:00:00.000Z' }]);
+], [{ effectivePower: 10, recordedAt: '2026-08-11T00:00:00.000Z' }], { now: '2026-08-13T00:00:00.000Z' });
 assert.equal(metrics.matrix_effective_power, 12.5);
 assert.equal(metrics.matrix_capability_index, 41.67);
+assert.equal(metrics.daily_evolution_score, 25);
 assert.equal(metrics.windows.lifetime_high, 12.5);
 assert.equal(new MatrixCapabilityGraph().measure([{ componentId: 'live', state: 'LIVE_WORKING', capacityUnits: 1, reliability: 1 }], []).matrix_effective_power, 1);
 

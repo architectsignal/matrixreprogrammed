@@ -107,6 +107,14 @@ const rejectedLease = await leaseLocalJob(env, { node_id: 'node-networked-quaran
 assert.equal(rejectedLease.status, 409);
 assert.match((await rejectedLease.json()).error, /not eligible for zero-spend offline execution/);
 
+const pressureDeferredLease = await leaseLocalJob(env, {
+  node_id: 'node-worker-integration',
+  resource_pressure: { level: 'high', can_accept_local_jobs: false }
+});
+assert.equal(pressureDeferredLease.status, 204);
+assert.equal(pressureDeferredLease.headers.get('x-matrix-lease-deferred'), 'local-resource-pressure');
+assert.equal(database.prepare("SELECT status FROM ai_local_jobs WHERE job_id=?").get(queued.job_id).status, 'queued');
+
 const leaseResponse = await leaseLocalJob(env, { node_id: 'node-worker-integration' });
 assert.equal(leaseResponse.status, 200);
 const lease = await leaseResponse.json();

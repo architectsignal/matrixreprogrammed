@@ -191,3 +191,72 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [ ] Merge the protected PR after checks pass.
 - [ ] Update the Cloudflare usage snapshot/variables only after a new period shows zero billable usage, then run the controlled deploy with exact confirmation.
 - [ ] Capture a live `LIVE_WORKING` doctor receipt; until then Phase 17 remains truthfully `WORKING_NOT_LIVE` despite passing local tests.
+## 2026-08-14 Agent Commons checkpoint
+
+- [x] Added a first-party AI social and investigation surface using only the existing Worker, Assets and D1 stack.
+- [x] Added verified-member and authenticated-Matrix-Host sponsorship, one-time scoped credentials, SHA-256-only persistence, expiration and revocation.
+- [x] Added automated local Host registration for eligible generation models with in-memory-only credentials and bounded bootstrap polling.
+- [x] Added public missions, claims, evidence submissions, peer reviews, agent posts, visible evidence grades and a public feed.
+- [x] Added two-review settlement, sponsor-independence labels, automatic once-only reputation and zero monetary authority.
+- [x] Added prompt-injection/private-content quarantine, public-HTTPS source constraints, idempotency, deduplication, rate limits and audit entries.
+- [x] Added repeat-safe D1 migration, canonical deploy-chain wiring, production schema checks, Wrangler feature flags and required asset checks.
+- [x] Added real SQLite/D1 integration tests covering registration, token hashing, claims, submissions, self-review rejection, independent review, reward settlement, duplicate rejection, quarantine and maintenance.
+- [x] Added a future Matrix digital-value roadmap that permanently separates social credentials from custody, trading and payment keys.
+- [ ] Run the complete applicable build, site audit, production guard and generated-output review.
+- [ ] Deploy only after the current Cloudflare zero-overage policy reports a fresh zero-billable snapshot and an available guarded daily slot.
+- [ ] Apply `migrations/agent_commons_v1.sql`, verify all nine D1 tables, then verify `/agent-commons` and `/api/agent-commons/health` at the exact deployed SHA.
+
+## 2026-08-14 zero-spend public resource expansion
+
+- [x] Added Crossref public scholarly metadata as an anonymous, account-free, key-free resource with concurrency 1, a conservative operator cap and no automatic full-text dereferencing.
+- [x] Added Grants.gov `search2` as an unauthenticated public funding-discovery resource with bounded JSON POST, concurrency 1 and a conservative operator cap.
+- [x] Added a same-official-family execution-host boundary so documentation on `www.grants.gov` can safely authorize only `api.grants.gov`, while unrelated hosts remain quarantined.
+- [x] Kept listings discovery-only: neither Crossref metadata nor a Grants.gov result establishes eligibility, entitlement, award, ownership or permission to submit.
+- [x] Kept Kaggle, Hugging Face and every account/key/identity-dependent source quarantined until their owner, terms, quota, health and zero-spend gates genuinely pass.
+- [ ] After controlled release, run `use_defaults=true`, confirm live evaluation, and execute one bounded Crossref GET and one Grants.gov POST through `zero-spend-opportunity-public-http` before reporting either resource live.
+
+## 2026-08-14 release-repeatability and resource-economy checkpoint
+
+- [x] Made membership, investigation search and optional Pagefind fallback reconciliation idempotent after legacy generators run.
+- [x] Removed raw structured-value placeholders from the 8,000-event evidence timeline, all 81 mission clocks and their public synthesis/download surfaces, with regression coverage.
+- [x] Excluded private source, migration, runtime, diagnostic and internal build directories from the Cloudflare static bundle and added route-level privacy assertions.
+- [x] Moved public editorial repair to the true packaging boundary and the public-copy audit boundary so neither a release build nor an audit can restore author-facing monetisation strategy text.
+- [x] Rebuilt the Cloudflare bundle: 116 required assets verified and protected private artifacts excluded.
+- [x] Passed Worker routes, site pressure, function harmony and two consecutive exhaustive public-audit cycles across 1,610 public pages with zero hard failures.
+- [x] Passed public copy/intake review across 3,008 files and 1,161 intake areas with zero high issues and zero weak intake areas; two low-priority review strings remain queued.
+- [x] Confirmed the local Host supervisor and Host are online, connected, registered, outbound-only and zero-spend locked with one completed benchmark job and no failed jobs.
+- [x] Preserved the long-horizon resource-economy constraints in `docs/MATRIX_DIGITAL_VALUE_ROADMAP.md`: verified needs/resources/contribution, human rights, lawful ownership, transparent scarcity assumptions, appeal, reversibility, anti-capture and no seizure, coercion, secret rationing or unbounded agent control.
+- [ ] Start an owner-controlled loopback model runtime before claiming local inference; current Host discovery reports zero healthy model servers and zero models.
+- [ ] Diagnose the Host `matrix_operations` startup receipt and public-site fetch failure before claiming the complete control loop is live.
+- [ ] Refresh the Cloudflare policy and GitHub usage variables only after the new billing period exposes a current zero-billable snapshot; do not bypass the production, billing or daily-slot guards.
+- [ ] Publish the reviewed source commits, merge through the protected PR chain and deploy the exact merged SHA only after every controlled-release gate passes.
+- [ ] After release, apply the pending schemas and verify Agent Commons, Ask Matrix, SEC/Crossref/Grants.gov public-only execution, evolution and owner-only health endpoints before enabling any additional resource.
+
+## 2026-08-14 owner-computer load protection and external-compute routing
+
+- [x] Diagnosed the local slowdown as memory pressure and paging from CPU-only LM Studio model servers that Matrix had not discovered or used; closed the model servers and their respawning LM Studio auto-loader while preserving the Matrix Host and supervisor.
+- [x] Added a live free-memory pressure probe with conservative 4,096 MB / 25% floors, a separate benchmark reserve and bounded busy backoff.
+- [x] Made the persistent Host and standalone poller defer new leases under pressure while remaining online, connected, outbound-only and zero-spend locked.
+- [x] Added allowlisted pressure telemetry to registration and lease requests without exposing prompts, credentials, process arguments or arbitrary host state.
+- [x] Made the Worker refuse a pressure-deferred lease and exclude memory-constrained nodes from benchmark creation, capacity totals and new assignments.
+- [x] Extended the Capability Director so verified system-memory pressure can prefer bounded public-only remote jobs, while no job is offloaded unless a current approved zero-spend compute resource passes every existing billing, quota, expiry and terms gate.
+- [x] Fixed the operating-system evolution-window test to use the cycle's injected clock instead of the wall clock, eliminating a time-of-day-dependent safety-gate failure.
+- [x] Passed local Host, pressure, control-plane, capability routing, Worker/D1 capacity, Matrix operating-system and production queue regression suites.
+- [ ] Merge and install this Host revision before claiming the pressure guard itself is active in the currently running original worktree.
+- [ ] Register and real-workload benchmark at least one lawful zero-spend remote compute resource before reporting external execution capacity as usable; paid fallback remains impossible.
+
+## 2026-08-14 global navigation, login and subscription access
+
+- [x] Audited the public HTML estate and confirmed that many legacy builders publish inconsistent local navigation.
+- [x] Confirmed the canonical passwordless Login route is backed by the existing Cloudflare Worker, D1 membership schema and transactional-email boundary.
+- [x] Confirmed the Subscribe target is the existing explicit-consent newsletter form and persistence runtime.
+- [x] Added a small same-origin Explore, Login and Subscribe dock without replacing or mass-editing existing page navigation.
+- [x] Made the final Cloudflare packager inject the dock into every copied HTML page and extensionless route variant idempotently.
+- [x] Added fail-closed output checks, keyboard/mobile/reduced-motion behavior and a zero-external-dependency contract test.
+- [x] Caught 10 member/forum output variants rewritten by late legacy repair scripts and added a final lifecycle reconciler that restores and re-audits all deployable documents.
+- [x] Removed the stale route-alias expectation that required the deliberately excluded private artwork-batch namespace, while retaining its noindex canonical page and extensionless file alias.
+- [x] Made the alias finalizer remove a stale private artwork-batch output directory before synchronizing the public extensionless route file, fixing the release-metadata clean-checkout failure without exposing private batch pages.
+- [x] Moved `/epstein` into the strict Worker static-asset bridge and `run_worker_first` configuration because the legacy redirect file is intentionally excluded from Worker assets.
+- [x] Reconciled the live verifier with the current homepage, protected deploy dashboard, search, download, map and opt-in contracts; current production now proves 43/44 routes with only the undeployed `/epstein` alias outstanding.
+- [x] Completed the guarded full build, responsive browser checks, 3,295-document dock audit, strict Worker route test, private-output test, site-function harmony test and production deploy guard.
+- [ ] Merge and deploy only through the protected release chain after every existing production and zero-spend guard passes.

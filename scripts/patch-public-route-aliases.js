@@ -9,6 +9,7 @@ const tomlPath = path.join(root, 'wrangler.toml');
 const jsoncPath = path.join(root, 'wrangler.jsonc');
 const reportPath = path.join(root, 'downloads', 'public-route-alias-routing.json');
 const aliases = [
+  ['/epstein', '/epstein-files.html'],
   ['/follow-the-money', '/follow-the-money.html'],
   ['/making-money', '/making-money.html'],
   ['/card-artwork-batches', '/card-artwork-batches.html'],

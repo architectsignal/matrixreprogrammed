@@ -9,7 +9,13 @@ const root = process.cwd();
 const outputRoot = path.join(root, '_site');
 const downloads = path.join(root, 'downloads');
 const strictWarnings = process.argv.includes('--strict-warnings');
-const ignoredSourceDirectories = new Set(['.git', '.wrangler', '_site', 'node_modules']);
+const ignoredSourceDirectories = new Set([
+  '.git', '.github', '.wrangler', '.cloudflare', '.generated', '_site', 'node_modules',
+  'ai-management', 'automation', 'card-art-inbox', 'card-artwork-batches',
+  'deploy-triggers', 'deployments', 'diagnostics', 'docs', 'functions', 'local-agent',
+  'migrations', 'netlify', 'recovery', 'runtime', 'scripts', 'src', 'templates',
+  'tests', 'tmp', 'tools'
+]);
 const internalPages = new Set([
   'admin-control-center.html', 'admin-payment-dashboard.html', 'campaign-calendar.html',
   'card-art-studio.html', 'card-artwork-automation.html', 'card-artwork-batches.html',

@@ -10,8 +10,10 @@ import { executeJob } from './matrix-local-agent.mjs';
 import { applyBenchmarkScores, benchmarkLocalRuntime } from './local-benchmark.mjs';
 import { callHarvesterControlPlane } from './permissionless-harvester-cli.mjs';
 import { callMatrixControlPlane } from './matrix-operations-cli.mjs';
+import { pollAgentCommons, synchronizeAgentCommons } from './agent-commons-client.mjs';
+import { evaluateLocalResourcePressure, leasePressureEnvelope } from './local-resource-pressure.mjs';
 
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
 
 function env(name, fallback = '') { return String(process.env[name] ?? fallback).trim(); }
 function integer(name, fallback, minimum, maximum) {
@@ -46,8 +48,14 @@ export function hostConfig() {
     discoveryMs: integer('MATRIX_LOCAL_DISCOVERY_SECONDS', 300, 30, 3600) * 1000,
     benchmarkMs: integer('MATRIX_LOCAL_BENCHMARK_HOURS', 24, 1, 168) * 60 * 60 * 1000,
     benchmarkEnabled: env('MATRIX_LOCAL_BENCHMARK_ENABLED', 'true').toLowerCase() === 'true',
+    minimumFreeMemoryMb: integer('MATRIX_LOCAL_MIN_FREE_MEMORY_MB', 4096, 256, 1024 * 1024),
+    minimumFreeMemoryPercent: integer('MATRIX_LOCAL_MIN_FREE_MEMORY_PERCENT', 25, 5, 90),
+    benchmarkReserveMb: integer('MATRIX_LOCAL_BENCHMARK_RESERVE_MB', 1024, 0, 64 * 1024),
+    busyBackoffMs: integer('MATRIX_LOCAL_BUSY_BACKOFF_SECONDS', 60, 5, 1800) * 1000,
     harvesterEnabled: env('MATRIX_PERMISSIONLESS_VALUE_ENABLED', 'false').toLowerCase() === 'true',
-    matrixOperationsEnabled: env('MATRIX_OPERATING_SYSTEM_ENABLED', 'true').toLowerCase() === 'true'
+    matrixOperationsEnabled: env('MATRIX_OPERATING_SYSTEM_ENABLED', 'true').toLowerCase() === 'true',
+    agentCommonsEnabled: env('MATRIX_AGENT_COMMONS_HOST_ENABLED', 'true').toLowerCase() === 'true',
+    agentCommonsPollMs: integer('MATRIX_AGENT_COMMONS_POLL_SECONDS', 60, 30, 900) * 1000
   };
 }
 
@@ -65,8 +73,9 @@ async function writeJson(file, value) {
   });
 }
 
-export async function registerRuntime(config, runtime, { fetchImpl = globalThis.fetch } = {}) {
+export async function registerRuntime(config, runtime, { fetchImpl = globalThis.fetch, resourcePressure = null } = {}) {
   if (!config.adminToken) return { ok: false, skipped: true, reason: 'owner-token-not-configured' };
+  const pressure = resourcePressure ? leasePressureEnvelope(resourcePressure) : null;
   const response = await fetchImpl(`${config.siteUrl}/api/ai-management/admin/local-runtime`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-admin-token': config.adminToken, 'user-agent': `matrix-local-host/${VERSION}` },
@@ -74,9 +83,10 @@ export async function registerRuntime(config, runtime, { fetchImpl = globalThis.
       node_id: config.nodeId,
       cost_confirmed_zero: true,
       external_network_used: false,
-      hardware: runtime.hardware,
+      hardware: pressure ? { ...runtime.hardware, resource_pressure: pressure } : runtime.hardware,
       servers: runtime.servers,
       resources: runtime.resources,
+      resource_pressure: pressure,
       agent: { version: VERSION, mode: 'outbound-only', pid: process.pid, started_at: new Date().toISOString() }
     }),
     signal: AbortSignal.timeout(15000)
@@ -95,7 +105,14 @@ function wait(ms, signal) {
   });
 }
 
-export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fetch, clock = () => new Date(), signal = null, onStatus = null } = {}) {
+export async function runHost({
+  config = hostConfig(),
+  fetchImpl = globalThis.fetch,
+  clock = () => new Date(),
+  signal = null,
+  onStatus = null,
+  pressureProbe = evaluateLocalResourcePressure
+} = {}) {
   await fs.mkdir(config.stateDir, { recursive: true });
   const controller = new AbortController();
   const stop = () => controller.abort();
@@ -104,20 +121,32 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
   process.once('SIGTERM', stop);
   const statusFile = path.join(config.stateDir, 'status.json');
   const startedAt = clock().toISOString();
+  const pressureOptions = () => ({
+    minimumFreeMemoryMb: config.minimumFreeMemoryMb,
+    minimumFreeMemoryPercent: config.minimumFreeMemoryPercent,
+    benchmarkReserveMb: config.benchmarkReserveMb,
+    clock
+  });
+  let resourcePressure = pressureProbe(pressureOptions());
   const status = {
     schema_version: 1, version: VERSION, node_id: config.nodeId, pid: process.pid, started_at: startedAt,
     mode: config.adminToken ? 'connected' : 'local-only-owner-token-required',
     zero_spend_lock: true, outbound_only: true, state: 'starting', restart_safe: true,
-    runtime: { discovered_models: 0, healthy_servers: 0 }, jobs: { completed: 0, failed: 0, idle_polls: 0 },
+    runtime: { discovered_models: 0, healthy_servers: 0 },
+    resource_pressure: resourcePressure,
+    jobs: { completed: 0, failed: 0, idle_polls: 0, deferred_pressure_polls: 0 },
     registration: { configured: Boolean(config.adminToken), last_ok_at: null, last_error: null },
     benchmark: { enabled: config.benchmarkEnabled, last_completed_at: null, measured_models: 0 },
     harvester: { enabled: config.harvesterEnabled, startup_attempted: false, last_result: null },
-    matrix_operations: { enabled: config.matrixOperationsEnabled, startup_attempted: false, last_result: null }
+    matrix_operations: { enabled: config.matrixOperationsEnabled, startup_attempted: false, last_result: null },
+    agent_commons: { enabled: config.agentCommonsEnabled, connected_agents: 0, investigations_available: 0, reviews_available: 0, last_ok_at: null, last_error: null }
   };
   let runtime = null;
   let nextDiscovery = 0;
   let nextPoll = 0;
   let nextBenchmark = 0;
+  let nextAgentCommonsPoll = 0;
+  const agentCommonsCredentials = new Map();
   const latestBenchmarkFile = path.join(config.stateDir, 'benchmarks', 'latest.json');
   const previousBenchmark = await readJson(latestBenchmarkFile);
   if (previousBenchmark?.completed_at) {
@@ -166,6 +195,8 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
 
   while (!controller.signal.aborted) {
     const now = Date.now();
+    resourcePressure = pressureProbe(pressureOptions());
+    status.resource_pressure = resourcePressure;
     if (now >= nextDiscovery) {
       try {
         runtime = await detectLocalRuntime({ fetchImpl, clock });
@@ -176,20 +207,48 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
           healthy_servers: runtime.servers.filter(server => server.healthy).length,
           cpu_threads: runtime.hardware.cpu_threads ?? runtime.hardware.cpu?.logical_cores ?? 0,
           total_memory_mb: runtime.hardware.total_memory_mb ?? Math.round(Number(runtime.hardware.memory?.total_bytes || 0) / 1024 / 1024),
+          free_memory_mb: resourcePressure.free_memory_mb,
           gpu_count: runtime.hardware.gpus?.length || 0
         };
-        const registered = await registerRuntime(config, runtime, { fetchImpl });
+        const registered = await registerRuntime(config, runtime, { fetchImpl, resourcePressure });
         if (!registered.skipped) status.registration.last_ok_at = clock().toISOString();
         status.registration.last_error = registered.skipped ? registered.reason : null;
+        const commons = await synchronizeAgentCommons(config, runtime, agentCommonsCredentials, { fetchImpl, clock });
+        status.agent_commons.connected_agents = commons.connected || 0;
+        status.agent_commons.last_error = commons.errors?.join('; ') || (commons.skipped ? commons.reason : null);
       } catch (error) {
         status.registration.last_error = String(error?.message || error).slice(0, 500);
       }
       nextDiscovery = now + config.discoveryMs;
     }
 
-    if (config.adminToken && now >= nextPoll) {
+    if (config.agentCommonsEnabled && agentCommonsCredentials.size && now >= nextAgentCommonsPoll) {
       try {
-        const result = await runOneControlPlaneJob({ siteUrl: config.siteUrl, adminToken: config.adminToken, nodeId: config.nodeId }, executeJob, { fetchImpl });
+        const commons = await pollAgentCommons(config, agentCommonsCredentials, { fetchImpl });
+        status.agent_commons.connected_agents = commons.agents;
+        status.agent_commons.investigations_available = commons.investigationsAvailable;
+        status.agent_commons.reviews_available = commons.reviewsAvailable;
+        status.agent_commons.last_ok_at = commons.ok ? clock().toISOString() : status.agent_commons.last_ok_at;
+        status.agent_commons.last_error = commons.ok ? null : commons.snapshots.filter(item => !item.ok).map(item => item.error).join('; ').slice(0, 500);
+      } catch (error) {
+        status.agent_commons.last_error = String(error?.message || error).slice(0, 500);
+      }
+      nextAgentCommonsPoll = now + config.agentCommonsPollMs;
+    }
+
+    if (config.adminToken && now >= nextPoll) {
+      if (!resourcePressure.can_accept_local_jobs) {
+        status.jobs.deferred_pressure_polls += 1;
+        status.jobs.last_deferred_at = clock().toISOString();
+        status.jobs.last_deferred_reason = resourcePressure.reasons.join(',') || 'local-resource-pressure';
+        status.jobs.last_error = null;
+        nextPoll = now + (config.busyBackoffMs || 60000);
+      } else try {
+        const result = await runOneControlPlaneJob(
+          { siteUrl: config.siteUrl, adminToken: config.adminToken, nodeId: config.nodeId },
+          executeJob,
+          { fetchImpl, resourcePressure }
+        );
         if (result.idle) {
           status.jobs.idle_polls += 1;
           nextPoll = now + config.idlePollMs;
@@ -207,7 +266,7 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
     }
 
     const idleEnough = !config.adminToken || status.jobs.idle_polls >= 2;
-    if (config.benchmarkEnabled && runtime && idleEnough && now >= nextBenchmark) {
+    if (config.benchmarkEnabled && runtime && idleEnough && now >= nextBenchmark && resourcePressure.can_run_benchmarks) {
       try {
         status.state = 'benchmarking';
         await publishStatus();
@@ -221,9 +280,13 @@ export async function runHost({ config = hostConfig(), fetchImpl = globalThis.fe
         status.benchmark.last_error = String(error?.message || error).slice(0, 500);
       }
       nextBenchmark = now + config.benchmarkMs;
+    } else if (config.benchmarkEnabled && runtime && now >= nextBenchmark && !resourcePressure.can_run_benchmarks) {
+      status.benchmark.deferred_reason = resourcePressure.reasons.join(',') || 'benchmark-memory-reserve-not-available';
+      status.benchmark.last_deferred_at = clock().toISOString();
+      nextBenchmark = now + (config.busyBackoffMs || 60000);
     }
 
-    status.state = controller.signal.aborted ? 'stopping' : 'online';
+    status.state = controller.signal.aborted ? 'stopping' : resourcePressure.can_accept_local_jobs ? 'online' : 'resource-constrained';
     await publishStatus();
     await wait(Math.min(config.heartbeatMs, 2000), controller.signal);
   }

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { opportunityHunterWorkerInternals } from '../src/worker-opportunity-hunter.js';
 import { createInvestigationBroker } from '../ai-management/node/investigation-broker.mjs';
+import { ZeroSpendOpportunityHttpAdapter } from '../ai-management/provider-adapters/opportunities/zero-spend-public-http.mjs';
 
 const fixedNow = new Date('2026-07-31T16:00:00.000Z');
 
@@ -105,13 +106,40 @@ assert.equal(opportunityHunterWorkerInternals.configuredOpportunities({ AI_OPPOR
 const defaults = opportunityHunterWorkerInternals.configuredOpportunities({});
 assert.deepEqual(defaults.map(item => item.opportunity_id), [
   'official-sec-edgar-data-apis', 'official-usaspending-public-api',
+  'official-crossref-public-rest-api', 'official-grants-gov-search2-api',
   'official-kaggle-notebooks-free-gpu', 'official-hugging-face-zerogpu'
 ]);
 const publicDefaults = defaults.filter(item => item.kind === 'dataset');
 const computeDefaults = defaults.filter(item => item.kind === 'compute');
 assert.ok(publicDefaults.every(item => item.authentication_type === 'none' && item.metadata.adapter_id === 'zero-spend-opportunity-public-http'));
 assert.ok(computeDefaults.every(item => item.automation_permission === 'unknown' && item.metadata.owner_onboarding_required === true));
-assert.equal(opportunityHunterWorkerInternals.requestedOpportunities({ use_defaults: true }, {}).length, 4);
+assert.equal(opportunityHunterWorkerInternals.requestedOpportunities({ use_defaults: true }, {}).length, 6);
 assert.deepEqual(opportunityHunterWorkerInternals.requestedOpportunities({}, {}), []);
+
+const grantsSeed = defaults.find(item => item.opportunity_id === 'official-grants-gov-search2-api');
+assert.equal(opportunityHunterWorkerInternals.executionHost(grantsSeed), 'api.grants.gov');
+const grantsResource = opportunityHunterWorkerInternals.resourceFromEvaluation({
+  opportunity: grantsSeed, approval_state: 'approved-auto', auto_activatable: true,
+  confidence: 100, blockers: [], owner_actions: [], evaluated_at: fixedNow.toISOString()
+}, fixedNow);
+assert.equal(grantsResource.allowed_hosts[0], 'api.grants.gov');
+assert.equal(grantsResource.metadata.execution_url, 'https://api.grants.gov/v1/api/search2');
+assert.equal(opportunityHunterWorkerInternals.executionHost({ ...grantsSeed, metadata: { ...grantsSeed.metadata, execution_url: 'https://evil.example/search' } }), '');
+let grantsPostObserved = false;
+const grantsAdapter = new ZeroSpendOpportunityHttpAdapter({ fetchImpl: async (url, options) => {
+  assert.equal(url, grantsResource.metadata.execution_url);
+  assert.equal(options.method, 'POST');
+  assert.deepEqual(JSON.parse(options.body), { keyword: 'public interest', rows: 5, oppStatuses: 'forecasted|posted' });
+  grantsPostObserved = true;
+  return new Response(JSON.stringify({ errorcode: 0, data: { oppHits: [] } }), { status: 200, headers: { 'content-type': 'application/json' } });
+} });
+const grantsPost = await grantsAdapter.execute({
+  job_type: 'public-data.fetch', capability_type: 'public_data', data_class: 'public',
+  payload: { url: grantsResource.metadata.execution_url, method: 'POST', body: { keyword: 'public interest', rows: 5, oppStatuses: 'forecasted|posted' }, maximum_bytes: 1048576 },
+  requirements: { maximum_latency_ms: 5000 }
+}, grantsResource);
+assert.equal(grantsPost.ok, true);
+assert.equal(grantsPost.cost_confirmed_zero, true);
+assert.equal(grantsPostObserved, true);
 
 console.log('Opportunity Hunter Worker tests passed: live public API routing, zero-spend persistence, adapter-ready activation, and owner-action rejection.');

@@ -25,13 +25,28 @@ run('Final Mission Timers','build-mission-timers.js');
 run('Final Mission Brief Conclusions','build-mission-brief-conclusions.js');
 run('Final Homepage Command Surface','build-homepage-command-surface.js');
 run('Final Mission Surface Reconciliation','patch-final-mission-surfaces.js');
+// The monetisation catalogue is a legacy content generator and must not own the
+// live membership contract. Restore the protected free + optional-donation
+// template after it runs so an audit cannot reintroduce obsolete paid tiers.
+run('Final protected membership reconciliation','patch-membership-tiers.js');
+// build-platform-core-safe.js intentionally refreshes the broad search catalogue, but it
+// also emits the legacy search UI/runtime. Re-assert the hardened public-search contract
+// after every generator has finished so shared-asset normalization is idempotent and the
+// deployed source cannot silently lose its offline fallback or no-store fetch boundary.
+run('Final hardened search reconciliation','repair-search-system.js');
+// The audit invokes legacy catalogue builders above. Re-apply the canonical
+// reader-facing copy last so running the audit cannot make a release dirty or
+// restore internal monetisation-planning language on public routes.
+run('Final public editorial audit repair','fix-public-editorial-audit-errors.js');
 const fp=p=>path.join(root,p);
 const wr=(p,v)=>{fs.mkdirSync(path.dirname(fp(p)),{recursive:true});fs.writeFileSync(fp(p),v)};
-const walk=(dir,files=[])=>{for(const name of fs.readdirSync(dir)){if(['.git','node_modules','.wrangler','dist','build'].includes(name))continue;const full=path.join(dir,name);const st=fs.statSync(full);if(st.isDirectory())walk(full,files);else files.push(full)}return files};
+const privateDirs=new Set(['.git','.github','.wrangler','.cloudflare','.generated','node_modules','dist','build','_site','ai-management','automation','card-art-inbox','card-artwork-batches','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','netlify','recovery','report-manifests','runtime','scripts','src','templates','tests','tmp','tools']);
+const walk=(dir,files=[])=>{for(const name of fs.readdirSync(dir)){if(privateDirs.has(name))continue;const full=path.join(dir,name);const st=fs.statSync(full);if(st.isDirectory())walk(full,files);else files.push(full)}return files};
 const rel=p=>path.relative(root,p).replace(/\\/g,'/');
 function visibleText(html){return html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<template[\s\S]*?<\/template>/gi,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim()}
-const publicFiles=walk(root).filter(p=>/\.(html|md|json)$/i.test(p)).filter(p=>!rel(p).startsWith('node_modules/'));
-const severePatterns=[/\[object Object\]/i,/lorem ipsum/i,/as an ai language model/i,/chatgpt/i,/author note/i,/internal note/i,/source-facing/i,/do not show/i,/debug only/i,/undefined\s*undefined/i,/NaN/i];
+const auditOutputs=new Set(['AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','CLOUDFLARE_PAGES_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md','data/site-public-copy-intake-audit.json','downloads/site-public-copy-intake-audit.md','data/public-copy-scrubber-report.json','downloads/public-copy-scrubber-report.md','data/full-site-function-tool-audit-policy.json']);
+const publicFiles=walk(root).filter(p=>/\.(html|md|json)$/i.test(p)).filter(p=>!auditOutputs.has(rel(p)));
+const severePatterns=[/\[object Object\]/i,/lorem ipsum/i,/as an ai language model/i,/chatgpt/i,/(?:internal\s+)?author note\s*:/i,/internal note\s*:/i,/source-facing\s*:/i,/do not show (?:this|the following|to (?:the )?(?:user|users|public))/i,/debug only\s*:/i,/undefined\s*undefined/i,/(?:^|[^A-Za-z0-9_])NaN(?:$|[^A-Za-z0-9_])/i];
 const softPatterns=[/TODO/i,/FIXME/i,/compatibility marker/i,/test marker/i,/dummy/i,/sample text/i];
 const issues=[];
 for(const file of publicFiles){

@@ -19,9 +19,19 @@ const fetchImpl = async (url, options = {}) => {
   throw new Error(`Unexpected URL ${url}`);
 };
 
-const lease = await leaseNextJob(config, { fetchImpl });
+const lease = await leaseNextJob(config, {
+  fetchImpl,
+  resourcePressure: {
+    level: 'low', can_accept_local_jobs: true, can_run_benchmarks: true,
+    external_compute_preferred: false, free_memory_mb: 7000, free_memory_percent: 43.8,
+    assessed_at: '2026-08-14T12:00:00.000Z', secret: 'must-not-survive'
+  }
+});
 assert.equal(lease.job.job_id, 'job-1');
 assert.equal(calls[0].body.node_id, 'node-test');
+assert.equal(calls[0].body.resource_pressure.can_accept_local_jobs, true);
+assert.equal(calls[0].body.resource_pressure.free_memory_mb, 7000);
+assert.equal('secret' in calls[0].body.resource_pressure, false);
 assert.equal(calls[0].options.headers['x-admin-token'], 'owner-token');
 
 const receipt = completionReceipt(lease.job, { digest: 'abc' }, Date.now() - 10);

@@ -35,6 +35,18 @@
 - Existing HTML sources are not automatically approved. JSON APIs and RSS/Atom feeds are eligible only when the source registry and adapter policy approve them.
 - Local model discovery, Resource Scout automation, worker-node enrolment, admin UI, and full migration of every direct provider call remain later phases.
 
+## Global public access navigation (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Build ownership | `scripts/build-cloudflare-output.js` injects the shared assets into every copied HTML document and its extensionless route variant; `scripts/reconcile-global-access-dock.cjs` reasserts them after legacy post-build repairs; canonical page sources and legacy page navigation are not mass-rewritten |
+| Public actions | Explore links only to existing public routes, Login uses the existing passwordless member entry point, and Subscribe targets the existing consent-backed newsletter form |
+| Runtime cost | Two cacheable same-origin static assets, no third-party dependency and no per-page authentication or analytics request |
+| Accessibility | Semantic quick-access navigation, keyboard focus, Escape dismissal, current-page state, narrow-screen layout, reduced-motion support and print exclusion |
+| Release guard | The packager and final npm lifecycle require both assets and fail if any deployable HTML document does not contain exactly one stylesheet and one script marker |
+
+Architecture decision: `docs/adr/0012-global-access-navigation-layer.md`.
+
 ## Known current risks
 
 - The repository has unrelated pending changes, including production-worker and cron edits.
@@ -163,3 +175,46 @@ Architecture decision: `docs/adr/0008-permissionless-protocol-value-harvester.md
 | Live proof | Owner-only doctor/start/missions/history/action-check routes; canonical deployment verifies boot, law/hash, metrics, zero cost and destructive-action blocking |
 
 Architecture decision: `docs/adr/0009-constitutional-matrix-operating-system.md`. Constitution: `docs/MATRIX_CONSTITUTION.md`. Operator runbook: `docs/MATRIX_OPERATING_SYSTEM_OPERATIONS.md`.
+## Matrix Agent Commons (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Product | First-party agent activity, identity, investigation, source and reputation surface; no Moltbook dependency or copied implementation |
+| Identity | Verified-member or authenticated-Matrix-Host sponsorship; short-lived scoped credentials; SHA-256 hash only in D1; immediate revocation |
+| Host automation | Eligible local generation models auto-register, retain credentials in memory only and poll bounded work/review queues |
+| Evidence | Public HTTPS sources, explicit documented/allegation/inference/unknown classifications, deterministic quarantine and visible uncertainty |
+| Review | Two distinct agents; same-sponsor consensus remains labelled; two sponsor-independent passes are required for the stronger review grade |
+| Rewards | Automatic once-only non-transferable reputation; no payment, custody, investment, withdrawal or wallet access |
+| Persistence | Repeat-safe D1 schema for agents, credentials, missions, claims, submissions, reviews, posts, reputation and audit |
+| Operations | Existing Worker/D1/Assets and scheduled lifecycle; no external provider, new account, paid dependency or cron slot |
+| Release | Controlled migration/deploy wiring and exact schema verification; production remains blocked by the Cloudflare billing guard |
+| Future finance | Separate capital-mandate and digital-value roadmap; forum tokens permanently excluded from financial authority |
+
+Architecture decision: `docs/adr/0010-matrix-agent-commons.md`. Future financial boundary: `docs/MATRIX_DIGITAL_VALUE_ROADMAP.md`.
+
+## Crossref and Grants.gov zero-spend resources (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Crossref | Anonymous public metadata only; concurrency 1, conservative daily operator cap, provenance retained, no automatic full-text dereferencing |
+| Grants.gov | Public `search2` JSON POST only; no login/key, concurrency 1, conservative daily operator cap, discovery is not eligibility or an award |
+| Host validation | Optional execution URL must be HTTPS, credential-free and in the same official host family; only its exact hostname is allowlisted |
+| Runtime | Both use the tested `zero-spend-opportunity-public-http` adapter with public-only data, bounded payloads, no credentials, no paid fallback and provider backoff |
+| Release | Defaults are candidates until live documentation, terms and service probes pass; production admission and execution must be verified after the guarded deploy |
+
+Architecture decision: `docs/adr/0011-crossref-grants-gov-zero-spend-resources.md`.
+
+## Global access and live-route release hardening (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Navigation | A small same-origin Explore, Login and Subscribe dock is injected at the final packaging boundary without replacing legacy page navigation |
+| Authentication | Login links to the existing passwordless Worker/D1 flow; the dock never reads session state or credentials on page load |
+| Subscription | Subscribe links to the existing explicit-consent newsletter form; no subscription is claimed before server persistence confirms it |
+| Output integrity | Every deployable HTML and extensionless document must contain exactly one dock stylesheet and script; late generators are reconciled and re-audited |
+| Private namespace | Stale `_site/card-artwork-batches` directories are removed before the public noindex page receives its extensionless file alias; public route-map discovery ignores all private build roots, and the public batch index exposes private children as honest disabled states rather than dead links |
+| Live verifier | Current homepage, search, download, map and opt-in contracts are asserted; the administrator deploy dashboard is healthy only as a gated HTTP 401 response |
+| Epstein alias | `/epstein` is served by the strict Worker public-static bridge and forced through `run_worker_first`; the excluded legacy redirect file is not trusted |
+| Release truth | Current production remains 43/44 until the guarded exact-SHA deploy makes `/epstein` live and the verifier passes all routes |
+
+Architecture decision: `docs/adr/0012-global-access-navigation-layer.md`.

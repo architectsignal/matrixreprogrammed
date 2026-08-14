@@ -1,0 +1,132 @@
+.matrix-access-dock {
+  --matrix-dock-bg: rgba(8, 8, 8, 0.96);
+  --matrix-dock-border: rgba(216, 181, 106, 0.48);
+  --matrix-dock-gold: #efd087;
+  --matrix-dock-red: #b92b30;
+  position: fixed;
+  right: max(0.75rem, env(safe-area-inset-right));
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  padding: 0.35rem;
+  border: 1px solid var(--matrix-dock-border);
+  border-radius: 999px;
+  background: var(--matrix-dock-bg);
+  box-shadow: 0 0.65rem 2rem rgba(0, 0, 0, 0.45);
+  color: #fff7e1;
+  font: 700 0.76rem/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.015em;
+  isolation: isolate;
+}
+
+.matrix-access-dock a,
+.matrix-access-dock summary {
+  box-sizing: border-box;
+  min-height: 2.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0.58rem 0.72rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: inherit;
+  background: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.matrix-access-dock summary {
+  list-style: none;
+}
+
+.matrix-access-dock summary::-webkit-details-marker {
+  display: none;
+}
+
+.matrix-access-dock a:hover,
+.matrix-access-dock summary:hover,
+.matrix-access-dock a:focus-visible,
+.matrix-access-dock summary:focus-visible {
+  border-color: var(--matrix-dock-gold);
+  color: #fff;
+  outline: none;
+}
+
+.matrix-access-dock a[aria-current="page"] {
+  color: var(--matrix-dock-gold);
+}
+
+.matrix-access-dock__login {
+  border-color: rgba(239, 208, 135, 0.45) !important;
+}
+
+.matrix-access-dock__subscribe {
+  background: linear-gradient(135deg, #8f1d24, var(--matrix-dock-red)) !important;
+  border-color: #d34b50 !important;
+  color: #fff !important;
+}
+
+.matrix-access-dock__explore {
+  position: relative;
+}
+
+.matrix-access-dock__drawer {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.7rem);
+  width: min(17rem, calc(100vw - 1.5rem));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.28rem;
+  padding: 0.55rem;
+  border: 1px solid var(--matrix-dock-border);
+  border-radius: 0.9rem;
+  background: var(--matrix-dock-bg);
+  box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.55);
+}
+
+.matrix-access-dock__drawer a {
+  justify-content: flex-start;
+  border-radius: 0.55rem;
+}
+
+@media (max-width: 480px) {
+  .matrix-access-dock {
+    right: max(0.5rem, env(safe-area-inset-right));
+    bottom: max(0.5rem, env(safe-area-inset-bottom));
+    gap: 0.2rem;
+    padding: 0.25rem;
+    font-size: 0.72rem;
+  }
+
+  .matrix-access-dock a,
+  .matrix-access-dock summary {
+    min-height: 2rem;
+    padding: 0.52rem 0.58rem;
+  }
+
+  .matrix-access-dock__drawer {
+    position: fixed;
+    right: max(0.5rem, env(safe-area-inset-right));
+    bottom: calc(max(0.5rem, env(safe-area-inset-bottom)) + 2.8rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matrix-access-dock *,
+  .matrix-access-dock *::before,
+  .matrix-access-dock *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  .matrix-access-dock {
+    display: none !important;
+  }
+}

@@ -3,6 +3,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { removePrivateOutputDirectories } = require('./private-output-directory-repair.js');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
@@ -81,6 +82,10 @@ if (!report.sitePresent) {
   if (!searchReport.ok) throw new Error('Clean public search finalization failed closed before route alias synchronization.');
   report.searchFinalized = true;
 
+  report.privateOutputDirectoryRepairs.push(
+    ...removePrivateOutputDirectories(site, privateOutputDirectoryConflicts)
+  );
+
   const htmlFiles = walk(site).sort();
   report.htmlFiles = htmlFiles.length;
 
@@ -90,24 +95,15 @@ if (!report.sitePresent) {
     const relativeAlias = slash(path.relative(site, aliasFile));
 
     if (fs.existsSync(aliasFile) && fs.statSync(aliasFile).isDirectory()) {
-      if (privateOutputDirectoryConflicts.has(relativeHtml)) {
-        fs.rmSync(aliasFile, { recursive: true, force: true });
-        report.privateOutputDirectoryRepairs.push({
-          html: relativeHtml,
-          directory: relativeAlias,
-          repair: 'removed-private-output-directory'
-        });
-      } else {
-        const expectedDirectory = directoryConflicts.get(relativeHtml);
-        const item = {
-          html: relativeHtml,
-          directory: relativeAlias,
-          approved: expectedDirectory === relativeAlias
-        };
-        report.directoryConflicts.push(item);
-        if (!item.approved) report.unexpectedDirectoryConflicts.push(item);
-        continue;
-      }
+      const expectedDirectory = directoryConflicts.get(relativeHtml);
+      const item = {
+        html: relativeHtml,
+        directory: relativeAlias,
+        approved: expectedDirectory === relativeAlias
+      };
+      report.directoryConflicts.push(item);
+      if (!item.approved) report.unexpectedDirectoryConflicts.push(item);
+      continue;
     }
 
     fs.mkdirSync(path.dirname(aliasFile), { recursive: true });

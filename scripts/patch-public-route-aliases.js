@@ -16,6 +16,9 @@ const aliases = [
   ['/subject-briefs', '/subject-briefs.html'],
   ['/entity-timelines', '/entity-timelines.html']
 ];
+const protectedWorkerAliases = new Set([
+  '/card-artwork-batches'
+]);
 
 function escapeRegExp(value) {
   return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -35,11 +38,21 @@ function writeIfChanged(file, before, after, changed) {
 function patchWorker(source) {
   const marker = 'const publicStaticAssetRoutes = new Map([';
   if (!source.includes(marker)) throw new Error('Strict Worker publicStaticAssetRoutes owner is missing');
+  let next = source;
+  for (const [requestPath, assetPath] of aliases) {
+    if (!protectedWorkerAliases.has(requestPath)) continue;
+    const unsafePublicMapping = new RegExp(
+      `^[ \\t]*\\['${escapeRegExp(requestPath)}',[ \\t]*'${escapeRegExp(assetPath)}'\\],[ \\t]*(?:\\r?\\n|$)`,
+      'gm'
+    );
+    next = next.replace(unsafePublicMapping, '');
+  }
   const lines = aliases
-    .filter(([requestPath]) => !source.includes(`['${requestPath}',`))
+    .filter(([requestPath]) => !protectedWorkerAliases.has(requestPath))
+    .filter(([requestPath]) => !next.includes(`['${requestPath}',`))
     .map(([requestPath, assetPath]) => `  ['${requestPath}', '${assetPath}'],`);
-  if (!lines.length) return source;
-  return source.replace(marker, `${marker}\n${lines.join('\n')}`);
+  if (!lines.length) return next;
+  return next.replace(marker, `${marker}\n${lines.join('\n')}`);
 }
 
 function runWorkerFirstBlock(source, marker) {
@@ -140,7 +153,15 @@ function runSelfTest() {
     }
     if (redundantRoutes(source, marker).length) throw new Error(`${name} self-test left a redundant route`);
   }
-  console.log('PUBLIC ROUTE ALIAS ROUTING SELF-TEST PASSED: wildcard coverage is preserved without redundant exact routes.');
+  const worker = `const publicStaticAssetRoutes = new Map([\n  ['/card-artwork-batches', '/card-artwork-batches.html'],\n]);\n`;
+  const patchedWorker = patchWorker(worker);
+  if (patchedWorker.includes("['/card-artwork-batches', '/card-artwork-batches.html']")) {
+    throw new Error('Worker self-test left a protected admin asset in the public static bridge');
+  }
+  if (!patchedWorker.includes("['/epstein', '/epstein-files.html']")) {
+    throw new Error('Worker self-test did not preserve public alias bridging');
+  }
+  console.log('PUBLIC ROUTE ALIAS ROUTING SELF-TEST PASSED: wildcard coverage is preserved without redundant exact routes, and protected admin assets stay outside the public bridge.');
 }
 
 function run() {
@@ -161,7 +182,8 @@ function run() {
   const coverage = [];
   for (const [requestPath, assetPath] of aliases) {
     const workerCount = (workerAfter.match(new RegExp(`\\['${escapeRegExp(requestPath)}',\\s*'${escapeRegExp(assetPath)}'\\]`, 'g')) || []).length;
-    if (workerCount !== 1) failures.push(`${requestPath} strict Worker mapping count is ${workerCount}`);
+    const expectedWorkerCount = protectedWorkerAliases.has(requestPath) ? 0 : 1;
+    if (workerCount !== expectedWorkerCount) failures.push(`${requestPath} public static Worker mapping count is ${workerCount}; expected ${expectedWorkerCount}`);
     const tomlCoverage = routeCoverage(tomlAfter, 'run_worker_first = [', requestPath);
     const jsoncCoverage = routeCoverage(jsoncAfter, '"run_worker_first": [', requestPath);
     coverage.push({ requestPath, toml: tomlCoverage, jsonc: jsoncCoverage });
@@ -179,12 +201,16 @@ function run() {
   const report = {
     ok: failures.length === 0,
     generatedAt: new Date().toISOString(),
-    aliases: aliases.map(([requestPath, assetPath]) => ({ requestPath, assetPath })),
+    aliases: aliases.map(([requestPath, assetPath]) => ({
+      requestPath,
+      assetPath,
+      workerBoundary: protectedWorkerAliases.has(requestPath) ? 'protected-asset-gate' : 'public-static-asset'
+    })),
     changed,
     coverage,
     redundantRoutes: { toml: tomlRedundant, jsonc: jsoncRedundant },
     failures,
-    boundary: 'Exact extensionless routes that collide with real namespace directories are handled by the strict production Worker and served from canonical root .html assets. run_worker_first uses an exact entry only when no existing wildcard already covers that path; nested namespace files remain unchanged.'
+    boundary: 'Exact extensionless routes that collide with real namespace directories are handled by the strict production Worker. Public aliases may be served from canonical root .html assets, while protected aliases remain outside the public bridge and continue through the membership/admin asset gate. run_worker_first uses an exact entry only when no existing wildcard already covers that path; nested namespace files remain unchanged.'
   };
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
   fs.writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`);
@@ -193,7 +219,7 @@ function run() {
     failures.forEach(item => console.error(`- ${item}`));
     process.exit(1);
   }
-  console.log(`Public route namespace aliases verified: ${aliases.length} strict Worker mappings; ${changed.length} owner file(s) patched; no run_worker_first redundancy.`);
+  console.log(`Public route namespace aliases verified: ${aliases.length} Worker-first aliases with protected/public boundaries; ${changed.length} owner file(s) patched; no run_worker_first redundancy.`);
   return report;
 }
 

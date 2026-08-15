@@ -1,32 +1,57 @@
 {
   "ok": true,
-  "generatedAt": "2026-08-12T05:37:40.210Z",
+  "generatedAt": "2026-08-15T13:18:14.120Z",
   "aliases": [
     {
+      "requestPath": "/epstein",
+      "assetPath": "/epstein-files.html",
+      "workerBoundary": "public-static-asset"
+    },
+    {
       "requestPath": "/follow-the-money",
-      "assetPath": "/follow-the-money.html"
+      "assetPath": "/follow-the-money.html",
+      "workerBoundary": "public-static-asset"
     },
     {
       "requestPath": "/making-money",
-      "assetPath": "/making-money.html"
+      "assetPath": "/making-money.html",
+      "workerBoundary": "public-static-asset"
     },
     {
       "requestPath": "/card-artwork-batches",
-      "assetPath": "/card-artwork-batches.html"
+      "assetPath": "/card-artwork-batches.html",
+      "workerBoundary": "protected-asset-gate"
     },
     {
       "requestPath": "/subject-briefs",
-      "assetPath": "/subject-briefs.html"
+      "assetPath": "/subject-briefs.html",
+      "workerBoundary": "public-static-asset"
     },
     {
       "requestPath": "/entity-timelines",
-      "assetPath": "/entity-timelines.html"
+      "assetPath": "/entity-timelines.html",
+      "workerBoundary": "public-static-asset"
     }
   ],
-  "changed": [
-    "src/worker-production.js"
-  ],
+  "changed": [],
   "coverage": [
+    {
+      "requestPath": "/epstein",
+      "toml": {
+        "requestPath": "/epstein",
+        "exact": true,
+        "wildcard": "",
+        "covered": true,
+        "redundant": false
+      },
+      "jsonc": {
+        "requestPath": "/epstein",
+        "exact": true,
+        "wildcard": "",
+        "covered": true,
+        "redundant": false
+      }
+    },
     {
       "requestPath": "/follow-the-money",
       "toml": {
@@ -118,5 +143,5 @@
     "jsonc": []
   },
   "failures": [],
-  "boundary": "Exact extensionless routes that collide with real namespace directories are handled by the strict production Worker and served from canonical root .html assets. run_worker_first uses an exact entry only when no existing wildcard already covers that path; nested namespace files remain unchanged."
+  "boundary": "Exact extensionless routes that collide with real namespace directories are handled by the strict production Worker. Public aliases may be served from canonical root .html assets, while protected aliases remain outside the public bridge and continue through the membership/admin asset gate. run_worker_first uses an exact entry only when no existing wildcard already covers that path; nested namespace files remain unchanged."
 }

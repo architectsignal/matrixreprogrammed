@@ -38,7 +38,6 @@ const aliasPairs = [
   ['/evidence-vault.html', '/evidence-vault'],
   ['/follow-the-money.html', '/follow-the-money'],
   ['/making-money.html', '/making-money'],
-  ['/card-artwork-batches.html', '/card-artwork-batches'],
   ['/subject-briefs.html', '/subject-briefs'],
   ['/entity-timelines.html', '/entity-timelines']
 ];
@@ -71,6 +70,14 @@ async function fetchLive(route, options = {}) {
 
 function residueIn(text = '') {
   return forbiddenResidue.filter(token => String(text).includes(token));
+}
+
+function normalizeCloudflareHtml(text = '') {
+  return String(text).replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, block => {
+    const injected = /\/cdn-cgi\/challenge-platform\/scripts\/jsd\//i.test(block)
+      && /(?:window\._cf_chl_opt|\(function\(\)\{function\s+[a-z]\(\))/i.test(block);
+    return injected ? '' : block;
+  }).trim();
 }
 
 async function verifyGitAncestry(liveSha) {
@@ -144,14 +151,34 @@ async function verifyOnce() {
     const [html, extensionless] = await Promise.all([fetchLive(htmlRoute), fetchLive(extensionlessRoute)]);
     const htmlResidue = residueIn(html.text);
     const extensionlessResidue = residueIn(extensionless.text);
+    const normalizedHtml = normalizeCloudflareHtml(html.text);
+    const normalizedExtensionless = normalizeCloudflareHtml(extensionless.text);
     const ok = html.ok
       && extensionless.ok
-      && html.text === extensionless.text
+      && normalizedHtml === normalizedExtensionless
       && htmlResidue.length === 0
       && extensionlessResidue.length === 0;
     if (!ok) failures.push(`route alias mismatch: ${htmlRoute} <> ${extensionlessRoute}`);
-    aliases.push({ htmlRoute, extensionlessRoute, htmlStatus: html.status, extensionlessStatus: extensionless.status, bytes: html.text.length, identical: html.text === extensionless.text, htmlResidue, extensionlessResidue, ok });
+    aliases.push({
+      htmlRoute, extensionlessRoute, htmlStatus: html.status, extensionlessStatus: extensionless.status,
+      bytes: html.text.length, identical: normalizedHtml === normalizedExtensionless,
+      cloudflareInjectionStripped: normalizedHtml !== html.text.trim() || normalizedExtensionless !== extensionless.text.trim(),
+      htmlResidue, extensionlessResidue, ok
+    });
   }
+
+  const protectedArtworkRoutes = await Promise.all([
+    fetchLive('/card-artwork-batches.html'),
+    fetchLive('/card-artwork-batches')
+  ]);
+  const protectedArtworkOk = protectedArtworkRoutes.every(result => {
+    const payload = parseJson(result.text);
+    return result.status === 401
+      && result.headers['x-matrix-origin'] === 'cloudflare-worker-membership-asset-gate'
+      && payload?.authenticated === false
+      && payload?.requiredTier === 'admin';
+  });
+  if (!protectedArtworkOk) failures.push('card artwork control routes are not consistently admin-protected');
 
   const authHealthResponse = await fetchLive('/api/auth/health');
   const authHealth = parseJson(authHealthResponse.text);
@@ -197,9 +224,10 @@ async function verifyOnce() {
   });
   const noConsent = parseJson(noConsentResponse.text);
   const consentBoundaryOk = noConsentResponse.status === 400
-    && noConsentResponse.headers['x-matrix-origin'] === 'cloudflare-worker-api'
+    && noConsentResponse.headers['x-matrix-origin'] === 'cloudflare-worker-email-lifecycle'
     && noConsent?.ok === false
-    && noConsent?.saved === false
+    && noConsent?.saved !== true
+    && noConsent?.persistent !== true
     && /consent/i.test(String(noConsent?.error || ''));
   if (!consentBoundaryOk) failures.push('newsletter explicit-consent gate did not fail closed without mutation');
 
@@ -251,6 +279,13 @@ async function verifyOnce() {
     pages,
     search: { status: searchResponse.status, ok: searchOk, records: Array.isArray(searchIndex) ? searchIndex.length : 0, residue: searchResidue, retiredSearchUrls, forumSearchRoutes, semanticStatus: semanticResponse.status, semanticRecords: Number(semantic?.count || 0), semanticOk },
     aliases,
+    protectedRoutes: protectedArtworkRoutes.map(result => ({
+      route: result.route,
+      status: result.status,
+      origin: result.headers['x-matrix-origin'] || null,
+      requiredTier: parseJson(result.text)?.requiredTier || null,
+      ok: result.status === 401
+    })),
     authentication: { healthStatus: authHealthResponse.status, health: authHealth, healthOk: authHealthOk, invalidRequestStatus: invalidLoginResponse.status, invalidRequest: invalidLogin, invalidRequestOk: loginBoundaryOk },
     newsletter: { healthStatus: newsletterHealthResponse.status, health: newsletterHealth, healthOk: newsletterHealthOk, noConsentStatus: noConsentResponse.status, noConsent, consentBoundaryOk },
     forum: { healthStatus: forumHealthResponse.status, health: forumHealth, healthOk: forumHealthOk, feedStatus: forumFeedResponse.status, feedCount: Number(forumFeed?.count || 0), readOk: forumReadOk, anonymousPostStatus: anonymousPostResponse.status, anonymousPost, writeBoundaryOk: forumWriteBoundaryOk },

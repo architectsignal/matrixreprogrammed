@@ -2,10 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const BASE = (process.env.LIVE_SITE_BASE || 'https://www.matrixreprogrammed.com').replace(/\/$/, '');
+const FALLBACK_BASE = String(process.env.LIVE_SITE_FALLBACK || '').replace(/\/$/, '');
 const POST_TESTS = String(process.env.LIVE_FUNCTIONALITY_POST_TESTS || 'true').toLowerCase() !== 'false';
 const SOFT_FORUM_TIMEOUTS = String(process.env.LIVE_FUNCTIONALITY_SOFT_FORUM_TIMEOUTS || 'true').toLowerCase() !== 'false';
 const startedAt = new Date().toISOString();
-const report = { startedAt, base: BASE, postTests: POST_TESTS, softForumTimeouts: SOFT_FORUM_TIMEOUTS, checks: [], failures: [], warnings: [] };
+const report = { startedAt, base: BASE, fallbackBase: FALLBACK_BASE || null, transportFallbacks: [], postTests: POST_TESTS, softForumTimeouts: SOFT_FORUM_TIMEOUTS, checks: [], failures: [], warnings: [] };
 
 function addCheck(name, ok, details = {}, options = {}) {
   const soft = Boolean(options.soft);
@@ -19,14 +20,26 @@ function addCheck(name, ok, details = {}, options = {}) {
 }
 
 function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
-function url(route) { return `${BASE}${route.startsWith('/') ? route : '/' + route}`; }
+function url(base, route) { return `${base}${route.startsWith('/') ? route : '/' + route}`; }
+function isCloudflareChallenge(res, text) {
+  return res.status === 403 && (res.headers.get('cf-mitigated') === 'challenge'
+    || (/<title>Just a moment\.\.\.<\/title>/i.test(text) && /cloudflare/i.test(text)));
+}
 async function fetchText(route, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), Number(process.env.LIVE_FUNCTIONALITY_TIMEOUT_MS || 25000));
   try {
-    const res = await fetch(url(route), { redirect: 'follow', cache: 'no-store', signal: controller.signal, headers: { 'user-agent': 'matrix-live-functionality-test/1.0', ...(options.headers || {}) }, ...options });
-    const text = await res.text();
-    return { res, text };
+    const request = async base => {
+      const res = await fetch(url(base, route), { redirect: 'follow', cache: 'no-store', signal: controller.signal, headers: { 'user-agent': 'matrix-live-functionality-test/1.0', ...(options.headers || {}) }, ...options });
+      return { res, text: await res.text() };
+    };
+    const primary = await request(BASE);
+    if (FALLBACK_BASE && FALLBACK_BASE !== BASE && isCloudflareChallenge(primary.res, primary.text)) {
+      const fallback = await request(FALLBACK_BASE);
+      report.transportFallbacks.push({ route, primaryStatus: primary.res.status, reason: 'known-cloudflare-challenge', fallbackStatus: fallback.res.status });
+      return fallback;
+    }
+    return primary;
   } finally {
     clearTimeout(timeout);
   }

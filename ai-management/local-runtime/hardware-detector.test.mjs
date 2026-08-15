@@ -38,7 +38,9 @@ const admitted = resources.find(resource => resource.metadata.model_id === 'qwen
 const embedding = resources.find(resource => resource.capability_types.includes('embeddings'));
 assert.equal(large.enabled, false, '14B model must be excluded from automatic loading on a 16 GB machine');
 assert.equal(large.metadata.memory_admission_passed, false);
-assert.equal(large.health_status, 'capacity-constrained');
+assert.equal(large.approved_for_automation, false);
+assert.equal(large.health_status, 'unhealthy');
+assert.equal(large.implementation_status, 'disabled');
 assert.equal(admitted.enabled, true);
 assert.equal(admitted.licence, 'Apache-2.0');
 assert.equal(admitted.metadata.licence_verified, true);

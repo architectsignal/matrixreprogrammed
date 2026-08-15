@@ -203,6 +203,9 @@ needText('scripts/build-cloudflare-output.js', 'copyHtmlRouteVariant', 'extensio
 needText('scripts/final-production-reconcile.js', 'paypal-membership.js', 'final PayPal membership reconciliation');
 needText('scripts/final-production-reconcile.js', 'Payments: RUNTIME GATED / DASHBOARD MANAGED', 'final runtime-gated payment guard');
 needText('scripts/final-production-reconcile.js', 'repair-forum-page-consistency.js', 'final forum page consistency owner');
+needText('scripts/final-production-reconcile.js', 'version-cloudflare-assets.js', 'final Cloudflare asset fingerprint owner');
+needText('src/worker-ai-management.js', "localModelStatus = resource.enabled === true", 'capacity-constrained local model quarantine');
+forbidText('src/worker-production.js', "['/card-artwork-batches', '/card-artwork-batches.html']", 'public bridge that bypasses the admin asset gate');
 needText('scripts/build-production-health.js', 'workerScript: configuredWorkerScript', 'configured Worker health identity');
 needText('scripts/build-production-health.js', 'delegates every fetch unchanged', 'verified wrapper health policy');
 needText('scripts/build-production-health.js', "paymentStatus: 'runtime-gated-dashboard-managed'", 'runtime-gated dashboard-managed health status');

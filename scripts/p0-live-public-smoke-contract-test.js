@@ -33,6 +33,11 @@ for (const marker of [
   '/newsletter-health',
   '/api/membership/signup',
   'marketingConsent: false',
+  'normalizeCloudflareHtml',
+  'cdn-cgi\\/challenge-platform\\/scripts\\/jsd',
+  'noConsent?.saved !== true',
+  'cloudflare-worker-email-lifecycle',
+  'card artwork control routes are not consistently admin-protected',
   '/forum-health',
   '/forum-feed-main',
   '/submit-main-post',
@@ -53,7 +58,6 @@ for (const pair of [
   "['/evidence-vault.html', '/evidence-vault']",
   "['/follow-the-money.html', '/follow-the-money']",
   "['/making-money.html', '/making-money']",
-  "['/card-artwork-batches.html', '/card-artwork-batches']",
   "['/subject-briefs.html', '/subject-briefs']",
   "['/entity-timelines.html', '/entity-timelines']"
 ]) need(smoke.includes(pair), `P0 live smoke missing route-alias pair: ${pair}`);

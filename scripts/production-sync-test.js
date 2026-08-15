@@ -137,6 +137,11 @@ check('built deployment manifest exists', fs.existsSync(path.join(site, 'deploy-
 check('source production health exists', exists('deploy-health.json') && exists('deploy-health.html'));
 check('built production health exists', fs.existsSync(path.join(site, 'deploy-health.json')) && fs.existsSync(path.join(site, 'deploy-health.html')) && fs.existsSync(path.join(site, 'deploy-health')));
 check('production health is regenerated last', read('scripts/final-production-reconcile.js').includes('build-production-health.js') && read('scripts/final-production-reconcile.js').includes('downloads/deploy-health.json'));
+const finalReconcile = read('scripts/final-production-reconcile.js');
+check('final Cloudflare assets are fingerprinted before release hashes',
+  finalReconcile.indexOf("run('scripts/version-cloudflare-assets.js')") > -1
+  && finalReconcile.indexOf("run('scripts/version-cloudflare-assets.js')") < finalReconcile.lastIndexOf("run('scripts/build-deploy-manifest.js')")
+  && finalReconcile.indexOf("run('scripts/version-cloudflare-assets.js')") < finalReconcile.lastIndexOf("run('scripts/build-production-health.js')"));
 check('main navigation safety links', read('index.html').includes('security-privacy.html') && read('index.html').includes('dark-web-safety.html'));
 check('Start Here safety links', read('start-here.html').includes('Open Security Tools') && read('start-here.html').includes('Open Dark Web Safety'));
 check('membership preserves free and server-gated paid tiers', read('membership.html').includes('Free Member') && read('membership.html').includes('paypal-membership.js') && read('membership.html').includes('Paid checkout remains disabled until the sandbox or live activation gates are deliberately enabled.') && !read('membership.html').includes('Coming soon — no payment taken'));

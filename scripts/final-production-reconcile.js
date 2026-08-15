@@ -164,6 +164,9 @@ run('scripts/finalize-black-file-postbuild.js');
 // Final release seal: every broad generator and sanitizer has finished. From
 // this point forward only deterministic compaction, corpus compilation,
 // byte-for-byte copies, hashing and validation are permitted.
+// Fingerprint the exact final HTML/CSS/JS bundle before the manifest and
+// production-health hashes are sealed. No HTML mutator may run after this.
+run('scripts/version-cloudflare-assets.js');
 run('scripts/compact-cloudflare-search-index.js');
 run('scripts/build-public-investigation-corpus.js');
 for (const relative of ['search-index.json', 'data/search-facets.json', 'data/public-investigation-corpus.json']) copy(relative);

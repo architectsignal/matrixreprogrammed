@@ -200,6 +200,11 @@ const promptRejectionProof = aiLiveVerifier.includes("body: { prompt: 'This cont
   && aiLiveVerifier.includes('promptRejection.status === 400')
   && aiLiveVerifier.includes('/prompt material is forbidden/i')
   && aiLiveVerifier.includes('promptAccepted: false');
+const typedBountyD1Proof = canonicalDeploy.includes("'source' AS record_type")
+  && canonicalDeploy.includes("'profile' AS record_type")
+  && canonicalDeploy.includes("'flag' AS record_type")
+  && canonicalDeploy.includes("row.record_type === 'source' && Number(row.consequential_actions_enabled) !== 0")
+  && canonicalDeploy.includes("row.record_type === 'profile' && Number(row.external_writes_enabled) !== 0");
 const explicitFreeze = text => /HARD FREEZE|PRODUCTION DEPLOYMENT LOCKED|MANUAL FALLBACK DEPLOYMENT LOCKED|PRODUCTION DISPATCH LOCKED/i.test(text);
 const executableDeployCommand = /^\s*(?:-\s*)?(?:run:\s*)?(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+(?:deploy|pages\s+deploy)\b/im;
 const d1MutationCommand = /\b(?:npx(?:\s+--yes)?\s+)?wrangler(?:@latest)?\s+d1\s+(?:execute|migrations\s+apply)\b|checkout_enabled\s*=/i;
@@ -238,6 +243,7 @@ if (hardFreeze) {
     if (!canonicalDeploy.includes(text)) hard.push(`canonical deploy missing AI release gate ${text}`);
   }
   if (!promptRejectionProof) hard.push('canonical deploy live verifier does not prove prompt-shaped payload rejection with HTTP 400');
+  if (!typedBountyD1Proof) hard.push('canonical deploy D1 verifier does not type bounty source, profile and flag rows');
 
   if (!fallbackDeploy.includes('workflow_dispatch:') || /^\s*(?:push|pull_request|schedule):/m.test(fallbackDeploy)) hard.push('manual fallback must remain manual only');
   if (!explicitFreeze(fallbackDeploy)) hard.push('manual fallback must remain explicitly hard frozen');

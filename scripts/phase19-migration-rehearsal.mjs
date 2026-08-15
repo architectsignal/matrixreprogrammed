@@ -29,6 +29,13 @@ const tables = [
   'matrix_future_opportunity_radar','matrix_capital_cycles'
 ];
 
+const phase19Sql = fs.readFileSync('migrations/phase19_matrix_capital_challenge.sql', 'utf8');
+assert.doesNotMatch(
+  phase19Sql,
+  /^\s*(?:BEGIN(?:\s+\w+)?|COMMIT|ROLLBACK|SAVEPOINT)\s*;/im,
+  'Phase 19 must not contain transaction-control SQL rejected by the remote D1 file importer'
+);
+
 const database = new DatabaseSync(':memory:');
 try {
   for (let pass = 1; pass <= 2; pass += 1) {

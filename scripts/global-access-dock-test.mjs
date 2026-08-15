@@ -36,6 +36,7 @@ const client = fs.readFileSync(path.join(root, 'matrix-access-dock.js'), 'utf8')
 const stylesheet = fs.readFileSync(path.join(root, 'matrix-access-dock.css'), 'utf8');
 const build = fs.readFileSync(path.join(root, 'scripts', 'build-cloudflare-output.js'), 'utf8');
 const finalReconcile = fs.readFileSync(path.join(root, 'scripts', 'final-production-reconcile.js'), 'utf8');
+const performanceOptimizer = fs.readFileSync(path.join(root, 'scripts', 'apply-runtime-performance-optimizations.js'), 'utf8');
 
 for (const route of [
   '/start-here.html',
@@ -61,6 +62,7 @@ assert.ok(build.includes("'matrix-access-dock.js'"), 'Cloudflare output must req
 assert.ok(finalReconcile.includes("run('scripts/reconcile-global-access-dock.cjs')"), 'final production reconciliation must restore the dock after authoritative HTML mirrors');
 assert.ok(finalReconcile.includes('stripSourceGlobalAccessDock'), 'final production reconciliation must remove deploy-only dock assets from authoritative source mirrors');
 assert.ok(finalReconcile.indexOf("run('scripts/reconcile-global-access-dock.cjs')") < finalReconcile.indexOf("run('scripts/version-cloudflare-assets.js')"), 'final dock reconciliation must run before final asset fingerprinting');
+assert.ok(performanceOptimizer.includes('stripGlobalAccessDock(read(optimized))'), 'runtime optimization must not copy deploy-only dock assets back into canonical source HTML');
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
 assert.ok(packageJson.scripts.postbuild.includes('reconcile-global-access-dock.cjs'), 'postbuild must restore the dock after late generators');
 assert.ok(packageJson.scripts['postcloudflare-output'].includes('reconcile-global-access-dock.cjs'), 'Cloudflare lifecycle must restore the dock after late generators');

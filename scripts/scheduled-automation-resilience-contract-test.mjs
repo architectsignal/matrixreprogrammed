@@ -42,9 +42,9 @@ if (!failures.length) {
   need(sitewideWorkflow.indexOf('daily-sitewide-build-safe.js') < sitewideWorkflow.indexOf('automation-health-gate.js'), 'daily sitewide refresh must build its report before enforcing the truthful health gate');
 
   const brain = JSON.parse(read('data/site-brain.json'));
-  need(Number(brain.version) >= 3, 'site brain contract version must describe the search-first homepage');
-  need(brain.freshness?.homepageCurrentMarker === 'POWER SHOULD HAVE', 'site brain current marker must match the canonical accountability homepage');
-  need(brain.criticalRoutes?.some(route => route.path === '/' && route.marker === 'POWER SHOULD HAVE'), 'root route health marker must match the canonical accountability homepage');
+  need(Number(brain.version) >= 4, 'site brain contract version must describe the stable search-first homepage identity');
+  need(brain.freshness?.homepageCurrentMarker === 'id="accountability-search"', 'site brain current marker must match the canonical functional search route');
+  need(brain.criticalRoutes?.some(route => route.path === '/' && route.marker === 'id="accountability-search"'), 'root route health marker must match the canonical functional search route');
   const health = read('scripts/site-brain-health.js');
   for (const marker of ['search-first-accountability', 'id="accountability-search"', 'id="accountability-hit-list"', 'id="open-question-ledger"', 'acceptedHomepageMarkers']) {
     need(health.includes(marker), `site brain health is missing search-first contract marker: ${marker}`);

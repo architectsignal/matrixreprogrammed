@@ -5,7 +5,6 @@ PRAGMA foreign_keys = ON;
 -- can never be mistaken for real Matrix capital and a real donation can be
 -- recorded. No other table references paypal_payment_records.
 PRAGMA foreign_keys = OFF;
-BEGIN IMMEDIATE;
 DROP TABLE IF EXISTS paypal_payment_records_phase19;
 CREATE TABLE paypal_payment_records_phase19 (
   id TEXT PRIMARY KEY,
@@ -39,7 +38,6 @@ DROP TABLE paypal_payment_records;
 ALTER TABLE paypal_payment_records_phase19 RENAME TO paypal_payment_records;
 CREATE INDEX IF NOT EXISTS idx_paypal_payment_subscription ON paypal_payment_records(provider_subscription_id,created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_paypal_payment_event ON paypal_payment_records(provider_event_id);
-COMMIT;
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS matrix_capital_challenges (

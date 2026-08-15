@@ -87,11 +87,11 @@ const requiredBuilt = [
   'security-privacy.html','security-privacy','dark-web-safety.html','dark-web-safety',
   'geographic-power-atlas.html','geographic-power-atlas','data-lab.html','data-lab','evidence-archive.html','evidence-archive','search.html','search',
   'deploy-manifest.json','deploy-manifest','deploy-health.html','deploy-health','deploy-health.json','downloads/deploy-health.json',
-  'answer-engine.html','answer-engine','ask-matrix.js','ask-matrix.css','data/public-investigation-corpus.json',
-  'runtime/deploy-manifest-current.json','runtime/deploy-health-current.json'
+  'answer-engine.html','answer-engine','ask-matrix.js','ask-matrix.css','data/public-investigation-corpus.json'
 ];
 requiredSource.forEach(need);
 requiredBuilt.forEach(needSite);
+if (siteExists('runtime')) hard.push('_site/runtime is an internal build artifact and must not be deployed');
 
 for (const rel of ['index.html','start-here.html','membership.html','member-dashboard.html','billing-dashboard.html','admin-payment-dashboard.html','live-intel.html','daily-power-conclusions.html','daily-investigation-conclusions.html','daily-brain-brief.html','outcome-briefings.html','deploy-health.html']) {
   if (exists(rel)) {
@@ -129,19 +129,15 @@ const expectedSha = process.env.DEPLOY_COMMIT_SHA || process.env.GITHUB_SHA || '
 const manifest = exists('deploy-manifest.json') ? parse('deploy-manifest.json') : null;
 const builtManifest = siteExists('deploy-manifest.json') ? parse('deploy-manifest.json', true) : null;
 const runtimeManifest = exists('runtime/deploy-manifest-current.json') ? parse('runtime/deploy-manifest-current.json') : null;
-const builtRuntimeManifest = siteExists('runtime/deploy-manifest-current.json') ? parse('runtime/deploy-manifest-current.json', true) : null;
 const health = exists('deploy-health.json') ? parse('deploy-health.json') : null;
 const builtHealth = siteExists('deploy-health.json') ? parse('deploy-health.json', true) : null;
 const runtimeHealth = exists('runtime/deploy-health-current.json') ? parse('runtime/deploy-health-current.json') : null;
-const builtRuntimeHealth = siteExists('runtime/deploy-health-current.json') ? parse('runtime/deploy-health-current.json', true) : null;
 if (manifest && expectedSha && manifest.commitSha !== expectedSha) hard.push(`source deploy manifest SHA ${manifest.commitSha} does not match expected ${expectedSha}`);
 if (builtManifest && expectedSha && builtManifest.commitSha !== expectedSha) hard.push(`built deploy manifest SHA ${builtManifest.commitSha} does not match expected ${expectedSha}`);
 if (runtimeManifest && expectedSha && runtimeManifest.commitSha !== expectedSha) hard.push(`runtime deploy manifest SHA ${runtimeManifest.commitSha} does not match expected ${expectedSha}`);
-if (builtRuntimeManifest && expectedSha && builtRuntimeManifest.commitSha !== expectedSha) hard.push(`built runtime deploy manifest SHA ${builtRuntimeManifest.commitSha} does not match expected ${expectedSha}`);
 if (manifest && builtManifest && manifest.commitSha !== builtManifest.commitSha) hard.push('source and built deploy manifests disagree');
 if (manifest && runtimeManifest && manifest.commitSha !== runtimeManifest.commitSha) hard.push('source and runtime deploy manifests disagree');
-if (manifest && builtRuntimeManifest && manifest.commitSha !== builtRuntimeManifest.commitSha) hard.push('source and deployable runtime manifests disagree');
-for (const [label, item] of [['source', health], ['built', builtHealth], ['runtime', runtimeHealth], ['built runtime', builtRuntimeHealth]]) {
+for (const [label, item] of [['source', health], ['built', builtHealth], ['runtime', runtimeHealth]]) {
   if (!item) continue;
   if (!item.ok) hard.push(`${label} production health reports not ready`);
   if (expectedSha && item.buildSha !== expectedSha) hard.push(`${label} production health SHA ${item.buildSha} does not match expected ${expectedSha}`);
@@ -163,7 +159,7 @@ for (const text of ["import forumWorker from './worker-forum-persistence.js'","i
 for (const text of ["import productionWorker from './worker-production.js';","import aiManagementWorker from './worker-ai-management.js';","import { handleLivingMatrixRoute, isLivingMatrixAdminRoute, isLivingMatrixPublicRoute, runScheduledLivingMatrix } from './worker-living-matrix.js';","import { handleValueHunterRoute, isValueHunterRoute, runScheduledValueHunter } from './worker-value-hunter.js';","import { handleBountyEngineRoute, isBountyEngineRoute, runScheduledBountyEngine } from './worker-bounty-engine.js';","import { handlePermissionlessHarvesterRoute, isPermissionlessHarvesterRoute, runScheduledPermissionlessHarvester } from './worker-permissionless-value.js';","import { handleMatrixOperationsRoute, isMatrixOperationsRoute, runScheduledMatrixOperations } from './worker-matrix-operations.js';",'return productionWorker.fetch(request, env, ctx);','productionWorker.scheduled','aiManagementWorker.scheduled','runScheduledLivingMatrix','runScheduledValueHunter','runScheduledBountyEngine','runScheduledPermissionlessHarvester','runScheduledMatrixOperations','await Promise.all([productionTask, autonomyTask]);']) {
   if (!read('src/worker-production-autonomy.js').includes(text)) hard.push(`production autonomy wrapper missing ${text}`);
 }
-for (const text of ["['/deploy-manifest.json', '/runtime/deploy-manifest-current.json']","['/deploy-health.json', '/runtime/deploy-health-current.json']",'cloudflare-worker-release-metadata','no-store, max-age=0']) {
+for (const text of ["['/deploy-manifest.json', '/deploy-manifest.json']","['/deploy-health.json', '/deploy-health.json']",'cloudflare-worker-release-metadata','no-store, max-age=0']) {
   if (!read('src/worker-release-metadata.js').includes(text)) hard.push(`release metadata Worker missing ${text}`);
 }
 for (const text of ['cloudflare-worker-paypal-subscriptions','/api/paypal/subscription/create','/api/paypal/subscription/return','/v1/billing/subscriptions','/api/paypal/webhook','PAYPAL_SANDBOX_ENABLED','PAYPAL_PRODUCTION_ENABLED','PAYPAL_LIVE_ACTIVATION_CONFIRMATION','paypal_runtime_settings']) {
@@ -267,11 +263,9 @@ const report = {
   manifestSha: manifest?.commitSha || null,
   builtManifestSha: builtManifest?.commitSha || null,
   runtimeManifestSha: runtimeManifest?.commitSha || null,
-  builtRuntimeManifestSha: builtRuntimeManifest?.commitSha || null,
   healthSha: health?.buildSha || null,
   builtHealthSha: builtHealth?.buildSha || null,
   runtimeHealthSha: runtimeHealth?.buildSha || null,
-  builtRuntimeHealthSha: builtRuntimeHealth?.buildSha || null,
   hardIssues: hard,
   softIssues: soft,
   deploymentMode: hardFreeze ? 'hard-freeze' : 'deployment-enabled',
@@ -282,13 +276,13 @@ const report = {
     ? 'No D1 migration is permitted while frozen; migration and rollback readiness assets remain preserved for a future explicitly restored deployment workflow.'
     : 'The canonical release captures a validated Cloudflare D1 Time Travel bookmark before migrations with an exact restore command.',
   productionHealthOwner: 'scripts/build-production-health.js via final-production-reconcile.js',
-  releaseMetadataOwner: 'src/worker-release-metadata.js with exact runtime aliases republished at the final pre-Wrangler guard.',
+  releaseMetadataOwner: 'src/worker-release-metadata.js with exact internal runtime aliases and public root assets republished at the final pre-Wrangler guard.',
   forumPersistence: 'Cloudflare D1 is authoritative behind a strict fail-closed production Worker.',
   aiManagement: 'Cloudflare stores only zero-spend resource state and metadata-only routing decisions. Prompts and inference remain on the owner-controlled local machine.',
   paymentStatus: 'PayPal runtime values are dashboard-managed and deployment-preserved; the Worker creates subscriptions and redirects to the official approval URL while checkout still requires credentials, the matching environment switch, D1 activation, live confirmation and three active plans.',
   boundary: hardFreeze
     ? 'Production is blocked unless all three workflow locks are deliberately replaced. Any executable Wrangler deploy, D1 mutation, automatic trigger or PayPal activation inside a frozen workflow fails this guard.'
-    : 'Deployment is blocked on automatic canonical triggers, missing guarded confirmation authority, interruptible canonical migration concurrency, missing rollback protection, a mutable fallback, direct dispatcher mutation, legacy health overwrite, stale or absent release metadata aliases, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction, prompt transfer, paid AI fallback or unguarded payment activation.'
+    : 'Deployment is blocked on automatic canonical triggers, missing guarded confirmation authority, interruptible canonical migration concurrency, missing rollback protection, a mutable fallback, direct dispatcher mutation, legacy health overwrite, stale or absent release metadata assets, public internal-runtime artifacts, stale routes or data, health/SHA drift, false-success forum fallback, repository PayPal overrides, browser SDK reintroduction, prompt transfer, paid AI fallback or unguarded payment activation.'
 };
 fs.mkdirSync(path.join(root, 'downloads'), { recursive: true });
 fs.writeFileSync(path.join(root, 'downloads', 'production-deploy-guard-report.json'), JSON.stringify(report, null, 2));

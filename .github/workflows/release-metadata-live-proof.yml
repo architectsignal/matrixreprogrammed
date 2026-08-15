@@ -9,6 +9,7 @@ on:
       - 'scripts/patch-release-metadata-routing.js'
       - 'scripts/patch-live-verifier-intelligence-routes.js'
       - 'scripts/publish-release-metadata-assets.js'
+      - 'scripts/publish-release-metadata-assets-legacy.js'
       - 'scripts/final-release-sanitize.js'
       - 'scripts/verify-live-production.js'
       - 'scripts/compact-cloudflare-search-index.js'
@@ -50,9 +51,6 @@ jobs:
           node scripts/build-deploy-manifest.js
           node scripts/build-production-health.js
           node scripts/publish-release-metadata-assets.js
-          mkdir -p _site/runtime
-          cp runtime/deploy-manifest-current.json _site/runtime/deploy-manifest-current.json
-          cp runtime/deploy-health-current.json _site/runtime/deploy-health-current.json
 
       - name: Verify exact metadata ownership and intelligence gates
         run: |
@@ -69,8 +67,9 @@ jobs:
           const health = fs.readFileSync('deploy-health.json', 'utf8');
           assert(worker.includes("worker-release-metadata.js"), 'release metadata module import missing');
           assert(worker.includes('isReleaseMetadataRoute(path)'), 'release metadata route gate missing');
-          assert(fs.readFileSync('_site/runtime/deploy-manifest-current.json', 'utf8') === manifest, 'manifest alias is not an exact copy');
-          assert(fs.readFileSync('_site/runtime/deploy-health-current.json', 'utf8') === health, 'health alias is not an exact copy');
+          assert(fs.readFileSync('_site/deploy-manifest.json', 'utf8') === manifest, 'public manifest asset is not an exact copy');
+          assert(fs.readFileSync('_site/deploy-health.json', 'utf8') === health, 'public health asset is not an exact copy');
+          assert(!fs.existsSync('_site/runtime'), 'internal runtime directory must not be deployable');
           for (const marker of ['/daily-epstein-update', '/data/daily-epstein-update.json', '/data/live-machine-status.json', '/controlled-opposition/andrew-tate.html']) {
             assert(verifier.includes(marker), `live verifier marker missing: ${marker}`);
           }

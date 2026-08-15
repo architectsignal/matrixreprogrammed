@@ -1,6 +1,6 @@
 const routeAssets = new Map([
-  ['/deploy-manifest.json', '/runtime/deploy-manifest-current.json'],
-  ['/deploy-health.json', '/runtime/deploy-health-current.json']
+  ['/deploy-manifest.json', '/deploy-manifest.json'],
+  ['/deploy-health.json', '/deploy-health.json']
 ]);
 
 const responseHeaders = {

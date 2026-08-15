@@ -274,6 +274,7 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Kept the custom-domain Cloudflare challenge intact while allowing the scheduled live-functionality verifier to retry only a recognized challenge through the direct Worker endpoint; scheduled synthetic forum and newsletter writes now default off.
 - [x] Moved the Answer Engine's AI Hypotheses links into its owning generator and current page so the hourly guard validates an idempotent source of truth instead of relying on a stale HTML rewrite marker.
 - [x] Reconciled the automatic-update deep proof with final asset/performance owners: data and JavaScript remain byte-identical, HTML may differ only by asset versions and audited loading/decoding/preload attributes, and the fingerprint and performance reports must independently pass.
+- [x] Restored the global Login/Subscribe access dock after authoritative HTML mirror copies and before asset fingerprinting; the deep update proof now requires exactly one deployable-only dock on every mirrored HTML surface.
 - [ ] Merge this stabilization patch only after its source, AI-management and live-proof checks pass.
 - [ ] Deploy the merged exact `main` SHA in the next available Europe/Paris daily slot; do not consume or bypass a second slot on 2026-08-15.
 - [ ] After that release, prove all eligible Host models register cleanly, the 14B model remains quarantined, the performance proof is green and Cloudflare billing remains at zero.

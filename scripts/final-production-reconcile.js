@@ -162,8 +162,11 @@ report.authoritativeUpdateMirrors = authoritativeUpdateMirrors;
 run('scripts/finalize-black-file-postbuild.js');
 
 // Final release seal: every broad generator and sanitizer has finished. From
-// this point forward only deterministic compaction, corpus compilation,
-// byte-for-byte copies, hashing and validation are permitted.
+// this point forward only deterministic navigation injection, compaction,
+// corpus compilation, byte-for-byte copies, hashing and validation are
+// permitted. Reconcile the dock here because the authoritative mirror copies
+// above intentionally replace selected deployable HTML files after postbuild.
+run('scripts/reconcile-global-access-dock.cjs');
 // Fingerprint the exact final HTML/CSS/JS bundle before the manifest and
 // production-health hashes are sealed. No HTML mutator may run after this.
 run('scripts/version-cloudflare-assets.js');

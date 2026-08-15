@@ -48,6 +48,7 @@ jobs:
   investigate:
     name: Search records, preserve changes and publish evidence-bounded conclusions
     runs-on: ubuntu-latest
+    environment: production
     timeout-minutes: 70
     steps:
       - name: Checkout current main

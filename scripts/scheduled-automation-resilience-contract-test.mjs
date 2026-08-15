@@ -20,6 +20,8 @@ const files = [
   'scripts/publish-investigation-matrix-events.test.mjs',
   '.github/workflows/daily-investigation-machine.yml',
   '.github/workflows/weekly-investigation-machine.yml',
+  '.github/workflows/investigation-deploy-handoff.yml',
+  '.github/workflows/source-preservation-hardening-assurance.yml',
   '.github/workflows/performance-deploy-handoff.yml',
   '.github/workflows/production-runtime-rehearsal.yml'
 ];
@@ -83,6 +85,18 @@ if (!failures.length) {
     need(workflowText.includes('SITE_FALLBACK_URL: https://matrixreprogrammed.njmgroupfrance.workers.dev'), `${workflow} is missing the canonical Worker fallback`);
     need(workflowText.includes('environment: production'), `${workflow} must use the production-scoped admin secret for authenticated live publication`);
   }
+
+  const investigationHandoff = read('.github/workflows/investigation-deploy-handoff.yml');
+  need(!/(^|\n)\s*(?:actions|contents):\s*write\s*$/m.test(investigationHandoff), 'investigation handoff must not have repository write or workflow-dispatch permission');
+  need(!/\bgh\s+workflow\s+run\b/.test(investigationHandoff), 'investigation handoff must not autonomously dispatch production');
+  need(!/\bgit\s+push\b/.test(investigationHandoff), 'investigation handoff must not autonomously write to main');
+  need(investigationHandoff.includes('validated-owner-dispatch-required'), 'investigation handoff must record the owner-controlled release boundary');
+  need(investigationHandoff.includes('actions/upload-artifact@v4'), 'investigation handoff must preserve its validation receipt as an artifact');
+
+  const preservationAssurance = read('.github/workflows/source-preservation-hardening-assurance.yml');
+  need(preservationAssurance.includes("github.event_name == 'workflow_dispatch' && inputs.verify_live == true"), 'source preservation live verification must require explicit post-release dispatch');
+  need(!/if:\s*github\.event_name\s*==\s*['"]push['"]/.test(preservationAssurance), 'source preservation push assurance must not assume an undeployed main SHA is already live');
+  need(preservationAssurance.includes('deferred-owner-controlled-release'), 'source preservation assurance must record the deferred production boundary');
 
   const performanceHandoff = read('.github/workflows/performance-deploy-handoff.yml');
   need(!/(^|\n)\s*(?:actions|contents):\s*write\s*$/m.test(performanceHandoff), 'performance handoff must not have repository write or workflow-dispatch permission');

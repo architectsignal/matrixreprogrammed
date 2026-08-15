@@ -8,7 +8,6 @@ on:
     types: [completed]
 
 permissions:
-  actions: write
   contents: read
 
 concurrency:
@@ -16,19 +15,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  dispatch-production:
-    name: Dispatch guarded production deployment after a healthy update
+  validate-release-handoff:
+    name: Record an owner-controlled release handoff after a healthy update
     if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch production workflow on latest main
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run "Matrix Reprogrammed Production Deploy" \
-            --repo "$GITHUB_REPOSITORY" \
-            --ref main
-
       - name: Record handoff proof
         run: |
           mkdir -p downloads
@@ -40,9 +31,10 @@ jobs:
             "upstreamRunId": "${{ github.event.workflow_run.id }}",
             "upstreamConclusion": "${{ github.event.workflow_run.conclusion }}",
             "upstreamHeadSha": "${{ github.event.workflow_run.head_sha }}",
-            "deploymentWorkflow": "Matrix Reprogrammed Production Deploy",
+            "deploymentWorkflow": ".github/workflows/deploy.yml",
             "deploymentRef": "main",
-            "boundary": "This workflow only dispatches the existing guarded production pipeline after a successful investigation run. The production workflow still performs freshness, synchronization, D1, deployment and live-SHA checks."
+            "status": "validated-owner-dispatch-required",
+            "boundary": "This read-only handoff never dispatches production or writes to main. A repository owner must dispatch the guarded production workflow on the reviewed main SHA; daily-slot, billing, synchronization, D1, deployment and live-SHA guards remain authoritative."
           }
           JSON
 

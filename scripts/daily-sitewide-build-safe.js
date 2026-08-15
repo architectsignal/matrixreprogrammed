@@ -96,7 +96,6 @@ jsonFallback('deploy-health.json', { ok: false, generatedAt: now, fallback: true
 jsonFallback('downloads/deploy-status.json', safeJson('deploy-status.json', { ok: false, generatedAt: now, fallback: true }));
 jsonFallback('downloads/deploy-health.json', safeJson('deploy-health.json', { ok: false, generatedAt: now, fallback: true }));
 jsonFallback('search-index.json', []);
-jsonFallback('data/daily-sitewide-refresh-status.json', { ok: false, generatedAt: now, fallback: true, note: 'Refresh outputs were created by fallback; inspect the build report.' });
 htmlFallback('index.html', 'Matrix Reprogrammed', 'Public-record intelligence system.');
 htmlFallback('search.html', 'Search', 'Search index is rebuilding.');
 if (!exists('search.js')) {
@@ -113,11 +112,10 @@ copyIfPossible('deploy-status.json', '_site/deploy-status.json');
 copyIfPossible('deploy-health.json', '_site/deploy-health.json');
 copyIfPossible('deploy-health.html', '_site/deploy-health.html');
 copyIfPossible('deploy-health.html', '_site/deploy-health');
-copyIfPossible('data/daily-sitewide-refresh-status.json', '_site/data/daily-sitewide-refresh-status.json');
 
 const criticalFiles = [
   'index.html','search.html','search.js','search-index.json','deploy-status.json','deploy-health.json',
-  'downloads/deploy-status.json','downloads/deploy-health.json','data/daily-sitewide-refresh-status.json',
+  'downloads/deploy-status.json','downloads/deploy-health.json',
   '_site/index.html','_site/search.html','_site/search','_site/search.js','_site/search-index.json',
   'downloads/newsletter-persistence-test.json','downloads/critical-route-drift-report.json','downloads/site-function-harmony-report.json',
   'downloads/cloudflare-search-index-compaction.json','downloads/membership-tiers-report.json','downloads/homepage-mission-normalization.json'
@@ -162,7 +160,7 @@ fs.writeFileSync(path.join(downloads, 'daily-sitewide-build-report.md'), [
 
 const refreshStatus = { ok, status, resilient: true, fallbackUsed, failedSteps: failedSteps.map(step => step.label), hardMissing, generatedAt: report.finishedAt, report: '/downloads/daily-sitewide-build-report.json' };
 write('data/daily-sitewide-refresh-status.json', JSON.stringify(refreshStatus, null, 2));
-if (exists('_site/data')) write('_site/data/daily-sitewide-refresh-status.json', JSON.stringify(refreshStatus, null, 2));
+if (exists('_site')) write('_site/data/daily-sitewide-refresh-status.json', JSON.stringify(refreshStatus, null, 2));
 
 console.log(`DAILY SITEWIDE BUILD ${status.toUpperCase()}`);
 console.log('Report: downloads/daily-sitewide-build-report.json');

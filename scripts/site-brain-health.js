@@ -5,6 +5,7 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const brainPath = path.join(root, 'data', 'site-brain.json');
 const problems = [];
+const homepageModes = {};
 
 function rel(file) {
   return path.join(root, file);
@@ -52,6 +53,24 @@ function loadBrain() {
 function normalisePrimaryNavigation(file) {
   if (!exists(file)) return;
   let html = read(file);
+  const searchFirst = html.includes('class="accountability-home"')
+    && html.includes('id="accountability-search"')
+    && html.includes('id="accountability-hit-list"')
+    && html.includes('id="open-question-ledger"');
+  if (searchFirst) {
+    homepageModes[file] = 'search-first-accountability';
+    if (!/<nav\b[^>]*aria-label=["']Primary navigation["']/i.test(html)) fail(`${file} search-first primary navigation landmark missing`);
+    for (const marker of [
+      'href="#accountability-search"',
+      'href="#accountability-hit-list"',
+      'href="#open-question-ledger"',
+      '<summary>Explore</summary>',
+      'href="member-dashboard.html"',
+      'href="book-universe.html"'
+    ]) if (!html.includes(marker)) fail(`${file} search-first navigation missing ${marker}`);
+    return;
+  }
+  homepageModes[file] = 'legacy-eight-link';
   const match = html.match(/<div class=["']nav-primary["'][^>]*>([\s\S]*?)<\/div>/i);
   if (!match) {
     fail(`${file} primary navigation container missing`);
@@ -129,7 +148,12 @@ if (brain) {
   if (exists('index.html')) {
     const home = read('index.html');
     const marker = brain.freshness && brain.freshness.homepageCurrentMarker;
-    if (marker && !home.includes(marker)) fail(`homepage missing current marker: ${marker}`);
+    const acceptedMarkers = brain.freshness && Array.isArray(brain.freshness.acceptedHomepageMarkers)
+      ? brain.freshness.acceptedHomepageMarkers.filter(Boolean)
+      : marker ? [marker] : [];
+    if (acceptedMarkers.length && !acceptedMarkers.some(accepted => home.includes(accepted))) {
+      fail(`homepage missing accepted current marker: ${acceptedMarkers.join(' OR ')}`);
+    }
     for (const stale of brain.freshness && brain.freshness.forbiddenStaleText ? brain.freshness.forbiddenStaleText : []) {
       if (home.includes(stale)) fail(`homepage contains stale text: ${stale}`);
     }
@@ -154,7 +178,7 @@ if (brain) {
     brainVersion: brain.version,
     productionUrl: brain.productionUrl,
     performanceGate: exists('downloads/runtime-performance-budget-test.json') ? 'executed-after-final-optimization' : 'not-applicable-without-_site',
-    primaryNavigation: '8 focused links; Contact remains in More and support routes',
+    primaryNavigation: homepageModes,
     problems
   };
 
@@ -169,4 +193,4 @@ if (problems.length) {
 }
 
 console.log('MATRIX SITE BRAIN HEALTH CHECK PASSED');
-console.log('Checked central brain config, eight-link primary navigation, final runtime optimization, compact search release, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');
+console.log('Checked central brain config, canonical search-first or legacy eight-link navigation, final runtime optimization, compact search release, stale homepage markers, duplicate guards, Cloudflare Worker asset serving, Wrangler config, source files, and generated _site routes when present.');

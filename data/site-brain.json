@@ -1,6 +1,6 @@
 {
   "name": "Matrix Reprogrammed Site Brain",
-  "version": 2,
+  "version": 3,
   "canonicalHost": "matrixreprogrammed.com",
   "productionUrl": "https://matrixreprogrammed.com",
   "cloudflare": {
@@ -18,10 +18,10 @@
     ]
   },
   "freshness": {
-    "homepageCurrentMarker": "MAP THE STRUCTURE. READ THE SIGNALS.",
+    "homepageCurrentMarker": "POWER SHOULD HAVE",
     "acceptedHomepageMarkers": [
-      "MAP THE STRUCTURE. READ THE SIGNALS.",
-      "READ THE SIGNALS."
+      "POWER SHOULD HAVE A PUBLIC MEMORY",
+      "POWER SHOULD HAVE"
     ],
     "forbiddenStaleText": [
       "rogue broadcast node inside the simulation",
@@ -35,7 +35,7 @@
     ]
   },
   "criticalRoutes": [
-    { "path": "/", "marker": "MAP THE STRUCTURE. READ THE SIGNALS.", "type": "html" },
+    { "path": "/", "marker": "POWER SHOULD HAVE", "type": "html" },
     { "path": "/search", "marker": "SEARCH THE SIGNAL.", "type": "html" },
     { "path": "/books", "marker": "Books", "type": "html" },
     { "path": "/live-intel", "marker": "Live Intel", "type": "html" },

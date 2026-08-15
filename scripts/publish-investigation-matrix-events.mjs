@@ -77,16 +77,66 @@ async function readJson(response) {
   return parsed;
 }
 
-export async function publishInvestigationMatrixEvents({ state, siteUrl, token, fetchImpl = fetch } = {}) {
+const CANONICAL_WORKER_HOST = 'matrixreprogrammed.njmgroupfrance.workers.dev';
+
+function normalizedBase(value) {
+  try {
+    const url = new URL(text(value, 1000));
+    if (url.protocol !== 'https:') return '';
+    url.username = '';
+    url.password = '';
+    url.pathname = '';
+    url.search = '';
+    url.hash = '';
+    return url.toString().replace(/\/+$/, '');
+  } catch {
+    return '';
+  }
+}
+
+function canonicalFallbackBase(value) {
+  const base = normalizedBase(value);
+  if (!base) return '';
+  return new URL(base).hostname.toLowerCase() === CANONICAL_WORKER_HOST ? base : '';
+}
+
+async function knownCloudflareChallenge(response) {
+  if (!response || response.status !== 403) return false;
+  if (String(response.headers?.get?.('cf-mitigated') || '').toLowerCase() === 'challenge') return true;
+  let body = '';
+  try { body = await response.clone().text(); } catch { return false; }
+  return /<title>\s*just a moment(?:\.\.\.)?\s*<\/title>/i.test(body) && /cloudflare/i.test(body);
+}
+
+async function fetchWithChallengeFallback({ base, fallbackBase, route, options, fetchImpl, transportFallbacks }) {
+  let response = await fetchImpl(`${base}${route}`, options);
+  if (fallbackBase && fallbackBase !== base && await knownCloudflareChallenge(response)) {
+    transportFallbacks.push({
+      route,
+      status: response.status,
+      from: base,
+      to: fallbackBase,
+      reason: 'known-cloudflare-challenge'
+    });
+    response = await fetchImpl(`${fallbackBase}${route}`, options);
+  }
+  return response;
+}
+
+export async function publishInvestigationMatrixEvents({ state, siteUrl, fallbackSiteUrl, token, fetchImpl = fetch } = {}) {
   const base = text(siteUrl || 'https://matrixreprogrammed.com', 1000).replace(/\/+$/, '');
+  const fallbackBase = canonicalFallbackBase(fallbackSiteUrl);
   const secret = text(token, 1000);
   if (!secret) return { ok: false, skipped: true, reason: 'admin-token-unavailable' };
-  const availability = await fetchImpl(`${base}/api/matrix/evolution`, { headers: { accept: 'application/json', 'cache-control': 'no-cache' } });
-  if (availability.status === 404) return { ok: false, skipped: true, reason: 'living-matrix-not-deployed' };
+  const transportFallbacks = [];
+  const request = (route, options) => fetchWithChallengeFallback({ base, fallbackBase, route, options, fetchImpl, transportFallbacks });
+  const availability = await request('/api/matrix/evolution', { headers: { accept: 'application/json', 'cache-control': 'no-cache' } });
+  if (availability.status === 404) return { ok: false, skipped: true, reason: 'living-matrix-not-deployed', transportFallbacks };
+  await readJson(availability);
   const events = buildSourceEvents(state);
   const outcomes = [];
   for (const event of events) {
-    const response = await fetchImpl(`${base}/api/matrix/admin/events`, {
+    const response = await request('/api/matrix/admin/events', {
       method: 'POST',
       headers: { accept: 'application/json', 'content-type': 'application/json', 'x-admin-token': secret },
       body: JSON.stringify(event)
@@ -94,12 +144,12 @@ export async function publishInvestigationMatrixEvents({ state, siteUrl, token, 
     const result = await readJson(response);
     outcomes.push({ audit_identifier: event.auditIdentifier, event_id: result.eventId, created: result.created === true });
   }
-  const cycle = await readJson(await fetchImpl(`${base}/api/matrix/admin/living-cycle`, {
+  const cycle = await readJson(await request('/api/matrix/admin/living-cycle', {
     method: 'POST',
     headers: { accept: 'application/json', 'content-type': 'application/json', 'x-admin-token': secret },
     body: '{}'
   }));
-  return { ok: true, skipped: false, candidates: events.length, created: outcomes.filter(item => item.created).length, reused: outcomes.filter(item => !item.created).length, outcomes, cycle_id: cycle.report?.cycle_id || null };
+  return { ok: true, skipped: false, candidates: events.length, created: outcomes.filter(item => item.created).length, reused: outcomes.filter(item => !item.created).length, outcomes, cycle_id: cycle.report?.cycle_id || null, transportFallbacks };
 }
 
 async function main() {
@@ -109,6 +159,7 @@ async function main() {
   const result = await publishInvestigationMatrixEvents({
     state,
     siteUrl: process.env.SITE_URL || 'https://matrixreprogrammed.com',
+    fallbackSiteUrl: process.env.SITE_FALLBACK_URL || '',
     token: process.env.AI_MANAGEMENT_ADMIN_TOKEN || process.env.ADMIN_API_TOKEN
   });
   console.log(JSON.stringify(result, null, 2));

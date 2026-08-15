@@ -89,6 +89,7 @@ jobs:
       - name: Publish source changes into the Living Matrix
         env:
           SITE_URL: https://matrixreprogrammed.com
+          SITE_FALLBACK_URL: https://matrixreprogrammed.njmgroupfrance.workers.dev
           AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
           ADMIN_API_TOKEN: ${{ secrets.ADMIN_API_TOKEN }}
         run: node scripts/publish-investigation-matrix-events.mjs

@@ -49,7 +49,11 @@ jobs:
           node scripts/patch-homepage-alerts.js
 
       - name: Build full site and run protected pressure tests
-        run: npm run build
+        run: |
+          npm run build
+          node scripts/reconcile-release-homepage-order.js
+          node scripts/reconcile-global-access-dock.cjs
+          node scripts/global-access-dock-test.mjs --site
 
       - name: Daily targeted freshness guardrails
         run: |

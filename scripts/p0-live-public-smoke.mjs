@@ -3,11 +3,13 @@ import path from 'node:path';
 
 const root = process.cwd();
 const siteUrl = String(process.env.SITE_URL || 'https://matrixreprogrammed.com').replace(/\/$/, '');
+const fallbackSiteUrl = String(process.env.SITE_FALLBACK_URL || '').replace(/\/$/, '');
 const expectedSha = String(process.env.EXPECTED_LIVE_SHA || '').trim().toLowerCase();
 const repository = String(process.env.GITHUB_REPOSITORY || 'architectsignal/matrixreprogrammed');
 const attempts = Math.max(1, Number(process.env.P0_SMOKE_ATTEMPTS || 36));
 const delayMs = Math.max(0, Number(process.env.P0_SMOKE_DELAY_MS || 10000));
 const reportPath = path.join(root, 'downloads', 'p0-live-public-smoke.json');
+const transportFallbacks = [];
 
 const forbiddenResidue = [
   'compatibility-marker-vault',
@@ -47,25 +49,38 @@ const parseJson = text => { try { return JSON.parse(text); } catch { return null
 
 async function fetchLive(route, options = {}) {
   const separator = route.includes('?') ? '&' : '?';
-  const response = await fetch(`${siteUrl}${route}${separator}p0_smoke=${Date.now()}-${Math.random().toString(36).slice(2)}`, {
-    redirect: 'follow',
-    cache: 'no-store',
-    ...options,
-    headers: {
-      'cache-control': 'no-cache',
-      pragma: 'no-cache',
-      'user-agent': 'MatrixP0LiveSmoke/1.0',
-      ...(options.headers || {})
-    }
-  });
-  return {
-    route,
-    status: response.status,
-    ok: response.ok,
-    url: response.url,
-    headers: Object.fromEntries(response.headers.entries()),
-    text: await response.text()
+  const request = async base => {
+    const response = await fetch(`${base}${route}${separator}p0_smoke=${Date.now()}-${Math.random().toString(36).slice(2)}`, {
+      redirect: 'follow',
+      cache: 'no-store',
+      ...options,
+      headers: {
+        'cache-control': 'no-cache',
+        pragma: 'no-cache',
+        'user-agent': 'MatrixP0LiveSmoke/1.0',
+        ...(options.headers || {})
+      }
+    });
+    return {
+      route,
+      base,
+      status: response.status,
+      ok: response.ok,
+      url: response.url,
+      headers: Object.fromEntries(response.headers.entries()),
+      text: await response.text()
+    };
   };
+  const primary = await request(siteUrl);
+  const challenge = primary.status === 403
+    && (primary.headers['cf-mitigated'] === 'challenge'
+      || (/<title>Just a moment\.\.\.<\/title>/i.test(primary.text) && /cloudflare/i.test(primary.text)));
+  if (challenge && fallbackSiteUrl && fallbackSiteUrl !== siteUrl) {
+    const fallback = await request(fallbackSiteUrl);
+    transportFallbacks.push({ route, reason: 'known-cloudflare-challenge', primaryStatus: primary.status, fallbackStatus: fallback.status });
+    return fallback;
+  }
+  return primary;
 }
 
 function residueIn(text = '') {
@@ -271,6 +286,8 @@ async function verifyOnce() {
     ok: failures.length === 0,
     checkedAt: new Date().toISOString(),
     siteUrl,
+    fallbackSiteUrl: fallbackSiteUrl || null,
+    transportFallbacks,
     expectedSha: expectedSha || null,
     liveSha,
     manifest: { status: manifestResponse.status, ok: manifestOk, payload: manifest },
@@ -303,6 +320,8 @@ for (let attempt = 1; attempt <= attempts; attempt += 1) {
       ok: false,
       checkedAt: new Date().toISOString(),
       siteUrl,
+      fallbackSiteUrl: fallbackSiteUrl || null,
+      transportFallbacks,
       expectedSha: expectedSha || null,
       failures: [String(error?.stack || error?.message || error)]
     };

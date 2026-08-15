@@ -49,6 +49,7 @@ if (!failures.length) {
   for (const marker of ['search-first-accountability', 'id="accountability-search"', 'id="accountability-hit-list"', 'id="open-question-ledger"', 'acceptedHomepageMarkers']) {
     need(health.includes(marker), `site brain health is missing search-first contract marker: ${marker}`);
   }
+  need(health.includes("toLocaleUpperCase('en-US')"), 'site brain homepage marker comparison must be case-insensitive across final generators');
 
   const daily = read('.github/workflows/daily-update-check.yml');
   const homepageOwner = daily.indexOf('reconcile-release-homepage-order.js');

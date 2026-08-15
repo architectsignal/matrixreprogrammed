@@ -147,11 +147,12 @@ if (brain) {
 
   if (exists('index.html')) {
     const home = read('index.html');
+    const normalizedHome = home.toLocaleUpperCase('en-US');
     const marker = brain.freshness && brain.freshness.homepageCurrentMarker;
     const acceptedMarkers = brain.freshness && Array.isArray(brain.freshness.acceptedHomepageMarkers)
       ? brain.freshness.acceptedHomepageMarkers.filter(Boolean)
       : marker ? [marker] : [];
-    if (acceptedMarkers.length && !acceptedMarkers.some(accepted => home.includes(accepted))) {
+    if (acceptedMarkers.length && !acceptedMarkers.some(accepted => normalizedHome.includes(String(accepted).toLocaleUpperCase('en-US')))) {
       fail(`homepage missing accepted current marker: ${acceptedMarkers.join(' OR ')}`);
     }
     for (const stale of brain.freshness && brain.freshness.forbiddenStaleText ? brain.freshness.forbiddenStaleText : []) {

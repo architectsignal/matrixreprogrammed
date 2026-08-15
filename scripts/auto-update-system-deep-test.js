@@ -37,6 +37,13 @@ function sha(value) {
   return crypto.createHash('sha256').update(data).digest('hex');
 }
 function fileSha(relative) { return exists(relative) ? sha(fs.readFileSync(at(relative))) : ''; }
+function withoutCloudflareAssetVersions(value) {
+  return String(value).replace(/<(?:script|link)\b[^>]*(?:src|href)=(['"])((?!(?:https?:)?\/\/|data:)[^'"]+\.(?:js|css)(?:\?[^'"]*)?(?:#[^'"]*)?)\1[^>]*>/gi, tag => (
+    tag.replace(/([?&])v=[^&#'"\s>]+(&?)/gi, (_match, prefix, trailingAmpersand) => (
+      prefix === '?' && trailingAmpersand === '&' ? '?' : ''
+    ))
+  ));
+}
 function ageHours(value) {
   const time = Date.parse(value || '');
   return Number.isFinite(time) ? (Date.now() - time) / 3600000 : Infinity;
@@ -326,8 +333,18 @@ function verifyOutputs(afterBuild = false) {
     ];
     check('Cloudflare output contains all current automatic-update surfaces',
       mirrored.every(file => exists(`_site/${file}`)));
-    check('Cloudflare output matches authoritative root files byte-for-byte',
-      mirrored.every(file => fileSha(file) === fileSha(`_site/${file}`)));
+    const htmlMirrors = mirrored.filter(file => file.endsWith('.html'));
+    const exactMirrors = mirrored.filter(file => !file.endsWith('.html'));
+    check('Cloudflare non-HTML output matches authoritative root files byte-for-byte',
+      exactMirrors.every(file => fileSha(file) === fileSha(`_site/${file}`)));
+    check('Cloudflare HTML output differs only by controlled asset fingerprints',
+      htmlMirrors.every(file => withoutCloudflareAssetVersions(read(file)) === withoutCloudflareAssetVersions(read(`_site/${file}`))));
+    const assetVersioning = readJson('downloads/cloudflare-asset-versioning.json', {});
+    check('Cloudflare asset fingerprint report is complete and safe',
+      assetVersioning.ok === true
+        && Number(assetVersioning.referencesVersioned || 0) > 0
+        && Array.isArray(assetVersioning.unresolved) && assetVersioning.unresolved.length === 0
+        && Array.isArray(assetVersioning.unversioned) && assetVersioning.unversioned.length === 0);
     report.metrics.mirroredFiles = mirrored.length;
   }
 

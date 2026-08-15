@@ -260,3 +260,23 @@ The following capabilities are mandatory release requirements for PR #184 and mu
 - [x] Reconciled the live verifier with the current homepage, protected deploy dashboard, search, download, map and opt-in contracts; current production now proves 43/44 routes with only the undeployed `/epstein` alias outstanding.
 - [x] Completed the guarded full build, responsive browser checks, 3,295-document dock audit, strict Worker route test, private-output test, site-function harmony test and production deploy guard.
 - [ ] Merge and deploy only through the protected release chain after every existing production and zero-spend guard passes.
+
+## 2026-08-15 exact-SHA release and post-deploy stabilization
+
+- [x] Released reviewed `main` SHA `fdf9f60a56adf8fedcd91401e409816a9efea590` through the guarded production workflow with D1 migrations, rollback protection, zero-spend policy and exact-SHA live checks green.
+- [x] Re-evaluated the default public opportunities and admitted SEC, Crossref and Grants.gov only through the bounded, credential-free `zero-spend-opportunity-public-http` adapter; kept USAspending, Kaggle, Hugging Face and external Qwen generation quarantined.
+- [x] Proved a bounded SEC public-document execution at zero cost and retained discovery-only, no-claim and no-payment boundaries.
+- [x] Restored the local Host supervisor through the current-user startup provider, configured the direct Cloudflare Worker control-plane endpoint and verified outbound-only, zero-spend-locked operation.
+- [x] Diagnosed the Host registration exception to a capacity-ineligible 14B model emitting a detector-only D1 status; changed the detector and Worker ingestion boundary so ineligible models are disabled and quarantined instead of advertised as available.
+- [x] Diagnosed post-deploy alias mismatches as Cloudflare's known challenge-script injection and restricted verifier normalization to that injected signature rather than weakening the security layer.
+- [x] Found and closed the extensionless `/card-artwork-batches` public bridge that ran before its admin asset gate; the live proof now requires both route forms to fail closed for anonymous users.
+- [x] Restored final production asset fingerprinting before the manifest and health seal so critical CSS and JavaScript references are cache-safe and exact-release verifiable.
+- [x] Kept the custom-domain Cloudflare challenge intact while allowing the scheduled live-functionality verifier to retry only a recognized challenge through the direct Worker endpoint; scheduled synthetic forum and newsletter writes now default off.
+- [x] Moved the Answer Engine's AI Hypotheses links into its owning generator and current page so the hourly guard validates an idempotent source of truth instead of relying on a stale HTML rewrite marker.
+- [x] Reconciled the automatic-update deep proof with final asset/performance owners: data and JavaScript remain byte-identical, HTML may differ only by asset versions and audited loading/decoding/preload attributes, and the fingerprint and performance reports must independently pass.
+- [x] Restored the global Login/Subscribe access dock after authoritative HTML mirror copies and before asset fingerprinting; the deep update proof now requires exactly one deployable-only dock on every mirrored HTML surface.
+- [x] Made scheduled public smoke, exact-SHA P0 and Chromium assurance probes retry the canonical Worker only after a recognized Cloudflare challenge, preserving the public edge challenge while eliminating false self-update alarms.
+- [x] Applied the same strict challenge-only transport fallback to scheduled Living Matrix publication, aligned Site Brain health with the canonical search-first homepage, removed the refresh report's self-created false fallback, and restored homepage plus access-dock ownership before daily Live Intel validation.
+- [ ] Merge this stabilization patch only after its source, AI-management and live-proof checks pass.
+- [ ] Deploy the merged exact `main` SHA in the next available Europe/Paris daily slot; do not consume or bypass a second slot on 2026-08-15.
+- [ ] After that release, prove all eligible Host models register cleanly, the 14B model remains quarantined, the performance proof is green and Cloudflare billing remains at zero.

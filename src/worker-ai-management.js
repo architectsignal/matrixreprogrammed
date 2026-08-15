@@ -230,10 +230,11 @@ async function recordLocalRuntime(env, runtime) {
   const registry = new D1ResourceRegistry(env.MEMBERS_DB);
   for (const resource of resources) {
     await registry.upsert(resource);
+    const localModelStatus = resource.enabled === true && resource.metadata?.memory_admission_passed !== false ? 'available' : 'quarantined';
     await env.MEMBERS_DB.prepare(`INSERT INTO ai_local_models(resource_id,node_id,model_id,protocol,endpoint_scope,metadata_json,route_score,status,last_seen,updated_at)
-      VALUES(?,?,?,?,?,?,NULL,'available',?,?) ON CONFLICT(resource_id) DO UPDATE SET node_id=excluded.node_id,model_id=excluded.model_id,protocol=excluded.protocol,
-      endpoint_scope='loopback-only',metadata_json=excluded.metadata_json,status='available',last_seen=excluded.last_seen,updated_at=excluded.updated_at`)
-      .bind(resource.resource_id, nodeId, resource.metadata.model_id, resource.metadata.protocol || 'openai', 'loopback-only', JSON.stringify(resource.metadata), now, now).run();
+      VALUES(?,?,?,?,?,?,NULL,?,?,?) ON CONFLICT(resource_id) DO UPDATE SET node_id=excluded.node_id,model_id=excluded.model_id,protocol=excluded.protocol,
+      endpoint_scope='loopback-only',metadata_json=excluded.metadata_json,status=excluded.status,last_seen=excluded.last_seen,updated_at=excluded.updated_at`)
+      .bind(resource.resource_id, nodeId, resource.metadata.model_id, resource.metadata.protocol || 'openai', 'loopback-only', JSON.stringify(resource.metadata), localModelStatus, now, now).run();
   }
   return json({ ok: true, nodeId, modelsRegistered: resources.length, costStatus: 'EUR 0', externalNetworkUsed: false, expiresAt: expires });
 }

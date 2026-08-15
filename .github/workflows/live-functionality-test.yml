@@ -6,7 +6,7 @@ on:
       post_tests:
         description: "Submit synthetic persistent posts to all three boards: true or false"
         required: false
-        default: "true"
+        default: "false"
   workflow_run:
     workflows:
       - Matrix Reprogrammed Production Deploy
@@ -20,8 +20,9 @@ permissions:
   contents: read
 
 env:
-  LIVE_SITE_BASE: https://www.matrixreprogrammed.com
-  LIVE_FUNCTIONALITY_POST_TESTS: ${{ github.event.inputs.post_tests || 'true' }}
+  LIVE_SITE_BASE: https://matrixreprogrammed.com
+  LIVE_SITE_FALLBACK: https://matrixreprogrammed.njmgroupfrance.workers.dev
+  LIVE_FUNCTIONALITY_POST_TESTS: ${{ github.event.inputs.post_tests || 'false' }}
 
 jobs:
   live-functionality:

@@ -121,8 +121,8 @@ report.namespaceAliasesFinalized = true;
 // File public hero here so Test Site artifacts, local previews, release audits
 // and production deployment all receive the same canonical H1—not merely the
 // later deploy-guard or exhaustive-audit paths.
-const blackFileHeroReport = require('./finalize-black-file-public-hero.js');
-if (!blackFileHeroReport.ok) throw new Error('Black File public hero finalization failed closed during postbuild.');
+const blackFileHeroReport = require('./finalize-black-file-postbuild.js');
+if (!blackFileHeroReport.ok) throw new Error('Black File postbuild recovery and hero finalization failed closed during postbuild.');
 report.blackFileHeroFinalized = true;
 report.blackFileHeroSurfaces = blackFileHeroReport.surfaces || [];
 

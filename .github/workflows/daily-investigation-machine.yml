@@ -9,6 +9,7 @@ on:
       - '.github/workflows/daily-investigation-machine.yml'
       - 'scripts/run-investigation-machine.js'
       - 'scripts/publish-investigation-matrix-events.mjs'
+      - 'scripts/publish-investigation-matrix-events.test.mjs'
       - 'scripts/monitor-source-changes.js'
       - 'scripts/harden-source-change-preservation.js'
       - 'scripts/source-change-preservation-test.js'
@@ -116,6 +117,7 @@ jobs:
       - name: Publish source changes into the Living Matrix
         env:
           SITE_URL: https://matrixreprogrammed.com
+          SITE_FALLBACK_URL: https://matrixreprogrammed.njmgroupfrance.workers.dev
           AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
           ADMIN_API_TOKEN: ${{ secrets.ADMIN_API_TOKEN }}
         run: node scripts/publish-investigation-matrix-events.mjs

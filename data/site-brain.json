@@ -1,6 +1,6 @@
 {
   "name": "Matrix Reprogrammed Site Brain",
-  "version": 2,
+  "version": 4,
   "canonicalHost": "matrixreprogrammed.com",
   "productionUrl": "https://matrixreprogrammed.com",
   "cloudflare": {
@@ -18,10 +18,9 @@
     ]
   },
   "freshness": {
-    "homepageCurrentMarker": "MAP THE STRUCTURE. READ THE SIGNALS.",
+    "homepageCurrentMarker": "id=\"accountability-search\"",
     "acceptedHomepageMarkers": [
-      "MAP THE STRUCTURE. READ THE SIGNALS.",
-      "READ THE SIGNALS."
+      "id=\"accountability-search\""
     ],
     "forbiddenStaleText": [
       "rogue broadcast node inside the simulation",
@@ -35,7 +34,7 @@
     ]
   },
   "criticalRoutes": [
-    { "path": "/", "marker": "MAP THE STRUCTURE. READ THE SIGNALS.", "type": "html" },
+    { "path": "/", "marker": "id=\"accountability-search\"", "type": "html" },
     { "path": "/search", "marker": "SEARCH THE SIGNAL.", "type": "html" },
     { "path": "/books", "marker": "Books", "type": "html" },
     { "path": "/live-intel", "marker": "Live Intel", "type": "html" },

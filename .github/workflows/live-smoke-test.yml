@@ -16,14 +16,21 @@ jobs:
         run: |
           set -e
           BASE="https://matrixreprogrammed.com"
+          FALLBACK="https://matrixreprogrammed.njmgroupfrance.workers.dev"
           mkdir -p smoke
 
           check_page() {
             path="$1"
             expected="$2"
             echo "Checking $BASE$path for: $expected"
-            curl -L --fail --silent --show-error "$BASE$path" -o "smoke/${path//\//_}.html"
-            grep -i "$expected" "smoke/${path//\//_}.html" >/dev/null
+            output="smoke/${path//\//_}.html"
+            status="$(curl -L --silent --show-error --max-time 25 -w '%{http_code}' "$BASE$path" -o "$output" || true)"
+            if [ "$status" = "403" ] && grep -qi 'Just a moment\.\.\.' "$output" && grep -qi 'cloudflare' "$output"; then
+              echo "Custom domain returned a recognized Cloudflare challenge; verifying the same public route through the canonical Worker."
+              status="$(curl -L --silent --show-error --max-time 25 -w '%{http_code}' "$FALLBACK$path" -o "$output" || true)"
+            fi
+            case "$status" in 2??|3??) ;; *) echo "HTTP $status for $path"; exit 1 ;; esac
+            grep -i "$expected" "$output" >/dev/null
           }
 
           check_page "/" "MATRIX REPROGRAMMED"

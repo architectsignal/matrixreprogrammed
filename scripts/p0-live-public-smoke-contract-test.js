@@ -7,17 +7,29 @@ const { spawnSync } = require('child_process');
 const root = process.cwd();
 const smokePath = path.join(root, 'scripts', 'p0-live-public-smoke.mjs');
 const workflowPath = path.join(root, '.github', 'workflows', 'p0-live-public-smoke.yml');
+const scheduledSmokePath = path.join(root, '.github', 'workflows', 'live-smoke-test.yml');
+const browserAuditPath = path.join(root, 'scripts', 'playwright-public-site-audit.js');
+const browserWorkflowPath = path.join(root, '.github', 'workflows', 'open-source-site-assurance.yml');
 const failures = [];
-const need = (condition, message) => { if (!condition) failures.push(message); };
+let checkCount = 0;
+const need = (condition, message) => { checkCount += 1; if (!condition) failures.push(message); };
 
 need(fs.existsSync(smokePath), 'P0 live smoke script is missing');
 need(fs.existsSync(workflowPath), 'P0 live smoke workflow is missing');
+need(fs.existsSync(scheduledSmokePath), 'scheduled live smoke workflow is missing');
+need(fs.existsSync(browserAuditPath), 'public browser audit is missing');
+need(fs.existsSync(browserWorkflowPath), 'public browser assurance workflow is missing');
 
 const smoke = fs.existsSync(smokePath) ? fs.readFileSync(smokePath, 'utf8') : '';
 const workflow = fs.existsSync(workflowPath) ? fs.readFileSync(workflowPath, 'utf8') : '';
+const scheduledSmoke = fs.existsSync(scheduledSmokePath) ? fs.readFileSync(scheduledSmokePath, 'utf8') : '';
+const browserAudit = fs.existsSync(browserAuditPath) ? fs.readFileSync(browserAuditPath, 'utf8') : '';
+const browserWorkflow = fs.existsSync(browserWorkflowPath) ? fs.readFileSync(browserWorkflowPath, 'utf8') : '';
 
 const syntax = spawnSync(process.execPath, ['--check', smokePath], { cwd: root, encoding: 'utf8' });
 need(syntax.status === 0, `P0 live smoke syntax failed: ${syntax.stderr || syntax.stdout || syntax.status}`);
+const browserSyntax = spawnSync(process.execPath, ['--check', browserAuditPath], { cwd: root, encoding: 'utf8' });
+need(browserSyntax.status === 0, `public browser audit syntax failed: ${browserSyntax.stderr || browserSyntax.stdout || browserSyntax.status}`);
 
 for (const marker of [
   '/deploy-manifest.json',
@@ -33,6 +45,14 @@ for (const marker of [
   '/newsletter-health',
   '/api/membership/signup',
   'marketingConsent: false',
+  'normalizeCloudflareHtml',
+  'cdn-cgi\\/challenge-platform\\/scripts\\/jsd',
+  'SITE_FALLBACK_URL',
+  'known-cloudflare-challenge',
+  '<title>Just a moment',
+  'noConsent?.saved !== true',
+  'cloudflare-worker-email-lifecycle',
+  'card artwork control routes are not consistently admin-protected',
   '/forum-health',
   '/forum-feed-main',
   '/submit-main-post',
@@ -53,7 +73,6 @@ for (const pair of [
   "['/evidence-vault.html', '/evidence-vault']",
   "['/follow-the-money.html', '/follow-the-money']",
   "['/making-money.html', '/making-money']",
-  "['/card-artwork-batches.html', '/card-artwork-batches']",
   "['/subject-briefs.html', '/subject-briefs']",
   "['/entity-timelines.html', '/entity-timelines']"
 ]) need(smoke.includes(pair), `P0 live smoke missing route-alias pair: ${pair}`);
@@ -83,10 +102,32 @@ for (const marker of [
   'downloads/p0-live-public-smoke.json'
 ]) need(workflow.includes(marker), `P0 live smoke workflow missing marker: ${marker}`);
 
+for (const marker of [
+  'https://matrixreprogrammed.njmgroupfrance.workers.dev',
+  'Just a moment\\.\\.\\.',
+  'Custom domain returned a recognized Cloudflare challenge',
+  'case "$status" in 2??|3??)'
+]) need(scheduledSmoke.includes(marker), `scheduled live smoke missing strict fallback marker: ${marker}`);
+
+for (const marker of [
+  'SITE_FALLBACK_URL',
+  'isCloudflareChallenge',
+  'known-cloudflare-challenge',
+  "response.status===403",
+  "response.headers.get('cf-mitigated')==='challenge'",
+  'transportFallbacks'
+]) need(browserAudit.includes(marker), `public browser audit missing strict fallback marker: ${marker}`);
+
+for (const marker of [
+  'https://matrixreprogrammed.njmgroupfrance.workers.dev/evidence-network-map.html',
+  'Just a moment\\.\\.\\.',
+  'SITE_FALLBACK_URL: https://matrixreprogrammed.njmgroupfrance.workers.dev'
+]) need(browserWorkflow.includes(marker), `public browser assurance workflow missing strict fallback marker: ${marker}`);
+
 const report = {
   ok: failures.length === 0,
   generatedAt: new Date().toISOString(),
-  checks: 58,
+  checks: checkCount,
   failures,
   boundary: 'The P0 live gate is read-only apart from deliberately invalid requests that fail before persistence: malformed login email, absent newsletter consent and anonymous forum posting.'
 };

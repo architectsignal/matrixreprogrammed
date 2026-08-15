@@ -23,6 +23,7 @@ for (const file of [
   'downloads/live-intel-latest.md',
   '.github/workflows/live-intel-update.yml',
   '.github/workflows/auto-update-orchestrator.yml',
+  '.github/workflows/daily-update-check.yml',
   'package.json',
   'netlify.toml'
 ]) requireFile(file);
@@ -134,6 +135,15 @@ requireIncludes('.github/workflows/live-intel-update.yml', 'live-intel.html', 'g
 requireIncludes('.github/workflows/live-intel-update.yml', 'downloads/live-intel-latest.json', 'generated Live Intel JSON commit');
 requireIncludes('.github/workflows/live-intel-update.yml', 'contents: write', 'workflow write permission');
 requireIncludes('.github/workflows/auto-update-orchestrator.yml', 'live-intel-pressure-test.js', 'daily orchestrator freshness gate');
+requireIncludes('.github/workflows/daily-update-check.yml', 'reconcile-release-homepage-order.js', 'daily refresh canonical homepage reconciliation');
+requireIncludes('.github/workflows/daily-update-check.yml', 'reconcile-global-access-dock.cjs', 'daily refresh final access-dock reconciliation');
+if (exists('.github/workflows/daily-update-check.yml')) {
+  const workflow = read('.github/workflows/daily-update-check.yml');
+  const homepageOwner = workflow.indexOf('reconcile-release-homepage-order.js');
+  const dockOwner = workflow.indexOf('reconcile-global-access-dock.cjs');
+  const pressureGate = workflow.indexOf('live-intel-pressure-test.js');
+  if (!(homepageOwner >= 0 && dockOwner > homepageOwner && pressureGate > dockOwner)) fail('daily refresh must reconcile the canonical homepage and access dock before Live Intel validation');
+}
 requireIncludes('package.json', 'build-live-intel-machine.js', 'npm build Live Intel builder');
 requireIncludes('package.json', 'live-intel-pressure-test.js', 'npm build Live Intel pressure test');
 requireIncludes('netlify.toml', 'build-live-intel-machine.js', 'Netlify Live Intel builder');

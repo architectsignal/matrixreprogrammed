@@ -9,7 +9,8 @@ const {
   SCRIPT_MARKER,
   STYLE_MARKER,
   auditGlobalAccessDock,
-  injectGlobalAccessDock
+  injectGlobalAccessDock,
+  stripGlobalAccessDock
 } = require('./global-access-dock-contract.cjs');
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -19,6 +20,12 @@ const reinjected = injectGlobalAccessDock(injected);
 
 assert.equal(auditGlobalAccessDock(injected).ok, true, 'sample document must receive both assets');
 assert.equal(reinjected, injected, 'injection must be idempotent');
+assert.equal(stripGlobalAccessDock(injected), sample, 'deploy-only dock assets must be removable from canonical source HTML');
+assert.equal(
+  auditGlobalAccessDock(injectGlobalAccessDock(`${injected}${injected}`)).ok,
+  true,
+  'injection must repair duplicate dock assets to exactly one pair'
+);
 assert.ok(injected.indexOf(STYLE_MARKER) < injected.indexOf('</head>'), 'stylesheet must be inside the head');
 assert.ok(injected.indexOf(SCRIPT_MARKER) < injected.indexOf('</body>'), 'script must be inside the body');
 
@@ -28,6 +35,8 @@ assert.equal(auditGlobalAccessDock(fragment).ok, true, 'documents without closin
 const client = fs.readFileSync(path.join(root, 'matrix-access-dock.js'), 'utf8');
 const stylesheet = fs.readFileSync(path.join(root, 'matrix-access-dock.css'), 'utf8');
 const build = fs.readFileSync(path.join(root, 'scripts', 'build-cloudflare-output.js'), 'utf8');
+const finalReconcile = fs.readFileSync(path.join(root, 'scripts', 'final-production-reconcile.js'), 'utf8');
+const performanceOptimizer = fs.readFileSync(path.join(root, 'scripts', 'apply-runtime-performance-optimizations.js'), 'utf8');
 
 for (const route of [
   '/start-here.html',
@@ -50,6 +59,10 @@ assert.ok(stylesheet.includes('@media (prefers-reduced-motion: reduce)'), 'dock 
 assert.ok(build.includes("require('./global-access-dock-contract.cjs')"), 'Cloudflare packaging must own the injection');
 assert.ok(build.includes("'matrix-access-dock.css'"), 'Cloudflare output must require the stylesheet');
 assert.ok(build.includes("'matrix-access-dock.js'"), 'Cloudflare output must require the client');
+assert.ok(finalReconcile.includes("run('scripts/reconcile-global-access-dock.cjs')"), 'final production reconciliation must restore the dock after authoritative HTML mirrors');
+assert.ok(finalReconcile.includes('stripSourceGlobalAccessDock'), 'final production reconciliation must remove deploy-only dock assets from authoritative source mirrors');
+assert.ok(finalReconcile.indexOf("run('scripts/reconcile-global-access-dock.cjs')") < finalReconcile.indexOf("run('scripts/version-cloudflare-assets.js')"), 'final dock reconciliation must run before final asset fingerprinting');
+assert.ok(performanceOptimizer.includes('stripGlobalAccessDock(read(optimized))'), 'runtime optimization must not copy deploy-only dock assets back into canonical source HTML');
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
 assert.ok(packageJson.scripts.postbuild.includes('reconcile-global-access-dock.cjs'), 'postbuild must restore the dock after late generators');
 assert.ok(packageJson.scripts['postcloudflare-output'].includes('reconcile-global-access-dock.cjs'), 'Cloudflare lifecycle must restore the dock after late generators');

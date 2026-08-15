@@ -6,6 +6,20 @@ on:
       - '.github/workflows/p0-live-public-smoke.yml'
       - 'scripts/p0-live-public-smoke.mjs'
       - 'scripts/p0-live-public-smoke-contract-test.js'
+      - '.github/workflows/live-smoke-test.yml'
+      - '.github/workflows/open-source-site-assurance.yml'
+      - 'scripts/playwright-public-site-audit.js'
+      - '.github/workflows/daily-investigation-machine.yml'
+      - '.github/workflows/weekly-investigation-machine.yml'
+      - 'scripts/publish-investigation-matrix-events.mjs'
+      - 'scripts/publish-investigation-matrix-events.test.mjs'
+      - 'scripts/scheduled-automation-resilience-contract-test.mjs'
+      - '.github/workflows/daily-update-check.yml'
+      - '.github/workflows/daily-sitewide-refresh.yml'
+      - 'scripts/daily-sitewide-build-safe.js'
+      - 'scripts/site-brain-health.js'
+      - 'data/site-brain.json'
+      - 'scripts/live-intel-pressure-test.js'
   workflow_run:
     workflows:
       - Matrix Reprogrammed Controlled Production Deploy
@@ -44,14 +58,18 @@ jobs:
           node-version: '24'
 
       - name: Verify P0 live-gate contract
-        run: node scripts/p0-live-public-smoke-contract-test.js
+        run: |
+          node scripts/p0-live-public-smoke-contract-test.js
+          node scripts/scheduled-automation-resilience-contract-test.mjs
 
       - name: Upload gate contract
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: p0-live-public-smoke-contract-${{ github.run_id }}
-          path: downloads/p0-live-public-smoke-contract-test.json
+          path: |
+            downloads/p0-live-public-smoke-contract-test.json
+            downloads/scheduled-automation-resilience-contract.json
           if-no-files-found: error
           retention-days: 30
 
@@ -75,6 +93,7 @@ jobs:
       - name: Verify P0 live public completion
         env:
           SITE_URL: https://matrixreprogrammed.com
+          SITE_FALLBACK_URL: https://matrixreprogrammed.njmgroupfrance.workers.dev
           EXPECTED_LIVE_SHA: ${{ inputs.expected_sha || '' }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           P0_SMOKE_ATTEMPTS: '36'

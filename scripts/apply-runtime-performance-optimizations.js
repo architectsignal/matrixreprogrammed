@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { stripGlobalAccessDock } = require('./global-access-dock-contract.cjs');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
@@ -197,7 +198,7 @@ if (fs.existsSync(site)) {
   for (const relative of ['timers.html', 'search.html']) {
     const optimized = path.join(site, relative);
     if (!fs.existsSync(optimized)) continue;
-    write(path.join(root, relative), read(optimized));
+    write(path.join(root, relative), stripGlobalAccessDock(read(optimized)));
     report.synchronizedSourceHtml.push(relative);
   }
 }

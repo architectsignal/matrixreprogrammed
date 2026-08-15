@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const { auditGlobalAccessDock, stripGlobalAccessDock } = require('./global-access-dock-contract.cjs');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
@@ -40,6 +41,24 @@ function copy(rel) {
     const extensionless = path.join(site, rel.replace(/\.html$/i, ''));
     if (!(fs.existsSync(extensionless) && fs.statSync(extensionless).isDirectory())) fs.copyFileSync(source, extensionless);
   }
+}
+function stripSourceGlobalAccessDock(rel) {
+  const source = path.join(root, rel);
+  if (!fs.existsSync(source) || !rel.endsWith('.html')) return;
+  const before = fs.readFileSync(source, 'utf8');
+  const after = stripGlobalAccessDock(before);
+  if (after !== before) fs.writeFileSync(source, after);
+  const audit = auditGlobalAccessDock(after);
+  if (audit.styleCount !== 0 || audit.scriptCount !== 0) {
+    throw new Error(`${rel} retains deploy-only global access dock assets in canonical source`);
+  }
+  report.checks.push({
+    scope: 'source',
+    rel,
+    contract: 'deploy-only-global-access-dock-absent',
+    removed: after !== before,
+    ok: true
+  });
 }
 function duplicateIds(html) {
   const ids = [...String(html).matchAll(/(?:^|\s)id\s*=\s*(["'])([^"']+)\1/gi)].map(match => match[2]);
@@ -153,6 +172,7 @@ const authoritativeUpdateMirrors = [
   'search.html',
   'search.js'
 ];
+authoritativeUpdateMirrors.forEach(stripSourceGlobalAccessDock);
 authoritativeUpdateMirrors.forEach(copy);
 report.authoritativeUpdateMirrors = authoritativeUpdateMirrors;
 
@@ -162,8 +182,14 @@ report.authoritativeUpdateMirrors = authoritativeUpdateMirrors;
 run('scripts/finalize-black-file-postbuild.js');
 
 // Final release seal: every broad generator and sanitizer has finished. From
-// this point forward only deterministic compaction, corpus compilation,
-// byte-for-byte copies, hashing and validation are permitted.
+// this point forward only deterministic navigation injection, compaction,
+// corpus compilation, byte-for-byte copies, hashing and validation are
+// permitted. Reconcile the dock here because the authoritative mirror copies
+// above intentionally replace selected deployable HTML files after postbuild.
+run('scripts/reconcile-global-access-dock.cjs');
+// Fingerprint the exact final HTML/CSS/JS bundle before the manifest and
+// production-health hashes are sealed. No HTML mutator may run after this.
+run('scripts/version-cloudflare-assets.js');
 run('scripts/compact-cloudflare-search-index.js');
 run('scripts/build-public-investigation-corpus.js');
 for (const relative of ['search-index.json', 'data/search-facets.json', 'data/public-investigation-corpus.json']) copy(relative);

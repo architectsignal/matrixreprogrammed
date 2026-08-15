@@ -15,6 +15,8 @@ const repository = process.env.GITHUB_REPOSITORY || 'architectsignal/matrixrepro
 const attempts = Number(process.env.LIVE_VERIFY_ATTEMPTS || 36);
 const delayMs = Number(process.env.LIVE_VERIFY_DELAY_MS || 10000);
 const policy = JSON.parse(fs.readFileSync(path.join(root, 'data', 'production-freshness-policy.json'), 'utf8'));
+const dockStyleMarker = 'data-matrix-access-dock-asset="style"';
+const dockScriptMarker = 'data-matrix-access-dock-asset="script"';
 const routeMarkers = {
   '/': 'POWER SHOULD HAVE',
   '/start-here': 'Open Dark Web Safety',
@@ -65,6 +67,7 @@ async function fetchText(route, options = {}) {
   return last;
 }
 const parseJson = text => { try { return JSON.parse(text); } catch { return null; } };
+const countText = (text, marker) => String(text || '').split(marker).length - 1;
 async function currentMainSha() {
   const headers = { accept: 'application/vnd.github+json', 'user-agent': 'MatrixProductionVerifier/6.0' };
   if (process.env.GITHUB_TOKEN) headers.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
@@ -218,8 +221,27 @@ async function verifyOnce() {
   const routeResults = [];
   for (const [route, marker] of Object.entries(routeMarkers)) {
     const response = await fetchText(route);
-    routeResults.push({ route, status: response.status, marker, ok: response.ok && response.text.includes(marker), cacheControl: response.headers['cache-control'] || null });
+    const htmlRoute = !route.endsWith('.json') && !route.startsWith('/data/');
+    const dockStyleCount = htmlRoute ? countText(response.text, dockStyleMarker) : null;
+    const dockScriptCount = htmlRoute ? countText(response.text, dockScriptMarker) : null;
+    const dockOk = !htmlRoute || (dockStyleCount === 1 && dockScriptCount === 1);
+    routeResults.push({ route, status: response.status, marker, dockStyleCount, dockScriptCount, dockOk, ok: response.ok && response.text.includes(marker) && dockOk, cacheControl: response.headers['cache-control'] || null });
   }
+  const [dockScriptResponse, dockStyleResponse] = await Promise.all([
+    fetchText('/matrix-access-dock.js'),
+    fetchText('/matrix-access-dock.css')
+  ]);
+  const accessDock = {
+    ok: dockScriptResponse.ok
+      && dockStyleResponse.ok
+      && dockScriptResponse.text.includes('/member-login.html')
+      && dockScriptResponse.text.includes('/newsletter.html#newsletter-form')
+      && dockScriptResponse.text.includes('matrix-access-dock'),
+    scriptStatus: dockScriptResponse.status,
+    styleStatus: dockStyleResponse.status,
+    loginRoute: dockScriptResponse.text.includes('/member-login.html'),
+    subscribeRoute: dockScriptResponse.text.includes('/newsletter.html#newsletter-form')
+  };
   const payloads = {};
   for (const item of policy.datasets || []) {
     const response = await fetchText(`/${item.file}`);
@@ -245,12 +267,12 @@ async function verifyOnce() {
     && health?.runtimeConfigurationOwner === 'Cloudflare dashboard'
     && String(health?.paymentMessage || '').includes('three active plans')
   );
-  const coreOk = manifestResponse.ok && manifestMatches && healthMatches && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
+  const coreOk = manifestResponse.ok && manifestMatches && healthMatches && accessDock.ok && routeResults.every(item => item.ok) && freshness.every(item => item.ok);
   const paypalBoundary = coreOk ? await verifyPayPalBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
   const emailAutomationBoundary = coreOk ? await verifyEmailAutomationBoundary() : { ok: false, skipped: true, reason: 'core production synchronization not proven yet' };
   const forumPersistence = coreOk && paypalBoundary.ok ? await verifyForumPersistence() : { ok: false, skipped: true, reason: 'core or PayPal boundary not proven yet' };
   const ok = coreOk && paypalBoundary.ok && emailAutomationBoundary.ok && forumPersistence.ok;
-  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifestSha, manifestIsCommitBound, manifestMatchesExpected, manifestMatchesCurrentMain, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, routeResults, freshness, paypalBoundary, emailAutomationBoundary, forumPersistence };
+  return { ok, checkedAt: new Date().toISOString(), expectedSha, mainSha, mainAdvancedDuringRun, manifestSha, manifestIsCommitBound, manifestMatchesExpected, manifestMatchesCurrentMain, manifest, manifestStatus: manifestResponse.status, manifestMatches, health, healthStatus: healthResponse.status, healthMatches, accessDock, routeResults, freshness, paypalBoundary, emailAutomationBoundary, forumPersistence };
 }
 
 (async () => {

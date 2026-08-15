@@ -16,6 +16,11 @@ function runFinalSeal(script, finalHashOnly = false) {
   });
 }
 
+// Late release-metadata routing restores canonical HTML without deploy-only
+// assets. Restore and audit the dock before sealing final manifest hashes.
+runFinalSeal('reconcile-global-access-dock.cjs');
+runFinalSeal('version-cloudflare-assets.js');
+
 // patch-release-metadata-routing deliberately reasserts the current homepage,
 // which can rebuild Search V3. Seal the exact post-reconciliation bytes before
 // the guard reads manifests or allows Wrangler to run.

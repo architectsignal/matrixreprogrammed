@@ -1,14 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const { auditGlobalAccessDock, injectGlobalAccessDock } = require('./global-access-dock-contract.cjs');
 
 const root = process.cwd();
 const out = path.join(root, '_site');
 const allowedExt = new Set(['.html','.css','.js','.json','.xml','.txt','.md','.pdf','.png','.jpg','.jpeg','.webp','.svg','.ico','.gif','.mp4','.webm','.woff','.woff2','.csv','.wasm','.pf_fragment','.pf_index','.pf_meta','.pf_filter','.wacz']);
 const allowedRootFiles = new Set(['_headers','robots.txt','llms.txt','sitemap.xml','site-graph.json','claim-taxonomy.json','crawler-map.json','search-index.json','sigil.png','matrix.js','styles.css','fixes.css']);
-const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site','evidence-archive','source-snapshots','browsertrix-output','tools','templates']);
-const blockedFiles = new Set(['_redirects','package.json','package-lock.json','bun.lock','netlify.toml','wrangler.jsonc','CLOUDFLARE_PAGES_SETUP.md','source-snapshot-index.json','source-change-ledger.json','source-change-monitor-report.json','source-change-preservation-hardening-report.json','source-change-preservation-test.json','source-change-preservation-hardening-test.json','search-v3-build-report.json','search-v3-runtime-report.json','search-v3-quality-test.json','evidence-network-map-build.json','evidence-network-map-wiring.json','public-network-map-test.json','osint-worker-patch-report.json','osint-tools-test.json','research-tools-ui-patch.json','market-activity-test.json','phase6-data-integration.json','phase6-worker-patch.json','phase6-integration-report.json','sec-market-activity-collection-report.json','open-source-research-suite-test.json','open-source-research-wiring.json','pagefind-output-test.json','phase8-evidence-archive-build.json','phase8-evidence-archive-test.json','phase8-wiring.json','browsertrix-crawl-plan.json','public-data-lab-build.json','public-data-lab-test.json','public-data-lab-output-test.json']);
+const blockedDirs = new Set(['.git','.github','node_modules','scripts','netlify','_site','evidence-archive','source-snapshots','browsertrix-output','tools','templates','.cloudflare','.generated','ai-management','automation','card-art-inbox','card-artwork-batches','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','recovery','report-manifests','runtime','src','tests','tmp']);
+const blockedFiles = new Set(['_redirects','package.json','package-lock.json','bun.lock','netlify.toml','wrangler.jsonc','AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','CLOUDFLARE_PAGES_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md','source-snapshot-index.json','source-change-ledger.json','source-change-monitor-report.json','source-change-preservation-hardening-report.json','source-change-preservation-test.json','source-change-preservation-hardening-test.json','search-v3-build-report.json','search-v3-runtime-report.json','search-v3-quality-test.json','evidence-network-map-build.json','evidence-network-map-wiring.json','public-network-map-test.json','osint-worker-patch-report.json','osint-tools-test.json','research-tools-ui-patch.json','market-activity-test.json','phase6-data-integration.json','phase6-worker-patch.json','phase6-integration-report.json','sec-market-activity-collection-report.json','open-source-research-suite-test.json','open-source-research-wiring.json','pagefind-output-test.json','phase8-evidence-archive-build.json','phase8-evidence-archive-test.json','phase8-wiring.json','browsertrix-crawl-plan.json','public-data-lab-build.json','public-data-lab-test.json','public-data-lab-output-test.json']);
 const maxAssetBytes = 25 * 1024 * 1024;
+const dockedOutputFiles = new Set();
 
 function normalizeWorkerAuditMarkers() {
   const file = path.join(root, 'src', 'worker.js');
@@ -101,7 +103,12 @@ function copyFile(src, dest, rel) {
     return false;
   }
   ensure(path.dirname(dest));
-  fs.copyFileSync(src, dest);
+  if (path.extname(src).toLowerCase() === '.html') {
+    fs.writeFileSync(dest, injectGlobalAccessDock(fs.readFileSync(src, 'utf8')));
+    dockedOutputFiles.add(path.resolve(dest));
+  } else {
+    fs.copyFileSync(src, dest);
+  }
   return true;
 }
 function copyHtmlRouteVariant(src, rel) {
@@ -181,6 +188,13 @@ runRequired('Cytoscape network map test', 'scripts/cytoscape-network-map-test.js
 require('./patch-osint-tool-tiers.js');
 require('./patch-newsletter-consent.js');
 require('./patch-homepage-construction-banner.js');
+// Several legacy builders above can recreate author-facing strategy copy after
+// the early scrub. Re-run the public owners in fresh processes at the true
+// packaging boundary so source and deployable output share the same clean copy.
+runRequired('Final commercial strategy visibility scrub', 'scripts/hide-commercial-strategy-blocks.js');
+runRequired('Final public editorial hardening', 'scripts/final-public-editorial-hardening.js');
+runRequired('Final public route cleanup', 'scripts/final-public-route-cleanup.js');
+runRequired('Final public editorial audit repair', 'scripts/fix-public-editorial-audit-errors.js');
 
 rm(out);
 ensure(out);
@@ -190,6 +204,7 @@ ensureArchiveSearchMarker(path.join(out, 'search'));
 
 const requiredFiles = [
   'index.html','index','start-here.html','start-here','books.html','books','epstein-files.html','epstein-files','live-intel.html','live-intel',
+  'matrix-access-dock.css','matrix-access-dock.js','member-login.html','member-login','newsletter.html','newsletter',
   'research-tools.html','research-tools','research-tools.js','contact-the-machine.html','contact-the-machine','contact-the-machine.css','contact-the-machine.js','security-privacy.html','security-privacy','security-privacy.js','dark-web-safety.html','dark-web-safety','dark-web-safety.js','data/security-privacy-tools.json','data/dark-web-safety.json',
   'market-activity.html','market-activity','market-activity.js','market-watchlist.html','market-watchlist','market-watchlist.js','data/market-activity.json','downloads/market-activity.csv',
   'evidence-reader.html','evidence-reader','evidence-reader.js','data/evidence-reader-manifest.json','evidence-timeline.html','evidence-timeline','evidence-timeline.js','data/evidence-timeline.json',
@@ -199,7 +214,7 @@ const requiredFiles = [
   'investigation-machine.html','investigation-machine','daily-investigation-conclusions.html','daily-investigation-conclusions','weekly-investigation-report.html','weekly-investigation-report','investigation-source-ledger.html','investigation-source-ledger','source-changes.html','source-changes',
   'entity-registry.html','entity-registry','relationship-registry.html','relationship-registry','investigation-pulse.js','interactive-network-map.js','evidence-network-map.html','evidence-network-map','evidence-network-map.js','data/evidence-network-map.json','downloads/evidence-network-map.csv',
   'data/membership-feature-matrix.json','data/investigation-status.json','data/investigation-source-registry.json','data/source-change-public.json','data/investigation-entity-schema.json','data/investigation-knowledge-graph.json','data/entity-registry.json','data/relationship-registry.json','downloads/investigation-entities.csv','downloads/investigation-relationships.csv',
-  'timers.html','timers','forum.html','forum','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers'
+  'timers.html','timers','forum.html','forum','agent-commons.html','agent-commons','agent-commons.css','agent-commons.js','agent-commons-skill.md','atlas-layers.html','atlas-layers','migration-flow.html','migration-flow','data/global-risk-clocks.json','data/atlas-layers.json','data/migration-flow-panel.json','data/forum-seed.json','_headers'
 ];
 for (const required of requiredFiles) {
   if (!fs.existsSync(path.join(out, required))) {
@@ -216,7 +231,25 @@ if (fs.existsSync(privateArchivePath) && fs.statSync(privateArchivePath).isDirec
   console.error('Cloudflare output failed: private evidence-archive directory exposed.');
   process.exit(1);
 }
+if (dockedOutputFiles.size === 0) {
+  console.error('Cloudflare output failed: no HTML documents received the global access dock.');
+  process.exit(1);
+}
+for (const file of dockedOutputFiles) {
+  const audit = auditGlobalAccessDock(fs.readFileSync(file, 'utf8'));
+  if (!audit.ok) {
+    console.error(`Cloudflare output failed: global access dock invalid in ${path.relative(out, file)} (${audit.styleCount} styles, ${audit.scriptCount} scripts).`);
+    process.exit(1);
+  }
+}
+const artworkBatchRoute = path.join(out, 'card-artwork-batches');
+if (fs.existsSync(artworkBatchRoute) && fs.statSync(artworkBatchRoute).isDirectory()) {
+  console.error('Cloudflare output failed: private card-artwork-batches directory exposed.');
+  process.exit(1);
+}
 const privatePaths = [
+  '.cloudflare','.generated','ai-management','automation','card-art-inbox','deploy-triggers','deployments','diagnostics','docs','functions','local-agent','migrations','recovery','runtime','src','tests','tmp',
+  'AGENTS.md','CLOUDFLARE_FORUM_KV_SETUP.md','DEPLOYMENT_RULES.md','INTERNAL_ANALYTICS_SETUP.md','SITE_BUILD_STATUS.md','SITE_RECOVERY_MASTER.md',
   'data/source-snapshots','data/source-snapshot-index.json','data/source-change-ledger.json',
   'downloads/source-change-monitor-report.json','downloads/source-change-preservation-hardening-report.json',
   'downloads/search-v3-build-report.json','downloads/search-v3-runtime-report.json','downloads/search-v3-quality-test.json',

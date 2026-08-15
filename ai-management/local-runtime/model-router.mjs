@@ -47,6 +47,8 @@ function taskProfile(job = {}) {
 export function modelCompatibility(resource, job, { now = new Date() } = {}) {
   const metadata = resource?.metadata || {};
   const reasons = [];
+  if (resource?.enabled !== true) reasons.push('resource-disabled');
+  if (resource?.health_status && resource.health_status !== 'healthy') reasons.push('resource-unhealthy');
   if (resource?.capability_types?.includes('llm') !== true) reasons.push('not-an-llm-resource');
   if (metadata.local !== true) reasons.push('not-owner-local');
   if (!metadata.endpoint || !metadata.model_id) reasons.push('local-model-metadata-missing');

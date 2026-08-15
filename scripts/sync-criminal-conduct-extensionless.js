@@ -9,10 +9,23 @@ const failures = [];
 const synchronized = [];
 const directoryBackedRoutes = [];
 const materializedBuiltRoutes = [];
+const privateBuiltRoutesSkipped = [];
+const privateBuiltRouteRoots = new Set([
+  'ai-management', 'automation', 'card-art-inbox', 'card-artwork-batches',
+  'deploy-triggers', 'deployments', 'diagnostics', 'docs', 'functions',
+  'local-agent', 'migrations', 'recovery', 'runtime', 'scripts', 'src',
+  'templates', 'tests', 'tmp', 'tools'
+]);
 
 if (!fs.existsSync(engineReportPath)) throw new Error('Missing criminal conduct engine report before extensionless synchronization');
 const engine = JSON.parse(fs.readFileSync(engineReportPath, 'utf8'));
 const sourceRoutes = [...new Set((engine.surfaces || []).filter(item => item.scope === 'source' && item.route.endsWith('.html')).map(item => item.route))];
+
+function isPrivateBuiltRoute(route) {
+  const normalized = String(route || '').replace(/\\/g, '/').replace(/^\/+/, '');
+  if (!normalized.includes('/')) return false;
+  return privateBuiltRouteRoots.has(normalized.split('/')[0]);
+}
 
 function syncAlias(base, route, label) {
   const htmlFile = path.join(base, route);
@@ -53,6 +66,10 @@ for (const route of sourceRoutes) {
   if (fs.existsSync(sourceAlias) && fs.statSync(sourceAlias).isFile()) syncAlias(root, route, 'source');
   else if (fs.existsSync(sourceAlias) && fs.statSync(sourceAlias).isDirectory()) syncAlias(root, route, 'source');
   if (fs.existsSync(site)) {
+    if (isPrivateBuiltRoute(route)) {
+      privateBuiltRoutesSkipped.push(route);
+      continue;
+    }
     const sourceHtml = path.join(root, route);
     const builtHtml = path.join(site, route);
     if (!fs.existsSync(builtHtml) && fs.existsSync(sourceHtml) && fs.statSync(sourceHtml).isFile()) {
@@ -70,9 +87,11 @@ const report = {
   sourceDossierRoutes: sourceRoutes.length,
   synchronizedCount: synchronized.length,
   materializedBuiltCount: materializedBuiltRoutes.length,
+  privateBuiltRoutesSkippedCount: privateBuiltRoutesSkipped.length,
   directoryBackedCount: directoryBackedRoutes.length,
   synchronized,
   materializedBuiltRoutes,
+  privateBuiltRoutesSkipped,
   directoryBackedRoutes,
   failures
 };
@@ -82,4 +101,4 @@ if (failures.length) {
   failures.forEach(item => console.error(`CRIMINAL CONDUCT EXTENSIONLESS SYNC FAILURE: ${item}`));
   process.exit(1);
 }
-console.log(`Criminal Conduct & Allegations engine synchronized to ${synchronized.length} extensionless dossier route(s); ${materializedBuiltRoutes.length} missing built dossier page(s) materialized; ${directoryBackedRoutes.length} directory-backed namespace(s) preserved with their explicit .html dossier verified.`);
+console.log(`Criminal Conduct & Allegations engine synchronized to ${synchronized.length} extensionless dossier route(s); ${materializedBuiltRoutes.length} missing built dossier page(s) materialized; ${privateBuiltRoutesSkipped.length} private built route(s) skipped; ${directoryBackedRoutes.length} directory-backed namespace(s) preserved with their explicit .html dossier verified.`);

@@ -24,7 +24,11 @@ await supervise({
   signal: controller.signal,
   onEvent: event => {
     events.push(event);
-    if (event.type === 'spawn' && events.filter(item => item.type === 'spawn').length === 2) setTimeout(() => controller.abort(), 100);
+    if (event.type === 'spawn' && events.filter(item => item.type === 'spawn').length === 2) {
+      // A spawn event precedes execution of the child fixture. Leave enough time for
+      // a loaded Windows/Node runner to enter the process and persist its receipt.
+      setTimeout(() => controller.abort(), 1000);
+    }
   }
 });
 assert.equal(Number(await fs.readFile(counterFile, 'utf8')), 2, 'watchdog must restart a failed Host process');

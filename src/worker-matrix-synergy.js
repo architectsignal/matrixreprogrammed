@@ -34,8 +34,11 @@ async function events(request,env){
   const body=await readBody(request);const current=nowIso();const auditIdentifier=clean(body.auditIdentifier,180)||newId('audit-event');
   const evidence=classifyEvidence({...body.evidence,trustedSystemAssertion:true,retrievedAt:body.evidence?.retrievedAt||current});
   const event=buildMatrixEvent({eventType:body.eventType,timestamp:current,auditIdentifier,origin:clean(body.origin,120)||'trusted-admin-pipeline',source:clean(body.source||body.evidence?.sourceUrl,1500),actor:clean(body.actor,180)||'matrix-pipeline',affectedEntities:body.affectedEntities,affectedPages:body.affectedPages,evidenceOutcome:evidence});
-  await env.MEMBERS_DB.prepare('INSERT INTO matrix_events (event_id,event_type,timestamp,origin,source,evidence_class,actor,affected_entities_json,affected_pages_json,confidence,review_state,audit_identifier,propagation_json,payload_json,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)').bind(newId('event'),event.eventType,event.timestamp,event.origin,event.source||null,event.evidenceClass,event.actor,safeJson(event.affectedEntities),safeJson(event.affectedPages),event.confidence,event.reviewState,event.auditIdentifier,safeJson(event.propagation),safeJson(body.payload||{}),current).run();
-  return json({ok:true,created:true,event},201);
+  const eventId=newId('event');
+  const result=await env.MEMBERS_DB.prepare('INSERT OR IGNORE INTO matrix_events (event_id,event_type,timestamp,origin,source,evidence_class,actor,affected_entities_json,affected_pages_json,confidence,review_state,audit_identifier,propagation_json,payload_json,created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)').bind(eventId,event.eventType,event.timestamp,event.origin,event.source||null,event.evidenceClass,event.actor,safeJson(event.affectedEntities),safeJson(event.affectedPages),event.confidence,event.reviewState,event.auditIdentifier,safeJson(event.propagation),safeJson(body.payload||{}),current).run();
+  const created=Number(result?.meta?.changes||0)>0;
+  const persisted=created?eventId:(await env.MEMBERS_DB.prepare('SELECT event_id FROM matrix_events WHERE audit_identifier=? LIMIT 1').bind(auditIdentifier).first())?.event_id||null;
+  return json({ok:true,created,eventId:persisted,event},created?201:200);
 }
 
 async function humanActions(env){

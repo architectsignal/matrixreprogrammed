@@ -25,11 +25,20 @@ function hash(value) {
 function localPressure(runtime = {}, siteReport = {}) {
   const gpuMemory = Number(runtime?.hardware?.total_gpu_memory_mb ?? runtime?.total_gpu_memory_mb ?? 0);
   const freeGpuMemory = Number(runtime?.hardware?.free_gpu_memory_mb ?? 0);
+  const totalMemoryMb = Number(runtime?.hardware?.memory?.total_bytes || 0) / 1024 / 1024
+    || Number(runtime?.hardware?.total_memory_mb || runtime?.total_memory_mb || 0);
+  const freeMemoryMb = Number(runtime?.hardware?.memory?.free_bytes || 0) / 1024 / 1024
+    || Number(runtime?.hardware?.free_memory_mb || runtime?.free_memory_mb || 0);
+  const freeMemoryPercent = totalMemoryMb > 0 ? 100 * freeMemoryMb / totalMemoryMb : 0;
+  const reportedPressure = runtime?.hardware?.resource_pressure || runtime?.resource_pressure || {};
   const models = Number(runtime?.resources?.length ?? runtime?.models ?? 0);
   const pages = Number(siteReport?.scanned_pages || 0);
   const issues = Number(siteReport?.total_issues || 0);
   let score = 0;
   const reasons = [];
+  if (reportedPressure.can_accept_local_jobs === false) { score += 60; reasons.push('local-host-deferred-for-memory-pressure'); }
+  else if (freeMemoryPercent > 0 && freeMemoryPercent < 25) { score += 30; reasons.push('free-system-memory-below-25-percent'); }
+  if (totalMemoryMb > 0 && totalMemoryMb < 8192) { score += 20; reasons.push('system-memory-below-8gb'); }
   if (gpuMemory < 8192) { score += 35; reasons.push('gpu-memory-below-8gb'); }
   if (freeGpuMemory > 0 && freeGpuMemory < 4096) { score += 20; reasons.push('free-gpu-memory-below-4gb'); }
   if (models > 0 && gpuMemory < 12288) { score += 10; reasons.push('local-models-compete-for-limited-vram'); }
@@ -41,6 +50,9 @@ function localPressure(runtime = {}, siteReport = {}) {
     reasons,
     gpu_memory_mb: gpuMemory,
     free_gpu_memory_mb: freeGpuMemory,
+    total_memory_mb: Math.round(totalMemoryMb),
+    free_memory_mb: Math.round(freeMemoryMb),
+    free_memory_percent: Number(freeMemoryPercent.toFixed(1)),
     models,
     pages,
     issues

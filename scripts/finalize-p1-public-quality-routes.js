@@ -47,6 +47,12 @@ function patch(file) {
     html = html
       .replace(/downloads\/wealth-guides\/business-system\.pdf/gi, canonicalBusinessGuide)
       .replace(/Wealth Guides\/Business system/gi, 'Business Creation Engine');
+    if (!html.includes(canonicalBusinessGuide)) {
+      html = html.replace(
+        /(<section\b[^>]*data-p1-public-quality=["'][^"']+["'][^>]*>[\s\S]*?<div class=["']cta-row["']>)/i,
+        `$1<a class="btn alt" href="${canonicalBusinessGuide}">Business Creation Engine PDF</a>`
+      );
+    }
   }
 
   html = html.replace(/(<section\b[^>]*data-p1-public-quality=["'][^"']+["'][^>]*>[\s\S]*?<div class=["']cta-row["']>)([\s\S]*?)(<\/div>)/i,

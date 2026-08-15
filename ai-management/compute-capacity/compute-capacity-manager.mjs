@@ -2,7 +2,12 @@ import { evaluateZeroSpendInvariant } from '../policy-engine/zero-spend-invarian
 
 const ALLOWED_SOURCES = new Set(['owner-local', 'owner-lan', 'official-free-program', 'official-community-pool']);
 const AUTO_ADMIT_SOURCES = new Set(['owner-local', 'owner-lan']);
-const ALLOWED_WORKLOADS = new Set(['deterministic', 'embedding', 'rerank', 'classification', 'summarization', 'llm']);
+const ALLOWED_WORKLOADS = new Set([
+  'deterministic', 'embedding', 'rerank', 'classification', 'summarization', 'llm',
+  'permissionless.scan', 'permissionless.decode', 'permissionless.health', 'permissionless.rank', 'permissionless.simulate'
+]);
+const PUBLIC_NETWORK_WORKLOADS = new Set(['permissionless.scan', 'permissionless.decode', 'permissionless.health', 'permissionless.rank', 'permissionless.simulate']);
+const APPROVED_NETWORK_SCOPES = new Set(['PUBLIC_RPC_READ', 'OFFICIAL_DOCS_READ', 'OFFICIAL_API_READ', 'CHAIN_INDEX_READ']);
 
 function clamp(value, minimum, maximum) {
   const number = Number(value);
@@ -66,6 +71,21 @@ function zeroSpendSubject(candidate = {}) {
   };
 }
 
+function scopedPublicNetworkAllowed(candidate = {}) {
+  if (candidate.external_network_used !== true) return true;
+  const scopes = safeArray(candidate.network_scopes, 20);
+  const workloads = safeArray(candidate.supported_workloads, 20);
+  return candidate.public_retrieval_only === true
+    && candidate.secrets_available !== true
+    && candidate.signing_allowed !== true
+    && safeArray(candidate.approved_data_classes, 20).includes('public')
+    && scopes.length > 0
+    && scopes.every(scope => APPROVED_NETWORK_SCOPES.has(String(scope)))
+    && safeArray(candidate.allowed_hosts, 100).length > 0
+    && workloads.length > 0
+    && workloads.every(workload => PUBLIC_NETWORK_WORKLOADS.has(String(workload)));
+}
+
 export function assessComputeCandidate(candidate = {}, { now = new Date() } = {}) {
   const sourceType = String(candidate.source_type || '');
   const blockers = [];
@@ -77,7 +97,7 @@ export function assessComputeCandidate(candidate = {}, { now = new Date() } = {}
   if (candidate.account_rotation === true) blockers.push('account-rotation-forbidden');
   if (candidate.quota_evasion === true) blockers.push('quota-evasion-forbidden');
   if (candidate.credential_harvesting === true) blockers.push('credential-harvesting-forbidden');
-  if (candidate.external_network_used === true) blockers.push('external-network-use-forbidden');
+  if (!scopedPublicNetworkAllowed(candidate)) blockers.push('external-network-use-outside-public-scope');
   if (candidate.terms_verified !== true) blockers.push('terms-not-verified');
   if (candidate.privacy_verified !== true) blockers.push('privacy-not-verified');
   if (candidate.automation_permission !== 'allowed') blockers.push('automation-permission-not-explicit');
@@ -120,7 +140,7 @@ export function assessComputeCandidate(candidate = {}, { now = new Date() } = {}
   };
 }
 
-export function buildCapacityPortfolio({ candidates = [], activeResources = [], now = new Date(), maximumExternalResources = 3 } = {}) {
+export function buildCapacityPortfolio({ candidates = [], activeResources = [], now = new Date(), maximumExternalResources = 100 } = {}) {
   const assessments = candidates.map(candidate => assessComputeCandidate(candidate, { now }));
   const activeIds = new Set(activeResources.map(resource => resource.resource_id));
   const approvedLocal = assessments.filter(item => item.state === 'approved-auto' && !activeIds.has(item.candidate_id));
@@ -181,12 +201,19 @@ export function allocateCapacity({ portfolio, jobs = [], resources = [] } = {}) 
       continue;
     }
     capacity.set(selected.resource_id, capacity.get(selected.resource_id) - 1);
+    const requestedScopes = safeArray(job.network_scopes, 20);
+    const matchedScopes = requestedScopes.filter(scope => safeArray(selected.network_scopes, 20).includes(scope) && APPROVED_NETWORK_SCOPES.has(String(scope)));
+    const externalNetworkAllowed = job.external_network_allowed === true
+      && requestedScopes.length > 0
+      && matchedScopes.length === requestedScopes.length
+      && scopedPublicNetworkAllowed(selected);
     assignments.push({
       job_id: job.job_id || null,
       resource_id: selected.resource_id,
       workload,
       monetary_ceiling_eur: 0,
-      external_network_allowed: job.external_network_allowed === true && selected.public_retrieval_only === true,
+      external_network_allowed: externalNetworkAllowed,
+      network_scopes: externalNetworkAllowed ? matchedScopes : [],
       reversible: true
     });
   }
@@ -198,7 +225,10 @@ export const computeCapacityInternals = {
   ALLOWED_SOURCES,
   AUTO_ADMIT_SOURCES,
   ALLOWED_WORKLOADS,
+  PUBLIC_NETWORK_WORKLOADS,
+  APPROVED_NETWORK_SCOPES,
   normalizedCapacity,
   zeroSpendSubject,
-  isUsableComputeResource
+  isUsableComputeResource,
+  scopedPublicNetworkAllowed
 };

@@ -2,7 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 const root = process.cwd();
-const ignoredDirectories = new Set(['.git', 'node_modules', '_site', '.matrix-production-bin']);
+const ignoredDirectories = new Set([
+  '.git', '.github', '.wrangler', '.cloudflare', '.generated', '.matrix-production-bin',
+  'node_modules', '_site', 'ai-management', 'automation', 'card-art-inbox',
+  'card-artwork-batches', 'deploy-triggers', 'deployments', 'diagnostics', 'docs',
+  'functions', 'local-agent', 'migrations', 'netlify', 'recovery', 'report-manifests',
+  'runtime', 'scripts', 'src', 'templates', 'tests', 'tmp', 'tools'
+]);
 const reportDirectory = path.join(root, 'downloads');
 const dataDirectory = path.join(root, 'data');
 fs.mkdirSync(reportDirectory, { recursive: true });

@@ -107,6 +107,14 @@ const rejectedLease = await leaseLocalJob(env, { node_id: 'node-networked-quaran
 assert.equal(rejectedLease.status, 409);
 assert.match((await rejectedLease.json()).error, /not eligible for zero-spend offline execution/);
 
+const pressureDeferredLease = await leaseLocalJob(env, {
+  node_id: 'node-worker-integration',
+  resource_pressure: { level: 'high', can_accept_local_jobs: false }
+});
+assert.equal(pressureDeferredLease.status, 204);
+assert.equal(pressureDeferredLease.headers.get('x-matrix-lease-deferred'), 'local-resource-pressure');
+assert.equal(database.prepare("SELECT status FROM ai_local_jobs WHERE job_id=?").get(queued.job_id).status, 'queued');
+
 const leaseResponse = await leaseLocalJob(env, { node_id: 'node-worker-integration' });
 assert.equal(leaseResponse.status, 200);
 const lease = await leaseResponse.json();
@@ -141,6 +149,7 @@ assert.equal(second.report.outcomes_last_24h.leased, 1);
 assert.equal(database.prepare("SELECT COUNT(*) count FROM matrix_learning_ledger WHERE domain='zero-cost-compute'").get().count, 2);
 assert.equal(database.prepare("SELECT COUNT(*) count FROM ai_local_jobs WHERE status='completed'").get().count, 1);
 assert.equal(database.prepare("SELECT COUNT(*) count FROM ai_local_job_receipts WHERE cost_confirmed_zero<>1 OR external_network_used<>0").get().count, 0);
+assert.equal(database.prepare("SELECT COUNT(*) count FROM matrix_events WHERE event_type='resource.benchmarked'").get().count, 1);
 
 console.log('CAPACITY GROWTH WORKER INTEGRATION TEST PASSED');
 console.log('A scheduled cycle admitted an online owner node, persisted and leased its daily benchmark, recorded a EUR 0 outcome, learned reliability, and reported the immutable receipts on the next cycle.');

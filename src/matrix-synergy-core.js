@@ -5,7 +5,15 @@ export const MATRIX_EVENT_TYPES=Object.freeze([
   'record.discovered','record.verified','record.speculative','record.corrected','record.withdrawn',
   'entity.linked','entity.unlinked','conclusion.opened','conclusion.downgraded','conclusion.reopened',
   'mission.created','contribution.received','contribution.accepted','contribution.invalidated',
-  'reward.granted','reward.revoked','source.failed','source.recovered','system.degraded','system.recovered'
+  'reward.granted','reward.revoked','source.failed','source.recovered','system.degraded','system.recovered',
+  'source.discovered','source.changed','document.discovered','document.changed','evidence.created',
+  'relationship.created','claim.created','claim.changed','claim.contradicted','dossier.changed','forecast.changed',
+  'resource.discovered','resource.benchmarked','resource.failed','model.discovered','model.benchmarked',
+  'value.discovered','value.entitlement.proven','value.claim.submitted','value.received','value.swept','value.failed','value.fraud.blocked','value.cycle.completed',
+  'value.permissionless.opportunity.verified','value.permissionless.simulated','value.permissionless.submitted',
+  'value.permissionless.confirmed','value.permissionless.reconciled','value.permissionless.failed','value.permissionless.cycle.completed',
+  'page.stale','site.change.proposed','build.failed','deploy.succeeded','user.correction.accepted',
+  'learning.signal.created','cycle.completed'
 ]);
 
 export const PROPAGATION_TARGETS=Object.freeze([

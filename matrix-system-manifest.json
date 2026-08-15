@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "manifest_id": "matrix-system-manifest-v1",
+  "constitutional_law": {
+    "text": "CAUSE NO HARM OR LOSS.",
+    "sha256": "2f440056e992d3edbe9dcfd60a5c9d24397bb28d68e29d1d3ed476e84021b189",
+    "immutable": true,
+    "authority_expansion_by_learning": false
+  },
+  "truthful_states": [
+    "LIVE_WORKING",
+    "WORKING_NOT_LIVE",
+    "PARTIAL",
+    "BLOCKED",
+    "BROKEN",
+    "SIMULATION_ONLY",
+    "DISABLED"
+  ],
+  "components": [
+    {
+      "component_id": "matrix-constitution",
+      "director": "MatrixPolicyEngine",
+      "implementation": "ai-management/matrix-core/matrix-constitution.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["phase17-migration", "controlled-cloudflare-release"],
+      "health_evidence": ["matrix-operating-system-contract-test", "phase17-migration-rehearsal"],
+      "blocker": "Branch implementation has not been deployed to production."
+    },
+    {
+      "component_id": "matrix-mission-director",
+      "director": "MatrixMissionDirector",
+      "implementation": "ai-management/matrix-core/matrix-operating-system.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-event-bus", "matrix-constitution", "D1"],
+      "health_evidence": ["matrix-operating-system-worker-integration-test"],
+      "blocker": "Branch implementation has not been deployed to production."
+    },
+    {
+      "component_id": "matrix-event-bus",
+      "director": "MatrixEventBus",
+      "implementation": "src/matrix-event-emitter.js",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["D1"],
+      "health_evidence": ["phase13-contract", "living-matrix-acceptance"],
+      "blocker": "A current production event receipt is required before this can be labelled LIVE_WORKING."
+    },
+    {
+      "component_id": "living-matrix",
+      "director": "MatrixBootDirector",
+      "implementation": "src/worker-living-matrix.js",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["matrix-event-bus", "D1"],
+      "health_evidence": ["living-matrix-acceptance"],
+      "blocker": "A current production scheduled-cycle receipt is required before this can be labelled LIVE_WORKING."
+    },
+    {
+      "component_id": "ask-matrix",
+      "director": "MatrixEvidenceDirector",
+      "implementation": "src/worker-public-investigation.js",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["public-evidence-corpus", "official-public-source-adapters", "D1"],
+      "health_evidence": ["public-investigation-test", "official-fresh-source-director-test", "fresh-public-investigation-worker-integration-test", "phase21-migration-rehearsal"],
+      "blocker": "A current production investigation receipt is required before this can be labelled LIVE_WORKING."
+    },
+    {
+      "component_id": "fresh-public-investigation",
+      "director": "OfficialFreshSourceDirector",
+      "implementation": "ai-management/public-investigation/official-fresh-source-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 2,
+      "dependencies": ["GOV.UK public API", "U.S. Federal Register public API", "D1 proof ledger"],
+      "health_evidence": ["official-fresh-source-director-test", "fresh-public-investigation-worker-integration-test", "phase21-migration-rehearsal", "live-official-public-api-proof"],
+      "blocker": "A production investigation receipt from the deployed Phase 21 Worker is required before this can be labelled LIVE_WORKING."
+    },
+    {
+      "component_id": "resource-hunter",
+      "director": "MatrixResourceDirector",
+      "implementation": "src/worker-opportunity-hunter.js",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["official-public-sources", "zero-spend-resource-broker"],
+      "health_evidence": ["capacity-growth-integration-test"],
+      "blocker": "External capacity counts only after a real eligible workload benchmark; provider onboarding may require the owner."
+    },
+    {
+      "component_id": "owner-local-compute",
+      "director": "MatrixCapabilityGraph",
+      "implementation": "local-agent/matrix-local-host.mjs",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["owner-token", "loopback-model-runtime"],
+      "health_evidence": ["local-host-test"],
+      "blocker": "Capacity is zero until an owner-controlled local model is online and benchmarked."
+    },
+    {
+      "component_id": "claim-value-hunter",
+      "director": "MatrixValueDirector",
+      "implementation": "src/worker-value-hunter.js",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["official-source", "proved-claimant-authority", "approved-destination", "certified-provider-adapter"],
+      "health_evidence": ["value-hunter-worker-integration-test"],
+      "blocker": "No live provider-specific collection adapter and claimant destination are registered."
+    },
+    {
+      "component_id": "permissionless-value-harvester",
+      "director": "MatrixValueDirector",
+      "implementation": "src/worker-permissionless-value.js",
+      "state": "SIMULATION_ONLY",
+      "capacity_units": 1,
+      "dependencies": ["certified-protocol-adapter", "bounded-wallet", "approved-RPC", "gas-reserve"],
+      "health_evidence": ["permissionless-harvester-golden-test", "phase16-contract-test"],
+      "blocker": "No production-certified protocol adapter is installed; no transaction can be signed."
+    },
+    {
+      "component_id": "protected-self-improvement",
+      "director": "MatrixArchitectDirector",
+      "implementation": "ai-management/self-improvement/capability-improvement-controller.mjs",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["benchmark-gate", "test-gate", "protected-release"],
+      "health_evidence": ["capability-improvement-controller-test"],
+      "blocker": "Generated changes remain staged until tests and the protected release workflow pass."
+    },
+    {
+      "component_id": "matrix-capability-graph",
+      "director": "MatrixCapabilityGraph",
+      "implementation": "ai-management/matrix-core/matrix-operating-system.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-system-components", "matrix-capability-snapshots"],
+      "health_evidence": ["matrix-operating-system-contract-test"],
+      "blocker": "A production capability snapshot is required."
+    },
+    {
+      "component_id": "matrix-learning-director",
+      "director": "MatrixLearningDirector",
+      "implementation": "ai-management/matrix-core/matrix-operating-system.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-learning-effects"],
+      "health_evidence": ["matrix-operating-system-worker-integration-test"],
+      "blocker": "A production learning-or-telemetry effect receipt is required."
+    },
+    {
+      "component_id": "matrix-health-director",
+      "director": "MatrixHealthDirector",
+      "implementation": "ai-management/matrix-core/matrix-operating-system.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-watchdog-events"],
+      "health_evidence": ["matrix-operating-system-worker-integration-test"],
+      "blocker": "A production watchdog cycle receipt is required."
+    },
+    {
+      "component_id": "matrix-boot-director",
+      "director": "MatrixBootDirector",
+      "implementation": "ai-management/matrix-core/matrix-operating-system.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-constitution", "matrix-event-bus", "matrix-mission-director"],
+      "health_evidence": ["matrix-operating-system-worker-integration-test"],
+      "blocker": "A production immediate-boot receipt is required."
+    },
+    {
+      "component_id": "owner-delegation-vault",
+      "director": "OwnerDelegationVault",
+      "implementation": "ai-management/matrix-core/matrix-constitution.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-delegations", "vault-references-only"],
+      "health_evidence": ["matrix-operating-system-contract-test"],
+      "blocker": "A production delegated-action evaluation receipt is required."
+    },
+    {
+      "component_id": "matrix-action-broker",
+      "director": "MatrixDelegatedActionBroker",
+      "implementation": "ai-management/matrix-core/matrix-constitution.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-constitution", "owner-delegation-vault"],
+      "health_evidence": ["matrix-operating-system-worker-integration-test"],
+      "blocker": "A production delegated-action evaluation receipt is required."
+    },
+    {
+      "component_id": "matrix-technology-director",
+      "director": "MatrixTechnologyDirector",
+      "implementation": "ai-management/matrix-core/matrix-operating-system.mjs",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["zero-spend-resource-hunter", "benchmark-gate", "protected-release"],
+      "health_evidence": ["matrix-operating-system-contract-test"],
+      "blocker": "No staged technology candidate has yet passed a real benchmark and protected-release gate."
+    },
+    {
+      "component_id": "matrix-architect-director",
+      "director": "MatrixArchitectDirector",
+      "implementation": "ai-management/matrix-core/matrix-operating-system.mjs",
+      "state": "PARTIAL",
+      "capacity_units": 1,
+      "dependencies": ["test-gate", "security-gate", "rollback-gate", "protected-release"],
+      "health_evidence": ["matrix-operating-system-contract-test"],
+      "blocker": "Code improvements are staged and cannot self-deploy to production."
+    },
+    {
+      "component_id": "matrix-evolution-director",
+      "director": "MatrixEvolutionDirector",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-capability-graph", "matrix-learning-director", "protected-self-improvement"],
+      "health_evidence": ["matrix-continuous-evolution-contract-test", "matrix-operating-system-worker-integration-test"],
+      "blocker": "A production evolution-cycle receipt is required."
+    },
+    {
+      "component_id": "capability-gap-detector",
+      "director": "CapabilityGapDetector",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-capability-graph", "matrix-operating-missions"],
+      "health_evidence": ["matrix-continuous-evolution-contract-test"],
+      "blocker": "A production gap-to-mission receipt is required."
+    },
+    {
+      "component_id": "human-dependency-ledger",
+      "director": "HumanDependencyLedger",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-human-dependencies"],
+      "health_evidence": ["phase18-migration-rehearsal"],
+      "blocker": "Production dependency classification has not run."
+    },
+    {
+      "component_id": "matrix-site-operator",
+      "director": "MatrixSiteOperator",
+      "implementation": "ai-management/matrix-core/matrix-evolution-director.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["cloudflare-assets", "matrix-site-health-checks"],
+      "health_evidence": ["matrix-operating-system-worker-integration-test"],
+      "blocker": "Bounded production surface probes have not run."
+    },
+    {
+      "component_id": "matrix-capital-challenge",
+      "director": "CapitalAcquisitionDirector",
+      "implementation": "ai-management/value-hunter/matrix-capital-challenge.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-value-receipts", "matrix-capital-destination-registry", "matrix-constitution"],
+      "health_evidence": ["matrix-capital-challenge-contract-test", "phase19-migration-rehearsal"],
+      "blocker": "No real external EUR receipt has been reconciled to an approved Matrix destination."
+    },
+    {
+      "component_id": "novel-opportunity-director",
+      "director": "NovelOpportunityDirector",
+      "implementation": "ai-management/value-hunter/matrix-capital-challenge.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-opportunity-graph", "matrix-capability-graph"],
+      "health_evidence": ["matrix-capital-challenge-contract-test"],
+      "blocker": "Generated hypotheses require real bounded experiment receipts before promotion."
+    },
+    {
+      "component_id": "revenue-creation-director",
+      "director": "RevenueCreationDirector",
+      "implementation": "ai-management/value-hunter/matrix-capital-challenge.mjs",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-site-assets", "approved-payment-destinations"],
+      "health_evidence": ["matrix-capital-challenge-contract-test"],
+      "blocker": "No production conversion receipt has been reconciled."
+    },
+    {
+      "component_id": "cloudflare-production-release",
+      "director": "MatrixActionBroker",
+      "implementation": ".github/workflows/deploy.yml",
+      "state": "BLOCKED",
+      "capacity_units": 1,
+      "dependencies": ["healthy-zero-overage-budget-snapshot", "owner-workflow-dispatch", "cloudflare-credentials"],
+      "health_evidence": ["production-deploy-guard"],
+      "blocker": "The repository zero-overage policy blocks a production release while Cloudflare build usage is billable, stale, or unknown."
+    },
+    {
+      "component_id": "bounty-completion-engine",
+      "director": "BountyCompletionDirector",
+      "implementation": "src/worker-bounty-engine.js",
+      "state": "WORKING_NOT_LIVE",
+      "capacity_units": 1,
+      "dependencies": ["matrix-capital-challenge", "official-bounty-source-adapters", "isolated-workspace", "delegated-github", "approved-payout-destination"],
+      "health_evidence": ["bounty-completion-engine-contract-test", "bounty-source-adapters-test", "bounty-worker-integration-test", "phase20-migration-rehearsal"],
+      "blocker": "First real bounty receipt is pending; platform identity, current rules permission, isolated workspace and payout onboarding are not yet production-configured."
+    }
+  ],
+  "required_boot_order": [
+    "matrix-constitution",
+    "matrix-event-bus",
+    "matrix-mission-director",
+    "matrix-capability-graph",
+    "matrix-learning-director",
+    "owner-delegation-vault",
+    "matrix-action-broker",
+    "matrix-health-director",
+    "matrix-boot-director",
+    "matrix-evolution-director",
+    "capability-gap-detector",
+    "human-dependency-ledger",
+    "matrix-site-operator",
+    "living-matrix",
+    "ask-matrix",
+    "fresh-public-investigation",
+    "resource-hunter",
+    "owner-local-compute",
+    "claim-value-hunter",
+    "matrix-capital-challenge",
+    "novel-opportunity-director",
+    "revenue-creation-director",
+    "bounty-completion-engine",
+    "permissionless-value-harvester",
+    "protected-self-improvement"
+  ]
+}

@@ -1,5 +1,6 @@
 import { D1ResourceRegistry } from '../ai-management/resource-registry/resource-registry.mjs';
 import { runCapacityGrowthCycle } from '../ai-management/compute-capacity/capacity-growth-controller.mjs';
+import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 const ROUTE = '/api/ai-management/admin/capacity-growth';
 
@@ -40,6 +41,10 @@ function isComputeResource(resource = {}) {
   return supported.some(item => ['deterministic', 'embedding', 'rerank', 'classification', 'summarization', 'llm'].includes(String(item)));
 }
 
+function acceptsLocalJobs(runtime = {}) {
+  return runtime?.hardware?.resource_pressure?.can_accept_local_jobs !== false;
+}
+
 async function loadState(env) {
   const [nodesResult, modelsResult, opportunitiesResult, jobsResult] = await Promise.all([
     env.MEMBERS_DB.prepare("SELECT node_id,node_name,hardware_json,cost_confirmed_zero,external_network_used,status,expires_at FROM ai_local_runtime_nodes WHERE status='online' AND expires_at>CURRENT_TIMESTAMP ORDER BY last_seen DESC LIMIT 100").all(),
@@ -58,17 +63,21 @@ async function loadState(env) {
     });
     modelsByNode.set(row.node_id, list);
   }
-  const localRuntimes = (nodesResult?.results || []).map(row => ({
-    node_id: row.node_id,
-    node_name: row.node_name,
-    owner_authorized: true,
-    allowed_for_project: true,
-    cost_confirmed_zero: Boolean(row.cost_confirmed_zero),
-    external_network_used: Boolean(row.external_network_used),
-    hardware: parse(row.hardware_json, {}),
-    resources: modelsByNode.get(row.node_id) || [],
-    maximum_concurrency: Math.max(1, Number(parse(row.hardware_json, {}).cpu_threads || 1))
-  }));
+  const localRuntimes = (nodesResult?.results || []).map(row => {
+    const hardware = parse(row.hardware_json, {});
+    return {
+      node_id: row.node_id,
+      node_name: row.node_name,
+      owner_authorized: true,
+      allowed_for_project: hardware?.resource_pressure?.can_accept_local_jobs !== false,
+      cost_confirmed_zero: Boolean(row.cost_confirmed_zero),
+      external_network_used: Boolean(row.external_network_used),
+      hardware,
+      resource_pressure: hardware.resource_pressure || null,
+      resources: modelsByNode.get(row.node_id) || [],
+      maximum_concurrency: Math.max(1, Number(hardware.cpu_threads || hardware.cpu?.logical_cores || 1))
+    };
+  });
   const opportunityEvaluations = (opportunitiesResult?.results || []).map(row => ({
     ...parse(row.evaluation_json, {}),
     opportunity: parse(row.opportunity_json, {})
@@ -83,7 +92,7 @@ async function loadState(env) {
 }
 
 async function ensureDailyBenchmark(env, state, now = new Date()) {
-  const eligibleNodes = state.localRuntimes.filter(runtime => runtime.cost_confirmed_zero === true && runtime.external_network_used !== true);
+  const eligibleNodes = state.localRuntimes.filter(runtime => runtime.cost_confirmed_zero === true && runtime.external_network_used !== true && acceptsLocalJobs(runtime));
   if (!eligibleNodes.length) return { created: false, reason: 'no-eligible-zero-cost-offline-owner-node' };
   const day = now.toISOString().slice(0, 10);
   const jobId = `capacity-benchmark-${day}`;
@@ -110,6 +119,7 @@ async function persistLocalAssignments(env, assignments, localRuntimes, now = ne
       WHERE job_id=? AND status='queued' AND (assigned_node_id IS NULL OR assigned_node_id NOT IN (
         SELECT node_id FROM ai_local_runtime_nodes WHERE status='online' AND expires_at>CURRENT_TIMESTAMP
           AND cost_confirmed_zero=1 AND external_network_used=0
+          AND COALESCE(json_extract(hardware_json,'$.resource_pressure.can_accept_local_jobs'),1)=1
       ))`)
       .bind(assignment.resource_id, now.toISOString(), assignment.job_id).run();
     if (Number(update?.meta?.changes || 0) > 0) persisted.push({ job_id: assignment.job_id, node_id: assignment.resource_id });
@@ -118,7 +128,7 @@ async function persistLocalAssignments(env, assignments, localRuntimes, now = ne
 }
 
 async function buildComputeReport(env, state, result, resources, benchmark, persistedAssignments, now = new Date()) {
-  const eligibleLocalRuntimes = state.localRuntimes.filter(runtime => runtime.cost_confirmed_zero === true && runtime.external_network_used !== true);
+  const eligibleLocalRuntimes = state.localRuntimes.filter(runtime => runtime.cost_confirmed_zero === true && runtime.external_network_used !== true && acceptsLocalJobs(runtime));
   const localHardware = eligibleLocalRuntimes.map(runtime => runtime.hardware || {});
   const [receipts, opportunityFindings] = await Promise.all([
     env.MEMBERS_DB.prepare(`SELECT receipt_type,COUNT(*) count FROM ai_local_job_receipts
@@ -170,7 +180,7 @@ async function buildComputeReport(env, state, result, resources, benchmark, pers
     estimated_external_compute_cost_avoided_eur: null,
     zero_spend_lock: true,
     paid_fallback_possible: false,
-    boundary: 'Capacity counts only online owner nodes and enabled zero-cost registry resources. Cost avoided remains unknown until a defensible equivalent-price model exists.'
+    boundary: 'Capacity counts only online, memory-available owner nodes and enabled zero-cost registry resources. Busy local nodes defer safely; cost avoided remains unknown until a defensible equivalent-price model exists.'
   };
 }
 
@@ -205,6 +215,22 @@ async function executeCycle(env, { createBenchmark = true, now = new Date() } = 
   const resources = await registry.list();
   const report = await buildComputeReport(env, state, result, resources, benchmark, persistedAssignments, now);
   await persistComputeLearning(env, report);
+  await emitMatrixSystemEvent(env, {
+    eventType: 'resource.benchmarked',
+    auditIdentifier: `resource-benchmark:${report.generated_at.slice(0, 10)}`,
+    timestamp: report.generated_at,
+    origin: 'capacity-growth',
+    actor: 'zero-spend-capacity-controller',
+    affectedPages: ['answer-engine.html'],
+    payload: {
+      change_summary: `Capacity cycle measured ${report.online_local_nodes} online owner node(s), ${report.usable_broker_resources} usable broker resource(s) and ${report.jobs_assigned.length} new assignment(s).`,
+      online_local_nodes: report.online_local_nodes,
+      usable_broker_resources: report.usable_broker_resources,
+      jobs_assigned: report.jobs_assigned.length,
+      outcomes_last_24h: report.outcomes_last_24h,
+      cost_confirmed_zero: true
+    }
+  });
   return { result, report, persistedAssignments };
 }
 
@@ -262,6 +288,11 @@ export async function handleCapacityGrowthRoute(request, env) {
     if (request.method === 'POST') return execute(env);
     return json({ ok: false, error: 'Method not allowed' }, 405);
   } catch (error) {
+    await emitMatrixSystemEvent(env, {
+      eventType: 'resource.failed', auditIdentifier: `resource-failure:${new Date().toISOString()}`,
+      origin: 'capacity-growth', actor: 'zero-spend-capacity-controller',
+      payload: { change_summary: 'Capacity growth failed safely and retained its existing resources.', error: String(error?.message || error).slice(0, 500), cost_confirmed_zero: true }
+    });
     return json({ ok: false, error: 'Capacity growth failed safely', message: String(error?.message || error).slice(0, 500), zero_spend_lock: true }, 500);
   }
 }

@@ -128,6 +128,8 @@ jobs:
           node scripts/build-investigation-pages.js
           node scripts/build-mission-intelligence-10.js
           node scripts/build-live-intel-machine.js
+          node scripts/build-daily-epstein-update.js
+          node scripts/build-card-live-updates.js
           node scripts/patch-conclusion-integrity-cards.js
           node scripts/repair-search-system.js
           node scripts/extend-search-with-investigations.js

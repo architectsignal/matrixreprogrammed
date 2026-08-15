@@ -3,10 +3,8 @@ const path = require('path');
 
 const root = process.cwd();
 const runtimeDir = path.join(root, 'runtime');
-const siteRuntimeDir = path.join(root, '_site', 'runtime');
 const downloadsDir = path.join(root, 'downloads');
 fs.mkdirSync(runtimeDir, { recursive: true });
-fs.mkdirSync(siteRuntimeDir, { recursive: true });
 fs.mkdirSync(downloadsDir, { recursive: true });
 
 function readJson(rel) {
@@ -31,8 +29,8 @@ if (health.data.workerScript !== 'src/worker-production.js') {
 const outputs = {
   'runtime/deploy-manifest-current.json': manifest.raw,
   'runtime/deploy-health-current.json': health.raw,
-  '_site/runtime/deploy-manifest-current.json': manifest.raw,
-  '_site/runtime/deploy-health-current.json': health.raw
+  '_site/deploy-manifest.json': manifest.raw,
+  '_site/deploy-health.json': health.raw
 };
 for (const [rel, value] of Object.entries(outputs)) {
   const full = path.join(root, rel);
@@ -41,7 +39,7 @@ for (const [rel, value] of Object.entries(outputs)) {
 }
 
 const exactCopies = Object.entries(outputs).every(([rel, value]) => fs.readFileSync(path.join(root, rel), 'utf8') === value);
-if (!exactCopies) throw new Error('Release metadata aliases are not exact byte-for-byte copies in runtime and _site');
+if (!exactCopies) throw new Error('Release metadata assets are not exact byte-for-byte copies in internal runtime and the public _site root');
 
 const report = {
   ok: true,
@@ -49,10 +47,10 @@ const report = {
   commitSha: manifest.data.commitSha,
   manifestAsset: 'runtime/deploy-manifest-current.json',
   healthAsset: 'runtime/deploy-health-current.json',
-  deployableManifestAsset: '_site/runtime/deploy-manifest-current.json',
-  deployableHealthAsset: '_site/runtime/deploy-health-current.json',
+  deployableManifestAsset: '_site/deploy-manifest.json',
+  deployableHealthAsset: '_site/deploy-health.json',
   exactCopies,
-  boundary: 'Runtime and deployable _site aliases preserve the exact final manifest and health bytes and are served through explicit no-store Worker routes.'
+  boundary: 'Internal runtime aliases and public root _site assets preserve the exact final manifest and health bytes. The Worker serves only the public root assets through explicit no-store routes, so _site/runtime remains private.'
 };
 fs.writeFileSync(path.join(downloadsDir, 'release-metadata-assets.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`Exact runtime and deployable release metadata assets published for ${manifest.data.commitSha.slice(0, 12)}.`);
+console.log(`Exact internal and public-root release metadata assets published for ${manifest.data.commitSha.slice(0, 12)}.`);

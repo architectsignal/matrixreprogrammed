@@ -6,12 +6,22 @@ MIGRATIONS = [
     "migrations/0001_membership_foundation.sql",
     "migrations/phase5_member_experience.sql",
     "migrations/phase13_member_entitlement_datetime_fix.sql",
+    "migrations/phase6_paypal_subscriptions.sql",
+    "migrations/phase6_paypal_failure_counter_fix.sql",
     "migrations/phase9_ai_resource_orchestration.sql",
     "migrations/phase10_ai_autonomy.sql",
     "migrations/phase11_local_job_queue.sql",
     "migrations/phase12_opportunity_hunter.sql",
     "migrations/phase13_matrix_synergy.sql",
     "migrations/public_investigation_api.sql",
+    "migrations/phase14_living_matrix.sql",
+    "migrations/phase15_matrix_value_hunter.sql",
+    "migrations/phase16_permissionless_value_harvester.sql",
+    "migrations/phase17_matrix_operating_system.sql",
+    "migrations/phase18_matrix_continuous_evolution.sql",
+    "migrations/phase19_matrix_capital_challenge.sql",
+    "migrations/phase20_bounty_completion_engine.sql",
+    "migrations/phase21_fresh_investigation_proof.sql",
 ]
 REQUIRED = {
     "matrix_events",
@@ -24,6 +34,74 @@ REQUIRED = {
     "matrix_model_benchmarks",
     "matrix_capabilities",
     "matrix_learning_ledger",
+    "matrix_living_cycles",
+    "matrix_event_dispatches",
+    "matrix_living_projections",
+    "matrix_page_dependencies",
+    "matrix_value_jurisdictions",
+    "matrix_value_sources",
+    "matrix_value_claimants",
+    "matrix_value_destinations",
+    "matrix_value_mandates",
+    "matrix_value_objectives",
+    "matrix_value_opportunities",
+    "matrix_value_entitlement_evidence",
+    "matrix_value_claim_queue",
+    "matrix_value_operations",
+    "matrix_value_receipts",
+    "matrix_value_audit",
+    "matrix_value_improvement_proposals",
+    "matrix_value_cycles",
+    "matrix_value_learning",
+    "matrix_permissionless_protocols",
+    "matrix_permissionless_markets",
+    "matrix_permissionless_opportunities",
+    "matrix_permissionless_simulations",
+    "matrix_permissionless_execution_intents",
+    "matrix_permissionless_receipts",
+    "matrix_permissionless_workers",
+    "matrix_permissionless_strategy_statistics",
+    "matrix_permissionless_cycles",
+    "matrix_constitution",
+    "matrix_system_components",
+    "matrix_operating_missions",
+    "matrix_capability_snapshots",
+    "matrix_daily_baselines",
+    "matrix_learning_effects",
+    "matrix_boot_runs",
+    "matrix_watchdog_events",
+    "matrix_delegations",
+    "matrix_action_receipts",
+    "matrix_capability_graph",
+    "matrix_human_dependencies",
+    "matrix_site_health_checks",
+    "matrix_evolution_cycles",
+    "matrix_acceptance_receipts",
+    "matrix_permanent_objectives",
+    "matrix_capital_challenges",
+    "matrix_capital_destination_registry",
+    "matrix_capital_receipts",
+    "matrix_capital_adjustments",
+    "matrix_capital_milestone_receipts",
+    "matrix_capital_channels",
+    "matrix_capital_opportunities",
+    "matrix_opportunity_graph_nodes",
+    "matrix_opportunity_graph_edges",
+    "matrix_acquisition_experiments",
+    "matrix_future_opportunity_radar",
+    "matrix_capital_cycles",
+    "matrix_bounty_sources",
+    "matrix_bounties",
+    "matrix_bounty_rules_checks",
+    "matrix_bounty_workspaces",
+    "matrix_bounty_reviews",
+    "matrix_bounty_submissions",
+    "matrix_bounty_receipts",
+    "matrix_bounty_repository_profiles",
+    "matrix_bounty_platform_profiles",
+    "matrix_bounty_learning",
+    "matrix_bounty_cycles",
+    "matrix_bounty_owner_actions",
 }
 
 database = sqlite3.connect(":memory:")
@@ -42,8 +120,35 @@ mission_count = database.execute("SELECT COUNT(*) FROM matrix_missions").fetchon
 if mission_count != 3:
     raise SystemExit(f"Expected three idempotent seed missions, found {mission_count}")
 capability_count = database.execute("SELECT COUNT(*) FROM matrix_capabilities").fetchone()[0]
-if capability_count != 6:
-    raise SystemExit(f"Expected six truthful capability seeds, found {capability_count}")
+if capability_count != 10:
+    raise SystemExit(f"Expected ten truthful capability seeds, found {capability_count}")
+
+constitution = database.execute("SELECT law_text,law_sha256,immutable,authority_expansion_by_learning FROM matrix_constitution WHERE constitution_id='matrix-law-v1'").fetchone()
+if constitution != ("CAUSE NO HARM OR LOSS.", "2f440056e992d3edbe9dcfd60a5c9d24397bb28d68e29d1d3ed476e84021b189", 1, 0):
+    raise SystemExit("Matrix constitutional law is missing or altered")
+
+capital = database.execute("SELECT received_net_minor,next_milestone_minor,state,operational_claim_allowed FROM matrix_capital_challenges WHERE challenge_id='matrix-capital-challenge-eur-v1'").fetchone()
+if capital != (0, 100, "AWAITING_FIRST_REAL_RECEIPT", 0):
+    raise SystemExit("Matrix Capital Challenge must begin at the truthful EUR 1 receipt gate")
+flags = dict(database.execute("SELECT flag_name,enabled FROM ai_feature_flags"))
+for flag in ("MATRIX_EVOLUTION_DIRECTOR_ENABLED", "MATRIX_SITE_OPERATOR_ENABLED", "MATRIX_CAPITAL_CHALLENGE_ENABLED", "MATRIX_NOVEL_OPPORTUNITY_DIRECTOR_ENABLED", "MATRIX_BOUNTY_ENGINE_ENABLED"):
+    if flags.get(flag) != 1:
+        raise SystemExit(f"{flag} must start enabled")
+if flags.get("MATRIX_CAPITAL_FINANCIAL_EXECUTION_ENABLED") != 0:
+    raise SystemExit("Capital financial execution must start fail closed")
+for flag in ("MATRIX_BOUNTY_AUTO_CLAIM_ENABLED", "MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED", "MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED"):
+    if flags.get(flag) != 0:
+        raise SystemExit(f"{flag} must start fail closed")
+for statement in (
+    "UPDATE matrix_constitution SET law_text='ALTERED' WHERE constitution_id='matrix-law-v1'",
+    "DELETE FROM matrix_constitution WHERE constitution_id='matrix-law-v1'",
+):
+    try:
+        database.execute(statement)
+        raise SystemExit("Matrix constitutional law was mutable")
+    except sqlite3.IntegrityError as error:
+        if "MATRIX_CONSTITUTION_IMMUTABLE" not in str(error):
+            raise
 
 entitlement_view = database.execute(
     "SELECT sql FROM sqlite_master WHERE type='view' AND name='member_effective_entitlements'"
@@ -62,4 +167,16 @@ if "'VERIFIED','SPECULATION','SECURITY_QUARANTINE'" not in contribution_schema:
 if "editorial" in human_action_schema.lower():
     raise SystemExit("Human action queue must not become an editorial fallback")
 
-print("Phase 13 migration rehearsal passed: 10 tables, two executions, three missions and six truthful capability seeds.")
+target = database.execute("SELECT target_net_minor FROM matrix_value_objectives WHERE objective_id='value-milestone-eur-10000'").fetchone()
+if not target or target[0] != 1000000:
+    raise SystemExit("Value Hunter EUR 10,000 net objective is missing")
+
+private_columns = {
+    row[1].lower()
+    for table in ("matrix_value_claimants", "matrix_value_destinations", "matrix_value_operations")
+    for row in database.execute(f"PRAGMA table_info({table})")
+}
+if private_columns & {"private_key", "seed_phrase", "mnemonic", "recovery_phrase"}:
+    raise SystemExit("Value Hunter schema must not persist signing secrets")
+
+print("Living Matrix, Value Hunter, Permissionless Harvester and constitutional Matrix operating-system migrations passed twice with strict value classes, safe intents and ten truthful capability seeds.")

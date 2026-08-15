@@ -75,6 +75,15 @@ export async function leaseLocalJob(env, body) {
   const node = await env.MEMBERS_DB.prepare("SELECT node_id,status,expires_at,cost_confirmed_zero,external_network_used FROM ai_local_runtime_nodes WHERE node_id=? LIMIT 1").bind(nodeId).first();
   if (!node || node.status !== 'online' || Date.parse(node.expires_at || '') <= Date.now()) return json({ ok: false, error: 'Node is not online' }, 409);
   if (!Boolean(node.cost_confirmed_zero) || Boolean(node.external_network_used)) return json({ ok: false, error: 'Node is not eligible for zero-spend offline execution' }, 409);
+  if (Object.prototype.hasOwnProperty.call(body || {}, 'resource_pressure') && body?.resource_pressure?.can_accept_local_jobs !== true) {
+    return new Response(null, {
+      status: 204,
+      headers: {
+        'cache-control': 'no-store',
+        'x-matrix-lease-deferred': 'local-resource-pressure'
+      }
+    });
+  }
   const row = await env.MEMBERS_DB.prepare(`SELECT * FROM ai_local_jobs
     WHERE status='queued' AND attempt_count<maximum_attempts AND (assigned_node_id IS NULL OR assigned_node_id=?)
     ORDER BY ${PRIORITY_SQL},created_at ASC LIMIT 1`).bind(nodeId).first();

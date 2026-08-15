@@ -3,6 +3,7 @@
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { removePrivateOutputDirectories } = require('./private-output-directory-repair.js');
 
 const root = process.cwd();
 const site = path.join(root, '_site');
@@ -10,9 +11,11 @@ const reportPath = path.join(root, 'downloads', 'public-route-alias-proof.json')
 const directoryConflicts = new Map([
   ['follow-the-money.html', 'follow-the-money'],
   ['making-money.html', 'making-money'],
-  ['card-artwork-batches.html', 'card-artwork-batches'],
   ['subject-briefs.html', 'subject-briefs'],
   ['entity-timelines.html', 'entity-timelines']
+]);
+const privateOutputDirectoryConflicts = new Set([
+  'card-artwork-batches.html'
 ]);
 
 function slash(value) {
@@ -53,6 +56,7 @@ const report = {
   synchronizedAliases: 0,
   identicalAliases: 0,
   directoryConflicts: [],
+  privateOutputDirectoryRepairs: [],
   unexpectedDirectoryConflicts: [],
   mismatches: [],
   boundary: 'Every feature route remains public with an honest maturity label. Every deployable .html route then has a byte-identical extensionless file unless its extensionless name is a real namespace directory; approved namespace collisions are served by exact Worker aliases.'
@@ -77,6 +81,10 @@ if (!report.sitePresent) {
   const searchReport = require('./finalize-clean-public-search.js');
   if (!searchReport.ok) throw new Error('Clean public search finalization failed closed before route alias synchronization.');
   report.searchFinalized = true;
+
+  report.privateOutputDirectoryRepairs.push(
+    ...removePrivateOutputDirectories(site, privateOutputDirectoryConflicts)
+  );
 
   const htmlFiles = walk(site).sort();
   report.htmlFiles = htmlFiles.length;

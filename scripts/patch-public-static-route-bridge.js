@@ -79,6 +79,7 @@ const workerBefore = fs.readFileSync(workerPath, 'utf8');
 const workerNewline = workerBefore.includes('\r\n') ? '\r\n' : '\n';
 let worker = workerBefore.replace(/\r\n/g, '\n');
 const routeBlock = `const publicStaticAssetRoutes = new Map([
+  ['/epstein', '/epstein-files.html'],
   ['/behind-the-curtain-access', '/behind-the-curtain-access.html'],
   ['/behind-the-curtain-access.html', '/behind-the-curtain-access.html'],
   ['/behind-the-curtain-capstone', '/behind-the-curtain-capstone.html'],

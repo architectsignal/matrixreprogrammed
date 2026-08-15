@@ -8,6 +8,7 @@ on:
     paths:
       - '.github/workflows/daily-investigation-machine.yml'
       - 'scripts/run-investigation-machine.js'
+      - 'scripts/publish-investigation-matrix-events.mjs'
       - 'scripts/monitor-source-changes.js'
       - 'scripts/harden-source-change-preservation.js'
       - 'scripts/source-change-preservation-test.js'
@@ -111,6 +112,13 @@ jobs:
           node scripts/source-change-preservation-test.js
           node scripts/source-change-preservation-hardening-test.js
           node scripts/final-investigation-hardening.js
+
+      - name: Publish source changes into the Living Matrix
+        env:
+          SITE_URL: https://matrixreprogrammed.com
+          AI_MANAGEMENT_ADMIN_TOKEN: ${{ secrets.AI_MANAGEMENT_ADMIN_TOKEN }}
+          ADMIN_API_TOKEN: ${{ secrets.ADMIN_API_TOKEN }}
+        run: node scripts/publish-investigation-matrix-events.mjs
 
       - name: Advisory site audit
         continue-on-error: true

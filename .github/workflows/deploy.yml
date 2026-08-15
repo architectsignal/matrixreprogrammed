@@ -120,8 +120,31 @@ jobs:
           node scripts/zero-cost-compute-golden-test.mjs
           node scripts/phase12-production-readiness-test.mjs
           node scripts/matrix-synergy-test.mjs
+          node scripts/living-matrix-acceptance-test.mjs
+          node scripts/publish-investigation-matrix-events.test.mjs
+          node scripts/value-hunter-golden-test.mjs
+          node scripts/value-code-improvement-test.mjs
+          node scripts/phase15-value-hunter-contract-test.mjs
+          node scripts/value-hunter-worker-integration-test.mjs
+          node scripts/permissionless-harvester-golden-test.mjs
+          node scripts/phase16-permissionless-harvester-contract-test.mjs
+          node scripts/permissionless-harvester-worker-integration-test.mjs
+          node scripts/matrix-operating-system-contract-test.mjs
+          node scripts/matrix-continuous-evolution-contract-test.mjs
+          node scripts/matrix-capital-challenge-contract-test.mjs
+          node scripts/matrix-operating-system-worker-integration-test.mjs
+          node scripts/phase17-migration-rehearsal.mjs
+          node scripts/phase18-migration-rehearsal.mjs
+          node scripts/phase19-migration-rehearsal.mjs
+          node scripts/bounty-completion-engine-contract-test.mjs
+          node scripts/bounty-source-adapters-test.mjs
+          node scripts/bounty-worker-integration-test.mjs
+          node scripts/phase20-migration-rehearsal.mjs
           node scripts/build-public-investigation-corpus.js
           node scripts/public-investigation-test.mjs
+          node scripts/official-fresh-source-director-test.mjs
+          node scripts/fresh-public-investigation-worker-integration-test.mjs
+          node scripts/phase21-migration-rehearsal.mjs
           python3 scripts/phase13-migration-rehearsal.py
           node local-agent/matrix-local-agent.test.mjs
           node local-agent/control-plane-client.test.mjs
@@ -131,10 +154,33 @@ jobs:
           node local-agent/matrix-local-cli.test.mjs
           node ai-management/local-runtime/job-queue.test.mjs
           node --check src/worker-production.js
+          node --check src/worker-public-investigation.js
+          node --check ai-management/public-investigation/official-fresh-source-director.mjs
           node --check src/worker-production-autonomy.js
           node --check src/worker-member-experience.js
           node --check src/worker-matrix-synergy.js
+          node --check src/worker-living-matrix.js
+          node --check src/worker-value-hunter.js
+          node --check src/worker-bounty-engine.js
+          node --check src/worker-permissionless-value.js
+          node --check src/worker-matrix-operations.js
+          node --check src/matrix-event-emitter.js
           node --check src/matrix-synergy-core.js
+          node --check ai-management/living-matrix/living-matrix-cycle.mjs
+          node --check ai-management/value-hunter/value-hunter-core.mjs
+          node --check ai-management/value-hunter/financial-firewall.mjs
+          node --check ai-management/value-hunter/value-collector.mjs
+          node --check ai-management/provider-adapters/value/official-html-links.mjs
+          find ai-management/value-hunter/permissionless -type f -name '*.mjs' -print0 | xargs -0 -n1 node --check
+          node --check local-agent/permissionless-harvester-cli.mjs
+          node --check local-agent/matrix-operations-cli.mjs
+          node --check ai-management/matrix-core/matrix-constitution.mjs
+          node --check ai-management/matrix-core/matrix-operating-system.mjs
+          node --check ai-management/matrix-core/matrix-evolution-director.mjs
+          node --check ai-management/value-hunter/matrix-capital-challenge.mjs
+          node --check ai-management/value-hunter/bounty/bounty-completion-engine.mjs
+          node --check ai-management/value-hunter/bounty/bounty-source-adapters.mjs
+          node --check scripts/publish-investigation-matrix-events.mjs
           node --check src/worker-ai-management.js
           node --check src/worker-local-job-api.js
           node --check src/worker-opportunity-hunter.js
@@ -232,6 +278,15 @@ jobs:
             migrations/phase12_opportunity_hunter.sql
             migrations/phase13_matrix_synergy.sql
             migrations/public_investigation_api.sql
+            migrations/phase14_living_matrix.sql
+            migrations/phase15_matrix_value_hunter.sql
+            migrations/phase16_permissionless_value_harvester.sql
+            migrations/phase17_matrix_operating_system.sql
+            migrations/phase18_matrix_continuous_evolution.sql
+            migrations/phase19_matrix_capital_challenge.sql
+            migrations/phase20_bounty_completion_engine.sql
+            migrations/phase21_fresh_investigation_proof.sql
+            migrations/agent_commons_v1.sql
           )
           : > downloads/d1-migration.log
           for migration in "${migrations[@]}"; do
@@ -247,22 +302,36 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits','matrix_living_cycles','matrix_event_dispatches','matrix_living_projections','matrix_page_dependencies','matrix_value_jurisdictions','matrix_value_sources','matrix_value_claimants','matrix_value_destinations','matrix_value_mandates','matrix_value_objectives','matrix_value_opportunities','matrix_value_entitlement_evidence','matrix_value_claim_queue','matrix_value_operations','matrix_value_receipts','matrix_value_audit','matrix_value_cycles','matrix_value_learning','matrix_permissionless_protocols','matrix_permissionless_markets','matrix_permissionless_opportunities','matrix_permissionless_simulations','matrix_permissionless_execution_intents','matrix_permissionless_receipts','matrix_permissionless_workers','matrix_permissionless_strategy_statistics','matrix_permissionless_cycles','matrix_constitution','matrix_system_components','matrix_operating_missions','matrix_capability_snapshots','matrix_daily_baselines','matrix_learning_effects','matrix_boot_runs','matrix_watchdog_events','matrix_delegations','matrix_action_receipts','matrix_capability_graph','matrix_human_dependencies','matrix_site_health_checks','matrix_evolution_cycles','matrix_acceptance_receipts','matrix_permanent_objectives','matrix_capital_challenges','matrix_capital_destination_registry','matrix_capital_receipts','matrix_capital_adjustments','matrix_capital_milestone_receipts','matrix_capital_channels','matrix_capital_opportunities','matrix_opportunity_graph_nodes','matrix_opportunity_graph_edges','matrix_acquisition_experiments','matrix_future_opportunity_radar','matrix_capital_cycles','matrix_bounty_sources','matrix_bounties','matrix_bounty_rules_checks','matrix_bounty_workspaces','matrix_bounty_reviews','matrix_bounty_submissions','matrix_bounty_receipts','matrix_bounty_repository_profiles','matrix_bounty_platform_profiles','matrix_bounty_learning','matrix_bounty_cycles','matrix_bounty_owner_actions','matrix_public_source_adapters','matrix_public_source_retrievals','matrix_public_investigation_proofs') ORDER BY type,name;" --json > downloads/d1-schema-verification.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE name IN ('agent_commons_agents','agent_commons_credentials','agent_commons_investigations','agent_commons_claims','agent_commons_submissions','agent_commons_reviews','agent_commons_posts','agent_commons_reputation_ledger','agent_commons_audit') ORDER BY type,name;" --json > downloads/d1-agent-commons-schema.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT type,name FROM sqlite_master WHERE type IN ('table','index','view') ORDER BY type,name;" --json > downloads/d1-schema-all.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT sql FROM sqlite_master WHERE type='table' AND name IN ('ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_leases','matrix_contributions','matrix_human_actions') ORDER BY name;" --json > downloads/d1-autonomy-schema.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT environment,checkout_enabled,activation_reason FROM paypal_runtime_settings ORDER BY environment;" --json > downloads/paypal-runtime-settings.json
           npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT resource_id,billing_enabled,payment_method_present,monetary_cost_per_unit_eur,billing_risk FROM ai_resources ORDER BY resource_id;" --json > downloads/d1-ai-zero-spend-resources.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT 'objective' AS record_type,objective_id AS record_id,target_net_minor AS value_minor,status AS state FROM matrix_value_objectives UNION ALL SELECT 'mandate',mandate_id,maximum_fee_minor,CASE WHEN active=1 AND auto_collect_proven_entitlements=1 THEN 'active-auto' ELSE 'inactive' END FROM matrix_value_mandates UNION ALL SELECT 'source-count','official-sources',COUNT(*),MIN(source_status) FROM matrix_value_sources;" --json > downloads/d1-value-hunter.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT 'protocol' AS record_type,protocol_key AS record_id,execution_status AS state FROM matrix_permissionless_protocols UNION ALL SELECT 'flag',flag_name,CASE WHEN enabled=1 THEN 'enabled' ELSE 'disabled' END FROM ai_feature_flags WHERE flag_name LIKE 'MATRIX_PERMISSIONLESS_%' OR flag_name='MATRIX_DISTRIBUTED_DISCOVERY_ENABLED';" --json > downloads/d1-permissionless-harvester.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT constitution_id,law_text,law_sha256,immutable,authority_expansion_by_learning FROM matrix_constitution; SELECT delegation_id,maximum_amount_minor,active,constitutional_law_sha256 FROM matrix_delegations; SELECT flag_name,enabled FROM ai_feature_flags WHERE flag_name IN ('MATRIX_OPERATING_SYSTEM_ENABLED','MATRIX_TECHNOLOGY_EVOLUTION_ENABLED','MATRIX_EVOLUTION_DIRECTOR_ENABLED','MATRIX_SITE_OPERATOR_ENABLED','MATRIX_CAPITAL_CHALLENGE_ENABLED','MATRIX_CAPITAL_FINANCIAL_EXECUTION_ENABLED','MATRIX_NOVEL_OPPORTUNITY_DIRECTOR_ENABLED','MATRIX_BOUNTY_ENGINE_ENABLED','MATRIX_BOUNTY_AUTO_CLAIM_ENABLED','MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED','MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED') ORDER BY flag_name;" --json > downloads/d1-matrix-operating-system.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT challenge_id,currency,baseline_net_minor,received_net_minor,next_milestone_minor,state,first_real_receipt_id,operational_claim_allowed,law_sha256 FROM matrix_capital_challenges; SELECT COUNT(*) AS reconciled_receipt_count,MAX(0,COALESCE(SUM(eur_net_minor),0)-(SELECT COALESCE(SUM(eur_amount_minor),0) FROM matrix_capital_adjustments WHERE reconciled=1)) AS received_net_minor FROM matrix_capital_receipts WHERE reconciled=1;" --json > downloads/d1-matrix-capital-challenge.json
+          npx --yes wrangler@latest d1 execute matrix-members --remote --command="SELECT source_id,platform,adapter_id,discovery_enabled,consequential_actions_enabled FROM matrix_bounty_sources ORDER BY source_id; SELECT platform,payout_identity_ready,terms_accepted,external_writes_enabled,status FROM matrix_bounty_platform_profiles ORDER BY platform; SELECT flag_name,enabled FROM ai_feature_flags WHERE flag_name LIKE 'MATRIX_BOUNTY_%' OR flag_name='MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED' ORDER BY flag_name;" --json > downloads/d1-bounty-engine.json
           node - <<'NODE'
           const fs = require('fs');
           const rows = payload => payload.flatMap(item => item.results || item.result?.results || []);
-          const schema = JSON.parse(fs.readFileSync('downloads/d1-schema-verification.json','utf8'));
+          const schema = JSON.parse(fs.readFileSync('downloads/d1-schema-all.json','utf8'));
           const autonomy = JSON.parse(fs.readFileSync('downloads/d1-autonomy-schema.json','utf8'));
           const payment = JSON.parse(fs.readFileSync('downloads/paypal-runtime-settings.json','utf8'));
           const resources = JSON.parse(fs.readFileSync('downloads/d1-ai-zero-spend-resources.json','utf8'));
-          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits'];
+          const valueHunter = JSON.parse(fs.readFileSync('downloads/d1-value-hunter.json','utf8'));
+          const permissionless = JSON.parse(fs.readFileSync('downloads/d1-permissionless-harvester.json','utf8'));
+          const matrixOperations = JSON.parse(fs.readFileSync('downloads/d1-matrix-operating-system.json','utf8'));
+          const matrixCapital = JSON.parse(fs.readFileSync('downloads/d1-matrix-capital-challenge.json','utf8'));
+          const bountyEngine = JSON.parse(fs.readFileSync('downloads/d1-bounty-engine.json','utf8'));
+          const required = ['members','member_sessions','subscriptions','audit_log','paypal_runtime_settings','ai_resources','ai_jobs','ai_audit_log','ai_feature_flags','ai_resource_candidates','ai_local_runtime_nodes','ai_local_models','ai_model_routing_decisions','ai_site_improvement_runs','ai_site_improvement_actions','ai_local_jobs','ai_local_job_receipts','ai_opportunities','ai_opportunity_hunter_runs','ai_compute_provider_candidates','ai_compute_onboarding_tasks','ai_compute_resources','ai_compute_leases','matrix_events','matrix_missions','matrix_contributions','matrix_impact_trail','matrix_rewards','matrix_human_actions','matrix_models','matrix_model_benchmarks','matrix_capabilities','matrix_learning_ledger','matrix_public_investigations','matrix_public_investigation_evidence','matrix_public_investigation_rate_limits','matrix_living_cycles','matrix_event_dispatches','matrix_living_projections','matrix_page_dependencies','matrix_value_jurisdictions','matrix_value_sources','matrix_value_claimants','matrix_value_destinations','matrix_value_mandates','matrix_value_objectives','matrix_value_opportunities','matrix_value_entitlement_evidence','matrix_value_claim_queue','matrix_value_operations','matrix_value_receipts','matrix_value_audit','matrix_value_cycles','matrix_value_learning','matrix_permissionless_protocols','matrix_permissionless_markets','matrix_permissionless_opportunities','matrix_permissionless_simulations','matrix_permissionless_execution_intents','matrix_permissionless_receipts','matrix_permissionless_workers','matrix_permissionless_strategy_statistics','matrix_permissionless_cycles','matrix_constitution','matrix_system_components','matrix_operating_missions','matrix_capability_snapshots','matrix_daily_baselines','matrix_learning_effects','matrix_boot_runs','matrix_watchdog_events','matrix_delegations','matrix_action_receipts','matrix_capability_graph','matrix_human_dependencies','matrix_site_health_checks','matrix_evolution_cycles','matrix_acceptance_receipts','matrix_permanent_objectives','matrix_capital_challenges','matrix_capital_destination_registry','matrix_capital_receipts','matrix_capital_adjustments','matrix_capital_milestone_receipts','matrix_capital_channels','matrix_capital_opportunities','matrix_opportunity_graph_nodes','matrix_opportunity_graph_edges','matrix_acquisition_experiments','matrix_future_opportunity_radar','matrix_capital_cycles','matrix_bounty_sources','matrix_bounties','matrix_bounty_rules_checks','matrix_bounty_workspaces','matrix_bounty_reviews','matrix_bounty_submissions','matrix_bounty_receipts','matrix_bounty_repository_profiles','matrix_bounty_platform_profiles','matrix_bounty_learning','matrix_bounty_cycles','matrix_bounty_owner_actions','matrix_public_source_adapters','matrix_public_source_retrievals','matrix_public_investigation_proofs'];
+          const agentCommonsRequired = ['agent_commons_agents','agent_commons_credentials','agent_commons_investigations','agent_commons_claims','agent_commons_submissions','agent_commons_reviews','agent_commons_posts','agent_commons_reputation_ledger','agent_commons_audit'];
           const names = new Set(rows(schema).map(row => row.name));
-          const missing = required.filter(name => !names.has(name));
+          const missing = [...required, ...agentCommonsRequired].filter(name => !names.has(name));
           if (missing.length) throw new Error(`Missing D1 objects: ${missing.join(', ')}`);
           const sql = rows(autonomy).map(row => String(row.sql || '')).join('\n');
+          const valueRows = rows(valueHunter);
           if (!sql.includes("job_type IN ('deterministic.hash','llm.generate')")) throw new Error('Local job allowlist missing');
           if (!sql.includes('cost_confirmed_zero = 1')) throw new Error('Local receipt zero-cost constraint missing');
           if (!sql.includes('external_network_used = 0')) throw new Error('Local receipt network constraint missing');
@@ -271,6 +340,42 @@ jobs:
           if (!sql.includes("data_class='public'")) throw new Error('Compute lease public-only constraint missing');
           if (!sql.includes("evidence_class IN ('VERIFIED','SPECULATION','SECURITY_QUARANTINE')")) throw new Error('Matrix evidence boundary missing');
           if (sql.toLowerCase().includes('editorial')) throw new Error('Human action queue became an editorial fallback');
+          const objective = valueRows.find(row => row.record_type === 'objective' && row.record_id === 'value-milestone-eur-10000');
+          const mandate = valueRows.find(row => row.record_type === 'mandate' && row.record_id === 'owner-standing-auto-collection-v1');
+          const sourceCount = valueRows.find(row => row.record_type === 'source-count');
+          if (!objective || Number(objective.value_minor) !== 1000000 || objective.state !== 'active') throw new Error('Value Hunter EUR 10,000 objective is not active');
+          if (!mandate || Number(mandate.value_minor) !== 0 || mandate.state !== 'active-auto') throw new Error('Value Hunter zero-fee standing mandate is not active');
+          if (!sourceCount || Number(sourceCount.value_minor) < 10) throw new Error('Value Hunter official source registry is incomplete');
+          const permissionlessRows = rows(permissionless);
+          const morpho = permissionlessRows.find(row => row.record_type === 'protocol' && row.record_id === 'morpho:8453');
+          if (!morpho || morpho.state !== 'simulation') throw new Error('Morpho must remain simulation-only until production certification');
+          for (const row of permissionlessRows.filter(row => row.record_type === 'flag')) {
+            if (row.state !== 'disabled') throw new Error(`${row.record_id} must remain disabled before production certification`);
+          }
+          const matrixRows = rows(matrixOperations);
+          const constitution = matrixRows.find(row => row.constitution_id === 'matrix-law-v1');
+          if (!constitution || constitution.law_text !== 'CAUSE NO HARM OR LOSS.' || constitution.law_sha256 !== '2f440056e992d3edbe9dcfd60a5c9d24397bb28d68e29d1d3ed476e84021b189' || Number(constitution.immutable) !== 1 || Number(constitution.authority_expansion_by_learning) !== 0) throw new Error('Matrix constitutional law is missing or altered');
+          for (const delegation of matrixRows.filter(row => row.delegation_id)) {
+            if (Number(delegation.maximum_amount_minor) !== 0) throw new Error(`${delegation.delegation_id} unexpectedly grants financial authority`);
+            if (delegation.constitutional_law_sha256 !== constitution.law_sha256) throw new Error(`${delegation.delegation_id} is not bound to the constitutional law`);
+          }
+          const matrixFlags = new Map(matrixRows.filter(row => row.flag_name).map(row => [row.flag_name, Number(row.enabled)]));
+          for (const flag of ['MATRIX_OPERATING_SYSTEM_ENABLED','MATRIX_TECHNOLOGY_EVOLUTION_ENABLED','MATRIX_EVOLUTION_DIRECTOR_ENABLED','MATRIX_SITE_OPERATOR_ENABLED','MATRIX_CAPITAL_CHALLENGE_ENABLED','MATRIX_NOVEL_OPPORTUNITY_DIRECTOR_ENABLED','MATRIX_BOUNTY_ENGINE_ENABLED']) {
+            if (matrixFlags.get(flag) !== 1) throw new Error(`${flag} is not enabled`);
+          }
+          if (matrixFlags.get('MATRIX_CAPITAL_FINANCIAL_EXECUTION_ENABLED') !== 0) throw new Error('Capital financial execution did not start fail closed');
+          for (const flag of ['MATRIX_BOUNTY_AUTO_CLAIM_ENABLED','MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED','MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED']) {
+            if (matrixFlags.get(flag) !== 0) throw new Error(`${flag} did not start fail closed`);
+          }
+          const bountyRows = rows(bountyEngine);
+          if (bountyRows.filter(row => row.source_id).length < 2 || bountyRows.some(row => row.source_id && Number(row.consequential_actions_enabled) !== 0)) throw new Error('Bounty discovery sources are missing or grant consequential authority');
+          if (bountyRows.some(row => row.platform && Number(row.external_writes_enabled) !== 0)) throw new Error('Bounty platform external writes started enabled');
+          const capitalRows = rows(matrixCapital);
+          const capital = capitalRows.find(row => row.challenge_id === 'matrix-capital-challenge-eur-v1');
+          const capitalReceipts = capitalRows.find(row => row.reconciled_receipt_count != null);
+          if (!capital || capital.currency !== 'EUR' || capital.law_sha256 !== constitution.law_sha256) throw new Error('Matrix Capital Challenge is missing or not constitution-bound');
+          if (!capitalReceipts || Number(capital.received_net_minor) !== Number(capitalReceipts.received_net_minor)) throw new Error('Matrix Capital Challenge total does not reconcile to its receipt ledger');
+          if (Number(capital.operational_claim_allowed) === 1 && (Number(capital.received_net_minor) + Number(capital.baseline_net_minor) < 100 || !capital.first_real_receipt_id)) throw new Error('Capital Challenge claimed operational status before its first real EUR receipt');
           const settings = rows(payment);
           const sandbox = settings.find(row => row.environment === 'sandbox');
           const live = settings.find(row => row.environment === 'live');
@@ -331,6 +436,24 @@ jobs:
               text = text.replace(old, new)
           if text.count('AI_RESOURCE_ZERO_SPEND_LOCK = "true"') != 1:
               raise SystemExit('Zero-spend lock is missing or ambiguous')
+          for required_true in (
+              'MATRIX_PUBLIC_INVESTIGATION_FRESH_SOURCES_ENABLED = "true"',
+              'MATRIX_VALUE_HUNTER_ENABLED = "true"',
+              'MATRIX_VALUE_AUTO_COLLECTION_ENABLED = "true"',
+              'MATRIX_OPERATING_SYSTEM_ENABLED = "true"',
+              'MATRIX_TECHNOLOGY_EVOLUTION_ENABLED = "true"',
+              'MATRIX_EVOLUTION_DIRECTOR_ENABLED = "true"',
+              'MATRIX_SITE_OPERATOR_ENABLED = "true"',
+              'MATRIX_CAPITAL_CHALLENGE_ENABLED = "true"',
+              'MATRIX_CAPITAL_FINANCIAL_EXECUTION_ENABLED = "false"',
+              'MATRIX_NOVEL_OPPORTUNITY_DIRECTOR_ENABLED = "true"',
+              'MATRIX_BOUNTY_ENGINE_ENABLED = "true"',
+              'MATRIX_BOUNTY_AUTO_CLAIM_ENABLED = "false"',
+              'MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED = "false"',
+              'MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED = "false"',
+          ):
+              if text.count(required_true) != 1:
+                  raise SystemExit(f'Required Matrix runtime gate is missing or ambiguous: {required_true}')
           if '\nworkers_dev = ' not in text:
               text = text.replace('keep_vars = true\n', 'keep_vars = true\nworkers_dev = true\n', 1)
           config.write_text(text, encoding='utf-8')
@@ -338,6 +461,14 @@ jobs:
           grep -F 'AI_RESOURCE_ZERO_SPEND_LOCK = "true"' .wrangler-production.toml
           grep -F 'AI_OPPORTUNITY_HUNTER_ENABLED = "true"' .wrangler-production.toml
           grep -F 'AI_COMPUTE_RESOURCE_SCOUT_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'MATRIX_PUBLIC_INVESTIGATION_FRESH_SOURCES_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'MATRIX_VALUE_HUNTER_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'MATRIX_VALUE_AUTO_COLLECTION_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'MATRIX_OPERATING_SYSTEM_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'MATRIX_BOUNTY_ENGINE_ENABLED = "true"' .wrangler-production.toml
+          grep -F 'MATRIX_BOUNTY_AUTO_CLAIM_ENABLED = "false"' .wrangler-production.toml
+          grep -F 'MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED = "false"' .wrangler-production.toml
+          grep -F 'MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED = "false"' .wrangler-production.toml
           npx --yes wrangler@latest deploy --config .wrangler-production.toml --dry-run
 
       - name: Deploy exact reconciled assets and autonomous D1 Worker to Cloudflare
@@ -449,6 +580,10 @@ jobs:
             downloads/d1-schema-verification.json
             downloads/d1-autonomy-schema.json
             downloads/d1-ai-zero-spend-resources.json
+            downloads/d1-value-hunter.json
+            downloads/d1-permissionless-harvester.json
+            downloads/d1-matrix-operating-system.json
+            downloads/d1-matrix-capital-challenge.json
             downloads/d1-ai-feature-flags.json
             downloads/paypal-runtime-settings.json
             downloads/wrangler-deploy.log

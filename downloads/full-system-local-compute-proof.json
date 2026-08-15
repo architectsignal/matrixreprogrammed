@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "proof_type": "REAL_OWNER_LOCAL_PUBLIC_INVESTIGATION_COMPUTE",
+  "state": "LOCAL_LIVE_WORKING",
+  "investigation_id": "local-compute-proof-5bf03440-e5e5-4040-b69a-3bca1f9bf0c1",
+  "node": {
+    "platform": "win32",
+    "cpu_threads": 12,
+    "total_memory_mb": 15521,
+    "discovered_model_count": 4,
+    "healthy_model_server_count": 1
+  },
+  "new_capacity": {
+    "selected_resource_id": "local-llm-openai-qwen-qwen3-4b",
+    "model_id": "qwen/qwen3-4b",
+    "protocol": "openai",
+    "endpoint_scope": "loopback-only",
+    "runtime_state": "loaded",
+    "official_model_url": "https://huggingface.co/Qwen/Qwen3-4B-GGUF",
+    "licence": "Apache-2.0",
+    "licence_verified": true,
+    "memory_admission_passed": true,
+    "automation_permission": true,
+    "monetary_cost_eur": 0,
+    "external_network_used_for_inference": false
+  },
+  "benchmark": {
+    "completed_at": "2026-08-13T14:29:19.645Z",
+    "duration_ms": 325206,
+    "measured_models": 3,
+    "selected_model": {
+      "resource_id": "local-llm-openai-qwen-qwen3-4b",
+      "model_id": "qwen/qwen3-4b",
+      "protocol": "openai",
+      "status": "measured",
+      "total_profiles": 4,
+      "passed_profiles": 3,
+      "failed_profiles": 1,
+      "success_rate": 0.75,
+      "p50_latency_ms": 3294,
+      "quality_score": 86,
+      "reliability_score": 75,
+      "latency_score": 75,
+      "composite_score": 79.95,
+      "results": [
+        {
+          "profile": "classification",
+          "ok": true,
+          "latency_ms": 3294,
+          "passed": true,
+          "output_sha256": "9f26200b7c6db21677c28c6cfbea2bd45e5eb0265d9ae12d061bd5acdb50ec04"
+        },
+        {
+          "profile": "reasoning",
+          "ok": true,
+          "latency_ms": 2270,
+          "passed": true,
+          "output_sha256": "73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049"
+        },
+        {
+          "profile": "structured-extraction",
+          "ok": true,
+          "latency_ms": 3436,
+          "passed": true,
+          "output_sha256": "0dde99bbd762b649ff902033b72edab3cb545e7410cba4762f66a9b1550ac9e6"
+        },
+        {
+          "profile": "bounded-synthesis",
+          "ok": false,
+          "passed": false,
+          "latency_ms": null,
+          "error": "The operation was aborted due to timeout"
+        }
+      ]
+    },
+    "deterministic_cpu": {
+      "algorithm": "sha256",
+      "iterations": 10000,
+      "duration_ms": 19,
+      "operations_per_second": 526316,
+      "result_sha256": "65557eef443815f5dfe129718e9972e9062d2cfb883617d50008f02ea57de143"
+    },
+    "zero_spend_confirmed": true,
+    "external_network_used": false,
+    "source": "persisted-fresh",
+    "age_ms_at_use": 2957673,
+    "persisted_path": "local-state/benchmarks/latest.json"
+  },
+  "routing_learning_effect": {
+    "behavior_changed": true,
+    "before": {
+      "resource_id": "local-llm-openai-qwen-qwen3-4b",
+      "route_score": 94.2
+    },
+    "after": {
+      "resource_id": "local-llm-openai-qwen-qwen3-4b",
+      "route_score": 91.4
+    },
+    "change": "Fresh benchmark quality, reliability and latency scores were applied before selecting the model for useful work.",
+    "persisted_benchmark_path": "local-state/benchmarks/latest.json"
+  },
+  "useful_work": {
+    "question": "What current official records describe artificial intelligence safety policy?",
+    "fresh_official_evidence_count": 6,
+    "independent_publishers": [
+      "GOV.UK",
+      "U.S. Federal Register"
+    ],
+    "evidence_ids": [
+      "fresh-govuk-search-public-v1-f9113ea504d3ebf9bcdb2eec35bfe30f",
+      "fresh-govuk-search-public-v1-c0d17f6c3ecd2d0449ee84365524ce30",
+      "fresh-federal-register-public-v1-531f75dd53ca4b1e8e255c0e7f8e4d1b",
+      "fresh-federal-register-public-v1-72b4c285ecefaafe05d5772ffdd1f403",
+      "fresh-federal-register-public-v1-2782dff46ff30003e030da8bcf218061",
+      "fresh-federal-register-public-v1-6aece4e371c72318dafe72b27bfb6757"
+    ],
+    "source_routes": [
+      "https://www.gov.uk/guidance/understanding-artificial-intelligence-ethics-and-safety",
+      "https://www.gov.uk/guidance/managing-your-artificial-intelligence-project",
+      "https://www.federalregister.gov/documents/2025/09/26/2025-18737/notice-of-request-for-information-regulatory-reform-on-artificial-intelligence",
+      "https://www.federalregister.gov/documents/2024/10/31/2024-25140/meeting-on-the-artificial-intelligence-in-healthcare-safety-program",
+      "https://www.federalregister.gov/documents/2025/12/16/2025-23092/ensuring-a-national-policy-framework-for-artificial-intelligence",
+      "https://www.federalregister.gov/documents/2026/01/08/2026-00206/request-for-information-regarding-security-considerations-for-artificial-intelligence-agents"
+    ],
+    "workload_type": "evidence-rerank",
+    "model_selected_evidence_id": "fresh-govuk-search-public-v1-f9113ea504d3ebf9bcdb2eec35bfe30f",
+    "baseline_first_evidence_id": "fresh-govuk-search-public-v1-f9113ea504d3ebf9bcdb2eec35bfe30f",
+    "evidence_order_changed": false,
+    "answer": "The strongest bounded answer in the current retrieved evidence set is: The GOV.UK public API returned a record titled \"Understanding artificial intelligence ethics and safety\" with publication date 2019-06-09T23:00:00Z. Its official metadata describes the record as: Understand how to use artificial intelligence ethically and safely The record does not establish: The API metadata does not by itself establish implementation, effectiveness, motive, causation, legal liability or facts beyond the identified publication.",
+    "facts": [
+      {
+        "text": "The GOV.UK public API returned a record titled \"Understanding artificial intelligence ethics and safety\" with publication date 2019-06-09T23:00:00Z. Its official metadata describes the record as: Understand how to use artificial intelligence ethically and safely",
+        "evidence_ids": [
+          "fresh-govuk-search-public-v1-f9113ea504d3ebf9bcdb2eec35bfe30f"
+        ]
+      },
+      {
+        "text": "The GOV.UK public API returned a record titled \"Managing your artificial intelligence project\" with publication date 2019-06-09T23:00:00Z. Its official metadata describes the record as: Understand how to manage a project which uses artificial intelligence.",
+        "evidence_ids": [
+          "fresh-govuk-search-public-v1-c0d17f6c3ecd2d0449ee84365524ce30"
+        ]
+      },
+      {
+        "text": "The U.S. Federal Register public API returned a record titled \"Notice of Request for Information; Regulatory Reform on Artificial Intelligence\" with publication date 2025-09-26. Its official metadata describes the record as: The Office of Science and Technology Policy (OSTP) requests input from all interested parties in identifying existing Federal statutes, regulations, agency rules, guidance, forms, and administrative processes that unnecessarily hinder the development, deployment, and adoption of artificial intelligence (AI) technologies within the United States. Through this Request for Information (RFI), OSTP is seeking input from the public, including private sector organizations, industry groups, academia, state, local, and tribal governments, and any other interested parties, on priorities for such regulatory reform or other agency action necessary to promote AI innovation and adoption.",
+        "evidence_ids": [
+          "fresh-federal-register-public-v1-531f75dd53ca4b1e8e255c0e7f8e4d1b"
+        ]
+      },
+      {
+        "text": "The U.S. Federal Register public API returned a record titled \"Meeting on the Artificial Intelligence in Healthcare Safety Program\" with publication date 2024-10-31. Its official metadata describes the record as: HHS is directed by Executive order (E.O.) to establish an Artificial Intelligence (AI) in Healthcare Safety Program in partnership with federally listed Patient Safety Organizations (PSOs). The purpose of this notice is to announce a meeting to discuss implementation of the Executive order to establish the AI in Healthcare Safety Program. This meeting is designed as an interactive forum where participants can provide input on the future of the program.",
+        "evidence_ids": [
+          "fresh-federal-register-public-v1-72b4c285ecefaafe05d5772ffdd1f403"
+        ]
+      },
+      {
+        "text": "The U.S. Federal Register public API returned a record titled \"Ensuring a National Policy Framework for Artificial Intelligence\" with publication date 2025-12-16.",
+        "evidence_ids": [
+          "fresh-federal-register-public-v1-2782dff46ff30003e030da8bcf218061"
+        ]
+      },
+      {
+        "text": "The U.S. Federal Register public API returned a record titled \"Request for Information Regarding Security Considerations for Artificial Intelligence Agents\" with publication date 2026-01-08. Its official metadata describes the record as: The Center for AI Standards and Innovation (CAISI), housed within the National Institute of Standards and Technology (NIST) at the Department of Commerce, is seeking information and insights from stakeholders on practices and methodologies for measuring and improving the secure development and deployment of artificial intelligence (AI) agent systems. AI agent systems are capable of taking autonomous actions that impact real-world systems or environments, and may be susceptible to hijacking, backdoor attacks, and other exploits. If left unchecked, these security risks may impact public safety, undermine consumer confidence, and curb adoption of the latest AI innovations. We encourage respondents to provide concrete examples, best practices, case studies, and actionable recommendations based on their experience developing and deploying AI agent systems and managing and anticipating their attendant risks. Responses may inform CAISI's work evaluating the security risks associated with various AI capabilities, assessing security vulnerabilities of AI systems, developing evaluation and assessment measurements and methods, generating technical guidelines and best practices to measure and improve the security of AI systems, and other activities related to the security of AI agent systems.",
+        "evidence_ids": [
+          "fresh-federal-register-public-v1-6aece4e371c72318dafe72b27bfb6757"
+        ]
+      }
+    ],
+    "unknowns": [
+      {
+        "text": "Review the complete underlying document and any later correction, withdrawal, final rule, implementation report or judicial treatment before drawing a broader conclusion.",
+        "evidence_ids": []
+      }
+    ],
+    "evidence_boundary": "Official API metadata and abstracts establish the existence and stated description of records. They do not alone establish implementation, effectiveness, motive, causation or legal liability.",
+    "output_sha256": "d45e8e6f7737c654eec727e32b96ab2612391edf246db828769bceff04bee01a",
+    "validation_passed": true,
+    "validation_attempts": 1
+  },
+  "receipt": {
+    "payload_sha256": "8d881e4c20e1c1e8fd7a11ab60f7991cb31b051d6b3980d8852e210dd4d68ef6",
+    "result_sha256": "d45e8e6f7737c654eec727e32b96ab2612391edf246db828769bceff04bee01a",
+    "cost_confirmed_zero": true,
+    "external_network_used_for_inference": false,
+    "prompt_compiled_locally": true,
+    "prompt_persisted": false,
+    "raw_model_output_persisted": false,
+    "duration_ms": 19961,
+    "started_at": "2026-08-13T15:18:30.309Z",
+    "completed_at": "2026-08-13T15:18:57.280Z"
+  }
+}

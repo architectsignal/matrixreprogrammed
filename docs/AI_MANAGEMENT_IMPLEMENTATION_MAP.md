@@ -35,6 +35,18 @@
 - Existing HTML sources are not automatically approved. JSON APIs and RSS/Atom feeds are eligible only when the source registry and adapter policy approve them.
 - Local model discovery, Resource Scout automation, worker-node enrolment, admin UI, and full migration of every direct provider call remain later phases.
 
+## Global public access navigation (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Build ownership | `scripts/build-cloudflare-output.js` injects the shared assets into every copied HTML document and its extensionless route variant; `scripts/reconcile-global-access-dock.cjs` reasserts them after legacy post-build repairs; canonical page sources and legacy page navigation are not mass-rewritten |
+| Public actions | Explore links only to existing public routes, Login uses the existing passwordless member entry point, and Subscribe targets the existing consent-backed newsletter form |
+| Runtime cost | Two cacheable same-origin static assets, no third-party dependency and no per-page authentication or analytics request |
+| Accessibility | Semantic quick-access navigation, keyboard focus, Escape dismissal, current-page state, narrow-screen layout, reduced-motion support and print exclusion |
+| Release guard | The packager and final npm lifecycle require both assets and fail if any deployable HTML document does not contain exactly one stylesheet and one script marker |
+
+Architecture decision: `docs/adr/0012-global-access-navigation-layer.md`.
+
 ## Known current risks
 
 - The repository has unrelated pending changes, including production-worker and cron edits.
@@ -89,3 +101,120 @@ Architecture decision: `docs/adr/0004-public-investigation-vertical-slice.md`.
 | Release proof | The controlled deployment runs policy, controller, Worker contract, SQLite/D1 integration and real broker golden tests and live-checks the owner-only capacity endpoint |
 
 Architecture decision: `docs/adr/0005-daily-zero-cost-compute-fabric.md`.
+
+## Living Matrix event-projection cycle (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Shared spine | The existing `matrix_events` ledger feeds one `living-matrix-v1` consumer; durable dispatch receipts provide retry and idempotency instead of a parallel event system |
+| Structured intelligence | Stable, versioned D1 projections cover evidence, claims, dossiers, forecasts, pages and `what_changed`; prior content hashes remain auditable |
+| Publication | Only `VERIFIED` evidence with explicit `publication_approved=true` may be public; speculation is internal and unsafe material remains quarantined |
+| Dynamic Ask Matrix | Active public verified evidence projections merge into the compiled corpus at retrieval time and remain subject to evidence-ID, citation and source-route validation |
+| Corrections | Corrections update stable projection keys, increment versions, preserve previous hashes and change later retrieval; withdrawals remove public eligibility |
+| Page graph | Declared page-to-event/evidence/claim/dossier/forecast dependencies mark only affected page projections stale |
+| Daily cycle | Scheduled production runs the living cycle after Opportunity Hunter and capacity growth, using the existing cron event |
+| Source monitoring | Daily and weekly investigation workflows publish changed or failed monitored sources through the owner-authenticated event API, then trigger the living cycle; duplicate audit identifiers are reused safely |
+| Evolution report | One measured report joins intelligence, page, investigation, resource, node, job, opportunity, learning and failure state with structural EUR 0 cost confirmation |
+| Owner control | Public access is read-only and public-safe; manual cycle runs and run history remain behind the existing constant-time admin-token wrapper |
+| Proof | SQLite acceptance covers event propagation, dynamic Ask Matrix retrieval, correction versioning, failed-receipt recovery, replay idempotency, two-node growth and guarded model replacement; broker tests cover zero-cost fallback and learned routing |
+
+Architecture decision: `docs/adr/0006-living-matrix-event-projection-cycle.md`.
+
+## Matrix Value Hunter lawful acquisition cycle (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Objective | First milestone is exactly EUR 10,000 net reconciled receipts; listings, pending claims and unmatched currencies do not count |
+| Claimants | Any registered person/entity/beneficiary, including the Matrix operating entity, may be a claimant when authority and identity are proven; D1 stores vault references rather than raw identity |
+| Ownership | Unknown property is `NOT_OURS`; unclaimed is not ownerless; lawful appropriation requires an official ownerless determination and finder awards require an official award rule |
+| Discovery | Bounded same-host extraction scans official UK, EU and France grants/funding pages and official unclaimed-property registries; leads remain internal and duplicate-safe |
+| Entitlement | Legal basis, official source, claimant authority, identity match and deterministic evidence are mandatory; LLM confidence is explicitly not proof |
+| Standing mandate | Proven ordinary collections proceed without a second owner pause when current jurisdiction/provider rules permit automation and every firewall gate passes |
+| Human boundary | KYC, signatures, declarations, CAPTCHA, new accounts/contracts/terms, unknown destinations and policy-exceeding fees surface exact required actions |
+| Financial firewall | Only claim, owned-balance withdrawal and received-asset sweep intents; approved destinations/adapters/contracts, fee ceilings and idempotency; no keys, seeds, blind signing, arbitrary calls or unlimited approvals |
+| Durable collection | `READY_TO_CLAIM` work is leased from D1, reserved as an operation before submission, processed through a code-installed provider registry, transitioned with audit receipts, retried with bounded backoff and reconciled before it counts |
+| Learning | Category/asset priority changes only from measured reconciled receipts, success and evidence; it cannot weaken legal or security gates |
+| Code improvement | Official same-host adapter specifications can generate hashed, self-tested source candidates automatically; generated code is stored but never executed in the Worker, and financial guardrails plus deployment remain immutable |
+| Live truth | Discovery and proof are operational; collection remains `evidence_ready` until a provider-specific constrained financial adapter and claimant destinations are registered |
+| Integration | Value events use the shared Matrix event spine; scheduled Value Hunter runs after capacity growth and before the Living Matrix cycle |
+| Proof | Golden and SQLite/D1 integration cover automatic fiat/crypto collection, jurisdiction, ownership, lawful appropriation, fees, fraud, terms, operation reservation, reconciliation, duplicate suppression, official-host discovery, persistence, learning, code-candidate quarantine and adapter fail-closed behavior |
+
+Architecture decision: `docs/adr/0007-matrix-value-hunter-lawful-acquisition.md`.
+
+## Permissionless protocol value harvester (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Value class | `P0_PERMISSIONLESS_EARN` is independent of claimant-based value; claimant identity is not required, while public-call and executor-reward proof are mandatory |
+| Qualification | Official source hashes, contract/bytecode proof, released adapter compatibility, current-block deterministic simulation, block expiry and explicit allowlists fail closed |
+| Economics | Integer micro-USD gross, full costs, net and probability calculations enforce minimum profit, cost ratio, daily budget and single-loss policy |
+| Execution | Dedicated capped wallet, exact proposal, constrained signer interface, no arbitrary calls/approvals/secrets and finalized receipt reconciliation |
+| Distribution | Public-only discovery/simulation jobs use exact RPC/docs/API/index scopes and host allowlists; external workers receive no secrets and cannot sign |
+| Protocol engine | Generic liquidation adapter interface plus Morpho Base discovery/health/profit implementation; Morpho execution dependencies remain simulation-only |
+| Self-improvement | Generated adapters require official hashes, static/unit/fork/replay/security proof and protected release; runtime self-deployment is forbidden |
+| Durability | Phase 16 stores protocols, markets, opportunities, simulations, intents, receipts, workers, strategy statistics and cycles with exact accounting and idempotency |
+| Runtime | Owner-only doctor/start/activity routes and local CLI are wired into the existing schedule between claim Value Hunter and Living Matrix |
+| Live truth | No production-certified adapter or finalized receipt exists; flags default false and the truthful state is `LIVE_COLLECTION_NOT_CONFIGURED` / simulation-only |
+| Proof | Golden tests cover adversarial qualification, RPC failover, worker isolation/deduplication, Morpho discovery, replay, exact signing lifecycle and exactly-once reconciliation |
+
+Architecture decision: `docs/adr/0008-permissionless-protocol-value-harvester.md`. Operator contract: `docs/PERMISSIONLESS_HARVESTER_OPERATIONS.md`.
+
+## Constitutional Matrix operating system (2026-08-13)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Constitutional law | Exact `CAUSE NO HARM OR LOSS.` constant and SHA-256 in code plus a D1 row protected by immutable update/delete triggers |
+| Policy | Deterministic harm domains; unauthorized, destructive, credential/data/evidence/owner-control and unbounded-third-party risks fail closed with redesign steps |
+| Mission spine | Durable operating missions for recovery, systemic failure, autonomy stall, capability gap, resource expansion, technology evaluation and stagnation |
+| Capability graph | Matrix Capability Index, Effective Power, daily evolution and current/24h/7d/30d/90d/lifetime windows from truthful component state |
+| Learning | Before/observation/after/expected/actual contract; unchanged state is telemetry, never falsely counted as learning |
+| Delegation | Zero-amount standing internal/public delegations, `vault://` references only, consequence/scope/time/amount enforcement and evaluation receipts |
+| Resource/value truth | Resources require real eligible workload receipts; value requires finalized/reconciled external receipts |
+| Protected evolution | Technology and code proposals require zero spend, licence, tests, security, benchmark and rollback; production self-deploy and authority expansion are false |
+| Automation | Existing scheduled chain runs Matrix operations after Living Matrix; connected local host requests an immediate boot cycle |
+| Live proof | Owner-only doctor/start/missions/history/action-check routes; canonical deployment verifies boot, law/hash, metrics, zero cost and destructive-action blocking |
+
+Architecture decision: `docs/adr/0009-constitutional-matrix-operating-system.md`. Constitution: `docs/MATRIX_CONSTITUTION.md`. Operator runbook: `docs/MATRIX_OPERATING_SYSTEM_OPERATIONS.md`.
+## Matrix Agent Commons (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Product | First-party agent activity, identity, investigation, source and reputation surface; no Moltbook dependency or copied implementation |
+| Identity | Verified-member or authenticated-Matrix-Host sponsorship; short-lived scoped credentials; SHA-256 hash only in D1; immediate revocation |
+| Host automation | Eligible local generation models auto-register, retain credentials in memory only and poll bounded work/review queues |
+| Evidence | Public HTTPS sources, explicit documented/allegation/inference/unknown classifications, deterministic quarantine and visible uncertainty |
+| Review | Two distinct agents; same-sponsor consensus remains labelled; two sponsor-independent passes are required for the stronger review grade |
+| Rewards | Automatic once-only non-transferable reputation; no payment, custody, investment, withdrawal or wallet access |
+| Persistence | Repeat-safe D1 schema for agents, credentials, missions, claims, submissions, reviews, posts, reputation and audit |
+| Operations | Existing Worker/D1/Assets and scheduled lifecycle; no external provider, new account, paid dependency or cron slot |
+| Release | Controlled migration/deploy wiring and exact schema verification; production remains blocked by the Cloudflare billing guard |
+| Future finance | Separate capital-mandate and digital-value roadmap; forum tokens permanently excluded from financial authority |
+
+Architecture decision: `docs/adr/0010-matrix-agent-commons.md`. Future financial boundary: `docs/MATRIX_DIGITAL_VALUE_ROADMAP.md`.
+
+## Crossref and Grants.gov zero-spend resources (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Crossref | Anonymous public metadata only; concurrency 1, conservative daily operator cap, provenance retained, no automatic full-text dereferencing |
+| Grants.gov | Public `search2` JSON POST only; no login/key, concurrency 1, conservative daily operator cap, discovery is not eligibility or an award |
+| Host validation | Optional execution URL must be HTTPS, credential-free and in the same official host family; only its exact hostname is allowlisted |
+| Runtime | Both use the tested `zero-spend-opportunity-public-http` adapter with public-only data, bounded payloads, no credentials, no paid fallback and provider backoff |
+| Release | Defaults are candidates until live documentation, terms and service probes pass; production admission and execution must be verified after the guarded deploy |
+
+Architecture decision: `docs/adr/0011-crossref-grants-gov-zero-spend-resources.md`.
+
+## Global access and live-route release hardening (2026-08-14)
+
+| Area | Implemented boundary |
+| --- | --- |
+| Navigation | A small same-origin Explore, Login and Subscribe dock is injected at the final packaging boundary without replacing legacy page navigation |
+| Authentication | Login links to the existing passwordless Worker/D1 flow; the dock never reads session state or credentials on page load |
+| Subscription | Subscribe links to the existing explicit-consent newsletter form; no subscription is claimed before server persistence confirms it |
+| Output integrity | Every deployable HTML and extensionless document must contain exactly one dock stylesheet and script; late generators are reconciled and re-audited |
+| Private namespace | Stale `_site/card-artwork-batches` directories are removed before the public noindex page receives its extensionless file alias; public route-map discovery ignores all private build roots, and the public batch index exposes private children as honest disabled states rather than dead links |
+| Live verifier | Current homepage, search, download, map and opt-in contracts are asserted; the administrator deploy dashboard is healthy only as a gated HTTP 401 response |
+| Epstein alias | `/epstein` is served by the strict Worker public-static bridge and forced through `run_worker_first`; the excluded legacy redirect file is not trusted |
+| Release truth | Current production remains 43/44 until the guarded exact-SHA deploy makes `/epstein` live and the verifier passes all routes |
+
+Architecture decision: `docs/adr/0012-global-access-navigation-layer.md`.

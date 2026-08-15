@@ -91,14 +91,10 @@ run('scripts/repair-release-page-contracts.js');
 run('scripts/repair-missing-generated-entity-briefs.js');
 
 // The deployment manifest and production health are generated immediately before
-// this final sanitizer. Publish exact versioned copies and give the strict Worker
-// ownership of their public routes so legacy asset keys cannot return stale proof.
+// this final sanitizer. Publish exact internal verification aliases and public-root
+// assets, then give the strict Worker ownership of their no-store public routes.
 run('scripts/patch-release-metadata-routing.js');
 run('scripts/publish-release-metadata-assets.js');
-for (const relative of [
-  'runtime/deploy-manifest-current.json',
-  'runtime/deploy-health-current.json'
-]) copy(relative);
 
 // These are the final public HTML mutations before the audits. Rebuild the
 // evidence/confidence layer after every legacy editor, then synchronize the exact
@@ -182,8 +178,8 @@ const report = {
     'admin-email-launch.html', 'admin-email-launch.js',
     'src/worker-paypal-subscriptions.js', 'src/worker-email-lifecycle.js',
     'src/worker-release-metadata.js', 'src/worker-production.js',
-    'runtime/deploy-manifest-current.json', '_site/runtime/deploy-manifest-current.json',
-    'runtime/deploy-health-current.json', '_site/runtime/deploy-health-current.json',
+    'runtime/deploy-manifest-current.json', '_site/deploy-manifest.json',
+    'runtime/deploy-health-current.json', '_site/deploy-health.json',
     'daily-power-conclusions.html', 'daily-investigation-conclusions.html',
     'weekly-investigation-report.html', 'daily-brain-brief.html', 'outcome-briefings.html',
     'matrix.js', 'investigation-pulse.js', 'search.js', 'evidence-network-map.js', 'fixes.css', '_headers',

@@ -41,6 +41,9 @@ for (const text of [
 ]) needText('timers.html', text);
 needNoText('timers.html', 'Static page, not a live counter');
 needNoText('timers.html', 'Connected systems');
+for (const name of ['data/global-risk-clocks.json', 'data/clock-wall.json', 'timers.html', 'downloads/timer-synthesis.md']) {
+  needNoText(name, '[object Object]');
+}
 for (const text of ['homepage-command-surface', 'What the evidence is pointing toward now', 'Clearly labelled speculation', 'Risk clocks over 90%', 'Seven-day window only']) needText('index.html', text);
 needNoText('index.html', 'Top Moments Now');
 needText('scripts/build-homepage-command-surface.js', 'Number(clock.score) > 90');

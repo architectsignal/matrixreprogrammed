@@ -15,7 +15,10 @@ check('production wrapper imports local job router', wrapper.includes("import { 
 check('local job routes are checked before generic AI-management routing', wrapper.indexOf('if (isLocalJobRoute(path))') > -1 && wrapper.indexOf('if (isLocalJobRoute(path))') < wrapper.indexOf('if (isAiManagementRoute(path))'));
 check('local job routes require owner admin authorization', wrapper.includes('if (!authorized(request, runtimeEnv)) return forbidden();') && wrapper.includes('return handleLocalJobRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);'));
 check('scheduled handler recovers expired leases', wrapper.includes('recoverExpiredLocalJobs(runtimeEnv)') && wrapper.includes('recoveryTask'));
-check('scheduled recovery and capacity growth participate in awaited task group', wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask])'));
+check(
+  'scheduled recovery, opportunity, capacity, claim value, permissionless value, Living Matrix and constitutional operating cycles participate in awaited task group',
+  wrapper.includes('Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, bountyTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask])')
+);
 
 for (const route of [
   '/api/ai-management/admin/local-jobs',

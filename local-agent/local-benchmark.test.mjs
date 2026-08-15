@@ -10,6 +10,7 @@ const resource = id => ({
   resource_id: id,
   service_name: id,
   capability_types: ['llm'],
+  enabled: true,
   quality_score: 60,
   reliability_score: 60,
   latency_score: 60,
@@ -67,6 +68,13 @@ assert.equal(unavailable.enabled, false);
 assert.equal(unavailable.health_status, 'unhealthy');
 assert.equal(unavailable.reliability_score, 0);
 assert.equal(unavailable.metadata.matrix_benchmark.status, 'unavailable');
+
+let disabledInvocations = 0;
+const constrained = { ...resource('model-too-large'), enabled: false, metadata: { ...resource('model-too-large').metadata, memory_admission_passed: false } };
+const constrainedReport = await benchmarkLocalRuntime({ resources: [constrained] }, { fetchImpl: async () => { disabledInvocations += 1; throw new Error('must not execute'); } });
+assert.equal(disabledInvocations, 0, 'disabled or oversized models must never be auto-loaded by the benchmark');
+assert.equal(constrainedReport.models[0].status, 'skipped-ineligible');
+assert.equal(constrainedReport.models[0].reason, 'memory-admission-gate');
 
 await fs.rm(stateDir, { recursive: true, force: true });
 console.log('Matrix local model benchmark and learned-routing tests passed.');

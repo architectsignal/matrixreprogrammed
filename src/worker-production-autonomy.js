@@ -6,6 +6,12 @@ import { handleLocalJobRoute, isLocalJobRoute, recoverExpiredLocalJobs } from '.
 import { handleOpportunityHunterRoute, isOpportunityHunterRoute, runScheduledOpportunityHunter } from './worker-opportunity-hunter.js';
 import { handleCapacityGrowthRoute, isCapacityGrowthRoute, runScheduledCapacityGrowth } from './worker-capacity-growth.js';
 import { handleMatrixSynergyRoute, isMatrixSynergyRoute } from './worker-matrix-synergy.js';
+import { handleLivingMatrixRoute, isLivingMatrixAdminRoute, isLivingMatrixPublicRoute, runScheduledLivingMatrix } from './worker-living-matrix.js';
+import { handleValueHunterRoute, isValueHunterRoute, runScheduledValueHunter } from './worker-value-hunter.js';
+import { handlePermissionlessHarvesterRoute, isPermissionlessHarvesterRoute, runScheduledPermissionlessHarvester } from './worker-permissionless-value.js';
+import { handleMatrixOperationsRoute, isMatrixOperationsRoute, runScheduledMatrixOperations } from './worker-matrix-operations.js';
+import { handleBountyEngineRoute, isBountyEngineRoute, runScheduledBountyEngine } from './worker-bounty-engine.js';
+import { emitMatrixSystemEvent } from './matrix-event-emitter.js';
 
 function cleanToken(value) {
   return String(value || '').trim();
@@ -81,6 +87,35 @@ export default {
     const runtimeEnv = withAiManagementAdminToken(env);
     const path = new URL(request.url).pathname.replace(/\/+$/, '') || '/';
 
+    if (isLivingMatrixPublicRoute(path)) {
+      return handleLivingMatrixRoute(request, runtimeEnv);
+    }
+
+    if (isLivingMatrixAdminRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleLivingMatrixRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
+    if (isValueHunterRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleValueHunterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
+    if (isBountyEngineRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleBountyEngineRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
+    if (isPermissionlessHarvesterRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handlePermissionlessHarvesterRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
+    if (isMatrixOperationsRoute(path)) {
+      if (!authorized(request, runtimeEnv)) return forbidden();
+      return handleMatrixOperationsRoute(normalizedAdminRequest(request, runtimeEnv), runtimeEnv);
+    }
+
     if (isScenarioProbabilityRoute(path)) {
       try {
         const response = await scenarioProbabilityWorker.fetch(request, runtimeEnv, ctx);
@@ -133,12 +168,69 @@ export default {
       ? recoverExpiredLocalJobs(runtimeEnv).catch(() => 0)
       : Promise.resolve(0);
     const opportunityTask = runtimeEnv?.MEMBERS_DB?.prepare
-      ? runScheduledOpportunityHunter(runtimeEnv).catch(() => ({ skipped: true, reason: 'scheduled-run-failed' }))
+      ? runScheduledOpportunityHunter(runtimeEnv).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'resource.failed', auditIdentifier: `opportunity-hunter-failure:${new Date().toISOString()}`,
+          origin: 'opportunity-hunter', actor: 'zero-spend-resource-hunter',
+          payload: { change_summary: 'Resource discovery failed safely; no candidate was activated.', error: String(error?.message || error).slice(0, 500), cost_confirmed_zero: true }
+        });
+        return { skipped: true, reason: 'scheduled-run-failed' };
+      })
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     const capacityTask = runtimeEnv?.MEMBERS_DB?.prepare
-      ? opportunityTask.then(() => runScheduledCapacityGrowth(runtimeEnv)).catch(() => ({ skipped: true, reason: 'scheduled-capacity-run-failed' }))
+      ? opportunityTask.then(() => runScheduledCapacityGrowth(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'resource.failed', auditIdentifier: `capacity-growth-failure:${new Date().toISOString()}`,
+          origin: 'capacity-growth', actor: 'zero-spend-capacity-controller',
+          payload: { change_summary: 'Capacity growth failed safely; queued work and existing resources were retained.', error: String(error?.message || error).slice(0, 500), cost_confirmed_zero: true }
+        });
+        return { skipped: true, reason: 'scheduled-capacity-run-failed' };
+      })
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const bountyTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? capacityTask.then(() => runScheduledBountyEngine(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'value.failed', auditIdentifier: `bounty-engine-failure:${new Date().toISOString()}`,
+          origin: 'matrix-bounty-engine', actor: 'BountyCompletionDirector',
+          payload: { change_summary: 'Bounty discovery failed safely; no claim, pull request or submission was attempted.', error: String(error?.message || error).slice(0, 500), security_execution: false }
+        });
+        return { skipped: true, reason: 'scheduled-bounty-cycle-failed' };
+      })
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const valueTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? bountyTask.then(() => runScheduledValueHunter(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'value.failed', auditIdentifier: `value-hunter-failure:${new Date().toISOString()}`,
+          origin: 'matrix-value-hunter', actor: 'lawful-value-cycle',
+          payload: { change_summary: 'Value Hunter failed safely; no claim, signature or transfer was attempted.', error: String(error?.message || error).slice(0, 500) }
+        });
+        return { skipped: true, reason: 'scheduled-value-cycle-failed' };
+      })
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const permissionlessTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? valueTask.then(() => runScheduledPermissionlessHarvester(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'value.permissionless.failed', auditIdentifier: `permissionless-harvester-failure:${new Date().toISOString()}`,
+          origin: 'permissionless-harvester', actor: 'p0-permissionless-director',
+          payload: { change_summary: 'Permissionless Harvester failed safely; no transaction was signed or broadcast.', error: String(error?.message || error).slice(0, 500) }
+        });
+        return { skipped: true, reason: 'scheduled-permissionless-cycle-failed' };
+      })
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const livingTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? permissionlessTask.then(() => runScheduledLivingMatrix(runtimeEnv)).catch(() => ({ skipped: true, reason: 'scheduled-living-cycle-failed' }))
+      : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
+    const matrixOperationsTask = runtimeEnv?.MEMBERS_DB?.prepare
+      ? livingTask.then(() => runScheduledMatrixOperations(runtimeEnv)).catch(async error => {
+        await emitMatrixSystemEvent(runtimeEnv, {
+          eventType: 'system.degraded', auditIdentifier: `matrix-operating-system-failure:${new Date().toISOString()}`,
+          origin: 'matrix-operating-system', actor: 'MatrixMissionDirector',
+          payload: { change_summary: 'The constitutional operating cycle failed safely; existing state was preserved for recovery.', error: String(error?.message || error).slice(0, 500), law: 'CAUSE NO HARM OR LOSS.' }
+        });
+        return { skipped: true, reason: 'scheduled-matrix-operating-cycle-failed' };
+      })
       : Promise.resolve({ skipped: true, reason: 'database-unavailable' });
     // Legacy membership contract marker: await Promise.all([productionTask, autonomyTask]);
-    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask]);
+    await Promise.all([productionTask, autonomyTask, recoveryTask, opportunityTask, capacityTask, bountyTask, valueTask, permissionlessTask, livingTask, matrixOperationsTask]);
   }
 };

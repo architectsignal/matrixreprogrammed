@@ -18,8 +18,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  actions: write
-  contents: write
+  contents: read
 
 concurrency:
   group: performance-release-handoff
@@ -47,15 +46,7 @@ jobs:
           node --check scripts/live-performance-and-tool-proof.js
           node scripts/forum-persistence-d1-test.js
           node scripts/money-intelligence-system-test.js
-      - name: Dispatch guarded production deployment
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh workflow run "Matrix Reprogrammed Controlled Production Deploy" \
-            --repo "$GITHUB_REPOSITORY" \
-            --ref main \
-            -f confirmation='DEPLOY MATRIX REPROGRAMMED'
-      - name: Record performance production dispatch
+      - name: Record owner-controlled production handoff
         env:
           DISPATCH_SHA: ${{ github.sha }}
           DISPATCH_RUN_ID: ${{ github.run_id }}
@@ -65,24 +56,22 @@ jobs:
           const fs=require('fs');
           fs.writeFileSync('data/performance-release-dispatch.json',JSON.stringify({
             ok:true,
-            dispatchedAt:new Date().toISOString(),
+            recordedAt:new Date().toISOString(),
+            status:'validated-owner-dispatch-required',
+            dispatched:false,
             sourceSha:process.env.DISPATCH_SHA,
             handoffRunId:process.env.DISPATCH_RUN_ID,
             workflow:'Matrix Reprogrammed Controlled Production Deploy',
-            confirmation:'DEPLOY MATRIX REPROGRAMMED'
+            confirmation:'DEPLOY MATRIX REPROGRAMMED',
+            boundary:'This automatic handoff validates and records an artifact only. It cannot dispatch production or write to main; the configured repository owner must use the guarded exact-main workflow after the Europe/Paris daily slot and zero-spend checks pass.'
           },null,2)+'\n');
           NODE
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/performance-release-dispatch.json
-          git commit -m "Record performance production dispatch" || exit 0
-          for attempt in 1 2 3; do
-            git fetch origin main
-            if git rebase origin/main && git push origin HEAD:main; then
-              exit 0
-            fi
-            git rebase --abort 2>/dev/null || true
-          done
-          exit 1
+      - name: Upload performance release handoff
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-release-handoff-${{ github.run_id }}
+          path: data/performance-release-dispatch.json
+          if-no-files-found: error
+          retention-days: 30
 
 # Release handoff nonce: final-clean-public-bundle-20260720T2121-Europe-Paris

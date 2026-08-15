@@ -41,6 +41,15 @@ if (!failures.length) {
   const sitewideWorkflow = read('.github/workflows/daily-sitewide-refresh.yml');
   need(sitewideWorkflow.indexOf('daily-sitewide-build-safe.js') < sitewideWorkflow.indexOf('automation-health-gate.js'), 'daily sitewide refresh must build its report before enforcing the truthful health gate');
 
+  const packageScripts = JSON.parse(read('package.json')).scripts;
+  for (const scriptName of ['build', 'site-brain', 'pressure-test:cloudflare']) {
+    const command = String(packageScripts[scriptName] || '');
+    const outputOwner = command.indexOf('build-cloudflare-output.js');
+    const homepageOwner = command.indexOf('reconcile-release-homepage-order.js');
+    const healthGate = command.indexOf('site-brain-health.js');
+    need(outputOwner >= 0 && homepageOwner > outputOwner && healthGate > homepageOwner, `${scriptName} must restore the canonical homepage after packaging and before Site Brain health`);
+  }
+
   const brain = JSON.parse(read('data/site-brain.json'));
   need(Number(brain.version) >= 4, 'site brain contract version must describe the stable search-first homepage identity');
   need(brain.freshness?.homepageCurrentMarker === 'id="accountability-search"', 'site brain current marker must match the canonical functional search route');

@@ -156,7 +156,7 @@ if (hitListPresent) {
 }
 
 for (const [relative, marker] of [
-  ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'action="search.html" method="get"'],
+  ['index.html', 'My Watchlist'],['index.html', 'href="book-universe.html"'],['index.html', 'id="accountability-search"'],['index.html', 'action="search.html" method="get"'],
   ['index.html', 'name="q"'],['index.html', 'accountability-home.js'],['index.html', 'href="follow-the-money.html"'],
   ['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],['index.html', 'live-intel-machine-route'],
   ['index.html', 'href="independent-links.html"'],['index.html', 'href="security-privacy.html"'],['index.html', 'href="dark-web-safety.html"'],
@@ -167,7 +167,7 @@ for (const [relative, marker] of [
 
 if (fs.existsSync(outputRoot)) {
   for (const [relative, marker] of [
-    ['index.html', 'My Watchlist'],['index.html', 'id="accountability-search"'],['index.html', 'name="q"'],
+    ['index.html', 'My Watchlist'],['index.html', 'href="book-universe.html"'],['index.html', 'id="accountability-search"'],['index.html', 'name="q"'],
     ['index.html', 'href="follow-the-money.html"'],['index.html', 'href="making-money.html"'],['index.html', 'href="live-intel.html"'],
     ['index.html', 'live-intel-machine-route'],['index.html', 'href="independent-links.html"'],['index.html', 'data-homepage-mask-intro'],
     ['search.html', 'search-query-handoff.js'],['search-query-handoff.js', "new URLSearchParams(location.search).get('q')"],

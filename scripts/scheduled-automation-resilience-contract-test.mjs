@@ -12,6 +12,7 @@ const files = [
   'scripts/daily-sitewide-build-safe.js',
   '.github/workflows/daily-sitewide-refresh.yml',
   'scripts/site-brain-health.js',
+  'scripts/finalize-search-first-accountability-home.js',
   'data/site-brain.json',
   '.github/workflows/daily-update-check.yml',
   'scripts/live-intel-pressure-test.js',
@@ -25,6 +26,7 @@ for (const relative of files) need(fs.existsSync(path.join(root, relative)), `mi
 for (const relative of [
   'scripts/daily-sitewide-build-safe.js',
   'scripts/site-brain-health.js',
+  'scripts/finalize-search-first-accountability-home.js',
   'scripts/live-intel-pressure-test.js',
   'scripts/publish-investigation-matrix-events.mjs',
   'scripts/publish-investigation-matrix-events.test.mjs'
@@ -59,6 +61,7 @@ if (!failures.length) {
     need(health.includes(marker), `site brain health is missing search-first contract marker: ${marker}`);
   }
   need(health.includes("toLocaleUpperCase('en-US')"), 'site brain homepage marker comparison must be case-insensitive across final generators');
+  need(read('scripts/finalize-search-first-accountability-home.js').includes("['book-universe.html','Book Universe']"), 'canonical homepage owner must preserve Book Universe navigation before Site Brain health');
 
   const daily = read('.github/workflows/daily-update-check.yml');
   const homepageOwner = daily.indexOf('reconcile-release-homepage-order.js');

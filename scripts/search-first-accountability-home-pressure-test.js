@@ -60,6 +60,7 @@ function checkHomepage(base = root) {
     'accountability-home.css',
     'accountability-home.js',
     'My Watchlist',
+    'href="book-universe.html"',
     'Submit evidence or a correction'
   ]) if (!html.includes(marker)) fail(`${label}/index.html missing marker: ${marker}`);
   for (const stale of ['MAP THE STRUCTURE','READ THE SIGNALS','Live Intel · Books · Source Trails','homepage-command-surface']) if (html.includes(stale)) fail(`${label}/index.html still exposes old homepage marker: ${stale}`);

@@ -34,10 +34,37 @@ try {
   for (let pass = 1; pass <= 2; pass += 1) {
     for (const migration of migrations) database.exec(fs.readFileSync(migration, 'utf8'));
     console.log(`Completed Phase 20 migration rehearsal pass ${pass}`);
+    if (pass === 1) {
+      database.exec(`
+        UPDATE matrix_bounty_platform_profiles
+        SET payout_identity_ready=1,
+            terms_accepted=1,
+            credential_vault_reference='vault://rehearsal/opire',
+            external_writes_enabled=1,
+            status='ACTIVE',
+            evidence_json='{"external_writes":true}',
+            updated_at=CURRENT_TIMESTAMP
+        WHERE platform='opire';
+        UPDATE ai_feature_flags SET enabled=1
+        WHERE flag_name IN (
+          'MATRIX_BOUNTY_AUTO_CLAIM_ENABLED',
+          'MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED',
+          'MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED'
+        );
+      `);
+    }
   }
   for (const table of tables) assert.equal(database.prepare("SELECT COUNT(*) count FROM sqlite_master WHERE type='table' AND name=?").get(table).count, 1, `${table} missing`);
   assert.equal(database.prepare('SELECT COUNT(*) count FROM matrix_bounty_sources WHERE discovery_enabled=1 AND consequential_actions_enabled=0').get().count, 2);
   assert.equal(database.prepare('SELECT COUNT(*) count FROM matrix_bounty_platform_profiles WHERE external_writes_enabled=0').get().count, 2);
+  const repairedProfile = database.prepare("SELECT * FROM matrix_bounty_platform_profiles WHERE platform='opire'").get();
+  assert.equal(repairedProfile.external_writes_enabled, 0);
+  assert.equal(repairedProfile.status, 'READY_FOR_OWNER_SUBMISSION');
+  assert.equal(repairedProfile.payout_identity_ready, 1);
+  assert.equal(repairedProfile.terms_accepted, 1);
+  assert.equal(repairedProfile.credential_vault_reference, 'vault://rehearsal/opire');
+  assert.equal(JSON.parse(repairedProfile.evidence_json).external_writes, false);
+  assert.equal(JSON.parse(repairedProfile.evidence_json).write_lock_reason, 'controlled-production-release');
   assert.equal(database.prepare("SELECT enabled FROM ai_feature_flags WHERE flag_name='MATRIX_BOUNTY_ENGINE_ENABLED'").get().enabled, 1);
   assert.equal(database.prepare("SELECT enabled FROM ai_feature_flags WHERE flag_name='MATRIX_BOUNTY_AUTO_CLAIM_ENABLED'").get().enabled, 0);
   assert.equal(database.prepare("SELECT enabled FROM ai_feature_flags WHERE flag_name='MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED'").get().enabled, 0);
@@ -45,7 +72,7 @@ try {
   assert.throws(() => database.prepare(`INSERT INTO matrix_bounties(
     bounty_id,source_id,source_platform,external_id,title,repository,issue_url,bounty_url,reward_currency,task_type,security_bounty,status,discovered_at,updated_at
     ) VALUES('unsafe','bounty-source-opire-featured','opire','unsafe','Unsafe security task','https://github.com/o/r','https://github.com/o/r/issues/1','https://github.com/o/r/issues/1','EUR','security',1,'WORKING',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)`).run(), /constraint/i);
-  assert.throws(() => database.prepare("UPDATE matrix_bounty_platform_profiles SET external_writes_enabled=1 WHERE platform='opire'").run(), /constraint/i);
+  assert.throws(() => database.prepare("UPDATE matrix_bounty_platform_profiles SET external_writes_enabled=1 WHERE platform='github-paid-issue'").run(), /constraint/i);
   console.log('Phase 20 migration rehearsal passed twice with discovery enabled, external writes disabled, receipt-only accounting, isolated workspaces and security execution blocked.');
 } finally {
   database.close();

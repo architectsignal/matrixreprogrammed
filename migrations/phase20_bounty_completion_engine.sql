@@ -230,6 +230,20 @@ INSERT OR IGNORE INTO matrix_bounty_platform_profiles(platform,payout_identity_r
   ('github-paid-issue',0,0,NULL,NULL,0,'DISCOVERY_ONLY','{"external_writes":false,"scoped_contributor_identity_required":true}',CURRENT_TIMESTAMP),
   ('opire',0,0,NULL,NULL,0,'DISCOVERY_ONLY','{"stripe_payout_onboarding_required":true,"external_writes":false}',CURRENT_TIMESTAMP);
 
+-- Every controlled release starts bounty integrations fail closed. Preserve
+-- completed identity, terms, vault and destination setup, but require a later
+-- method-scoped authorization before any consequential external write.
+UPDATE matrix_bounty_platform_profiles
+SET external_writes_enabled=0,
+    status=CASE WHEN status='ACTIVE' THEN 'READY_FOR_OWNER_SUBMISSION' ELSE status END,
+    evidence_json=json_set(
+      CASE WHEN json_valid(evidence_json) THEN evidence_json ELSE '{}' END,
+      '$.external_writes',json('false'),
+      '$.write_lock_reason','controlled-production-release'
+    ),
+    updated_at=CURRENT_TIMESTAMP
+WHERE external_writes_enabled<>0;
+
 INSERT OR IGNORE INTO matrix_bounty_owner_actions(action_id,platform,action_required,exact_configuration,reason,secret_value_required,status,evidence_json,updated_at) VALUES
   ('bounty-github-identity','github-paid-issue','Provide a Matrix-controlled GitHub contributor identity and a least-privilege token after reviewing each program ruleset.','Store the token in the approved secret vault; set matrix_bounty_platform_profiles.credential_vault_reference to its vault:// reference. Do not store the token in D1 or source.','Claim comments, forks and pull requests are consequential external writes and require attributable authorization.',1,'READY_FOR_OWNER','{"minimum_scope":"repository-specific contents and pull-request permissions only"}',CURRENT_TIMESTAMP),
   ('bounty-opire-payout','opire','Create the Matrix developer profile, accept current Opire terms, and complete its Stripe payout/KYC onboarding.','After onboarding, register the approved EUR-capable destination and vault reference in the Matrix platform profile.','Matrix cannot fabricate identity, KYC, terms acceptance, tax status or payout ownership.',1,'READY_FOR_OWNER','{"official_guide":"https://docs.opire.dev/overview/getting-started"}',CURRENT_TIMESTAMP),
@@ -241,6 +255,17 @@ INSERT OR IGNORE INTO ai_feature_flags(flag_name,enabled,value_json,reason,updat
   ('MATRIX_BOUNTY_AUTO_CLAIM_ENABLED',0,'{"method_scoped_authorization_required":true}','External claims remain disabled until a platform-specific rules and identity gate passes.','migration',CURRENT_TIMESTAMP),
   ('MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED',0,'{"separate_review_required":true,"idempotency_required":true}','External submissions remain disabled until scoped delegation and review pass.','migration',CURRENT_TIMESTAMP),
   ('MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED',0,'{"immutable":true,"authorized_security_testing_required":true}','Security bounty execution is disabled; discovery metadata does not grant testing authority.','migration',CURRENT_TIMESTAMP);
+
+UPDATE ai_feature_flags
+SET enabled=0,
+    reason='Controlled production release restores fail-closed bounty execution boundaries.',
+    updated_by='phase20-repeat-safe-migration',
+    updated_at=CURRENT_TIMESTAMP
+WHERE flag_name IN (
+  'MATRIX_BOUNTY_AUTO_CLAIM_ENABLED',
+  'MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED',
+  'MATRIX_SECURITY_BOUNTY_EXECUTION_ENABLED'
+);
 
 INSERT OR IGNORE INTO matrix_system_components(component_id,director,implementation,state,capacity_units,reliability,dependencies_json,health_evidence_json,blocker,last_verified_at,updated_at) VALUES
   ('bounty-completion-engine','BountyCompletionDirector','ai-management/value-hunter/bounty/bounty-completion-engine.mjs','WORKING_NOT_LIVE',1,0.75,'["matrix-capital-challenge","bounty-source-adapters","isolated-workspace","delegated-github","approved-payout-destination"]','["bounty-completion-engine-contract-test","bounty-worker-integration-test","phase20-migration-rehearsal"]','First real bounty receipt is pending; external claims and submissions are not configured.',NULL,CURRENT_TIMESTAMP);

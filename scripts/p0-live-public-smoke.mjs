@@ -10,6 +10,8 @@ const attempts = Math.max(1, Number(process.env.P0_SMOKE_ATTEMPTS || 36));
 const delayMs = Math.max(0, Number(process.env.P0_SMOKE_DELAY_MS || 10000));
 const reportPath = path.join(root, 'downloads', 'p0-live-public-smoke.json');
 const transportFallbacks = [];
+const dockStyleMarker = 'data-matrix-access-dock-asset="style"';
+const dockScriptMarker = 'data-matrix-access-dock-asset="script"';
 
 const forbiddenResidue = [
   'compatibility-marker-vault',
@@ -46,6 +48,7 @@ const aliasPairs = [
 
 const sleep = milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds));
 const parseJson = text => { try { return JSON.parse(text); } catch { return null; } };
+const countText = (text, marker) => String(text || '').split(marker).length - 1;
 
 async function fetchLive(route, options = {}) {
   const separator = route.includes('?') ? '&' : '?';
@@ -141,10 +144,29 @@ async function verifyOnce() {
     const response = await fetchLive(spec.route);
     const missingMarkers = spec.markers.filter(marker => !response.text.includes(marker));
     const residue = residueIn(response.text);
-    const ok = response.ok && missingMarkers.length === 0 && residue.length === 0;
-    if (!ok) failures.push(`${spec.route} failed: HTTP ${response.status}; missing ${missingMarkers.join(', ') || 'none'}; residue ${residue.join(', ') || 'none'}`);
-    pages.push({ route: spec.route, status: response.status, ok, missingMarkers, residue });
+    const dockStyleCount = countText(response.text, dockStyleMarker);
+    const dockScriptCount = countText(response.text, dockScriptMarker);
+    const dockOk = dockStyleCount === 1 && dockScriptCount === 1;
+    const ok = response.ok && missingMarkers.length === 0 && residue.length === 0 && dockOk;
+    if (!ok) failures.push(`${spec.route} failed: HTTP ${response.status}; missing ${missingMarkers.join(', ') || 'none'}; residue ${residue.join(', ') || 'none'}; dock ${dockStyleCount}/${dockScriptCount}`);
+    pages.push({ route: spec.route, status: response.status, ok, missingMarkers, residue, dockStyleCount, dockScriptCount, dockOk });
   }
+  const [dockScriptResponse, dockStyleResponse] = await Promise.all([
+    fetchLive('/matrix-access-dock.js'),
+    fetchLive('/matrix-access-dock.css')
+  ]);
+  const accessDock = {
+    ok: dockScriptResponse.ok
+      && dockStyleResponse.ok
+      && dockScriptResponse.text.includes('/member-login.html')
+      && dockScriptResponse.text.includes('/newsletter.html#newsletter-form')
+      && dockScriptResponse.text.includes('matrix-access-dock'),
+    scriptStatus: dockScriptResponse.status,
+    styleStatus: dockStyleResponse.status,
+    loginRoute: dockScriptResponse.text.includes('/member-login.html'),
+    subscribeRoute: dockScriptResponse.text.includes('/newsletter.html#newsletter-form')
+  };
+  if (!accessDock.ok) failures.push('global access dock assets or Login/Subscribe routes are incomplete');
 
   const searchResponse = await fetchLive('/search-index.json');
   const searchIndex = parseJson(searchResponse.text);
@@ -294,6 +316,7 @@ async function verifyOnce() {
     health: { status: healthResponse.status, ok: healthOk, payload: health },
     ancestry,
     pages,
+    accessDock,
     search: { status: searchResponse.status, ok: searchOk, records: Array.isArray(searchIndex) ? searchIndex.length : 0, residue: searchResidue, retiredSearchUrls, forumSearchRoutes, semanticStatus: semanticResponse.status, semanticRecords: Number(semantic?.count || 0), semanticOk },
     aliases,
     protectedRoutes: protectedArtworkRoutes.map(result => ({

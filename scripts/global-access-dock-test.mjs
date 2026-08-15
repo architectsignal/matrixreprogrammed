@@ -36,6 +36,7 @@ const client = fs.readFileSync(path.join(root, 'matrix-access-dock.js'), 'utf8')
 const stylesheet = fs.readFileSync(path.join(root, 'matrix-access-dock.css'), 'utf8');
 const build = fs.readFileSync(path.join(root, 'scripts', 'build-cloudflare-output.js'), 'utf8');
 const finalReconcile = fs.readFileSync(path.join(root, 'scripts', 'final-production-reconcile.js'), 'utf8');
+const productionDeployGuard = fs.readFileSync(path.join(root, 'scripts', 'production-deploy-guard.js'), 'utf8');
 const performanceOptimizer = fs.readFileSync(path.join(root, 'scripts', 'apply-runtime-performance-optimizations.js'), 'utf8');
 
 for (const route of [
@@ -62,6 +63,12 @@ assert.ok(build.includes("'matrix-access-dock.js'"), 'Cloudflare output must req
 assert.ok(finalReconcile.includes("run('scripts/reconcile-global-access-dock.cjs')"), 'final production reconciliation must restore the dock after authoritative HTML mirrors');
 assert.ok(finalReconcile.includes('stripSourceGlobalAccessDock'), 'final production reconciliation must remove deploy-only dock assets from authoritative source mirrors');
 assert.ok(finalReconcile.indexOf("run('scripts/reconcile-global-access-dock.cjs')") < finalReconcile.indexOf("run('scripts/version-cloudflare-assets.js')"), 'final dock reconciliation must run before final asset fingerprinting');
+assert.ok(productionDeployGuard.includes("require('./patch-release-metadata-routing.js')"), 'production guard must identify the late release-metadata mutator');
+assert.ok(productionDeployGuard.includes("runFinalSeal('reconcile-global-access-dock.cjs')"), 'production guard must restore the dock after its late HTML mutator');
+assert.ok(productionDeployGuard.includes("runFinalSeal('version-cloudflare-assets.js')"), 'production guard must fingerprint dock assets after late restoration');
+assert.ok(productionDeployGuard.indexOf("runFinalSeal('reconcile-global-access-dock.cjs')") < productionDeployGuard.indexOf("runFinalSeal('version-cloudflare-assets.js')"), 'production guard must fingerprint dock assets after restoring them');
+assert.ok(productionDeployGuard.indexOf("require('./patch-release-metadata-routing.js')") < productionDeployGuard.indexOf("runFinalSeal('reconcile-global-access-dock.cjs')"), 'production guard dock restoration must follow release-metadata routing');
+assert.ok(productionDeployGuard.indexOf("runFinalSeal('reconcile-global-access-dock.cjs')") < productionDeployGuard.indexOf("runFinalSeal('build-deploy-manifest.js', true)"), 'production guard must restore the dock before sealing final manifest hashes');
 assert.ok(performanceOptimizer.includes('stripGlobalAccessDock(read(optimized))'), 'runtime optimization must not copy deploy-only dock assets back into canonical source HTML');
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
 assert.ok(packageJson.scripts.postbuild.includes('reconcile-global-access-dock.cjs'), 'postbuild must restore the dock after late generators');

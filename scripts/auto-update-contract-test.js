@@ -52,11 +52,15 @@ need('Investigation completion handoff listens to daily and weekly workflows',
     && /types:\s*\[\s*completed\s*\]/.test(handoff));
 need('Investigation completion handoff dispatches only successful runs',
   /github\.event\.workflow_run\.conclusion\s*==\s*['"]success['"]/.test(handoff));
-need('Handoff has Actions write permission and no repository write permission',
-  /actions:\s*write/.test(handoff) && /contents:\s*read/.test(handoff) && !/contents:\s*write/.test(handoff));
-need('Handoff dispatches the existing guarded production workflow on latest main',
-  /gh workflow run ["']Matrix Reprogrammed Production Deploy["']/.test(handoff)
-    && /--ref main/.test(handoff));
+need('Handoff is read-only and cannot write repositories or dispatch workflows',
+  /contents:\s*read/.test(handoff)
+    && !/(^|\n)\s*(?:actions|contents):\s*write\s*$/m.test(handoff)
+    && !/\bgh\s+workflow\s+run\b/.test(handoff)
+    && !/\bgit\s+push\b/.test(handoff));
+need('Handoff records the owner-controlled guarded deployment boundary',
+  handoff.includes('.github/workflows/deploy.yml')
+    && handoff.includes('validated-owner-dispatch-required')
+    && handoff.includes('repository owner must dispatch'));
 need('Handoff preserves a machine-readable proof artifact',
   handoff.includes('investigation-deploy-handoff.json') && handoff.includes('upload-artifact@v4'));
 need('Production fail-closed guard scripts exist',
@@ -80,7 +84,7 @@ const report = {
   schedules: {
     daily: '05:20 UTC every day',
     weekly: '06:40 UTC every Sunday',
-    deployment: 'immediately dispatched after a successful investigation; existing production schedule remains as fallback'
+    deployment: 'read-only handoff after a successful investigation; owner-controlled guarded production dispatch remains required'
   }
 };
 

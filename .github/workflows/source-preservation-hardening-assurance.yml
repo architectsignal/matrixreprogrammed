@@ -2,6 +2,16 @@ name: Source Preservation Hardening Assurance
 
 on:
   workflow_dispatch:
+    inputs:
+      verify_live:
+        description: Verify the public production boundary after an owner-controlled exact-SHA release
+        required: true
+        type: boolean
+        default: false
+      expected_build_sha:
+        description: Exact reviewed main SHA expected in production (defaults to the dispatched SHA)
+        required: false
+        type: string
   pull_request:
     branches:
       - main
@@ -83,10 +93,10 @@ jobs:
           test ! -e _site/downloads/source-change-monitor-report.json
 
       - name: Verify live public route and private exclusions
-        if: github.event_name == 'push'
+        if: github.event_name == 'workflow_dispatch' && inputs.verify_live == true
         env:
           SITE_URL: https://matrixreprogrammed.com
-          EXPECTED_BUILD_SHA: ${{ github.sha }}
+          EXPECTED_BUILD_SHA: ${{ inputs.expected_build_sha || github.sha }}
         run: |
           mkdir -p downloads
           for attempt in $(seq 1 36); do
@@ -138,6 +148,22 @@ jobs:
             }
             console.log(`Live source preservation verification passed: ${checks.length} checks.`);
           })().catch(error => { console.error(error.stack || error.message); process.exit(1); });
+          NODE
+
+      - name: Record owner-controlled live verification boundary
+        if: github.event_name != 'workflow_dispatch' || inputs.verify_live != true
+        run: |
+          mkdir -p downloads
+          node <<'NODE'
+          const fs = require('fs');
+          const report = {
+            ok: true,
+            generatedAt: new Date().toISOString(),
+            sourceSha: process.env.GITHUB_SHA,
+            liveVerification: 'deferred-owner-controlled-release',
+            boundary: 'Push and pull-request assurance validates the complete deployable output without assuming it is already live. Public live verification runs only when explicitly requested after the guarded exact-SHA production release.'
+          };
+          fs.writeFileSync('downloads/source-preservation-live-verification.json', `${JSON.stringify(report, null, 2)}\n`);
           NODE
 
       - name: Upload preservation assurance reports

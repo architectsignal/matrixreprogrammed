@@ -44,6 +44,21 @@ const promptRejectionProof = aiLiveVerifier.includes("body: { prompt: 'This cont
   && aiLiveVerifier.includes('promptRejection.status === 400')
   && aiLiveVerifier.includes('/prompt material is forbidden/i')
   && aiLiveVerifier.includes('promptAccepted: false');
+const typedBountyD1Proof = canonicalDeploy.includes("'source' AS record_type")
+  && canonicalDeploy.includes("'profile' AS record_type")
+  && canonicalDeploy.includes("'flag' AS record_type")
+  && canonicalDeploy.includes("row.record_type === 'source' && Number(row.consequential_actions_enabled) !== 0")
+  && canonicalDeploy.includes("row.record_type === 'profile' && Number(row.external_writes_enabled) !== 0");
+const bountyD1SafeFixture = [
+  { record_type: 'source', platform: 'opire', consequential_actions_enabled: 0 },
+  { record_type: 'profile', platform: 'opire', external_writes_enabled: 0 },
+  { record_type: 'flag', flag_name: 'MATRIX_BOUNTY_AUTO_SUBMISSION_ENABLED', enabled: 0 }
+];
+const bountyD1UnsafeFixture = [
+  ...bountyD1SafeFixture,
+  { record_type: 'profile', platform: 'github-paid-issue', external_writes_enabled: 1 }
+];
+const profileWritesEnabled = rows => rows.some(row => row.record_type === 'profile' && Number(row.external_writes_enabled) !== 0);
 
 if (hardFreeze) {
   check('canonical deploy is manual only', canonicalDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(canonicalDeploy));
@@ -86,6 +101,9 @@ if (hardFreeze) {
   check('canonical deploy verifies strict PayPal route', canonicalDeploy.includes('verify-live-production.js') && liveVerifier.includes('verifyPayPalBoundary') && liveVerifier.includes('/api/paypal/config') && liveVerifier.includes('/api/paypal/subscription/create') && liveVerifier.includes('cloudflare-worker-paypal-subscriptions'));
   check('canonical deploy retains zero-spend lock and activates approved AI gates', canonicalDeploy.includes('AI_RESOURCE_ZERO_SPEND_LOCK = "true"') && canonicalDeploy.includes('AI_RESOURCE_AUTO_APPROVAL_ENABLED = "true"') && canonicalDeploy.includes('AI_LOCAL_MODEL_ROUTING_ENABLED = "true"') && canonicalDeploy.includes('AI_SITE_DIRECTOR_ENABLED = "true"'));
   check('canonical deploy verifies prompt rejection', canonicalDeploy.includes('verify-live-ai-management.mjs') && promptRejectionProof);
+  check('canonical deploy types bounty D1 verification rows', typedBountyD1Proof);
+  check('typed bounty D1 verifier accepts safe mixed rows and rejects an enabled profile',
+    !profileWritesEnabled(bountyD1SafeFixture) && profileWritesEnabled(bountyD1UnsafeFixture));
 
   check('fallback deploy is manual only', fallbackDeploy.includes('workflow_dispatch:') && !/^\s*(?:push|pull_request|schedule):/m.test(fallbackDeploy));
   check('fallback deploy remains explicitly hard frozen', explicitFreeze(fallbackDeploy));

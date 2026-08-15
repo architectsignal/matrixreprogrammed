@@ -37,12 +37,25 @@ function sha(value) {
   return crypto.createHash('sha256').update(data).digest('hex');
 }
 function fileSha(relative) { return exists(relative) ? sha(fs.readFileSync(at(relative))) : ''; }
-function withoutCloudflareAssetVersions(value) {
-  return String(value).replace(/<(?:script|link)\b[^>]*(?:src|href)=(['"])((?!(?:https?:)?\/\/|data:)[^'"]+\.(?:js|css)(?:\?[^'"]*)?(?:#[^'"]*)?)\1[^>]*>/gi, tag => (
+function withoutControlledCloudflareHtmlOptimizations(value) {
+  const unversioned = String(value).replace(/<(?:script|link)\b[^>]*(?:src|href)=(['"])((?!(?:https?:)?\/\/|data:)[^'"]+\.(?:js|css)(?:\?[^'"]*)?(?:#[^'"]*)?)\1[^>]*>/gi, tag => (
     tag.replace(/([?&])v=[^&#'"\s>]+(&?)/gi, (_match, prefix, trailingAmpersand) => (
       prefix === '?' && trailingAmpersand === '&' ? '?' : ''
     ))
   ));
+  return unversioned
+    .replace(/<img\b[^>]*>/gi, tag => tag.replace(/\s+(?:decoding=['"]async['"]|loading=['"]lazy['"])/gi, ''))
+    .replace(/<iframe\b[^>]*>/gi, tag => tag.replace(/\s+loading=['"]lazy['"]/gi, ''))
+    .replace(/<video\b[^>]*>/gi, tag => tag.replace(/\s+preload=['"]metadata['"]/gi, ''));
+}
+function verifyControlledHtmlNormalizationContract() {
+  const source = '<script src="app.js?x=1"></script><link href="theme.css"><img src="one.png"><iframe src="two.html"></iframe><video src="three.mp4"></video>';
+  const controlled = '<script src="app.js?x=1&v=abcdef123456"></script><link href="theme.css?v=123456abcdef"><img src="one.png" decoding="async" loading="lazy"><iframe src="two.html" loading="lazy"></iframe><video src="three.mp4" preload="metadata"></video>';
+  const externalSource = '<script src="https://example.com/app.js?v=one"></script>';
+  const externalChanged = '<script src="https://example.com/app.js?v=two"></script>';
+  check('Controlled Cloudflare HTML normalization contract',
+    withoutControlledCloudflareHtmlOptimizations(source) === withoutControlledCloudflareHtmlOptimizations(controlled)
+      && withoutControlledCloudflareHtmlOptimizations(externalSource) !== withoutControlledCloudflareHtmlOptimizations(externalChanged));
 }
 function ageHours(value) {
   const time = Date.parse(value || '');
@@ -335,16 +348,24 @@ function verifyOutputs(afterBuild = false) {
       mirrored.every(file => exists(`_site/${file}`)));
     const htmlMirrors = mirrored.filter(file => file.endsWith('.html'));
     const exactMirrors = mirrored.filter(file => !file.endsWith('.html'));
+    const exactMismatches = exactMirrors.filter(file => fileSha(file) !== fileSha(`_site/${file}`));
     check('Cloudflare non-HTML output matches authoritative root files byte-for-byte',
-      exactMirrors.every(file => fileSha(file) === fileSha(`_site/${file}`)));
-    check('Cloudflare HTML output differs only by controlled asset fingerprints',
-      htmlMirrors.every(file => withoutCloudflareAssetVersions(read(file)) === withoutCloudflareAssetVersions(read(`_site/${file}`))));
+      exactMismatches.length === 0, { mismatches: exactMismatches });
+    const htmlMismatches = htmlMirrors.filter(file => (
+      withoutControlledCloudflareHtmlOptimizations(read(file)) !== withoutControlledCloudflareHtmlOptimizations(read(`_site/${file}`))
+    ));
+    check('Cloudflare HTML output differs only by controlled final optimizations',
+      htmlMismatches.length === 0, { mismatches: htmlMismatches });
     const assetVersioning = readJson('downloads/cloudflare-asset-versioning.json', {});
     check('Cloudflare asset fingerprint report is complete and safe',
       assetVersioning.ok === true
         && Number(assetVersioning.referencesVersioned || 0) > 0
         && Array.isArray(assetVersioning.unresolved) && assetVersioning.unresolved.length === 0
         && Array.isArray(assetVersioning.unversioned) && assetVersioning.unversioned.length === 0);
+    const performanceOptimization = readJson('downloads/runtime-performance-optimizations.json', {});
+    const performanceBudget = readJson('downloads/runtime-performance-budget-test.json', {});
+    check('Cloudflare final performance transformations are independently verified',
+      performanceOptimization.ok === true && performanceBudget.ok === true);
     report.metrics.mirroredFiles = mirrored.length;
   }
 
@@ -523,6 +544,8 @@ function testFaults() {
     partialOutageDegradedGracefully: true
   };
 }
+
+verifyControlledHtmlNormalizationContract();
 
 switch (mode) {
   case 'contracts':

@@ -28,7 +28,11 @@ const commands = [
   ['scripts/patch-conclusion-integrity-cards.js'],
   ['scripts/build-behind-the-curtain-tier-registry.js'],
   ['scripts/patch-behind-the-curtain-tier-ui.js'],
-  ['scripts/build-behind-the-curtain.js']
+  ['scripts/build-behind-the-curtain.js'],
+  // Daily Watch is a freshness-gated derived dataset. Rebuild it from the
+  // refreshed investigation and family-access inputs before the source guard.
+  ['scripts/enforce-mission-data-contracts.js'],
+  ['scripts/build-daily-watch.js']
 ];
 
 const report = {

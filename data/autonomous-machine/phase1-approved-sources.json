@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "updated": "2026-07-29",
+  "mode": "review_only",
+  "sources": [
+    {
+      "id": "doj-sdny-press-releases",
+      "name": "U.S. DOJ SDNY Press Releases",
+      "baseUrl": "https://www.justice.gov/",
+      "feedUrl": "https://www.justice.gov/news/rss?field_component=1981&groupname=441&require_all=0&search_api_language=en&type=press_release",
+      "enabled": true,
+      "allowSubdomains": false,
+      "allowedPathPrefixes": [
+        "/news/rss",
+        "/usao-sdny/pr/"
+      ],
+      "lawfulBasis": "official_public_rss",
+      "termsReviewed": true,
+      "automationAllowed": true,
+      "rateLimitPerHour": 2,
+      "reliability": "official",
+      "notes": "The Department of Justice publicly exposes this as an RSS feed for automatic news updates. Phase 1.1 may read only this feed and linked SDNY press-release paths. Every item remains pending review and cannot publish."
+    }
+  ]
+}

@@ -38,6 +38,7 @@ const build = fs.readFileSync(path.join(root, 'scripts', 'build-cloudflare-outpu
 const finalReconcile = fs.readFileSync(path.join(root, 'scripts', 'final-production-reconcile.js'), 'utf8');
 const productionDeployGuard = fs.readFileSync(path.join(root, 'scripts', 'production-deploy-guard.js'), 'utf8');
 const performanceOptimizer = fs.readFileSync(path.join(root, 'scripts', 'apply-runtime-performance-optimizations.js'), 'utf8');
+const assetVersioner = fs.readFileSync(path.join(root, 'scripts', 'version-cloudflare-assets.js'), 'utf8');
 
 for (const route of [
   '/start-here.html',
@@ -70,6 +71,9 @@ assert.ok(productionDeployGuard.indexOf("runFinalSeal('reconcile-global-access-d
 assert.ok(productionDeployGuard.indexOf("require('./patch-release-metadata-routing.js')") < productionDeployGuard.indexOf("runFinalSeal('reconcile-global-access-dock.cjs')"), 'production guard dock restoration must follow release-metadata routing');
 assert.ok(productionDeployGuard.indexOf("runFinalSeal('reconcile-global-access-dock.cjs')") < productionDeployGuard.indexOf("runFinalSeal('build-deploy-manifest.js', true)"), 'production guard must restore the dock before sealing final manifest hashes');
 assert.ok(performanceOptimizer.includes('stripGlobalAccessDock(read(optimized))'), 'runtime optimization must not copy deploy-only dock assets back into canonical source HTML');
+assert.ok(assetVersioner.includes("run('scripts/reconcile-global-access-dock.cjs')"), 'asset versioning must restore the dock after its internal HTML mutators');
+assert.ok(assetVersioner.indexOf("run('scripts/runtime-performance-budget-test.js')") < assetVersioner.indexOf("run('scripts/reconcile-global-access-dock.cjs')"), 'asset versioning must restore the dock after cache and performance finalizers');
+assert.ok(assetVersioner.indexOf("run('scripts/reconcile-global-access-dock.cjs')") < assetVersioner.indexOf('const files = walk(site);'), 'asset versioning must restore the dock before hashing and rewriting final asset references');
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 'utf8'));
 assert.ok(packageJson.scripts.postbuild.includes('reconcile-global-access-dock.cjs'), 'postbuild must restore the dock after late generators');
 assert.ok(packageJson.scripts['postcloudflare-output'].includes('reconcile-global-access-dock.cjs'), 'Cloudflare lifecycle must restore the dock after late generators');

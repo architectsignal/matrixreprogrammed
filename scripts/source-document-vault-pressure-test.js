@@ -4,6 +4,9 @@ const root = process.cwd();
 require('./restore-premier-resource-routes.js');
 require('./restore-evidence-badge-routes.js');
 require('./restore-source-document-vault-routes.js');
+// Route restorers intentionally operate broadly; re-apply the canonical
+// visible-de-duplication contract before testing the final public surfaces.
+require('./deep-cleanup-pass.js');
 const problems = [];
 function exists(file){ return fs.existsSync(path.join(root, file)); }
 function read(file){ return fs.readFileSync(path.join(root, file), 'utf8'); }
@@ -89,10 +92,13 @@ for(const id of [
 for(const id of ['evidence-badge-system-route','source-document-vault-route','reader-usefulness-route','figure-source-status']){
   if(hasVisibleSection('news.html', id)) fail(`news.html still has visible utility duplicate section: ${id}`);
 }
-requireIncludes('index.html', 'data-cleanup-marker="deep-cleanup"', 'homepage hidden cleanup markers');
-requireIncludes('index.html', 'Read The Black File', 'homepage hidden Black File compatibility marker');
-requireIncludes('index.html', 'downloads/forum-posts.json', 'homepage hidden forum-posts compatibility marker');
-requireIncludes('index.html', 'Useful Free Briefs', 'homepage hidden free-brief compatibility marker');
+// The search-first homepage intentionally removed legacy hidden compatibility
+// payloads. Verify the durable reader routes instead of requiring retired,
+// invisible copy that can conflict with the public-homepage contract.
+requireIncludes('index.html', 'href="source-document-vault.html"', 'homepage Source Document Vault route');
+requireIncludes('index.html', 'href="epstein-files.html"', 'homepage Epstein / Black File route');
+requireIncludes('index.html', 'href="forum.html"', 'homepage Signal Board route');
+requireIncludes('index.html', 'href="optin-center.html"', 'homepage free-brief route');
 requireIncludes('epstein-files.html', 'id="black-file-conversion-panel"', 'Epstein page keeps visible Black File panel');
 
 requireIncludes('scripts/branded-pdf-mini-book.js', 'coverPage()', 'premium PDF cover generator');

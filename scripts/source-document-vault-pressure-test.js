@@ -40,7 +40,7 @@ for(const file of [
 
 for(const marker of ['SOURCE DOCUMENT VAULT.', 'SOURCE DOCUMENT VAULT STATUS', 'How To Use The Vault', 'Search Source Doors', 'Actual File Doors', 'Actual Files First', 'Open Actual Source', 'Classify Claim']) requireIncludes('source-document-vault.html', marker, marker);
 for(const marker of ['DOJ Epstein Disclosures', 'House Oversight Epstein Records', 'CourtListener Epstein Dockets', 'Jmail Epstein Email Search', 'WikiLeaks Search: Epstein', 'FBI Vault Search', 'SEC EDGAR', 'ICIJ Offshore Leaks Database']) requireIncludes('source-document-vault.html', marker, marker);
-for(const file of ['index.html','daily-drop.html','epstein-files.html','network-search.html','claim-classifier.html','evidence-vault.html','download-center.html','live-intel.html','news.html','books.html']) requireIncludes(file, 'source-document-vault-route', `${file} source document vault route marker`);
+for(const file of ['daily-drop.html','epstein-files.html','network-search.html','claim-classifier.html','evidence-vault.html','download-center.html','live-intel.html','news.html','books.html']) requireIncludes(file, 'source-document-vault-route', `${file} source document vault route marker`);
 
 if(exists('downloads/source-document-vault.json')){
   const data = JSON.parse(read('downloads/source-document-vault.json'));

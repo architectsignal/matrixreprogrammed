@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const root = process.cwd();
-require('./restore-premier-resource-routes.js');
-require('./restore-evidence-badge-routes.js');
-require('./restore-source-document-vault-routes.js');
 const problems = [];
 function exists(file){ return fs.existsSync(path.join(root, file)); }
 function read(file){ return fs.readFileSync(path.join(root, file), 'utf8'); }
@@ -43,7 +40,7 @@ for(const file of [
 
 for(const marker of ['SOURCE DOCUMENT VAULT.', 'SOURCE DOCUMENT VAULT STATUS', 'How To Use The Vault', 'Search Source Doors', 'Actual File Doors', 'Actual Files First', 'Open Actual Source', 'Classify Claim']) requireIncludes('source-document-vault.html', marker, marker);
 for(const marker of ['DOJ Epstein Disclosures', 'House Oversight Epstein Records', 'CourtListener Epstein Dockets', 'Jmail Epstein Email Search', 'WikiLeaks Search: Epstein', 'FBI Vault Search', 'SEC EDGAR', 'ICIJ Offshore Leaks Database']) requireIncludes('source-document-vault.html', marker, marker);
-for(const file of ['index.html','daily-drop.html','epstein-files.html','network-search.html','claim-classifier.html','evidence-vault.html','download-center.html','live-intel.html','news.html','books.html']) requireIncludes(file, 'source-document-vault-route', `${file} source document vault route marker`);
+for(const file of ['daily-drop.html','epstein-files.html','network-search.html','claim-classifier.html','evidence-vault.html','download-center.html','live-intel.html','news.html','books.html']) requireIncludes(file, 'source-document-vault-route', `${file} source document vault route marker`);
 
 if(exists('downloads/source-document-vault.json')){
   const data = JSON.parse(read('downloads/source-document-vault.json'));
@@ -89,10 +86,13 @@ for(const id of [
 for(const id of ['evidence-badge-system-route','source-document-vault-route','reader-usefulness-route','figure-source-status']){
   if(hasVisibleSection('news.html', id)) fail(`news.html still has visible utility duplicate section: ${id}`);
 }
-requireIncludes('index.html', 'data-cleanup-marker="deep-cleanup"', 'homepage hidden cleanup markers');
-requireIncludes('index.html', 'Read The Black File', 'homepage hidden Black File compatibility marker');
-requireIncludes('index.html', 'downloads/forum-posts.json', 'homepage hidden forum-posts compatibility marker');
-requireIncludes('index.html', 'Useful Free Briefs', 'homepage hidden free-brief compatibility marker');
+// The search-first homepage intentionally removed legacy hidden compatibility
+// payloads. Verify the durable reader routes instead of requiring retired,
+// invisible copy that can conflict with the public-homepage contract.
+requireIncludes('index.html', 'href="source-document-vault.html"', 'homepage Source Document Vault route');
+requireIncludes('index.html', 'href="epstein-files.html"', 'homepage Epstein / Black File route');
+requireIncludes('index.html', 'href="forum.html"', 'homepage Signal Board route');
+requireIncludes('index.html', 'href="optin-center.html"', 'homepage free-brief route');
 requireIncludes('epstein-files.html', 'id="black-file-conversion-panel"', 'Epstein page keeps visible Black File panel');
 
 requireIncludes('scripts/branded-pdf-mini-book.js', 'coverPage()', 'premium PDF cover generator');

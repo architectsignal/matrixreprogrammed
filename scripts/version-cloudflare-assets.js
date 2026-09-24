@@ -154,6 +154,12 @@ run('scripts/enforce-production-cache-policy.js');
 run('scripts/apply-runtime-performance-optimizations.js');
 run('scripts/runtime-performance-budget-test.js');
 
+// The cache/performance finalizers above are allowed to synchronize canonical
+// HTML and deployable aliases. Reassert the deploy-only dock after every HTML
+// mutator and before the asset map is hashed so clean routes, .html routes and
+// their fingerprints all describe the same final bytes.
+run('scripts/reconcile-global-access-dock.cjs');
+
 function posix(value) { return String(value || '').replace(/\\/g, '/'); }
 function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
